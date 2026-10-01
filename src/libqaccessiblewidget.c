@@ -29,177 +29,177 @@ QAccessibleWidget* q_accessiblewidget_from_q_accessible_action_interface(void* _
     return (QAccessibleWidget*)QAccessibleWidget_FromQAccessibleActionInterface((QAccessibleActionInterface*)_qaccessibleactioninterface);
 }
 
-bool q_accessiblewidget_is_valid(void* self) {
+bool q_accessiblewidget_is_valid(const void* self) {
     return QAccessibleWidget_IsValid((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_is_valid(void* self, bool (*callback)()) {
+void q_accessiblewidget_on_is_valid(const void* self, bool (*callback)(const void*)) {
     QAccessibleWidget_OnIsValid((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-bool q_accessiblewidget_super_is_valid(void* self) {
+bool q_accessiblewidget_super_is_valid(const void* self) {
     return QAccessibleWidget_SuperIsValid((QAccessibleWidget*)self);
 }
 
-QWindow* q_accessiblewidget_window(void* self) {
+QWindow* q_accessiblewidget_window(const void* self) {
     return QAccessibleWidget_Window((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_window(void* self, QWindow* (*callback)()) {
+void q_accessiblewidget_on_window(const void* self, QWindow* (*callback)(const void*)) {
     QAccessibleWidget_OnWindow((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QWindow* q_accessiblewidget_super_window(void* self) {
+QWindow* q_accessiblewidget_super_window(const void* self) {
     return QAccessibleWidget_SuperWindow((QAccessibleWidget*)self);
 }
 
-int32_t q_accessiblewidget_child_count(void* self) {
+int32_t q_accessiblewidget_child_count(const void* self) {
     return QAccessibleWidget_ChildCount((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_child_count(void* self, int32_t (*callback)()) {
+void q_accessiblewidget_on_child_count(const void* self, int32_t (*callback)(const void*)) {
     QAccessibleWidget_OnChildCount((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_accessiblewidget_super_child_count(void* self) {
+int32_t q_accessiblewidget_super_child_count(const void* self) {
     return QAccessibleWidget_SuperChildCount((QAccessibleWidget*)self);
 }
 
-int32_t q_accessiblewidget_index_of_child(void* self, void* child) {
+int32_t q_accessiblewidget_index_of_child(const void* self, const void* child) {
     return QAccessibleWidget_IndexOfChild((QAccessibleWidget*)self, (QAccessibleInterface*)child);
 }
 
-void q_accessiblewidget_on_index_of_child(void* self, int32_t (*callback)(void*, void*)) {
+void q_accessiblewidget_on_index_of_child(const void* self, int32_t (*callback)(const void*, const void*)) {
     QAccessibleWidget_OnIndexOfChild((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_accessiblewidget_super_index_of_child(void* self, void* child) {
+int32_t q_accessiblewidget_super_index_of_child(const void* self, const void* child) {
     return QAccessibleWidget_SuperIndexOfChild((QAccessibleWidget*)self, (QAccessibleInterface*)child);
 }
 
-libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_relations(void* self, int32_t match) {
+libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_relations(const void* self, int32_t match) {
     return QAccessibleWidget_Relations((QAccessibleWidget*)self, match);
 }
 
-void q_accessiblewidget_on_relations(void* self, libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(void*, int32_t)) {
+void q_accessiblewidget_on_relations(const void* self, libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ (*callback)(const void*, int32_t)) {
     QAccessibleWidget_OnRelations((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_super_relations(void* self, int32_t match) {
+libqt_list /* of pair_qaccessibleinterface_int32_t tuple of QAccessibleInterface* and flag of enum QAccessible__RelationFlag */ q_accessiblewidget_super_relations(const void* self, int32_t match) {
     return QAccessibleWidget_SuperRelations((QAccessibleWidget*)self, match);
 }
 
-QAccessibleInterface* q_accessiblewidget_focus_child(void* self) {
+QAccessibleInterface* q_accessiblewidget_focus_child(const void* self) {
     return QAccessibleWidget_FocusChild((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_focus_child(void* self, QAccessibleInterface* (*callback)()) {
+void q_accessiblewidget_on_focus_child(const void* self, QAccessibleInterface* (*callback)(const void*)) {
     QAccessibleWidget_OnFocusChild((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QAccessibleInterface* q_accessiblewidget_super_focus_child(void* self) {
+QAccessibleInterface* q_accessiblewidget_super_focus_child(const void* self) {
     return QAccessibleWidget_SuperFocusChild((QAccessibleWidget*)self);
 }
 
-QRect* q_accessiblewidget_rect(void* self) {
+QRect* q_accessiblewidget_rect(const void* self) {
     return QAccessibleWidget_Rect((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_rect(void* self, QRect* (*callback)()) {
+void q_accessiblewidget_on_rect(const void* self, QRect* (*callback)(const void*)) {
     QAccessibleWidget_OnRect((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QRect* q_accessiblewidget_super_rect(void* self) {
+QRect* q_accessiblewidget_super_rect(const void* self) {
     return QAccessibleWidget_SuperRect((QAccessibleWidget*)self);
 }
 
-QAccessibleInterface* q_accessiblewidget_parent(void* self) {
+QAccessibleInterface* q_accessiblewidget_parent(const void* self) {
     return QAccessibleWidget_Parent((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_parent(void* self, QAccessibleInterface* (*callback)()) {
+void q_accessiblewidget_on_parent(const void* self, QAccessibleInterface* (*callback)(const void*)) {
     QAccessibleWidget_OnParent((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QAccessibleInterface* q_accessiblewidget_super_parent(void* self) {
+QAccessibleInterface* q_accessiblewidget_super_parent(const void* self) {
     return QAccessibleWidget_SuperParent((QAccessibleWidget*)self);
 }
 
-QAccessibleInterface* q_accessiblewidget_child(void* self, int index) {
+QAccessibleInterface* q_accessiblewidget_child(const void* self, int index) {
     return QAccessibleWidget_Child((QAccessibleWidget*)self, index);
 }
 
-void q_accessiblewidget_on_child(void* self, QAccessibleInterface* (*callback)(void*, int)) {
+void q_accessiblewidget_on_child(const void* self, QAccessibleInterface* (*callback)(const void*, int)) {
     QAccessibleWidget_OnChild((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QAccessibleInterface* q_accessiblewidget_super_child(void* self, int index) {
+QAccessibleInterface* q_accessiblewidget_super_child(const void* self, int index) {
     return QAccessibleWidget_SuperChild((QAccessibleWidget*)self, index);
 }
 
-const char* q_accessiblewidget_text(void* self, int32_t t) {
+const char* q_accessiblewidget_text(const void* self, int32_t t) {
     libqt_string _str = QAccessibleWidget_Text((QAccessibleWidget*)self, t);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_accessiblewidget_on_text(void* self, const char* (*callback)(void*, int32_t)) {
+void q_accessiblewidget_on_text(const void* self, const char* (*callback)(const void*, int32_t)) {
     QAccessibleWidget_OnText((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-const char* q_accessiblewidget_super_text(void* self, int32_t t) {
+const char* q_accessiblewidget_super_text(const void* self, int32_t t) {
     libqt_string _str = QAccessibleWidget_SuperText((QAccessibleWidget*)self, t);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_accessiblewidget_role(void* self) {
+int32_t q_accessiblewidget_role(const void* self) {
     return QAccessibleWidget_Role((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_role(void* self, int32_t (*callback)()) {
+void q_accessiblewidget_on_role(const void* self, int32_t (*callback)(const void*)) {
     QAccessibleWidget_OnRole((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_accessiblewidget_super_role(void* self) {
+int32_t q_accessiblewidget_super_role(const void* self) {
     return QAccessibleWidget_SuperRole((QAccessibleWidget*)self);
 }
 
-QAccessible__State* q_accessiblewidget_state(void* self) {
+QAccessible__State* q_accessiblewidget_state(const void* self) {
     return QAccessibleWidget_State((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_state(void* self, QAccessible__State* (*callback)()) {
+void q_accessiblewidget_on_state(const void* self, QAccessible__State* (*callback)(const void*)) {
     QAccessibleWidget_OnState((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QAccessible__State* q_accessiblewidget_super_state(void* self) {
+QAccessible__State* q_accessiblewidget_super_state(const void* self) {
     return QAccessibleWidget_SuperState((QAccessibleWidget*)self);
 }
 
-QColor* q_accessiblewidget_foreground_color(void* self) {
+QColor* q_accessiblewidget_foreground_color(const void* self) {
     return QAccessibleWidget_ForegroundColor((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_foreground_color(void* self, QColor* (*callback)()) {
+void q_accessiblewidget_on_foreground_color(const void* self, QColor* (*callback)(const void*)) {
     QAccessibleWidget_OnForegroundColor((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QColor* q_accessiblewidget_super_foreground_color(void* self) {
+QColor* q_accessiblewidget_super_foreground_color(const void* self) {
     return QAccessibleWidget_SuperForegroundColor((QAccessibleWidget*)self);
 }
 
-QColor* q_accessiblewidget_background_color(void* self) {
+QColor* q_accessiblewidget_background_color(const void* self) {
     return QAccessibleWidget_BackgroundColor((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_background_color(void* self, QColor* (*callback)()) {
+void q_accessiblewidget_on_background_color(const void* self, QColor* (*callback)(const void*)) {
     QAccessibleWidget_OnBackgroundColor((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QColor* q_accessiblewidget_super_background_color(void* self) {
+QColor* q_accessiblewidget_super_background_color(const void* self) {
     return QAccessibleWidget_SuperBackgroundColor((QAccessibleWidget*)self);
 }
 
@@ -215,7 +215,7 @@ void* q_accessiblewidget_super_interface_cast(void* self, int32_t t) {
     return QAccessibleWidget_SuperInterfaceCast((QAccessibleWidget*)self, t);
 }
 
-const char** q_accessiblewidget_action_names(void* self) {
+const char** q_accessiblewidget_action_names(const void* self) {
     libqt_list _arr = QAccessibleWidget_ActionNames((QAccessibleWidget*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -232,11 +232,11 @@ const char** q_accessiblewidget_action_names(void* self) {
     return _ret;
 }
 
-void q_accessiblewidget_on_action_names(void* self, const char** (*callback)()) {
+void q_accessiblewidget_on_action_names(const void* self, const char** (*callback)(const void*)) {
     QAccessibleWidget_OnActionNames((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-const char** q_accessiblewidget_super_action_names(void* self) {
+const char** q_accessiblewidget_super_action_names(const void* self) {
     libqt_list _arr = QAccessibleWidget_SuperActionNames((QAccessibleWidget*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -265,7 +265,7 @@ void q_accessiblewidget_super_do_action(void* self, const char* actionName) {
     QAccessibleWidget_SuperDoAction((QAccessibleWidget*)self, qstring(actionName));
 }
 
-const char** q_accessiblewidget_key_bindings_for_action(void* self, const char* actionName) {
+const char** q_accessiblewidget_key_bindings_for_action(const void* self, const char* actionName) {
     libqt_list _arr = QAccessibleWidget_KeyBindingsForAction((QAccessibleWidget*)self, qstring(actionName));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -282,11 +282,11 @@ const char** q_accessiblewidget_key_bindings_for_action(void* self, const char* 
     return _ret;
 }
 
-void q_accessiblewidget_on_key_bindings_for_action(void* self, const char** (*callback)(void*, const char*)) {
+void q_accessiblewidget_on_key_bindings_for_action(const void* self, const char** (*callback)(const void*, const char*)) {
     QAccessibleWidget_OnKeyBindingsForAction((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-const char** q_accessiblewidget_super_key_bindings_for_action(void* self, const char* actionName) {
+const char** q_accessiblewidget_super_key_bindings_for_action(const void* self, const char* actionName) {
     libqt_list _arr = QAccessibleWidget_SuperKeyBindingsForAction((QAccessibleWidget*)self, qstring(actionName));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -303,40 +303,16 @@ const char** q_accessiblewidget_super_key_bindings_for_action(void* self, const 
     return _ret;
 }
 
-QWidget* q_accessiblewidget_widget(void* self) {
+QWidget* q_accessiblewidget_widget(const void* self) {
     return QAccessibleWidget_Widget((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_widget(void* self, QWidget* (*callback)()) {
-    QAccessibleWidget_OnWidget((QAccessibleWidget*)self, (intptr_t)callback);
-}
-
-QWidget* q_accessiblewidget_super_widget(void* self) {
-    return QAccessibleWidget_SuperWidget((QAccessibleWidget*)self);
-}
-
-QObject* q_accessiblewidget_parent_object(void* self) {
+QObject* q_accessiblewidget_parent_object(const void* self) {
     return QAccessibleWidget_ParentObject((QAccessibleWidget*)self);
-}
-
-void q_accessiblewidget_on_parent_object(void* self, QObject* (*callback)()) {
-    QAccessibleWidget_OnParentObject((QAccessibleWidget*)self, (intptr_t)callback);
-}
-
-QObject* q_accessiblewidget_super_parent_object(void* self) {
-    return QAccessibleWidget_SuperParentObject((QAccessibleWidget*)self);
 }
 
 void q_accessiblewidget_add_controlling_signal(void* self, const char* signal) {
     QAccessibleWidget_AddControllingSignal((QAccessibleWidget*)self, qstring(signal));
-}
-
-void q_accessiblewidget_on_add_controlling_signal(void* self, void (*callback)(void*, const char*)) {
-    QAccessibleWidget_OnAddControllingSignal((QAccessibleWidget*)self, (intptr_t)callback);
-}
-
-void q_accessiblewidget_super_add_controlling_signal(void* self, const char* signal) {
-    QAccessibleWidget_SuperAddControllingSignal((QAccessibleWidget*)self, qstring(signal));
 }
 
 QAccessibleTextInterface* q_accessiblewidget_text_interface(void* self) {
@@ -379,7 +355,7 @@ QAccessibleAttributesInterface* q_accessiblewidget_attributes_interface(void* se
     return QAccessibleInterface_AttributesInterface((QAccessibleInterface*)self);
 }
 
-void q_accessiblewidget_operator_assign(void* self, void* param1) {
+void q_accessiblewidget_operator_assign(void* self, const void* param1) {
     QAccessibleInterface_OperatorAssign((QAccessibleInterface*)self, (QAccessibleInterface*)param1);
 }
 
@@ -488,16 +464,16 @@ const char* q_accessiblewidget_tr3(const char* sourceText, const char* disambigu
     return _ret;
 }
 
-QObject* q_accessiblewidget_object(void* self) {
+QObject* q_accessiblewidget_object(const void* self) {
     return QAccessibleWidget_Object((QAccessibleWidget*)self);
 }
 
-QObject* q_accessiblewidget_super_object(void* self) {
+QObject* q_accessiblewidget_super_object(const void* self) {
     return QAccessibleWidget_SuperObject((QAccessibleWidget*)self);
 }
 
-void q_accessiblewidget_on_object(void* self, QObject* (*callback)()) {
-    QAccessibleWidget_OnObject((QAccessibleWidget*)self, (intptr_t)callback);
+void q_accessiblewidget_on_object(const void* self, QObject* (*callback)(const void*)) {
+    QAccessibleWidget_OnObject((const QAccessibleWidget*)self, (intptr_t)callback);
 }
 
 void q_accessiblewidget_set_text(void* self, int32_t t, const char* text) {
@@ -512,16 +488,16 @@ void q_accessiblewidget_on_set_text(void* self, void (*callback)(void*, int32_t,
     QAccessibleWidget_OnSetText((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-QAccessibleInterface* q_accessiblewidget_child_at(void* self, int x, int y) {
+QAccessibleInterface* q_accessiblewidget_child_at(const void* self, int x, int y) {
     return QAccessibleWidget_ChildAt((QAccessibleWidget*)self, x, y);
 }
 
-QAccessibleInterface* q_accessiblewidget_super_child_at(void* self, int x, int y) {
+QAccessibleInterface* q_accessiblewidget_super_child_at(const void* self, int x, int y) {
     return QAccessibleWidget_SuperChildAt((QAccessibleWidget*)self, x, y);
 }
 
-void q_accessiblewidget_on_child_at(void* self, QAccessibleInterface* (*callback)(void*, int, int)) {
-    QAccessibleWidget_OnChildAt((QAccessibleWidget*)self, (intptr_t)callback);
+void q_accessiblewidget_on_child_at(const void* self, QAccessibleInterface* (*callback)(const void*, int, int)) {
+    QAccessibleWidget_OnChildAt((const QAccessibleWidget*)self, (intptr_t)callback);
 }
 
 void q_accessiblewidget_virtual_hook(void* self, int id, void* data) {
@@ -536,38 +512,38 @@ void q_accessiblewidget_on_virtual_hook(void* self, void (*callback)(void*, int,
     QAccessibleWidget_OnVirtualHook((QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-const char* q_accessiblewidget_localized_action_name(void* self, const char* name) {
+const char* q_accessiblewidget_localized_action_name(const void* self, const char* name) {
     libqt_string _str = QAccessibleWidget_LocalizedActionName((QAccessibleWidget*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accessiblewidget_super_localized_action_name(void* self, const char* name) {
+const char* q_accessiblewidget_super_localized_action_name(const void* self, const char* name) {
     libqt_string _str = QAccessibleWidget_SuperLocalizedActionName((QAccessibleWidget*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_accessiblewidget_on_localized_action_name(void* self, const char* (*callback)(void*, const char*)) {
-    QAccessibleWidget_OnLocalizedActionName((QAccessibleWidget*)self, (intptr_t)callback);
+void q_accessiblewidget_on_localized_action_name(const void* self, const char* (*callback)(const void*, const char*)) {
+    QAccessibleWidget_OnLocalizedActionName((const QAccessibleWidget*)self, (intptr_t)callback);
 }
 
-const char* q_accessiblewidget_localized_action_description(void* self, const char* name) {
+const char* q_accessiblewidget_localized_action_description(const void* self, const char* name) {
     libqt_string _str = QAccessibleWidget_LocalizedActionDescription((QAccessibleWidget*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accessiblewidget_super_localized_action_description(void* self, const char* name) {
+const char* q_accessiblewidget_super_localized_action_description(const void* self, const char* name) {
     libqt_string _str = QAccessibleWidget_SuperLocalizedActionDescription((QAccessibleWidget*)self, qstring(name));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_accessiblewidget_on_localized_action_description(void* self, const char* (*callback)(void*, const char*)) {
-    QAccessibleWidget_OnLocalizedActionDescription((QAccessibleWidget*)self, (intptr_t)callback);
+void q_accessiblewidget_on_localized_action_description(const void* self, const char* (*callback)(const void*, const char*)) {
+    QAccessibleWidget_OnLocalizedActionDescription((const QAccessibleWidget*)self, (intptr_t)callback);
 }

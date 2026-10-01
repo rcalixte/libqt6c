@@ -5,11 +5,11 @@ Attica__AccountBalance* k_attica__accountbalance_new() {
     return Attica__AccountBalance_New();
 }
 
-Attica__AccountBalance* k_attica__accountbalance_new2(void* other) {
+Attica__AccountBalance* k_attica__accountbalance_new2(const void* other) {
     return Attica__AccountBalance_New2((Attica__AccountBalance*)other);
 }
 
-void k_attica__accountbalance_operator_assign(void* self, void* other) {
+void k_attica__accountbalance_operator_assign(void* self, const void* other) {
     Attica__AccountBalance_OperatorAssign((Attica__AccountBalance*)self, (Attica__AccountBalance*)other);
 }
 
@@ -17,7 +17,7 @@ void k_attica__accountbalance_set_currency(void* self, const char* currency) {
     Attica__AccountBalance_SetCurrency((Attica__AccountBalance*)self, qstring(currency));
 }
 
-const char* k_attica__accountbalance_currency(void* self) {
+const char* k_attica__accountbalance_currency(const void* self) {
     libqt_string _str = Attica__AccountBalance_Currency((Attica__AccountBalance*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -28,7 +28,7 @@ void k_attica__accountbalance_set_balance(void* self, const char* name) {
     Attica__AccountBalance_SetBalance((Attica__AccountBalance*)self, qstring(name));
 }
 
-const char* k_attica__accountbalance_balance(void* self) {
+const char* k_attica__accountbalance_balance(const void* self) {
     libqt_string _str = Attica__AccountBalance_Balance((Attica__AccountBalance*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -3,7 +3,7 @@
 #include "libqurlquery.hpp"
 #include "libqurlquery.h"
 
-size_t q_qurlquery_q_hash(void* key, size_t seed) {
+size_t q_qurlquery_q_hash(const void* key, size_t seed) {
     return qurlquery_QHash((QUrlQuery*)key, seed);
 }
 
@@ -11,7 +11,7 @@ QUrlQuery* q_urlquery_new() {
     return QUrlQuery_New();
 }
 
-QUrlQuery* q_urlquery_new2(void* url) {
+QUrlQuery* q_urlquery_new2(const void* url) {
     return QUrlQuery_New2((QUrl*)url);
 }
 
@@ -19,11 +19,11 @@ QUrlQuery* q_urlquery_new3(const char* queryString) {
     return QUrlQuery_New3(qstring(queryString));
 }
 
-QUrlQuery* q_urlquery_new4(void* other) {
+QUrlQuery* q_urlquery_new4(const void* other) {
     return QUrlQuery_New4((QUrlQuery*)other);
 }
 
-void q_urlquery_operator_assign(void* self, void* other) {
+void q_urlquery_operator_assign(void* self, const void* other) {
     QUrlQuery_OperatorAssign((QUrlQuery*)self, (QUrlQuery*)other);
 }
 
@@ -31,11 +31,11 @@ void q_urlquery_swap(void* self, void* other) {
     QUrlQuery_Swap((QUrlQuery*)self, (QUrlQuery*)other);
 }
 
-bool q_urlquery_is_empty(void* self) {
+bool q_urlquery_is_empty(const void* self) {
     return QUrlQuery_IsEmpty((QUrlQuery*)self);
 }
 
-bool q_urlquery_is_detached(void* self) {
+bool q_urlquery_is_detached(const void* self) {
     return QUrlQuery_IsDetached((QUrlQuery*)self);
 }
 
@@ -43,7 +43,7 @@ void q_urlquery_clear(void* self) {
     QUrlQuery_Clear((QUrlQuery*)self);
 }
 
-const char* q_urlquery_query(void* self) {
+const char* q_urlquery_query(const void* self) {
     libqt_string _str = QUrlQuery_Query((QUrlQuery*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -54,7 +54,7 @@ void q_urlquery_set_query(void* self, const char* queryString) {
     QUrlQuery_SetQuery((QUrlQuery*)self, qstring(queryString));
 }
 
-const char* q_urlquery_to_string(void* self) {
+const char* q_urlquery_to_string(const void* self) {
     libqt_string _str = QUrlQuery_ToString((QUrlQuery*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -65,15 +65,15 @@ void q_urlquery_set_query_delimiters(void* self, void* valueDelimiter, void* pai
     QUrlQuery_SetQueryDelimiters((QUrlQuery*)self, (QChar*)valueDelimiter, (QChar*)pairDelimiter);
 }
 
-QChar* q_urlquery_query_value_delimiter(void* self) {
+QChar* q_urlquery_query_value_delimiter(const void* self) {
     return QUrlQuery_QueryValueDelimiter((QUrlQuery*)self);
 }
 
-QChar* q_urlquery_query_pair_delimiter(void* self) {
+QChar* q_urlquery_query_pair_delimiter(const void* self) {
     return QUrlQuery_QueryPairDelimiter((QUrlQuery*)self);
 }
 
-libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_query_items(void* self) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_query_items(const void* self) {
     libqt_list _arr = QUrlQuery_QueryItems((QUrlQuery*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -89,7 +89,7 @@ libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_q
     return _arr;
 }
 
-bool q_urlquery_has_query_item(void* self, const char* key) {
+bool q_urlquery_has_query_item(const void* self, const char* key) {
     return QUrlQuery_HasQueryItem((QUrlQuery*)self, qstring(key));
 }
 
@@ -101,14 +101,14 @@ void q_urlquery_remove_query_item(void* self, const char* key) {
     QUrlQuery_RemoveQueryItem((QUrlQuery*)self, qstring(key));
 }
 
-const char* q_urlquery_query_item_value(void* self, const char* key) {
+const char* q_urlquery_query_item_value(const void* self, const char* key) {
     libqt_string _str = QUrlQuery_QueryItemValue((QUrlQuery*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_urlquery_all_query_item_values(void* self, const char* key) {
+const char** q_urlquery_all_query_item_values(const void* self, const char* key) {
     libqt_list _arr = QUrlQuery_AllQueryItemValues((QUrlQuery*)self, qstring(key));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -129,21 +129,21 @@ void q_urlquery_remove_all_query_items(void* self, const char* key) {
     QUrlQuery_RemoveAllQueryItems((QUrlQuery*)self, qstring(key));
 }
 
-const char* q_urlquery_query1(void* self, uint32_t encoding) {
+const char* q_urlquery_query1(const void* self, uint32_t encoding) {
     libqt_string _str = QUrlQuery_Query1((QUrlQuery*)self, encoding);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_urlquery_to_string1(void* self, uint32_t encoding) {
+const char* q_urlquery_to_string1(const void* self, uint32_t encoding) {
     libqt_string _str = QUrlQuery_ToString1((QUrlQuery*)self, encoding);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_query_items1(void* self, uint32_t encoding) {
+libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_query_items1(const void* self, uint32_t encoding) {
     libqt_list _arr = QUrlQuery_QueryItems1((QUrlQuery*)self, encoding);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -159,14 +159,14 @@ libqt_list /* of libqt_pair tuple of const char* and const char* */ q_urlquery_q
     return _arr;
 }
 
-const char* q_urlquery_query_item_value2(void* self, const char* key, uint32_t encoding) {
+const char* q_urlquery_query_item_value2(const void* self, const char* key, uint32_t encoding) {
     libqt_string _str = QUrlQuery_QueryItemValue2((QUrlQuery*)self, qstring(key), encoding);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_urlquery_all_query_item_values2(void* self, const char* key, uint32_t encoding) {
+const char** q_urlquery_all_query_item_values2(const void* self, const char* key, uint32_t encoding) {
     libqt_list _arr = QUrlQuery_AllQueryItemValues2((QUrlQuery*)self, qstring(key), encoding);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

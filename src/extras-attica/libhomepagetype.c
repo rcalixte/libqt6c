@@ -5,15 +5,15 @@ Attica__HomePageType* k_attica__homepagetype_new() {
     return Attica__HomePageType_New();
 }
 
-Attica__HomePageType* k_attica__homepagetype_new2(void* other) {
+Attica__HomePageType* k_attica__homepagetype_new2(const void* other) {
     return Attica__HomePageType_New2((Attica__HomePageType*)other);
 }
 
-void k_attica__homepagetype_operator_assign(void* self, void* other) {
+void k_attica__homepagetype_operator_assign(void* self, const void* other) {
     Attica__HomePageType_OperatorAssign((Attica__HomePageType*)self, (Attica__HomePageType*)other);
 }
 
-uint32_t k_attica__homepagetype_id(void* self) {
+uint32_t k_attica__homepagetype_id(const void* self) {
     return Attica__HomePageType_Id((Attica__HomePageType*)self);
 }
 
@@ -21,7 +21,7 @@ void k_attica__homepagetype_set_id(void* self, uint32_t id) {
     Attica__HomePageType_SetId((Attica__HomePageType*)self, id);
 }
 
-const char* k_attica__homepagetype_name(void* self) {
+const char* k_attica__homepagetype_name(const void* self) {
     libqt_string _str = Attica__HomePageType_Name((Attica__HomePageType*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

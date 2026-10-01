@@ -20,14 +20,14 @@ QPlaceMatchRequest* q_placematchrequest_new();
 ///
 /// @param other QPlaceMatchRequest*
 ///
-QPlaceMatchRequest* q_placematchrequest_new2(void* other);
+QPlaceMatchRequest* q_placematchrequest_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#operator-eq)
 ///
 /// @param self QPlaceMatchRequest*
 /// @param other QPlaceMatchRequest*
 ///
-void q_placematchrequest_operator_assign(void* self, void* other);
+void q_placematchrequest_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#swap)
 ///
@@ -38,11 +38,11 @@ void q_placematchrequest_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#places)
 ///
-/// @param self QPlaceMatchRequest*
+/// @param self const QPlaceMatchRequest*
 ///
 /// @return libqt_list of QPlace*
 ///
-libqt_list q_placematchrequest_places(void* self);
+libqt_list q_placematchrequest_places(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#setPlaces)
 ///
@@ -72,11 +72,11 @@ void q_placematchrequest_set_results(void* self, libqt_list results);
 /// free(map.values);
 /// ```
 ///
-/// @param self QPlaceMatchRequest*
+/// @param self const QPlaceMatchRequest*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map q_placematchrequest_parameters(void* self);
+libqt_map q_placematchrequest_parameters(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacematchrequest.html#setParameters)
 ///

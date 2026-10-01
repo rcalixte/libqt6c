@@ -14,7 +14,7 @@
 ///
 /// @param param1 KColorScheme*
 ///
-KColorScheme* k_colorscheme_new(void* param1);
+KColorScheme* k_colorscheme_new(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html)
 
@@ -44,33 +44,33 @@ KColorScheme* k_colorscheme_new4(int32_t param1, int32_t param2);
 /// @param self KColorScheme*
 /// @param param1 KColorScheme*
 ///
-void k_colorscheme_operator_assign(void* self, void* param1);
+void k_colorscheme_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#background)
 ///
-/// @param self KColorScheme*
+/// @param self const KColorScheme*
 ///
-QBrush* k_colorscheme_background(void* self);
+QBrush* k_colorscheme_background(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#foreground)
 ///
-/// @param self KColorScheme*
+/// @param self const KColorScheme*
 ///
-QBrush* k_colorscheme_foreground(void* self);
+QBrush* k_colorscheme_foreground(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#decoration)
 ///
-/// @param self KColorScheme*
+/// @param self const KColorScheme*
 /// @param param1 enum KColorScheme__DecorationRole
 ///
-QBrush* k_colorscheme_decoration(void* self, int32_t param1);
+QBrush* k_colorscheme_decoration(const void* self, int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#shade)
 ///
-/// @param self KColorScheme*
+/// @param self const KColorScheme*
 /// @param param1 enum KColorScheme__ShadeRole
 ///
-QColor* k_colorscheme_shade(void* self, int32_t param1);
+QColor* k_colorscheme_shade(const void* self, int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#contrastF)
 ///
@@ -81,7 +81,7 @@ double k_colorscheme_contrast_f();
 /// @param param1 QColor*
 /// @param param2 enum KColorScheme__ShadeRole
 ///
-QColor* k_colorscheme_shade2(void* param1, int32_t param2);
+QColor* k_colorscheme_shade2(const void* param1, int32_t param2);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#shade)
 ///
@@ -89,7 +89,7 @@ QColor* k_colorscheme_shade2(void* param1, int32_t param2);
 /// @param param2 enum KColorScheme__ShadeRole
 /// @param contrast double
 ///
-QColor* k_colorscheme_shade3(void* param1, int32_t param2, double contrast);
+QColor* k_colorscheme_shade3(const void* param1, int32_t param2, double contrast);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#adjustBackground)
 ///
@@ -105,24 +105,24 @@ void k_colorscheme_adjust_foreground(void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#operator-eq-eq)
 ///
-/// @param self KColorScheme*
+/// @param self const KColorScheme*
 /// @param other KColorScheme*
 ///
-bool k_colorscheme_operator_equal(void* self, void* other);
+bool k_colorscheme_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#background)
 ///
-/// @param self KColorScheme*
+/// @param self const KColorScheme*
 /// @param param1 enum KColorScheme__BackgroundRole
 ///
-QBrush* k_colorscheme_background1(void* self, int32_t param1);
+QBrush* k_colorscheme_background1(const void* self, int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#foreground)
 ///
-/// @param self KColorScheme*
+/// @param self const KColorScheme*
 /// @param param1 enum KColorScheme__ForegroundRole
 ///
-QBrush* k_colorscheme_foreground1(void* self, int32_t param1);
+QBrush* k_colorscheme_foreground1(const void* self, int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#shade)
 ///
@@ -131,7 +131,7 @@ QBrush* k_colorscheme_foreground1(void* self, int32_t param1);
 /// @param contrast double
 /// @param chromaAdjust double
 ///
-QColor* k_colorscheme_shade4(void* param1, int32_t param2, double contrast, double chromaAdjust);
+QColor* k_colorscheme_shade4(const void* param1, int32_t param2, double contrast, double chromaAdjust);
 
 /// [Upstream resources](https://api.kde.org/kcolorscheme.html#adjustBackground)
 ///

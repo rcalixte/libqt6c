@@ -7,7 +7,7 @@ QSqlIndex* q_sqlindex_new() {
     return QSqlIndex_New();
 }
 
-QSqlIndex* q_sqlindex_new2(void* other) {
+QSqlIndex* q_sqlindex_new2(const void* other) {
     return QSqlIndex_New2((QSqlIndex*)other);
 }
 
@@ -19,7 +19,7 @@ QSqlIndex* q_sqlindex_new4(const char* cursorName, const char* name) {
     return QSqlIndex_New4(qstring(cursorName), qstring(name));
 }
 
-void q_sqlindex_operator_assign(void* self, void* other) {
+void q_sqlindex_operator_assign(void* self, const void* other) {
     QSqlIndex_OperatorAssign((QSqlIndex*)self, (QSqlIndex*)other);
 }
 
@@ -31,7 +31,7 @@ void q_sqlindex_set_cursor_name(void* self, const char* cursorName) {
     QSqlIndex_SetCursorName((QSqlIndex*)self, qstring(cursorName));
 }
 
-const char* q_sqlindex_cursor_name(void* self) {
+const char* q_sqlindex_cursor_name(const void* self) {
     libqt_string _str = QSqlIndex_CursorName((QSqlIndex*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -42,22 +42,22 @@ void q_sqlindex_set_name(void* self, const char* name) {
     QSqlIndex_SetName((QSqlIndex*)self, qstring(name));
 }
 
-const char* q_sqlindex_name(void* self) {
+const char* q_sqlindex_name(const void* self) {
     libqt_string _str = QSqlIndex_Name((QSqlIndex*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_sqlindex_append(void* self, void* field) {
+void q_sqlindex_append(void* self, const void* field) {
     QSqlIndex_Append((QSqlIndex*)self, (QSqlField*)field);
 }
 
-void q_sqlindex_append2(void* self, void* field, bool desc) {
+void q_sqlindex_append2(void* self, const void* field, bool desc) {
     QSqlIndex_Append2((QSqlIndex*)self, (QSqlField*)field, desc);
 }
 
-bool q_sqlindex_is_descending(void* self, int i) {
+bool q_sqlindex_is_descending(const void* self, int i) {
     return QSqlIndex_IsDescending((QSqlIndex*)self, i);
 }
 
@@ -65,27 +65,27 @@ void q_sqlindex_set_descending(void* self, int i, bool desc) {
     QSqlIndex_SetDescending((QSqlIndex*)self, i, desc);
 }
 
-bool q_sqlindex_operator_equal(void* self, void* other) {
+bool q_sqlindex_operator_equal(const void* self, const void* other) {
     return QSqlRecord_OperatorEqual((QSqlRecord*)self, (QSqlRecord*)other);
 }
 
-bool q_sqlindex_operator_not_equal(void* self, void* other) {
+bool q_sqlindex_operator_not_equal(const void* self, const void* other) {
     return QSqlRecord_OperatorNotEqual((QSqlRecord*)self, (QSqlRecord*)other);
 }
 
-QVariant* q_sqlindex_value(void* self, int i) {
+QVariant* q_sqlindex_value(const void* self, int i) {
     return QSqlRecord_Value((QSqlRecord*)self, i);
 }
 
-QVariant* q_sqlindex_value2(void* self, const char* name) {
+QVariant* q_sqlindex_value2(const void* self, const char* name) {
     return QSqlRecord_Value2((QSqlRecord*)self, name);
 }
 
-void q_sqlindex_set_value(void* self, int i, void* val) {
+void q_sqlindex_set_value(void* self, int i, const void* val) {
     QSqlRecord_SetValue((QSqlRecord*)self, i, (QVariant*)val);
 }
 
-void q_sqlindex_set_value2(void* self, const char* name, void* val) {
+void q_sqlindex_set_value2(void* self, const char* name, const void* val) {
     QSqlRecord_SetValue2((QSqlRecord*)self, name, (QVariant*)val);
 }
 
@@ -97,38 +97,38 @@ void q_sqlindex_set_null2(void* self, const char* name) {
     QSqlRecord_SetNull2((QSqlRecord*)self, name);
 }
 
-bool q_sqlindex_is_null(void* self, int i) {
+bool q_sqlindex_is_null(const void* self, int i) {
     return QSqlRecord_IsNull((QSqlRecord*)self, i);
 }
 
-bool q_sqlindex_is_null2(void* self, const char* name) {
+bool q_sqlindex_is_null2(const void* self, const char* name) {
     return QSqlRecord_IsNull2((QSqlRecord*)self, name);
 }
 
-int32_t q_sqlindex_index_of(void* self, const char* name) {
+int32_t q_sqlindex_index_of(const void* self, const char* name) {
     return QSqlRecord_IndexOf((QSqlRecord*)self, name);
 }
 
-const char* q_sqlindex_field_name(void* self, int i) {
+const char* q_sqlindex_field_name(const void* self, int i) {
     libqt_string _str = QSqlRecord_FieldName((QSqlRecord*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QSqlField* q_sqlindex_field(void* self, int i) {
+QSqlField* q_sqlindex_field(const void* self, int i) {
     return QSqlRecord_Field((QSqlRecord*)self, i);
 }
 
-QSqlField* q_sqlindex_field2(void* self, const char* name) {
+QSqlField* q_sqlindex_field2(const void* self, const char* name) {
     return QSqlRecord_Field2((QSqlRecord*)self, name);
 }
 
-bool q_sqlindex_is_generated(void* self, int i) {
+bool q_sqlindex_is_generated(const void* self, int i) {
     return QSqlRecord_IsGenerated((QSqlRecord*)self, i);
 }
 
-bool q_sqlindex_is_generated2(void* self, const char* name) {
+bool q_sqlindex_is_generated2(const void* self, const char* name) {
     return QSqlRecord_IsGenerated2((QSqlRecord*)self, name);
 }
 
@@ -140,11 +140,11 @@ void q_sqlindex_set_generated2(void* self, int i, bool generated) {
     QSqlRecord_SetGenerated2((QSqlRecord*)self, i, generated);
 }
 
-void q_sqlindex_replace(void* self, int pos, void* field) {
+void q_sqlindex_replace(void* self, int pos, const void* field) {
     QSqlRecord_Replace((QSqlRecord*)self, pos, (QSqlField*)field);
 }
 
-void q_sqlindex_insert(void* self, int pos, void* field) {
+void q_sqlindex_insert(void* self, int pos, const void* field) {
     QSqlRecord_Insert((QSqlRecord*)self, pos, (QSqlField*)field);
 }
 
@@ -152,11 +152,11 @@ void q_sqlindex_remove(void* self, int pos) {
     QSqlRecord_Remove((QSqlRecord*)self, pos);
 }
 
-bool q_sqlindex_is_empty(void* self) {
+bool q_sqlindex_is_empty(const void* self) {
     return QSqlRecord_IsEmpty((QSqlRecord*)self);
 }
 
-bool q_sqlindex_contains(void* self, const char* name) {
+bool q_sqlindex_contains(const void* self, const char* name) {
     return QSqlRecord_Contains((QSqlRecord*)self, name);
 }
 
@@ -168,11 +168,11 @@ void q_sqlindex_clear_values(void* self) {
     QSqlRecord_ClearValues((QSqlRecord*)self);
 }
 
-int32_t q_sqlindex_count(void* self) {
+int32_t q_sqlindex_count(const void* self) {
     return QSqlRecord_Count((QSqlRecord*)self);
 }
 
-QSqlRecord* q_sqlindex_key_values(void* self, void* keyFields) {
+QSqlRecord* q_sqlindex_key_values(const void* self, const void* keyFields) {
     return QSqlRecord_KeyValues((QSqlRecord*)self, (QSqlRecord*)keyFields);
 }
 

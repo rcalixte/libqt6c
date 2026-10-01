@@ -16,26 +16,26 @@ KNSCore__Provider* k_nscore__provider_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const QMetaObject* k_nscore__provider_meta_object(void* self);
+const QMetaObject* k_nscore__provider_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNSCore__Provider*
-/// @param callback const QMetaObject* func()
+/// @param self const KNSCore__Provider*
+/// @param callback const QMetaObject* func(const KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_nscore__provider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const QMetaObject* k_nscore__provider_super_meta_object(void* self);
+const QMetaObject* k_nscore__provider_super_meta_object(const void* self);
 
 /// @param self KNSCore__Provider*
 /// @param param1 const char*
@@ -89,35 +89,31 @@ const char* k_nscore__provider_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#id)
 ///
+/// @warning This method must be implemented with `k_nscore__provider_on_id` before it can be called.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char* k_nscore__provider_id(void* self);
+const char* k_nscore__provider_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#id)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNSCore__Provider*
-/// @param callback const char* func()
+/// @param self const KNSCore__Provider*
+/// @param callback const char* func(const KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_id(void* self, const char* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#id)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__Provider*
-///
-const char* k_nscore__provider_super_id(void* self);
+void k_nscore__provider_on_id(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setProviderXML)
+///
+/// @warning This method must be implemented with `k_nscore__provider_on_set_provider_x_m_l` before it can be called.
 ///
 /// @param self KNSCore__Provider*
 /// @param xmldata QDomElement*
 ///
-bool k_nscore__provider_set_provider_x_m_l(void* self, void* xmldata);
+bool k_nscore__provider_set_provider_x_m_l(void* self, const void* xmldata);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setProviderXML)
 ///
@@ -126,41 +122,28 @@ bool k_nscore__provider_set_provider_x_m_l(void* self, void* xmldata);
 /// @param self KNSCore__Provider*
 /// @param callback bool func(KNSCore__Provider* self, QDomElement* xmldata)
 ///
-void k_nscore__provider_on_set_provider_x_m_l(void* self, bool (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#setProviderXML)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__Provider*
-/// @param xmldata QDomElement*
-///
-bool k_nscore__provider_super_set_provider_x_m_l(void* self, void* xmldata);
+void k_nscore__provider_on_set_provider_x_m_l(void* self, bool (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#isInitialized)
 ///
-/// @param self KNSCore__Provider*
+/// @warning This method must be implemented with `k_nscore__provider_on_is_initialized` before it can be called.
 ///
-bool k_nscore__provider_is_initialized(void* self);
+/// @param self const KNSCore__Provider*
+///
+bool k_nscore__provider_is_initialized(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#isInitialized)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNSCore__Provider*
-/// @param callback bool func()
+/// @param self const KNSCore__Provider*
+/// @param callback bool func(const KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_is_initialized(void* self, bool (*callback)());
-
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#isInitialized)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__Provider*
-///
-bool k_nscore__provider_super_is_initialized(void* self);
+void k_nscore__provider_on_is_initialized(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setCachedEntries)
+///
+/// @warning This method must be implemented with `k_nscore__provider_on_set_cached_entries` before it can be called.
 ///
 /// @param self KNSCore__Provider*
 /// @param cachedEntries libqt_list of KNSCore__Entry*
@@ -176,71 +159,64 @@ void k_nscore__provider_set_cached_entries(void* self, libqt_list cachedEntries)
 ///
 void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*, libqt_list));
 
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#setCachedEntries)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__Provider*
-/// @param cachedEntries libqt_list of KNSCore__Entry*
-///
-void k_nscore__provider_super_set_cached_entries(void* self, libqt_list cachedEntries);
-
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char* k_nscore__provider_name(void* self);
+const char* k_nscore__provider_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#name)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNSCore__Provider*
-/// @param callback const char* func()
+/// @param self const KNSCore__Provider*
+/// @param callback const char* func(const KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_name(void* self, const char* (*callback)());
+void k_nscore__provider_on_name(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#name)
 ///
 /// Base class method implementation
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char* k_nscore__provider_super_name(void* self);
+const char* k_nscore__provider_super_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#icon)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-QUrl* k_nscore__provider_icon(void* self);
+QUrl* k_nscore__provider_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#icon)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNSCore__Provider*
-/// @param callback QUrl* func()
+/// @param self const KNSCore__Provider*
+/// @param callback QUrl* func(const KNSCore__Provider* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_nscore__provider_on_icon(void* self, QUrl* (*callback)());
+void k_nscore__provider_on_icon(const void* self, QUrl* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#icon)
 ///
 /// Base class method implementation
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-QUrl* k_nscore__provider_super_icon(void* self);
+QUrl* k_nscore__provider_super_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntries)
+///
+/// @warning This method must be implemented with `k_nscore__provider_on_load_entries` before it can be called.
 ///
 /// @param self KNSCore__Provider*
 /// @param request KNSCore__Provider__SearchRequest*
 ///
-void k_nscore__provider_load_entries(void* self, void* request);
+void k_nscore__provider_load_entries(void* self, const void* request);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntries)
 ///
@@ -249,23 +225,14 @@ void k_nscore__provider_load_entries(void* self, void* request);
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Provider__SearchRequest* request)
 ///
-void k_nscore__provider_on_load_entries(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntries)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__Provider*
-/// @param request KNSCore__Provider__SearchRequest*
-///
-void k_nscore__provider_super_load_entries(void* self, void* request);
+void k_nscore__provider_on_load_entries(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntryDetails)
 ///
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Entry*
 ///
-void k_nscore__provider_load_entry_details(void* self, void* param1);
+void k_nscore__provider_load_entry_details(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntryDetails)
 ///
@@ -274,7 +241,7 @@ void k_nscore__provider_load_entry_details(void* self, void* param1);
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Entry* param1)
 ///
-void k_nscore__provider_on_load_entry_details(void* self, void (*callback)(void*, void*));
+void k_nscore__provider_on_load_entry_details(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntryDetails)
 ///
@@ -283,15 +250,17 @@ void k_nscore__provider_on_load_entry_details(void* self, void (*callback)(void*
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Entry*
 ///
-void k_nscore__provider_super_load_entry_details(void* self, void* param1);
+void k_nscore__provider_super_load_entry_details(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadPayloadLink)
+///
+/// @warning This method must be implemented with `k_nscore__provider_on_load_payload_link` before it can be called.
 ///
 /// @param self KNSCore__Provider*
 /// @param entry KNSCore__Entry*
 /// @param linkId int
 ///
-void k_nscore__provider_load_payload_link(void* self, void* entry, int linkId);
+void k_nscore__provider_load_payload_link(void* self, const void* entry, int linkId);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadPayloadLink)
 ///
@@ -300,17 +269,7 @@ void k_nscore__provider_load_payload_link(void* self, void* entry, int linkId);
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Entry* entry, int linkId)
 ///
-void k_nscore__provider_on_load_payload_link(void* self, void (*callback)(void*, void*, int));
-
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#loadPayloadLink)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__Provider*
-/// @param entry KNSCore__Entry*
-/// @param linkId int
-///
-void k_nscore__provider_super_load_payload_link(void* self, void* entry, int linkId);
+void k_nscore__provider_on_load_payload_link(void* self, void (*callback)(void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadComments)
 ///
@@ -319,7 +278,7 @@ void k_nscore__provider_super_load_payload_link(void* self, void* entry, int lin
 /// @param param2 int
 /// @param param3 int
 ///
-void k_nscore__provider_load_comments(void* self, void* param1, int param2, int param3);
+void k_nscore__provider_load_comments(void* self, const void* param1, int param2, int param3);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadComments)
 ///
@@ -328,7 +287,7 @@ void k_nscore__provider_load_comments(void* self, void* param1, int param2, int 
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Entry* param1, int param2, int param3)
 ///
-void k_nscore__provider_on_load_comments(void* self, void (*callback)(void*, void*, int, int));
+void k_nscore__provider_on_load_comments(void* self, void (*callback)(void*, const void*, int, int));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadComments)
 ///
@@ -339,7 +298,7 @@ void k_nscore__provider_on_load_comments(void* self, void (*callback)(void*, voi
 /// @param param2 int
 /// @param param3 int
 ///
-void k_nscore__provider_super_load_comments(void* self, void* param1, int param2, int param3);
+void k_nscore__provider_super_load_comments(void* self, const void* param1, int param2, int param3);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadPerson)
 ///
@@ -377,9 +336,9 @@ void k_nscore__provider_load_basics(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KNSCore__Provider*
-/// @param callback void func()
+/// @param callback void func(KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_load_basics(void* self, void (*callback)());
+void k_nscore__provider_on_load_basics(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadBasics)
 ///
@@ -393,9 +352,9 @@ void k_nscore__provider_super_load_basics(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char* k_nscore__provider_version(void* self);
+const char* k_nscore__provider_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setVersion)
 ///
@@ -406,37 +365,37 @@ void k_nscore__provider_set_version(void* self, const char* version);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#website)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-QUrl* k_nscore__provider_website(void* self);
+QUrl* k_nscore__provider_website(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setWebsite)
 ///
 /// @param self KNSCore__Provider*
 /// @param website QUrl*
 ///
-void k_nscore__provider_set_website(void* self, void* website);
+void k_nscore__provider_set_website(void* self, const void* website);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#host)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-QUrl* k_nscore__provider_host(void* self);
+QUrl* k_nscore__provider_host(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setHost)
 ///
 /// @param self KNSCore__Provider*
 /// @param host QUrl*
 ///
-void k_nscore__provider_set_host(void* self, void* host);
+void k_nscore__provider_set_host(void* self, const void* host);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#contactEmail)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char* k_nscore__provider_contact_email(void* self);
+const char* k_nscore__provider_contact_email(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setContactEmail)
 ///
@@ -447,9 +406,9 @@ void k_nscore__provider_set_contact_email(void* self, const char* contactEmail);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#supportsSsl)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-bool k_nscore__provider_supports_ssl(void* self);
+bool k_nscore__provider_supports_ssl(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setSupportsSsl)
 ///
@@ -469,9 +428,9 @@ bool k_nscore__provider_user_can_vote(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KNSCore__Provider*
-/// @param callback bool func()
+/// @param callback bool func(KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_user_can_vote(void* self, bool (*callback)());
+void k_nscore__provider_on_user_can_vote(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#userCanVote)
 ///
@@ -487,7 +446,7 @@ bool k_nscore__provider_super_user_can_vote(void* self);
 /// @param param1 KNSCore__Entry*
 /// @param param2 uint32_t
 ///
-void k_nscore__provider_vote(void* self, void* param1, uint32_t param2);
+void k_nscore__provider_vote(void* self, const void* param1, uint32_t param2);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#vote)
 ///
@@ -496,7 +455,7 @@ void k_nscore__provider_vote(void* self, void* param1, uint32_t param2);
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Entry* param1, uint32_t param2)
 ///
-void k_nscore__provider_on_vote(void* self, void (*callback)(void*, void*, uint32_t));
+void k_nscore__provider_on_vote(void* self, void (*callback)(void*, const void*, uint32_t));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#vote)
 ///
@@ -506,7 +465,7 @@ void k_nscore__provider_on_vote(void* self, void (*callback)(void*, void*, uint3
 /// @param param1 KNSCore__Entry*
 /// @param param2 uint32_t
 ///
-void k_nscore__provider_super_vote(void* self, void* param1, uint32_t param2);
+void k_nscore__provider_super_vote(void* self, const void* param1, uint32_t param2);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#userCanBecomeFan)
 ///
@@ -519,9 +478,9 @@ bool k_nscore__provider_user_can_become_fan(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KNSCore__Provider*
-/// @param callback bool func()
+/// @param callback bool func(KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_user_can_become_fan(void* self, bool (*callback)());
+void k_nscore__provider_on_user_can_become_fan(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#userCanBecomeFan)
 ///
@@ -536,7 +495,7 @@ bool k_nscore__provider_super_user_can_become_fan(void* self);
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Entry*
 ///
-void k_nscore__provider_become_fan(void* self, void* param1);
+void k_nscore__provider_become_fan(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#becomeFan)
 ///
@@ -545,7 +504,7 @@ void k_nscore__provider_become_fan(void* self, void* param1);
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Entry* param1)
 ///
-void k_nscore__provider_on_become_fan(void* self, void (*callback)(void*, void*));
+void k_nscore__provider_on_become_fan(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#becomeFan)
 ///
@@ -554,7 +513,7 @@ void k_nscore__provider_on_become_fan(void* self, void (*callback)(void*, void*)
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Entry*
 ///
-void k_nscore__provider_super_become_fan(void* self, void* param1);
+void k_nscore__provider_super_become_fan(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setTagFilter)
 ///
@@ -567,9 +526,9 @@ void k_nscore__provider_set_tag_filter(void* self, const char* tagFilter[static 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char** k_nscore__provider_tag_filter(void* self);
+const char** k_nscore__provider_tag_filter(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setDownloadTagFilter)
 ///
@@ -582,9 +541,9 @@ void k_nscore__provider_set_download_tag_filter(void* self, const char* download
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char** k_nscore__provider_download_tag_filter(void* self);
+const char** k_nscore__provider_download_tag_filter(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#providerInitialized)
 ///
@@ -606,56 +565,56 @@ void k_nscore__provider_on_provider_initialized(void* self, void (*callback)(voi
 /// @param param1 KNSCore__Provider__SearchRequest*
 /// @param param2 libqt_list of KNSCore__Entry*
 ///
-void k_nscore__provider_loading_finished(void* self, void* param1, libqt_list param2);
+void k_nscore__provider_loading_finished(void* self, const void* param1, libqt_list param2);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadingFinished)
 ///
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Provider__SearchRequest* param1, libqt_list of KNSCore__Entry* param2)
 ///
-void k_nscore__provider_on_loading_finished(void* self, void (*callback)(void*, void*, libqt_list));
+void k_nscore__provider_on_loading_finished(void* self, void (*callback)(void*, const void*, libqt_list));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadingFailed)
 ///
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Provider__SearchRequest*
 ///
-void k_nscore__provider_loading_failed(void* self, void* param1);
+void k_nscore__provider_loading_failed(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadingFailed)
 ///
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Provider__SearchRequest* param1)
 ///
-void k_nscore__provider_on_loading_failed(void* self, void (*callback)(void*, void*));
+void k_nscore__provider_on_loading_failed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#entryDetailsLoaded)
 ///
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Entry*
 ///
-void k_nscore__provider_entry_details_loaded(void* self, void* param1);
+void k_nscore__provider_entry_details_loaded(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#entryDetailsLoaded)
 ///
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Entry* param1)
 ///
-void k_nscore__provider_on_entry_details_loaded(void* self, void (*callback)(void*, void*));
+void k_nscore__provider_on_entry_details_loaded(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#payloadLinkLoaded)
 ///
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Entry*
 ///
-void k_nscore__provider_payload_link_loaded(void* self, void* param1);
+void k_nscore__provider_payload_link_loaded(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#payloadLinkLoaded)
 ///
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, KNSCore__Entry* param1)
 ///
-void k_nscore__provider_on_payload_link_loaded(void* self, void (*callback)(void*, void*));
+void k_nscore__provider_on_payload_link_loaded(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#basicsLoaded)
 ///
@@ -719,14 +678,14 @@ void k_nscore__provider_on_signal_error(void* self, void (*callback)(void*, cons
 /// @param message const char*
 /// @param metadata QVariant*
 ///
-void k_nscore__provider_signal_error_code(void* self, int32_t errorCode, const char* message, void* metadata);
+void k_nscore__provider_signal_error_code(void* self, int32_t errorCode, const char* message, const void* metadata);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#signalErrorCode)
 ///
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, enum KNSCore__ErrorCode__ErrorCode errorCode, const char* message, QVariant* metadata)
 ///
-void k_nscore__provider_on_signal_error_code(void* self, void (*callback)(void*, int32_t, const char*, void*));
+void k_nscore__provider_on_signal_error_code(void* self, void (*callback)(void*, int32_t, const char*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#categoriesMetadataLoded)
 ///
@@ -775,48 +734,12 @@ void k_nscore__provider_on_download_tag_filter_changed(void* self, void (*callba
 ///
 void k_nscore__provider_set_name(void* self, const char* name);
 
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#setName)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KNSCore__Provider*
-/// @param callback void func(KNSCore__Provider* self, const char* name)
-///
-void k_nscore__provider_on_set_name(void* self, void (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#setName)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__Provider*
-/// @param name const char*
-///
-void k_nscore__provider_super_set_name(void* self, const char* name);
-
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setIcon)
 ///
 /// @param self KNSCore__Provider*
 /// @param icon QUrl*
 ///
-void k_nscore__provider_set_icon(void* self, void* icon);
-
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#setIcon)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KNSCore__Provider*
-/// @param callback void func(KNSCore__Provider* self, QUrl* icon)
-///
-void k_nscore__provider_on_set_icon(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/knscore-provider.html#setIcon)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__Provider*
-/// @param icon QUrl*
-///
-void k_nscore__provider_super_set_icon(void* self, void* icon);
+void k_nscore__provider_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -843,9 +766,9 @@ const char* k_nscore__provider_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char* k_nscore__provider_object_name(void* self);
+const char* k_nscore__provider_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -860,33 +783,33 @@ void k_nscore__provider_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-bool k_nscore__provider_is_widget_type(void* self);
+bool k_nscore__provider_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-bool k_nscore__provider_is_window_type(void* self);
+bool k_nscore__provider_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-bool k_nscore__provider_is_quick_item_type(void* self);
+bool k_nscore__provider_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-bool k_nscore__provider_signals_blocked(void* self);
+bool k_nscore__provider_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -901,9 +824,9 @@ bool k_nscore__provider_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-QThread* k_nscore__provider_thread(void* self);
+QThread* k_nscore__provider_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -954,11 +877,11 @@ void k_nscore__provider_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_nscore__provider_children(void* self);
+libqt_list k_nscore__provider_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -996,7 +919,7 @@ void k_nscore__provider_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_nscore__provider_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_nscore__provider_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1007,18 +930,18 @@ QMetaObject__Connection* k_nscore__provider_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_nscore__provider_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_nscore__provider_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_nscore__provider_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_nscore__provider_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1029,7 +952,7 @@ QMetaObject__Connection* k_nscore__provider_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_nscore__provider_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_nscore__provider_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1040,24 +963,24 @@ bool k_nscore__provider_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_nscore__provider_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_nscore__provider_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-bool k_nscore__provider_disconnect3(void* self);
+bool k_nscore__provider_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param receiver QObject*
 ///
-bool k_nscore__provider_disconnect4(void* self, void* receiver);
+bool k_nscore__provider_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1065,23 +988,23 @@ bool k_nscore__provider_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_nscore__provider_disconnect5(void* param1);
+bool k_nscore__provider_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-void k_nscore__provider_dump_object_tree(void* self);
+void k_nscore__provider_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-void k_nscore__provider_dump_object_info(void* self);
+void k_nscore__provider_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1091,16 +1014,16 @@ void k_nscore__provider_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_nscore__provider_set_property(void* self, const char* name, void* value);
+bool k_nscore__provider_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param name const char*
 ///
-QVariant* k_nscore__provider_property(void* self, const char* name);
+QVariant* k_nscore__provider_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1108,9 +1031,9 @@ QVariant* k_nscore__provider_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const char** k_nscore__provider_dynamic_property_names(void* self);
+const char** k_nscore__provider_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1124,9 +1047,9 @@ QBindingStorage* k_nscore__provider_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-const QBindingStorage* k_nscore__provider_binding_storage2(void* self);
+const QBindingStorage* k_nscore__provider_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1149,18 +1072,18 @@ void k_nscore__provider_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-QObject* k_nscore__provider_parent(void* self);
+QObject* k_nscore__provider_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param classname const char*
 ///
-bool k_nscore__provider_inherits(void* self, const char* classname);
+bool k_nscore__provider_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1200,7 +1123,7 @@ int32_t k_nscore__provider_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_nscore__provider_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_nscore__provider_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1212,59 +1135,59 @@ QMetaObject__Connection* k_nscore__provider_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_nscore__provider_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_nscore__provider_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_nscore__provider_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_nscore__provider_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param signal const char*
 ///
-bool k_nscore__provider_disconnect1(void* self, const char* signal);
+bool k_nscore__provider_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__Provider*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_nscore__provider_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_nscore__provider_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_nscore__provider_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_nscore__provider_disconnect23(void* self, void* receiver, const char* member);
+bool k_nscore__provider_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KNSCore__Provider*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_nscore__provider_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1460,7 +1383,7 @@ void k_nscore__provider_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__provider_connect_notify(void* self, void* signal);
+void k_nscore__provider_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1471,7 +1394,7 @@ void k_nscore__provider_connect_notify(void* self, void* signal);
 /// @param self KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__provider_super_connect_notify(void* self, void* signal);
+void k_nscore__provider_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1482,7 +1405,7 @@ void k_nscore__provider_super_connect_notify(void* self, void* signal);
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, QMetaMethod* signal)
 ///
-void k_nscore__provider_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_nscore__provider_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1493,7 +1416,7 @@ void k_nscore__provider_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__provider_disconnect_notify(void* self, void* signal);
+void k_nscore__provider_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1504,7 +1427,7 @@ void k_nscore__provider_disconnect_notify(void* self, void* signal);
 /// @param self KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__provider_super_disconnect_notify(void* self, void* signal);
+void k_nscore__provider_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1515,7 +1438,7 @@ void k_nscore__provider_super_disconnect_notify(void* self, void* signal);
 /// @param self KNSCore__Provider*
 /// @param callback void func(KNSCore__Provider* self, QMetaMethod* signal)
 ///
-void k_nscore__provider_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_nscore__provider_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1523,9 +1446,9 @@ void k_nscore__provider_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-QObject* k_nscore__provider_sender(void* self);
+QObject* k_nscore__provider_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1533,9 +1456,9 @@ QObject* k_nscore__provider_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-QObject* k_nscore__provider_super_sender(void* self);
+QObject* k_nscore__provider_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1543,10 +1466,10 @@ QObject* k_nscore__provider_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNSCore__Provider*
-/// @param callback QObject* func()
+/// @param self const KNSCore__Provider*
+/// @param callback QObject* func(KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_sender(void* self, QObject* (*callback)());
+void k_nscore__provider_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1554,9 +1477,9 @@ void k_nscore__provider_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-int32_t k_nscore__provider_sender_signal_index(void* self);
+int32_t k_nscore__provider_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1564,9 +1487,9 @@ int32_t k_nscore__provider_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 ///
-int32_t k_nscore__provider_super_sender_signal_index(void* self);
+int32_t k_nscore__provider_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1574,10 +1497,10 @@ int32_t k_nscore__provider_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNSCore__Provider*
-/// @param callback int32_t func()
+/// @param self const KNSCore__Provider*
+/// @param callback int32_t func(KNSCore__Provider* self)
 ///
-void k_nscore__provider_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_nscore__provider_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1585,10 +1508,10 @@ void k_nscore__provider_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param signal const char*
 ///
-int32_t k_nscore__provider_receivers(void* self, const char* signal);
+int32_t k_nscore__provider_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1596,10 +1519,10 @@ int32_t k_nscore__provider_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param signal const char*
 ///
-int32_t k_nscore__provider_super_receivers(void* self, const char* signal);
+int32_t k_nscore__provider_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1607,10 +1530,10 @@ int32_t k_nscore__provider_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param callback int32_t func(KNSCore__Provider* self, const char* signal)
 ///
-void k_nscore__provider_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_nscore__provider_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1618,10 +1541,10 @@ void k_nscore__provider_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-bool k_nscore__provider_is_signal_connected(void* self, void* signal);
+bool k_nscore__provider_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1629,10 +1552,10 @@ bool k_nscore__provider_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-bool k_nscore__provider_super_is_signal_connected(void* self, void* signal);
+bool k_nscore__provider_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1640,10 +1563,10 @@ bool k_nscore__provider_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNSCore__Provider*
+/// @param self const KNSCore__Provider*
 /// @param callback bool func(KNSCore__Provider* self, QMetaMethod* signal)
 ///
-void k_nscore__provider_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_nscore__provider_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1674,7 +1597,7 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new();
 ///
 /// @param param1 KNSCore__Provider__SearchRequest*
 ///
-KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new2(void* param1);
+KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html)
 
@@ -1741,11 +1664,11 @@ KNSCore__Provider__SearchRequest* k_nscore__provider__searchrequest_new8(int32_t
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#sortMode-var)
 ///
-/// @param self KNSCore__Provider__SearchRequest*
+/// @param self const KNSCore__Provider__SearchRequest*
 ///
 /// @return enum KNSCore__Provider__SortMode
 ///
-int32_t k_nscore__provider__searchrequest_sort_mode(void* self);
+int32_t k_nscore__provider__searchrequest_sort_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#sortMode-var)
 ///
@@ -1756,11 +1679,11 @@ void k_nscore__provider__searchrequest_set_sort_mode(void* self, int32_t sortMod
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#filter-var)
 ///
-/// @param self KNSCore__Provider__SearchRequest*
+/// @param self const KNSCore__Provider__SearchRequest*
 ///
 /// @return enum KNSCore__Provider__Filter
 ///
-int32_t k_nscore__provider__searchrequest_filter(void* self);
+int32_t k_nscore__provider__searchrequest_filter(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#filter-var)
 ///
@@ -1773,9 +1696,9 @@ void k_nscore__provider__searchrequest_set_filter(void* self, int32_t filter);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider__SearchRequest*
+/// @param self const KNSCore__Provider__SearchRequest*
 ///
-const char* k_nscore__provider__searchrequest_search_term(void* self);
+const char* k_nscore__provider__searchrequest_search_term(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#searchTerm-var)
 ///
@@ -1788,9 +1711,9 @@ void k_nscore__provider__searchrequest_set_search_term(void* self, const char* s
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__Provider__SearchRequest*
+/// @param self const KNSCore__Provider__SearchRequest*
 ///
-const char** k_nscore__provider__searchrequest_categories(void* self);
+const char** k_nscore__provider__searchrequest_categories(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#categories-var)
 ///
@@ -1801,9 +1724,9 @@ void k_nscore__provider__searchrequest_set_categories(void* self, const char* ca
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#page-var)
 ///
-/// @param self KNSCore__Provider__SearchRequest*
+/// @param self const KNSCore__Provider__SearchRequest*
 ///
-int32_t k_nscore__provider__searchrequest_page(void* self);
+int32_t k_nscore__provider__searchrequest_page(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#page-var)
 ///
@@ -1814,9 +1737,9 @@ void k_nscore__provider__searchrequest_set_page(void* self, int page);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#pageSize-var)
 ///
-/// @param self KNSCore__Provider__SearchRequest*
+/// @param self const KNSCore__Provider__SearchRequest*
 ///
-int32_t k_nscore__provider__searchrequest_page_size(void* self);
+int32_t k_nscore__provider__searchrequest_page_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#pageSize-var)
 ///
@@ -1829,23 +1752,23 @@ void k_nscore__provider__searchrequest_set_page_size(void* self, int pageSize);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider__SearchRequest*
+/// @param self const KNSCore__Provider__SearchRequest*
 ///
-const char* k_nscore__provider__searchrequest_hash_for_request(void* self);
+const char* k_nscore__provider__searchrequest_hash_for_request(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#operator-eq-eq)
 ///
-/// @param self KNSCore__Provider__SearchRequest*
+/// @param self const KNSCore__Provider__SearchRequest*
 /// @param other KNSCore__Provider__SearchRequest*
 ///
-bool k_nscore__provider__searchrequest_operator_equal(void* self, void* other);
+bool k_nscore__provider__searchrequest_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchrequest.html#operator-eq)
 ///
 /// @param self KNSCore__Provider__SearchRequest*
 /// @param param1 KNSCore__Provider__SearchRequest*
 ///
-void k_nscore__provider__searchrequest_operator_assign(void* self, void* param1);
+void k_nscore__provider__searchrequest_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///
@@ -1865,15 +1788,15 @@ KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new();
 ///
 /// @param param1 KNSCore__Provider__CategoryMetadata*
 ///
-KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new2(void* param1);
+KNSCore__Provider__CategoryMetadata* k_nscore__provider__categorymetadata_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html#id-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider__CategoryMetadata*
+/// @param self const KNSCore__Provider__CategoryMetadata*
 ///
-const char* k_nscore__provider__categorymetadata_id(void* self);
+const char* k_nscore__provider__categorymetadata_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html#id-var)
 ///
@@ -1886,9 +1809,9 @@ void k_nscore__provider__categorymetadata_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider__CategoryMetadata*
+/// @param self const KNSCore__Provider__CategoryMetadata*
 ///
-const char* k_nscore__provider__categorymetadata_name(void* self);
+const char* k_nscore__provider__categorymetadata_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html#name-var)
 ///
@@ -1901,9 +1824,9 @@ void k_nscore__provider__categorymetadata_set_name(void* self, const char* name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider__CategoryMetadata*
+/// @param self const KNSCore__Provider__CategoryMetadata*
 ///
-const char* k_nscore__provider__categorymetadata_display_name(void* self);
+const char* k_nscore__provider__categorymetadata_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-categorymetadata.html#displayName-var)
 ///
@@ -1917,7 +1840,7 @@ void k_nscore__provider__categorymetadata_set_display_name(void* self, const cha
 /// @param self KNSCore__Provider__CategoryMetadata*
 /// @param param1 KNSCore__Provider__CategoryMetadata*
 ///
-void k_nscore__provider__categorymetadata_operator_assign(void* self, void* param1);
+void k_nscore__provider__categorymetadata_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///
@@ -1937,13 +1860,13 @@ KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new();
 ///
 /// @param param1 KNSCore__Provider__SearchPreset*
 ///
-KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new2(void* param1);
+KNSCore__Provider__SearchPreset* k_nscore__provider__searchpreset_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#request-var)
 ///
-/// @param self KNSCore__Provider__SearchPreset*
+/// @param self const KNSCore__Provider__SearchPreset*
 ///
-KNSCore__Provider__SearchRequest* k_nscore__provider__searchpreset_request(void* self);
+KNSCore__Provider__SearchRequest* k_nscore__provider__searchpreset_request(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#request-var)
 ///
@@ -1956,9 +1879,9 @@ void k_nscore__provider__searchpreset_set_request(void* self, void* request);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider__SearchPreset*
+/// @param self const KNSCore__Provider__SearchPreset*
 ///
-const char* k_nscore__provider__searchpreset_display_name(void* self);
+const char* k_nscore__provider__searchpreset_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#displayName-var)
 ///
@@ -1971,9 +1894,9 @@ void k_nscore__provider__searchpreset_set_display_name(void* self, const char* d
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider__SearchPreset*
+/// @param self const KNSCore__Provider__SearchPreset*
 ///
-const char* k_nscore__provider__searchpreset_icon_name(void* self);
+const char* k_nscore__provider__searchpreset_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#iconName-var)
 ///
@@ -1984,11 +1907,11 @@ void k_nscore__provider__searchpreset_set_icon_name(void* self, const char* icon
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#type-var)
 ///
-/// @param self KNSCore__Provider__SearchPreset*
+/// @param self const KNSCore__Provider__SearchPreset*
 ///
 /// @return enum KNSCore__Provider__SearchPresetTypes
 ///
-int32_t k_nscore__provider__searchpreset_type(void* self);
+int32_t k_nscore__provider__searchpreset_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#type-var)
 ///
@@ -2001,9 +1924,9 @@ void k_nscore__provider__searchpreset_set_type(void* self, int32_t type);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Provider__SearchPreset*
+/// @param self const KNSCore__Provider__SearchPreset*
 ///
-const char* k_nscore__provider__searchpreset_provider_id(void* self);
+const char* k_nscore__provider__searchpreset_provider_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider-searchpreset.html#providerId-var)
 ///
@@ -2017,7 +1940,7 @@ void k_nscore__provider__searchpreset_set_provider_id(void* self, const char* pr
 /// @param self KNSCore__Provider__SearchPreset*
 /// @param param1 KNSCore__Provider__SearchPreset*
 ///
-void k_nscore__provider__searchpreset_operator_assign(void* self, void* param1);
+void k_nscore__provider__searchpreset_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

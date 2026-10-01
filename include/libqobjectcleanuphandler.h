@@ -16,26 +16,26 @@ QObjectCleanupHandler* q_objectcleanuphandler_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-const QMetaObject* q_objectcleanuphandler_meta_object(void* self);
+const QMetaObject* q_objectcleanuphandler_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QObjectCleanupHandler*
-/// @param callback const QMetaObject* func()
+/// @param self const QObjectCleanupHandler*
+/// @param callback const QMetaObject* func(const QObjectCleanupHandler* self)
 ///
-void q_objectcleanuphandler_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_objectcleanuphandler_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-const QMetaObject* q_objectcleanuphandler_super_meta_object(void* self);
+const QMetaObject* q_objectcleanuphandler_super_meta_object(const void* self);
 
 /// @param self QObjectCleanupHandler*
 /// @param param1 const char*
@@ -103,9 +103,9 @@ void q_objectcleanuphandler_remove(void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobjectcleanuphandler.html#isEmpty)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-bool q_objectcleanuphandler_is_empty(void* self);
+bool q_objectcleanuphandler_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobjectcleanuphandler.html#clear)
 ///
@@ -138,9 +138,9 @@ const char* q_objectcleanuphandler_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-const char* q_objectcleanuphandler_object_name(void* self);
+const char* q_objectcleanuphandler_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -155,33 +155,33 @@ void q_objectcleanuphandler_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-bool q_objectcleanuphandler_is_widget_type(void* self);
+bool q_objectcleanuphandler_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-bool q_objectcleanuphandler_is_window_type(void* self);
+bool q_objectcleanuphandler_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-bool q_objectcleanuphandler_is_quick_item_type(void* self);
+bool q_objectcleanuphandler_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-bool q_objectcleanuphandler_signals_blocked(void* self);
+bool q_objectcleanuphandler_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -196,9 +196,9 @@ bool q_objectcleanuphandler_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-QThread* q_objectcleanuphandler_thread(void* self);
+QThread* q_objectcleanuphandler_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -249,11 +249,11 @@ void q_objectcleanuphandler_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_objectcleanuphandler_children(void* self);
+libqt_list q_objectcleanuphandler_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -291,7 +291,7 @@ void q_objectcleanuphandler_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_objectcleanuphandler_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_objectcleanuphandler_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -302,18 +302,18 @@ QMetaObject__Connection* q_objectcleanuphandler_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_objectcleanuphandler_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_objectcleanuphandler_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_objectcleanuphandler_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_objectcleanuphandler_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -324,7 +324,7 @@ QMetaObject__Connection* q_objectcleanuphandler_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_objectcleanuphandler_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_objectcleanuphandler_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -335,24 +335,24 @@ bool q_objectcleanuphandler_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_objectcleanuphandler_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_objectcleanuphandler_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-bool q_objectcleanuphandler_disconnect3(void* self);
+bool q_objectcleanuphandler_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param receiver QObject*
 ///
-bool q_objectcleanuphandler_disconnect4(void* self, void* receiver);
+bool q_objectcleanuphandler_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -360,23 +360,23 @@ bool q_objectcleanuphandler_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_objectcleanuphandler_disconnect5(void* param1);
+bool q_objectcleanuphandler_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-void q_objectcleanuphandler_dump_object_tree(void* self);
+void q_objectcleanuphandler_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-void q_objectcleanuphandler_dump_object_info(void* self);
+void q_objectcleanuphandler_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -386,16 +386,16 @@ void q_objectcleanuphandler_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_objectcleanuphandler_set_property(void* self, const char* name, void* value);
+bool q_objectcleanuphandler_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param name const char*
 ///
-QVariant* q_objectcleanuphandler_property(void* self, const char* name);
+QVariant* q_objectcleanuphandler_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -403,9 +403,9 @@ QVariant* q_objectcleanuphandler_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-const char** q_objectcleanuphandler_dynamic_property_names(void* self);
+const char** q_objectcleanuphandler_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -419,9 +419,9 @@ QBindingStorage* q_objectcleanuphandler_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-const QBindingStorage* q_objectcleanuphandler_binding_storage2(void* self);
+const QBindingStorage* q_objectcleanuphandler_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -444,18 +444,18 @@ void q_objectcleanuphandler_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-QObject* q_objectcleanuphandler_parent(void* self);
+QObject* q_objectcleanuphandler_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param classname const char*
 ///
-bool q_objectcleanuphandler_inherits(void* self, const char* classname);
+bool q_objectcleanuphandler_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -495,7 +495,7 @@ int32_t q_objectcleanuphandler_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_objectcleanuphandler_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_objectcleanuphandler_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -507,59 +507,59 @@ QMetaObject__Connection* q_objectcleanuphandler_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_objectcleanuphandler_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_objectcleanuphandler_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_objectcleanuphandler_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_objectcleanuphandler_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param signal const char*
 ///
-bool q_objectcleanuphandler_disconnect1(void* self, const char* signal);
+bool q_objectcleanuphandler_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QObjectCleanupHandler*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_objectcleanuphandler_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_objectcleanuphandler_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_objectcleanuphandler_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_objectcleanuphandler_disconnect23(void* self, void* receiver, const char* member);
+bool q_objectcleanuphandler_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QObjectCleanupHandler*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_objectcleanuphandler_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -755,7 +755,7 @@ void q_objectcleanuphandler_on_custom_event(void* self, void (*callback)(void*, 
 /// @param self QObjectCleanupHandler*
 /// @param signal QMetaMethod*
 ///
-void q_objectcleanuphandler_connect_notify(void* self, void* signal);
+void q_objectcleanuphandler_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -766,7 +766,7 @@ void q_objectcleanuphandler_connect_notify(void* self, void* signal);
 /// @param self QObjectCleanupHandler*
 /// @param signal QMetaMethod*
 ///
-void q_objectcleanuphandler_super_connect_notify(void* self, void* signal);
+void q_objectcleanuphandler_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -777,7 +777,7 @@ void q_objectcleanuphandler_super_connect_notify(void* self, void* signal);
 /// @param self QObjectCleanupHandler*
 /// @param callback void func(QObjectCleanupHandler* self, QMetaMethod* signal)
 ///
-void q_objectcleanuphandler_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_objectcleanuphandler_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -788,7 +788,7 @@ void q_objectcleanuphandler_on_connect_notify(void* self, void (*callback)(void*
 /// @param self QObjectCleanupHandler*
 /// @param signal QMetaMethod*
 ///
-void q_objectcleanuphandler_disconnect_notify(void* self, void* signal);
+void q_objectcleanuphandler_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -799,7 +799,7 @@ void q_objectcleanuphandler_disconnect_notify(void* self, void* signal);
 /// @param self QObjectCleanupHandler*
 /// @param signal QMetaMethod*
 ///
-void q_objectcleanuphandler_super_disconnect_notify(void* self, void* signal);
+void q_objectcleanuphandler_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -810,7 +810,7 @@ void q_objectcleanuphandler_super_disconnect_notify(void* self, void* signal);
 /// @param self QObjectCleanupHandler*
 /// @param callback void func(QObjectCleanupHandler* self, QMetaMethod* signal)
 ///
-void q_objectcleanuphandler_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_objectcleanuphandler_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -818,9 +818,9 @@ void q_objectcleanuphandler_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-QObject* q_objectcleanuphandler_sender(void* self);
+QObject* q_objectcleanuphandler_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -828,9 +828,9 @@ QObject* q_objectcleanuphandler_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-QObject* q_objectcleanuphandler_super_sender(void* self);
+QObject* q_objectcleanuphandler_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -838,10 +838,10 @@ QObject* q_objectcleanuphandler_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
-/// @param callback QObject* func()
+/// @param self const QObjectCleanupHandler*
+/// @param callback QObject* func(QObjectCleanupHandler* self)
 ///
-void q_objectcleanuphandler_on_sender(void* self, QObject* (*callback)());
+void q_objectcleanuphandler_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -849,9 +849,9 @@ void q_objectcleanuphandler_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-int32_t q_objectcleanuphandler_sender_signal_index(void* self);
+int32_t q_objectcleanuphandler_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -859,9 +859,9 @@ int32_t q_objectcleanuphandler_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 ///
-int32_t q_objectcleanuphandler_super_sender_signal_index(void* self);
+int32_t q_objectcleanuphandler_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -869,10 +869,10 @@ int32_t q_objectcleanuphandler_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
-/// @param callback int32_t func()
+/// @param self const QObjectCleanupHandler*
+/// @param callback int32_t func(QObjectCleanupHandler* self)
 ///
-void q_objectcleanuphandler_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_objectcleanuphandler_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -880,10 +880,10 @@ void q_objectcleanuphandler_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param signal const char*
 ///
-int32_t q_objectcleanuphandler_receivers(void* self, const char* signal);
+int32_t q_objectcleanuphandler_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -891,10 +891,10 @@ int32_t q_objectcleanuphandler_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param signal const char*
 ///
-int32_t q_objectcleanuphandler_super_receivers(void* self, const char* signal);
+int32_t q_objectcleanuphandler_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -902,10 +902,10 @@ int32_t q_objectcleanuphandler_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param callback int32_t func(QObjectCleanupHandler* self, const char* signal)
 ///
-void q_objectcleanuphandler_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_objectcleanuphandler_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -913,10 +913,10 @@ void q_objectcleanuphandler_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param signal QMetaMethod*
 ///
-bool q_objectcleanuphandler_is_signal_connected(void* self, void* signal);
+bool q_objectcleanuphandler_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -924,10 +924,10 @@ bool q_objectcleanuphandler_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param signal QMetaMethod*
 ///
-bool q_objectcleanuphandler_super_is_signal_connected(void* self, void* signal);
+bool q_objectcleanuphandler_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -935,10 +935,10 @@ bool q_objectcleanuphandler_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QObjectCleanupHandler*
+/// @param self const QObjectCleanupHandler*
 /// @param callback bool func(QObjectCleanupHandler* self, QMetaMethod* signal)
 ///
-void q_objectcleanuphandler_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_objectcleanuphandler_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

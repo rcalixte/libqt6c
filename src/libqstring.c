@@ -49,7 +49,7 @@ const char* q_string_from_local8_bit2(const char* str, intptr_t size) {
     return _ret;
 }
 
-const char* q_string_from_raw_data(void* param1, intptr_t size) {
+const char* q_string_from_raw_data(const void* param1, intptr_t size) {
     libqt_string _str = QString_FromRawData((QChar*)param1, size);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

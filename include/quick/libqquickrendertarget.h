@@ -20,26 +20,26 @@ QQuickRenderTarget* q_quickrendertarget_new();
 ///
 /// @param other QQuickRenderTarget*
 ///
-QQuickRenderTarget* q_quickrendertarget_new2(void* other);
+QQuickRenderTarget* q_quickrendertarget_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#operator-eq)
 ///
 /// @param self QQuickRenderTarget*
 /// @param other QQuickRenderTarget*
 ///
-void q_quickrendertarget_operator_assign(void* self, void* other);
+void q_quickrendertarget_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#isNull)
 ///
-/// @param self QQuickRenderTarget*
+/// @param self const QQuickRenderTarget*
 ///
-bool q_quickrendertarget_is_null(void* self);
+bool q_quickrendertarget_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#devicePixelRatio)
 ///
-/// @param self QQuickRenderTarget*
+/// @param self const QQuickRenderTarget*
 ///
-double q_quickrendertarget_device_pixel_ratio(void* self);
+double q_quickrendertarget_device_pixel_ratio(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#setDevicePixelRatio)
 ///
@@ -50,9 +50,9 @@ void q_quickrendertarget_set_device_pixel_ratio(void* self, double ratio);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#mirrorVertically)
 ///
-/// @param self QQuickRenderTarget*
+/// @param self const QQuickRenderTarget*
 ///
-bool q_quickrendertarget_mirror_vertically(void* self);
+bool q_quickrendertarget_mirror_vertically(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#setMirrorVertically)
 ///
@@ -66,7 +66,7 @@ void q_quickrendertarget_set_mirror_vertically(void* self, bool enable);
 /// @param textureId uint32_t
 /// @param pixelSize QSize*
 ///
-QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture(uint32_t textureId, void* pixelSize);
+QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture(uint32_t textureId, const void* pixelSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#fromOpenGLTexture)
 ///
@@ -74,7 +74,7 @@ QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture(uint32_t textureId
 /// @param format uint32_t
 /// @param pixelSize QSize*
 ///
-QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture2(uint32_t textureId, uint32_t format, void* pixelSize);
+QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture2(uint32_t textureId, uint32_t format, const void* pixelSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#fromOpenGLTexture)
 ///
@@ -92,7 +92,7 @@ QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture3(uint32_t textureI
 /// @param renderbufferId uint32_t
 /// @param pixelSize QSize*
 ///
-QQuickRenderTarget* q_quickrendertarget_from_open_g_l_render_buffer(uint32_t renderbufferId, void* pixelSize);
+QQuickRenderTarget* q_quickrendertarget_from_open_g_l_render_buffer(uint32_t renderbufferId, const void* pixelSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#fromPaintDevice)
 ///
@@ -106,7 +106,7 @@ QQuickRenderTarget* q_quickrendertarget_from_paint_device(void* device);
 /// @param pixelSize QSize*
 /// @param sampleCount int
 ///
-QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture32(uint32_t textureId, void* pixelSize, int sampleCount);
+QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture32(uint32_t textureId, const void* pixelSize, int sampleCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#fromOpenGLTexture)
 ///
@@ -115,7 +115,7 @@ QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture32(uint32_t texture
 /// @param pixelSize QSize*
 /// @param sampleCount int
 ///
-QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture4(uint32_t textureId, uint32_t format, void* pixelSize, int sampleCount);
+QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture4(uint32_t textureId, uint32_t format, const void* pixelSize, int sampleCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#fromOpenGLRenderBuffer)
 ///
@@ -123,7 +123,7 @@ QQuickRenderTarget* q_quickrendertarget_from_open_g_l_texture4(uint32_t textureI
 /// @param pixelSize QSize*
 /// @param sampleCount int
 ///
-QQuickRenderTarget* q_quickrendertarget_from_open_g_l_render_buffer3(uint32_t renderbufferId, void* pixelSize, int sampleCount);
+QQuickRenderTarget* q_quickrendertarget_from_open_g_l_render_buffer3(uint32_t renderbufferId, const void* pixelSize, int sampleCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickrendertarget.html#dtor.QQuickRenderTarget)
 ///

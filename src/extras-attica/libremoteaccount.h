@@ -20,14 +20,14 @@ Attica__RemoteAccount* k_attica__remoteaccount_new();
 ///
 /// @param other Attica__RemoteAccount*
 ///
-Attica__RemoteAccount* k_attica__remoteaccount_new2(void* other);
+Attica__RemoteAccount* k_attica__remoteaccount_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#operator-eq)
 ///
 /// @param self Attica__RemoteAccount*
 /// @param other Attica__RemoteAccount*
 ///
-void k_attica__remoteaccount_operator_assign(void* self, void* other);
+void k_attica__remoteaccount_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#setId)
 ///
@@ -40,9 +40,9 @@ void k_attica__remoteaccount_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__RemoteAccount*
+/// @param self const Attica__RemoteAccount*
 ///
-const char* k_attica__remoteaccount_id(void* self);
+const char* k_attica__remoteaccount_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#setType)
 ///
@@ -55,9 +55,9 @@ void k_attica__remoteaccount_set_type(void* self, const char* type);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__RemoteAccount*
+/// @param self const Attica__RemoteAccount*
 ///
-const char* k_attica__remoteaccount_type(void* self);
+const char* k_attica__remoteaccount_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#setRemoteServiceId)
 ///
@@ -70,9 +70,9 @@ void k_attica__remoteaccount_set_remote_service_id(void* self, const char* remot
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__RemoteAccount*
+/// @param self const Attica__RemoteAccount*
 ///
-const char* k_attica__remoteaccount_remote_service_id(void* self);
+const char* k_attica__remoteaccount_remote_service_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#setData)
 ///
@@ -85,9 +85,9 @@ void k_attica__remoteaccount_set_data(void* self, const char* data);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__RemoteAccount*
+/// @param self const Attica__RemoteAccount*
 ///
-const char* k_attica__remoteaccount_data(void* self);
+const char* k_attica__remoteaccount_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#setLogin)
 ///
@@ -100,9 +100,9 @@ void k_attica__remoteaccount_set_login(void* self, const char* login);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__RemoteAccount*
+/// @param self const Attica__RemoteAccount*
 ///
-const char* k_attica__remoteaccount_login(void* self);
+const char* k_attica__remoteaccount_login(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#setPassword)
 ///
@@ -115,15 +115,15 @@ void k_attica__remoteaccount_set_password(void* self, const char* password);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__RemoteAccount*
+/// @param self const Attica__RemoteAccount*
 ///
-const char* k_attica__remoteaccount_password(void* self);
+const char* k_attica__remoteaccount_password(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-remoteaccount.html#isValid)
 ///
-/// @param self Attica__RemoteAccount*
+/// @param self const Attica__RemoteAccount*
 ///
-bool k_attica__remoteaccount_is_valid(void* self);
+bool k_attica__remoteaccount_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

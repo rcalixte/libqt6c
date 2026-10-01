@@ -14,7 +14,7 @@
 ///
 /// @param other QQuaternion*
 ///
-QQuaternion* q_quaternion_new(void* other);
+QQuaternion* q_quaternion_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html)
 
@@ -56,7 +56,7 @@ QQuaternion* q_quaternion_new5(float scalar, float xpos, float ypos, float zpos)
 /// @param scalar float
 /// @param vector QVector3D*
 ///
-QQuaternion* q_quaternion_new6(float scalar, void* vector);
+QQuaternion* q_quaternion_new6(float scalar, const void* vector);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html)
 
@@ -64,7 +64,7 @@ QQuaternion* q_quaternion_new6(float scalar, void* vector);
 ///
 /// @param vector QVector4D*
 ///
-QQuaternion* q_quaternion_new7(void* vector);
+QQuaternion* q_quaternion_new7(const void* vector);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html)
 
@@ -72,7 +72,7 @@ QQuaternion* q_quaternion_new7(void* vector);
 ///
 /// @param param1 QQuaternion*
 ///
-QQuaternion* q_quaternion_new8(void* param1);
+QQuaternion* q_quaternion_new8(const void* param1);
 
 /// q_quaternion_copy_assign shallow copies `other` into `self`.
 ///
@@ -90,28 +90,28 @@ void q_quaternion_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#isNull)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-bool q_quaternion_is_null(void* self);
+bool q_quaternion_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#isIdentity)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-bool q_quaternion_is_identity(void* self);
+bool q_quaternion_is_identity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#vector)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-QVector3D* q_quaternion_vector(void* self);
+QVector3D* q_quaternion_vector(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#setVector)
 ///
 /// @param self QQuaternion*
 /// @param vector QVector3D*
 ///
-void q_quaternion_set_vector(void* self, void* vector);
+void q_quaternion_set_vector(void* self, const void* vector);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#setVector)
 ///
@@ -124,27 +124,27 @@ void q_quaternion_set_vector2(void* self, float x, float y, float z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#x)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-float q_quaternion_x(void* self);
+float q_quaternion_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#y)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-float q_quaternion_y(void* self);
+float q_quaternion_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#z)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-float q_quaternion_z(void* self);
+float q_quaternion_z(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#scalar)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-float q_quaternion_scalar(void* self);
+float q_quaternion_scalar(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#setX)
 ///
@@ -179,25 +179,25 @@ void q_quaternion_set_scalar(void* self, float scalar);
 /// @param q1 QQuaternion*
 /// @param q2 QQuaternion*
 ///
-float q_quaternion_dot_product(void* q1, void* q2);
+float q_quaternion_dot_product(const void* q1, const void* q2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#length)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-float q_quaternion_length(void* self);
+float q_quaternion_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#lengthSquared)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-float q_quaternion_length_squared(void* self);
+float q_quaternion_length_squared(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#normalized)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-QQuaternion* q_quaternion_normalized(void* self);
+QQuaternion* q_quaternion_normalized(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#normalize)
 ///
@@ -207,36 +207,36 @@ void q_quaternion_normalize(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#inverted)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-QQuaternion* q_quaternion_inverted(void* self);
+QQuaternion* q_quaternion_inverted(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#conjugated)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-QQuaternion* q_quaternion_conjugated(void* self);
+QQuaternion* q_quaternion_conjugated(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#rotatedVector)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 /// @param vector QVector3D*
 ///
-QVector3D* q_quaternion_rotated_vector(void* self, void* vector);
+QVector3D* q_quaternion_rotated_vector(const void* self, const void* vector);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator-2b-eq)
 ///
 /// @param self QQuaternion*
 /// @param quaternion QQuaternion*
 ///
-QQuaternion* q_quaternion_operator_plus_assign(void* self, void* quaternion);
+QQuaternion* q_quaternion_operator_plus_assign(void* self, const void* quaternion);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator--eq)
 ///
 /// @param self QQuaternion*
 /// @param quaternion QQuaternion*
 ///
-QQuaternion* q_quaternion_operator_minus_assign(void* self, void* quaternion);
+QQuaternion* q_quaternion_operator_minus_assign(void* self, const void* quaternion);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator-2a-eq)
 ///
@@ -250,7 +250,7 @@ QQuaternion* q_quaternion_operator_multiply_assign(void* self, float factor);
 /// @param self QQuaternion*
 /// @param quaternion QQuaternion*
 ///
-QQuaternion* q_quaternion_operator_multiply_assign2(void* self, void* quaternion);
+QQuaternion* q_quaternion_operator_multiply_assign2(void* self, const void* quaternion);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator-2f-eq)
 ///
@@ -261,40 +261,40 @@ QQuaternion* q_quaternion_operator_divide_assign(void* self, float divisor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#toVector4D)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-QVector4D* q_quaternion_to_vector4_d(void* self);
+QVector4D* q_quaternion_to_vector4_d(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator-QVariant)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-QVariant* q_quaternion_to_q_variant(void* self);
+QVariant* q_quaternion_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#getAxisAndAngle)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 /// @param axis QVector3D*
 /// @param angle float*
 ///
-void q_quaternion_get_axis_and_angle(void* self, void* axis, float* angle);
+void q_quaternion_get_axis_and_angle(const void* self, void* axis, float* angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#fromAxisAndAngle)
 ///
 /// @param axis QVector3D*
 /// @param angle float
 ///
-QQuaternion* q_quaternion_from_axis_and_angle(void* axis, float angle);
+QQuaternion* q_quaternion_from_axis_and_angle(const void* axis, float angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#getAxisAndAngle)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 /// @param x float*
 /// @param y float*
 /// @param z float*
 /// @param angle float*
 ///
-void q_quaternion_get_axis_and_angle2(void* self, float* x, float* y, float* z, float* angle);
+void q_quaternion_get_axis_and_angle2(const void* self, float* x, float* y, float* z, float* angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#fromAxisAndAngle)
 ///
@@ -307,24 +307,24 @@ QQuaternion* q_quaternion_from_axis_and_angle2(float x, float y, float z, float 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#toEulerAngles)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 ///
-QVector3D* q_quaternion_to_euler_angles(void* self);
+QVector3D* q_quaternion_to_euler_angles(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#fromEulerAngles)
 ///
 /// @param eulerAngles QVector3D*
 ///
-QQuaternion* q_quaternion_from_euler_angles(void* eulerAngles);
+QQuaternion* q_quaternion_from_euler_angles(const void* eulerAngles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#getEulerAngles)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 /// @param pitch float*
 /// @param yaw float*
 /// @param roll float*
 ///
-void q_quaternion_get_euler_angles(void* self, float* pitch, float* yaw, float* roll);
+void q_quaternion_get_euler_angles(const void* self, float* pitch, float* yaw, float* roll);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#fromEulerAngles)
 ///
@@ -336,12 +336,12 @@ QQuaternion* q_quaternion_from_euler_angles2(float pitch, float yaw, float roll)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#getAxes)
 ///
-/// @param self QQuaternion*
+/// @param self const QQuaternion*
 /// @param xAxis QVector3D*
 /// @param yAxis QVector3D*
 /// @param zAxis QVector3D*
 ///
-void q_quaternion_get_axes(void* self, void* xAxis, void* yAxis, void* zAxis);
+void q_quaternion_get_axes(const void* self, void* xAxis, void* yAxis, void* zAxis);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#fromAxes)
 ///
@@ -349,21 +349,21 @@ void q_quaternion_get_axes(void* self, void* xAxis, void* yAxis, void* zAxis);
 /// @param yAxis QVector3D*
 /// @param zAxis QVector3D*
 ///
-QQuaternion* q_quaternion_from_axes(void* xAxis, void* yAxis, void* zAxis);
+QQuaternion* q_quaternion_from_axes(const void* xAxis, const void* yAxis, const void* zAxis);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#fromDirection)
 ///
 /// @param direction QVector3D*
 /// @param up QVector3D*
 ///
-QQuaternion* q_quaternion_from_direction(void* direction, void* up);
+QQuaternion* q_quaternion_from_direction(const void* direction, const void* up);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#rotationTo)
 ///
 /// @param from QVector3D*
 /// @param to QVector3D*
 ///
-QQuaternion* q_quaternion_rotation_to(void* from, void* to);
+QQuaternion* q_quaternion_rotation_to(const void* from, const void* to);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#slerp)
 ///
@@ -371,7 +371,7 @@ QQuaternion* q_quaternion_rotation_to(void* from, void* to);
 /// @param q2 QQuaternion*
 /// @param t float
 ///
-QQuaternion* q_quaternion_slerp(void* q1, void* q2, float t);
+QQuaternion* q_quaternion_slerp(const void* q1, const void* q2, float t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#nlerp)
 ///
@@ -379,14 +379,14 @@ QQuaternion* q_quaternion_slerp(void* q1, void* q2, float t);
 /// @param q2 QQuaternion*
 /// @param t float
 ///
-QQuaternion* q_quaternion_nlerp(void* q1, void* q2, float t);
+QQuaternion* q_quaternion_nlerp(const void* q1, const void* q2, float t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#operator-eq)
 ///
 /// @param self QQuaternion*
 /// @param param1 QQuaternion*
 ///
-void q_quaternion_operator_assign(void* self, void* param1);
+void q_quaternion_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquaternion.html#dtor.QQuaternion)
 ///
@@ -403,5 +403,5 @@ void q_quaternion_delete(void* self);
 /// @param q1 QQuaternion*
 /// @param q2 QQuaternion*
 ///
-bool q_qquaternion_h_q_fuzzy_compare(void* q1, void* q2);
+bool q_qquaternion_h_q_fuzzy_compare(const void* q1, const void* q2);
 #endif

@@ -20,14 +20,14 @@ QVoice* q_voice_new();
 ///
 /// @param other QVoice*
 ///
-QVoice* q_voice_new2(void* other);
+QVoice* q_voice_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvoice.html#operator-eq)
 ///
 /// @param self QVoice*
 /// @param other QVoice*
 ///
-void q_voice_operator_assign(void* self, void* other);
+void q_voice_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvoice.html#swap)
 ///
@@ -40,39 +40,39 @@ void q_voice_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVoice*
+/// @param self const QVoice*
 ///
-const char* q_voice_name(void* self);
+const char* q_voice_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvoice.html#locale)
 ///
-/// @param self QVoice*
+/// @param self const QVoice*
 ///
-QLocale* q_voice_locale(void* self);
+QLocale* q_voice_locale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvoice.html#gender)
 ///
-/// @param self QVoice*
+/// @param self const QVoice*
 ///
 /// @return enum QVoice__Gender
 ///
-int32_t q_voice_gender(void* self);
+int32_t q_voice_gender(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvoice.html#age)
 ///
-/// @param self QVoice*
+/// @param self const QVoice*
 ///
 /// @return enum QVoice__Age
 ///
-int32_t q_voice_age(void* self);
+int32_t q_voice_age(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvoice.html#language)
 ///
-/// @param self QVoice*
+/// @param self const QVoice*
 ///
 /// @return enum QLocale__Language
 ///
-uint16_t q_voice_language(void* self);
+uint16_t q_voice_language(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvoice.html#genderName)
 ///

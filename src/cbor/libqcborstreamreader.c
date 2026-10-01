@@ -27,7 +27,7 @@ void q_cborstreamreader_set_device(void* self, void* device) {
     QCborStreamReader_SetDevice((QCborStreamReader*)self, (QIODevice*)device);
 }
 
-QIODevice* q_cborstreamreader_device(void* self) {
+QIODevice* q_cborstreamreader_device(const void* self) {
     return QCborStreamReader_Device((QCborStreamReader*)self);
 }
 
@@ -55,27 +55,27 @@ void q_cborstreamreader_reset(void* self) {
     QCborStreamReader_Reset((QCborStreamReader*)self);
 }
 
-QCborError* q_cborstreamreader_last_error(void* self) {
+QCborError* q_cborstreamreader_last_error(const void* self) {
     return QCborStreamReader_LastError((QCborStreamReader*)self);
 }
 
-int64_t q_cborstreamreader_current_offset(void* self) {
+int64_t q_cborstreamreader_current_offset(const void* self) {
     return QCborStreamReader_CurrentOffset((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_valid(void* self) {
+bool q_cborstreamreader_is_valid(const void* self) {
     return QCborStreamReader_IsValid((QCborStreamReader*)self);
 }
 
-int32_t q_cborstreamreader_container_depth(void* self) {
+int32_t q_cborstreamreader_container_depth(const void* self) {
     return QCborStreamReader_ContainerDepth((QCborStreamReader*)self);
 }
 
-uint8_t q_cborstreamreader_parent_container_type(void* self) {
+uint8_t q_cborstreamreader_parent_container_type(const void* self) {
     return QCborStreamReader_ParentContainerType((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_has_next(void* self) {
+bool q_cborstreamreader_has_next(const void* self) {
     return QCborStreamReader_HasNext((QCborStreamReader*)self);
 }
 
@@ -83,95 +83,95 @@ bool q_cborstreamreader_next(void* self) {
     return QCborStreamReader_Next((QCborStreamReader*)self);
 }
 
-uint8_t q_cborstreamreader_type(void* self) {
+uint8_t q_cborstreamreader_type(const void* self) {
     return QCborStreamReader_Type((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_unsigned_integer(void* self) {
+bool q_cborstreamreader_is_unsigned_integer(const void* self) {
     return QCborStreamReader_IsUnsignedInteger((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_negative_integer(void* self) {
+bool q_cborstreamreader_is_negative_integer(const void* self) {
     return QCborStreamReader_IsNegativeInteger((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_integer(void* self) {
+bool q_cborstreamreader_is_integer(const void* self) {
     return QCborStreamReader_IsInteger((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_byte_array(void* self) {
+bool q_cborstreamreader_is_byte_array(const void* self) {
     return QCborStreamReader_IsByteArray((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_string(void* self) {
+bool q_cborstreamreader_is_string(const void* self) {
     return QCborStreamReader_IsString((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_array(void* self) {
+bool q_cborstreamreader_is_array(const void* self) {
     return QCborStreamReader_IsArray((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_map(void* self) {
+bool q_cborstreamreader_is_map(const void* self) {
     return QCborStreamReader_IsMap((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_tag(void* self) {
+bool q_cborstreamreader_is_tag(const void* self) {
     return QCborStreamReader_IsTag((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_simple_type(void* self) {
+bool q_cborstreamreader_is_simple_type(const void* self) {
     return QCborStreamReader_IsSimpleType((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_float16(void* self) {
+bool q_cborstreamreader_is_float16(const void* self) {
     return QCborStreamReader_IsFloat16((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_float(void* self) {
+bool q_cborstreamreader_is_float(const void* self) {
     return QCborStreamReader_IsFloat((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_double(void* self) {
+bool q_cborstreamreader_is_double(const void* self) {
     return QCborStreamReader_IsDouble((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_invalid(void* self) {
+bool q_cborstreamreader_is_invalid(const void* self) {
     return QCborStreamReader_IsInvalid((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_simple_type2(void* self, uint8_t st) {
+bool q_cborstreamreader_is_simple_type2(const void* self, uint8_t st) {
     return QCborStreamReader_IsSimpleType2((QCborStreamReader*)self, st);
 }
 
-bool q_cborstreamreader_is_false(void* self) {
+bool q_cborstreamreader_is_false(const void* self) {
     return QCborStreamReader_IsFalse((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_true(void* self) {
+bool q_cborstreamreader_is_true(const void* self) {
     return QCborStreamReader_IsTrue((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_bool(void* self) {
+bool q_cborstreamreader_is_bool(const void* self) {
     return QCborStreamReader_IsBool((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_null(void* self) {
+bool q_cborstreamreader_is_null(const void* self) {
     return QCborStreamReader_IsNull((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_undefined(void* self) {
+bool q_cborstreamreader_is_undefined(const void* self) {
     return QCborStreamReader_IsUndefined((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_length_known(void* self) {
+bool q_cborstreamreader_is_length_known(const void* self) {
     return QCborStreamReader_IsLengthKnown((QCborStreamReader*)self);
 }
 
-uint64_t q_cborstreamreader_length(void* self) {
+uint64_t q_cborstreamreader_length(const void* self) {
     return QCborStreamReader_Length((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_container(void* self) {
+bool q_cborstreamreader_is_container(const void* self) {
     return QCborStreamReader_IsContainer((QCborStreamReader*)self);
 }
 
@@ -195,39 +195,39 @@ bool q_cborstreamreader_read_and_append_to_byte_array(void* self, char* dst) {
     return QCborStreamReader_ReadAndAppendToByteArray((QCborStreamReader*)self, qstring(dst));
 }
 
-intptr_t q_cborstreamreader_current_string_chunk_size(void* self) {
+intptr_t q_cborstreamreader_current_string_chunk_size(const void* self) {
     return QCborStreamReader_CurrentStringChunkSize((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_to_bool(void* self) {
+bool q_cborstreamreader_to_bool(const void* self) {
     return QCborStreamReader_ToBool((QCborStreamReader*)self);
 }
 
-uint64_t q_cborstreamreader_to_tag(void* self) {
+uint64_t q_cborstreamreader_to_tag(const void* self) {
     return QCborStreamReader_ToTag((QCborStreamReader*)self);
 }
 
-uint64_t q_cborstreamreader_to_unsigned_integer(void* self) {
+uint64_t q_cborstreamreader_to_unsigned_integer(const void* self) {
     return QCborStreamReader_ToUnsignedInteger((QCborStreamReader*)self);
 }
 
-uint64_t q_cborstreamreader_to_negative_integer(void* self) {
+uint64_t q_cborstreamreader_to_negative_integer(const void* self) {
     return QCborStreamReader_ToNegativeInteger((QCborStreamReader*)self);
 }
 
-uint8_t q_cborstreamreader_to_simple_type(void* self) {
+uint8_t q_cborstreamreader_to_simple_type(const void* self) {
     return QCborStreamReader_ToSimpleType((QCborStreamReader*)self);
 }
 
-float q_cborstreamreader_to_float(void* self) {
+float q_cborstreamreader_to_float(const void* self) {
     return QCborStreamReader_ToFloat((QCborStreamReader*)self);
 }
 
-double q_cborstreamreader_to_double(void* self) {
+double q_cborstreamreader_to_double(const void* self) {
     return QCborStreamReader_ToDouble((QCborStreamReader*)self);
 }
 
-int64_t q_cborstreamreader_to_integer(void* self) {
+int64_t q_cborstreamreader_to_integer(const void* self) {
     return QCborStreamReader_ToInteger((QCborStreamReader*)self);
 }
 

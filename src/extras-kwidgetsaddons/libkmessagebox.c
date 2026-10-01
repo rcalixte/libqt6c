@@ -9,15 +9,15 @@
 #include "libkmessagebox.hpp"
 #include "libkmessagebox.h"
 
-int32_t k_messagebox_question_two_actions(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_question_two_actions(void* parent, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_QuestionTwoActions((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_question_two_actions_cancel(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_question_two_actions_cancel(void* parent, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_QuestionTwoActionsCancel((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_question_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_question_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -32,11 +32,11 @@ int32_t k_messagebox_question_two_actions_list(void* parent, const char* text, c
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_two_actions(void* parent, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_WarningTwoActions((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -51,15 +51,15 @@ int32_t k_messagebox_warning_two_actions_list(void* parent, const char* text, co
     return _out;
 }
 
-int32_t k_messagebox_warning_continue_cancel(void* parent, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_continue_cancel(void* parent, const char* text, const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_WarningContinueCancel((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)buttonContinue, (KGuiItem*)buttonCancel, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_continue_cancel_detailed(void* parent, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options, const char* details) {
+int32_t k_messagebox_warning_continue_cancel_detailed(void* parent, const char* text, const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options, const char* details) {
     return KMessageBox_WarningContinueCancelDetailed((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)buttonContinue, (KGuiItem*)buttonCancel, qstring(dontAskAgainName), options, qstring(details));
 }
 
-int32_t k_messagebox_warning_continue_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_continue_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -74,11 +74,11 @@ int32_t k_messagebox_warning_continue_cancel_list(void* parent, const char* text
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_cancel(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_two_actions_cancel(void* parent, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_WarningTwoActionsCancel((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_two_actions_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -97,7 +97,7 @@ void k_messagebox_error(void* parent, const char* text, const char* title, int32
     KMessageBox_Error((QWidget*)parent, qstring(text), qstring(title), options);
 }
 
-void k_messagebox_error2(void* parent, const char* text, const char* title, void* buttonOk, int32_t options) {
+void k_messagebox_error2(void* parent, const char* text, const char* title, const void* buttonOk, int32_t options) {
     KMessageBox_Error2((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)buttonOk, options);
 }
 
@@ -119,7 +119,7 @@ void k_messagebox_detailed_error(void* parent, const char* text, const char* det
     KMessageBox_DetailedError((QWidget*)parent, qstring(text), qstring(details), qstring(title), options);
 }
 
-void k_messagebox_detailed_error2(void* parent, const char* text, const char* details, const char* title, void* buttonOk, int32_t options) {
+void k_messagebox_detailed_error2(void* parent, const char* text, const char* details, const char* title, const void* buttonOk, int32_t options) {
     KMessageBox_DetailedError2((QWidget*)parent, qstring(text), qstring(details), qstring(title), (KGuiItem*)buttonOk, options);
 }
 
@@ -149,7 +149,7 @@ void k_messagebox_enable_message(const char* dontShowAgainName) {
     KMessageBox_EnableMessage(qstring(dontShowAgainName));
 }
 
-int32_t k_messagebox_message_box(void* parent, int32_t type, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontShowAskAgainName, int32_t options) {
+int32_t k_messagebox_message_box(void* parent, int32_t type, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontShowAskAgainName, int32_t options) {
     return KMessageBox_MessageBox((QWidget*)parent, type, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontShowAskAgainName), options);
 }
 
@@ -196,7 +196,7 @@ int32_t k_messagebox_create_k_message_box(void* dialog, void* buttons, int32_t i
     return _out;
 }
 
-int32_t k_messagebox_create_k_message_box2(void* dialog, void* buttons, void* icon, const char* text, const char* strlist[static 1], const char* ask, bool* checkboxReturn, int32_t options, const char* details, int32_t notifyType) {
+int32_t k_messagebox_create_k_message_box2(void* dialog, void* buttons, const void* icon, const char* text, const char* strlist[static 1], const char* ask, bool* checkboxReturn, int32_t options, const char* details, int32_t notifyType) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -211,15 +211,15 @@ int32_t k_messagebox_create_k_message_box2(void* dialog, void* buttons, void* ic
     return _out;
 }
 
-int32_t k_messagebox_question_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_question_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_QuestionTwoActionsWId(parent_id, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_QuestionTwoActionsCancelWId(parent_id, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -234,11 +234,11 @@ int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t parent_id, const c
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_WarningTwoActionsWId(parent_id, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -253,11 +253,11 @@ int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t parent_id, const ch
     return _out;
 }
 
-int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_WarningContinueCancelWId(parent_id, qstring(text), qstring(title), (KGuiItem*)buttonContinue, (KGuiItem*)buttonCancel, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -272,11 +272,11 @@ int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t parent_id, cons
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options) {
     return KMessageBox_WarningTwoActionsCancelWId(parent_id, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options) {
     size_t strlist_len = libqt_strv_length(strlist);
     libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
     if (strlist_qstr == NULL) {
@@ -313,7 +313,7 @@ void k_messagebox_detailed_error_w_id(uintptr_t parent_id, const char* text, con
     KMessageBox_DetailedErrorWId(parent_id, qstring(text), qstring(details), qstring(title), options);
 }
 
-void k_messagebox_detailed_error_w_id2(uintptr_t parent_id, const char* text, const char* details, const char* title, void* buttonOk, int32_t options) {
+void k_messagebox_detailed_error_w_id2(uintptr_t parent_id, const char* text, const char* details, const char* title, const void* buttonOk, int32_t options) {
     KMessageBox_DetailedErrorWId2(parent_id, qstring(text), qstring(details), qstring(title), (KGuiItem*)buttonOk, options);
 }
 
@@ -335,6 +335,6 @@ void k_messagebox_information_list_w_id(uintptr_t parent_id, const char* text, c
     free(strlist_qstr);
 }
 
-int32_t k_messagebox_message_box_w_id(uintptr_t parent_id, int32_t type, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontShowAskAgainName, int32_t options) {
+int32_t k_messagebox_message_box_w_id(uintptr_t parent_id, int32_t type, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontShowAskAgainName, int32_t options) {
     return KMessageBox_MessageBoxWId(parent_id, type, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontShowAskAgainName), options);
 }

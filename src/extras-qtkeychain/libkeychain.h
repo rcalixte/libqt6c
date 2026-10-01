@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-const QMetaObject* q_keychain__job_meta_object(void* self);
+const QMetaObject* q_keychain__job_meta_object(const void* self);
 
 /// @param self QKeychain__Job*
 /// @param param1 const char*
@@ -38,9 +38,9 @@ const char* q_keychain__job_tr(const char* s);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-QSettings* q_keychain__job_settings(void* self);
+QSettings* q_keychain__job_settings(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
@@ -59,31 +59,31 @@ void q_keychain__job_start(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-const char* q_keychain__job_service(void* self);
+const char* q_keychain__job_service(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
 /// @return enum QKeychain__Error
 ///
-int32_t q_keychain__job_error(void* self);
+int32_t q_keychain__job_error(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-const char* q_keychain__job_error_string(void* self);
+const char* q_keychain__job_error_string(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-bool q_keychain__job_auto_delete(void* self);
+bool q_keychain__job_auto_delete(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
@@ -94,9 +94,9 @@ void q_keychain__job_set_auto_delete(void* self, bool autoDelete);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-bool q_keychain__job_insecure_fallback(void* self);
+bool q_keychain__job_insecure_fallback(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
@@ -109,9 +109,9 @@ void q_keychain__job_set_insecure_fallback(void* self, bool insecureFallback);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-const char* q_keychain__job_key(void* self);
+const char* q_keychain__job_key(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
@@ -192,9 +192,9 @@ bool q_keychain__job_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-const char* q_keychain__job_object_name(void* self);
+const char* q_keychain__job_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -209,33 +209,33 @@ void q_keychain__job_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-bool q_keychain__job_is_widget_type(void* self);
+bool q_keychain__job_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-bool q_keychain__job_is_window_type(void* self);
+bool q_keychain__job_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-bool q_keychain__job_is_quick_item_type(void* self);
+bool q_keychain__job_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-bool q_keychain__job_signals_blocked(void* self);
+bool q_keychain__job_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -250,9 +250,9 @@ bool q_keychain__job_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-QThread* q_keychain__job_thread(void* self);
+QThread* q_keychain__job_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -303,11 +303,11 @@ void q_keychain__job_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_keychain__job_children(void* self);
+libqt_list q_keychain__job_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -345,7 +345,7 @@ void q_keychain__job_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_keychain__job_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_keychain__job_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -356,18 +356,18 @@ QMetaObject__Connection* q_keychain__job_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_keychain__job_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_keychain__job_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_keychain__job_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_keychain__job_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -378,7 +378,7 @@ QMetaObject__Connection* q_keychain__job_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_keychain__job_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_keychain__job_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -389,24 +389,24 @@ bool q_keychain__job_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_keychain__job_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_keychain__job_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-bool q_keychain__job_disconnect3(void* self);
+bool q_keychain__job_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 /// @param receiver QObject*
 ///
-bool q_keychain__job_disconnect4(void* self, void* receiver);
+bool q_keychain__job_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -414,23 +414,23 @@ bool q_keychain__job_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_keychain__job_disconnect5(void* param1);
+bool q_keychain__job_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-void q_keychain__job_dump_object_tree(void* self);
+void q_keychain__job_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-void q_keychain__job_dump_object_info(void* self);
+void q_keychain__job_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -440,16 +440,16 @@ void q_keychain__job_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_keychain__job_set_property(void* self, const char* name, void* value);
+bool q_keychain__job_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 /// @param name const char*
 ///
-QVariant* q_keychain__job_property(void* self, const char* name);
+QVariant* q_keychain__job_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -457,9 +457,9 @@ QVariant* q_keychain__job_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-const char** q_keychain__job_dynamic_property_names(void* self);
+const char** q_keychain__job_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -473,9 +473,9 @@ QBindingStorage* q_keychain__job_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-const QBindingStorage* q_keychain__job_binding_storage2(void* self);
+const QBindingStorage* q_keychain__job_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -498,18 +498,18 @@ void q_keychain__job_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 ///
-QObject* q_keychain__job_parent(void* self);
+QObject* q_keychain__job_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 /// @param classname const char*
 ///
-bool q_keychain__job_inherits(void* self, const char* classname);
+bool q_keychain__job_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -549,7 +549,7 @@ int32_t q_keychain__job_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__job_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_keychain__job_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -561,59 +561,59 @@ QMetaObject__Connection* q_keychain__job_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__job_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_keychain__job_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__job_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_keychain__job_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 /// @param signal const char*
 ///
-bool q_keychain__job_disconnect1(void* self, const char* signal);
+bool q_keychain__job_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__Job*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_keychain__job_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_keychain__job_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_keychain__job_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__Job*
+/// @param self const QKeychain__Job*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_keychain__job_disconnect23(void* self, void* receiver, const char* member);
+bool q_keychain__job_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QKeychain__Job*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_keychain__job_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -671,26 +671,26 @@ QKeychain__ReadPasswordJob* q_keychain__readpasswordjob_new2(const char* service
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const QMetaObject* q_keychain__readpasswordjob_meta_object(void* self);
+const QMetaObject* q_keychain__readpasswordjob_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QKeychain__ReadPasswordJob*
-/// @param callback const QMetaObject* func()
+/// @param self const QKeychain__ReadPasswordJob*
+/// @param callback const QMetaObject* func(const QKeychain__ReadPasswordJob* self)
 ///
-void q_keychain__readpasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_keychain__readpasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const QMetaObject* q_keychain__readpasswordjob_super_meta_object(void* self);
+const QMetaObject* q_keychain__readpasswordjob_super_meta_object(const void* self);
 
 /// @param self QKeychain__ReadPasswordJob*
 /// @param param1 const char*
@@ -746,17 +746,17 @@ const char* q_keychain__readpasswordjob_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-char* q_keychain__readpasswordjob_binary_data(void* self);
+char* q_keychain__readpasswordjob_binary_data(const void* self);
 
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const char* q_keychain__readpasswordjob_text_data(void* self);
+const char* q_keychain__readpasswordjob_text_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -781,9 +781,9 @@ const char* q_keychain__readpasswordjob_tr3(const char* s, const char* c, int n)
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-QSettings* q_keychain__readpasswordjob_settings(void* self);
+QSettings* q_keychain__readpasswordjob_settings(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -808,19 +808,19 @@ void q_keychain__readpasswordjob_start(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const char* q_keychain__readpasswordjob_service(void* self);
+const char* q_keychain__readpasswordjob_service(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
 /// @return enum QKeychain__Error
 ///
-int32_t q_keychain__readpasswordjob_error(void* self);
+int32_t q_keychain__readpasswordjob_error(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -828,17 +828,17 @@ int32_t q_keychain__readpasswordjob_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const char* q_keychain__readpasswordjob_error_string(void* self);
+const char* q_keychain__readpasswordjob_error_string(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-bool q_keychain__readpasswordjob_auto_delete(void* self);
+bool q_keychain__readpasswordjob_auto_delete(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -853,9 +853,9 @@ void q_keychain__readpasswordjob_set_auto_delete(void* self, bool autoDelete);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-bool q_keychain__readpasswordjob_insecure_fallback(void* self);
+bool q_keychain__readpasswordjob_insecure_fallback(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -872,9 +872,9 @@ void q_keychain__readpasswordjob_set_insecure_fallback(void* self, bool insecure
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const char* q_keychain__readpasswordjob_key(void* self);
+const char* q_keychain__readpasswordjob_key(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -927,9 +927,9 @@ void q_keychain__readpasswordjob_on_finished(void* self, void (*callback)(void*,
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const char* q_keychain__readpasswordjob_object_name(void* self);
+const char* q_keychain__readpasswordjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -944,33 +944,33 @@ void q_keychain__readpasswordjob_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-bool q_keychain__readpasswordjob_is_widget_type(void* self);
+bool q_keychain__readpasswordjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-bool q_keychain__readpasswordjob_is_window_type(void* self);
+bool q_keychain__readpasswordjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-bool q_keychain__readpasswordjob_is_quick_item_type(void* self);
+bool q_keychain__readpasswordjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-bool q_keychain__readpasswordjob_signals_blocked(void* self);
+bool q_keychain__readpasswordjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -985,9 +985,9 @@ bool q_keychain__readpasswordjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-QThread* q_keychain__readpasswordjob_thread(void* self);
+QThread* q_keychain__readpasswordjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1038,11 +1038,11 @@ void q_keychain__readpasswordjob_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_keychain__readpasswordjob_children(void* self);
+libqt_list q_keychain__readpasswordjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1080,7 +1080,7 @@ void q_keychain__readpasswordjob_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_keychain__readpasswordjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_keychain__readpasswordjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1091,18 +1091,18 @@ QMetaObject__Connection* q_keychain__readpasswordjob_connect(void* sender, const
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_keychain__readpasswordjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_keychain__readpasswordjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_keychain__readpasswordjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_keychain__readpasswordjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1113,7 +1113,7 @@ QMetaObject__Connection* q_keychain__readpasswordjob_connect3(void* self, void* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_keychain__readpasswordjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_keychain__readpasswordjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1124,24 +1124,24 @@ bool q_keychain__readpasswordjob_disconnect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_keychain__readpasswordjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_keychain__readpasswordjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-bool q_keychain__readpasswordjob_disconnect3(void* self);
+bool q_keychain__readpasswordjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param receiver QObject*
 ///
-bool q_keychain__readpasswordjob_disconnect4(void* self, void* receiver);
+bool q_keychain__readpasswordjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1149,23 +1149,23 @@ bool q_keychain__readpasswordjob_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_keychain__readpasswordjob_disconnect5(void* param1);
+bool q_keychain__readpasswordjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-void q_keychain__readpasswordjob_dump_object_tree(void* self);
+void q_keychain__readpasswordjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-void q_keychain__readpasswordjob_dump_object_info(void* self);
+void q_keychain__readpasswordjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1175,16 +1175,16 @@ void q_keychain__readpasswordjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_keychain__readpasswordjob_set_property(void* self, const char* name, void* value);
+bool q_keychain__readpasswordjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param name const char*
 ///
-QVariant* q_keychain__readpasswordjob_property(void* self, const char* name);
+QVariant* q_keychain__readpasswordjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1192,9 +1192,9 @@ QVariant* q_keychain__readpasswordjob_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const char** q_keychain__readpasswordjob_dynamic_property_names(void* self);
+const char** q_keychain__readpasswordjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1208,9 +1208,9 @@ QBindingStorage* q_keychain__readpasswordjob_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-const QBindingStorage* q_keychain__readpasswordjob_binding_storage2(void* self);
+const QBindingStorage* q_keychain__readpasswordjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1233,18 +1233,18 @@ void q_keychain__readpasswordjob_on_destroyed(void* self, void (*callback)(void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-QObject* q_keychain__readpasswordjob_parent(void* self);
+QObject* q_keychain__readpasswordjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param classname const char*
 ///
-bool q_keychain__readpasswordjob_inherits(void* self, const char* classname);
+bool q_keychain__readpasswordjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1284,7 +1284,7 @@ int32_t q_keychain__readpasswordjob_start_timer23(void* self, int64_t time, int3
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__readpasswordjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_keychain__readpasswordjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1296,59 +1296,59 @@ QMetaObject__Connection* q_keychain__readpasswordjob_connect5(void* sender, cons
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__readpasswordjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_keychain__readpasswordjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__readpasswordjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_keychain__readpasswordjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param signal const char*
 ///
-bool q_keychain__readpasswordjob_disconnect1(void* self, const char* signal);
+bool q_keychain__readpasswordjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__ReadPasswordJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_keychain__readpasswordjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_keychain__readpasswordjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_keychain__readpasswordjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_keychain__readpasswordjob_disconnect23(void* self, void* receiver, const char* member);
+bool q_keychain__readpasswordjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QKeychain__ReadPasswordJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_keychain__readpasswordjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1544,7 +1544,7 @@ void q_keychain__readpasswordjob_on_custom_event(void* self, void (*callback)(vo
 /// @param self QKeychain__ReadPasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__readpasswordjob_connect_notify(void* self, void* signal);
+void q_keychain__readpasswordjob_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1555,7 +1555,7 @@ void q_keychain__readpasswordjob_connect_notify(void* self, void* signal);
 /// @param self QKeychain__ReadPasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__readpasswordjob_super_connect_notify(void* self, void* signal);
+void q_keychain__readpasswordjob_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1566,7 +1566,7 @@ void q_keychain__readpasswordjob_super_connect_notify(void* self, void* signal);
 /// @param self QKeychain__ReadPasswordJob*
 /// @param callback void func(QKeychain__ReadPasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__readpasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_keychain__readpasswordjob_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1577,7 +1577,7 @@ void q_keychain__readpasswordjob_on_connect_notify(void* self, void (*callback)(
 /// @param self QKeychain__ReadPasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__readpasswordjob_disconnect_notify(void* self, void* signal);
+void q_keychain__readpasswordjob_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1588,7 +1588,7 @@ void q_keychain__readpasswordjob_disconnect_notify(void* self, void* signal);
 /// @param self QKeychain__ReadPasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__readpasswordjob_super_disconnect_notify(void* self, void* signal);
+void q_keychain__readpasswordjob_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1599,7 +1599,7 @@ void q_keychain__readpasswordjob_super_disconnect_notify(void* self, void* signa
 /// @param self QKeychain__ReadPasswordJob*
 /// @param callback void func(QKeychain__ReadPasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__readpasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_keychain__readpasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QKeychain::Job
 ///
@@ -1628,9 +1628,9 @@ void q_keychain__readpasswordjob_super_do_start(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeychain__ReadPasswordJob*
-/// @param callback void func()
+/// @param callback void func(QKeychain__ReadPasswordJob* self)
 ///
-void q_keychain__readpasswordjob_on_do_start(void* self, void (*callback)());
+void q_keychain__readpasswordjob_on_do_start(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -1638,9 +1638,9 @@ void q_keychain__readpasswordjob_on_do_start(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-QObject* q_keychain__readpasswordjob_sender(void* self);
+QObject* q_keychain__readpasswordjob_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1648,9 +1648,9 @@ QObject* q_keychain__readpasswordjob_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-QObject* q_keychain__readpasswordjob_super_sender(void* self);
+QObject* q_keychain__readpasswordjob_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1658,10 +1658,10 @@ QObject* q_keychain__readpasswordjob_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
-/// @param callback QObject* func()
+/// @param self const QKeychain__ReadPasswordJob*
+/// @param callback QObject* func(QKeychain__ReadPasswordJob* self)
 ///
-void q_keychain__readpasswordjob_on_sender(void* self, QObject* (*callback)());
+void q_keychain__readpasswordjob_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1669,9 +1669,9 @@ void q_keychain__readpasswordjob_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-int32_t q_keychain__readpasswordjob_sender_signal_index(void* self);
+int32_t q_keychain__readpasswordjob_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1679,9 +1679,9 @@ int32_t q_keychain__readpasswordjob_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 ///
-int32_t q_keychain__readpasswordjob_super_sender_signal_index(void* self);
+int32_t q_keychain__readpasswordjob_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1689,10 +1689,10 @@ int32_t q_keychain__readpasswordjob_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
-/// @param callback int32_t func()
+/// @param self const QKeychain__ReadPasswordJob*
+/// @param callback int32_t func(QKeychain__ReadPasswordJob* self)
 ///
-void q_keychain__readpasswordjob_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_keychain__readpasswordjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1700,10 +1700,10 @@ void q_keychain__readpasswordjob_on_sender_signal_index(void* self, int32_t (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param signal const char*
 ///
-int32_t q_keychain__readpasswordjob_receivers(void* self, const char* signal);
+int32_t q_keychain__readpasswordjob_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1711,10 +1711,10 @@ int32_t q_keychain__readpasswordjob_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param signal const char*
 ///
-int32_t q_keychain__readpasswordjob_super_receivers(void* self, const char* signal);
+int32_t q_keychain__readpasswordjob_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1722,10 +1722,10 @@ int32_t q_keychain__readpasswordjob_super_receivers(void* self, const char* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param callback int32_t func(QKeychain__ReadPasswordJob* self, const char* signal)
 ///
-void q_keychain__readpasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_keychain__readpasswordjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1733,10 +1733,10 @@ void q_keychain__readpasswordjob_on_receivers(void* self, int32_t (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param signal QMetaMethod*
 ///
-bool q_keychain__readpasswordjob_is_signal_connected(void* self, void* signal);
+bool q_keychain__readpasswordjob_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1744,10 +1744,10 @@ bool q_keychain__readpasswordjob_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param signal QMetaMethod*
 ///
-bool q_keychain__readpasswordjob_super_is_signal_connected(void* self, void* signal);
+bool q_keychain__readpasswordjob_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1755,10 +1755,10 @@ bool q_keychain__readpasswordjob_super_is_signal_connected(void* self, void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__ReadPasswordJob*
+/// @param self const QKeychain__ReadPasswordJob*
 /// @param callback bool func(QKeychain__ReadPasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__readpasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_keychain__readpasswordjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1798,26 +1798,26 @@ QKeychain__WritePasswordJob* q_keychain__writepasswordjob_new2(const char* servi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-const QMetaObject* q_keychain__writepasswordjob_meta_object(void* self);
+const QMetaObject* q_keychain__writepasswordjob_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QKeychain__WritePasswordJob*
-/// @param callback const QMetaObject* func()
+/// @param self const QKeychain__WritePasswordJob*
+/// @param callback const QMetaObject* func(const QKeychain__WritePasswordJob* self)
 ///
-void q_keychain__writepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_keychain__writepasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-const QMetaObject* q_keychain__writepasswordjob_super_meta_object(void* self);
+const QMetaObject* q_keychain__writepasswordjob_super_meta_object(const void* self);
 
 /// @param self QKeychain__WritePasswordJob*
 /// @param param1 const char*
@@ -1906,9 +1906,9 @@ const char* q_keychain__writepasswordjob_tr3(const char* s, const char* c, int n
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-QSettings* q_keychain__writepasswordjob_settings(void* self);
+QSettings* q_keychain__writepasswordjob_settings(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -1933,19 +1933,19 @@ void q_keychain__writepasswordjob_start(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-const char* q_keychain__writepasswordjob_service(void* self);
+const char* q_keychain__writepasswordjob_service(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
 /// @return enum QKeychain__Error
 ///
-int32_t q_keychain__writepasswordjob_error(void* self);
+int32_t q_keychain__writepasswordjob_error(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -1953,17 +1953,17 @@ int32_t q_keychain__writepasswordjob_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-const char* q_keychain__writepasswordjob_error_string(void* self);
+const char* q_keychain__writepasswordjob_error_string(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-bool q_keychain__writepasswordjob_auto_delete(void* self);
+bool q_keychain__writepasswordjob_auto_delete(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -1978,9 +1978,9 @@ void q_keychain__writepasswordjob_set_auto_delete(void* self, bool autoDelete);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-bool q_keychain__writepasswordjob_insecure_fallback(void* self);
+bool q_keychain__writepasswordjob_insecure_fallback(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -1997,9 +1997,9 @@ void q_keychain__writepasswordjob_set_insecure_fallback(void* self, bool insecur
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-const char* q_keychain__writepasswordjob_key(void* self);
+const char* q_keychain__writepasswordjob_key(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -2052,9 +2052,9 @@ void q_keychain__writepasswordjob_on_finished(void* self, void (*callback)(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-const char* q_keychain__writepasswordjob_object_name(void* self);
+const char* q_keychain__writepasswordjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2069,33 +2069,33 @@ void q_keychain__writepasswordjob_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-bool q_keychain__writepasswordjob_is_widget_type(void* self);
+bool q_keychain__writepasswordjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-bool q_keychain__writepasswordjob_is_window_type(void* self);
+bool q_keychain__writepasswordjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-bool q_keychain__writepasswordjob_is_quick_item_type(void* self);
+bool q_keychain__writepasswordjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-bool q_keychain__writepasswordjob_signals_blocked(void* self);
+bool q_keychain__writepasswordjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2110,9 +2110,9 @@ bool q_keychain__writepasswordjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-QThread* q_keychain__writepasswordjob_thread(void* self);
+QThread* q_keychain__writepasswordjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2163,11 +2163,11 @@ void q_keychain__writepasswordjob_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_keychain__writepasswordjob_children(void* self);
+libqt_list q_keychain__writepasswordjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2205,7 +2205,7 @@ void q_keychain__writepasswordjob_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_keychain__writepasswordjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_keychain__writepasswordjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2216,18 +2216,18 @@ QMetaObject__Connection* q_keychain__writepasswordjob_connect(void* sender, cons
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_keychain__writepasswordjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_keychain__writepasswordjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_keychain__writepasswordjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_keychain__writepasswordjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2238,7 +2238,7 @@ QMetaObject__Connection* q_keychain__writepasswordjob_connect3(void* self, void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_keychain__writepasswordjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_keychain__writepasswordjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2249,24 +2249,24 @@ bool q_keychain__writepasswordjob_disconnect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_keychain__writepasswordjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_keychain__writepasswordjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-bool q_keychain__writepasswordjob_disconnect3(void* self);
+bool q_keychain__writepasswordjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param receiver QObject*
 ///
-bool q_keychain__writepasswordjob_disconnect4(void* self, void* receiver);
+bool q_keychain__writepasswordjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2274,23 +2274,23 @@ bool q_keychain__writepasswordjob_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_keychain__writepasswordjob_disconnect5(void* param1);
+bool q_keychain__writepasswordjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-void q_keychain__writepasswordjob_dump_object_tree(void* self);
+void q_keychain__writepasswordjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-void q_keychain__writepasswordjob_dump_object_info(void* self);
+void q_keychain__writepasswordjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2300,16 +2300,16 @@ void q_keychain__writepasswordjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_keychain__writepasswordjob_set_property(void* self, const char* name, void* value);
+bool q_keychain__writepasswordjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param name const char*
 ///
-QVariant* q_keychain__writepasswordjob_property(void* self, const char* name);
+QVariant* q_keychain__writepasswordjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2317,9 +2317,9 @@ QVariant* q_keychain__writepasswordjob_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-const char** q_keychain__writepasswordjob_dynamic_property_names(void* self);
+const char** q_keychain__writepasswordjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2333,9 +2333,9 @@ QBindingStorage* q_keychain__writepasswordjob_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-const QBindingStorage* q_keychain__writepasswordjob_binding_storage2(void* self);
+const QBindingStorage* q_keychain__writepasswordjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2358,18 +2358,18 @@ void q_keychain__writepasswordjob_on_destroyed(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-QObject* q_keychain__writepasswordjob_parent(void* self);
+QObject* q_keychain__writepasswordjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param classname const char*
 ///
-bool q_keychain__writepasswordjob_inherits(void* self, const char* classname);
+bool q_keychain__writepasswordjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2409,7 +2409,7 @@ int32_t q_keychain__writepasswordjob_start_timer23(void* self, int64_t time, int
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__writepasswordjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_keychain__writepasswordjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2421,59 +2421,59 @@ QMetaObject__Connection* q_keychain__writepasswordjob_connect5(void* sender, con
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__writepasswordjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_keychain__writepasswordjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__writepasswordjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_keychain__writepasswordjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param signal const char*
 ///
-bool q_keychain__writepasswordjob_disconnect1(void* self, const char* signal);
+bool q_keychain__writepasswordjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__WritePasswordJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_keychain__writepasswordjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_keychain__writepasswordjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_keychain__writepasswordjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_keychain__writepasswordjob_disconnect23(void* self, void* receiver, const char* member);
+bool q_keychain__writepasswordjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QKeychain__WritePasswordJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_keychain__writepasswordjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2669,7 +2669,7 @@ void q_keychain__writepasswordjob_on_custom_event(void* self, void (*callback)(v
 /// @param self QKeychain__WritePasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__writepasswordjob_connect_notify(void* self, void* signal);
+void q_keychain__writepasswordjob_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2680,7 +2680,7 @@ void q_keychain__writepasswordjob_connect_notify(void* self, void* signal);
 /// @param self QKeychain__WritePasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__writepasswordjob_super_connect_notify(void* self, void* signal);
+void q_keychain__writepasswordjob_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2691,7 +2691,7 @@ void q_keychain__writepasswordjob_super_connect_notify(void* self, void* signal)
 /// @param self QKeychain__WritePasswordJob*
 /// @param callback void func(QKeychain__WritePasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__writepasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_keychain__writepasswordjob_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2702,7 +2702,7 @@ void q_keychain__writepasswordjob_on_connect_notify(void* self, void (*callback)
 /// @param self QKeychain__WritePasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__writepasswordjob_disconnect_notify(void* self, void* signal);
+void q_keychain__writepasswordjob_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2713,7 +2713,7 @@ void q_keychain__writepasswordjob_disconnect_notify(void* self, void* signal);
 /// @param self QKeychain__WritePasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__writepasswordjob_super_disconnect_notify(void* self, void* signal);
+void q_keychain__writepasswordjob_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2724,7 +2724,7 @@ void q_keychain__writepasswordjob_super_disconnect_notify(void* self, void* sign
 /// @param self QKeychain__WritePasswordJob*
 /// @param callback void func(QKeychain__WritePasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__writepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_keychain__writepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QKeychain::Job
 ///
@@ -2753,9 +2753,9 @@ void q_keychain__writepasswordjob_super_do_start(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeychain__WritePasswordJob*
-/// @param callback void func()
+/// @param callback void func(QKeychain__WritePasswordJob* self)
 ///
-void q_keychain__writepasswordjob_on_do_start(void* self, void (*callback)());
+void q_keychain__writepasswordjob_on_do_start(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -2763,9 +2763,9 @@ void q_keychain__writepasswordjob_on_do_start(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-QObject* q_keychain__writepasswordjob_sender(void* self);
+QObject* q_keychain__writepasswordjob_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2773,9 +2773,9 @@ QObject* q_keychain__writepasswordjob_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-QObject* q_keychain__writepasswordjob_super_sender(void* self);
+QObject* q_keychain__writepasswordjob_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2783,10 +2783,10 @@ QObject* q_keychain__writepasswordjob_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
-/// @param callback QObject* func()
+/// @param self const QKeychain__WritePasswordJob*
+/// @param callback QObject* func(QKeychain__WritePasswordJob* self)
 ///
-void q_keychain__writepasswordjob_on_sender(void* self, QObject* (*callback)());
+void q_keychain__writepasswordjob_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2794,9 +2794,9 @@ void q_keychain__writepasswordjob_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-int32_t q_keychain__writepasswordjob_sender_signal_index(void* self);
+int32_t q_keychain__writepasswordjob_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2804,9 +2804,9 @@ int32_t q_keychain__writepasswordjob_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 ///
-int32_t q_keychain__writepasswordjob_super_sender_signal_index(void* self);
+int32_t q_keychain__writepasswordjob_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2814,10 +2814,10 @@ int32_t q_keychain__writepasswordjob_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
-/// @param callback int32_t func()
+/// @param self const QKeychain__WritePasswordJob*
+/// @param callback int32_t func(QKeychain__WritePasswordJob* self)
 ///
-void q_keychain__writepasswordjob_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_keychain__writepasswordjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2825,10 +2825,10 @@ void q_keychain__writepasswordjob_on_sender_signal_index(void* self, int32_t (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param signal const char*
 ///
-int32_t q_keychain__writepasswordjob_receivers(void* self, const char* signal);
+int32_t q_keychain__writepasswordjob_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2836,10 +2836,10 @@ int32_t q_keychain__writepasswordjob_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param signal const char*
 ///
-int32_t q_keychain__writepasswordjob_super_receivers(void* self, const char* signal);
+int32_t q_keychain__writepasswordjob_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2847,10 +2847,10 @@ int32_t q_keychain__writepasswordjob_super_receivers(void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param callback int32_t func(QKeychain__WritePasswordJob* self, const char* signal)
 ///
-void q_keychain__writepasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_keychain__writepasswordjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2858,10 +2858,10 @@ void q_keychain__writepasswordjob_on_receivers(void* self, int32_t (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param signal QMetaMethod*
 ///
-bool q_keychain__writepasswordjob_is_signal_connected(void* self, void* signal);
+bool q_keychain__writepasswordjob_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2869,10 +2869,10 @@ bool q_keychain__writepasswordjob_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param signal QMetaMethod*
 ///
-bool q_keychain__writepasswordjob_super_is_signal_connected(void* self, void* signal);
+bool q_keychain__writepasswordjob_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2880,10 +2880,10 @@ bool q_keychain__writepasswordjob_super_is_signal_connected(void* self, void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__WritePasswordJob*
+/// @param self const QKeychain__WritePasswordJob*
 /// @param callback bool func(QKeychain__WritePasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__writepasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_keychain__writepasswordjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2923,26 +2923,26 @@ QKeychain__DeletePasswordJob* q_keychain__deletepasswordjob_new2(const char* ser
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-const QMetaObject* q_keychain__deletepasswordjob_meta_object(void* self);
+const QMetaObject* q_keychain__deletepasswordjob_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QKeychain__DeletePasswordJob*
-/// @param callback const QMetaObject* func()
+/// @param self const QKeychain__DeletePasswordJob*
+/// @param callback const QMetaObject* func(const QKeychain__DeletePasswordJob* self)
 ///
-void q_keychain__deletepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_keychain__deletepasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-const QMetaObject* q_keychain__deletepasswordjob_super_meta_object(void* self);
+const QMetaObject* q_keychain__deletepasswordjob_super_meta_object(const void* self);
 
 /// @param self QKeychain__DeletePasswordJob*
 /// @param param1 const char*
@@ -3017,9 +3017,9 @@ const char* q_keychain__deletepasswordjob_tr3(const char* s, const char* c, int 
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-QSettings* q_keychain__deletepasswordjob_settings(void* self);
+QSettings* q_keychain__deletepasswordjob_settings(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -3044,19 +3044,19 @@ void q_keychain__deletepasswordjob_start(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-const char* q_keychain__deletepasswordjob_service(void* self);
+const char* q_keychain__deletepasswordjob_service(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
 /// @return enum QKeychain__Error
 ///
-int32_t q_keychain__deletepasswordjob_error(void* self);
+int32_t q_keychain__deletepasswordjob_error(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -3064,17 +3064,17 @@ int32_t q_keychain__deletepasswordjob_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-const char* q_keychain__deletepasswordjob_error_string(void* self);
+const char* q_keychain__deletepasswordjob_error_string(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-bool q_keychain__deletepasswordjob_auto_delete(void* self);
+bool q_keychain__deletepasswordjob_auto_delete(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -3089,9 +3089,9 @@ void q_keychain__deletepasswordjob_set_auto_delete(void* self, bool autoDelete);
 ///
 /// [Upstream resources](https://github.com/frankosterfeld/qtkeychain)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-bool q_keychain__deletepasswordjob_insecure_fallback(void* self);
+bool q_keychain__deletepasswordjob_insecure_fallback(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -3108,9 +3108,9 @@ void q_keychain__deletepasswordjob_set_insecure_fallback(void* self, bool insecu
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-const char* q_keychain__deletepasswordjob_key(void* self);
+const char* q_keychain__deletepasswordjob_key(const void* self);
 
 /// Inherited from QKeychain::Job
 ///
@@ -3163,9 +3163,9 @@ void q_keychain__deletepasswordjob_on_finished(void* self, void (*callback)(void
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-const char* q_keychain__deletepasswordjob_object_name(void* self);
+const char* q_keychain__deletepasswordjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3180,33 +3180,33 @@ void q_keychain__deletepasswordjob_set_object_name(void* self, const char* name)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-bool q_keychain__deletepasswordjob_is_widget_type(void* self);
+bool q_keychain__deletepasswordjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-bool q_keychain__deletepasswordjob_is_window_type(void* self);
+bool q_keychain__deletepasswordjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-bool q_keychain__deletepasswordjob_is_quick_item_type(void* self);
+bool q_keychain__deletepasswordjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-bool q_keychain__deletepasswordjob_signals_blocked(void* self);
+bool q_keychain__deletepasswordjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3221,9 +3221,9 @@ bool q_keychain__deletepasswordjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-QThread* q_keychain__deletepasswordjob_thread(void* self);
+QThread* q_keychain__deletepasswordjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3274,11 +3274,11 @@ void q_keychain__deletepasswordjob_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_keychain__deletepasswordjob_children(void* self);
+libqt_list q_keychain__deletepasswordjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3316,7 +3316,7 @@ void q_keychain__deletepasswordjob_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3327,18 +3327,18 @@ QMetaObject__Connection* q_keychain__deletepasswordjob_connect(void* sender, con
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3349,7 +3349,7 @@ QMetaObject__Connection* q_keychain__deletepasswordjob_connect3(void* self, void
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_keychain__deletepasswordjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_keychain__deletepasswordjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3360,24 +3360,24 @@ bool q_keychain__deletepasswordjob_disconnect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_keychain__deletepasswordjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_keychain__deletepasswordjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-bool q_keychain__deletepasswordjob_disconnect3(void* self);
+bool q_keychain__deletepasswordjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param receiver QObject*
 ///
-bool q_keychain__deletepasswordjob_disconnect4(void* self, void* receiver);
+bool q_keychain__deletepasswordjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3385,23 +3385,23 @@ bool q_keychain__deletepasswordjob_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_keychain__deletepasswordjob_disconnect5(void* param1);
+bool q_keychain__deletepasswordjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-void q_keychain__deletepasswordjob_dump_object_tree(void* self);
+void q_keychain__deletepasswordjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-void q_keychain__deletepasswordjob_dump_object_info(void* self);
+void q_keychain__deletepasswordjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3411,16 +3411,16 @@ void q_keychain__deletepasswordjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_keychain__deletepasswordjob_set_property(void* self, const char* name, void* value);
+bool q_keychain__deletepasswordjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param name const char*
 ///
-QVariant* q_keychain__deletepasswordjob_property(void* self, const char* name);
+QVariant* q_keychain__deletepasswordjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3428,9 +3428,9 @@ QVariant* q_keychain__deletepasswordjob_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-const char** q_keychain__deletepasswordjob_dynamic_property_names(void* self);
+const char** q_keychain__deletepasswordjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3444,9 +3444,9 @@ QBindingStorage* q_keychain__deletepasswordjob_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-const QBindingStorage* q_keychain__deletepasswordjob_binding_storage2(void* self);
+const QBindingStorage* q_keychain__deletepasswordjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3469,18 +3469,18 @@ void q_keychain__deletepasswordjob_on_destroyed(void* self, void (*callback)(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-QObject* q_keychain__deletepasswordjob_parent(void* self);
+QObject* q_keychain__deletepasswordjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param classname const char*
 ///
-bool q_keychain__deletepasswordjob_inherits(void* self, const char* classname);
+bool q_keychain__deletepasswordjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3520,7 +3520,7 @@ int32_t q_keychain__deletepasswordjob_start_timer23(void* self, int64_t time, in
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3532,59 +3532,59 @@ QMetaObject__Connection* q_keychain__deletepasswordjob_connect5(void* sender, co
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param signal const char*
 ///
-bool q_keychain__deletepasswordjob_disconnect1(void* self, const char* signal);
+bool q_keychain__deletepasswordjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__DeletePasswordJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_keychain__deletepasswordjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_keychain__deletepasswordjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_keychain__deletepasswordjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_keychain__deletepasswordjob_disconnect23(void* self, void* receiver, const char* member);
+bool q_keychain__deletepasswordjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QKeychain__DeletePasswordJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_keychain__deletepasswordjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3780,7 +3780,7 @@ void q_keychain__deletepasswordjob_on_custom_event(void* self, void (*callback)(
 /// @param self QKeychain__DeletePasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__deletepasswordjob_connect_notify(void* self, void* signal);
+void q_keychain__deletepasswordjob_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3791,7 +3791,7 @@ void q_keychain__deletepasswordjob_connect_notify(void* self, void* signal);
 /// @param self QKeychain__DeletePasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__deletepasswordjob_super_connect_notify(void* self, void* signal);
+void q_keychain__deletepasswordjob_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3802,7 +3802,7 @@ void q_keychain__deletepasswordjob_super_connect_notify(void* self, void* signal
 /// @param self QKeychain__DeletePasswordJob*
 /// @param callback void func(QKeychain__DeletePasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__deletepasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_keychain__deletepasswordjob_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3813,7 +3813,7 @@ void q_keychain__deletepasswordjob_on_connect_notify(void* self, void (*callback
 /// @param self QKeychain__DeletePasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__deletepasswordjob_disconnect_notify(void* self, void* signal);
+void q_keychain__deletepasswordjob_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3824,7 +3824,7 @@ void q_keychain__deletepasswordjob_disconnect_notify(void* self, void* signal);
 /// @param self QKeychain__DeletePasswordJob*
 /// @param signal QMetaMethod*
 ///
-void q_keychain__deletepasswordjob_super_disconnect_notify(void* self, void* signal);
+void q_keychain__deletepasswordjob_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3835,7 +3835,7 @@ void q_keychain__deletepasswordjob_super_disconnect_notify(void* self, void* sig
 /// @param self QKeychain__DeletePasswordJob*
 /// @param callback void func(QKeychain__DeletePasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__deletepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_keychain__deletepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QKeychain::Job
 ///
@@ -3864,9 +3864,9 @@ void q_keychain__deletepasswordjob_super_do_start(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QKeychain__DeletePasswordJob*
-/// @param callback void func()
+/// @param callback void func(QKeychain__DeletePasswordJob* self)
 ///
-void q_keychain__deletepasswordjob_on_do_start(void* self, void (*callback)());
+void q_keychain__deletepasswordjob_on_do_start(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -3874,9 +3874,9 @@ void q_keychain__deletepasswordjob_on_do_start(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-QObject* q_keychain__deletepasswordjob_sender(void* self);
+QObject* q_keychain__deletepasswordjob_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3884,9 +3884,9 @@ QObject* q_keychain__deletepasswordjob_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-QObject* q_keychain__deletepasswordjob_super_sender(void* self);
+QObject* q_keychain__deletepasswordjob_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3894,10 +3894,10 @@ QObject* q_keychain__deletepasswordjob_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
-/// @param callback QObject* func()
+/// @param self const QKeychain__DeletePasswordJob*
+/// @param callback QObject* func(QKeychain__DeletePasswordJob* self)
 ///
-void q_keychain__deletepasswordjob_on_sender(void* self, QObject* (*callback)());
+void q_keychain__deletepasswordjob_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3905,9 +3905,9 @@ void q_keychain__deletepasswordjob_on_sender(void* self, QObject* (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-int32_t q_keychain__deletepasswordjob_sender_signal_index(void* self);
+int32_t q_keychain__deletepasswordjob_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3915,9 +3915,9 @@ int32_t q_keychain__deletepasswordjob_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 ///
-int32_t q_keychain__deletepasswordjob_super_sender_signal_index(void* self);
+int32_t q_keychain__deletepasswordjob_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3925,10 +3925,10 @@ int32_t q_keychain__deletepasswordjob_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
-/// @param callback int32_t func()
+/// @param self const QKeychain__DeletePasswordJob*
+/// @param callback int32_t func(QKeychain__DeletePasswordJob* self)
 ///
-void q_keychain__deletepasswordjob_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_keychain__deletepasswordjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3936,10 +3936,10 @@ void q_keychain__deletepasswordjob_on_sender_signal_index(void* self, int32_t (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param signal const char*
 ///
-int32_t q_keychain__deletepasswordjob_receivers(void* self, const char* signal);
+int32_t q_keychain__deletepasswordjob_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3947,10 +3947,10 @@ int32_t q_keychain__deletepasswordjob_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param signal const char*
 ///
-int32_t q_keychain__deletepasswordjob_super_receivers(void* self, const char* signal);
+int32_t q_keychain__deletepasswordjob_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3958,10 +3958,10 @@ int32_t q_keychain__deletepasswordjob_super_receivers(void* self, const char* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param callback int32_t func(QKeychain__DeletePasswordJob* self, const char* signal)
 ///
-void q_keychain__deletepasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_keychain__deletepasswordjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3969,10 +3969,10 @@ void q_keychain__deletepasswordjob_on_receivers(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param signal QMetaMethod*
 ///
-bool q_keychain__deletepasswordjob_is_signal_connected(void* self, void* signal);
+bool q_keychain__deletepasswordjob_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3980,10 +3980,10 @@ bool q_keychain__deletepasswordjob_is_signal_connected(void* self, void* signal)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param signal QMetaMethod*
 ///
-bool q_keychain__deletepasswordjob_super_is_signal_connected(void* self, void* signal);
+bool q_keychain__deletepasswordjob_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3991,10 +3991,10 @@ bool q_keychain__deletepasswordjob_super_is_signal_connected(void* self, void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QKeychain__DeletePasswordJob*
+/// @param self const QKeychain__DeletePasswordJob*
 /// @param callback bool func(QKeychain__DeletePasswordJob* self, QMetaMethod* signal)
 ///
-void q_keychain__deletepasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_keychain__deletepasswordjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

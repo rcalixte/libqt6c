@@ -110,9 +110,9 @@ void q_readlocker_relock(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qreadlocker.html#readWriteLock)
 ///
-/// @param self QReadLocker*
+/// @param self const QReadLocker*
 ///
-QReadWriteLock* q_readlocker_read_write_lock(void* self);
+QReadWriteLock* q_readlocker_read_write_lock(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qreadlocker.html#dtor.QReadLocker)
 ///
@@ -144,9 +144,9 @@ void q_writelocker_relock(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwritelocker.html#readWriteLock)
 ///
-/// @param self QWriteLocker*
+/// @param self const QWriteLocker*
 ///
-QReadWriteLock* q_writelocker_read_write_lock(void* self);
+QReadWriteLock* q_writelocker_read_write_lock(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwritelocker.html#dtor.QWriteLocker)
 ///

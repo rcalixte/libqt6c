@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-const QMetaObject* k_sambashare_meta_object(void* self);
+const QMetaObject* k_sambashare_meta_object(const void* self);
 
 /// @param self KSambaShare*
 /// @param param1 const char*
@@ -42,63 +42,63 @@ KSambaShare* k_sambashare_instance();
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#isDirectoryShared)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param path const char*
 ///
-bool k_sambashare_is_directory_shared(void* self, const char* path);
+bool k_sambashare_is_directory_shared(const void* self, const char* path);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#sharedDirectories)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-const char** k_sambashare_shared_directories(void* self);
+const char** k_sambashare_shared_directories(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#isShareNameAvailable)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param name const char*
 ///
-bool k_sambashare_is_share_name_available(void* self, const char* name);
+bool k_sambashare_is_share_name_available(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#shareNames)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-const char** k_sambashare_share_names(void* self);
+const char** k_sambashare_share_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#getShareByName)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param name const char*
 ///
-KSambaShareData* k_sambashare_get_share_by_name(void* self, const char* name);
+KSambaShareData* k_sambashare_get_share_by_name(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#getSharesByPath)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param path const char*
 ///
 /// @return libqt_list of KSambaShareData*
 ///
-libqt_list k_sambashare_get_shares_by_path(void* self, const char* path);
+libqt_list k_sambashare_get_shares_by_path(const void* self, const char* path);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#lastSystemErrorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-const char* k_sambashare_last_system_error_string(void* self);
+const char* k_sambashare_last_system_error_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#areGuestsAllowed)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-bool k_sambashare_are_guests_allowed(void* self);
+bool k_sambashare_are_guests_allowed(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambashare.html#changed)
 ///
@@ -157,9 +157,9 @@ bool k_sambashare_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-const char* k_sambashare_object_name(void* self);
+const char* k_sambashare_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -174,33 +174,33 @@ void k_sambashare_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-bool k_sambashare_is_widget_type(void* self);
+bool k_sambashare_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-bool k_sambashare_is_window_type(void* self);
+bool k_sambashare_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-bool k_sambashare_is_quick_item_type(void* self);
+bool k_sambashare_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-bool k_sambashare_signals_blocked(void* self);
+bool k_sambashare_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -215,9 +215,9 @@ bool k_sambashare_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-QThread* k_sambashare_thread(void* self);
+QThread* k_sambashare_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -268,11 +268,11 @@ void k_sambashare_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_sambashare_children(void* self);
+libqt_list k_sambashare_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -310,7 +310,7 @@ void k_sambashare_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_sambashare_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_sambashare_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -321,18 +321,18 @@ QMetaObject__Connection* k_sambashare_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_sambashare_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_sambashare_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_sambashare_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_sambashare_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -343,7 +343,7 @@ QMetaObject__Connection* k_sambashare_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_sambashare_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_sambashare_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -354,24 +354,24 @@ bool k_sambashare_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_sambashare_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_sambashare_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-bool k_sambashare_disconnect3(void* self);
+bool k_sambashare_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param receiver QObject*
 ///
-bool k_sambashare_disconnect4(void* self, void* receiver);
+bool k_sambashare_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -379,23 +379,23 @@ bool k_sambashare_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_sambashare_disconnect5(void* param1);
+bool k_sambashare_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-void k_sambashare_dump_object_tree(void* self);
+void k_sambashare_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-void k_sambashare_dump_object_info(void* self);
+void k_sambashare_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -405,16 +405,16 @@ void k_sambashare_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_sambashare_set_property(void* self, const char* name, void* value);
+bool k_sambashare_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param name const char*
 ///
-QVariant* k_sambashare_property(void* self, const char* name);
+QVariant* k_sambashare_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -422,9 +422,9 @@ QVariant* k_sambashare_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-const char** k_sambashare_dynamic_property_names(void* self);
+const char** k_sambashare_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -438,9 +438,9 @@ QBindingStorage* k_sambashare_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-const QBindingStorage* k_sambashare_binding_storage2(void* self);
+const QBindingStorage* k_sambashare_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -463,18 +463,18 @@ void k_sambashare_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 ///
-QObject* k_sambashare_parent(void* self);
+QObject* k_sambashare_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param classname const char*
 ///
-bool k_sambashare_inherits(void* self, const char* classname);
+bool k_sambashare_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -514,7 +514,7 @@ int32_t k_sambashare_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sambashare_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_sambashare_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -526,59 +526,59 @@ QMetaObject__Connection* k_sambashare_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sambashare_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_sambashare_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sambashare_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_sambashare_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param signal const char*
 ///
-bool k_sambashare_disconnect1(void* self, const char* signal);
+bool k_sambashare_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSambaShare*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_sambashare_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_sambashare_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_sambashare_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSambaShare*
+/// @param self const KSambaShare*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_sambashare_disconnect23(void* self, void* receiver, const char* member);
+bool k_sambashare_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KSambaShare*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_sambashare_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

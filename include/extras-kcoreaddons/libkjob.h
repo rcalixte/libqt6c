@@ -24,26 +24,26 @@ KJob* k_job_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-const QMetaObject* k_job_meta_object(void* self);
+const QMetaObject* k_job_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KJob*
-/// @param callback const QMetaObject* func()
+/// @param self const KJob*
+/// @param callback const QMetaObject* func(const KJob* self)
 ///
-void k_job_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_job_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-const QMetaObject* k_job_super_meta_object(void* self);
+const QMetaObject* k_job_super_meta_object(const void* self);
 
 /// @param self KJob*
 /// @param param1 const char*
@@ -104,25 +104,27 @@ void k_job_set_ui_delegate(void* self, void* delegate);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-KJobUiDelegate* k_job_ui_delegate(void* self);
+KJobUiDelegate* k_job_ui_delegate(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
 /// @return flag of enum KJob__Capability
 ///
-int32_t k_job_capabilities(void* self);
+int32_t k_job_capabilities(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_is_suspended(void* self);
+bool k_job_is_suspended(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#start)
+///
+/// @warning This method must be implemented with `k_job_on_start` before it can be called.
 ///
 /// @param self KJob*
 ///
@@ -133,17 +135,9 @@ void k_job_start(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void func()
+/// @param callback void func(KJob* self)
 ///
-void k_job_on_start(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kjob.html#start)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-///
-void k_job_super_start(void* self);
+void k_job_on_start(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#kill)
 ///
@@ -174,9 +168,9 @@ bool k_job_do_kill(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback bool func()
+/// @param callback bool func(KJob* self)
 ///
-void k_job_on_do_kill(void* self, bool (*callback)());
+void k_job_on_do_kill(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#doKill)
 ///
@@ -197,9 +191,9 @@ bool k_job_do_suspend(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback bool func()
+/// @param callback bool func(KJob* self)
 ///
-void k_job_on_do_suspend(void* self, bool (*callback)());
+void k_job_on_do_suspend(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#doSuspend)
 ///
@@ -220,9 +214,9 @@ bool k_job_do_resume(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback bool func()
+/// @param callback bool func(KJob* self)
 ///
-void k_job_on_do_resume(void* self, bool (*callback)());
+void k_job_on_do_resume(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#doResume)
 ///
@@ -239,24 +233,6 @@ bool k_job_super_do_resume(void* self);
 ///
 void k_job_set_capabilities(void* self, int32_t capabilities);
 
-/// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, flag of enum KJob__Capability capabilities)
-///
-void k_job_on_set_capabilities(void* self, void (*callback)(void*, int32_t));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setCapabilities)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param capabilities flag of enum KJob__Capability
-///
-void k_job_super_set_capabilities(void* self, int32_t capabilities);
-
 /// [Upstream resources](https://api.kde.org/kjob.html#exec)
 ///
 /// @param self KJob*
@@ -265,62 +241,62 @@ bool k_job_exec(void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-int32_t k_job_error(void* self);
+int32_t k_job_error(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#errorText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-const char* k_job_error_text(void* self);
+const char* k_job_error_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-const char* k_job_error_string(void* self);
+const char* k_job_error_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KJob*
-/// @param callback const char* func()
+/// @param self const KJob*
+/// @param callback const char* func(const KJob* self)
 ///
-void k_job_on_error_string(void* self, const char* (*callback)());
+void k_job_on_error_string(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#errorString)
 ///
 /// Base class method implementation
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-const char* k_job_super_error_string(void* self);
+const char* k_job_super_error_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_job_processed_amount(void* self, int32_t unit);
+uintptr_t k_job_processed_amount(const void* self, int32_t unit);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_job_total_amount(void* self, int32_t unit);
+uintptr_t k_job_total_amount(const void* self, int32_t unit);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-uintptr_t k_job_percent(void* self);
+uintptr_t k_job_percent(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setAutoDelete)
 ///
@@ -331,9 +307,9 @@ void k_job_set_auto_delete(void* self, bool autodelete);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_is_auto_delete(void* self);
+bool k_job_is_auto_delete(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setFinishedNotificationHidden)
 ///
@@ -343,21 +319,21 @@ void k_job_set_finished_notification_hidden(void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_is_finished_notification_hidden(void* self);
+bool k_job_is_finished_notification_hidden(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_is_started_with_exec(void* self);
+bool k_job_is_started_with_exec(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-int64_t k_job_elapsed_time(void* self);
+int64_t k_job_elapsed_time(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
@@ -436,26 +412,9 @@ void k_job_on_speed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_is_finished(void* self);
-
-/// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback bool func()
-///
-void k_job_on_is_finished(void* self, bool (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-///
-bool k_job_super_is_finished(void* self);
+bool k_job_is_finished(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setError)
 ///
@@ -464,48 +423,12 @@ bool k_job_super_is_finished(void* self);
 ///
 void k_job_set_error(void* self, int errorCode);
 
-/// [Upstream resources](https://api.kde.org/kjob.html#setError)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, int errorCode)
-///
-void k_job_on_set_error(void* self, void (*callback)(void*, int));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setError)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param errorCode int
-///
-void k_job_super_set_error(void* self, int errorCode);
-
 /// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
 ///
 /// @param self KJob*
 /// @param errorText const char*
 ///
 void k_job_set_error_text(void* self, const char* errorText);
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, const char* errorText)
-///
-void k_job_on_set_error_text(void* self, void (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setErrorText)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param errorText const char*
-///
-void k_job_super_set_error_text(void* self, const char* errorText);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
@@ -515,25 +438,6 @@ void k_job_super_set_error_text(void* self, const char* errorText);
 ///
 void k_job_set_processed_amount(void* self, int32_t unit, uintptr_t amount);
 
-/// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, enum KJob__Unit unit, uintptr_t amount)
-///
-void k_job_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param unit enum KJob__Unit
-/// @param amount uintptr_t
-///
-void k_job_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount);
-
 /// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// @param self KJob*
@@ -542,49 +446,12 @@ void k_job_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount
 ///
 void k_job_set_total_amount(void* self, int32_t unit, uintptr_t amount);
 
-/// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, enum KJob__Unit unit, uintptr_t amount)
-///
-void k_job_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param unit enum KJob__Unit
-/// @param amount uintptr_t
-///
-void k_job_super_set_total_amount(void* self, int32_t unit, uintptr_t amount);
-
 /// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
 ///
 /// @param self KJob*
 /// @param unit enum KJob__Unit
 ///
 void k_job_set_progress_unit(void* self, int32_t unit);
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, enum KJob__Unit unit)
-///
-void k_job_on_set_progress_unit(void* self, void (*callback)(void*, int32_t));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param unit enum KJob__Unit
-///
-void k_job_super_set_progress_unit(void* self, int32_t unit);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
@@ -593,46 +460,11 @@ void k_job_super_set_progress_unit(void* self, int32_t unit);
 ///
 void k_job_set_percent(void* self, uintptr_t percentage);
 
-/// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, uintptr_t percentage)
-///
-void k_job_on_set_percent(void* self, void (*callback)(void*, uintptr_t));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param percentage uintptr_t
-///
-void k_job_super_set_percent(void* self, uintptr_t percentage);
-
 /// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
 ///
 /// @param self KJob*
 ///
 void k_job_emit_result(void* self);
-
-/// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func()
-///
-void k_job_on_emit_result(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-///
-void k_job_super_emit_result(void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
@@ -642,25 +474,6 @@ void k_job_super_emit_result(void* self);
 ///
 void k_job_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount);
 
-/// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, uintptr_t processedAmount, uintptr_t totalAmount)
-///
-void k_job_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param processedAmount uintptr_t
-/// @param totalAmount uintptr_t
-///
-void k_job_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount);
-
 /// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// @param self KJob*
@@ -668,46 +481,11 @@ void k_job_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t t
 ///
 void k_job_emit_speed(void* self, uintptr_t speed);
 
-/// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func(KJob* self, uintptr_t speed)
-///
-void k_job_on_emit_speed(void* self, void (*callback)(void*, uintptr_t));
-
-/// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-/// @param speed uintptr_t
-///
-void k_job_super_emit_speed(void* self, uintptr_t speed);
-
 /// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
 /// @param self KJob*
 ///
 void k_job_start_elapsed_timer(void* self);
-
-/// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KJob*
-/// @param callback void func()
-///
-void k_job_on_start_elapsed_timer(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
-///
-/// Base class method implementation
-///
-/// @param self KJob*
-///
-void k_job_super_start_elapsed_timer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -748,9 +526,9 @@ void k_job_set_finished_notification_hidden1(void* self, bool hide);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-const char* k_job_object_name(void* self);
+const char* k_job_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -765,33 +543,33 @@ void k_job_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_is_widget_type(void* self);
+bool k_job_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_is_window_type(void* self);
+bool k_job_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_is_quick_item_type(void* self);
+bool k_job_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_signals_blocked(void* self);
+bool k_job_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -806,9 +584,9 @@ bool k_job_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-QThread* k_job_thread(void* self);
+QThread* k_job_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -859,11 +637,11 @@ void k_job_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_job_children(void* self);
+libqt_list k_job_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -901,7 +679,7 @@ void k_job_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_job_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_job_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -912,18 +690,18 @@ QMetaObject__Connection* k_job_connect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_job_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_job_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_job_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_job_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -934,7 +712,7 @@ QMetaObject__Connection* k_job_connect3(void* self, void* sender, const char* si
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_job_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_job_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -945,24 +723,24 @@ bool k_job_disconnect(void* sender, const char* signal, void* receiver, const ch
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_job_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_job_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-bool k_job_disconnect3(void* self);
+bool k_job_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param receiver QObject*
 ///
-bool k_job_disconnect4(void* self, void* receiver);
+bool k_job_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -970,23 +748,23 @@ bool k_job_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_job_disconnect5(void* param1);
+bool k_job_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-void k_job_dump_object_tree(void* self);
+void k_job_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-void k_job_dump_object_info(void* self);
+void k_job_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -996,16 +774,16 @@ void k_job_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_job_set_property(void* self, const char* name, void* value);
+bool k_job_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param name const char*
 ///
-QVariant* k_job_property(void* self, const char* name);
+QVariant* k_job_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1013,9 +791,9 @@ QVariant* k_job_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-const char** k_job_dynamic_property_names(void* self);
+const char** k_job_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1029,9 +807,9 @@ QBindingStorage* k_job_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-const QBindingStorage* k_job_binding_storage2(void* self);
+const QBindingStorage* k_job_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1054,18 +832,18 @@ void k_job_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-QObject* k_job_parent(void* self);
+QObject* k_job_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param classname const char*
 ///
-bool k_job_inherits(void* self, const char* classname);
+bool k_job_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1105,7 +883,7 @@ int32_t k_job_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_job_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_job_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1117,59 +895,59 @@ QMetaObject__Connection* k_job_connect5(void* sender, const char* signal, void* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_job_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_job_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_job_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_job_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param signal const char*
 ///
-bool k_job_disconnect1(void* self, const char* signal);
+bool k_job_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_job_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_job_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_job_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KJob*
+/// @param self const KJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_job_disconnect23(void* self, void* receiver, const char* member);
+bool k_job_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_job_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1365,7 +1143,7 @@ void k_job_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KJob*
 /// @param signal QMetaMethod*
 ///
-void k_job_connect_notify(void* self, void* signal);
+void k_job_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1376,7 +1154,7 @@ void k_job_connect_notify(void* self, void* signal);
 /// @param self KJob*
 /// @param signal QMetaMethod*
 ///
-void k_job_super_connect_notify(void* self, void* signal);
+void k_job_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1387,7 +1165,7 @@ void k_job_super_connect_notify(void* self, void* signal);
 /// @param self KJob*
 /// @param callback void func(KJob* self, QMetaMethod* signal)
 ///
-void k_job_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_job_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1398,7 +1176,7 @@ void k_job_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self KJob*
 /// @param signal QMetaMethod*
 ///
-void k_job_disconnect_notify(void* self, void* signal);
+void k_job_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1409,7 +1187,7 @@ void k_job_disconnect_notify(void* self, void* signal);
 /// @param self KJob*
 /// @param signal QMetaMethod*
 ///
-void k_job_super_disconnect_notify(void* self, void* signal);
+void k_job_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1420,7 +1198,7 @@ void k_job_super_disconnect_notify(void* self, void* signal);
 /// @param self KJob*
 /// @param callback void func(KJob* self, QMetaMethod* signal)
 ///
-void k_job_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_job_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1428,9 +1206,9 @@ void k_job_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-QObject* k_job_sender(void* self);
+QObject* k_job_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1438,9 +1216,9 @@ QObject* k_job_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-QObject* k_job_super_sender(void* self);
+QObject* k_job_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1448,10 +1226,10 @@ QObject* k_job_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KJob*
-/// @param callback QObject* func()
+/// @param self const KJob*
+/// @param callback QObject* func(KJob* self)
 ///
-void k_job_on_sender(void* self, QObject* (*callback)());
+void k_job_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1459,9 +1237,9 @@ void k_job_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-int32_t k_job_sender_signal_index(void* self);
+int32_t k_job_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1469,9 +1247,9 @@ int32_t k_job_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 ///
-int32_t k_job_super_sender_signal_index(void* self);
+int32_t k_job_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1479,10 +1257,10 @@ int32_t k_job_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KJob*
-/// @param callback int32_t func()
+/// @param self const KJob*
+/// @param callback int32_t func(KJob* self)
 ///
-void k_job_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_job_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1490,10 +1268,10 @@ void k_job_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param signal const char*
 ///
-int32_t k_job_receivers(void* self, const char* signal);
+int32_t k_job_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1501,10 +1279,10 @@ int32_t k_job_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param signal const char*
 ///
-int32_t k_job_super_receivers(void* self, const char* signal);
+int32_t k_job_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1512,10 +1290,10 @@ int32_t k_job_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param callback int32_t func(KJob* self, const char* signal)
 ///
-void k_job_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_job_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1523,10 +1301,10 @@ void k_job_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param signal QMetaMethod*
 ///
-bool k_job_is_signal_connected(void* self, void* signal);
+bool k_job_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1534,10 +1312,10 @@ bool k_job_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param signal QMetaMethod*
 ///
-bool k_job_super_is_signal_connected(void* self, void* signal);
+bool k_job_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1545,10 +1323,10 @@ bool k_job_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KJob*
+/// @param self const KJob*
 /// @param callback bool func(KJob* self, QMetaMethod* signal)
 ///
-void k_job_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_job_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#finished)
 ///

@@ -2,7 +2,7 @@
 #include "libqocspresponse.hpp"
 #include "libqocspresponse.h"
 
-size_t q_qocspresponse_h_q_hash(void* response, size_t seed) {
+size_t q_qocspresponse_h_q_hash(const void* response, size_t seed) {
     return qocspresponse_h_QHash((QOcspResponse*)response, seed);
 }
 
@@ -10,27 +10,27 @@ QOcspResponse* q_ocspresponse_new() {
     return QOcspResponse_New();
 }
 
-QOcspResponse* q_ocspresponse_new2(void* other) {
+QOcspResponse* q_ocspresponse_new2(const void* other) {
     return QOcspResponse_New2((QOcspResponse*)other);
 }
 
-void q_ocspresponse_operator_assign(void* self, void* other) {
+void q_ocspresponse_operator_assign(void* self, const void* other) {
     QOcspResponse_OperatorAssign((QOcspResponse*)self, (QOcspResponse*)other);
 }
 
-int32_t q_ocspresponse_certificate_status(void* self) {
+int32_t q_ocspresponse_certificate_status(const void* self) {
     return QOcspResponse_CertificateStatus((QOcspResponse*)self);
 }
 
-int32_t q_ocspresponse_revocation_reason(void* self) {
+int32_t q_ocspresponse_revocation_reason(const void* self) {
     return QOcspResponse_RevocationReason((QOcspResponse*)self);
 }
 
-QSslCertificate* q_ocspresponse_responder(void* self) {
+QSslCertificate* q_ocspresponse_responder(const void* self) {
     return QOcspResponse_Responder((QOcspResponse*)self);
 }
 
-QSslCertificate* q_ocspresponse_subject(void* self) {
+QSslCertificate* q_ocspresponse_subject(const void* self) {
     return QOcspResponse_Subject((QOcspResponse*)self);
 }
 

@@ -41,50 +41,50 @@ KProcessList__KProcessInfo* k_processlist__kprocessinfo_new3(int64_t pid, const 
 ///
 /// @param other KProcessList__KProcessInfo*
 ///
-KProcessList__KProcessInfo* k_processlist__kprocessinfo_new4(void* other);
+KProcessList__KProcessInfo* k_processlist__kprocessinfo_new4(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#operator-eq)
 ///
 /// @param self KProcessList__KProcessInfo*
 /// @param other KProcessList__KProcessInfo*
 ///
-void k_processlist__kprocessinfo_operator_assign(void* self, void* other);
+void k_processlist__kprocessinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#isValid)
 ///
-/// @param self KProcessList__KProcessInfo*
+/// @param self const KProcessList__KProcessInfo*
 ///
-bool k_processlist__kprocessinfo_is_valid(void* self);
+bool k_processlist__kprocessinfo_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#pid)
 ///
-/// @param self KProcessList__KProcessInfo*
+/// @param self const KProcessList__KProcessInfo*
 ///
-int64_t k_processlist__kprocessinfo_pid(void* self);
+int64_t k_processlist__kprocessinfo_pid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KProcessList__KProcessInfo*
+/// @param self const KProcessList__KProcessInfo*
 ///
-const char* k_processlist__kprocessinfo_name(void* self);
+const char* k_processlist__kprocessinfo_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#user)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KProcessList__KProcessInfo*
+/// @param self const KProcessList__KProcessInfo*
 ///
-const char* k_processlist__kprocessinfo_user(void* self);
+const char* k_processlist__kprocessinfo_user(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#command)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KProcessList__KProcessInfo*
+/// @param self const KProcessList__KProcessInfo*
 ///
-const char* k_processlist__kprocessinfo_command(void* self);
+const char* k_processlist__kprocessinfo_command(const void* self);
 
 /// Delete this object from C++ memory.
 ///

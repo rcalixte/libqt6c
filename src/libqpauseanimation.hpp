@@ -36,13 +36,13 @@ int QPauseAnimation_Duration(const QPauseAnimation* self);
 void QPauseAnimation_SetDuration(QPauseAnimation* self, int msecs);
 bool QPauseAnimation_Event(QPauseAnimation* self, QEvent* e);
 void QPauseAnimation_UpdateCurrentTime(QPauseAnimation* self, int param1);
-void QPauseAnimation_OnMetaObject(const QPauseAnimation* self, intptr_t slot);
+void QPauseAnimation_OnMetaObject(QPauseAnimation* self, intptr_t slot);
 QMetaObject* QPauseAnimation_SuperMetaObject(const QPauseAnimation* self);
 void QPauseAnimation_OnMetacast(QPauseAnimation* self, intptr_t slot);
 void* QPauseAnimation_SuperMetacast(QPauseAnimation* self, const char* param1);
 void QPauseAnimation_OnMetacall(QPauseAnimation* self, intptr_t slot);
 int QPauseAnimation_SuperMetacall(QPauseAnimation* self, int param1, int param2, void** param3);
-void QPauseAnimation_OnDuration(const QPauseAnimation* self, intptr_t slot);
+void QPauseAnimation_OnDuration(QPauseAnimation* self, intptr_t slot);
 int QPauseAnimation_SuperDuration(const QPauseAnimation* self);
 void QPauseAnimation_OnEvent(QPauseAnimation* self, intptr_t slot);
 bool QPauseAnimation_SuperEvent(QPauseAnimation* self, QEvent* e);
@@ -73,17 +73,9 @@ void QPauseAnimation_DisconnectNotify(QPauseAnimation* self, const QMetaMethod* 
 void QPauseAnimation_OnDisconnectNotify(QPauseAnimation* self, intptr_t slot);
 void QPauseAnimation_SuperDisconnectNotify(QPauseAnimation* self, const QMetaMethod* signal);
 QObject* QPauseAnimation_Sender(const QPauseAnimation* self);
-void QPauseAnimation_OnSender(const QPauseAnimation* self, intptr_t slot);
-QObject* QPauseAnimation_SuperSender(const QPauseAnimation* self);
 int QPauseAnimation_SenderSignalIndex(const QPauseAnimation* self);
-void QPauseAnimation_OnSenderSignalIndex(const QPauseAnimation* self, intptr_t slot);
-int QPauseAnimation_SuperSenderSignalIndex(const QPauseAnimation* self);
 int QPauseAnimation_Receivers(const QPauseAnimation* self, const char* signal);
-void QPauseAnimation_OnReceivers(const QPauseAnimation* self, intptr_t slot);
-int QPauseAnimation_SuperReceivers(const QPauseAnimation* self, const char* signal);
 bool QPauseAnimation_IsSignalConnected(const QPauseAnimation* self, const QMetaMethod* signal);
-void QPauseAnimation_OnIsSignalConnected(const QPauseAnimation* self, intptr_t slot);
-bool QPauseAnimation_SuperIsSignalConnected(const QPauseAnimation* self, const QMetaMethod* signal);
 void QPauseAnimation_Delete(QPauseAnimation* self);
 
 #ifdef __cplusplus

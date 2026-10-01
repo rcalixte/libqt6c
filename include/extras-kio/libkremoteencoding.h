@@ -26,54 +26,54 @@ KRemoteEncoding* k_remoteencoding_new2(const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KRemoteEncoding*
+/// @param self const KRemoteEncoding*
 /// @param name char*
 ///
-const char* k_remoteencoding_decode(void* self, char* name);
+const char* k_remoteencoding_decode(const void* self, char* name);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#encode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KRemoteEncoding*
+/// @param self const KRemoteEncoding*
 /// @param name const char*
 ///
-char* k_remoteencoding_encode(void* self, const char* name);
+char* k_remoteencoding_encode(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#encode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KRemoteEncoding*
+/// @param self const KRemoteEncoding*
 /// @param url QUrl*
 ///
-char* k_remoteencoding_encode2(void* self, void* url);
+char* k_remoteencoding_encode2(const void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#directory)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KRemoteEncoding*
+/// @param self const KRemoteEncoding*
 /// @param url QUrl*
 ///
-char* k_remoteencoding_directory(void* self, void* url);
+char* k_remoteencoding_directory(const void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#fileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KRemoteEncoding*
+/// @param self const KRemoteEncoding*
 /// @param url QUrl*
 ///
-char* k_remoteencoding_file_name(void* self, void* url);
+char* k_remoteencoding_file_name(const void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#encoding)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KRemoteEncoding*
+/// @param self const KRemoteEncoding*
 ///
-const char* k_remoteencoding_encoding(void* self);
+const char* k_remoteencoding_encoding(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#setEncoding)
 ///
@@ -113,11 +113,11 @@ void k_remoteencoding_super_virtual_hook(void* self, int id, void* data);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KRemoteEncoding*
+/// @param self const KRemoteEncoding*
 /// @param url QUrl*
 /// @param ignore_trailing_slash bool
 ///
-char* k_remoteencoding_directory2(void* self, void* url, bool ignore_trailing_slash);
+char* k_remoteencoding_directory2(const void* self, const void* url, bool ignore_trailing_slash);
 
 /// [Upstream resources](https://api.kde.org/kremoteencoding.html#dtor.KRemoteEncoding)
 ///

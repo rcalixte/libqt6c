@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-const QMetaObject* q_legendmarker_meta_object(void* self);
+const QMetaObject* q_legendmarker_meta_object(const void* self);
 
 /// @param self QLegendMarker*
 /// @param param1 const char*
@@ -36,21 +36,13 @@ int32_t q_legendmarker_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 const char* q_legendmarker_tr(const char* s);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#type)
-///
-/// @param self QLegendMarker*
-///
-/// @return enum QLegendMarker__LegendMarkerType
-///
-int32_t q_legendmarker_type(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#label)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-const char* q_legendmarker_label(void* self);
+const char* q_legendmarker_label(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setLabel)
 ///
@@ -61,61 +53,61 @@ void q_legendmarker_set_label(void* self, const char* label);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#labelBrush)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-QBrush* q_legendmarker_label_brush(void* self);
+QBrush* q_legendmarker_label_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setLabelBrush)
 ///
 /// @param self QLegendMarker*
 /// @param brush QBrush*
 ///
-void q_legendmarker_set_label_brush(void* self, void* brush);
+void q_legendmarker_set_label_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#font)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-QFont* q_legendmarker_font(void* self);
+QFont* q_legendmarker_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setFont)
 ///
 /// @param self QLegendMarker*
 /// @param font QFont*
 ///
-void q_legendmarker_set_font(void* self, void* font);
+void q_legendmarker_set_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#pen)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-QPen* q_legendmarker_pen(void* self);
+QPen* q_legendmarker_pen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setPen)
 ///
 /// @param self QLegendMarker*
 /// @param pen QPen*
 ///
-void q_legendmarker_set_pen(void* self, void* pen);
+void q_legendmarker_set_pen(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#brush)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-QBrush* q_legendmarker_brush(void* self);
+QBrush* q_legendmarker_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setBrush)
 ///
 /// @param self QLegendMarker*
 /// @param brush QBrush*
 ///
-void q_legendmarker_set_brush(void* self, void* brush);
+void q_legendmarker_set_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#isVisible)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-bool q_legendmarker_is_visible(void* self);
+bool q_legendmarker_is_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setVisible)
 ///
@@ -126,11 +118,11 @@ void q_legendmarker_set_visible(void* self, bool visible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#shape)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
 /// @return enum QLegend__MarkerShape
 ///
-int32_t q_legendmarker_shape(void* self);
+int32_t q_legendmarker_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#setShape)
 ///
@@ -138,12 +130,6 @@ int32_t q_legendmarker_shape(void* self);
 /// @param shape enum QLegend__MarkerShape
 ///
 void q_legendmarker_set_shape(void* self, int32_t shape);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#series)
-///
-/// @param self QLegendMarker*
-///
-QAbstractSeries* q_legendmarker_series(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html#clicked)
 ///
@@ -307,9 +293,9 @@ bool q_legendmarker_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-const char* q_legendmarker_object_name(void* self);
+const char* q_legendmarker_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -324,33 +310,33 @@ void q_legendmarker_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-bool q_legendmarker_is_widget_type(void* self);
+bool q_legendmarker_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-bool q_legendmarker_is_window_type(void* self);
+bool q_legendmarker_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-bool q_legendmarker_is_quick_item_type(void* self);
+bool q_legendmarker_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-bool q_legendmarker_signals_blocked(void* self);
+bool q_legendmarker_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -365,9 +351,9 @@ bool q_legendmarker_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-QThread* q_legendmarker_thread(void* self);
+QThread* q_legendmarker_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -418,11 +404,11 @@ void q_legendmarker_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_legendmarker_children(void* self);
+libqt_list q_legendmarker_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -460,7 +446,7 @@ void q_legendmarker_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_legendmarker_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_legendmarker_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -471,18 +457,18 @@ QMetaObject__Connection* q_legendmarker_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_legendmarker_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_legendmarker_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_legendmarker_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_legendmarker_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -493,7 +479,7 @@ QMetaObject__Connection* q_legendmarker_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_legendmarker_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_legendmarker_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -504,24 +490,24 @@ bool q_legendmarker_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_legendmarker_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_legendmarker_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-bool q_legendmarker_disconnect3(void* self);
+bool q_legendmarker_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 /// @param receiver QObject*
 ///
-bool q_legendmarker_disconnect4(void* self, void* receiver);
+bool q_legendmarker_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -529,23 +515,23 @@ bool q_legendmarker_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_legendmarker_disconnect5(void* param1);
+bool q_legendmarker_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-void q_legendmarker_dump_object_tree(void* self);
+void q_legendmarker_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-void q_legendmarker_dump_object_info(void* self);
+void q_legendmarker_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -555,16 +541,16 @@ void q_legendmarker_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_legendmarker_set_property(void* self, const char* name, void* value);
+bool q_legendmarker_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 /// @param name const char*
 ///
-QVariant* q_legendmarker_property(void* self, const char* name);
+QVariant* q_legendmarker_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -572,9 +558,9 @@ QVariant* q_legendmarker_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-const char** q_legendmarker_dynamic_property_names(void* self);
+const char** q_legendmarker_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -588,9 +574,9 @@ QBindingStorage* q_legendmarker_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-const QBindingStorage* q_legendmarker_binding_storage2(void* self);
+const QBindingStorage* q_legendmarker_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -613,18 +599,18 @@ void q_legendmarker_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 ///
-QObject* q_legendmarker_parent(void* self);
+QObject* q_legendmarker_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 /// @param classname const char*
 ///
-bool q_legendmarker_inherits(void* self, const char* classname);
+bool q_legendmarker_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -664,7 +650,7 @@ int32_t q_legendmarker_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_legendmarker_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_legendmarker_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -676,59 +662,59 @@ QMetaObject__Connection* q_legendmarker_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_legendmarker_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_legendmarker_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_legendmarker_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_legendmarker_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 /// @param signal const char*
 ///
-bool q_legendmarker_disconnect1(void* self, const char* signal);
+bool q_legendmarker_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLegendMarker*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_legendmarker_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_legendmarker_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_legendmarker_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLegendMarker*
+/// @param self const QLegendMarker*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_legendmarker_disconnect23(void* self, void* receiver, const char* member);
+bool q_legendmarker_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QLegendMarker*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_legendmarker_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

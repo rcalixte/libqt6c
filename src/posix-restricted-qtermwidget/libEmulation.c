@@ -11,15 +11,15 @@ Konsole__Emulation* k_onsole__emulation_new() {
     return Konsole__Emulation_New();
 }
 
-const QMetaObject* k_onsole__emulation_meta_object(void* self) {
+const QMetaObject* k_onsole__emulation_meta_object(const void* self) {
     return Konsole__Emulation_MetaObject((Konsole__Emulation*)self);
 }
 
-void k_onsole__emulation_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_onsole__emulation_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     Konsole__Emulation_OnMetaObject((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_onsole__emulation_super_meta_object(void* self) {
+const QMetaObject* k_onsole__emulation_super_meta_object(const void* self) {
     return Konsole__Emulation_SuperMetaObject((Konsole__Emulation*)self);
 }
 
@@ -54,11 +54,11 @@ const char* k_onsole__emulation_tr(const char* s) {
     return _ret;
 }
 
-QSize* k_onsole__emulation_image_size(void* self) {
+QSize* k_onsole__emulation_image_size(const void* self) {
     return Konsole__Emulation_ImageSize((Konsole__Emulation*)self);
 }
 
-int32_t k_onsole__emulation_line_count(void* self) {
+int32_t k_onsole__emulation_line_count(const void* self) {
     return Konsole__Emulation_LineCount((Konsole__Emulation*)self);
 }
 
@@ -66,15 +66,15 @@ void k_onsole__emulation_clear_history(void* self) {
     Konsole__Emulation_ClearHistory((Konsole__Emulation*)self);
 }
 
-char k_onsole__emulation_erase_char(void* self) {
+char k_onsole__emulation_erase_char(const void* self) {
     return Konsole__Emulation_EraseChar((Konsole__Emulation*)self);
 }
 
-void k_onsole__emulation_on_erase_char(void* self, char (*callback)()) {
+void k_onsole__emulation_on_erase_char(const void* self, char (*callback)(const void*)) {
     Konsole__Emulation_OnEraseChar((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-char k_onsole__emulation_super_erase_char(void* self) {
+char k_onsole__emulation_super_erase_char(const void* self) {
     return Konsole__Emulation_SuperEraseChar((Konsole__Emulation*)self);
 }
 
@@ -82,7 +82,7 @@ void k_onsole__emulation_set_key_bindings(void* self, const char* name) {
     Konsole__Emulation_SetKeyBindings((Konsole__Emulation*)self, qstring(name));
 }
 
-const char* k_onsole__emulation_key_bindings(void* self) {
+const char* k_onsole__emulation_key_bindings(const void* self) {
     libqt_string _str = Konsole__Emulation_KeyBindings((Konsole__Emulation*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -93,31 +93,23 @@ void k_onsole__emulation_clear_entire_screen(void* self) {
     Konsole__Emulation_ClearEntireScreen((Konsole__Emulation*)self);
 }
 
-void k_onsole__emulation_on_clear_entire_screen(void* self, void (*callback)()) {
+void k_onsole__emulation_on_clear_entire_screen(void* self, void (*callback)(void*)) {
     Konsole__Emulation_OnClearEntireScreen((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-void k_onsole__emulation_super_clear_entire_screen(void* self) {
-    Konsole__Emulation_SuperClearEntireScreen((Konsole__Emulation*)self);
 }
 
 void k_onsole__emulation_reset(void* self) {
     Konsole__Emulation_Reset((Konsole__Emulation*)self);
 }
 
-void k_onsole__emulation_on_reset(void* self, void (*callback)()) {
+void k_onsole__emulation_on_reset(void* self, void (*callback)(void*)) {
     Konsole__Emulation_OnReset((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_super_reset(void* self) {
-    Konsole__Emulation_SuperReset((Konsole__Emulation*)self);
-}
-
-bool k_onsole__emulation_program_uses_mouse(void* self) {
+bool k_onsole__emulation_program_uses_mouse(const void* self) {
     return Konsole__Emulation_ProgramUsesMouse((Konsole__Emulation*)self);
 }
 
-bool k_onsole__emulation_program_bracketed_paste_mode(void* self) {
+bool k_onsole__emulation_program_bracketed_paste_mode(const void* self) {
     return Konsole__Emulation_ProgramBracketedPasteMode((Konsole__Emulation*)self);
 }
 
@@ -139,10 +131,6 @@ void k_onsole__emulation_send_text(void* self, const char* text) {
 
 void k_onsole__emulation_on_send_text(void* self, void (*callback)(void*, const char*)) {
     Konsole__Emulation_OnSendText((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-void k_onsole__emulation_super_send_text(void* self, const char* text) {
-    Konsole__Emulation_SuperSendText((Konsole__Emulation*)self, qstring(text));
 }
 
 void k_onsole__emulation_send_key_event(void* self, void* param1, bool fromPaste) {
@@ -175,10 +163,6 @@ void k_onsole__emulation_send_string(void* self, const char* string, int length)
 
 void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, const char*, int)) {
     Konsole__Emulation_OnSendString((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-void k_onsole__emulation_super_send_string(void* self, const char* string, int length) {
-    Konsole__Emulation_SuperSendString((Konsole__Emulation*)self, string, length);
 }
 
 void k_onsole__emulation_receive_data(void* self, const char* buffer, int lenVal) {
@@ -281,11 +265,11 @@ void k_onsole__emulation_on_image_size_initialized(void* self, void (*callback)(
     Konsole__Emulation_Connect_ImageSizeInitialized((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_image_resize_request(void* self, void* sizz) {
+void k_onsole__emulation_image_resize_request(void* self, const void* sizz) {
     Konsole__Emulation_ImageResizeRequest((Konsole__Emulation*)self, (QSize*)sizz);
 }
 
-void k_onsole__emulation_on_image_resize_request(void* self, void (*callback)(void*, void*)) {
+void k_onsole__emulation_on_image_resize_request(void* self, void (*callback)(void*, const void*)) {
     Konsole__Emulation_Connect_ImageResizeRequest((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
@@ -337,10 +321,6 @@ void k_onsole__emulation_on_set_mode(void* self, void (*callback)(void*, int)) {
     Konsole__Emulation_OnSetMode((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_super_set_mode(void* self, int mode) {
-    Konsole__Emulation_SuperSetMode((Konsole__Emulation*)self, mode);
-}
-
 void k_onsole__emulation_reset_mode(void* self, int mode) {
     Konsole__Emulation_ResetMode((Konsole__Emulation*)self, mode);
 }
@@ -349,44 +329,16 @@ void k_onsole__emulation_on_reset_mode(void* self, void (*callback)(void*, int))
     Konsole__Emulation_OnResetMode((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_super_reset_mode(void* self, int mode) {
-    Konsole__Emulation_SuperResetMode((Konsole__Emulation*)self, mode);
-}
-
 void k_onsole__emulation_set_screen(void* self, int index) {
     Konsole__Emulation_SetScreen((Konsole__Emulation*)self, index);
-}
-
-void k_onsole__emulation_on_set_screen(void* self, void (*callback)(void*, int)) {
-    Konsole__Emulation_OnSetScreen((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-void k_onsole__emulation_super_set_screen(void* self, int index) {
-    Konsole__Emulation_SuperSetScreen((Konsole__Emulation*)self, index);
 }
 
 void k_onsole__emulation_set_codec(void* self, int32_t codec) {
     Konsole__Emulation_SetCodec((Konsole__Emulation*)self, codec);
 }
 
-void k_onsole__emulation_on_set_codec(void* self, void (*callback)(void*, int32_t)) {
-    Konsole__Emulation_OnSetCodec((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-void k_onsole__emulation_super_set_codec(void* self, int32_t codec) {
-    Konsole__Emulation_SuperSetCodec((Konsole__Emulation*)self, codec);
-}
-
 void k_onsole__emulation_buffered_update(void* self) {
     Konsole__Emulation_BufferedUpdate((Konsole__Emulation*)self);
-}
-
-void k_onsole__emulation_on_buffered_update(void* self, void (*callback)()) {
-    Konsole__Emulation_OnBufferedUpdate((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-void k_onsole__emulation_super_buffered_update(void* self) {
-    Konsole__Emulation_SuperBufferedUpdate((Konsole__Emulation*)self);
 }
 
 const char* k_onsole__emulation_tr2(const char* s, const char* c) {
@@ -403,7 +355,7 @@ const char* k_onsole__emulation_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* k_onsole__emulation_object_name(void* self) {
+const char* k_onsole__emulation_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -414,19 +366,19 @@ void k_onsole__emulation_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_onsole__emulation_is_widget_type(void* self) {
+bool k_onsole__emulation_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_onsole__emulation_is_window_type(void* self) {
+bool k_onsole__emulation_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_onsole__emulation_is_quick_item_type(void* self) {
+bool k_onsole__emulation_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_onsole__emulation_signals_blocked(void* self) {
+bool k_onsole__emulation_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -434,7 +386,7 @@ bool k_onsole__emulation_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_onsole__emulation_thread(void* self) {
+QThread* k_onsole__emulation_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -458,7 +410,7 @@ void k_onsole__emulation_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_onsole__emulation_children(void* self) {
+libqt_list /* of QObject* */ k_onsole__emulation_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -475,55 +427,55 @@ void k_onsole__emulation_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_onsole__emulation_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_onsole__emulation_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_onsole__emulation_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_onsole__emulation_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_onsole__emulation_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_onsole__emulation_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_onsole__emulation_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_onsole__emulation_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_onsole__emulation_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_onsole__emulation_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_onsole__emulation_disconnect3(void* self) {
+bool k_onsole__emulation_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_onsole__emulation_disconnect4(void* self, void* receiver) {
+bool k_onsole__emulation_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_onsole__emulation_disconnect5(void* param1) {
+bool k_onsole__emulation_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_onsole__emulation_dump_object_tree(void* self) {
+void k_onsole__emulation_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_onsole__emulation_dump_object_info(void* self) {
+void k_onsole__emulation_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_onsole__emulation_set_property(void* self, const char* name, void* value) {
+bool k_onsole__emulation_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_onsole__emulation_property(void* self, const char* name) {
+QVariant* k_onsole__emulation_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_onsole__emulation_dynamic_property_names(void* self) {
+const char** k_onsole__emulation_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -544,7 +496,7 @@ QBindingStorage* k_onsole__emulation_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_onsole__emulation_binding_storage2(void* self) {
+const QBindingStorage* k_onsole__emulation_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -556,11 +508,11 @@ void k_onsole__emulation_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_onsole__emulation_parent(void* self) {
+QObject* k_onsole__emulation_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_onsole__emulation_inherits(void* self, const char* classname) {
+bool k_onsole__emulation_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -576,31 +528,31 @@ int32_t k_onsole__emulation_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_onsole__emulation_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_onsole__emulation_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_onsole__emulation_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_onsole__emulation_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_onsole__emulation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_onsole__emulation_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_onsole__emulation_disconnect1(void* self, const char* signal) {
+bool k_onsole__emulation_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_onsole__emulation_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_onsole__emulation_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_onsole__emulation_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_onsole__emulation_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_onsole__emulation_disconnect23(void* self, void* receiver, const char* member) {
+bool k_onsole__emulation_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -672,76 +624,44 @@ void k_onsole__emulation_on_custom_event(void* self, void (*callback)(void*, voi
     Konsole__Emulation_OnCustomEvent((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_connect_notify(void* self, void* signal) {
+void k_onsole__emulation_connect_notify(void* self, const void* signal) {
     Konsole__Emulation_ConnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__emulation_super_connect_notify(void* self, void* signal) {
+void k_onsole__emulation_super_connect_notify(void* self, const void* signal) {
     Konsole__Emulation_SuperConnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__emulation_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_onsole__emulation_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     Konsole__Emulation_OnConnectNotify((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_disconnect_notify(void* self, void* signal) {
+void k_onsole__emulation_disconnect_notify(void* self, const void* signal) {
     Konsole__Emulation_DisconnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__emulation_super_disconnect_notify(void* self, void* signal) {
+void k_onsole__emulation_super_disconnect_notify(void* self, const void* signal) {
     Konsole__Emulation_SuperDisconnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__emulation_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_onsole__emulation_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     Konsole__Emulation_OnDisconnectNotify((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-QObject* k_onsole__emulation_sender(void* self) {
+QObject* k_onsole__emulation_sender(const void* self) {
     return Konsole__Emulation_Sender((Konsole__Emulation*)self);
 }
 
-QObject* k_onsole__emulation_super_sender(void* self) {
-    return Konsole__Emulation_SuperSender((Konsole__Emulation*)self);
-}
-
-void k_onsole__emulation_on_sender(void* self, QObject* (*callback)()) {
-    Konsole__Emulation_OnSender((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-int32_t k_onsole__emulation_sender_signal_index(void* self) {
+int32_t k_onsole__emulation_sender_signal_index(const void* self) {
     return Konsole__Emulation_SenderSignalIndex((Konsole__Emulation*)self);
 }
 
-int32_t k_onsole__emulation_super_sender_signal_index(void* self) {
-    return Konsole__Emulation_SuperSenderSignalIndex((Konsole__Emulation*)self);
-}
-
-void k_onsole__emulation_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    Konsole__Emulation_OnSenderSignalIndex((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-int32_t k_onsole__emulation_receivers(void* self, const char* signal) {
+int32_t k_onsole__emulation_receivers(const void* self, const char* signal) {
     return Konsole__Emulation_Receivers((Konsole__Emulation*)self, signal);
 }
 
-int32_t k_onsole__emulation_super_receivers(void* self, const char* signal) {
-    return Konsole__Emulation_SuperReceivers((Konsole__Emulation*)self, signal);
-}
-
-void k_onsole__emulation_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    Konsole__Emulation_OnReceivers((Konsole__Emulation*)self, (intptr_t)callback);
-}
-
-bool k_onsole__emulation_is_signal_connected(void* self, void* signal) {
+bool k_onsole__emulation_is_signal_connected(const void* self, const void* signal) {
     return Konsole__Emulation_IsSignalConnected((Konsole__Emulation*)self, (QMetaMethod*)signal);
-}
-
-bool k_onsole__emulation_super_is_signal_connected(void* self, void* signal) {
-    return Konsole__Emulation_SuperIsSignalConnected((Konsole__Emulation*)self, (QMetaMethod*)signal);
-}
-
-void k_onsole__emulation_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    Konsole__Emulation_OnIsSignalConnected((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
 void k_onsole__emulation_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

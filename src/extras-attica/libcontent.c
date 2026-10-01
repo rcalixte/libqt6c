@@ -10,11 +10,11 @@ Attica__Content* k_attica__content_new() {
     return Attica__Content_New();
 }
 
-Attica__Content* k_attica__content_new2(void* other) {
+Attica__Content* k_attica__content_new2(const void* other) {
     return Attica__Content_New2((Attica__Content*)other);
 }
 
-void k_attica__content_operator_assign(void* self, void* other) {
+void k_attica__content_operator_assign(void* self, const void* other) {
     Attica__Content_OperatorAssign((Attica__Content*)self, (Attica__Content*)other);
 }
 
@@ -22,7 +22,7 @@ void k_attica__content_set_id(void* self, const char* id) {
     Attica__Content_SetId((Attica__Content*)self, qstring(id));
 }
 
-const char* k_attica__content_id(void* self) {
+const char* k_attica__content_id(const void* self) {
     libqt_string _str = Attica__Content_Id((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -33,7 +33,7 @@ void k_attica__content_set_name(void* self, const char* name) {
     Attica__Content_SetName((Attica__Content*)self, qstring(name));
 }
 
-const char* k_attica__content_name(void* self) {
+const char* k_attica__content_name(const void* self) {
     libqt_string _str = Attica__Content_Name((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -44,7 +44,7 @@ void k_attica__content_set_rating(void* self, int rating) {
     Attica__Content_SetRating((Attica__Content*)self, rating);
 }
 
-int32_t k_attica__content_rating(void* self) {
+int32_t k_attica__content_rating(const void* self) {
     return Attica__Content_Rating((Attica__Content*)self);
 }
 
@@ -52,7 +52,7 @@ void k_attica__content_set_downloads(void* self, int downloads) {
     Attica__Content_SetDownloads((Attica__Content*)self, downloads);
 }
 
-int32_t k_attica__content_downloads(void* self) {
+int32_t k_attica__content_downloads(const void* self) {
     return Attica__Content_Downloads((Attica__Content*)self);
 }
 
@@ -60,75 +60,75 @@ void k_attica__content_set_number_of_comments(void* self, int numComments) {
     Attica__Content_SetNumberOfComments((Attica__Content*)self, numComments);
 }
 
-int32_t k_attica__content_number_of_comments(void* self) {
+int32_t k_attica__content_number_of_comments(const void* self) {
     return Attica__Content_NumberOfComments((Attica__Content*)self);
 }
 
-void k_attica__content_set_created(void* self, void* created) {
+void k_attica__content_set_created(void* self, const void* created) {
     Attica__Content_SetCreated((Attica__Content*)self, (QDateTime*)created);
 }
 
-QDateTime* k_attica__content_created(void* self) {
+QDateTime* k_attica__content_created(const void* self) {
     return Attica__Content_Created((Attica__Content*)self);
 }
 
-void k_attica__content_set_updated(void* self, void* updated) {
+void k_attica__content_set_updated(void* self, const void* updated) {
     Attica__Content_SetUpdated((Attica__Content*)self, (QDateTime*)updated);
 }
 
-QDateTime* k_attica__content_updated(void* self) {
+QDateTime* k_attica__content_updated(const void* self) {
     return Attica__Content_Updated((Attica__Content*)self);
 }
 
-const char* k_attica__content_summary(void* self) {
+const char* k_attica__content_summary(const void* self) {
     libqt_string _str = Attica__Content_Summary((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__content_description(void* self) {
+const char* k_attica__content_description(const void* self) {
     libqt_string _str = Attica__Content_Description((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* k_attica__content_detailpage(void* self) {
+QUrl* k_attica__content_detailpage(const void* self) {
     return Attica__Content_Detailpage((Attica__Content*)self);
 }
 
-const char* k_attica__content_changelog(void* self) {
+const char* k_attica__content_changelog(const void* self) {
     libqt_string _str = Attica__Content_Changelog((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__content_version(void* self) {
+const char* k_attica__content_version(const void* self) {
     libqt_string _str = Attica__Content_Version((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__content_depend(void* self) {
+const char* k_attica__content_depend(const void* self) {
     libqt_string _str = Attica__Content_Depend((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-Attica__DownloadDescription* k_attica__content_download_url_description(void* self, int number) {
+Attica__DownloadDescription* k_attica__content_download_url_description(const void* self, int number) {
     return Attica__Content_DownloadUrlDescription((Attica__Content*)self, number);
 }
 
-libqt_list /* of Attica__DownloadDescription* */ k_attica__content_download_url_descriptions(void* self) {
+libqt_list /* of Attica__DownloadDescription* */ k_attica__content_download_url_descriptions(const void* self) {
     libqt_list _arr = Attica__Content_DownloadUrlDescriptions((Attica__Content*)self);
     return _arr;
 }
 
-Attica__HomePageEntry* k_attica__content_home_page_entry(void* self, int number) {
+Attica__HomePageEntry* k_attica__content_home_page_entry(const void* self, int number) {
     return Attica__Content_HomePageEntry((Attica__Content*)self, number);
 }
 
@@ -137,35 +137,35 @@ libqt_list /* of Attica__HomePageEntry* */ k_attica__content_home_page_entries(v
     return _arr;
 }
 
-const char* k_attica__content_preview_picture(void* self) {
+const char* k_attica__content_preview_picture(const void* self) {
     libqt_string _str = Attica__Content_PreviewPicture((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__content_small_preview_picture(void* self) {
+const char* k_attica__content_small_preview_picture(const void* self) {
     libqt_string _str = Attica__Content_SmallPreviewPicture((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__content_license(void* self) {
+const char* k_attica__content_license(const void* self) {
     libqt_string _str = Attica__Content_License((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__content_license_name(void* self) {
+const char* k_attica__content_license_name(const void* self) {
     libqt_string _str = Attica__Content_LicenseName((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__content_author(void* self) {
+const char* k_attica__content_author(const void* self) {
     libqt_string _str = Attica__Content_Author((Attica__Content*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -177,7 +177,7 @@ libqt_list /* of Attica__Icon* */ k_attica__content_icons(void* self) {
     return _arr;
 }
 
-libqt_list /* of Attica__Icon* */ k_attica__content_icons2(void* self) {
+libqt_list /* of Attica__Icon* */ k_attica__content_icons2(const void* self) {
     libqt_list _arr = Attica__Content_Icons2((Attica__Content*)self);
     return _arr;
 }
@@ -195,7 +195,7 @@ void k_attica__content_set_videos(void* self, libqt_list /* of QUrl* */ videos) 
     Attica__Content_SetVideos((Attica__Content*)self, videos);
 }
 
-const char** k_attica__content_tags(void* self) {
+const char** k_attica__content_tags(const void* self) {
     libqt_list _arr = Attica__Content_Tags((Attica__Content*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -230,14 +230,14 @@ void k_attica__content_add_attribute(void* self, const char* key, const char* va
     Attica__Content_AddAttribute((Attica__Content*)self, qstring(key), qstring(value));
 }
 
-const char* k_attica__content_attribute(void* self, const char* key) {
+const char* k_attica__content_attribute(const void* self, const char* key) {
     libqt_string _str = Attica__Content_Attribute((Attica__Content*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_map /* of const char* to const char* */ k_attica__content_attributes(void* self) {
+libqt_map /* of const char* to const char* */ k_attica__content_attributes(const void* self) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = Attica__Content_Attributes((Attica__Content*)self);
     libqt_map _ret;
@@ -292,18 +292,18 @@ libqt_map /* of const char* to const char* */ k_attica__content_attributes(void*
     return _ret;
 }
 
-bool k_attica__content_is_valid(void* self) {
+bool k_attica__content_is_valid(const void* self) {
     return Attica__Content_IsValid((Attica__Content*)self);
 }
 
-const char* k_attica__content_preview_picture1(void* self, const char* number) {
+const char* k_attica__content_preview_picture1(const void* self, const char* number) {
     libqt_string _str = Attica__Content_PreviewPicture1((Attica__Content*)self, qstring(number));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__content_small_preview_picture1(void* self, const char* number) {
+const char* k_attica__content_small_preview_picture1(const void* self, const char* number) {
     libqt_string _str = Attica__Content_SmallPreviewPicture1((Attica__Content*)self, qstring(number));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

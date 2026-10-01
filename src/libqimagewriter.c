@@ -31,7 +31,7 @@ void q_imagewriter_set_format(void* self, char* format) {
     QImageWriter_SetFormat((QImageWriter*)self, qstring(format));
 }
 
-char* q_imagewriter_format(void* self) {
+char* q_imagewriter_format(const void* self) {
     libqt_string _str = QImageWriter_Format((QImageWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -42,7 +42,7 @@ void q_imagewriter_set_device(void* self, void* device) {
     QImageWriter_SetDevice((QImageWriter*)self, (QIODevice*)device);
 }
 
-QIODevice* q_imagewriter_device(void* self) {
+QIODevice* q_imagewriter_device(const void* self) {
     return QImageWriter_Device((QImageWriter*)self);
 }
 
@@ -50,7 +50,7 @@ void q_imagewriter_set_file_name(void* self, const char* fileName) {
     QImageWriter_SetFileName((QImageWriter*)self, qstring(fileName));
 }
 
-const char* q_imagewriter_file_name(void* self) {
+const char* q_imagewriter_file_name(const void* self) {
     libqt_string _str = QImageWriter_FileName((QImageWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -61,7 +61,7 @@ void q_imagewriter_set_quality(void* self, int quality) {
     QImageWriter_SetQuality((QImageWriter*)self, quality);
 }
 
-int32_t q_imagewriter_quality(void* self) {
+int32_t q_imagewriter_quality(const void* self) {
     return QImageWriter_Quality((QImageWriter*)self);
 }
 
@@ -69,7 +69,7 @@ void q_imagewriter_set_compression(void* self, int compression) {
     QImageWriter_SetCompression((QImageWriter*)self, compression);
 }
 
-int32_t q_imagewriter_compression(void* self) {
+int32_t q_imagewriter_compression(const void* self) {
     return QImageWriter_Compression((QImageWriter*)self);
 }
 
@@ -77,14 +77,14 @@ void q_imagewriter_set_sub_type(void* self, char* type) {
     QImageWriter_SetSubType((QImageWriter*)self, qstring(type));
 }
 
-char* q_imagewriter_sub_type(void* self) {
+char* q_imagewriter_sub_type(const void* self) {
     libqt_string _str = QImageWriter_SubType((QImageWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_imagewriter_supported_sub_types(void* self) {
+const char** q_imagewriter_supported_sub_types(const void* self) {
     libqt_list _arr = QImageWriter_SupportedSubTypes((QImageWriter*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -105,7 +105,7 @@ void q_imagewriter_set_optimized_write(void* self, bool optimize) {
     QImageWriter_SetOptimizedWrite((QImageWriter*)self, optimize);
 }
 
-bool q_imagewriter_optimized_write(void* self) {
+bool q_imagewriter_optimized_write(const void* self) {
     return QImageWriter_OptimizedWrite((QImageWriter*)self);
 }
 
@@ -113,11 +113,11 @@ void q_imagewriter_set_progressive_scan_write(void* self, bool progressive) {
     QImageWriter_SetProgressiveScanWrite((QImageWriter*)self, progressive);
 }
 
-bool q_imagewriter_progressive_scan_write(void* self) {
+bool q_imagewriter_progressive_scan_write(const void* self) {
     return QImageWriter_ProgressiveScanWrite((QImageWriter*)self);
 }
 
-int32_t q_imagewriter_transformation(void* self) {
+int32_t q_imagewriter_transformation(const void* self) {
     return QImageWriter_Transformation((QImageWriter*)self);
 }
 
@@ -129,26 +129,26 @@ void q_imagewriter_set_text(void* self, const char* key, const char* text) {
     QImageWriter_SetText((QImageWriter*)self, qstring(key), qstring(text));
 }
 
-bool q_imagewriter_can_write(void* self) {
+bool q_imagewriter_can_write(const void* self) {
     return QImageWriter_CanWrite((QImageWriter*)self);
 }
 
-bool q_imagewriter_write(void* self, void* image) {
+bool q_imagewriter_write(void* self, const void* image) {
     return QImageWriter_Write((QImageWriter*)self, (QImage*)image);
 }
 
-int32_t q_imagewriter_error(void* self) {
+int32_t q_imagewriter_error(const void* self) {
     return QImageWriter_Error((QImageWriter*)self);
 }
 
-const char* q_imagewriter_error_string(void* self) {
+const char* q_imagewriter_error_string(const void* self) {
     libqt_string _str = QImageWriter_ErrorString((QImageWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_imagewriter_supports_option(void* self, int32_t option) {
+bool q_imagewriter_supports_option(const void* self, int32_t option) {
     return QImageWriter_SupportsOption((QImageWriter*)self, option);
 }
 

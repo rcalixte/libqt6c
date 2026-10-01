@@ -27,26 +27,26 @@ QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_new2(void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const QMetaObject* q_designerpropertyeditorinterface_meta_object(void* self);
+const QMetaObject* q_designerpropertyeditorinterface_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback const QMetaObject* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback const QMetaObject* func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_designerpropertyeditorinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const QMetaObject* q_designerpropertyeditorinterface_super_meta_object(void* self);
+const QMetaObject* q_designerpropertyeditorinterface_super_meta_object(const void* self);
 
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 const char*
@@ -100,97 +100,79 @@ const char* q_designerpropertyeditorinterface_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#core)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QDesignerFormEditorInterface* q_designerpropertyeditorinterface_core(void* self);
+QDesignerFormEditorInterface* q_designerpropertyeditorinterface_core(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#core)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback QDesignerFormEditorInterface* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback QDesignerFormEditorInterface* func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)());
+void q_designerpropertyeditorinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#core)
 ///
 /// Base class method implementation
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QDesignerFormEditorInterface* q_designerpropertyeditorinterface_super_core(void* self);
+QDesignerFormEditorInterface* q_designerpropertyeditorinterface_super_core(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#isReadOnly)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @warning This method must be implemented with `q_designerpropertyeditorinterface_on_is_read_only` before it can be called.
 ///
-bool q_designerpropertyeditorinterface_is_read_only(void* self);
+/// @param self const QDesignerPropertyEditorInterface*
+///
+bool q_designerpropertyeditorinterface_is_read_only(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#isReadOnly)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback bool func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback bool func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_is_read_only(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#isReadOnly)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerPropertyEditorInterface*
-///
-bool q_designerpropertyeditorinterface_super_is_read_only(void* self);
+void q_designerpropertyeditorinterface_on_is_read_only(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#object)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @warning This method must be implemented with `q_designerpropertyeditorinterface_on_object` before it can be called.
 ///
-QObject* q_designerpropertyeditorinterface_object(void* self);
+/// @param self const QDesignerPropertyEditorInterface*
+///
+QObject* q_designerpropertyeditorinterface_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#object)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback QObject* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback QObject* func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_object(void* self, QObject* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#object)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerPropertyEditorInterface*
-///
-QObject* q_designerpropertyeditorinterface_super_object(void* self);
+void q_designerpropertyeditorinterface_on_object(const void* self, QObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#currentPropertyName)
+///
+/// @warning This method must be implemented with `q_designerpropertyeditorinterface_on_current_property_name` before it can be called.
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_current_property_name(void* self);
+const char* q_designerpropertyeditorinterface_current_property_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#currentPropertyName)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback const char* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback const char* func(const QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_current_property_name(void* self, const char* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#currentPropertyName)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerPropertyEditorInterface*
-///
-const char* q_designerpropertyeditorinterface_super_current_property_name(void* self);
+void q_designerpropertyeditorinterface_on_current_property_name(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#propertyChanged)
 ///
@@ -198,16 +180,18 @@ const char* q_designerpropertyeditorinterface_super_current_property_name(void* 
 /// @param name const char*
 /// @param value QVariant*
 ///
-void q_designerpropertyeditorinterface_property_changed(void* self, const char* name, void* value);
+void q_designerpropertyeditorinterface_property_changed(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#propertyChanged)
 ///
 /// @param self QDesignerPropertyEditorInterface*
 /// @param callback void func(QDesignerPropertyEditorInterface* self, const char* name, QVariant* value)
 ///
-void q_designerpropertyeditorinterface_on_property_changed(void* self, void (*callback)(void*, const char*, void*));
+void q_designerpropertyeditorinterface_on_property_changed(void* self, void (*callback)(void*, const char*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setObject)
+///
+/// @warning This method must be implemented with `q_designerpropertyeditorinterface_on_set_object` before it can be called.
 ///
 /// @param self QDesignerPropertyEditorInterface*
 /// @param object QObject*
@@ -223,23 +207,16 @@ void q_designerpropertyeditorinterface_set_object(void* self, void* object);
 ///
 void q_designerpropertyeditorinterface_on_set_object(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setObject)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param object QObject*
-///
-void q_designerpropertyeditorinterface_super_set_object(void* self, void* object);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setPropertyValue)
+///
+/// @warning This method must be implemented with `q_designerpropertyeditorinterface_on_set_property_value` before it can be called.
 ///
 /// @param self QDesignerPropertyEditorInterface*
 /// @param name const char*
 /// @param value QVariant*
 /// @param changed bool
 ///
-void q_designerpropertyeditorinterface_set_property_value(void* self, const char* name, void* value, bool changed);
+void q_designerpropertyeditorinterface_set_property_value(void* self, const char* name, const void* value, bool changed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setPropertyValue)
 ///
@@ -248,20 +225,11 @@ void q_designerpropertyeditorinterface_set_property_value(void* self, const char
 /// @param self QDesignerPropertyEditorInterface*
 /// @param callback void func(QDesignerPropertyEditorInterface* self, const char* name, QVariant* value, bool changed)
 ///
-void q_designerpropertyeditorinterface_on_set_property_value(void* self, void (*callback)(void*, const char*, void*, bool));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setPropertyValue)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param name const char*
-/// @param value QVariant*
-/// @param changed bool
-///
-void q_designerpropertyeditorinterface_super_set_property_value(void* self, const char* name, void* value, bool changed);
+void q_designerpropertyeditorinterface_on_set_property_value(void* self, void (*callback)(void*, const char*, const void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setReadOnly)
+///
+/// @warning This method must be implemented with `q_designerpropertyeditorinterface_on_set_read_only` before it can be called.
 ///
 /// @param self QDesignerPropertyEditorInterface*
 /// @param readOnly bool
@@ -276,15 +244,6 @@ void q_designerpropertyeditorinterface_set_read_only(void* self, bool readOnly);
 /// @param callback void func(QDesignerPropertyEditorInterface* self, bool readOnly)
 ///
 void q_designerpropertyeditorinterface_on_set_read_only(void* self, void (*callback)(void*, bool));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpropertyeditorinterface.html#setReadOnly)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param readOnly bool
-///
-void q_designerpropertyeditorinterface_super_set_read_only(void* self, bool readOnly);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -325,9 +284,9 @@ QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_from_q_paint
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-uintptr_t q_designerpropertyeditorinterface_win_id(void* self);
+uintptr_t q_designerpropertyeditorinterface_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -341,25 +300,25 @@ void q_designerpropertyeditorinterface_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-uintptr_t q_designerpropertyeditorinterface_internal_win_id(void* self);
+uintptr_t q_designerpropertyeditorinterface_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-uintptr_t q_designerpropertyeditorinterface_effective_win_id(void* self);
+uintptr_t q_designerpropertyeditorinterface_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QStyle* q_designerpropertyeditorinterface_style(void* self);
+QStyle* q_designerpropertyeditorinterface_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -374,35 +333,35 @@ void q_designerpropertyeditorinterface_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_top_level(void* self);
+bool q_designerpropertyeditorinterface_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_window(void* self);
+bool q_designerpropertyeditorinterface_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_modal(void* self);
+bool q_designerpropertyeditorinterface_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_designerpropertyeditorinterface_window_modality(void* self);
+int32_t q_designerpropertyeditorinterface_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -417,18 +376,18 @@ void q_designerpropertyeditorinterface_set_window_modality(void* self, int32_t w
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_enabled(void* self);
+bool q_designerpropertyeditorinterface_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QWidget*
 ///
-bool q_designerpropertyeditorinterface_is_enabled_to(void* self, void* param1);
+bool q_designerpropertyeditorinterface_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -461,153 +420,153 @@ void q_designerpropertyeditorinterface_set_window_modified(void* self, bool wind
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QRect* q_designerpropertyeditorinterface_frame_geometry(void* self);
+QRect* q_designerpropertyeditorinterface_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const QRect* q_designerpropertyeditorinterface_geometry(void* self);
+const QRect* q_designerpropertyeditorinterface_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QRect* q_designerpropertyeditorinterface_normal_geometry(void* self);
+QRect* q_designerpropertyeditorinterface_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_x(void* self);
+int32_t q_designerpropertyeditorinterface_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_y(void* self);
+int32_t q_designerpropertyeditorinterface_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QPoint* q_designerpropertyeditorinterface_pos(void* self);
+QPoint* q_designerpropertyeditorinterface_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_frame_size(void* self);
+QSize* q_designerpropertyeditorinterface_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_size(void* self);
+QSize* q_designerpropertyeditorinterface_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_width(void* self);
+int32_t q_designerpropertyeditorinterface_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_height(void* self);
+int32_t q_designerpropertyeditorinterface_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QRect* q_designerpropertyeditorinterface_rect(void* self);
+QRect* q_designerpropertyeditorinterface_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QRect* q_designerpropertyeditorinterface_children_rect(void* self);
+QRect* q_designerpropertyeditorinterface_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QRegion* q_designerpropertyeditorinterface_children_region(void* self);
+QRegion* q_designerpropertyeditorinterface_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_minimum_size(void* self);
+QSize* q_designerpropertyeditorinterface_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_maximum_size(void* self);
+QSize* q_designerpropertyeditorinterface_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_minimum_width(void* self);
+int32_t q_designerpropertyeditorinterface_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_minimum_height(void* self);
+int32_t q_designerpropertyeditorinterface_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_maximum_width(void* self);
+int32_t q_designerpropertyeditorinterface_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_maximum_height(void* self);
+int32_t q_designerpropertyeditorinterface_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -616,7 +575,7 @@ int32_t q_designerpropertyeditorinterface_maximum_height(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param minimumSize QSize*
 ///
-void q_designerpropertyeditorinterface_set_minimum_size(void* self, void* minimumSize);
+void q_designerpropertyeditorinterface_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -635,7 +594,7 @@ void q_designerpropertyeditorinterface_set_minimum_size2(void* self, int minw, i
 /// @param self QDesignerPropertyEditorInterface*
 /// @param maximumSize QSize*
 ///
-void q_designerpropertyeditorinterface_set_maximum_size(void* self, void* maximumSize);
+void q_designerpropertyeditorinterface_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -687,9 +646,9 @@ void q_designerpropertyeditorinterface_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_size_increment(void* self);
+QSize* q_designerpropertyeditorinterface_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -698,7 +657,7 @@ QSize* q_designerpropertyeditorinterface_size_increment(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param sizeIncrement QSize*
 ///
-void q_designerpropertyeditorinterface_set_size_increment(void* self, void* sizeIncrement);
+void q_designerpropertyeditorinterface_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -714,9 +673,9 @@ void q_designerpropertyeditorinterface_set_size_increment2(void* self, int w, in
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_base_size(void* self);
+QSize* q_designerpropertyeditorinterface_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -725,7 +684,7 @@ QSize* q_designerpropertyeditorinterface_base_size(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param baseSize QSize*
 ///
-void q_designerpropertyeditorinterface_set_base_size(void* self, void* baseSize);
+void q_designerpropertyeditorinterface_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -744,7 +703,7 @@ void q_designerpropertyeditorinterface_set_base_size2(void* self, int basew, int
 /// @param self QDesignerPropertyEditorInterface*
 /// @param fixedSize QSize*
 ///
-void q_designerpropertyeditorinterface_set_fixed_size(void* self, void* fixedSize);
+void q_designerpropertyeditorinterface_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -778,145 +737,145 @@ void q_designerpropertyeditorinterface_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QPointF*
 ///
-QPointF* q_designerpropertyeditorinterface_map_to_global(void* self, void* param1);
+QPointF* q_designerpropertyeditorinterface_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QPoint*
 ///
-QPoint* q_designerpropertyeditorinterface_map_to_global2(void* self, void* param1);
+QPoint* q_designerpropertyeditorinterface_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QPointF*
 ///
-QPointF* q_designerpropertyeditorinterface_map_from_global(void* self, void* param1);
+QPointF* q_designerpropertyeditorinterface_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QPoint*
 ///
-QPoint* q_designerpropertyeditorinterface_map_from_global2(void* self, void* param1);
+QPoint* q_designerpropertyeditorinterface_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QPointF*
 ///
-QPointF* q_designerpropertyeditorinterface_map_to_parent(void* self, void* param1);
+QPointF* q_designerpropertyeditorinterface_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QPoint*
 ///
-QPoint* q_designerpropertyeditorinterface_map_to_parent2(void* self, void* param1);
+QPoint* q_designerpropertyeditorinterface_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QPointF*
 ///
-QPointF* q_designerpropertyeditorinterface_map_from_parent(void* self, void* param1);
+QPointF* q_designerpropertyeditorinterface_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QPoint*
 ///
-QPoint* q_designerpropertyeditorinterface_map_from_parent2(void* self, void* param1);
+QPoint* q_designerpropertyeditorinterface_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_designerpropertyeditorinterface_map_to(void* self, void* param1, void* param2);
+QPointF* q_designerpropertyeditorinterface_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_designerpropertyeditorinterface_map_to2(void* self, void* param1, void* param2);
+QPoint* q_designerpropertyeditorinterface_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_designerpropertyeditorinterface_map_from(void* self, void* param1, void* param2);
+QPointF* q_designerpropertyeditorinterface_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_designerpropertyeditorinterface_map_from2(void* self, void* param1, void* param2);
+QPoint* q_designerpropertyeditorinterface_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWidget* q_designerpropertyeditorinterface_window(void* self);
+QWidget* q_designerpropertyeditorinterface_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWidget* q_designerpropertyeditorinterface_native_parent_widget(void* self);
+QWidget* q_designerpropertyeditorinterface_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWidget* q_designerpropertyeditorinterface_top_level_widget(void* self);
+QWidget* q_designerpropertyeditorinterface_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const QPalette* q_designerpropertyeditorinterface_palette(void* self);
+const QPalette* q_designerpropertyeditorinterface_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -925,7 +884,7 @@ const QPalette* q_designerpropertyeditorinterface_palette(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param palette QPalette*
 ///
-void q_designerpropertyeditorinterface_set_palette(void* self, void* palette);
+void q_designerpropertyeditorinterface_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -940,11 +899,11 @@ void q_designerpropertyeditorinterface_set_background_role(void* self, int32_t b
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_designerpropertyeditorinterface_background_role(void* self);
+int32_t q_designerpropertyeditorinterface_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -959,19 +918,19 @@ void q_designerpropertyeditorinterface_set_foreground_role(void* self, int32_t f
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_designerpropertyeditorinterface_foreground_role(void* self);
+int32_t q_designerpropertyeditorinterface_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const QFont* q_designerpropertyeditorinterface_font(void* self);
+const QFont* q_designerpropertyeditorinterface_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -980,31 +939,31 @@ const QFont* q_designerpropertyeditorinterface_font(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param font QFont*
 ///
-void q_designerpropertyeditorinterface_set_font(void* self, void* font);
+void q_designerpropertyeditorinterface_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QFontMetrics* q_designerpropertyeditorinterface_font_metrics(void* self);
+QFontMetrics* q_designerpropertyeditorinterface_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QFontInfo* q_designerpropertyeditorinterface_font_info(void* self);
+QFontInfo* q_designerpropertyeditorinterface_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QCursor* q_designerpropertyeditorinterface_cursor(void* self);
+QCursor* q_designerpropertyeditorinterface_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1013,7 +972,7 @@ QCursor* q_designerpropertyeditorinterface_cursor(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param cursor QCursor*
 ///
-void q_designerpropertyeditorinterface_set_cursor(void* self, void* cursor);
+void q_designerpropertyeditorinterface_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1036,17 +995,17 @@ void q_designerpropertyeditorinterface_set_mouse_tracking(void* self, bool enabl
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_has_mouse_tracking(void* self);
+bool q_designerpropertyeditorinterface_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_under_mouse(void* self);
+bool q_designerpropertyeditorinterface_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1061,9 +1020,9 @@ void q_designerpropertyeditorinterface_set_tablet_tracking(void* self, bool enab
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_has_tablet_tracking(void* self);
+bool q_designerpropertyeditorinterface_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1072,7 +1031,7 @@ bool q_designerpropertyeditorinterface_has_tablet_tracking(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param mask QBitmap*
 ///
-void q_designerpropertyeditorinterface_set_mask(void* self, void* mask);
+void q_designerpropertyeditorinterface_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1081,15 +1040,15 @@ void q_designerpropertyeditorinterface_set_mask(void* self, void* mask);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param mask QRegion*
 ///
-void q_designerpropertyeditorinterface_set_mask2(void* self, void* mask);
+void q_designerpropertyeditorinterface_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QRegion* q_designerpropertyeditorinterface_mask(void* self);
+QRegion* q_designerpropertyeditorinterface_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1129,9 +1088,9 @@ QPixmap* q_designerpropertyeditorinterface_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QGraphicsEffect* q_designerpropertyeditorinterface_graphics_effect(void* self);
+QGraphicsEffect* q_designerpropertyeditorinterface_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1184,9 +1143,9 @@ void q_designerpropertyeditorinterface_set_style_sheet(void* self, const char* s
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_style_sheet(void* self);
+const char* q_designerpropertyeditorinterface_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1194,9 +1153,9 @@ const char* q_designerpropertyeditorinterface_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_window_title(void* self);
+const char* q_designerpropertyeditorinterface_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1205,15 +1164,15 @@ const char* q_designerpropertyeditorinterface_window_title(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param icon QIcon*
 ///
-void q_designerpropertyeditorinterface_set_window_icon(void* self, void* icon);
+void q_designerpropertyeditorinterface_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QIcon* q_designerpropertyeditorinterface_window_icon(void* self);
+QIcon* q_designerpropertyeditorinterface_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1230,9 +1189,9 @@ void q_designerpropertyeditorinterface_set_window_icon_text(void* self, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_window_icon_text(void* self);
+const char* q_designerpropertyeditorinterface_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1249,9 +1208,9 @@ void q_designerpropertyeditorinterface_set_window_role(void* self, const char* w
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_window_role(void* self);
+const char* q_designerpropertyeditorinterface_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1268,9 +1227,9 @@ void q_designerpropertyeditorinterface_set_window_file_path(void* self, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_window_file_path(void* self);
+const char* q_designerpropertyeditorinterface_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1285,17 +1244,17 @@ void q_designerpropertyeditorinterface_set_window_opacity(void* self, double lev
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-double q_designerpropertyeditorinterface_window_opacity(void* self);
+double q_designerpropertyeditorinterface_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_window_modified(void* self);
+bool q_designerpropertyeditorinterface_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1312,9 +1271,9 @@ void q_designerpropertyeditorinterface_set_tool_tip(void* self, const char* tool
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_tool_tip(void* self);
+const char* q_designerpropertyeditorinterface_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1329,9 +1288,9 @@ void q_designerpropertyeditorinterface_set_tool_tip_duration(void* self, int mse
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_tool_tip_duration(void* self);
+int32_t q_designerpropertyeditorinterface_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1348,9 +1307,9 @@ void q_designerpropertyeditorinterface_set_status_tip(void* self, const char* st
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_status_tip(void* self);
+const char* q_designerpropertyeditorinterface_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1367,9 +1326,9 @@ void q_designerpropertyeditorinterface_set_whats_this(void* self, const char* wh
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_whats_this(void* self);
+const char* q_designerpropertyeditorinterface_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1377,9 +1336,9 @@ const char* q_designerpropertyeditorinterface_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_accessible_name(void* self);
+const char* q_designerpropertyeditorinterface_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1396,9 +1355,9 @@ void q_designerpropertyeditorinterface_set_accessible_name(void* self, const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_accessible_description(void* self);
+const char* q_designerpropertyeditorinterface_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1422,11 +1381,11 @@ void q_designerpropertyeditorinterface_set_layout_direction(void* self, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_designerpropertyeditorinterface_layout_direction(void* self);
+int32_t q_designerpropertyeditorinterface_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1443,15 +1402,15 @@ void q_designerpropertyeditorinterface_unset_layout_direction(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param locale QLocale*
 ///
-void q_designerpropertyeditorinterface_set_locale(void* self, void* locale);
+void q_designerpropertyeditorinterface_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QLocale* q_designerpropertyeditorinterface_locale(void* self);
+QLocale* q_designerpropertyeditorinterface_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1465,17 +1424,17 @@ void q_designerpropertyeditorinterface_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_right_to_left(void* self);
+bool q_designerpropertyeditorinterface_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_left_to_right(void* self);
+bool q_designerpropertyeditorinterface_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1489,9 +1448,9 @@ void q_designerpropertyeditorinterface_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_active_window(void* self);
+bool q_designerpropertyeditorinterface_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1522,11 +1481,11 @@ void q_designerpropertyeditorinterface_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_designerpropertyeditorinterface_focus_policy(void* self);
+int32_t q_designerpropertyeditorinterface_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1541,9 +1500,9 @@ void q_designerpropertyeditorinterface_set_focus_policy(void* self, int32_t poli
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_has_focus(void* self);
+bool q_designerpropertyeditorinterface_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1567,19 +1526,19 @@ void q_designerpropertyeditorinterface_set_focus_proxy(void* self, void* focusPr
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWidget* q_designerpropertyeditorinterface_focus_proxy(void* self);
+QWidget* q_designerpropertyeditorinterface_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_designerpropertyeditorinterface_context_menu_policy(void* self);
+int32_t q_designerpropertyeditorinterface_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1605,7 +1564,7 @@ void q_designerpropertyeditorinterface_grab_mouse(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 QCursor*
 ///
-void q_designerpropertyeditorinterface_grab_mouse2(void* self, void* param1);
+void q_designerpropertyeditorinterface_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1638,7 +1597,7 @@ void q_designerpropertyeditorinterface_release_keyboard(void* self);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param key QKeySequence*
 ///
-int32_t q_designerpropertyeditorinterface_grab_shortcut(void* self, void* key);
+int32_t q_designerpropertyeditorinterface_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1683,9 +1642,9 @@ QWidget* q_designerpropertyeditorinterface_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_updates_enabled(void* self);
+bool q_designerpropertyeditorinterface_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1700,9 +1659,9 @@ void q_designerpropertyeditorinterface_set_updates_enabled(void* self, bool enab
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QGraphicsProxyWidget* q_designerpropertyeditorinterface_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_designerpropertyeditorinterface_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1739,7 +1698,7 @@ void q_designerpropertyeditorinterface_update2(void* self, int x, int y, int w, 
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 QRect*
 ///
-void q_designerpropertyeditorinterface_update3(void* self, void* param1);
+void q_designerpropertyeditorinterface_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1748,7 +1707,7 @@ void q_designerpropertyeditorinterface_update3(void* self, void* param1);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 QRegion*
 ///
-void q_designerpropertyeditorinterface_update4(void* self, void* param1);
+void q_designerpropertyeditorinterface_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1769,7 +1728,7 @@ void q_designerpropertyeditorinterface_repaint2(void* self, int x, int y, int w,
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 QRect*
 ///
-void q_designerpropertyeditorinterface_repaint3(void* self, void* param1);
+void q_designerpropertyeditorinterface_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1778,7 +1737,7 @@ void q_designerpropertyeditorinterface_repaint3(void* self, void* param1);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 QRegion*
 ///
-void q_designerpropertyeditorinterface_repaint4(void* self, void* param1);
+void q_designerpropertyeditorinterface_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1887,7 +1846,7 @@ void q_designerpropertyeditorinterface_move(void* self, int x, int y);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 QPoint*
 ///
-void q_designerpropertyeditorinterface_move2(void* self, void* param1);
+void q_designerpropertyeditorinterface_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1906,7 +1865,7 @@ void q_designerpropertyeditorinterface_resize(void* self, int w, int h);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param param1 QSize*
 ///
-void q_designerpropertyeditorinterface_resize2(void* self, void* param1);
+void q_designerpropertyeditorinterface_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1927,7 +1886,7 @@ void q_designerpropertyeditorinterface_set_geometry(void* self, int x, int y, in
 /// @param self QDesignerPropertyEditorInterface*
 /// @param geometry QRect*
 ///
-void q_designerpropertyeditorinterface_set_geometry2(void* self, void* geometry);
+void q_designerpropertyeditorinterface_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -1935,9 +1894,9 @@ void q_designerpropertyeditorinterface_set_geometry2(void* self, void* geometry)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-char* q_designerpropertyeditorinterface_save_geometry(void* self);
+char* q_designerpropertyeditorinterface_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1960,60 +1919,60 @@ void q_designerpropertyeditorinterface_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_visible(void* self);
+bool q_designerpropertyeditorinterface_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 QWidget*
 ///
-bool q_designerpropertyeditorinterface_is_visible_to(void* self, void* param1);
+bool q_designerpropertyeditorinterface_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_hidden(void* self);
+bool q_designerpropertyeditorinterface_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_minimized(void* self);
+bool q_designerpropertyeditorinterface_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_maximized(void* self);
+bool q_designerpropertyeditorinterface_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_full_screen(void* self);
+bool q_designerpropertyeditorinterface_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_designerpropertyeditorinterface_window_state(void* self);
+int32_t q_designerpropertyeditorinterface_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2037,9 +1996,9 @@ void q_designerpropertyeditorinterface_override_window_state(void* self, int32_t
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSizePolicy* q_designerpropertyeditorinterface_size_policy(void* self);
+QSizePolicy* q_designerpropertyeditorinterface_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2064,9 +2023,9 @@ void q_designerpropertyeditorinterface_set_size_policy2(void* self, int32_t hori
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QRegion* q_designerpropertyeditorinterface_visible_region(void* self);
+QRegion* q_designerpropertyeditorinterface_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2087,31 +2046,31 @@ void q_designerpropertyeditorinterface_set_contents_margins(void* self, int left
 /// @param self QDesignerPropertyEditorInterface*
 /// @param margins QMargins*
 ///
-void q_designerpropertyeditorinterface_set_contents_margins2(void* self, void* margins);
+void q_designerpropertyeditorinterface_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QMargins* q_designerpropertyeditorinterface_contents_margins(void* self);
+QMargins* q_designerpropertyeditorinterface_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QRect* q_designerpropertyeditorinterface_contents_rect(void* self);
+QRect* q_designerpropertyeditorinterface_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QLayout* q_designerpropertyeditorinterface_layout(void* self);
+QLayout* q_designerpropertyeditorinterface_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2168,39 +2127,39 @@ void q_designerpropertyeditorinterface_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_designerpropertyeditorinterface_scroll2(void* self, int dx, int dy, void* param3);
+void q_designerpropertyeditorinterface_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWidget* q_designerpropertyeditorinterface_focus_widget(void* self);
+QWidget* q_designerpropertyeditorinterface_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWidget* q_designerpropertyeditorinterface_next_in_focus_chain(void* self);
+QWidget* q_designerpropertyeditorinterface_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWidget* q_designerpropertyeditorinterface_previous_in_focus_chain(void* self);
+QWidget* q_designerpropertyeditorinterface_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_accept_drops(void* self);
+bool q_designerpropertyeditorinterface_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2262,11 +2221,11 @@ void q_designerpropertyeditorinterface_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_designerpropertyeditorinterface_actions(void* self);
+libqt_list q_designerpropertyeditorinterface_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2285,7 +2244,7 @@ QAction* q_designerpropertyeditorinterface_add_action2(void* self, const char* t
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_designerpropertyeditorinterface_add_action3(void* self, void* icon, const char* text);
+QAction* q_designerpropertyeditorinterface_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2295,7 +2254,7 @@ QAction* q_designerpropertyeditorinterface_add_action3(void* self, void* icon, c
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_designerpropertyeditorinterface_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_designerpropertyeditorinterface_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2306,15 +2265,15 @@ QAction* q_designerpropertyeditorinterface_add_action4(void* self, const char* t
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_designerpropertyeditorinterface_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_designerpropertyeditorinterface_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWidget* q_designerpropertyeditorinterface_parent_widget(void* self);
+QWidget* q_designerpropertyeditorinterface_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2329,11 +2288,11 @@ void q_designerpropertyeditorinterface_set_window_flags(void* self, int32_t type
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_designerpropertyeditorinterface_window_flags(void* self);
+int32_t q_designerpropertyeditorinterface_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2357,11 +2316,11 @@ void q_designerpropertyeditorinterface_override_window_flags(void* self, int32_t
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_designerpropertyeditorinterface_window_type(void* self);
+int32_t q_designerpropertyeditorinterface_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2375,29 +2334,29 @@ QWidget* q_designerpropertyeditorinterface_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_designerpropertyeditorinterface_child_at(void* self, int x, int y);
+QWidget* q_designerpropertyeditorinterface_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param p QPoint*
 ///
-QWidget* q_designerpropertyeditorinterface_child_at2(void* self, void* p);
+QWidget* q_designerpropertyeditorinterface_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param p QPointF*
 ///
-QWidget* q_designerpropertyeditorinterface_child_at3(void* self, void* p);
+QWidget* q_designerpropertyeditorinterface_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2412,35 +2371,35 @@ void q_designerpropertyeditorinterface_set_attribute(void* self, int32_t param1)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_designerpropertyeditorinterface_test_attribute(void* self, int32_t param1);
+bool q_designerpropertyeditorinterface_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-void q_designerpropertyeditorinterface_ensure_polished(void* self);
+void q_designerpropertyeditorinterface_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param child QWidget*
 ///
-bool q_designerpropertyeditorinterface_is_ancestor_of(void* self, void* child);
+bool q_designerpropertyeditorinterface_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_auto_fill_background(void* self);
+bool q_designerpropertyeditorinterface_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2455,25 +2414,25 @@ void q_designerpropertyeditorinterface_set_auto_fill_background(void* self, bool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QBackingStore* q_designerpropertyeditorinterface_backing_store(void* self);
+QBackingStore* q_designerpropertyeditorinterface_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QWindow* q_designerpropertyeditorinterface_window_handle(void* self);
+QWindow* q_designerpropertyeditorinterface_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QScreen* q_designerpropertyeditorinterface_screen(void* self);
+QScreen* q_designerpropertyeditorinterface_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2517,7 +2476,7 @@ void q_designerpropertyeditorinterface_on_window_title_changed(void* self, void 
 /// @param self QDesignerPropertyEditorInterface*
 /// @param icon QIcon*
 ///
-void q_designerpropertyeditorinterface_window_icon_changed(void* self, void* icon);
+void q_designerpropertyeditorinterface_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2526,7 +2485,7 @@ void q_designerpropertyeditorinterface_window_icon_changed(void* self, void* ico
 /// @param self QDesignerPropertyEditorInterface*
 /// @param callback void func(QDesignerPropertyEditorInterface* self, QIcon* icon)
 ///
-void q_designerpropertyeditorinterface_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_designerpropertyeditorinterface_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2553,7 +2512,7 @@ void q_designerpropertyeditorinterface_on_window_icon_text_changed(void* self, v
 /// @param self QDesignerPropertyEditorInterface*
 /// @param pos QPoint*
 ///
-void q_designerpropertyeditorinterface_custom_context_menu_requested(void* self, void* pos);
+void q_designerpropertyeditorinterface_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2562,17 +2521,17 @@ void q_designerpropertyeditorinterface_custom_context_menu_requested(void* self,
 /// @param self QDesignerPropertyEditorInterface*
 /// @param callback void func(QDesignerPropertyEditorInterface* self, QPoint* pos)
 ///
-void q_designerpropertyeditorinterface_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_designerpropertyeditorinterface_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_designerpropertyeditorinterface_input_method_hints(void* self);
+int32_t q_designerpropertyeditorinterface_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2591,7 +2550,7 @@ void q_designerpropertyeditorinterface_set_input_method_hints(void* self, int32_
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_designerpropertyeditorinterface_render22(void* self, void* target, void* targetOffset);
+void q_designerpropertyeditorinterface_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2602,7 +2561,7 @@ void q_designerpropertyeditorinterface_render22(void* self, void* target, void* 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_designerpropertyeditorinterface_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_designerpropertyeditorinterface_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2614,7 +2573,7 @@ void q_designerpropertyeditorinterface_render3(void* self, void* target, void* t
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_designerpropertyeditorinterface_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_designerpropertyeditorinterface_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2624,7 +2583,7 @@ void q_designerpropertyeditorinterface_render4(void* self, void* target, void* t
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_designerpropertyeditorinterface_render23(void* self, void* painter, void* targetOffset);
+void q_designerpropertyeditorinterface_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2635,7 +2594,7 @@ void q_designerpropertyeditorinterface_render23(void* self, void* painter, void*
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_designerpropertyeditorinterface_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_designerpropertyeditorinterface_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2647,7 +2606,7 @@ void q_designerpropertyeditorinterface_render32(void* self, void* painter, void*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_designerpropertyeditorinterface_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_designerpropertyeditorinterface_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2656,7 +2615,7 @@ void q_designerpropertyeditorinterface_render42(void* self, void* painter, void*
 /// @param self QDesignerPropertyEditorInterface*
 /// @param rectangle QRect*
 ///
-QPixmap* q_designerpropertyeditorinterface_grab1(void* self, void* rectangle);
+QPixmap* q_designerpropertyeditorinterface_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2676,7 +2635,7 @@ void q_designerpropertyeditorinterface_grab_gesture2(void* self, int32_t type, i
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_designerpropertyeditorinterface_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_designerpropertyeditorinterface_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2743,9 +2702,9 @@ QWidget* q_designerpropertyeditorinterface_create_window_container3(void* window
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char* q_designerpropertyeditorinterface_object_name(void* self);
+const char* q_designerpropertyeditorinterface_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2760,33 +2719,33 @@ void q_designerpropertyeditorinterface_set_object_name(void* self, const char* n
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_widget_type(void* self);
+bool q_designerpropertyeditorinterface_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_window_type(void* self);
+bool q_designerpropertyeditorinterface_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_is_quick_item_type(void* self);
+bool q_designerpropertyeditorinterface_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_signals_blocked(void* self);
+bool q_designerpropertyeditorinterface_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2801,9 +2760,9 @@ bool q_designerpropertyeditorinterface_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QThread* q_designerpropertyeditorinterface_thread(void* self);
+QThread* q_designerpropertyeditorinterface_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2854,11 +2813,11 @@ void q_designerpropertyeditorinterface_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_designerpropertyeditorinterface_children(void* self);
+libqt_list q_designerpropertyeditorinterface_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2887,7 +2846,7 @@ void q_designerpropertyeditorinterface_remove_event_filter(void* self, void* obj
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_designerpropertyeditorinterface_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_designerpropertyeditorinterface_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2898,18 +2857,18 @@ QMetaObject__Connection* q_designerpropertyeditorinterface_connect(void* sender,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_designerpropertyeditorinterface_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_designerpropertyeditorinterface_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_designerpropertyeditorinterface_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_designerpropertyeditorinterface_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2920,7 +2879,7 @@ QMetaObject__Connection* q_designerpropertyeditorinterface_connect3(void* self, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_designerpropertyeditorinterface_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_designerpropertyeditorinterface_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2931,24 +2890,24 @@ bool q_designerpropertyeditorinterface_disconnect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_designerpropertyeditorinterface_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_designerpropertyeditorinterface_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_disconnect3(void* self);
+bool q_designerpropertyeditorinterface_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param receiver QObject*
 ///
-bool q_designerpropertyeditorinterface_disconnect4(void* self, void* receiver);
+bool q_designerpropertyeditorinterface_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2956,23 +2915,23 @@ bool q_designerpropertyeditorinterface_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_designerpropertyeditorinterface_disconnect5(void* param1);
+bool q_designerpropertyeditorinterface_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-void q_designerpropertyeditorinterface_dump_object_tree(void* self);
+void q_designerpropertyeditorinterface_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-void q_designerpropertyeditorinterface_dump_object_info(void* self);
+void q_designerpropertyeditorinterface_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2982,16 +2941,16 @@ void q_designerpropertyeditorinterface_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_designerpropertyeditorinterface_set_property(void* self, const char* name, void* value);
+bool q_designerpropertyeditorinterface_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param name const char*
 ///
-QVariant* q_designerpropertyeditorinterface_property(void* self, const char* name);
+QVariant* q_designerpropertyeditorinterface_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2999,9 +2958,9 @@ QVariant* q_designerpropertyeditorinterface_property(void* self, const char* nam
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const char** q_designerpropertyeditorinterface_dynamic_property_names(void* self);
+const char** q_designerpropertyeditorinterface_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3015,9 +2974,9 @@ QBindingStorage* q_designerpropertyeditorinterface_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-const QBindingStorage* q_designerpropertyeditorinterface_binding_storage2(void* self);
+const QBindingStorage* q_designerpropertyeditorinterface_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3040,18 +2999,18 @@ void q_designerpropertyeditorinterface_on_destroyed(void* self, void (*callback)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QObject* q_designerpropertyeditorinterface_parent(void* self);
+QObject* q_designerpropertyeditorinterface_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param classname const char*
 ///
-bool q_designerpropertyeditorinterface_inherits(void* self, const char* classname);
+bool q_designerpropertyeditorinterface_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3091,7 +3050,7 @@ int32_t q_designerpropertyeditorinterface_start_timer23(void* self, int64_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designerpropertyeditorinterface_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_designerpropertyeditorinterface_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3103,59 +3062,59 @@ QMetaObject__Connection* q_designerpropertyeditorinterface_connect5(void* sender
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designerpropertyeditorinterface_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_designerpropertyeditorinterface_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designerpropertyeditorinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_designerpropertyeditorinterface_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param signal const char*
 ///
-bool q_designerpropertyeditorinterface_disconnect1(void* self, const char* signal);
+bool q_designerpropertyeditorinterface_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_designerpropertyeditorinterface_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_designerpropertyeditorinterface_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_designerpropertyeditorinterface_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_designerpropertyeditorinterface_disconnect23(void* self, void* receiver, const char* member);
+bool q_designerpropertyeditorinterface_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designerpropertyeditorinterface_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3179,89 +3138,89 @@ void q_designerpropertyeditorinterface_on_destroyed1(void* self, void (*callback
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_painting_active(void* self);
+bool q_designerpropertyeditorinterface_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_width_m_m(void* self);
+int32_t q_designerpropertyeditorinterface_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_height_m_m(void* self);
+int32_t q_designerpropertyeditorinterface_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_logical_dpi_x(void* self);
+int32_t q_designerpropertyeditorinterface_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_logical_dpi_y(void* self);
+int32_t q_designerpropertyeditorinterface_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_physical_dpi_x(void* self);
+int32_t q_designerpropertyeditorinterface_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_physical_dpi_y(void* self);
+int32_t q_designerpropertyeditorinterface_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-double q_designerpropertyeditorinterface_device_pixel_ratio(void* self);
+double q_designerpropertyeditorinterface_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-double q_designerpropertyeditorinterface_device_pixel_ratio_f(void* self);
+double q_designerpropertyeditorinterface_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_color_count(void* self);
+int32_t q_designerpropertyeditorinterface_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_depth(void* self);
+int32_t q_designerpropertyeditorinterface_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3284,9 +3243,9 @@ int32_t q_designerpropertyeditorinterface_encode_metric_f(int32_t metric, double
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_dev_type(void* self);
+int32_t q_designerpropertyeditorinterface_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3294,9 +3253,9 @@ int32_t q_designerpropertyeditorinterface_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_super_dev_type(void* self);
+int32_t q_designerpropertyeditorinterface_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3304,10 +3263,10 @@ int32_t q_designerpropertyeditorinterface_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback int32_t func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback int32_t func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_dev_type(void* self, int32_t (*callback)());
+void q_designerpropertyeditorinterface_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3348,9 +3307,9 @@ void q_designerpropertyeditorinterface_on_set_visible(void* self, void (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_size_hint(void* self);
+QSize* q_designerpropertyeditorinterface_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3358,9 +3317,9 @@ QSize* q_designerpropertyeditorinterface_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_super_size_hint(void* self);
+QSize* q_designerpropertyeditorinterface_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3368,12 +3327,12 @@ QSize* q_designerpropertyeditorinterface_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback QSize* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback QSize* func(QDesignerPropertyEditorInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerpropertyeditorinterface_on_size_hint(void* self, QSize* (*callback)());
+void q_designerpropertyeditorinterface_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3381,9 +3340,9 @@ void q_designerpropertyeditorinterface_on_size_hint(void* self, QSize* (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_minimum_size_hint(void* self);
+QSize* q_designerpropertyeditorinterface_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3391,9 +3350,9 @@ QSize* q_designerpropertyeditorinterface_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QSize* q_designerpropertyeditorinterface_super_minimum_size_hint(void* self);
+QSize* q_designerpropertyeditorinterface_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3401,12 +3360,12 @@ QSize* q_designerpropertyeditorinterface_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback QSize* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback QSize* func(QDesignerPropertyEditorInterface* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerpropertyeditorinterface_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_designerpropertyeditorinterface_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3414,10 +3373,10 @@ void q_designerpropertyeditorinterface_on_minimum_size_hint(void* self, QSize* (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 int
 ///
-int32_t q_designerpropertyeditorinterface_height_for_width(void* self, int param1);
+int32_t q_designerpropertyeditorinterface_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3425,10 +3384,10 @@ int32_t q_designerpropertyeditorinterface_height_for_width(void* self, int param
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 int
 ///
-int32_t q_designerpropertyeditorinterface_super_height_for_width(void* self, int param1);
+int32_t q_designerpropertyeditorinterface_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3436,10 +3395,10 @@ int32_t q_designerpropertyeditorinterface_super_height_for_width(void* self, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self, int param1)
 ///
-void q_designerpropertyeditorinterface_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_designerpropertyeditorinterface_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3447,9 +3406,9 @@ void q_designerpropertyeditorinterface_on_height_for_width(void* self, int32_t (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_has_height_for_width(void* self);
+bool q_designerpropertyeditorinterface_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3457,9 +3416,9 @@ bool q_designerpropertyeditorinterface_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-bool q_designerpropertyeditorinterface_super_has_height_for_width(void* self);
+bool q_designerpropertyeditorinterface_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3467,10 +3426,10 @@ bool q_designerpropertyeditorinterface_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback bool func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback bool func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_has_height_for_width(void* self, bool (*callback)());
+void q_designerpropertyeditorinterface_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3478,9 +3437,9 @@ void q_designerpropertyeditorinterface_on_has_height_for_width(void* self, bool 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QPaintEngine* q_designerpropertyeditorinterface_paint_engine(void* self);
+QPaintEngine* q_designerpropertyeditorinterface_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3488,9 +3447,9 @@ QPaintEngine* q_designerpropertyeditorinterface_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QPaintEngine* q_designerpropertyeditorinterface_super_paint_engine(void* self);
+QPaintEngine* q_designerpropertyeditorinterface_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3498,10 +3457,10 @@ QPaintEngine* q_designerpropertyeditorinterface_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback QPaintEngine* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback QPaintEngine* func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_designerpropertyeditorinterface_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4404,10 +4363,10 @@ void q_designerpropertyeditorinterface_on_change_event(void* self, void (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_designerpropertyeditorinterface_metric(void* self, int32_t param1);
+int32_t q_designerpropertyeditorinterface_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4415,10 +4374,10 @@ int32_t q_designerpropertyeditorinterface_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_designerpropertyeditorinterface_super_metric(void* self, int32_t param1);
+int32_t q_designerpropertyeditorinterface_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4426,10 +4385,10 @@ int32_t q_designerpropertyeditorinterface_super_metric(void* self, int32_t param
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_designerpropertyeditorinterface_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_designerpropertyeditorinterface_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4437,10 +4396,10 @@ void q_designerpropertyeditorinterface_on_metric(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param painter QPainter*
 ///
-void q_designerpropertyeditorinterface_init_painter(void* self, void* painter);
+void q_designerpropertyeditorinterface_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4448,10 +4407,10 @@ void q_designerpropertyeditorinterface_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param painter QPainter*
 ///
-void q_designerpropertyeditorinterface_super_init_painter(void* self, void* painter);
+void q_designerpropertyeditorinterface_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4459,10 +4418,10 @@ void q_designerpropertyeditorinterface_super_init_painter(void* self, void* pain
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param callback void func(QDesignerPropertyEditorInterface* self, QPainter* painter)
 ///
-void q_designerpropertyeditorinterface_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_designerpropertyeditorinterface_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4470,10 +4429,10 @@ void q_designerpropertyeditorinterface_on_init_painter(void* self, void (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_designerpropertyeditorinterface_redirected(void* self, void* offset);
+QPaintDevice* q_designerpropertyeditorinterface_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4481,10 +4440,10 @@ QPaintDevice* q_designerpropertyeditorinterface_redirected(void* self, void* off
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_designerpropertyeditorinterface_super_redirected(void* self, void* offset);
+QPaintDevice* q_designerpropertyeditorinterface_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4492,10 +4451,10 @@ QPaintDevice* q_designerpropertyeditorinterface_super_redirected(void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param callback QPaintDevice* func(QDesignerPropertyEditorInterface* self, QPoint* offset)
 ///
-void q_designerpropertyeditorinterface_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_designerpropertyeditorinterface_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4503,9 +4462,9 @@ void q_designerpropertyeditorinterface_on_redirected(void* self, QPaintDevice* (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QPainter* q_designerpropertyeditorinterface_shared_painter(void* self);
+QPainter* q_designerpropertyeditorinterface_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4513,9 +4472,9 @@ QPainter* q_designerpropertyeditorinterface_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QPainter* q_designerpropertyeditorinterface_super_shared_painter(void* self);
+QPainter* q_designerpropertyeditorinterface_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4523,10 +4482,10 @@ QPainter* q_designerpropertyeditorinterface_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback QPainter* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback QPainter* func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_shared_painter(void* self, QPainter* (*callback)());
+void q_designerpropertyeditorinterface_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4567,10 +4526,10 @@ void q_designerpropertyeditorinterface_on_input_method_event(void* self, void (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_designerpropertyeditorinterface_input_method_query(void* self, int32_t param1);
+QVariant* q_designerpropertyeditorinterface_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4578,10 +4537,10 @@ QVariant* q_designerpropertyeditorinterface_input_method_query(void* self, int32
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_designerpropertyeditorinterface_super_input_method_query(void* self, int32_t param1);
+QVariant* q_designerpropertyeditorinterface_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4589,12 +4548,12 @@ QVariant* q_designerpropertyeditorinterface_super_input_method_query(void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param callback QVariant* func(QDesignerPropertyEditorInterface* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerpropertyeditorinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_designerpropertyeditorinterface_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4772,7 +4731,7 @@ void q_designerpropertyeditorinterface_on_custom_event(void* self, void (*callba
 /// @param self QDesignerPropertyEditorInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerpropertyeditorinterface_connect_notify(void* self, void* signal);
+void q_designerpropertyeditorinterface_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4783,7 +4742,7 @@ void q_designerpropertyeditorinterface_connect_notify(void* self, void* signal);
 /// @param self QDesignerPropertyEditorInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerpropertyeditorinterface_super_connect_notify(void* self, void* signal);
+void q_designerpropertyeditorinterface_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4794,7 +4753,7 @@ void q_designerpropertyeditorinterface_super_connect_notify(void* self, void* si
 /// @param self QDesignerPropertyEditorInterface*
 /// @param callback void func(QDesignerPropertyEditorInterface* self, QMetaMethod* signal)
 ///
-void q_designerpropertyeditorinterface_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_designerpropertyeditorinterface_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4805,7 +4764,7 @@ void q_designerpropertyeditorinterface_on_connect_notify(void* self, void (*call
 /// @param self QDesignerPropertyEditorInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerpropertyeditorinterface_disconnect_notify(void* self, void* signal);
+void q_designerpropertyeditorinterface_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4816,7 +4775,7 @@ void q_designerpropertyeditorinterface_disconnect_notify(void* self, void* signa
 /// @param self QDesignerPropertyEditorInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerpropertyeditorinterface_super_disconnect_notify(void* self, void* signal);
+void q_designerpropertyeditorinterface_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4827,7 +4786,7 @@ void q_designerpropertyeditorinterface_super_disconnect_notify(void* self, void*
 /// @param self QDesignerPropertyEditorInterface*
 /// @param callback void func(QDesignerPropertyEditorInterface* self, QMetaMethod* signal)
 ///
-void q_designerpropertyeditorinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_designerpropertyeditorinterface_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4856,9 +4815,9 @@ void q_designerpropertyeditorinterface_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param callback void func()
+/// @param callback void func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_update_micro_focus(void* self, void (*callback)());
+void q_designerpropertyeditorinterface_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4887,9 +4846,9 @@ void q_designerpropertyeditorinterface_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param callback void func()
+/// @param callback void func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_create(void* self, void (*callback)());
+void q_designerpropertyeditorinterface_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4918,9 +4877,9 @@ void q_designerpropertyeditorinterface_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param callback void func()
+/// @param callback void func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_destroy(void* self, void (*callback)());
+void q_designerpropertyeditorinterface_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4949,9 +4908,9 @@ bool q_designerpropertyeditorinterface_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param callback bool func()
+/// @param callback bool func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_focus_next_child(void* self, bool (*callback)());
+void q_designerpropertyeditorinterface_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4980,9 +4939,9 @@ bool q_designerpropertyeditorinterface_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDesignerPropertyEditorInterface*
-/// @param callback bool func()
+/// @param callback bool func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_focus_previous_child(void* self, bool (*callback)());
+void q_designerpropertyeditorinterface_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -4990,9 +4949,9 @@ void q_designerpropertyeditorinterface_on_focus_previous_child(void* self, bool 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QObject* q_designerpropertyeditorinterface_sender(void* self);
+QObject* q_designerpropertyeditorinterface_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5000,9 +4959,9 @@ QObject* q_designerpropertyeditorinterface_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-QObject* q_designerpropertyeditorinterface_super_sender(void* self);
+QObject* q_designerpropertyeditorinterface_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5010,10 +4969,10 @@ QObject* q_designerpropertyeditorinterface_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback QObject* func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback QObject* func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_sender(void* self, QObject* (*callback)());
+void q_designerpropertyeditorinterface_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5021,9 +4980,9 @@ void q_designerpropertyeditorinterface_on_sender(void* self, QObject* (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_sender_signal_index(void* self);
+int32_t q_designerpropertyeditorinterface_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5031,9 +4990,9 @@ int32_t q_designerpropertyeditorinterface_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 ///
-int32_t q_designerpropertyeditorinterface_super_sender_signal_index(void* self);
+int32_t q_designerpropertyeditorinterface_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5041,10 +5000,10 @@ int32_t q_designerpropertyeditorinterface_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
-/// @param callback int32_t func()
+/// @param self const QDesignerPropertyEditorInterface*
+/// @param callback int32_t func(QDesignerPropertyEditorInterface* self)
 ///
-void q_designerpropertyeditorinterface_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_designerpropertyeditorinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5052,10 +5011,10 @@ void q_designerpropertyeditorinterface_on_sender_signal_index(void* self, int32_
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param signal const char*
 ///
-int32_t q_designerpropertyeditorinterface_receivers(void* self, const char* signal);
+int32_t q_designerpropertyeditorinterface_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5063,10 +5022,10 @@ int32_t q_designerpropertyeditorinterface_receivers(void* self, const char* sign
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param signal const char*
 ///
-int32_t q_designerpropertyeditorinterface_super_receivers(void* self, const char* signal);
+int32_t q_designerpropertyeditorinterface_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5074,10 +5033,10 @@ int32_t q_designerpropertyeditorinterface_super_receivers(void* self, const char
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param callback int32_t func(QDesignerPropertyEditorInterface* self, const char* signal)
 ///
-void q_designerpropertyeditorinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_designerpropertyeditorinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5085,10 +5044,10 @@ void q_designerpropertyeditorinterface_on_receivers(void* self, int32_t (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param signal QMetaMethod*
 ///
-bool q_designerpropertyeditorinterface_is_signal_connected(void* self, void* signal);
+bool q_designerpropertyeditorinterface_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5096,10 +5055,10 @@ bool q_designerpropertyeditorinterface_is_signal_connected(void* self, void* sig
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param signal QMetaMethod*
 ///
-bool q_designerpropertyeditorinterface_super_is_signal_connected(void* self, void* signal);
+bool q_designerpropertyeditorinterface_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5107,10 +5066,10 @@ bool q_designerpropertyeditorinterface_super_is_signal_connected(void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param callback bool func(QDesignerPropertyEditorInterface* self, QMetaMethod* signal)
 ///
-void q_designerpropertyeditorinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_designerpropertyeditorinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5118,11 +5077,11 @@ void q_designerpropertyeditorinterface_on_is_signal_connected(void* self, bool (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_designerpropertyeditorinterface_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_designerpropertyeditorinterface_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5130,11 +5089,11 @@ double q_designerpropertyeditorinterface_get_decoded_metric_f(void* self, int32_
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_designerpropertyeditorinterface_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_designerpropertyeditorinterface_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5142,10 +5101,10 @@ double q_designerpropertyeditorinterface_super_get_decoded_metric_f(void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerPropertyEditorInterface*
+/// @param self const QDesignerPropertyEditorInterface*
 /// @param callback double func(QDesignerPropertyEditorInterface* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_designerpropertyeditorinterface_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_designerpropertyeditorinterface_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

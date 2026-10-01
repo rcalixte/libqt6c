@@ -16,15 +16,15 @@ KParts__NavigationExtension* k_parts__navigationextension_new(void* parent) {
     return KParts__NavigationExtension_New((KParts__ReadOnlyPart*)parent);
 }
 
-const QMetaObject* k_parts__navigationextension_meta_object(void* self) {
+const QMetaObject* k_parts__navigationextension_meta_object(const void* self) {
     return KParts__NavigationExtension_MetaObject((KParts__NavigationExtension*)self);
 }
 
-void k_parts__navigationextension_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_parts__navigationextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KParts__NavigationExtension_OnMetaObject((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_parts__navigationextension_super_meta_object(void* self) {
+const QMetaObject* k_parts__navigationextension_super_meta_object(const void* self) {
     return KParts__NavigationExtension_SuperMetaObject((KParts__NavigationExtension*)self);
 }
 
@@ -63,7 +63,7 @@ int32_t k_parts__navigationextension_x_offset(void* self) {
     return KParts__NavigationExtension_XOffset((KParts__NavigationExtension*)self);
 }
 
-void k_parts__navigationextension_on_x_offset(void* self, int32_t (*callback)()) {
+void k_parts__navigationextension_on_x_offset(void* self, int32_t (*callback)(void*)) {
     KParts__NavigationExtension_OnXOffset((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
@@ -75,7 +75,7 @@ int32_t k_parts__navigationextension_y_offset(void* self) {
     return KParts__NavigationExtension_YOffset((KParts__NavigationExtension*)self);
 }
 
-void k_parts__navigationextension_on_y_offset(void* self, int32_t (*callback)()) {
+void k_parts__navigationextension_on_y_offset(void* self, int32_t (*callback)(void*)) {
     KParts__NavigationExtension_OnYOffset((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
@@ -107,7 +107,7 @@ void k_parts__navigationextension_super_restore_state(void* self, void* stream) 
     KParts__NavigationExtension_SuperRestoreState((KParts__NavigationExtension*)self, (QDataStream*)stream);
 }
 
-bool k_parts__navigationextension_is_u_r_l_drop_handling_enabled(void* self) {
+bool k_parts__navigationextension_is_u_r_l_drop_handling_enabled(const void* self) {
     return KParts__NavigationExtension_IsURLDropHandlingEnabled((KParts__NavigationExtension*)self);
 }
 
@@ -115,11 +115,11 @@ void k_parts__navigationextension_set_u_r_l_drop_handling_enabled(void* self, bo
     KParts__NavigationExtension_SetURLDropHandlingEnabled((KParts__NavigationExtension*)self, enable);
 }
 
-bool k_parts__navigationextension_is_action_enabled(void* self, const char* name) {
+bool k_parts__navigationextension_is_action_enabled(const void* self, const char* name) {
     return KParts__NavigationExtension_IsActionEnabled((KParts__NavigationExtension*)self, name);
 }
 
-const char* k_parts__navigationextension_action_text(void* self, const char* name) {
+const char* k_parts__navigationextension_action_text(const void* self, const char* name) {
     libqt_string _str = KParts__NavigationExtension_ActionText((KParts__NavigationExtension*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -213,19 +213,19 @@ void k_parts__navigationextension_on_set_action_text(void* self, void (*callback
     KParts__NavigationExtension_Connect_SetActionText((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_open_url_request(void* self, void* url) {
+void k_parts__navigationextension_open_url_request(void* self, const void* url) {
     KParts__NavigationExtension_OpenUrlRequest((KParts__NavigationExtension*)self, (QUrl*)url);
 }
 
-void k_parts__navigationextension_on_open_url_request(void* self, void (*callback)(void*, void*)) {
+void k_parts__navigationextension_on_open_url_request(void* self, void (*callback)(void*, const void*)) {
     KParts__NavigationExtension_Connect_OpenUrlRequest((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_open_url_request_delayed(void* self, void* url, void* arguments) {
+void k_parts__navigationextension_open_url_request_delayed(void* self, const void* url, const void* arguments) {
     KParts__NavigationExtension_OpenUrlRequestDelayed((KParts__NavigationExtension*)self, (QUrl*)url, (KParts__OpenUrlArguments*)arguments);
 }
 
-void k_parts__navigationextension_on_open_url_request_delayed(void* self, void (*callback)(void*, void*, void*)) {
+void k_parts__navigationextension_on_open_url_request_delayed(void* self, void (*callback)(void*, const void*, const void*)) {
     KParts__NavigationExtension_Connect_OpenUrlRequestDelayed((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
@@ -245,19 +245,19 @@ void k_parts__navigationextension_on_set_location_bar_url(void* self, void (*cal
     KParts__NavigationExtension_Connect_SetLocationBarUrl((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_set_icon_url(void* self, void* url) {
+void k_parts__navigationextension_set_icon_url(void* self, const void* url) {
     KParts__NavigationExtension_SetIconUrl((KParts__NavigationExtension*)self, (QUrl*)url);
 }
 
-void k_parts__navigationextension_on_set_icon_url(void* self, void (*callback)(void*, void*)) {
+void k_parts__navigationextension_on_set_icon_url(void* self, void (*callback)(void*, const void*)) {
     KParts__NavigationExtension_Connect_SetIconUrl((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_create_new_window(void* self, void* url) {
+void k_parts__navigationextension_create_new_window(void* self, const void* url) {
     KParts__NavigationExtension_CreateNewWindow((KParts__NavigationExtension*)self, (QUrl*)url);
 }
 
-void k_parts__navigationextension_on_create_new_window(void* self, void (*callback)(void*, void*)) {
+void k_parts__navigationextension_on_create_new_window(void* self, void (*callback)(void*, const void*)) {
     KParts__NavigationExtension_Connect_CreateNewWindow((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
@@ -285,43 +285,43 @@ void k_parts__navigationextension_on_info_message(void* self, void (*callback)(v
     KParts__NavigationExtension_Connect_InfoMessage((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu(void* self, void* global, void* items) {
+void k_parts__navigationextension_popup_menu(void* self, const void* global, const void* items) {
     KParts__NavigationExtension_PopupMenu((KParts__NavigationExtension*)self, (QPoint*)global, (KFileItemList*)items);
 }
 
-void k_parts__navigationextension_on_popup_menu(void* self, void (*callback)(void*, void*, void*)) {
+void k_parts__navigationextension_on_popup_menu(void* self, void (*callback)(void*, const void*, const void*)) {
     KParts__NavigationExtension_Connect_PopupMenu((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu2(void* self, void* global, void* url) {
+void k_parts__navigationextension_popup_menu2(void* self, const void* global, const void* url) {
     KParts__NavigationExtension_PopupMenu2((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url);
 }
 
-void k_parts__navigationextension_on_popup_menu2(void* self, void (*callback)(void*, void*, void*)) {
+void k_parts__navigationextension_on_popup_menu2(void* self, void (*callback)(void*, const void*, const void*)) {
     KParts__NavigationExtension_Connect_PopupMenu2((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_selection_info(void* self, void* items) {
+void k_parts__navigationextension_selection_info(void* self, const void* items) {
     KParts__NavigationExtension_SelectionInfo((KParts__NavigationExtension*)self, (KFileItemList*)items);
 }
 
-void k_parts__navigationextension_on_selection_info(void* self, void (*callback)(void*, void*)) {
+void k_parts__navigationextension_on_selection_info(void* self, void (*callback)(void*, const void*)) {
     KParts__NavigationExtension_Connect_SelectionInfo((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_mouse_over_info(void* self, void* item) {
+void k_parts__navigationextension_mouse_over_info(void* self, const void* item) {
     KParts__NavigationExtension_MouseOverInfo((KParts__NavigationExtension*)self, (KFileItem*)item);
 }
 
-void k_parts__navigationextension_on_mouse_over_info(void* self, void (*callback)(void*, void*)) {
+void k_parts__navigationextension_on_mouse_over_info(void* self, void (*callback)(void*, const void*)) {
     KParts__NavigationExtension_Connect_MouseOverInfo((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_add_web_side_bar(void* self, void* url, const char* name) {
+void k_parts__navigationextension_add_web_side_bar(void* self, const void* url, const char* name) {
     KParts__NavigationExtension_AddWebSideBar((KParts__NavigationExtension*)self, (QUrl*)url, qstring(name));
 }
 
-void k_parts__navigationextension_on_add_web_side_bar(void* self, void (*callback)(void*, void*, const char*)) {
+void k_parts__navigationextension_on_add_web_side_bar(void* self, void (*callback)(void*, const void*, const char*)) {
     KParts__NavigationExtension_Connect_AddWebSideBar((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
@@ -357,11 +357,11 @@ void k_parts__navigationextension_on_set_page_security(void* self, void (*callba
     KParts__NavigationExtension_Connect_SetPageSecurity((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_items_removed(void* self, void* items) {
+void k_parts__navigationextension_items_removed(void* self, const void* items) {
     KParts__NavigationExtension_ItemsRemoved((KParts__NavigationExtension*)self, (KFileItemList*)items);
 }
 
-void k_parts__navigationextension_on_items_removed(void* self, void (*callback)(void*, void*)) {
+void k_parts__navigationextension_on_items_removed(void* self, void (*callback)(void*, const void*)) {
     KParts__NavigationExtension_Connect_ItemsRemoved((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
@@ -379,31 +379,31 @@ const char* k_parts__navigationextension_tr3(const char* s, const char* c, int n
     return _ret;
 }
 
-void k_parts__navigationextension_open_url_request2(void* self, void* url, void* arguments) {
+void k_parts__navigationextension_open_url_request2(void* self, const void* url, const void* arguments) {
     KParts__NavigationExtension_OpenUrlRequest2((KParts__NavigationExtension*)self, (QUrl*)url, (KParts__OpenUrlArguments*)arguments);
 }
 
-void k_parts__navigationextension_on_open_url_request2(void* self, void (*callback)(void*, void*, void*)) {
+void k_parts__navigationextension_on_open_url_request2(void* self, void (*callback)(void*, const void*, const void*)) {
     KParts__NavigationExtension_Connect_OpenUrlRequest2((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu3(void* self, void* global, void* items, void* arguments) {
+void k_parts__navigationextension_popup_menu3(void* self, const void* global, const void* items, const void* arguments) {
     KParts__NavigationExtension_PopupMenu3((KParts__NavigationExtension*)self, (QPoint*)global, (KFileItemList*)items, (KParts__OpenUrlArguments*)arguments);
 }
 
-void k_parts__navigationextension_on_popup_menu3(void* self, void (*callback)(void*, void*, void*, void*)) {
+void k_parts__navigationextension_on_popup_menu3(void* self, void (*callback)(void*, const void*, const void*, const void*)) {
     KParts__NavigationExtension_Connect_PopupMenu3((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu4(void* self, void* global, void* items, void* arguments, int32_t flags) {
+void k_parts__navigationextension_popup_menu4(void* self, const void* global, const void* items, const void* arguments, int32_t flags) {
     KParts__NavigationExtension_PopupMenu4((KParts__NavigationExtension*)self, (QPoint*)global, (KFileItemList*)items, (KParts__OpenUrlArguments*)arguments, flags);
 }
 
-void k_parts__navigationextension_on_popup_menu4(void* self, void (*callback)(void*, void*, void*, void*, int32_t)) {
+void k_parts__navigationextension_on_popup_menu4(void* self, void (*callback)(void*, const void*, const void*, const void*, int32_t)) {
     KParts__NavigationExtension_Connect_PopupMenu4((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu5(void* self, void* global, void* items, void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups) {
+void k_parts__navigationextension_popup_menu5(void* self, const void* global, const void* items, const void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups) {
     // Convert libqt_map to QMap<QString,QList<QAction*>>
     libqt_map actionGroups_ret;
     actionGroups_ret.len = actionGroups.len;
@@ -435,35 +435,35 @@ void k_parts__navigationextension_popup_menu5(void* self, void* global, void* it
     free(actionGroups_ret.values);
 }
 
-void k_parts__navigationextension_on_popup_menu5(void* self, void (*callback)(void*, void*, void*, void*, int32_t, libqt_map /* of const char* to QAction** */)) {
+void k_parts__navigationextension_on_popup_menu5(void* self, void (*callback)(void*, const void*, const void*, const void*, int32_t, libqt_map /* of const char* to QAction** */)) {
     KParts__NavigationExtension_Connect_PopupMenu5((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu32(void* self, void* global, void* url, mode_t mode) {
+void k_parts__navigationextension_popup_menu32(void* self, const void* global, const void* url, mode_t mode) {
     KParts__NavigationExtension_PopupMenu32((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode);
 }
 
-void k_parts__navigationextension_on_popup_menu32(void* self, void (*callback)(void*, void*, void*, mode_t)) {
+void k_parts__navigationextension_on_popup_menu32(void* self, void (*callback)(void*, const void*, const void*, mode_t)) {
     KParts__NavigationExtension_Connect_PopupMenu32((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu42(void* self, void* global, void* url, mode_t mode, void* arguments) {
+void k_parts__navigationextension_popup_menu42(void* self, const void* global, const void* url, mode_t mode, const void* arguments) {
     KParts__NavigationExtension_PopupMenu42((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode, (KParts__OpenUrlArguments*)arguments);
 }
 
-void k_parts__navigationextension_on_popup_menu42(void* self, void (*callback)(void*, void*, void*, mode_t, void*)) {
+void k_parts__navigationextension_on_popup_menu42(void* self, void (*callback)(void*, const void*, const void*, mode_t, const void*)) {
     KParts__NavigationExtension_Connect_PopupMenu42((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu52(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags) {
+void k_parts__navigationextension_popup_menu52(void* self, const void* global, const void* url, mode_t mode, const void* arguments, int32_t flags) {
     KParts__NavigationExtension_PopupMenu52((KParts__NavigationExtension*)self, (QPoint*)global, (QUrl*)url, mode, (KParts__OpenUrlArguments*)arguments, flags);
 }
 
-void k_parts__navigationextension_on_popup_menu52(void* self, void (*callback)(void*, void*, void*, mode_t, void*, int32_t)) {
+void k_parts__navigationextension_on_popup_menu52(void* self, void (*callback)(void*, const void*, const void*, mode_t, const void*, int32_t)) {
     KParts__NavigationExtension_Connect_PopupMenu52((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_popup_menu6(void* self, void* global, void* url, mode_t mode, void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups) {
+void k_parts__navigationextension_popup_menu6(void* self, const void* global, const void* url, mode_t mode, const void* arguments, int32_t flags, libqt_map /* of const char* to QAction** */ actionGroups) {
     // Convert libqt_map to QMap<QString,QList<QAction*>>
     libqt_map actionGroups_ret;
     actionGroups_ret.len = actionGroups.len;
@@ -495,11 +495,11 @@ void k_parts__navigationextension_popup_menu6(void* self, void* global, void* ur
     free(actionGroups_ret.values);
 }
 
-void k_parts__navigationextension_on_popup_menu6(void* self, void (*callback)(void*, void*, void*, mode_t, void*, int32_t, libqt_map /* of const char* to QAction** */)) {
+void k_parts__navigationextension_on_popup_menu6(void* self, void (*callback)(void*, const void*, const void*, mode_t, const void*, int32_t, libqt_map /* of const char* to QAction** */)) {
     KParts__NavigationExtension_Connect_PopupMenu6((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-const char* k_parts__navigationextension_object_name(void* self) {
+const char* k_parts__navigationextension_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -510,19 +510,19 @@ void k_parts__navigationextension_set_object_name(void* self, const char* name) 
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_parts__navigationextension_is_widget_type(void* self) {
+bool k_parts__navigationextension_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_parts__navigationextension_is_window_type(void* self) {
+bool k_parts__navigationextension_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_parts__navigationextension_is_quick_item_type(void* self) {
+bool k_parts__navigationextension_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_parts__navigationextension_signals_blocked(void* self) {
+bool k_parts__navigationextension_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -530,7 +530,7 @@ bool k_parts__navigationextension_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_parts__navigationextension_thread(void* self) {
+QThread* k_parts__navigationextension_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -554,7 +554,7 @@ void k_parts__navigationextension_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_parts__navigationextension_children(void* self) {
+libqt_list /* of QObject* */ k_parts__navigationextension_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -571,55 +571,55 @@ void k_parts__navigationextension_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_parts__navigationextension_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_parts__navigationextension_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_parts__navigationextension_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_parts__navigationextension_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_parts__navigationextension_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_parts__navigationextension_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_parts__navigationextension_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_parts__navigationextension_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_parts__navigationextension_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_parts__navigationextension_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_parts__navigationextension_disconnect3(void* self) {
+bool k_parts__navigationextension_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_parts__navigationextension_disconnect4(void* self, void* receiver) {
+bool k_parts__navigationextension_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_parts__navigationextension_disconnect5(void* param1) {
+bool k_parts__navigationextension_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_parts__navigationextension_dump_object_tree(void* self) {
+void k_parts__navigationextension_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_parts__navigationextension_dump_object_info(void* self) {
+void k_parts__navigationextension_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_parts__navigationextension_set_property(void* self, const char* name, void* value) {
+bool k_parts__navigationextension_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_parts__navigationextension_property(void* self, const char* name) {
+QVariant* k_parts__navigationextension_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_parts__navigationextension_dynamic_property_names(void* self) {
+const char** k_parts__navigationextension_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -640,7 +640,7 @@ QBindingStorage* k_parts__navigationextension_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_parts__navigationextension_binding_storage2(void* self) {
+const QBindingStorage* k_parts__navigationextension_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -652,11 +652,11 @@ void k_parts__navigationextension_on_destroyed(void* self, void (*callback)(void
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_parts__navigationextension_parent(void* self) {
+QObject* k_parts__navigationextension_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_parts__navigationextension_inherits(void* self, const char* classname) {
+bool k_parts__navigationextension_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -672,31 +672,31 @@ int32_t k_parts__navigationextension_start_timer23(void* self, int64_t time, int
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_parts__navigationextension_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_parts__navigationextension_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_parts__navigationextension_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_parts__navigationextension_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_parts__navigationextension_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_parts__navigationextension_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_parts__navigationextension_disconnect1(void* self, const char* signal) {
+bool k_parts__navigationextension_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_parts__navigationextension_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_parts__navigationextension_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_parts__navigationextension_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_parts__navigationextension_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_parts__navigationextension_disconnect23(void* self, void* receiver, const char* member) {
+bool k_parts__navigationextension_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -768,76 +768,44 @@ void k_parts__navigationextension_on_custom_event(void* self, void (*callback)(v
     KParts__NavigationExtension_OnCustomEvent((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_connect_notify(void* self, void* signal) {
+void k_parts__navigationextension_connect_notify(void* self, const void* signal) {
     KParts__NavigationExtension_ConnectNotify((KParts__NavigationExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__navigationextension_super_connect_notify(void* self, void* signal) {
+void k_parts__navigationextension_super_connect_notify(void* self, const void* signal) {
     KParts__NavigationExtension_SuperConnectNotify((KParts__NavigationExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__navigationextension_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_parts__navigationextension_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KParts__NavigationExtension_OnConnectNotify((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-void k_parts__navigationextension_disconnect_notify(void* self, void* signal) {
+void k_parts__navigationextension_disconnect_notify(void* self, const void* signal) {
     KParts__NavigationExtension_DisconnectNotify((KParts__NavigationExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__navigationextension_super_disconnect_notify(void* self, void* signal) {
+void k_parts__navigationextension_super_disconnect_notify(void* self, const void* signal) {
     KParts__NavigationExtension_SuperDisconnectNotify((KParts__NavigationExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__navigationextension_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_parts__navigationextension_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KParts__NavigationExtension_OnDisconnectNotify((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
-QObject* k_parts__navigationextension_sender(void* self) {
+QObject* k_parts__navigationextension_sender(const void* self) {
     return KParts__NavigationExtension_Sender((KParts__NavigationExtension*)self);
 }
 
-QObject* k_parts__navigationextension_super_sender(void* self) {
-    return KParts__NavigationExtension_SuperSender((KParts__NavigationExtension*)self);
-}
-
-void k_parts__navigationextension_on_sender(void* self, QObject* (*callback)()) {
-    KParts__NavigationExtension_OnSender((KParts__NavigationExtension*)self, (intptr_t)callback);
-}
-
-int32_t k_parts__navigationextension_sender_signal_index(void* self) {
+int32_t k_parts__navigationextension_sender_signal_index(const void* self) {
     return KParts__NavigationExtension_SenderSignalIndex((KParts__NavigationExtension*)self);
 }
 
-int32_t k_parts__navigationextension_super_sender_signal_index(void* self) {
-    return KParts__NavigationExtension_SuperSenderSignalIndex((KParts__NavigationExtension*)self);
-}
-
-void k_parts__navigationextension_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KParts__NavigationExtension_OnSenderSignalIndex((KParts__NavigationExtension*)self, (intptr_t)callback);
-}
-
-int32_t k_parts__navigationextension_receivers(void* self, const char* signal) {
+int32_t k_parts__navigationextension_receivers(const void* self, const char* signal) {
     return KParts__NavigationExtension_Receivers((KParts__NavigationExtension*)self, signal);
 }
 
-int32_t k_parts__navigationextension_super_receivers(void* self, const char* signal) {
-    return KParts__NavigationExtension_SuperReceivers((KParts__NavigationExtension*)self, signal);
-}
-
-void k_parts__navigationextension_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KParts__NavigationExtension_OnReceivers((KParts__NavigationExtension*)self, (intptr_t)callback);
-}
-
-bool k_parts__navigationextension_is_signal_connected(void* self, void* signal) {
+bool k_parts__navigationextension_is_signal_connected(const void* self, const void* signal) {
     return KParts__NavigationExtension_IsSignalConnected((KParts__NavigationExtension*)self, (QMetaMethod*)signal);
-}
-
-bool k_parts__navigationextension_super_is_signal_connected(void* self, void* signal) {
-    return KParts__NavigationExtension_SuperIsSignalConnected((KParts__NavigationExtension*)self, (QMetaMethod*)signal);
-}
-
-void k_parts__navigationextension_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KParts__NavigationExtension_OnIsSignalConnected((KParts__NavigationExtension*)self, (intptr_t)callback);
 }
 
 void k_parts__navigationextension_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

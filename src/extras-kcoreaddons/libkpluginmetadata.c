@@ -8,7 +8,7 @@ KPluginMetaData* k_pluginmetadata_new() {
     return KPluginMetaData_New();
 }
 
-KPluginMetaData* k_pluginmetadata_new2(void* loader) {
+KPluginMetaData* k_pluginmetadata_new2(const void* loader) {
     return KPluginMetaData_New2((QPluginLoader*)loader);
 }
 
@@ -16,15 +16,15 @@ KPluginMetaData* k_pluginmetadata_new3(const char* pluginFile) {
     return KPluginMetaData_New3(qstring(pluginFile));
 }
 
-KPluginMetaData* k_pluginmetadata_new4(void* metaData, const char* fileName) {
+KPluginMetaData* k_pluginmetadata_new4(const void* metaData, const char* fileName) {
     return KPluginMetaData_New4((QJsonObject*)metaData, qstring(fileName));
 }
 
-KPluginMetaData* k_pluginmetadata_new5(void* param1) {
+KPluginMetaData* k_pluginmetadata_new5(const void* param1) {
     return KPluginMetaData_New5((KPluginMetaData*)param1);
 }
 
-KPluginMetaData* k_pluginmetadata_new6(void* loader, int32_t options) {
+KPluginMetaData* k_pluginmetadata_new6(const void* loader, int32_t options) {
     return KPluginMetaData_New6((QPluginLoader*)loader, options);
 }
 
@@ -32,7 +32,7 @@ KPluginMetaData* k_pluginmetadata_new7(const char* pluginFile, int32_t options) 
     return KPluginMetaData_New7(qstring(pluginFile), options);
 }
 
-void k_pluginmetadata_operator_assign(void* self, void* param1) {
+void k_pluginmetadata_operator_assign(void* self, const void* param1) {
     KPluginMetaData_OperatorAssign((KPluginMetaData*)self, (KPluginMetaData*)param1);
 }
 
@@ -49,118 +49,118 @@ libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins(const char* d
     return _arr;
 }
 
-bool k_pluginmetadata_is_valid(void* self) {
+bool k_pluginmetadata_is_valid(const void* self) {
     return KPluginMetaData_IsValid((KPluginMetaData*)self);
 }
 
-bool k_pluginmetadata_is_hidden(void* self) {
+bool k_pluginmetadata_is_hidden(const void* self) {
     return KPluginMetaData_IsHidden((KPluginMetaData*)self);
 }
 
-const char* k_pluginmetadata_file_name(void* self) {
+const char* k_pluginmetadata_file_name(const void* self) {
     libqt_string _str = KPluginMetaData_FileName((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QJsonObject* k_pluginmetadata_raw_data(void* self) {
+QJsonObject* k_pluginmetadata_raw_data(const void* self) {
     return KPluginMetaData_RawData((KPluginMetaData*)self);
 }
 
-const char* k_pluginmetadata_name(void* self) {
+const char* k_pluginmetadata_name(const void* self) {
     libqt_string _str = KPluginMetaData_Name((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_description(void* self) {
+const char* k_pluginmetadata_description(const void* self) {
     libqt_string _str = KPluginMetaData_Description((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of KAboutPerson* */ k_pluginmetadata_authors(void* self) {
+libqt_list /* of KAboutPerson* */ k_pluginmetadata_authors(const void* self) {
     libqt_list _arr = KPluginMetaData_Authors((KPluginMetaData*)self);
     return _arr;
 }
 
-libqt_list /* of KAboutPerson* */ k_pluginmetadata_translators(void* self) {
+libqt_list /* of KAboutPerson* */ k_pluginmetadata_translators(const void* self) {
     libqt_list _arr = KPluginMetaData_Translators((KPluginMetaData*)self);
     return _arr;
 }
 
-libqt_list /* of KAboutPerson* */ k_pluginmetadata_other_contributors(void* self) {
+libqt_list /* of KAboutPerson* */ k_pluginmetadata_other_contributors(const void* self) {
     libqt_list _arr = KPluginMetaData_OtherContributors((KPluginMetaData*)self);
     return _arr;
 }
 
-const char* k_pluginmetadata_category(void* self) {
+const char* k_pluginmetadata_category(const void* self) {
     libqt_string _str = KPluginMetaData_Category((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_icon_name(void* self) {
+const char* k_pluginmetadata_icon_name(const void* self) {
     libqt_string _str = KPluginMetaData_IconName((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_license(void* self) {
+const char* k_pluginmetadata_license(const void* self) {
     libqt_string _str = KPluginMetaData_License((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_license_text(void* self) {
+const char* k_pluginmetadata_license_text(const void* self) {
     libqt_string _str = KPluginMetaData_LicenseText((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_copyright_text(void* self) {
+const char* k_pluginmetadata_copyright_text(const void* self) {
     libqt_string _str = KPluginMetaData_CopyrightText((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_plugin_id(void* self) {
+const char* k_pluginmetadata_plugin_id(const void* self) {
     libqt_string _str = KPluginMetaData_PluginId((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_version(void* self) {
+const char* k_pluginmetadata_version(const void* self) {
     libqt_string _str = KPluginMetaData_Version((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_website(void* self) {
+const char* k_pluginmetadata_website(const void* self) {
     libqt_string _str = KPluginMetaData_Website((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_bug_report_url(void* self) {
+const char* k_pluginmetadata_bug_report_url(const void* self) {
     libqt_string _str = KPluginMetaData_BugReportUrl((KPluginMetaData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_pluginmetadata_mime_types(void* self) {
+const char** k_pluginmetadata_mime_types(const void* self) {
     libqt_list _arr = KPluginMetaData_MimeTypes((KPluginMetaData*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -177,11 +177,11 @@ const char** k_pluginmetadata_mime_types(void* self) {
     return _ret;
 }
 
-bool k_pluginmetadata_supports_mime_type(void* self, const char* mimeType) {
+bool k_pluginmetadata_supports_mime_type(const void* self, const char* mimeType) {
     return KPluginMetaData_SupportsMimeType((KPluginMetaData*)self, qstring(mimeType));
 }
 
-const char** k_pluginmetadata_form_factors(void* self) {
+const char** k_pluginmetadata_form_factors(const void* self) {
     libqt_list _arr = KPluginMetaData_FormFactors((KPluginMetaData*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -198,41 +198,41 @@ const char** k_pluginmetadata_form_factors(void* self) {
     return _ret;
 }
 
-bool k_pluginmetadata_is_enabled_by_default(void* self) {
+bool k_pluginmetadata_is_enabled_by_default(const void* self) {
     return KPluginMetaData_IsEnabledByDefault((KPluginMetaData*)self);
 }
 
-const char* k_pluginmetadata_value(void* self, const char* key) {
+const char* k_pluginmetadata_value(const void* self, const char* key) {
     libqt_string _str = KPluginMetaData_Value((KPluginMetaData*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_value2(void* self, const char* key) {
+const char* k_pluginmetadata_value2(const void* self, const char* key) {
     libqt_string _str = KPluginMetaData_Value2((KPluginMetaData*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_pluginmetadata_value3(void* self, const char* key, bool defaultValue) {
+bool k_pluginmetadata_value3(const void* self, const char* key, bool defaultValue) {
     return KPluginMetaData_Value3((KPluginMetaData*)self, qstring(key), defaultValue);
 }
 
-bool k_pluginmetadata_value4(void* self, const char* key, bool defaultValue) {
+bool k_pluginmetadata_value4(const void* self, const char* key, bool defaultValue) {
     return KPluginMetaData_Value4((KPluginMetaData*)self, qstring(key), defaultValue);
 }
 
-int32_t k_pluginmetadata_value5(void* self, const char* key, int defaultValue) {
+int32_t k_pluginmetadata_value5(const void* self, const char* key, int defaultValue) {
     return KPluginMetaData_Value5((KPluginMetaData*)self, qstring(key), defaultValue);
 }
 
-int32_t k_pluginmetadata_value6(void* self, const char* key, int defaultValue) {
+int32_t k_pluginmetadata_value6(const void* self, const char* key, int defaultValue) {
     return KPluginMetaData_Value6((KPluginMetaData*)self, qstring(key), defaultValue);
 }
 
-const char** k_pluginmetadata_value7(void* self, const char* key, const char* defaultValue[static 1]) {
+const char** k_pluginmetadata_value7(const void* self, const char* key, const char* defaultValue[static 1]) {
     size_t defaultValue_len = libqt_strv_length(defaultValue);
     libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
     if (defaultValue_qstr == NULL) {
@@ -259,7 +259,7 @@ const char** k_pluginmetadata_value7(void* self, const char* key, const char* de
     return _ret;
 }
 
-const char** k_pluginmetadata_value8(void* self, const char* key, const char* defaultValue[static 1]) {
+const char** k_pluginmetadata_value8(const void* self, const char* key, const char* defaultValue[static 1]) {
     size_t defaultValue_len = libqt_strv_length(defaultValue);
     libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
     if (defaultValue_qstr == NULL) {
@@ -286,15 +286,15 @@ const char** k_pluginmetadata_value8(void* self, const char* key, const char* de
     return _ret;
 }
 
-bool k_pluginmetadata_operator_equal(void* self, void* other) {
+bool k_pluginmetadata_operator_equal(const void* self, const void* other) {
     return KPluginMetaData_OperatorEqual((KPluginMetaData*)self, (KPluginMetaData*)other);
 }
 
-bool k_pluginmetadata_operator_not_equal(void* self, void* other) {
+bool k_pluginmetadata_operator_not_equal(const void* self, const void* other) {
     return KPluginMetaData_OperatorNotEqual((KPluginMetaData*)self, (KPluginMetaData*)other);
 }
 
-bool k_pluginmetadata_is_static_plugin(void* self) {
+bool k_pluginmetadata_is_static_plugin(const void* self) {
     return KPluginMetaData_IsStaticPlugin((KPluginMetaData*)self);
 }
 
@@ -302,24 +302,24 @@ KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, cons
     return KPluginMetaData_FindPluginById3(qstring(directory), qstring(pluginId), options);
 }
 
-libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins2(const char* directory, bool (*filter)(void* funcparam1)) {
+libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins2(const char* directory, bool (*filter)(const void* funcparam1)) {
     libqt_list _arr = KPluginMetaData_FindPlugins2(qstring(directory), (intptr_t)filter);
     return _arr;
 }
 
-libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins3(const char* directory, bool (*filter)(void* funcparam1), int32_t options) {
+libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins3(const char* directory, bool (*filter)(const void* funcparam1), int32_t options) {
     libqt_list _arr = KPluginMetaData_FindPlugins3(qstring(directory), (intptr_t)filter, options);
     return _arr;
 }
 
-const char* k_pluginmetadata_value22(void* self, const char* key, const char* defaultValue) {
+const char* k_pluginmetadata_value22(const void* self, const char* key, const char* defaultValue) {
     libqt_string _str = KPluginMetaData_Value22((KPluginMetaData*)self, qstring(key), qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_pluginmetadata_value23(void* self, const char* key, const char* defaultValue) {
+const char* k_pluginmetadata_value23(const void* self, const char* key, const char* defaultValue) {
     libqt_string _str = KPluginMetaData_Value23((KPluginMetaData*)self, qstring(key), qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -330,6 +330,6 @@ void k_pluginmetadata_delete(void* self) {
     KPluginMetaData_Delete((KPluginMetaData*)(self));
 }
 
-size_t k_pluginmetadata_h_q_hash(void* md, size_t seed) {
+size_t k_pluginmetadata_h_q_hash(const void* md, size_t seed) {
     return kpluginmetadata_h_QHash((KPluginMetaData*)md, seed);
 }

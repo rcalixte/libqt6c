@@ -50,7 +50,7 @@ void QHttpMultiPart_Append(QHttpMultiPart* self, const QHttpPart* httpPart);
 void QHttpMultiPart_SetContentType(QHttpMultiPart* self, int contentType);
 libqt_string QHttpMultiPart_Boundary(const QHttpMultiPart* self);
 void QHttpMultiPart_SetBoundary(QHttpMultiPart* self, const libqt_string boundary);
-void QHttpMultiPart_OnMetaObject(const QHttpMultiPart* self, intptr_t slot);
+void QHttpMultiPart_OnMetaObject(QHttpMultiPart* self, intptr_t slot);
 QMetaObject* QHttpMultiPart_SuperMetaObject(const QHttpMultiPart* self);
 void QHttpMultiPart_OnMetacast(QHttpMultiPart* self, intptr_t slot);
 void* QHttpMultiPart_SuperMetacast(QHttpMultiPart* self, const char* param1);
@@ -78,17 +78,9 @@ void QHttpMultiPart_DisconnectNotify(QHttpMultiPart* self, const QMetaMethod* si
 void QHttpMultiPart_OnDisconnectNotify(QHttpMultiPart* self, intptr_t slot);
 void QHttpMultiPart_SuperDisconnectNotify(QHttpMultiPart* self, const QMetaMethod* signal);
 QObject* QHttpMultiPart_Sender(const QHttpMultiPart* self);
-void QHttpMultiPart_OnSender(const QHttpMultiPart* self, intptr_t slot);
-QObject* QHttpMultiPart_SuperSender(const QHttpMultiPart* self);
 int QHttpMultiPart_SenderSignalIndex(const QHttpMultiPart* self);
-void QHttpMultiPart_OnSenderSignalIndex(const QHttpMultiPart* self, intptr_t slot);
-int QHttpMultiPart_SuperSenderSignalIndex(const QHttpMultiPart* self);
 int QHttpMultiPart_Receivers(const QHttpMultiPart* self, const char* signal);
-void QHttpMultiPart_OnReceivers(const QHttpMultiPart* self, intptr_t slot);
-int QHttpMultiPart_SuperReceivers(const QHttpMultiPart* self, const char* signal);
 bool QHttpMultiPart_IsSignalConnected(const QHttpMultiPart* self, const QMetaMethod* signal);
-void QHttpMultiPart_OnIsSignalConnected(const QHttpMultiPart* self, intptr_t slot);
-bool QHttpMultiPart_SuperIsSignalConnected(const QHttpMultiPart* self, const QMetaMethod* signal);
 void QHttpMultiPart_Delete(QHttpMultiPart* self);
 
 #ifdef __cplusplus

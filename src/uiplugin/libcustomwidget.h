@@ -10,70 +10,11 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#name)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDesignerCustomWidgetInterface*
-///
-const char* q_designercustomwidgetinterface_name(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#group)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDesignerCustomWidgetInterface*
-///
-const char* q_designercustomwidgetinterface_group(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#toolTip)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDesignerCustomWidgetInterface*
-///
-const char* q_designercustomwidgetinterface_tool_tip(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#whatsThis)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDesignerCustomWidgetInterface*
-///
-const char* q_designercustomwidgetinterface_whats_this(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#includeFile)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self QDesignerCustomWidgetInterface*
-///
-const char* q_designercustomwidgetinterface_include_file(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#icon)
-///
-/// @param self QDesignerCustomWidgetInterface*
-///
-QIcon* q_designercustomwidgetinterface_icon(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#isContainer)
-///
-/// @param self QDesignerCustomWidgetInterface*
-///
-bool q_designercustomwidgetinterface_is_container(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#createWidget)
-///
-/// @param self QDesignerCustomWidgetInterface*
-/// @param parent QWidget*
-///
-QWidget* q_designercustomwidgetinterface_create_widget(void* self, void* parent);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#isInitialized)
 ///
-/// @param self QDesignerCustomWidgetInterface*
+/// @param self const QDesignerCustomWidgetInterface*
 ///
-bool q_designercustomwidgetinterface_is_initialized(void* self);
+bool q_designercustomwidgetinterface_is_initialized(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#initialize)
 ///
@@ -86,24 +27,24 @@ void q_designercustomwidgetinterface_initialize(void* self, void* core);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerCustomWidgetInterface*
+/// @param self const QDesignerCustomWidgetInterface*
 ///
-const char* q_designercustomwidgetinterface_dom_xml(void* self);
+const char* q_designercustomwidgetinterface_dom_xml(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#codeTemplate)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerCustomWidgetInterface*
+/// @param self const QDesignerCustomWidgetInterface*
 ///
-const char* q_designercustomwidgetinterface_code_template(void* self);
+const char* q_designercustomwidgetinterface_code_template(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#operator-eq)
 ///
 /// @param self QDesignerCustomWidgetInterface*
 /// @param param1 QDesignerCustomWidgetInterface*
 ///
-void q_designercustomwidgetinterface_operator_assign(void* self, void* param1);
+void q_designercustomwidgetinterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetinterface.html#dtor.QDesignerCustomWidgetInterface)
 ///
@@ -115,20 +56,12 @@ void q_designercustomwidgetinterface_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetcollectioninterface.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetcollectioninterface.html#customWidgets)
-///
-/// @param self QDesignerCustomWidgetCollectionInterface*
-///
-/// @return libqt_list of QDesignerCustomWidgetInterface*
-///
-libqt_list q_designercustomwidgetcollectioninterface_custom_widgets(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetcollectioninterface.html#operator-eq)
 ///
 /// @param self QDesignerCustomWidgetCollectionInterface*
 /// @param param1 QDesignerCustomWidgetCollectionInterface*
 ///
-void q_designercustomwidgetcollectioninterface_operator_assign(void* self, void* param1);
+void q_designercustomwidgetcollectioninterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignercustomwidgetcollectioninterface.html#dtor.QDesignerCustomWidgetCollectionInterface)
 ///

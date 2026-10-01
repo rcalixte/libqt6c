@@ -24,26 +24,26 @@ QQuickTransform* q_quicktransform_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-const QMetaObject* q_quicktransform_meta_object(void* self);
+const QMetaObject* q_quicktransform_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickTransform*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuickTransform*
+/// @param callback const QMetaObject* func(const QQuickTransform* self)
 ///
-void q_quicktransform_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quicktransform_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-const QMetaObject* q_quicktransform_super_meta_object(void* self);
+const QMetaObject* q_quicktransform_super_meta_object(const void* self);
 
 /// @param self QQuickTransform*
 /// @param param1 const char*
@@ -111,51 +111,27 @@ void q_quicktransform_prepend_to_item(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktransform.html#applyTo)
 ///
-/// @param self QQuickTransform*
+/// @warning This method must be implemented with `q_quicktransform_on_apply_to` before it can be called.
+///
+/// @param self const QQuickTransform*
 /// @param matrix QMatrix4x4*
 ///
-void q_quicktransform_apply_to(void* self, void* matrix);
+void q_quicktransform_apply_to(const void* self, void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktransform.html#applyTo)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickTransform*
-/// @param callback void func(QQuickTransform* self, QMatrix4x4* matrix)
+/// @param self const QQuickTransform*
+/// @param callback void func(const QQuickTransform* self, QMatrix4x4* matrix)
 ///
-void q_quicktransform_on_apply_to(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquicktransform.html#applyTo)
-///
-/// Base class method implementation
-///
-/// @param self QQuickTransform*
-/// @param matrix QMatrix4x4*
-///
-void q_quicktransform_super_apply_to(void* self, void* matrix);
+void q_quicktransform_on_apply_to(const void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktransform.html#update)
 ///
 /// @param self QQuickTransform*
 ///
 void q_quicktransform_update(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquicktransform.html#update)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuickTransform*
-/// @param callback void func()
-///
-void q_quicktransform_on_update(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquicktransform.html#update)
-///
-/// Base class method implementation
-///
-/// @param self QQuickTransform*
-///
-void q_quicktransform_super_update(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -182,9 +158,9 @@ const char* q_quicktransform_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-const char* q_quicktransform_object_name(void* self);
+const char* q_quicktransform_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -199,33 +175,33 @@ void q_quicktransform_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-bool q_quicktransform_is_widget_type(void* self);
+bool q_quicktransform_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-bool q_quicktransform_is_window_type(void* self);
+bool q_quicktransform_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-bool q_quicktransform_is_quick_item_type(void* self);
+bool q_quicktransform_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-bool q_quicktransform_signals_blocked(void* self);
+bool q_quicktransform_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -240,9 +216,9 @@ bool q_quicktransform_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-QThread* q_quicktransform_thread(void* self);
+QThread* q_quicktransform_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -293,11 +269,11 @@ void q_quicktransform_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quicktransform_children(void* self);
+libqt_list q_quicktransform_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -335,7 +311,7 @@ void q_quicktransform_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quicktransform_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quicktransform_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -346,18 +322,18 @@ QMetaObject__Connection* q_quicktransform_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quicktransform_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quicktransform_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quicktransform_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quicktransform_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -368,7 +344,7 @@ QMetaObject__Connection* q_quicktransform_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quicktransform_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quicktransform_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -379,24 +355,24 @@ bool q_quicktransform_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quicktransform_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quicktransform_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-bool q_quicktransform_disconnect3(void* self);
+bool q_quicktransform_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param receiver QObject*
 ///
-bool q_quicktransform_disconnect4(void* self, void* receiver);
+bool q_quicktransform_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -404,23 +380,23 @@ bool q_quicktransform_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quicktransform_disconnect5(void* param1);
+bool q_quicktransform_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-void q_quicktransform_dump_object_tree(void* self);
+void q_quicktransform_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-void q_quicktransform_dump_object_info(void* self);
+void q_quicktransform_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -430,16 +406,16 @@ void q_quicktransform_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quicktransform_set_property(void* self, const char* name, void* value);
+bool q_quicktransform_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param name const char*
 ///
-QVariant* q_quicktransform_property(void* self, const char* name);
+QVariant* q_quicktransform_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -447,9 +423,9 @@ QVariant* q_quicktransform_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-const char** q_quicktransform_dynamic_property_names(void* self);
+const char** q_quicktransform_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -463,9 +439,9 @@ QBindingStorage* q_quicktransform_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-const QBindingStorage* q_quicktransform_binding_storage2(void* self);
+const QBindingStorage* q_quicktransform_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -488,18 +464,18 @@ void q_quicktransform_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-QObject* q_quicktransform_parent(void* self);
+QObject* q_quicktransform_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param classname const char*
 ///
-bool q_quicktransform_inherits(void* self, const char* classname);
+bool q_quicktransform_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -539,7 +515,7 @@ int32_t q_quicktransform_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quicktransform_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quicktransform_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -551,59 +527,59 @@ QMetaObject__Connection* q_quicktransform_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quicktransform_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quicktransform_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quicktransform_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quicktransform_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param signal const char*
 ///
-bool q_quicktransform_disconnect1(void* self, const char* signal);
+bool q_quicktransform_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTransform*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quicktransform_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quicktransform_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quicktransform_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quicktransform_disconnect23(void* self, void* receiver, const char* member);
+bool q_quicktransform_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuickTransform*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quicktransform_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -799,7 +775,7 @@ void q_quicktransform_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self QQuickTransform*
 /// @param signal QMetaMethod*
 ///
-void q_quicktransform_connect_notify(void* self, void* signal);
+void q_quicktransform_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -810,7 +786,7 @@ void q_quicktransform_connect_notify(void* self, void* signal);
 /// @param self QQuickTransform*
 /// @param signal QMetaMethod*
 ///
-void q_quicktransform_super_connect_notify(void* self, void* signal);
+void q_quicktransform_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -821,7 +797,7 @@ void q_quicktransform_super_connect_notify(void* self, void* signal);
 /// @param self QQuickTransform*
 /// @param callback void func(QQuickTransform* self, QMetaMethod* signal)
 ///
-void q_quicktransform_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quicktransform_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -832,7 +808,7 @@ void q_quicktransform_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self QQuickTransform*
 /// @param signal QMetaMethod*
 ///
-void q_quicktransform_disconnect_notify(void* self, void* signal);
+void q_quicktransform_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -843,7 +819,7 @@ void q_quicktransform_disconnect_notify(void* self, void* signal);
 /// @param self QQuickTransform*
 /// @param signal QMetaMethod*
 ///
-void q_quicktransform_super_disconnect_notify(void* self, void* signal);
+void q_quicktransform_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -854,7 +830,7 @@ void q_quicktransform_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuickTransform*
 /// @param callback void func(QQuickTransform* self, QMetaMethod* signal)
 ///
-void q_quicktransform_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quicktransform_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -862,9 +838,9 @@ void q_quicktransform_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-QObject* q_quicktransform_sender(void* self);
+QObject* q_quicktransform_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -872,9 +848,9 @@ QObject* q_quicktransform_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-QObject* q_quicktransform_super_sender(void* self);
+QObject* q_quicktransform_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -882,10 +858,10 @@ QObject* q_quicktransform_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickTransform*
-/// @param callback QObject* func()
+/// @param self const QQuickTransform*
+/// @param callback QObject* func(QQuickTransform* self)
 ///
-void q_quicktransform_on_sender(void* self, QObject* (*callback)());
+void q_quicktransform_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -893,9 +869,9 @@ void q_quicktransform_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-int32_t q_quicktransform_sender_signal_index(void* self);
+int32_t q_quicktransform_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -903,9 +879,9 @@ int32_t q_quicktransform_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 ///
-int32_t q_quicktransform_super_sender_signal_index(void* self);
+int32_t q_quicktransform_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -913,10 +889,10 @@ int32_t q_quicktransform_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickTransform*
-/// @param callback int32_t func()
+/// @param self const QQuickTransform*
+/// @param callback int32_t func(QQuickTransform* self)
 ///
-void q_quicktransform_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quicktransform_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -924,10 +900,10 @@ void q_quicktransform_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param signal const char*
 ///
-int32_t q_quicktransform_receivers(void* self, const char* signal);
+int32_t q_quicktransform_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -935,10 +911,10 @@ int32_t q_quicktransform_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param signal const char*
 ///
-int32_t q_quicktransform_super_receivers(void* self, const char* signal);
+int32_t q_quicktransform_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -946,10 +922,10 @@ int32_t q_quicktransform_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param callback int32_t func(QQuickTransform* self, const char* signal)
 ///
-void q_quicktransform_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quicktransform_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -957,10 +933,10 @@ void q_quicktransform_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param signal QMetaMethod*
 ///
-bool q_quicktransform_is_signal_connected(void* self, void* signal);
+bool q_quicktransform_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -968,10 +944,10 @@ bool q_quicktransform_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param signal QMetaMethod*
 ///
-bool q_quicktransform_super_is_signal_connected(void* self, void* signal);
+bool q_quicktransform_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -979,10 +955,10 @@ bool q_quicktransform_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickTransform*
+/// @param self const QQuickTransform*
 /// @param callback bool func(QQuickTransform* self, QMetaMethod* signal)
 ///
-void q_quicktransform_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quicktransform_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1031,26 +1007,26 @@ QQuickItem* q_quickitem_from_q_qml_parser_status(void* _qqmlparserstatus);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-const QMetaObject* q_quickitem_meta_object(void* self);
+const QMetaObject* q_quickitem_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickItem*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuickItem*
+/// @param callback const QMetaObject* func(const QQuickItem* self)
 ///
-void q_quickitem_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quickitem_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-const QMetaObject* q_quickitem_super_meta_object(void* self);
+const QMetaObject* q_quickitem_super_meta_object(const void* self);
 
 /// @param self QQuickItem*
 /// @param param1 const char*
@@ -1104,15 +1080,15 @@ const char* q_quickitem_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#window)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QQuickWindow* q_quickitem_window(void* self);
+QQuickWindow* q_quickitem_window(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#parentItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QQuickItem* q_quickitem_parent_item(void* self);
+QQuickItem* q_quickitem_parent_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setParentItem)
 ///
@@ -1126,14 +1102,14 @@ void q_quickitem_set_parent_item(void* self, void* parent);
 /// @param self QQuickItem*
 /// @param param1 QQuickItem*
 ///
-void q_quickitem_stack_before(void* self, void* param1);
+void q_quickitem_stack_before(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#stackAfter)
 ///
 /// @param self QQuickItem*
 /// @param param1 QQuickItem*
 ///
-void q_quickitem_stack_after(void* self, void* param1);
+void q_quickitem_stack_after(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#childrenRect)
 ///
@@ -1143,17 +1119,17 @@ QRectF* q_quickitem_children_rect(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#childItems)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
 /// @return libqt_list of QQuickItem*
 ///
-libqt_list q_quickitem_child_items(void* self);
+libqt_list q_quickitem_child_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#clip)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_clip(void* self);
+bool q_quickitem_clip(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setClip)
 ///
@@ -1166,9 +1142,9 @@ void q_quickitem_set_clip(void* self, bool clip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-const char* q_quickitem_state(void* self);
+const char* q_quickitem_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setState)
 ///
@@ -1179,9 +1155,9 @@ void q_quickitem_set_state(void* self, const char* state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#baselineOffset)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_baseline_offset(void* self);
+double q_quickitem_baseline_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setBaselineOffset)
 ///
@@ -1192,21 +1168,21 @@ void q_quickitem_set_baseline_offset(void* self, double baselineOffset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#x)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_x(void* self);
+double q_quickitem_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#y)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_y(void* self);
+double q_quickitem_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#position)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QPointF* q_quickitem_position(void* self);
+QPointF* q_quickitem_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setX)
 ///
@@ -1227,13 +1203,13 @@ void q_quickitem_set_y(void* self, double y);
 /// @param self QQuickItem*
 /// @param position QPointF*
 ///
-void q_quickitem_set_position(void* self, void* position);
+void q_quickitem_set_position(void* self, const void* position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#width)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_width(void* self);
+double q_quickitem_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setWidth)
 ///
@@ -1257,15 +1233,15 @@ void q_quickitem_set_implicit_width(void* self, double implicitWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#implicitWidth)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_implicit_width(void* self);
+double q_quickitem_implicit_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#height)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_height(void* self);
+double q_quickitem_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setHeight)
 ///
@@ -1289,30 +1265,30 @@ void q_quickitem_set_implicit_height(void* self, double implicitHeight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#implicitHeight)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_implicit_height(void* self);
+double q_quickitem_implicit_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#size)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QSizeF* q_quickitem_size(void* self);
+QSizeF* q_quickitem_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setSize)
 ///
 /// @param self QQuickItem*
 /// @param size QSizeF*
 ///
-void q_quickitem_set_size(void* self, void* size);
+void q_quickitem_set_size(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#transformOrigin)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
 /// @return enum QQuickItem__TransformOrigin
 ///
-int32_t q_quickitem_transform_origin(void* self);
+int32_t q_quickitem_transform_origin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setTransformOrigin)
 ///
@@ -1323,22 +1299,22 @@ void q_quickitem_set_transform_origin(void* self, int32_t transformOrigin);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#transformOriginPoint)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QPointF* q_quickitem_transform_origin_point(void* self);
+QPointF* q_quickitem_transform_origin_point(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setTransformOriginPoint)
 ///
 /// @param self QQuickItem*
 /// @param transformOriginPoint QPointF*
 ///
-void q_quickitem_set_transform_origin_point(void* self, void* transformOriginPoint);
+void q_quickitem_set_transform_origin_point(void* self, const void* transformOriginPoint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#z)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_z(void* self);
+double q_quickitem_z(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setZ)
 ///
@@ -1349,9 +1325,9 @@ void q_quickitem_set_z(void* self, double z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#rotation)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_rotation(void* self);
+double q_quickitem_rotation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setRotation)
 ///
@@ -1362,9 +1338,9 @@ void q_quickitem_set_rotation(void* self, double rotation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#scale)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_scale(void* self);
+double q_quickitem_scale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setScale)
 ///
@@ -1375,9 +1351,9 @@ void q_quickitem_set_scale(void* self, double scale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#opacity)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-double q_quickitem_opacity(void* self);
+double q_quickitem_opacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setOpacity)
 ///
@@ -1388,9 +1364,9 @@ void q_quickitem_set_opacity(void* self, double opacity);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isVisible)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_visible(void* self);
+bool q_quickitem_is_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setVisible)
 ///
@@ -1401,9 +1377,9 @@ void q_quickitem_set_visible(void* self, bool visible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isEnabled)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_enabled(void* self);
+bool q_quickitem_is_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setEnabled)
 ///
@@ -1414,9 +1390,9 @@ void q_quickitem_set_enabled(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#smooth)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_smooth(void* self);
+bool q_quickitem_smooth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setSmooth)
 ///
@@ -1427,9 +1403,9 @@ void q_quickitem_set_smooth(void* self, bool smooth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#activeFocusOnTab)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_active_focus_on_tab(void* self);
+bool q_quickitem_active_focus_on_tab(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setActiveFocusOnTab)
 ///
@@ -1440,9 +1416,9 @@ void q_quickitem_set_active_focus_on_tab(void* self, bool activeFocusOnTab);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#antialiasing)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_antialiasing(void* self);
+bool q_quickitem_antialiasing(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setAntialiasing)
 ///
@@ -1459,11 +1435,11 @@ void q_quickitem_reset_antialiasing(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#flags)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
 /// @return flag of enum QQuickItem__Flag
 ///
-int32_t q_quickitem_flags(void* self);
+int32_t q_quickitem_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setFlag)
 ///
@@ -1481,71 +1457,71 @@ void q_quickitem_set_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#boundingRect)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QRectF* q_quickitem_bounding_rect(void* self);
+QRectF* q_quickitem_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickItem*
-/// @param callback QRectF* func()
+/// @param self const QQuickItem*
+/// @param callback QRectF* func(const QQuickItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickitem_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_quickitem_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QRectF* q_quickitem_super_bounding_rect(void* self);
+QRectF* q_quickitem_super_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#clipRect)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QRectF* q_quickitem_clip_rect(void* self);
+QRectF* q_quickitem_clip_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#clipRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickItem*
-/// @param callback QRectF* func()
+/// @param self const QQuickItem*
+/// @param callback QRectF* func(const QQuickItem* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickitem_on_clip_rect(void* self, QRectF* (*callback)());
+void q_quickitem_on_clip_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#clipRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QRectF* q_quickitem_super_clip_rect(void* self);
+QRectF* q_quickitem_super_clip_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#viewportItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QQuickItem* q_quickitem_viewport_item(void* self);
+QQuickItem* q_quickitem_viewport_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#hasActiveFocus)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_has_active_focus(void* self);
+bool q_quickitem_has_active_focus(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#hasFocus)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_has_focus(void* self);
+bool q_quickitem_has_focus(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setFocus)
 ///
@@ -1564,23 +1540,23 @@ void q_quickitem_set_focus2(void* self, bool focus, int32_t reason);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isFocusScope)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_focus_scope(void* self);
+bool q_quickitem_is_focus_scope(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#scopedFocusItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QQuickItem* q_quickitem_scoped_focus_item(void* self);
+QQuickItem* q_quickitem_scoped_focus_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#focusPolicy)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_quickitem_focus_policy(void* self);
+int32_t q_quickitem_focus_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setFocusPolicy)
 ///
@@ -1591,18 +1567,18 @@ void q_quickitem_set_focus_policy(void* self, int32_t policy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isAncestorOf)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param child QQuickItem*
 ///
-bool q_quickitem_is_ancestor_of(void* self, void* child);
+bool q_quickitem_is_ancestor_of(const void* self, const void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#acceptedMouseButtons)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_quickitem_accepted_mouse_buttons(void* self);
+int32_t q_quickitem_accepted_mouse_buttons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setAcceptedMouseButtons)
 ///
@@ -1613,9 +1589,9 @@ void q_quickitem_set_accepted_mouse_buttons(void* self, int32_t buttons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#acceptHoverEvents)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_accept_hover_events(void* self);
+bool q_quickitem_accept_hover_events(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setAcceptHoverEvents)
 ///
@@ -1626,9 +1602,9 @@ void q_quickitem_set_accept_hover_events(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#acceptTouchEvents)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_accept_touch_events(void* self);
+bool q_quickitem_accept_touch_events(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setAcceptTouchEvents)
 ///
@@ -1639,16 +1615,16 @@ void q_quickitem_set_accept_touch_events(void* self, bool accept);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#cursor)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QCursor* q_quickitem_cursor(void* self);
+QCursor* q_quickitem_cursor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setCursor)
 ///
 /// @param self QQuickItem*
 /// @param cursor QCursor*
 ///
-void q_quickitem_set_cursor(void* self, void* cursor);
+void q_quickitem_set_cursor(void* self, const void* cursor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#unsetCursor)
 ///
@@ -1658,9 +1634,9 @@ void q_quickitem_unset_cursor(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isUnderMouse)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_under_mouse(void* self);
+bool q_quickitem_is_under_mouse(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#grabMouse)
 ///
@@ -1676,9 +1652,9 @@ void q_quickitem_ungrab_mouse(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#keepMouseGrab)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_keep_mouse_grab(void* self);
+bool q_quickitem_keep_mouse_grab(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setKeepMouseGrab)
 ///
@@ -1689,9 +1665,9 @@ void q_quickitem_set_keep_mouse_grab(void* self, bool keepMouseGrab);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#filtersChildMouseEvents)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_filters_child_mouse_events(void* self);
+bool q_quickitem_filters_child_mouse_events(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setFiltersChildMouseEvents)
 ///
@@ -1715,9 +1691,9 @@ void q_quickitem_ungrab_touch_points(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#keepTouchGrab)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_keep_touch_grab(void* self);
+bool q_quickitem_keep_touch_grab(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setKeepTouchGrab)
 ///
@@ -1731,38 +1707,38 @@ void q_quickitem_set_keep_touch_grab(void* self, bool keepTouchGrab);
 /// @param self QQuickItem*
 /// @param callback QJSValue*
 ///
-bool q_quickitem_grab_to_image(void* self, void* callback);
+bool q_quickitem_grab_to_image(void* self, const void* callback);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#contains)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param point QPointF*
 ///
-bool q_quickitem_contains(void* self, void* point);
+bool q_quickitem_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#contains)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickItem*
-/// @param callback bool func(QQuickItem* self, QPointF* point)
+/// @param self const QQuickItem*
+/// @param callback bool func(const QQuickItem* self, QPointF* point)
 ///
-void q_quickitem_on_contains(void* self, bool (*callback)(void*, void*));
+void q_quickitem_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#contains)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param point QPointF*
 ///
-bool q_quickitem_super_contains(void* self, void* point);
+bool q_quickitem_super_contains(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#containmentMask)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QObject* q_quickitem_containment_mask(void* self);
+QObject* q_quickitem_containment_mask(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setContainmentMask)
 ///
@@ -1773,55 +1749,55 @@ void q_quickitem_set_containment_mask(void* self, void* mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#itemTransform)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param param1 QQuickItem*
 /// @param param2 bool*
 ///
-QTransform* q_quickitem_item_transform(void* self, void* param1, bool* param2);
+QTransform* q_quickitem_item_transform(const void* self, void* param1, bool* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapToScene)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param point QPointF*
 ///
-QPointF* q_quickitem_map_to_scene(void* self, void* point);
+QPointF* q_quickitem_map_to_scene(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapRectToItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param item QQuickItem*
 /// @param rect QRectF*
 ///
-QRectF* q_quickitem_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_quickitem_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapRectToScene)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param rect QRectF*
 ///
-QRectF* q_quickitem_map_rect_to_scene(void* self, void* rect);
+QRectF* q_quickitem_map_rect_to_scene(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapFromScene)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param point QPointF*
 ///
-QPointF* q_quickitem_map_from_scene(void* self, void* point);
+QPointF* q_quickitem_map_from_scene(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapRectFromItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param item QQuickItem*
 /// @param rect QRectF*
 ///
-QRectF* q_quickitem_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_quickitem_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapRectFromScene)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param rect QRectF*
 ///
-QRectF* q_quickitem_map_rect_from_scene(void* self, void* rect);
+QRectF* q_quickitem_map_rect_from_scene(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#polish)
 ///
@@ -1831,11 +1807,11 @@ void q_quickitem_polish(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapFromItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param item QQuickItem*
 /// @param point QPointF*
 ///
-QPointF* q_quickitem_map_from_item2(void* self, void* item, void* point);
+QPointF* q_quickitem_map_from_item2(const void* self, const void* item, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapFromItem)
 ///
@@ -1844,34 +1820,34 @@ QPointF* q_quickitem_map_from_item2(void* self, void* item, void* point);
 /// @param x double
 /// @param y double
 ///
-QPointF* q_quickitem_map_from_item3(void* self, void* item, double x, double y);
+QPointF* q_quickitem_map_from_item3(void* self, const void* item, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapFromItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param item QQuickItem*
 /// @param rect QRectF*
 ///
-QRectF* q_quickitem_map_from_item4(void* self, void* item, void* rect);
+QRectF* q_quickitem_map_from_item4(const void* self, const void* item, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapFromItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param item QQuickItem*
 /// @param x double
 /// @param y double
 /// @param width double
 /// @param height double
 ///
-QRectF* q_quickitem_map_from_item5(void* self, void* item, double x, double y, double width, double height);
+QRectF* q_quickitem_map_from_item5(const void* self, const void* item, double x, double y, double width, double height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapToItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param item QQuickItem*
 /// @param point QPointF*
 ///
-QPointF* q_quickitem_map_to_item2(void* self, void* item, void* point);
+QPointF* q_quickitem_map_to_item2(const void* self, const void* item, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapToItem)
 ///
@@ -1880,56 +1856,56 @@ QPointF* q_quickitem_map_to_item2(void* self, void* item, void* point);
 /// @param x double
 /// @param y double
 ///
-QPointF* q_quickitem_map_to_item3(void* self, void* item, double x, double y);
+QPointF* q_quickitem_map_to_item3(void* self, const void* item, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapToItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param item QQuickItem*
 /// @param rect QRectF*
 ///
-QRectF* q_quickitem_map_to_item4(void* self, void* item, void* rect);
+QRectF* q_quickitem_map_to_item4(const void* self, const void* item, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapToItem)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param item QQuickItem*
 /// @param x double
 /// @param y double
 /// @param width double
 /// @param height double
 ///
-QRectF* q_quickitem_map_to_item5(void* self, void* item, double x, double y, double width, double height);
+QRectF* q_quickitem_map_to_item5(const void* self, const void* item, double x, double y, double width, double height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapFromGlobal)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_quickitem_map_from_global2(void* self, double x, double y);
+QPointF* q_quickitem_map_from_global2(const void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapFromGlobal)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param point QPointF*
 ///
-QPointF* q_quickitem_map_from_global3(void* self, void* point);
+QPointF* q_quickitem_map_from_global3(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapToGlobal)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_quickitem_map_to_global2(void* self, double x, double y);
+QPointF* q_quickitem_map_to_global2(const void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mapToGlobal)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param point QPointF*
 ///
-QPointF* q_quickitem_map_to_global3(void* self, void* point);
+QPointF* q_quickitem_map_to_global3(const void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#forceActiveFocus)
 ///
@@ -1952,11 +1928,11 @@ QQuickItem* q_quickitem_next_item_in_focus_chain(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#childAt)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param x double
 /// @param y double
 ///
-QQuickItem* q_quickitem_child_at(void* self, double x, double y);
+QQuickItem* q_quickitem_child_at(const void* self, double x, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#ensurePolished)
 ///
@@ -1966,82 +1942,82 @@ void q_quickitem_ensure_polished(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#dumpItemTree)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-void q_quickitem_dump_item_tree(void* self);
+void q_quickitem_dump_item_tree(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#inputMethodQuery)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_quickitem_input_method_query(void* self, int32_t query);
+QVariant* q_quickitem_input_method_query(const void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#inputMethodQuery)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickItem*
-/// @param callback QVariant* func(QQuickItem* self, enum Qt__InputMethodQuery query)
+/// @param self const QQuickItem*
+/// @param callback QVariant* func(const QQuickItem* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_quickitem_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#inputMethodQuery)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_quickitem_super_input_method_query(void* self, int32_t query);
+QVariant* q_quickitem_super_input_method_query(const void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isTextureProvider)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_texture_provider(void* self);
+bool q_quickitem_is_texture_provider(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isTextureProvider)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickItem*
-/// @param callback bool func()
+/// @param self const QQuickItem*
+/// @param callback bool func(const QQuickItem* self)
 ///
-void q_quickitem_on_is_texture_provider(void* self, bool (*callback)());
+void q_quickitem_on_is_texture_provider(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isTextureProvider)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_super_is_texture_provider(void* self);
+bool q_quickitem_super_is_texture_provider(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#textureProvider)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QSGTextureProvider* q_quickitem_texture_provider(void* self);
+QSGTextureProvider* q_quickitem_texture_provider(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#textureProvider)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickItem*
-/// @param callback QSGTextureProvider* func()
+/// @param self const QQuickItem*
+/// @param callback QSGTextureProvider* func(const QQuickItem* self)
 ///
-void q_quickitem_on_texture_provider(void* self, QSGTextureProvider* (*callback)());
+void q_quickitem_on_texture_provider(const void* self, QSGTextureProvider* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#textureProvider)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QSGTextureProvider* q_quickitem_super_texture_provider(void* self);
+QSGTextureProvider* q_quickitem_super_texture_provider(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#update)
 ///
@@ -2054,14 +2030,14 @@ void q_quickitem_update(void* self);
 /// @param self QQuickItem*
 /// @param param1 QRectF*
 ///
-void q_quickitem_children_rect_changed(void* self, void* param1);
+void q_quickitem_children_rect_changed(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#childrenRectChanged)
 ///
 /// @param self QQuickItem*
 /// @param callback void func(QQuickItem* self, QRectF* param1)
 ///
-void q_quickitem_on_children_rect_changed(void* self, void (*callback)(void*, void*));
+void q_quickitem_on_children_rect_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#baselineOffsetChanged)
 ///
@@ -2479,26 +2455,9 @@ bool q_quickitem_super_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isComponentComplete)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_component_complete(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isComponentComplete)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuickItem*
-/// @param callback bool func()
-///
-void q_quickitem_on_is_component_complete(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#isComponentComplete)
-///
-/// Base class method implementation
-///
-/// @param self QQuickItem*
-///
-bool q_quickitem_super_is_component_complete(void* self);
+bool q_quickitem_is_component_complete(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#itemChange)
 ///
@@ -2506,7 +2465,7 @@ bool q_quickitem_super_is_component_complete(void* self);
 /// @param param1 enum QQuickItem__ItemChange
 /// @param param2 QQuickItem__ItemChangeData*
 ///
-void q_quickitem_item_change(void* self, int32_t param1, void* param2);
+void q_quickitem_item_change(void* self, int32_t param1, const void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#itemChange)
 ///
@@ -2515,7 +2474,7 @@ void q_quickitem_item_change(void* self, int32_t param1, void* param2);
 /// @param self QQuickItem*
 /// @param callback void func(QQuickItem* self, enum QQuickItem__ItemChange param1, QQuickItem__ItemChangeData* param2)
 ///
-void q_quickitem_on_item_change(void* self, void (*callback)(void*, int32_t, void*));
+void q_quickitem_on_item_change(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#itemChange)
 ///
@@ -2525,7 +2484,7 @@ void q_quickitem_on_item_change(void* self, void (*callback)(void*, int32_t, voi
 /// @param param1 enum QQuickItem__ItemChange
 /// @param param2 QQuickItem__ItemChangeData*
 ///
-void q_quickitem_super_item_change(void* self, int32_t param1, void* param2);
+void q_quickitem_super_item_change(void* self, int32_t param1, const void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#geometryChange)
 ///
@@ -2533,7 +2492,7 @@ void q_quickitem_super_item_change(void* self, int32_t param1, void* param2);
 /// @param newGeometry QRectF*
 /// @param oldGeometry QRectF*
 ///
-void q_quickitem_geometry_change(void* self, void* newGeometry, void* oldGeometry);
+void q_quickitem_geometry_change(void* self, const void* newGeometry, const void* oldGeometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#geometryChange)
 ///
@@ -2542,7 +2501,7 @@ void q_quickitem_geometry_change(void* self, void* newGeometry, void* oldGeometr
 /// @param self QQuickItem*
 /// @param callback void func(QQuickItem* self, QRectF* newGeometry, QRectF* oldGeometry)
 ///
-void q_quickitem_on_geometry_change(void* self, void (*callback)(void*, void*, void*));
+void q_quickitem_on_geometry_change(void* self, void (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#geometryChange)
 ///
@@ -2552,7 +2511,7 @@ void q_quickitem_on_geometry_change(void* self, void (*callback)(void*, void*, v
 /// @param newGeometry QRectF*
 /// @param oldGeometry QRectF*
 ///
-void q_quickitem_super_geometry_change(void* self, void* newGeometry, void* oldGeometry);
+void q_quickitem_super_geometry_change(void* self, const void* newGeometry, const void* oldGeometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#updateInputMethod)
 ///
@@ -2560,68 +2519,17 @@ void q_quickitem_super_geometry_change(void* self, void* newGeometry, void* oldG
 ///
 void q_quickitem_update_input_method(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#updateInputMethod)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuickItem*
-/// @param callback void func()
-///
-void q_quickitem_on_update_input_method(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#updateInputMethod)
-///
-/// Base class method implementation
-///
-/// @param self QQuickItem*
-///
-void q_quickitem_super_update_input_method(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#widthValid)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_width_valid(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#widthValid)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuickItem*
-/// @param callback bool func()
-///
-void q_quickitem_on_width_valid(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#widthValid)
-///
-/// Base class method implementation
-///
-/// @param self QQuickItem*
-///
-bool q_quickitem_super_width_valid(void* self);
+bool q_quickitem_width_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#heightValid)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_height_valid(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#heightValid)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuickItem*
-/// @param callback bool func()
-///
-void q_quickitem_on_height_valid(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#heightValid)
-///
-/// Base class method implementation
-///
-/// @param self QQuickItem*
-///
-bool q_quickitem_super_height_valid(void* self);
+bool q_quickitem_height_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setImplicitSize)
 ///
@@ -2630,25 +2538,6 @@ bool q_quickitem_super_height_valid(void* self);
 /// @param param2 double
 ///
 void q_quickitem_set_implicit_size(void* self, double param1, double param2);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setImplicitSize)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuickItem*
-/// @param callback void func(QQuickItem* self, double param1, double param2)
-///
-void q_quickitem_on_set_implicit_size(void* self, void (*callback)(void*, double, double));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#setImplicitSize)
-///
-/// Base class method implementation
-///
-/// @param self QQuickItem*
-/// @param param1 double
-/// @param param2 double
-///
-void q_quickitem_super_set_implicit_size(void* self, double param1, double param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#classBegin)
 ///
@@ -2661,9 +2550,9 @@ void q_quickitem_class_begin(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QQuickItem*
-/// @param callback void func()
+/// @param callback void func(QQuickItem* self)
 ///
-void q_quickitem_on_class_begin(void* self, void (*callback)());
+void q_quickitem_on_class_begin(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#classBegin)
 ///
@@ -2684,9 +2573,9 @@ void q_quickitem_component_complete(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QQuickItem*
-/// @param callback void func()
+/// @param callback void func(QQuickItem* self)
 ///
-void q_quickitem_on_component_complete(void* self, void (*callback)());
+void q_quickitem_on_component_complete(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#componentComplete)
 ///
@@ -2932,9 +2821,9 @@ void q_quickitem_mouse_ungrab_event(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QQuickItem*
-/// @param callback void func()
+/// @param callback void func(QQuickItem* self)
 ///
-void q_quickitem_on_mouse_ungrab_event(void* self, void (*callback)());
+void q_quickitem_on_mouse_ungrab_event(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#mouseUngrabEvent)
 ///
@@ -2955,9 +2844,9 @@ void q_quickitem_touch_ungrab_event(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QQuickItem*
-/// @param callback void func()
+/// @param callback void func(QQuickItem* self)
 ///
-void q_quickitem_on_touch_ungrab_event(void* self, void (*callback)());
+void q_quickitem_on_touch_ungrab_event(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#touchUngrabEvent)
 ///
@@ -3257,9 +3146,9 @@ void q_quickitem_release_resources(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QQuickItem*
-/// @param callback void func()
+/// @param callback void func(QQuickItem* self)
 ///
-void q_quickitem_on_release_resources(void* self, void (*callback)());
+void q_quickitem_on_release_resources(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#releaseResources)
 ///
@@ -3280,9 +3169,9 @@ void q_quickitem_update_polish(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QQuickItem*
-/// @param callback void func()
+/// @param callback void func(QQuickItem* self)
 ///
-void q_quickitem_on_update_polish(void* self, void (*callback)());
+void q_quickitem_on_update_polish(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#updatePolish)
 ///
@@ -3325,7 +3214,7 @@ void q_quickitem_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param callback QJSValue*
 /// @param targetSize QSize*
 ///
-bool q_quickitem_grab_to_image22(void* self, void* callback, void* targetSize);
+bool q_quickitem_grab_to_image22(void* self, const void* callback, const void* targetSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#nextItemInFocusChain)
 ///
@@ -3341,33 +3230,15 @@ QQuickItem* q_quickitem_next_item_in_focus_chain1(void* self, bool forward);
 ///
 void q_quickitem_update_input_method1(void* self, int32_t queries);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#updateInputMethod)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuickItem*
-/// @param callback void func(QQuickItem* self, flag of enum Qt__InputMethodQuery queries)
-///
-void q_quickitem_on_update_input_method1(void* self, void (*callback)(void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickitem.html#updateInputMethod)
-///
-/// Base class method implementation
-///
-/// @param self QQuickItem*
-/// @param queries flag of enum Qt__InputMethodQuery
-///
-void q_quickitem_super_update_input_method1(void* self, int32_t queries);
-
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-const char* q_quickitem_object_name(void* self);
+const char* q_quickitem_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3382,33 +3253,33 @@ void q_quickitem_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_widget_type(void* self);
+bool q_quickitem_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_window_type(void* self);
+bool q_quickitem_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_is_quick_item_type(void* self);
+bool q_quickitem_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_signals_blocked(void* self);
+bool q_quickitem_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3423,9 +3294,9 @@ bool q_quickitem_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QThread* q_quickitem_thread(void* self);
+QThread* q_quickitem_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3476,11 +3347,11 @@ void q_quickitem_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quickitem_children(void* self);
+libqt_list q_quickitem_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3518,7 +3389,7 @@ void q_quickitem_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickitem_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quickitem_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3529,18 +3400,18 @@ QMetaObject__Connection* q_quickitem_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quickitem_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quickitem_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickitem_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quickitem_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3551,7 +3422,7 @@ QMetaObject__Connection* q_quickitem_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickitem_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quickitem_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3562,24 +3433,24 @@ bool q_quickitem_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quickitem_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quickitem_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-bool q_quickitem_disconnect3(void* self);
+bool q_quickitem_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param receiver QObject*
 ///
-bool q_quickitem_disconnect4(void* self, void* receiver);
+bool q_quickitem_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3587,23 +3458,23 @@ bool q_quickitem_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quickitem_disconnect5(void* param1);
+bool q_quickitem_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-void q_quickitem_dump_object_tree(void* self);
+void q_quickitem_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-void q_quickitem_dump_object_info(void* self);
+void q_quickitem_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3613,16 +3484,16 @@ void q_quickitem_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quickitem_set_property(void* self, const char* name, void* value);
+bool q_quickitem_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param name const char*
 ///
-QVariant* q_quickitem_property(void* self, const char* name);
+QVariant* q_quickitem_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3630,9 +3501,9 @@ QVariant* q_quickitem_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-const char** q_quickitem_dynamic_property_names(void* self);
+const char** q_quickitem_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3646,9 +3517,9 @@ QBindingStorage* q_quickitem_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-const QBindingStorage* q_quickitem_binding_storage2(void* self);
+const QBindingStorage* q_quickitem_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3671,18 +3542,18 @@ void q_quickitem_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QObject* q_quickitem_parent(void* self);
+QObject* q_quickitem_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param classname const char*
 ///
-bool q_quickitem_inherits(void* self, const char* classname);
+bool q_quickitem_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3722,7 +3593,7 @@ int32_t q_quickitem_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickitem_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quickitem_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3734,59 +3605,59 @@ QMetaObject__Connection* q_quickitem_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickitem_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quickitem_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quickitem_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param signal const char*
 ///
-bool q_quickitem_disconnect1(void* self, const char* signal);
+bool q_quickitem_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickItem*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quickitem_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quickitem_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quickitem_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickitem_disconnect23(void* self, void* receiver, const char* member);
+bool q_quickitem_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuickItem*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quickitem_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3813,7 +3684,7 @@ void q_quickitem_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QQuickItem*
 /// @param param1 QQmlParserStatus*
 ///
-void q_quickitem_operator_assign(void* self, void* param1);
+void q_quickitem_operator_assign(void* self, const void* param1);
 
 /// Inherited from QObject
 ///
@@ -3958,7 +3829,7 @@ void q_quickitem_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QQuickItem*
 /// @param signal QMetaMethod*
 ///
-void q_quickitem_connect_notify(void* self, void* signal);
+void q_quickitem_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3969,7 +3840,7 @@ void q_quickitem_connect_notify(void* self, void* signal);
 /// @param self QQuickItem*
 /// @param signal QMetaMethod*
 ///
-void q_quickitem_super_connect_notify(void* self, void* signal);
+void q_quickitem_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3980,7 +3851,7 @@ void q_quickitem_super_connect_notify(void* self, void* signal);
 /// @param self QQuickItem*
 /// @param callback void func(QQuickItem* self, QMetaMethod* signal)
 ///
-void q_quickitem_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quickitem_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3991,7 +3862,7 @@ void q_quickitem_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QQuickItem*
 /// @param signal QMetaMethod*
 ///
-void q_quickitem_disconnect_notify(void* self, void* signal);
+void q_quickitem_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4002,7 +3873,7 @@ void q_quickitem_disconnect_notify(void* self, void* signal);
 /// @param self QQuickItem*
 /// @param signal QMetaMethod*
 ///
-void q_quickitem_super_disconnect_notify(void* self, void* signal);
+void q_quickitem_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4013,7 +3884,7 @@ void q_quickitem_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuickItem*
 /// @param callback void func(QQuickItem* self, QMetaMethod* signal)
 ///
-void q_quickitem_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quickitem_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4021,9 +3892,9 @@ void q_quickitem_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QObject* q_quickitem_sender(void* self);
+QObject* q_quickitem_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4031,9 +3902,9 @@ QObject* q_quickitem_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-QObject* q_quickitem_super_sender(void* self);
+QObject* q_quickitem_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4041,10 +3912,10 @@ QObject* q_quickitem_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickItem*
-/// @param callback QObject* func()
+/// @param self const QQuickItem*
+/// @param callback QObject* func(QQuickItem* self)
 ///
-void q_quickitem_on_sender(void* self, QObject* (*callback)());
+void q_quickitem_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4052,9 +3923,9 @@ void q_quickitem_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-int32_t q_quickitem_sender_signal_index(void* self);
+int32_t q_quickitem_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4062,9 +3933,9 @@ int32_t q_quickitem_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 ///
-int32_t q_quickitem_super_sender_signal_index(void* self);
+int32_t q_quickitem_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4072,10 +3943,10 @@ int32_t q_quickitem_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickItem*
-/// @param callback int32_t func()
+/// @param self const QQuickItem*
+/// @param callback int32_t func(QQuickItem* self)
 ///
-void q_quickitem_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quickitem_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4083,10 +3954,10 @@ void q_quickitem_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param signal const char*
 ///
-int32_t q_quickitem_receivers(void* self, const char* signal);
+int32_t q_quickitem_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4094,10 +3965,10 @@ int32_t q_quickitem_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param signal const char*
 ///
-int32_t q_quickitem_super_receivers(void* self, const char* signal);
+int32_t q_quickitem_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4105,10 +3976,10 @@ int32_t q_quickitem_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param callback int32_t func(QQuickItem* self, const char* signal)
 ///
-void q_quickitem_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quickitem_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4116,10 +3987,10 @@ void q_quickitem_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param signal QMetaMethod*
 ///
-bool q_quickitem_is_signal_connected(void* self, void* signal);
+bool q_quickitem_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4127,10 +3998,10 @@ bool q_quickitem_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param signal QMetaMethod*
 ///
-bool q_quickitem_super_is_signal_connected(void* self, void* signal);
+bool q_quickitem_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4138,10 +4009,10 @@ bool q_quickitem_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickItem*
+/// @param self const QQuickItem*
 /// @param callback bool func(QQuickItem* self, QMetaMethod* signal)
 ///
-void q_quickitem_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quickitem_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4168,7 +4039,7 @@ void q_quickitem_delete(void* self);
 ///
 /// @param other QQuickItem__ItemChangeData*
 ///
-QQuickItem__ItemChangeData* q_quickitem__itemchangedata_new(void* other);
+QQuickItem__ItemChangeData* q_quickitem__itemchangedata_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html)
 
@@ -4226,9 +4097,9 @@ void q_quickitem__itemchangedata_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html#item-var)
 ///
-/// @param self QQuickItem__ItemChangeData*
+/// @param self const QQuickItem__ItemChangeData*
 ///
-QQuickItem* q_quickitem__itemchangedata_item(void* self);
+QQuickItem* q_quickitem__itemchangedata_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html#item-var)
 ///
@@ -4239,9 +4110,9 @@ void q_quickitem__itemchangedata_set_item(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html#window-var)
 ///
-/// @param self QQuickItem__ItemChangeData*
+/// @param self const QQuickItem__ItemChangeData*
 ///
-QQuickWindow* q_quickitem__itemchangedata_window(void* self);
+QQuickWindow* q_quickitem__itemchangedata_window(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html#window-var)
 ///
@@ -4252,9 +4123,9 @@ void q_quickitem__itemchangedata_set_window(void* self, void* window);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html#realValue-var)
 ///
-/// @param self QQuickItem__ItemChangeData*
+/// @param self const QQuickItem__ItemChangeData*
 ///
-double q_quickitem__itemchangedata_real_value(void* self);
+double q_quickitem__itemchangedata_real_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html#realValue-var)
 ///
@@ -4265,9 +4136,9 @@ void q_quickitem__itemchangedata_set_real_value(void* self, double realValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html#boolValue-var)
 ///
-/// @param self QQuickItem__ItemChangeData*
+/// @param self const QQuickItem__ItemChangeData*
 ///
-bool q_quickitem__itemchangedata_bool_value(void* self);
+bool q_quickitem__itemchangedata_bool_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-itemchangedata.html#boolValue-var)
 ///
@@ -4288,7 +4159,7 @@ void q_quickitem__itemchangedata_delete(void* self);
 ///
 /// @param other QQuickItem__UpdatePaintNodeData*
 ///
-QQuickItem__UpdatePaintNodeData* q_quickitem__updatepaintnodedata_new(void* other);
+QQuickItem__UpdatePaintNodeData* q_quickitem__updatepaintnodedata_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-updatepaintnodedata.html)
 
@@ -4314,9 +4185,9 @@ void q_quickitem__updatepaintnodedata_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-updatepaintnodedata.html#transformNode-var)
 ///
-/// @param self QQuickItem__UpdatePaintNodeData*
+/// @param self const QQuickItem__UpdatePaintNodeData*
 ///
-QSGTransformNode* q_quickitem__updatepaintnodedata_transform_node(void* self);
+QSGTransformNode* q_quickitem__updatepaintnodedata_transform_node(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickitem-updatepaintnodedata.html#transformNode-var)
 ///

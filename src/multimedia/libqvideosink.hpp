@@ -42,7 +42,7 @@ void QVideoSink_SubtitleTextChanged(const QVideoSink* self, const libqt_string s
 void QVideoSink_Connect_SubtitleTextChanged(const QVideoSink* self, intptr_t slot);
 void QVideoSink_VideoSizeChanged(QVideoSink* self);
 void QVideoSink_Connect_VideoSizeChanged(QVideoSink* self, intptr_t slot);
-void QVideoSink_OnMetaObject(const QVideoSink* self, intptr_t slot);
+void QVideoSink_OnMetaObject(QVideoSink* self, intptr_t slot);
 QMetaObject* QVideoSink_SuperMetaObject(const QVideoSink* self);
 void QVideoSink_OnMetacast(QVideoSink* self, intptr_t slot);
 void* QVideoSink_SuperMetacast(QVideoSink* self, const char* param1);
@@ -70,17 +70,9 @@ void QVideoSink_DisconnectNotify(QVideoSink* self, const QMetaMethod* signal);
 void QVideoSink_OnDisconnectNotify(QVideoSink* self, intptr_t slot);
 void QVideoSink_SuperDisconnectNotify(QVideoSink* self, const QMetaMethod* signal);
 QObject* QVideoSink_Sender(const QVideoSink* self);
-void QVideoSink_OnSender(const QVideoSink* self, intptr_t slot);
-QObject* QVideoSink_SuperSender(const QVideoSink* self);
 int QVideoSink_SenderSignalIndex(const QVideoSink* self);
-void QVideoSink_OnSenderSignalIndex(const QVideoSink* self, intptr_t slot);
-int QVideoSink_SuperSenderSignalIndex(const QVideoSink* self);
 int QVideoSink_Receivers(const QVideoSink* self, const char* signal);
-void QVideoSink_OnReceivers(const QVideoSink* self, intptr_t slot);
-int QVideoSink_SuperReceivers(const QVideoSink* self, const char* signal);
 bool QVideoSink_IsSignalConnected(const QVideoSink* self, const QMetaMethod* signal);
-void QVideoSink_OnIsSignalConnected(const QVideoSink* self, intptr_t slot);
-bool QVideoSink_SuperIsSignalConnected(const QVideoSink* self, const QMetaMethod* signal);
 void QVideoSink_Delete(QVideoSink* self);
 
 #ifdef __cplusplus

@@ -52,7 +52,7 @@ bool q_stylepainter_begin2(void* self, void* pd, void* w);
 /// @param pe enum QStyle__PrimitiveElement
 /// @param opt QStyleOption*
 ///
-void q_stylepainter_draw_primitive(void* self, int32_t pe, void* opt);
+void q_stylepainter_draw_primitive(void* self, int32_t pe, const void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylepainter.html#drawControl)
 ///
@@ -60,7 +60,7 @@ void q_stylepainter_draw_primitive(void* self, int32_t pe, void* opt);
 /// @param ce enum QStyle__ControlElement
 /// @param opt QStyleOption*
 ///
-void q_stylepainter_draw_control(void* self, int32_t ce, void* opt);
+void q_stylepainter_draw_control(void* self, int32_t ce, const void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylepainter.html#drawComplexControl)
 ///
@@ -68,7 +68,7 @@ void q_stylepainter_draw_control(void* self, int32_t ce, void* opt);
 /// @param cc enum QStyle__ComplexControl
 /// @param opt QStyleOptionComplex*
 ///
-void q_stylepainter_draw_complex_control(void* self, int32_t cc, void* opt);
+void q_stylepainter_draw_complex_control(void* self, int32_t cc, const void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylepainter.html#drawItemText)
 ///
@@ -79,7 +79,7 @@ void q_stylepainter_draw_complex_control(void* self, int32_t cc, void* opt);
 /// @param enabled bool
 /// @param text const char*
 ///
-void q_stylepainter_draw_item_text(void* self, void* r, int flags, void* pal, bool enabled, const char* text);
+void q_stylepainter_draw_item_text(void* self, const void* r, int flags, const void* pal, bool enabled, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylepainter.html#drawItemPixmap)
 ///
@@ -88,13 +88,13 @@ void q_stylepainter_draw_item_text(void* self, void* r, int flags, void* pal, bo
 /// @param flags int
 /// @param pixmap QPixmap*
 ///
-void q_stylepainter_draw_item_pixmap(void* self, void* r, int flags, void* pixmap);
+void q_stylepainter_draw_item_pixmap(void* self, const void* r, int flags, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylepainter.html#style)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QStyle* q_stylepainter_style(void* self);
+QStyle* q_stylepainter_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylepainter.html#drawItemText)
 ///
@@ -106,15 +106,15 @@ QStyle* q_stylepainter_style(void* self);
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
 ///
-void q_stylepainter_draw_item_text6(void* self, void* r, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
+void q_stylepainter_draw_item_text6(void* self, const void* r, int flags, const void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#device)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QPaintDevice* q_stylepainter_device(void* self);
+QPaintDevice* q_stylepainter_device(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -128,9 +128,9 @@ bool q_stylepainter_end(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#isActive)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-bool q_stylepainter_is_active(void* self);
+bool q_stylepainter_is_active(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -145,19 +145,19 @@ void q_stylepainter_set_composition_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#compositionMode)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
 /// @return enum QPainter__CompositionMode
 ///
-int32_t q_stylepainter_composition_mode(void* self);
+int32_t q_stylepainter_composition_mode(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#font)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-const QFont* q_stylepainter_font(void* self);
+const QFont* q_stylepainter_font(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -166,23 +166,23 @@ const QFont* q_stylepainter_font(void* self);
 /// @param self QStylePainter*
 /// @param f QFont*
 ///
-void q_stylepainter_set_font(void* self, void* f);
+void q_stylepainter_set_font(void* self, const void* f);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fontMetrics)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QFontMetrics* q_stylepainter_font_metrics(void* self);
+QFontMetrics* q_stylepainter_font_metrics(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#fontInfo)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QFontInfo* q_stylepainter_font_info(void* self);
+QFontInfo* q_stylepainter_font_info(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -191,7 +191,7 @@ QFontInfo* q_stylepainter_font_info(void* self);
 /// @param self QStylePainter*
 /// @param color QColor*
 ///
-void q_stylepainter_set_pen(void* self, void* color);
+void q_stylepainter_set_pen(void* self, const void* color);
 
 /// Inherited from QPainter
 ///
@@ -200,7 +200,7 @@ void q_stylepainter_set_pen(void* self, void* color);
 /// @param self QStylePainter*
 /// @param pen QPen*
 ///
-void q_stylepainter_set_pen2(void* self, void* pen);
+void q_stylepainter_set_pen2(void* self, const void* pen);
 
 /// Inherited from QPainter
 ///
@@ -215,9 +215,9 @@ void q_stylepainter_set_pen3(void* self, int32_t style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#pen)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-const QPen* q_stylepainter_pen(void* self);
+const QPen* q_stylepainter_pen(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -226,7 +226,7 @@ const QPen* q_stylepainter_pen(void* self);
 /// @param self QStylePainter*
 /// @param brush QBrush*
 ///
-void q_stylepainter_set_brush(void* self, void* brush);
+void q_stylepainter_set_brush(void* self, const void* brush);
 
 /// Inherited from QPainter
 ///
@@ -241,9 +241,9 @@ void q_stylepainter_set_brush2(void* self, int32_t style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#brush)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-const QBrush* q_stylepainter_brush(void* self);
+const QBrush* q_stylepainter_brush(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -258,19 +258,19 @@ void q_stylepainter_set_background_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#backgroundMode)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
 /// @return enum Qt__BGMode
 ///
-int32_t q_stylepainter_background_mode(void* self);
+int32_t q_stylepainter_background_mode(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#brushOrigin)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QPoint* q_stylepainter_brush_origin(void* self);
+QPoint* q_stylepainter_brush_origin(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -289,7 +289,7 @@ void q_stylepainter_set_brush_origin(void* self, int x, int y);
 /// @param self QStylePainter*
 /// @param brushOrigin QPoint*
 ///
-void q_stylepainter_set_brush_origin2(void* self, void* brushOrigin);
+void q_stylepainter_set_brush_origin2(void* self, const void* brushOrigin);
 
 /// Inherited from QPainter
 ///
@@ -298,7 +298,7 @@ void q_stylepainter_set_brush_origin2(void* self, void* brushOrigin);
 /// @param self QStylePainter*
 /// @param brushOrigin QPointF*
 ///
-void q_stylepainter_set_brush_origin3(void* self, void* brushOrigin);
+void q_stylepainter_set_brush_origin3(void* self, const void* brushOrigin);
 
 /// Inherited from QPainter
 ///
@@ -307,23 +307,23 @@ void q_stylepainter_set_brush_origin3(void* self, void* brushOrigin);
 /// @param self QStylePainter*
 /// @param bg QBrush*
 ///
-void q_stylepainter_set_background(void* self, void* bg);
+void q_stylepainter_set_background(void* self, const void* bg);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#background)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-const QBrush* q_stylepainter_background(void* self);
+const QBrush* q_stylepainter_background(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#opacity)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-double q_stylepainter_opacity(void* self);
+double q_stylepainter_opacity(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -338,17 +338,17 @@ void q_stylepainter_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#clipRegion)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QRegion* q_stylepainter_clip_region(void* self);
+QRegion* q_stylepainter_clip_region(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#clipPath)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QPainterPath* q_stylepainter_clip_path(void* self);
+QPainterPath* q_stylepainter_clip_path(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -357,7 +357,7 @@ QPainterPath* q_stylepainter_clip_path(void* self);
 /// @param self QStylePainter*
 /// @param param1 QRectF*
 ///
-void q_stylepainter_set_clip_rect(void* self, void* param1);
+void q_stylepainter_set_clip_rect(void* self, const void* param1);
 
 /// Inherited from QPainter
 ///
@@ -366,7 +366,7 @@ void q_stylepainter_set_clip_rect(void* self, void* param1);
 /// @param self QStylePainter*
 /// @param param1 QRect*
 ///
-void q_stylepainter_set_clip_rect2(void* self, void* param1);
+void q_stylepainter_set_clip_rect2(void* self, const void* param1);
 
 /// Inherited from QPainter
 ///
@@ -387,7 +387,7 @@ void q_stylepainter_set_clip_rect3(void* self, int x, int y, int w, int h);
 /// @param self QStylePainter*
 /// @param param1 QRegion*
 ///
-void q_stylepainter_set_clip_region(void* self, void* param1);
+void q_stylepainter_set_clip_region(void* self, const void* param1);
 
 /// Inherited from QPainter
 ///
@@ -396,7 +396,7 @@ void q_stylepainter_set_clip_region(void* self, void* param1);
 /// @param self QStylePainter*
 /// @param path QPainterPath*
 ///
-void q_stylepainter_set_clip_path(void* self, void* path);
+void q_stylepainter_set_clip_path(void* self, const void* path);
 
 /// Inherited from QPainter
 ///
@@ -411,17 +411,17 @@ void q_stylepainter_set_clipping(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#hasClipping)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-bool q_stylepainter_has_clipping(void* self);
+bool q_stylepainter_has_clipping(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#clipBoundingRect)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QRectF* q_stylepainter_clip_bounding_rect(void* self);
+QRectF* q_stylepainter_clip_bounding_rect(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -446,23 +446,23 @@ void q_stylepainter_restore(void* self);
 /// @param self QStylePainter*
 /// @param transform QTransform*
 ///
-void q_stylepainter_set_transform(void* self, void* transform);
+void q_stylepainter_set_transform(void* self, const void* transform);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#transform)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-const QTransform* q_stylepainter_transform(void* self);
+const QTransform* q_stylepainter_transform(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#deviceTransform)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-const QTransform* q_stylepainter_device_transform(void* self);
+const QTransform* q_stylepainter_device_transform(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -479,23 +479,23 @@ void q_stylepainter_reset_transform(void* self);
 /// @param self QStylePainter*
 /// @param matrix QTransform*
 ///
-void q_stylepainter_set_world_transform(void* self, void* matrix);
+void q_stylepainter_set_world_transform(void* self, const void* matrix);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#worldTransform)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-const QTransform* q_stylepainter_world_transform(void* self);
+const QTransform* q_stylepainter_world_transform(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#combinedTransform)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QTransform* q_stylepainter_combined_transform(void* self);
+QTransform* q_stylepainter_combined_transform(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -510,9 +510,9 @@ void q_stylepainter_set_world_matrix_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#worldMatrixEnabled)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-bool q_stylepainter_world_matrix_enabled(void* self);
+bool q_stylepainter_world_matrix_enabled(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -550,7 +550,7 @@ void q_stylepainter_rotate(void* self, double a);
 /// @param self QStylePainter*
 /// @param offset QPointF*
 ///
-void q_stylepainter_translate(void* self, void* offset);
+void q_stylepainter_translate(void* self, const void* offset);
 
 /// Inherited from QPainter
 ///
@@ -559,7 +559,7 @@ void q_stylepainter_translate(void* self, void* offset);
 /// @param self QStylePainter*
 /// @param offset QPoint*
 ///
-void q_stylepainter_translate2(void* self, void* offset);
+void q_stylepainter_translate2(void* self, const void* offset);
 
 /// Inherited from QPainter
 ///
@@ -575,9 +575,9 @@ void q_stylepainter_translate3(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#window)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QRect* q_stylepainter_window(void* self);
+QRect* q_stylepainter_window(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -586,7 +586,7 @@ QRect* q_stylepainter_window(void* self);
 /// @param self QStylePainter*
 /// @param window QRect*
 ///
-void q_stylepainter_set_window(void* self, void* window);
+void q_stylepainter_set_window(void* self, const void* window);
 
 /// Inherited from QPainter
 ///
@@ -604,9 +604,9 @@ void q_stylepainter_set_window2(void* self, int x, int y, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#viewport)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QRect* q_stylepainter_viewport(void* self);
+QRect* q_stylepainter_viewport(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -615,7 +615,7 @@ QRect* q_stylepainter_viewport(void* self);
 /// @param self QStylePainter*
 /// @param viewport QRect*
 ///
-void q_stylepainter_set_viewport(void* self, void* viewport);
+void q_stylepainter_set_viewport(void* self, const void* viewport);
 
 /// Inherited from QPainter
 ///
@@ -642,9 +642,9 @@ void q_stylepainter_set_view_transform_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#viewTransformEnabled)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-bool q_stylepainter_view_transform_enabled(void* self);
+bool q_stylepainter_view_transform_enabled(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -654,7 +654,7 @@ bool q_stylepainter_view_transform_enabled(void* self);
 /// @param path QPainterPath*
 /// @param pen QPen*
 ///
-void q_stylepainter_stroke_path(void* self, void* path, void* pen);
+void q_stylepainter_stroke_path(void* self, const void* path, const void* pen);
 
 /// Inherited from QPainter
 ///
@@ -664,7 +664,7 @@ void q_stylepainter_stroke_path(void* self, void* path, void* pen);
 /// @param path QPainterPath*
 /// @param brush QBrush*
 ///
-void q_stylepainter_fill_path(void* self, void* path, void* brush);
+void q_stylepainter_fill_path(void* self, const void* path, const void* brush);
 
 /// Inherited from QPainter
 ///
@@ -673,7 +673,7 @@ void q_stylepainter_fill_path(void* self, void* path, void* brush);
 /// @param self QStylePainter*
 /// @param path QPainterPath*
 ///
-void q_stylepainter_draw_path(void* self, void* path);
+void q_stylepainter_draw_path(void* self, const void* path);
 
 /// Inherited from QPainter
 ///
@@ -682,7 +682,7 @@ void q_stylepainter_draw_path(void* self, void* path);
 /// @param self QStylePainter*
 /// @param pt QPointF*
 ///
-void q_stylepainter_draw_point(void* self, void* pt);
+void q_stylepainter_draw_point(void* self, const void* pt);
 
 /// Inherited from QPainter
 ///
@@ -691,7 +691,7 @@ void q_stylepainter_draw_point(void* self, void* pt);
 /// @param self QStylePainter*
 /// @param p QPoint*
 ///
-void q_stylepainter_draw_point2(void* self, void* p);
+void q_stylepainter_draw_point2(void* self, const void* p);
 
 /// Inherited from QPainter
 ///
@@ -711,7 +711,7 @@ void q_stylepainter_draw_point3(void* self, int x, int y);
 /// @param points QPointF*
 /// @param pointCount int
 ///
-void q_stylepainter_draw_points(void* self, void* points, int pointCount);
+void q_stylepainter_draw_points(void* self, const void* points, int pointCount);
 
 /// Inherited from QPainter
 ///
@@ -720,7 +720,7 @@ void q_stylepainter_draw_points(void* self, void* points, int pointCount);
 /// @param self QStylePainter*
 /// @param points QPolygonF*
 ///
-void q_stylepainter_draw_points2(void* self, void* points);
+void q_stylepainter_draw_points2(void* self, const void* points);
 
 /// Inherited from QPainter
 ///
@@ -730,7 +730,7 @@ void q_stylepainter_draw_points2(void* self, void* points);
 /// @param points QPoint*
 /// @param pointCount int
 ///
-void q_stylepainter_draw_points3(void* self, void* points, int pointCount);
+void q_stylepainter_draw_points3(void* self, const void* points, int pointCount);
 
 /// Inherited from QPainter
 ///
@@ -739,7 +739,7 @@ void q_stylepainter_draw_points3(void* self, void* points, int pointCount);
 /// @param self QStylePainter*
 /// @param points QPolygon*
 ///
-void q_stylepainter_draw_points4(void* self, void* points);
+void q_stylepainter_draw_points4(void* self, const void* points);
 
 /// Inherited from QPainter
 ///
@@ -748,7 +748,7 @@ void q_stylepainter_draw_points4(void* self, void* points);
 /// @param self QStylePainter*
 /// @param line QLineF*
 ///
-void q_stylepainter_draw_line(void* self, void* line);
+void q_stylepainter_draw_line(void* self, const void* line);
 
 /// Inherited from QPainter
 ///
@@ -757,7 +757,7 @@ void q_stylepainter_draw_line(void* self, void* line);
 /// @param self QStylePainter*
 /// @param line QLine*
 ///
-void q_stylepainter_draw_line2(void* self, void* line);
+void q_stylepainter_draw_line2(void* self, const void* line);
 
 /// Inherited from QPainter
 ///
@@ -779,7 +779,7 @@ void q_stylepainter_draw_line3(void* self, int x1, int y1, int x2, int y2);
 /// @param p1 QPoint*
 /// @param p2 QPoint*
 ///
-void q_stylepainter_draw_line4(void* self, void* p1, void* p2);
+void q_stylepainter_draw_line4(void* self, const void* p1, const void* p2);
 
 /// Inherited from QPainter
 ///
@@ -789,7 +789,7 @@ void q_stylepainter_draw_line4(void* self, void* p1, void* p2);
 /// @param p1 QPointF*
 /// @param p2 QPointF*
 ///
-void q_stylepainter_draw_line5(void* self, void* p1, void* p2);
+void q_stylepainter_draw_line5(void* self, const void* p1, const void* p2);
 
 /// Inherited from QPainter
 ///
@@ -799,7 +799,7 @@ void q_stylepainter_draw_line5(void* self, void* p1, void* p2);
 /// @param lines QLineF*
 /// @param lineCount int
 ///
-void q_stylepainter_draw_lines(void* self, void* lines, int lineCount);
+void q_stylepainter_draw_lines(void* self, const void* lines, int lineCount);
 
 /// Inherited from QPainter
 ///
@@ -818,7 +818,7 @@ void q_stylepainter_draw_lines2(void* self, libqt_list lines);
 /// @param pointPairs QPointF*
 /// @param lineCount int
 ///
-void q_stylepainter_draw_lines3(void* self, void* pointPairs, int lineCount);
+void q_stylepainter_draw_lines3(void* self, const void* pointPairs, int lineCount);
 
 /// Inherited from QPainter
 ///
@@ -837,7 +837,7 @@ void q_stylepainter_draw_lines4(void* self, libqt_list pointPairs);
 /// @param lines QLine*
 /// @param lineCount int
 ///
-void q_stylepainter_draw_lines5(void* self, void* lines, int lineCount);
+void q_stylepainter_draw_lines5(void* self, const void* lines, int lineCount);
 
 /// Inherited from QPainter
 ///
@@ -856,7 +856,7 @@ void q_stylepainter_draw_lines6(void* self, libqt_list lines);
 /// @param pointPairs QPoint*
 /// @param lineCount int
 ///
-void q_stylepainter_draw_lines7(void* self, void* pointPairs, int lineCount);
+void q_stylepainter_draw_lines7(void* self, const void* pointPairs, int lineCount);
 
 /// Inherited from QPainter
 ///
@@ -874,7 +874,7 @@ void q_stylepainter_draw_lines8(void* self, libqt_list pointPairs);
 /// @param self QStylePainter*
 /// @param rect QRectF*
 ///
-void q_stylepainter_draw_rect(void* self, void* rect);
+void q_stylepainter_draw_rect(void* self, const void* rect);
 
 /// Inherited from QPainter
 ///
@@ -895,7 +895,7 @@ void q_stylepainter_draw_rect2(void* self, int x1, int y1, int w, int h);
 /// @param self QStylePainter*
 /// @param rect QRect*
 ///
-void q_stylepainter_draw_rect3(void* self, void* rect);
+void q_stylepainter_draw_rect3(void* self, const void* rect);
 
 /// Inherited from QPainter
 ///
@@ -905,7 +905,7 @@ void q_stylepainter_draw_rect3(void* self, void* rect);
 /// @param rects QRectF*
 /// @param rectCount int
 ///
-void q_stylepainter_draw_rects(void* self, void* rects, int rectCount);
+void q_stylepainter_draw_rects(void* self, const void* rects, int rectCount);
 
 /// Inherited from QPainter
 ///
@@ -924,7 +924,7 @@ void q_stylepainter_draw_rects2(void* self, libqt_list rectangles);
 /// @param rects QRect*
 /// @param rectCount int
 ///
-void q_stylepainter_draw_rects3(void* self, void* rects, int rectCount);
+void q_stylepainter_draw_rects3(void* self, const void* rects, int rectCount);
 
 /// Inherited from QPainter
 ///
@@ -942,7 +942,7 @@ void q_stylepainter_draw_rects4(void* self, libqt_list rectangles);
 /// @param self QStylePainter*
 /// @param r QRectF*
 ///
-void q_stylepainter_draw_ellipse(void* self, void* r);
+void q_stylepainter_draw_ellipse(void* self, const void* r);
 
 /// Inherited from QPainter
 ///
@@ -951,7 +951,7 @@ void q_stylepainter_draw_ellipse(void* self, void* r);
 /// @param self QStylePainter*
 /// @param r QRect*
 ///
-void q_stylepainter_draw_ellipse2(void* self, void* r);
+void q_stylepainter_draw_ellipse2(void* self, const void* r);
 
 /// Inherited from QPainter
 ///
@@ -974,7 +974,7 @@ void q_stylepainter_draw_ellipse3(void* self, int x, int y, int w, int h);
 /// @param rx double
 /// @param ry double
 ///
-void q_stylepainter_draw_ellipse4(void* self, void* center, double rx, double ry);
+void q_stylepainter_draw_ellipse4(void* self, const void* center, double rx, double ry);
 
 /// Inherited from QPainter
 ///
@@ -985,7 +985,7 @@ void q_stylepainter_draw_ellipse4(void* self, void* center, double rx, double ry
 /// @param rx int
 /// @param ry int
 ///
-void q_stylepainter_draw_ellipse5(void* self, void* center, int rx, int ry);
+void q_stylepainter_draw_ellipse5(void* self, const void* center, int rx, int ry);
 
 /// Inherited from QPainter
 ///
@@ -995,7 +995,7 @@ void q_stylepainter_draw_ellipse5(void* self, void* center, int rx, int ry);
 /// @param points QPointF*
 /// @param pointCount int
 ///
-void q_stylepainter_draw_polyline(void* self, void* points, int pointCount);
+void q_stylepainter_draw_polyline(void* self, const void* points, int pointCount);
 
 /// Inherited from QPainter
 ///
@@ -1004,7 +1004,7 @@ void q_stylepainter_draw_polyline(void* self, void* points, int pointCount);
 /// @param self QStylePainter*
 /// @param polyline QPolygonF*
 ///
-void q_stylepainter_draw_polyline2(void* self, void* polyline);
+void q_stylepainter_draw_polyline2(void* self, const void* polyline);
 
 /// Inherited from QPainter
 ///
@@ -1014,7 +1014,7 @@ void q_stylepainter_draw_polyline2(void* self, void* polyline);
 /// @param points QPoint*
 /// @param pointCount int
 ///
-void q_stylepainter_draw_polyline3(void* self, void* points, int pointCount);
+void q_stylepainter_draw_polyline3(void* self, const void* points, int pointCount);
 
 /// Inherited from QPainter
 ///
@@ -1023,7 +1023,7 @@ void q_stylepainter_draw_polyline3(void* self, void* points, int pointCount);
 /// @param self QStylePainter*
 /// @param polygon QPolygon*
 ///
-void q_stylepainter_draw_polyline4(void* self, void* polygon);
+void q_stylepainter_draw_polyline4(void* self, const void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1033,7 +1033,7 @@ void q_stylepainter_draw_polyline4(void* self, void* polygon);
 /// @param points QPointF*
 /// @param pointCount int
 ///
-void q_stylepainter_draw_polygon(void* self, void* points, int pointCount);
+void q_stylepainter_draw_polygon(void* self, const void* points, int pointCount);
 
 /// Inherited from QPainter
 ///
@@ -1042,7 +1042,7 @@ void q_stylepainter_draw_polygon(void* self, void* points, int pointCount);
 /// @param self QStylePainter*
 /// @param polygon QPolygonF*
 ///
-void q_stylepainter_draw_polygon2(void* self, void* polygon);
+void q_stylepainter_draw_polygon2(void* self, const void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1052,7 +1052,7 @@ void q_stylepainter_draw_polygon2(void* self, void* polygon);
 /// @param points QPoint*
 /// @param pointCount int
 ///
-void q_stylepainter_draw_polygon3(void* self, void* points, int pointCount);
+void q_stylepainter_draw_polygon3(void* self, const void* points, int pointCount);
 
 /// Inherited from QPainter
 ///
@@ -1061,7 +1061,7 @@ void q_stylepainter_draw_polygon3(void* self, void* points, int pointCount);
 /// @param self QStylePainter*
 /// @param polygon QPolygon*
 ///
-void q_stylepainter_draw_polygon4(void* self, void* polygon);
+void q_stylepainter_draw_polygon4(void* self, const void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1071,7 +1071,7 @@ void q_stylepainter_draw_polygon4(void* self, void* polygon);
 /// @param points QPointF*
 /// @param pointCount int
 ///
-void q_stylepainter_draw_convex_polygon(void* self, void* points, int pointCount);
+void q_stylepainter_draw_convex_polygon(void* self, const void* points, int pointCount);
 
 /// Inherited from QPainter
 ///
@@ -1080,7 +1080,7 @@ void q_stylepainter_draw_convex_polygon(void* self, void* points, int pointCount
 /// @param self QStylePainter*
 /// @param polygon QPolygonF*
 ///
-void q_stylepainter_draw_convex_polygon2(void* self, void* polygon);
+void q_stylepainter_draw_convex_polygon2(void* self, const void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1090,7 +1090,7 @@ void q_stylepainter_draw_convex_polygon2(void* self, void* polygon);
 /// @param points QPoint*
 /// @param pointCount int
 ///
-void q_stylepainter_draw_convex_polygon3(void* self, void* points, int pointCount);
+void q_stylepainter_draw_convex_polygon3(void* self, const void* points, int pointCount);
 
 /// Inherited from QPainter
 ///
@@ -1099,7 +1099,7 @@ void q_stylepainter_draw_convex_polygon3(void* self, void* points, int pointCoun
 /// @param self QStylePainter*
 /// @param polygon QPolygon*
 ///
-void q_stylepainter_draw_convex_polygon4(void* self, void* polygon);
+void q_stylepainter_draw_convex_polygon4(void* self, const void* polygon);
 
 /// Inherited from QPainter
 ///
@@ -1110,7 +1110,7 @@ void q_stylepainter_draw_convex_polygon4(void* self, void* polygon);
 /// @param a int
 /// @param alen int
 ///
-void q_stylepainter_draw_arc(void* self, void* rect, int a, int alen);
+void q_stylepainter_draw_arc(void* self, const void* rect, int a, int alen);
 
 /// Inherited from QPainter
 ///
@@ -1121,7 +1121,7 @@ void q_stylepainter_draw_arc(void* self, void* rect, int a, int alen);
 /// @param a int
 /// @param alen int
 ///
-void q_stylepainter_draw_arc2(void* self, void* param1, int a, int alen);
+void q_stylepainter_draw_arc2(void* self, const void* param1, int a, int alen);
 
 /// Inherited from QPainter
 ///
@@ -1146,7 +1146,7 @@ void q_stylepainter_draw_arc3(void* self, int x, int y, int w, int h, int a, int
 /// @param a int
 /// @param alen int
 ///
-void q_stylepainter_draw_pie(void* self, void* rect, int a, int alen);
+void q_stylepainter_draw_pie(void* self, const void* rect, int a, int alen);
 
 /// Inherited from QPainter
 ///
@@ -1171,7 +1171,7 @@ void q_stylepainter_draw_pie2(void* self, int x, int y, int w, int h, int a, int
 /// @param a int
 /// @param alen int
 ///
-void q_stylepainter_draw_pie3(void* self, void* param1, int a, int alen);
+void q_stylepainter_draw_pie3(void* self, const void* param1, int a, int alen);
 
 /// Inherited from QPainter
 ///
@@ -1182,7 +1182,7 @@ void q_stylepainter_draw_pie3(void* self, void* param1, int a, int alen);
 /// @param a int
 /// @param alen int
 ///
-void q_stylepainter_draw_chord(void* self, void* rect, int a, int alen);
+void q_stylepainter_draw_chord(void* self, const void* rect, int a, int alen);
 
 /// Inherited from QPainter
 ///
@@ -1207,7 +1207,7 @@ void q_stylepainter_draw_chord2(void* self, int x, int y, int w, int h, int a, i
 /// @param a int
 /// @param alen int
 ///
-void q_stylepainter_draw_chord3(void* self, void* param1, int a, int alen);
+void q_stylepainter_draw_chord3(void* self, const void* param1, int a, int alen);
 
 /// Inherited from QPainter
 ///
@@ -1218,7 +1218,7 @@ void q_stylepainter_draw_chord3(void* self, void* param1, int a, int alen);
 /// @param xRadius double
 /// @param yRadius double
 ///
-void q_stylepainter_draw_rounded_rect(void* self, void* rect, double xRadius, double yRadius);
+void q_stylepainter_draw_rounded_rect(void* self, const void* rect, double xRadius, double yRadius);
 
 /// Inherited from QPainter
 ///
@@ -1243,7 +1243,7 @@ void q_stylepainter_draw_rounded_rect2(void* self, int x, int y, int w, int h, d
 /// @param xRadius double
 /// @param yRadius double
 ///
-void q_stylepainter_draw_rounded_rect3(void* self, void* rect, double xRadius, double yRadius);
+void q_stylepainter_draw_rounded_rect3(void* self, const void* rect, double xRadius, double yRadius);
 
 /// Inherited from QPainter
 ///
@@ -1253,7 +1253,7 @@ void q_stylepainter_draw_rounded_rect3(void* self, void* rect, double xRadius, d
 /// @param rect QRectF*
 /// @param pm QPixmap*
 ///
-void q_stylepainter_draw_tiled_pixmap(void* self, void* rect, void* pm);
+void q_stylepainter_draw_tiled_pixmap(void* self, const void* rect, const void* pm);
 
 /// Inherited from QPainter
 ///
@@ -1266,7 +1266,7 @@ void q_stylepainter_draw_tiled_pixmap(void* self, void* rect, void* pm);
 /// @param h int
 /// @param param5 QPixmap*
 ///
-void q_stylepainter_draw_tiled_pixmap2(void* self, int x, int y, int w, int h, void* param5);
+void q_stylepainter_draw_tiled_pixmap2(void* self, int x, int y, int w, int h, const void* param5);
 
 /// Inherited from QPainter
 ///
@@ -1276,7 +1276,7 @@ void q_stylepainter_draw_tiled_pixmap2(void* self, int x, int y, int w, int h, v
 /// @param param1 QRect*
 /// @param param2 QPixmap*
 ///
-void q_stylepainter_draw_tiled_pixmap3(void* self, void* param1, void* param2);
+void q_stylepainter_draw_tiled_pixmap3(void* self, const void* param1, const void* param2);
 
 /// Inherited from QPainter
 ///
@@ -1286,7 +1286,7 @@ void q_stylepainter_draw_tiled_pixmap3(void* self, void* param1, void* param2);
 /// @param p QPointF*
 /// @param picture QPicture*
 ///
-void q_stylepainter_draw_picture(void* self, void* p, void* picture);
+void q_stylepainter_draw_picture(void* self, const void* p, const void* picture);
 
 /// Inherited from QPainter
 ///
@@ -1297,7 +1297,7 @@ void q_stylepainter_draw_picture(void* self, void* p, void* picture);
 /// @param y int
 /// @param picture QPicture*
 ///
-void q_stylepainter_draw_picture2(void* self, int x, int y, void* picture);
+void q_stylepainter_draw_picture2(void* self, int x, int y, const void* picture);
 
 /// Inherited from QPainter
 ///
@@ -1307,7 +1307,7 @@ void q_stylepainter_draw_picture2(void* self, int x, int y, void* picture);
 /// @param p QPoint*
 /// @param picture QPicture*
 ///
-void q_stylepainter_draw_picture3(void* self, void* p, void* picture);
+void q_stylepainter_draw_picture3(void* self, const void* p, const void* picture);
 
 /// Inherited from QPainter
 ///
@@ -1318,7 +1318,7 @@ void q_stylepainter_draw_picture3(void* self, void* p, void* picture);
 /// @param pixmap QPixmap*
 /// @param sourceRect QRectF*
 ///
-void q_stylepainter_draw_pixmap(void* self, void* targetRect, void* pixmap, void* sourceRect);
+void q_stylepainter_draw_pixmap(void* self, const void* targetRect, const void* pixmap, const void* sourceRect);
 
 /// Inherited from QPainter
 ///
@@ -1329,7 +1329,7 @@ void q_stylepainter_draw_pixmap(void* self, void* targetRect, void* pixmap, void
 /// @param pixmap QPixmap*
 /// @param sourceRect QRect*
 ///
-void q_stylepainter_draw_pixmap2(void* self, void* targetRect, void* pixmap, void* sourceRect);
+void q_stylepainter_draw_pixmap2(void* self, const void* targetRect, const void* pixmap, const void* sourceRect);
 
 /// Inherited from QPainter
 ///
@@ -1346,7 +1346,7 @@ void q_stylepainter_draw_pixmap2(void* self, void* targetRect, void* pixmap, voi
 /// @param sw int
 /// @param sh int
 ///
-void q_stylepainter_draw_pixmap3(void* self, int x, int y, int w, int h, void* pm, int sx, int sy, int sw, int sh);
+void q_stylepainter_draw_pixmap3(void* self, int x, int y, int w, int h, const void* pm, int sx, int sy, int sw, int sh);
 
 /// Inherited from QPainter
 ///
@@ -1361,7 +1361,7 @@ void q_stylepainter_draw_pixmap3(void* self, int x, int y, int w, int h, void* p
 /// @param sw int
 /// @param sh int
 ///
-void q_stylepainter_draw_pixmap4(void* self, int x, int y, void* pm, int sx, int sy, int sw, int sh);
+void q_stylepainter_draw_pixmap4(void* self, int x, int y, const void* pm, int sx, int sy, int sw, int sh);
 
 /// Inherited from QPainter
 ///
@@ -1372,7 +1372,7 @@ void q_stylepainter_draw_pixmap4(void* self, int x, int y, void* pm, int sx, int
 /// @param pm QPixmap*
 /// @param sr QRectF*
 ///
-void q_stylepainter_draw_pixmap5(void* self, void* p, void* pm, void* sr);
+void q_stylepainter_draw_pixmap5(void* self, const void* p, const void* pm, const void* sr);
 
 /// Inherited from QPainter
 ///
@@ -1383,7 +1383,7 @@ void q_stylepainter_draw_pixmap5(void* self, void* p, void* pm, void* sr);
 /// @param pm QPixmap*
 /// @param sr QRect*
 ///
-void q_stylepainter_draw_pixmap6(void* self, void* p, void* pm, void* sr);
+void q_stylepainter_draw_pixmap6(void* self, const void* p, const void* pm, const void* sr);
 
 /// Inherited from QPainter
 ///
@@ -1393,7 +1393,7 @@ void q_stylepainter_draw_pixmap6(void* self, void* p, void* pm, void* sr);
 /// @param p QPointF*
 /// @param pm QPixmap*
 ///
-void q_stylepainter_draw_pixmap7(void* self, void* p, void* pm);
+void q_stylepainter_draw_pixmap7(void* self, const void* p, const void* pm);
 
 /// Inherited from QPainter
 ///
@@ -1403,7 +1403,7 @@ void q_stylepainter_draw_pixmap7(void* self, void* p, void* pm);
 /// @param p QPoint*
 /// @param pm QPixmap*
 ///
-void q_stylepainter_draw_pixmap8(void* self, void* p, void* pm);
+void q_stylepainter_draw_pixmap8(void* self, const void* p, const void* pm);
 
 /// Inherited from QPainter
 ///
@@ -1414,7 +1414,7 @@ void q_stylepainter_draw_pixmap8(void* self, void* p, void* pm);
 /// @param y int
 /// @param pm QPixmap*
 ///
-void q_stylepainter_draw_pixmap9(void* self, int x, int y, void* pm);
+void q_stylepainter_draw_pixmap9(void* self, int x, int y, const void* pm);
 
 /// Inherited from QPainter
 ///
@@ -1424,7 +1424,7 @@ void q_stylepainter_draw_pixmap9(void* self, int x, int y, void* pm);
 /// @param r QRect*
 /// @param pm QPixmap*
 ///
-void q_stylepainter_draw_pixmap10(void* self, void* r, void* pm);
+void q_stylepainter_draw_pixmap10(void* self, const void* r, const void* pm);
 
 /// Inherited from QPainter
 ///
@@ -1437,7 +1437,7 @@ void q_stylepainter_draw_pixmap10(void* self, void* r, void* pm);
 /// @param h int
 /// @param pm QPixmap*
 ///
-void q_stylepainter_draw_pixmap11(void* self, int x, int y, int w, int h, void* pm);
+void q_stylepainter_draw_pixmap11(void* self, int x, int y, int w, int h, const void* pm);
 
 /// Inherited from QPainter
 ///
@@ -1448,7 +1448,7 @@ void q_stylepainter_draw_pixmap11(void* self, int x, int y, int w, int h, void* 
 /// @param fragmentCount int
 /// @param pixmap QPixmap*
 ///
-void q_stylepainter_draw_pixmap_fragments(void* self, void* fragments, int fragmentCount, void* pixmap);
+void q_stylepainter_draw_pixmap_fragments(void* self, const void* fragments, int fragmentCount, const void* pixmap);
 
 /// Inherited from QPainter
 ///
@@ -1459,7 +1459,7 @@ void q_stylepainter_draw_pixmap_fragments(void* self, void* fragments, int fragm
 /// @param image QImage*
 /// @param sourceRect QRectF*
 ///
-void q_stylepainter_draw_image(void* self, void* targetRect, void* image, void* sourceRect);
+void q_stylepainter_draw_image(void* self, const void* targetRect, const void* image, const void* sourceRect);
 
 /// Inherited from QPainter
 ///
@@ -1470,7 +1470,7 @@ void q_stylepainter_draw_image(void* self, void* targetRect, void* image, void* 
 /// @param image QImage*
 /// @param sourceRect QRect*
 ///
-void q_stylepainter_draw_image2(void* self, void* targetRect, void* image, void* sourceRect);
+void q_stylepainter_draw_image2(void* self, const void* targetRect, const void* image, const void* sourceRect);
 
 /// Inherited from QPainter
 ///
@@ -1481,7 +1481,7 @@ void q_stylepainter_draw_image2(void* self, void* targetRect, void* image, void*
 /// @param image QImage*
 /// @param sr QRectF*
 ///
-void q_stylepainter_draw_image3(void* self, void* p, void* image, void* sr);
+void q_stylepainter_draw_image3(void* self, const void* p, const void* image, const void* sr);
 
 /// Inherited from QPainter
 ///
@@ -1492,7 +1492,7 @@ void q_stylepainter_draw_image3(void* self, void* p, void* image, void* sr);
 /// @param image QImage*
 /// @param sr QRect*
 ///
-void q_stylepainter_draw_image4(void* self, void* p, void* image, void* sr);
+void q_stylepainter_draw_image4(void* self, const void* p, const void* image, const void* sr);
 
 /// Inherited from QPainter
 ///
@@ -1502,7 +1502,7 @@ void q_stylepainter_draw_image4(void* self, void* p, void* image, void* sr);
 /// @param r QRectF*
 /// @param image QImage*
 ///
-void q_stylepainter_draw_image5(void* self, void* r, void* image);
+void q_stylepainter_draw_image5(void* self, const void* r, const void* image);
 
 /// Inherited from QPainter
 ///
@@ -1512,7 +1512,7 @@ void q_stylepainter_draw_image5(void* self, void* r, void* image);
 /// @param r QRect*
 /// @param image QImage*
 ///
-void q_stylepainter_draw_image6(void* self, void* r, void* image);
+void q_stylepainter_draw_image6(void* self, const void* r, const void* image);
 
 /// Inherited from QPainter
 ///
@@ -1522,7 +1522,7 @@ void q_stylepainter_draw_image6(void* self, void* r, void* image);
 /// @param p QPointF*
 /// @param image QImage*
 ///
-void q_stylepainter_draw_image7(void* self, void* p, void* image);
+void q_stylepainter_draw_image7(void* self, const void* p, const void* image);
 
 /// Inherited from QPainter
 ///
@@ -1532,7 +1532,7 @@ void q_stylepainter_draw_image7(void* self, void* p, void* image);
 /// @param p QPoint*
 /// @param image QImage*
 ///
-void q_stylepainter_draw_image8(void* self, void* p, void* image);
+void q_stylepainter_draw_image8(void* self, const void* p, const void* image);
 
 /// Inherited from QPainter
 ///
@@ -1543,7 +1543,7 @@ void q_stylepainter_draw_image8(void* self, void* p, void* image);
 /// @param y int
 /// @param image QImage*
 ///
-void q_stylepainter_draw_image9(void* self, int x, int y, void* image);
+void q_stylepainter_draw_image9(void* self, int x, int y, const void* image);
 
 /// Inherited from QPainter
 ///
@@ -1558,11 +1558,11 @@ void q_stylepainter_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#layoutDirection)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_stylepainter_layout_direction(void* self);
+int32_t q_stylepainter_layout_direction(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -1572,7 +1572,7 @@ int32_t q_stylepainter_layout_direction(void* self);
 /// @param position QPointF*
 /// @param glyphRun QGlyphRun*
 ///
-void q_stylepainter_draw_glyph_run(void* self, void* position, void* glyphRun);
+void q_stylepainter_draw_glyph_run(void* self, const void* position, const void* glyphRun);
 
 /// Inherited from QPainter
 ///
@@ -1582,7 +1582,7 @@ void q_stylepainter_draw_glyph_run(void* self, void* position, void* glyphRun);
 /// @param topLeftPosition QPointF*
 /// @param staticText QStaticText*
 ///
-void q_stylepainter_draw_static_text(void* self, void* topLeftPosition, void* staticText);
+void q_stylepainter_draw_static_text(void* self, const void* topLeftPosition, const void* staticText);
 
 /// Inherited from QPainter
 ///
@@ -1592,7 +1592,7 @@ void q_stylepainter_draw_static_text(void* self, void* topLeftPosition, void* st
 /// @param topLeftPosition QPoint*
 /// @param staticText QStaticText*
 ///
-void q_stylepainter_draw_static_text2(void* self, void* topLeftPosition, void* staticText);
+void q_stylepainter_draw_static_text2(void* self, const void* topLeftPosition, const void* staticText);
 
 /// Inherited from QPainter
 ///
@@ -1603,7 +1603,7 @@ void q_stylepainter_draw_static_text2(void* self, void* topLeftPosition, void* s
 /// @param top int
 /// @param staticText QStaticText*
 ///
-void q_stylepainter_draw_static_text3(void* self, int left, int top, void* staticText);
+void q_stylepainter_draw_static_text3(void* self, int left, int top, const void* staticText);
 
 /// Inherited from QPainter
 ///
@@ -1613,7 +1613,7 @@ void q_stylepainter_draw_static_text3(void* self, int left, int top, void* stati
 /// @param p QPointF*
 /// @param s const char*
 ///
-void q_stylepainter_draw_text(void* self, void* p, const char* s);
+void q_stylepainter_draw_text(void* self, const void* p, const char* s);
 
 /// Inherited from QPainter
 ///
@@ -1623,7 +1623,7 @@ void q_stylepainter_draw_text(void* self, void* p, const char* s);
 /// @param p QPoint*
 /// @param s const char*
 ///
-void q_stylepainter_draw_text2(void* self, void* p, const char* s);
+void q_stylepainter_draw_text2(void* self, const void* p, const char* s);
 
 /// Inherited from QPainter
 ///
@@ -1646,7 +1646,7 @@ void q_stylepainter_draw_text3(void* self, int x, int y, const char* s);
 /// @param tf int
 /// @param justificationPadding int
 ///
-void q_stylepainter_draw_text4(void* self, void* p, const char* str, int tf, int justificationPadding);
+void q_stylepainter_draw_text4(void* self, const void* p, const char* str, int tf, int justificationPadding);
 
 /// Inherited from QPainter
 ///
@@ -1657,7 +1657,7 @@ void q_stylepainter_draw_text4(void* self, void* p, const char* str, int tf, int
 /// @param flags int
 /// @param text const char*
 ///
-void q_stylepainter_draw_text5(void* self, void* r, int flags, const char* text);
+void q_stylepainter_draw_text5(void* self, const void* r, int flags, const char* text);
 
 /// Inherited from QPainter
 ///
@@ -1668,7 +1668,7 @@ void q_stylepainter_draw_text5(void* self, void* r, int flags, const char* text)
 /// @param flags int
 /// @param text const char*
 ///
-void q_stylepainter_draw_text6(void* self, void* r, int flags, const char* text);
+void q_stylepainter_draw_text6(void* self, const void* r, int flags, const char* text);
 
 /// Inherited from QPainter
 ///
@@ -1692,7 +1692,7 @@ void q_stylepainter_draw_text7(void* self, int x, int y, int w, int h, int flags
 /// @param r QRectF*
 /// @param text const char*
 ///
-void q_stylepainter_draw_text8(void* self, void* r, const char* text);
+void q_stylepainter_draw_text8(void* self, const void* r, const char* text);
 
 /// Inherited from QPainter
 ///
@@ -1703,7 +1703,7 @@ void q_stylepainter_draw_text8(void* self, void* r, const char* text);
 /// @param flags int
 /// @param text const char*
 ///
-QRectF* q_stylepainter_bounding_rect(void* self, void* rect, int flags, const char* text);
+QRectF* q_stylepainter_bounding_rect(void* self, const void* rect, int flags, const char* text);
 
 /// Inherited from QPainter
 ///
@@ -1714,7 +1714,7 @@ QRectF* q_stylepainter_bounding_rect(void* self, void* rect, int flags, const ch
 /// @param flags int
 /// @param text const char*
 ///
-QRect* q_stylepainter_bounding_rect2(void* self, void* rect, int flags, const char* text);
+QRect* q_stylepainter_bounding_rect2(void* self, const void* rect, int flags, const char* text);
 
 /// Inherited from QPainter
 ///
@@ -1738,7 +1738,7 @@ QRect* q_stylepainter_bounding_rect3(void* self, int x, int y, int w, int h, int
 /// @param rect QRectF*
 /// @param text const char*
 ///
-QRectF* q_stylepainter_bounding_rect4(void* self, void* rect, const char* text);
+QRectF* q_stylepainter_bounding_rect4(void* self, const void* rect, const char* text);
 
 /// Inherited from QPainter
 ///
@@ -1748,7 +1748,7 @@ QRectF* q_stylepainter_bounding_rect4(void* self, void* rect, const char* text);
 /// @param p QPointF*
 /// @param ti QTextItem*
 ///
-void q_stylepainter_draw_text_item(void* self, void* p, void* ti);
+void q_stylepainter_draw_text_item(void* self, const void* p, const void* ti);
 
 /// Inherited from QPainter
 ///
@@ -1759,7 +1759,7 @@ void q_stylepainter_draw_text_item(void* self, void* p, void* ti);
 /// @param y int
 /// @param ti QTextItem*
 ///
-void q_stylepainter_draw_text_item2(void* self, int x, int y, void* ti);
+void q_stylepainter_draw_text_item2(void* self, int x, int y, const void* ti);
 
 /// Inherited from QPainter
 ///
@@ -1769,7 +1769,7 @@ void q_stylepainter_draw_text_item2(void* self, int x, int y, void* ti);
 /// @param p QPoint*
 /// @param ti QTextItem*
 ///
-void q_stylepainter_draw_text_item3(void* self, void* p, void* ti);
+void q_stylepainter_draw_text_item3(void* self, const void* p, const void* ti);
 
 /// Inherited from QPainter
 ///
@@ -1779,7 +1779,7 @@ void q_stylepainter_draw_text_item3(void* self, void* p, void* ti);
 /// @param param1 QRectF*
 /// @param param2 QBrush*
 ///
-void q_stylepainter_fill_rect(void* self, void* param1, void* param2);
+void q_stylepainter_fill_rect(void* self, const void* param1, const void* param2);
 
 /// Inherited from QPainter
 ///
@@ -1792,7 +1792,7 @@ void q_stylepainter_fill_rect(void* self, void* param1, void* param2);
 /// @param h int
 /// @param param5 QBrush*
 ///
-void q_stylepainter_fill_rect2(void* self, int x, int y, int w, int h, void* param5);
+void q_stylepainter_fill_rect2(void* self, int x, int y, int w, int h, const void* param5);
 
 /// Inherited from QPainter
 ///
@@ -1802,7 +1802,7 @@ void q_stylepainter_fill_rect2(void* self, int x, int y, int w, int h, void* par
 /// @param param1 QRect*
 /// @param param2 QBrush*
 ///
-void q_stylepainter_fill_rect3(void* self, void* param1, void* param2);
+void q_stylepainter_fill_rect3(void* self, const void* param1, const void* param2);
 
 /// Inherited from QPainter
 ///
@@ -1812,7 +1812,7 @@ void q_stylepainter_fill_rect3(void* self, void* param1, void* param2);
 /// @param param1 QRectF*
 /// @param color QColor*
 ///
-void q_stylepainter_fill_rect4(void* self, void* param1, void* color);
+void q_stylepainter_fill_rect4(void* self, const void* param1, const void* color);
 
 /// Inherited from QPainter
 ///
@@ -1825,7 +1825,7 @@ void q_stylepainter_fill_rect4(void* self, void* param1, void* color);
 /// @param h int
 /// @param color QColor*
 ///
-void q_stylepainter_fill_rect5(void* self, int x, int y, int w, int h, void* color);
+void q_stylepainter_fill_rect5(void* self, int x, int y, int w, int h, const void* color);
 
 /// Inherited from QPainter
 ///
@@ -1835,7 +1835,7 @@ void q_stylepainter_fill_rect5(void* self, int x, int y, int w, int h, void* col
 /// @param param1 QRect*
 /// @param color QColor*
 ///
-void q_stylepainter_fill_rect6(void* self, void* param1, void* color);
+void q_stylepainter_fill_rect6(void* self, const void* param1, const void* color);
 
 /// Inherited from QPainter
 ///
@@ -1858,7 +1858,7 @@ void q_stylepainter_fill_rect7(void* self, int x, int y, int w, int h, int32_t c
 /// @param r QRect*
 /// @param c enum Qt__GlobalColor
 ///
-void q_stylepainter_fill_rect8(void* self, void* r, int32_t c);
+void q_stylepainter_fill_rect8(void* self, const void* r, int32_t c);
 
 /// Inherited from QPainter
 ///
@@ -1868,7 +1868,7 @@ void q_stylepainter_fill_rect8(void* self, void* r, int32_t c);
 /// @param r QRectF*
 /// @param c enum Qt__GlobalColor
 ///
-void q_stylepainter_fill_rect9(void* self, void* r, int32_t c);
+void q_stylepainter_fill_rect9(void* self, const void* r, int32_t c);
 
 /// Inherited from QPainter
 ///
@@ -1891,7 +1891,7 @@ void q_stylepainter_fill_rect10(void* self, int x, int y, int w, int h, int32_t 
 /// @param r QRect*
 /// @param style enum Qt__BrushStyle
 ///
-void q_stylepainter_fill_rect11(void* self, void* r, int32_t style);
+void q_stylepainter_fill_rect11(void* self, const void* r, int32_t style);
 
 /// Inherited from QPainter
 ///
@@ -1901,7 +1901,7 @@ void q_stylepainter_fill_rect11(void* self, void* r, int32_t style);
 /// @param r QRectF*
 /// @param style enum Qt__BrushStyle
 ///
-void q_stylepainter_fill_rect12(void* self, void* r, int32_t style);
+void q_stylepainter_fill_rect12(void* self, const void* r, int32_t style);
 
 /// Inherited from QPainter
 ///
@@ -1924,7 +1924,7 @@ void q_stylepainter_fill_rect13(void* self, int x, int y, int w, int h, int32_t 
 /// @param r QRect*
 /// @param preset enum QGradient__Preset
 ///
-void q_stylepainter_fill_rect14(void* self, void* r, int32_t preset);
+void q_stylepainter_fill_rect14(void* self, const void* r, int32_t preset);
 
 /// Inherited from QPainter
 ///
@@ -1934,7 +1934,7 @@ void q_stylepainter_fill_rect14(void* self, void* r, int32_t preset);
 /// @param r QRectF*
 /// @param preset enum QGradient__Preset
 ///
-void q_stylepainter_fill_rect15(void* self, void* r, int32_t preset);
+void q_stylepainter_fill_rect15(void* self, const void* r, int32_t preset);
 
 /// Inherited from QPainter
 ///
@@ -1943,7 +1943,7 @@ void q_stylepainter_fill_rect15(void* self, void* r, int32_t preset);
 /// @param self QStylePainter*
 /// @param param1 QRectF*
 ///
-void q_stylepainter_erase_rect(void* self, void* param1);
+void q_stylepainter_erase_rect(void* self, const void* param1);
 
 /// Inherited from QPainter
 ///
@@ -1964,7 +1964,7 @@ void q_stylepainter_erase_rect2(void* self, int x, int y, int w, int h);
 /// @param self QStylePainter*
 /// @param param1 QRect*
 ///
-void q_stylepainter_erase_rect3(void* self, void* param1);
+void q_stylepainter_erase_rect3(void* self, const void* param1);
 
 /// Inherited from QPainter
 ///
@@ -1988,28 +1988,28 @@ void q_stylepainter_set_render_hints(void* self, int32_t hints);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#renderHints)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
 /// @return flag of enum QPainter__RenderHint
 ///
-int32_t q_stylepainter_render_hints(void* self);
+int32_t q_stylepainter_render_hints(const void* self);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#testRenderHint)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 /// @param hint enum QPainter__RenderHint
 ///
-bool q_stylepainter_test_render_hint(void* self, int32_t hint);
+bool q_stylepainter_test_render_hint(const void* self, int32_t hint);
 
 /// Inherited from QPainter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainter.html#paintEngine)
 ///
-/// @param self QStylePainter*
+/// @param self const QStylePainter*
 ///
-QPaintEngine* q_stylepainter_paint_engine(void* self);
+QPaintEngine* q_stylepainter_paint_engine(const void* self);
 
 /// Inherited from QPainter
 ///
@@ -2035,7 +2035,7 @@ void q_stylepainter_end_native_painting(void* self);
 /// @param param1 QRectF*
 /// @param op enum Qt__ClipOperation
 ///
-void q_stylepainter_set_clip_rect22(void* self, void* param1, int32_t op);
+void q_stylepainter_set_clip_rect22(void* self, const void* param1, int32_t op);
 
 /// Inherited from QPainter
 ///
@@ -2045,7 +2045,7 @@ void q_stylepainter_set_clip_rect22(void* self, void* param1, int32_t op);
 /// @param param1 QRect*
 /// @param op enum Qt__ClipOperation
 ///
-void q_stylepainter_set_clip_rect23(void* self, void* param1, int32_t op);
+void q_stylepainter_set_clip_rect23(void* self, const void* param1, int32_t op);
 
 /// Inherited from QPainter
 ///
@@ -2068,7 +2068,7 @@ void q_stylepainter_set_clip_rect5(void* self, int x, int y, int w, int h, int32
 /// @param param1 QRegion*
 /// @param op enum Qt__ClipOperation
 ///
-void q_stylepainter_set_clip_region2(void* self, void* param1, int32_t op);
+void q_stylepainter_set_clip_region2(void* self, const void* param1, int32_t op);
 
 /// Inherited from QPainter
 ///
@@ -2078,7 +2078,7 @@ void q_stylepainter_set_clip_region2(void* self, void* param1, int32_t op);
 /// @param path QPainterPath*
 /// @param op enum Qt__ClipOperation
 ///
-void q_stylepainter_set_clip_path2(void* self, void* path, int32_t op);
+void q_stylepainter_set_clip_path2(void* self, const void* path, int32_t op);
 
 /// Inherited from QPainter
 ///
@@ -2088,7 +2088,7 @@ void q_stylepainter_set_clip_path2(void* self, void* path, int32_t op);
 /// @param transform QTransform*
 /// @param combine bool
 ///
-void q_stylepainter_set_transform2(void* self, void* transform, bool combine);
+void q_stylepainter_set_transform2(void* self, const void* transform, bool combine);
 
 /// Inherited from QPainter
 ///
@@ -2098,7 +2098,7 @@ void q_stylepainter_set_transform2(void* self, void* transform, bool combine);
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_stylepainter_set_world_transform2(void* self, void* matrix, bool combine);
+void q_stylepainter_set_world_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QPainter
 ///
@@ -2109,7 +2109,7 @@ void q_stylepainter_set_world_transform2(void* self, void* matrix, bool combine)
 /// @param pointCount int
 /// @param fillRule enum Qt__FillRule
 ///
-void q_stylepainter_draw_polygon32(void* self, void* points, int pointCount, int32_t fillRule);
+void q_stylepainter_draw_polygon32(void* self, const void* points, int pointCount, int32_t fillRule);
 
 /// Inherited from QPainter
 ///
@@ -2119,7 +2119,7 @@ void q_stylepainter_draw_polygon32(void* self, void* points, int pointCount, int
 /// @param polygon QPolygonF*
 /// @param fillRule enum Qt__FillRule
 ///
-void q_stylepainter_draw_polygon22(void* self, void* polygon, int32_t fillRule);
+void q_stylepainter_draw_polygon22(void* self, const void* polygon, int32_t fillRule);
 
 /// Inherited from QPainter
 ///
@@ -2130,7 +2130,7 @@ void q_stylepainter_draw_polygon22(void* self, void* polygon, int32_t fillRule);
 /// @param pointCount int
 /// @param fillRule enum Qt__FillRule
 ///
-void q_stylepainter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule);
+void q_stylepainter_draw_polygon33(void* self, const void* points, int pointCount, int32_t fillRule);
 
 /// Inherited from QPainter
 ///
@@ -2140,7 +2140,7 @@ void q_stylepainter_draw_polygon33(void* self, void* points, int pointCount, int
 /// @param polygon QPolygon*
 /// @param fillRule enum Qt__FillRule
 ///
-void q_stylepainter_draw_polygon23(void* self, void* polygon, int32_t fillRule);
+void q_stylepainter_draw_polygon23(void* self, const void* polygon, int32_t fillRule);
 
 /// Inherited from QPainter
 ///
@@ -2152,7 +2152,7 @@ void q_stylepainter_draw_polygon23(void* self, void* polygon, int32_t fillRule);
 /// @param yRadius double
 /// @param mode enum Qt__SizeMode
 ///
-void q_stylepainter_draw_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode);
+void q_stylepainter_draw_rounded_rect4(void* self, const void* rect, double xRadius, double yRadius, int32_t mode);
 
 /// Inherited from QPainter
 ///
@@ -2179,7 +2179,7 @@ void q_stylepainter_draw_rounded_rect7(void* self, int x, int y, int w, int h, d
 /// @param yRadius double
 /// @param mode enum Qt__SizeMode
 ///
-void q_stylepainter_draw_rounded_rect42(void* self, void* rect, double xRadius, double yRadius, int32_t mode);
+void q_stylepainter_draw_rounded_rect42(void* self, const void* rect, double xRadius, double yRadius, int32_t mode);
 
 /// Inherited from QPainter
 ///
@@ -2190,7 +2190,7 @@ void q_stylepainter_draw_rounded_rect42(void* self, void* rect, double xRadius, 
 /// @param pm QPixmap*
 /// @param offset QPointF*
 ///
-void q_stylepainter_draw_tiled_pixmap32(void* self, void* rect, void* pm, void* offset);
+void q_stylepainter_draw_tiled_pixmap32(void* self, const void* rect, const void* pm, const void* offset);
 
 /// Inherited from QPainter
 ///
@@ -2204,7 +2204,7 @@ void q_stylepainter_draw_tiled_pixmap32(void* self, void* rect, void* pm, void* 
 /// @param param5 QPixmap*
 /// @param sx int
 ///
-void q_stylepainter_draw_tiled_pixmap6(void* self, int x, int y, int w, int h, void* param5, int sx);
+void q_stylepainter_draw_tiled_pixmap6(void* self, int x, int y, int w, int h, const void* param5, int sx);
 
 /// Inherited from QPainter
 ///
@@ -2219,7 +2219,7 @@ void q_stylepainter_draw_tiled_pixmap6(void* self, int x, int y, int w, int h, v
 /// @param sx int
 /// @param sy int
 ///
-void q_stylepainter_draw_tiled_pixmap7(void* self, int x, int y, int w, int h, void* param5, int sx, int sy);
+void q_stylepainter_draw_tiled_pixmap7(void* self, int x, int y, int w, int h, const void* param5, int sx, int sy);
 
 /// Inherited from QPainter
 ///
@@ -2230,7 +2230,7 @@ void q_stylepainter_draw_tiled_pixmap7(void* self, int x, int y, int w, int h, v
 /// @param param2 QPixmap*
 /// @param param3 QPoint*
 ///
-void q_stylepainter_draw_tiled_pixmap33(void* self, void* param1, void* param2, void* param3);
+void q_stylepainter_draw_tiled_pixmap33(void* self, const void* param1, const void* param2, const void* param3);
 
 /// Inherited from QPainter
 ///
@@ -2242,7 +2242,7 @@ void q_stylepainter_draw_tiled_pixmap33(void* self, void* param1, void* param2, 
 /// @param pixmap QPixmap*
 /// @param hints flag of enum QPainter__PixmapFragmentHint
 ///
-void q_stylepainter_draw_pixmap_fragments4(void* self, void* fragments, int fragmentCount, void* pixmap, int32_t hints);
+void q_stylepainter_draw_pixmap_fragments4(void* self, const void* fragments, int fragmentCount, const void* pixmap, int32_t hints);
 
 /// Inherited from QPainter
 ///
@@ -2254,7 +2254,7 @@ void q_stylepainter_draw_pixmap_fragments4(void* self, void* fragments, int frag
 /// @param sourceRect QRectF*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-void q_stylepainter_draw_image42(void* self, void* targetRect, void* image, void* sourceRect, int32_t flags);
+void q_stylepainter_draw_image42(void* self, const void* targetRect, const void* image, const void* sourceRect, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -2266,7 +2266,7 @@ void q_stylepainter_draw_image42(void* self, void* targetRect, void* image, void
 /// @param sourceRect QRect*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-void q_stylepainter_draw_image43(void* self, void* targetRect, void* image, void* sourceRect, int32_t flags);
+void q_stylepainter_draw_image43(void* self, const void* targetRect, const void* image, const void* sourceRect, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -2278,7 +2278,7 @@ void q_stylepainter_draw_image43(void* self, void* targetRect, void* image, void
 /// @param sr QRectF*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-void q_stylepainter_draw_image44(void* self, void* p, void* image, void* sr, int32_t flags);
+void q_stylepainter_draw_image44(void* self, const void* p, const void* image, const void* sr, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -2290,7 +2290,7 @@ void q_stylepainter_draw_image44(void* self, void* p, void* image, void* sr, int
 /// @param sr QRect*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-void q_stylepainter_draw_image45(void* self, void* p, void* image, void* sr, int32_t flags);
+void q_stylepainter_draw_image45(void* self, const void* p, const void* image, const void* sr, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -2302,7 +2302,7 @@ void q_stylepainter_draw_image45(void* self, void* p, void* image, void* sr, int
 /// @param image QImage*
 /// @param sx int
 ///
-void q_stylepainter_draw_image46(void* self, int x, int y, void* image, int sx);
+void q_stylepainter_draw_image46(void* self, int x, int y, const void* image, int sx);
 
 /// Inherited from QPainter
 ///
@@ -2315,7 +2315,7 @@ void q_stylepainter_draw_image46(void* self, int x, int y, void* image, int sx);
 /// @param sx int
 /// @param sy int
 ///
-void q_stylepainter_draw_image52(void* self, int x, int y, void* image, int sx, int sy);
+void q_stylepainter_draw_image52(void* self, int x, int y, const void* image, int sx, int sy);
 
 /// Inherited from QPainter
 ///
@@ -2329,7 +2329,7 @@ void q_stylepainter_draw_image52(void* self, int x, int y, void* image, int sx, 
 /// @param sy int
 /// @param sw int
 ///
-void q_stylepainter_draw_image62(void* self, int x, int y, void* image, int sx, int sy, int sw);
+void q_stylepainter_draw_image62(void* self, int x, int y, const void* image, int sx, int sy, int sw);
 
 /// Inherited from QPainter
 ///
@@ -2344,7 +2344,7 @@ void q_stylepainter_draw_image62(void* self, int x, int y, void* image, int sx, 
 /// @param sw int
 /// @param sh int
 ///
-void q_stylepainter_draw_image72(void* self, int x, int y, void* image, int sx, int sy, int sw, int sh);
+void q_stylepainter_draw_image72(void* self, int x, int y, const void* image, int sx, int sy, int sw, int sh);
 
 /// Inherited from QPainter
 ///
@@ -2360,7 +2360,7 @@ void q_stylepainter_draw_image72(void* self, int x, int y, void* image, int sx, 
 /// @param sh int
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-void q_stylepainter_draw_image82(void* self, int x, int y, void* image, int sx, int sy, int sw, int sh, int32_t flags);
+void q_stylepainter_draw_image82(void* self, int x, int y, const void* image, int sx, int sy, int sw, int sh, int32_t flags);
 
 /// Inherited from QPainter
 ///
@@ -2372,7 +2372,7 @@ void q_stylepainter_draw_image82(void* self, int x, int y, void* image, int sx, 
 /// @param text const char*
 /// @param br QRectF*
 ///
-void q_stylepainter_draw_text42(void* self, void* r, int flags, const char* text, void* br);
+void q_stylepainter_draw_text42(void* self, const void* r, int flags, const char* text, void* br);
 
 /// Inherited from QPainter
 ///
@@ -2384,7 +2384,7 @@ void q_stylepainter_draw_text42(void* self, void* r, int flags, const char* text
 /// @param text const char*
 /// @param br QRect*
 ///
-void q_stylepainter_draw_text43(void* self, void* r, int flags, const char* text, void* br);
+void q_stylepainter_draw_text43(void* self, const void* r, int flags, const char* text, void* br);
 
 /// Inherited from QPainter
 ///
@@ -2410,7 +2410,7 @@ void q_stylepainter_draw_text72(void* self, int x, int y, int w, int h, int flag
 /// @param text const char*
 /// @param o QTextOption*
 ///
-void q_stylepainter_draw_text32(void* self, void* r, const char* text, void* o);
+void q_stylepainter_draw_text32(void* self, const void* r, const char* text, const void* o);
 
 /// Inherited from QPainter
 ///
@@ -2421,7 +2421,7 @@ void q_stylepainter_draw_text32(void* self, void* r, const char* text, void* o);
 /// @param text const char*
 /// @param o QTextOption*
 ///
-QRectF* q_stylepainter_bounding_rect32(void* self, void* rect, const char* text, void* o);
+QRectF* q_stylepainter_bounding_rect32(void* self, const void* rect, const char* text, const void* o);
 
 /// Inherited from QPainter
 ///

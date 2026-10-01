@@ -15,7 +15,7 @@
 /// @param part KParts__ReadOnlyPart*
 /// @param url QUrl*
 ///
-KParts__OpenUrlEvent* k_parts__openurlevent_new(void* part, void* url);
+KParts__OpenUrlEvent* k_parts__openurlevent_new(void* part, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlevent.html)
 
@@ -25,57 +25,57 @@ KParts__OpenUrlEvent* k_parts__openurlevent_new(void* part, void* url);
 /// @param url QUrl*
 /// @param args KParts__OpenUrlArguments*
 ///
-KParts__OpenUrlEvent* k_parts__openurlevent_new2(void* part, void* url, void* args);
+KParts__OpenUrlEvent* k_parts__openurlevent_new2(void* part, const void* url, const void* args);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlevent.html#part)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-KParts__ReadOnlyPart* k_parts__openurlevent_part(void* self);
+KParts__ReadOnlyPart* k_parts__openurlevent_part(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlevent.html#url)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-QUrl* k_parts__openurlevent_url(void* self);
+QUrl* k_parts__openurlevent_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlevent.html#arguments)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-KParts__OpenUrlArguments* k_parts__openurlevent_arguments(void* self);
+KParts__OpenUrlArguments* k_parts__openurlevent_arguments(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-openurlevent.html#test)
 ///
 /// @param event QEvent*
 ///
-bool k_parts__openurlevent_test(void* event);
+bool k_parts__openurlevent_test(const void* event);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t k_parts__openurlevent_type(void* self);
+int32_t k_parts__openurlevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-bool k_parts__openurlevent_spontaneous(void* self);
+bool k_parts__openurlevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-bool k_parts__openurlevent_is_accepted(void* self);
+bool k_parts__openurlevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -97,25 +97,25 @@ void k_parts__openurlevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-bool k_parts__openurlevent_is_input_event(void* self);
+bool k_parts__openurlevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-bool k_parts__openurlevent_is_pointer_event(void* self);
+bool k_parts__openurlevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-bool k_parts__openurlevent_is_single_point_event(void* self);
+bool k_parts__openurlevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -170,9 +170,9 @@ void k_parts__openurlevent_on_set_accepted(void* self, void (*callback)(void*, b
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-QEvent* k_parts__openurlevent_clone(void* self);
+QEvent* k_parts__openurlevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -180,9 +180,9 @@ QEvent* k_parts__openurlevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__OpenUrlEvent*
+/// @param self const KParts__OpenUrlEvent*
 ///
-QEvent* k_parts__openurlevent_super_clone(void* self);
+QEvent* k_parts__openurlevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -190,10 +190,10 @@ QEvent* k_parts__openurlevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__OpenUrlEvent*
-/// @param callback QEvent* func()
+/// @param self const KParts__OpenUrlEvent*
+/// @param callback QEvent* func(KParts__OpenUrlEvent* self)
 ///
-void k_parts__openurlevent_on_clone(void* self, QEvent* (*callback)());
+void k_parts__openurlevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///

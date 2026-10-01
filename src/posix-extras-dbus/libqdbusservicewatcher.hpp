@@ -47,7 +47,7 @@ void QDBusServiceWatcher_ServiceUnregistered(QDBusServiceWatcher* self, const li
 void QDBusServiceWatcher_Connect_ServiceUnregistered(QDBusServiceWatcher* self, intptr_t slot);
 void QDBusServiceWatcher_ServiceOwnerChanged(QDBusServiceWatcher* self, const libqt_string service, const libqt_string oldOwner, const libqt_string newOwner);
 void QDBusServiceWatcher_Connect_ServiceOwnerChanged(QDBusServiceWatcher* self, intptr_t slot);
-void QDBusServiceWatcher_OnMetaObject(const QDBusServiceWatcher* self, intptr_t slot);
+void QDBusServiceWatcher_OnMetaObject(QDBusServiceWatcher* self, intptr_t slot);
 QMetaObject* QDBusServiceWatcher_SuperMetaObject(const QDBusServiceWatcher* self);
 void QDBusServiceWatcher_OnMetacast(QDBusServiceWatcher* self, intptr_t slot);
 void* QDBusServiceWatcher_SuperMetacast(QDBusServiceWatcher* self, const char* param1);
@@ -75,17 +75,9 @@ void QDBusServiceWatcher_DisconnectNotify(QDBusServiceWatcher* self, const QMeta
 void QDBusServiceWatcher_OnDisconnectNotify(QDBusServiceWatcher* self, intptr_t slot);
 void QDBusServiceWatcher_SuperDisconnectNotify(QDBusServiceWatcher* self, const QMetaMethod* signal);
 QObject* QDBusServiceWatcher_Sender(const QDBusServiceWatcher* self);
-void QDBusServiceWatcher_OnSender(const QDBusServiceWatcher* self, intptr_t slot);
-QObject* QDBusServiceWatcher_SuperSender(const QDBusServiceWatcher* self);
 int QDBusServiceWatcher_SenderSignalIndex(const QDBusServiceWatcher* self);
-void QDBusServiceWatcher_OnSenderSignalIndex(const QDBusServiceWatcher* self, intptr_t slot);
-int QDBusServiceWatcher_SuperSenderSignalIndex(const QDBusServiceWatcher* self);
 int QDBusServiceWatcher_Receivers(const QDBusServiceWatcher* self, const char* signal);
-void QDBusServiceWatcher_OnReceivers(const QDBusServiceWatcher* self, intptr_t slot);
-int QDBusServiceWatcher_SuperReceivers(const QDBusServiceWatcher* self, const char* signal);
 bool QDBusServiceWatcher_IsSignalConnected(const QDBusServiceWatcher* self, const QMetaMethod* signal);
-void QDBusServiceWatcher_OnIsSignalConnected(const QDBusServiceWatcher* self, intptr_t slot);
-bool QDBusServiceWatcher_SuperIsSignalConnected(const QDBusServiceWatcher* self, const QMetaMethod* signal);
 void QDBusServiceWatcher_Delete(QDBusServiceWatcher* self);
 
 #ifdef __cplusplus

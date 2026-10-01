@@ -25,15 +25,15 @@ KDateComboBox* k_datecombobox_new2() {
     return KDateComboBox_New2();
 }
 
-const QMetaObject* k_datecombobox_meta_object(void* self) {
+const QMetaObject* k_datecombobox_meta_object(const void* self) {
     return KDateComboBox_MetaObject((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_datecombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KDateComboBox_OnMetaObject((KDateComboBox*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_datecombobox_super_meta_object(void* self) {
+const QMetaObject* k_datecombobox_super_meta_object(const void* self) {
     return KDateComboBox_SuperMetaObject((KDateComboBox*)self);
 }
 
@@ -68,35 +68,35 @@ const char* k_datecombobox_tr(const char* s) {
     return _ret;
 }
 
-QDate* k_datecombobox_date(void* self) {
+QDate* k_datecombobox_date(const void* self) {
     return KDateComboBox_Date((KDateComboBox*)self);
 }
 
-bool k_datecombobox_is_valid(void* self) {
+bool k_datecombobox_is_valid(const void* self) {
     return KDateComboBox_IsValid((KDateComboBox*)self);
 }
 
-bool k_datecombobox_is_null(void* self) {
+bool k_datecombobox_is_null(const void* self) {
     return KDateComboBox_IsNull((KDateComboBox*)self);
 }
 
-int32_t k_datecombobox_options(void* self) {
+int32_t k_datecombobox_options(const void* self) {
     return KDateComboBox_Options((KDateComboBox*)self);
 }
 
-int32_t k_datecombobox_display_format(void* self) {
+int32_t k_datecombobox_display_format(const void* self) {
     return KDateComboBox_DisplayFormat((KDateComboBox*)self);
 }
 
-QDate* k_datecombobox_minimum_date(void* self) {
+QDate* k_datecombobox_minimum_date(const void* self) {
     return KDateComboBox_MinimumDate((KDateComboBox*)self);
 }
 
-QDate* k_datecombobox_maximum_date(void* self) {
+QDate* k_datecombobox_maximum_date(const void* self) {
     return KDateComboBox_MaximumDate((KDateComboBox*)self);
 }
 
-libqt_map /* of QDate* to const char* */ k_datecombobox_date_map(void* self) {
+libqt_map /* of QDate* to const char* */ k_datecombobox_date_map(const void* self) {
     // Convert QMap<QDate,QString> to libqt_map
     libqt_map _out = KDateComboBox_DateMap((KDateComboBox*)self);
     libqt_map _ret;
@@ -129,31 +129,31 @@ libqt_map /* of QDate* to const char* */ k_datecombobox_date_map(void* self) {
     return _ret;
 }
 
-void k_datecombobox_date_entered(void* self, void* date) {
+void k_datecombobox_date_entered(void* self, const void* date) {
     KDateComboBox_DateEntered((KDateComboBox*)self, (QDate*)date);
 }
 
-void k_datecombobox_on_date_entered(void* self, void (*callback)(void*, void*)) {
+void k_datecombobox_on_date_entered(void* self, void (*callback)(void*, const void*)) {
     KDateComboBox_Connect_DateEntered((KDateComboBox*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_date_changed(void* self, void* date) {
+void k_datecombobox_date_changed(void* self, const void* date) {
     KDateComboBox_DateChanged((KDateComboBox*)self, (QDate*)date);
 }
 
-void k_datecombobox_on_date_changed(void* self, void (*callback)(void*, void*)) {
+void k_datecombobox_on_date_changed(void* self, void (*callback)(void*, const void*)) {
     KDateComboBox_Connect_DateChanged((KDateComboBox*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_date_edited(void* self, void* date) {
+void k_datecombobox_date_edited(void* self, const void* date) {
     KDateComboBox_DateEdited((KDateComboBox*)self, (QDate*)date);
 }
 
-void k_datecombobox_on_date_edited(void* self, void (*callback)(void*, void*)) {
+void k_datecombobox_on_date_edited(void* self, void (*callback)(void*, const void*)) {
     KDateComboBox_Connect_DateEdited((KDateComboBox*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_set_date(void* self, void* date) {
+void k_datecombobox_set_date(void* self, const void* date) {
     KDateComboBox_SetDate((KDateComboBox*)self, (QDate*)date);
 }
 
@@ -165,7 +165,7 @@ void k_datecombobox_set_display_format(void* self, int32_t format) {
     KDateComboBox_SetDisplayFormat((KDateComboBox*)self, format);
 }
 
-void k_datecombobox_set_date_range(void* self, void* minDate, void* maxDate) {
+void k_datecombobox_set_date_range(void* self, const void* minDate, const void* maxDate) {
     KDateComboBox_SetDateRange((KDateComboBox*)self, (QDate*)minDate, (QDate*)maxDate);
 }
 
@@ -173,7 +173,7 @@ void k_datecombobox_reset_date_range(void* self) {
     KDateComboBox_ResetDateRange((KDateComboBox*)self);
 }
 
-void k_datecombobox_set_minimum_date(void* self, void* minDate) {
+void k_datecombobox_set_minimum_date(void* self, const void* minDate) {
     KDateComboBox_SetMinimumDate((KDateComboBox*)self, (QDate*)minDate);
 }
 
@@ -181,7 +181,7 @@ void k_datecombobox_reset_minimum_date(void* self) {
     KDateComboBox_ResetMinimumDate((KDateComboBox*)self);
 }
 
-void k_datecombobox_set_maximum_date(void* self, void* maxDate) {
+void k_datecombobox_set_maximum_date(void* self, const void* maxDate) {
     KDateComboBox_SetMaximumDate((KDateComboBox*)self, (QDate*)maxDate);
 }
 
@@ -233,7 +233,7 @@ void k_datecombobox_show_popup(void* self) {
     KDateComboBox_ShowPopup((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_show_popup(void* self, void (*callback)()) {
+void k_datecombobox_on_show_popup(void* self, void (*callback)(void*)) {
     KDateComboBox_OnShowPopup((KDateComboBox*)self, (intptr_t)callback);
 }
 
@@ -245,7 +245,7 @@ void k_datecombobox_hide_popup(void* self) {
     KDateComboBox_HidePopup((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_hide_popup(void* self, void (*callback)()) {
+void k_datecombobox_on_hide_popup(void* self, void (*callback)(void*)) {
     KDateComboBox_OnHidePopup((KDateComboBox*)self, (intptr_t)callback);
 }
 
@@ -325,15 +325,15 @@ void k_datecombobox_super_resize_event(void* self, void* event) {
     KDateComboBox_SuperResizeEvent((KDateComboBox*)self, (QResizeEvent*)event);
 }
 
-void k_datecombobox_assign_date(void* self, void* date) {
+void k_datecombobox_assign_date(void* self, const void* date) {
     KDateComboBox_AssignDate((KDateComboBox*)self, (QDate*)date);
 }
 
-void k_datecombobox_on_assign_date(void* self, void (*callback)(void*, void*)) {
+void k_datecombobox_on_assign_date(void* self, void (*callback)(void*, const void*)) {
     KDateComboBox_OnAssignDate((KDateComboBox*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_super_assign_date(void* self, void* date) {
+void k_datecombobox_super_assign_date(void* self, const void* date) {
     KDateComboBox_SuperAssignDate((KDateComboBox*)self, (QDate*)date);
 }
 
@@ -351,23 +351,23 @@ const char* k_datecombobox_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_datecombobox_set_date_range3(void* self, void* minDate, void* maxDate, const char* minWarnMsg) {
+void k_datecombobox_set_date_range3(void* self, const void* minDate, const void* maxDate, const char* minWarnMsg) {
     KDateComboBox_SetDateRange3((KDateComboBox*)self, (QDate*)minDate, (QDate*)maxDate, qstring(minWarnMsg));
 }
 
-void k_datecombobox_set_date_range4(void* self, void* minDate, void* maxDate, const char* minWarnMsg, const char* maxWarnMsg) {
+void k_datecombobox_set_date_range4(void* self, const void* minDate, const void* maxDate, const char* minWarnMsg, const char* maxWarnMsg) {
     KDateComboBox_SetDateRange4((KDateComboBox*)self, (QDate*)minDate, (QDate*)maxDate, qstring(minWarnMsg), qstring(maxWarnMsg));
 }
 
-void k_datecombobox_set_minimum_date2(void* self, void* minDate, const char* minWarnMsg) {
+void k_datecombobox_set_minimum_date2(void* self, const void* minDate, const char* minWarnMsg) {
     KDateComboBox_SetMinimumDate2((KDateComboBox*)self, (QDate*)minDate, qstring(minWarnMsg));
 }
 
-void k_datecombobox_set_maximum_date2(void* self, void* maxDate, const char* maxWarnMsg) {
+void k_datecombobox_set_maximum_date2(void* self, const void* maxDate, const char* maxWarnMsg) {
     KDateComboBox_SetMaximumDate2((KDateComboBox*)self, (QDate*)maxDate, qstring(maxWarnMsg));
 }
 
-int32_t k_datecombobox_max_visible_items(void* self) {
+int32_t k_datecombobox_max_visible_items(const void* self) {
     return QComboBox_MaxVisibleItems((QComboBox*)self);
 }
 
@@ -375,7 +375,7 @@ void k_datecombobox_set_max_visible_items(void* self, int maxItems) {
     QComboBox_SetMaxVisibleItems((QComboBox*)self, maxItems);
 }
 
-int32_t k_datecombobox_count(void* self) {
+int32_t k_datecombobox_count(const void* self) {
     return QComboBox_Count((QComboBox*)self);
 }
 
@@ -383,11 +383,11 @@ void k_datecombobox_set_max_count(void* self, int max) {
     QComboBox_SetMaxCount((QComboBox*)self, max);
 }
 
-int32_t k_datecombobox_max_count(void* self) {
+int32_t k_datecombobox_max_count(const void* self) {
     return QComboBox_MaxCount((QComboBox*)self);
 }
 
-bool k_datecombobox_duplicates_enabled(void* self) {
+bool k_datecombobox_duplicates_enabled(const void* self) {
     return QComboBox_DuplicatesEnabled((QComboBox*)self);
 }
 
@@ -399,19 +399,19 @@ void k_datecombobox_set_frame(void* self, bool frame) {
     QComboBox_SetFrame((QComboBox*)self, frame);
 }
 
-bool k_datecombobox_has_frame(void* self) {
+bool k_datecombobox_has_frame(const void* self) {
     return QComboBox_HasFrame((QComboBox*)self);
 }
 
-int32_t k_datecombobox_find_text(void* self, const char* text) {
+int32_t k_datecombobox_find_text(const void* self, const char* text) {
     return QComboBox_FindText((QComboBox*)self, qstring(text));
 }
 
-int32_t k_datecombobox_find_data(void* self, void* data) {
+int32_t k_datecombobox_find_data(const void* self, const void* data) {
     return QComboBox_FindData((QComboBox*)self, (QVariant*)data);
 }
 
-int32_t k_datecombobox_insert_policy(void* self) {
+int32_t k_datecombobox_insert_policy(const void* self) {
     return QComboBox_InsertPolicy((QComboBox*)self);
 }
 
@@ -419,7 +419,7 @@ void k_datecombobox_set_insert_policy(void* self, int32_t policy) {
     QComboBox_SetInsertPolicy((QComboBox*)self, policy);
 }
 
-int32_t k_datecombobox_size_adjust_policy(void* self) {
+int32_t k_datecombobox_size_adjust_policy(const void* self) {
     return QComboBox_SizeAdjustPolicy((QComboBox*)self);
 }
 
@@ -427,7 +427,7 @@ void k_datecombobox_set_size_adjust_policy(void* self, int32_t policy) {
     QComboBox_SetSizeAdjustPolicy((QComboBox*)self, policy);
 }
 
-int32_t k_datecombobox_minimum_contents_length(void* self) {
+int32_t k_datecombobox_minimum_contents_length(const void* self) {
     return QComboBox_MinimumContentsLength((QComboBox*)self);
 }
 
@@ -435,11 +435,11 @@ void k_datecombobox_set_minimum_contents_length(void* self, int characters) {
     QComboBox_SetMinimumContentsLength((QComboBox*)self, characters);
 }
 
-QSize* k_datecombobox_icon_size(void* self) {
+QSize* k_datecombobox_icon_size(const void* self) {
     return QComboBox_IconSize((QComboBox*)self);
 }
 
-void k_datecombobox_set_icon_size(void* self, void* size) {
+void k_datecombobox_set_icon_size(void* self, const void* size) {
     QComboBox_SetIconSize((QComboBox*)self, (QSize*)size);
 }
 
@@ -447,14 +447,14 @@ void k_datecombobox_set_placeholder_text(void* self, const char* placeholderText
     QComboBox_SetPlaceholderText((QComboBox*)self, qstring(placeholderText));
 }
 
-const char* k_datecombobox_placeholder_text(void* self) {
+const char* k_datecombobox_placeholder_text(const void* self) {
     libqt_string _str = QComboBox_PlaceholderText((QComboBox*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_datecombobox_is_editable(void* self) {
+bool k_datecombobox_is_editable(const void* self) {
     return QComboBox_IsEditable((QComboBox*)self);
 }
 
@@ -466,15 +466,15 @@ void k_datecombobox_set_line_edit(void* self, void* edit) {
     QComboBox_SetLineEdit((QComboBox*)self, (QLineEdit*)edit);
 }
 
-QLineEdit* k_datecombobox_line_edit(void* self) {
+QLineEdit* k_datecombobox_line_edit(const void* self) {
     return QComboBox_LineEdit((QComboBox*)self);
 }
 
-void k_datecombobox_set_validator(void* self, void* v) {
+void k_datecombobox_set_validator(void* self, const void* v) {
     QComboBox_SetValidator((QComboBox*)self, (QValidator*)v);
 }
 
-const QValidator* k_datecombobox_validator(void* self) {
+const QValidator* k_datecombobox_validator(const void* self) {
     return QComboBox_Validator((QComboBox*)self);
 }
 
@@ -482,11 +482,11 @@ void k_datecombobox_set_completer(void* self, void* c) {
     QComboBox_SetCompleter((QComboBox*)self, (QCompleter*)c);
 }
 
-QCompleter* k_datecombobox_completer(void* self) {
+QCompleter* k_datecombobox_completer(const void* self) {
     return QComboBox_Completer((QComboBox*)self);
 }
 
-QAbstractItemDelegate* k_datecombobox_item_delegate(void* self) {
+QAbstractItemDelegate* k_datecombobox_item_delegate(const void* self) {
     return QComboBox_ItemDelegate((QComboBox*)self);
 }
 
@@ -494,19 +494,19 @@ void k_datecombobox_set_item_delegate(void* self, void* delegate) {
     QComboBox_SetItemDelegate((QComboBox*)self, (QAbstractItemDelegate*)delegate);
 }
 
-QAbstractItemModel* k_datecombobox_model(void* self) {
+QAbstractItemModel* k_datecombobox_model(const void* self) {
     return QComboBox_Model((QComboBox*)self);
 }
 
-QModelIndex* k_datecombobox_root_model_index(void* self) {
+QModelIndex* k_datecombobox_root_model_index(const void* self) {
     return QComboBox_RootModelIndex((QComboBox*)self);
 }
 
-void k_datecombobox_set_root_model_index(void* self, void* index) {
+void k_datecombobox_set_root_model_index(void* self, const void* index) {
     QComboBox_SetRootModelIndex((QComboBox*)self, (QModelIndex*)index);
 }
 
-int32_t k_datecombobox_model_column(void* self) {
+int32_t k_datecombobox_model_column(const void* self) {
     return QComboBox_ModelColumn((QComboBox*)self);
 }
 
@@ -514,33 +514,33 @@ void k_datecombobox_set_model_column(void* self, int visibleColumn) {
     QComboBox_SetModelColumn((QComboBox*)self, visibleColumn);
 }
 
-int32_t k_datecombobox_current_index(void* self) {
+int32_t k_datecombobox_current_index(const void* self) {
     return QComboBox_CurrentIndex((QComboBox*)self);
 }
 
-const char* k_datecombobox_current_text(void* self) {
+const char* k_datecombobox_current_text(const void* self) {
     libqt_string _str = QComboBox_CurrentText((QComboBox*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QVariant* k_datecombobox_current_data(void* self) {
+QVariant* k_datecombobox_current_data(const void* self) {
     return QComboBox_CurrentData((QComboBox*)self);
 }
 
-const char* k_datecombobox_item_text(void* self, int index) {
+const char* k_datecombobox_item_text(const void* self, int index) {
     libqt_string _str = QComboBox_ItemText((QComboBox*)self, index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QIcon* k_datecombobox_item_icon(void* self, int index) {
+QIcon* k_datecombobox_item_icon(const void* self, int index) {
     return QComboBox_ItemIcon((QComboBox*)self, index);
 }
 
-QVariant* k_datecombobox_item_data(void* self, int index) {
+QVariant* k_datecombobox_item_data(const void* self, int index) {
     return QComboBox_ItemData((QComboBox*)self, index);
 }
 
@@ -548,7 +548,7 @@ void k_datecombobox_add_item(void* self, const char* text) {
     QComboBox_AddItem((QComboBox*)self, qstring(text));
 }
 
-void k_datecombobox_add_item2(void* self, void* icon, const char* text) {
+void k_datecombobox_add_item2(void* self, const void* icon, const char* text) {
     QComboBox_AddItem2((QComboBox*)self, (QIcon*)icon, qstring(text));
 }
 
@@ -570,7 +570,7 @@ void k_datecombobox_insert_item(void* self, int index, const char* text) {
     QComboBox_InsertItem((QComboBox*)self, index, qstring(text));
 }
 
-void k_datecombobox_insert_item2(void* self, int index, void* icon, const char* text) {
+void k_datecombobox_insert_item2(void* self, int index, const void* icon, const char* text) {
     QComboBox_InsertItem2((QComboBox*)self, index, (QIcon*)icon, qstring(text));
 }
 
@@ -600,15 +600,15 @@ void k_datecombobox_set_item_text(void* self, int index, const char* text) {
     QComboBox_SetItemText((QComboBox*)self, index, qstring(text));
 }
 
-void k_datecombobox_set_item_icon(void* self, int index, void* icon) {
+void k_datecombobox_set_item_icon(void* self, int index, const void* icon) {
     QComboBox_SetItemIcon((QComboBox*)self, index, (QIcon*)icon);
 }
 
-void k_datecombobox_set_item_data(void* self, int index, void* value) {
+void k_datecombobox_set_item_data(void* self, int index, const void* value) {
     QComboBox_SetItemData((QComboBox*)self, index, (QVariant*)value);
 }
 
-QAbstractItemView* k_datecombobox_view(void* self) {
+QAbstractItemView* k_datecombobox_view(const void* self) {
     return QComboBox_View((QComboBox*)self);
 }
 
@@ -616,7 +616,7 @@ void k_datecombobox_set_view(void* self, void* itemView) {
     QComboBox_SetView((QComboBox*)self, (QAbstractItemView*)itemView);
 }
 
-QVariant* k_datecombobox_input_method_query2(void* self, int32_t query, void* argument) {
+QVariant* k_datecombobox_input_method_query2(const void* self, int32_t query, const void* argument) {
     return QComboBox_InputMethodQuery2((QComboBox*)self, query, (QVariant*)argument);
 }
 
@@ -696,43 +696,43 @@ void k_datecombobox_on_current_text_changed(void* self, void (*callback)(void*, 
     QComboBox_Connect_CurrentTextChanged((QComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_datecombobox_find_text2(void* self, const char* text, int32_t flags) {
+int32_t k_datecombobox_find_text2(const void* self, const char* text, int32_t flags) {
     return QComboBox_FindText2((QComboBox*)self, qstring(text), flags);
 }
 
-int32_t k_datecombobox_find_data2(void* self, void* data, int role) {
+int32_t k_datecombobox_find_data2(const void* self, const void* data, int role) {
     return QComboBox_FindData2((QComboBox*)self, (QVariant*)data, role);
 }
 
-int32_t k_datecombobox_find_data3(void* self, void* data, int role, int32_t flags) {
+int32_t k_datecombobox_find_data3(const void* self, const void* data, int role, int32_t flags) {
     return QComboBox_FindData3((QComboBox*)self, (QVariant*)data, role, flags);
 }
 
-QVariant* k_datecombobox_current_data1(void* self, int role) {
+QVariant* k_datecombobox_current_data1(const void* self, int role) {
     return QComboBox_CurrentData1((QComboBox*)self, role);
 }
 
-QVariant* k_datecombobox_item_data2(void* self, int index, int role) {
+QVariant* k_datecombobox_item_data2(const void* self, int index, int role) {
     return QComboBox_ItemData2((QComboBox*)self, index, role);
 }
 
-void k_datecombobox_add_item22(void* self, const char* text, void* userData) {
+void k_datecombobox_add_item22(void* self, const char* text, const void* userData) {
     QComboBox_AddItem22((QComboBox*)self, qstring(text), (QVariant*)userData);
 }
 
-void k_datecombobox_add_item3(void* self, void* icon, const char* text, void* userData) {
+void k_datecombobox_add_item3(void* self, const void* icon, const char* text, const void* userData) {
     QComboBox_AddItem3((QComboBox*)self, (QIcon*)icon, qstring(text), (QVariant*)userData);
 }
 
-void k_datecombobox_insert_item3(void* self, int index, const char* text, void* userData) {
+void k_datecombobox_insert_item3(void* self, int index, const char* text, const void* userData) {
     QComboBox_InsertItem3((QComboBox*)self, index, qstring(text), (QVariant*)userData);
 }
 
-void k_datecombobox_insert_item4(void* self, int index, void* icon, const char* text, void* userData) {
+void k_datecombobox_insert_item4(void* self, int index, const void* icon, const char* text, const void* userData) {
     QComboBox_InsertItem4((QComboBox*)self, index, (QIcon*)icon, qstring(text), (QVariant*)userData);
 }
 
-void k_datecombobox_set_item_data3(void* self, int index, void* value, int role) {
+void k_datecombobox_set_item_data3(void* self, int index, const void* value, int role) {
     QComboBox_SetItemData3((QComboBox*)self, index, (QVariant*)value, role);
 }
 
@@ -744,7 +744,7 @@ KDateComboBox* k_datecombobox_from_q_paint_device(void* _qpaintdevice) {
     return (KDateComboBox*)QWidget_FromQPaintDevice((QPaintDevice*)_qpaintdevice);
 }
 
-uintptr_t k_datecombobox_win_id(void* self) {
+uintptr_t k_datecombobox_win_id(const void* self) {
     return QWidget_WinId((QWidget*)self);
 }
 
@@ -752,15 +752,15 @@ void k_datecombobox_create_win_id(void* self) {
     QWidget_CreateWinId((QWidget*)self);
 }
 
-uintptr_t k_datecombobox_internal_win_id(void* self) {
+uintptr_t k_datecombobox_internal_win_id(const void* self) {
     return QWidget_InternalWinId((QWidget*)self);
 }
 
-uintptr_t k_datecombobox_effective_win_id(void* self) {
+uintptr_t k_datecombobox_effective_win_id(const void* self) {
     return QWidget_EffectiveWinId((QWidget*)self);
 }
 
-QStyle* k_datecombobox_style(void* self) {
+QStyle* k_datecombobox_style(const void* self) {
     return QWidget_Style((QWidget*)self);
 }
 
@@ -768,19 +768,19 @@ void k_datecombobox_set_style(void* self, void* style) {
     QWidget_SetStyle((QWidget*)self, (QStyle*)style);
 }
 
-bool k_datecombobox_is_top_level(void* self) {
+bool k_datecombobox_is_top_level(const void* self) {
     return QWidget_IsTopLevel((QWidget*)self);
 }
 
-bool k_datecombobox_is_window(void* self) {
+bool k_datecombobox_is_window(const void* self) {
     return QWidget_IsWindow((QWidget*)self);
 }
 
-bool k_datecombobox_is_modal(void* self) {
+bool k_datecombobox_is_modal(const void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int32_t k_datecombobox_window_modality(void* self) {
+int32_t k_datecombobox_window_modality(const void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
@@ -788,11 +788,11 @@ void k_datecombobox_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
-bool k_datecombobox_is_enabled(void* self) {
+bool k_datecombobox_is_enabled(const void* self) {
     return QWidget_IsEnabled((QWidget*)self);
 }
 
-bool k_datecombobox_is_enabled_to(void* self, void* param1) {
+bool k_datecombobox_is_enabled_to(const void* self, const void* param1) {
     return QWidget_IsEnabledTo((QWidget*)self, (QWidget*)param1);
 }
 
@@ -808,83 +808,83 @@ void k_datecombobox_set_window_modified(void* self, bool windowModified) {
     QWidget_SetWindowModified((QWidget*)self, windowModified);
 }
 
-QRect* k_datecombobox_frame_geometry(void* self) {
+QRect* k_datecombobox_frame_geometry(const void* self) {
     return QWidget_FrameGeometry((QWidget*)self);
 }
 
-const QRect* k_datecombobox_geometry(void* self) {
+const QRect* k_datecombobox_geometry(const void* self) {
     return QWidget_Geometry((QWidget*)self);
 }
 
-QRect* k_datecombobox_normal_geometry(void* self) {
+QRect* k_datecombobox_normal_geometry(const void* self) {
     return QWidget_NormalGeometry((QWidget*)self);
 }
 
-int32_t k_datecombobox_x(void* self) {
+int32_t k_datecombobox_x(const void* self) {
     return QWidget_X((QWidget*)self);
 }
 
-int32_t k_datecombobox_y(void* self) {
+int32_t k_datecombobox_y(const void* self) {
     return QWidget_Y((QWidget*)self);
 }
 
-QPoint* k_datecombobox_pos(void* self) {
+QPoint* k_datecombobox_pos(const void* self) {
     return QWidget_Pos((QWidget*)self);
 }
 
-QSize* k_datecombobox_frame_size(void* self) {
+QSize* k_datecombobox_frame_size(const void* self) {
     return QWidget_FrameSize((QWidget*)self);
 }
 
-QSize* k_datecombobox_size(void* self) {
+QSize* k_datecombobox_size(const void* self) {
     return QWidget_Size((QWidget*)self);
 }
 
-int32_t k_datecombobox_width(void* self) {
+int32_t k_datecombobox_width(const void* self) {
     return QWidget_Width((QWidget*)self);
 }
 
-int32_t k_datecombobox_height(void* self) {
+int32_t k_datecombobox_height(const void* self) {
     return QWidget_Height((QWidget*)self);
 }
 
-QRect* k_datecombobox_rect(void* self) {
+QRect* k_datecombobox_rect(const void* self) {
     return QWidget_Rect((QWidget*)self);
 }
 
-QRect* k_datecombobox_children_rect(void* self) {
+QRect* k_datecombobox_children_rect(const void* self) {
     return QWidget_ChildrenRect((QWidget*)self);
 }
 
-QRegion* k_datecombobox_children_region(void* self) {
+QRegion* k_datecombobox_children_region(const void* self) {
     return QWidget_ChildrenRegion((QWidget*)self);
 }
 
-QSize* k_datecombobox_minimum_size(void* self) {
+QSize* k_datecombobox_minimum_size(const void* self) {
     return QWidget_MinimumSize((QWidget*)self);
 }
 
-QSize* k_datecombobox_maximum_size(void* self) {
+QSize* k_datecombobox_maximum_size(const void* self) {
     return QWidget_MaximumSize((QWidget*)self);
 }
 
-int32_t k_datecombobox_minimum_width(void* self) {
+int32_t k_datecombobox_minimum_width(const void* self) {
     return QWidget_MinimumWidth((QWidget*)self);
 }
 
-int32_t k_datecombobox_minimum_height(void* self) {
+int32_t k_datecombobox_minimum_height(const void* self) {
     return QWidget_MinimumHeight((QWidget*)self);
 }
 
-int32_t k_datecombobox_maximum_width(void* self) {
+int32_t k_datecombobox_maximum_width(const void* self) {
     return QWidget_MaximumWidth((QWidget*)self);
 }
 
-int32_t k_datecombobox_maximum_height(void* self) {
+int32_t k_datecombobox_maximum_height(const void* self) {
     return QWidget_MaximumHeight((QWidget*)self);
 }
 
-void k_datecombobox_set_minimum_size(void* self, void* minimumSize) {
+void k_datecombobox_set_minimum_size(void* self, const void* minimumSize) {
     QWidget_SetMinimumSize((QWidget*)self, (QSize*)minimumSize);
 }
 
@@ -892,7 +892,7 @@ void k_datecombobox_set_minimum_size2(void* self, int minw, int minh) {
     QWidget_SetMinimumSize2((QWidget*)self, minw, minh);
 }
 
-void k_datecombobox_set_maximum_size(void* self, void* maximumSize) {
+void k_datecombobox_set_maximum_size(void* self, const void* maximumSize) {
     QWidget_SetMaximumSize((QWidget*)self, (QSize*)maximumSize);
 }
 
@@ -916,11 +916,11 @@ void k_datecombobox_set_maximum_height(void* self, int maxh) {
     QWidget_SetMaximumHeight((QWidget*)self, maxh);
 }
 
-QSize* k_datecombobox_size_increment(void* self) {
+QSize* k_datecombobox_size_increment(const void* self) {
     return QWidget_SizeIncrement((QWidget*)self);
 }
 
-void k_datecombobox_set_size_increment(void* self, void* sizeIncrement) {
+void k_datecombobox_set_size_increment(void* self, const void* sizeIncrement) {
     QWidget_SetSizeIncrement((QWidget*)self, (QSize*)sizeIncrement);
 }
 
@@ -928,11 +928,11 @@ void k_datecombobox_set_size_increment2(void* self, int w, int h) {
     QWidget_SetSizeIncrement2((QWidget*)self, w, h);
 }
 
-QSize* k_datecombobox_base_size(void* self) {
+QSize* k_datecombobox_base_size(const void* self) {
     return QWidget_BaseSize((QWidget*)self);
 }
 
-void k_datecombobox_set_base_size(void* self, void* baseSize) {
+void k_datecombobox_set_base_size(void* self, const void* baseSize) {
     QWidget_SetBaseSize((QWidget*)self, (QSize*)baseSize);
 }
 
@@ -940,7 +940,7 @@ void k_datecombobox_set_base_size2(void* self, int basew, int baseh) {
     QWidget_SetBaseSize2((QWidget*)self, basew, baseh);
 }
 
-void k_datecombobox_set_fixed_size(void* self, void* fixedSize) {
+void k_datecombobox_set_fixed_size(void* self, const void* fixedSize) {
     QWidget_SetFixedSize((QWidget*)self, (QSize*)fixedSize);
 }
 
@@ -956,71 +956,71 @@ void k_datecombobox_set_fixed_height(void* self, int h) {
     QWidget_SetFixedHeight((QWidget*)self, h);
 }
 
-QPointF* k_datecombobox_map_to_global(void* self, void* param1) {
+QPointF* k_datecombobox_map_to_global(const void* self, const void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_datecombobox_map_to_global2(void* self, void* param1) {
+QPoint* k_datecombobox_map_to_global2(const void* self, const void* param1) {
     return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_datecombobox_map_from_global(void* self, void* param1) {
+QPointF* k_datecombobox_map_from_global(const void* self, const void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_datecombobox_map_from_global2(void* self, void* param1) {
+QPoint* k_datecombobox_map_from_global2(const void* self, const void* param1) {
     return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_datecombobox_map_to_parent(void* self, void* param1) {
+QPointF* k_datecombobox_map_to_parent(const void* self, const void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_datecombobox_map_to_parent2(void* self, void* param1) {
+QPoint* k_datecombobox_map_to_parent2(const void* self, const void* param1) {
     return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_datecombobox_map_from_parent(void* self, void* param1) {
+QPointF* k_datecombobox_map_from_parent(const void* self, const void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* k_datecombobox_map_from_parent2(void* self, void* param1) {
+QPoint* k_datecombobox_map_from_parent2(const void* self, const void* param1) {
     return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
-QPointF* k_datecombobox_map_to(void* self, void* param1, void* param2) {
+QPointF* k_datecombobox_map_to(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_datecombobox_map_to2(void* self, void* param1, void* param2) {
+QPoint* k_datecombobox_map_to2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapTo2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QPointF* k_datecombobox_map_from(void* self, void* param1, void* param2) {
+QPointF* k_datecombobox_map_from(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom((QWidget*)self, (QWidget*)param1, (QPointF*)param2);
 }
 
-QPoint* k_datecombobox_map_from2(void* self, void* param1, void* param2) {
+QPoint* k_datecombobox_map_from2(const void* self, const void* param1, const void* param2) {
     return QWidget_MapFrom2((QWidget*)self, (QWidget*)param1, (QPoint*)param2);
 }
 
-QWidget* k_datecombobox_window(void* self) {
+QWidget* k_datecombobox_window(const void* self) {
     return QWidget_Window((QWidget*)self);
 }
 
-QWidget* k_datecombobox_native_parent_widget(void* self) {
+QWidget* k_datecombobox_native_parent_widget(const void* self) {
     return QWidget_NativeParentWidget((QWidget*)self);
 }
 
-QWidget* k_datecombobox_top_level_widget(void* self) {
+QWidget* k_datecombobox_top_level_widget(const void* self) {
     return QWidget_TopLevelWidget((QWidget*)self);
 }
 
-const QPalette* k_datecombobox_palette(void* self) {
+const QPalette* k_datecombobox_palette(const void* self) {
     return QWidget_Palette((QWidget*)self);
 }
 
-void k_datecombobox_set_palette(void* self, void* palette) {
+void k_datecombobox_set_palette(void* self, const void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
@@ -1028,7 +1028,7 @@ void k_datecombobox_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int32_t k_datecombobox_background_role(void* self) {
+int32_t k_datecombobox_background_role(const void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
@@ -1036,31 +1036,31 @@ void k_datecombobox_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int32_t k_datecombobox_foreground_role(void* self) {
+int32_t k_datecombobox_foreground_role(const void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
-const QFont* k_datecombobox_font(void* self) {
+const QFont* k_datecombobox_font(const void* self) {
     return QWidget_Font((QWidget*)self);
 }
 
-void k_datecombobox_set_font(void* self, void* font) {
+void k_datecombobox_set_font(void* self, const void* font) {
     QWidget_SetFont((QWidget*)self, (QFont*)font);
 }
 
-QFontMetrics* k_datecombobox_font_metrics(void* self) {
+QFontMetrics* k_datecombobox_font_metrics(const void* self) {
     return QWidget_FontMetrics((QWidget*)self);
 }
 
-QFontInfo* k_datecombobox_font_info(void* self) {
+QFontInfo* k_datecombobox_font_info(const void* self) {
     return QWidget_FontInfo((QWidget*)self);
 }
 
-QCursor* k_datecombobox_cursor(void* self) {
+QCursor* k_datecombobox_cursor(const void* self) {
     return QWidget_Cursor((QWidget*)self);
 }
 
-void k_datecombobox_set_cursor(void* self, void* cursor) {
+void k_datecombobox_set_cursor(void* self, const void* cursor) {
     QWidget_SetCursor((QWidget*)self, (QCursor*)cursor);
 }
 
@@ -1072,11 +1072,11 @@ void k_datecombobox_set_mouse_tracking(void* self, bool enable) {
     QWidget_SetMouseTracking((QWidget*)self, enable);
 }
 
-bool k_datecombobox_has_mouse_tracking(void* self) {
+bool k_datecombobox_has_mouse_tracking(const void* self) {
     return QWidget_HasMouseTracking((QWidget*)self);
 }
 
-bool k_datecombobox_under_mouse(void* self) {
+bool k_datecombobox_under_mouse(const void* self) {
     return QWidget_UnderMouse((QWidget*)self);
 }
 
@@ -1084,19 +1084,19 @@ void k_datecombobox_set_tablet_tracking(void* self, bool enable) {
     QWidget_SetTabletTracking((QWidget*)self, enable);
 }
 
-bool k_datecombobox_has_tablet_tracking(void* self) {
+bool k_datecombobox_has_tablet_tracking(const void* self) {
     return QWidget_HasTabletTracking((QWidget*)self);
 }
 
-void k_datecombobox_set_mask(void* self, void* mask) {
+void k_datecombobox_set_mask(void* self, const void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void k_datecombobox_set_mask2(void* self, void* mask) {
+void k_datecombobox_set_mask2(void* self, const void* mask) {
     QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
-QRegion* k_datecombobox_mask(void* self) {
+QRegion* k_datecombobox_mask(const void* self) {
     return QWidget_Mask((QWidget*)self);
 }
 
@@ -1116,7 +1116,7 @@ QPixmap* k_datecombobox_grab(void* self) {
     return QWidget_Grab((QWidget*)self);
 }
 
-QGraphicsEffect* k_datecombobox_graphics_effect(void* self) {
+QGraphicsEffect* k_datecombobox_graphics_effect(const void* self) {
     return QWidget_GraphicsEffect((QWidget*)self);
 }
 
@@ -1140,25 +1140,25 @@ void k_datecombobox_set_style_sheet(void* self, const char* styleSheet) {
     QWidget_SetStyleSheet((QWidget*)self, qstring(styleSheet));
 }
 
-const char* k_datecombobox_style_sheet(void* self) {
+const char* k_datecombobox_style_sheet(const void* self) {
     libqt_string _str = QWidget_StyleSheet((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_datecombobox_window_title(void* self) {
+const char* k_datecombobox_window_title(const void* self) {
     libqt_string _str = QWidget_WindowTitle((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_datecombobox_set_window_icon(void* self, void* icon) {
+void k_datecombobox_set_window_icon(void* self, const void* icon) {
     QWidget_SetWindowIcon((QWidget*)self, (QIcon*)icon);
 }
 
-QIcon* k_datecombobox_window_icon(void* self) {
+QIcon* k_datecombobox_window_icon(const void* self) {
     return QWidget_WindowIcon((QWidget*)self);
 }
 
@@ -1166,7 +1166,7 @@ void k_datecombobox_set_window_icon_text(void* self, const char* windowIconText)
     QWidget_SetWindowIconText((QWidget*)self, qstring(windowIconText));
 }
 
-const char* k_datecombobox_window_icon_text(void* self) {
+const char* k_datecombobox_window_icon_text(const void* self) {
     libqt_string _str = QWidget_WindowIconText((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1177,7 +1177,7 @@ void k_datecombobox_set_window_role(void* self, const char* windowRole) {
     QWidget_SetWindowRole((QWidget*)self, qstring(windowRole));
 }
 
-const char* k_datecombobox_window_role(void* self) {
+const char* k_datecombobox_window_role(const void* self) {
     libqt_string _str = QWidget_WindowRole((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1188,7 +1188,7 @@ void k_datecombobox_set_window_file_path(void* self, const char* filePath) {
     QWidget_SetWindowFilePath((QWidget*)self, qstring(filePath));
 }
 
-const char* k_datecombobox_window_file_path(void* self) {
+const char* k_datecombobox_window_file_path(const void* self) {
     libqt_string _str = QWidget_WindowFilePath((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1199,11 +1199,11 @@ void k_datecombobox_set_window_opacity(void* self, double level) {
     QWidget_SetWindowOpacity((QWidget*)self, level);
 }
 
-double k_datecombobox_window_opacity(void* self) {
+double k_datecombobox_window_opacity(const void* self) {
     return QWidget_WindowOpacity((QWidget*)self);
 }
 
-bool k_datecombobox_is_window_modified(void* self) {
+bool k_datecombobox_is_window_modified(const void* self) {
     return QWidget_IsWindowModified((QWidget*)self);
 }
 
@@ -1211,7 +1211,7 @@ void k_datecombobox_set_tool_tip(void* self, const char* toolTip) {
     QWidget_SetToolTip((QWidget*)self, qstring(toolTip));
 }
 
-const char* k_datecombobox_tool_tip(void* self) {
+const char* k_datecombobox_tool_tip(const void* self) {
     libqt_string _str = QWidget_ToolTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1222,7 +1222,7 @@ void k_datecombobox_set_tool_tip_duration(void* self, int msec) {
     QWidget_SetToolTipDuration((QWidget*)self, msec);
 }
 
-int32_t k_datecombobox_tool_tip_duration(void* self) {
+int32_t k_datecombobox_tool_tip_duration(const void* self) {
     return QWidget_ToolTipDuration((QWidget*)self);
 }
 
@@ -1230,7 +1230,7 @@ void k_datecombobox_set_status_tip(void* self, const char* statusTip) {
     QWidget_SetStatusTip((QWidget*)self, qstring(statusTip));
 }
 
-const char* k_datecombobox_status_tip(void* self) {
+const char* k_datecombobox_status_tip(const void* self) {
     libqt_string _str = QWidget_StatusTip((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1241,14 +1241,14 @@ void k_datecombobox_set_whats_this(void* self, const char* whatsThis) {
     QWidget_SetWhatsThis((QWidget*)self, qstring(whatsThis));
 }
 
-const char* k_datecombobox_whats_this(void* self) {
+const char* k_datecombobox_whats_this(const void* self) {
     libqt_string _str = QWidget_WhatsThis((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_datecombobox_accessible_name(void* self) {
+const char* k_datecombobox_accessible_name(const void* self) {
     libqt_string _str = QWidget_AccessibleName((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1259,7 +1259,7 @@ void k_datecombobox_set_accessible_name(void* self, const char* name) {
     QWidget_SetAccessibleName((QWidget*)self, qstring(name));
 }
 
-const char* k_datecombobox_accessible_description(void* self) {
+const char* k_datecombobox_accessible_description(const void* self) {
     libqt_string _str = QWidget_AccessibleDescription((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1274,7 +1274,7 @@ void k_datecombobox_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int32_t k_datecombobox_layout_direction(void* self) {
+int32_t k_datecombobox_layout_direction(const void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1282,11 +1282,11 @@ void k_datecombobox_unset_layout_direction(void* self) {
     QWidget_UnsetLayoutDirection((QWidget*)self);
 }
 
-void k_datecombobox_set_locale(void* self, void* locale) {
+void k_datecombobox_set_locale(void* self, const void* locale) {
     QWidget_SetLocale((QWidget*)self, (QLocale*)locale);
 }
 
-QLocale* k_datecombobox_locale(void* self) {
+QLocale* k_datecombobox_locale(const void* self) {
     return QWidget_Locale((QWidget*)self);
 }
 
@@ -1294,11 +1294,11 @@ void k_datecombobox_unset_locale(void* self) {
     QWidget_UnsetLocale((QWidget*)self);
 }
 
-bool k_datecombobox_is_right_to_left(void* self) {
+bool k_datecombobox_is_right_to_left(const void* self) {
     return QWidget_IsRightToLeft((QWidget*)self);
 }
 
-bool k_datecombobox_is_left_to_right(void* self) {
+bool k_datecombobox_is_left_to_right(const void* self) {
     return QWidget_IsLeftToRight((QWidget*)self);
 }
 
@@ -1306,7 +1306,7 @@ void k_datecombobox_set_focus(void* self) {
     QWidget_SetFocus((QWidget*)self);
 }
 
-bool k_datecombobox_is_active_window(void* self) {
+bool k_datecombobox_is_active_window(const void* self) {
     return QWidget_IsActiveWindow((QWidget*)self);
 }
 
@@ -1322,7 +1322,7 @@ void k_datecombobox_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int32_t k_datecombobox_focus_policy(void* self) {
+int32_t k_datecombobox_focus_policy(const void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
@@ -1330,7 +1330,7 @@ void k_datecombobox_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
-bool k_datecombobox_has_focus(void* self) {
+bool k_datecombobox_has_focus(const void* self) {
     return QWidget_HasFocus((QWidget*)self);
 }
 
@@ -1342,11 +1342,11 @@ void k_datecombobox_set_focus_proxy(void* self, void* focusProxy) {
     QWidget_SetFocusProxy((QWidget*)self, (QWidget*)focusProxy);
 }
 
-QWidget* k_datecombobox_focus_proxy(void* self) {
+QWidget* k_datecombobox_focus_proxy(const void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int32_t k_datecombobox_context_menu_policy(void* self) {
+int32_t k_datecombobox_context_menu_policy(const void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
@@ -1358,7 +1358,7 @@ void k_datecombobox_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void k_datecombobox_grab_mouse2(void* self, void* param1) {
+void k_datecombobox_grab_mouse2(void* self, const void* param1) {
     QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
@@ -1374,7 +1374,7 @@ void k_datecombobox_release_keyboard(void* self) {
     QWidget_ReleaseKeyboard((QWidget*)self);
 }
 
-int32_t k_datecombobox_grab_shortcut(void* self, void* key) {
+int32_t k_datecombobox_grab_shortcut(void* self, const void* key) {
     return QWidget_GrabShortcut((QWidget*)self, (QKeySequence*)key);
 }
 
@@ -1398,7 +1398,7 @@ QWidget* k_datecombobox_keyboard_grabber() {
     return QWidget_KeyboardGrabber();
 }
 
-bool k_datecombobox_updates_enabled(void* self) {
+bool k_datecombobox_updates_enabled(const void* self) {
     return QWidget_UpdatesEnabled((QWidget*)self);
 }
 
@@ -1406,7 +1406,7 @@ void k_datecombobox_set_updates_enabled(void* self, bool enable) {
     QWidget_SetUpdatesEnabled((QWidget*)self, enable);
 }
 
-QGraphicsProxyWidget* k_datecombobox_graphics_proxy_widget(void* self) {
+QGraphicsProxyWidget* k_datecombobox_graphics_proxy_widget(const void* self) {
     return QWidget_GraphicsProxyWidget((QWidget*)self);
 }
 
@@ -1422,11 +1422,11 @@ void k_datecombobox_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void k_datecombobox_update3(void* self, void* param1) {
+void k_datecombobox_update3(void* self, const void* param1) {
     QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void k_datecombobox_update4(void* self, void* param1) {
+void k_datecombobox_update4(void* self, const void* param1) {
     QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1434,11 +1434,11 @@ void k_datecombobox_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void k_datecombobox_repaint3(void* self, void* param1) {
+void k_datecombobox_repaint3(void* self, const void* param1) {
     QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void k_datecombobox_repaint4(void* self, void* param1) {
+void k_datecombobox_repaint4(void* self, const void* param1) {
     QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
@@ -1490,7 +1490,7 @@ void k_datecombobox_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void k_datecombobox_move2(void* self, void* param1) {
+void k_datecombobox_move2(void* self, const void* param1) {
     QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
@@ -1498,7 +1498,7 @@ void k_datecombobox_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void k_datecombobox_resize2(void* self, void* param1) {
+void k_datecombobox_resize2(void* self, const void* param1) {
     QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
@@ -1506,11 +1506,11 @@ void k_datecombobox_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void k_datecombobox_set_geometry2(void* self, void* geometry) {
+void k_datecombobox_set_geometry2(void* self, const void* geometry) {
     QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
-char* k_datecombobox_save_geometry(void* self) {
+char* k_datecombobox_save_geometry(const void* self) {
     libqt_string _str = QWidget_SaveGeometry((QWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1525,31 +1525,31 @@ void k_datecombobox_adjust_size(void* self) {
     QWidget_AdjustSize((QWidget*)self);
 }
 
-bool k_datecombobox_is_visible(void* self) {
+bool k_datecombobox_is_visible(const void* self) {
     return QWidget_IsVisible((QWidget*)self);
 }
 
-bool k_datecombobox_is_visible_to(void* self, void* param1) {
+bool k_datecombobox_is_visible_to(const void* self, const void* param1) {
     return QWidget_IsVisibleTo((QWidget*)self, (QWidget*)param1);
 }
 
-bool k_datecombobox_is_hidden(void* self) {
+bool k_datecombobox_is_hidden(const void* self) {
     return QWidget_IsHidden((QWidget*)self);
 }
 
-bool k_datecombobox_is_minimized(void* self) {
+bool k_datecombobox_is_minimized(const void* self) {
     return QWidget_IsMinimized((QWidget*)self);
 }
 
-bool k_datecombobox_is_maximized(void* self) {
+bool k_datecombobox_is_maximized(const void* self) {
     return QWidget_IsMaximized((QWidget*)self);
 }
 
-bool k_datecombobox_is_full_screen(void* self) {
+bool k_datecombobox_is_full_screen(const void* self) {
     return QWidget_IsFullScreen((QWidget*)self);
 }
 
-int32_t k_datecombobox_window_state(void* self) {
+int32_t k_datecombobox_window_state(const void* self) {
     return QWidget_WindowState((QWidget*)self);
 }
 
@@ -1561,7 +1561,7 @@ void k_datecombobox_override_window_state(void* self, int32_t state) {
     QWidget_OverrideWindowState((QWidget*)self, state);
 }
 
-QSizePolicy* k_datecombobox_size_policy(void* self) {
+QSizePolicy* k_datecombobox_size_policy(const void* self) {
     return QWidget_SizePolicy((QWidget*)self);
 }
 
@@ -1573,7 +1573,7 @@ void k_datecombobox_set_size_policy2(void* self, int32_t horizontal, int32_t ver
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
-QRegion* k_datecombobox_visible_region(void* self) {
+QRegion* k_datecombobox_visible_region(const void* self) {
     return QWidget_VisibleRegion((QWidget*)self);
 }
 
@@ -1581,19 +1581,19 @@ void k_datecombobox_set_contents_margins(void* self, int left, int top, int righ
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void k_datecombobox_set_contents_margins2(void* self, void* margins) {
+void k_datecombobox_set_contents_margins2(void* self, const void* margins) {
     QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
-QMargins* k_datecombobox_contents_margins(void* self) {
+QMargins* k_datecombobox_contents_margins(const void* self) {
     return QWidget_ContentsMargins((QWidget*)self);
 }
 
-QRect* k_datecombobox_contents_rect(void* self) {
+QRect* k_datecombobox_contents_rect(const void* self) {
     return QWidget_ContentsRect((QWidget*)self);
 }
 
-QLayout* k_datecombobox_layout(void* self) {
+QLayout* k_datecombobox_layout(const void* self) {
     return QWidget_Layout((QWidget*)self);
 }
 
@@ -1617,23 +1617,23 @@ void k_datecombobox_scroll(void* self, int dx, int dy) {
     QWidget_Scroll((QWidget*)self, dx, dy);
 }
 
-void k_datecombobox_scroll2(void* self, int dx, int dy, void* param3) {
+void k_datecombobox_scroll2(void* self, int dx, int dy, const void* param3) {
     QWidget_Scroll2((QWidget*)self, dx, dy, (QRect*)param3);
 }
 
-QWidget* k_datecombobox_focus_widget(void* self) {
+QWidget* k_datecombobox_focus_widget(const void* self) {
     return QWidget_FocusWidget((QWidget*)self);
 }
 
-QWidget* k_datecombobox_next_in_focus_chain(void* self) {
+QWidget* k_datecombobox_next_in_focus_chain(const void* self) {
     return QWidget_NextInFocusChain((QWidget*)self);
 }
 
-QWidget* k_datecombobox_previous_in_focus_chain(void* self) {
+QWidget* k_datecombobox_previous_in_focus_chain(const void* self) {
     return QWidget_PreviousInFocusChain((QWidget*)self);
 }
 
-bool k_datecombobox_accept_drops(void* self) {
+bool k_datecombobox_accept_drops(const void* self) {
     return QWidget_AcceptDrops((QWidget*)self);
 }
 
@@ -1661,7 +1661,7 @@ void k_datecombobox_remove_action(void* self, void* action) {
     QWidget_RemoveAction((QWidget*)self, (QAction*)action);
 }
 
-libqt_list /* of QAction* */ k_datecombobox_actions(void* self) {
+libqt_list /* of QAction* */ k_datecombobox_actions(const void* self) {
     libqt_list _arr = QWidget_Actions((QWidget*)self);
     return _arr;
 }
@@ -1670,19 +1670,19 @@ QAction* k_datecombobox_add_action2(void* self, const char* text) {
     return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* k_datecombobox_add_action3(void* self, void* icon, const char* text) {
+QAction* k_datecombobox_add_action3(void* self, const void* icon, const char* text) {
     return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* k_datecombobox_add_action4(void* self, const char* text, void* shortcut) {
+QAction* k_datecombobox_add_action4(void* self, const char* text, const void* shortcut) {
     return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* k_datecombobox_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+QAction* k_datecombobox_add_action5(void* self, const void* icon, const char* text, const void* shortcut) {
     return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
-QWidget* k_datecombobox_parent_widget(void* self) {
+QWidget* k_datecombobox_parent_widget(const void* self) {
     return QWidget_ParentWidget((QWidget*)self);
 }
 
@@ -1690,7 +1690,7 @@ void k_datecombobox_set_window_flags(void* self, int32_t type) {
     QWidget_SetWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_datecombobox_window_flags(void* self) {
+int32_t k_datecombobox_window_flags(const void* self) {
     return QWidget_WindowFlags((QWidget*)self);
 }
 
@@ -1702,7 +1702,7 @@ void k_datecombobox_override_window_flags(void* self, int32_t type) {
     QWidget_OverrideWindowFlags((QWidget*)self, type);
 }
 
-int32_t k_datecombobox_window_type(void* self) {
+int32_t k_datecombobox_window_type(const void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
@@ -1710,15 +1710,15 @@ QWidget* k_datecombobox_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
-QWidget* k_datecombobox_child_at(void* self, int x, int y) {
+QWidget* k_datecombobox_child_at(const void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* k_datecombobox_child_at2(void* self, void* p) {
+QWidget* k_datecombobox_child_at2(const void* self, const void* p) {
     return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* k_datecombobox_child_at3(void* self, void* p) {
+QWidget* k_datecombobox_child_at3(const void* self, const void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
@@ -1726,19 +1726,19 @@ void k_datecombobox_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool k_datecombobox_test_attribute(void* self, int32_t param1) {
+bool k_datecombobox_test_attribute(const void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
-void k_datecombobox_ensure_polished(void* self) {
+void k_datecombobox_ensure_polished(const void* self) {
     QWidget_EnsurePolished((QWidget*)self);
 }
 
-bool k_datecombobox_is_ancestor_of(void* self, void* child) {
+bool k_datecombobox_is_ancestor_of(const void* self, const void* child) {
     return QWidget_IsAncestorOf((QWidget*)self, (QWidget*)child);
 }
 
-bool k_datecombobox_auto_fill_background(void* self) {
+bool k_datecombobox_auto_fill_background(const void* self) {
     return QWidget_AutoFillBackground((QWidget*)self);
 }
 
@@ -1746,15 +1746,15 @@ void k_datecombobox_set_auto_fill_background(void* self, bool enabled) {
     QWidget_SetAutoFillBackground((QWidget*)self, enabled);
 }
 
-QBackingStore* k_datecombobox_backing_store(void* self) {
+QBackingStore* k_datecombobox_backing_store(const void* self) {
     return QWidget_BackingStore((QWidget*)self);
 }
 
-QWindow* k_datecombobox_window_handle(void* self) {
+QWindow* k_datecombobox_window_handle(const void* self) {
     return QWidget_WindowHandle((QWidget*)self);
 }
 
-QScreen* k_datecombobox_screen(void* self) {
+QScreen* k_datecombobox_screen(const void* self) {
     return QWidget_Screen((QWidget*)self);
 }
 
@@ -1774,11 +1774,11 @@ void k_datecombobox_on_window_title_changed(void* self, void (*callback)(void*, 
     QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_window_icon_changed(void* self, void* icon) {
+void k_datecombobox_window_icon_changed(void* self, const void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void k_datecombobox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+void k_datecombobox_on_window_icon_changed(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
@@ -1790,15 +1790,15 @@ void k_datecombobox_on_window_icon_text_changed(void* self, void (*callback)(voi
     QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_custom_context_menu_requested(void* self, void* pos) {
+void k_datecombobox_custom_context_menu_requested(void* self, const void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void k_datecombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+void k_datecombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*)) {
     QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_datecombobox_input_method_hints(void* self) {
+int32_t k_datecombobox_input_method_hints(const void* self) {
     return QWidget_InputMethodHints((QWidget*)self);
 }
 
@@ -1806,31 +1806,31 @@ void k_datecombobox_set_input_method_hints(void* self, int32_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void k_datecombobox_render22(void* self, void* target, void* targetOffset) {
+void k_datecombobox_render22(void* self, void* target, const void* targetOffset) {
     QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
-void k_datecombobox_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
+void k_datecombobox_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render3((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_datecombobox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_datecombobox_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void k_datecombobox_render23(void* self, void* painter, void* targetOffset) {
+void k_datecombobox_render23(void* self, void* painter, const void* targetOffset) {
     QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
-void k_datecombobox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
+void k_datecombobox_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion) {
     QWidget_Render32((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion);
 }
 
-void k_datecombobox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags) {
+void k_datecombobox_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags) {
     QWidget_Render42((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-QPixmap* k_datecombobox_grab1(void* self, void* rectangle) {
+QPixmap* k_datecombobox_grab1(void* self, const void* rectangle) {
     return QWidget_Grab1((QWidget*)self, (QRect*)rectangle);
 }
 
@@ -1838,7 +1838,7 @@ void k_datecombobox_grab_gesture2(void* self, int32_t type, int32_t flags) {
     QWidget_GrabGesture2((QWidget*)self, type, flags);
 }
 
-int32_t k_datecombobox_grab_shortcut2(void* self, void* key, int32_t context) {
+int32_t k_datecombobox_grab_shortcut2(void* self, const void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1866,7 +1866,7 @@ QWidget* k_datecombobox_create_window_container3(void* window, void* parent, int
     return QWidget_CreateWindowContainer3((QWindow*)window, (QWidget*)parent, flags);
 }
 
-const char* k_datecombobox_object_name(void* self) {
+const char* k_datecombobox_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1877,19 +1877,19 @@ void k_datecombobox_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_datecombobox_is_widget_type(void* self) {
+bool k_datecombobox_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_datecombobox_is_window_type(void* self) {
+bool k_datecombobox_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_datecombobox_is_quick_item_type(void* self) {
+bool k_datecombobox_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_datecombobox_signals_blocked(void* self) {
+bool k_datecombobox_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1897,7 +1897,7 @@ bool k_datecombobox_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_datecombobox_thread(void* self) {
+QThread* k_datecombobox_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1921,7 +1921,7 @@ void k_datecombobox_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_datecombobox_children(void* self) {
+libqt_list /* of QObject* */ k_datecombobox_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1934,55 +1934,55 @@ void k_datecombobox_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_datecombobox_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_datecombobox_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_datecombobox_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_datecombobox_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_datecombobox_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_datecombobox_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_datecombobox_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_datecombobox_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_datecombobox_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_datecombobox_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_datecombobox_disconnect3(void* self) {
+bool k_datecombobox_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_datecombobox_disconnect4(void* self, void* receiver) {
+bool k_datecombobox_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_datecombobox_disconnect5(void* param1) {
+bool k_datecombobox_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_datecombobox_dump_object_tree(void* self) {
+void k_datecombobox_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_datecombobox_dump_object_info(void* self) {
+void k_datecombobox_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_datecombobox_set_property(void* self, const char* name, void* value) {
+bool k_datecombobox_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_datecombobox_property(void* self, const char* name) {
+QVariant* k_datecombobox_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_datecombobox_dynamic_property_names(void* self) {
+const char** k_datecombobox_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -2003,7 +2003,7 @@ QBindingStorage* k_datecombobox_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_datecombobox_binding_storage2(void* self) {
+const QBindingStorage* k_datecombobox_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -2015,11 +2015,11 @@ void k_datecombobox_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_datecombobox_parent(void* self) {
+QObject* k_datecombobox_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_datecombobox_inherits(void* self, const char* classname) {
+bool k_datecombobox_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -2035,31 +2035,31 @@ int32_t k_datecombobox_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_datecombobox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_datecombobox_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_datecombobox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_datecombobox_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_datecombobox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_datecombobox_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_datecombobox_disconnect1(void* self, const char* signal) {
+bool k_datecombobox_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_datecombobox_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_datecombobox_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_datecombobox_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_datecombobox_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_datecombobox_disconnect23(void* self, void* receiver, const char* member) {
+bool k_datecombobox_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -2071,47 +2071,47 @@ void k_datecombobox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool k_datecombobox_painting_active(void* self) {
+bool k_datecombobox_painting_active(const void* self) {
     return QPaintDevice_PaintingActive(k_datecombobox_as_q_paint_device(self));
 }
 
-int32_t k_datecombobox_width_m_m(void* self) {
+int32_t k_datecombobox_width_m_m(const void* self) {
     return QPaintDevice_WidthMM(k_datecombobox_as_q_paint_device(self));
 }
 
-int32_t k_datecombobox_height_m_m(void* self) {
+int32_t k_datecombobox_height_m_m(const void* self) {
     return QPaintDevice_HeightMM(k_datecombobox_as_q_paint_device(self));
 }
 
-int32_t k_datecombobox_logical_dpi_x(void* self) {
+int32_t k_datecombobox_logical_dpi_x(const void* self) {
     return QPaintDevice_LogicalDpiX(k_datecombobox_as_q_paint_device(self));
 }
 
-int32_t k_datecombobox_logical_dpi_y(void* self) {
+int32_t k_datecombobox_logical_dpi_y(const void* self) {
     return QPaintDevice_LogicalDpiY(k_datecombobox_as_q_paint_device(self));
 }
 
-int32_t k_datecombobox_physical_dpi_x(void* self) {
+int32_t k_datecombobox_physical_dpi_x(const void* self) {
     return QPaintDevice_PhysicalDpiX(k_datecombobox_as_q_paint_device(self));
 }
 
-int32_t k_datecombobox_physical_dpi_y(void* self) {
+int32_t k_datecombobox_physical_dpi_y(const void* self) {
     return QPaintDevice_PhysicalDpiY(k_datecombobox_as_q_paint_device(self));
 }
 
-double k_datecombobox_device_pixel_ratio(void* self) {
+double k_datecombobox_device_pixel_ratio(const void* self) {
     return QPaintDevice_DevicePixelRatio(k_datecombobox_as_q_paint_device(self));
 }
 
-double k_datecombobox_device_pixel_ratio_f(void* self) {
+double k_datecombobox_device_pixel_ratio_f(const void* self) {
     return QPaintDevice_DevicePixelRatioF(k_datecombobox_as_q_paint_device(self));
 }
 
-int32_t k_datecombobox_color_count(void* self) {
+int32_t k_datecombobox_color_count(const void* self) {
     return QPaintDevice_ColorCount(k_datecombobox_as_q_paint_device(self));
 }
 
-int32_t k_datecombobox_depth(void* self) {
+int32_t k_datecombobox_depth(const void* self) {
     return QPaintDevice_Depth(k_datecombobox_as_q_paint_device(self));
 }
 
@@ -2135,28 +2135,28 @@ void k_datecombobox_on_set_model(void* self, void (*callback)(void*, void*)) {
     KDateComboBox_OnSetModel((KDateComboBox*)self, (intptr_t)callback);
 }
 
-QSize* k_datecombobox_size_hint(void* self) {
+QSize* k_datecombobox_size_hint(const void* self) {
     return KDateComboBox_SizeHint((KDateComboBox*)self);
 }
 
-QSize* k_datecombobox_super_size_hint(void* self) {
+QSize* k_datecombobox_super_size_hint(const void* self) {
     return KDateComboBox_SuperSizeHint((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_size_hint(void* self, QSize* (*callback)()) {
-    KDateComboBox_OnSizeHint((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    KDateComboBox_OnSizeHint((const KDateComboBox*)self, (intptr_t)callback);
 }
 
-QSize* k_datecombobox_minimum_size_hint(void* self) {
+QSize* k_datecombobox_minimum_size_hint(const void* self) {
     return KDateComboBox_MinimumSizeHint((KDateComboBox*)self);
 }
 
-QSize* k_datecombobox_super_minimum_size_hint(void* self) {
+QSize* k_datecombobox_super_minimum_size_hint(const void* self) {
     return KDateComboBox_SuperMinimumSizeHint((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
-    KDateComboBox_OnMinimumSizeHint((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*)) {
+    KDateComboBox_OnMinimumSizeHint((const KDateComboBox*)self, (intptr_t)callback);
 }
 
 bool k_datecombobox_event(void* self, void* event) {
@@ -2171,16 +2171,16 @@ void k_datecombobox_on_event(void* self, bool (*callback)(void*, void*)) {
     KDateComboBox_OnEvent((KDateComboBox*)self, (intptr_t)callback);
 }
 
-QVariant* k_datecombobox_input_method_query(void* self, int32_t param1) {
+QVariant* k_datecombobox_input_method_query(const void* self, int32_t param1) {
     return KDateComboBox_InputMethodQuery((KDateComboBox*)self, param1);
 }
 
-QVariant* k_datecombobox_super_input_method_query(void* self, int32_t param1) {
+QVariant* k_datecombobox_super_input_method_query(const void* self, int32_t param1) {
     return KDateComboBox_SuperInputMethodQuery((KDateComboBox*)self, param1);
 }
 
-void k_datecombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
-    KDateComboBox_OnInputMethodQuery((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t)) {
+    KDateComboBox_OnInputMethodQuery((const KDateComboBox*)self, (intptr_t)callback);
 }
 
 void k_datecombobox_change_event(void* self, void* e) {
@@ -2279,28 +2279,28 @@ void k_datecombobox_on_input_method_event(void* self, void (*callback)(void*, vo
     KDateComboBox_OnInputMethodEvent((KDateComboBox*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_init_style_option(void* self, void* option) {
+void k_datecombobox_init_style_option(const void* self, void* option) {
     KDateComboBox_InitStyleOption((KDateComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_datecombobox_super_init_style_option(void* self, void* option) {
+void k_datecombobox_super_init_style_option(const void* self, void* option) {
     KDateComboBox_SuperInitStyleOption((KDateComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_datecombobox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
-    KDateComboBox_OnInitStyleOption((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*)) {
+    KDateComboBox_OnInitStyleOption((const KDateComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_datecombobox_dev_type(void* self) {
+int32_t k_datecombobox_dev_type(const void* self) {
     return KDateComboBox_DevType((KDateComboBox*)self);
 }
 
-int32_t k_datecombobox_super_dev_type(void* self) {
+int32_t k_datecombobox_super_dev_type(const void* self) {
     return KDateComboBox_SuperDevType((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_dev_type(void* self, int32_t (*callback)()) {
-    KDateComboBox_OnDevType((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_dev_type(const void* self, int32_t (*callback)(const void*)) {
+    KDateComboBox_OnDevType((const KDateComboBox*)self, (intptr_t)callback);
 }
 
 void k_datecombobox_set_visible(void* self, bool visible) {
@@ -2315,40 +2315,40 @@ void k_datecombobox_on_set_visible(void* self, void (*callback)(void*, bool)) {
     KDateComboBox_OnSetVisible((KDateComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_datecombobox_height_for_width(void* self, int param1) {
+int32_t k_datecombobox_height_for_width(const void* self, int param1) {
     return KDateComboBox_HeightForWidth((KDateComboBox*)self, param1);
 }
 
-int32_t k_datecombobox_super_height_for_width(void* self, int param1) {
+int32_t k_datecombobox_super_height_for_width(const void* self, int param1) {
     return KDateComboBox_SuperHeightForWidth((KDateComboBox*)self, param1);
 }
 
-void k_datecombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
-    KDateComboBox_OnHeightForWidth((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int)) {
+    KDateComboBox_OnHeightForWidth((const KDateComboBox*)self, (intptr_t)callback);
 }
 
-bool k_datecombobox_has_height_for_width(void* self) {
+bool k_datecombobox_has_height_for_width(const void* self) {
     return KDateComboBox_HasHeightForWidth((KDateComboBox*)self);
 }
 
-bool k_datecombobox_super_has_height_for_width(void* self) {
+bool k_datecombobox_super_has_height_for_width(const void* self) {
     return KDateComboBox_SuperHasHeightForWidth((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_has_height_for_width(void* self, bool (*callback)()) {
-    KDateComboBox_OnHasHeightForWidth((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*)) {
+    KDateComboBox_OnHasHeightForWidth((const KDateComboBox*)self, (intptr_t)callback);
 }
 
-QPaintEngine* k_datecombobox_paint_engine(void* self) {
+QPaintEngine* k_datecombobox_paint_engine(const void* self) {
     return KDateComboBox_PaintEngine((KDateComboBox*)self);
 }
 
-QPaintEngine* k_datecombobox_super_paint_engine(void* self) {
+QPaintEngine* k_datecombobox_super_paint_engine(const void* self) {
     return KDateComboBox_SuperPaintEngine((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
-    KDateComboBox_OnPaintEngine((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*)) {
+    KDateComboBox_OnPaintEngine((const KDateComboBox*)self, (intptr_t)callback);
 }
 
 void k_datecombobox_mouse_double_click_event(void* self, void* event) {
@@ -2507,52 +2507,52 @@ void k_datecombobox_on_native_event(void* self, bool (*callback)(void*, libqt_st
     KDateComboBox_OnNativeEvent((KDateComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_datecombobox_metric(void* self, int32_t param1) {
+int32_t k_datecombobox_metric(const void* self, int32_t param1) {
     return KDateComboBox_Metric((KDateComboBox*)self, param1);
 }
 
-int32_t k_datecombobox_super_metric(void* self, int32_t param1) {
+int32_t k_datecombobox_super_metric(const void* self, int32_t param1) {
     return KDateComboBox_SuperMetric((KDateComboBox*)self, param1);
 }
 
-void k_datecombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
-    KDateComboBox_OnMetric((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t)) {
+    KDateComboBox_OnMetric((const KDateComboBox*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_init_painter(void* self, void* painter) {
+void k_datecombobox_init_painter(const void* self, void* painter) {
     KDateComboBox_InitPainter((KDateComboBox*)self, (QPainter*)painter);
 }
 
-void k_datecombobox_super_init_painter(void* self, void* painter) {
+void k_datecombobox_super_init_painter(const void* self, void* painter) {
     KDateComboBox_SuperInitPainter((KDateComboBox*)self, (QPainter*)painter);
 }
 
-void k_datecombobox_on_init_painter(void* self, void (*callback)(void*, void*)) {
-    KDateComboBox_OnInitPainter((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_init_painter(const void* self, void (*callback)(const void*, void*)) {
+    KDateComboBox_OnInitPainter((const KDateComboBox*)self, (intptr_t)callback);
 }
 
-QPaintDevice* k_datecombobox_redirected(void* self, void* offset) {
+QPaintDevice* k_datecombobox_redirected(const void* self, void* offset) {
     return KDateComboBox_Redirected((KDateComboBox*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_datecombobox_super_redirected(void* self, void* offset) {
+QPaintDevice* k_datecombobox_super_redirected(const void* self, void* offset) {
     return KDateComboBox_SuperRedirected((KDateComboBox*)self, (QPoint*)offset);
 }
 
-void k_datecombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
-    KDateComboBox_OnRedirected((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*)) {
+    KDateComboBox_OnRedirected((const KDateComboBox*)self, (intptr_t)callback);
 }
 
-QPainter* k_datecombobox_shared_painter(void* self) {
+QPainter* k_datecombobox_shared_painter(const void* self) {
     return KDateComboBox_SharedPainter((KDateComboBox*)self);
 }
 
-QPainter* k_datecombobox_super_shared_painter(void* self) {
+QPainter* k_datecombobox_super_shared_painter(const void* self) {
     return KDateComboBox_SuperSharedPainter((KDateComboBox*)self);
 }
 
-void k_datecombobox_on_shared_painter(void* self, QPainter* (*callback)()) {
-    KDateComboBox_OnSharedPainter((KDateComboBox*)self, (intptr_t)callback);
+void k_datecombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*)) {
+    KDateComboBox_OnSharedPainter((const KDateComboBox*)self, (intptr_t)callback);
 }
 
 bool k_datecombobox_focus_next_prev_child(void* self, bool next) {
@@ -2603,27 +2603,27 @@ void k_datecombobox_on_custom_event(void* self, void (*callback)(void*, void*)) 
     KDateComboBox_OnCustomEvent((KDateComboBox*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_connect_notify(void* self, void* signal) {
+void k_datecombobox_connect_notify(void* self, const void* signal) {
     KDateComboBox_ConnectNotify((KDateComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_datecombobox_super_connect_notify(void* self, void* signal) {
+void k_datecombobox_super_connect_notify(void* self, const void* signal) {
     KDateComboBox_SuperConnectNotify((KDateComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_datecombobox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_datecombobox_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KDateComboBox_OnConnectNotify((KDateComboBox*)self, (intptr_t)callback);
 }
 
-void k_datecombobox_disconnect_notify(void* self, void* signal) {
+void k_datecombobox_disconnect_notify(void* self, const void* signal) {
     KDateComboBox_DisconnectNotify((KDateComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_datecombobox_super_disconnect_notify(void* self, void* signal) {
+void k_datecombobox_super_disconnect_notify(void* self, const void* signal) {
     KDateComboBox_SuperDisconnectNotify((KDateComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_datecombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_datecombobox_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KDateComboBox_OnDisconnectNotify((KDateComboBox*)self, (intptr_t)callback);
 }
 
@@ -2631,120 +2631,40 @@ void k_datecombobox_update_micro_focus(void* self) {
     KDateComboBox_UpdateMicroFocus((KDateComboBox*)self);
 }
 
-void k_datecombobox_super_update_micro_focus(void* self) {
-    KDateComboBox_SuperUpdateMicroFocus((KDateComboBox*)self);
-}
-
-void k_datecombobox_on_update_micro_focus(void* self, void (*callback)()) {
-    KDateComboBox_OnUpdateMicroFocus((KDateComboBox*)self, (intptr_t)callback);
-}
-
 void k_datecombobox_create(void* self) {
     KDateComboBox_Create((KDateComboBox*)self);
-}
-
-void k_datecombobox_super_create(void* self) {
-    KDateComboBox_SuperCreate((KDateComboBox*)self);
-}
-
-void k_datecombobox_on_create(void* self, void (*callback)()) {
-    KDateComboBox_OnCreate((KDateComboBox*)self, (intptr_t)callback);
 }
 
 void k_datecombobox_destroy(void* self) {
     KDateComboBox_Destroy((KDateComboBox*)self);
 }
 
-void k_datecombobox_super_destroy(void* self) {
-    KDateComboBox_SuperDestroy((KDateComboBox*)self);
-}
-
-void k_datecombobox_on_destroy(void* self, void (*callback)()) {
-    KDateComboBox_OnDestroy((KDateComboBox*)self, (intptr_t)callback);
-}
-
 bool k_datecombobox_focus_next_child(void* self) {
     return KDateComboBox_FocusNextChild((KDateComboBox*)self);
-}
-
-bool k_datecombobox_super_focus_next_child(void* self) {
-    return KDateComboBox_SuperFocusNextChild((KDateComboBox*)self);
-}
-
-void k_datecombobox_on_focus_next_child(void* self, bool (*callback)()) {
-    KDateComboBox_OnFocusNextChild((KDateComboBox*)self, (intptr_t)callback);
 }
 
 bool k_datecombobox_focus_previous_child(void* self) {
     return KDateComboBox_FocusPreviousChild((KDateComboBox*)self);
 }
 
-bool k_datecombobox_super_focus_previous_child(void* self) {
-    return KDateComboBox_SuperFocusPreviousChild((KDateComboBox*)self);
-}
-
-void k_datecombobox_on_focus_previous_child(void* self, bool (*callback)()) {
-    KDateComboBox_OnFocusPreviousChild((KDateComboBox*)self, (intptr_t)callback);
-}
-
-QObject* k_datecombobox_sender(void* self) {
+QObject* k_datecombobox_sender(const void* self) {
     return KDateComboBox_Sender((KDateComboBox*)self);
 }
 
-QObject* k_datecombobox_super_sender(void* self) {
-    return KDateComboBox_SuperSender((KDateComboBox*)self);
-}
-
-void k_datecombobox_on_sender(void* self, QObject* (*callback)()) {
-    KDateComboBox_OnSender((KDateComboBox*)self, (intptr_t)callback);
-}
-
-int32_t k_datecombobox_sender_signal_index(void* self) {
+int32_t k_datecombobox_sender_signal_index(const void* self) {
     return KDateComboBox_SenderSignalIndex((KDateComboBox*)self);
 }
 
-int32_t k_datecombobox_super_sender_signal_index(void* self) {
-    return KDateComboBox_SuperSenderSignalIndex((KDateComboBox*)self);
-}
-
-void k_datecombobox_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KDateComboBox_OnSenderSignalIndex((KDateComboBox*)self, (intptr_t)callback);
-}
-
-int32_t k_datecombobox_receivers(void* self, const char* signal) {
+int32_t k_datecombobox_receivers(const void* self, const char* signal) {
     return KDateComboBox_Receivers((KDateComboBox*)self, signal);
 }
 
-int32_t k_datecombobox_super_receivers(void* self, const char* signal) {
-    return KDateComboBox_SuperReceivers((KDateComboBox*)self, signal);
-}
-
-void k_datecombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KDateComboBox_OnReceivers((KDateComboBox*)self, (intptr_t)callback);
-}
-
-bool k_datecombobox_is_signal_connected(void* self, void* signal) {
+bool k_datecombobox_is_signal_connected(const void* self, const void* signal) {
     return KDateComboBox_IsSignalConnected((KDateComboBox*)self, (QMetaMethod*)signal);
 }
 
-bool k_datecombobox_super_is_signal_connected(void* self, void* signal) {
-    return KDateComboBox_SuperIsSignalConnected((KDateComboBox*)self, (QMetaMethod*)signal);
-}
-
-void k_datecombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KDateComboBox_OnIsSignalConnected((KDateComboBox*)self, (intptr_t)callback);
-}
-
-double k_datecombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+double k_datecombobox_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB) {
     return KDateComboBox_GetDecodedMetricF((KDateComboBox*)self, metricA, metricB);
-}
-
-double k_datecombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KDateComboBox_SuperGetDecodedMetricF((KDateComboBox*)self, metricA, metricB);
-}
-
-void k_datecombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
-    KDateComboBox_OnGetDecodedMetricF((KDateComboBox*)self, (intptr_t)callback);
 }
 
 void k_datecombobox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

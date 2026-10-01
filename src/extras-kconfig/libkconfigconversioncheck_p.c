@@ -1,7 +1,7 @@
 #include "libkconfigconversioncheck_p.hpp"
 #include "libkconfigconversioncheck_p.h"
 
-KConfigConversionCheck__supported* k_configconversioncheck__supported_new(void* other) {
+KConfigConversionCheck__supported* k_configconversioncheck__supported_new(const void* other) {
     return KConfigConversionCheck__supported_New((KConfigConversionCheck__supported*)other);
 }
 
@@ -21,7 +21,7 @@ void k_configconversioncheck__supported_delete(void* self) {
     KConfigConversionCheck__supported_Delete((KConfigConversionCheck__supported*)(self));
 }
 
-KConfigConversionCheck__unsupported* k_configconversioncheck__unsupported_new(void* other) {
+KConfigConversionCheck__unsupported* k_configconversioncheck__unsupported_new(const void* other) {
     return KConfigConversionCheck__unsupported_New((KConfigConversionCheck__unsupported*)other);
 }
 

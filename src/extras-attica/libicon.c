@@ -6,23 +6,23 @@ Attica__Icon* k_attica__icon_new() {
     return Attica__Icon_New();
 }
 
-Attica__Icon* k_attica__icon_new2(void* other) {
+Attica__Icon* k_attica__icon_new2(const void* other) {
     return Attica__Icon_New2((Attica__Icon*)other);
 }
 
-void k_attica__icon_operator_assign(void* self, void* other) {
+void k_attica__icon_operator_assign(void* self, const void* other) {
     Attica__Icon_OperatorAssign((Attica__Icon*)self, (Attica__Icon*)other);
 }
 
-QUrl* k_attica__icon_url(void* self) {
+QUrl* k_attica__icon_url(const void* self) {
     return Attica__Icon_Url((Attica__Icon*)self);
 }
 
-void k_attica__icon_set_url(void* self, void* url) {
+void k_attica__icon_set_url(void* self, const void* url) {
     Attica__Icon_SetUrl((Attica__Icon*)self, (QUrl*)url);
 }
 
-uint32_t k_attica__icon_width(void* self) {
+uint32_t k_attica__icon_width(const void* self) {
     return Attica__Icon_Width((Attica__Icon*)self);
 }
 
@@ -30,7 +30,7 @@ void k_attica__icon_set_width(void* self, uint32_t width) {
     Attica__Icon_SetWidth((Attica__Icon*)self, width);
 }
 
-uint32_t k_attica__icon_height(void* self) {
+uint32_t k_attica__icon_height(const void* self) {
     return Attica__Icon_Height((Attica__Icon*)self);
 }
 

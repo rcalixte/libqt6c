@@ -1,7 +1,7 @@
 #include "libopenwith.hpp"
 #include "libopenwith.h"
 
-KIO__OpenWith* k_io__openwith_new(void* other) {
+KIO__OpenWith* k_io__openwith_new(const void* other) {
     return KIO__OpenWith_New((KIO__OpenWith*)other);
 }
 
@@ -25,11 +25,11 @@ KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new() {
     return KIO__OpenWith__AcceptResult_New();
 }
 
-KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new2(void* param1) {
+KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new2(const void* param1) {
     return KIO__OpenWith__AcceptResult_New2((KIO__OpenWith__AcceptResult*)param1);
 }
 
-bool k_io__openwith__acceptresult_accept(void* self) {
+bool k_io__openwith__acceptresult_accept(const void* self) {
     return KIO__OpenWith__AcceptResult_Accept((KIO__OpenWith__AcceptResult*)self);
 }
 
@@ -37,7 +37,7 @@ void k_io__openwith__acceptresult_set_accept(void* self, bool accept) {
     KIO__OpenWith__AcceptResult_SetAccept((KIO__OpenWith__AcceptResult*)self, accept);
 }
 
-const char* k_io__openwith__acceptresult_error(void* self) {
+const char* k_io__openwith__acceptresult_error(const void* self) {
     libqt_string error_str = KIO__OpenWith__AcceptResult_Error((KIO__OpenWith__AcceptResult*)self);
     char* error_ret = qstring_to_char(error_str);
     libqt_string_free(&error_str);
@@ -48,7 +48,7 @@ void k_io__openwith__acceptresult_set_error(void* self, const char* error) {
     KIO__OpenWith__AcceptResult_SetError((KIO__OpenWith__AcceptResult*)self, qstring(error));
 }
 
-bool k_io__openwith__acceptresult_rebuild_sycoca(void* self) {
+bool k_io__openwith__acceptresult_rebuild_sycoca(const void* self) {
     return KIO__OpenWith__AcceptResult_RebuildSycoca((KIO__OpenWith__AcceptResult*)self);
 }
 
@@ -56,7 +56,7 @@ void k_io__openwith__acceptresult_set_rebuild_sycoca(void* self, bool rebuildSyc
     KIO__OpenWith__AcceptResult_SetRebuildSycoca((KIO__OpenWith__AcceptResult*)self, rebuildSycoca);
 }
 
-void k_io__openwith__acceptresult_operator_assign(void* self, void* param1) {
+void k_io__openwith__acceptresult_operator_assign(void* self, const void* param1) {
     KIO__OpenWith__AcceptResult_OperatorAssign((KIO__OpenWith__AcceptResult*)self, (KIO__OpenWith__AcceptResult*)param1);
 }
 

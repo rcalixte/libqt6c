@@ -14,7 +14,7 @@
 ///
 /// @param other QGenericPluginFactory*
 ///
-QGenericPluginFactory* q_genericpluginfactory_new(void* other);
+QGenericPluginFactory* q_genericpluginfactory_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericpluginfactory.html)
 

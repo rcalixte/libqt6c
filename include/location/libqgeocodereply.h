@@ -29,26 +29,26 @@ QGeoCodeReply* q_geocodereply_new2(int32_t error, const char* errorString, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-const QMetaObject* q_geocodereply_meta_object(void* self);
+const QMetaObject* q_geocodereply_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGeoCodeReply*
-/// @param callback const QMetaObject* func()
+/// @param self const QGeoCodeReply*
+/// @param callback const QMetaObject* func(const QGeoCodeReply* self)
 ///
-void q_geocodereply_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_geocodereply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-const QMetaObject* q_geocodereply_super_meta_object(void* self);
+const QMetaObject* q_geocodereply_super_meta_object(const void* self);
 
 /// @param self QGeoCodeReply*
 /// @param param1 const char*
@@ -102,51 +102,51 @@ const char* q_geocodereply_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#isFinished)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-bool q_geocodereply_is_finished(void* self);
+bool q_geocodereply_is_finished(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#error)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
 /// @return enum QGeoCodeReply__Error
 ///
-int32_t q_geocodereply_error(void* self);
+int32_t q_geocodereply_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-const char* q_geocodereply_error_string(void* self);
+const char* q_geocodereply_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#viewport)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-QGeoShape* q_geocodereply_viewport(void* self);
+QGeoShape* q_geocodereply_viewport(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#locations)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
 /// @return libqt_list of QGeoLocation*
 ///
-libqt_list q_geocodereply_locations(void* self);
+libqt_list q_geocodereply_locations(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#limit)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-intptr_t q_geocodereply_limit(void* self);
+intptr_t q_geocodereply_limit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#offset)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-intptr_t q_geocodereply_offset(void* self);
+intptr_t q_geocodereply_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#abort)
 ///
@@ -159,9 +159,9 @@ void q_geocodereply_abort(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoCodeReply*
-/// @param callback void func()
+/// @param callback void func(QGeoCodeReply* self)
 ///
-void q_geocodereply_on_abort(void* self, void (*callback)());
+void q_geocodereply_on_abort(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#abort)
 ///
@@ -219,25 +219,6 @@ void q_geocodereply_on_error_occurred(void* self, void (*callback)(void*, int32_
 ///
 void q_geocodereply_set_error(void* self, int32_t error, const char* errorString);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setError)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, enum QGeoCodeReply__Error error, const char* errorString)
-///
-void q_geocodereply_on_set_error(void* self, void (*callback)(void*, int32_t, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setError)
-///
-/// Base class method implementation
-///
-/// @param self QGeoCodeReply*
-/// @param error enum QGeoCodeReply__Error
-/// @param errorString const char*
-///
-void q_geocodereply_super_set_error(void* self, int32_t error, const char* errorString);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setFinished)
 ///
 /// @param self QGeoCodeReply*
@@ -245,73 +226,19 @@ void q_geocodereply_super_set_error(void* self, int32_t error, const char* error
 ///
 void q_geocodereply_set_finished(void* self, bool finished);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setFinished)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, bool finished)
-///
-void q_geocodereply_on_set_finished(void* self, void (*callback)(void*, bool));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setFinished)
-///
-/// Base class method implementation
-///
-/// @param self QGeoCodeReply*
-/// @param finished bool
-///
-void q_geocodereply_super_set_finished(void* self, bool finished);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setViewport)
 ///
 /// @param self QGeoCodeReply*
 /// @param viewport QGeoShape*
 ///
-void q_geocodereply_set_viewport(void* self, void* viewport);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setViewport)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, QGeoShape* viewport)
-///
-void q_geocodereply_on_set_viewport(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setViewport)
-///
-/// Base class method implementation
-///
-/// @param self QGeoCodeReply*
-/// @param viewport QGeoShape*
-///
-void q_geocodereply_super_set_viewport(void* self, void* viewport);
+void q_geocodereply_set_viewport(void* self, const void* viewport);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#addLocation)
 ///
 /// @param self QGeoCodeReply*
 /// @param location QGeoLocation*
 ///
-void q_geocodereply_add_location(void* self, void* location);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#addLocation)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, QGeoLocation* location)
-///
-void q_geocodereply_on_add_location(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#addLocation)
-///
-/// Base class method implementation
-///
-/// @param self QGeoCodeReply*
-/// @param location QGeoLocation*
-///
-void q_geocodereply_super_add_location(void* self, void* location);
+void q_geocodereply_add_location(void* self, const void* location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLocations)
 ///
@@ -320,24 +247,6 @@ void q_geocodereply_super_add_location(void* self, void* location);
 ///
 void q_geocodereply_set_locations(void* self, libqt_list locations);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLocations)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, libqt_list of QGeoLocation* locations)
-///
-void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, libqt_list));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLocations)
-///
-/// Base class method implementation
-///
-/// @param self QGeoCodeReply*
-/// @param locations libqt_list of QGeoLocation*
-///
-void q_geocodereply_super_set_locations(void* self, libqt_list locations);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLimit)
 ///
 /// @param self QGeoCodeReply*
@@ -345,48 +254,12 @@ void q_geocodereply_super_set_locations(void* self, libqt_list locations);
 ///
 void q_geocodereply_set_limit(void* self, intptr_t limit);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLimit)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, intptr_t limit)
-///
-void q_geocodereply_on_set_limit(void* self, void (*callback)(void*, intptr_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLimit)
-///
-/// Base class method implementation
-///
-/// @param self QGeoCodeReply*
-/// @param limit intptr_t
-///
-void q_geocodereply_super_set_limit(void* self, intptr_t limit);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setOffset)
 ///
 /// @param self QGeoCodeReply*
 /// @param offset intptr_t
 ///
 void q_geocodereply_set_offset(void* self, intptr_t offset);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setOffset)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, intptr_t offset)
-///
-void q_geocodereply_on_set_offset(void* self, void (*callback)(void*, intptr_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setOffset)
-///
-/// Base class method implementation
-///
-/// @param self QGeoCodeReply*
-/// @param offset intptr_t
-///
-void q_geocodereply_super_set_offset(void* self, intptr_t offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -428,9 +301,9 @@ void q_geocodereply_on_error_occurred2(void* self, void (*callback)(void*, int32
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-const char* q_geocodereply_object_name(void* self);
+const char* q_geocodereply_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -445,33 +318,33 @@ void q_geocodereply_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-bool q_geocodereply_is_widget_type(void* self);
+bool q_geocodereply_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-bool q_geocodereply_is_window_type(void* self);
+bool q_geocodereply_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-bool q_geocodereply_is_quick_item_type(void* self);
+bool q_geocodereply_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-bool q_geocodereply_signals_blocked(void* self);
+bool q_geocodereply_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -486,9 +359,9 @@ bool q_geocodereply_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-QThread* q_geocodereply_thread(void* self);
+QThread* q_geocodereply_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -539,11 +412,11 @@ void q_geocodereply_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_geocodereply_children(void* self);
+libqt_list q_geocodereply_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -581,7 +454,7 @@ void q_geocodereply_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_geocodereply_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_geocodereply_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -592,18 +465,18 @@ QMetaObject__Connection* q_geocodereply_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_geocodereply_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_geocodereply_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_geocodereply_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_geocodereply_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -614,7 +487,7 @@ QMetaObject__Connection* q_geocodereply_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_geocodereply_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_geocodereply_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -625,24 +498,24 @@ bool q_geocodereply_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_geocodereply_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_geocodereply_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-bool q_geocodereply_disconnect3(void* self);
+bool q_geocodereply_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param receiver QObject*
 ///
-bool q_geocodereply_disconnect4(void* self, void* receiver);
+bool q_geocodereply_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -650,23 +523,23 @@ bool q_geocodereply_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_geocodereply_disconnect5(void* param1);
+bool q_geocodereply_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-void q_geocodereply_dump_object_tree(void* self);
+void q_geocodereply_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-void q_geocodereply_dump_object_info(void* self);
+void q_geocodereply_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -676,16 +549,16 @@ void q_geocodereply_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_geocodereply_set_property(void* self, const char* name, void* value);
+bool q_geocodereply_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param name const char*
 ///
-QVariant* q_geocodereply_property(void* self, const char* name);
+QVariant* q_geocodereply_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -693,9 +566,9 @@ QVariant* q_geocodereply_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-const char** q_geocodereply_dynamic_property_names(void* self);
+const char** q_geocodereply_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -709,9 +582,9 @@ QBindingStorage* q_geocodereply_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-const QBindingStorage* q_geocodereply_binding_storage2(void* self);
+const QBindingStorage* q_geocodereply_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -734,18 +607,18 @@ void q_geocodereply_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-QObject* q_geocodereply_parent(void* self);
+QObject* q_geocodereply_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param classname const char*
 ///
-bool q_geocodereply_inherits(void* self, const char* classname);
+bool q_geocodereply_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -785,7 +658,7 @@ int32_t q_geocodereply_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_geocodereply_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_geocodereply_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -797,59 +670,59 @@ QMetaObject__Connection* q_geocodereply_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_geocodereply_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_geocodereply_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_geocodereply_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_geocodereply_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param signal const char*
 ///
-bool q_geocodereply_disconnect1(void* self, const char* signal);
+bool q_geocodereply_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoCodeReply*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_geocodereply_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_geocodereply_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_geocodereply_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_geocodereply_disconnect23(void* self, void* receiver, const char* member);
+bool q_geocodereply_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGeoCodeReply*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_geocodereply_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1045,7 +918,7 @@ void q_geocodereply_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QGeoCodeReply*
 /// @param signal QMetaMethod*
 ///
-void q_geocodereply_connect_notify(void* self, void* signal);
+void q_geocodereply_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1056,7 +929,7 @@ void q_geocodereply_connect_notify(void* self, void* signal);
 /// @param self QGeoCodeReply*
 /// @param signal QMetaMethod*
 ///
-void q_geocodereply_super_connect_notify(void* self, void* signal);
+void q_geocodereply_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1067,7 +940,7 @@ void q_geocodereply_super_connect_notify(void* self, void* signal);
 /// @param self QGeoCodeReply*
 /// @param callback void func(QGeoCodeReply* self, QMetaMethod* signal)
 ///
-void q_geocodereply_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_geocodereply_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1078,7 +951,7 @@ void q_geocodereply_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QGeoCodeReply*
 /// @param signal QMetaMethod*
 ///
-void q_geocodereply_disconnect_notify(void* self, void* signal);
+void q_geocodereply_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1089,7 +962,7 @@ void q_geocodereply_disconnect_notify(void* self, void* signal);
 /// @param self QGeoCodeReply*
 /// @param signal QMetaMethod*
 ///
-void q_geocodereply_super_disconnect_notify(void* self, void* signal);
+void q_geocodereply_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1100,7 +973,7 @@ void q_geocodereply_super_disconnect_notify(void* self, void* signal);
 /// @param self QGeoCodeReply*
 /// @param callback void func(QGeoCodeReply* self, QMetaMethod* signal)
 ///
-void q_geocodereply_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_geocodereply_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1108,9 +981,9 @@ void q_geocodereply_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-QObject* q_geocodereply_sender(void* self);
+QObject* q_geocodereply_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1118,9 +991,9 @@ QObject* q_geocodereply_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-QObject* q_geocodereply_super_sender(void* self);
+QObject* q_geocodereply_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1128,10 +1001,10 @@ QObject* q_geocodereply_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGeoCodeReply*
-/// @param callback QObject* func()
+/// @param self const QGeoCodeReply*
+/// @param callback QObject* func(QGeoCodeReply* self)
 ///
-void q_geocodereply_on_sender(void* self, QObject* (*callback)());
+void q_geocodereply_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1139,9 +1012,9 @@ void q_geocodereply_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-int32_t q_geocodereply_sender_signal_index(void* self);
+int32_t q_geocodereply_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1149,9 +1022,9 @@ int32_t q_geocodereply_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 ///
-int32_t q_geocodereply_super_sender_signal_index(void* self);
+int32_t q_geocodereply_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1159,10 +1032,10 @@ int32_t q_geocodereply_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGeoCodeReply*
-/// @param callback int32_t func()
+/// @param self const QGeoCodeReply*
+/// @param callback int32_t func(QGeoCodeReply* self)
 ///
-void q_geocodereply_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_geocodereply_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1170,10 +1043,10 @@ void q_geocodereply_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param signal const char*
 ///
-int32_t q_geocodereply_receivers(void* self, const char* signal);
+int32_t q_geocodereply_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1181,10 +1054,10 @@ int32_t q_geocodereply_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param signal const char*
 ///
-int32_t q_geocodereply_super_receivers(void* self, const char* signal);
+int32_t q_geocodereply_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1192,10 +1065,10 @@ int32_t q_geocodereply_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param callback int32_t func(QGeoCodeReply* self, const char* signal)
 ///
-void q_geocodereply_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_geocodereply_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1203,10 +1076,10 @@ void q_geocodereply_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param signal QMetaMethod*
 ///
-bool q_geocodereply_is_signal_connected(void* self, void* signal);
+bool q_geocodereply_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1214,10 +1087,10 @@ bool q_geocodereply_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param signal QMetaMethod*
 ///
-bool q_geocodereply_super_is_signal_connected(void* self, void* signal);
+bool q_geocodereply_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1225,10 +1098,10 @@ bool q_geocodereply_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGeoCodeReply*
+/// @param self const QGeoCodeReply*
 /// @param callback bool func(QGeoCodeReply* self, QMetaMethod* signal)
 ///
-void q_geocodereply_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_geocodereply_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

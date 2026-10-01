@@ -3,7 +3,7 @@
 #include "libqopenglversionfunctionsfactory.hpp"
 #include "libqopenglversionfunctionsfactory.h"
 
-QOpenGLVersionFunctionsFactory* q_openglversionfunctionsfactory_new(void* other) {
+QOpenGLVersionFunctionsFactory* q_openglversionfunctionsfactory_new(const void* other) {
     return QOpenGLVersionFunctionsFactory_New((QOpenGLVersionFunctionsFactory*)other);
 }
 
@@ -23,11 +23,11 @@ QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get() {
     return QOpenGLVersionFunctionsFactory_Get();
 }
 
-QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get1(void* versionProfile) {
+QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get1(const void* versionProfile) {
     return QOpenGLVersionFunctionsFactory_Get1((QOpenGLVersionProfile*)versionProfile);
 }
 
-QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get2(void* versionProfile, void* context) {
+QAbstractOpenGLFunctions* q_openglversionfunctionsfactory_get2(const void* versionProfile, void* context) {
     return QOpenGLVersionFunctionsFactory_Get2((QOpenGLVersionProfile*)versionProfile, (QOpenGLContext*)context);
 }
 

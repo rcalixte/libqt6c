@@ -21,15 +21,15 @@ KExtraColumnsProxyModel* k_extracolumnsproxymodel_new2(void* parent) {
     return KExtraColumnsProxyModel_New2((QObject*)parent);
 }
 
-const QMetaObject* k_extracolumnsproxymodel_meta_object(void* self) {
+const QMetaObject* k_extracolumnsproxymodel_meta_object(const void* self) {
     return KExtraColumnsProxyModel_MetaObject((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_extracolumnsproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KExtraColumnsProxyModel_OnMetaObject((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_extracolumnsproxymodel_super_meta_object(void* self) {
+const QMetaObject* k_extracolumnsproxymodel_super_meta_object(const void* self) {
     return KExtraColumnsProxyModel_SuperMetaObject((KExtraColumnsProxyModel*)self);
 }
 
@@ -72,39 +72,35 @@ void k_extracolumnsproxymodel_remove_extra_column(void* self, int idx) {
     KExtraColumnsProxyModel_RemoveExtraColumn((KExtraColumnsProxyModel*)self, idx);
 }
 
-QVariant* k_extracolumnsproxymodel_extra_column_data(void* self, void* parent, int row, int extraColumn, int role) {
+QVariant* k_extracolumnsproxymodel_extra_column_data(const void* self, const void* parent, int row, int extraColumn, int role) {
     return KExtraColumnsProxyModel_ExtraColumnData((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, row, extraColumn, role);
 }
 
-void k_extracolumnsproxymodel_on_extra_column_data(void* self, QVariant* (*callback)(void*, void*, int, int, int)) {
+void k_extracolumnsproxymodel_on_extra_column_data(const void* self, QVariant* (*callback)(const void*, const void*, int, int, int)) {
     KExtraColumnsProxyModel_OnExtraColumnData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_extracolumnsproxymodel_super_extra_column_data(void* self, void* parent, int row, int extraColumn, int role) {
-    return KExtraColumnsProxyModel_SuperExtraColumnData((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, row, extraColumn, role);
-}
-
-bool k_extracolumnsproxymodel_set_extra_column_data(void* self, void* parent, int row, int extraColumn, void* data, int role) {
+bool k_extracolumnsproxymodel_set_extra_column_data(void* self, const void* parent, int row, int extraColumn, const void* data, int role) {
     return KExtraColumnsProxyModel_SetExtraColumnData((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, row, extraColumn, (QVariant*)data, role);
 }
 
-void k_extracolumnsproxymodel_on_set_extra_column_data(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void k_extracolumnsproxymodel_on_set_extra_column_data(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     KExtraColumnsProxyModel_OnSetExtraColumnData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_super_set_extra_column_data(void* self, void* parent, int row, int extraColumn, void* data, int role) {
+bool k_extracolumnsproxymodel_super_set_extra_column_data(void* self, const void* parent, int row, int extraColumn, const void* data, int role) {
     return KExtraColumnsProxyModel_SuperSetExtraColumnData((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, row, extraColumn, (QVariant*)data, role);
 }
 
-void k_extracolumnsproxymodel_extra_column_data_changed(void* self, void* parent, int row, int extraColumn, libqt_list /* of int */ roles) {
+void k_extracolumnsproxymodel_extra_column_data_changed(void* self, const void* parent, int row, int extraColumn, libqt_list /* of int */ roles) {
     KExtraColumnsProxyModel_ExtraColumnDataChanged((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, row, extraColumn, roles);
 }
 
-int32_t k_extracolumnsproxymodel_extra_column_for_proxy_column(void* self, int proxyColumn) {
+int32_t k_extracolumnsproxymodel_extra_column_for_proxy_column(const void* self, int proxyColumn) {
     return KExtraColumnsProxyModel_ExtraColumnForProxyColumn((KExtraColumnsProxyModel*)self, proxyColumn);
 }
 
-int32_t k_extracolumnsproxymodel_proxy_column_for_extra_column(void* self, int extraColumn) {
+int32_t k_extracolumnsproxymodel_proxy_column_for_extra_column(const void* self, int extraColumn) {
     return KExtraColumnsProxyModel_ProxyColumnForExtraColumn((KExtraColumnsProxyModel*)self, extraColumn);
 }
 
@@ -120,147 +116,147 @@ void k_extracolumnsproxymodel_super_set_source_model(void* self, void* model) {
     KExtraColumnsProxyModel_SuperSetSourceModel((KExtraColumnsProxyModel*)self, (QAbstractItemModel*)model);
 }
 
-QModelIndex* k_extracolumnsproxymodel_map_to_source(void* self, void* proxyIndex) {
+QModelIndex* k_extracolumnsproxymodel_map_to_source(const void* self, const void* proxyIndex) {
     return KExtraColumnsProxyModel_MapToSource((KExtraColumnsProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-void k_extracolumnsproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KExtraColumnsProxyModel_OnMapToSource((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_extracolumnsproxymodel_super_map_to_source(void* self, void* proxyIndex) {
+QModelIndex* k_extracolumnsproxymodel_super_map_to_source(const void* self, const void* proxyIndex) {
     return KExtraColumnsProxyModel_SuperMapToSource((KExtraColumnsProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-QItemSelection* k_extracolumnsproxymodel_map_selection_to_source(void* self, void* selection) {
+QItemSelection* k_extracolumnsproxymodel_map_selection_to_source(const void* self, const void* selection) {
     return KExtraColumnsProxyModel_MapSelectionToSource((KExtraColumnsProxyModel*)self, (QItemSelection*)selection);
 }
 
-void k_extracolumnsproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
     KExtraColumnsProxyModel_OnMapSelectionToSource((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* k_extracolumnsproxymodel_super_map_selection_to_source(void* self, void* selection) {
+QItemSelection* k_extracolumnsproxymodel_super_map_selection_to_source(const void* self, const void* selection) {
     return KExtraColumnsProxyModel_SuperMapSelectionToSource((KExtraColumnsProxyModel*)self, (QItemSelection*)selection);
 }
 
-int32_t k_extracolumnsproxymodel_column_count(void* self, void* parent) {
+int32_t k_extracolumnsproxymodel_column_count(const void* self, const void* parent) {
     return KExtraColumnsProxyModel_ColumnCount((KExtraColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
     KExtraColumnsProxyModel_OnColumnCount((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_extracolumnsproxymodel_super_column_count(void* self, void* parent) {
+int32_t k_extracolumnsproxymodel_super_column_count(const void* self, const void* parent) {
     return KExtraColumnsProxyModel_SuperColumnCount((KExtraColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-QVariant* k_extracolumnsproxymodel_data(void* self, void* index, int role) {
+QVariant* k_extracolumnsproxymodel_data(const void* self, const void* index, int role) {
     return KExtraColumnsProxyModel_Data((KExtraColumnsProxyModel*)self, (QModelIndex*)index, role);
 }
 
-void k_extracolumnsproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)) {
+void k_extracolumnsproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
     KExtraColumnsProxyModel_OnData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_extracolumnsproxymodel_super_data(void* self, void* index, int role) {
+QVariant* k_extracolumnsproxymodel_super_data(const void* self, const void* index, int role) {
     return KExtraColumnsProxyModel_SuperData((KExtraColumnsProxyModel*)self, (QModelIndex*)index, role);
 }
 
-bool k_extracolumnsproxymodel_set_data(void* self, void* index, void* value, int role) {
+bool k_extracolumnsproxymodel_set_data(void* self, const void* index, const void* value, int role) {
     return KExtraColumnsProxyModel_SetData((KExtraColumnsProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-void k_extracolumnsproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
+void k_extracolumnsproxymodel_on_set_data(void* self, bool (*callback)(void*, const void*, const void*, int)) {
     KExtraColumnsProxyModel_OnSetData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_super_set_data(void* self, void* index, void* value, int role) {
+bool k_extracolumnsproxymodel_super_set_data(void* self, const void* index, const void* value, int role) {
     return KExtraColumnsProxyModel_SuperSetData((KExtraColumnsProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-QModelIndex* k_extracolumnsproxymodel_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* k_extracolumnsproxymodel_sibling(const void* self, int row, int column, const void* idx) {
     return KExtraColumnsProxyModel_Sibling((KExtraColumnsProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_extracolumnsproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
+void k_extracolumnsproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     KExtraColumnsProxyModel_OnSibling((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_extracolumnsproxymodel_super_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* k_extracolumnsproxymodel_super_sibling(const void* self, int row, int column, const void* idx) {
     return KExtraColumnsProxyModel_SuperSibling((KExtraColumnsProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_extracolumnsproxymodel_buddy(void* self, void* index) {
+QModelIndex* k_extracolumnsproxymodel_buddy(const void* self, const void* index) {
     return KExtraColumnsProxyModel_Buddy((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_extracolumnsproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KExtraColumnsProxyModel_OnBuddy((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_extracolumnsproxymodel_super_buddy(void* self, void* index) {
+QModelIndex* k_extracolumnsproxymodel_super_buddy(const void* self, const void* index) {
     return KExtraColumnsProxyModel_SuperBuddy((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-int32_t k_extracolumnsproxymodel_flags(void* self, void* index) {
+int32_t k_extracolumnsproxymodel_flags(const void* self, const void* index) {
     return KExtraColumnsProxyModel_Flags((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_extracolumnsproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
     KExtraColumnsProxyModel_OnFlags((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_extracolumnsproxymodel_super_flags(void* self, void* index) {
+int32_t k_extracolumnsproxymodel_super_flags(const void* self, const void* index) {
     return KExtraColumnsProxyModel_SuperFlags((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-bool k_extracolumnsproxymodel_has_children(void* self, void* index) {
+bool k_extracolumnsproxymodel_has_children(const void* self, const void* index) {
     return KExtraColumnsProxyModel_HasChildren((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_extracolumnsproxymodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
     KExtraColumnsProxyModel_OnHasChildren((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_super_has_children(void* self, void* index) {
+bool k_extracolumnsproxymodel_super_has_children(const void* self, const void* index) {
     return KExtraColumnsProxyModel_SuperHasChildren((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-QVariant* k_extracolumnsproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* k_extracolumnsproxymodel_header_data(const void* self, int section, int32_t orientation, int role) {
     return KExtraColumnsProxyModel_HeaderData((KExtraColumnsProxyModel*)self, section, orientation, role);
 }
 
-void k_extracolumnsproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
+void k_extracolumnsproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
     KExtraColumnsProxyModel_OnHeaderData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_extracolumnsproxymodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* k_extracolumnsproxymodel_super_header_data(const void* self, int section, int32_t orientation, int role) {
     return KExtraColumnsProxyModel_SuperHeaderData((KExtraColumnsProxyModel*)self, section, orientation, role);
 }
 
-QModelIndex* k_extracolumnsproxymodel_index(void* self, int row, int column, void* parent) {
+QModelIndex* k_extracolumnsproxymodel_index(const void* self, int row, int column, const void* parent) {
     return KExtraColumnsProxyModel_Index((KExtraColumnsProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
+void k_extracolumnsproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     KExtraColumnsProxyModel_OnIndex((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_extracolumnsproxymodel_super_index(void* self, int row, int column, void* parent) {
+QModelIndex* k_extracolumnsproxymodel_super_index(const void* self, int row, int column, const void* parent) {
     return KExtraColumnsProxyModel_SuperIndex((KExtraColumnsProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* k_extracolumnsproxymodel_parent(void* self, void* child) {
+QModelIndex* k_extracolumnsproxymodel_parent(const void* self, const void* child) {
     return KExtraColumnsProxyModel_Parent((KExtraColumnsProxyModel*)self, (QModelIndex*)child);
 }
 
-void k_extracolumnsproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KExtraColumnsProxyModel_OnParent((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_extracolumnsproxymodel_super_parent(void* self, void* child) {
+QModelIndex* k_extracolumnsproxymodel_super_parent(const void* self, const void* child) {
     return KExtraColumnsProxyModel_SuperParent((KExtraColumnsProxyModel*)self, (QModelIndex*)child);
 }
 
@@ -282,19 +278,19 @@ void k_extracolumnsproxymodel_append_column1(void* self, const char* header) {
     KExtraColumnsProxyModel_AppendColumn1((KExtraColumnsProxyModel*)self, qstring(header));
 }
 
-bool k_extracolumnsproxymodel_handle_source_layout_changes(void* self) {
+bool k_extracolumnsproxymodel_handle_source_layout_changes(const void* self) {
     return QIdentityProxyModel_HandleSourceLayoutChanges((QIdentityProxyModel*)self);
 }
 
-bool k_extracolumnsproxymodel_handle_source_data_changes(void* self) {
+bool k_extracolumnsproxymodel_handle_source_data_changes(const void* self) {
     return QIdentityProxyModel_HandleSourceDataChanges((QIdentityProxyModel*)self);
 }
 
-QAbstractItemModel* k_extracolumnsproxymodel_source_model(void* self) {
+QAbstractItemModel* k_extracolumnsproxymodel_source_model(const void* self) {
     return QAbstractProxyModel_SourceModel((QAbstractProxyModel*)self);
 }
 
-bool k_extracolumnsproxymodel_has_index(void* self, int row, int column) {
+bool k_extracolumnsproxymodel_has_index(const void* self, int row, int column) {
     return QAbstractItemModel_HasIndex((QAbstractItemModel*)self, row, column);
 }
 
@@ -314,23 +310,23 @@ bool k_extracolumnsproxymodel_remove_column(void* self, int column) {
     return QAbstractItemModel_RemoveColumn((QAbstractItemModel*)self, column);
 }
 
-bool k_extracolumnsproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild) {
+bool k_extracolumnsproxymodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveRow((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceRow, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_extracolumnsproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild) {
+bool k_extracolumnsproxymodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveColumn((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceColumn, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_extracolumnsproxymodel_check_index(void* self, void* index) {
+bool k_extracolumnsproxymodel_check_index(const void* self, const void* index) {
     return QAbstractItemModel_CheckIndex((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void k_extracolumnsproxymodel_data_changed(void* self, void* topLeft, void* bottomRight) {
+void k_extracolumnsproxymodel_data_changed(void* self, const void* topLeft, const void* bottomRight) {
     QAbstractItemModel_DataChanged((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
-void k_extracolumnsproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_extracolumnsproxymodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -358,35 +354,35 @@ void k_extracolumnsproxymodel_on_layout_about_to_be_changed(void* self, void (*c
     QAbstractItemModel_Connect_LayoutAboutToBeChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_has_index3(void* self, int row, int column, void* parent) {
+bool k_extracolumnsproxymodel_has_index3(const void* self, int row, int column, const void* parent) {
     return QAbstractItemModel_HasIndex3((QAbstractItemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_insert_row2(void* self, int row, void* parent) {
+bool k_extracolumnsproxymodel_insert_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_InsertRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_insert_column2(void* self, int column, void* parent) {
+bool k_extracolumnsproxymodel_insert_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_InsertColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_remove_row2(void* self, int row, void* parent) {
+bool k_extracolumnsproxymodel_remove_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_RemoveRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_remove_column2(void* self, int column, void* parent) {
+bool k_extracolumnsproxymodel_remove_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_check_index2(void* self, void* index, int32_t options) {
+bool k_extracolumnsproxymodel_check_index2(const void* self, const void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void k_extracolumnsproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+void k_extracolumnsproxymodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void k_extracolumnsproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
+void k_extracolumnsproxymodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -422,7 +418,7 @@ void k_extracolumnsproxymodel_on_layout_about_to_be_changed2(void* self, void (*
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-const char* k_extracolumnsproxymodel_object_name(void* self) {
+const char* k_extracolumnsproxymodel_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -433,19 +429,19 @@ void k_extracolumnsproxymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_extracolumnsproxymodel_is_widget_type(void* self) {
+bool k_extracolumnsproxymodel_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_extracolumnsproxymodel_is_window_type(void* self) {
+bool k_extracolumnsproxymodel_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_extracolumnsproxymodel_is_quick_item_type(void* self) {
+bool k_extracolumnsproxymodel_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_extracolumnsproxymodel_signals_blocked(void* self) {
+bool k_extracolumnsproxymodel_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -453,7 +449,7 @@ bool k_extracolumnsproxymodel_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_extracolumnsproxymodel_thread(void* self) {
+QThread* k_extracolumnsproxymodel_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -477,7 +473,7 @@ void k_extracolumnsproxymodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_extracolumnsproxymodel_children(void* self) {
+libqt_list /* of QObject* */ k_extracolumnsproxymodel_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -494,55 +490,55 @@ void k_extracolumnsproxymodel_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_extracolumnsproxymodel_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_extracolumnsproxymodel_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_extracolumnsproxymodel_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_extracolumnsproxymodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_extracolumnsproxymodel_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_extracolumnsproxymodel_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_extracolumnsproxymodel_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_extracolumnsproxymodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_extracolumnsproxymodel_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_extracolumnsproxymodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_extracolumnsproxymodel_disconnect3(void* self) {
+bool k_extracolumnsproxymodel_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_extracolumnsproxymodel_disconnect4(void* self, void* receiver) {
+bool k_extracolumnsproxymodel_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_extracolumnsproxymodel_disconnect5(void* param1) {
+bool k_extracolumnsproxymodel_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_extracolumnsproxymodel_dump_object_tree(void* self) {
+void k_extracolumnsproxymodel_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_extracolumnsproxymodel_dump_object_info(void* self) {
+void k_extracolumnsproxymodel_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_extracolumnsproxymodel_set_property(void* self, const char* name, void* value) {
+bool k_extracolumnsproxymodel_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_extracolumnsproxymodel_property(void* self, const char* name) {
+QVariant* k_extracolumnsproxymodel_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_extracolumnsproxymodel_dynamic_property_names(void* self) {
+const char** k_extracolumnsproxymodel_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -563,7 +559,7 @@ QBindingStorage* k_extracolumnsproxymodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_extracolumnsproxymodel_binding_storage2(void* self) {
+const QBindingStorage* k_extracolumnsproxymodel_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -575,7 +571,7 @@ void k_extracolumnsproxymodel_on_destroyed(void* self, void (*callback)(void*)) 
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_inherits(void* self, const char* classname) {
+bool k_extracolumnsproxymodel_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -591,31 +587,31 @@ int32_t k_extracolumnsproxymodel_start_timer23(void* self, int64_t time, int32_t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_extracolumnsproxymodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_extracolumnsproxymodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_extracolumnsproxymodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_extracolumnsproxymodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_extracolumnsproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_extracolumnsproxymodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_extracolumnsproxymodel_disconnect1(void* self, const char* signal) {
+bool k_extracolumnsproxymodel_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_extracolumnsproxymodel_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_extracolumnsproxymodel_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_extracolumnsproxymodel_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_extracolumnsproxymodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_extracolumnsproxymodel_disconnect23(void* self, void* receiver, const char* member) {
+bool k_extracolumnsproxymodel_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -627,137 +623,137 @@ void k_extracolumnsproxymodel_on_destroyed1(void* self, void (*callback)(void*, 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_extracolumnsproxymodel_map_from_source(void* self, void* sourceIndex) {
+QModelIndex* k_extracolumnsproxymodel_map_from_source(const void* self, const void* sourceIndex) {
     return KExtraColumnsProxyModel_MapFromSource((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-QModelIndex* k_extracolumnsproxymodel_super_map_from_source(void* self, void* sourceIndex) {
+QModelIndex* k_extracolumnsproxymodel_super_map_from_source(const void* self, const void* sourceIndex) {
     return KExtraColumnsProxyModel_SuperMapFromSource((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_extracolumnsproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*)) {
-    KExtraColumnsProxyModel_OnMapFromSource((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KExtraColumnsProxyModel_OnMapFromSource((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_extracolumnsproxymodel_row_count(void* self, void* parent) {
+int32_t k_extracolumnsproxymodel_row_count(const void* self, const void* parent) {
     return KExtraColumnsProxyModel_RowCount((KExtraColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-int32_t k_extracolumnsproxymodel_super_row_count(void* self, void* parent) {
+int32_t k_extracolumnsproxymodel_super_row_count(const void* self, const void* parent) {
     return KExtraColumnsProxyModel_SuperRowCount((KExtraColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*)) {
-    KExtraColumnsProxyModel_OnRowCount((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+    KExtraColumnsProxyModel_OnRowCount((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_extracolumnsproxymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KExtraColumnsProxyModel_DropMimeData((KExtraColumnsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_extracolumnsproxymodel_super_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KExtraColumnsProxyModel_SuperDropMimeData((KExtraColumnsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
+void k_extracolumnsproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, const void*, int32_t, int, int, const void*)) {
     KExtraColumnsProxyModel_OnDropMimeData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* k_extracolumnsproxymodel_map_selection_from_source(void* self, void* selection) {
+QItemSelection* k_extracolumnsproxymodel_map_selection_from_source(const void* self, const void* selection) {
     return KExtraColumnsProxyModel_MapSelectionFromSource((KExtraColumnsProxyModel*)self, (QItemSelection*)selection);
 }
 
-QItemSelection* k_extracolumnsproxymodel_super_map_selection_from_source(void* self, void* selection) {
+QItemSelection* k_extracolumnsproxymodel_super_map_selection_from_source(const void* self, const void* selection) {
     return KExtraColumnsProxyModel_SuperMapSelectionFromSource((KExtraColumnsProxyModel*)self, (QItemSelection*)selection);
 }
 
-void k_extracolumnsproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*)) {
-    KExtraColumnsProxyModel_OnMapSelectionFromSource((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    KExtraColumnsProxyModel_OnMapSelectionFromSource((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = KExtraColumnsProxyModel_Match((KExtraColumnsProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_super_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = KExtraColumnsProxyModel_SuperMatch((KExtraColumnsProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void k_extracolumnsproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
-    KExtraColumnsProxyModel_OnMatch((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    KExtraColumnsProxyModel_OnMatch((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_insert_columns(void* self, int column, int count, void* parent) {
+bool k_extracolumnsproxymodel_insert_columns(void* self, int column, int count, const void* parent) {
     return KExtraColumnsProxyModel_InsertColumns((KExtraColumnsProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_super_insert_columns(void* self, int column, int count, void* parent) {
+bool k_extracolumnsproxymodel_super_insert_columns(void* self, int column, int count, const void* parent) {
     return KExtraColumnsProxyModel_SuperInsertColumns((KExtraColumnsProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_extracolumnsproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, const void*)) {
     KExtraColumnsProxyModel_OnInsertColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_insert_rows(void* self, int row, int count, void* parent) {
+bool k_extracolumnsproxymodel_insert_rows(void* self, int row, int count, const void* parent) {
     return KExtraColumnsProxyModel_InsertRows((KExtraColumnsProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_super_insert_rows(void* self, int row, int count, void* parent) {
+bool k_extracolumnsproxymodel_super_insert_rows(void* self, int row, int count, const void* parent) {
     return KExtraColumnsProxyModel_SuperInsertRows((KExtraColumnsProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_extracolumnsproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, const void*)) {
     KExtraColumnsProxyModel_OnInsertRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_remove_columns(void* self, int column, int count, void* parent) {
+bool k_extracolumnsproxymodel_remove_columns(void* self, int column, int count, const void* parent) {
     return KExtraColumnsProxyModel_RemoveColumns((KExtraColumnsProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_super_remove_columns(void* self, int column, int count, void* parent) {
+bool k_extracolumnsproxymodel_super_remove_columns(void* self, int column, int count, const void* parent) {
     return KExtraColumnsProxyModel_SuperRemoveColumns((KExtraColumnsProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_extracolumnsproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, const void*)) {
     KExtraColumnsProxyModel_OnRemoveColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_remove_rows(void* self, int row, int count, void* parent) {
+bool k_extracolumnsproxymodel_remove_rows(void* self, int row, int count, const void* parent) {
     return KExtraColumnsProxyModel_RemoveRows((KExtraColumnsProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_super_remove_rows(void* self, int row, int count, void* parent) {
+bool k_extracolumnsproxymodel_super_remove_rows(void* self, int row, int count, const void* parent) {
     return KExtraColumnsProxyModel_SuperRemoveRows((KExtraColumnsProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_extracolumnsproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, const void*)) {
     KExtraColumnsProxyModel_OnRemoveRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool k_extracolumnsproxymodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return KExtraColumnsProxyModel_MoveRows((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_extracolumnsproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool k_extracolumnsproxymodel_super_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return KExtraColumnsProxyModel_SuperMoveRows((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void k_extracolumnsproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void k_extracolumnsproxymodel_on_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     KExtraColumnsProxyModel_OnMoveRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool k_extracolumnsproxymodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return KExtraColumnsProxyModel_MoveColumns((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_extracolumnsproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool k_extracolumnsproxymodel_super_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return KExtraColumnsProxyModel_SuperMoveColumns((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void k_extracolumnsproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void k_extracolumnsproxymodel_on_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     KExtraColumnsProxyModel_OnMoveColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -769,7 +765,7 @@ bool k_extracolumnsproxymodel_super_submit(void* self) {
     return KExtraColumnsProxyModel_SuperSubmit((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_on_submit(void* self, bool (*callback)()) {
+void k_extracolumnsproxymodel_on_submit(void* self, bool (*callback)(void*)) {
     KExtraColumnsProxyModel_OnSubmit((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -781,11 +777,11 @@ void k_extracolumnsproxymodel_super_revert(void* self) {
     KExtraColumnsProxyModel_SuperRevert((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_on_revert(void* self, void (*callback)()) {
+void k_extracolumnsproxymodel_on_revert(void* self, void (*callback)(void*)) {
     KExtraColumnsProxyModel_OnRevert((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to QVariant* */ k_extracolumnsproxymodel_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_extracolumnsproxymodel_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = KExtraColumnsProxyModel_ItemData((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -795,7 +791,7 @@ libqt_map /* of int to QVariant* */ k_extracolumnsproxymodel_item_data(void* sel
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_extracolumnsproxymodel_super_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_extracolumnsproxymodel_super_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = KExtraColumnsProxyModel_SuperItemData((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -805,11 +801,11 @@ libqt_map /* of int to QVariant* */ k_extracolumnsproxymodel_super_item_data(voi
     return _ret;
 }
 
-void k_extracolumnsproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
-    KExtraColumnsProxyModel_OnItemData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    KExtraColumnsProxyModel_OnItemData((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_extracolumnsproxymodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -838,7 +834,7 @@ bool k_extracolumnsproxymodel_set_item_data(void* self, void* index, libqt_map /
     return _out;
 }
 
-bool k_extracolumnsproxymodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_extracolumnsproxymodel_super_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -867,55 +863,55 @@ bool k_extracolumnsproxymodel_super_set_item_data(void* self, void* index, libqt
     return _out;
 }
 
-void k_extracolumnsproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
+void k_extracolumnsproxymodel_on_set_item_data(void* self, bool (*callback)(void*, const void*, libqt_map /* of int to QVariant* */)) {
     KExtraColumnsProxyModel_OnSetItemData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool k_extracolumnsproxymodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return KExtraColumnsProxyModel_SetHeaderData((KExtraColumnsProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_extracolumnsproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool k_extracolumnsproxymodel_super_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return KExtraColumnsProxyModel_SuperSetHeaderData((KExtraColumnsProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void k_extracolumnsproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
+void k_extracolumnsproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, const void*, int)) {
     KExtraColumnsProxyModel_OnSetHeaderData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_clear_item_data(void* self, void* index) {
+bool k_extracolumnsproxymodel_clear_item_data(void* self, const void* index) {
     return KExtraColumnsProxyModel_ClearItemData((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-bool k_extracolumnsproxymodel_super_clear_item_data(void* self, void* index) {
+bool k_extracolumnsproxymodel_super_clear_item_data(void* self, const void* index) {
     return KExtraColumnsProxyModel_SuperClearItemData((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_extracolumnsproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, const void*)) {
     KExtraColumnsProxyModel_OnClearItemData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_can_fetch_more(void* self, void* parent) {
+bool k_extracolumnsproxymodel_can_fetch_more(const void* self, const void* parent) {
     return KExtraColumnsProxyModel_CanFetchMore((KExtraColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_super_can_fetch_more(void* self, void* parent) {
+bool k_extracolumnsproxymodel_super_can_fetch_more(const void* self, const void* parent) {
     return KExtraColumnsProxyModel_SuperCanFetchMore((KExtraColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
-    KExtraColumnsProxyModel_OnCanFetchMore((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
+    KExtraColumnsProxyModel_OnCanFetchMore((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_fetch_more(void* self, void* parent) {
+void k_extracolumnsproxymodel_fetch_more(void* self, const void* parent) {
     KExtraColumnsProxyModel_FetchMore((KExtraColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_super_fetch_more(void* self, void* parent) {
+void k_extracolumnsproxymodel_super_fetch_more(void* self, const void* parent) {
     KExtraColumnsProxyModel_SuperFetchMore((KExtraColumnsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_fetch_more(void* self, void (*callback)(void*, const void*)) {
     KExtraColumnsProxyModel_OnFetchMore((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -931,43 +927,43 @@ void k_extracolumnsproxymodel_on_sort(void* self, void (*callback)(void*, int, i
     KExtraColumnsProxyModel_OnSort((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QSize* k_extracolumnsproxymodel_span(void* self, void* index) {
+QSize* k_extracolumnsproxymodel_span(const void* self, const void* index) {
     return KExtraColumnsProxyModel_Span((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_extracolumnsproxymodel_super_span(void* self, void* index) {
+QSize* k_extracolumnsproxymodel_super_span(const void* self, const void* index) {
     return KExtraColumnsProxyModel_SuperSpan((KExtraColumnsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_extracolumnsproxymodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
-    KExtraColumnsProxyModel_OnSpan((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
+    KExtraColumnsProxyModel_OnSpan((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-QMimeData* k_extracolumnsproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* k_extracolumnsproxymodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return KExtraColumnsProxyModel_MimeData((KExtraColumnsProxyModel*)self, indexes);
 }
 
-QMimeData* k_extracolumnsproxymodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* k_extracolumnsproxymodel_super_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return KExtraColumnsProxyModel_SuperMimeData((KExtraColumnsProxyModel*)self, indexes);
 }
 
-void k_extracolumnsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
-    KExtraColumnsProxyModel_OnMimeData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    KExtraColumnsProxyModel_OnMimeData((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_extracolumnsproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_extracolumnsproxymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KExtraColumnsProxyModel_CanDropMimeData((KExtraColumnsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_extracolumnsproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_extracolumnsproxymodel_super_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KExtraColumnsProxyModel_SuperCanDropMimeData((KExtraColumnsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_extracolumnsproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
-    KExtraColumnsProxyModel_OnCanDropMimeData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    KExtraColumnsProxyModel_OnCanDropMimeData((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-const char** k_extracolumnsproxymodel_mime_types(void* self) {
+const char** k_extracolumnsproxymodel_mime_types(const void* self) {
     libqt_list _arr = KExtraColumnsProxyModel_MimeTypes((KExtraColumnsProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -984,7 +980,7 @@ const char** k_extracolumnsproxymodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** k_extracolumnsproxymodel_super_mime_types(void* self) {
+const char** k_extracolumnsproxymodel_super_mime_types(const void* self) {
     libqt_list _arr = KExtraColumnsProxyModel_SuperMimeTypes((KExtraColumnsProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1001,35 +997,35 @@ const char** k_extracolumnsproxymodel_super_mime_types(void* self) {
     return _ret;
 }
 
-void k_extracolumnsproxymodel_on_mime_types(void* self, const char** (*callback)()) {
-    KExtraColumnsProxyModel_OnMimeTypes((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
+    KExtraColumnsProxyModel_OnMimeTypes((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_extracolumnsproxymodel_supported_drag_actions(void* self) {
+int32_t k_extracolumnsproxymodel_supported_drag_actions(const void* self) {
     return KExtraColumnsProxyModel_SupportedDragActions((KExtraColumnsProxyModel*)self);
 }
 
-int32_t k_extracolumnsproxymodel_super_supported_drag_actions(void* self) {
+int32_t k_extracolumnsproxymodel_super_supported_drag_actions(const void* self) {
     return KExtraColumnsProxyModel_SuperSupportedDragActions((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
-    KExtraColumnsProxyModel_OnSupportedDragActions((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
+    KExtraColumnsProxyModel_OnSupportedDragActions((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_extracolumnsproxymodel_supported_drop_actions(void* self) {
+int32_t k_extracolumnsproxymodel_supported_drop_actions(const void* self) {
     return KExtraColumnsProxyModel_SupportedDropActions((KExtraColumnsProxyModel*)self);
 }
 
-int32_t k_extracolumnsproxymodel_super_supported_drop_actions(void* self) {
+int32_t k_extracolumnsproxymodel_super_supported_drop_actions(const void* self) {
     return KExtraColumnsProxyModel_SuperSupportedDropActions((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
-    KExtraColumnsProxyModel_OnSupportedDropActions((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+    KExtraColumnsProxyModel_OnSupportedDropActions((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_extracolumnsproxymodel_role_names(void* self) {
+libqt_map /* of int to char* */ k_extracolumnsproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KExtraColumnsProxyModel_RoleNames((KExtraColumnsProxyModel*)self);
     libqt_map _ret;
@@ -1062,7 +1058,7 @@ libqt_map /* of int to char* */ k_extracolumnsproxymodel_role_names(void* self) 
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_extracolumnsproxymodel_super_role_names(void* self) {
+libqt_map /* of int to char* */ k_extracolumnsproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KExtraColumnsProxyModel_SuperRoleNames((KExtraColumnsProxyModel*)self);
     libqt_map _ret;
@@ -1095,20 +1091,20 @@ libqt_map /* of int to char* */ k_extracolumnsproxymodel_super_role_names(void* 
     return _ret;
 }
 
-void k_extracolumnsproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {
-    KExtraColumnsProxyModel_OnRoleNames((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    KExtraColumnsProxyModel_OnRoleNames((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_multi_data(void* self, void* index, void* roleDataSpan) {
+void k_extracolumnsproxymodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
     KExtraColumnsProxyModel_MultiData((KExtraColumnsProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_extracolumnsproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+void k_extracolumnsproxymodel_super_multi_data(const void* self, const void* index, void* roleDataSpan) {
     KExtraColumnsProxyModel_SuperMultiData((KExtraColumnsProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_extracolumnsproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
-    KExtraColumnsProxyModel_OnMultiData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
+void k_extracolumnsproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
+    KExtraColumnsProxyModel_OnMultiData((const KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_reset_internal_data(void* self) {
@@ -1119,7 +1115,7 @@ void k_extracolumnsproxymodel_super_reset_internal_data(void* self) {
     KExtraColumnsProxyModel_SuperResetInternalData((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_on_reset_internal_data(void* self, void (*callback)()) {
+void k_extracolumnsproxymodel_on_reset_internal_data(void* self, void (*callback)(void*)) {
     KExtraColumnsProxyModel_OnResetInternalData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1183,27 +1179,27 @@ void k_extracolumnsproxymodel_on_custom_event(void* self, void (*callback)(void*
     KExtraColumnsProxyModel_OnCustomEvent((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_connect_notify(void* self, void* signal) {
+void k_extracolumnsproxymodel_connect_notify(void* self, const void* signal) {
     KExtraColumnsProxyModel_ConnectNotify((KExtraColumnsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_extracolumnsproxymodel_super_connect_notify(void* self, void* signal) {
+void k_extracolumnsproxymodel_super_connect_notify(void* self, const void* signal) {
     KExtraColumnsProxyModel_SuperConnectNotify((KExtraColumnsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_extracolumnsproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KExtraColumnsProxyModel_OnConnectNotify((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_disconnect_notify(void* self, void* signal) {
+void k_extracolumnsproxymodel_disconnect_notify(void* self, const void* signal) {
     KExtraColumnsProxyModel_DisconnectNotify((KExtraColumnsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_extracolumnsproxymodel_super_disconnect_notify(void* self, void* signal) {
+void k_extracolumnsproxymodel_super_disconnect_notify(void* self, const void* signal) {
     KExtraColumnsProxyModel_SuperDisconnectNotify((KExtraColumnsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_extracolumnsproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_extracolumnsproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KExtraColumnsProxyModel_OnDisconnectNotify((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1211,361 +1207,144 @@ void k_extracolumnsproxymodel_set_handle_source_layout_changes(void* self, bool 
     KExtraColumnsProxyModel_SetHandleSourceLayoutChanges((KExtraColumnsProxyModel*)self, handleSourceLayoutChanges);
 }
 
-void k_extracolumnsproxymodel_super_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges) {
-    KExtraColumnsProxyModel_SuperSetHandleSourceLayoutChanges((KExtraColumnsProxyModel*)self, handleSourceLayoutChanges);
-}
-
-void k_extracolumnsproxymodel_on_set_handle_source_layout_changes(void* self, void (*callback)(void*, bool)) {
-    KExtraColumnsProxyModel_OnSetHandleSourceLayoutChanges((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
 void k_extracolumnsproxymodel_set_handle_source_data_changes(void* self, bool handleSourceDataChanges) {
     KExtraColumnsProxyModel_SetHandleSourceDataChanges((KExtraColumnsProxyModel*)self, handleSourceDataChanges);
 }
 
-void k_extracolumnsproxymodel_super_set_handle_source_data_changes(void* self, bool handleSourceDataChanges) {
-    KExtraColumnsProxyModel_SuperSetHandleSourceDataChanges((KExtraColumnsProxyModel*)self, handleSourceDataChanges);
-}
-
-void k_extracolumnsproxymodel_on_set_handle_source_data_changes(void* self, void (*callback)(void*, bool)) {
-    KExtraColumnsProxyModel_OnSetHandleSourceDataChanges((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-QModelIndex* k_extracolumnsproxymodel_create_source_index(void* self, int row, int col, void* internalPtr) {
+QModelIndex* k_extracolumnsproxymodel_create_source_index(const void* self, int row, int col, void* internalPtr) {
     return KExtraColumnsProxyModel_CreateSourceIndex((KExtraColumnsProxyModel*)self, row, col, internalPtr);
 }
 
-QModelIndex* k_extracolumnsproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr) {
-    return KExtraColumnsProxyModel_SuperCreateSourceIndex((KExtraColumnsProxyModel*)self, row, col, internalPtr);
-}
-
-void k_extracolumnsproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
-    KExtraColumnsProxyModel_OnCreateSourceIndex((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-QModelIndex* k_extracolumnsproxymodel_create_index(void* self, int row, int column) {
+QModelIndex* k_extracolumnsproxymodel_create_index(const void* self, int row, int column) {
     return KExtraColumnsProxyModel_CreateIndex((KExtraColumnsProxyModel*)self, row, column);
 }
 
-QModelIndex* k_extracolumnsproxymodel_super_create_index(void* self, int row, int column) {
-    return KExtraColumnsProxyModel_SuperCreateIndex((KExtraColumnsProxyModel*)self, row, column);
-}
-
-void k_extracolumnsproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
-    KExtraColumnsProxyModel_OnCreateIndex((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_extracolumnsproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+void k_extracolumnsproxymodel_encode_data(const void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     KExtraColumnsProxyModel_EncodeData((KExtraColumnsProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_extracolumnsproxymodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KExtraColumnsProxyModel_SuperEncodeData((KExtraColumnsProxyModel*)self, indexes, (QDataStream*)stream);
-}
-
-void k_extracolumnsproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
-    KExtraColumnsProxyModel_OnEncodeData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_extracolumnsproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream) {
+bool k_extracolumnsproxymodel_decode_data(void* self, int row, int column, const void* parent, void* stream) {
     return KExtraColumnsProxyModel_DecodeData((KExtraColumnsProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_extracolumnsproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KExtraColumnsProxyModel_SuperDecodeData((KExtraColumnsProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
-}
-
-void k_extracolumnsproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
-    KExtraColumnsProxyModel_OnDecodeData((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_extracolumnsproxymodel_begin_insert_rows(void* self, void* parent, int first, int last) {
+void k_extracolumnsproxymodel_begin_insert_rows(void* self, const void* parent, int first, int last) {
     KExtraColumnsProxyModel_BeginInsertRows((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_extracolumnsproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KExtraColumnsProxyModel_SuperBeginInsertRows((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_extracolumnsproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
-    KExtraColumnsProxyModel_OnBeginInsertRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_end_insert_rows(void* self) {
     KExtraColumnsProxyModel_EndInsertRows((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_super_end_insert_rows(void* self) {
-    KExtraColumnsProxyModel_SuperEndInsertRows((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_end_insert_rows(void* self, void (*callback)()) {
-    KExtraColumnsProxyModel_OnEndInsertRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_extracolumnsproxymodel_begin_remove_rows(void* self, void* parent, int first, int last) {
+void k_extracolumnsproxymodel_begin_remove_rows(void* self, const void* parent, int first, int last) {
     KExtraColumnsProxyModel_BeginRemoveRows((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_extracolumnsproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KExtraColumnsProxyModel_SuperBeginRemoveRows((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_extracolumnsproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
-    KExtraColumnsProxyModel_OnBeginRemoveRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_end_remove_rows(void* self) {
     KExtraColumnsProxyModel_EndRemoveRows((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_super_end_remove_rows(void* self) {
-    KExtraColumnsProxyModel_SuperEndRemoveRows((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_end_remove_rows(void* self, void (*callback)()) {
-    KExtraColumnsProxyModel_OnEndRemoveRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_extracolumnsproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+bool k_extracolumnsproxymodel_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow) {
     return KExtraColumnsProxyModel_BeginMoveRows((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
-}
-
-bool k_extracolumnsproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KExtraColumnsProxyModel_SuperBeginMoveRows((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
-}
-
-void k_extracolumnsproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
-    KExtraColumnsProxyModel_OnBeginMoveRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_end_move_rows(void* self) {
     KExtraColumnsProxyModel_EndMoveRows((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_super_end_move_rows(void* self) {
-    KExtraColumnsProxyModel_SuperEndMoveRows((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_end_move_rows(void* self, void (*callback)()) {
-    KExtraColumnsProxyModel_OnEndMoveRows((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_extracolumnsproxymodel_begin_insert_columns(void* self, void* parent, int first, int last) {
+void k_extracolumnsproxymodel_begin_insert_columns(void* self, const void* parent, int first, int last) {
     KExtraColumnsProxyModel_BeginInsertColumns((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_extracolumnsproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KExtraColumnsProxyModel_SuperBeginInsertColumns((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_extracolumnsproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
-    KExtraColumnsProxyModel_OnBeginInsertColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_end_insert_columns(void* self) {
     KExtraColumnsProxyModel_EndInsertColumns((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_super_end_insert_columns(void* self) {
-    KExtraColumnsProxyModel_SuperEndInsertColumns((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_end_insert_columns(void* self, void (*callback)()) {
-    KExtraColumnsProxyModel_OnEndInsertColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_extracolumnsproxymodel_begin_remove_columns(void* self, void* parent, int first, int last) {
+void k_extracolumnsproxymodel_begin_remove_columns(void* self, const void* parent, int first, int last) {
     KExtraColumnsProxyModel_BeginRemoveColumns((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_extracolumnsproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KExtraColumnsProxyModel_SuperBeginRemoveColumns((KExtraColumnsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_extracolumnsproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
-    KExtraColumnsProxyModel_OnBeginRemoveColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_end_remove_columns(void* self) {
     KExtraColumnsProxyModel_EndRemoveColumns((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_super_end_remove_columns(void* self) {
-    KExtraColumnsProxyModel_SuperEndRemoveColumns((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_end_remove_columns(void* self, void (*callback)()) {
-    KExtraColumnsProxyModel_OnEndRemoveColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_extracolumnsproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+bool k_extracolumnsproxymodel_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn) {
     return KExtraColumnsProxyModel_BeginMoveColumns((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
-}
-
-bool k_extracolumnsproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KExtraColumnsProxyModel_SuperBeginMoveColumns((KExtraColumnsProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
-}
-
-void k_extracolumnsproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
-    KExtraColumnsProxyModel_OnBeginMoveColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_end_move_columns(void* self) {
     KExtraColumnsProxyModel_EndMoveColumns((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_super_end_move_columns(void* self) {
-    KExtraColumnsProxyModel_SuperEndMoveColumns((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_end_move_columns(void* self, void (*callback)()) {
-    KExtraColumnsProxyModel_OnEndMoveColumns((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
 void k_extracolumnsproxymodel_begin_reset_model(void* self) {
     KExtraColumnsProxyModel_BeginResetModel((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_super_begin_reset_model(void* self) {
-    KExtraColumnsProxyModel_SuperBeginResetModel((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_begin_reset_model(void* self, void (*callback)()) {
-    KExtraColumnsProxyModel_OnBeginResetModel((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_end_reset_model(void* self) {
     KExtraColumnsProxyModel_EndResetModel((KExtraColumnsProxyModel*)self);
 }
 
-void k_extracolumnsproxymodel_super_end_reset_model(void* self) {
-    KExtraColumnsProxyModel_SuperEndResetModel((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_end_reset_model(void* self, void (*callback)()) {
-    KExtraColumnsProxyModel_OnEndResetModel((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_extracolumnsproxymodel_change_persistent_index(void* self, void* from, void* to) {
+void k_extracolumnsproxymodel_change_persistent_index(void* self, const void* from, const void* to) {
     KExtraColumnsProxyModel_ChangePersistentIndex((KExtraColumnsProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
-}
-
-void k_extracolumnsproxymodel_super_change_persistent_index(void* self, void* from, void* to) {
-    KExtraColumnsProxyModel_SuperChangePersistentIndex((KExtraColumnsProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
-}
-
-void k_extracolumnsproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
-    KExtraColumnsProxyModel_OnChangePersistentIndex((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     KExtraColumnsProxyModel_ChangePersistentIndexList((KExtraColumnsProxyModel*)self, from, to);
 }
 
-void k_extracolumnsproxymodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KExtraColumnsProxyModel_SuperChangePersistentIndexList((KExtraColumnsProxyModel*)self, from, to);
-}
-
-void k_extracolumnsproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
-    KExtraColumnsProxyModel_OnChangePersistentIndexList((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_persistent_index_list(void* self) {
+libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_persistent_index_list(const void* self) {
     libqt_list _arr = KExtraColumnsProxyModel_PersistentIndexList((KExtraColumnsProxyModel*)self);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_extracolumnsproxymodel_super_persistent_index_list(void* self) {
-    libqt_list _arr = KExtraColumnsProxyModel_SuperPersistentIndexList((KExtraColumnsProxyModel*)self);
-    return _arr;
-}
-
-void k_extracolumnsproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
-    KExtraColumnsProxyModel_OnPersistentIndexList((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-QObject* k_extracolumnsproxymodel_sender(void* self) {
+QObject* k_extracolumnsproxymodel_sender(const void* self) {
     return KExtraColumnsProxyModel_Sender((KExtraColumnsProxyModel*)self);
 }
 
-QObject* k_extracolumnsproxymodel_super_sender(void* self) {
-    return KExtraColumnsProxyModel_SuperSender((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_sender(void* self, QObject* (*callback)()) {
-    KExtraColumnsProxyModel_OnSender((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-int32_t k_extracolumnsproxymodel_sender_signal_index(void* self) {
+int32_t k_extracolumnsproxymodel_sender_signal_index(const void* self) {
     return KExtraColumnsProxyModel_SenderSignalIndex((KExtraColumnsProxyModel*)self);
 }
 
-int32_t k_extracolumnsproxymodel_super_sender_signal_index(void* self) {
-    return KExtraColumnsProxyModel_SuperSenderSignalIndex((KExtraColumnsProxyModel*)self);
-}
-
-void k_extracolumnsproxymodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KExtraColumnsProxyModel_OnSenderSignalIndex((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-int32_t k_extracolumnsproxymodel_receivers(void* self, const char* signal) {
+int32_t k_extracolumnsproxymodel_receivers(const void* self, const char* signal) {
     return KExtraColumnsProxyModel_Receivers((KExtraColumnsProxyModel*)self, signal);
 }
 
-int32_t k_extracolumnsproxymodel_super_receivers(void* self, const char* signal) {
-    return KExtraColumnsProxyModel_SuperReceivers((KExtraColumnsProxyModel*)self, signal);
-}
-
-void k_extracolumnsproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KExtraColumnsProxyModel_OnReceivers((KExtraColumnsProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_extracolumnsproxymodel_is_signal_connected(void* self, void* signal) {
+bool k_extracolumnsproxymodel_is_signal_connected(const void* self, const void* signal) {
     return KExtraColumnsProxyModel_IsSignalConnected((KExtraColumnsProxyModel*)self, (QMetaMethod*)signal);
-}
-
-bool k_extracolumnsproxymodel_super_is_signal_connected(void* self, void* signal) {
-    return KExtraColumnsProxyModel_SuperIsSignalConnected((KExtraColumnsProxyModel*)self, (QMetaMethod*)signal);
-}
-
-void k_extracolumnsproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KExtraColumnsProxyModel_OnIsSignalConnected((KExtraColumnsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_extracolumnsproxymodel_on_source_model_changed(void* self, void (*callback)(void*)) {
     QAbstractProxyModel_Connect_SourceModelChanged((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_extracolumnsproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_extracolumnsproxymodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_extracolumnsproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_extracolumnsproxymodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_extracolumnsproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_extracolumnsproxymodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_extracolumnsproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_extracolumnsproxymodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1577,19 +1356,19 @@ void k_extracolumnsproxymodel_on_model_reset(void* self, void (*callback)(void*)
     QAbstractItemModel_Connect_ModelReset((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_extracolumnsproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_extracolumnsproxymodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_extracolumnsproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_extracolumnsproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_extracolumnsproxymodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 

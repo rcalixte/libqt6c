@@ -4,50 +4,50 @@
 #include "libqwebengineframe.hpp"
 #include "libqwebengineframe.h"
 
-QWebEngineFrame* q_webengineframe_new(void* param1) {
+QWebEngineFrame* q_webengineframe_new(const void* param1) {
     return QWebEngineFrame_New((QWebEngineFrame*)param1);
 }
 
-bool q_webengineframe_is_valid(void* self) {
+bool q_webengineframe_is_valid(const void* self) {
     return QWebEngineFrame_IsValid((QWebEngineFrame*)self);
 }
 
-const char* q_webengineframe_name(void* self) {
+const char* q_webengineframe_name(const void* self) {
     libqt_string _str = QWebEngineFrame_Name((QWebEngineFrame*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_webengineframe_html_name(void* self) {
+const char* q_webengineframe_html_name(const void* self) {
     libqt_string _str = QWebEngineFrame_HtmlName((QWebEngineFrame*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of QWebEngineFrame* */ q_webengineframe_children(void* self) {
+libqt_list /* of QWebEngineFrame* */ q_webengineframe_children(const void* self) {
     libqt_list _arr = QWebEngineFrame_Children((QWebEngineFrame*)self);
     return _arr;
 }
 
-QUrl* q_webengineframe_url(void* self) {
+QUrl* q_webengineframe_url(const void* self) {
     return QWebEngineFrame_Url((QWebEngineFrame*)self);
 }
 
-QSizeF* q_webengineframe_size(void* self) {
+QSizeF* q_webengineframe_size(const void* self) {
     return QWebEngineFrame_Size((QWebEngineFrame*)self);
 }
 
-bool q_webengineframe_is_main_frame(void* self) {
+bool q_webengineframe_is_main_frame(const void* self) {
     return QWebEngineFrame_IsMainFrame((QWebEngineFrame*)self);
 }
 
-void q_webengineframe_run_java_script(void* self, const char* script, void (*callback)(void* funcparam1)) {
+void q_webengineframe_run_java_script(void* self, const char* script, void (*callback)(const void* funcparam1)) {
     QWebEngineFrame_RunJavaScript((QWebEngineFrame*)self, qstring(script), (intptr_t)callback);
 }
 
-void q_webengineframe_run_java_script2(void* self, const char* script, uint32_t worldId, void (*callback)(void* funcparam1)) {
+void q_webengineframe_run_java_script2(void* self, const char* script, uint32_t worldId, void (*callback)(const void* funcparam1)) {
     QWebEngineFrame_RunJavaScript2((QWebEngineFrame*)self, qstring(script), worldId, (intptr_t)callback);
 }
 
@@ -55,11 +55,11 @@ void q_webengineframe_run_java_script3(void* self, const char* script) {
     QWebEngineFrame_RunJavaScript3((QWebEngineFrame*)self, qstring(script));
 }
 
-void q_webengineframe_run_java_script4(void* self, const char* script, void* callback) {
+void q_webengineframe_run_java_script4(void* self, const char* script, const void* callback) {
     QWebEngineFrame_RunJavaScript4((QWebEngineFrame*)self, qstring(script), (QJSValue*)callback);
 }
 
-void q_webengineframe_run_java_script5(void* self, const char* script, uint32_t worldId, void* callback) {
+void q_webengineframe_run_java_script5(void* self, const char* script, uint32_t worldId, const void* callback) {
     QWebEngineFrame_RunJavaScript5((QWebEngineFrame*)self, qstring(script), worldId, (QJSValue*)callback);
 }
 
@@ -71,11 +71,11 @@ void q_webengineframe_print_to_pdf2(void* self, void (*callback)(char* funcparam
     QWebEngineFrame_PrintToPdf2((QWebEngineFrame*)self, (intptr_t)callback);
 }
 
-void q_webengineframe_print_to_pdf3(void* self, void* callback) {
+void q_webengineframe_print_to_pdf3(void* self, const void* callback) {
     QWebEngineFrame_PrintToPdf3((QWebEngineFrame*)self, (QJSValue*)callback);
 }
 
-void q_webengineframe_operator_assign(void* self, void* param1) {
+void q_webengineframe_operator_assign(void* self, const void* param1) {
     QWebEngineFrame_OperatorAssign((QWebEngineFrame*)self, (QWebEngineFrame*)param1);
 }
 

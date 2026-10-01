@@ -2,7 +2,7 @@
 #include "libqstylefactory.hpp"
 #include "libqstylefactory.h"
 
-QStyleFactory* q_stylefactory_new(void* other) {
+QStyleFactory* q_stylefactory_new(const void* other) {
     return QStyleFactory_New((QStyleFactory*)other);
 }
 

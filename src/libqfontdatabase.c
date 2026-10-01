@@ -3,7 +3,7 @@
 #include "libqfontdatabase.hpp"
 #include "libqfontdatabase.h"
 
-QFontDatabase* q_fontdatabase_new(void* other) {
+QFontDatabase* q_fontdatabase_new(const void* other) {
     return QFontDatabase_New((QFontDatabase*)other);
 }
 
@@ -82,14 +82,14 @@ libqt_list /* of int */ q_fontdatabase_smooth_sizes(const char* family, const ch
     return _arr;
 }
 
-const char* q_fontdatabase_style_string(void* font) {
+const char* q_fontdatabase_style_string(const void* font) {
     libqt_string _str = QFontDatabase_StyleString((QFont*)font);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_fontdatabase_style_string2(void* fontInfo) {
+const char* q_fontdatabase_style_string2(const void* fontInfo) {
     libqt_string _str = QFontDatabase_StyleString2((QFontInfo*)fontInfo);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

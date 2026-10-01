@@ -28,7 +28,7 @@ KFileCustomDialog* k_filecustomdialog_new2();
 ///
 /// @param startDir QUrl*
 ///
-KFileCustomDialog* k_filecustomdialog_new3(void* startDir);
+KFileCustomDialog* k_filecustomdialog_new3(const void* startDir);
 
 /// [Upstream resources](https://api.kde.org/kfilecustomdialog.html)
 
@@ -37,30 +37,30 @@ KFileCustomDialog* k_filecustomdialog_new3(void* startDir);
 /// @param startDir QUrl*
 /// @param parent QWidget*
 ///
-KFileCustomDialog* k_filecustomdialog_new4(void* startDir, void* parent);
+KFileCustomDialog* k_filecustomdialog_new4(const void* startDir, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const QMetaObject* k_filecustomdialog_meta_object(void* self);
+const QMetaObject* k_filecustomdialog_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback const QMetaObject* func()
+/// @param self const KFileCustomDialog*
+/// @param callback const QMetaObject* func(const KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_filecustomdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const QMetaObject* k_filecustomdialog_super_meta_object(void* self);
+const QMetaObject* k_filecustomdialog_super_meta_object(const void* self);
 
 /// @param self KFileCustomDialog*
 /// @param param1 const char*
@@ -117,7 +117,7 @@ const char* k_filecustomdialog_tr(const char* s);
 /// @param self KFileCustomDialog*
 /// @param url QUrl*
 ///
-void k_filecustomdialog_set_url(void* self, void* url);
+void k_filecustomdialog_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kfilecustomdialog.html#setCustomWidget)
 ///
@@ -128,9 +128,9 @@ void k_filecustomdialog_set_custom_widget(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kfilecustomdialog.html#fileWidget)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-KFileWidget* k_filecustomdialog_file_widget(void* self);
+KFileWidget* k_filecustomdialog_file_widget(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilecustomdialog.html#setOperationMode)
 ///
@@ -150,9 +150,9 @@ void k_filecustomdialog_accept(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback void func()
+/// @param callback void func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_accept(void* self, void (*callback)());
+void k_filecustomdialog_on_accept(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kfilecustomdialog.html#accept)
 ///
@@ -185,9 +185,9 @@ const char* k_filecustomdialog_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_result(void* self);
+int32_t k_filecustomdialog_result(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -202,9 +202,9 @@ void k_filecustomdialog_set_size_grip_enabled(void* self, bool sizeGripEnabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_size_grip_enabled(void* self);
+bool k_filecustomdialog_is_size_grip_enabled(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -296,9 +296,9 @@ KFileCustomDialog* k_filecustomdialog_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-uintptr_t k_filecustomdialog_win_id(void* self);
+uintptr_t k_filecustomdialog_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -312,25 +312,25 @@ void k_filecustomdialog_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-uintptr_t k_filecustomdialog_internal_win_id(void* self);
+uintptr_t k_filecustomdialog_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-uintptr_t k_filecustomdialog_effective_win_id(void* self);
+uintptr_t k_filecustomdialog_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QStyle* k_filecustomdialog_style(void* self);
+QStyle* k_filecustomdialog_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -345,35 +345,35 @@ void k_filecustomdialog_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_top_level(void* self);
+bool k_filecustomdialog_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_window(void* self);
+bool k_filecustomdialog_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_modal(void* self);
+bool k_filecustomdialog_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_filecustomdialog_window_modality(void* self);
+int32_t k_filecustomdialog_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -388,18 +388,18 @@ void k_filecustomdialog_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_enabled(void* self);
+bool k_filecustomdialog_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QWidget*
 ///
-bool k_filecustomdialog_is_enabled_to(void* self, void* param1);
+bool k_filecustomdialog_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -432,153 +432,153 @@ void k_filecustomdialog_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QRect* k_filecustomdialog_frame_geometry(void* self);
+QRect* k_filecustomdialog_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const QRect* k_filecustomdialog_geometry(void* self);
+const QRect* k_filecustomdialog_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QRect* k_filecustomdialog_normal_geometry(void* self);
+QRect* k_filecustomdialog_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_x(void* self);
+int32_t k_filecustomdialog_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_y(void* self);
+int32_t k_filecustomdialog_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QPoint* k_filecustomdialog_pos(void* self);
+QPoint* k_filecustomdialog_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_frame_size(void* self);
+QSize* k_filecustomdialog_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_size(void* self);
+QSize* k_filecustomdialog_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_width(void* self);
+int32_t k_filecustomdialog_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_height(void* self);
+int32_t k_filecustomdialog_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QRect* k_filecustomdialog_rect(void* self);
+QRect* k_filecustomdialog_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QRect* k_filecustomdialog_children_rect(void* self);
+QRect* k_filecustomdialog_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QRegion* k_filecustomdialog_children_region(void* self);
+QRegion* k_filecustomdialog_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_minimum_size(void* self);
+QSize* k_filecustomdialog_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_maximum_size(void* self);
+QSize* k_filecustomdialog_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_minimum_width(void* self);
+int32_t k_filecustomdialog_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_minimum_height(void* self);
+int32_t k_filecustomdialog_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_maximum_width(void* self);
+int32_t k_filecustomdialog_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_maximum_height(void* self);
+int32_t k_filecustomdialog_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -587,7 +587,7 @@ int32_t k_filecustomdialog_maximum_height(void* self);
 /// @param self KFileCustomDialog*
 /// @param minimumSize QSize*
 ///
-void k_filecustomdialog_set_minimum_size(void* self, void* minimumSize);
+void k_filecustomdialog_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -606,7 +606,7 @@ void k_filecustomdialog_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KFileCustomDialog*
 /// @param maximumSize QSize*
 ///
-void k_filecustomdialog_set_maximum_size(void* self, void* maximumSize);
+void k_filecustomdialog_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -658,9 +658,9 @@ void k_filecustomdialog_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_size_increment(void* self);
+QSize* k_filecustomdialog_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -669,7 +669,7 @@ QSize* k_filecustomdialog_size_increment(void* self);
 /// @param self KFileCustomDialog*
 /// @param sizeIncrement QSize*
 ///
-void k_filecustomdialog_set_size_increment(void* self, void* sizeIncrement);
+void k_filecustomdialog_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -685,9 +685,9 @@ void k_filecustomdialog_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_base_size(void* self);
+QSize* k_filecustomdialog_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -696,7 +696,7 @@ QSize* k_filecustomdialog_base_size(void* self);
 /// @param self KFileCustomDialog*
 /// @param baseSize QSize*
 ///
-void k_filecustomdialog_set_base_size(void* self, void* baseSize);
+void k_filecustomdialog_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -715,7 +715,7 @@ void k_filecustomdialog_set_base_size2(void* self, int basew, int baseh);
 /// @param self KFileCustomDialog*
 /// @param fixedSize QSize*
 ///
-void k_filecustomdialog_set_fixed_size(void* self, void* fixedSize);
+void k_filecustomdialog_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -749,145 +749,145 @@ void k_filecustomdialog_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QPointF*
 ///
-QPointF* k_filecustomdialog_map_to_global(void* self, void* param1);
+QPointF* k_filecustomdialog_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QPoint*
 ///
-QPoint* k_filecustomdialog_map_to_global2(void* self, void* param1);
+QPoint* k_filecustomdialog_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QPointF*
 ///
-QPointF* k_filecustomdialog_map_from_global(void* self, void* param1);
+QPointF* k_filecustomdialog_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QPoint*
 ///
-QPoint* k_filecustomdialog_map_from_global2(void* self, void* param1);
+QPoint* k_filecustomdialog_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QPointF*
 ///
-QPointF* k_filecustomdialog_map_to_parent(void* self, void* param1);
+QPointF* k_filecustomdialog_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QPoint*
 ///
-QPoint* k_filecustomdialog_map_to_parent2(void* self, void* param1);
+QPoint* k_filecustomdialog_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QPointF*
 ///
-QPointF* k_filecustomdialog_map_from_parent(void* self, void* param1);
+QPointF* k_filecustomdialog_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QPoint*
 ///
-QPoint* k_filecustomdialog_map_from_parent2(void* self, void* param1);
+QPoint* k_filecustomdialog_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_filecustomdialog_map_to(void* self, void* param1, void* param2);
+QPointF* k_filecustomdialog_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_filecustomdialog_map_to2(void* self, void* param1, void* param2);
+QPoint* k_filecustomdialog_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_filecustomdialog_map_from(void* self, void* param1, void* param2);
+QPointF* k_filecustomdialog_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_filecustomdialog_map_from2(void* self, void* param1, void* param2);
+QPoint* k_filecustomdialog_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWidget* k_filecustomdialog_window(void* self);
+QWidget* k_filecustomdialog_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWidget* k_filecustomdialog_native_parent_widget(void* self);
+QWidget* k_filecustomdialog_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWidget* k_filecustomdialog_top_level_widget(void* self);
+QWidget* k_filecustomdialog_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const QPalette* k_filecustomdialog_palette(void* self);
+const QPalette* k_filecustomdialog_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -896,7 +896,7 @@ const QPalette* k_filecustomdialog_palette(void* self);
 /// @param self KFileCustomDialog*
 /// @param palette QPalette*
 ///
-void k_filecustomdialog_set_palette(void* self, void* palette);
+void k_filecustomdialog_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -911,11 +911,11 @@ void k_filecustomdialog_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_filecustomdialog_background_role(void* self);
+int32_t k_filecustomdialog_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -930,19 +930,19 @@ void k_filecustomdialog_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_filecustomdialog_foreground_role(void* self);
+int32_t k_filecustomdialog_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const QFont* k_filecustomdialog_font(void* self);
+const QFont* k_filecustomdialog_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -951,31 +951,31 @@ const QFont* k_filecustomdialog_font(void* self);
 /// @param self KFileCustomDialog*
 /// @param font QFont*
 ///
-void k_filecustomdialog_set_font(void* self, void* font);
+void k_filecustomdialog_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QFontMetrics* k_filecustomdialog_font_metrics(void* self);
+QFontMetrics* k_filecustomdialog_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QFontInfo* k_filecustomdialog_font_info(void* self);
+QFontInfo* k_filecustomdialog_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QCursor* k_filecustomdialog_cursor(void* self);
+QCursor* k_filecustomdialog_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -984,7 +984,7 @@ QCursor* k_filecustomdialog_cursor(void* self);
 /// @param self KFileCustomDialog*
 /// @param cursor QCursor*
 ///
-void k_filecustomdialog_set_cursor(void* self, void* cursor);
+void k_filecustomdialog_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1007,17 +1007,17 @@ void k_filecustomdialog_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_has_mouse_tracking(void* self);
+bool k_filecustomdialog_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_under_mouse(void* self);
+bool k_filecustomdialog_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1032,9 +1032,9 @@ void k_filecustomdialog_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_has_tablet_tracking(void* self);
+bool k_filecustomdialog_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1043,7 +1043,7 @@ bool k_filecustomdialog_has_tablet_tracking(void* self);
 /// @param self KFileCustomDialog*
 /// @param mask QBitmap*
 ///
-void k_filecustomdialog_set_mask(void* self, void* mask);
+void k_filecustomdialog_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1052,15 +1052,15 @@ void k_filecustomdialog_set_mask(void* self, void* mask);
 /// @param self KFileCustomDialog*
 /// @param mask QRegion*
 ///
-void k_filecustomdialog_set_mask2(void* self, void* mask);
+void k_filecustomdialog_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QRegion* k_filecustomdialog_mask(void* self);
+QRegion* k_filecustomdialog_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1100,9 +1100,9 @@ QPixmap* k_filecustomdialog_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QGraphicsEffect* k_filecustomdialog_graphics_effect(void* self);
+QGraphicsEffect* k_filecustomdialog_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1155,9 +1155,9 @@ void k_filecustomdialog_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_style_sheet(void* self);
+const char* k_filecustomdialog_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1165,9 +1165,9 @@ const char* k_filecustomdialog_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_window_title(void* self);
+const char* k_filecustomdialog_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1176,15 +1176,15 @@ const char* k_filecustomdialog_window_title(void* self);
 /// @param self KFileCustomDialog*
 /// @param icon QIcon*
 ///
-void k_filecustomdialog_set_window_icon(void* self, void* icon);
+void k_filecustomdialog_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QIcon* k_filecustomdialog_window_icon(void* self);
+QIcon* k_filecustomdialog_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1201,9 +1201,9 @@ void k_filecustomdialog_set_window_icon_text(void* self, const char* windowIconT
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_window_icon_text(void* self);
+const char* k_filecustomdialog_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1220,9 +1220,9 @@ void k_filecustomdialog_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_window_role(void* self);
+const char* k_filecustomdialog_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1239,9 +1239,9 @@ void k_filecustomdialog_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_window_file_path(void* self);
+const char* k_filecustomdialog_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1256,17 +1256,17 @@ void k_filecustomdialog_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-double k_filecustomdialog_window_opacity(void* self);
+double k_filecustomdialog_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_window_modified(void* self);
+bool k_filecustomdialog_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1283,9 +1283,9 @@ void k_filecustomdialog_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_tool_tip(void* self);
+const char* k_filecustomdialog_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1300,9 +1300,9 @@ void k_filecustomdialog_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_tool_tip_duration(void* self);
+int32_t k_filecustomdialog_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1319,9 +1319,9 @@ void k_filecustomdialog_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_status_tip(void* self);
+const char* k_filecustomdialog_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1338,9 +1338,9 @@ void k_filecustomdialog_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_whats_this(void* self);
+const char* k_filecustomdialog_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1348,9 +1348,9 @@ const char* k_filecustomdialog_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_accessible_name(void* self);
+const char* k_filecustomdialog_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1367,9 +1367,9 @@ void k_filecustomdialog_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_accessible_description(void* self);
+const char* k_filecustomdialog_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1393,11 +1393,11 @@ void k_filecustomdialog_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_filecustomdialog_layout_direction(void* self);
+int32_t k_filecustomdialog_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1414,15 +1414,15 @@ void k_filecustomdialog_unset_layout_direction(void* self);
 /// @param self KFileCustomDialog*
 /// @param locale QLocale*
 ///
-void k_filecustomdialog_set_locale(void* self, void* locale);
+void k_filecustomdialog_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QLocale* k_filecustomdialog_locale(void* self);
+QLocale* k_filecustomdialog_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1436,17 +1436,17 @@ void k_filecustomdialog_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_right_to_left(void* self);
+bool k_filecustomdialog_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_left_to_right(void* self);
+bool k_filecustomdialog_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1460,9 +1460,9 @@ void k_filecustomdialog_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_active_window(void* self);
+bool k_filecustomdialog_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1493,11 +1493,11 @@ void k_filecustomdialog_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_filecustomdialog_focus_policy(void* self);
+int32_t k_filecustomdialog_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1512,9 +1512,9 @@ void k_filecustomdialog_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_has_focus(void* self);
+bool k_filecustomdialog_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1538,19 +1538,19 @@ void k_filecustomdialog_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWidget* k_filecustomdialog_focus_proxy(void* self);
+QWidget* k_filecustomdialog_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_filecustomdialog_context_menu_policy(void* self);
+int32_t k_filecustomdialog_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1576,7 +1576,7 @@ void k_filecustomdialog_grab_mouse(void* self);
 /// @param self KFileCustomDialog*
 /// @param param1 QCursor*
 ///
-void k_filecustomdialog_grab_mouse2(void* self, void* param1);
+void k_filecustomdialog_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1609,7 +1609,7 @@ void k_filecustomdialog_release_keyboard(void* self);
 /// @param self KFileCustomDialog*
 /// @param key QKeySequence*
 ///
-int32_t k_filecustomdialog_grab_shortcut(void* self, void* key);
+int32_t k_filecustomdialog_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1654,9 +1654,9 @@ QWidget* k_filecustomdialog_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_updates_enabled(void* self);
+bool k_filecustomdialog_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1671,9 +1671,9 @@ void k_filecustomdialog_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QGraphicsProxyWidget* k_filecustomdialog_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_filecustomdialog_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1710,7 +1710,7 @@ void k_filecustomdialog_update2(void* self, int x, int y, int w, int h);
 /// @param self KFileCustomDialog*
 /// @param param1 QRect*
 ///
-void k_filecustomdialog_update3(void* self, void* param1);
+void k_filecustomdialog_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1719,7 +1719,7 @@ void k_filecustomdialog_update3(void* self, void* param1);
 /// @param self KFileCustomDialog*
 /// @param param1 QRegion*
 ///
-void k_filecustomdialog_update4(void* self, void* param1);
+void k_filecustomdialog_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1740,7 +1740,7 @@ void k_filecustomdialog_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KFileCustomDialog*
 /// @param param1 QRect*
 ///
-void k_filecustomdialog_repaint3(void* self, void* param1);
+void k_filecustomdialog_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1749,7 +1749,7 @@ void k_filecustomdialog_repaint3(void* self, void* param1);
 /// @param self KFileCustomDialog*
 /// @param param1 QRegion*
 ///
-void k_filecustomdialog_repaint4(void* self, void* param1);
+void k_filecustomdialog_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1858,7 +1858,7 @@ void k_filecustomdialog_move(void* self, int x, int y);
 /// @param self KFileCustomDialog*
 /// @param param1 QPoint*
 ///
-void k_filecustomdialog_move2(void* self, void* param1);
+void k_filecustomdialog_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1877,7 +1877,7 @@ void k_filecustomdialog_resize(void* self, int w, int h);
 /// @param self KFileCustomDialog*
 /// @param param1 QSize*
 ///
-void k_filecustomdialog_resize2(void* self, void* param1);
+void k_filecustomdialog_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1898,7 +1898,7 @@ void k_filecustomdialog_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KFileCustomDialog*
 /// @param geometry QRect*
 ///
-void k_filecustomdialog_set_geometry2(void* self, void* geometry);
+void k_filecustomdialog_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -1906,9 +1906,9 @@ void k_filecustomdialog_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-char* k_filecustomdialog_save_geometry(void* self);
+char* k_filecustomdialog_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1931,60 +1931,60 @@ void k_filecustomdialog_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_visible(void* self);
+bool k_filecustomdialog_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 QWidget*
 ///
-bool k_filecustomdialog_is_visible_to(void* self, void* param1);
+bool k_filecustomdialog_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_hidden(void* self);
+bool k_filecustomdialog_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_minimized(void* self);
+bool k_filecustomdialog_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_maximized(void* self);
+bool k_filecustomdialog_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_full_screen(void* self);
+bool k_filecustomdialog_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_filecustomdialog_window_state(void* self);
+int32_t k_filecustomdialog_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2008,9 +2008,9 @@ void k_filecustomdialog_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSizePolicy* k_filecustomdialog_size_policy(void* self);
+QSizePolicy* k_filecustomdialog_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2035,9 +2035,9 @@ void k_filecustomdialog_set_size_policy2(void* self, int32_t horizontal, int32_t
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QRegion* k_filecustomdialog_visible_region(void* self);
+QRegion* k_filecustomdialog_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2058,31 +2058,31 @@ void k_filecustomdialog_set_contents_margins(void* self, int left, int top, int 
 /// @param self KFileCustomDialog*
 /// @param margins QMargins*
 ///
-void k_filecustomdialog_set_contents_margins2(void* self, void* margins);
+void k_filecustomdialog_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QMargins* k_filecustomdialog_contents_margins(void* self);
+QMargins* k_filecustomdialog_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QRect* k_filecustomdialog_contents_rect(void* self);
+QRect* k_filecustomdialog_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QLayout* k_filecustomdialog_layout(void* self);
+QLayout* k_filecustomdialog_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2139,39 +2139,39 @@ void k_filecustomdialog_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_filecustomdialog_scroll2(void* self, int dx, int dy, void* param3);
+void k_filecustomdialog_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWidget* k_filecustomdialog_focus_widget(void* self);
+QWidget* k_filecustomdialog_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWidget* k_filecustomdialog_next_in_focus_chain(void* self);
+QWidget* k_filecustomdialog_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWidget* k_filecustomdialog_previous_in_focus_chain(void* self);
+QWidget* k_filecustomdialog_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_accept_drops(void* self);
+bool k_filecustomdialog_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2233,11 +2233,11 @@ void k_filecustomdialog_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_filecustomdialog_actions(void* self);
+libqt_list k_filecustomdialog_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2256,7 +2256,7 @@ QAction* k_filecustomdialog_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_filecustomdialog_add_action3(void* self, void* icon, const char* text);
+QAction* k_filecustomdialog_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2266,7 +2266,7 @@ QAction* k_filecustomdialog_add_action3(void* self, void* icon, const char* text
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_filecustomdialog_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_filecustomdialog_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2277,15 +2277,15 @@ QAction* k_filecustomdialog_add_action4(void* self, const char* text, void* shor
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_filecustomdialog_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_filecustomdialog_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWidget* k_filecustomdialog_parent_widget(void* self);
+QWidget* k_filecustomdialog_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2300,11 +2300,11 @@ void k_filecustomdialog_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_filecustomdialog_window_flags(void* self);
+int32_t k_filecustomdialog_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2328,11 +2328,11 @@ void k_filecustomdialog_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_filecustomdialog_window_type(void* self);
+int32_t k_filecustomdialog_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2346,29 +2346,29 @@ QWidget* k_filecustomdialog_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_filecustomdialog_child_at(void* self, int x, int y);
+QWidget* k_filecustomdialog_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param p QPoint*
 ///
-QWidget* k_filecustomdialog_child_at2(void* self, void* p);
+QWidget* k_filecustomdialog_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param p QPointF*
 ///
-QWidget* k_filecustomdialog_child_at3(void* self, void* p);
+QWidget* k_filecustomdialog_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2383,35 +2383,35 @@ void k_filecustomdialog_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_filecustomdialog_test_attribute(void* self, int32_t param1);
+bool k_filecustomdialog_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-void k_filecustomdialog_ensure_polished(void* self);
+void k_filecustomdialog_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param child QWidget*
 ///
-bool k_filecustomdialog_is_ancestor_of(void* self, void* child);
+bool k_filecustomdialog_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_auto_fill_background(void* self);
+bool k_filecustomdialog_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2426,25 +2426,25 @@ void k_filecustomdialog_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QBackingStore* k_filecustomdialog_backing_store(void* self);
+QBackingStore* k_filecustomdialog_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QWindow* k_filecustomdialog_window_handle(void* self);
+QWindow* k_filecustomdialog_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QScreen* k_filecustomdialog_screen(void* self);
+QScreen* k_filecustomdialog_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2488,7 +2488,7 @@ void k_filecustomdialog_on_window_title_changed(void* self, void (*callback)(voi
 /// @param self KFileCustomDialog*
 /// @param icon QIcon*
 ///
-void k_filecustomdialog_window_icon_changed(void* self, void* icon);
+void k_filecustomdialog_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2497,7 +2497,7 @@ void k_filecustomdialog_window_icon_changed(void* self, void* icon);
 /// @param self KFileCustomDialog*
 /// @param callback void func(KFileCustomDialog* self, QIcon* icon)
 ///
-void k_filecustomdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_filecustomdialog_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2524,7 +2524,7 @@ void k_filecustomdialog_on_window_icon_text_changed(void* self, void (*callback)
 /// @param self KFileCustomDialog*
 /// @param pos QPoint*
 ///
-void k_filecustomdialog_custom_context_menu_requested(void* self, void* pos);
+void k_filecustomdialog_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2533,17 +2533,17 @@ void k_filecustomdialog_custom_context_menu_requested(void* self, void* pos);
 /// @param self KFileCustomDialog*
 /// @param callback void func(KFileCustomDialog* self, QPoint* pos)
 ///
-void k_filecustomdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_filecustomdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_filecustomdialog_input_method_hints(void* self);
+int32_t k_filecustomdialog_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2562,7 +2562,7 @@ void k_filecustomdialog_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_filecustomdialog_render22(void* self, void* target, void* targetOffset);
+void k_filecustomdialog_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2573,7 +2573,7 @@ void k_filecustomdialog_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_filecustomdialog_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_filecustomdialog_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2585,7 +2585,7 @@ void k_filecustomdialog_render3(void* self, void* target, void* targetOffset, vo
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_filecustomdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_filecustomdialog_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2595,7 +2595,7 @@ void k_filecustomdialog_render4(void* self, void* target, void* targetOffset, vo
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_filecustomdialog_render23(void* self, void* painter, void* targetOffset);
+void k_filecustomdialog_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2606,7 +2606,7 @@ void k_filecustomdialog_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_filecustomdialog_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_filecustomdialog_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2618,7 +2618,7 @@ void k_filecustomdialog_render32(void* self, void* painter, void* targetOffset, 
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_filecustomdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_filecustomdialog_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2627,7 +2627,7 @@ void k_filecustomdialog_render42(void* self, void* painter, void* targetOffset, 
 /// @param self KFileCustomDialog*
 /// @param rectangle QRect*
 ///
-QPixmap* k_filecustomdialog_grab1(void* self, void* rectangle);
+QPixmap* k_filecustomdialog_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2647,7 +2647,7 @@ void k_filecustomdialog_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_filecustomdialog_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_filecustomdialog_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2714,9 +2714,9 @@ QWidget* k_filecustomdialog_create_window_container3(void* window, void* parent,
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char* k_filecustomdialog_object_name(void* self);
+const char* k_filecustomdialog_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2731,33 +2731,33 @@ void k_filecustomdialog_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_widget_type(void* self);
+bool k_filecustomdialog_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_window_type(void* self);
+bool k_filecustomdialog_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_is_quick_item_type(void* self);
+bool k_filecustomdialog_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_signals_blocked(void* self);
+bool k_filecustomdialog_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2772,9 +2772,9 @@ bool k_filecustomdialog_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QThread* k_filecustomdialog_thread(void* self);
+QThread* k_filecustomdialog_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2825,11 +2825,11 @@ void k_filecustomdialog_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_filecustomdialog_children(void* self);
+libqt_list k_filecustomdialog_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2858,7 +2858,7 @@ void k_filecustomdialog_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_filecustomdialog_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_filecustomdialog_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2869,18 +2869,18 @@ QMetaObject__Connection* k_filecustomdialog_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_filecustomdialog_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_filecustomdialog_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_filecustomdialog_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_filecustomdialog_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2891,7 +2891,7 @@ QMetaObject__Connection* k_filecustomdialog_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_filecustomdialog_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_filecustomdialog_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2902,24 +2902,24 @@ bool k_filecustomdialog_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_filecustomdialog_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_filecustomdialog_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_disconnect3(void* self);
+bool k_filecustomdialog_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param receiver QObject*
 ///
-bool k_filecustomdialog_disconnect4(void* self, void* receiver);
+bool k_filecustomdialog_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2927,23 +2927,23 @@ bool k_filecustomdialog_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_filecustomdialog_disconnect5(void* param1);
+bool k_filecustomdialog_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-void k_filecustomdialog_dump_object_tree(void* self);
+void k_filecustomdialog_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-void k_filecustomdialog_dump_object_info(void* self);
+void k_filecustomdialog_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2953,16 +2953,16 @@ void k_filecustomdialog_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_filecustomdialog_set_property(void* self, const char* name, void* value);
+bool k_filecustomdialog_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param name const char*
 ///
-QVariant* k_filecustomdialog_property(void* self, const char* name);
+QVariant* k_filecustomdialog_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2970,9 +2970,9 @@ QVariant* k_filecustomdialog_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const char** k_filecustomdialog_dynamic_property_names(void* self);
+const char** k_filecustomdialog_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2986,9 +2986,9 @@ QBindingStorage* k_filecustomdialog_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-const QBindingStorage* k_filecustomdialog_binding_storage2(void* self);
+const QBindingStorage* k_filecustomdialog_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3011,18 +3011,18 @@ void k_filecustomdialog_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QObject* k_filecustomdialog_parent(void* self);
+QObject* k_filecustomdialog_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param classname const char*
 ///
-bool k_filecustomdialog_inherits(void* self, const char* classname);
+bool k_filecustomdialog_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3062,7 +3062,7 @@ int32_t k_filecustomdialog_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_filecustomdialog_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_filecustomdialog_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3074,59 +3074,59 @@ QMetaObject__Connection* k_filecustomdialog_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_filecustomdialog_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_filecustomdialog_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_filecustomdialog_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_filecustomdialog_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param signal const char*
 ///
-bool k_filecustomdialog_disconnect1(void* self, const char* signal);
+bool k_filecustomdialog_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileCustomDialog*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_filecustomdialog_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_filecustomdialog_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_filecustomdialog_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_filecustomdialog_disconnect23(void* self, void* receiver, const char* member);
+bool k_filecustomdialog_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KFileCustomDialog*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_filecustomdialog_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3150,89 +3150,89 @@ void k_filecustomdialog_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_painting_active(void* self);
+bool k_filecustomdialog_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_width_m_m(void* self);
+int32_t k_filecustomdialog_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_height_m_m(void* self);
+int32_t k_filecustomdialog_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_logical_dpi_x(void* self);
+int32_t k_filecustomdialog_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_logical_dpi_y(void* self);
+int32_t k_filecustomdialog_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_physical_dpi_x(void* self);
+int32_t k_filecustomdialog_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_physical_dpi_y(void* self);
+int32_t k_filecustomdialog_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-double k_filecustomdialog_device_pixel_ratio(void* self);
+double k_filecustomdialog_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-double k_filecustomdialog_device_pixel_ratio_f(void* self);
+double k_filecustomdialog_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_color_count(void* self);
+int32_t k_filecustomdialog_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_depth(void* self);
+int32_t k_filecustomdialog_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3288,9 +3288,9 @@ void k_filecustomdialog_on_set_visible(void* self, void (*callback)(void*, bool)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_size_hint(void* self);
+QSize* k_filecustomdialog_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3298,9 +3298,9 @@ QSize* k_filecustomdialog_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_super_size_hint(void* self);
+QSize* k_filecustomdialog_super_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3308,12 +3308,12 @@ QSize* k_filecustomdialog_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback QSize* func()
+/// @param self const KFileCustomDialog*
+/// @param callback QSize* func(KFileCustomDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_filecustomdialog_on_size_hint(void* self, QSize* (*callback)());
+void k_filecustomdialog_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3321,9 +3321,9 @@ void k_filecustomdialog_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_minimum_size_hint(void* self);
+QSize* k_filecustomdialog_minimum_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3331,9 +3331,9 @@ QSize* k_filecustomdialog_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QSize* k_filecustomdialog_super_minimum_size_hint(void* self);
+QSize* k_filecustomdialog_super_minimum_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3341,12 +3341,12 @@ QSize* k_filecustomdialog_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback QSize* func()
+/// @param self const KFileCustomDialog*
+/// @param callback QSize* func(KFileCustomDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_filecustomdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_filecustomdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3375,9 +3375,9 @@ void k_filecustomdialog_super_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback void func()
+/// @param callback void func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_open(void* self, void (*callback)());
+void k_filecustomdialog_on_open(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3406,9 +3406,9 @@ int32_t k_filecustomdialog_super_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback int32_t func()
+/// @param callback int32_t func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_exec(void* self, int32_t (*callback)());
+void k_filecustomdialog_on_exec(void* self, int32_t (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3470,9 +3470,9 @@ void k_filecustomdialog_super_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback void func()
+/// @param callback void func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_reject(void* self, void (*callback)());
+void k_filecustomdialog_on_reject(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3680,9 +3680,9 @@ void k_filecustomdialog_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_dev_type(void* self);
+int32_t k_filecustomdialog_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3690,9 +3690,9 @@ int32_t k_filecustomdialog_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_super_dev_type(void* self);
+int32_t k_filecustomdialog_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3700,10 +3700,10 @@ int32_t k_filecustomdialog_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback int32_t func()
+/// @param self const KFileCustomDialog*
+/// @param callback int32_t func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_dev_type(void* self, int32_t (*callback)());
+void k_filecustomdialog_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3711,10 +3711,10 @@ void k_filecustomdialog_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 int
 ///
-int32_t k_filecustomdialog_height_for_width(void* self, int param1);
+int32_t k_filecustomdialog_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3722,10 +3722,10 @@ int32_t k_filecustomdialog_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 int
 ///
-int32_t k_filecustomdialog_super_height_for_width(void* self, int param1);
+int32_t k_filecustomdialog_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3733,10 +3733,10 @@ int32_t k_filecustomdialog_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param callback int32_t func(KFileCustomDialog* self, int param1)
 ///
-void k_filecustomdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_filecustomdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3744,9 +3744,9 @@ void k_filecustomdialog_on_height_for_width(void* self, int32_t (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_has_height_for_width(void* self);
+bool k_filecustomdialog_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3754,9 +3754,9 @@ bool k_filecustomdialog_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-bool k_filecustomdialog_super_has_height_for_width(void* self);
+bool k_filecustomdialog_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3764,10 +3764,10 @@ bool k_filecustomdialog_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback bool func()
+/// @param self const KFileCustomDialog*
+/// @param callback bool func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_has_height_for_width(void* self, bool (*callback)());
+void k_filecustomdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3775,9 +3775,9 @@ void k_filecustomdialog_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QPaintEngine* k_filecustomdialog_paint_engine(void* self);
+QPaintEngine* k_filecustomdialog_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3785,9 +3785,9 @@ QPaintEngine* k_filecustomdialog_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QPaintEngine* k_filecustomdialog_super_paint_engine(void* self);
+QPaintEngine* k_filecustomdialog_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3795,10 +3795,10 @@ QPaintEngine* k_filecustomdialog_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback QPaintEngine* func()
+/// @param self const KFileCustomDialog*
+/// @param callback QPaintEngine* func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_filecustomdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4536,10 +4536,10 @@ void k_filecustomdialog_on_change_event(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_filecustomdialog_metric(void* self, int32_t param1);
+int32_t k_filecustomdialog_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4547,10 +4547,10 @@ int32_t k_filecustomdialog_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_filecustomdialog_super_metric(void* self, int32_t param1);
+int32_t k_filecustomdialog_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4558,10 +4558,10 @@ int32_t k_filecustomdialog_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param callback int32_t func(KFileCustomDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_filecustomdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_filecustomdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4569,10 +4569,10 @@ void k_filecustomdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param painter QPainter*
 ///
-void k_filecustomdialog_init_painter(void* self, void* painter);
+void k_filecustomdialog_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4580,10 +4580,10 @@ void k_filecustomdialog_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param painter QPainter*
 ///
-void k_filecustomdialog_super_init_painter(void* self, void* painter);
+void k_filecustomdialog_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4591,10 +4591,10 @@ void k_filecustomdialog_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param callback void func(KFileCustomDialog* self, QPainter* painter)
 ///
-void k_filecustomdialog_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_filecustomdialog_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4602,10 +4602,10 @@ void k_filecustomdialog_on_init_painter(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_filecustomdialog_redirected(void* self, void* offset);
+QPaintDevice* k_filecustomdialog_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4613,10 +4613,10 @@ QPaintDevice* k_filecustomdialog_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_filecustomdialog_super_redirected(void* self, void* offset);
+QPaintDevice* k_filecustomdialog_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4624,10 +4624,10 @@ QPaintDevice* k_filecustomdialog_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param callback QPaintDevice* func(KFileCustomDialog* self, QPoint* offset)
 ///
-void k_filecustomdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_filecustomdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4635,9 +4635,9 @@ void k_filecustomdialog_on_redirected(void* self, QPaintDevice* (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QPainter* k_filecustomdialog_shared_painter(void* self);
+QPainter* k_filecustomdialog_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4645,9 +4645,9 @@ QPainter* k_filecustomdialog_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QPainter* k_filecustomdialog_super_shared_painter(void* self);
+QPainter* k_filecustomdialog_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4655,10 +4655,10 @@ QPainter* k_filecustomdialog_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback QPainter* func()
+/// @param self const KFileCustomDialog*
+/// @param callback QPainter* func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_shared_painter(void* self, QPainter* (*callback)());
+void k_filecustomdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4699,10 +4699,10 @@ void k_filecustomdialog_on_input_method_event(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_filecustomdialog_input_method_query(void* self, int32_t param1);
+QVariant* k_filecustomdialog_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4710,10 +4710,10 @@ QVariant* k_filecustomdialog_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_filecustomdialog_super_input_method_query(void* self, int32_t param1);
+QVariant* k_filecustomdialog_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4721,12 +4721,12 @@ QVariant* k_filecustomdialog_super_input_method_query(void* self, int32_t param1
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param callback QVariant* func(KFileCustomDialog* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_filecustomdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_filecustomdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4869,7 +4869,7 @@ void k_filecustomdialog_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self KFileCustomDialog*
 /// @param signal QMetaMethod*
 ///
-void k_filecustomdialog_connect_notify(void* self, void* signal);
+void k_filecustomdialog_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4880,7 +4880,7 @@ void k_filecustomdialog_connect_notify(void* self, void* signal);
 /// @param self KFileCustomDialog*
 /// @param signal QMetaMethod*
 ///
-void k_filecustomdialog_super_connect_notify(void* self, void* signal);
+void k_filecustomdialog_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4891,7 +4891,7 @@ void k_filecustomdialog_super_connect_notify(void* self, void* signal);
 /// @param self KFileCustomDialog*
 /// @param callback void func(KFileCustomDialog* self, QMetaMethod* signal)
 ///
-void k_filecustomdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_filecustomdialog_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4902,7 +4902,7 @@ void k_filecustomdialog_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self KFileCustomDialog*
 /// @param signal QMetaMethod*
 ///
-void k_filecustomdialog_disconnect_notify(void* self, void* signal);
+void k_filecustomdialog_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4913,7 +4913,7 @@ void k_filecustomdialog_disconnect_notify(void* self, void* signal);
 /// @param self KFileCustomDialog*
 /// @param signal QMetaMethod*
 ///
-void k_filecustomdialog_super_disconnect_notify(void* self, void* signal);
+void k_filecustomdialog_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4924,7 +4924,7 @@ void k_filecustomdialog_super_disconnect_notify(void* self, void* signal);
 /// @param self KFileCustomDialog*
 /// @param callback void func(KFileCustomDialog* self, QMetaMethod* signal)
 ///
-void k_filecustomdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_filecustomdialog_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QDialog
 ///
@@ -4986,9 +4986,9 @@ void k_filecustomdialog_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback void func()
+/// @param callback void func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_update_micro_focus(void* self, void (*callback)());
+void k_filecustomdialog_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5017,9 +5017,9 @@ void k_filecustomdialog_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback void func()
+/// @param callback void func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_create(void* self, void (*callback)());
+void k_filecustomdialog_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5048,9 +5048,9 @@ void k_filecustomdialog_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback void func()
+/// @param callback void func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_destroy(void* self, void (*callback)());
+void k_filecustomdialog_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5079,9 +5079,9 @@ bool k_filecustomdialog_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback bool func()
+/// @param callback bool func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_focus_next_child(void* self, bool (*callback)());
+void k_filecustomdialog_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5110,9 +5110,9 @@ bool k_filecustomdialog_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KFileCustomDialog*
-/// @param callback bool func()
+/// @param callback bool func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_focus_previous_child(void* self, bool (*callback)());
+void k_filecustomdialog_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5120,9 +5120,9 @@ void k_filecustomdialog_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QObject* k_filecustomdialog_sender(void* self);
+QObject* k_filecustomdialog_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5130,9 +5130,9 @@ QObject* k_filecustomdialog_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-QObject* k_filecustomdialog_super_sender(void* self);
+QObject* k_filecustomdialog_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5140,10 +5140,10 @@ QObject* k_filecustomdialog_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback QObject* func()
+/// @param self const KFileCustomDialog*
+/// @param callback QObject* func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_sender(void* self, QObject* (*callback)());
+void k_filecustomdialog_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5151,9 +5151,9 @@ void k_filecustomdialog_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_sender_signal_index(void* self);
+int32_t k_filecustomdialog_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5161,9 +5161,9 @@ int32_t k_filecustomdialog_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 ///
-int32_t k_filecustomdialog_super_sender_signal_index(void* self);
+int32_t k_filecustomdialog_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5171,10 +5171,10 @@ int32_t k_filecustomdialog_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
-/// @param callback int32_t func()
+/// @param self const KFileCustomDialog*
+/// @param callback int32_t func(KFileCustomDialog* self)
 ///
-void k_filecustomdialog_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_filecustomdialog_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5182,10 +5182,10 @@ void k_filecustomdialog_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param signal const char*
 ///
-int32_t k_filecustomdialog_receivers(void* self, const char* signal);
+int32_t k_filecustomdialog_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5193,10 +5193,10 @@ int32_t k_filecustomdialog_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param signal const char*
 ///
-int32_t k_filecustomdialog_super_receivers(void* self, const char* signal);
+int32_t k_filecustomdialog_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5204,10 +5204,10 @@ int32_t k_filecustomdialog_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param callback int32_t func(KFileCustomDialog* self, const char* signal)
 ///
-void k_filecustomdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_filecustomdialog_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5215,10 +5215,10 @@ void k_filecustomdialog_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param signal QMetaMethod*
 ///
-bool k_filecustomdialog_is_signal_connected(void* self, void* signal);
+bool k_filecustomdialog_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5226,10 +5226,10 @@ bool k_filecustomdialog_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param signal QMetaMethod*
 ///
-bool k_filecustomdialog_super_is_signal_connected(void* self, void* signal);
+bool k_filecustomdialog_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5237,10 +5237,10 @@ bool k_filecustomdialog_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param callback bool func(KFileCustomDialog* self, QMetaMethod* signal)
 ///
-void k_filecustomdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_filecustomdialog_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5248,11 +5248,11 @@ void k_filecustomdialog_on_is_signal_connected(void* self, bool (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_filecustomdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_filecustomdialog_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5260,11 +5260,11 @@ double k_filecustomdialog_get_decoded_metric_f(void* self, int32_t metricA, int3
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_filecustomdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_filecustomdialog_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5272,10 +5272,10 @@ double k_filecustomdialog_super_get_decoded_metric_f(void* self, int32_t metricA
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileCustomDialog*
+/// @param self const KFileCustomDialog*
 /// @param callback double func(KFileCustomDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_filecustomdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_filecustomdialog_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

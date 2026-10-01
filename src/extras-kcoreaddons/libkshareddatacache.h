@@ -29,11 +29,11 @@ KSharedDataCache* k_shareddatacache_new2(const char* cacheName, uint32_t default
 
 /// [Upstream resources](https://api.kde.org/kshareddatacache.html#evictionPolicy)
 ///
-/// @param self KSharedDataCache*
+/// @param self const KSharedDataCache*
 ///
 /// @return enum KSharedDataCache__EvictionPolicy
 ///
-int32_t k_shareddatacache_eviction_policy(void* self);
+int32_t k_shareddatacache_eviction_policy(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kshareddatacache.html#setEvictionPolicy)
 ///
@@ -64,28 +64,28 @@ void k_shareddatacache_delete_cache(const char* cacheName);
 
 /// [Upstream resources](https://api.kde.org/kshareddatacache.html#contains)
 ///
-/// @param self KSharedDataCache*
+/// @param self const KSharedDataCache*
 /// @param key const char*
 ///
-bool k_shareddatacache_contains(void* self, const char* key);
+bool k_shareddatacache_contains(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kshareddatacache.html#totalSize)
 ///
-/// @param self KSharedDataCache*
+/// @param self const KSharedDataCache*
 ///
-uint32_t k_shareddatacache_total_size(void* self);
+uint32_t k_shareddatacache_total_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kshareddatacache.html#freeSize)
 ///
-/// @param self KSharedDataCache*
+/// @param self const KSharedDataCache*
 ///
-uint32_t k_shareddatacache_free_size(void* self);
+uint32_t k_shareddatacache_free_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kshareddatacache.html#timestamp)
 ///
-/// @param self KSharedDataCache*
+/// @param self const KSharedDataCache*
 ///
-uint32_t k_shareddatacache_timestamp(void* self);
+uint32_t k_shareddatacache_timestamp(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kshareddatacache.html#setTimestamp)
 ///

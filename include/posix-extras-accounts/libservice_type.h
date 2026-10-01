@@ -20,81 +20,81 @@ Accounts__ServiceType* q_accounts__servicetype_new();
 ///
 /// @param other Accounts__ServiceType*
 ///
-Accounts__ServiceType* q_accounts__servicetype_new2(void* other);
+Accounts__ServiceType* q_accounts__servicetype_new2(const void* other);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @param self Accounts__ServiceType*
 /// @param other Accounts__ServiceType*
 ///
-void q_accounts__servicetype_operator_assign(void* self, void* other);
+void q_accounts__servicetype_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
-/// @param self Accounts__ServiceType*
+/// @param self const Accounts__ServiceType*
 ///
-bool q_accounts__servicetype_is_valid(void* self);
-
-/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self Accounts__ServiceType*
-///
-const char* q_accounts__servicetype_name(void* self);
+bool q_accounts__servicetype_is_valid(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__ServiceType*
+/// @param self const Accounts__ServiceType*
 ///
-const char* q_accounts__servicetype_description(void* self);
+const char* q_accounts__servicetype_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__ServiceType*
+/// @param self const Accounts__ServiceType*
 ///
-const char* q_accounts__servicetype_display_name(void* self);
+const char* q_accounts__servicetype_description(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__ServiceType*
+/// @param self const Accounts__ServiceType*
 ///
-const char* q_accounts__servicetype_tr_catalog(void* self);
+const char* q_accounts__servicetype_display_name(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__ServiceType*
+/// @param self const Accounts__ServiceType*
 ///
-const char* q_accounts__servicetype_icon_name(void* self);
+const char* q_accounts__servicetype_tr_catalog(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
-/// @param self Accounts__ServiceType*
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const Accounts__ServiceType*
+///
+const char* q_accounts__servicetype_icon_name(const void* self);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
+///
+/// @param self const Accounts__ServiceType*
 /// @param tag const char*
 ///
-bool q_accounts__servicetype_has_tag(void* self, const char* tag);
+bool q_accounts__servicetype_has_tag(const void* self, const char* tag);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
-/// @param self Accounts__ServiceType*
+/// @param self const Accounts__ServiceType*
 ///
 /// @return libqt_list set of const char*
 ///
-libqt_list q_accounts__servicetype_tags(void* self);
+libqt_list q_accounts__servicetype_tags(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///
-/// @param self Accounts__ServiceType*
+/// @param self const Accounts__ServiceType*
 ///
-const QDomDocument* q_accounts__servicetype_dom_document(void* self);
+const QDomDocument* q_accounts__servicetype_dom_document(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1ServiceType.html)
 ///

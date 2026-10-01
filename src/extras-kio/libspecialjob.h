@@ -14,7 +14,7 @@
 ///
 /// @param url QUrl*
 ///
-KIO__SpecialJob* k_io__specialjob_new(void* url);
+KIO__SpecialJob* k_io__specialjob_new(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-specialjob.html)
 
@@ -23,30 +23,30 @@ KIO__SpecialJob* k_io__specialjob_new(void* url);
 /// @param url QUrl*
 /// @param data char*
 ///
-KIO__SpecialJob* k_io__specialjob_new2(void* url, char* data);
+KIO__SpecialJob* k_io__specialjob_new2(const void* url, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const QMetaObject* k_io__specialjob_meta_object(void* self);
+const QMetaObject* k_io__specialjob_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KIO__SpecialJob*
-/// @param callback const QMetaObject* func()
+/// @param self const KIO__SpecialJob*
+/// @param callback const QMetaObject* func(const KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_io__specialjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const QMetaObject* k_io__specialjob_super_meta_object(void* self);
+const QMetaObject* k_io__specialjob_super_meta_object(const void* self);
 
 /// @param self KIO__SpecialJob*
 /// @param param1 const char*
@@ -109,9 +109,9 @@ void k_io__specialjob_set_arguments(void* self, char* data);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-char* k_io__specialjob_arguments(void* self);
+char* k_io__specialjob_arguments(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -139,15 +139,15 @@ const char* k_io__specialjob_tr3(const char* s, const char* c, int n);
 /// @param self KIO__SpecialJob*
 /// @param mtime QDateTime*
 ///
-void k_io__specialjob_set_modification_time(void* self, void* mtime);
+void k_io__specialjob_set_modification_time(void* self, const void* mtime);
 
 /// Inherited from KIO::TransferJob
 ///
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#isErrorPage)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_error_page(void* self);
+bool k_io__specialjob_is_error_page(const void* self);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -173,17 +173,17 @@ void k_io__specialjob_send_async_data(void* self, char* data);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const char* k_io__specialjob_mimetype(void* self);
+const char* k_io__specialjob_mimetype(const void* self);
 
 /// Inherited from KIO::TransferJob
 ///
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#redirectUrl)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-QUrl* k_io__specialjob_redirect_url(void* self);
+QUrl* k_io__specialjob_redirect_url(const void* self);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -240,7 +240,7 @@ void k_io__specialjob_on_data_req(void* self, void (*callback)(void*, void*, lib
 /// @param job KIO__Job*
 /// @param url QUrl*
 ///
-void k_io__specialjob_redirection(void* self, void* job, void* url);
+void k_io__specialjob_redirection(void* self, void* job, const void* url);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -249,7 +249,7 @@ void k_io__specialjob_redirection(void* self, void* job, void* url);
 /// @param self KIO__SpecialJob*
 /// @param callback void func(KIO__SpecialJob* self, KIO__Job* job, QUrl* url)
 ///
-void k_io__specialjob_on_redirection(void* self, void (*callback)(void*, void*, void*));
+void k_io__specialjob_on_redirection(void* self, void (*callback)(void*, void*, const void*));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -260,7 +260,7 @@ void k_io__specialjob_on_redirection(void* self, void (*callback)(void*, void*, 
 /// @param fromUrl QUrl*
 /// @param toUrl QUrl*
 ///
-void k_io__specialjob_permanent_redirection(void* self, void* job, void* fromUrl, void* toUrl);
+void k_io__specialjob_permanent_redirection(void* self, void* job, const void* fromUrl, const void* toUrl);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -269,7 +269,7 @@ void k_io__specialjob_permanent_redirection(void* self, void* job, void* fromUrl
 /// @param self KIO__SpecialJob*
 /// @param callback void func(KIO__SpecialJob* self, KIO__Job* job, QUrl* fromUrl, QUrl* toUrl)
 ///
-void k_io__specialjob_on_permanent_redirection(void* self, void (*callback)(void*, void*, void*, void*));
+void k_io__specialjob_on_permanent_redirection(void* self, void (*callback)(void*, void*, const void*, const void*));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -313,9 +313,9 @@ void k_io__specialjob_on_can_resume(void* self, void (*callback)(void*, void*, u
 ///
 /// [Upstream resources](https://api.kde.org/kio-simplejob.html#url)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const QUrl* k_io__specialjob_url(void* self);
+const QUrl* k_io__specialjob_url(const void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -327,9 +327,9 @@ void k_io__specialjob_remove_on_hold();
 ///
 /// [Upstream resources](https://api.kde.org/kio-simplejob.html#isRedirectionHandlingEnabled)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_redirection_handling_enabled(void* self);
+bool k_io__specialjob_is_redirection_handling_enabled(const void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -354,9 +354,9 @@ void k_io__specialjob_slot_error(void* self, int param1, const char* param2);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#uiDelegateExtension)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-KIO__JobUiDelegateExtension* k_io__specialjob_ui_delegate_extension(void* self);
+KIO__JobUiDelegateExtension* k_io__specialjob_ui_delegate_extension(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -373,9 +373,9 @@ void k_io__specialjob_set_ui_delegate_extension(void* self, void* extension);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const char** k_io__specialjob_detailed_error_strings(void* self);
+const char** k_io__specialjob_detailed_error_strings(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -390,9 +390,9 @@ void k_io__specialjob_set_parent_job(void* self, void* parentJob);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#parentJob)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-KIO__Job* k_io__specialjob_parent_job(void* self);
+KIO__Job* k_io__specialjob_parent_job(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -401,7 +401,7 @@ KIO__Job* k_io__specialjob_parent_job(void* self);
 /// @param self KIO__SpecialJob*
 /// @param metaData KIO__MetaData*
 ///
-void k_io__specialjob_set_meta_data(void* self, void* metaData);
+void k_io__specialjob_set_meta_data(void* self, const void* metaData);
 
 /// Inherited from KIO::Job
 ///
@@ -435,17 +435,17 @@ void k_io__specialjob_merge_meta_data(void* self, libqt_map values);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#outgoingMetaData)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-KIO__MetaData* k_io__specialjob_outgoing_meta_data(void* self);
+KIO__MetaData* k_io__specialjob_outgoing_meta_data(const void* self);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#metaData)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-KIO__MetaData* k_io__specialjob_meta_data(void* self);
+KIO__MetaData* k_io__specialjob_meta_data(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -482,10 +482,10 @@ void k_io__specialjob_on_connected(void* self, void (*callback)(void*, void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param reqUrl QUrl*
 ///
-const char** k_io__specialjob_detailed_error_strings1(void* self, void* reqUrl);
+const char** k_io__specialjob_detailed_error_strings1(const void* self, const void* reqUrl);
 
 /// Inherited from KIO::Job
 ///
@@ -493,11 +493,11 @@ const char** k_io__specialjob_detailed_error_strings1(void* self, void* reqUrl);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param reqUrl QUrl*
 /// @param method int
 ///
-const char** k_io__specialjob_detailed_error_strings2(void* self, void* reqUrl, int method);
+const char** k_io__specialjob_detailed_error_strings2(const void* self, const void* reqUrl, int method);
 
 /// Inherited from KJob
 ///
@@ -512,27 +512,27 @@ void k_io__specialjob_set_ui_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-KJobUiDelegate* k_io__specialjob_ui_delegate(void* self);
+KJobUiDelegate* k_io__specialjob_ui_delegate(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
 /// @return flag of enum KJob__Capability
 ///
-int32_t k_io__specialjob_capabilities(void* self);
+int32_t k_io__specialjob_capabilities(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_suspended(void* self);
+bool k_io__specialjob_is_suspended(const void* self);
 
 /// Inherited from KJob
 ///
@@ -570,9 +570,9 @@ bool k_io__specialjob_exec(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-int32_t k_io__specialjob_error(void* self);
+int32_t k_io__specialjob_error(const void* self);
 
 /// Inherited from KJob
 ///
@@ -580,35 +580,35 @@ int32_t k_io__specialjob_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const char* k_io__specialjob_error_text(void* self);
+const char* k_io__specialjob_error_text(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_io__specialjob_processed_amount(void* self, int32_t unit);
+uintptr_t k_io__specialjob_processed_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_io__specialjob_total_amount(void* self, int32_t unit);
+uintptr_t k_io__specialjob_total_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-uintptr_t k_io__specialjob_percent(void* self);
+uintptr_t k_io__specialjob_percent(const void* self);
 
 /// Inherited from KJob
 ///
@@ -623,9 +623,9 @@ void k_io__specialjob_set_auto_delete(void* self, bool autodelete);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_auto_delete(void* self);
+bool k_io__specialjob_is_auto_delete(const void* self);
 
 /// Inherited from KJob
 ///
@@ -639,25 +639,25 @@ void k_io__specialjob_set_finished_notification_hidden(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_finished_notification_hidden(void* self);
+bool k_io__specialjob_is_finished_notification_hidden(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_started_with_exec(void* self);
+bool k_io__specialjob_is_started_with_exec(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-int64_t k_io__specialjob_elapsed_time(void* self);
+int64_t k_io__specialjob_elapsed_time(const void* self);
 
 /// Inherited from KJob
 ///
@@ -778,9 +778,9 @@ void k_io__specialjob_set_finished_notification_hidden1(void* self, bool hide);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const char* k_io__specialjob_object_name(void* self);
+const char* k_io__specialjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -795,33 +795,33 @@ void k_io__specialjob_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_widget_type(void* self);
+bool k_io__specialjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_window_type(void* self);
+bool k_io__specialjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_quick_item_type(void* self);
+bool k_io__specialjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_signals_blocked(void* self);
+bool k_io__specialjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -836,9 +836,9 @@ bool k_io__specialjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-QThread* k_io__specialjob_thread(void* self);
+QThread* k_io__specialjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -889,11 +889,11 @@ void k_io__specialjob_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_io__specialjob_children(void* self);
+libqt_list k_io__specialjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -931,7 +931,7 @@ void k_io__specialjob_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__specialjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_io__specialjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -942,18 +942,18 @@ QMetaObject__Connection* k_io__specialjob_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_io__specialjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_io__specialjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__specialjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_io__specialjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -964,7 +964,7 @@ QMetaObject__Connection* k_io__specialjob_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__specialjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_io__specialjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -975,24 +975,24 @@ bool k_io__specialjob_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_io__specialjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_io__specialjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_disconnect3(void* self);
+bool k_io__specialjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param receiver QObject*
 ///
-bool k_io__specialjob_disconnect4(void* self, void* receiver);
+bool k_io__specialjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1000,23 +1000,23 @@ bool k_io__specialjob_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_io__specialjob_disconnect5(void* param1);
+bool k_io__specialjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-void k_io__specialjob_dump_object_tree(void* self);
+void k_io__specialjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-void k_io__specialjob_dump_object_info(void* self);
+void k_io__specialjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1026,16 +1026,16 @@ void k_io__specialjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_io__specialjob_set_property(void* self, const char* name, void* value);
+bool k_io__specialjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param name const char*
 ///
-QVariant* k_io__specialjob_property(void* self, const char* name);
+QVariant* k_io__specialjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1043,9 +1043,9 @@ QVariant* k_io__specialjob_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const char** k_io__specialjob_dynamic_property_names(void* self);
+const char** k_io__specialjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1059,9 +1059,9 @@ QBindingStorage* k_io__specialjob_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const QBindingStorage* k_io__specialjob_binding_storage2(void* self);
+const QBindingStorage* k_io__specialjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1084,18 +1084,18 @@ void k_io__specialjob_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-QObject* k_io__specialjob_parent(void* self);
+QObject* k_io__specialjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param classname const char*
 ///
-bool k_io__specialjob_inherits(void* self, const char* classname);
+bool k_io__specialjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1135,7 +1135,7 @@ int32_t k_io__specialjob_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__specialjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_io__specialjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1147,59 +1147,59 @@ QMetaObject__Connection* k_io__specialjob_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__specialjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_io__specialjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__specialjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_io__specialjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param signal const char*
 ///
-bool k_io__specialjob_disconnect1(void* self, const char* signal);
+bool k_io__specialjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__SpecialJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_io__specialjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_io__specialjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_io__specialjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__specialjob_disconnect23(void* self, void* receiver, const char* member);
+bool k_io__specialjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KIO__SpecialJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_io__specialjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1246,9 +1246,9 @@ bool k_io__specialjob_super_do_resume(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback bool func()
+/// @param callback bool func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_do_resume(void* self, bool (*callback)());
+void k_io__specialjob_on_do_resume(void* self, bool (*callback)(void*));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -1259,7 +1259,7 @@ void k_io__specialjob_on_do_resume(void* self, bool (*callback)());
 /// @param self KIO__SpecialJob*
 /// @param url QUrl*
 ///
-void k_io__specialjob_slot_redirection(void* self, void* url);
+void k_io__specialjob_slot_redirection(void* self, const void* url);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -1270,7 +1270,7 @@ void k_io__specialjob_slot_redirection(void* self, void* url);
 /// @param self KIO__SpecialJob*
 /// @param url QUrl*
 ///
-void k_io__specialjob_super_slot_redirection(void* self, void* url);
+void k_io__specialjob_super_slot_redirection(void* self, const void* url);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -1281,7 +1281,7 @@ void k_io__specialjob_super_slot_redirection(void* self, void* url);
 /// @param self KIO__SpecialJob*
 /// @param callback void func(KIO__SpecialJob* self, QUrl* url)
 ///
-void k_io__specialjob_on_slot_redirection(void* self, void (*callback)(void*, void*));
+void k_io__specialjob_on_slot_redirection(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -1310,9 +1310,9 @@ void k_io__specialjob_super_slot_finished(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback void func()
+/// @param callback void func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_slot_finished(void* self, void (*callback)());
+void k_io__specialjob_on_slot_finished(void* self, void (*callback)(void*));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -1374,9 +1374,9 @@ void k_io__specialjob_super_slot_data_req(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback void func()
+/// @param callback void func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_slot_data_req(void* self, void (*callback)());
+void k_io__specialjob_on_slot_data_req(void* self, void (*callback)(void*));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -1438,9 +1438,9 @@ bool k_io__specialjob_super_do_suspend(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback bool func()
+/// @param callback bool func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_do_suspend(void* self, bool (*callback)());
+void k_io__specialjob_on_do_suspend(void* self, bool (*callback)(void*));
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -1469,9 +1469,9 @@ bool k_io__specialjob_super_do_kill(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback bool func()
+/// @param callback bool func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_do_kill(void* self, bool (*callback)());
+void k_io__specialjob_on_do_kill(void* self, bool (*callback)(void*));
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -1500,9 +1500,9 @@ void k_io__specialjob_super_put_on_hold(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback void func()
+/// @param callback void func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_put_on_hold(void* self, void (*callback)());
+void k_io__specialjob_on_put_on_hold(void* self, void (*callback)(void*));
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -1546,7 +1546,7 @@ void k_io__specialjob_on_slot_warning(void* self, void (*callback)(void*, const 
 /// @param self KIO__SpecialJob*
 /// @param _metaData KIO__MetaData*
 ///
-void k_io__specialjob_slot_meta_data(void* self, void* _metaData);
+void k_io__specialjob_slot_meta_data(void* self, const void* _metaData);
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -1557,7 +1557,7 @@ void k_io__specialjob_slot_meta_data(void* self, void* _metaData);
 /// @param self KIO__SpecialJob*
 /// @param _metaData KIO__MetaData*
 ///
-void k_io__specialjob_super_slot_meta_data(void* self, void* _metaData);
+void k_io__specialjob_super_slot_meta_data(void* self, const void* _metaData);
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -1568,7 +1568,7 @@ void k_io__specialjob_super_slot_meta_data(void* self, void* _metaData);
 /// @param self KIO__SpecialJob*
 /// @param callback void func(KIO__SpecialJob* self, KIO__MetaData* _metaData)
 ///
-void k_io__specialjob_on_slot_meta_data(void* self, void (*callback)(void*, void*));
+void k_io__specialjob_on_slot_meta_data(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KIO::Job
 ///
@@ -1597,9 +1597,9 @@ void k_io__specialjob_super_start(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback void func()
+/// @param callback void func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_start(void* self, void (*callback)());
+void k_io__specialjob_on_start(void* self, void (*callback)(void*));
 
 /// Inherited from KIO::Job
 ///
@@ -1609,9 +1609,9 @@ void k_io__specialjob_on_start(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const char* k_io__specialjob_error_string(void* self);
+const char* k_io__specialjob_error_string(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -1621,9 +1621,9 @@ const char* k_io__specialjob_error_string(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-const char* k_io__specialjob_super_error_string(void* self);
+const char* k_io__specialjob_super_error_string(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -1631,10 +1631,10 @@ const char* k_io__specialjob_super_error_string(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
-/// @param callback const char* func()
+/// @param self const KIO__SpecialJob*
+/// @param callback const char* func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_error_string(void* self, const char* (*callback)());
+void k_io__specialjob_on_error_string(const void* self, const char* (*callback)(const void*));
 
 /// Inherited from KIO::Job
 ///
@@ -1946,7 +1946,7 @@ void k_io__specialjob_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self KIO__SpecialJob*
 /// @param signal QMetaMethod*
 ///
-void k_io__specialjob_connect_notify(void* self, void* signal);
+void k_io__specialjob_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1957,7 +1957,7 @@ void k_io__specialjob_connect_notify(void* self, void* signal);
 /// @param self KIO__SpecialJob*
 /// @param signal QMetaMethod*
 ///
-void k_io__specialjob_super_connect_notify(void* self, void* signal);
+void k_io__specialjob_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1968,7 +1968,7 @@ void k_io__specialjob_super_connect_notify(void* self, void* signal);
 /// @param self KIO__SpecialJob*
 /// @param callback void func(KIO__SpecialJob* self, QMetaMethod* signal)
 ///
-void k_io__specialjob_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_io__specialjob_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1979,7 +1979,7 @@ void k_io__specialjob_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self KIO__SpecialJob*
 /// @param signal QMetaMethod*
 ///
-void k_io__specialjob_disconnect_notify(void* self, void* signal);
+void k_io__specialjob_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1990,7 +1990,7 @@ void k_io__specialjob_disconnect_notify(void* self, void* signal);
 /// @param self KIO__SpecialJob*
 /// @param signal QMetaMethod*
 ///
-void k_io__specialjob_super_disconnect_notify(void* self, void* signal);
+void k_io__specialjob_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2001,7 +2001,7 @@ void k_io__specialjob_super_disconnect_notify(void* self, void* signal);
 /// @param self KIO__SpecialJob*
 /// @param callback void func(KIO__SpecialJob* self, QMetaMethod* signal)
 ///
-void k_io__specialjob_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_io__specialjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KCompositeJob
 ///
@@ -2009,9 +2009,9 @@ void k_io__specialjob_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_has_subjobs(void* self);
+bool k_io__specialjob_has_subjobs(const void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -2019,9 +2019,9 @@ bool k_io__specialjob_has_subjobs(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_super_has_subjobs(void* self);
+bool k_io__specialjob_super_has_subjobs(const void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -2029,10 +2029,10 @@ bool k_io__specialjob_super_has_subjobs(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
-/// @param callback bool func()
+/// @param self const KIO__SpecialJob*
+/// @param callback bool func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_has_subjobs(void* self, bool (*callback)());
+void k_io__specialjob_on_has_subjobs(const void* self, bool (*callback)(const void*));
 
 /// Inherited from KCompositeJob
 ///
@@ -2040,11 +2040,11 @@ void k_io__specialjob_on_has_subjobs(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
 /// @return libqt_list of KJob*
 ///
-libqt_list k_io__specialjob_subjobs(void* self);
+libqt_list k_io__specialjob_subjobs(const void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -2052,11 +2052,11 @@ libqt_list k_io__specialjob_subjobs(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
 /// @return libqt_list of KJob*
 ///
-libqt_list k_io__specialjob_super_subjobs(void* self);
+libqt_list k_io__specialjob_super_subjobs(const void* self);
 
 /// Inherited from KCompositeJob
 ///
@@ -2064,10 +2064,10 @@ libqt_list k_io__specialjob_super_subjobs(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
-/// @param callback libqt_list of KJob* func()
+/// @param self const KIO__SpecialJob*
+/// @param callback libqt_list of KJob* func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_subjobs(void* self, libqt_list (*callback)());
+void k_io__specialjob_on_subjobs(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from KCompositeJob
 ///
@@ -2096,9 +2096,9 @@ void k_io__specialjob_super_clear_subjobs(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback void func()
+/// @param callback void func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_clear_subjobs(void* self, void (*callback)());
+void k_io__specialjob_on_clear_subjobs(void* self, void (*callback)(void*));
 
 /// Inherited from KJob
 ///
@@ -2139,9 +2139,9 @@ void k_io__specialjob_on_set_capabilities(void* self, void (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_is_finished(void* self);
+bool k_io__specialjob_is_finished(const void* self);
 
 /// Inherited from KJob
 ///
@@ -2149,9 +2149,9 @@ bool k_io__specialjob_is_finished(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-bool k_io__specialjob_super_is_finished(void* self);
+bool k_io__specialjob_super_is_finished(const void* self);
 
 /// Inherited from KJob
 ///
@@ -2159,10 +2159,10 @@ bool k_io__specialjob_super_is_finished(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
-/// @param callback bool func()
+/// @param self const KIO__SpecialJob*
+/// @param callback bool func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_is_finished(void* self, bool (*callback)());
+void k_io__specialjob_on_is_finished(const void* self, bool (*callback)(const void*));
 
 /// Inherited from KJob
 ///
@@ -2393,9 +2393,9 @@ void k_io__specialjob_super_emit_result(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback void func()
+/// @param callback void func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_emit_result(void* self, void (*callback)());
+void k_io__specialjob_on_emit_result(void* self, void (*callback)(void*));
 
 /// Inherited from KJob
 ///
@@ -2492,9 +2492,9 @@ void k_io__specialjob_super_start_elapsed_timer(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__SpecialJob*
-/// @param callback void func()
+/// @param callback void func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_start_elapsed_timer(void* self, void (*callback)());
+void k_io__specialjob_on_start_elapsed_timer(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -2502,9 +2502,9 @@ void k_io__specialjob_on_start_elapsed_timer(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-QObject* k_io__specialjob_sender(void* self);
+QObject* k_io__specialjob_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2512,9 +2512,9 @@ QObject* k_io__specialjob_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-QObject* k_io__specialjob_super_sender(void* self);
+QObject* k_io__specialjob_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2522,10 +2522,10 @@ QObject* k_io__specialjob_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
-/// @param callback QObject* func()
+/// @param self const KIO__SpecialJob*
+/// @param callback QObject* func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_sender(void* self, QObject* (*callback)());
+void k_io__specialjob_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2533,9 +2533,9 @@ void k_io__specialjob_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-int32_t k_io__specialjob_sender_signal_index(void* self);
+int32_t k_io__specialjob_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2543,9 +2543,9 @@ int32_t k_io__specialjob_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 ///
-int32_t k_io__specialjob_super_sender_signal_index(void* self);
+int32_t k_io__specialjob_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2553,10 +2553,10 @@ int32_t k_io__specialjob_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
-/// @param callback int32_t func()
+/// @param self const KIO__SpecialJob*
+/// @param callback int32_t func(KIO__SpecialJob* self)
 ///
-void k_io__specialjob_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_io__specialjob_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2564,10 +2564,10 @@ void k_io__specialjob_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param signal const char*
 ///
-int32_t k_io__specialjob_receivers(void* self, const char* signal);
+int32_t k_io__specialjob_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2575,10 +2575,10 @@ int32_t k_io__specialjob_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param signal const char*
 ///
-int32_t k_io__specialjob_super_receivers(void* self, const char* signal);
+int32_t k_io__specialjob_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2586,10 +2586,10 @@ int32_t k_io__specialjob_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param callback int32_t func(KIO__SpecialJob* self, const char* signal)
 ///
-void k_io__specialjob_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_io__specialjob_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2597,10 +2597,10 @@ void k_io__specialjob_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param signal QMetaMethod*
 ///
-bool k_io__specialjob_is_signal_connected(void* self, void* signal);
+bool k_io__specialjob_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2608,10 +2608,10 @@ bool k_io__specialjob_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param signal QMetaMethod*
 ///
-bool k_io__specialjob_super_is_signal_connected(void* self, void* signal);
+bool k_io__specialjob_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2619,10 +2619,10 @@ bool k_io__specialjob_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KIO__SpecialJob*
+/// @param self const KIO__SpecialJob*
 /// @param callback bool func(KIO__SpecialJob* self, QMetaMethod* signal)
 ///
-void k_io__specialjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_io__specialjob_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from KJob
 ///

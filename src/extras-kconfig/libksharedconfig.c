@@ -8,18 +8,18 @@ QSharedData* k_sharedconfig_as_q_shared_data(void* self) {
     return KSharedConfig_AsQSharedData((KSharedConfig*)self);
 }
 
-int32_t k_sharedconfig_location_type(void* self) {
+int32_t k_sharedconfig_location_type(const void* self) {
     return KConfig_LocationType((KConfig*)self);
 }
 
-const char* k_sharedconfig_name(void* self) {
+const char* k_sharedconfig_name(const void* self) {
     libqt_string _str = KConfig_Name((KConfig*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_sharedconfig_open_flags(void* self) {
+int32_t k_sharedconfig_open_flags(const void* self) {
     return KConfig_OpenFlags((KConfig*)self);
 }
 
@@ -27,7 +27,7 @@ bool k_sharedconfig_sync(void* self) {
     return KConfig_Sync((KConfig*)self);
 }
 
-bool k_sharedconfig_is_dirty(void* self) {
+bool k_sharedconfig_is_dirty(const void* self) {
     return KConfig_IsDirty((KConfig*)self);
 }
 
@@ -35,7 +35,7 @@ void k_sharedconfig_mark_as_clean(void* self) {
     KConfig_MarkAsClean((KConfig*)self);
 }
 
-int32_t k_sharedconfig_access_mode(void* self) {
+int32_t k_sharedconfig_access_mode(const void* self) {
     return KConfig_AccessMode((KConfig*)self);
 }
 
@@ -43,7 +43,7 @@ bool k_sharedconfig_is_config_writable(void* self, bool warnUser) {
     return KConfig_IsConfigWritable((KConfig*)self, warnUser);
 }
 
-KConfig* k_sharedconfig_copy_to(void* self, const char* file) {
+KConfig* k_sharedconfig_copy_to(const void* self, const char* file) {
     return KConfig_CopyTo((KConfig*)self, qstring(file));
 }
 
@@ -69,7 +69,7 @@ void k_sharedconfig_add_config_sources(void* self, const char* sources[static 1]
     free(sources_qstr);
 }
 
-const char** k_sharedconfig_additional_config_sources(void* self) {
+const char** k_sharedconfig_additional_config_sources(const void* self) {
     libqt_list _arr = KConfig_AdditionalConfigSources((KConfig*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -86,7 +86,7 @@ const char** k_sharedconfig_additional_config_sources(void* self) {
     return _ret;
 }
 
-const char* k_sharedconfig_locale(void* self) {
+const char* k_sharedconfig_locale(const void* self) {
     libqt_string _str = KConfig_Locale((KConfig*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -101,15 +101,15 @@ void k_sharedconfig_set_read_defaults(void* self, bool b) {
     KConfig_SetReadDefaults((KConfig*)self, b);
 }
 
-bool k_sharedconfig_read_defaults(void* self) {
+bool k_sharedconfig_read_defaults(const void* self) {
     return KConfig_ReadDefaults((KConfig*)self);
 }
 
-bool k_sharedconfig_is_immutable(void* self) {
+bool k_sharedconfig_is_immutable(const void* self) {
     return KConfig_IsImmutable((KConfig*)self);
 }
 
-const char** k_sharedconfig_group_list(void* self) {
+const char** k_sharedconfig_group_list(const void* self) {
     libqt_list _arr = KConfig_GroupList((KConfig*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -126,7 +126,7 @@ const char** k_sharedconfig_group_list(void* self) {
     return _ret;
 }
 
-libqt_map /* of const char* to const char* */ k_sharedconfig_entry_map(void* self) {
+libqt_map /* of const char* to const char* */ k_sharedconfig_entry_map(const void* self) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = KConfig_EntryMap((KConfig*)self);
     libqt_map _ret;
@@ -192,11 +192,11 @@ const char* k_sharedconfig_main_config_name() {
     return _ret;
 }
 
-KConfig* k_sharedconfig_copy_to2(void* self, const char* file, void* config) {
+KConfig* k_sharedconfig_copy_to2(const void* self, const char* file, void* config) {
     return KConfig_CopyTo2((KConfig*)self, qstring(file), (KConfig*)config);
 }
 
-libqt_map /* of const char* to const char* */ k_sharedconfig_entry_map1(void* self, const char* aGroup) {
+libqt_map /* of const char* to const char* */ k_sharedconfig_entry_map1(const void* self, const char* aGroup) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = KConfig_EntryMap1((KConfig*)self, qstring(aGroup));
     libqt_map _ret;
@@ -251,7 +251,7 @@ libqt_map /* of const char* to const char* */ k_sharedconfig_entry_map1(void* se
     return _ret;
 }
 
-bool k_sharedconfig_has_group(void* self, const char* group) {
+bool k_sharedconfig_has_group(const void* self, const char* group) {
     return KConfigBase_HasGroup((KConfigBase*)self, qstring(group));
 }
 
@@ -259,7 +259,7 @@ KConfigGroup* k_sharedconfig_group(void* self, const char* group) {
     return KConfigBase_Group((KConfigBase*)self, qstring(group));
 }
 
-const KConfigGroup* k_sharedconfig_group2(void* self, const char* group) {
+const KConfigGroup* k_sharedconfig_group2(const void* self, const char* group) {
     return KConfigBase_Group2((KConfigBase*)self, qstring(group));
 }
 
@@ -267,11 +267,11 @@ void k_sharedconfig_delete_group(void* self, const char* group) {
     KConfigBase_DeleteGroup((KConfigBase*)self, qstring(group));
 }
 
-bool k_sharedconfig_is_group_immutable(void* self, const char* group) {
+bool k_sharedconfig_is_group_immutable(const void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
-void k_sharedconfig_operator_assign(void* self, void* param1) {
+void k_sharedconfig_operator_assign(void* self, const void* param1) {
     KConfigBase_OperatorAssign((KConfigBase*)self, (KConfigBase*)param1);
 }
 

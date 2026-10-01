@@ -20,14 +20,14 @@ Attica__Project* k_attica__project_new();
 ///
 /// @param other Attica__Project*
 ///
-Attica__Project* k_attica__project_new2(void* other);
+Attica__Project* k_attica__project_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#operator-eq)
 ///
 /// @param self Attica__Project*
 /// @param other Attica__Project*
 ///
-void k_attica__project_operator_assign(void* self, void* other);
+void k_attica__project_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setId)
 ///
@@ -40,9 +40,9 @@ void k_attica__project_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_id(void* self);
+const char* k_attica__project_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setName)
 ///
@@ -55,9 +55,9 @@ void k_attica__project_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_name(void* self);
+const char* k_attica__project_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setVersion)
 ///
@@ -70,9 +70,9 @@ void k_attica__project_set_version(void* self, const char* version);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_version(void* self);
+const char* k_attica__project_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setUrl)
 ///
@@ -85,9 +85,9 @@ void k_attica__project_set_url(void* self, const char* url);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_url(void* self);
+const char* k_attica__project_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setLicense)
 ///
@@ -100,9 +100,9 @@ void k_attica__project_set_license(void* self, const char* license);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_license(void* self);
+const char* k_attica__project_license(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setSummary)
 ///
@@ -115,9 +115,9 @@ void k_attica__project_set_summary(void* self, const char* summary);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_summary(void* self);
+const char* k_attica__project_summary(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setDescription)
 ///
@@ -130,9 +130,9 @@ void k_attica__project_set_description(void* self, const char* description);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_description(void* self);
+const char* k_attica__project_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setDevelopers)
 ///
@@ -145,9 +145,9 @@ void k_attica__project_set_developers(void* self, const char* developers[static 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char** k_attica__project_developers(void* self);
+const char** k_attica__project_developers(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setRequirements)
 ///
@@ -160,9 +160,9 @@ void k_attica__project_set_requirements(void* self, const char* requirements);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_requirements(void* self);
+const char* k_attica__project_requirements(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#setSpecFile)
 ///
@@ -175,9 +175,9 @@ void k_attica__project_set_spec_file(void* self, const char* specFile);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-const char* k_attica__project_spec_file(void* self);
+const char* k_attica__project_spec_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#addExtendedAttribute)
 ///
@@ -191,10 +191,10 @@ void k_attica__project_add_extended_attribute(void* self, const char* key, const
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 /// @param key const char*
 ///
-const char* k_attica__project_extended_attribute(void* self, const char* key);
+const char* k_attica__project_extended_attribute(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#extendedAttributes)
 ///
@@ -210,17 +210,17 @@ const char* k_attica__project_extended_attribute(void* self, const char* key);
 /// free(map.values);
 /// ```
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_attica__project_extended_attributes(void* self);
+libqt_map k_attica__project_extended_attributes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-project.html#isValid)
 ///
-/// @param self Attica__Project*
+/// @param self const Attica__Project*
 ///
-bool k_attica__project_is_valid(void* self);
+bool k_attica__project_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

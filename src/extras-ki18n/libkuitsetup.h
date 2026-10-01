@@ -26,7 +26,7 @@ KuitSetup* k_uit_setup_for_domain(char* domain);
 /// @param format enum Kuit__VisualFormat
 /// @param pattern KLocalizedString*
 ///
-void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[static 1], int32_t format, void* pattern);
+void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[static 1], int32_t format, const void* pattern);
 
 /// [Upstream resources](https://api.kde.org/kuitsetup.html#setTagClass)
 ///

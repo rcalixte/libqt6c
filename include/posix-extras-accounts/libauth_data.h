@@ -14,29 +14,29 @@
 ///
 /// @param other Accounts__AuthData*
 ///
-Accounts__AuthData* q_accounts__authdata_new(void* other);
+Accounts__AuthData* q_accounts__authdata_new(const void* other);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
-/// @param self Accounts__AuthData*
+/// @param self const Accounts__AuthData*
 ///
-uint32_t q_accounts__authdata_credentials_id(void* self);
-
-/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self Accounts__AuthData*
-///
-const char* q_accounts__authdata_method(void* self);
+uint32_t q_accounts__authdata_credentials_id(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Accounts__AuthData*
+/// @param self const Accounts__AuthData*
 ///
-const char* q_accounts__authdata_mechanism(void* self);
+const char* q_accounts__authdata_method(const void* self);
+
+/// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const Accounts__AuthData*
+///
+const char* q_accounts__authdata_mechanism(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
@@ -52,18 +52,18 @@ const char* q_accounts__authdata_mechanism(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self Accounts__AuthData*
+/// @param self const Accounts__AuthData*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map q_accounts__authdata_parameters(void* self);
+libqt_map q_accounts__authdata_parameters(const void* self);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///
 /// @param self Accounts__AuthData*
 /// @param param1 Accounts__AuthData*
 ///
-void q_accounts__authdata_operator_assign(void* self, void* param1);
+void q_accounts__authdata_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/libaccounts-qt/classAccounts_1_1AuthData.html)
 ///

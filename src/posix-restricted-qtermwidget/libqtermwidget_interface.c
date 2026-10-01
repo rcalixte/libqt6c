@@ -33,7 +33,7 @@ void q_termwidgetinterface_change_dir(void* self, const char* dir) {
     QTermWidgetInterface_ChangeDir((QTermWidgetInterface*)self, qstring(dir));
 }
 
-void q_termwidgetinterface_set_terminal_font(void* self, void* font) {
+void q_termwidgetinterface_set_terminal_font(void* self, const void* font) {
     QTermWidgetInterface_SetTerminalFont((QTermWidgetInterface*)self, (QFont*)font);
 }
 
@@ -121,7 +121,7 @@ void q_termwidgetinterface_set_history_size(void* self, int lines) {
     QTermWidgetInterface_SetHistorySize((QTermWidgetInterface*)self, lines);
 }
 
-int32_t q_termwidgetinterface_history_size(void* self) {
+int32_t q_termwidgetinterface_history_size(const void* self) {
     return QTermWidgetInterface_HistorySize((QTermWidgetInterface*)self);
 }
 
@@ -211,12 +211,12 @@ void q_termwidgetinterface_set_silence_timeout(void* self, int seconds) {
     QTermWidgetInterface_SetSilenceTimeout((QTermWidgetInterface*)self, seconds);
 }
 
-libqt_list /* of QAction* */ q_termwidgetinterface_filter_actions(void* self, void* position) {
+libqt_list /* of QAction* */ q_termwidgetinterface_filter_actions(void* self, const void* position) {
     libqt_list _arr = QTermWidgetInterface_FilterActions((QTermWidgetInterface*)self, (QPoint*)position);
     return _arr;
 }
 
-int32_t q_termwidgetinterface_get_pty_slave_fd(void* self) {
+int32_t q_termwidgetinterface_get_pty_slave_fd(const void* self) {
     return QTermWidgetInterface_GetPtySlaveFd((QTermWidgetInterface*)self);
 }
 
@@ -236,21 +236,21 @@ void q_termwidgetinterface_set_auto_close(void* self, bool autoClose) {
     QTermWidgetInterface_SetAutoClose((QTermWidgetInterface*)self, autoClose);
 }
 
-const char* q_termwidgetinterface_title(void* self) {
+const char* q_termwidgetinterface_title(const void* self) {
     libqt_string _str = QTermWidgetInterface_Title((QTermWidgetInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_termwidgetinterface_icon(void* self) {
+const char* q_termwidgetinterface_icon(const void* self) {
     libqt_string _str = QTermWidgetInterface_Icon((QTermWidgetInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_termwidgetinterface_is_title_changed(void* self) {
+bool q_termwidgetinterface_is_title_changed(const void* self) {
     return QTermWidgetInterface_IsTitleChanged((QTermWidgetInterface*)self);
 }
 
@@ -262,7 +262,7 @@ void q_termwidgetinterface_disable_bracketed_paste_mode(void* self, bool disable
     QTermWidgetInterface_DisableBracketedPasteMode((QTermWidgetInterface*)self, disable);
 }
 
-bool q_termwidgetinterface_bracketed_paste_mode_is_disabled(void* self) {
+bool q_termwidgetinterface_bracketed_paste_mode_is_disabled(const void* self) {
     return QTermWidgetInterface_BracketedPasteModeIsDisabled((QTermWidgetInterface*)self);
 }
 
@@ -270,7 +270,7 @@ void q_termwidgetinterface_set_margin(void* self, int margin) {
     QTermWidgetInterface_SetMargin((QTermWidgetInterface*)self, margin);
 }
 
-int32_t q_termwidgetinterface_get_margin(void* self) {
+int32_t q_termwidgetinterface_get_margin(const void* self) {
     return QTermWidgetInterface_GetMargin((QTermWidgetInterface*)self);
 }
 
@@ -290,7 +290,7 @@ void q_termwidgetinterface_set_trim_pasted_trailing_newlines(void* self, bool tr
     QTermWidgetInterface_SetTrimPastedTrailingNewlines((QTermWidgetInterface*)self, trimPastedTrailingNewlines);
 }
 
-const char* q_termwidgetinterface_word_characters(void* self) {
+const char* q_termwidgetinterface_word_characters(const void* self) {
     libqt_string _str = QTermWidgetInterface_WordCharacters((QTermWidgetInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -301,11 +301,11 @@ void q_termwidgetinterface_set_word_characters(void* self, const char* chars) {
     QTermWidgetInterface_SetWordCharacters((QTermWidgetInterface*)self, qstring(chars));
 }
 
-QTermWidgetInterface* q_termwidgetinterface_create_widget(void* self, int startnow) {
+QTermWidgetInterface* q_termwidgetinterface_create_widget(const void* self, int startnow) {
     return QTermWidgetInterface_CreateWidget((QTermWidgetInterface*)self, startnow);
 }
 
-void q_termwidgetinterface_operator_assign(void* self, void* param1) {
+void q_termwidgetinterface_operator_assign(void* self, const void* param1) {
     QTermWidgetInterface_OperatorAssign((QTermWidgetInterface*)self, (QTermWidgetInterface*)param1);
 }
 

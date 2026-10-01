@@ -24,26 +24,26 @@ Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const QMetaObject* k_sonnet__dictionarycombobox_meta_object(void* self);
+const QMetaObject* k_sonnet__dictionarycombobox_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback const QMetaObject* func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback const QMetaObject* func(const Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_sonnet__dictionarycombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const QMetaObject* k_sonnet__dictionarycombobox_super_meta_object(void* self);
+const QMetaObject* k_sonnet__dictionarycombobox_super_meta_object(const void* self);
 
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 const char*
@@ -105,17 +105,17 @@ void k_sonnet__dictionarycombobox_reload_combo(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_current_dictionary_name(void* self);
+const char* k_sonnet__dictionarycombobox_current_dictionary_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-dictionarycombobox.html#currentDictionary)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_current_dictionary(void* self);
+const char* k_sonnet__dictionarycombobox_current_dictionary(const void* self);
 
 /// [Upstream resources](https://api.kde.org/sonnet-dictionarycombobox.html#setCurrentByDictionaryName)
 ///
@@ -196,9 +196,9 @@ const char* k_sonnet__dictionarycombobox_tr3(const char* s, const char* c, int n
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#maxVisibleItems)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_max_visible_items(void* self);
+int32_t k_sonnet__dictionarycombobox_max_visible_items(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -213,9 +213,9 @@ void k_sonnet__dictionarycombobox_set_max_visible_items(void* self, int maxItems
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#count)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_count(void* self);
+int32_t k_sonnet__dictionarycombobox_count(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -230,17 +230,17 @@ void k_sonnet__dictionarycombobox_set_max_count(void* self, int max);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#maxCount)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_max_count(void* self);
+int32_t k_sonnet__dictionarycombobox_max_count(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#duplicatesEnabled)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_duplicates_enabled(void* self);
+bool k_sonnet__dictionarycombobox_duplicates_enabled(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -264,37 +264,37 @@ void k_sonnet__dictionarycombobox_set_frame(void* self, bool frame);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hasFrame)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_has_frame(void* self);
+bool k_sonnet__dictionarycombobox_has_frame(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findText)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param text const char*
 ///
-int32_t k_sonnet__dictionarycombobox_find_text(void* self, const char* text);
+int32_t k_sonnet__dictionarycombobox_find_text(const void* self, const char* text);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param data QVariant*
 ///
-int32_t k_sonnet__dictionarycombobox_find_data(void* self, void* data);
+int32_t k_sonnet__dictionarycombobox_find_data(const void* self, const void* data);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertPolicy)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum QComboBox__InsertPolicy
 ///
-int32_t k_sonnet__dictionarycombobox_insert_policy(void* self);
+int32_t k_sonnet__dictionarycombobox_insert_policy(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -309,11 +309,11 @@ void k_sonnet__dictionarycombobox_set_insert_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeAdjustPolicy)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum QComboBox__SizeAdjustPolicy
 ///
-int32_t k_sonnet__dictionarycombobox_size_adjust_policy(void* self);
+int32_t k_sonnet__dictionarycombobox_size_adjust_policy(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -328,9 +328,9 @@ void k_sonnet__dictionarycombobox_set_size_adjust_policy(void* self, int32_t pol
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#minimumContentsLength)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_minimum_contents_length(void* self);
+int32_t k_sonnet__dictionarycombobox_minimum_contents_length(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -345,9 +345,9 @@ void k_sonnet__dictionarycombobox_set_minimum_contents_length(void* self, int ch
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#iconSize)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_icon_size(void* self);
+QSize* k_sonnet__dictionarycombobox_icon_size(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -356,7 +356,7 @@ QSize* k_sonnet__dictionarycombobox_icon_size(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param size QSize*
 ///
-void k_sonnet__dictionarycombobox_set_icon_size(void* self, void* size);
+void k_sonnet__dictionarycombobox_set_icon_size(void* self, const void* size);
 
 /// Inherited from QComboBox
 ///
@@ -373,17 +373,17 @@ void k_sonnet__dictionarycombobox_set_placeholder_text(void* self, const char* p
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_placeholder_text(void* self);
+const char* k_sonnet__dictionarycombobox_placeholder_text(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#isEditable)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_editable(void* self);
+bool k_sonnet__dictionarycombobox_is_editable(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -407,9 +407,9 @@ void k_sonnet__dictionarycombobox_set_line_edit(void* self, void* edit);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#lineEdit)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QLineEdit* k_sonnet__dictionarycombobox_line_edit(void* self);
+QLineEdit* k_sonnet__dictionarycombobox_line_edit(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -418,15 +418,15 @@ QLineEdit* k_sonnet__dictionarycombobox_line_edit(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param v QValidator*
 ///
-void k_sonnet__dictionarycombobox_set_validator(void* self, void* v);
+void k_sonnet__dictionarycombobox_set_validator(void* self, const void* v);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#validator)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const QValidator* k_sonnet__dictionarycombobox_validator(void* self);
+const QValidator* k_sonnet__dictionarycombobox_validator(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -441,17 +441,17 @@ void k_sonnet__dictionarycombobox_set_completer(void* self, void* c);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#completer)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QCompleter* k_sonnet__dictionarycombobox_completer(void* self);
+QCompleter* k_sonnet__dictionarycombobox_completer(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemDelegate)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QAbstractItemDelegate* k_sonnet__dictionarycombobox_item_delegate(void* self);
+QAbstractItemDelegate* k_sonnet__dictionarycombobox_item_delegate(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -466,17 +466,17 @@ void k_sonnet__dictionarycombobox_set_item_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#model)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QAbstractItemModel* k_sonnet__dictionarycombobox_model(void* self);
+QAbstractItemModel* k_sonnet__dictionarycombobox_model(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#rootModelIndex)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QModelIndex* k_sonnet__dictionarycombobox_root_model_index(void* self);
+QModelIndex* k_sonnet__dictionarycombobox_root_model_index(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -485,15 +485,15 @@ QModelIndex* k_sonnet__dictionarycombobox_root_model_index(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param index QModelIndex*
 ///
-void k_sonnet__dictionarycombobox_set_root_model_index(void* self, void* index);
+void k_sonnet__dictionarycombobox_set_root_model_index(void* self, const void* index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#modelColumn)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_model_column(void* self);
+int32_t k_sonnet__dictionarycombobox_model_column(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -508,9 +508,9 @@ void k_sonnet__dictionarycombobox_set_model_column(void* self, int visibleColumn
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentIndex)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_current_index(void* self);
+int32_t k_sonnet__dictionarycombobox_current_index(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -518,17 +518,17 @@ int32_t k_sonnet__dictionarycombobox_current_index(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_current_text(void* self);
+const char* k_sonnet__dictionarycombobox_current_text(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentData)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QVariant* k_sonnet__dictionarycombobox_current_data(void* self);
+QVariant* k_sonnet__dictionarycombobox_current_data(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -536,28 +536,28 @@ QVariant* k_sonnet__dictionarycombobox_current_data(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param index int
 ///
-const char* k_sonnet__dictionarycombobox_item_text(void* self, int index);
+const char* k_sonnet__dictionarycombobox_item_text(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemIcon)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param index int
 ///
-QIcon* k_sonnet__dictionarycombobox_item_icon(void* self, int index);
+QIcon* k_sonnet__dictionarycombobox_item_icon(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemData)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param index int
 ///
-QVariant* k_sonnet__dictionarycombobox_item_data(void* self, int index);
+QVariant* k_sonnet__dictionarycombobox_item_data(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
@@ -576,7 +576,7 @@ void k_sonnet__dictionarycombobox_add_item(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-void k_sonnet__dictionarycombobox_add_item2(void* self, void* icon, const char* text);
+void k_sonnet__dictionarycombobox_add_item2(void* self, const void* icon, const char* text);
 
 /// Inherited from QComboBox
 ///
@@ -606,7 +606,7 @@ void k_sonnet__dictionarycombobox_insert_item(void* self, int index, const char*
 /// @param icon QIcon*
 /// @param text const char*
 ///
-void k_sonnet__dictionarycombobox_insert_item2(void* self, int index, void* icon, const char* text);
+void k_sonnet__dictionarycombobox_insert_item2(void* self, int index, const void* icon, const char* text);
 
 /// Inherited from QComboBox
 ///
@@ -654,7 +654,7 @@ void k_sonnet__dictionarycombobox_set_item_text(void* self, int index, const cha
 /// @param index int
 /// @param icon QIcon*
 ///
-void k_sonnet__dictionarycombobox_set_item_icon(void* self, int index, void* icon);
+void k_sonnet__dictionarycombobox_set_item_icon(void* self, int index, const void* icon);
 
 /// Inherited from QComboBox
 ///
@@ -664,15 +664,15 @@ void k_sonnet__dictionarycombobox_set_item_icon(void* self, int index, void* ico
 /// @param index int
 /// @param value QVariant*
 ///
-void k_sonnet__dictionarycombobox_set_item_data(void* self, int index, void* value);
+void k_sonnet__dictionarycombobox_set_item_data(void* self, int index, const void* value);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#view)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QAbstractItemView* k_sonnet__dictionarycombobox_view(void* self);
+QAbstractItemView* k_sonnet__dictionarycombobox_view(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -687,11 +687,11 @@ void k_sonnet__dictionarycombobox_set_view(void* self, void* itemView);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_sonnet__dictionarycombobox_input_method_query2(void* self, int32_t query, void* argument);
+QVariant* k_sonnet__dictionarycombobox_input_method_query2(const void* self, int32_t query, const void* argument);
 
 /// Inherited from QComboBox
 ///
@@ -866,51 +866,51 @@ void k_sonnet__dictionarycombobox_on_current_text_changed(void* self, void (*cal
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findText)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
 ///
-int32_t k_sonnet__dictionarycombobox_find_text2(void* self, const char* text, int32_t flags);
+int32_t k_sonnet__dictionarycombobox_find_text2(const void* self, const char* text, int32_t flags);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param data QVariant*
 /// @param role int
 ///
-int32_t k_sonnet__dictionarycombobox_find_data2(void* self, void* data, int role);
+int32_t k_sonnet__dictionarycombobox_find_data2(const void* self, const void* data, int role);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param data QVariant*
 /// @param role int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-int32_t k_sonnet__dictionarycombobox_find_data3(void* self, void* data, int role, int32_t flags);
+int32_t k_sonnet__dictionarycombobox_find_data3(const void* self, const void* data, int role, int32_t flags);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentData)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param role int
 ///
-QVariant* k_sonnet__dictionarycombobox_current_data1(void* self, int role);
+QVariant* k_sonnet__dictionarycombobox_current_data1(const void* self, int role);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemData)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param index int
 /// @param role int
 ///
-QVariant* k_sonnet__dictionarycombobox_item_data2(void* self, int index, int role);
+QVariant* k_sonnet__dictionarycombobox_item_data2(const void* self, int index, int role);
 
 /// Inherited from QComboBox
 ///
@@ -920,7 +920,7 @@ QVariant* k_sonnet__dictionarycombobox_item_data2(void* self, int index, int rol
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_sonnet__dictionarycombobox_add_item22(void* self, const char* text, void* userData);
+void k_sonnet__dictionarycombobox_add_item22(void* self, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -931,7 +931,7 @@ void k_sonnet__dictionarycombobox_add_item22(void* self, const char* text, void*
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_sonnet__dictionarycombobox_add_item3(void* self, void* icon, const char* text, void* userData);
+void k_sonnet__dictionarycombobox_add_item3(void* self, const void* icon, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -942,7 +942,7 @@ void k_sonnet__dictionarycombobox_add_item3(void* self, void* icon, const char* 
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_sonnet__dictionarycombobox_insert_item3(void* self, int index, const char* text, void* userData);
+void k_sonnet__dictionarycombobox_insert_item3(void* self, int index, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -954,7 +954,7 @@ void k_sonnet__dictionarycombobox_insert_item3(void* self, int index, const char
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_sonnet__dictionarycombobox_insert_item4(void* self, int index, void* icon, const char* text, void* userData);
+void k_sonnet__dictionarycombobox_insert_item4(void* self, int index, const void* icon, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -965,7 +965,7 @@ void k_sonnet__dictionarycombobox_insert_item4(void* self, int index, void* icon
 /// @param value QVariant*
 /// @param role int
 ///
-void k_sonnet__dictionarycombobox_set_item_data3(void* self, int index, void* value, int role);
+void k_sonnet__dictionarycombobox_set_item_data3(void* self, int index, const void* value, int role);
 
 /// Inherited from QWidget
 ///
@@ -987,9 +987,9 @@ Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_from_q_paint_device(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-uintptr_t k_sonnet__dictionarycombobox_win_id(void* self);
+uintptr_t k_sonnet__dictionarycombobox_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1003,25 +1003,25 @@ void k_sonnet__dictionarycombobox_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-uintptr_t k_sonnet__dictionarycombobox_internal_win_id(void* self);
+uintptr_t k_sonnet__dictionarycombobox_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-uintptr_t k_sonnet__dictionarycombobox_effective_win_id(void* self);
+uintptr_t k_sonnet__dictionarycombobox_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QStyle* k_sonnet__dictionarycombobox_style(void* self);
+QStyle* k_sonnet__dictionarycombobox_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1036,35 +1036,35 @@ void k_sonnet__dictionarycombobox_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_top_level(void* self);
+bool k_sonnet__dictionarycombobox_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_window(void* self);
+bool k_sonnet__dictionarycombobox_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_modal(void* self);
+bool k_sonnet__dictionarycombobox_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_sonnet__dictionarycombobox_window_modality(void* self);
+int32_t k_sonnet__dictionarycombobox_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1079,18 +1079,18 @@ void k_sonnet__dictionarycombobox_set_window_modality(void* self, int32_t window
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_enabled(void* self);
+bool k_sonnet__dictionarycombobox_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QWidget*
 ///
-bool k_sonnet__dictionarycombobox_is_enabled_to(void* self, void* param1);
+bool k_sonnet__dictionarycombobox_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1123,153 +1123,153 @@ void k_sonnet__dictionarycombobox_set_window_modified(void* self, bool windowMod
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QRect* k_sonnet__dictionarycombobox_frame_geometry(void* self);
+QRect* k_sonnet__dictionarycombobox_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const QRect* k_sonnet__dictionarycombobox_geometry(void* self);
+const QRect* k_sonnet__dictionarycombobox_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QRect* k_sonnet__dictionarycombobox_normal_geometry(void* self);
+QRect* k_sonnet__dictionarycombobox_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_x(void* self);
+int32_t k_sonnet__dictionarycombobox_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_y(void* self);
+int32_t k_sonnet__dictionarycombobox_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QPoint* k_sonnet__dictionarycombobox_pos(void* self);
+QPoint* k_sonnet__dictionarycombobox_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_frame_size(void* self);
+QSize* k_sonnet__dictionarycombobox_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_size(void* self);
+QSize* k_sonnet__dictionarycombobox_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_width(void* self);
+int32_t k_sonnet__dictionarycombobox_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_height(void* self);
+int32_t k_sonnet__dictionarycombobox_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QRect* k_sonnet__dictionarycombobox_rect(void* self);
+QRect* k_sonnet__dictionarycombobox_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QRect* k_sonnet__dictionarycombobox_children_rect(void* self);
+QRect* k_sonnet__dictionarycombobox_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QRegion* k_sonnet__dictionarycombobox_children_region(void* self);
+QRegion* k_sonnet__dictionarycombobox_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_minimum_size(void* self);
+QSize* k_sonnet__dictionarycombobox_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_maximum_size(void* self);
+QSize* k_sonnet__dictionarycombobox_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_minimum_width(void* self);
+int32_t k_sonnet__dictionarycombobox_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_minimum_height(void* self);
+int32_t k_sonnet__dictionarycombobox_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_maximum_width(void* self);
+int32_t k_sonnet__dictionarycombobox_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_maximum_height(void* self);
+int32_t k_sonnet__dictionarycombobox_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1278,7 +1278,7 @@ int32_t k_sonnet__dictionarycombobox_maximum_height(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param minimumSize QSize*
 ///
-void k_sonnet__dictionarycombobox_set_minimum_size(void* self, void* minimumSize);
+void k_sonnet__dictionarycombobox_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1297,7 +1297,7 @@ void k_sonnet__dictionarycombobox_set_minimum_size2(void* self, int minw, int mi
 /// @param self Sonnet__DictionaryComboBox*
 /// @param maximumSize QSize*
 ///
-void k_sonnet__dictionarycombobox_set_maximum_size(void* self, void* maximumSize);
+void k_sonnet__dictionarycombobox_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1349,9 +1349,9 @@ void k_sonnet__dictionarycombobox_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_size_increment(void* self);
+QSize* k_sonnet__dictionarycombobox_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1360,7 +1360,7 @@ QSize* k_sonnet__dictionarycombobox_size_increment(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param sizeIncrement QSize*
 ///
-void k_sonnet__dictionarycombobox_set_size_increment(void* self, void* sizeIncrement);
+void k_sonnet__dictionarycombobox_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1376,9 +1376,9 @@ void k_sonnet__dictionarycombobox_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_base_size(void* self);
+QSize* k_sonnet__dictionarycombobox_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1387,7 +1387,7 @@ QSize* k_sonnet__dictionarycombobox_base_size(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param baseSize QSize*
 ///
-void k_sonnet__dictionarycombobox_set_base_size(void* self, void* baseSize);
+void k_sonnet__dictionarycombobox_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1406,7 +1406,7 @@ void k_sonnet__dictionarycombobox_set_base_size2(void* self, int basew, int base
 /// @param self Sonnet__DictionaryComboBox*
 /// @param fixedSize QSize*
 ///
-void k_sonnet__dictionarycombobox_set_fixed_size(void* self, void* fixedSize);
+void k_sonnet__dictionarycombobox_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1440,145 +1440,145 @@ void k_sonnet__dictionarycombobox_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_sonnet__dictionarycombobox_map_to_global(void* self, void* param1);
+QPointF* k_sonnet__dictionarycombobox_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_sonnet__dictionarycombobox_map_to_global2(void* self, void* param1);
+QPoint* k_sonnet__dictionarycombobox_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_sonnet__dictionarycombobox_map_from_global(void* self, void* param1);
+QPointF* k_sonnet__dictionarycombobox_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_sonnet__dictionarycombobox_map_from_global2(void* self, void* param1);
+QPoint* k_sonnet__dictionarycombobox_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_sonnet__dictionarycombobox_map_to_parent(void* self, void* param1);
+QPointF* k_sonnet__dictionarycombobox_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_sonnet__dictionarycombobox_map_to_parent2(void* self, void* param1);
+QPoint* k_sonnet__dictionarycombobox_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_sonnet__dictionarycombobox_map_from_parent(void* self, void* param1);
+QPointF* k_sonnet__dictionarycombobox_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_sonnet__dictionarycombobox_map_from_parent2(void* self, void* param1);
+QPoint* k_sonnet__dictionarycombobox_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_sonnet__dictionarycombobox_map_to(void* self, void* param1, void* param2);
+QPointF* k_sonnet__dictionarycombobox_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_sonnet__dictionarycombobox_map_to2(void* self, void* param1, void* param2);
+QPoint* k_sonnet__dictionarycombobox_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_sonnet__dictionarycombobox_map_from(void* self, void* param1, void* param2);
+QPointF* k_sonnet__dictionarycombobox_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_sonnet__dictionarycombobox_map_from2(void* self, void* param1, void* param2);
+QPoint* k_sonnet__dictionarycombobox_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWidget* k_sonnet__dictionarycombobox_window(void* self);
+QWidget* k_sonnet__dictionarycombobox_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWidget* k_sonnet__dictionarycombobox_native_parent_widget(void* self);
+QWidget* k_sonnet__dictionarycombobox_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWidget* k_sonnet__dictionarycombobox_top_level_widget(void* self);
+QWidget* k_sonnet__dictionarycombobox_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const QPalette* k_sonnet__dictionarycombobox_palette(void* self);
+const QPalette* k_sonnet__dictionarycombobox_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1587,7 +1587,7 @@ const QPalette* k_sonnet__dictionarycombobox_palette(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param palette QPalette*
 ///
-void k_sonnet__dictionarycombobox_set_palette(void* self, void* palette);
+void k_sonnet__dictionarycombobox_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1602,11 +1602,11 @@ void k_sonnet__dictionarycombobox_set_background_role(void* self, int32_t backgr
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_sonnet__dictionarycombobox_background_role(void* self);
+int32_t k_sonnet__dictionarycombobox_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1621,19 +1621,19 @@ void k_sonnet__dictionarycombobox_set_foreground_role(void* self, int32_t foregr
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_sonnet__dictionarycombobox_foreground_role(void* self);
+int32_t k_sonnet__dictionarycombobox_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const QFont* k_sonnet__dictionarycombobox_font(void* self);
+const QFont* k_sonnet__dictionarycombobox_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1642,31 +1642,31 @@ const QFont* k_sonnet__dictionarycombobox_font(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param font QFont*
 ///
-void k_sonnet__dictionarycombobox_set_font(void* self, void* font);
+void k_sonnet__dictionarycombobox_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QFontMetrics* k_sonnet__dictionarycombobox_font_metrics(void* self);
+QFontMetrics* k_sonnet__dictionarycombobox_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QFontInfo* k_sonnet__dictionarycombobox_font_info(void* self);
+QFontInfo* k_sonnet__dictionarycombobox_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QCursor* k_sonnet__dictionarycombobox_cursor(void* self);
+QCursor* k_sonnet__dictionarycombobox_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1675,7 +1675,7 @@ QCursor* k_sonnet__dictionarycombobox_cursor(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param cursor QCursor*
 ///
-void k_sonnet__dictionarycombobox_set_cursor(void* self, void* cursor);
+void k_sonnet__dictionarycombobox_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1698,17 +1698,17 @@ void k_sonnet__dictionarycombobox_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_has_mouse_tracking(void* self);
+bool k_sonnet__dictionarycombobox_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_under_mouse(void* self);
+bool k_sonnet__dictionarycombobox_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1723,9 +1723,9 @@ void k_sonnet__dictionarycombobox_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_has_tablet_tracking(void* self);
+bool k_sonnet__dictionarycombobox_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1734,7 +1734,7 @@ bool k_sonnet__dictionarycombobox_has_tablet_tracking(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param mask QBitmap*
 ///
-void k_sonnet__dictionarycombobox_set_mask(void* self, void* mask);
+void k_sonnet__dictionarycombobox_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1743,15 +1743,15 @@ void k_sonnet__dictionarycombobox_set_mask(void* self, void* mask);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param mask QRegion*
 ///
-void k_sonnet__dictionarycombobox_set_mask2(void* self, void* mask);
+void k_sonnet__dictionarycombobox_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QRegion* k_sonnet__dictionarycombobox_mask(void* self);
+QRegion* k_sonnet__dictionarycombobox_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1791,9 +1791,9 @@ QPixmap* k_sonnet__dictionarycombobox_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QGraphicsEffect* k_sonnet__dictionarycombobox_graphics_effect(void* self);
+QGraphicsEffect* k_sonnet__dictionarycombobox_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1846,9 +1846,9 @@ void k_sonnet__dictionarycombobox_set_style_sheet(void* self, const char* styleS
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_style_sheet(void* self);
+const char* k_sonnet__dictionarycombobox_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1856,9 +1856,9 @@ const char* k_sonnet__dictionarycombobox_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_window_title(void* self);
+const char* k_sonnet__dictionarycombobox_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1867,15 +1867,15 @@ const char* k_sonnet__dictionarycombobox_window_title(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param icon QIcon*
 ///
-void k_sonnet__dictionarycombobox_set_window_icon(void* self, void* icon);
+void k_sonnet__dictionarycombobox_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QIcon* k_sonnet__dictionarycombobox_window_icon(void* self);
+QIcon* k_sonnet__dictionarycombobox_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1892,9 +1892,9 @@ void k_sonnet__dictionarycombobox_set_window_icon_text(void* self, const char* w
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_window_icon_text(void* self);
+const char* k_sonnet__dictionarycombobox_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1911,9 +1911,9 @@ void k_sonnet__dictionarycombobox_set_window_role(void* self, const char* window
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_window_role(void* self);
+const char* k_sonnet__dictionarycombobox_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1930,9 +1930,9 @@ void k_sonnet__dictionarycombobox_set_window_file_path(void* self, const char* f
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_window_file_path(void* self);
+const char* k_sonnet__dictionarycombobox_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1947,17 +1947,17 @@ void k_sonnet__dictionarycombobox_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-double k_sonnet__dictionarycombobox_window_opacity(void* self);
+double k_sonnet__dictionarycombobox_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_window_modified(void* self);
+bool k_sonnet__dictionarycombobox_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1974,9 +1974,9 @@ void k_sonnet__dictionarycombobox_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_tool_tip(void* self);
+const char* k_sonnet__dictionarycombobox_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1991,9 +1991,9 @@ void k_sonnet__dictionarycombobox_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_tool_tip_duration(void* self);
+int32_t k_sonnet__dictionarycombobox_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2010,9 +2010,9 @@ void k_sonnet__dictionarycombobox_set_status_tip(void* self, const char* statusT
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_status_tip(void* self);
+const char* k_sonnet__dictionarycombobox_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2029,9 +2029,9 @@ void k_sonnet__dictionarycombobox_set_whats_this(void* self, const char* whatsTh
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_whats_this(void* self);
+const char* k_sonnet__dictionarycombobox_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2039,9 +2039,9 @@ const char* k_sonnet__dictionarycombobox_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_accessible_name(void* self);
+const char* k_sonnet__dictionarycombobox_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2058,9 +2058,9 @@ void k_sonnet__dictionarycombobox_set_accessible_name(void* self, const char* na
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_accessible_description(void* self);
+const char* k_sonnet__dictionarycombobox_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2084,11 +2084,11 @@ void k_sonnet__dictionarycombobox_set_layout_direction(void* self, int32_t direc
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_sonnet__dictionarycombobox_layout_direction(void* self);
+int32_t k_sonnet__dictionarycombobox_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2105,15 +2105,15 @@ void k_sonnet__dictionarycombobox_unset_layout_direction(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param locale QLocale*
 ///
-void k_sonnet__dictionarycombobox_set_locale(void* self, void* locale);
+void k_sonnet__dictionarycombobox_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QLocale* k_sonnet__dictionarycombobox_locale(void* self);
+QLocale* k_sonnet__dictionarycombobox_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2127,17 +2127,17 @@ void k_sonnet__dictionarycombobox_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_right_to_left(void* self);
+bool k_sonnet__dictionarycombobox_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_left_to_right(void* self);
+bool k_sonnet__dictionarycombobox_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2151,9 +2151,9 @@ void k_sonnet__dictionarycombobox_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_active_window(void* self);
+bool k_sonnet__dictionarycombobox_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2184,11 +2184,11 @@ void k_sonnet__dictionarycombobox_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_sonnet__dictionarycombobox_focus_policy(void* self);
+int32_t k_sonnet__dictionarycombobox_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2203,9 +2203,9 @@ void k_sonnet__dictionarycombobox_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_has_focus(void* self);
+bool k_sonnet__dictionarycombobox_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2229,19 +2229,19 @@ void k_sonnet__dictionarycombobox_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWidget* k_sonnet__dictionarycombobox_focus_proxy(void* self);
+QWidget* k_sonnet__dictionarycombobox_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_sonnet__dictionarycombobox_context_menu_policy(void* self);
+int32_t k_sonnet__dictionarycombobox_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2267,7 +2267,7 @@ void k_sonnet__dictionarycombobox_grab_mouse(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 QCursor*
 ///
-void k_sonnet__dictionarycombobox_grab_mouse2(void* self, void* param1);
+void k_sonnet__dictionarycombobox_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2300,7 +2300,7 @@ void k_sonnet__dictionarycombobox_release_keyboard(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param key QKeySequence*
 ///
-int32_t k_sonnet__dictionarycombobox_grab_shortcut(void* self, void* key);
+int32_t k_sonnet__dictionarycombobox_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2345,9 +2345,9 @@ QWidget* k_sonnet__dictionarycombobox_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_updates_enabled(void* self);
+bool k_sonnet__dictionarycombobox_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2362,9 +2362,9 @@ void k_sonnet__dictionarycombobox_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QGraphicsProxyWidget* k_sonnet__dictionarycombobox_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_sonnet__dictionarycombobox_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2401,7 +2401,7 @@ void k_sonnet__dictionarycombobox_update2(void* self, int x, int y, int w, int h
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 QRect*
 ///
-void k_sonnet__dictionarycombobox_update3(void* self, void* param1);
+void k_sonnet__dictionarycombobox_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2410,7 +2410,7 @@ void k_sonnet__dictionarycombobox_update3(void* self, void* param1);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 QRegion*
 ///
-void k_sonnet__dictionarycombobox_update4(void* self, void* param1);
+void k_sonnet__dictionarycombobox_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2431,7 +2431,7 @@ void k_sonnet__dictionarycombobox_repaint2(void* self, int x, int y, int w, int 
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 QRect*
 ///
-void k_sonnet__dictionarycombobox_repaint3(void* self, void* param1);
+void k_sonnet__dictionarycombobox_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2440,7 +2440,7 @@ void k_sonnet__dictionarycombobox_repaint3(void* self, void* param1);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 QRegion*
 ///
-void k_sonnet__dictionarycombobox_repaint4(void* self, void* param1);
+void k_sonnet__dictionarycombobox_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2549,7 +2549,7 @@ void k_sonnet__dictionarycombobox_move(void* self, int x, int y);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 QPoint*
 ///
-void k_sonnet__dictionarycombobox_move2(void* self, void* param1);
+void k_sonnet__dictionarycombobox_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2568,7 +2568,7 @@ void k_sonnet__dictionarycombobox_resize(void* self, int w, int h);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param param1 QSize*
 ///
-void k_sonnet__dictionarycombobox_resize2(void* self, void* param1);
+void k_sonnet__dictionarycombobox_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2589,7 +2589,7 @@ void k_sonnet__dictionarycombobox_set_geometry(void* self, int x, int y, int w, 
 /// @param self Sonnet__DictionaryComboBox*
 /// @param geometry QRect*
 ///
-void k_sonnet__dictionarycombobox_set_geometry2(void* self, void* geometry);
+void k_sonnet__dictionarycombobox_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2597,9 +2597,9 @@ void k_sonnet__dictionarycombobox_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-char* k_sonnet__dictionarycombobox_save_geometry(void* self);
+char* k_sonnet__dictionarycombobox_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2622,60 +2622,60 @@ void k_sonnet__dictionarycombobox_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_visible(void* self);
+bool k_sonnet__dictionarycombobox_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 QWidget*
 ///
-bool k_sonnet__dictionarycombobox_is_visible_to(void* self, void* param1);
+bool k_sonnet__dictionarycombobox_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_hidden(void* self);
+bool k_sonnet__dictionarycombobox_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_minimized(void* self);
+bool k_sonnet__dictionarycombobox_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_maximized(void* self);
+bool k_sonnet__dictionarycombobox_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_full_screen(void* self);
+bool k_sonnet__dictionarycombobox_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_sonnet__dictionarycombobox_window_state(void* self);
+int32_t k_sonnet__dictionarycombobox_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2699,9 +2699,9 @@ void k_sonnet__dictionarycombobox_override_window_state(void* self, int32_t stat
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSizePolicy* k_sonnet__dictionarycombobox_size_policy(void* self);
+QSizePolicy* k_sonnet__dictionarycombobox_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2726,9 +2726,9 @@ void k_sonnet__dictionarycombobox_set_size_policy2(void* self, int32_t horizonta
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QRegion* k_sonnet__dictionarycombobox_visible_region(void* self);
+QRegion* k_sonnet__dictionarycombobox_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2749,31 +2749,31 @@ void k_sonnet__dictionarycombobox_set_contents_margins(void* self, int left, int
 /// @param self Sonnet__DictionaryComboBox*
 /// @param margins QMargins*
 ///
-void k_sonnet__dictionarycombobox_set_contents_margins2(void* self, void* margins);
+void k_sonnet__dictionarycombobox_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QMargins* k_sonnet__dictionarycombobox_contents_margins(void* self);
+QMargins* k_sonnet__dictionarycombobox_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QRect* k_sonnet__dictionarycombobox_contents_rect(void* self);
+QRect* k_sonnet__dictionarycombobox_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QLayout* k_sonnet__dictionarycombobox_layout(void* self);
+QLayout* k_sonnet__dictionarycombobox_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2830,39 +2830,39 @@ void k_sonnet__dictionarycombobox_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_sonnet__dictionarycombobox_scroll2(void* self, int dx, int dy, void* param3);
+void k_sonnet__dictionarycombobox_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWidget* k_sonnet__dictionarycombobox_focus_widget(void* self);
+QWidget* k_sonnet__dictionarycombobox_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWidget* k_sonnet__dictionarycombobox_next_in_focus_chain(void* self);
+QWidget* k_sonnet__dictionarycombobox_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWidget* k_sonnet__dictionarycombobox_previous_in_focus_chain(void* self);
+QWidget* k_sonnet__dictionarycombobox_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_accept_drops(void* self);
+bool k_sonnet__dictionarycombobox_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2924,11 +2924,11 @@ void k_sonnet__dictionarycombobox_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_sonnet__dictionarycombobox_actions(void* self);
+libqt_list k_sonnet__dictionarycombobox_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2947,7 +2947,7 @@ QAction* k_sonnet__dictionarycombobox_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_sonnet__dictionarycombobox_add_action3(void* self, void* icon, const char* text);
+QAction* k_sonnet__dictionarycombobox_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2957,7 +2957,7 @@ QAction* k_sonnet__dictionarycombobox_add_action3(void* self, void* icon, const 
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_sonnet__dictionarycombobox_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_sonnet__dictionarycombobox_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2968,15 +2968,15 @@ QAction* k_sonnet__dictionarycombobox_add_action4(void* self, const char* text, 
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_sonnet__dictionarycombobox_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_sonnet__dictionarycombobox_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWidget* k_sonnet__dictionarycombobox_parent_widget(void* self);
+QWidget* k_sonnet__dictionarycombobox_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2991,11 +2991,11 @@ void k_sonnet__dictionarycombobox_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_sonnet__dictionarycombobox_window_flags(void* self);
+int32_t k_sonnet__dictionarycombobox_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3019,11 +3019,11 @@ void k_sonnet__dictionarycombobox_override_window_flags(void* self, int32_t type
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_sonnet__dictionarycombobox_window_type(void* self);
+int32_t k_sonnet__dictionarycombobox_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3037,29 +3037,29 @@ QWidget* k_sonnet__dictionarycombobox_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_sonnet__dictionarycombobox_child_at(void* self, int x, int y);
+QWidget* k_sonnet__dictionarycombobox_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param p QPoint*
 ///
-QWidget* k_sonnet__dictionarycombobox_child_at2(void* self, void* p);
+QWidget* k_sonnet__dictionarycombobox_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param p QPointF*
 ///
-QWidget* k_sonnet__dictionarycombobox_child_at3(void* self, void* p);
+QWidget* k_sonnet__dictionarycombobox_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -3074,35 +3074,35 @@ void k_sonnet__dictionarycombobox_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_sonnet__dictionarycombobox_test_attribute(void* self, int32_t param1);
+bool k_sonnet__dictionarycombobox_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-void k_sonnet__dictionarycombobox_ensure_polished(void* self);
+void k_sonnet__dictionarycombobox_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param child QWidget*
 ///
-bool k_sonnet__dictionarycombobox_is_ancestor_of(void* self, void* child);
+bool k_sonnet__dictionarycombobox_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_auto_fill_background(void* self);
+bool k_sonnet__dictionarycombobox_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3117,25 +3117,25 @@ void k_sonnet__dictionarycombobox_set_auto_fill_background(void* self, bool enab
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QBackingStore* k_sonnet__dictionarycombobox_backing_store(void* self);
+QBackingStore* k_sonnet__dictionarycombobox_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QWindow* k_sonnet__dictionarycombobox_window_handle(void* self);
+QWindow* k_sonnet__dictionarycombobox_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QScreen* k_sonnet__dictionarycombobox_screen(void* self);
+QScreen* k_sonnet__dictionarycombobox_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3179,7 +3179,7 @@ void k_sonnet__dictionarycombobox_on_window_title_changed(void* self, void (*cal
 /// @param self Sonnet__DictionaryComboBox*
 /// @param icon QIcon*
 ///
-void k_sonnet__dictionarycombobox_window_icon_changed(void* self, void* icon);
+void k_sonnet__dictionarycombobox_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3188,7 +3188,7 @@ void k_sonnet__dictionarycombobox_window_icon_changed(void* self, void* icon);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback void func(Sonnet__DictionaryComboBox* self, QIcon* icon)
 ///
-void k_sonnet__dictionarycombobox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_sonnet__dictionarycombobox_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3215,7 +3215,7 @@ void k_sonnet__dictionarycombobox_on_window_icon_text_changed(void* self, void (
 /// @param self Sonnet__DictionaryComboBox*
 /// @param pos QPoint*
 ///
-void k_sonnet__dictionarycombobox_custom_context_menu_requested(void* self, void* pos);
+void k_sonnet__dictionarycombobox_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3224,17 +3224,17 @@ void k_sonnet__dictionarycombobox_custom_context_menu_requested(void* self, void
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback void func(Sonnet__DictionaryComboBox* self, QPoint* pos)
 ///
-void k_sonnet__dictionarycombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_sonnet__dictionarycombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_sonnet__dictionarycombobox_input_method_hints(void* self);
+int32_t k_sonnet__dictionarycombobox_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3253,7 +3253,7 @@ void k_sonnet__dictionarycombobox_set_input_method_hints(void* self, int32_t hin
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_sonnet__dictionarycombobox_render22(void* self, void* target, void* targetOffset);
+void k_sonnet__dictionarycombobox_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3264,7 +3264,7 @@ void k_sonnet__dictionarycombobox_render22(void* self, void* target, void* targe
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_sonnet__dictionarycombobox_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_sonnet__dictionarycombobox_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3276,7 +3276,7 @@ void k_sonnet__dictionarycombobox_render3(void* self, void* target, void* target
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_sonnet__dictionarycombobox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_sonnet__dictionarycombobox_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3286,7 +3286,7 @@ void k_sonnet__dictionarycombobox_render4(void* self, void* target, void* target
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_sonnet__dictionarycombobox_render23(void* self, void* painter, void* targetOffset);
+void k_sonnet__dictionarycombobox_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3297,7 +3297,7 @@ void k_sonnet__dictionarycombobox_render23(void* self, void* painter, void* targ
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_sonnet__dictionarycombobox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_sonnet__dictionarycombobox_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3309,7 +3309,7 @@ void k_sonnet__dictionarycombobox_render32(void* self, void* painter, void* targ
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_sonnet__dictionarycombobox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_sonnet__dictionarycombobox_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3318,7 +3318,7 @@ void k_sonnet__dictionarycombobox_render42(void* self, void* painter, void* targ
 /// @param self Sonnet__DictionaryComboBox*
 /// @param rectangle QRect*
 ///
-QPixmap* k_sonnet__dictionarycombobox_grab1(void* self, void* rectangle);
+QPixmap* k_sonnet__dictionarycombobox_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3338,7 +3338,7 @@ void k_sonnet__dictionarycombobox_grab_gesture2(void* self, int32_t type, int32_
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_sonnet__dictionarycombobox_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_sonnet__dictionarycombobox_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3405,9 +3405,9 @@ QWidget* k_sonnet__dictionarycombobox_create_window_container3(void* window, voi
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char* k_sonnet__dictionarycombobox_object_name(void* self);
+const char* k_sonnet__dictionarycombobox_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3422,33 +3422,33 @@ void k_sonnet__dictionarycombobox_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_widget_type(void* self);
+bool k_sonnet__dictionarycombobox_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_window_type(void* self);
+bool k_sonnet__dictionarycombobox_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_is_quick_item_type(void* self);
+bool k_sonnet__dictionarycombobox_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_signals_blocked(void* self);
+bool k_sonnet__dictionarycombobox_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3463,9 +3463,9 @@ bool k_sonnet__dictionarycombobox_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QThread* k_sonnet__dictionarycombobox_thread(void* self);
+QThread* k_sonnet__dictionarycombobox_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3516,11 +3516,11 @@ void k_sonnet__dictionarycombobox_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_sonnet__dictionarycombobox_children(void* self);
+libqt_list k_sonnet__dictionarycombobox_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3549,7 +3549,7 @@ void k_sonnet__dictionarycombobox_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_sonnet__dictionarycombobox_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_sonnet__dictionarycombobox_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3560,18 +3560,18 @@ QMetaObject__Connection* k_sonnet__dictionarycombobox_connect(void* sender, cons
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_sonnet__dictionarycombobox_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_sonnet__dictionarycombobox_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_sonnet__dictionarycombobox_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_sonnet__dictionarycombobox_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3582,7 +3582,7 @@ QMetaObject__Connection* k_sonnet__dictionarycombobox_connect3(void* self, void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_sonnet__dictionarycombobox_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_sonnet__dictionarycombobox_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3593,24 +3593,24 @@ bool k_sonnet__dictionarycombobox_disconnect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_sonnet__dictionarycombobox_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_sonnet__dictionarycombobox_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_disconnect3(void* self);
+bool k_sonnet__dictionarycombobox_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param receiver QObject*
 ///
-bool k_sonnet__dictionarycombobox_disconnect4(void* self, void* receiver);
+bool k_sonnet__dictionarycombobox_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3618,23 +3618,23 @@ bool k_sonnet__dictionarycombobox_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_sonnet__dictionarycombobox_disconnect5(void* param1);
+bool k_sonnet__dictionarycombobox_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-void k_sonnet__dictionarycombobox_dump_object_tree(void* self);
+void k_sonnet__dictionarycombobox_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-void k_sonnet__dictionarycombobox_dump_object_info(void* self);
+void k_sonnet__dictionarycombobox_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3644,16 +3644,16 @@ void k_sonnet__dictionarycombobox_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_sonnet__dictionarycombobox_set_property(void* self, const char* name, void* value);
+bool k_sonnet__dictionarycombobox_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param name const char*
 ///
-QVariant* k_sonnet__dictionarycombobox_property(void* self, const char* name);
+QVariant* k_sonnet__dictionarycombobox_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3661,9 +3661,9 @@ QVariant* k_sonnet__dictionarycombobox_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const char** k_sonnet__dictionarycombobox_dynamic_property_names(void* self);
+const char** k_sonnet__dictionarycombobox_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3677,9 +3677,9 @@ QBindingStorage* k_sonnet__dictionarycombobox_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-const QBindingStorage* k_sonnet__dictionarycombobox_binding_storage2(void* self);
+const QBindingStorage* k_sonnet__dictionarycombobox_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3702,18 +3702,18 @@ void k_sonnet__dictionarycombobox_on_destroyed(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QObject* k_sonnet__dictionarycombobox_parent(void* self);
+QObject* k_sonnet__dictionarycombobox_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param classname const char*
 ///
-bool k_sonnet__dictionarycombobox_inherits(void* self, const char* classname);
+bool k_sonnet__dictionarycombobox_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3753,7 +3753,7 @@ int32_t k_sonnet__dictionarycombobox_start_timer23(void* self, int64_t time, int
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sonnet__dictionarycombobox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_sonnet__dictionarycombobox_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3765,59 +3765,59 @@ QMetaObject__Connection* k_sonnet__dictionarycombobox_connect5(void* sender, con
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sonnet__dictionarycombobox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_sonnet__dictionarycombobox_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_sonnet__dictionarycombobox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_sonnet__dictionarycombobox_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param signal const char*
 ///
-bool k_sonnet__dictionarycombobox_disconnect1(void* self, const char* signal);
+bool k_sonnet__dictionarycombobox_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_sonnet__dictionarycombobox_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_sonnet__dictionarycombobox_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_sonnet__dictionarycombobox_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_sonnet__dictionarycombobox_disconnect23(void* self, void* receiver, const char* member);
+bool k_sonnet__dictionarycombobox_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_sonnet__dictionarycombobox_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3841,89 +3841,89 @@ void k_sonnet__dictionarycombobox_on_destroyed1(void* self, void (*callback)(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_painting_active(void* self);
+bool k_sonnet__dictionarycombobox_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_width_m_m(void* self);
+int32_t k_sonnet__dictionarycombobox_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_height_m_m(void* self);
+int32_t k_sonnet__dictionarycombobox_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_logical_dpi_x(void* self);
+int32_t k_sonnet__dictionarycombobox_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_logical_dpi_y(void* self);
+int32_t k_sonnet__dictionarycombobox_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_physical_dpi_x(void* self);
+int32_t k_sonnet__dictionarycombobox_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_physical_dpi_y(void* self);
+int32_t k_sonnet__dictionarycombobox_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-double k_sonnet__dictionarycombobox_device_pixel_ratio(void* self);
+double k_sonnet__dictionarycombobox_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-double k_sonnet__dictionarycombobox_device_pixel_ratio_f(void* self);
+double k_sonnet__dictionarycombobox_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_color_count(void* self);
+int32_t k_sonnet__dictionarycombobox_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_depth(void* self);
+int32_t k_sonnet__dictionarycombobox_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3979,9 +3979,9 @@ void k_sonnet__dictionarycombobox_on_set_model(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_size_hint(void* self);
+QSize* k_sonnet__dictionarycombobox_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -3989,9 +3989,9 @@ QSize* k_sonnet__dictionarycombobox_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_super_size_hint(void* self);
+QSize* k_sonnet__dictionarycombobox_super_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -3999,12 +3999,12 @@ QSize* k_sonnet__dictionarycombobox_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback QSize* func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback QSize* func(Sonnet__DictionaryComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_sonnet__dictionarycombobox_on_size_hint(void* self, QSize* (*callback)());
+void k_sonnet__dictionarycombobox_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -4012,9 +4012,9 @@ void k_sonnet__dictionarycombobox_on_size_hint(void* self, QSize* (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_minimum_size_hint(void* self);
+QSize* k_sonnet__dictionarycombobox_minimum_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4022,9 +4022,9 @@ QSize* k_sonnet__dictionarycombobox_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QSize* k_sonnet__dictionarycombobox_super_minimum_size_hint(void* self);
+QSize* k_sonnet__dictionarycombobox_super_minimum_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4032,12 +4032,12 @@ QSize* k_sonnet__dictionarycombobox_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback QSize* func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback QSize* func(Sonnet__DictionaryComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_sonnet__dictionarycombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_sonnet__dictionarycombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -4066,9 +4066,9 @@ void k_sonnet__dictionarycombobox_super_show_popup(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Sonnet__DictionaryComboBox*
-/// @param callback void func()
+/// @param callback void func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_show_popup(void* self, void (*callback)());
+void k_sonnet__dictionarycombobox_on_show_popup(void* self, void (*callback)(void*));
 
 /// Inherited from QComboBox
 ///
@@ -4097,9 +4097,9 @@ void k_sonnet__dictionarycombobox_super_hide_popup(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Sonnet__DictionaryComboBox*
-/// @param callback void func()
+/// @param callback void func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_hide_popup(void* self, void (*callback)());
+void k_sonnet__dictionarycombobox_on_hide_popup(void* self, void (*callback)(void*));
 
 /// Inherited from QComboBox
 ///
@@ -4140,10 +4140,10 @@ void k_sonnet__dictionarycombobox_on_event(void* self, bool (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_sonnet__dictionarycombobox_input_method_query(void* self, int32_t param1);
+QVariant* k_sonnet__dictionarycombobox_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4151,10 +4151,10 @@ QVariant* k_sonnet__dictionarycombobox_input_method_query(void* self, int32_t pa
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_sonnet__dictionarycombobox_super_input_method_query(void* self, int32_t param1);
+QVariant* k_sonnet__dictionarycombobox_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4162,12 +4162,12 @@ QVariant* k_sonnet__dictionarycombobox_super_input_method_query(void* self, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback QVariant* func(Sonnet__DictionaryComboBox* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_sonnet__dictionarycombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_sonnet__dictionarycombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QComboBox
 ///
@@ -4637,10 +4637,10 @@ void k_sonnet__dictionarycombobox_on_input_method_event(void* self, void (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param option QStyleOptionComboBox*
 ///
-void k_sonnet__dictionarycombobox_init_style_option(void* self, void* option);
+void k_sonnet__dictionarycombobox_init_style_option(const void* self, void* option);
 
 /// Inherited from QComboBox
 ///
@@ -4648,10 +4648,10 @@ void k_sonnet__dictionarycombobox_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param option QStyleOptionComboBox*
 ///
-void k_sonnet__dictionarycombobox_super_init_style_option(void* self, void* option);
+void k_sonnet__dictionarycombobox_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QComboBox
 ///
@@ -4659,10 +4659,10 @@ void k_sonnet__dictionarycombobox_super_init_style_option(void* self, void* opti
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback void func(Sonnet__DictionaryComboBox* self, QStyleOptionComboBox* option)
 ///
-void k_sonnet__dictionarycombobox_on_init_style_option(void* self, void (*callback)(void*, void*));
+void k_sonnet__dictionarycombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4670,9 +4670,9 @@ void k_sonnet__dictionarycombobox_on_init_style_option(void* self, void (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_dev_type(void* self);
+int32_t k_sonnet__dictionarycombobox_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4680,9 +4680,9 @@ int32_t k_sonnet__dictionarycombobox_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_super_dev_type(void* self);
+int32_t k_sonnet__dictionarycombobox_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4690,10 +4690,10 @@ int32_t k_sonnet__dictionarycombobox_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback int32_t func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback int32_t func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_dev_type(void* self, int32_t (*callback)());
+void k_sonnet__dictionarycombobox_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4734,10 +4734,10 @@ void k_sonnet__dictionarycombobox_on_set_visible(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 int
 ///
-int32_t k_sonnet__dictionarycombobox_height_for_width(void* self, int param1);
+int32_t k_sonnet__dictionarycombobox_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4745,10 +4745,10 @@ int32_t k_sonnet__dictionarycombobox_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 int
 ///
-int32_t k_sonnet__dictionarycombobox_super_height_for_width(void* self, int param1);
+int32_t k_sonnet__dictionarycombobox_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4756,10 +4756,10 @@ int32_t k_sonnet__dictionarycombobox_super_height_for_width(void* self, int para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback int32_t func(Sonnet__DictionaryComboBox* self, int param1)
 ///
-void k_sonnet__dictionarycombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_sonnet__dictionarycombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4767,9 +4767,9 @@ void k_sonnet__dictionarycombobox_on_height_for_width(void* self, int32_t (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_has_height_for_width(void* self);
+bool k_sonnet__dictionarycombobox_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4777,9 +4777,9 @@ bool k_sonnet__dictionarycombobox_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-bool k_sonnet__dictionarycombobox_super_has_height_for_width(void* self);
+bool k_sonnet__dictionarycombobox_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4787,10 +4787,10 @@ bool k_sonnet__dictionarycombobox_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback bool func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback bool func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_has_height_for_width(void* self, bool (*callback)());
+void k_sonnet__dictionarycombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4798,9 +4798,9 @@ void k_sonnet__dictionarycombobox_on_has_height_for_width(void* self, bool (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QPaintEngine* k_sonnet__dictionarycombobox_paint_engine(void* self);
+QPaintEngine* k_sonnet__dictionarycombobox_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4808,9 +4808,9 @@ QPaintEngine* k_sonnet__dictionarycombobox_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QPaintEngine* k_sonnet__dictionarycombobox_super_paint_engine(void* self);
+QPaintEngine* k_sonnet__dictionarycombobox_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4818,10 +4818,10 @@ QPaintEngine* k_sonnet__dictionarycombobox_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback QPaintEngine* func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback QPaintEngine* func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_sonnet__dictionarycombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5262,10 +5262,10 @@ void k_sonnet__dictionarycombobox_on_native_event(void* self, bool (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_sonnet__dictionarycombobox_metric(void* self, int32_t param1);
+int32_t k_sonnet__dictionarycombobox_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5273,10 +5273,10 @@ int32_t k_sonnet__dictionarycombobox_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_sonnet__dictionarycombobox_super_metric(void* self, int32_t param1);
+int32_t k_sonnet__dictionarycombobox_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5284,10 +5284,10 @@ int32_t k_sonnet__dictionarycombobox_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback int32_t func(Sonnet__DictionaryComboBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_sonnet__dictionarycombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_sonnet__dictionarycombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5295,10 +5295,10 @@ void k_sonnet__dictionarycombobox_on_metric(void* self, int32_t (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param painter QPainter*
 ///
-void k_sonnet__dictionarycombobox_init_painter(void* self, void* painter);
+void k_sonnet__dictionarycombobox_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5306,10 +5306,10 @@ void k_sonnet__dictionarycombobox_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param painter QPainter*
 ///
-void k_sonnet__dictionarycombobox_super_init_painter(void* self, void* painter);
+void k_sonnet__dictionarycombobox_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5317,10 +5317,10 @@ void k_sonnet__dictionarycombobox_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback void func(Sonnet__DictionaryComboBox* self, QPainter* painter)
 ///
-void k_sonnet__dictionarycombobox_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_sonnet__dictionarycombobox_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5328,10 +5328,10 @@ void k_sonnet__dictionarycombobox_on_init_painter(void* self, void (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_sonnet__dictionarycombobox_redirected(void* self, void* offset);
+QPaintDevice* k_sonnet__dictionarycombobox_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5339,10 +5339,10 @@ QPaintDevice* k_sonnet__dictionarycombobox_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_sonnet__dictionarycombobox_super_redirected(void* self, void* offset);
+QPaintDevice* k_sonnet__dictionarycombobox_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5350,10 +5350,10 @@ QPaintDevice* k_sonnet__dictionarycombobox_super_redirected(void* self, void* of
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback QPaintDevice* func(Sonnet__DictionaryComboBox* self, QPoint* offset)
 ///
-void k_sonnet__dictionarycombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_sonnet__dictionarycombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5361,9 +5361,9 @@ void k_sonnet__dictionarycombobox_on_redirected(void* self, QPaintDevice* (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QPainter* k_sonnet__dictionarycombobox_shared_painter(void* self);
+QPainter* k_sonnet__dictionarycombobox_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5371,9 +5371,9 @@ QPainter* k_sonnet__dictionarycombobox_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QPainter* k_sonnet__dictionarycombobox_super_shared_painter(void* self);
+QPainter* k_sonnet__dictionarycombobox_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5381,10 +5381,10 @@ QPainter* k_sonnet__dictionarycombobox_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback QPainter* func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback QPainter* func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_shared_painter(void* self, QPainter* (*callback)());
+void k_sonnet__dictionarycombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5562,7 +5562,7 @@ void k_sonnet__dictionarycombobox_on_custom_event(void* self, void (*callback)(v
 /// @param self Sonnet__DictionaryComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_sonnet__dictionarycombobox_connect_notify(void* self, void* signal);
+void k_sonnet__dictionarycombobox_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5573,7 +5573,7 @@ void k_sonnet__dictionarycombobox_connect_notify(void* self, void* signal);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_sonnet__dictionarycombobox_super_connect_notify(void* self, void* signal);
+void k_sonnet__dictionarycombobox_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5584,7 +5584,7 @@ void k_sonnet__dictionarycombobox_super_connect_notify(void* self, void* signal)
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback void func(Sonnet__DictionaryComboBox* self, QMetaMethod* signal)
 ///
-void k_sonnet__dictionarycombobox_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_sonnet__dictionarycombobox_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5595,7 +5595,7 @@ void k_sonnet__dictionarycombobox_on_connect_notify(void* self, void (*callback)
 /// @param self Sonnet__DictionaryComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_sonnet__dictionarycombobox_disconnect_notify(void* self, void* signal);
+void k_sonnet__dictionarycombobox_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5606,7 +5606,7 @@ void k_sonnet__dictionarycombobox_disconnect_notify(void* self, void* signal);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_sonnet__dictionarycombobox_super_disconnect_notify(void* self, void* signal);
+void k_sonnet__dictionarycombobox_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5617,7 +5617,7 @@ void k_sonnet__dictionarycombobox_super_disconnect_notify(void* self, void* sign
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback void func(Sonnet__DictionaryComboBox* self, QMetaMethod* signal)
 ///
-void k_sonnet__dictionarycombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_sonnet__dictionarycombobox_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -5646,9 +5646,9 @@ void k_sonnet__dictionarycombobox_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Sonnet__DictionaryComboBox*
-/// @param callback void func()
+/// @param callback void func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_update_micro_focus(void* self, void (*callback)());
+void k_sonnet__dictionarycombobox_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5677,9 +5677,9 @@ void k_sonnet__dictionarycombobox_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Sonnet__DictionaryComboBox*
-/// @param callback void func()
+/// @param callback void func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_create(void* self, void (*callback)());
+void k_sonnet__dictionarycombobox_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5708,9 +5708,9 @@ void k_sonnet__dictionarycombobox_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Sonnet__DictionaryComboBox*
-/// @param callback void func()
+/// @param callback void func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_destroy(void* self, void (*callback)());
+void k_sonnet__dictionarycombobox_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5739,9 +5739,9 @@ bool k_sonnet__dictionarycombobox_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Sonnet__DictionaryComboBox*
-/// @param callback bool func()
+/// @param callback bool func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_focus_next_child(void* self, bool (*callback)());
+void k_sonnet__dictionarycombobox_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5770,9 +5770,9 @@ bool k_sonnet__dictionarycombobox_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self Sonnet__DictionaryComboBox*
-/// @param callback bool func()
+/// @param callback bool func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_focus_previous_child(void* self, bool (*callback)());
+void k_sonnet__dictionarycombobox_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5780,9 +5780,9 @@ void k_sonnet__dictionarycombobox_on_focus_previous_child(void* self, bool (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QObject* k_sonnet__dictionarycombobox_sender(void* self);
+QObject* k_sonnet__dictionarycombobox_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5790,9 +5790,9 @@ QObject* k_sonnet__dictionarycombobox_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-QObject* k_sonnet__dictionarycombobox_super_sender(void* self);
+QObject* k_sonnet__dictionarycombobox_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5800,10 +5800,10 @@ QObject* k_sonnet__dictionarycombobox_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback QObject* func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback QObject* func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_sender(void* self, QObject* (*callback)());
+void k_sonnet__dictionarycombobox_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5811,9 +5811,9 @@ void k_sonnet__dictionarycombobox_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_sender_signal_index(void* self);
+int32_t k_sonnet__dictionarycombobox_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5821,9 +5821,9 @@ int32_t k_sonnet__dictionarycombobox_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 ///
-int32_t k_sonnet__dictionarycombobox_super_sender_signal_index(void* self);
+int32_t k_sonnet__dictionarycombobox_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5831,10 +5831,10 @@ int32_t k_sonnet__dictionarycombobox_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
-/// @param callback int32_t func()
+/// @param self const Sonnet__DictionaryComboBox*
+/// @param callback int32_t func(Sonnet__DictionaryComboBox* self)
 ///
-void k_sonnet__dictionarycombobox_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_sonnet__dictionarycombobox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5842,10 +5842,10 @@ void k_sonnet__dictionarycombobox_on_sender_signal_index(void* self, int32_t (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param signal const char*
 ///
-int32_t k_sonnet__dictionarycombobox_receivers(void* self, const char* signal);
+int32_t k_sonnet__dictionarycombobox_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5853,10 +5853,10 @@ int32_t k_sonnet__dictionarycombobox_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param signal const char*
 ///
-int32_t k_sonnet__dictionarycombobox_super_receivers(void* self, const char* signal);
+int32_t k_sonnet__dictionarycombobox_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5864,10 +5864,10 @@ int32_t k_sonnet__dictionarycombobox_super_receivers(void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback int32_t func(Sonnet__DictionaryComboBox* self, const char* signal)
 ///
-void k_sonnet__dictionarycombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_sonnet__dictionarycombobox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5875,10 +5875,10 @@ void k_sonnet__dictionarycombobox_on_receivers(void* self, int32_t (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param signal QMetaMethod*
 ///
-bool k_sonnet__dictionarycombobox_is_signal_connected(void* self, void* signal);
+bool k_sonnet__dictionarycombobox_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5886,10 +5886,10 @@ bool k_sonnet__dictionarycombobox_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param signal QMetaMethod*
 ///
-bool k_sonnet__dictionarycombobox_super_is_signal_connected(void* self, void* signal);
+bool k_sonnet__dictionarycombobox_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5897,10 +5897,10 @@ bool k_sonnet__dictionarycombobox_super_is_signal_connected(void* self, void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback bool func(Sonnet__DictionaryComboBox* self, QMetaMethod* signal)
 ///
-void k_sonnet__dictionarycombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_sonnet__dictionarycombobox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5908,11 +5908,11 @@ void k_sonnet__dictionarycombobox_on_is_signal_connected(void* self, bool (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_sonnet__dictionarycombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_sonnet__dictionarycombobox_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5920,11 +5920,11 @@ double k_sonnet__dictionarycombobox_get_decoded_metric_f(void* self, int32_t met
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_sonnet__dictionarycombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_sonnet__dictionarycombobox_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5932,10 +5932,10 @@ double k_sonnet__dictionarycombobox_super_get_decoded_metric_f(void* self, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Sonnet__DictionaryComboBox*
+/// @param self const Sonnet__DictionaryComboBox*
 /// @param callback double func(Sonnet__DictionaryComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_sonnet__dictionarycombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_sonnet__dictionarycombobox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

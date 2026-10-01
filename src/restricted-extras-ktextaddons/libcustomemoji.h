@@ -20,15 +20,15 @@ TextEmoticonsCore__CustomEmoji* k_textemoticonscore__customemoji_new();
 ///
 /// @param param1 TextEmoticonsCore__CustomEmoji*
 ///
-TextEmoticonsCore__CustomEmoji* k_textemoticonscore__customemoji_new2(void* param1);
+TextEmoticonsCore__CustomEmoji* k_textemoticonscore__customemoji_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmoji.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__CustomEmoji*
+/// @param self const TextEmoticonsCore__CustomEmoji*
 ///
-const char* k_textemoticonscore__customemoji_identifier(void* self);
+const char* k_textemoticonscore__customemoji_identifier(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmoji.html)
 ///
@@ -41,15 +41,15 @@ void k_textemoticonscore__customemoji_set_identifier(void* self, const char* new
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__CustomEmoji*
+/// @param self const TextEmoticonsCore__CustomEmoji*
 ///
-const char* k_textemoticonscore__customemoji_category(void* self);
+const char* k_textemoticonscore__customemoji_category(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmoji.html)
 ///
-/// @param self TextEmoticonsCore__CustomEmoji*
+/// @param self const TextEmoticonsCore__CustomEmoji*
 ///
-bool k_textemoticonscore__customemoji_is_animated_emoji(void* self);
+bool k_textemoticonscore__customemoji_is_animated_emoji(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmoji.html)
 ///
@@ -63,7 +63,7 @@ void k_textemoticonscore__customemoji_set_is_animated_emoji(void* self, bool new
 /// @param self TextEmoticonsCore__CustomEmoji*
 /// @param param1 TextEmoticonsCore__CustomEmoji*
 ///
-void k_textemoticonscore__customemoji_operator_assign(void* self, void* param1);
+void k_textemoticonscore__customemoji_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1CustomEmoji.html)
 ///

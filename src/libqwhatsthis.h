@@ -14,7 +14,7 @@
 ///
 /// @param other QWhatsThis*
 ///
-QWhatsThis* q_whatsthis_new(void* other);
+QWhatsThis* q_whatsthis_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html)
 
@@ -55,7 +55,7 @@ void q_whatsthis_leave_whats_this_mode();
 /// @param pos QPoint*
 /// @param text const char*
 ///
-void q_whatsthis_show_text(void* pos, const char* text);
+void q_whatsthis_show_text(const void* pos, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#hideText)
 ///
@@ -71,7 +71,7 @@ QAction* q_whatsthis_create_action();
 /// @param text const char*
 /// @param w QWidget*
 ///
-void q_whatsthis_show_text3(void* pos, const char* text, void* w);
+void q_whatsthis_show_text3(const void* pos, const char* text, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwhatsthis.html#createAction)
 ///

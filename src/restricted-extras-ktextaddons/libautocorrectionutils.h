@@ -16,7 +16,7 @@ TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrec
 ///
 /// @param other TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
 ///
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new2(void* other);
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new2(const void* other);
 
 /// k_textautocorrectioncore__autocorrectionutils__typographicquotes_new3 constructs a new TextAutoCorrectionCore::AutoCorrectionUtils::TypographicQuotes object and invalidates the source TextAutoCorrectionCore::AutoCorrectionUtils::TypographicQuotes object.
 ///
@@ -39,9 +39,9 @@ void k_textautocorrectioncore__autocorrectionutils__typographicquotes_copy_assig
 void k_textautocorrectioncore__autocorrectionutils__typographicquotes_move_assign(void* self, void* other);
 
 ///
-/// @param self TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
+/// @param self const TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
 ///
-QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_begin(void* self);
+QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_begin(const void* self);
 
 ///
 /// @param self TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
@@ -50,9 +50,9 @@ QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_begin(vo
 void k_textautocorrectioncore__autocorrectionutils__typographicquotes_set_begin(void* self, void* begin);
 
 ///
-/// @param self TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
+/// @param self const TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
 ///
-QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_end(void* self);
+QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_end(const void* self);
 
 ///
 /// @param self TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
@@ -63,14 +63,14 @@ void k_textautocorrectioncore__autocorrectionutils__typographicquotes_set_end(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
+/// @param self const TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
 ///
-const char* k_textautocorrectioncore__autocorrectionutils__typographicquotes_to_string(void* self);
+const char* k_textautocorrectioncore__autocorrectionutils__typographicquotes_to_string(const void* self);
 
 ///
-/// @param self TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
+/// @param self const TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*
 ///
-bool k_textautocorrectioncore__autocorrectionutils__typographicquotes_is_empty(void* self);
+bool k_textautocorrectioncore__autocorrectionutils__typographicquotes_is_empty(const void* self);
 
 ///
 /// @param str const char*

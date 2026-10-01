@@ -14,27 +14,27 @@
 ///
 /// @param param1 QWebEngineClientCertificateSelection*
 ///
-QWebEngineClientCertificateSelection* q_webengineclientcertificateselection_new(void* param1);
+QWebEngineClientCertificateSelection* q_webengineclientcertificateselection_new(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#operator-eq)
 ///
 /// @param self QWebEngineClientCertificateSelection*
 /// @param param1 QWebEngineClientCertificateSelection*
 ///
-void q_webengineclientcertificateselection_operator_assign(void* self, void* param1);
+void q_webengineclientcertificateselection_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#host)
 ///
-/// @param self QWebEngineClientCertificateSelection*
+/// @param self const QWebEngineClientCertificateSelection*
 ///
-QUrl* q_webengineclientcertificateselection_host(void* self);
+QUrl* q_webengineclientcertificateselection_host(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#select)
 ///
 /// @param self QWebEngineClientCertificateSelection*
 /// @param certificate QSslCertificate*
 ///
-void q_webengineclientcertificateselection_select(void* self, void* certificate);
+void q_webengineclientcertificateselection_select(void* self, const void* certificate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#selectNone)
 ///
@@ -44,11 +44,11 @@ void q_webengineclientcertificateselection_select_none(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#certificates)
 ///
-/// @param self QWebEngineClientCertificateSelection*
+/// @param self const QWebEngineClientCertificateSelection*
 ///
 /// @return libqt_list of QSslCertificate*
 ///
-libqt_list q_webengineclientcertificateselection_certificates(void* self);
+libqt_list q_webengineclientcertificateselection_certificates(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#dtor.QWebEngineClientCertificateSelection)
 ///

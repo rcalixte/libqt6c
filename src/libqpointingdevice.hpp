@@ -62,7 +62,7 @@ bool QPointingDevice_OperatorEqual(const QPointingDevice* self, const QPointingD
 void QPointingDevice_GrabChanged(const QPointingDevice* self, QObject* grabber, int transition, const QPointerEvent* event, const QEventPoint* point);
 void QPointingDevice_Connect_GrabChanged(const QPointingDevice* self, intptr_t slot);
 QPointingDevice* QPointingDevice_PrimaryPointingDevice1(const libqt_string seatName);
-void QPointingDevice_OnMetaObject(const QPointingDevice* self, intptr_t slot);
+void QPointingDevice_OnMetaObject(QPointingDevice* self, intptr_t slot);
 QMetaObject* QPointingDevice_SuperMetaObject(const QPointingDevice* self);
 void QPointingDevice_OnMetacast(QPointingDevice* self, intptr_t slot);
 void* QPointingDevice_SuperMetacast(QPointingDevice* self, const char* param1);
@@ -90,17 +90,9 @@ void QPointingDevice_DisconnectNotify(QPointingDevice* self, const QMetaMethod* 
 void QPointingDevice_OnDisconnectNotify(QPointingDevice* self, intptr_t slot);
 void QPointingDevice_SuperDisconnectNotify(QPointingDevice* self, const QMetaMethod* signal);
 QObject* QPointingDevice_Sender(const QPointingDevice* self);
-void QPointingDevice_OnSender(const QPointingDevice* self, intptr_t slot);
-QObject* QPointingDevice_SuperSender(const QPointingDevice* self);
 int QPointingDevice_SenderSignalIndex(const QPointingDevice* self);
-void QPointingDevice_OnSenderSignalIndex(const QPointingDevice* self, intptr_t slot);
-int QPointingDevice_SuperSenderSignalIndex(const QPointingDevice* self);
 int QPointingDevice_Receivers(const QPointingDevice* self, const char* signal);
-void QPointingDevice_OnReceivers(const QPointingDevice* self, intptr_t slot);
-int QPointingDevice_SuperReceivers(const QPointingDevice* self, const char* signal);
 bool QPointingDevice_IsSignalConnected(const QPointingDevice* self, const QMetaMethod* signal);
-void QPointingDevice_OnIsSignalConnected(const QPointingDevice* self, intptr_t slot);
-bool QPointingDevice_SuperIsSignalConnected(const QPointingDevice* self, const QMetaMethod* signal);
 void QPointingDevice_Delete(QPointingDevice* self);
 
 #ifdef __cplusplus

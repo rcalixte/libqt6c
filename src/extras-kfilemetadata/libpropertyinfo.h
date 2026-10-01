@@ -28,59 +28,59 @@ KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new2(int32_t property)
 ///
 /// @param pi KFileMetaData__PropertyInfo*
 ///
-KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new3(void* pi);
+KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new3(const void* pi);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-propertyinfo.html#operator-eq)
 ///
 /// @param self KFileMetaData__PropertyInfo*
 /// @param rhs KFileMetaData__PropertyInfo*
 ///
-void k_filemetadata__propertyinfo_operator_assign(void* self, void* rhs);
+void k_filemetadata__propertyinfo_operator_assign(void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-propertyinfo.html#operator-eq-eq)
 ///
-/// @param self KFileMetaData__PropertyInfo*
+/// @param self const KFileMetaData__PropertyInfo*
 /// @param rhs KFileMetaData__PropertyInfo*
 ///
-bool k_filemetadata__propertyinfo_operator_equal(void* self, void* rhs);
+bool k_filemetadata__propertyinfo_operator_equal(const void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-propertyinfo.html#property)
 ///
-/// @param self KFileMetaData__PropertyInfo*
+/// @param self const KFileMetaData__PropertyInfo*
 ///
 /// @return enum KFileMetaData__Property__Property
 ///
-int32_t k_filemetadata__propertyinfo_property(void* self);
+int32_t k_filemetadata__propertyinfo_property(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-propertyinfo.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__PropertyInfo*
+/// @param self const KFileMetaData__PropertyInfo*
 ///
-const char* k_filemetadata__propertyinfo_name(void* self);
+const char* k_filemetadata__propertyinfo_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-propertyinfo.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__PropertyInfo*
+/// @param self const KFileMetaData__PropertyInfo*
 ///
-const char* k_filemetadata__propertyinfo_display_name(void* self);
+const char* k_filemetadata__propertyinfo_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-propertyinfo.html#valueType)
 ///
-/// @param self KFileMetaData__PropertyInfo*
+/// @param self const KFileMetaData__PropertyInfo*
 ///
 /// @return enum QMetaType__Type
 ///
-int32_t k_filemetadata__propertyinfo_value_type(void* self);
+int32_t k_filemetadata__propertyinfo_value_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-propertyinfo.html#shouldBeIndexed)
 ///
-/// @param self KFileMetaData__PropertyInfo*
+/// @param self const KFileMetaData__PropertyInfo*
 ///
-bool k_filemetadata__propertyinfo_should_be_indexed(void* self);
+bool k_filemetadata__propertyinfo_should_be_indexed(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-propertyinfo.html#fromName)
 ///
@@ -98,10 +98,10 @@ const char** k_filemetadata__propertyinfo_all_names();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__PropertyInfo*
+/// @param self const KFileMetaData__PropertyInfo*
 /// @param value QVariant*
 ///
-const char* k_filemetadata__propertyinfo_format_as_display_string(void* self, void* value);
+const char* k_filemetadata__propertyinfo_format_as_display_string(const void* self, const void* value);
 
 /// Delete this object from C++ memory.
 ///

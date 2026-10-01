@@ -2,7 +2,7 @@
 #include "libatticautils.hpp"
 #include "libatticautils.h"
 
-Attica__Utils* k_attica__utils_new(void* other) {
+Attica__Utils* k_attica__utils_new(const void* other) {
     return Attica__Utils_New((Attica__Utils*)other);
 }
 

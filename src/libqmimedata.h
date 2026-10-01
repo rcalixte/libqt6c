@@ -16,26 +16,26 @@ QMimeData* q_mimedata_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const QMetaObject* q_mimedata_meta_object(void* self);
+const QMetaObject* q_mimedata_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QMimeData*
-/// @param callback const QMetaObject* func()
+/// @param self const QMimeData*
+/// @param callback const QMetaObject* func(const QMimeData* self)
 ///
-void q_mimedata_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_mimedata_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const QMetaObject* q_mimedata_super_meta_object(void* self);
+const QMetaObject* q_mimedata_super_meta_object(const void* self);
 
 /// @param self QMimeData*
 /// @param param1 const char*
@@ -89,11 +89,11 @@ const char* q_mimedata_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#urls)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
 /// @return libqt_list of QUrl*
 ///
-libqt_list q_mimedata_urls(void* self);
+libqt_list q_mimedata_urls(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#setUrls)
 ///
@@ -104,17 +104,17 @@ void q_mimedata_set_urls(void* self, libqt_list urls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasUrls)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_has_urls(void* self);
+bool q_mimedata_has_urls(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const char* q_mimedata_text(void* self);
+const char* q_mimedata_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#setText)
 ///
@@ -125,17 +125,17 @@ void q_mimedata_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasText)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_has_text(void* self);
+bool q_mimedata_has_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const char* q_mimedata_html(void* self);
+const char* q_mimedata_html(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#setHtml)
 ///
@@ -146,56 +146,56 @@ void q_mimedata_set_html(void* self, const char* html);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasHtml)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_has_html(void* self);
+bool q_mimedata_has_html(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#imageData)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-QVariant* q_mimedata_image_data(void* self);
+QVariant* q_mimedata_image_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#setImageData)
 ///
 /// @param self QMimeData*
 /// @param image QVariant*
 ///
-void q_mimedata_set_image_data(void* self, void* image);
+void q_mimedata_set_image_data(void* self, const void* image);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasImage)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_has_image(void* self);
+bool q_mimedata_has_image(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#colorData)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-QVariant* q_mimedata_color_data(void* self);
+QVariant* q_mimedata_color_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#setColorData)
 ///
 /// @param self QMimeData*
 /// @param color QVariant*
 ///
-void q_mimedata_set_color_data(void* self, void* color);
+void q_mimedata_set_color_data(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasColor)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_has_color(void* self);
+bool q_mimedata_has_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#data)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param mimetype const char*
 ///
-char* q_mimedata_data(void* self, const char* mimetype);
+char* q_mimedata_data(const void* self, const char* mimetype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#setData)
 ///
@@ -214,53 +214,53 @@ void q_mimedata_remove_format(void* self, const char* mimetype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasFormat)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param mimetype const char*
 ///
-bool q_mimedata_has_format(void* self, const char* mimetype);
+bool q_mimedata_has_format(const void* self, const char* mimetype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasFormat)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QMimeData*
-/// @param callback bool func(QMimeData* self, const char* mimetype)
+/// @param self const QMimeData*
+/// @param callback bool func(const QMimeData* self, const char* mimetype)
 ///
-void q_mimedata_on_has_format(void* self, bool (*callback)(void*, const char*));
+void q_mimedata_on_has_format(const void* self, bool (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#hasFormat)
 ///
 /// Base class method implementation
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param mimetype const char*
 ///
-bool q_mimedata_super_has_format(void* self, const char* mimetype);
+bool q_mimedata_super_has_format(const void* self, const char* mimetype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#formats)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const char** q_mimedata_formats(void* self);
+const char** q_mimedata_formats(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#formats)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QMimeData*
-/// @param callback const char** func()
+/// @param self const QMimeData*
+/// @param callback const char** func(const QMimeData* self)
 ///
-void q_mimedata_on_formats(void* self, const char** (*callback)());
+void q_mimedata_on_formats(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#formats)
 ///
 /// Base class method implementation
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const char** q_mimedata_super_formats(void* self);
+const char** q_mimedata_super_formats(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#clear)
 ///
@@ -270,32 +270,32 @@ void q_mimedata_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#retrieveData)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param mimetype const char*
 /// @param preferredType QMetaType*
 ///
-QVariant* q_mimedata_retrieve_data(void* self, const char* mimetype, void* preferredType);
+QVariant* q_mimedata_retrieve_data(const void* self, const char* mimetype, void* preferredType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#retrieveData)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QMimeData*
-/// @param callback QVariant* func(QMimeData* self, const char* mimetype, QMetaType* preferredType)
+/// @param self const QMimeData*
+/// @param callback QVariant* func(const QMimeData* self, const char* mimetype, QMetaType* preferredType)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_mimedata_on_retrieve_data(void* self, QVariant* (*callback)(void*, const char*, void*));
+void q_mimedata_on_retrieve_data(const void* self, QVariant* (*callback)(const void*, const char*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmimedata.html#retrieveData)
 ///
 /// Base class method implementation
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param mimetype const char*
 /// @param preferredType QMetaType*
 ///
-QVariant* q_mimedata_super_retrieve_data(void* self, const char* mimetype, void* preferredType);
+QVariant* q_mimedata_super_retrieve_data(const void* self, const char* mimetype, void* preferredType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -322,9 +322,9 @@ const char* q_mimedata_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const char* q_mimedata_object_name(void* self);
+const char* q_mimedata_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -339,33 +339,33 @@ void q_mimedata_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_is_widget_type(void* self);
+bool q_mimedata_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_is_window_type(void* self);
+bool q_mimedata_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_is_quick_item_type(void* self);
+bool q_mimedata_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_signals_blocked(void* self);
+bool q_mimedata_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -380,9 +380,9 @@ bool q_mimedata_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-QThread* q_mimedata_thread(void* self);
+QThread* q_mimedata_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -433,11 +433,11 @@ void q_mimedata_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_mimedata_children(void* self);
+libqt_list q_mimedata_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -475,7 +475,7 @@ void q_mimedata_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_mimedata_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_mimedata_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -486,18 +486,18 @@ QMetaObject__Connection* q_mimedata_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_mimedata_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_mimedata_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_mimedata_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_mimedata_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -508,7 +508,7 @@ QMetaObject__Connection* q_mimedata_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_mimedata_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_mimedata_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -519,24 +519,24 @@ bool q_mimedata_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_mimedata_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_mimedata_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-bool q_mimedata_disconnect3(void* self);
+bool q_mimedata_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param receiver QObject*
 ///
-bool q_mimedata_disconnect4(void* self, void* receiver);
+bool q_mimedata_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -544,23 +544,23 @@ bool q_mimedata_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_mimedata_disconnect5(void* param1);
+bool q_mimedata_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-void q_mimedata_dump_object_tree(void* self);
+void q_mimedata_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-void q_mimedata_dump_object_info(void* self);
+void q_mimedata_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -570,16 +570,16 @@ void q_mimedata_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_mimedata_set_property(void* self, const char* name, void* value);
+bool q_mimedata_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param name const char*
 ///
-QVariant* q_mimedata_property(void* self, const char* name);
+QVariant* q_mimedata_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -587,9 +587,9 @@ QVariant* q_mimedata_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const char** q_mimedata_dynamic_property_names(void* self);
+const char** q_mimedata_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -603,9 +603,9 @@ QBindingStorage* q_mimedata_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-const QBindingStorage* q_mimedata_binding_storage2(void* self);
+const QBindingStorage* q_mimedata_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -628,18 +628,18 @@ void q_mimedata_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-QObject* q_mimedata_parent(void* self);
+QObject* q_mimedata_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param classname const char*
 ///
-bool q_mimedata_inherits(void* self, const char* classname);
+bool q_mimedata_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -679,7 +679,7 @@ int32_t q_mimedata_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mimedata_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_mimedata_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -691,59 +691,59 @@ QMetaObject__Connection* q_mimedata_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mimedata_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_mimedata_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mimedata_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_mimedata_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param signal const char*
 ///
-bool q_mimedata_disconnect1(void* self, const char* signal);
+bool q_mimedata_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMimeData*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_mimedata_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_mimedata_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_mimedata_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_mimedata_disconnect23(void* self, void* receiver, const char* member);
+bool q_mimedata_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QMimeData*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_mimedata_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -939,7 +939,7 @@ void q_mimedata_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QMimeData*
 /// @param signal QMetaMethod*
 ///
-void q_mimedata_connect_notify(void* self, void* signal);
+void q_mimedata_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -950,7 +950,7 @@ void q_mimedata_connect_notify(void* self, void* signal);
 /// @param self QMimeData*
 /// @param signal QMetaMethod*
 ///
-void q_mimedata_super_connect_notify(void* self, void* signal);
+void q_mimedata_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -961,7 +961,7 @@ void q_mimedata_super_connect_notify(void* self, void* signal);
 /// @param self QMimeData*
 /// @param callback void func(QMimeData* self, QMetaMethod* signal)
 ///
-void q_mimedata_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_mimedata_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -972,7 +972,7 @@ void q_mimedata_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QMimeData*
 /// @param signal QMetaMethod*
 ///
-void q_mimedata_disconnect_notify(void* self, void* signal);
+void q_mimedata_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -983,7 +983,7 @@ void q_mimedata_disconnect_notify(void* self, void* signal);
 /// @param self QMimeData*
 /// @param signal QMetaMethod*
 ///
-void q_mimedata_super_disconnect_notify(void* self, void* signal);
+void q_mimedata_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -994,7 +994,7 @@ void q_mimedata_super_disconnect_notify(void* self, void* signal);
 /// @param self QMimeData*
 /// @param callback void func(QMimeData* self, QMetaMethod* signal)
 ///
-void q_mimedata_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_mimedata_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1002,9 +1002,9 @@ void q_mimedata_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-QObject* q_mimedata_sender(void* self);
+QObject* q_mimedata_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1012,9 +1012,9 @@ QObject* q_mimedata_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-QObject* q_mimedata_super_sender(void* self);
+QObject* q_mimedata_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1022,10 +1022,10 @@ QObject* q_mimedata_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMimeData*
-/// @param callback QObject* func()
+/// @param self const QMimeData*
+/// @param callback QObject* func(QMimeData* self)
 ///
-void q_mimedata_on_sender(void* self, QObject* (*callback)());
+void q_mimedata_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1033,9 +1033,9 @@ void q_mimedata_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-int32_t q_mimedata_sender_signal_index(void* self);
+int32_t q_mimedata_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1043,9 +1043,9 @@ int32_t q_mimedata_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 ///
-int32_t q_mimedata_super_sender_signal_index(void* self);
+int32_t q_mimedata_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1053,10 +1053,10 @@ int32_t q_mimedata_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMimeData*
-/// @param callback int32_t func()
+/// @param self const QMimeData*
+/// @param callback int32_t func(QMimeData* self)
 ///
-void q_mimedata_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_mimedata_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1064,10 +1064,10 @@ void q_mimedata_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param signal const char*
 ///
-int32_t q_mimedata_receivers(void* self, const char* signal);
+int32_t q_mimedata_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1075,10 +1075,10 @@ int32_t q_mimedata_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param signal const char*
 ///
-int32_t q_mimedata_super_receivers(void* self, const char* signal);
+int32_t q_mimedata_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1086,10 +1086,10 @@ int32_t q_mimedata_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param callback int32_t func(QMimeData* self, const char* signal)
 ///
-void q_mimedata_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_mimedata_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1097,10 +1097,10 @@ void q_mimedata_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param signal QMetaMethod*
 ///
-bool q_mimedata_is_signal_connected(void* self, void* signal);
+bool q_mimedata_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1108,10 +1108,10 @@ bool q_mimedata_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param signal QMetaMethod*
 ///
-bool q_mimedata_super_is_signal_connected(void* self, void* signal);
+bool q_mimedata_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1119,10 +1119,10 @@ bool q_mimedata_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMimeData*
+/// @param self const QMimeData*
 /// @param callback bool func(QMimeData* self, QMetaMethod* signal)
 ///
-void q_mimedata_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_mimedata_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

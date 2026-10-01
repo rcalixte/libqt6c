@@ -6,7 +6,7 @@ TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrec
     return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_New();
 }
 
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new2(void* other) {
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionutils__typographicquotes_new2(const void* other) {
     return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_New2((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)other);
 }
 
@@ -22,7 +22,7 @@ void k_textautocorrectioncore__autocorrectionutils__typographicquotes_move_assig
     TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_MoveAssign((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)self, (TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)other);
 }
 
-QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_begin(void* self) {
+QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_begin(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_Begin((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)self);
 }
 
@@ -30,7 +30,7 @@ void k_textautocorrectioncore__autocorrectionutils__typographicquotes_set_begin(
     TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_SetBegin((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)self, (QChar*)begin);
 }
 
-QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_end(void* self) {
+QChar* k_textautocorrectioncore__autocorrectionutils__typographicquotes_end(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_End((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)self);
 }
 
@@ -38,14 +38,14 @@ void k_textautocorrectioncore__autocorrectionutils__typographicquotes_set_end(vo
     TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_SetEnd((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)self, (QChar*)end);
 }
 
-const char* k_textautocorrectioncore__autocorrectionutils__typographicquotes_to_string(void* self) {
+const char* k_textautocorrectioncore__autocorrectionutils__typographicquotes_to_string(const void* self) {
     libqt_string _str = TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_ToString((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_textautocorrectioncore__autocorrectionutils__typographicquotes_is_empty(void* self) {
+bool k_textautocorrectioncore__autocorrectionutils__typographicquotes_is_empty(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes_IsEmpty((TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)self);
 }
 

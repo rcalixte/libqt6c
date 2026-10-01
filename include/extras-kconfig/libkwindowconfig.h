@@ -16,7 +16,7 @@
 /// @param config KConfigGroup*
 /// @param options flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_windowconfig_save_window_size(void* window, void* config, int32_t options);
+void k_windowconfig_save_window_size(const void* window, void* config, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kwindowconfig.html#hasSavedWindowSize)
 ///
@@ -29,7 +29,7 @@ bool k_windowconfig_has_saved_window_size(void* config);
 /// @param window QWindow*
 /// @param config KConfigGroup*
 ///
-void k_windowconfig_restore_window_size(void* window, void* config);
+void k_windowconfig_restore_window_size(void* window, const void* config);
 
 /// [Upstream resources](https://api.kde.org/kwindowconfig.html#saveWindowPosition)
 ///
@@ -37,7 +37,7 @@ void k_windowconfig_restore_window_size(void* window, void* config);
 /// @param config KConfigGroup*
 /// @param options flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_windowconfig_save_window_position(void* window, void* config, int32_t options);
+void k_windowconfig_save_window_position(const void* window, void* config, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kwindowconfig.html#hasSavedWindowPosition)
 ///
@@ -50,7 +50,7 @@ bool k_windowconfig_has_saved_window_position(void* config);
 /// @param window QWindow*
 /// @param config KConfigGroup*
 ///
-void k_windowconfig_restore_window_position(void* window, void* config);
+void k_windowconfig_restore_window_position(void* window, const void* config);
 
 /// [Upstream resources](https://api.kde.org/kwindowconfig.html#restoreWindowScreenPosition)
 ///
@@ -58,5 +58,5 @@ void k_windowconfig_restore_window_position(void* window, void* config);
 /// @param screen QScreen*
 /// @param config KConfigGroup*
 ///
-void k_windowconfig_restore_window_screen_position(void* window, void* screen, void* config);
+void k_windowconfig_restore_window_screen_position(void* window, const void* screen, const void* config);
 #endif

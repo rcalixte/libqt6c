@@ -24,26 +24,26 @@ Attica__ProviderManager* k_attica__providermanager_new2(const int32_t* flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-const QMetaObject* k_attica__providermanager_meta_object(void* self);
+const QMetaObject* k_attica__providermanager_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Attica__ProviderManager*
-/// @param callback const QMetaObject* func()
+/// @param self const Attica__ProviderManager*
+/// @param callback const QMetaObject* func(const Attica__ProviderManager* self)
 ///
-void k_attica__providermanager_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_attica__providermanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-const QMetaObject* k_attica__providermanager_super_meta_object(void* self);
+const QMetaObject* k_attica__providermanager_super_meta_object(const void* self);
 
 /// @param self Attica__ProviderManager*
 /// @param param1 const char*
@@ -114,14 +114,14 @@ libqt_list k_attica__providermanager_default_provider_files(void* self);
 /// @param self Attica__ProviderManager*
 /// @param url QUrl*
 ///
-void k_attica__providermanager_add_provider_file_to_default_providers(void* self, void* url);
+void k_attica__providermanager_add_provider_file_to_default_providers(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#removeProviderFileFromDefaultProviders)
 ///
 /// @param self Attica__ProviderManager*
 /// @param url QUrl*
 ///
-void k_attica__providermanager_remove_provider_file_from_default_providers(void* self, void* url);
+void k_attica__providermanager_remove_provider_file_from_default_providers(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#setAuthenticationSuppressed)
 ///
@@ -148,58 +148,58 @@ void k_attica__providermanager_add_provider_from_xml(void* self, const char* pro
 /// @param self Attica__ProviderManager*
 /// @param file QUrl*
 ///
-void k_attica__providermanager_add_provider_file(void* self, void* file);
+void k_attica__providermanager_add_provider_file(void* self, const void* file);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#providerFiles)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
 /// @return libqt_list of QUrl*
 ///
-libqt_list k_attica__providermanager_provider_files(void* self);
+libqt_list k_attica__providermanager_provider_files(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#providers)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
 /// @return libqt_list of Attica__Provider*
 ///
-libqt_list k_attica__providermanager_providers(void* self);
+libqt_list k_attica__providermanager_providers(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#contains)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param provider QUrl*
 ///
-bool k_attica__providermanager_contains(void* self, void* provider);
+bool k_attica__providermanager_contains(const void* self, const void* provider);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#providerByUrl)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param url QUrl*
 ///
-Attica__Provider* k_attica__providermanager_provider_by_url(void* self, void* url);
+Attica__Provider* k_attica__providermanager_provider_by_url(const void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#providerFor)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param url QUrl*
 ///
-Attica__Provider* k_attica__providermanager_provider_for(void* self, void* url);
+Attica__Provider* k_attica__providermanager_provider_for(const void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#providerAdded)
 ///
 /// @param self Attica__ProviderManager*
 /// @param provider Attica__Provider*
 ///
-void k_attica__providermanager_provider_added(void* self, void* provider);
+void k_attica__providermanager_provider_added(void* self, const void* provider);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#providerAdded)
 ///
 /// @param self Attica__ProviderManager*
 /// @param callback void func(Attica__ProviderManager* self, Attica__Provider* provider)
 ///
-void k_attica__providermanager_on_provider_added(void* self, void (*callback)(void*, void*));
+void k_attica__providermanager_on_provider_added(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#defaultProvidersLoaded)
 ///
@@ -219,14 +219,14 @@ void k_attica__providermanager_on_default_providers_loaded(void* self, void (*ca
 /// @param self Attica__ProviderManager*
 /// @param provider Attica__Provider*
 ///
-void k_attica__providermanager_authentication_credentials_missing(void* self, void* provider);
+void k_attica__providermanager_authentication_credentials_missing(void* self, const void* provider);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#authenticationCredentialsMissing)
 ///
 /// @param self Attica__ProviderManager*
 /// @param callback void func(Attica__ProviderManager* self, Attica__Provider* provider)
 ///
-void k_attica__providermanager_on_authentication_credentials_missing(void* self, void (*callback)(void*, void*));
+void k_attica__providermanager_on_authentication_credentials_missing(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#failedToLoad)
 ///
@@ -234,14 +234,14 @@ void k_attica__providermanager_on_authentication_credentials_missing(void* self,
 /// @param provider QUrl*
 /// @param error enum QNetworkReply__NetworkError
 ///
-void k_attica__providermanager_failed_to_load(void* self, void* provider, int32_t error);
+void k_attica__providermanager_failed_to_load(void* self, const void* provider, int32_t error);
 
 /// [Upstream resources](https://api.kde.org/attica-providermanager.html#failedToLoad)
 ///
 /// @param self Attica__ProviderManager*
 /// @param callback void func(Attica__ProviderManager* self, QUrl* provider, enum QNetworkReply__NetworkError error)
 ///
-void k_attica__providermanager_on_failed_to_load(void* self, void (*callback)(void*, void*, int32_t));
+void k_attica__providermanager_on_failed_to_load(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -268,9 +268,9 @@ const char* k_attica__providermanager_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-const char* k_attica__providermanager_object_name(void* self);
+const char* k_attica__providermanager_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -285,33 +285,33 @@ void k_attica__providermanager_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-bool k_attica__providermanager_is_widget_type(void* self);
+bool k_attica__providermanager_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-bool k_attica__providermanager_is_window_type(void* self);
+bool k_attica__providermanager_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-bool k_attica__providermanager_is_quick_item_type(void* self);
+bool k_attica__providermanager_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-bool k_attica__providermanager_signals_blocked(void* self);
+bool k_attica__providermanager_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -326,9 +326,9 @@ bool k_attica__providermanager_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-QThread* k_attica__providermanager_thread(void* self);
+QThread* k_attica__providermanager_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -379,11 +379,11 @@ void k_attica__providermanager_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_attica__providermanager_children(void* self);
+libqt_list k_attica__providermanager_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -421,7 +421,7 @@ void k_attica__providermanager_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_attica__providermanager_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_attica__providermanager_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -432,18 +432,18 @@ QMetaObject__Connection* k_attica__providermanager_connect(void* sender, const c
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_attica__providermanager_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_attica__providermanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_attica__providermanager_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_attica__providermanager_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -454,7 +454,7 @@ QMetaObject__Connection* k_attica__providermanager_connect3(void* self, void* se
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_attica__providermanager_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_attica__providermanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -465,24 +465,24 @@ bool k_attica__providermanager_disconnect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_attica__providermanager_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_attica__providermanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-bool k_attica__providermanager_disconnect3(void* self);
+bool k_attica__providermanager_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param receiver QObject*
 ///
-bool k_attica__providermanager_disconnect4(void* self, void* receiver);
+bool k_attica__providermanager_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -490,23 +490,23 @@ bool k_attica__providermanager_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_attica__providermanager_disconnect5(void* param1);
+bool k_attica__providermanager_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-void k_attica__providermanager_dump_object_tree(void* self);
+void k_attica__providermanager_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-void k_attica__providermanager_dump_object_info(void* self);
+void k_attica__providermanager_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -516,16 +516,16 @@ void k_attica__providermanager_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_attica__providermanager_set_property(void* self, const char* name, void* value);
+bool k_attica__providermanager_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param name const char*
 ///
-QVariant* k_attica__providermanager_property(void* self, const char* name);
+QVariant* k_attica__providermanager_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -533,9 +533,9 @@ QVariant* k_attica__providermanager_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-const char** k_attica__providermanager_dynamic_property_names(void* self);
+const char** k_attica__providermanager_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -549,9 +549,9 @@ QBindingStorage* k_attica__providermanager_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-const QBindingStorage* k_attica__providermanager_binding_storage2(void* self);
+const QBindingStorage* k_attica__providermanager_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -574,18 +574,18 @@ void k_attica__providermanager_on_destroyed(void* self, void (*callback)(void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-QObject* k_attica__providermanager_parent(void* self);
+QObject* k_attica__providermanager_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param classname const char*
 ///
-bool k_attica__providermanager_inherits(void* self, const char* classname);
+bool k_attica__providermanager_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -625,7 +625,7 @@ int32_t k_attica__providermanager_start_timer23(void* self, int64_t time, int32_
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_attica__providermanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_attica__providermanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -637,59 +637,59 @@ QMetaObject__Connection* k_attica__providermanager_connect5(void* sender, const 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_attica__providermanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_attica__providermanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_attica__providermanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_attica__providermanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param signal const char*
 ///
-bool k_attica__providermanager_disconnect1(void* self, const char* signal);
+bool k_attica__providermanager_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Attica__ProviderManager*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_attica__providermanager_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_attica__providermanager_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_attica__providermanager_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_attica__providermanager_disconnect23(void* self, void* receiver, const char* member);
+bool k_attica__providermanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Attica__ProviderManager*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_attica__providermanager_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -885,7 +885,7 @@ void k_attica__providermanager_on_custom_event(void* self, void (*callback)(void
 /// @param self Attica__ProviderManager*
 /// @param signal QMetaMethod*
 ///
-void k_attica__providermanager_connect_notify(void* self, void* signal);
+void k_attica__providermanager_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -896,7 +896,7 @@ void k_attica__providermanager_connect_notify(void* self, void* signal);
 /// @param self Attica__ProviderManager*
 /// @param signal QMetaMethod*
 ///
-void k_attica__providermanager_super_connect_notify(void* self, void* signal);
+void k_attica__providermanager_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -907,7 +907,7 @@ void k_attica__providermanager_super_connect_notify(void* self, void* signal);
 /// @param self Attica__ProviderManager*
 /// @param callback void func(Attica__ProviderManager* self, QMetaMethod* signal)
 ///
-void k_attica__providermanager_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_attica__providermanager_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -918,7 +918,7 @@ void k_attica__providermanager_on_connect_notify(void* self, void (*callback)(vo
 /// @param self Attica__ProviderManager*
 /// @param signal QMetaMethod*
 ///
-void k_attica__providermanager_disconnect_notify(void* self, void* signal);
+void k_attica__providermanager_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -929,7 +929,7 @@ void k_attica__providermanager_disconnect_notify(void* self, void* signal);
 /// @param self Attica__ProviderManager*
 /// @param signal QMetaMethod*
 ///
-void k_attica__providermanager_super_disconnect_notify(void* self, void* signal);
+void k_attica__providermanager_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -940,7 +940,7 @@ void k_attica__providermanager_super_disconnect_notify(void* self, void* signal)
 /// @param self Attica__ProviderManager*
 /// @param callback void func(Attica__ProviderManager* self, QMetaMethod* signal)
 ///
-void k_attica__providermanager_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_attica__providermanager_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -948,9 +948,9 @@ void k_attica__providermanager_on_disconnect_notify(void* self, void (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-QObject* k_attica__providermanager_sender(void* self);
+QObject* k_attica__providermanager_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -958,9 +958,9 @@ QObject* k_attica__providermanager_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-QObject* k_attica__providermanager_super_sender(void* self);
+QObject* k_attica__providermanager_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -968,10 +968,10 @@ QObject* k_attica__providermanager_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
-/// @param callback QObject* func()
+/// @param self const Attica__ProviderManager*
+/// @param callback QObject* func(Attica__ProviderManager* self)
 ///
-void k_attica__providermanager_on_sender(void* self, QObject* (*callback)());
+void k_attica__providermanager_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -979,9 +979,9 @@ void k_attica__providermanager_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-int32_t k_attica__providermanager_sender_signal_index(void* self);
+int32_t k_attica__providermanager_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -989,9 +989,9 @@ int32_t k_attica__providermanager_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 ///
-int32_t k_attica__providermanager_super_sender_signal_index(void* self);
+int32_t k_attica__providermanager_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -999,10 +999,10 @@ int32_t k_attica__providermanager_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
-/// @param callback int32_t func()
+/// @param self const Attica__ProviderManager*
+/// @param callback int32_t func(Attica__ProviderManager* self)
 ///
-void k_attica__providermanager_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_attica__providermanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1010,10 +1010,10 @@ void k_attica__providermanager_on_sender_signal_index(void* self, int32_t (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param signal const char*
 ///
-int32_t k_attica__providermanager_receivers(void* self, const char* signal);
+int32_t k_attica__providermanager_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1021,10 +1021,10 @@ int32_t k_attica__providermanager_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param signal const char*
 ///
-int32_t k_attica__providermanager_super_receivers(void* self, const char* signal);
+int32_t k_attica__providermanager_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1032,10 +1032,10 @@ int32_t k_attica__providermanager_super_receivers(void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param callback int32_t func(Attica__ProviderManager* self, const char* signal)
 ///
-void k_attica__providermanager_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_attica__providermanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1043,10 +1043,10 @@ void k_attica__providermanager_on_receivers(void* self, int32_t (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param signal QMetaMethod*
 ///
-bool k_attica__providermanager_is_signal_connected(void* self, void* signal);
+bool k_attica__providermanager_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1054,10 +1054,10 @@ bool k_attica__providermanager_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param signal QMetaMethod*
 ///
-bool k_attica__providermanager_super_is_signal_connected(void* self, void* signal);
+bool k_attica__providermanager_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1065,10 +1065,10 @@ bool k_attica__providermanager_super_is_signal_connected(void* self, void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Attica__ProviderManager*
+/// @param self const Attica__ProviderManager*
 /// @param callback bool func(Attica__ProviderManager* self, QMetaMethod* signal)
 ///
-void k_attica__providermanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_attica__providermanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

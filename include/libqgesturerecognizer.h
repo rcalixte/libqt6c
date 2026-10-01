@@ -41,6 +41,8 @@ QGesture* q_gesturerecognizer_super_create(void* self, void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
 ///
+/// @warning This method must be implemented with `q_gesturerecognizer_on_recognize` before it can be called.
+///
 /// @param self QGestureRecognizer*
 /// @param state QGesture*
 /// @param watched QObject*
@@ -58,19 +60,6 @@ int32_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, vo
 /// @param callback int32_t func(QGestureRecognizer* self, QGesture* state, QObject* watched, QEvent* event)
 ///
 void q_gesturerecognizer_on_recognize(void* self, int32_t (*callback)(void*, void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#recognize)
-///
-/// Base class method implementation
-///
-/// @param self QGestureRecognizer*
-/// @param state QGesture*
-/// @param watched QObject*
-/// @param event QEvent*
-///
-/// @return flag of enum QGestureRecognizer__ResultFlag
-///
-int32_t q_gesturerecognizer_super_recognize(void* self, void* state, void* watched, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#reset)
 ///
@@ -116,7 +105,7 @@ void q_gesturerecognizer_unregister_recognizer(int32_t type);
 /// @param self QGestureRecognizer*
 /// @param param1 QGestureRecognizer*
 ///
-void q_gesturerecognizer_operator_assign(void* self, void* param1);
+void q_gesturerecognizer_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesturerecognizer.html#dtor.QGestureRecognizer)
 ///

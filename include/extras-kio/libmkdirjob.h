@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-const QMetaObject* k_io__mkdirjob_meta_object(void* self);
+const QMetaObject* k_io__mkdirjob_meta_object(const void* self);
 
 /// @param self KIO__MkdirJob*
 /// @param param1 const char*
@@ -42,14 +42,14 @@ const char* k_io__mkdirjob_tr(const char* s);
 /// @param job KIO__Job*
 /// @param url QUrl*
 ///
-void k_io__mkdirjob_redirection(void* self, void* job, void* url);
+void k_io__mkdirjob_redirection(void* self, void* job, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-mkdirjob.html#redirection)
 ///
 /// @param self KIO__MkdirJob*
 /// @param callback void func(KIO__MkdirJob* self, KIO__Job* job, QUrl* url)
 ///
-void k_io__mkdirjob_on_redirection(void* self, void (*callback)(void*, void*, void*));
+void k_io__mkdirjob_on_redirection(void* self, void (*callback)(void*, void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-mkdirjob.html#permanentRedirection)
 ///
@@ -58,14 +58,14 @@ void k_io__mkdirjob_on_redirection(void* self, void (*callback)(void*, void*, vo
 /// @param fromUrl QUrl*
 /// @param toUrl QUrl*
 ///
-void k_io__mkdirjob_permanent_redirection(void* self, void* job, void* fromUrl, void* toUrl);
+void k_io__mkdirjob_permanent_redirection(void* self, void* job, const void* fromUrl, const void* toUrl);
 
 /// [Upstream resources](https://api.kde.org/kio-mkdirjob.html#permanentRedirection)
 ///
 /// @param self KIO__MkdirJob*
 /// @param callback void func(KIO__MkdirJob* self, KIO__Job* job, QUrl* fromUrl, QUrl* toUrl)
 ///
-void k_io__mkdirjob_on_permanent_redirection(void* self, void (*callback)(void*, void*, void*, void*));
+void k_io__mkdirjob_on_permanent_redirection(void* self, void (*callback)(void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -90,9 +90,9 @@ const char* k_io__mkdirjob_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://api.kde.org/kio-simplejob.html#url)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-const QUrl* k_io__mkdirjob_url(void* self);
+const QUrl* k_io__mkdirjob_url(const void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -112,9 +112,9 @@ void k_io__mkdirjob_remove_on_hold();
 ///
 /// [Upstream resources](https://api.kde.org/kio-simplejob.html#isRedirectionHandlingEnabled)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_is_redirection_handling_enabled(void* self);
+bool k_io__mkdirjob_is_redirection_handling_enabled(const void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -147,9 +147,9 @@ void k_io__mkdirjob_start(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#uiDelegateExtension)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-KIO__JobUiDelegateExtension* k_io__mkdirjob_ui_delegate_extension(void* self);
+KIO__JobUiDelegateExtension* k_io__mkdirjob_ui_delegate_extension(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -166,9 +166,9 @@ void k_io__mkdirjob_set_ui_delegate_extension(void* self, void* extension);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-const char* k_io__mkdirjob_error_string(void* self);
+const char* k_io__mkdirjob_error_string(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -176,9 +176,9 @@ const char* k_io__mkdirjob_error_string(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-const char** k_io__mkdirjob_detailed_error_strings(void* self);
+const char** k_io__mkdirjob_detailed_error_strings(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -193,9 +193,9 @@ void k_io__mkdirjob_set_parent_job(void* self, void* parentJob);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#parentJob)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-KIO__Job* k_io__mkdirjob_parent_job(void* self);
+KIO__Job* k_io__mkdirjob_parent_job(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -204,7 +204,7 @@ KIO__Job* k_io__mkdirjob_parent_job(void* self);
 /// @param self KIO__MkdirJob*
 /// @param metaData KIO__MetaData*
 ///
-void k_io__mkdirjob_set_meta_data(void* self, void* metaData);
+void k_io__mkdirjob_set_meta_data(void* self, const void* metaData);
 
 /// Inherited from KIO::Job
 ///
@@ -238,17 +238,17 @@ void k_io__mkdirjob_merge_meta_data(void* self, libqt_map values);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#outgoingMetaData)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-KIO__MetaData* k_io__mkdirjob_outgoing_meta_data(void* self);
+KIO__MetaData* k_io__mkdirjob_outgoing_meta_data(const void* self);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#metaData)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-KIO__MetaData* k_io__mkdirjob_meta_data(void* self);
+KIO__MetaData* k_io__mkdirjob_meta_data(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -285,10 +285,10 @@ void k_io__mkdirjob_on_connected(void* self, void (*callback)(void*, void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param reqUrl QUrl*
 ///
-const char** k_io__mkdirjob_detailed_error_strings1(void* self, void* reqUrl);
+const char** k_io__mkdirjob_detailed_error_strings1(const void* self, const void* reqUrl);
 
 /// Inherited from KIO::Job
 ///
@@ -296,11 +296,11 @@ const char** k_io__mkdirjob_detailed_error_strings1(void* self, void* reqUrl);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param reqUrl QUrl*
 /// @param method int
 ///
-const char** k_io__mkdirjob_detailed_error_strings2(void* self, void* reqUrl, int method);
+const char** k_io__mkdirjob_detailed_error_strings2(const void* self, const void* reqUrl, int method);
 
 /// Inherited from KJob
 ///
@@ -315,27 +315,27 @@ void k_io__mkdirjob_set_ui_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-KJobUiDelegate* k_io__mkdirjob_ui_delegate(void* self);
+KJobUiDelegate* k_io__mkdirjob_ui_delegate(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
 /// @return flag of enum KJob__Capability
 ///
-int32_t k_io__mkdirjob_capabilities(void* self);
+int32_t k_io__mkdirjob_capabilities(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_is_suspended(void* self);
+bool k_io__mkdirjob_is_suspended(const void* self);
 
 /// Inherited from KJob
 ///
@@ -373,9 +373,9 @@ bool k_io__mkdirjob_exec(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-int32_t k_io__mkdirjob_error(void* self);
+int32_t k_io__mkdirjob_error(const void* self);
 
 /// Inherited from KJob
 ///
@@ -383,35 +383,35 @@ int32_t k_io__mkdirjob_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-const char* k_io__mkdirjob_error_text(void* self);
+const char* k_io__mkdirjob_error_text(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_io__mkdirjob_processed_amount(void* self, int32_t unit);
+uintptr_t k_io__mkdirjob_processed_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_io__mkdirjob_total_amount(void* self, int32_t unit);
+uintptr_t k_io__mkdirjob_total_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-uintptr_t k_io__mkdirjob_percent(void* self);
+uintptr_t k_io__mkdirjob_percent(const void* self);
 
 /// Inherited from KJob
 ///
@@ -426,9 +426,9 @@ void k_io__mkdirjob_set_auto_delete(void* self, bool autodelete);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_is_auto_delete(void* self);
+bool k_io__mkdirjob_is_auto_delete(const void* self);
 
 /// Inherited from KJob
 ///
@@ -442,25 +442,25 @@ void k_io__mkdirjob_set_finished_notification_hidden(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_is_finished_notification_hidden(void* self);
+bool k_io__mkdirjob_is_finished_notification_hidden(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_is_started_with_exec(void* self);
+bool k_io__mkdirjob_is_started_with_exec(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-int64_t k_io__mkdirjob_elapsed_time(void* self);
+int64_t k_io__mkdirjob_elapsed_time(const void* self);
 
 /// Inherited from KJob
 ///
@@ -600,9 +600,9 @@ bool k_io__mkdirjob_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-const char* k_io__mkdirjob_object_name(void* self);
+const char* k_io__mkdirjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -617,33 +617,33 @@ void k_io__mkdirjob_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_is_widget_type(void* self);
+bool k_io__mkdirjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_is_window_type(void* self);
+bool k_io__mkdirjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_is_quick_item_type(void* self);
+bool k_io__mkdirjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_signals_blocked(void* self);
+bool k_io__mkdirjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -658,9 +658,9 @@ bool k_io__mkdirjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-QThread* k_io__mkdirjob_thread(void* self);
+QThread* k_io__mkdirjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -711,11 +711,11 @@ void k_io__mkdirjob_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_io__mkdirjob_children(void* self);
+libqt_list k_io__mkdirjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -753,7 +753,7 @@ void k_io__mkdirjob_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__mkdirjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_io__mkdirjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -764,18 +764,18 @@ QMetaObject__Connection* k_io__mkdirjob_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_io__mkdirjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_io__mkdirjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__mkdirjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_io__mkdirjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -786,7 +786,7 @@ QMetaObject__Connection* k_io__mkdirjob_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__mkdirjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_io__mkdirjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -797,24 +797,24 @@ bool k_io__mkdirjob_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_io__mkdirjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_io__mkdirjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-bool k_io__mkdirjob_disconnect3(void* self);
+bool k_io__mkdirjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param receiver QObject*
 ///
-bool k_io__mkdirjob_disconnect4(void* self, void* receiver);
+bool k_io__mkdirjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -822,23 +822,23 @@ bool k_io__mkdirjob_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_io__mkdirjob_disconnect5(void* param1);
+bool k_io__mkdirjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-void k_io__mkdirjob_dump_object_tree(void* self);
+void k_io__mkdirjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-void k_io__mkdirjob_dump_object_info(void* self);
+void k_io__mkdirjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -848,16 +848,16 @@ void k_io__mkdirjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_io__mkdirjob_set_property(void* self, const char* name, void* value);
+bool k_io__mkdirjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param name const char*
 ///
-QVariant* k_io__mkdirjob_property(void* self, const char* name);
+QVariant* k_io__mkdirjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -865,9 +865,9 @@ QVariant* k_io__mkdirjob_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-const char** k_io__mkdirjob_dynamic_property_names(void* self);
+const char** k_io__mkdirjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -881,9 +881,9 @@ QBindingStorage* k_io__mkdirjob_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-const QBindingStorage* k_io__mkdirjob_binding_storage2(void* self);
+const QBindingStorage* k_io__mkdirjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -906,18 +906,18 @@ void k_io__mkdirjob_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 ///
-QObject* k_io__mkdirjob_parent(void* self);
+QObject* k_io__mkdirjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param classname const char*
 ///
-bool k_io__mkdirjob_inherits(void* self, const char* classname);
+bool k_io__mkdirjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -957,7 +957,7 @@ int32_t k_io__mkdirjob_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__mkdirjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_io__mkdirjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -969,59 +969,59 @@ QMetaObject__Connection* k_io__mkdirjob_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__mkdirjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_io__mkdirjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__mkdirjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_io__mkdirjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param signal const char*
 ///
-bool k_io__mkdirjob_disconnect1(void* self, const char* signal);
+bool k_io__mkdirjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__MkdirJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_io__mkdirjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_io__mkdirjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_io__mkdirjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__MkdirJob*
+/// @param self const KIO__MkdirJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__mkdirjob_disconnect23(void* self, void* receiver, const char* member);
+bool k_io__mkdirjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KIO__MkdirJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_io__mkdirjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1142,5 +1142,5 @@ void k_io__mkdirjob_delete(void* self);
 /// @param url QUrl*
 /// @param permissions int
 ///
-KIO__MkdirJob* k_io_mkdir(void* url, int permissions);
+KIO__MkdirJob* k_io_mkdir(const void* url, int permissions);
 #endif

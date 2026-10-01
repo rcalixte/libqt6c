@@ -18,9 +18,9 @@ KXMLGUIBuilder* k_xmlguibuilder_new(void* widget);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#builderClient)
 ///
-/// @param self KXMLGUIBuilder*
+/// @param self const KXMLGUIBuilder*
 ///
-KXMLGUIClient* k_xmlguibuilder_builder_client(void* self);
+KXMLGUIClient* k_xmlguibuilder_builder_client(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#setBuilderClient)
 ///
@@ -39,26 +39,26 @@ QWidget* k_xmlguibuilder_widget(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KXMLGUIBuilder*
+/// @param self const KXMLGUIBuilder*
 ///
-const char** k_xmlguibuilder_container_tags(void* self);
+const char** k_xmlguibuilder_container_tags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KXMLGUIBuilder*
-/// @param callback const char** func()
+/// @param self const KXMLGUIBuilder*
+/// @param callback const char** func(const KXMLGUIBuilder* self)
 ///
-void k_xmlguibuilder_on_container_tags(void* self, const char** (*callback)());
+void k_xmlguibuilder_on_container_tags(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Base class method implementation
 ///
-/// @param self KXMLGUIBuilder*
+/// @param self const KXMLGUIBuilder*
 ///
-const char** k_xmlguibuilder_super_container_tags(void* self);
+const char** k_xmlguibuilder_super_container_tags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
@@ -68,7 +68,7 @@ const char** k_xmlguibuilder_super_container_tags(void* self);
 /// @param element QDomElement*
 /// @param containerAction QAction**
 ///
-QWidget* k_xmlguibuilder_create_container(void* self, void* parent, int index, void* element, void** containerAction);
+QWidget* k_xmlguibuilder_create_container(void* self, void* parent, int index, const void* element, void** containerAction);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
@@ -77,7 +77,7 @@ QWidget* k_xmlguibuilder_create_container(void* self, void* parent, int index, v
 /// @param self KXMLGUIBuilder*
 /// @param callback QWidget* func(KXMLGUIBuilder* self, QWidget* parent, int index, QDomElement* element, QAction** containerAction)
 ///
-void k_xmlguibuilder_on_create_container(void* self, QWidget* (*callback)(void*, void*, int, void*, void**));
+void k_xmlguibuilder_on_create_container(void* self, QWidget* (*callback)(void*, void*, int, const void*, void**));
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
@@ -89,7 +89,7 @@ void k_xmlguibuilder_on_create_container(void* self, QWidget* (*callback)(void*,
 /// @param element QDomElement*
 /// @param containerAction QAction**
 ///
-QWidget* k_xmlguibuilder_super_create_container(void* self, void* parent, int index, void* element, void** containerAction);
+QWidget* k_xmlguibuilder_super_create_container(void* self, void* parent, int index, const void* element, void** containerAction);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
@@ -126,26 +126,26 @@ void k_xmlguibuilder_super_remove_container(void* self, void* container, void* p
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KXMLGUIBuilder*
+/// @param self const KXMLGUIBuilder*
 ///
-const char** k_xmlguibuilder_custom_tags(void* self);
+const char** k_xmlguibuilder_custom_tags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KXMLGUIBuilder*
-/// @param callback const char** func()
+/// @param self const KXMLGUIBuilder*
+/// @param callback const char** func(const KXMLGUIBuilder* self)
 ///
-void k_xmlguibuilder_on_custom_tags(void* self, const char** (*callback)());
+void k_xmlguibuilder_on_custom_tags(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Base class method implementation
 ///
-/// @param self KXMLGUIBuilder*
+/// @param self const KXMLGUIBuilder*
 ///
-const char** k_xmlguibuilder_super_custom_tags(void* self);
+const char** k_xmlguibuilder_super_custom_tags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
@@ -154,7 +154,7 @@ const char** k_xmlguibuilder_super_custom_tags(void* self);
 /// @param index int
 /// @param element QDomElement*
 ///
-QAction* k_xmlguibuilder_create_custom_element(void* self, void* parent, int index, void* element);
+QAction* k_xmlguibuilder_create_custom_element(void* self, void* parent, int index, const void* element);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
@@ -163,7 +163,7 @@ QAction* k_xmlguibuilder_create_custom_element(void* self, void* parent, int ind
 /// @param self KXMLGUIBuilder*
 /// @param callback QAction* func(KXMLGUIBuilder* self, QWidget* parent, int index, QDomElement* element)
 ///
-void k_xmlguibuilder_on_create_custom_element(void* self, QAction* (*callback)(void*, void*, int, void*));
+void k_xmlguibuilder_on_create_custom_element(void* self, QAction* (*callback)(void*, void*, int, const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
@@ -174,7 +174,7 @@ void k_xmlguibuilder_on_create_custom_element(void* self, QAction* (*callback)(v
 /// @param index int
 /// @param element QDomElement*
 ///
-QAction* k_xmlguibuilder_super_create_custom_element(void* self, void* parent, int index, void* element);
+QAction* k_xmlguibuilder_super_create_custom_element(void* self, void* parent, int index, const void* element);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
 ///

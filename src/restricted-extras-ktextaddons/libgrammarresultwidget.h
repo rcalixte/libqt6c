@@ -24,26 +24,26 @@ TextGrammarCheck__GrammarResultWidget* k_textgrammarcheck__grammarresultwidget_n
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const QMetaObject* k_textgrammarcheck__grammarresultwidget_meta_object(void* self);
+const QMetaObject* k_textgrammarcheck__grammarresultwidget_meta_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback const QMetaObject* func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback const QMetaObject* func(const TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
 ///
 /// Base class method implementation
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const QMetaObject* k_textgrammarcheck__grammarresultwidget_super_meta_object(void* self);
+const QMetaObject* k_textgrammarcheck__grammarresultwidget_super_meta_object(const void* self);
 
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param param1 const char*
@@ -104,6 +104,8 @@ void k_textgrammarcheck__grammarresultwidget_set_text(void* self, const char* st
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
 ///
+/// @warning This method must be implemented with `k_textgrammarcheck__grammarresultwidget_on_check_grammar` before it can be called.
+///
 /// @param self TextGrammarCheck__GrammarResultWidget*
 ///
 void k_textgrammarcheck__grammarresultwidget_check_grammar(void* self);
@@ -113,17 +115,9 @@ void k_textgrammarcheck__grammarresultwidget_check_grammar(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_check_grammar(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
-///
-/// Base class method implementation
-///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-///
-void k_textgrammarcheck__grammarresultwidget_super_check_grammar(void* self);
+void k_textgrammarcheck__grammarresultwidget_on_check_grammar(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
 ///
@@ -137,14 +131,14 @@ void k_textgrammarcheck__grammarresultwidget_apply_grammar_result(void* self, li
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param act TextGrammarCheck__GrammarAction*
 ///
-void k_textgrammarcheck__grammarresultwidget_replace_text(void* self, void* act);
+void k_textgrammarcheck__grammarresultwidget_replace_text(void* self, const void* act);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param callback void func(TextGrammarCheck__GrammarResultWidget* self, TextGrammarCheck__GrammarAction* act)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_replace_text(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__grammarresultwidget_on_replace_text(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
 ///
@@ -196,9 +190,9 @@ void k_textgrammarcheck__grammarresultwidget_add_extra_widget(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_add_extra_widget(void* self, void (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_add_extra_widget(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarResultWidget.html)
 ///
@@ -247,9 +241,9 @@ TextGrammarCheck__GrammarResultWidget* k_textgrammarcheck__grammarresultwidget_f
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-uintptr_t k_textgrammarcheck__grammarresultwidget_win_id(void* self);
+uintptr_t k_textgrammarcheck__grammarresultwidget_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -263,25 +257,25 @@ void k_textgrammarcheck__grammarresultwidget_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-uintptr_t k_textgrammarcheck__grammarresultwidget_internal_win_id(void* self);
+uintptr_t k_textgrammarcheck__grammarresultwidget_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-uintptr_t k_textgrammarcheck__grammarresultwidget_effective_win_id(void* self);
+uintptr_t k_textgrammarcheck__grammarresultwidget_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QStyle* k_textgrammarcheck__grammarresultwidget_style(void* self);
+QStyle* k_textgrammarcheck__grammarresultwidget_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -296,35 +290,35 @@ void k_textgrammarcheck__grammarresultwidget_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_top_level(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_window(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_modal(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_window_modality(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -339,18 +333,18 @@ void k_textgrammarcheck__grammarresultwidget_set_window_modality(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_enabled(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_enabled_to(void* self, void* param1);
+bool k_textgrammarcheck__grammarresultwidget_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -383,153 +377,153 @@ void k_textgrammarcheck__grammarresultwidget_set_window_modified(void* self, boo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QRect* k_textgrammarcheck__grammarresultwidget_frame_geometry(void* self);
+QRect* k_textgrammarcheck__grammarresultwidget_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const QRect* k_textgrammarcheck__grammarresultwidget_geometry(void* self);
+const QRect* k_textgrammarcheck__grammarresultwidget_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QRect* k_textgrammarcheck__grammarresultwidget_normal_geometry(void* self);
+QRect* k_textgrammarcheck__grammarresultwidget_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_x(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_y(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QPoint* k_textgrammarcheck__grammarresultwidget_pos(void* self);
+QPoint* k_textgrammarcheck__grammarresultwidget_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_frame_size(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_size(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_width(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_height(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QRect* k_textgrammarcheck__grammarresultwidget_rect(void* self);
+QRect* k_textgrammarcheck__grammarresultwidget_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QRect* k_textgrammarcheck__grammarresultwidget_children_rect(void* self);
+QRect* k_textgrammarcheck__grammarresultwidget_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QRegion* k_textgrammarcheck__grammarresultwidget_children_region(void* self);
+QRegion* k_textgrammarcheck__grammarresultwidget_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_minimum_size(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_maximum_size(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_minimum_width(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_minimum_height(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_maximum_width(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_maximum_height(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -538,7 +532,7 @@ int32_t k_textgrammarcheck__grammarresultwidget_maximum_height(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param minimumSize QSize*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_minimum_size(void* self, void* minimumSize);
+void k_textgrammarcheck__grammarresultwidget_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -557,7 +551,7 @@ void k_textgrammarcheck__grammarresultwidget_set_minimum_size2(void* self, int m
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param maximumSize QSize*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_maximum_size(void* self, void* maximumSize);
+void k_textgrammarcheck__grammarresultwidget_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -609,9 +603,9 @@ void k_textgrammarcheck__grammarresultwidget_set_maximum_height(void* self, int 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_size_increment(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -620,7 +614,7 @@ QSize* k_textgrammarcheck__grammarresultwidget_size_increment(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param sizeIncrement QSize*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_size_increment(void* self, void* sizeIncrement);
+void k_textgrammarcheck__grammarresultwidget_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -636,9 +630,9 @@ void k_textgrammarcheck__grammarresultwidget_set_size_increment2(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_base_size(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -647,7 +641,7 @@ QSize* k_textgrammarcheck__grammarresultwidget_base_size(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param baseSize QSize*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_base_size(void* self, void* baseSize);
+void k_textgrammarcheck__grammarresultwidget_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -666,7 +660,7 @@ void k_textgrammarcheck__grammarresultwidget_set_base_size2(void* self, int base
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param fixedSize QSize*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_fixed_size(void* self, void* fixedSize);
+void k_textgrammarcheck__grammarresultwidget_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -700,145 +694,145 @@ void k_textgrammarcheck__grammarresultwidget_set_fixed_height(void* self, int h)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPointF*
 ///
-QPointF* k_textgrammarcheck__grammarresultwidget_map_to_global(void* self, void* param1);
+QPointF* k_textgrammarcheck__grammarresultwidget_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPoint*
 ///
-QPoint* k_textgrammarcheck__grammarresultwidget_map_to_global2(void* self, void* param1);
+QPoint* k_textgrammarcheck__grammarresultwidget_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPointF*
 ///
-QPointF* k_textgrammarcheck__grammarresultwidget_map_from_global(void* self, void* param1);
+QPointF* k_textgrammarcheck__grammarresultwidget_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPoint*
 ///
-QPoint* k_textgrammarcheck__grammarresultwidget_map_from_global2(void* self, void* param1);
+QPoint* k_textgrammarcheck__grammarresultwidget_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPointF*
 ///
-QPointF* k_textgrammarcheck__grammarresultwidget_map_to_parent(void* self, void* param1);
+QPointF* k_textgrammarcheck__grammarresultwidget_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPoint*
 ///
-QPoint* k_textgrammarcheck__grammarresultwidget_map_to_parent2(void* self, void* param1);
+QPoint* k_textgrammarcheck__grammarresultwidget_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPointF*
 ///
-QPointF* k_textgrammarcheck__grammarresultwidget_map_from_parent(void* self, void* param1);
+QPointF* k_textgrammarcheck__grammarresultwidget_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPoint*
 ///
-QPoint* k_textgrammarcheck__grammarresultwidget_map_from_parent2(void* self, void* param1);
+QPoint* k_textgrammarcheck__grammarresultwidget_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_textgrammarcheck__grammarresultwidget_map_to(void* self, void* param1, void* param2);
+QPointF* k_textgrammarcheck__grammarresultwidget_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_textgrammarcheck__grammarresultwidget_map_to2(void* self, void* param1, void* param2);
+QPoint* k_textgrammarcheck__grammarresultwidget_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_textgrammarcheck__grammarresultwidget_map_from(void* self, void* param1, void* param2);
+QPointF* k_textgrammarcheck__grammarresultwidget_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_textgrammarcheck__grammarresultwidget_map_from2(void* self, void* param1, void* param2);
+QPoint* k_textgrammarcheck__grammarresultwidget_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_window(void* self);
+QWidget* k_textgrammarcheck__grammarresultwidget_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_native_parent_widget(void* self);
+QWidget* k_textgrammarcheck__grammarresultwidget_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_top_level_widget(void* self);
+QWidget* k_textgrammarcheck__grammarresultwidget_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const QPalette* k_textgrammarcheck__grammarresultwidget_palette(void* self);
+const QPalette* k_textgrammarcheck__grammarresultwidget_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -847,7 +841,7 @@ const QPalette* k_textgrammarcheck__grammarresultwidget_palette(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param palette QPalette*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_palette(void* self, void* palette);
+void k_textgrammarcheck__grammarresultwidget_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -862,11 +856,11 @@ void k_textgrammarcheck__grammarresultwidget_set_background_role(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_background_role(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -881,19 +875,19 @@ void k_textgrammarcheck__grammarresultwidget_set_foreground_role(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_foreground_role(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const QFont* k_textgrammarcheck__grammarresultwidget_font(void* self);
+const QFont* k_textgrammarcheck__grammarresultwidget_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -902,31 +896,31 @@ const QFont* k_textgrammarcheck__grammarresultwidget_font(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param font QFont*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_font(void* self, void* font);
+void k_textgrammarcheck__grammarresultwidget_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QFontMetrics* k_textgrammarcheck__grammarresultwidget_font_metrics(void* self);
+QFontMetrics* k_textgrammarcheck__grammarresultwidget_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QFontInfo* k_textgrammarcheck__grammarresultwidget_font_info(void* self);
+QFontInfo* k_textgrammarcheck__grammarresultwidget_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QCursor* k_textgrammarcheck__grammarresultwidget_cursor(void* self);
+QCursor* k_textgrammarcheck__grammarresultwidget_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -935,7 +929,7 @@ QCursor* k_textgrammarcheck__grammarresultwidget_cursor(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param cursor QCursor*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_cursor(void* self, void* cursor);
+void k_textgrammarcheck__grammarresultwidget_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -958,17 +952,17 @@ void k_textgrammarcheck__grammarresultwidget_set_mouse_tracking(void* self, bool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_has_mouse_tracking(void* self);
+bool k_textgrammarcheck__grammarresultwidget_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_under_mouse(void* self);
+bool k_textgrammarcheck__grammarresultwidget_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -983,9 +977,9 @@ void k_textgrammarcheck__grammarresultwidget_set_tablet_tracking(void* self, boo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_has_tablet_tracking(void* self);
+bool k_textgrammarcheck__grammarresultwidget_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -994,7 +988,7 @@ bool k_textgrammarcheck__grammarresultwidget_has_tablet_tracking(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param mask QBitmap*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_mask(void* self, void* mask);
+void k_textgrammarcheck__grammarresultwidget_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1003,15 +997,15 @@ void k_textgrammarcheck__grammarresultwidget_set_mask(void* self, void* mask);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param mask QRegion*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_mask2(void* self, void* mask);
+void k_textgrammarcheck__grammarresultwidget_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QRegion* k_textgrammarcheck__grammarresultwidget_mask(void* self);
+QRegion* k_textgrammarcheck__grammarresultwidget_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1051,9 +1045,9 @@ QPixmap* k_textgrammarcheck__grammarresultwidget_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QGraphicsEffect* k_textgrammarcheck__grammarresultwidget_graphics_effect(void* self);
+QGraphicsEffect* k_textgrammarcheck__grammarresultwidget_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1106,9 +1100,9 @@ void k_textgrammarcheck__grammarresultwidget_set_style_sheet(void* self, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_style_sheet(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1116,9 +1110,9 @@ const char* k_textgrammarcheck__grammarresultwidget_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_window_title(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1127,15 +1121,15 @@ const char* k_textgrammarcheck__grammarresultwidget_window_title(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param icon QIcon*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_window_icon(void* self, void* icon);
+void k_textgrammarcheck__grammarresultwidget_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QIcon* k_textgrammarcheck__grammarresultwidget_window_icon(void* self);
+QIcon* k_textgrammarcheck__grammarresultwidget_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1152,9 +1146,9 @@ void k_textgrammarcheck__grammarresultwidget_set_window_icon_text(void* self, co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_window_icon_text(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1171,9 +1165,9 @@ void k_textgrammarcheck__grammarresultwidget_set_window_role(void* self, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_window_role(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1190,9 +1184,9 @@ void k_textgrammarcheck__grammarresultwidget_set_window_file_path(void* self, co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_window_file_path(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1207,17 +1201,17 @@ void k_textgrammarcheck__grammarresultwidget_set_window_opacity(void* self, doub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-double k_textgrammarcheck__grammarresultwidget_window_opacity(void* self);
+double k_textgrammarcheck__grammarresultwidget_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_window_modified(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1234,9 +1228,9 @@ void k_textgrammarcheck__grammarresultwidget_set_tool_tip(void* self, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_tool_tip(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1251,9 +1245,9 @@ void k_textgrammarcheck__grammarresultwidget_set_tool_tip_duration(void* self, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_tool_tip_duration(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1270,9 +1264,9 @@ void k_textgrammarcheck__grammarresultwidget_set_status_tip(void* self, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_status_tip(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1289,9 +1283,9 @@ void k_textgrammarcheck__grammarresultwidget_set_whats_this(void* self, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_whats_this(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1299,9 +1293,9 @@ const char* k_textgrammarcheck__grammarresultwidget_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_accessible_name(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1318,9 +1312,9 @@ void k_textgrammarcheck__grammarresultwidget_set_accessible_name(void* self, con
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_accessible_description(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1344,11 +1338,11 @@ void k_textgrammarcheck__grammarresultwidget_set_layout_direction(void* self, in
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_layout_direction(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1365,15 +1359,15 @@ void k_textgrammarcheck__grammarresultwidget_unset_layout_direction(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param locale QLocale*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_locale(void* self, void* locale);
+void k_textgrammarcheck__grammarresultwidget_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QLocale* k_textgrammarcheck__grammarresultwidget_locale(void* self);
+QLocale* k_textgrammarcheck__grammarresultwidget_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1387,17 +1381,17 @@ void k_textgrammarcheck__grammarresultwidget_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_right_to_left(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_left_to_right(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1411,9 +1405,9 @@ void k_textgrammarcheck__grammarresultwidget_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_active_window(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1444,11 +1438,11 @@ void k_textgrammarcheck__grammarresultwidget_set_focus2(void* self, int32_t reas
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_focus_policy(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1463,9 +1457,9 @@ void k_textgrammarcheck__grammarresultwidget_set_focus_policy(void* self, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_has_focus(void* self);
+bool k_textgrammarcheck__grammarresultwidget_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1489,19 +1483,19 @@ void k_textgrammarcheck__grammarresultwidget_set_focus_proxy(void* self, void* f
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_focus_proxy(void* self);
+QWidget* k_textgrammarcheck__grammarresultwidget_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_context_menu_policy(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1527,7 +1521,7 @@ void k_textgrammarcheck__grammarresultwidget_grab_mouse(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QCursor*
 ///
-void k_textgrammarcheck__grammarresultwidget_grab_mouse2(void* self, void* param1);
+void k_textgrammarcheck__grammarresultwidget_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1560,7 +1554,7 @@ void k_textgrammarcheck__grammarresultwidget_release_keyboard(void* self);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param key QKeySequence*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_grab_shortcut(void* self, void* key);
+int32_t k_textgrammarcheck__grammarresultwidget_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1605,9 +1599,9 @@ QWidget* k_textgrammarcheck__grammarresultwidget_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_updates_enabled(void* self);
+bool k_textgrammarcheck__grammarresultwidget_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1622,9 +1616,9 @@ void k_textgrammarcheck__grammarresultwidget_set_updates_enabled(void* self, boo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QGraphicsProxyWidget* k_textgrammarcheck__grammarresultwidget_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_textgrammarcheck__grammarresultwidget_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1661,7 +1655,7 @@ void k_textgrammarcheck__grammarresultwidget_update2(void* self, int x, int y, i
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QRect*
 ///
-void k_textgrammarcheck__grammarresultwidget_update3(void* self, void* param1);
+void k_textgrammarcheck__grammarresultwidget_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1670,7 +1664,7 @@ void k_textgrammarcheck__grammarresultwidget_update3(void* self, void* param1);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QRegion*
 ///
-void k_textgrammarcheck__grammarresultwidget_update4(void* self, void* param1);
+void k_textgrammarcheck__grammarresultwidget_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1691,7 +1685,7 @@ void k_textgrammarcheck__grammarresultwidget_repaint2(void* self, int x, int y, 
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QRect*
 ///
-void k_textgrammarcheck__grammarresultwidget_repaint3(void* self, void* param1);
+void k_textgrammarcheck__grammarresultwidget_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1700,7 +1694,7 @@ void k_textgrammarcheck__grammarresultwidget_repaint3(void* self, void* param1);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QRegion*
 ///
-void k_textgrammarcheck__grammarresultwidget_repaint4(void* self, void* param1);
+void k_textgrammarcheck__grammarresultwidget_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1809,7 +1803,7 @@ void k_textgrammarcheck__grammarresultwidget_move(void* self, int x, int y);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QPoint*
 ///
-void k_textgrammarcheck__grammarresultwidget_move2(void* self, void* param1);
+void k_textgrammarcheck__grammarresultwidget_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1828,7 +1822,7 @@ void k_textgrammarcheck__grammarresultwidget_resize(void* self, int w, int h);
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QSize*
 ///
-void k_textgrammarcheck__grammarresultwidget_resize2(void* self, void* param1);
+void k_textgrammarcheck__grammarresultwidget_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1849,7 +1843,7 @@ void k_textgrammarcheck__grammarresultwidget_set_geometry(void* self, int x, int
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param geometry QRect*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_geometry2(void* self, void* geometry);
+void k_textgrammarcheck__grammarresultwidget_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -1857,9 +1851,9 @@ void k_textgrammarcheck__grammarresultwidget_set_geometry2(void* self, void* geo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-char* k_textgrammarcheck__grammarresultwidget_save_geometry(void* self);
+char* k_textgrammarcheck__grammarresultwidget_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1882,60 +1876,60 @@ void k_textgrammarcheck__grammarresultwidget_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_visible(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 QWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_visible_to(void* self, void* param1);
+bool k_textgrammarcheck__grammarresultwidget_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_hidden(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_minimized(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_maximized(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_full_screen(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_window_state(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1959,9 +1953,9 @@ void k_textgrammarcheck__grammarresultwidget_override_window_state(void* self, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSizePolicy* k_textgrammarcheck__grammarresultwidget_size_policy(void* self);
+QSizePolicy* k_textgrammarcheck__grammarresultwidget_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1986,9 +1980,9 @@ void k_textgrammarcheck__grammarresultwidget_set_size_policy2(void* self, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QRegion* k_textgrammarcheck__grammarresultwidget_visible_region(void* self);
+QRegion* k_textgrammarcheck__grammarresultwidget_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2009,31 +2003,31 @@ void k_textgrammarcheck__grammarresultwidget_set_contents_margins(void* self, in
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param margins QMargins*
 ///
-void k_textgrammarcheck__grammarresultwidget_set_contents_margins2(void* self, void* margins);
+void k_textgrammarcheck__grammarresultwidget_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QMargins* k_textgrammarcheck__grammarresultwidget_contents_margins(void* self);
+QMargins* k_textgrammarcheck__grammarresultwidget_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QRect* k_textgrammarcheck__grammarresultwidget_contents_rect(void* self);
+QRect* k_textgrammarcheck__grammarresultwidget_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QLayout* k_textgrammarcheck__grammarresultwidget_layout(void* self);
+QLayout* k_textgrammarcheck__grammarresultwidget_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2090,39 +2084,39 @@ void k_textgrammarcheck__grammarresultwidget_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_textgrammarcheck__grammarresultwidget_scroll2(void* self, int dx, int dy, void* param3);
+void k_textgrammarcheck__grammarresultwidget_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_focus_widget(void* self);
+QWidget* k_textgrammarcheck__grammarresultwidget_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_next_in_focus_chain(void* self);
+QWidget* k_textgrammarcheck__grammarresultwidget_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_previous_in_focus_chain(void* self);
+QWidget* k_textgrammarcheck__grammarresultwidget_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_accept_drops(void* self);
+bool k_textgrammarcheck__grammarresultwidget_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2184,11 +2178,11 @@ void k_textgrammarcheck__grammarresultwidget_remove_action(void* self, void* act
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_textgrammarcheck__grammarresultwidget_actions(void* self);
+libqt_list k_textgrammarcheck__grammarresultwidget_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2207,7 +2201,7 @@ QAction* k_textgrammarcheck__grammarresultwidget_add_action2(void* self, const c
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_textgrammarcheck__grammarresultwidget_add_action3(void* self, void* icon, const char* text);
+QAction* k_textgrammarcheck__grammarresultwidget_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2217,7 +2211,7 @@ QAction* k_textgrammarcheck__grammarresultwidget_add_action3(void* self, void* i
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_textgrammarcheck__grammarresultwidget_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_textgrammarcheck__grammarresultwidget_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2228,15 +2222,15 @@ QAction* k_textgrammarcheck__grammarresultwidget_add_action4(void* self, const c
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_textgrammarcheck__grammarresultwidget_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_textgrammarcheck__grammarresultwidget_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_parent_widget(void* self);
+QWidget* k_textgrammarcheck__grammarresultwidget_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2251,11 +2245,11 @@ void k_textgrammarcheck__grammarresultwidget_set_window_flags(void* self, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_window_flags(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2279,11 +2273,11 @@ void k_textgrammarcheck__grammarresultwidget_override_window_flags(void* self, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_window_type(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2297,29 +2291,29 @@ QWidget* k_textgrammarcheck__grammarresultwidget_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_child_at(void* self, int x, int y);
+QWidget* k_textgrammarcheck__grammarresultwidget_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param p QPoint*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_child_at2(void* self, void* p);
+QWidget* k_textgrammarcheck__grammarresultwidget_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param p QPointF*
 ///
-QWidget* k_textgrammarcheck__grammarresultwidget_child_at3(void* self, void* p);
+QWidget* k_textgrammarcheck__grammarresultwidget_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2334,35 +2328,35 @@ void k_textgrammarcheck__grammarresultwidget_set_attribute(void* self, int32_t p
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_textgrammarcheck__grammarresultwidget_test_attribute(void* self, int32_t param1);
+bool k_textgrammarcheck__grammarresultwidget_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-void k_textgrammarcheck__grammarresultwidget_ensure_polished(void* self);
+void k_textgrammarcheck__grammarresultwidget_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param child QWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_ancestor_of(void* self, void* child);
+bool k_textgrammarcheck__grammarresultwidget_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_auto_fill_background(void* self);
+bool k_textgrammarcheck__grammarresultwidget_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2377,25 +2371,25 @@ void k_textgrammarcheck__grammarresultwidget_set_auto_fill_background(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QBackingStore* k_textgrammarcheck__grammarresultwidget_backing_store(void* self);
+QBackingStore* k_textgrammarcheck__grammarresultwidget_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QWindow* k_textgrammarcheck__grammarresultwidget_window_handle(void* self);
+QWindow* k_textgrammarcheck__grammarresultwidget_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QScreen* k_textgrammarcheck__grammarresultwidget_screen(void* self);
+QScreen* k_textgrammarcheck__grammarresultwidget_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2439,7 +2433,7 @@ void k_textgrammarcheck__grammarresultwidget_on_window_title_changed(void* self,
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param icon QIcon*
 ///
-void k_textgrammarcheck__grammarresultwidget_window_icon_changed(void* self, void* icon);
+void k_textgrammarcheck__grammarresultwidget_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2448,7 +2442,7 @@ void k_textgrammarcheck__grammarresultwidget_window_icon_changed(void* self, voi
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param callback void func(TextGrammarCheck__GrammarResultWidget* self, QIcon* icon)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__grammarresultwidget_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2475,7 +2469,7 @@ void k_textgrammarcheck__grammarresultwidget_on_window_icon_text_changed(void* s
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param pos QPoint*
 ///
-void k_textgrammarcheck__grammarresultwidget_custom_context_menu_requested(void* self, void* pos);
+void k_textgrammarcheck__grammarresultwidget_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2484,17 +2478,17 @@ void k_textgrammarcheck__grammarresultwidget_custom_context_menu_requested(void*
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param callback void func(TextGrammarCheck__GrammarResultWidget* self, QPoint* pos)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__grammarresultwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_input_method_hints(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2513,7 +2507,7 @@ void k_textgrammarcheck__grammarresultwidget_set_input_method_hints(void* self, 
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_textgrammarcheck__grammarresultwidget_render22(void* self, void* target, void* targetOffset);
+void k_textgrammarcheck__grammarresultwidget_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2524,7 +2518,7 @@ void k_textgrammarcheck__grammarresultwidget_render22(void* self, void* target, 
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_textgrammarcheck__grammarresultwidget_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_textgrammarcheck__grammarresultwidget_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2536,7 +2530,7 @@ void k_textgrammarcheck__grammarresultwidget_render3(void* self, void* target, v
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_textgrammarcheck__grammarresultwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_textgrammarcheck__grammarresultwidget_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2546,7 +2540,7 @@ void k_textgrammarcheck__grammarresultwidget_render4(void* self, void* target, v
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_textgrammarcheck__grammarresultwidget_render23(void* self, void* painter, void* targetOffset);
+void k_textgrammarcheck__grammarresultwidget_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2557,7 +2551,7 @@ void k_textgrammarcheck__grammarresultwidget_render23(void* self, void* painter,
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_textgrammarcheck__grammarresultwidget_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_textgrammarcheck__grammarresultwidget_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2569,7 +2563,7 @@ void k_textgrammarcheck__grammarresultwidget_render32(void* self, void* painter,
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_textgrammarcheck__grammarresultwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_textgrammarcheck__grammarresultwidget_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2578,7 +2572,7 @@ void k_textgrammarcheck__grammarresultwidget_render42(void* self, void* painter,
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param rectangle QRect*
 ///
-QPixmap* k_textgrammarcheck__grammarresultwidget_grab1(void* self, void* rectangle);
+QPixmap* k_textgrammarcheck__grammarresultwidget_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2598,7 +2592,7 @@ void k_textgrammarcheck__grammarresultwidget_grab_gesture2(void* self, int32_t t
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_textgrammarcheck__grammarresultwidget_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2665,9 +2659,9 @@ QWidget* k_textgrammarcheck__grammarresultwidget_create_window_container3(void* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char* k_textgrammarcheck__grammarresultwidget_object_name(void* self);
+const char* k_textgrammarcheck__grammarresultwidget_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2682,33 +2676,33 @@ void k_textgrammarcheck__grammarresultwidget_set_object_name(void* self, const c
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_widget_type(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_window_type(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_quick_item_type(void* self);
+bool k_textgrammarcheck__grammarresultwidget_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_signals_blocked(void* self);
+bool k_textgrammarcheck__grammarresultwidget_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2723,9 +2717,9 @@ bool k_textgrammarcheck__grammarresultwidget_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QThread* k_textgrammarcheck__grammarresultwidget_thread(void* self);
+QThread* k_textgrammarcheck__grammarresultwidget_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2776,11 +2770,11 @@ void k_textgrammarcheck__grammarresultwidget_kill_timer2(void* self, int32_t id)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_textgrammarcheck__grammarresultwidget_children(void* self);
+libqt_list k_textgrammarcheck__grammarresultwidget_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2809,7 +2803,7 @@ void k_textgrammarcheck__grammarresultwidget_remove_event_filter(void* self, voi
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2820,18 +2814,18 @@ QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect(void* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2842,7 +2836,7 @@ QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect3(void* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textgrammarcheck__grammarresultwidget_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_textgrammarcheck__grammarresultwidget_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2853,24 +2847,24 @@ bool k_textgrammarcheck__grammarresultwidget_disconnect(void* sender, const char
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_textgrammarcheck__grammarresultwidget_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_textgrammarcheck__grammarresultwidget_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_disconnect3(void* self);
+bool k_textgrammarcheck__grammarresultwidget_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param receiver QObject*
 ///
-bool k_textgrammarcheck__grammarresultwidget_disconnect4(void* self, void* receiver);
+bool k_textgrammarcheck__grammarresultwidget_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2878,23 +2872,23 @@ bool k_textgrammarcheck__grammarresultwidget_disconnect4(void* self, void* recei
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_textgrammarcheck__grammarresultwidget_disconnect5(void* param1);
+bool k_textgrammarcheck__grammarresultwidget_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-void k_textgrammarcheck__grammarresultwidget_dump_object_tree(void* self);
+void k_textgrammarcheck__grammarresultwidget_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-void k_textgrammarcheck__grammarresultwidget_dump_object_info(void* self);
+void k_textgrammarcheck__grammarresultwidget_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2904,16 +2898,16 @@ void k_textgrammarcheck__grammarresultwidget_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_textgrammarcheck__grammarresultwidget_set_property(void* self, const char* name, void* value);
+bool k_textgrammarcheck__grammarresultwidget_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param name const char*
 ///
-QVariant* k_textgrammarcheck__grammarresultwidget_property(void* self, const char* name);
+QVariant* k_textgrammarcheck__grammarresultwidget_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2921,9 +2915,9 @@ QVariant* k_textgrammarcheck__grammarresultwidget_property(void* self, const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const char** k_textgrammarcheck__grammarresultwidget_dynamic_property_names(void* self);
+const char** k_textgrammarcheck__grammarresultwidget_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2937,9 +2931,9 @@ QBindingStorage* k_textgrammarcheck__grammarresultwidget_binding_storage(void* s
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-const QBindingStorage* k_textgrammarcheck__grammarresultwidget_binding_storage2(void* self);
+const QBindingStorage* k_textgrammarcheck__grammarresultwidget_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2962,18 +2956,18 @@ void k_textgrammarcheck__grammarresultwidget_on_destroyed(void* self, void (*cal
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QObject* k_textgrammarcheck__grammarresultwidget_parent(void* self);
+QObject* k_textgrammarcheck__grammarresultwidget_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param classname const char*
 ///
-bool k_textgrammarcheck__grammarresultwidget_inherits(void* self, const char* classname);
+bool k_textgrammarcheck__grammarresultwidget_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3013,7 +3007,7 @@ int32_t k_textgrammarcheck__grammarresultwidget_start_timer23(void* self, int64_
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3025,59 +3019,59 @@ QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect5(void* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_textgrammarcheck__grammarresultwidget_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param signal const char*
 ///
-bool k_textgrammarcheck__grammarresultwidget_disconnect1(void* self, const char* signal);
+bool k_textgrammarcheck__grammarresultwidget_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_textgrammarcheck__grammarresultwidget_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_textgrammarcheck__grammarresultwidget_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_textgrammarcheck__grammarresultwidget_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textgrammarcheck__grammarresultwidget_disconnect23(void* self, void* receiver, const char* member);
+bool k_textgrammarcheck__grammarresultwidget_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_textgrammarcheck__grammarresultwidget_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3101,89 +3095,89 @@ void k_textgrammarcheck__grammarresultwidget_on_destroyed1(void* self, void (*ca
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_painting_active(void* self);
+bool k_textgrammarcheck__grammarresultwidget_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_width_m_m(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_height_m_m(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_logical_dpi_x(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_logical_dpi_y(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_physical_dpi_x(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_physical_dpi_y(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-double k_textgrammarcheck__grammarresultwidget_device_pixel_ratio(void* self);
+double k_textgrammarcheck__grammarresultwidget_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-double k_textgrammarcheck__grammarresultwidget_device_pixel_ratio_f(void* self);
+double k_textgrammarcheck__grammarresultwidget_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_color_count(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_depth(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3206,9 +3200,9 @@ int32_t k_textgrammarcheck__grammarresultwidget_encode_metric_f(int32_t metric, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_dev_type(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3216,9 +3210,9 @@ int32_t k_textgrammarcheck__grammarresultwidget_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_super_dev_type(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3226,10 +3220,10 @@ int32_t k_textgrammarcheck__grammarresultwidget_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback int32_t func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback int32_t func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_dev_type(void* self, int32_t (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3270,9 +3264,9 @@ void k_textgrammarcheck__grammarresultwidget_on_set_visible(void* self, void (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_size_hint(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3280,9 +3274,9 @@ QSize* k_textgrammarcheck__grammarresultwidget_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_super_size_hint(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3290,12 +3284,12 @@ QSize* k_textgrammarcheck__grammarresultwidget_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback QSize* func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback QSize* func(TextGrammarCheck__GrammarResultWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammarresultwidget_on_size_hint(void* self, QSize* (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3303,9 +3297,9 @@ void k_textgrammarcheck__grammarresultwidget_on_size_hint(void* self, QSize* (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_minimum_size_hint(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3313,9 +3307,9 @@ QSize* k_textgrammarcheck__grammarresultwidget_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QSize* k_textgrammarcheck__grammarresultwidget_super_minimum_size_hint(void* self);
+QSize* k_textgrammarcheck__grammarresultwidget_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3323,12 +3317,12 @@ QSize* k_textgrammarcheck__grammarresultwidget_super_minimum_size_hint(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback QSize* func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback QSize* func(TextGrammarCheck__GrammarResultWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammarresultwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3336,10 +3330,10 @@ void k_textgrammarcheck__grammarresultwidget_on_minimum_size_hint(void* self, QS
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 int
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_height_for_width(void* self, int param1);
+int32_t k_textgrammarcheck__grammarresultwidget_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3347,10 +3341,10 @@ int32_t k_textgrammarcheck__grammarresultwidget_height_for_width(void* self, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 int
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_super_height_for_width(void* self, int param1);
+int32_t k_textgrammarcheck__grammarresultwidget_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3358,10 +3352,10 @@ int32_t k_textgrammarcheck__grammarresultwidget_super_height_for_width(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param callback int32_t func(TextGrammarCheck__GrammarResultWidget* self, int param1)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_textgrammarcheck__grammarresultwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3369,9 +3363,9 @@ void k_textgrammarcheck__grammarresultwidget_on_height_for_width(void* self, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_has_height_for_width(void* self);
+bool k_textgrammarcheck__grammarresultwidget_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3379,9 +3373,9 @@ bool k_textgrammarcheck__grammarresultwidget_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-bool k_textgrammarcheck__grammarresultwidget_super_has_height_for_width(void* self);
+bool k_textgrammarcheck__grammarresultwidget_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3389,10 +3383,10 @@ bool k_textgrammarcheck__grammarresultwidget_super_has_height_for_width(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback bool func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback bool func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_has_height_for_width(void* self, bool (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3400,9 +3394,9 @@ void k_textgrammarcheck__grammarresultwidget_on_has_height_for_width(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QPaintEngine* k_textgrammarcheck__grammarresultwidget_paint_engine(void* self);
+QPaintEngine* k_textgrammarcheck__grammarresultwidget_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3410,9 +3404,9 @@ QPaintEngine* k_textgrammarcheck__grammarresultwidget_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QPaintEngine* k_textgrammarcheck__grammarresultwidget_super_paint_engine(void* self);
+QPaintEngine* k_textgrammarcheck__grammarresultwidget_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3420,10 +3414,10 @@ QPaintEngine* k_textgrammarcheck__grammarresultwidget_super_paint_engine(void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback QPaintEngine* func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback QPaintEngine* func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4326,10 +4320,10 @@ void k_textgrammarcheck__grammarresultwidget_on_change_event(void* self, void (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_metric(void* self, int32_t param1);
+int32_t k_textgrammarcheck__grammarresultwidget_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4337,10 +4331,10 @@ int32_t k_textgrammarcheck__grammarresultwidget_metric(void* self, int32_t param
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_super_metric(void* self, int32_t param1);
+int32_t k_textgrammarcheck__grammarresultwidget_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4348,10 +4342,10 @@ int32_t k_textgrammarcheck__grammarresultwidget_super_metric(void* self, int32_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param callback int32_t func(TextGrammarCheck__GrammarResultWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_textgrammarcheck__grammarresultwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4359,10 +4353,10 @@ void k_textgrammarcheck__grammarresultwidget_on_metric(void* self, int32_t (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param painter QPainter*
 ///
-void k_textgrammarcheck__grammarresultwidget_init_painter(void* self, void* painter);
+void k_textgrammarcheck__grammarresultwidget_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4370,10 +4364,10 @@ void k_textgrammarcheck__grammarresultwidget_init_painter(void* self, void* pain
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param painter QPainter*
 ///
-void k_textgrammarcheck__grammarresultwidget_super_init_painter(void* self, void* painter);
+void k_textgrammarcheck__grammarresultwidget_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4381,10 +4375,10 @@ void k_textgrammarcheck__grammarresultwidget_super_init_painter(void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param callback void func(TextGrammarCheck__GrammarResultWidget* self, QPainter* painter)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__grammarresultwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4392,10 +4386,10 @@ void k_textgrammarcheck__grammarresultwidget_on_init_painter(void* self, void (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_textgrammarcheck__grammarresultwidget_redirected(void* self, void* offset);
+QPaintDevice* k_textgrammarcheck__grammarresultwidget_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4403,10 +4397,10 @@ QPaintDevice* k_textgrammarcheck__grammarresultwidget_redirected(void* self, voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_textgrammarcheck__grammarresultwidget_super_redirected(void* self, void* offset);
+QPaintDevice* k_textgrammarcheck__grammarresultwidget_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4414,10 +4408,10 @@ QPaintDevice* k_textgrammarcheck__grammarresultwidget_super_redirected(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param callback QPaintDevice* func(TextGrammarCheck__GrammarResultWidget* self, QPoint* offset)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_textgrammarcheck__grammarresultwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4425,9 +4419,9 @@ void k_textgrammarcheck__grammarresultwidget_on_redirected(void* self, QPaintDev
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QPainter* k_textgrammarcheck__grammarresultwidget_shared_painter(void* self);
+QPainter* k_textgrammarcheck__grammarresultwidget_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4435,9 +4429,9 @@ QPainter* k_textgrammarcheck__grammarresultwidget_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QPainter* k_textgrammarcheck__grammarresultwidget_super_shared_painter(void* self);
+QPainter* k_textgrammarcheck__grammarresultwidget_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4445,10 +4439,10 @@ QPainter* k_textgrammarcheck__grammarresultwidget_super_shared_painter(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback QPainter* func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback QPainter* func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_shared_painter(void* self, QPainter* (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4489,10 +4483,10 @@ void k_textgrammarcheck__grammarresultwidget_on_input_method_event(void* self, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_textgrammarcheck__grammarresultwidget_input_method_query(void* self, int32_t param1);
+QVariant* k_textgrammarcheck__grammarresultwidget_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4500,10 +4494,10 @@ QVariant* k_textgrammarcheck__grammarresultwidget_input_method_query(void* self,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_textgrammarcheck__grammarresultwidget_super_input_method_query(void* self, int32_t param1);
+QVariant* k_textgrammarcheck__grammarresultwidget_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4511,12 +4505,12 @@ QVariant* k_textgrammarcheck__grammarresultwidget_super_input_method_query(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param callback QVariant* func(TextGrammarCheck__GrammarResultWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__grammarresultwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_textgrammarcheck__grammarresultwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4694,7 +4688,7 @@ void k_textgrammarcheck__grammarresultwidget_on_custom_event(void* self, void (*
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__grammarresultwidget_connect_notify(void* self, void* signal);
+void k_textgrammarcheck__grammarresultwidget_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4705,7 +4699,7 @@ void k_textgrammarcheck__grammarresultwidget_connect_notify(void* self, void* si
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__grammarresultwidget_super_connect_notify(void* self, void* signal);
+void k_textgrammarcheck__grammarresultwidget_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4716,7 +4710,7 @@ void k_textgrammarcheck__grammarresultwidget_super_connect_notify(void* self, vo
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param callback void func(TextGrammarCheck__GrammarResultWidget* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__grammarresultwidget_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4727,7 +4721,7 @@ void k_textgrammarcheck__grammarresultwidget_on_connect_notify(void* self, void 
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__grammarresultwidget_disconnect_notify(void* self, void* signal);
+void k_textgrammarcheck__grammarresultwidget_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4738,7 +4732,7 @@ void k_textgrammarcheck__grammarresultwidget_disconnect_notify(void* self, void*
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__grammarresultwidget_super_disconnect_notify(void* self, void* signal);
+void k_textgrammarcheck__grammarresultwidget_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4749,7 +4743,7 @@ void k_textgrammarcheck__grammarresultwidget_super_disconnect_notify(void* self,
 /// @param self TextGrammarCheck__GrammarResultWidget*
 /// @param callback void func(TextGrammarCheck__GrammarResultWidget* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__grammarresultwidget_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4778,9 +4772,9 @@ void k_textgrammarcheck__grammarresultwidget_super_update_micro_focus(void* self
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_update_micro_focus(void* self, void (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4809,9 +4803,9 @@ void k_textgrammarcheck__grammarresultwidget_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_create(void* self, void (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4840,9 +4834,9 @@ void k_textgrammarcheck__grammarresultwidget_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_destroy(void* self, void (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4871,9 +4865,9 @@ bool k_textgrammarcheck__grammarresultwidget_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback bool func()
+/// @param callback bool func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_focus_next_child(void* self, bool (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4902,9 +4896,9 @@ bool k_textgrammarcheck__grammarresultwidget_super_focus_previous_child(void* se
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback bool func()
+/// @param callback bool func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_focus_previous_child(void* self, bool (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -4912,9 +4906,9 @@ void k_textgrammarcheck__grammarresultwidget_on_focus_previous_child(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QObject* k_textgrammarcheck__grammarresultwidget_sender(void* self);
+QObject* k_textgrammarcheck__grammarresultwidget_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4922,9 +4916,9 @@ QObject* k_textgrammarcheck__grammarresultwidget_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-QObject* k_textgrammarcheck__grammarresultwidget_super_sender(void* self);
+QObject* k_textgrammarcheck__grammarresultwidget_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4932,10 +4926,10 @@ QObject* k_textgrammarcheck__grammarresultwidget_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback QObject* func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback QObject* func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_sender(void* self, QObject* (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4943,9 +4937,9 @@ void k_textgrammarcheck__grammarresultwidget_on_sender(void* self, QObject* (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_sender_signal_index(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4953,9 +4947,9 @@ int32_t k_textgrammarcheck__grammarresultwidget_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_super_sender_signal_index(void* self);
+int32_t k_textgrammarcheck__grammarresultwidget_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4963,10 +4957,10 @@ int32_t k_textgrammarcheck__grammarresultwidget_super_sender_signal_index(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
-/// @param callback int32_t func()
+/// @param self const TextGrammarCheck__GrammarResultWidget*
+/// @param callback int32_t func(TextGrammarCheck__GrammarResultWidget* self)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_textgrammarcheck__grammarresultwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4974,10 +4968,10 @@ void k_textgrammarcheck__grammarresultwidget_on_sender_signal_index(void* self, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param signal const char*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_receivers(void* self, const char* signal);
+int32_t k_textgrammarcheck__grammarresultwidget_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4985,10 +4979,10 @@ int32_t k_textgrammarcheck__grammarresultwidget_receivers(void* self, const char
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param signal const char*
 ///
-int32_t k_textgrammarcheck__grammarresultwidget_super_receivers(void* self, const char* signal);
+int32_t k_textgrammarcheck__grammarresultwidget_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4996,10 +4990,10 @@ int32_t k_textgrammarcheck__grammarresultwidget_super_receivers(void* self, cons
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param callback int32_t func(TextGrammarCheck__GrammarResultWidget* self, const char* signal)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_textgrammarcheck__grammarresultwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5007,10 +5001,10 @@ void k_textgrammarcheck__grammarresultwidget_on_receivers(void* self, int32_t (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param signal QMetaMethod*
 ///
-bool k_textgrammarcheck__grammarresultwidget_is_signal_connected(void* self, void* signal);
+bool k_textgrammarcheck__grammarresultwidget_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5018,10 +5012,10 @@ bool k_textgrammarcheck__grammarresultwidget_is_signal_connected(void* self, voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param signal QMetaMethod*
 ///
-bool k_textgrammarcheck__grammarresultwidget_super_is_signal_connected(void* self, void* signal);
+bool k_textgrammarcheck__grammarresultwidget_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5029,10 +5023,10 @@ bool k_textgrammarcheck__grammarresultwidget_super_is_signal_connected(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param callback bool func(TextGrammarCheck__GrammarResultWidget* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_textgrammarcheck__grammarresultwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5040,11 +5034,11 @@ void k_textgrammarcheck__grammarresultwidget_on_is_signal_connected(void* self, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_textgrammarcheck__grammarresultwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_textgrammarcheck__grammarresultwidget_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5052,11 +5046,11 @@ double k_textgrammarcheck__grammarresultwidget_get_decoded_metric_f(void* self, 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_textgrammarcheck__grammarresultwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_textgrammarcheck__grammarresultwidget_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5064,10 +5058,10 @@ double k_textgrammarcheck__grammarresultwidget_super_get_decoded_metric_f(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__GrammarResultWidget*
+/// @param self const TextGrammarCheck__GrammarResultWidget*
 /// @param callback double func(TextGrammarCheck__GrammarResultWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textgrammarcheck__grammarresultwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_textgrammarcheck__grammarresultwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

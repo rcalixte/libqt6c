@@ -14,7 +14,7 @@
 ///
 /// @param other QStringTokenizerBaseBase*
 ///
-QStringTokenizerBaseBase* q_stringtokenizerbasebase_new(void* other);
+QStringTokenizerBaseBase* q_stringtokenizerbasebase_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringtokenizerbasebase.html)
 
@@ -22,7 +22,7 @@ QStringTokenizerBaseBase* q_stringtokenizerbasebase_new(void* other);
 ///
 /// @param param1 QStringTokenizerBaseBase*
 ///
-QStringTokenizerBaseBase* q_stringtokenizerbasebase_new2(void* param1);
+QStringTokenizerBaseBase* q_stringtokenizerbasebase_new2(const void* param1);
 
 /// q_stringtokenizerbasebase_copy_assign shallow copies `other` into `self`.
 ///

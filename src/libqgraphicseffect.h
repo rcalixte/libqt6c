@@ -24,26 +24,26 @@ QGraphicsEffect* q_graphicseffect_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-const QMetaObject* q_graphicseffect_meta_object(void* self);
+const QMetaObject* q_graphicseffect_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEffect*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsEffect*
+/// @param callback const QMetaObject* func(const QGraphicsEffect* self)
 ///
-void q_graphicseffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicseffect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-const QMetaObject* q_graphicseffect_super_meta_object(void* self);
+const QMetaObject* q_graphicseffect_super_meta_object(const void* self);
 
 /// @param self QGraphicsEffect*
 /// @param param1 const char*
@@ -97,42 +97,42 @@ const char* q_graphicseffect_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicseffect_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicseffect_bounding_rect_for(const void* self, const void* sourceRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsEffect*
-/// @param callback QRectF* func(QGraphicsEffect* self, QRectF* sourceRect)
+/// @param self const QGraphicsEffect*
+/// @param callback QRectF* func(const QGraphicsEffect* self, QRectF* sourceRect)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicseffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
+void q_graphicseffect_on_bounding_rect_for(const void* self, QRectF* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRectFor)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicseffect_super_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicseffect_super_bounding_rect_for(const void* self, const void* sourceRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-QRectF* q_graphicseffect_bounding_rect(void* self);
+QRectF* q_graphicseffect_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#isEnabled)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-bool q_graphicseffect_is_enabled(void* self);
+bool q_graphicseffect_is_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#setEnabled)
 ///
@@ -163,6 +163,8 @@ void q_graphicseffect_on_enabled_changed(void* self, void (*callback)(void*, boo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#draw)
 ///
+/// @warning This method must be implemented with `q_graphicseffect_on_draw` before it can be called.
+///
 /// @param self QGraphicsEffect*
 /// @param painter QPainter*
 ///
@@ -176,15 +178,6 @@ void q_graphicseffect_draw(void* self, void* painter);
 /// @param callback void func(QGraphicsEffect* self, QPainter* painter)
 ///
 void q_graphicseffect_on_draw(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#draw)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-/// @param painter QPainter*
-///
-void q_graphicseffect_super_draw(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceChanged)
 ///
@@ -217,70 +210,17 @@ void q_graphicseffect_super_source_changed(void* self, int32_t flags);
 ///
 void q_graphicseffect_update_bounding_rect(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback void func()
-///
-void q_graphicseffect_on_update_bounding_rect(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#updateBoundingRect)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-///
-void q_graphicseffect_super_update_bounding_rect(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-bool q_graphicseffect_source_is_pixmap(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback bool func()
-///
-void q_graphicseffect_on_source_is_pixmap(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceIsPixmap)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-///
-bool q_graphicseffect_super_source_is_pixmap(void* self);
+bool q_graphicseffect_source_is_pixmap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-QRectF* q_graphicseffect_source_bounding_rect(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback QRectF* func()
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_graphicseffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-///
-QRectF* q_graphicseffect_super_source_bounding_rect(void* self);
+QRectF* q_graphicseffect_source_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
 ///
@@ -289,48 +229,11 @@ QRectF* q_graphicseffect_super_source_bounding_rect(void* self);
 ///
 void q_graphicseffect_draw_source(void* self, void* painter);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback void func(QGraphicsEffect* self, QPainter* painter)
-///
-void q_graphicseffect_on_draw_source(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#drawSource)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-/// @param painter QPainter*
-///
-void q_graphicseffect_super_draw_source(void* self, void* painter);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-QPixmap* q_graphicseffect_source_pixmap(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback QPixmap* func()
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_graphicseffect_on_source_pixmap(void* self, QPixmap* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-///
-QPixmap* q_graphicseffect_super_source_pixmap(void* self);
+QPixmap* q_graphicseffect_source_pixmap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -353,117 +256,34 @@ const char* q_graphicseffect_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
 ///
-QRectF* q_graphicseffect_source_bounding_rect1(void* self, int32_t system);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback QRectF* func(QGraphicsEffect* self, enum Qt__CoordinateSystem system)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-/// @param system enum Qt__CoordinateSystem
-///
-QRectF* q_graphicseffect_super_source_bounding_rect1(void* self, int32_t system);
+QRectF* q_graphicseffect_source_bounding_rect1(const void* self, int32_t system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
 ///
-QPixmap* q_graphicseffect_source_pixmap1(void* self, int32_t system);
+QPixmap* q_graphicseffect_source_pixmap1(const void* self, int32_t system);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback QPixmap* func(QGraphicsEffect* self, enum Qt__CoordinateSystem system)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-/// @param system enum Qt__CoordinateSystem
-///
-QPixmap* q_graphicseffect_super_source_pixmap1(void* self, int32_t system);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
-///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
 /// @param offset QPoint*
 ///
-QPixmap* q_graphicseffect_source_pixmap2(void* self, int32_t system, void* offset);
+QPixmap* q_graphicseffect_source_pixmap2(const void* self, int32_t system, void* offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback QPixmap* func(QGraphicsEffect* self, enum Qt__CoordinateSystem system, QPoint* offset)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, int32_t, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-/// @param system enum Qt__CoordinateSystem
-/// @param offset QPoint*
-///
-QPixmap* q_graphicseffect_super_source_pixmap2(void* self, int32_t system, void* offset);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
-///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
 /// @param offset QPoint*
 /// @param mode enum QGraphicsEffect__PixmapPadMode
 ///
-QPixmap* q_graphicseffect_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGraphicsEffect*
-/// @param callback QPixmap* func(QGraphicsEffect* self, enum Qt__CoordinateSystem system, QPoint* offset, enum QGraphicsEffect__PixmapPadMode mode)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, int32_t, void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
-///
-/// Base class method implementation
-///
-/// @param self QGraphicsEffect*
-/// @param system enum Qt__CoordinateSystem
-/// @param offset QPoint*
-/// @param mode enum QGraphicsEffect__PixmapPadMode
-///
-QPixmap* q_graphicseffect_super_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode);
+QPixmap* q_graphicseffect_source_pixmap3(const void* self, int32_t system, void* offset, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -471,9 +291,9 @@ QPixmap* q_graphicseffect_super_source_pixmap3(void* self, int32_t system, void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-const char* q_graphicseffect_object_name(void* self);
+const char* q_graphicseffect_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -488,33 +308,33 @@ void q_graphicseffect_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-bool q_graphicseffect_is_widget_type(void* self);
+bool q_graphicseffect_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-bool q_graphicseffect_is_window_type(void* self);
+bool q_graphicseffect_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-bool q_graphicseffect_is_quick_item_type(void* self);
+bool q_graphicseffect_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-bool q_graphicseffect_signals_blocked(void* self);
+bool q_graphicseffect_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -529,9 +349,9 @@ bool q_graphicseffect_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-QThread* q_graphicseffect_thread(void* self);
+QThread* q_graphicseffect_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -582,11 +402,11 @@ void q_graphicseffect_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicseffect_children(void* self);
+libqt_list q_graphicseffect_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -624,7 +444,7 @@ void q_graphicseffect_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicseffect_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicseffect_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -635,18 +455,18 @@ QMetaObject__Connection* q_graphicseffect_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicseffect_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicseffect_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicseffect_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicseffect_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -657,7 +477,7 @@ QMetaObject__Connection* q_graphicseffect_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicseffect_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicseffect_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -668,24 +488,24 @@ bool q_graphicseffect_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicseffect_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicseffect_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-bool q_graphicseffect_disconnect3(void* self);
+bool q_graphicseffect_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param receiver QObject*
 ///
-bool q_graphicseffect_disconnect4(void* self, void* receiver);
+bool q_graphicseffect_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -693,23 +513,23 @@ bool q_graphicseffect_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicseffect_disconnect5(void* param1);
+bool q_graphicseffect_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-void q_graphicseffect_dump_object_tree(void* self);
+void q_graphicseffect_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-void q_graphicseffect_dump_object_info(void* self);
+void q_graphicseffect_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -719,16 +539,16 @@ void q_graphicseffect_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicseffect_set_property(void* self, const char* name, void* value);
+bool q_graphicseffect_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param name const char*
 ///
-QVariant* q_graphicseffect_property(void* self, const char* name);
+QVariant* q_graphicseffect_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -736,9 +556,9 @@ QVariant* q_graphicseffect_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-const char** q_graphicseffect_dynamic_property_names(void* self);
+const char** q_graphicseffect_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -752,9 +572,9 @@ QBindingStorage* q_graphicseffect_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-const QBindingStorage* q_graphicseffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicseffect_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -777,18 +597,18 @@ void q_graphicseffect_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-QObject* q_graphicseffect_parent(void* self);
+QObject* q_graphicseffect_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param classname const char*
 ///
-bool q_graphicseffect_inherits(void* self, const char* classname);
+bool q_graphicseffect_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -828,7 +648,7 @@ int32_t q_graphicseffect_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicseffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicseffect_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -840,59 +660,59 @@ QMetaObject__Connection* q_graphicseffect_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicseffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicseffect_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicseffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicseffect_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param signal const char*
 ///
-bool q_graphicseffect_disconnect1(void* self, const char* signal);
+bool q_graphicseffect_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsEffect*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicseffect_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicseffect_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicseffect_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicseffect_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicseffect_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsEffect*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicseffect_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1088,7 +908,7 @@ void q_graphicseffect_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicseffect_connect_notify(void* self, void* signal);
+void q_graphicseffect_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1099,7 +919,7 @@ void q_graphicseffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicseffect_super_connect_notify(void* self, void* signal);
+void q_graphicseffect_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1110,7 +930,7 @@ void q_graphicseffect_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsEffect*
 /// @param callback void func(QGraphicsEffect* self, QMetaMethod* signal)
 ///
-void q_graphicseffect_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicseffect_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1121,7 +941,7 @@ void q_graphicseffect_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicseffect_disconnect_notify(void* self, void* signal);
+void q_graphicseffect_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1132,7 +952,7 @@ void q_graphicseffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicseffect_super_disconnect_notify(void* self, void* signal);
+void q_graphicseffect_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1143,7 +963,7 @@ void q_graphicseffect_super_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsEffect*
 /// @param callback void func(QGraphicsEffect* self, QMetaMethod* signal)
 ///
-void q_graphicseffect_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicseffect_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1151,9 +971,9 @@ void q_graphicseffect_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-QObject* q_graphicseffect_sender(void* self);
+QObject* q_graphicseffect_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1161,9 +981,9 @@ QObject* q_graphicseffect_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-QObject* q_graphicseffect_super_sender(void* self);
+QObject* q_graphicseffect_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1171,10 +991,10 @@ QObject* q_graphicseffect_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsEffect*
-/// @param callback QObject* func()
+/// @param self const QGraphicsEffect*
+/// @param callback QObject* func(QGraphicsEffect* self)
 ///
-void q_graphicseffect_on_sender(void* self, QObject* (*callback)());
+void q_graphicseffect_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1182,9 +1002,9 @@ void q_graphicseffect_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-int32_t q_graphicseffect_sender_signal_index(void* self);
+int32_t q_graphicseffect_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1192,9 +1012,9 @@ int32_t q_graphicseffect_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 ///
-int32_t q_graphicseffect_super_sender_signal_index(void* self);
+int32_t q_graphicseffect_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1202,10 +1022,10 @@ int32_t q_graphicseffect_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsEffect*
-/// @param callback int32_t func()
+/// @param self const QGraphicsEffect*
+/// @param callback int32_t func(QGraphicsEffect* self)
 ///
-void q_graphicseffect_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicseffect_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1213,10 +1033,10 @@ void q_graphicseffect_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicseffect_receivers(void* self, const char* signal);
+int32_t q_graphicseffect_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1224,10 +1044,10 @@ int32_t q_graphicseffect_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicseffect_super_receivers(void* self, const char* signal);
+int32_t q_graphicseffect_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1235,10 +1055,10 @@ int32_t q_graphicseffect_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param callback int32_t func(QGraphicsEffect* self, const char* signal)
 ///
-void q_graphicseffect_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicseffect_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1246,10 +1066,10 @@ void q_graphicseffect_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicseffect_is_signal_connected(void* self, void* signal);
+bool q_graphicseffect_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1257,10 +1077,10 @@ bool q_graphicseffect_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicseffect_super_is_signal_connected(void* self, void* signal);
+bool q_graphicseffect_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1268,10 +1088,10 @@ bool q_graphicseffect_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsEffect*
+/// @param self const QGraphicsEffect*
 /// @param callback bool func(QGraphicsEffect* self, QMetaMethod* signal)
 ///
-void q_graphicseffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicseffect_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1308,26 +1128,26 @@ QGraphicsColorizeEffect* q_graphicscolorizeeffect_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-const QMetaObject* q_graphicscolorizeeffect_meta_object(void* self);
+const QMetaObject* q_graphicscolorizeeffect_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsColorizeEffect*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsColorizeEffect*
+/// @param callback const QMetaObject* func(const QGraphicsColorizeEffect* self)
 ///
-void q_graphicscolorizeeffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicscolorizeeffect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-const QMetaObject* q_graphicscolorizeeffect_super_meta_object(void* self);
+const QMetaObject* q_graphicscolorizeeffect_super_meta_object(const void* self);
 
 /// @param self QGraphicsColorizeEffect*
 /// @param param1 const char*
@@ -1381,22 +1201,22 @@ const char* q_graphicscolorizeeffect_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#color)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QColor* q_graphicscolorizeeffect_color(void* self);
+QColor* q_graphicscolorizeeffect_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#strength)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-double q_graphicscolorizeeffect_strength(void* self);
+double q_graphicscolorizeeffect_strength(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#setColor)
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param c QColor*
 ///
-void q_graphicscolorizeeffect_set_color(void* self, void* c);
+void q_graphicscolorizeeffect_set_color(void* self, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#setStrength)
 ///
@@ -1410,14 +1230,14 @@ void q_graphicscolorizeeffect_set_strength(void* self, double strength);
 /// @param self QGraphicsColorizeEffect*
 /// @param color QColor*
 ///
-void q_graphicscolorizeeffect_color_changed(void* self, void* color);
+void q_graphicscolorizeeffect_color_changed(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#colorChanged)
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param callback void func(QGraphicsColorizeEffect* self, QColor* color)
 ///
-void q_graphicscolorizeeffect_on_color_changed(void* self, void (*callback)(void*, void*));
+void q_graphicscolorizeeffect_on_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#strengthChanged)
 ///
@@ -1481,17 +1301,17 @@ const char* q_graphicscolorizeeffect_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRect)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QRectF* q_graphicscolorizeeffect_bounding_rect(void* self);
+QRectF* q_graphicscolorizeeffect_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#isEnabled)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_is_enabled(void* self);
+bool q_graphicscolorizeeffect_is_enabled(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -1534,9 +1354,9 @@ void q_graphicscolorizeeffect_on_enabled_changed(void* self, void (*callback)(vo
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-const char* q_graphicscolorizeeffect_object_name(void* self);
+const char* q_graphicscolorizeeffect_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1551,33 +1371,33 @@ void q_graphicscolorizeeffect_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_is_widget_type(void* self);
+bool q_graphicscolorizeeffect_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_is_window_type(void* self);
+bool q_graphicscolorizeeffect_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_is_quick_item_type(void* self);
+bool q_graphicscolorizeeffect_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_signals_blocked(void* self);
+bool q_graphicscolorizeeffect_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1592,9 +1412,9 @@ bool q_graphicscolorizeeffect_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QThread* q_graphicscolorizeeffect_thread(void* self);
+QThread* q_graphicscolorizeeffect_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1645,11 +1465,11 @@ void q_graphicscolorizeeffect_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicscolorizeeffect_children(void* self);
+libqt_list q_graphicscolorizeeffect_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1687,7 +1507,7 @@ void q_graphicscolorizeeffect_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicscolorizeeffect_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1698,18 +1518,18 @@ QMetaObject__Connection* q_graphicscolorizeeffect_connect(void* sender, const ch
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicscolorizeeffect_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicscolorizeeffect_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1720,7 +1540,7 @@ QMetaObject__Connection* q_graphicscolorizeeffect_connect3(void* self, void* sen
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicscolorizeeffect_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicscolorizeeffect_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1731,24 +1551,24 @@ bool q_graphicscolorizeeffect_disconnect(void* sender, const char* signal, void*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicscolorizeeffect_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicscolorizeeffect_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_disconnect3(void* self);
+bool q_graphicscolorizeeffect_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param receiver QObject*
 ///
-bool q_graphicscolorizeeffect_disconnect4(void* self, void* receiver);
+bool q_graphicscolorizeeffect_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1756,23 +1576,23 @@ bool q_graphicscolorizeeffect_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicscolorizeeffect_disconnect5(void* param1);
+bool q_graphicscolorizeeffect_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-void q_graphicscolorizeeffect_dump_object_tree(void* self);
+void q_graphicscolorizeeffect_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-void q_graphicscolorizeeffect_dump_object_info(void* self);
+void q_graphicscolorizeeffect_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1782,16 +1602,16 @@ void q_graphicscolorizeeffect_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicscolorizeeffect_set_property(void* self, const char* name, void* value);
+bool q_graphicscolorizeeffect_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param name const char*
 ///
-QVariant* q_graphicscolorizeeffect_property(void* self, const char* name);
+QVariant* q_graphicscolorizeeffect_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1799,9 +1619,9 @@ QVariant* q_graphicscolorizeeffect_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-const char** q_graphicscolorizeeffect_dynamic_property_names(void* self);
+const char** q_graphicscolorizeeffect_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1815,9 +1635,9 @@ QBindingStorage* q_graphicscolorizeeffect_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-const QBindingStorage* q_graphicscolorizeeffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicscolorizeeffect_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1840,18 +1660,18 @@ void q_graphicscolorizeeffect_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QObject* q_graphicscolorizeeffect_parent(void* self);
+QObject* q_graphicscolorizeeffect_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param classname const char*
 ///
-bool q_graphicscolorizeeffect_inherits(void* self, const char* classname);
+bool q_graphicscolorizeeffect_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1891,7 +1711,7 @@ int32_t q_graphicscolorizeeffect_start_timer23(void* self, int64_t time, int32_t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1903,59 +1723,59 @@ QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, const c
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicscolorizeeffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicscolorizeeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param signal const char*
 ///
-bool q_graphicscolorizeeffect_disconnect1(void* self, const char* signal);
+bool q_graphicscolorizeeffect_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsColorizeEffect*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicscolorizeeffect_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicscolorizeeffect_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicscolorizeeffect_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicscolorizeeffect_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicscolorizeeffect_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsColorizeEffect*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicscolorizeeffect_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1981,10 +1801,10 @@ void q_graphicscolorizeeffect_on_destroyed1(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicscolorizeeffect_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicscolorizeeffect_bounding_rect_for(const void* self, const void* sourceRect);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -1992,10 +1812,10 @@ QRectF* q_graphicscolorizeeffect_bounding_rect_for(void* self, void* sourceRect)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicscolorizeeffect_super_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicscolorizeeffect_super_bounding_rect_for(const void* self, const void* sourceRect);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2003,12 +1823,12 @@ QRectF* q_graphicscolorizeeffect_super_bounding_rect_for(void* self, void* sourc
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param callback QRectF* func(QGraphicsColorizeEffect* self, QRectF* sourceRect)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicscolorizeeffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
+void q_graphicscolorizeeffect_on_bounding_rect_for(const void* self, QRectF* (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2219,7 +2039,7 @@ void q_graphicscolorizeeffect_on_custom_event(void* self, void (*callback)(void*
 /// @param self QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicscolorizeeffect_connect_notify(void* self, void* signal);
+void q_graphicscolorizeeffect_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2230,7 +2050,7 @@ void q_graphicscolorizeeffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicscolorizeeffect_super_connect_notify(void* self, void* signal);
+void q_graphicscolorizeeffect_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2241,7 +2061,7 @@ void q_graphicscolorizeeffect_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsColorizeEffect*
 /// @param callback void func(QGraphicsColorizeEffect* self, QMetaMethod* signal)
 ///
-void q_graphicscolorizeeffect_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicscolorizeeffect_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2252,7 +2072,7 @@ void q_graphicscolorizeeffect_on_connect_notify(void* self, void (*callback)(voi
 /// @param self QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicscolorizeeffect_disconnect_notify(void* self, void* signal);
+void q_graphicscolorizeeffect_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2263,7 +2083,7 @@ void q_graphicscolorizeeffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicscolorizeeffect_super_disconnect_notify(void* self, void* signal);
+void q_graphicscolorizeeffect_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2274,7 +2094,7 @@ void q_graphicscolorizeeffect_super_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsColorizeEffect*
 /// @param callback void func(QGraphicsColorizeEffect* self, QMetaMethod* signal)
 ///
-void q_graphicscolorizeeffect_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicscolorizeeffect_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2303,9 +2123,9 @@ void q_graphicscolorizeeffect_super_update_bounding_rect(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsColorizeEffect*
-/// @param callback void func()
+/// @param callback void func(QGraphicsColorizeEffect* self)
 ///
-void q_graphicscolorizeeffect_on_update_bounding_rect(void* self, void (*callback)());
+void q_graphicscolorizeeffect_on_update_bounding_rect(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2313,9 +2133,9 @@ void q_graphicscolorizeeffect_on_update_bounding_rect(void* self, void (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_source_is_pixmap(void* self);
+bool q_graphicscolorizeeffect_source_is_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2323,9 +2143,9 @@ bool q_graphicscolorizeeffect_source_is_pixmap(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-bool q_graphicscolorizeeffect_super_source_is_pixmap(void* self);
+bool q_graphicscolorizeeffect_super_source_is_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2333,10 +2153,10 @@ bool q_graphicscolorizeeffect_super_source_is_pixmap(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
-/// @param callback bool func()
+/// @param self const QGraphicsColorizeEffect*
+/// @param callback bool func(QGraphicsColorizeEffect* self)
 ///
-void q_graphicscolorizeeffect_on_source_is_pixmap(void* self, bool (*callback)());
+void q_graphicscolorizeeffect_on_source_is_pixmap(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2344,9 +2164,9 @@ void q_graphicscolorizeeffect_on_source_is_pixmap(void* self, bool (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QRectF* q_graphicscolorizeeffect_source_bounding_rect(void* self);
+QRectF* q_graphicscolorizeeffect_source_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2354,9 +2174,9 @@ QRectF* q_graphicscolorizeeffect_source_bounding_rect(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QRectF* q_graphicscolorizeeffect_super_source_bounding_rect(void* self);
+QRectF* q_graphicscolorizeeffect_super_source_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2364,12 +2184,12 @@ QRectF* q_graphicscolorizeeffect_super_source_bounding_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsColorizeEffect*
+/// @param callback QRectF* func(QGraphicsColorizeEffect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicscolorizeeffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicscolorizeeffect_on_source_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2410,9 +2230,9 @@ void q_graphicscolorizeeffect_on_draw_source(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QPixmap* q_graphicscolorizeeffect_source_pixmap(void* self);
+QPixmap* q_graphicscolorizeeffect_source_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2420,9 +2240,9 @@ QPixmap* q_graphicscolorizeeffect_source_pixmap(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QPixmap* q_graphicscolorizeeffect_super_source_pixmap(void* self);
+QPixmap* q_graphicscolorizeeffect_super_source_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2430,12 +2250,12 @@ QPixmap* q_graphicscolorizeeffect_super_source_pixmap(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
-/// @param callback QPixmap* func()
+/// @param self const QGraphicsColorizeEffect*
+/// @param callback QPixmap* func(QGraphicsColorizeEffect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicscolorizeeffect_on_source_pixmap(void* self, QPixmap* (*callback)());
+void q_graphicscolorizeeffect_on_source_pixmap(const void* self, QPixmap* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2443,9 +2263,9 @@ void q_graphicscolorizeeffect_on_source_pixmap(void* self, QPixmap* (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QObject* q_graphicscolorizeeffect_sender(void* self);
+QObject* q_graphicscolorizeeffect_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2453,9 +2273,9 @@ QObject* q_graphicscolorizeeffect_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-QObject* q_graphicscolorizeeffect_super_sender(void* self);
+QObject* q_graphicscolorizeeffect_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2463,10 +2283,10 @@ QObject* q_graphicscolorizeeffect_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
-/// @param callback QObject* func()
+/// @param self const QGraphicsColorizeEffect*
+/// @param callback QObject* func(QGraphicsColorizeEffect* self)
 ///
-void q_graphicscolorizeeffect_on_sender(void* self, QObject* (*callback)());
+void q_graphicscolorizeeffect_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2474,9 +2294,9 @@ void q_graphicscolorizeeffect_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-int32_t q_graphicscolorizeeffect_sender_signal_index(void* self);
+int32_t q_graphicscolorizeeffect_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2484,9 +2304,9 @@ int32_t q_graphicscolorizeeffect_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 ///
-int32_t q_graphicscolorizeeffect_super_sender_signal_index(void* self);
+int32_t q_graphicscolorizeeffect_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2494,10 +2314,10 @@ int32_t q_graphicscolorizeeffect_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
-/// @param callback int32_t func()
+/// @param self const QGraphicsColorizeEffect*
+/// @param callback int32_t func(QGraphicsColorizeEffect* self)
 ///
-void q_graphicscolorizeeffect_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicscolorizeeffect_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2505,10 +2325,10 @@ void q_graphicscolorizeeffect_on_sender_signal_index(void* self, int32_t (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicscolorizeeffect_receivers(void* self, const char* signal);
+int32_t q_graphicscolorizeeffect_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2516,10 +2336,10 @@ int32_t q_graphicscolorizeeffect_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicscolorizeeffect_super_receivers(void* self, const char* signal);
+int32_t q_graphicscolorizeeffect_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2527,10 +2347,10 @@ int32_t q_graphicscolorizeeffect_super_receivers(void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param callback int32_t func(QGraphicsColorizeEffect* self, const char* signal)
 ///
-void q_graphicscolorizeeffect_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicscolorizeeffect_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2538,10 +2358,10 @@ void q_graphicscolorizeeffect_on_receivers(void* self, int32_t (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicscolorizeeffect_is_signal_connected(void* self, void* signal);
+bool q_graphicscolorizeeffect_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2549,10 +2369,10 @@ bool q_graphicscolorizeeffect_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicscolorizeeffect_super_is_signal_connected(void* self, void* signal);
+bool q_graphicscolorizeeffect_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2560,10 +2380,10 @@ bool q_graphicscolorizeeffect_super_is_signal_connected(void* self, void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsColorizeEffect*
+/// @param self const QGraphicsColorizeEffect*
 /// @param callback bool func(QGraphicsColorizeEffect* self, QMetaMethod* signal)
 ///
-void q_graphicscolorizeeffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicscolorizeeffect_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2600,26 +2420,26 @@ QGraphicsBlurEffect* q_graphicsblureffect_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-const QMetaObject* q_graphicsblureffect_meta_object(void* self);
+const QMetaObject* q_graphicsblureffect_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsBlurEffect*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsBlurEffect*
+/// @param callback const QMetaObject* func(const QGraphicsBlurEffect* self)
 ///
-void q_graphicsblureffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicsblureffect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-const QMetaObject* q_graphicsblureffect_super_meta_object(void* self);
+const QMetaObject* q_graphicsblureffect_super_meta_object(const void* self);
 
 /// @param self QGraphicsBlurEffect*
 /// @param param1 const char*
@@ -2673,44 +2493,44 @@ const char* q_graphicsblureffect_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#boundingRectFor)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsblureffect_bounding_rect_for(void* self, void* rect);
+QRectF* q_graphicsblureffect_bounding_rect_for(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#boundingRectFor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsBlurEffect*
-/// @param callback QRectF* func(QGraphicsBlurEffect* self, QRectF* rect)
+/// @param self const QGraphicsBlurEffect*
+/// @param callback QRectF* func(const QGraphicsBlurEffect* self, QRectF* rect)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsblureffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
+void q_graphicsblureffect_on_bounding_rect_for(const void* self, QRectF* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#boundingRectFor)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsblureffect_super_bounding_rect_for(void* self, void* rect);
+QRectF* q_graphicsblureffect_super_bounding_rect_for(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#blurRadius)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-double q_graphicsblureffect_blur_radius(void* self);
+double q_graphicsblureffect_blur_radius(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#blurHints)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
 /// @return flag of enum QGraphicsBlurEffect__BlurHint
 ///
-int32_t q_graphicsblureffect_blur_hints(void* self);
+int32_t q_graphicsblureffect_blur_hints(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsblureffect.html#setBlurRadius)
 ///
@@ -2802,17 +2622,17 @@ const char* q_graphicsblureffect_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRect)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QRectF* q_graphicsblureffect_bounding_rect(void* self);
+QRectF* q_graphicsblureffect_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#isEnabled)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_is_enabled(void* self);
+bool q_graphicsblureffect_is_enabled(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -2855,9 +2675,9 @@ void q_graphicsblureffect_on_enabled_changed(void* self, void (*callback)(void*,
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-const char* q_graphicsblureffect_object_name(void* self);
+const char* q_graphicsblureffect_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2872,33 +2692,33 @@ void q_graphicsblureffect_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_is_widget_type(void* self);
+bool q_graphicsblureffect_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_is_window_type(void* self);
+bool q_graphicsblureffect_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_is_quick_item_type(void* self);
+bool q_graphicsblureffect_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_signals_blocked(void* self);
+bool q_graphicsblureffect_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2913,9 +2733,9 @@ bool q_graphicsblureffect_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QThread* q_graphicsblureffect_thread(void* self);
+QThread* q_graphicsblureffect_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2966,11 +2786,11 @@ void q_graphicsblureffect_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicsblureffect_children(void* self);
+libqt_list q_graphicsblureffect_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3008,7 +2828,7 @@ void q_graphicsblureffect_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsblureffect_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicsblureffect_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3019,18 +2839,18 @@ QMetaObject__Connection* q_graphicsblureffect_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicsblureffect_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicsblureffect_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsblureffect_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicsblureffect_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3041,7 +2861,7 @@ QMetaObject__Connection* q_graphicsblureffect_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsblureffect_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicsblureffect_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3052,24 +2872,24 @@ bool q_graphicsblureffect_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicsblureffect_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicsblureffect_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_disconnect3(void* self);
+bool q_graphicsblureffect_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param receiver QObject*
 ///
-bool q_graphicsblureffect_disconnect4(void* self, void* receiver);
+bool q_graphicsblureffect_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3077,23 +2897,23 @@ bool q_graphicsblureffect_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicsblureffect_disconnect5(void* param1);
+bool q_graphicsblureffect_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-void q_graphicsblureffect_dump_object_tree(void* self);
+void q_graphicsblureffect_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-void q_graphicsblureffect_dump_object_info(void* self);
+void q_graphicsblureffect_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3103,16 +2923,16 @@ void q_graphicsblureffect_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicsblureffect_set_property(void* self, const char* name, void* value);
+bool q_graphicsblureffect_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param name const char*
 ///
-QVariant* q_graphicsblureffect_property(void* self, const char* name);
+QVariant* q_graphicsblureffect_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3120,9 +2940,9 @@ QVariant* q_graphicsblureffect_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-const char** q_graphicsblureffect_dynamic_property_names(void* self);
+const char** q_graphicsblureffect_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3136,9 +2956,9 @@ QBindingStorage* q_graphicsblureffect_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-const QBindingStorage* q_graphicsblureffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicsblureffect_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3161,18 +2981,18 @@ void q_graphicsblureffect_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QObject* q_graphicsblureffect_parent(void* self);
+QObject* q_graphicsblureffect_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param classname const char*
 ///
-bool q_graphicsblureffect_inherits(void* self, const char* classname);
+bool q_graphicsblureffect_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3212,7 +3032,7 @@ int32_t q_graphicsblureffect_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicsblureffect_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3224,59 +3044,59 @@ QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsblureffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicsblureffect_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsblureffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicsblureffect_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param signal const char*
 ///
-bool q_graphicsblureffect_disconnect1(void* self, const char* signal);
+bool q_graphicsblureffect_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsBlurEffect*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicsblureffect_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicsblureffect_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicsblureffect_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsblureffect_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicsblureffect_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsBlurEffect*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsblureffect_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3505,7 +3325,7 @@ void q_graphicsblureffect_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsblureffect_connect_notify(void* self, void* signal);
+void q_graphicsblureffect_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3516,7 +3336,7 @@ void q_graphicsblureffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsblureffect_super_connect_notify(void* self, void* signal);
+void q_graphicsblureffect_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3527,7 +3347,7 @@ void q_graphicsblureffect_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsBlurEffect*
 /// @param callback void func(QGraphicsBlurEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsblureffect_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsblureffect_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3538,7 +3358,7 @@ void q_graphicsblureffect_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsblureffect_disconnect_notify(void* self, void* signal);
+void q_graphicsblureffect_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3549,7 +3369,7 @@ void q_graphicsblureffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsblureffect_super_disconnect_notify(void* self, void* signal);
+void q_graphicsblureffect_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3560,7 +3380,7 @@ void q_graphicsblureffect_super_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsBlurEffect*
 /// @param callback void func(QGraphicsBlurEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsblureffect_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsblureffect_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3589,9 +3409,9 @@ void q_graphicsblureffect_super_update_bounding_rect(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsBlurEffect*
-/// @param callback void func()
+/// @param callback void func(QGraphicsBlurEffect* self)
 ///
-void q_graphicsblureffect_on_update_bounding_rect(void* self, void (*callback)());
+void q_graphicsblureffect_on_update_bounding_rect(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3599,9 +3419,9 @@ void q_graphicsblureffect_on_update_bounding_rect(void* self, void (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_source_is_pixmap(void* self);
+bool q_graphicsblureffect_source_is_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3609,9 +3429,9 @@ bool q_graphicsblureffect_source_is_pixmap(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-bool q_graphicsblureffect_super_source_is_pixmap(void* self);
+bool q_graphicsblureffect_super_source_is_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3619,10 +3439,10 @@ bool q_graphicsblureffect_super_source_is_pixmap(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
-/// @param callback bool func()
+/// @param self const QGraphicsBlurEffect*
+/// @param callback bool func(QGraphicsBlurEffect* self)
 ///
-void q_graphicsblureffect_on_source_is_pixmap(void* self, bool (*callback)());
+void q_graphicsblureffect_on_source_is_pixmap(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3630,9 +3450,9 @@ void q_graphicsblureffect_on_source_is_pixmap(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QRectF* q_graphicsblureffect_source_bounding_rect(void* self);
+QRectF* q_graphicsblureffect_source_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3640,9 +3460,9 @@ QRectF* q_graphicsblureffect_source_bounding_rect(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QRectF* q_graphicsblureffect_super_source_bounding_rect(void* self);
+QRectF* q_graphicsblureffect_super_source_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3650,12 +3470,12 @@ QRectF* q_graphicsblureffect_super_source_bounding_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsBlurEffect*
+/// @param callback QRectF* func(QGraphicsBlurEffect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsblureffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicsblureffect_on_source_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3696,9 +3516,9 @@ void q_graphicsblureffect_on_draw_source(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QPixmap* q_graphicsblureffect_source_pixmap(void* self);
+QPixmap* q_graphicsblureffect_source_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3706,9 +3526,9 @@ QPixmap* q_graphicsblureffect_source_pixmap(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QPixmap* q_graphicsblureffect_super_source_pixmap(void* self);
+QPixmap* q_graphicsblureffect_super_source_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -3716,12 +3536,12 @@ QPixmap* q_graphicsblureffect_super_source_pixmap(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
-/// @param callback QPixmap* func()
+/// @param self const QGraphicsBlurEffect*
+/// @param callback QPixmap* func(QGraphicsBlurEffect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsblureffect_on_source_pixmap(void* self, QPixmap* (*callback)());
+void q_graphicsblureffect_on_source_pixmap(const void* self, QPixmap* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3729,9 +3549,9 @@ void q_graphicsblureffect_on_source_pixmap(void* self, QPixmap* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QObject* q_graphicsblureffect_sender(void* self);
+QObject* q_graphicsblureffect_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3739,9 +3559,9 @@ QObject* q_graphicsblureffect_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-QObject* q_graphicsblureffect_super_sender(void* self);
+QObject* q_graphicsblureffect_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3749,10 +3569,10 @@ QObject* q_graphicsblureffect_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
-/// @param callback QObject* func()
+/// @param self const QGraphicsBlurEffect*
+/// @param callback QObject* func(QGraphicsBlurEffect* self)
 ///
-void q_graphicsblureffect_on_sender(void* self, QObject* (*callback)());
+void q_graphicsblureffect_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3760,9 +3580,9 @@ void q_graphicsblureffect_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-int32_t q_graphicsblureffect_sender_signal_index(void* self);
+int32_t q_graphicsblureffect_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3770,9 +3590,9 @@ int32_t q_graphicsblureffect_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 ///
-int32_t q_graphicsblureffect_super_sender_signal_index(void* self);
+int32_t q_graphicsblureffect_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3780,10 +3600,10 @@ int32_t q_graphicsblureffect_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
-/// @param callback int32_t func()
+/// @param self const QGraphicsBlurEffect*
+/// @param callback int32_t func(QGraphicsBlurEffect* self)
 ///
-void q_graphicsblureffect_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicsblureffect_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3791,10 +3611,10 @@ void q_graphicsblureffect_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsblureffect_receivers(void* self, const char* signal);
+int32_t q_graphicsblureffect_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3802,10 +3622,10 @@ int32_t q_graphicsblureffect_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsblureffect_super_receivers(void* self, const char* signal);
+int32_t q_graphicsblureffect_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3813,10 +3633,10 @@ int32_t q_graphicsblureffect_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param callback int32_t func(QGraphicsBlurEffect* self, const char* signal)
 ///
-void q_graphicsblureffect_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicsblureffect_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3824,10 +3644,10 @@ void q_graphicsblureffect_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsblureffect_is_signal_connected(void* self, void* signal);
+bool q_graphicsblureffect_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3835,10 +3655,10 @@ bool q_graphicsblureffect_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsblureffect_super_is_signal_connected(void* self, void* signal);
+bool q_graphicsblureffect_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3846,10 +3666,10 @@ bool q_graphicsblureffect_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsBlurEffect*
+/// @param self const QGraphicsBlurEffect*
 /// @param callback bool func(QGraphicsBlurEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsblureffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicsblureffect_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3886,26 +3706,26 @@ QGraphicsDropShadowEffect* q_graphicsdropshadoweffect_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-const QMetaObject* q_graphicsdropshadoweffect_meta_object(void* self);
+const QMetaObject* q_graphicsdropshadoweffect_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsDropShadowEffect*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsDropShadowEffect*
+/// @param callback const QMetaObject* func(const QGraphicsDropShadowEffect* self)
 ///
-void q_graphicsdropshadoweffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicsdropshadoweffect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-const QMetaObject* q_graphicsdropshadoweffect_super_meta_object(void* self);
+const QMetaObject* q_graphicsdropshadoweffect_super_meta_object(const void* self);
 
 /// @param self QGraphicsDropShadowEffect*
 /// @param param1 const char*
@@ -3959,67 +3779,67 @@ const char* q_graphicsdropshadoweffect_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#boundingRectFor)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsdropshadoweffect_bounding_rect_for(void* self, void* rect);
+QRectF* q_graphicsdropshadoweffect_bounding_rect_for(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#boundingRectFor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsDropShadowEffect*
-/// @param callback QRectF* func(QGraphicsDropShadowEffect* self, QRectF* rect)
+/// @param self const QGraphicsDropShadowEffect*
+/// @param callback QRectF* func(const QGraphicsDropShadowEffect* self, QRectF* rect)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsdropshadoweffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
+void q_graphicsdropshadoweffect_on_bounding_rect_for(const void* self, QRectF* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#boundingRectFor)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param rect QRectF*
 ///
-QRectF* q_graphicsdropshadoweffect_super_bounding_rect_for(void* self, void* rect);
+QRectF* q_graphicsdropshadoweffect_super_bounding_rect_for(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#offset)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QPointF* q_graphicsdropshadoweffect_offset(void* self);
+QPointF* q_graphicsdropshadoweffect_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#xOffset)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-double q_graphicsdropshadoweffect_x_offset(void* self);
+double q_graphicsdropshadoweffect_x_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#yOffset)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-double q_graphicsdropshadoweffect_y_offset(void* self);
+double q_graphicsdropshadoweffect_y_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#blurRadius)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-double q_graphicsdropshadoweffect_blur_radius(void* self);
+double q_graphicsdropshadoweffect_blur_radius(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#color)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QColor* q_graphicsdropshadoweffect_color(void* self);
+QColor* q_graphicsdropshadoweffect_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#setOffset)
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param ofs QPointF*
 ///
-void q_graphicsdropshadoweffect_set_offset(void* self, void* ofs);
+void q_graphicsdropshadoweffect_set_offset(void* self, const void* ofs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#setOffset)
 ///
@@ -4062,21 +3882,21 @@ void q_graphicsdropshadoweffect_set_blur_radius(void* self, double blurRadius);
 /// @param self QGraphicsDropShadowEffect*
 /// @param color QColor*
 ///
-void q_graphicsdropshadoweffect_set_color(void* self, void* color);
+void q_graphicsdropshadoweffect_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#offsetChanged)
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param offset QPointF*
 ///
-void q_graphicsdropshadoweffect_offset_changed(void* self, void* offset);
+void q_graphicsdropshadoweffect_offset_changed(void* self, const void* offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#offsetChanged)
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback void func(QGraphicsDropShadowEffect* self, QPointF* offset)
 ///
-void q_graphicsdropshadoweffect_on_offset_changed(void* self, void (*callback)(void*, void*));
+void q_graphicsdropshadoweffect_on_offset_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#blurRadiusChanged)
 ///
@@ -4097,14 +3917,14 @@ void q_graphicsdropshadoweffect_on_blur_radius_changed(void* self, void (*callba
 /// @param self QGraphicsDropShadowEffect*
 /// @param color QColor*
 ///
-void q_graphicsdropshadoweffect_color_changed(void* self, void* color);
+void q_graphicsdropshadoweffect_color_changed(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#colorChanged)
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback void func(QGraphicsDropShadowEffect* self, QColor* color)
 ///
-void q_graphicsdropshadoweffect_on_color_changed(void* self, void (*callback)(void*, void*));
+void q_graphicsdropshadoweffect_on_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#draw)
 ///
@@ -4154,17 +3974,17 @@ const char* q_graphicsdropshadoweffect_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRect)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QRectF* q_graphicsdropshadoweffect_bounding_rect(void* self);
+QRectF* q_graphicsdropshadoweffect_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#isEnabled)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_is_enabled(void* self);
+bool q_graphicsdropshadoweffect_is_enabled(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4207,9 +4027,9 @@ void q_graphicsdropshadoweffect_on_enabled_changed(void* self, void (*callback)(
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-const char* q_graphicsdropshadoweffect_object_name(void* self);
+const char* q_graphicsdropshadoweffect_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4224,33 +4044,33 @@ void q_graphicsdropshadoweffect_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_is_widget_type(void* self);
+bool q_graphicsdropshadoweffect_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_is_window_type(void* self);
+bool q_graphicsdropshadoweffect_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_is_quick_item_type(void* self);
+bool q_graphicsdropshadoweffect_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_signals_blocked(void* self);
+bool q_graphicsdropshadoweffect_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4265,9 +4085,9 @@ bool q_graphicsdropshadoweffect_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QThread* q_graphicsdropshadoweffect_thread(void* self);
+QThread* q_graphicsdropshadoweffect_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4318,11 +4138,11 @@ void q_graphicsdropshadoweffect_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicsdropshadoweffect_children(void* self);
+libqt_list q_graphicsdropshadoweffect_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4360,7 +4180,7 @@ void q_graphicsdropshadoweffect_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4371,18 +4191,18 @@ QMetaObject__Connection* q_graphicsdropshadoweffect_connect(void* sender, const 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4393,7 +4213,7 @@ QMetaObject__Connection* q_graphicsdropshadoweffect_connect3(void* self, void* s
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsdropshadoweffect_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicsdropshadoweffect_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4404,24 +4224,24 @@ bool q_graphicsdropshadoweffect_disconnect(void* sender, const char* signal, voi
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicsdropshadoweffect_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicsdropshadoweffect_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_disconnect3(void* self);
+bool q_graphicsdropshadoweffect_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param receiver QObject*
 ///
-bool q_graphicsdropshadoweffect_disconnect4(void* self, void* receiver);
+bool q_graphicsdropshadoweffect_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4429,23 +4249,23 @@ bool q_graphicsdropshadoweffect_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicsdropshadoweffect_disconnect5(void* param1);
+bool q_graphicsdropshadoweffect_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-void q_graphicsdropshadoweffect_dump_object_tree(void* self);
+void q_graphicsdropshadoweffect_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-void q_graphicsdropshadoweffect_dump_object_info(void* self);
+void q_graphicsdropshadoweffect_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4455,16 +4275,16 @@ void q_graphicsdropshadoweffect_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicsdropshadoweffect_set_property(void* self, const char* name, void* value);
+bool q_graphicsdropshadoweffect_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param name const char*
 ///
-QVariant* q_graphicsdropshadoweffect_property(void* self, const char* name);
+QVariant* q_graphicsdropshadoweffect_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4472,9 +4292,9 @@ QVariant* q_graphicsdropshadoweffect_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-const char** q_graphicsdropshadoweffect_dynamic_property_names(void* self);
+const char** q_graphicsdropshadoweffect_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4488,9 +4308,9 @@ QBindingStorage* q_graphicsdropshadoweffect_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-const QBindingStorage* q_graphicsdropshadoweffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicsdropshadoweffect_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4513,18 +4333,18 @@ void q_graphicsdropshadoweffect_on_destroyed(void* self, void (*callback)(void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QObject* q_graphicsdropshadoweffect_parent(void* self);
+QObject* q_graphicsdropshadoweffect_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param classname const char*
 ///
-bool q_graphicsdropshadoweffect_inherits(void* self, const char* classname);
+bool q_graphicsdropshadoweffect_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4564,7 +4384,7 @@ int32_t q_graphicsdropshadoweffect_start_timer23(void* self, int64_t time, int32
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4576,59 +4396,59 @@ QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, const
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param signal const char*
 ///
-bool q_graphicsdropshadoweffect_disconnect1(void* self, const char* signal);
+bool q_graphicsdropshadoweffect_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsDropShadowEffect*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicsdropshadoweffect_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicsdropshadoweffect_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicsdropshadoweffect_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsdropshadoweffect_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicsdropshadoweffect_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsDropShadowEffect*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsdropshadoweffect_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4857,7 +4677,7 @@ void q_graphicsdropshadoweffect_on_custom_event(void* self, void (*callback)(voi
 /// @param self QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsdropshadoweffect_connect_notify(void* self, void* signal);
+void q_graphicsdropshadoweffect_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4868,7 +4688,7 @@ void q_graphicsdropshadoweffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsdropshadoweffect_super_connect_notify(void* self, void* signal);
+void q_graphicsdropshadoweffect_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4879,7 +4699,7 @@ void q_graphicsdropshadoweffect_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback void func(QGraphicsDropShadowEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsdropshadoweffect_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsdropshadoweffect_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4890,7 +4710,7 @@ void q_graphicsdropshadoweffect_on_connect_notify(void* self, void (*callback)(v
 /// @param self QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsdropshadoweffect_disconnect_notify(void* self, void* signal);
+void q_graphicsdropshadoweffect_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4901,7 +4721,7 @@ void q_graphicsdropshadoweffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsdropshadoweffect_super_disconnect_notify(void* self, void* signal);
+void q_graphicsdropshadoweffect_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4912,7 +4732,7 @@ void q_graphicsdropshadoweffect_super_disconnect_notify(void* self, void* signal
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback void func(QGraphicsDropShadowEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsdropshadoweffect_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsdropshadoweffect_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4941,9 +4761,9 @@ void q_graphicsdropshadoweffect_super_update_bounding_rect(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsDropShadowEffect*
-/// @param callback void func()
+/// @param callback void func(QGraphicsDropShadowEffect* self)
 ///
-void q_graphicsdropshadoweffect_on_update_bounding_rect(void* self, void (*callback)());
+void q_graphicsdropshadoweffect_on_update_bounding_rect(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4951,9 +4771,9 @@ void q_graphicsdropshadoweffect_on_update_bounding_rect(void* self, void (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_source_is_pixmap(void* self);
+bool q_graphicsdropshadoweffect_source_is_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4961,9 +4781,9 @@ bool q_graphicsdropshadoweffect_source_is_pixmap(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-bool q_graphicsdropshadoweffect_super_source_is_pixmap(void* self);
+bool q_graphicsdropshadoweffect_super_source_is_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4971,10 +4791,10 @@ bool q_graphicsdropshadoweffect_super_source_is_pixmap(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
-/// @param callback bool func()
+/// @param self const QGraphicsDropShadowEffect*
+/// @param callback bool func(QGraphicsDropShadowEffect* self)
 ///
-void q_graphicsdropshadoweffect_on_source_is_pixmap(void* self, bool (*callback)());
+void q_graphicsdropshadoweffect_on_source_is_pixmap(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4982,9 +4802,9 @@ void q_graphicsdropshadoweffect_on_source_is_pixmap(void* self, bool (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QRectF* q_graphicsdropshadoweffect_source_bounding_rect(void* self);
+QRectF* q_graphicsdropshadoweffect_source_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -4992,9 +4812,9 @@ QRectF* q_graphicsdropshadoweffect_source_bounding_rect(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QRectF* q_graphicsdropshadoweffect_super_source_bounding_rect(void* self);
+QRectF* q_graphicsdropshadoweffect_super_source_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5002,12 +4822,12 @@ QRectF* q_graphicsdropshadoweffect_super_source_bounding_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsDropShadowEffect*
+/// @param callback QRectF* func(QGraphicsDropShadowEffect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsdropshadoweffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicsdropshadoweffect_on_source_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5048,9 +4868,9 @@ void q_graphicsdropshadoweffect_on_draw_source(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QPixmap* q_graphicsdropshadoweffect_source_pixmap(void* self);
+QPixmap* q_graphicsdropshadoweffect_source_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5058,9 +4878,9 @@ QPixmap* q_graphicsdropshadoweffect_source_pixmap(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QPixmap* q_graphicsdropshadoweffect_super_source_pixmap(void* self);
+QPixmap* q_graphicsdropshadoweffect_super_source_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5068,12 +4888,12 @@ QPixmap* q_graphicsdropshadoweffect_super_source_pixmap(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
-/// @param callback QPixmap* func()
+/// @param self const QGraphicsDropShadowEffect*
+/// @param callback QPixmap* func(QGraphicsDropShadowEffect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsdropshadoweffect_on_source_pixmap(void* self, QPixmap* (*callback)());
+void q_graphicsdropshadoweffect_on_source_pixmap(const void* self, QPixmap* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5081,9 +4901,9 @@ void q_graphicsdropshadoweffect_on_source_pixmap(void* self, QPixmap* (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QObject* q_graphicsdropshadoweffect_sender(void* self);
+QObject* q_graphicsdropshadoweffect_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5091,9 +4911,9 @@ QObject* q_graphicsdropshadoweffect_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-QObject* q_graphicsdropshadoweffect_super_sender(void* self);
+QObject* q_graphicsdropshadoweffect_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5101,10 +4921,10 @@ QObject* q_graphicsdropshadoweffect_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
-/// @param callback QObject* func()
+/// @param self const QGraphicsDropShadowEffect*
+/// @param callback QObject* func(QGraphicsDropShadowEffect* self)
 ///
-void q_graphicsdropshadoweffect_on_sender(void* self, QObject* (*callback)());
+void q_graphicsdropshadoweffect_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5112,9 +4932,9 @@ void q_graphicsdropshadoweffect_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-int32_t q_graphicsdropshadoweffect_sender_signal_index(void* self);
+int32_t q_graphicsdropshadoweffect_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5122,9 +4942,9 @@ int32_t q_graphicsdropshadoweffect_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 ///
-int32_t q_graphicsdropshadoweffect_super_sender_signal_index(void* self);
+int32_t q_graphicsdropshadoweffect_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5132,10 +4952,10 @@ int32_t q_graphicsdropshadoweffect_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
-/// @param callback int32_t func()
+/// @param self const QGraphicsDropShadowEffect*
+/// @param callback int32_t func(QGraphicsDropShadowEffect* self)
 ///
-void q_graphicsdropshadoweffect_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicsdropshadoweffect_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5143,10 +4963,10 @@ void q_graphicsdropshadoweffect_on_sender_signal_index(void* self, int32_t (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsdropshadoweffect_receivers(void* self, const char* signal);
+int32_t q_graphicsdropshadoweffect_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5154,10 +4974,10 @@ int32_t q_graphicsdropshadoweffect_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsdropshadoweffect_super_receivers(void* self, const char* signal);
+int32_t q_graphicsdropshadoweffect_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5165,10 +4985,10 @@ int32_t q_graphicsdropshadoweffect_super_receivers(void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param callback int32_t func(QGraphicsDropShadowEffect* self, const char* signal)
 ///
-void q_graphicsdropshadoweffect_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicsdropshadoweffect_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5176,10 +4996,10 @@ void q_graphicsdropshadoweffect_on_receivers(void* self, int32_t (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsdropshadoweffect_is_signal_connected(void* self, void* signal);
+bool q_graphicsdropshadoweffect_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5187,10 +5007,10 @@ bool q_graphicsdropshadoweffect_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsdropshadoweffect_super_is_signal_connected(void* self, void* signal);
+bool q_graphicsdropshadoweffect_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5198,10 +5018,10 @@ bool q_graphicsdropshadoweffect_super_is_signal_connected(void* self, void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsDropShadowEffect*
+/// @param self const QGraphicsDropShadowEffect*
 /// @param callback bool func(QGraphicsDropShadowEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsdropshadoweffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicsdropshadoweffect_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5238,26 +5058,26 @@ QGraphicsOpacityEffect* q_graphicsopacityeffect_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-const QMetaObject* q_graphicsopacityeffect_meta_object(void* self);
+const QMetaObject* q_graphicsopacityeffect_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsOpacityEffect*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsOpacityEffect*
+/// @param callback const QMetaObject* func(const QGraphicsOpacityEffect* self)
 ///
-void q_graphicsopacityeffect_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicsopacityeffect_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-const QMetaObject* q_graphicsopacityeffect_super_meta_object(void* self);
+const QMetaObject* q_graphicsopacityeffect_super_meta_object(const void* self);
 
 /// @param self QGraphicsOpacityEffect*
 /// @param param1 const char*
@@ -5311,15 +5131,15 @@ const char* q_graphicsopacityeffect_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#opacity)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-double q_graphicsopacityeffect_opacity(void* self);
+double q_graphicsopacityeffect_opacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#opacityMask)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QBrush* q_graphicsopacityeffect_opacity_mask(void* self);
+QBrush* q_graphicsopacityeffect_opacity_mask(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#setOpacity)
 ///
@@ -5333,7 +5153,7 @@ void q_graphicsopacityeffect_set_opacity(void* self, double opacity);
 /// @param self QGraphicsOpacityEffect*
 /// @param mask QBrush*
 ///
-void q_graphicsopacityeffect_set_opacity_mask(void* self, void* mask);
+void q_graphicsopacityeffect_set_opacity_mask(void* self, const void* mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#opacityChanged)
 ///
@@ -5354,14 +5174,14 @@ void q_graphicsopacityeffect_on_opacity_changed(void* self, void (*callback)(voi
 /// @param self QGraphicsOpacityEffect*
 /// @param mask QBrush*
 ///
-void q_graphicsopacityeffect_opacity_mask_changed(void* self, void* mask);
+void q_graphicsopacityeffect_opacity_mask_changed(void* self, const void* mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#opacityMaskChanged)
 ///
 /// @param self QGraphicsOpacityEffect*
 /// @param callback void func(QGraphicsOpacityEffect* self, QBrush* mask)
 ///
-void q_graphicsopacityeffect_on_opacity_mask_changed(void* self, void (*callback)(void*, void*));
+void q_graphicsopacityeffect_on_opacity_mask_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#draw)
 ///
@@ -5411,17 +5231,17 @@ const char* q_graphicsopacityeffect_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#boundingRect)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QRectF* q_graphicsopacityeffect_bounding_rect(void* self);
+QRectF* q_graphicsopacityeffect_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicseffect.html#isEnabled)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_is_enabled(void* self);
+bool q_graphicsopacityeffect_is_enabled(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5464,9 +5284,9 @@ void q_graphicsopacityeffect_on_enabled_changed(void* self, void (*callback)(voi
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-const char* q_graphicsopacityeffect_object_name(void* self);
+const char* q_graphicsopacityeffect_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5481,33 +5301,33 @@ void q_graphicsopacityeffect_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_is_widget_type(void* self);
+bool q_graphicsopacityeffect_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_is_window_type(void* self);
+bool q_graphicsopacityeffect_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_is_quick_item_type(void* self);
+bool q_graphicsopacityeffect_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_signals_blocked(void* self);
+bool q_graphicsopacityeffect_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5522,9 +5342,9 @@ bool q_graphicsopacityeffect_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QThread* q_graphicsopacityeffect_thread(void* self);
+QThread* q_graphicsopacityeffect_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5575,11 +5395,11 @@ void q_graphicsopacityeffect_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicsopacityeffect_children(void* self);
+libqt_list q_graphicsopacityeffect_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5617,7 +5437,7 @@ void q_graphicsopacityeffect_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsopacityeffect_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicsopacityeffect_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5628,18 +5448,18 @@ QMetaObject__Connection* q_graphicsopacityeffect_connect(void* sender, const cha
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicsopacityeffect_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicsopacityeffect_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsopacityeffect_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicsopacityeffect_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5650,7 +5470,7 @@ QMetaObject__Connection* q_graphicsopacityeffect_connect3(void* self, void* send
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsopacityeffect_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicsopacityeffect_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5661,24 +5481,24 @@ bool q_graphicsopacityeffect_disconnect(void* sender, const char* signal, void* 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicsopacityeffect_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicsopacityeffect_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_disconnect3(void* self);
+bool q_graphicsopacityeffect_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param receiver QObject*
 ///
-bool q_graphicsopacityeffect_disconnect4(void* self, void* receiver);
+bool q_graphicsopacityeffect_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -5686,23 +5506,23 @@ bool q_graphicsopacityeffect_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicsopacityeffect_disconnect5(void* param1);
+bool q_graphicsopacityeffect_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-void q_graphicsopacityeffect_dump_object_tree(void* self);
+void q_graphicsopacityeffect_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-void q_graphicsopacityeffect_dump_object_info(void* self);
+void q_graphicsopacityeffect_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5712,16 +5532,16 @@ void q_graphicsopacityeffect_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicsopacityeffect_set_property(void* self, const char* name, void* value);
+bool q_graphicsopacityeffect_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param name const char*
 ///
-QVariant* q_graphicsopacityeffect_property(void* self, const char* name);
+QVariant* q_graphicsopacityeffect_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -5729,9 +5549,9 @@ QVariant* q_graphicsopacityeffect_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-const char** q_graphicsopacityeffect_dynamic_property_names(void* self);
+const char** q_graphicsopacityeffect_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5745,9 +5565,9 @@ QBindingStorage* q_graphicsopacityeffect_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-const QBindingStorage* q_graphicsopacityeffect_binding_storage2(void* self);
+const QBindingStorage* q_graphicsopacityeffect_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5770,18 +5590,18 @@ void q_graphicsopacityeffect_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QObject* q_graphicsopacityeffect_parent(void* self);
+QObject* q_graphicsopacityeffect_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param classname const char*
 ///
-bool q_graphicsopacityeffect_inherits(void* self, const char* classname);
+bool q_graphicsopacityeffect_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -5821,7 +5641,7 @@ int32_t q_graphicsopacityeffect_start_timer23(void* self, int64_t time, int32_t 
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicsopacityeffect_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -5833,59 +5653,59 @@ QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, const ch
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsopacityeffect_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicsopacityeffect_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsopacityeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicsopacityeffect_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param signal const char*
 ///
-bool q_graphicsopacityeffect_disconnect1(void* self, const char* signal);
+bool q_graphicsopacityeffect_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsOpacityEffect*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicsopacityeffect_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicsopacityeffect_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicsopacityeffect_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsopacityeffect_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicsopacityeffect_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsOpacityEffect*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsopacityeffect_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5911,10 +5731,10 @@ void q_graphicsopacityeffect_on_destroyed1(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicsopacityeffect_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicsopacityeffect_bounding_rect_for(const void* self, const void* sourceRect);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5922,10 +5742,10 @@ QRectF* q_graphicsopacityeffect_bounding_rect_for(void* self, void* sourceRect);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param sourceRect QRectF*
 ///
-QRectF* q_graphicsopacityeffect_super_bounding_rect_for(void* self, void* sourceRect);
+QRectF* q_graphicsopacityeffect_super_bounding_rect_for(const void* self, const void* sourceRect);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -5933,12 +5753,12 @@ QRectF* q_graphicsopacityeffect_super_bounding_rect_for(void* self, void* source
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param callback QRectF* func(QGraphicsOpacityEffect* self, QRectF* sourceRect)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsopacityeffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
+void q_graphicsopacityeffect_on_bounding_rect_for(const void* self, QRectF* (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6149,7 +5969,7 @@ void q_graphicsopacityeffect_on_custom_event(void* self, void (*callback)(void*,
 /// @param self QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsopacityeffect_connect_notify(void* self, void* signal);
+void q_graphicsopacityeffect_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6160,7 +5980,7 @@ void q_graphicsopacityeffect_connect_notify(void* self, void* signal);
 /// @param self QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsopacityeffect_super_connect_notify(void* self, void* signal);
+void q_graphicsopacityeffect_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6171,7 +5991,7 @@ void q_graphicsopacityeffect_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsOpacityEffect*
 /// @param callback void func(QGraphicsOpacityEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsopacityeffect_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsopacityeffect_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6182,7 +6002,7 @@ void q_graphicsopacityeffect_on_connect_notify(void* self, void (*callback)(void
 /// @param self QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsopacityeffect_disconnect_notify(void* self, void* signal);
+void q_graphicsopacityeffect_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6193,7 +6013,7 @@ void q_graphicsopacityeffect_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsopacityeffect_super_disconnect_notify(void* self, void* signal);
+void q_graphicsopacityeffect_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6204,7 +6024,7 @@ void q_graphicsopacityeffect_super_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsOpacityEffect*
 /// @param callback void func(QGraphicsOpacityEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsopacityeffect_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsopacityeffect_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6233,9 +6053,9 @@ void q_graphicsopacityeffect_super_update_bounding_rect(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsOpacityEffect*
-/// @param callback void func()
+/// @param callback void func(QGraphicsOpacityEffect* self)
 ///
-void q_graphicsopacityeffect_on_update_bounding_rect(void* self, void (*callback)());
+void q_graphicsopacityeffect_on_update_bounding_rect(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6243,9 +6063,9 @@ void q_graphicsopacityeffect_on_update_bounding_rect(void* self, void (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_source_is_pixmap(void* self);
+bool q_graphicsopacityeffect_source_is_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6253,9 +6073,9 @@ bool q_graphicsopacityeffect_source_is_pixmap(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-bool q_graphicsopacityeffect_super_source_is_pixmap(void* self);
+bool q_graphicsopacityeffect_super_source_is_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6263,10 +6083,10 @@ bool q_graphicsopacityeffect_super_source_is_pixmap(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
-/// @param callback bool func()
+/// @param self const QGraphicsOpacityEffect*
+/// @param callback bool func(QGraphicsOpacityEffect* self)
 ///
-void q_graphicsopacityeffect_on_source_is_pixmap(void* self, bool (*callback)());
+void q_graphicsopacityeffect_on_source_is_pixmap(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6274,9 +6094,9 @@ void q_graphicsopacityeffect_on_source_is_pixmap(void* self, bool (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QRectF* q_graphicsopacityeffect_source_bounding_rect(void* self);
+QRectF* q_graphicsopacityeffect_source_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6284,9 +6104,9 @@ QRectF* q_graphicsopacityeffect_source_bounding_rect(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QRectF* q_graphicsopacityeffect_super_source_bounding_rect(void* self);
+QRectF* q_graphicsopacityeffect_super_source_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6294,12 +6114,12 @@ QRectF* q_graphicsopacityeffect_super_source_bounding_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
-/// @param callback QRectF* func()
+/// @param self const QGraphicsOpacityEffect*
+/// @param callback QRectF* func(QGraphicsOpacityEffect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsopacityeffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
+void q_graphicsopacityeffect_on_source_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6340,9 +6160,9 @@ void q_graphicsopacityeffect_on_draw_source(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QPixmap* q_graphicsopacityeffect_source_pixmap(void* self);
+QPixmap* q_graphicsopacityeffect_source_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6350,9 +6170,9 @@ QPixmap* q_graphicsopacityeffect_source_pixmap(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QPixmap* q_graphicsopacityeffect_super_source_pixmap(void* self);
+QPixmap* q_graphicsopacityeffect_super_source_pixmap(const void* self);
 
 /// Inherited from QGraphicsEffect
 ///
@@ -6360,12 +6180,12 @@ QPixmap* q_graphicsopacityeffect_super_source_pixmap(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
-/// @param callback QPixmap* func()
+/// @param self const QGraphicsOpacityEffect*
+/// @param callback QPixmap* func(QGraphicsOpacityEffect* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsopacityeffect_on_source_pixmap(void* self, QPixmap* (*callback)());
+void q_graphicsopacityeffect_on_source_pixmap(const void* self, QPixmap* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6373,9 +6193,9 @@ void q_graphicsopacityeffect_on_source_pixmap(void* self, QPixmap* (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QObject* q_graphicsopacityeffect_sender(void* self);
+QObject* q_graphicsopacityeffect_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6383,9 +6203,9 @@ QObject* q_graphicsopacityeffect_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-QObject* q_graphicsopacityeffect_super_sender(void* self);
+QObject* q_graphicsopacityeffect_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6393,10 +6213,10 @@ QObject* q_graphicsopacityeffect_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
-/// @param callback QObject* func()
+/// @param self const QGraphicsOpacityEffect*
+/// @param callback QObject* func(QGraphicsOpacityEffect* self)
 ///
-void q_graphicsopacityeffect_on_sender(void* self, QObject* (*callback)());
+void q_graphicsopacityeffect_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6404,9 +6224,9 @@ void q_graphicsopacityeffect_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-int32_t q_graphicsopacityeffect_sender_signal_index(void* self);
+int32_t q_graphicsopacityeffect_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6414,9 +6234,9 @@ int32_t q_graphicsopacityeffect_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 ///
-int32_t q_graphicsopacityeffect_super_sender_signal_index(void* self);
+int32_t q_graphicsopacityeffect_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6424,10 +6244,10 @@ int32_t q_graphicsopacityeffect_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
-/// @param callback int32_t func()
+/// @param self const QGraphicsOpacityEffect*
+/// @param callback int32_t func(QGraphicsOpacityEffect* self)
 ///
-void q_graphicsopacityeffect_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicsopacityeffect_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6435,10 +6255,10 @@ void q_graphicsopacityeffect_on_sender_signal_index(void* self, int32_t (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsopacityeffect_receivers(void* self, const char* signal);
+int32_t q_graphicsopacityeffect_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6446,10 +6266,10 @@ int32_t q_graphicsopacityeffect_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param signal const char*
 ///
-int32_t q_graphicsopacityeffect_super_receivers(void* self, const char* signal);
+int32_t q_graphicsopacityeffect_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6457,10 +6277,10 @@ int32_t q_graphicsopacityeffect_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param callback int32_t func(QGraphicsOpacityEffect* self, const char* signal)
 ///
-void q_graphicsopacityeffect_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicsopacityeffect_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6468,10 +6288,10 @@ void q_graphicsopacityeffect_on_receivers(void* self, int32_t (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsopacityeffect_is_signal_connected(void* self, void* signal);
+bool q_graphicsopacityeffect_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6479,10 +6299,10 @@ bool q_graphicsopacityeffect_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsopacityeffect_super_is_signal_connected(void* self, void* signal);
+bool q_graphicsopacityeffect_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6490,10 +6310,10 @@ bool q_graphicsopacityeffect_super_is_signal_connected(void* self, void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsOpacityEffect*
+/// @param self const QGraphicsOpacityEffect*
 /// @param callback bool func(QGraphicsOpacityEffect* self, QMetaMethod* signal)
 ///
-void q_graphicsopacityeffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicsopacityeffect_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

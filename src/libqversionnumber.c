@@ -1,7 +1,7 @@
 #include "libqversionnumber.hpp"
 #include "libqversionnumber.h"
 
-size_t q_qversionnumber_q_hash(void* key, size_t seed) {
+size_t q_qversionnumber_q_hash(const void* key, size_t seed) {
     return qversionnumber_QHash((QVersionNumber*)key, seed);
 }
 
@@ -25,60 +25,60 @@ QVersionNumber* q_versionnumber_new5(int maj, int min, int mic) {
     return QVersionNumber_New5(maj, min, mic);
 }
 
-QVersionNumber* q_versionnumber_new6(void* param1) {
+QVersionNumber* q_versionnumber_new6(const void* param1) {
     return QVersionNumber_New6((QVersionNumber*)param1);
 }
 
-bool q_versionnumber_is_null(void* self) {
+bool q_versionnumber_is_null(const void* self) {
     return QVersionNumber_IsNull((QVersionNumber*)self);
 }
 
-bool q_versionnumber_is_normalized(void* self) {
+bool q_versionnumber_is_normalized(const void* self) {
     return QVersionNumber_IsNormalized((QVersionNumber*)self);
 }
 
-int32_t q_versionnumber_major_version(void* self) {
+int32_t q_versionnumber_major_version(const void* self) {
     return QVersionNumber_MajorVersion((QVersionNumber*)self);
 }
 
-int32_t q_versionnumber_minor_version(void* self) {
+int32_t q_versionnumber_minor_version(const void* self) {
     return QVersionNumber_MinorVersion((QVersionNumber*)self);
 }
 
-int32_t q_versionnumber_micro_version(void* self) {
+int32_t q_versionnumber_micro_version(const void* self) {
     return QVersionNumber_MicroVersion((QVersionNumber*)self);
 }
 
-QVersionNumber* q_versionnumber_normalized(void* self) {
+QVersionNumber* q_versionnumber_normalized(const void* self) {
     return QVersionNumber_Normalized((QVersionNumber*)self);
 }
 
-libqt_list /* of int */ q_versionnumber_segments(void* self) {
+libqt_list /* of int */ q_versionnumber_segments(const void* self) {
     libqt_list _arr = QVersionNumber_Segments((QVersionNumber*)self);
     return _arr;
 }
 
-int32_t q_versionnumber_segment_at(void* self, intptr_t index) {
+int32_t q_versionnumber_segment_at(const void* self, intptr_t index) {
     return QVersionNumber_SegmentAt((QVersionNumber*)self, index);
 }
 
-intptr_t q_versionnumber_segment_count(void* self) {
+intptr_t q_versionnumber_segment_count(const void* self) {
     return QVersionNumber_SegmentCount((QVersionNumber*)self);
 }
 
-bool q_versionnumber_is_prefix_of(void* self, void* other) {
+bool q_versionnumber_is_prefix_of(const void* self, const void* other) {
     return QVersionNumber_IsPrefixOf((QVersionNumber*)self, (QVersionNumber*)other);
 }
 
-int32_t q_versionnumber_compare(void* v1, void* v2) {
+int32_t q_versionnumber_compare(const void* v1, const void* v2) {
     return QVersionNumber_Compare((QVersionNumber*)v1, (QVersionNumber*)v2);
 }
 
-QVersionNumber* q_versionnumber_common_prefix(void* v1, void* v2) {
+QVersionNumber* q_versionnumber_common_prefix(const void* v1, const void* v2) {
     return QVersionNumber_CommonPrefix((QVersionNumber*)v1, (QVersionNumber*)v2);
 }
 
-const char* q_versionnumber_to_string(void* self) {
+const char* q_versionnumber_to_string(const void* self) {
     libqt_string _str = QVersionNumber_ToString((QVersionNumber*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -89,7 +89,7 @@ QVersionNumber* q_versionnumber_from_string(const char* string) {
     return QVersionNumber_FromString(string);
 }
 
-void q_versionnumber_operator_assign(void* self, void* param1) {
+void q_versionnumber_operator_assign(void* self, const void* param1) {
     QVersionNumber_OperatorAssign((QVersionNumber*)self, (QVersionNumber*)param1);
 }
 

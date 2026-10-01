@@ -20,15 +20,15 @@ QRestAccessManager* q_restaccessmanager_new2(void* manager, void* parent) {
     return QRestAccessManager_New2((QNetworkAccessManager*)manager, (QObject*)parent);
 }
 
-const QMetaObject* q_restaccessmanager_meta_object(void* self) {
+const QMetaObject* q_restaccessmanager_meta_object(const void* self) {
     return QRestAccessManager_MetaObject((QRestAccessManager*)self);
 }
 
-void q_restaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_restaccessmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QRestAccessManager_OnMetaObject((QRestAccessManager*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_restaccessmanager_super_meta_object(void* self) {
+const QMetaObject* q_restaccessmanager_super_meta_object(const void* self) {
     return QRestAccessManager_SuperMetaObject((QRestAccessManager*)self);
 }
 
@@ -63,39 +63,39 @@ const char* q_restaccessmanager_tr(const char* s) {
     return _ret;
 }
 
-QNetworkAccessManager* q_restaccessmanager_network_access_manager(void* self) {
+QNetworkAccessManager* q_restaccessmanager_network_access_manager(const void* self) {
     return QRestAccessManager_NetworkAccessManager((QRestAccessManager*)self);
 }
 
-QNetworkReply* q_restaccessmanager_delete_resource(void* self, void* request) {
+QNetworkReply* q_restaccessmanager_delete_resource(void* self, const void* request) {
     return QRestAccessManager_DeleteResource((QRestAccessManager*)self, (QNetworkRequest*)request);
 }
 
-QNetworkReply* q_restaccessmanager_head(void* self, void* request) {
+QNetworkReply* q_restaccessmanager_head(void* self, const void* request) {
     return QRestAccessManager_Head((QRestAccessManager*)self, (QNetworkRequest*)request);
 }
 
-QNetworkReply* q_restaccessmanager_get(void* self, void* request) {
+QNetworkReply* q_restaccessmanager_get(void* self, const void* request) {
     return QRestAccessManager_Get((QRestAccessManager*)self, (QNetworkRequest*)request);
 }
 
-QNetworkReply* q_restaccessmanager_get2(void* self, void* request, char* data) {
+QNetworkReply* q_restaccessmanager_get2(void* self, const void* request, char* data) {
     return QRestAccessManager_Get2((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(data));
 }
 
-QNetworkReply* q_restaccessmanager_get3(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_get3(void* self, const void* request, const void* data) {
     return QRestAccessManager_Get3((QRestAccessManager*)self, (QNetworkRequest*)request, (QJsonDocument*)data);
 }
 
-QNetworkReply* q_restaccessmanager_get4(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_get4(void* self, const void* request, void* data) {
     return QRestAccessManager_Get4((QRestAccessManager*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
 
-QNetworkReply* q_restaccessmanager_post(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_post(void* self, const void* request, const void* data) {
     return QRestAccessManager_Post((QRestAccessManager*)self, (QNetworkRequest*)request, (QJsonDocument*)data);
 }
 
-QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data) {
+QNetworkReply* q_restaccessmanager_post2(void* self, const void* request, libqt_map /* of const char* to QVariant* */ data) {
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map data_ret;
     data_ret.len = data.len;
@@ -124,23 +124,23 @@ QNetworkReply* q_restaccessmanager_post2(void* self, void* request, libqt_map /*
     return _out;
 }
 
-QNetworkReply* q_restaccessmanager_post3(void* self, void* request, char* data) {
+QNetworkReply* q_restaccessmanager_post3(void* self, const void* request, char* data) {
     return QRestAccessManager_Post3((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(data));
 }
 
-QNetworkReply* q_restaccessmanager_post4(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_post4(void* self, const void* request, void* data) {
     return QRestAccessManager_Post4((QRestAccessManager*)self, (QNetworkRequest*)request, (QHttpMultiPart*)data);
 }
 
-QNetworkReply* q_restaccessmanager_post5(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_post5(void* self, const void* request, void* data) {
     return QRestAccessManager_Post5((QRestAccessManager*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
 
-QNetworkReply* q_restaccessmanager_put(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_put(void* self, const void* request, const void* data) {
     return QRestAccessManager_Put((QRestAccessManager*)self, (QNetworkRequest*)request, (QJsonDocument*)data);
 }
 
-QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data) {
+QNetworkReply* q_restaccessmanager_put2(void* self, const void* request, libqt_map /* of const char* to QVariant* */ data) {
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map data_ret;
     data_ret.len = data.len;
@@ -169,23 +169,23 @@ QNetworkReply* q_restaccessmanager_put2(void* self, void* request, libqt_map /* 
     return _out;
 }
 
-QNetworkReply* q_restaccessmanager_put3(void* self, void* request, char* data) {
+QNetworkReply* q_restaccessmanager_put3(void* self, const void* request, char* data) {
     return QRestAccessManager_Put3((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(data));
 }
 
-QNetworkReply* q_restaccessmanager_put4(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_put4(void* self, const void* request, void* data) {
     return QRestAccessManager_Put4((QRestAccessManager*)self, (QNetworkRequest*)request, (QHttpMultiPart*)data);
 }
 
-QNetworkReply* q_restaccessmanager_put5(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_put5(void* self, const void* request, void* data) {
     return QRestAccessManager_Put5((QRestAccessManager*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
 
-QNetworkReply* q_restaccessmanager_patch(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_patch(void* self, const void* request, const void* data) {
     return QRestAccessManager_Patch((QRestAccessManager*)self, (QNetworkRequest*)request, (QJsonDocument*)data);
 }
 
-QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map /* of const char* to QVariant* */ data) {
+QNetworkReply* q_restaccessmanager_patch2(void* self, const void* request, libqt_map /* of const char* to QVariant* */ data) {
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map data_ret;
     data_ret.len = data.len;
@@ -214,23 +214,23 @@ QNetworkReply* q_restaccessmanager_patch2(void* self, void* request, libqt_map /
     return _out;
 }
 
-QNetworkReply* q_restaccessmanager_patch3(void* self, void* request, char* data) {
+QNetworkReply* q_restaccessmanager_patch3(void* self, const void* request, char* data) {
     return QRestAccessManager_Patch3((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(data));
 }
 
-QNetworkReply* q_restaccessmanager_patch4(void* self, void* request, void* data) {
+QNetworkReply* q_restaccessmanager_patch4(void* self, const void* request, void* data) {
     return QRestAccessManager_Patch4((QRestAccessManager*)self, (QNetworkRequest*)request, (QIODevice*)data);
 }
 
-QNetworkReply* q_restaccessmanager_send_custom_request(void* self, void* request, char* method, char* data) {
+QNetworkReply* q_restaccessmanager_send_custom_request(void* self, const void* request, char* method, char* data) {
     return QRestAccessManager_SendCustomRequest((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(method), qstring(data));
 }
 
-QNetworkReply* q_restaccessmanager_send_custom_request2(void* self, void* request, char* method, void* data) {
+QNetworkReply* q_restaccessmanager_send_custom_request2(void* self, const void* request, char* method, void* data) {
     return QRestAccessManager_SendCustomRequest2((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(method), (QIODevice*)data);
 }
 
-QNetworkReply* q_restaccessmanager_send_custom_request3(void* self, void* request, char* method, void* data) {
+QNetworkReply* q_restaccessmanager_send_custom_request3(void* self, const void* request, char* method, void* data) {
     return QRestAccessManager_SendCustomRequest3((QRestAccessManager*)self, (QNetworkRequest*)request, qstring(method), (QHttpMultiPart*)data);
 }
 
@@ -248,7 +248,7 @@ const char* q_restaccessmanager_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_restaccessmanager_object_name(void* self) {
+const char* q_restaccessmanager_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -259,19 +259,19 @@ void q_restaccessmanager_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_restaccessmanager_is_widget_type(void* self) {
+bool q_restaccessmanager_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_restaccessmanager_is_window_type(void* self) {
+bool q_restaccessmanager_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_restaccessmanager_is_quick_item_type(void* self) {
+bool q_restaccessmanager_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_restaccessmanager_signals_blocked(void* self) {
+bool q_restaccessmanager_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -279,7 +279,7 @@ bool q_restaccessmanager_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_restaccessmanager_thread(void* self) {
+QThread* q_restaccessmanager_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -303,7 +303,7 @@ void q_restaccessmanager_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_restaccessmanager_children(void* self) {
+libqt_list /* of QObject* */ q_restaccessmanager_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -320,55 +320,55 @@ void q_restaccessmanager_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_restaccessmanager_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_restaccessmanager_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_restaccessmanager_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_restaccessmanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_restaccessmanager_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_restaccessmanager_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_restaccessmanager_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_restaccessmanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_restaccessmanager_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_restaccessmanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_restaccessmanager_disconnect3(void* self) {
+bool q_restaccessmanager_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_restaccessmanager_disconnect4(void* self, void* receiver) {
+bool q_restaccessmanager_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_restaccessmanager_disconnect5(void* param1) {
+bool q_restaccessmanager_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_restaccessmanager_dump_object_tree(void* self) {
+void q_restaccessmanager_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_restaccessmanager_dump_object_info(void* self) {
+void q_restaccessmanager_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_restaccessmanager_set_property(void* self, const char* name, void* value) {
+bool q_restaccessmanager_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_restaccessmanager_property(void* self, const char* name) {
+QVariant* q_restaccessmanager_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_restaccessmanager_dynamic_property_names(void* self) {
+const char** q_restaccessmanager_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -389,7 +389,7 @@ QBindingStorage* q_restaccessmanager_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_restaccessmanager_binding_storage2(void* self) {
+const QBindingStorage* q_restaccessmanager_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -401,11 +401,11 @@ void q_restaccessmanager_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_restaccessmanager_parent(void* self) {
+QObject* q_restaccessmanager_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_restaccessmanager_inherits(void* self, const char* classname) {
+bool q_restaccessmanager_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -421,31 +421,31 @@ int32_t q_restaccessmanager_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_restaccessmanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_restaccessmanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_restaccessmanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_restaccessmanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_restaccessmanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_restaccessmanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_restaccessmanager_disconnect1(void* self, const char* signal) {
+bool q_restaccessmanager_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_restaccessmanager_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_restaccessmanager_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_restaccessmanager_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_restaccessmanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_restaccessmanager_disconnect23(void* self, void* receiver, const char* member) {
+bool q_restaccessmanager_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -517,76 +517,44 @@ void q_restaccessmanager_on_custom_event(void* self, void (*callback)(void*, voi
     QRestAccessManager_OnCustomEvent((QRestAccessManager*)self, (intptr_t)callback);
 }
 
-void q_restaccessmanager_connect_notify(void* self, void* signal) {
+void q_restaccessmanager_connect_notify(void* self, const void* signal) {
     QRestAccessManager_ConnectNotify((QRestAccessManager*)self, (QMetaMethod*)signal);
 }
 
-void q_restaccessmanager_super_connect_notify(void* self, void* signal) {
+void q_restaccessmanager_super_connect_notify(void* self, const void* signal) {
     QRestAccessManager_SuperConnectNotify((QRestAccessManager*)self, (QMetaMethod*)signal);
 }
 
-void q_restaccessmanager_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_restaccessmanager_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QRestAccessManager_OnConnectNotify((QRestAccessManager*)self, (intptr_t)callback);
 }
 
-void q_restaccessmanager_disconnect_notify(void* self, void* signal) {
+void q_restaccessmanager_disconnect_notify(void* self, const void* signal) {
     QRestAccessManager_DisconnectNotify((QRestAccessManager*)self, (QMetaMethod*)signal);
 }
 
-void q_restaccessmanager_super_disconnect_notify(void* self, void* signal) {
+void q_restaccessmanager_super_disconnect_notify(void* self, const void* signal) {
     QRestAccessManager_SuperDisconnectNotify((QRestAccessManager*)self, (QMetaMethod*)signal);
 }
 
-void q_restaccessmanager_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_restaccessmanager_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QRestAccessManager_OnDisconnectNotify((QRestAccessManager*)self, (intptr_t)callback);
 }
 
-QObject* q_restaccessmanager_sender(void* self) {
+QObject* q_restaccessmanager_sender(const void* self) {
     return QRestAccessManager_Sender((QRestAccessManager*)self);
 }
 
-QObject* q_restaccessmanager_super_sender(void* self) {
-    return QRestAccessManager_SuperSender((QRestAccessManager*)self);
-}
-
-void q_restaccessmanager_on_sender(void* self, QObject* (*callback)()) {
-    QRestAccessManager_OnSender((QRestAccessManager*)self, (intptr_t)callback);
-}
-
-int32_t q_restaccessmanager_sender_signal_index(void* self) {
+int32_t q_restaccessmanager_sender_signal_index(const void* self) {
     return QRestAccessManager_SenderSignalIndex((QRestAccessManager*)self);
 }
 
-int32_t q_restaccessmanager_super_sender_signal_index(void* self) {
-    return QRestAccessManager_SuperSenderSignalIndex((QRestAccessManager*)self);
-}
-
-void q_restaccessmanager_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QRestAccessManager_OnSenderSignalIndex((QRestAccessManager*)self, (intptr_t)callback);
-}
-
-int32_t q_restaccessmanager_receivers(void* self, const char* signal) {
+int32_t q_restaccessmanager_receivers(const void* self, const char* signal) {
     return QRestAccessManager_Receivers((QRestAccessManager*)self, signal);
 }
 
-int32_t q_restaccessmanager_super_receivers(void* self, const char* signal) {
-    return QRestAccessManager_SuperReceivers((QRestAccessManager*)self, signal);
-}
-
-void q_restaccessmanager_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QRestAccessManager_OnReceivers((QRestAccessManager*)self, (intptr_t)callback);
-}
-
-bool q_restaccessmanager_is_signal_connected(void* self, void* signal) {
+bool q_restaccessmanager_is_signal_connected(const void* self, const void* signal) {
     return QRestAccessManager_IsSignalConnected((QRestAccessManager*)self, (QMetaMethod*)signal);
-}
-
-bool q_restaccessmanager_super_is_signal_connected(void* self, void* signal) {
-    return QRestAccessManager_SuperIsSignalConnected((QRestAccessManager*)self, (QMetaMethod*)signal);
-}
-
-void q_restaccessmanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QRestAccessManager_OnIsSignalConnected((QRestAccessManager*)self, (intptr_t)callback);
 }
 
 void q_restaccessmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

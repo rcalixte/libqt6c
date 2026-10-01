@@ -22,7 +22,7 @@ QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new();
 /// @param name const char*
 /// @param classOfDevice uint32_t
 ///
-QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new2(void* address, const char* name, uint32_t classOfDevice);
+QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new2(const void* address, const char* name, uint32_t classOfDevice);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html)
 
@@ -32,7 +32,7 @@ QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new2(void* address, const char* name
 /// @param name const char*
 /// @param classOfDevice uint32_t
 ///
-QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new3(void* uuid, const char* name, uint32_t classOfDevice);
+QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new3(const void* uuid, const char* name, uint32_t classOfDevice);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html)
 
@@ -40,19 +40,19 @@ QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new3(void* uuid, const char* name, u
 ///
 /// @param other QBluetoothDeviceInfo*
 ///
-QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new4(void* other);
+QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#isValid)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
-bool q_bluetoothdeviceinfo_is_valid(void* self);
+bool q_bluetoothdeviceinfo_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#isCached)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
-bool q_bluetoothdeviceinfo_is_cached(void* self);
+bool q_bluetoothdeviceinfo_is_cached(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setCached)
 ///
@@ -66,21 +66,21 @@ void q_bluetoothdeviceinfo_set_cached(void* self, bool cached);
 /// @param self QBluetoothDeviceInfo*
 /// @param other QBluetoothDeviceInfo*
 ///
-void q_bluetoothdeviceinfo_operator_assign(void* self, void* other);
+void q_bluetoothdeviceinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#address)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
-QBluetoothAddress* q_bluetoothdeviceinfo_address(void* self);
+QBluetoothAddress* q_bluetoothdeviceinfo_address(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
-const char* q_bluetoothdeviceinfo_name(void* self);
+const char* q_bluetoothdeviceinfo_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setName)
 ///
@@ -91,31 +91,31 @@ void q_bluetoothdeviceinfo_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#serviceClasses)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
 /// @return flag of enum QBluetoothDeviceInfo__ServiceClass
 ///
-int32_t q_bluetoothdeviceinfo_service_classes(void* self);
+int32_t q_bluetoothdeviceinfo_service_classes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#majorDeviceClass)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
 /// @return enum QBluetoothDeviceInfo__MajorDeviceClass
 ///
-int32_t q_bluetoothdeviceinfo_major_device_class(void* self);
+int32_t q_bluetoothdeviceinfo_major_device_class(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#minorDeviceClass)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
-uint8_t q_bluetoothdeviceinfo_minor_device_class(void* self);
+uint8_t q_bluetoothdeviceinfo_minor_device_class(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#rssi)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
-int16_t q_bluetoothdeviceinfo_rssi(void* self);
+int16_t q_bluetoothdeviceinfo_rssi(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setRssi)
 ///
@@ -126,11 +126,11 @@ void q_bluetoothdeviceinfo_set_rssi(void* self, int16_t signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#serviceUuids)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
 /// @return libqt_list of QBluetoothUuid*
 ///
-libqt_list q_bluetoothdeviceinfo_service_uuids(void* self);
+libqt_list q_bluetoothdeviceinfo_service_uuids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setServiceUuids)
 ///
@@ -141,20 +141,20 @@ void q_bluetoothdeviceinfo_set_service_uuids(void* self, libqt_list uuids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#manufacturerIds)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
 /// @return libqt_list of uint16_t
 ///
-libqt_list q_bluetoothdeviceinfo_manufacturer_ids(void* self);
+libqt_list q_bluetoothdeviceinfo_manufacturer_ids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#manufacturerData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 /// @param manufacturerId uint16_t
 ///
-char* q_bluetoothdeviceinfo_manufacturer_data(void* self, uint16_t manufacturerId);
+char* q_bluetoothdeviceinfo_manufacturer_data(const void* self, uint16_t manufacturerId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setManufacturerData)
 ///
@@ -179,28 +179,28 @@ bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufactur
 /// free(map.values);
 /// ```
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
 /// @return libqt_map of uint16_t to char**
 ///
-libqt_map q_bluetoothdeviceinfo_manufacturer_data2(void* self);
+libqt_map q_bluetoothdeviceinfo_manufacturer_data2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#serviceIds)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
 /// @return libqt_list of QBluetoothUuid*
 ///
-libqt_list q_bluetoothdeviceinfo_service_ids(void* self);
+libqt_list q_bluetoothdeviceinfo_service_ids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#serviceData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 /// @param serviceId QBluetoothUuid*
 ///
-char* q_bluetoothdeviceinfo_service_data(void* self, void* serviceId);
+char* q_bluetoothdeviceinfo_service_data(const void* self, const void* serviceId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setServiceData)
 ///
@@ -208,7 +208,7 @@ char* q_bluetoothdeviceinfo_service_data(void* self, void* serviceId);
 /// @param serviceId QBluetoothUuid*
 /// @param data char*
 ///
-bool q_bluetoothdeviceinfo_set_service_data(void* self, void* serviceId, char* data);
+bool q_bluetoothdeviceinfo_set_service_data(void* self, const void* serviceId, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#serviceData)
 ///
@@ -226,11 +226,11 @@ bool q_bluetoothdeviceinfo_set_service_data(void* self, void* serviceId, char* d
 /// free(map.values);
 /// ```
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
 /// @return libqt_map of QBluetoothUuid* to char**
 ///
-libqt_map q_bluetoothdeviceinfo_service_data2(void* self);
+libqt_map q_bluetoothdeviceinfo_service_data2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setCoreConfigurations)
 ///
@@ -241,24 +241,24 @@ void q_bluetoothdeviceinfo_set_core_configurations(void* self, int32_t coreConfi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#coreConfigurations)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
 /// @return flag of enum QBluetoothDeviceInfo__CoreConfiguration
 ///
-int32_t q_bluetoothdeviceinfo_core_configurations(void* self);
+int32_t q_bluetoothdeviceinfo_core_configurations(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#setDeviceUuid)
 ///
 /// @param self QBluetoothDeviceInfo*
 /// @param uuid QBluetoothUuid*
 ///
-void q_bluetoothdeviceinfo_set_device_uuid(void* self, void* uuid);
+void q_bluetoothdeviceinfo_set_device_uuid(void* self, const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#deviceUuid)
 ///
-/// @param self QBluetoothDeviceInfo*
+/// @param self const QBluetoothDeviceInfo*
 ///
-QBluetoothUuid* q_bluetoothdeviceinfo_device_uuid(void* self);
+QBluetoothUuid* q_bluetoothdeviceinfo_device_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html#dtor.QBluetoothDeviceInfo)
 ///

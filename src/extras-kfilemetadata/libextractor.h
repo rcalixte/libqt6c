@@ -21,9 +21,9 @@ void k_filemetadata__extractor_extract(void* self, void* result);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileMetaData__Extractor*
+/// @param self const KFileMetaData__Extractor*
 ///
-const char** k_filemetadata__extractor_mimetypes(void* self);
+const char** k_filemetadata__extractor_mimetypes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractor.html#extractorProperties)
 ///
@@ -39,11 +39,11 @@ const char** k_filemetadata__extractor_mimetypes(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self KFileMetaData__Extractor*
+/// @param self const KFileMetaData__Extractor*
 ///
 /// @return libqt_map of const char* to QVariant*
 ///
-libqt_map k_filemetadata__extractor_extractor_properties(void* self);
+libqt_map k_filemetadata__extractor_extractor_properties(const void* self);
 
 /// Delete this object from C++ memory.
 ///

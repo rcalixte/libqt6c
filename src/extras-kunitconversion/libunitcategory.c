@@ -10,71 +10,71 @@ KUnitConversion__UnitCategory* k_unitconversion__unitcategory_new() {
     return KUnitConversion__UnitCategory_New();
 }
 
-KUnitConversion__UnitCategory* k_unitconversion__unitcategory_new2(void* other) {
+KUnitConversion__UnitCategory* k_unitconversion__unitcategory_new2(const void* other) {
     return KUnitConversion__UnitCategory_New2((KUnitConversion__UnitCategory*)other);
 }
 
-void k_unitconversion__unitcategory_operator_assign(void* self, void* other) {
+void k_unitconversion__unitcategory_operator_assign(void* self, const void* other) {
     KUnitConversion__UnitCategory_OperatorAssign((KUnitConversion__UnitCategory*)self, (KUnitConversion__UnitCategory*)other);
 }
 
-bool k_unitconversion__unitcategory_operator_equal(void* self, void* other) {
+bool k_unitconversion__unitcategory_operator_equal(const void* self, const void* other) {
     return KUnitConversion__UnitCategory_OperatorEqual((KUnitConversion__UnitCategory*)self, (KUnitConversion__UnitCategory*)other);
 }
 
-bool k_unitconversion__unitcategory_operator_not_equal(void* self, void* other) {
+bool k_unitconversion__unitcategory_operator_not_equal(const void* self, const void* other) {
     return KUnitConversion__UnitCategory_OperatorNotEqual((KUnitConversion__UnitCategory*)self, (KUnitConversion__UnitCategory*)other);
 }
 
-bool k_unitconversion__unitcategory_is_null(void* self) {
+bool k_unitconversion__unitcategory_is_null(const void* self) {
     return KUnitConversion__UnitCategory_IsNull((KUnitConversion__UnitCategory*)self);
 }
 
-int32_t k_unitconversion__unitcategory_id(void* self) {
+int32_t k_unitconversion__unitcategory_id(const void* self) {
     return KUnitConversion__UnitCategory_Id((KUnitConversion__UnitCategory*)self);
 }
 
-const char* k_unitconversion__unitcategory_name(void* self) {
+const char* k_unitconversion__unitcategory_name(const void* self) {
     libqt_string _str = KUnitConversion__UnitCategory_Name((KUnitConversion__UnitCategory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_unitconversion__unitcategory_description(void* self) {
+const char* k_unitconversion__unitcategory_description(const void* self) {
     libqt_string _str = KUnitConversion__UnitCategory_Description((KUnitConversion__UnitCategory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-KUnitConversion__Unit* k_unitconversion__unitcategory_default_unit(void* self) {
+KUnitConversion__Unit* k_unitconversion__unitcategory_default_unit(const void* self) {
     return KUnitConversion__UnitCategory_DefaultUnit((KUnitConversion__UnitCategory*)self);
 }
 
-bool k_unitconversion__unitcategory_has_unit(void* self, const char* unit) {
+bool k_unitconversion__unitcategory_has_unit(const void* self, const char* unit) {
     return KUnitConversion__UnitCategory_HasUnit((KUnitConversion__UnitCategory*)self, qstring(unit));
 }
 
-KUnitConversion__Unit* k_unitconversion__unitcategory_unit(void* self, const char* s) {
+KUnitConversion__Unit* k_unitconversion__unitcategory_unit(const void* self, const char* s) {
     return KUnitConversion__UnitCategory_Unit((KUnitConversion__UnitCategory*)self, qstring(s));
 }
 
-KUnitConversion__Unit* k_unitconversion__unitcategory_unit2(void* self, int32_t unitId) {
+KUnitConversion__Unit* k_unitconversion__unitcategory_unit2(const void* self, int32_t unitId) {
     return KUnitConversion__UnitCategory_Unit2((KUnitConversion__UnitCategory*)self, unitId);
 }
 
-libqt_list /* of KUnitConversion__Unit* */ k_unitconversion__unitcategory_units(void* self) {
+libqt_list /* of KUnitConversion__Unit* */ k_unitconversion__unitcategory_units(const void* self) {
     libqt_list _arr = KUnitConversion__UnitCategory_Units((KUnitConversion__UnitCategory*)self);
     return _arr;
 }
 
-libqt_list /* of KUnitConversion__Unit* */ k_unitconversion__unitcategory_most_common_units(void* self) {
+libqt_list /* of KUnitConversion__Unit* */ k_unitconversion__unitcategory_most_common_units(const void* self) {
     libqt_list _arr = KUnitConversion__UnitCategory_MostCommonUnits((KUnitConversion__UnitCategory*)self);
     return _arr;
 }
 
-const char** k_unitconversion__unitcategory_all_units(void* self) {
+const char** k_unitconversion__unitcategory_all_units(const void* self) {
     libqt_list _arr = KUnitConversion__UnitCategory_AllUnits((KUnitConversion__UnitCategory*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -91,19 +91,19 @@ const char** k_unitconversion__unitcategory_all_units(void* self) {
     return _ret;
 }
 
-KUnitConversion__Value* k_unitconversion__unitcategory_convert(void* self, void* value) {
+KUnitConversion__Value* k_unitconversion__unitcategory_convert(const void* self, const void* value) {
     return KUnitConversion__UnitCategory_Convert((KUnitConversion__UnitCategory*)self, (KUnitConversion__Value*)value);
 }
 
-KUnitConversion__Value* k_unitconversion__unitcategory_convert2(void* self, void* value, int32_t toUnit) {
+KUnitConversion__Value* k_unitconversion__unitcategory_convert2(const void* self, const void* value, int32_t toUnit) {
     return KUnitConversion__UnitCategory_Convert2((KUnitConversion__UnitCategory*)self, (KUnitConversion__Value*)value, toUnit);
 }
 
-KUnitConversion__Value* k_unitconversion__unitcategory_convert3(void* self, void* value, void* toUnit) {
+KUnitConversion__Value* k_unitconversion__unitcategory_convert3(const void* self, const void* value, const void* toUnit) {
     return KUnitConversion__UnitCategory_Convert3((KUnitConversion__UnitCategory*)self, (KUnitConversion__Value*)value, (KUnitConversion__Unit*)toUnit);
 }
 
-bool k_unitconversion__unitcategory_has_online_conversion_table(void* self) {
+bool k_unitconversion__unitcategory_has_online_conversion_table(const void* self) {
     return KUnitConversion__UnitCategory_HasOnlineConversionTable((KUnitConversion__UnitCategory*)self);
 }
 
@@ -111,7 +111,7 @@ KUnitConversion__UpdateJob* k_unitconversion__unitcategory_sync_conversion_table
     return KUnitConversion__UnitCategory_SyncConversionTable((KUnitConversion__UnitCategory*)self);
 }
 
-KUnitConversion__Value* k_unitconversion__unitcategory_convert22(void* self, void* value, const char* toUnit) {
+KUnitConversion__Value* k_unitconversion__unitcategory_convert22(const void* self, const void* value, const char* toUnit) {
     return KUnitConversion__UnitCategory_Convert22((KUnitConversion__UnitCategory*)self, (KUnitConversion__Value*)value, qstring(toUnit));
 }
 
@@ -123,7 +123,7 @@ void k_unitconversion__unitcategory_delete(void* self) {
     KUnitConversion__UnitCategory_Delete((KUnitConversion__UnitCategory*)(self));
 }
 
-const QMetaObject* k_unitconversion__updatejob_meta_object(void* self) {
+const QMetaObject* k_unitconversion__updatejob_meta_object(const void* self) {
     return KUnitConversion__UpdateJob_MetaObject((KUnitConversion__UpdateJob*)self);
 }
 
@@ -172,7 +172,7 @@ bool k_unitconversion__updatejob_event_filter(void* self, void* watched, void* e
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* k_unitconversion__updatejob_object_name(void* self) {
+const char* k_unitconversion__updatejob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -183,19 +183,19 @@ void k_unitconversion__updatejob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_unitconversion__updatejob_is_widget_type(void* self) {
+bool k_unitconversion__updatejob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_unitconversion__updatejob_is_window_type(void* self) {
+bool k_unitconversion__updatejob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_unitconversion__updatejob_is_quick_item_type(void* self) {
+bool k_unitconversion__updatejob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_unitconversion__updatejob_signals_blocked(void* self) {
+bool k_unitconversion__updatejob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -203,7 +203,7 @@ bool k_unitconversion__updatejob_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_unitconversion__updatejob_thread(void* self) {
+QThread* k_unitconversion__updatejob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -227,7 +227,7 @@ void k_unitconversion__updatejob_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_unitconversion__updatejob_children(void* self) {
+libqt_list /* of QObject* */ k_unitconversion__updatejob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -244,55 +244,55 @@ void k_unitconversion__updatejob_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_unitconversion__updatejob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_unitconversion__updatejob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_unitconversion__updatejob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_unitconversion__updatejob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_unitconversion__updatejob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_unitconversion__updatejob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_unitconversion__updatejob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_unitconversion__updatejob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_unitconversion__updatejob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_unitconversion__updatejob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_unitconversion__updatejob_disconnect3(void* self) {
+bool k_unitconversion__updatejob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_unitconversion__updatejob_disconnect4(void* self, void* receiver) {
+bool k_unitconversion__updatejob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_unitconversion__updatejob_disconnect5(void* param1) {
+bool k_unitconversion__updatejob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_unitconversion__updatejob_dump_object_tree(void* self) {
+void k_unitconversion__updatejob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_unitconversion__updatejob_dump_object_info(void* self) {
+void k_unitconversion__updatejob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_unitconversion__updatejob_set_property(void* self, const char* name, void* value) {
+bool k_unitconversion__updatejob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_unitconversion__updatejob_property(void* self, const char* name) {
+QVariant* k_unitconversion__updatejob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_unitconversion__updatejob_dynamic_property_names(void* self) {
+const char** k_unitconversion__updatejob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -313,7 +313,7 @@ QBindingStorage* k_unitconversion__updatejob_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_unitconversion__updatejob_binding_storage2(void* self) {
+const QBindingStorage* k_unitconversion__updatejob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -325,11 +325,11 @@ void k_unitconversion__updatejob_on_destroyed(void* self, void (*callback)(void*
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_unitconversion__updatejob_parent(void* self) {
+QObject* k_unitconversion__updatejob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_unitconversion__updatejob_inherits(void* self, const char* classname) {
+bool k_unitconversion__updatejob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -345,31 +345,31 @@ int32_t k_unitconversion__updatejob_start_timer23(void* self, int64_t time, int3
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_unitconversion__updatejob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_unitconversion__updatejob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_unitconversion__updatejob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_unitconversion__updatejob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_unitconversion__updatejob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_unitconversion__updatejob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_unitconversion__updatejob_disconnect1(void* self, const char* signal) {
+bool k_unitconversion__updatejob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_unitconversion__updatejob_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_unitconversion__updatejob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_unitconversion__updatejob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_unitconversion__updatejob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_unitconversion__updatejob_disconnect23(void* self, void* receiver, const char* member) {
+bool k_unitconversion__updatejob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 

@@ -18,7 +18,7 @@ QDBusObjectPath* q_dbusobjectpath_new4(const char* path) {
     return QDBusObjectPath_New4(qstring(path));
 }
 
-QDBusObjectPath* q_dbusobjectpath_new5(void* param1) {
+QDBusObjectPath* q_dbusobjectpath_new5(const void* param1) {
     return QDBusObjectPath_New5((QDBusObjectPath*)param1);
 }
 
@@ -30,18 +30,18 @@ void q_dbusobjectpath_set_path(void* self, const char* path) {
     QDBusObjectPath_SetPath((QDBusObjectPath*)self, qstring(path));
 }
 
-const char* q_dbusobjectpath_path(void* self) {
+const char* q_dbusobjectpath_path(const void* self) {
     libqt_string _str = QDBusObjectPath_Path((QDBusObjectPath*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QVariant* q_dbusobjectpath_to_q_variant(void* self) {
+QVariant* q_dbusobjectpath_to_q_variant(const void* self) {
     return QDBusObjectPath_ToQVariant((QDBusObjectPath*)self);
 }
 
-void q_dbusobjectpath_operator_assign(void* self, void* param1) {
+void q_dbusobjectpath_operator_assign(void* self, const void* param1) {
     QDBusObjectPath_OperatorAssign((QDBusObjectPath*)self, (QDBusObjectPath*)param1);
 }
 
@@ -49,11 +49,11 @@ void q_dbusobjectpath_delete(void* self) {
     QDBusObjectPath_Delete((QDBusObjectPath*)(self));
 }
 
-size_t q_qdbusextratypes_h_q_hash(void* objectPath, size_t seed) {
+size_t q_qdbusextratypes_h_q_hash(const void* objectPath, size_t seed) {
     return qdbusextratypes_h_QHash((QDBusObjectPath*)objectPath, seed);
 }
 
-size_t q_qdbusextratypes_h_q_hash2(void* signature, size_t seed) {
+size_t q_qdbusextratypes_h_q_hash2(const void* signature, size_t seed) {
     return qdbusextratypes_h_QHash2((QDBusSignature*)signature, seed);
 }
 
@@ -73,7 +73,7 @@ QDBusSignature* q_dbussignature_new4(const char* signature) {
     return QDBusSignature_New4(qstring(signature));
 }
 
-QDBusSignature* q_dbussignature_new5(void* param1) {
+QDBusSignature* q_dbussignature_new5(const void* param1) {
     return QDBusSignature_New5((QDBusSignature*)param1);
 }
 
@@ -85,14 +85,14 @@ void q_dbussignature_set_signature(void* self, const char* signature) {
     QDBusSignature_SetSignature((QDBusSignature*)self, qstring(signature));
 }
 
-const char* q_dbussignature_signature(void* self) {
+const char* q_dbussignature_signature(const void* self) {
     libqt_string _str = QDBusSignature_Signature((QDBusSignature*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_dbussignature_operator_assign(void* self, void* param1) {
+void q_dbussignature_operator_assign(void* self, const void* param1) {
     QDBusSignature_OperatorAssign((QDBusSignature*)self, (QDBusSignature*)param1);
 }
 
@@ -104,11 +104,11 @@ QDBusVariant* q_dbusvariant_new() {
     return QDBusVariant_New();
 }
 
-QDBusVariant* q_dbusvariant_new2(void* variant) {
+QDBusVariant* q_dbusvariant_new2(const void* variant) {
     return QDBusVariant_New2((QVariant*)variant);
 }
 
-QDBusVariant* q_dbusvariant_new3(void* param1) {
+QDBusVariant* q_dbusvariant_new3(const void* param1) {
     return QDBusVariant_New3((QDBusVariant*)param1);
 }
 
@@ -116,15 +116,15 @@ void q_dbusvariant_swap(void* self, void* other) {
     QDBusVariant_Swap((QDBusVariant*)self, (QDBusVariant*)other);
 }
 
-void q_dbusvariant_set_variant(void* self, void* variant) {
+void q_dbusvariant_set_variant(void* self, const void* variant) {
     QDBusVariant_SetVariant((QDBusVariant*)self, (QVariant*)variant);
 }
 
-QVariant* q_dbusvariant_variant(void* self) {
+QVariant* q_dbusvariant_variant(const void* self) {
     return QDBusVariant_Variant((QDBusVariant*)self);
 }
 
-void q_dbusvariant_operator_assign(void* self, void* param1) {
+void q_dbusvariant_operator_assign(void* self, const void* param1) {
     QDBusVariant_OperatorAssign((QDBusVariant*)self, (QDBusVariant*)param1);
 }
 

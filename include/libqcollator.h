@@ -14,14 +14,14 @@
 ///
 /// @param other QCollatorSortKey*
 ///
-QCollatorSortKey* q_collatorsortkey_new(void* other);
+QCollatorSortKey* q_collatorsortkey_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollatorsortkey.html#operator-eq)
 ///
 /// @param self QCollatorSortKey*
 /// @param other QCollatorSortKey*
 ///
-void q_collatorsortkey_operator_assign(void* self, void* other);
+void q_collatorsortkey_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollatorsortkey.html#swap)
 ///
@@ -32,10 +32,10 @@ void q_collatorsortkey_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollatorsortkey.html#compare)
 ///
-/// @param self QCollatorSortKey*
+/// @param self const QCollatorSortKey*
 /// @param key QCollatorSortKey*
 ///
-int32_t q_collatorsortkey_compare(void* self, void* key);
+int32_t q_collatorsortkey_compare(const void* self, const void* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollatorsortkey.html#dtor.QCollatorSortKey)
 ///
@@ -57,7 +57,7 @@ QCollator* q_collator_new();
 ///
 /// @param locale QLocale*
 ///
-QCollator* q_collator_new2(void* locale);
+QCollator* q_collator_new2(const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html)
 
@@ -65,14 +65,14 @@ QCollator* q_collator_new2(void* locale);
 ///
 /// @param param1 QCollator*
 ///
-QCollator* q_collator_new3(void* param1);
+QCollator* q_collator_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#operator-eq)
 ///
 /// @param self QCollator*
 /// @param param1 QCollator*
 ///
-void q_collator_operator_assign(void* self, void* param1);
+void q_collator_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#swap)
 ///
@@ -86,21 +86,21 @@ void q_collator_swap(void* self, void* other);
 /// @param self QCollator*
 /// @param locale QLocale*
 ///
-void q_collator_set_locale(void* self, void* locale);
+void q_collator_set_locale(void* self, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#locale)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 ///
-QLocale* q_collator_locale(void* self);
+QLocale* q_collator_locale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#caseSensitivity)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 ///
 /// @return enum Qt__CaseSensitivity
 ///
-int32_t q_collator_case_sensitivity(void* self);
+int32_t q_collator_case_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#setCaseSensitivity)
 ///
@@ -118,9 +118,9 @@ void q_collator_set_numeric_mode(void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#numericMode)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 ///
-bool q_collator_numeric_mode(void* self);
+bool q_collator_numeric_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#setIgnorePunctuation)
 ///
@@ -131,58 +131,58 @@ void q_collator_set_ignore_punctuation(void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#ignorePunctuation)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 ///
-bool q_collator_ignore_punctuation(void* self);
+bool q_collator_ignore_punctuation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#compare)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 /// @param s1 const char*
 /// @param s2 const char*
 ///
-int32_t q_collator_compare(void* self, const char* s1, const char* s2);
+int32_t q_collator_compare(const void* self, const char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#compare)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 /// @param s1 QChar*
 /// @param len1 intptr_t
 /// @param s2 QChar*
 /// @param len2 intptr_t
 ///
-int32_t q_collator_compare2(void* self, void* s1, intptr_t len1, void* s2, intptr_t len2);
+int32_t q_collator_compare2(const void* self, const void* s1, intptr_t len1, const void* s2, intptr_t len2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#operator-28-29)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 /// @param s1 const char*
 /// @param s2 const char*
 ///
-bool q_collator_operator_call(void* self, const char* s1, const char* s2);
+bool q_collator_operator_call(const void* self, const char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#compare)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 /// @param s1 const char*
 /// @param s2 const char*
 ///
-int32_t q_collator_compare3(void* self, const char* s1, const char* s2);
+int32_t q_collator_compare3(const void* self, const char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#operator-28-29)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 /// @param s1 const char*
 /// @param s2 const char*
 ///
-bool q_collator_operator_call2(void* self, const char* s1, const char* s2);
+bool q_collator_operator_call2(const void* self, const char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#sortKey)
 ///
-/// @param self QCollator*
+/// @param self const QCollator*
 /// @param string const char*
 ///
-QCollatorSortKey* q_collator_sort_key(void* self, const char* string);
+QCollatorSortKey* q_collator_sort_key(const void* self, const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#defaultCompare)
 ///

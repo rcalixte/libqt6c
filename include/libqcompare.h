@@ -14,7 +14,7 @@
 ///
 /// @param other partial_ordering*
 ///
-partial_ordering* q_partial_ordering_new(void* other);
+partial_ordering* q_partial_ordering_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/partial-ordering.html)
 
@@ -30,7 +30,7 @@ partial_ordering* q_partial_ordering_new2(void* other);
 ///
 /// @param param1 partial_ordering*
 ///
-partial_ordering* q_partial_ordering_new3(void* param1);
+partial_ordering* q_partial_ordering_new3(const void* param1);
 
 /// q_partial_ordering_copy_assign shallow copies `other` into `self`.
 ///
@@ -60,7 +60,7 @@ void q_partial_ordering_delete(void* self);
 ///
 /// @param other weak_ordering*
 ///
-weak_ordering* q_weak_ordering_new(void* other);
+weak_ordering* q_weak_ordering_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/weak-ordering.html)
 
@@ -76,7 +76,7 @@ weak_ordering* q_weak_ordering_new2(void* other);
 ///
 /// @param param1 weak_ordering*
 ///
-weak_ordering* q_weak_ordering_new3(void* param1);
+weak_ordering* q_weak_ordering_new3(const void* param1);
 
 /// q_weak_ordering_copy_assign shallow copies `other` into `self`.
 ///
@@ -94,9 +94,9 @@ void q_weak_ordering_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/weak-ordering.html#operator-partialordering)
 ///
-/// @param self weak_ordering*
+/// @param self const weak_ordering*
 ///
-partial_ordering* q_weak_ordering_to_partial_ordering(void* self);
+partial_ordering* q_weak_ordering_to_partial_ordering(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/weak-ordering.html#dtor.weak_ordering)
 ///
@@ -112,7 +112,7 @@ void q_weak_ordering_delete(void* self);
 ///
 /// @param other strong_ordering*
 ///
-strong_ordering* q_strong_ordering_new(void* other);
+strong_ordering* q_strong_ordering_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/strong-ordering.html)
 
@@ -128,7 +128,7 @@ strong_ordering* q_strong_ordering_new2(void* other);
 ///
 /// @param param1 strong_ordering*
 ///
-strong_ordering* q_strong_ordering_new3(void* param1);
+strong_ordering* q_strong_ordering_new3(const void* param1);
 
 /// q_strong_ordering_copy_assign shallow copies `other` into `self`.
 ///
@@ -146,15 +146,15 @@ void q_strong_ordering_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/strong-ordering.html#operator-partialordering)
 ///
-/// @param self strong_ordering*
+/// @param self const strong_ordering*
 ///
-partial_ordering* q_strong_ordering_to_partial_ordering(void* self);
+partial_ordering* q_strong_ordering_to_partial_ordering(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/strong-ordering.html#operator-weakordering)
 ///
-/// @param self strong_ordering*
+/// @param self const strong_ordering*
 ///
-weak_ordering* q_strong_ordering_to_weak_ordering(void* self);
+weak_ordering* q_strong_ordering_to_weak_ordering(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/strong-ordering.html#dtor.strong_ordering)
 ///
@@ -170,7 +170,7 @@ void q_strong_ordering_delete(void* self);
 ///
 /// @param other QPartialOrdering*
 ///
-QPartialOrdering* q_partialordering_new(void* other);
+QPartialOrdering* q_partialordering_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpartialordering.html)
 
@@ -210,7 +210,7 @@ QPartialOrdering* q_partialordering_new5(void* stdorder);
 ///
 /// @param param1 QPartialOrdering*
 ///
-QPartialOrdering* q_partialordering_new6(void* param1);
+QPartialOrdering* q_partialordering_new6(const void* param1);
 
 /// q_partialordering_copy_assign shallow copies `other` into `self`.
 ///
@@ -228,9 +228,9 @@ void q_partialordering_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpartialordering.html#operator-partialordering)
 ///
-/// @param self QPartialOrdering*
+/// @param self const QPartialOrdering*
 ///
-partial_ordering* q_partialordering_to_partial_ordering(void* self);
+partial_ordering* q_partialordering_to_partial_ordering(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpartialordering.html#dtor.QPartialOrdering)
 ///

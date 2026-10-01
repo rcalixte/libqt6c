@@ -20,7 +20,7 @@ KFormat* k_format_new();
 ///
 /// @param other KFormat*
 ///
-KFormat* k_format_new2(void* other);
+KFormat* k_format_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kformat.html)
 
@@ -28,234 +28,234 @@ KFormat* k_format_new2(void* other);
 ///
 /// @param locale QLocale*
 ///
-KFormat* k_format_new3(void* locale);
+KFormat* k_format_new3(const void* locale);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#operator-eq)
 ///
 /// @param self KFormat*
 /// @param other KFormat*
 ///
-void k_format_operator_assign(void* self, void* other);
+void k_format_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatByteSize)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param size double
 ///
-const char* k_format_format_byte_size(void* self, double size);
+const char* k_format_format_byte_size(const void* self, double size);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDuration)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param msecs uint64_t
 ///
-const char* k_format_format_duration(void* self, uint64_t msecs);
+const char* k_format_format_duration(const void* self, uint64_t msecs);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDecimalDuration)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param msecs uint64_t
 ///
-const char* k_format_format_decimal_duration(void* self, uint64_t msecs);
+const char* k_format_format_decimal_duration(const void* self, uint64_t msecs);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatSpelloutDuration)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param msecs uint64_t
 ///
-const char* k_format_format_spellout_duration(void* self, uint64_t msecs);
+const char* k_format_format_spellout_duration(const void* self, uint64_t msecs);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatRelativeDate)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param date QDate*
 /// @param format enum QLocale__FormatType
 ///
-const char* k_format_format_relative_date(void* self, void* date, int32_t format);
+const char* k_format_format_relative_date(const void* self, const void* date, int32_t format);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatRelativeDateTime)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param dateTime QDateTime*
 /// @param format enum QLocale__FormatType
 ///
-const char* k_format_format_relative_date_time(void* self, void* dateTime, int32_t format);
+const char* k_format_format_relative_date_time(const void* self, const void* dateTime, int32_t format);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param value double
 /// @param unit enum KFormat__Unit
 ///
-const char* k_format_format_value(void* self, double value, int32_t unit);
+const char* k_format_format_value(const void* self, double value, int32_t unit);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param value double
 /// @param unit const char*
 ///
-const char* k_format_format_value2(void* self, double value, const char* unit);
+const char* k_format_format_value2(const void* self, double value, const char* unit);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param value double
 /// @param unit const char*
 /// @param precision int
 /// @param prefix enum KFormat__UnitPrefix
 /// @param dialect enum KFormat__BinaryUnitDialect
 ///
-const char* k_format_format_value3(void* self, double value, const char* unit, int precision, int32_t prefix, int32_t dialect);
+const char* k_format_format_value3(const void* self, double value, const char* unit, int precision, int32_t prefix, int32_t dialect);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDistance)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param distance double
 ///
-const char* k_format_format_distance(void* self, double distance);
+const char* k_format_format_distance(const void* self, double distance);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatByteSize)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param size double
 /// @param precision int
 ///
-const char* k_format_format_byte_size2(void* self, double size, int precision);
+const char* k_format_format_byte_size2(const void* self, double size, int precision);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatByteSize)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param size double
 /// @param precision int
 /// @param dialect enum KFormat__BinaryUnitDialect
 ///
-const char* k_format_format_byte_size3(void* self, double size, int precision, int32_t dialect);
+const char* k_format_format_byte_size3(const void* self, double size, int precision, int32_t dialect);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatByteSize)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param size double
 /// @param precision int
 /// @param dialect enum KFormat__BinaryUnitDialect
 /// @param units enum KFormat__BinarySizeUnits
 ///
-const char* k_format_format_byte_size4(void* self, double size, int precision, int32_t dialect, int32_t units);
+const char* k_format_format_byte_size4(const void* self, double size, int precision, int32_t dialect, int32_t units);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDuration)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param msecs uint64_t
 /// @param options flag of enum KFormat__DurationFormatOption
 ///
-const char* k_format_format_duration2(void* self, uint64_t msecs, int32_t options);
+const char* k_format_format_duration2(const void* self, uint64_t msecs, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDecimalDuration)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param msecs uint64_t
 /// @param decimalPlaces int
 ///
-const char* k_format_format_decimal_duration2(void* self, uint64_t msecs, int decimalPlaces);
+const char* k_format_format_decimal_duration2(const void* self, uint64_t msecs, int decimalPlaces);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param value double
 /// @param unit enum KFormat__Unit
 /// @param precision int
 ///
-const char* k_format_format_value32(void* self, double value, int32_t unit, int precision);
+const char* k_format_format_value32(const void* self, double value, int32_t unit, int precision);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param value double
 /// @param unit enum KFormat__Unit
 /// @param precision int
 /// @param prefix enum KFormat__UnitPrefix
 ///
-const char* k_format_format_value4(void* self, double value, int32_t unit, int precision, int32_t prefix);
+const char* k_format_format_value4(const void* self, double value, int32_t unit, int precision, int32_t prefix);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param value double
 /// @param unit enum KFormat__Unit
 /// @param precision int
 /// @param prefix enum KFormat__UnitPrefix
 /// @param dialect enum KFormat__BinaryUnitDialect
 ///
-const char* k_format_format_value5(void* self, double value, int32_t unit, int precision, int32_t prefix, int32_t dialect);
+const char* k_format_format_value5(const void* self, double value, int32_t unit, int precision, int32_t prefix, int32_t dialect);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param value double
 /// @param unit const char*
 /// @param precision int
 ///
-const char* k_format_format_value33(void* self, double value, const char* unit, int precision);
+const char* k_format_format_value33(const void* self, double value, const char* unit, int precision);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param value double
 /// @param unit const char*
 /// @param precision int
 /// @param prefix enum KFormat__UnitPrefix
 ///
-const char* k_format_format_value42(void* self, double value, const char* unit, int precision, int32_t prefix);
+const char* k_format_format_value42(const void* self, double value, const char* unit, int precision, int32_t prefix);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#formatDistance)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFormat*
+/// @param self const KFormat*
 /// @param distance double
 /// @param param2 flag of enum KFormat__DistanceFormatOption
 ///
-const char* k_format_format_distance2(void* self, double distance, int32_t param2);
+const char* k_format_format_distance2(const void* self, double distance, int32_t param2);
 
 /// [Upstream resources](https://api.kde.org/kformat.html#dtor.KFormat)
 ///

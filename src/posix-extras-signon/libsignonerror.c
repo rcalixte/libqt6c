@@ -5,7 +5,7 @@ SignOn__Error* q_signon__error_new() {
     return SignOn__Error_New();
 }
 
-SignOn__Error* q_signon__error_new2(void* src) {
+SignOn__Error* q_signon__error_new2(const void* src) {
     return SignOn__Error_New2((SignOn__Error*)src);
 }
 
@@ -17,7 +17,7 @@ SignOn__Error* q_signon__error_new4(int type, const char* message) {
     return SignOn__Error_New4(type, qstring(message));
 }
 
-void q_signon__error_operator_assign(void* self, void* src) {
+void q_signon__error_operator_assign(void* self, const void* src) {
     SignOn__Error_OperatorAssign((SignOn__Error*)self, (SignOn__Error*)src);
 }
 
@@ -29,11 +29,11 @@ void q_signon__error_set_message(void* self, const char* message) {
     SignOn__Error_SetMessage((SignOn__Error*)self, qstring(message));
 }
 
-int32_t q_signon__error_type(void* self) {
+int32_t q_signon__error_type(const void* self) {
     return SignOn__Error_Type((SignOn__Error*)self);
 }
 
-const char* q_signon__error_message(void* self) {
+const char* q_signon__error_message(const void* self) {
     libqt_string _str = SignOn__Error_Message((SignOn__Error*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

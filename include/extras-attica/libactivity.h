@@ -20,14 +20,14 @@ Attica__Activity* k_attica__activity_new();
 ///
 /// @param other Attica__Activity*
 ///
-Attica__Activity* k_attica__activity_new2(void* other);
+Attica__Activity* k_attica__activity_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#operator-eq)
 ///
 /// @param self Attica__Activity*
 /// @param other Attica__Activity*
 ///
-void k_attica__activity_operator_assign(void* self, void* other);
+void k_attica__activity_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#setId)
 ///
@@ -40,35 +40,35 @@ void k_attica__activity_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Activity*
+/// @param self const Attica__Activity*
 ///
-const char* k_attica__activity_id(void* self);
+const char* k_attica__activity_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#setAssociatedPerson)
 ///
 /// @param self Attica__Activity*
 /// @param associatedPerson Attica__Person*
 ///
-void k_attica__activity_set_associated_person(void* self, void* associatedPerson);
+void k_attica__activity_set_associated_person(void* self, const void* associatedPerson);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#associatedPerson)
 ///
-/// @param self Attica__Activity*
+/// @param self const Attica__Activity*
 ///
-Attica__Person* k_attica__activity_associated_person(void* self);
+Attica__Person* k_attica__activity_associated_person(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#setTimestamp)
 ///
 /// @param self Attica__Activity*
 /// @param timestamp QDateTime*
 ///
-void k_attica__activity_set_timestamp(void* self, void* timestamp);
+void k_attica__activity_set_timestamp(void* self, const void* timestamp);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#timestamp)
 ///
-/// @param self Attica__Activity*
+/// @param self const Attica__Activity*
 ///
-QDateTime* k_attica__activity_timestamp(void* self);
+QDateTime* k_attica__activity_timestamp(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#setMessage)
 ///
@@ -81,28 +81,28 @@ void k_attica__activity_set_message(void* self, const char* message);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Activity*
+/// @param self const Attica__Activity*
 ///
-const char* k_attica__activity_message(void* self);
+const char* k_attica__activity_message(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#setLink)
 ///
 /// @param self Attica__Activity*
 /// @param link QUrl*
 ///
-void k_attica__activity_set_link(void* self, void* link);
+void k_attica__activity_set_link(void* self, const void* link);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#link)
 ///
-/// @param self Attica__Activity*
+/// @param self const Attica__Activity*
 ///
-QUrl* k_attica__activity_link(void* self);
+QUrl* k_attica__activity_link(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-activity.html#isValid)
 ///
-/// @param self Attica__Activity*
+/// @param self const Attica__Activity*
 ///
-bool k_attica__activity_is_valid(void* self);
+bool k_attica__activity_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

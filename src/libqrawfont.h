@@ -38,7 +38,7 @@ QRawFont* q_rawfont_new3(char* fontData, double pixelSize);
 ///
 /// @param other QRawFont*
 ///
-QRawFont* q_rawfont_new4(void* other);
+QRawFont* q_rawfont_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html)
 
@@ -65,7 +65,7 @@ QRawFont* q_rawfont_new6(char* fontData, double pixelSize, int32_t hintingPrefer
 /// @param self QRawFont*
 /// @param other QRawFont*
 ///
-void q_rawfont_operator_assign(void* self, void* other);
+void q_rawfont_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#swap)
 ///
@@ -76,131 +76,131 @@ void q_rawfont_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#isValid)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-bool q_rawfont_is_valid(void* self);
+bool q_rawfont_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#operator-eq-eq)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param other QRawFont*
 ///
-bool q_rawfont_operator_equal(void* self, void* other);
+bool q_rawfont_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#operator-not-eq)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param other QRawFont*
 ///
-bool q_rawfont_operator_not_equal(void* self, void* other);
+bool q_rawfont_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#familyName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-const char* q_rawfont_family_name(void* self);
+const char* q_rawfont_family_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#styleName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-const char* q_rawfont_style_name(void* self);
+const char* q_rawfont_style_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#style)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
 /// @return enum QFont__Style
 ///
-int32_t q_rawfont_style(void* self);
+int32_t q_rawfont_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#weight)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-int32_t q_rawfont_weight(void* self);
+int32_t q_rawfont_weight(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#glyphIndexesForString)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param text const char*
 ///
 /// @return libqt_list of uint32_t
 ///
-libqt_list q_rawfont_glyph_indexes_for_string(void* self, const char* text);
+libqt_list q_rawfont_glyph_indexes_for_string(const void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndexes libqt_list of uint32_t
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_rawfont_advances_for_glyph_indexes(void* self, libqt_list glyphIndexes);
+libqt_list q_rawfont_advances_for_glyph_indexes(const void* self, libqt_list glyphIndexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndexes libqt_list of uint32_t
 /// @param layoutFlags flag of enum QRawFont__LayoutFlag
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_rawfont_advances_for_glyph_indexes2(void* self, libqt_list glyphIndexes, int32_t layoutFlags);
+libqt_list q_rawfont_advances_for_glyph_indexes2(const void* self, libqt_list glyphIndexes, int32_t layoutFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#glyphIndexesForChars)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param chars QChar*
 /// @param numChars int
 /// @param glyphIndexes uint32_t*
 /// @param numGlyphs int*
 ///
-bool q_rawfont_glyph_indexes_for_chars(void* self, void* chars, int numChars, uint32_t* glyphIndexes, int* numGlyphs);
+bool q_rawfont_glyph_indexes_for_chars(const void* self, const void* chars, int numChars, uint32_t* glyphIndexes, int* numGlyphs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndexes uint32_t*
 /// @param advances QPointF*
 /// @param numGlyphs int
 ///
-bool q_rawfont_advances_for_glyph_indexes3(void* self, uint32_t* glyphIndexes, void* advances, int numGlyphs);
+bool q_rawfont_advances_for_glyph_indexes3(const void* self, uint32_t* glyphIndexes, void* advances, int numGlyphs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#advancesForGlyphIndexes)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndexes uint32_t*
 /// @param advances QPointF*
 /// @param numGlyphs int
 /// @param layoutFlags flag of enum QRawFont__LayoutFlag
 ///
-bool q_rawfont_advances_for_glyph_indexes4(void* self, uint32_t* glyphIndexes, void* advances, int numGlyphs, int32_t layoutFlags);
+bool q_rawfont_advances_for_glyph_indexes4(const void* self, uint32_t* glyphIndexes, void* advances, int numGlyphs, int32_t layoutFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#alphaMapForGlyph)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndex uint32_t
 ///
-QImage* q_rawfont_alpha_map_for_glyph(void* self, uint32_t glyphIndex);
+QImage* q_rawfont_alpha_map_for_glyph(const void* self, uint32_t glyphIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#pathForGlyph)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndex uint32_t
 ///
-QPainterPath* q_rawfont_path_for_glyph(void* self, uint32_t glyphIndex);
+QPainterPath* q_rawfont_path_for_glyph(const void* self, uint32_t glyphIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#boundingRect)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndex uint32_t
 ///
-QRectF* q_rawfont_bounding_rect(void* self, uint32_t glyphIndex);
+QRectF* q_rawfont_bounding_rect(const void* self, uint32_t glyphIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#setPixelSize)
 ///
@@ -211,77 +211,77 @@ void q_rawfont_set_pixel_size(void* self, double pixelSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#pixelSize)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_pixel_size(void* self);
+double q_rawfont_pixel_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#hintingPreference)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
 /// @return enum QFont__HintingPreference
 ///
-int32_t q_rawfont_hinting_preference(void* self);
+int32_t q_rawfont_hinting_preference(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#ascent)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_ascent(void* self);
+double q_rawfont_ascent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#capHeight)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_cap_height(void* self);
+double q_rawfont_cap_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#descent)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_descent(void* self);
+double q_rawfont_descent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#leading)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_leading(void* self);
+double q_rawfont_leading(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#xHeight)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_x_height(void* self);
+double q_rawfont_x_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#averageCharWidth)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_average_char_width(void* self);
+double q_rawfont_average_char_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#maxCharWidth)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_max_char_width(void* self);
+double q_rawfont_max_char_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#lineThickness)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_line_thickness(void* self);
+double q_rawfont_line_thickness(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#underlinePosition)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_underline_position(void* self);
+double q_rawfont_underline_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#unitsPerEm)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
-double q_rawfont_units_per_em(void* self);
+double q_rawfont_units_per_em(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#loadFromFile)
 ///
@@ -303,73 +303,73 @@ void q_rawfont_load_from_data(void* self, char* fontData, double pixelSize, int3
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#supportsCharacter)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param ucs4 uint32_t
 ///
-bool q_rawfont_supports_character(void* self, uint32_t ucs4);
+bool q_rawfont_supports_character(const void* self, uint32_t ucs4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#supportsCharacter)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param character QChar*
 ///
-bool q_rawfont_supports_character2(void* self, void* character);
+bool q_rawfont_supports_character2(const void* self, void* character);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#supportedWritingSystems)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
 ///
-libqt_list q_rawfont_supported_writing_systems(void* self);
+libqt_list q_rawfont_supported_writing_systems(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param tagName const char*
 ///
-char* q_rawfont_font_table(void* self, const char* tagName);
+char* q_rawfont_font_table(const void* self, const char* tagName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param tag QFont__Tag*
 ///
-char* q_rawfont_font_table2(void* self, void* tag);
+char* q_rawfont_font_table2(const void* self, void* tag);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#fromFont)
 ///
 /// @param font QFont*
 ///
-QRawFont* q_rawfont_from_font(void* font);
+QRawFont* q_rawfont_from_font(const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#alphaMapForGlyph)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndex uint32_t
 /// @param antialiasingType enum QRawFont__AntialiasingType
 ///
-QImage* q_rawfont_alpha_map_for_glyph2(void* self, uint32_t glyphIndex, int32_t antialiasingType);
+QImage* q_rawfont_alpha_map_for_glyph2(const void* self, uint32_t glyphIndex, int32_t antialiasingType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#alphaMapForGlyph)
 ///
-/// @param self QRawFont*
+/// @param self const QRawFont*
 /// @param glyphIndex uint32_t
 /// @param antialiasingType enum QRawFont__AntialiasingType
 /// @param transform QTransform*
 ///
-QImage* q_rawfont_alpha_map_for_glyph3(void* self, uint32_t glyphIndex, int32_t antialiasingType, void* transform);
+QImage* q_rawfont_alpha_map_for_glyph3(const void* self, uint32_t glyphIndex, int32_t antialiasingType, const void* transform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#fromFont)
 ///
 /// @param font QFont*
 /// @param writingSystem enum QFontDatabase__WritingSystem
 ///
-QRawFont* q_rawfont_from_font2(void* font, int32_t writingSystem);
+QRawFont* q_rawfont_from_font2(const void* font, int32_t writingSystem);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#dtor.QRawFont)
 ///
@@ -386,7 +386,7 @@ void q_rawfont_delete(void* self);
 /// @param font QRawFont*
 /// @param seed size_t
 ///
-size_t q_qrawfont_h_q_hash(void* font, size_t seed);
+size_t q_qrawfont_h_q_hash(const void* font, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrawfont.html#public-types)
 

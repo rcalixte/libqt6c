@@ -20,120 +20,103 @@
 /// @param group const char*
 /// @param symlink const char*
 ///
-KArchiveEntry* k_archiveentry_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink);
+KArchiveEntry* k_archiveentry_new(void* archive, const char* name, int access, const void* date, const char* user, const char* group, const char* symlink);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#date)
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-QDateTime* k_archiveentry_date(void* self);
+QDateTime* k_archiveentry_date(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-const char* k_archiveentry_name(void* self);
+const char* k_archiveentry_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#permissions)
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-mode_t k_archiveentry_permissions(void* self);
+mode_t k_archiveentry_permissions(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#user)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-const char* k_archiveentry_user(void* self);
+const char* k_archiveentry_user(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#group)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-const char* k_archiveentry_group(void* self);
+const char* k_archiveentry_group(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#symLinkTarget)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-const char* k_archiveentry_sym_link_target(void* self);
+const char* k_archiveentry_sym_link_target(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isFile)
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-bool k_archiveentry_is_file(void* self);
+bool k_archiveentry_is_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isFile)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KArchiveEntry*
-/// @param callback bool func()
+/// @param self const KArchiveEntry*
+/// @param callback bool func(const KArchiveEntry* self)
 ///
-void k_archiveentry_on_is_file(void* self, bool (*callback)());
+void k_archiveentry_on_is_file(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isFile)
 ///
 /// Base class method implementation
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-bool k_archiveentry_super_is_file(void* self);
+bool k_archiveentry_super_is_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-bool k_archiveentry_is_directory(void* self);
+bool k_archiveentry_is_directory(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KArchiveEntry*
-/// @param callback bool func()
+/// @param self const KArchiveEntry*
+/// @param callback bool func(const KArchiveEntry* self)
 ///
-void k_archiveentry_on_is_directory(void* self, bool (*callback)());
+void k_archiveentry_on_is_directory(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
 ///
 /// Base class method implementation
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-bool k_archiveentry_super_is_directory(void* self);
+bool k_archiveentry_super_is_directory(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#archive)
 ///
-/// @param self KArchiveEntry*
+/// @param self const KArchiveEntry*
 ///
-KArchive* k_archiveentry_archive(void* self);
-
-/// [Upstream resources](https://api.kde.org/karchiveentry.html#archive)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KArchiveEntry*
-/// @param callback KArchive* func()
-///
-void k_archiveentry_on_archive(void* self, KArchive* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/karchiveentry.html#archive)
-///
-/// Base class method implementation
-///
-/// @param self KArchiveEntry*
-///
-KArchive* k_archiveentry_super_archive(void* self);
+KArchive* k_archiveentry_archive(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#virtual_hook)
 ///

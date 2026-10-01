@@ -8,31 +8,31 @@ KParts__PartActivateEvent* k_parts__partactivateevent_new(bool activated, void* 
     return KParts__PartActivateEvent_New(activated, (KParts__Part*)part, (QWidget*)widget);
 }
 
-bool k_parts__partactivateevent_activated(void* self) {
+bool k_parts__partactivateevent_activated(const void* self) {
     return KParts__PartActivateEvent_Activated((KParts__PartActivateEvent*)self);
 }
 
-KParts__Part* k_parts__partactivateevent_part(void* self) {
+KParts__Part* k_parts__partactivateevent_part(const void* self) {
     return KParts__PartActivateEvent_Part((KParts__PartActivateEvent*)self);
 }
 
-QWidget* k_parts__partactivateevent_widget(void* self) {
+QWidget* k_parts__partactivateevent_widget(const void* self) {
     return KParts__PartActivateEvent_Widget((KParts__PartActivateEvent*)self);
 }
 
-bool k_parts__partactivateevent_test(void* event) {
+bool k_parts__partactivateevent_test(const void* event) {
     return KParts__PartActivateEvent_Test((QEvent*)event);
 }
 
-int32_t k_parts__partactivateevent_type(void* self) {
+int32_t k_parts__partactivateevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool k_parts__partactivateevent_spontaneous(void* self) {
+bool k_parts__partactivateevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool k_parts__partactivateevent_is_accepted(void* self) {
+bool k_parts__partactivateevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -44,15 +44,15 @@ void k_parts__partactivateevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool k_parts__partactivateevent_is_input_event(void* self) {
+bool k_parts__partactivateevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool k_parts__partactivateevent_is_pointer_event(void* self) {
+bool k_parts__partactivateevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool k_parts__partactivateevent_is_single_point_event(void* self) {
+bool k_parts__partactivateevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -76,16 +76,16 @@ void k_parts__partactivateevent_on_set_accepted(void* self, void (*callback)(voi
     KParts__PartActivateEvent_OnSetAccepted((KParts__PartActivateEvent*)self, (intptr_t)callback);
 }
 
-QEvent* k_parts__partactivateevent_clone(void* self) {
+QEvent* k_parts__partactivateevent_clone(const void* self) {
     return KParts__PartActivateEvent_Clone((KParts__PartActivateEvent*)self);
 }
 
-QEvent* k_parts__partactivateevent_super_clone(void* self) {
+QEvent* k_parts__partactivateevent_super_clone(const void* self) {
     return KParts__PartActivateEvent_SuperClone((KParts__PartActivateEvent*)self);
 }
 
-void k_parts__partactivateevent_on_clone(void* self, QEvent* (*callback)()) {
-    KParts__PartActivateEvent_OnClone((KParts__PartActivateEvent*)self, (intptr_t)callback);
+void k_parts__partactivateevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    KParts__PartActivateEvent_OnClone((const KParts__PartActivateEvent*)self, (intptr_t)callback);
 }
 
 void k_parts__partactivateevent_delete(void* self) {

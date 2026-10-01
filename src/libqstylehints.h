@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-const QMetaObject* q_stylehints_meta_object(void* self);
+const QMetaObject* q_stylehints_meta_object(const void* self);
 
 /// @param self QStyleHints*
 /// @param param1 const char*
@@ -45,21 +45,21 @@ void q_stylehints_set_mouse_double_click_interval(void* self, int mouseDoubleCli
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#mouseDoubleClickInterval)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_mouse_double_click_interval(void* self);
+int32_t q_stylehints_mouse_double_click_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#mouseDoubleClickDistance)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_mouse_double_click_distance(void* self);
+int32_t q_stylehints_mouse_double_click_distance(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#touchDoubleTapDistance)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_touch_double_tap_distance(void* self);
+int32_t q_stylehints_touch_double_tap_distance(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setMousePressAndHoldInterval)
 ///
@@ -70,9 +70,9 @@ void q_stylehints_set_mouse_press_and_hold_interval(void* self, int mousePressAn
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#mousePressAndHoldInterval)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_mouse_press_and_hold_interval(void* self);
+int32_t q_stylehints_mouse_press_and_hold_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setStartDragDistance)
 ///
@@ -83,9 +83,9 @@ void q_stylehints_set_start_drag_distance(void* self, int startDragDistance);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#startDragDistance)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_start_drag_distance(void* self);
+int32_t q_stylehints_start_drag_distance(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setStartDragTime)
 ///
@@ -96,15 +96,15 @@ void q_stylehints_set_start_drag_time(void* self, int startDragTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#startDragTime)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_start_drag_time(void* self);
+int32_t q_stylehints_start_drag_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#startDragVelocity)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_start_drag_velocity(void* self);
+int32_t q_stylehints_start_drag_velocity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setKeyboardInputInterval)
 ///
@@ -115,21 +115,21 @@ void q_stylehints_set_keyboard_input_interval(void* self, int keyboardInputInter
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#keyboardInputInterval)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_keyboard_input_interval(void* self);
+int32_t q_stylehints_keyboard_input_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#keyboardAutoRepeatRate)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_keyboard_auto_repeat_rate(void* self);
+int32_t q_stylehints_keyboard_auto_repeat_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#keyboardAutoRepeatRateF)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-double q_stylehints_keyboard_auto_repeat_rate_f(void* self);
+double q_stylehints_keyboard_auto_repeat_rate_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setCursorFlashTime)
 ///
@@ -140,27 +140,27 @@ void q_stylehints_set_cursor_flash_time(void* self, int cursorFlashTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#cursorFlashTime)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_cursor_flash_time(void* self);
+int32_t q_stylehints_cursor_flash_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#showIsFullScreen)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_show_is_full_screen(void* self);
+bool q_stylehints_show_is_full_screen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#showIsMaximized)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_show_is_maximized(void* self);
+bool q_stylehints_show_is_maximized(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#showShortcutsInContextMenus)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_show_shortcuts_in_context_menus(void* self);
+bool q_stylehints_show_shortcuts_in_context_menus(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setShowShortcutsInContextMenus)
 ///
@@ -171,11 +171,11 @@ void q_stylehints_set_show_shortcuts_in_context_menus(void* self, bool showShort
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#contextMenuTrigger)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
 /// @return enum Qt__ContextMenuTrigger
 ///
-int32_t q_stylehints_context_menu_trigger(void* self);
+int32_t q_stylehints_context_menu_trigger(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setContextMenuTrigger)
 ///
@@ -186,41 +186,41 @@ void q_stylehints_set_context_menu_trigger(void* self, int32_t contextMenuTrigge
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#passwordMaskDelay)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_password_mask_delay(void* self);
+int32_t q_stylehints_password_mask_delay(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#passwordMaskCharacter)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-QChar* q_stylehints_password_mask_character(void* self);
+QChar* q_stylehints_password_mask_character(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#fontSmoothingGamma)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-double q_stylehints_font_smoothing_gamma(void* self);
+double q_stylehints_font_smoothing_gamma(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#useRtlExtensions)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_use_rtl_extensions(void* self);
+bool q_stylehints_use_rtl_extensions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setFocusOnTouchRelease)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_set_focus_on_touch_release(void* self);
+bool q_stylehints_set_focus_on_touch_release(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#tabFocusBehavior)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
 /// @return enum Qt__TabFocusBehavior
 ///
-int32_t q_stylehints_tab_focus_behavior(void* self);
+int32_t q_stylehints_tab_focus_behavior(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setTabFocusBehavior)
 ///
@@ -231,15 +231,15 @@ void q_stylehints_set_tab_focus_behavior(void* self, int32_t tabFocusBehavior);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#singleClickActivation)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_single_click_activation(void* self);
+bool q_stylehints_single_click_activation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#useHoverEffects)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_use_hover_effects(void* self);
+bool q_stylehints_use_hover_effects(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setUseHoverEffects)
 ///
@@ -250,9 +250,9 @@ void q_stylehints_set_use_hover_effects(void* self, bool useHoverEffects);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#wheelScrollLines)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_wheel_scroll_lines(void* self);
+int32_t q_stylehints_wheel_scroll_lines(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setWheelScrollLines)
 ///
@@ -270,17 +270,17 @@ void q_stylehints_set_mouse_quick_selection_threshold(void* self, int threshold)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#mouseQuickSelectionThreshold)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-int32_t q_stylehints_mouse_quick_selection_threshold(void* self);
+int32_t q_stylehints_mouse_quick_selection_threshold(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#colorScheme)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
 /// @return enum Qt__ColorScheme
 ///
-int32_t q_stylehints_color_scheme(void* self);
+int32_t q_stylehints_color_scheme(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehints.html#setColorScheme)
 ///
@@ -521,9 +521,9 @@ bool q_stylehints_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-const char* q_stylehints_object_name(void* self);
+const char* q_stylehints_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -538,33 +538,33 @@ void q_stylehints_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_is_widget_type(void* self);
+bool q_stylehints_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_is_window_type(void* self);
+bool q_stylehints_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_is_quick_item_type(void* self);
+bool q_stylehints_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_signals_blocked(void* self);
+bool q_stylehints_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -579,9 +579,9 @@ bool q_stylehints_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-QThread* q_stylehints_thread(void* self);
+QThread* q_stylehints_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -632,11 +632,11 @@ void q_stylehints_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_stylehints_children(void* self);
+libqt_list q_stylehints_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -674,7 +674,7 @@ void q_stylehints_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_stylehints_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_stylehints_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -685,18 +685,18 @@ QMetaObject__Connection* q_stylehints_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_stylehints_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_stylehints_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_stylehints_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_stylehints_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -707,7 +707,7 @@ QMetaObject__Connection* q_stylehints_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_stylehints_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_stylehints_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -718,24 +718,24 @@ bool q_stylehints_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_stylehints_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_stylehints_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-bool q_stylehints_disconnect3(void* self);
+bool q_stylehints_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 /// @param receiver QObject*
 ///
-bool q_stylehints_disconnect4(void* self, void* receiver);
+bool q_stylehints_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -743,23 +743,23 @@ bool q_stylehints_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_stylehints_disconnect5(void* param1);
+bool q_stylehints_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-void q_stylehints_dump_object_tree(void* self);
+void q_stylehints_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-void q_stylehints_dump_object_info(void* self);
+void q_stylehints_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -769,16 +769,16 @@ void q_stylehints_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_stylehints_set_property(void* self, const char* name, void* value);
+bool q_stylehints_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 /// @param name const char*
 ///
-QVariant* q_stylehints_property(void* self, const char* name);
+QVariant* q_stylehints_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -786,9 +786,9 @@ QVariant* q_stylehints_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-const char** q_stylehints_dynamic_property_names(void* self);
+const char** q_stylehints_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -802,9 +802,9 @@ QBindingStorage* q_stylehints_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-const QBindingStorage* q_stylehints_binding_storage2(void* self);
+const QBindingStorage* q_stylehints_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -827,18 +827,18 @@ void q_stylehints_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 ///
-QObject* q_stylehints_parent(void* self);
+QObject* q_stylehints_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 /// @param classname const char*
 ///
-bool q_stylehints_inherits(void* self, const char* classname);
+bool q_stylehints_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -878,7 +878,7 @@ int32_t q_stylehints_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_stylehints_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_stylehints_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -890,59 +890,59 @@ QMetaObject__Connection* q_stylehints_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_stylehints_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_stylehints_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_stylehints_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_stylehints_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 /// @param signal const char*
 ///
-bool q_stylehints_disconnect1(void* self, const char* signal);
+bool q_stylehints_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStyleHints*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_stylehints_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_stylehints_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_stylehints_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QStyleHints*
+/// @param self const QStyleHints*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_stylehints_disconnect23(void* self, void* receiver, const char* member);
+bool q_stylehints_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QStyleHints*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_stylehints_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

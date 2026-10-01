@@ -22,15 +22,15 @@ QQuickWebEngineProfile* q_quickwebengineprofile_new2(void* parent) {
     return QQuickWebEngineProfile_New2((QObject*)parent);
 }
 
-const QMetaObject* q_quickwebengineprofile_meta_object(void* self) {
+const QMetaObject* q_quickwebengineprofile_meta_object(const void* self) {
     return QQuickWebEngineProfile_MetaObject((QQuickWebEngineProfile*)self);
 }
 
-void q_quickwebengineprofile_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_quickwebengineprofile_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickWebEngineProfile_OnMetaObject((QQuickWebEngineProfile*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_quickwebengineprofile_super_meta_object(void* self) {
+const QMetaObject* q_quickwebengineprofile_super_meta_object(const void* self) {
     return QQuickWebEngineProfile_SuperMetaObject((QQuickWebEngineProfile*)self);
 }
 
@@ -65,7 +65,7 @@ const char* q_quickwebengineprofile_tr(const char* s) {
     return _ret;
 }
 
-const char* q_quickwebengineprofile_storage_name(void* self) {
+const char* q_quickwebengineprofile_storage_name(const void* self) {
     libqt_string _str = QQuickWebEngineProfile_StorageName((QQuickWebEngineProfile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -76,7 +76,7 @@ void q_quickwebengineprofile_set_storage_name(void* self, const char* name) {
     QQuickWebEngineProfile_SetStorageName((QQuickWebEngineProfile*)self, qstring(name));
 }
 
-bool q_quickwebengineprofile_is_off_the_record(void* self) {
+bool q_quickwebengineprofile_is_off_the_record(const void* self) {
     return QQuickWebEngineProfile_IsOffTheRecord((QQuickWebEngineProfile*)self);
 }
 
@@ -84,7 +84,7 @@ void q_quickwebengineprofile_set_off_the_record(void* self, bool offTheRecord) {
     QQuickWebEngineProfile_SetOffTheRecord((QQuickWebEngineProfile*)self, offTheRecord);
 }
 
-const char* q_quickwebengineprofile_persistent_storage_path(void* self) {
+const char* q_quickwebengineprofile_persistent_storage_path(const void* self) {
     libqt_string _str = QQuickWebEngineProfile_PersistentStoragePath((QQuickWebEngineProfile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -95,7 +95,7 @@ void q_quickwebengineprofile_set_persistent_storage_path(void* self, const char*
     QQuickWebEngineProfile_SetPersistentStoragePath((QQuickWebEngineProfile*)self, qstring(path));
 }
 
-const char* q_quickwebengineprofile_cache_path(void* self) {
+const char* q_quickwebengineprofile_cache_path(const void* self) {
     libqt_string _str = QQuickWebEngineProfile_CachePath((QQuickWebEngineProfile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -106,7 +106,7 @@ void q_quickwebengineprofile_set_cache_path(void* self, const char* path) {
     QQuickWebEngineProfile_SetCachePath((QQuickWebEngineProfile*)self, qstring(path));
 }
 
-const char* q_quickwebengineprofile_http_user_agent(void* self) {
+const char* q_quickwebengineprofile_http_user_agent(const void* self) {
     libqt_string _str = QQuickWebEngineProfile_HttpUserAgent((QQuickWebEngineProfile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -117,7 +117,7 @@ void q_quickwebengineprofile_set_http_user_agent(void* self, const char* userAge
     QQuickWebEngineProfile_SetHttpUserAgent((QQuickWebEngineProfile*)self, qstring(userAgent));
 }
 
-int32_t q_quickwebengineprofile_http_cache_type(void* self) {
+int32_t q_quickwebengineprofile_http_cache_type(const void* self) {
     return QQuickWebEngineProfile_HttpCacheType((QQuickWebEngineProfile*)self);
 }
 
@@ -125,7 +125,7 @@ void q_quickwebengineprofile_set_http_cache_type(void* self, int32_t httpCacheTy
     QQuickWebEngineProfile_SetHttpCacheType((QQuickWebEngineProfile*)self, httpCacheType);
 }
 
-int32_t q_quickwebengineprofile_persistent_cookies_policy(void* self) {
+int32_t q_quickwebengineprofile_persistent_cookies_policy(const void* self) {
     return QQuickWebEngineProfile_PersistentCookiesPolicy((QQuickWebEngineProfile*)self);
 }
 
@@ -133,7 +133,7 @@ void q_quickwebengineprofile_set_persistent_cookies_policy(void* self, int32_t p
     QQuickWebEngineProfile_SetPersistentCookiesPolicy((QQuickWebEngineProfile*)self, persistentCookiesPolicy);
 }
 
-uint8_t q_quickwebengineprofile_persistent_permissions_policy(void* self) {
+uint8_t q_quickwebengineprofile_persistent_permissions_policy(const void* self) {
     return QQuickWebEngineProfile_PersistentPermissionsPolicy((QQuickWebEngineProfile*)self);
 }
 
@@ -141,7 +141,7 @@ void q_quickwebengineprofile_set_persistent_permissions_policy(void* self, uint8
     QQuickWebEngineProfile_SetPersistentPermissionsPolicy((QQuickWebEngineProfile*)self, persistentPermissionsPolicy);
 }
 
-int32_t q_quickwebengineprofile_http_cache_maximum_size(void* self) {
+int32_t q_quickwebengineprofile_http_cache_maximum_size(const void* self) {
     return QQuickWebEngineProfile_HttpCacheMaximumSize((QQuickWebEngineProfile*)self);
 }
 
@@ -149,7 +149,7 @@ void q_quickwebengineprofile_set_http_cache_maximum_size(void* self, int maxSize
     QQuickWebEngineProfile_SetHttpCacheMaximumSize((QQuickWebEngineProfile*)self, maxSize);
 }
 
-const char* q_quickwebengineprofile_http_accept_language(void* self) {
+const char* q_quickwebengineprofile_http_accept_language(const void* self) {
     libqt_string _str = QQuickWebEngineProfile_HttpAcceptLanguage((QQuickWebEngineProfile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -160,7 +160,7 @@ void q_quickwebengineprofile_set_http_accept_language(void* self, const char* ht
     QQuickWebEngineProfile_SetHttpAcceptLanguage((QQuickWebEngineProfile*)self, qstring(httpAcceptLanguage));
 }
 
-QWebEngineCookieStore* q_quickwebengineprofile_cookie_store(void* self) {
+QWebEngineCookieStore* q_quickwebengineprofile_cookie_store(const void* self) {
     return QQuickWebEngineProfile_CookieStore((QQuickWebEngineProfile*)self);
 }
 
@@ -168,7 +168,7 @@ void q_quickwebengineprofile_set_url_request_interceptor(void* self, void* inter
     QQuickWebEngineProfile_SetUrlRequestInterceptor((QQuickWebEngineProfile*)self, (QWebEngineUrlRequestInterceptor*)interceptor);
 }
 
-const QWebEngineUrlSchemeHandler* q_quickwebengineprofile_url_scheme_handler(void* self, char* param1) {
+const QWebEngineUrlSchemeHandler* q_quickwebengineprofile_url_scheme_handler(const void* self, char* param1) {
     return QQuickWebEngineProfile_UrlSchemeHandler((QQuickWebEngineProfile*)self, qstring(param1));
 }
 
@@ -206,7 +206,7 @@ void q_quickwebengineprofile_set_spell_check_languages(void* self, const char* l
     free(languages_qstr);
 }
 
-const char** q_quickwebengineprofile_spell_check_languages(void* self) {
+const char** q_quickwebengineprofile_spell_check_languages(const void* self) {
     libqt_list _arr = QQuickWebEngineProfile_SpellCheckLanguages((QQuickWebEngineProfile*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -227,11 +227,11 @@ void q_quickwebengineprofile_set_spell_check_enabled(void* self, bool enabled) {
     QQuickWebEngineProfile_SetSpellCheckEnabled((QQuickWebEngineProfile*)self, enabled);
 }
 
-bool q_quickwebengineprofile_is_spell_check_enabled(void* self) {
+bool q_quickwebengineprofile_is_spell_check_enabled(const void* self) {
     return QQuickWebEngineProfile_IsSpellCheckEnabled((QQuickWebEngineProfile*)self);
 }
 
-const char* q_quickwebengineprofile_download_path(void* self) {
+const char* q_quickwebengineprofile_download_path(const void* self) {
     libqt_string _str = QQuickWebEngineProfile_DownloadPath((QQuickWebEngineProfile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -242,7 +242,7 @@ void q_quickwebengineprofile_set_download_path(void* self, const char* path) {
     QQuickWebEngineProfile_SetDownloadPath((QQuickWebEngineProfile*)self, qstring(path));
 }
 
-bool q_quickwebengineprofile_is_push_service_enabled(void* self) {
+bool q_quickwebengineprofile_is_push_service_enabled(const void* self) {
     return QQuickWebEngineProfile_IsPushServiceEnabled((QQuickWebEngineProfile*)self);
 }
 
@@ -254,25 +254,25 @@ QWebEngineClientCertificateStore* q_quickwebengineprofile_client_certificate_sto
     return QQuickWebEngineProfile_ClientCertificateStore((QQuickWebEngineProfile*)self);
 }
 
-QWebEngineClientHints* q_quickwebengineprofile_client_hints(void* self) {
+QWebEngineClientHints* q_quickwebengineprofile_client_hints(const void* self) {
     return QQuickWebEngineProfile_ClientHints((QQuickWebEngineProfile*)self);
 }
 
-QWebEnginePermission* q_quickwebengineprofile_query_permission(void* self, void* securityOrigin, uint8_t permissionType) {
+QWebEnginePermission* q_quickwebengineprofile_query_permission(const void* self, const void* securityOrigin, uint8_t permissionType) {
     return QQuickWebEngineProfile_QueryPermission((QQuickWebEngineProfile*)self, (QUrl*)securityOrigin, permissionType);
 }
 
-libqt_list /* of QWebEnginePermission* */ q_quickwebengineprofile_list_all_permissions(void* self) {
+libqt_list /* of QWebEnginePermission* */ q_quickwebengineprofile_list_all_permissions(const void* self) {
     libqt_list _arr = QQuickWebEngineProfile_ListAllPermissions((QQuickWebEngineProfile*)self);
     return _arr;
 }
 
-libqt_list /* of QWebEnginePermission* */ q_quickwebengineprofile_list_permissions_for_origin(void* self, void* securityOrigin) {
+libqt_list /* of QWebEnginePermission* */ q_quickwebengineprofile_list_permissions_for_origin(const void* self, const void* securityOrigin) {
     libqt_list _arr = QQuickWebEngineProfile_ListPermissionsForOrigin((QQuickWebEngineProfile*)self, (QUrl*)securityOrigin);
     return _arr;
 }
 
-libqt_list /* of QWebEnginePermission* */ q_quickwebengineprofile_list_permissions_for_permission_type(void* self, uint8_t permissionType) {
+libqt_list /* of QWebEnginePermission* */ q_quickwebengineprofile_list_permissions_for_permission_type(const void* self, uint8_t permissionType) {
     libqt_list _arr = QQuickWebEngineProfile_ListPermissionsForPermissionType((QQuickWebEngineProfile*)self, permissionType);
     return _arr;
 }
@@ -439,7 +439,7 @@ const char* q_quickwebengineprofile_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_quickwebengineprofile_object_name(void* self) {
+const char* q_quickwebengineprofile_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -450,19 +450,19 @@ void q_quickwebengineprofile_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_quickwebengineprofile_is_widget_type(void* self) {
+bool q_quickwebengineprofile_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_quickwebengineprofile_is_window_type(void* self) {
+bool q_quickwebengineprofile_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_quickwebengineprofile_is_quick_item_type(void* self) {
+bool q_quickwebengineprofile_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_quickwebengineprofile_signals_blocked(void* self) {
+bool q_quickwebengineprofile_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -470,7 +470,7 @@ bool q_quickwebengineprofile_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_quickwebengineprofile_thread(void* self) {
+QThread* q_quickwebengineprofile_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -494,7 +494,7 @@ void q_quickwebengineprofile_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_quickwebengineprofile_children(void* self) {
+libqt_list /* of QObject* */ q_quickwebengineprofile_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -511,55 +511,55 @@ void q_quickwebengineprofile_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_quickwebengineprofile_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_quickwebengineprofile_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_quickwebengineprofile_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_quickwebengineprofile_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_quickwebengineprofile_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_quickwebengineprofile_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_quickwebengineprofile_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_quickwebengineprofile_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_quickwebengineprofile_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_quickwebengineprofile_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_quickwebengineprofile_disconnect3(void* self) {
+bool q_quickwebengineprofile_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_quickwebengineprofile_disconnect4(void* self, void* receiver) {
+bool q_quickwebengineprofile_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_quickwebengineprofile_disconnect5(void* param1) {
+bool q_quickwebengineprofile_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_quickwebengineprofile_dump_object_tree(void* self) {
+void q_quickwebengineprofile_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_quickwebengineprofile_dump_object_info(void* self) {
+void q_quickwebengineprofile_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_quickwebengineprofile_set_property(void* self, const char* name, void* value) {
+bool q_quickwebengineprofile_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_quickwebengineprofile_property(void* self, const char* name) {
+QVariant* q_quickwebengineprofile_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_quickwebengineprofile_dynamic_property_names(void* self) {
+const char** q_quickwebengineprofile_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -580,7 +580,7 @@ QBindingStorage* q_quickwebengineprofile_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_quickwebengineprofile_binding_storage2(void* self) {
+const QBindingStorage* q_quickwebengineprofile_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -592,11 +592,11 @@ void q_quickwebengineprofile_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_quickwebengineprofile_parent(void* self) {
+QObject* q_quickwebengineprofile_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_quickwebengineprofile_inherits(void* self, const char* classname) {
+bool q_quickwebengineprofile_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -612,31 +612,31 @@ int32_t q_quickwebengineprofile_start_timer23(void* self, int64_t time, int32_t 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_quickwebengineprofile_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_quickwebengineprofile_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_quickwebengineprofile_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_quickwebengineprofile_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_quickwebengineprofile_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_quickwebengineprofile_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_quickwebengineprofile_disconnect1(void* self, const char* signal) {
+bool q_quickwebengineprofile_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_quickwebengineprofile_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_quickwebengineprofile_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_quickwebengineprofile_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_quickwebengineprofile_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_quickwebengineprofile_disconnect23(void* self, void* receiver, const char* member) {
+bool q_quickwebengineprofile_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -708,76 +708,44 @@ void q_quickwebengineprofile_on_custom_event(void* self, void (*callback)(void*,
     QQuickWebEngineProfile_OnCustomEvent((QQuickWebEngineProfile*)self, (intptr_t)callback);
 }
 
-void q_quickwebengineprofile_connect_notify(void* self, void* signal) {
+void q_quickwebengineprofile_connect_notify(void* self, const void* signal) {
     QQuickWebEngineProfile_ConnectNotify((QQuickWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_quickwebengineprofile_super_connect_notify(void* self, void* signal) {
+void q_quickwebengineprofile_super_connect_notify(void* self, const void* signal) {
     QQuickWebEngineProfile_SuperConnectNotify((QQuickWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_quickwebengineprofile_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quickwebengineprofile_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuickWebEngineProfile_OnConnectNotify((QQuickWebEngineProfile*)self, (intptr_t)callback);
 }
 
-void q_quickwebengineprofile_disconnect_notify(void* self, void* signal) {
+void q_quickwebengineprofile_disconnect_notify(void* self, const void* signal) {
     QQuickWebEngineProfile_DisconnectNotify((QQuickWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_quickwebengineprofile_super_disconnect_notify(void* self, void* signal) {
+void q_quickwebengineprofile_super_disconnect_notify(void* self, const void* signal) {
     QQuickWebEngineProfile_SuperDisconnectNotify((QQuickWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_quickwebengineprofile_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quickwebengineprofile_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuickWebEngineProfile_OnDisconnectNotify((QQuickWebEngineProfile*)self, (intptr_t)callback);
 }
 
-QObject* q_quickwebengineprofile_sender(void* self) {
+QObject* q_quickwebengineprofile_sender(const void* self) {
     return QQuickWebEngineProfile_Sender((QQuickWebEngineProfile*)self);
 }
 
-QObject* q_quickwebengineprofile_super_sender(void* self) {
-    return QQuickWebEngineProfile_SuperSender((QQuickWebEngineProfile*)self);
-}
-
-void q_quickwebengineprofile_on_sender(void* self, QObject* (*callback)()) {
-    QQuickWebEngineProfile_OnSender((QQuickWebEngineProfile*)self, (intptr_t)callback);
-}
-
-int32_t q_quickwebengineprofile_sender_signal_index(void* self) {
+int32_t q_quickwebengineprofile_sender_signal_index(const void* self) {
     return QQuickWebEngineProfile_SenderSignalIndex((QQuickWebEngineProfile*)self);
 }
 
-int32_t q_quickwebengineprofile_super_sender_signal_index(void* self) {
-    return QQuickWebEngineProfile_SuperSenderSignalIndex((QQuickWebEngineProfile*)self);
-}
-
-void q_quickwebengineprofile_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QQuickWebEngineProfile_OnSenderSignalIndex((QQuickWebEngineProfile*)self, (intptr_t)callback);
-}
-
-int32_t q_quickwebengineprofile_receivers(void* self, const char* signal) {
+int32_t q_quickwebengineprofile_receivers(const void* self, const char* signal) {
     return QQuickWebEngineProfile_Receivers((QQuickWebEngineProfile*)self, signal);
 }
 
-int32_t q_quickwebengineprofile_super_receivers(void* self, const char* signal) {
-    return QQuickWebEngineProfile_SuperReceivers((QQuickWebEngineProfile*)self, signal);
-}
-
-void q_quickwebengineprofile_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QQuickWebEngineProfile_OnReceivers((QQuickWebEngineProfile*)self, (intptr_t)callback);
-}
-
-bool q_quickwebengineprofile_is_signal_connected(void* self, void* signal) {
+bool q_quickwebengineprofile_is_signal_connected(const void* self, const void* signal) {
     return QQuickWebEngineProfile_IsSignalConnected((QQuickWebEngineProfile*)self, (QMetaMethod*)signal);
-}
-
-bool q_quickwebengineprofile_super_is_signal_connected(void* self, void* signal) {
-    return QQuickWebEngineProfile_SuperIsSignalConnected((QQuickWebEngineProfile*)self, (QMetaMethod*)signal);
-}
-
-void q_quickwebengineprofile_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QQuickWebEngineProfile_OnIsSignalConnected((QQuickWebEngineProfile*)self, (intptr_t)callback);
 }
 
 void q_quickwebengineprofile_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -5,23 +5,23 @@ QLoggingCategory* q_loggingcategory_new(const char* category) {
     return QLoggingCategory_New(category);
 }
 
-bool q_loggingcategory_is_debug_enabled(void* self) {
+bool q_loggingcategory_is_debug_enabled(const void* self) {
     return QLoggingCategory_IsDebugEnabled((QLoggingCategory*)self);
 }
 
-bool q_loggingcategory_is_info_enabled(void* self) {
+bool q_loggingcategory_is_info_enabled(const void* self) {
     return QLoggingCategory_IsInfoEnabled((QLoggingCategory*)self);
 }
 
-bool q_loggingcategory_is_warning_enabled(void* self) {
+bool q_loggingcategory_is_warning_enabled(const void* self) {
     return QLoggingCategory_IsWarningEnabled((QLoggingCategory*)self);
 }
 
-bool q_loggingcategory_is_critical_enabled(void* self) {
+bool q_loggingcategory_is_critical_enabled(const void* self) {
     return QLoggingCategory_IsCriticalEnabled((QLoggingCategory*)self);
 }
 
-const char* q_loggingcategory_category_name(void* self) {
+const char* q_loggingcategory_category_name(const void* self) {
     return QLoggingCategory_CategoryName((QLoggingCategory*)self);
 }
 
@@ -29,7 +29,7 @@ QLoggingCategory* q_loggingcategory_operator_call(void* self) {
     return QLoggingCategory_OperatorCall((QLoggingCategory*)self);
 }
 
-const QLoggingCategory* q_loggingcategory_operator_call2(void* self) {
+const QLoggingCategory* q_loggingcategory_operator_call2(const void* self) {
     return QLoggingCategory_OperatorCall2((QLoggingCategory*)self);
 }
 

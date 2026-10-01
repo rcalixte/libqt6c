@@ -12,7 +12,7 @@ QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new() {
     return QBluetoothServiceDiscoveryAgent_New();
 }
 
-QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new2(void* deviceAdapter) {
+QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new2(const void* deviceAdapter) {
     return QBluetoothServiceDiscoveryAgent_New2((QBluetoothAddress*)deviceAdapter);
 }
 
@@ -20,19 +20,19 @@ QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new3(void* par
     return QBluetoothServiceDiscoveryAgent_New3((QObject*)parent);
 }
 
-QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new4(void* deviceAdapter, void* parent) {
+QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new4(const void* deviceAdapter, void* parent) {
     return QBluetoothServiceDiscoveryAgent_New4((QBluetoothAddress*)deviceAdapter, (QObject*)parent);
 }
 
-const QMetaObject* q_bluetoothservicediscoveryagent_meta_object(void* self) {
+const QMetaObject* q_bluetoothservicediscoveryagent_meta_object(const void* self) {
     return QBluetoothServiceDiscoveryAgent_MetaObject((QBluetoothServiceDiscoveryAgent*)self);
 }
 
-void q_bluetoothservicediscoveryagent_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_bluetoothservicediscoveryagent_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QBluetoothServiceDiscoveryAgent_OnMetaObject((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_bluetoothservicediscoveryagent_super_meta_object(void* self) {
+const QMetaObject* q_bluetoothservicediscoveryagent_super_meta_object(const void* self) {
     return QBluetoothServiceDiscoveryAgent_SuperMetaObject((QBluetoothServiceDiscoveryAgent*)self);
 }
 
@@ -67,22 +67,22 @@ const char* q_bluetoothservicediscoveryagent_tr(const char* s) {
     return _ret;
 }
 
-bool q_bluetoothservicediscoveryagent_is_active(void* self) {
+bool q_bluetoothservicediscoveryagent_is_active(const void* self) {
     return QBluetoothServiceDiscoveryAgent_IsActive((QBluetoothServiceDiscoveryAgent*)self);
 }
 
-int32_t q_bluetoothservicediscoveryagent_error(void* self) {
+int32_t q_bluetoothservicediscoveryagent_error(const void* self) {
     return QBluetoothServiceDiscoveryAgent_Error((QBluetoothServiceDiscoveryAgent*)self);
 }
 
-const char* q_bluetoothservicediscoveryagent_error_string(void* self) {
+const char* q_bluetoothservicediscoveryagent_error_string(const void* self) {
     libqt_string _str = QBluetoothServiceDiscoveryAgent_ErrorString((QBluetoothServiceDiscoveryAgent*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of QBluetoothServiceInfo* */ q_bluetoothservicediscoveryagent_discovered_services(void* self) {
+libqt_list /* of QBluetoothServiceInfo* */ q_bluetoothservicediscoveryagent_discovered_services(const void* self) {
     libqt_list _arr = QBluetoothServiceDiscoveryAgent_DiscoveredServices((QBluetoothServiceDiscoveryAgent*)self);
     return _arr;
 }
@@ -91,20 +91,20 @@ void q_bluetoothservicediscoveryagent_set_uuid_filter(void* self, libqt_list /* 
     QBluetoothServiceDiscoveryAgent_SetUuidFilter((QBluetoothServiceDiscoveryAgent*)self, uuids);
 }
 
-void q_bluetoothservicediscoveryagent_set_uuid_filter2(void* self, void* uuid) {
+void q_bluetoothservicediscoveryagent_set_uuid_filter2(void* self, const void* uuid) {
     QBluetoothServiceDiscoveryAgent_SetUuidFilter2((QBluetoothServiceDiscoveryAgent*)self, (QBluetoothUuid*)uuid);
 }
 
-libqt_list /* of QBluetoothUuid* */ q_bluetoothservicediscoveryagent_uuid_filter(void* self) {
+libqt_list /* of QBluetoothUuid* */ q_bluetoothservicediscoveryagent_uuid_filter(const void* self) {
     libqt_list _arr = QBluetoothServiceDiscoveryAgent_UuidFilter((QBluetoothServiceDiscoveryAgent*)self);
     return _arr;
 }
 
-bool q_bluetoothservicediscoveryagent_set_remote_address(void* self, void* address) {
+bool q_bluetoothservicediscoveryagent_set_remote_address(void* self, const void* address) {
     return QBluetoothServiceDiscoveryAgent_SetRemoteAddress((QBluetoothServiceDiscoveryAgent*)self, (QBluetoothAddress*)address);
 }
 
-QBluetoothAddress* q_bluetoothservicediscoveryagent_remote_address(void* self) {
+QBluetoothAddress* q_bluetoothservicediscoveryagent_remote_address(const void* self) {
     return QBluetoothServiceDiscoveryAgent_RemoteAddress((QBluetoothServiceDiscoveryAgent*)self);
 }
 
@@ -120,11 +120,11 @@ void q_bluetoothservicediscoveryagent_clear(void* self) {
     QBluetoothServiceDiscoveryAgent_Clear((QBluetoothServiceDiscoveryAgent*)self);
 }
 
-void q_bluetoothservicediscoveryagent_service_discovered(void* self, void* info) {
+void q_bluetoothservicediscoveryagent_service_discovered(void* self, const void* info) {
     QBluetoothServiceDiscoveryAgent_ServiceDiscovered((QBluetoothServiceDiscoveryAgent*)self, (QBluetoothServiceInfo*)info);
 }
 
-void q_bluetoothservicediscoveryagent_on_service_discovered(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothservicediscoveryagent_on_service_discovered(void* self, void (*callback)(void*, const void*)) {
     QBluetoothServiceDiscoveryAgent_Connect_ServiceDiscovered((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
 }
 
@@ -170,7 +170,7 @@ void q_bluetoothservicediscoveryagent_start1(void* self, int32_t mode) {
     QBluetoothServiceDiscoveryAgent_Start1((QBluetoothServiceDiscoveryAgent*)self, mode);
 }
 
-const char* q_bluetoothservicediscoveryagent_object_name(void* self) {
+const char* q_bluetoothservicediscoveryagent_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -181,19 +181,19 @@ void q_bluetoothservicediscoveryagent_set_object_name(void* self, const char* na
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_bluetoothservicediscoveryagent_is_widget_type(void* self) {
+bool q_bluetoothservicediscoveryagent_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_bluetoothservicediscoveryagent_is_window_type(void* self) {
+bool q_bluetoothservicediscoveryagent_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_bluetoothservicediscoveryagent_is_quick_item_type(void* self) {
+bool q_bluetoothservicediscoveryagent_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_bluetoothservicediscoveryagent_signals_blocked(void* self) {
+bool q_bluetoothservicediscoveryagent_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -201,7 +201,7 @@ bool q_bluetoothservicediscoveryagent_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_bluetoothservicediscoveryagent_thread(void* self) {
+QThread* q_bluetoothservicediscoveryagent_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -225,7 +225,7 @@ void q_bluetoothservicediscoveryagent_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_bluetoothservicediscoveryagent_children(void* self) {
+libqt_list /* of QObject* */ q_bluetoothservicediscoveryagent_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -242,55 +242,55 @@ void q_bluetoothservicediscoveryagent_remove_event_filter(void* self, void* obj)
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_bluetoothservicediscoveryagent_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_bluetoothservicediscoveryagent_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect3(void* self) {
+bool q_bluetoothservicediscoveryagent_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect4(void* self, void* receiver) {
+bool q_bluetoothservicediscoveryagent_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect5(void* param1) {
+bool q_bluetoothservicediscoveryagent_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_bluetoothservicediscoveryagent_dump_object_tree(void* self) {
+void q_bluetoothservicediscoveryagent_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_bluetoothservicediscoveryagent_dump_object_info(void* self) {
+void q_bluetoothservicediscoveryagent_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_bluetoothservicediscoveryagent_set_property(void* self, const char* name, void* value) {
+bool q_bluetoothservicediscoveryagent_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_bluetoothservicediscoveryagent_property(void* self, const char* name) {
+QVariant* q_bluetoothservicediscoveryagent_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_bluetoothservicediscoveryagent_dynamic_property_names(void* self) {
+const char** q_bluetoothservicediscoveryagent_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -311,7 +311,7 @@ QBindingStorage* q_bluetoothservicediscoveryagent_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_bluetoothservicediscoveryagent_binding_storage2(void* self) {
+const QBindingStorage* q_bluetoothservicediscoveryagent_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -323,11 +323,11 @@ void q_bluetoothservicediscoveryagent_on_destroyed(void* self, void (*callback)(
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_bluetoothservicediscoveryagent_parent(void* self) {
+QObject* q_bluetoothservicediscoveryagent_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_bluetoothservicediscoveryagent_inherits(void* self, const char* classname) {
+bool q_bluetoothservicediscoveryagent_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -343,31 +343,31 @@ int32_t q_bluetoothservicediscoveryagent_start_timer23(void* self, int64_t time,
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_bluetoothservicediscoveryagent_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect1(void* self, const char* signal) {
+bool q_bluetoothservicediscoveryagent_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_bluetoothservicediscoveryagent_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_bluetoothservicediscoveryagent_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_bluetoothservicediscoveryagent_disconnect23(void* self, void* receiver, const char* member) {
+bool q_bluetoothservicediscoveryagent_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -439,76 +439,44 @@ void q_bluetoothservicediscoveryagent_on_custom_event(void* self, void (*callbac
     QBluetoothServiceDiscoveryAgent_OnCustomEvent((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
 }
 
-void q_bluetoothservicediscoveryagent_connect_notify(void* self, void* signal) {
+void q_bluetoothservicediscoveryagent_connect_notify(void* self, const void* signal) {
     QBluetoothServiceDiscoveryAgent_ConnectNotify((QBluetoothServiceDiscoveryAgent*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothservicediscoveryagent_super_connect_notify(void* self, void* signal) {
+void q_bluetoothservicediscoveryagent_super_connect_notify(void* self, const void* signal) {
     QBluetoothServiceDiscoveryAgent_SuperConnectNotify((QBluetoothServiceDiscoveryAgent*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothservicediscoveryagent_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothservicediscoveryagent_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QBluetoothServiceDiscoveryAgent_OnConnectNotify((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
 }
 
-void q_bluetoothservicediscoveryagent_disconnect_notify(void* self, void* signal) {
+void q_bluetoothservicediscoveryagent_disconnect_notify(void* self, const void* signal) {
     QBluetoothServiceDiscoveryAgent_DisconnectNotify((QBluetoothServiceDiscoveryAgent*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothservicediscoveryagent_super_disconnect_notify(void* self, void* signal) {
+void q_bluetoothservicediscoveryagent_super_disconnect_notify(void* self, const void* signal) {
     QBluetoothServiceDiscoveryAgent_SuperDisconnectNotify((QBluetoothServiceDiscoveryAgent*)self, (QMetaMethod*)signal);
 }
 
-void q_bluetoothservicediscoveryagent_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_bluetoothservicediscoveryagent_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QBluetoothServiceDiscoveryAgent_OnDisconnectNotify((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
 }
 
-QObject* q_bluetoothservicediscoveryagent_sender(void* self) {
+QObject* q_bluetoothservicediscoveryagent_sender(const void* self) {
     return QBluetoothServiceDiscoveryAgent_Sender((QBluetoothServiceDiscoveryAgent*)self);
 }
 
-QObject* q_bluetoothservicediscoveryagent_super_sender(void* self) {
-    return QBluetoothServiceDiscoveryAgent_SuperSender((QBluetoothServiceDiscoveryAgent*)self);
-}
-
-void q_bluetoothservicediscoveryagent_on_sender(void* self, QObject* (*callback)()) {
-    QBluetoothServiceDiscoveryAgent_OnSender((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
-}
-
-int32_t q_bluetoothservicediscoveryagent_sender_signal_index(void* self) {
+int32_t q_bluetoothservicediscoveryagent_sender_signal_index(const void* self) {
     return QBluetoothServiceDiscoveryAgent_SenderSignalIndex((QBluetoothServiceDiscoveryAgent*)self);
 }
 
-int32_t q_bluetoothservicediscoveryagent_super_sender_signal_index(void* self) {
-    return QBluetoothServiceDiscoveryAgent_SuperSenderSignalIndex((QBluetoothServiceDiscoveryAgent*)self);
-}
-
-void q_bluetoothservicediscoveryagent_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QBluetoothServiceDiscoveryAgent_OnSenderSignalIndex((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
-}
-
-int32_t q_bluetoothservicediscoveryagent_receivers(void* self, const char* signal) {
+int32_t q_bluetoothservicediscoveryagent_receivers(const void* self, const char* signal) {
     return QBluetoothServiceDiscoveryAgent_Receivers((QBluetoothServiceDiscoveryAgent*)self, signal);
 }
 
-int32_t q_bluetoothservicediscoveryagent_super_receivers(void* self, const char* signal) {
-    return QBluetoothServiceDiscoveryAgent_SuperReceivers((QBluetoothServiceDiscoveryAgent*)self, signal);
-}
-
-void q_bluetoothservicediscoveryagent_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QBluetoothServiceDiscoveryAgent_OnReceivers((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
-}
-
-bool q_bluetoothservicediscoveryagent_is_signal_connected(void* self, void* signal) {
+bool q_bluetoothservicediscoveryagent_is_signal_connected(const void* self, const void* signal) {
     return QBluetoothServiceDiscoveryAgent_IsSignalConnected((QBluetoothServiceDiscoveryAgent*)self, (QMetaMethod*)signal);
-}
-
-bool q_bluetoothservicediscoveryagent_super_is_signal_connected(void* self, void* signal) {
-    return QBluetoothServiceDiscoveryAgent_SuperIsSignalConnected((QBluetoothServiceDiscoveryAgent*)self, (QMetaMethod*)signal);
-}
-
-void q_bluetoothservicediscoveryagent_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QBluetoothServiceDiscoveryAgent_OnIsSignalConnected((QBluetoothServiceDiscoveryAgent*)self, (intptr_t)callback);
 }
 
 void q_bluetoothservicediscoveryagent_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

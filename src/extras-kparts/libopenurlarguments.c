@@ -5,15 +5,15 @@ KParts__OpenUrlArguments* k_parts__openurlarguments_new() {
     return KParts__OpenUrlArguments_New();
 }
 
-KParts__OpenUrlArguments* k_parts__openurlarguments_new2(void* other) {
+KParts__OpenUrlArguments* k_parts__openurlarguments_new2(const void* other) {
     return KParts__OpenUrlArguments_New2((KParts__OpenUrlArguments*)other);
 }
 
-void k_parts__openurlarguments_operator_assign(void* self, void* other) {
+void k_parts__openurlarguments_operator_assign(void* self, const void* other) {
     KParts__OpenUrlArguments_OperatorAssign((KParts__OpenUrlArguments*)self, (KParts__OpenUrlArguments*)other);
 }
 
-bool k_parts__openurlarguments_reload(void* self) {
+bool k_parts__openurlarguments_reload(const void* self) {
     return KParts__OpenUrlArguments_Reload((KParts__OpenUrlArguments*)self);
 }
 
@@ -21,7 +21,7 @@ void k_parts__openurlarguments_set_reload(void* self, bool b) {
     KParts__OpenUrlArguments_SetReload((KParts__OpenUrlArguments*)self, b);
 }
 
-int32_t k_parts__openurlarguments_x_offset(void* self) {
+int32_t k_parts__openurlarguments_x_offset(const void* self) {
     return KParts__OpenUrlArguments_XOffset((KParts__OpenUrlArguments*)self);
 }
 
@@ -29,7 +29,7 @@ void k_parts__openurlarguments_set_x_offset(void* self, int x) {
     KParts__OpenUrlArguments_SetXOffset((KParts__OpenUrlArguments*)self, x);
 }
 
-int32_t k_parts__openurlarguments_y_offset(void* self) {
+int32_t k_parts__openurlarguments_y_offset(const void* self) {
     return KParts__OpenUrlArguments_YOffset((KParts__OpenUrlArguments*)self);
 }
 
@@ -37,7 +37,7 @@ void k_parts__openurlarguments_set_y_offset(void* self, int y) {
     KParts__OpenUrlArguments_SetYOffset((KParts__OpenUrlArguments*)self, y);
 }
 
-const char* k_parts__openurlarguments_mime_type(void* self) {
+const char* k_parts__openurlarguments_mime_type(const void* self) {
     libqt_string _str = KParts__OpenUrlArguments_MimeType((KParts__OpenUrlArguments*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -48,7 +48,7 @@ void k_parts__openurlarguments_set_mime_type(void* self, const char* mime) {
     KParts__OpenUrlArguments_SetMimeType((KParts__OpenUrlArguments*)self, qstring(mime));
 }
 
-bool k_parts__openurlarguments_action_requested_by_user(void* self) {
+bool k_parts__openurlarguments_action_requested_by_user(const void* self) {
     return KParts__OpenUrlArguments_ActionRequestedByUser((KParts__OpenUrlArguments*)self);
 }
 
@@ -111,7 +111,7 @@ libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_dat
     return _ret;
 }
 
-libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_data2(void* self) {
+libqt_map /* of const char* to const char* */ k_parts__openurlarguments_meta_data2(const void* self) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = KParts__OpenUrlArguments_MetaData2((KParts__OpenUrlArguments*)self);
     libqt_map _ret;

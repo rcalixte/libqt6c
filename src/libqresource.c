@@ -11,7 +11,7 @@ QResource* q_resource_new2(const char* file) {
     return QResource_New2(qstring(file));
 }
 
-QResource* q_resource_new3(const char* file, void* locale) {
+QResource* q_resource_new3(const char* file, const void* locale) {
     return QResource_New3(qstring(file), (QLocale*)locale);
 }
 
@@ -19,56 +19,56 @@ void q_resource_set_file_name(void* self, const char* file) {
     QResource_SetFileName((QResource*)self, qstring(file));
 }
 
-const char* q_resource_file_name(void* self) {
+const char* q_resource_file_name(const void* self) {
     libqt_string _str = QResource_FileName((QResource*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_resource_absolute_file_path(void* self) {
+const char* q_resource_absolute_file_path(const void* self) {
     libqt_string _str = QResource_AbsoluteFilePath((QResource*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_resource_set_locale(void* self, void* locale) {
+void q_resource_set_locale(void* self, const void* locale) {
     QResource_SetLocale((QResource*)self, (QLocale*)locale);
 }
 
-QLocale* q_resource_locale(void* self) {
+QLocale* q_resource_locale(const void* self) {
     return QResource_Locale((QResource*)self);
 }
 
-bool q_resource_is_valid(void* self) {
+bool q_resource_is_valid(const void* self) {
     return QResource_IsValid((QResource*)self);
 }
 
-int32_t q_resource_compression_algorithm(void* self) {
+int32_t q_resource_compression_algorithm(const void* self) {
     return QResource_CompressionAlgorithm((QResource*)self);
 }
 
-int64_t q_resource_size(void* self) {
+int64_t q_resource_size(const void* self) {
     return QResource_Size((QResource*)self);
 }
 
-const unsigned char* q_resource_data(void* self) {
+const unsigned char* q_resource_data(const void* self) {
     return (unsigned char*)QResource_Data((QResource*)self);
 }
 
-int64_t q_resource_uncompressed_size(void* self) {
+int64_t q_resource_uncompressed_size(const void* self) {
     return QResource_UncompressedSize((QResource*)self);
 }
 
-char* q_resource_uncompressed_data(void* self) {
+char* q_resource_uncompressed_data(const void* self) {
     libqt_string _str = QResource_UncompressedData((QResource*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_resource_last_modified(void* self) {
+QDateTime* q_resource_last_modified(const void* self) {
     return QResource_LastModified((QResource*)self);
 }
 

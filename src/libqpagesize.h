@@ -28,7 +28,7 @@ QPageSize* q_pagesize_new2(int32_t pageSizeId);
 ///
 /// @param pointSize QSize*
 ///
-QPageSize* q_pagesize_new3(void* pointSize);
+QPageSize* q_pagesize_new3(const void* pointSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html)
 
@@ -37,7 +37,7 @@ QPageSize* q_pagesize_new3(void* pointSize);
 /// @param size QSizeF*
 /// @param units enum QPageSize__Unit
 ///
-QPageSize* q_pagesize_new4(void* size, int32_t units);
+QPageSize* q_pagesize_new4(const void* size, int32_t units);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html)
 
@@ -45,7 +45,7 @@ QPageSize* q_pagesize_new4(void* size, int32_t units);
 ///
 /// @param other QPageSize*
 ///
-QPageSize* q_pagesize_new5(void* other);
+QPageSize* q_pagesize_new5(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html)
 
@@ -54,7 +54,7 @@ QPageSize* q_pagesize_new5(void* other);
 /// @param pointSize QSize*
 /// @param name const char*
 ///
-QPageSize* q_pagesize_new6(void* pointSize, const char* name);
+QPageSize* q_pagesize_new6(const void* pointSize, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html)
 
@@ -64,7 +64,7 @@ QPageSize* q_pagesize_new6(void* pointSize, const char* name);
 /// @param name const char*
 /// @param matchPolicy enum QPageSize__SizeMatchPolicy
 ///
-QPageSize* q_pagesize_new7(void* pointSize, const char* name, int32_t matchPolicy);
+QPageSize* q_pagesize_new7(const void* pointSize, const char* name, int32_t matchPolicy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html)
 
@@ -74,7 +74,7 @@ QPageSize* q_pagesize_new7(void* pointSize, const char* name, int32_t matchPolic
 /// @param units enum QPageSize__Unit
 /// @param name const char*
 ///
-QPageSize* q_pagesize_new8(void* size, int32_t units, const char* name);
+QPageSize* q_pagesize_new8(const void* size, int32_t units, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html)
 
@@ -85,14 +85,14 @@ QPageSize* q_pagesize_new8(void* size, int32_t units, const char* name);
 /// @param name const char*
 /// @param matchPolicy enum QPageSize__SizeMatchPolicy
 ///
-QPageSize* q_pagesize_new9(void* size, int32_t units, const char* name, int32_t matchPolicy);
+QPageSize* q_pagesize_new9(const void* size, int32_t units, const char* name, int32_t matchPolicy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#operator-eq)
 ///
 /// @param self QPageSize*
 /// @param other QPageSize*
 ///
-void q_pagesize_operator_assign(void* self, void* other);
+void q_pagesize_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#swap)
 ///
@@ -103,100 +103,100 @@ void q_pagesize_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#isEquivalentTo)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 /// @param other QPageSize*
 ///
-bool q_pagesize_is_equivalent_to(void* self, void* other);
+bool q_pagesize_is_equivalent_to(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#isValid)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
-bool q_pagesize_is_valid(void* self);
+bool q_pagesize_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#key)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
-const char* q_pagesize_key(void* self);
+const char* q_pagesize_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
-const char* q_pagesize_name(void* self);
+const char* q_pagesize_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#id)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
 /// @return enum QPageSize__PageSizeId
 ///
-int32_t q_pagesize_id(void* self);
+int32_t q_pagesize_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#windowsId)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
-int32_t q_pagesize_windows_id(void* self);
+int32_t q_pagesize_windows_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#definitionSize)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
-QSizeF* q_pagesize_definition_size(void* self);
+QSizeF* q_pagesize_definition_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#definitionUnits)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
 /// @return enum QPageSize__Unit
 ///
-int32_t q_pagesize_definition_units(void* self);
+int32_t q_pagesize_definition_units(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#size)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 /// @param units enum QPageSize__Unit
 ///
-QSizeF* q_pagesize_size(void* self, int32_t units);
+QSizeF* q_pagesize_size(const void* self, int32_t units);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#sizePoints)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
-QSize* q_pagesize_size_points(void* self);
+QSize* q_pagesize_size_points(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#sizePixels)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 /// @param resolution int
 ///
-QSize* q_pagesize_size_pixels(void* self, int resolution);
+QSize* q_pagesize_size_pixels(const void* self, int resolution);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#rect)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 /// @param units enum QPageSize__Unit
 ///
-QRectF* q_pagesize_rect(void* self, int32_t units);
+QRectF* q_pagesize_rect(const void* self, int32_t units);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#rectPoints)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 ///
-QRect* q_pagesize_rect_points(void* self);
+QRect* q_pagesize_rect_points(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#rectPixels)
 ///
-/// @param self QPageSize*
+/// @param self const QPageSize*
 /// @param resolution int
 ///
-QRect* q_pagesize_rect_pixels(void* self, int resolution);
+QRect* q_pagesize_rect_pixels(const void* self, int resolution);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#key)
 ///
@@ -220,7 +220,7 @@ const char* q_pagesize_name2(int32_t pageSizeId);
 ///
 /// @return enum QPageSize__PageSizeId
 ///
-int32_t q_pagesize_id2(void* pointSize);
+int32_t q_pagesize_id2(const void* pointSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#id)
 ///
@@ -229,7 +229,7 @@ int32_t q_pagesize_id2(void* pointSize);
 ///
 /// @return enum QPageSize__PageSizeId
 ///
-int32_t q_pagesize_id3(void* size, int32_t units);
+int32_t q_pagesize_id3(const void* size, int32_t units);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#id)
 ///
@@ -286,7 +286,7 @@ QSize* q_pagesize_size_pixels2(int32_t pageSizeId, int resolution);
 ///
 /// @return enum QPageSize__PageSizeId
 ///
-int32_t q_pagesize_id22(void* pointSize, int32_t matchPolicy);
+int32_t q_pagesize_id22(const void* pointSize, int32_t matchPolicy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#id)
 ///
@@ -296,7 +296,7 @@ int32_t q_pagesize_id22(void* pointSize, int32_t matchPolicy);
 ///
 /// @return enum QPageSize__PageSizeId
 ///
-int32_t q_pagesize_id32(void* size, int32_t units, int32_t matchPolicy);
+int32_t q_pagesize_id32(const void* size, int32_t units, int32_t matchPolicy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpagesize.html#dtor.QPageSize)
 ///

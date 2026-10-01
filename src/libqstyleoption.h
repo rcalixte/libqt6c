@@ -20,7 +20,7 @@ QStyleOption* q_styleoption_new();
 ///
 /// @param other QStyleOption*
 ///
-QStyleOption* q_styleoption_new2(void* other);
+QStyleOption* q_styleoption_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html)
 
@@ -41,9 +41,9 @@ QStyleOption* q_styleoption_new4(int version, int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOption*
+/// @param self const QStyleOption*
 ///
-int32_t q_styleoption_version(void* self);
+int32_t q_styleoption_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
@@ -54,9 +54,9 @@ void q_styleoption_set_version(void* self, int version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOption*
+/// @param self const QStyleOption*
 ///
-int32_t q_styleoption_type(void* self);
+int32_t q_styleoption_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
@@ -67,11 +67,11 @@ void q_styleoption_set_type(void* self, int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOption*
+/// @param self const QStyleOption*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoption_state(void* self);
+int32_t q_styleoption_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
@@ -82,11 +82,11 @@ void q_styleoption_set_state(void* self, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOption*
+/// @param self const QStyleOption*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoption_direction(void* self);
+int32_t q_styleoption_direction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
@@ -97,9 +97,9 @@ void q_styleoption_set_direction(void* self, int32_t direction);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOption*
+/// @param self const QStyleOption*
 ///
-QRect* q_styleoption_rect(void* self);
+QRect* q_styleoption_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
@@ -110,9 +110,9 @@ void q_styleoption_set_rect(void* self, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOption*
+/// @param self const QStyleOption*
 ///
-QFontMetrics* q_styleoption_font_metrics(void* self);
+QFontMetrics* q_styleoption_font_metrics(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
@@ -123,9 +123,9 @@ void q_styleoption_set_font_metrics(void* self, void* fontMetrics);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOption*
+/// @param self const QStyleOption*
 ///
-QPalette* q_styleoption_palette(void* self);
+QPalette* q_styleoption_palette(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
@@ -136,9 +136,9 @@ void q_styleoption_set_palette(void* self, void* palette);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOption*
+/// @param self const QStyleOption*
 ///
-QObject* q_styleoption_style_object(void* self);
+QObject* q_styleoption_style_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
@@ -152,14 +152,14 @@ void q_styleoption_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOption*
 /// @param w QWidget*
 ///
-void q_styleoption_init_from(void* self, void* w);
+void q_styleoption_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
 /// @param self QStyleOption*
 /// @param other QStyleOption*
 ///
-void q_styleoption_operator_assign(void* self, void* other);
+void q_styleoption_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#dtor.QStyleOption)
 ///
@@ -181,13 +181,13 @@ QStyleOptionFocusRect* q_styleoptionfocusrect_new();
 ///
 /// @param other QStyleOptionFocusRect*
 ///
-QStyleOptionFocusRect* q_styleoptionfocusrect_new2(void* other);
+QStyleOptionFocusRect* q_styleoptionfocusrect_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionfocusrect.html#backgroundColor-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
-QColor* q_styleoptionfocusrect_background_color(void* self);
+QColor* q_styleoptionfocusrect_background_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionfocusrect.html#backgroundColor-var)
 ///
@@ -201,15 +201,15 @@ void q_styleoptionfocusrect_set_background_color(void* self, void* backgroundCol
 /// @param self QStyleOptionFocusRect*
 /// @param param1 QStyleOptionFocusRect*
 ///
-void q_styleoptionfocusrect_operator_assign(void* self, void* param1);
+void q_styleoptionfocusrect_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
-int32_t q_styleoptionfocusrect_version(void* self);
+int32_t q_styleoptionfocusrect_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -224,9 +224,9 @@ void q_styleoptionfocusrect_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
-int32_t q_styleoptionfocusrect_type(void* self);
+int32_t q_styleoptionfocusrect_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -241,11 +241,11 @@ void q_styleoptionfocusrect_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionfocusrect_state(void* self);
+int32_t q_styleoptionfocusrect_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -260,11 +260,11 @@ void q_styleoptionfocusrect_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionfocusrect_direction(void* self);
+int32_t q_styleoptionfocusrect_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -279,9 +279,9 @@ void q_styleoptionfocusrect_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
-QRect* q_styleoptionfocusrect_rect(void* self);
+QRect* q_styleoptionfocusrect_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -296,9 +296,9 @@ void q_styleoptionfocusrect_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
-QFontMetrics* q_styleoptionfocusrect_font_metrics(void* self);
+QFontMetrics* q_styleoptionfocusrect_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -313,9 +313,9 @@ void q_styleoptionfocusrect_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
-QPalette* q_styleoptionfocusrect_palette(void* self);
+QPalette* q_styleoptionfocusrect_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -330,9 +330,9 @@ void q_styleoptionfocusrect_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionFocusRect*
+/// @param self const QStyleOptionFocusRect*
 ///
-QObject* q_styleoptionfocusrect_style_object(void* self);
+QObject* q_styleoptionfocusrect_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -350,7 +350,7 @@ void q_styleoptionfocusrect_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionFocusRect*
 /// @param w QWidget*
 ///
-void q_styleoptionfocusrect_init_from(void* self, void* w);
+void q_styleoptionfocusrect_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionfocusrect.html#dtor.QStyleOptionFocusRect)
 ///
@@ -372,13 +372,13 @@ QStyleOptionFrame* q_styleoptionframe_new();
 ///
 /// @param other QStyleOptionFrame*
 ///
-QStyleOptionFrame* q_styleoptionframe_new2(void* other);
+QStyleOptionFrame* q_styleoptionframe_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#lineWidth-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
-int32_t q_styleoptionframe_line_width(void* self);
+int32_t q_styleoptionframe_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#lineWidth-var)
 ///
@@ -389,9 +389,9 @@ void q_styleoptionframe_set_line_width(void* self, int lineWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#midLineWidth-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
-int32_t q_styleoptionframe_mid_line_width(void* self);
+int32_t q_styleoptionframe_mid_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#midLineWidth-var)
 ///
@@ -402,11 +402,11 @@ void q_styleoptionframe_set_mid_line_width(void* self, int midLineWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#features-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
 /// @return flag of enum QStyleOptionFrame__FrameFeature
 ///
-int32_t q_styleoptionframe_features(void* self);
+int32_t q_styleoptionframe_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#features-var)
 ///
@@ -417,11 +417,11 @@ void q_styleoptionframe_set_features(void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#frameShape-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
 /// @return enum QFrame__Shape
 ///
-int32_t q_styleoptionframe_frame_shape(void* self);
+int32_t q_styleoptionframe_frame_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#frameShape-var)
 ///
@@ -435,15 +435,15 @@ void q_styleoptionframe_set_frame_shape(void* self, int32_t frameShape);
 /// @param self QStyleOptionFrame*
 /// @param param1 QStyleOptionFrame*
 ///
-void q_styleoptionframe_operator_assign(void* self, void* param1);
+void q_styleoptionframe_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
-int32_t q_styleoptionframe_version(void* self);
+int32_t q_styleoptionframe_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -458,9 +458,9 @@ void q_styleoptionframe_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
-int32_t q_styleoptionframe_type(void* self);
+int32_t q_styleoptionframe_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -475,11 +475,11 @@ void q_styleoptionframe_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionframe_state(void* self);
+int32_t q_styleoptionframe_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -494,11 +494,11 @@ void q_styleoptionframe_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionframe_direction(void* self);
+int32_t q_styleoptionframe_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -513,9 +513,9 @@ void q_styleoptionframe_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
-QRect* q_styleoptionframe_rect(void* self);
+QRect* q_styleoptionframe_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -530,9 +530,9 @@ void q_styleoptionframe_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
-QFontMetrics* q_styleoptionframe_font_metrics(void* self);
+QFontMetrics* q_styleoptionframe_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -547,9 +547,9 @@ void q_styleoptionframe_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
-QPalette* q_styleoptionframe_palette(void* self);
+QPalette* q_styleoptionframe_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -564,9 +564,9 @@ void q_styleoptionframe_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionFrame*
+/// @param self const QStyleOptionFrame*
 ///
-QObject* q_styleoptionframe_style_object(void* self);
+QObject* q_styleoptionframe_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -584,7 +584,7 @@ void q_styleoptionframe_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionFrame*
 /// @param w QWidget*
 ///
-void q_styleoptionframe_init_from(void* self, void* w);
+void q_styleoptionframe_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionframe.html#dtor.QStyleOptionFrame)
 ///
@@ -606,13 +606,13 @@ QStyleOptionTabWidgetFrame* q_styleoptiontabwidgetframe_new();
 ///
 /// @param other QStyleOptionTabWidgetFrame*
 ///
-QStyleOptionTabWidgetFrame* q_styleoptiontabwidgetframe_new2(void* other);
+QStyleOptionTabWidgetFrame* q_styleoptiontabwidgetframe_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#lineWidth-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-int32_t q_styleoptiontabwidgetframe_line_width(void* self);
+int32_t q_styleoptiontabwidgetframe_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#lineWidth-var)
 ///
@@ -623,9 +623,9 @@ void q_styleoptiontabwidgetframe_set_line_width(void* self, int lineWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#midLineWidth-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-int32_t q_styleoptiontabwidgetframe_mid_line_width(void* self);
+int32_t q_styleoptiontabwidgetframe_mid_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#midLineWidth-var)
 ///
@@ -636,11 +636,11 @@ void q_styleoptiontabwidgetframe_set_mid_line_width(void* self, int midLineWidth
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#shape-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
 /// @return enum QTabBar__Shape
 ///
-int32_t q_styleoptiontabwidgetframe_shape(void* self);
+int32_t q_styleoptiontabwidgetframe_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#shape-var)
 ///
@@ -651,9 +651,9 @@ void q_styleoptiontabwidgetframe_set_shape(void* self, int32_t shape);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#tabBarSize-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QSize* q_styleoptiontabwidgetframe_tab_bar_size(void* self);
+QSize* q_styleoptiontabwidgetframe_tab_bar_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#tabBarSize-var)
 ///
@@ -664,9 +664,9 @@ void q_styleoptiontabwidgetframe_set_tab_bar_size(void* self, void* tabBarSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#rightCornerWidgetSize-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QSize* q_styleoptiontabwidgetframe_right_corner_widget_size(void* self);
+QSize* q_styleoptiontabwidgetframe_right_corner_widget_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#rightCornerWidgetSize-var)
 ///
@@ -677,9 +677,9 @@ void q_styleoptiontabwidgetframe_set_right_corner_widget_size(void* self, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#leftCornerWidgetSize-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QSize* q_styleoptiontabwidgetframe_left_corner_widget_size(void* self);
+QSize* q_styleoptiontabwidgetframe_left_corner_widget_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#leftCornerWidgetSize-var)
 ///
@@ -690,9 +690,9 @@ void q_styleoptiontabwidgetframe_set_left_corner_widget_size(void* self, void* l
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#tabBarRect-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QRect* q_styleoptiontabwidgetframe_tab_bar_rect(void* self);
+QRect* q_styleoptiontabwidgetframe_tab_bar_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#tabBarRect-var)
 ///
@@ -703,9 +703,9 @@ void q_styleoptiontabwidgetframe_set_tab_bar_rect(void* self, void* tabBarRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#selectedTabRect-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QRect* q_styleoptiontabwidgetframe_selected_tab_rect(void* self);
+QRect* q_styleoptiontabwidgetframe_selected_tab_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#selectedTabRect-var)
 ///
@@ -719,15 +719,15 @@ void q_styleoptiontabwidgetframe_set_selected_tab_rect(void* self, void* selecte
 /// @param self QStyleOptionTabWidgetFrame*
 /// @param param1 QStyleOptionTabWidgetFrame*
 ///
-void q_styleoptiontabwidgetframe_operator_assign(void* self, void* param1);
+void q_styleoptiontabwidgetframe_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-int32_t q_styleoptiontabwidgetframe_version(void* self);
+int32_t q_styleoptiontabwidgetframe_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -742,9 +742,9 @@ void q_styleoptiontabwidgetframe_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-int32_t q_styleoptiontabwidgetframe_type(void* self);
+int32_t q_styleoptiontabwidgetframe_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -759,11 +759,11 @@ void q_styleoptiontabwidgetframe_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiontabwidgetframe_state(void* self);
+int32_t q_styleoptiontabwidgetframe_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -778,11 +778,11 @@ void q_styleoptiontabwidgetframe_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiontabwidgetframe_direction(void* self);
+int32_t q_styleoptiontabwidgetframe_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -797,9 +797,9 @@ void q_styleoptiontabwidgetframe_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QRect* q_styleoptiontabwidgetframe_rect(void* self);
+QRect* q_styleoptiontabwidgetframe_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -814,9 +814,9 @@ void q_styleoptiontabwidgetframe_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QFontMetrics* q_styleoptiontabwidgetframe_font_metrics(void* self);
+QFontMetrics* q_styleoptiontabwidgetframe_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -831,9 +831,9 @@ void q_styleoptiontabwidgetframe_set_font_metrics(void* self, void* fontMetrics)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QPalette* q_styleoptiontabwidgetframe_palette(void* self);
+QPalette* q_styleoptiontabwidgetframe_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -848,9 +848,9 @@ void q_styleoptiontabwidgetframe_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionTabWidgetFrame*
+/// @param self const QStyleOptionTabWidgetFrame*
 ///
-QObject* q_styleoptiontabwidgetframe_style_object(void* self);
+QObject* q_styleoptiontabwidgetframe_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -868,7 +868,7 @@ void q_styleoptiontabwidgetframe_set_style_object(void* self, void* styleObject)
 /// @param self QStyleOptionTabWidgetFrame*
 /// @param w QWidget*
 ///
-void q_styleoptiontabwidgetframe_init_from(void* self, void* w);
+void q_styleoptiontabwidgetframe_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#dtor.QStyleOptionTabWidgetFrame)
 ///
@@ -890,15 +890,15 @@ QStyleOptionTabBarBase* q_styleoptiontabbarbase_new();
 ///
 /// @param other QStyleOptionTabBarBase*
 ///
-QStyleOptionTabBarBase* q_styleoptiontabbarbase_new2(void* other);
+QStyleOptionTabBarBase* q_styleoptiontabbarbase_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#shape-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
 /// @return enum QTabBar__Shape
 ///
-int32_t q_styleoptiontabbarbase_shape(void* self);
+int32_t q_styleoptiontabbarbase_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#shape-var)
 ///
@@ -909,9 +909,9 @@ void q_styleoptiontabbarbase_set_shape(void* self, int32_t shape);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#tabBarRect-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-QRect* q_styleoptiontabbarbase_tab_bar_rect(void* self);
+QRect* q_styleoptiontabbarbase_tab_bar_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#tabBarRect-var)
 ///
@@ -922,9 +922,9 @@ void q_styleoptiontabbarbase_set_tab_bar_rect(void* self, void* tabBarRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#selectedTabRect-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-QRect* q_styleoptiontabbarbase_selected_tab_rect(void* self);
+QRect* q_styleoptiontabbarbase_selected_tab_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#selectedTabRect-var)
 ///
@@ -935,9 +935,9 @@ void q_styleoptiontabbarbase_set_selected_tab_rect(void* self, void* selectedTab
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#documentMode-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-bool q_styleoptiontabbarbase_document_mode(void* self);
+bool q_styleoptiontabbarbase_document_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#documentMode-var)
 ///
@@ -951,15 +951,15 @@ void q_styleoptiontabbarbase_set_document_mode(void* self, bool documentMode);
 /// @param self QStyleOptionTabBarBase*
 /// @param param1 QStyleOptionTabBarBase*
 ///
-void q_styleoptiontabbarbase_operator_assign(void* self, void* param1);
+void q_styleoptiontabbarbase_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-int32_t q_styleoptiontabbarbase_version(void* self);
+int32_t q_styleoptiontabbarbase_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -974,9 +974,9 @@ void q_styleoptiontabbarbase_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-int32_t q_styleoptiontabbarbase_type(void* self);
+int32_t q_styleoptiontabbarbase_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -991,11 +991,11 @@ void q_styleoptiontabbarbase_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiontabbarbase_state(void* self);
+int32_t q_styleoptiontabbarbase_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1010,11 +1010,11 @@ void q_styleoptiontabbarbase_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiontabbarbase_direction(void* self);
+int32_t q_styleoptiontabbarbase_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1029,9 +1029,9 @@ void q_styleoptiontabbarbase_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-QRect* q_styleoptiontabbarbase_rect(void* self);
+QRect* q_styleoptiontabbarbase_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1046,9 +1046,9 @@ void q_styleoptiontabbarbase_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-QFontMetrics* q_styleoptiontabbarbase_font_metrics(void* self);
+QFontMetrics* q_styleoptiontabbarbase_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1063,9 +1063,9 @@ void q_styleoptiontabbarbase_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-QPalette* q_styleoptiontabbarbase_palette(void* self);
+QPalette* q_styleoptiontabbarbase_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1080,9 +1080,9 @@ void q_styleoptiontabbarbase_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionTabBarBase*
+/// @param self const QStyleOptionTabBarBase*
 ///
-QObject* q_styleoptiontabbarbase_style_object(void* self);
+QObject* q_styleoptiontabbarbase_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1100,7 +1100,7 @@ void q_styleoptiontabbarbase_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionTabBarBase*
 /// @param w QWidget*
 ///
-void q_styleoptiontabbarbase_init_from(void* self, void* w);
+void q_styleoptiontabbarbase_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#dtor.QStyleOptionTabBarBase)
 ///
@@ -1122,13 +1122,13 @@ QStyleOptionHeader* q_styleoptionheader_new();
 ///
 /// @param other QStyleOptionHeader*
 ///
-QStyleOptionHeader* q_styleoptionheader_new2(void* other);
+QStyleOptionHeader* q_styleoptionheader_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#section-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-int32_t q_styleoptionheader_section(void* self);
+int32_t q_styleoptionheader_section(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#section-var)
 ///
@@ -1141,9 +1141,9 @@ void q_styleoptionheader_set_section(void* self, int section);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-const char* q_styleoptionheader_text(void* self);
+const char* q_styleoptionheader_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#text-var)
 ///
@@ -1154,11 +1154,11 @@ void q_styleoptionheader_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#textAlignment-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptionheader_text_alignment(void* self);
+int32_t q_styleoptionheader_text_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#textAlignment-var)
 ///
@@ -1169,9 +1169,9 @@ void q_styleoptionheader_set_text_alignment(void* self, int32_t textAlignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#icon-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-QIcon* q_styleoptionheader_icon(void* self);
+QIcon* q_styleoptionheader_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#icon-var)
 ///
@@ -1182,11 +1182,11 @@ void q_styleoptionheader_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#iconAlignment-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptionheader_icon_alignment(void* self);
+int32_t q_styleoptionheader_icon_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#iconAlignment-var)
 ///
@@ -1197,11 +1197,11 @@ void q_styleoptionheader_set_icon_alignment(void* self, int32_t iconAlignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#position-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
 /// @return enum QStyleOptionHeader__SectionPosition
 ///
-int32_t q_styleoptionheader_position(void* self);
+int32_t q_styleoptionheader_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#position-var)
 ///
@@ -1212,11 +1212,11 @@ void q_styleoptionheader_set_position(void* self, int32_t position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#selectedPosition-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
 /// @return enum QStyleOptionHeader__SelectedPosition
 ///
-int32_t q_styleoptionheader_selected_position(void* self);
+int32_t q_styleoptionheader_selected_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#selectedPosition-var)
 ///
@@ -1227,11 +1227,11 @@ void q_styleoptionheader_set_selected_position(void* self, int32_t selectedPosit
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#sortIndicator-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
 /// @return enum QStyleOptionHeader__SortIndicator
 ///
-int32_t q_styleoptionheader_sort_indicator(void* self);
+int32_t q_styleoptionheader_sort_indicator(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#sortIndicator-var)
 ///
@@ -1242,11 +1242,11 @@ void q_styleoptionheader_set_sort_indicator(void* self, int32_t sortIndicator);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#orientation-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_styleoptionheader_orientation(void* self);
+int32_t q_styleoptionheader_orientation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#orientation-var)
 ///
@@ -1260,15 +1260,15 @@ void q_styleoptionheader_set_orientation(void* self, int32_t orientation);
 /// @param self QStyleOptionHeader*
 /// @param param1 QStyleOptionHeader*
 ///
-void q_styleoptionheader_operator_assign(void* self, void* param1);
+void q_styleoptionheader_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-int32_t q_styleoptionheader_version(void* self);
+int32_t q_styleoptionheader_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1283,9 +1283,9 @@ void q_styleoptionheader_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-int32_t q_styleoptionheader_type(void* self);
+int32_t q_styleoptionheader_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1300,11 +1300,11 @@ void q_styleoptionheader_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionheader_state(void* self);
+int32_t q_styleoptionheader_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1319,11 +1319,11 @@ void q_styleoptionheader_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionheader_direction(void* self);
+int32_t q_styleoptionheader_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1338,9 +1338,9 @@ void q_styleoptionheader_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-QRect* q_styleoptionheader_rect(void* self);
+QRect* q_styleoptionheader_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1355,9 +1355,9 @@ void q_styleoptionheader_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-QFontMetrics* q_styleoptionheader_font_metrics(void* self);
+QFontMetrics* q_styleoptionheader_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1372,9 +1372,9 @@ void q_styleoptionheader_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-QPalette* q_styleoptionheader_palette(void* self);
+QPalette* q_styleoptionheader_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1389,9 +1389,9 @@ void q_styleoptionheader_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionHeader*
+/// @param self const QStyleOptionHeader*
 ///
-QObject* q_styleoptionheader_style_object(void* self);
+QObject* q_styleoptionheader_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1409,7 +1409,7 @@ void q_styleoptionheader_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionHeader*
 /// @param w QWidget*
 ///
-void q_styleoptionheader_init_from(void* self, void* w);
+void q_styleoptionheader_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#dtor.QStyleOptionHeader)
 ///
@@ -1431,22 +1431,22 @@ QStyleOptionHeaderV2* q_styleoptionheaderv2_new();
 ///
 /// @param other QStyleOptionHeaderV2*
 ///
-QStyleOptionHeaderV2* q_styleoptionheaderv2_new2(void* other);
+QStyleOptionHeaderV2* q_styleoptionheaderv2_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#operator-eq)
 ///
 /// @param self QStyleOptionHeaderV2*
 /// @param param1 QStyleOptionHeaderV2*
 ///
-void q_styleoptionheaderv2_operator_assign(void* self, void* param1);
+void q_styleoptionheaderv2_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#textElideMode-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return enum Qt__TextElideMode
 ///
-int32_t q_styleoptionheaderv2_text_elide_mode(void* self);
+int32_t q_styleoptionheaderv2_text_elide_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#textElideMode-var)
 ///
@@ -1457,9 +1457,9 @@ void q_styleoptionheaderv2_set_text_elide_mode(void* self, int32_t textElideMode
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#isSectionDragTarget-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-bool q_styleoptionheaderv2_is_section_drag_target(void* self);
+bool q_styleoptionheaderv2_is_section_drag_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#isSectionDragTarget-var)
 ///
@@ -1470,9 +1470,9 @@ void q_styleoptionheaderv2_set_is_section_drag_target(void* self, bool isSection
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#unused-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-int32_t q_styleoptionheaderv2_unused(void* self);
+int32_t q_styleoptionheaderv2_unused(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#unused-var)
 ///
@@ -1485,9 +1485,9 @@ void q_styleoptionheaderv2_set_unused(void* self, int unused);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#section-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-int32_t q_styleoptionheaderv2_section(void* self);
+int32_t q_styleoptionheaderv2_section(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1504,9 +1504,9 @@ void q_styleoptionheaderv2_set_section(void* self, int section);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-const char* q_styleoptionheaderv2_text(void* self);
+const char* q_styleoptionheaderv2_text(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1521,11 +1521,11 @@ void q_styleoptionheaderv2_set_text(void* self, const char* text);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#textAlignment-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptionheaderv2_text_alignment(void* self);
+int32_t q_styleoptionheaderv2_text_alignment(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1540,9 +1540,9 @@ void q_styleoptionheaderv2_set_text_alignment(void* self, int32_t textAlignment)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#icon-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-QIcon* q_styleoptionheaderv2_icon(void* self);
+QIcon* q_styleoptionheaderv2_icon(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1557,11 +1557,11 @@ void q_styleoptionheaderv2_set_icon(void* self, void* icon);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#iconAlignment-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptionheaderv2_icon_alignment(void* self);
+int32_t q_styleoptionheaderv2_icon_alignment(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1576,11 +1576,11 @@ void q_styleoptionheaderv2_set_icon_alignment(void* self, int32_t iconAlignment)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#position-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return enum QStyleOptionHeader__SectionPosition
 ///
-int32_t q_styleoptionheaderv2_position(void* self);
+int32_t q_styleoptionheaderv2_position(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1595,11 +1595,11 @@ void q_styleoptionheaderv2_set_position(void* self, int32_t position);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#selectedPosition-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return enum QStyleOptionHeader__SelectedPosition
 ///
-int32_t q_styleoptionheaderv2_selected_position(void* self);
+int32_t q_styleoptionheaderv2_selected_position(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1614,11 +1614,11 @@ void q_styleoptionheaderv2_set_selected_position(void* self, int32_t selectedPos
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#sortIndicator-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return enum QStyleOptionHeader__SortIndicator
 ///
-int32_t q_styleoptionheaderv2_sort_indicator(void* self);
+int32_t q_styleoptionheaderv2_sort_indicator(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1633,11 +1633,11 @@ void q_styleoptionheaderv2_set_sort_indicator(void* self, int32_t sortIndicator)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheader.html#orientation-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_styleoptionheaderv2_orientation(void* self);
+int32_t q_styleoptionheaderv2_orientation(const void* self);
 
 /// Inherited from QStyleOptionHeader
 ///
@@ -1652,9 +1652,9 @@ void q_styleoptionheaderv2_set_orientation(void* self, int32_t orientation);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-int32_t q_styleoptionheaderv2_version(void* self);
+int32_t q_styleoptionheaderv2_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1669,9 +1669,9 @@ void q_styleoptionheaderv2_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-int32_t q_styleoptionheaderv2_type(void* self);
+int32_t q_styleoptionheaderv2_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1686,11 +1686,11 @@ void q_styleoptionheaderv2_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionheaderv2_state(void* self);
+int32_t q_styleoptionheaderv2_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1705,11 +1705,11 @@ void q_styleoptionheaderv2_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionheaderv2_direction(void* self);
+int32_t q_styleoptionheaderv2_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1724,9 +1724,9 @@ void q_styleoptionheaderv2_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-QRect* q_styleoptionheaderv2_rect(void* self);
+QRect* q_styleoptionheaderv2_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1741,9 +1741,9 @@ void q_styleoptionheaderv2_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-QFontMetrics* q_styleoptionheaderv2_font_metrics(void* self);
+QFontMetrics* q_styleoptionheaderv2_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1758,9 +1758,9 @@ void q_styleoptionheaderv2_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-QPalette* q_styleoptionheaderv2_palette(void* self);
+QPalette* q_styleoptionheaderv2_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1775,9 +1775,9 @@ void q_styleoptionheaderv2_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionHeaderV2*
+/// @param self const QStyleOptionHeaderV2*
 ///
-QObject* q_styleoptionheaderv2_style_object(void* self);
+QObject* q_styleoptionheaderv2_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1795,7 +1795,7 @@ void q_styleoptionheaderv2_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionHeaderV2*
 /// @param w QWidget*
 ///
-void q_styleoptionheaderv2_init_from(void* self, void* w);
+void q_styleoptionheaderv2_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#dtor.QStyleOptionHeaderV2)
 ///
@@ -1817,15 +1817,15 @@ QStyleOptionButton* q_styleoptionbutton_new();
 ///
 /// @param other QStyleOptionButton*
 ///
-QStyleOptionButton* q_styleoptionbutton_new2(void* other);
+QStyleOptionButton* q_styleoptionbutton_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#features-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
 /// @return flag of enum QStyleOptionButton__ButtonFeature
 ///
-int32_t q_styleoptionbutton_features(void* self);
+int32_t q_styleoptionbutton_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#features-var)
 ///
@@ -1838,9 +1838,9 @@ void q_styleoptionbutton_set_features(void* self, int32_t features);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-const char* q_styleoptionbutton_text(void* self);
+const char* q_styleoptionbutton_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#text-var)
 ///
@@ -1851,9 +1851,9 @@ void q_styleoptionbutton_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#icon-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-QIcon* q_styleoptionbutton_icon(void* self);
+QIcon* q_styleoptionbutton_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#icon-var)
 ///
@@ -1864,9 +1864,9 @@ void q_styleoptionbutton_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#iconSize-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-QSize* q_styleoptionbutton_icon_size(void* self);
+QSize* q_styleoptionbutton_icon_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#iconSize-var)
 ///
@@ -1880,15 +1880,15 @@ void q_styleoptionbutton_set_icon_size(void* self, void* iconSize);
 /// @param self QStyleOptionButton*
 /// @param param1 QStyleOptionButton*
 ///
-void q_styleoptionbutton_operator_assign(void* self, void* param1);
+void q_styleoptionbutton_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-int32_t q_styleoptionbutton_version(void* self);
+int32_t q_styleoptionbutton_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1903,9 +1903,9 @@ void q_styleoptionbutton_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-int32_t q_styleoptionbutton_type(void* self);
+int32_t q_styleoptionbutton_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1920,11 +1920,11 @@ void q_styleoptionbutton_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionbutton_state(void* self);
+int32_t q_styleoptionbutton_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1939,11 +1939,11 @@ void q_styleoptionbutton_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionbutton_direction(void* self);
+int32_t q_styleoptionbutton_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1958,9 +1958,9 @@ void q_styleoptionbutton_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-QRect* q_styleoptionbutton_rect(void* self);
+QRect* q_styleoptionbutton_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1975,9 +1975,9 @@ void q_styleoptionbutton_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-QFontMetrics* q_styleoptionbutton_font_metrics(void* self);
+QFontMetrics* q_styleoptionbutton_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -1992,9 +1992,9 @@ void q_styleoptionbutton_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-QPalette* q_styleoptionbutton_palette(void* self);
+QPalette* q_styleoptionbutton_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2009,9 +2009,9 @@ void q_styleoptionbutton_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionButton*
+/// @param self const QStyleOptionButton*
 ///
-QObject* q_styleoptionbutton_style_object(void* self);
+QObject* q_styleoptionbutton_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2029,7 +2029,7 @@ void q_styleoptionbutton_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionButton*
 /// @param w QWidget*
 ///
-void q_styleoptionbutton_init_from(void* self, void* w);
+void q_styleoptionbutton_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionbutton.html#dtor.QStyleOptionButton)
 ///
@@ -2051,15 +2051,15 @@ QStyleOptionTab* q_styleoptiontab_new();
 ///
 /// @param other QStyleOptionTab*
 ///
-QStyleOptionTab* q_styleoptiontab_new2(void* other);
+QStyleOptionTab* q_styleoptiontab_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#shape-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
 /// @return enum QTabBar__Shape
 ///
-int32_t q_styleoptiontab_shape(void* self);
+int32_t q_styleoptiontab_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#shape-var)
 ///
@@ -2072,9 +2072,9 @@ void q_styleoptiontab_set_shape(void* self, int32_t shape);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-const char* q_styleoptiontab_text(void* self);
+const char* q_styleoptiontab_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#text-var)
 ///
@@ -2085,9 +2085,9 @@ void q_styleoptiontab_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#icon-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-QIcon* q_styleoptiontab_icon(void* self);
+QIcon* q_styleoptiontab_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#icon-var)
 ///
@@ -2098,9 +2098,9 @@ void q_styleoptiontab_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#row-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-int32_t q_styleoptiontab_row(void* self);
+int32_t q_styleoptiontab_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#row-var)
 ///
@@ -2111,11 +2111,11 @@ void q_styleoptiontab_set_row(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#position-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
 /// @return enum QStyleOptionTab__TabPosition
 ///
-int32_t q_styleoptiontab_position(void* self);
+int32_t q_styleoptiontab_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#position-var)
 ///
@@ -2126,11 +2126,11 @@ void q_styleoptiontab_set_position(void* self, int32_t position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#selectedPosition-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
 /// @return enum QStyleOptionTab__SelectedPosition
 ///
-int32_t q_styleoptiontab_selected_position(void* self);
+int32_t q_styleoptiontab_selected_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#selectedPosition-var)
 ///
@@ -2141,11 +2141,11 @@ void q_styleoptiontab_set_selected_position(void* self, int32_t selectedPosition
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#cornerWidgets-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
 /// @return flag of enum QStyleOptionTab__CornerWidget
 ///
-int32_t q_styleoptiontab_corner_widgets(void* self);
+int32_t q_styleoptiontab_corner_widgets(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#cornerWidgets-var)
 ///
@@ -2156,9 +2156,9 @@ void q_styleoptiontab_set_corner_widgets(void* self, int32_t cornerWidgets);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#iconSize-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-QSize* q_styleoptiontab_icon_size(void* self);
+QSize* q_styleoptiontab_icon_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#iconSize-var)
 ///
@@ -2169,9 +2169,9 @@ void q_styleoptiontab_set_icon_size(void* self, void* iconSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#documentMode-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-bool q_styleoptiontab_document_mode(void* self);
+bool q_styleoptiontab_document_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#documentMode-var)
 ///
@@ -2182,9 +2182,9 @@ void q_styleoptiontab_set_document_mode(void* self, bool documentMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#leftButtonSize-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-QSize* q_styleoptiontab_left_button_size(void* self);
+QSize* q_styleoptiontab_left_button_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#leftButtonSize-var)
 ///
@@ -2195,9 +2195,9 @@ void q_styleoptiontab_set_left_button_size(void* self, void* leftButtonSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#rightButtonSize-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-QSize* q_styleoptiontab_right_button_size(void* self);
+QSize* q_styleoptiontab_right_button_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#rightButtonSize-var)
 ///
@@ -2208,11 +2208,11 @@ void q_styleoptiontab_set_right_button_size(void* self, void* rightButtonSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#features-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
 /// @return flag of enum QStyleOptionTab__TabFeature
 ///
-int32_t q_styleoptiontab_features(void* self);
+int32_t q_styleoptiontab_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#features-var)
 ///
@@ -2223,9 +2223,9 @@ void q_styleoptiontab_set_features(void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#tabIndex-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-int32_t q_styleoptiontab_tab_index(void* self);
+int32_t q_styleoptiontab_tab_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#tabIndex-var)
 ///
@@ -2239,15 +2239,15 @@ void q_styleoptiontab_set_tab_index(void* self, int tabIndex);
 /// @param self QStyleOptionTab*
 /// @param param1 QStyleOptionTab*
 ///
-void q_styleoptiontab_operator_assign(void* self, void* param1);
+void q_styleoptiontab_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-int32_t q_styleoptiontab_version(void* self);
+int32_t q_styleoptiontab_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2262,9 +2262,9 @@ void q_styleoptiontab_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-int32_t q_styleoptiontab_type(void* self);
+int32_t q_styleoptiontab_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2279,11 +2279,11 @@ void q_styleoptiontab_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiontab_state(void* self);
+int32_t q_styleoptiontab_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2298,11 +2298,11 @@ void q_styleoptiontab_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiontab_direction(void* self);
+int32_t q_styleoptiontab_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2317,9 +2317,9 @@ void q_styleoptiontab_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-QRect* q_styleoptiontab_rect(void* self);
+QRect* q_styleoptiontab_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2334,9 +2334,9 @@ void q_styleoptiontab_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-QFontMetrics* q_styleoptiontab_font_metrics(void* self);
+QFontMetrics* q_styleoptiontab_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2351,9 +2351,9 @@ void q_styleoptiontab_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-QPalette* q_styleoptiontab_palette(void* self);
+QPalette* q_styleoptiontab_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2368,9 +2368,9 @@ void q_styleoptiontab_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionTab*
+/// @param self const QStyleOptionTab*
 ///
-QObject* q_styleoptiontab_style_object(void* self);
+QObject* q_styleoptiontab_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2388,7 +2388,7 @@ void q_styleoptiontab_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionTab*
 /// @param w QWidget*
 ///
-void q_styleoptiontab_init_from(void* self, void* w);
+void q_styleoptiontab_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontab.html#dtor.QStyleOptionTab)
 ///
@@ -2410,15 +2410,15 @@ QStyleOptionToolBar* q_styleoptiontoolbar_new();
 ///
 /// @param other QStyleOptionToolBar*
 ///
-QStyleOptionToolBar* q_styleoptiontoolbar_new2(void* other);
+QStyleOptionToolBar* q_styleoptiontoolbar_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#positionOfLine-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
 /// @return enum QStyleOptionToolBar__ToolBarPosition
 ///
-int32_t q_styleoptiontoolbar_position_of_line(void* self);
+int32_t q_styleoptiontoolbar_position_of_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#positionOfLine-var)
 ///
@@ -2429,11 +2429,11 @@ void q_styleoptiontoolbar_set_position_of_line(void* self, int32_t positionOfLin
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#positionWithinLine-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
 /// @return enum QStyleOptionToolBar__ToolBarPosition
 ///
-int32_t q_styleoptiontoolbar_position_within_line(void* self);
+int32_t q_styleoptiontoolbar_position_within_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#positionWithinLine-var)
 ///
@@ -2444,11 +2444,11 @@ void q_styleoptiontoolbar_set_position_within_line(void* self, int32_t positionW
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#toolBarArea-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
 /// @return enum Qt__ToolBarArea
 ///
-int32_t q_styleoptiontoolbar_tool_bar_area(void* self);
+int32_t q_styleoptiontoolbar_tool_bar_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#toolBarArea-var)
 ///
@@ -2459,11 +2459,11 @@ void q_styleoptiontoolbar_set_tool_bar_area(void* self, int32_t toolBarArea);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#features-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
 /// @return flag of enum QStyleOptionToolBar__ToolBarFeature
 ///
-int32_t q_styleoptiontoolbar_features(void* self);
+int32_t q_styleoptiontoolbar_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#features-var)
 ///
@@ -2474,9 +2474,9 @@ void q_styleoptiontoolbar_set_features(void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#lineWidth-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
-int32_t q_styleoptiontoolbar_line_width(void* self);
+int32_t q_styleoptiontoolbar_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#lineWidth-var)
 ///
@@ -2487,9 +2487,9 @@ void q_styleoptiontoolbar_set_line_width(void* self, int lineWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#midLineWidth-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
-int32_t q_styleoptiontoolbar_mid_line_width(void* self);
+int32_t q_styleoptiontoolbar_mid_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#midLineWidth-var)
 ///
@@ -2503,15 +2503,15 @@ void q_styleoptiontoolbar_set_mid_line_width(void* self, int midLineWidth);
 /// @param self QStyleOptionToolBar*
 /// @param param1 QStyleOptionToolBar*
 ///
-void q_styleoptiontoolbar_operator_assign(void* self, void* param1);
+void q_styleoptiontoolbar_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
-int32_t q_styleoptiontoolbar_version(void* self);
+int32_t q_styleoptiontoolbar_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2526,9 +2526,9 @@ void q_styleoptiontoolbar_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
-int32_t q_styleoptiontoolbar_type(void* self);
+int32_t q_styleoptiontoolbar_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2543,11 +2543,11 @@ void q_styleoptiontoolbar_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiontoolbar_state(void* self);
+int32_t q_styleoptiontoolbar_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2562,11 +2562,11 @@ void q_styleoptiontoolbar_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiontoolbar_direction(void* self);
+int32_t q_styleoptiontoolbar_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2581,9 +2581,9 @@ void q_styleoptiontoolbar_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
-QRect* q_styleoptiontoolbar_rect(void* self);
+QRect* q_styleoptiontoolbar_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2598,9 +2598,9 @@ void q_styleoptiontoolbar_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
-QFontMetrics* q_styleoptiontoolbar_font_metrics(void* self);
+QFontMetrics* q_styleoptiontoolbar_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2615,9 +2615,9 @@ void q_styleoptiontoolbar_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
-QPalette* q_styleoptiontoolbar_palette(void* self);
+QPalette* q_styleoptiontoolbar_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2632,9 +2632,9 @@ void q_styleoptiontoolbar_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionToolBar*
+/// @param self const QStyleOptionToolBar*
 ///
-QObject* q_styleoptiontoolbar_style_object(void* self);
+QObject* q_styleoptiontoolbar_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2652,7 +2652,7 @@ void q_styleoptiontoolbar_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionToolBar*
 /// @param w QWidget*
 ///
-void q_styleoptiontoolbar_init_from(void* self, void* w);
+void q_styleoptiontoolbar_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#dtor.QStyleOptionToolBar)
 ///
@@ -2674,13 +2674,13 @@ QStyleOptionProgressBar* q_styleoptionprogressbar_new();
 ///
 /// @param other QStyleOptionProgressBar*
 ///
-QStyleOptionProgressBar* q_styleoptionprogressbar_new2(void* other);
+QStyleOptionProgressBar* q_styleoptionprogressbar_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#minimum-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-int32_t q_styleoptionprogressbar_minimum(void* self);
+int32_t q_styleoptionprogressbar_minimum(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#minimum-var)
 ///
@@ -2691,9 +2691,9 @@ void q_styleoptionprogressbar_set_minimum(void* self, int minimum);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#maximum-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-int32_t q_styleoptionprogressbar_maximum(void* self);
+int32_t q_styleoptionprogressbar_maximum(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#maximum-var)
 ///
@@ -2704,9 +2704,9 @@ void q_styleoptionprogressbar_set_maximum(void* self, int maximum);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#progress-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-int32_t q_styleoptionprogressbar_progress(void* self);
+int32_t q_styleoptionprogressbar_progress(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#progress-var)
 ///
@@ -2719,9 +2719,9 @@ void q_styleoptionprogressbar_set_progress(void* self, int progress);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-const char* q_styleoptionprogressbar_text(void* self);
+const char* q_styleoptionprogressbar_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#text-var)
 ///
@@ -2732,11 +2732,11 @@ void q_styleoptionprogressbar_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#textAlignment-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptionprogressbar_text_alignment(void* self);
+int32_t q_styleoptionprogressbar_text_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#textAlignment-var)
 ///
@@ -2747,9 +2747,9 @@ void q_styleoptionprogressbar_set_text_alignment(void* self, int32_t textAlignme
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#textVisible-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-bool q_styleoptionprogressbar_text_visible(void* self);
+bool q_styleoptionprogressbar_text_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#textVisible-var)
 ///
@@ -2760,9 +2760,9 @@ void q_styleoptionprogressbar_set_text_visible(void* self, bool textVisible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#invertedAppearance-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-bool q_styleoptionprogressbar_inverted_appearance(void* self);
+bool q_styleoptionprogressbar_inverted_appearance(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#invertedAppearance-var)
 ///
@@ -2773,9 +2773,9 @@ void q_styleoptionprogressbar_set_inverted_appearance(void* self, bool invertedA
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#bottomToTop-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-bool q_styleoptionprogressbar_bottom_to_top(void* self);
+bool q_styleoptionprogressbar_bottom_to_top(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#bottomToTop-var)
 ///
@@ -2789,15 +2789,15 @@ void q_styleoptionprogressbar_set_bottom_to_top(void* self, bool bottomToTop);
 /// @param self QStyleOptionProgressBar*
 /// @param param1 QStyleOptionProgressBar*
 ///
-void q_styleoptionprogressbar_operator_assign(void* self, void* param1);
+void q_styleoptionprogressbar_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-int32_t q_styleoptionprogressbar_version(void* self);
+int32_t q_styleoptionprogressbar_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2812,9 +2812,9 @@ void q_styleoptionprogressbar_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-int32_t q_styleoptionprogressbar_type(void* self);
+int32_t q_styleoptionprogressbar_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2829,11 +2829,11 @@ void q_styleoptionprogressbar_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionprogressbar_state(void* self);
+int32_t q_styleoptionprogressbar_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2848,11 +2848,11 @@ void q_styleoptionprogressbar_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionprogressbar_direction(void* self);
+int32_t q_styleoptionprogressbar_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2867,9 +2867,9 @@ void q_styleoptionprogressbar_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-QRect* q_styleoptionprogressbar_rect(void* self);
+QRect* q_styleoptionprogressbar_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2884,9 +2884,9 @@ void q_styleoptionprogressbar_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-QFontMetrics* q_styleoptionprogressbar_font_metrics(void* self);
+QFontMetrics* q_styleoptionprogressbar_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2901,9 +2901,9 @@ void q_styleoptionprogressbar_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-QPalette* q_styleoptionprogressbar_palette(void* self);
+QPalette* q_styleoptionprogressbar_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2918,9 +2918,9 @@ void q_styleoptionprogressbar_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionProgressBar*
+/// @param self const QStyleOptionProgressBar*
 ///
-QObject* q_styleoptionprogressbar_style_object(void* self);
+QObject* q_styleoptionprogressbar_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -2938,7 +2938,7 @@ void q_styleoptionprogressbar_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionProgressBar*
 /// @param w QWidget*
 ///
-void q_styleoptionprogressbar_init_from(void* self, void* w);
+void q_styleoptionprogressbar_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#dtor.QStyleOptionProgressBar)
 ///
@@ -2960,15 +2960,15 @@ QStyleOptionMenuItem* q_styleoptionmenuitem_new();
 ///
 /// @param other QStyleOptionMenuItem*
 ///
-QStyleOptionMenuItem* q_styleoptionmenuitem_new2(void* other);
+QStyleOptionMenuItem* q_styleoptionmenuitem_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#menuItemType-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
 /// @return enum QStyleOptionMenuItem__MenuItemType
 ///
-int32_t q_styleoptionmenuitem_menu_item_type(void* self);
+int32_t q_styleoptionmenuitem_menu_item_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#menuItemType-var)
 ///
@@ -2979,11 +2979,11 @@ void q_styleoptionmenuitem_set_menu_item_type(void* self, int32_t menuItemType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#checkType-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
 /// @return enum QStyleOptionMenuItem__CheckType
 ///
-int32_t q_styleoptionmenuitem_check_type(void* self);
+int32_t q_styleoptionmenuitem_check_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#checkType-var)
 ///
@@ -2994,9 +2994,9 @@ void q_styleoptionmenuitem_set_check_type(void* self, int32_t checkType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#checked-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-bool q_styleoptionmenuitem_checked(void* self);
+bool q_styleoptionmenuitem_checked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#checked-var)
 ///
@@ -3007,9 +3007,9 @@ void q_styleoptionmenuitem_set_checked(void* self, bool checked);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#menuHasCheckableItems-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-bool q_styleoptionmenuitem_menu_has_checkable_items(void* self);
+bool q_styleoptionmenuitem_menu_has_checkable_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#menuHasCheckableItems-var)
 ///
@@ -3020,9 +3020,9 @@ void q_styleoptionmenuitem_set_menu_has_checkable_items(void* self, bool menuHas
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#menuRect-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-QRect* q_styleoptionmenuitem_menu_rect(void* self);
+QRect* q_styleoptionmenuitem_menu_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#menuRect-var)
 ///
@@ -3035,9 +3035,9 @@ void q_styleoptionmenuitem_set_menu_rect(void* self, void* menuRect);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-const char* q_styleoptionmenuitem_text(void* self);
+const char* q_styleoptionmenuitem_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#text-var)
 ///
@@ -3048,9 +3048,9 @@ void q_styleoptionmenuitem_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#icon-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-QIcon* q_styleoptionmenuitem_icon(void* self);
+QIcon* q_styleoptionmenuitem_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#icon-var)
 ///
@@ -3061,9 +3061,9 @@ void q_styleoptionmenuitem_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#maxIconWidth-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-int32_t q_styleoptionmenuitem_max_icon_width(void* self);
+int32_t q_styleoptionmenuitem_max_icon_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#maxIconWidth-var)
 ///
@@ -3074,9 +3074,9 @@ void q_styleoptionmenuitem_set_max_icon_width(void* self, int maxIconWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#reservedShortcutWidth-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-int32_t q_styleoptionmenuitem_reserved_shortcut_width(void* self);
+int32_t q_styleoptionmenuitem_reserved_shortcut_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#reservedShortcutWidth-var)
 ///
@@ -3087,9 +3087,9 @@ void q_styleoptionmenuitem_set_reserved_shortcut_width(void* self, int reservedS
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#font-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-QFont* q_styleoptionmenuitem_font(void* self);
+QFont* q_styleoptionmenuitem_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#font-var)
 ///
@@ -3103,15 +3103,15 @@ void q_styleoptionmenuitem_set_font(void* self, void* font);
 /// @param self QStyleOptionMenuItem*
 /// @param param1 QStyleOptionMenuItem*
 ///
-void q_styleoptionmenuitem_operator_assign(void* self, void* param1);
+void q_styleoptionmenuitem_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-int32_t q_styleoptionmenuitem_version(void* self);
+int32_t q_styleoptionmenuitem_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3126,9 +3126,9 @@ void q_styleoptionmenuitem_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-int32_t q_styleoptionmenuitem_type(void* self);
+int32_t q_styleoptionmenuitem_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3143,11 +3143,11 @@ void q_styleoptionmenuitem_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionmenuitem_state(void* self);
+int32_t q_styleoptionmenuitem_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3162,11 +3162,11 @@ void q_styleoptionmenuitem_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionmenuitem_direction(void* self);
+int32_t q_styleoptionmenuitem_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3181,9 +3181,9 @@ void q_styleoptionmenuitem_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-QRect* q_styleoptionmenuitem_rect(void* self);
+QRect* q_styleoptionmenuitem_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3198,9 +3198,9 @@ void q_styleoptionmenuitem_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-QFontMetrics* q_styleoptionmenuitem_font_metrics(void* self);
+QFontMetrics* q_styleoptionmenuitem_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3215,9 +3215,9 @@ void q_styleoptionmenuitem_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-QPalette* q_styleoptionmenuitem_palette(void* self);
+QPalette* q_styleoptionmenuitem_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3232,9 +3232,9 @@ void q_styleoptionmenuitem_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionMenuItem*
+/// @param self const QStyleOptionMenuItem*
 ///
-QObject* q_styleoptionmenuitem_style_object(void* self);
+QObject* q_styleoptionmenuitem_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3252,7 +3252,7 @@ void q_styleoptionmenuitem_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionMenuItem*
 /// @param w QWidget*
 ///
-void q_styleoptionmenuitem_init_from(void* self, void* w);
+void q_styleoptionmenuitem_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#dtor.QStyleOptionMenuItem)
 ///
@@ -3274,15 +3274,15 @@ QStyleOptionDockWidget* q_styleoptiondockwidget_new();
 ///
 /// @param other QStyleOptionDockWidget*
 ///
-QStyleOptionDockWidget* q_styleoptiondockwidget_new2(void* other);
+QStyleOptionDockWidget* q_styleoptiondockwidget_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#title-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-const char* q_styleoptiondockwidget_title(void* self);
+const char* q_styleoptiondockwidget_title(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#title-var)
 ///
@@ -3293,9 +3293,9 @@ void q_styleoptiondockwidget_set_title(void* self, const char* title);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#closable-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-bool q_styleoptiondockwidget_closable(void* self);
+bool q_styleoptiondockwidget_closable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#closable-var)
 ///
@@ -3306,9 +3306,9 @@ void q_styleoptiondockwidget_set_closable(void* self, bool closable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#movable-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-bool q_styleoptiondockwidget_movable(void* self);
+bool q_styleoptiondockwidget_movable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#movable-var)
 ///
@@ -3319,9 +3319,9 @@ void q_styleoptiondockwidget_set_movable(void* self, bool movable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#floatable-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-bool q_styleoptiondockwidget_floatable(void* self);
+bool q_styleoptiondockwidget_floatable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#floatable-var)
 ///
@@ -3332,9 +3332,9 @@ void q_styleoptiondockwidget_set_floatable(void* self, bool floatable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#verticalTitleBar-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-bool q_styleoptiondockwidget_vertical_title_bar(void* self);
+bool q_styleoptiondockwidget_vertical_title_bar(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#verticalTitleBar-var)
 ///
@@ -3348,15 +3348,15 @@ void q_styleoptiondockwidget_set_vertical_title_bar(void* self, bool verticalTit
 /// @param self QStyleOptionDockWidget*
 /// @param param1 QStyleOptionDockWidget*
 ///
-void q_styleoptiondockwidget_operator_assign(void* self, void* param1);
+void q_styleoptiondockwidget_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-int32_t q_styleoptiondockwidget_version(void* self);
+int32_t q_styleoptiondockwidget_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3371,9 +3371,9 @@ void q_styleoptiondockwidget_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-int32_t q_styleoptiondockwidget_type(void* self);
+int32_t q_styleoptiondockwidget_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3388,11 +3388,11 @@ void q_styleoptiondockwidget_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiondockwidget_state(void* self);
+int32_t q_styleoptiondockwidget_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3407,11 +3407,11 @@ void q_styleoptiondockwidget_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiondockwidget_direction(void* self);
+int32_t q_styleoptiondockwidget_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3426,9 +3426,9 @@ void q_styleoptiondockwidget_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-QRect* q_styleoptiondockwidget_rect(void* self);
+QRect* q_styleoptiondockwidget_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3443,9 +3443,9 @@ void q_styleoptiondockwidget_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-QFontMetrics* q_styleoptiondockwidget_font_metrics(void* self);
+QFontMetrics* q_styleoptiondockwidget_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3460,9 +3460,9 @@ void q_styleoptiondockwidget_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-QPalette* q_styleoptiondockwidget_palette(void* self);
+QPalette* q_styleoptiondockwidget_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3477,9 +3477,9 @@ void q_styleoptiondockwidget_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionDockWidget*
+/// @param self const QStyleOptionDockWidget*
 ///
-QObject* q_styleoptiondockwidget_style_object(void* self);
+QObject* q_styleoptiondockwidget_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3497,7 +3497,7 @@ void q_styleoptiondockwidget_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionDockWidget*
 /// @param w QWidget*
 ///
-void q_styleoptiondockwidget_init_from(void* self, void* w);
+void q_styleoptiondockwidget_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#dtor.QStyleOptionDockWidget)
 ///
@@ -3519,15 +3519,15 @@ QStyleOptionViewItem* q_styleoptionviewitem_new();
 ///
 /// @param other QStyleOptionViewItem*
 ///
-QStyleOptionViewItem* q_styleoptionviewitem_new2(void* other);
+QStyleOptionViewItem* q_styleoptionviewitem_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#displayAlignment-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptionviewitem_display_alignment(void* self);
+int32_t q_styleoptionviewitem_display_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#displayAlignment-var)
 ///
@@ -3538,11 +3538,11 @@ void q_styleoptionviewitem_set_display_alignment(void* self, int32_t displayAlig
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#decorationAlignment-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptionviewitem_decoration_alignment(void* self);
+int32_t q_styleoptionviewitem_decoration_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#decorationAlignment-var)
 ///
@@ -3553,11 +3553,11 @@ void q_styleoptionviewitem_set_decoration_alignment(void* self, int32_t decorati
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#textElideMode-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return enum Qt__TextElideMode
 ///
-int32_t q_styleoptionviewitem_text_elide_mode(void* self);
+int32_t q_styleoptionviewitem_text_elide_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#textElideMode-var)
 ///
@@ -3568,11 +3568,11 @@ void q_styleoptionviewitem_set_text_elide_mode(void* self, int32_t textElideMode
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#decorationPosition-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return enum QStyleOptionViewItem__Position
 ///
-int32_t q_styleoptionviewitem_decoration_position(void* self);
+int32_t q_styleoptionviewitem_decoration_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#decorationPosition-var)
 ///
@@ -3583,9 +3583,9 @@ void q_styleoptionviewitem_set_decoration_position(void* self, int32_t decoratio
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#decorationSize-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QSize* q_styleoptionviewitem_decoration_size(void* self);
+QSize* q_styleoptionviewitem_decoration_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#decorationSize-var)
 ///
@@ -3596,9 +3596,9 @@ void q_styleoptionviewitem_set_decoration_size(void* self, void* decorationSize)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#font-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QFont* q_styleoptionviewitem_font(void* self);
+QFont* q_styleoptionviewitem_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#font-var)
 ///
@@ -3609,9 +3609,9 @@ void q_styleoptionviewitem_set_font(void* self, void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#showDecorationSelected-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-bool q_styleoptionviewitem_show_decoration_selected(void* self);
+bool q_styleoptionviewitem_show_decoration_selected(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#showDecorationSelected-var)
 ///
@@ -3622,11 +3622,11 @@ void q_styleoptionviewitem_set_show_decoration_selected(void* self, bool showDec
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#features-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return flag of enum QStyleOptionViewItem__ViewItemFeature
 ///
-int32_t q_styleoptionviewitem_features(void* self);
+int32_t q_styleoptionviewitem_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#features-var)
 ///
@@ -3637,9 +3637,9 @@ void q_styleoptionviewitem_set_features(void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#locale-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QLocale* q_styleoptionviewitem_locale(void* self);
+QLocale* q_styleoptionviewitem_locale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#locale-var)
 ///
@@ -3650,22 +3650,22 @@ void q_styleoptionviewitem_set_locale(void* self, void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#widget-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-const QWidget* q_styleoptionviewitem_widget(void* self);
+const QWidget* q_styleoptionviewitem_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#widget-var)
 ///
 /// @param self QStyleOptionViewItem*
 /// @param widget QWidget*
 ///
-void q_styleoptionviewitem_set_widget(void* self, void* widget);
+void q_styleoptionviewitem_set_widget(void* self, const void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#index-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QModelIndex* q_styleoptionviewitem_index(void* self);
+QModelIndex* q_styleoptionviewitem_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#index-var)
 ///
@@ -3676,11 +3676,11 @@ void q_styleoptionviewitem_set_index(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#checkState-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return enum Qt__CheckState
 ///
-int32_t q_styleoptionviewitem_check_state(void* self);
+int32_t q_styleoptionviewitem_check_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#checkState-var)
 ///
@@ -3691,9 +3691,9 @@ void q_styleoptionviewitem_set_check_state(void* self, int32_t checkState);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#icon-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QIcon* q_styleoptionviewitem_icon(void* self);
+QIcon* q_styleoptionviewitem_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#icon-var)
 ///
@@ -3706,9 +3706,9 @@ void q_styleoptionviewitem_set_icon(void* self, void* icon);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-const char* q_styleoptionviewitem_text(void* self);
+const char* q_styleoptionviewitem_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#text-var)
 ///
@@ -3719,11 +3719,11 @@ void q_styleoptionviewitem_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#viewItemPosition-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return enum QStyleOptionViewItem__ViewItemPosition
 ///
-int32_t q_styleoptionviewitem_view_item_position(void* self);
+int32_t q_styleoptionviewitem_view_item_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#viewItemPosition-var)
 ///
@@ -3734,9 +3734,9 @@ void q_styleoptionviewitem_set_view_item_position(void* self, int32_t viewItemPo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#backgroundBrush-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QBrush* q_styleoptionviewitem_background_brush(void* self);
+QBrush* q_styleoptionviewitem_background_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#backgroundBrush-var)
 ///
@@ -3750,15 +3750,15 @@ void q_styleoptionviewitem_set_background_brush(void* self, void* backgroundBrus
 /// @param self QStyleOptionViewItem*
 /// @param param1 QStyleOptionViewItem*
 ///
-void q_styleoptionviewitem_operator_assign(void* self, void* param1);
+void q_styleoptionviewitem_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-int32_t q_styleoptionviewitem_version(void* self);
+int32_t q_styleoptionviewitem_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3773,9 +3773,9 @@ void q_styleoptionviewitem_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-int32_t q_styleoptionviewitem_type(void* self);
+int32_t q_styleoptionviewitem_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3790,11 +3790,11 @@ void q_styleoptionviewitem_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionviewitem_state(void* self);
+int32_t q_styleoptionviewitem_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3809,11 +3809,11 @@ void q_styleoptionviewitem_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionviewitem_direction(void* self);
+int32_t q_styleoptionviewitem_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3828,9 +3828,9 @@ void q_styleoptionviewitem_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QRect* q_styleoptionviewitem_rect(void* self);
+QRect* q_styleoptionviewitem_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3845,9 +3845,9 @@ void q_styleoptionviewitem_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QFontMetrics* q_styleoptionviewitem_font_metrics(void* self);
+QFontMetrics* q_styleoptionviewitem_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3862,9 +3862,9 @@ void q_styleoptionviewitem_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QPalette* q_styleoptionviewitem_palette(void* self);
+QPalette* q_styleoptionviewitem_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3879,9 +3879,9 @@ void q_styleoptionviewitem_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionViewItem*
+/// @param self const QStyleOptionViewItem*
 ///
-QObject* q_styleoptionviewitem_style_object(void* self);
+QObject* q_styleoptionviewitem_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -3899,7 +3899,7 @@ void q_styleoptionviewitem_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionViewItem*
 /// @param w QWidget*
 ///
-void q_styleoptionviewitem_init_from(void* self, void* w);
+void q_styleoptionviewitem_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#dtor.QStyleOptionViewItem)
 ///
@@ -3921,15 +3921,15 @@ QStyleOptionToolBox* q_styleoptiontoolbox_new();
 ///
 /// @param other QStyleOptionToolBox*
 ///
-QStyleOptionToolBox* q_styleoptiontoolbox_new2(void* other);
+QStyleOptionToolBox* q_styleoptiontoolbox_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#text-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
-const char* q_styleoptiontoolbox_text(void* self);
+const char* q_styleoptiontoolbox_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#text-var)
 ///
@@ -3940,9 +3940,9 @@ void q_styleoptiontoolbox_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#icon-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
-QIcon* q_styleoptiontoolbox_icon(void* self);
+QIcon* q_styleoptiontoolbox_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#icon-var)
 ///
@@ -3953,11 +3953,11 @@ void q_styleoptiontoolbox_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#position-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
 /// @return enum QStyleOptionToolBox__TabPosition
 ///
-int32_t q_styleoptiontoolbox_position(void* self);
+int32_t q_styleoptiontoolbox_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#position-var)
 ///
@@ -3968,11 +3968,11 @@ void q_styleoptiontoolbox_set_position(void* self, int32_t position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#selectedPosition-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
 /// @return enum QStyleOptionToolBox__SelectedPosition
 ///
-int32_t q_styleoptiontoolbox_selected_position(void* self);
+int32_t q_styleoptiontoolbox_selected_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#selectedPosition-var)
 ///
@@ -3986,15 +3986,15 @@ void q_styleoptiontoolbox_set_selected_position(void* self, int32_t selectedPosi
 /// @param self QStyleOptionToolBox*
 /// @param param1 QStyleOptionToolBox*
 ///
-void q_styleoptiontoolbox_operator_assign(void* self, void* param1);
+void q_styleoptiontoolbox_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
-int32_t q_styleoptiontoolbox_version(void* self);
+int32_t q_styleoptiontoolbox_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4009,9 +4009,9 @@ void q_styleoptiontoolbox_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
-int32_t q_styleoptiontoolbox_type(void* self);
+int32_t q_styleoptiontoolbox_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4026,11 +4026,11 @@ void q_styleoptiontoolbox_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiontoolbox_state(void* self);
+int32_t q_styleoptiontoolbox_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4045,11 +4045,11 @@ void q_styleoptiontoolbox_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiontoolbox_direction(void* self);
+int32_t q_styleoptiontoolbox_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4064,9 +4064,9 @@ void q_styleoptiontoolbox_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
-QRect* q_styleoptiontoolbox_rect(void* self);
+QRect* q_styleoptiontoolbox_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4081,9 +4081,9 @@ void q_styleoptiontoolbox_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
-QFontMetrics* q_styleoptiontoolbox_font_metrics(void* self);
+QFontMetrics* q_styleoptiontoolbox_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4098,9 +4098,9 @@ void q_styleoptiontoolbox_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
-QPalette* q_styleoptiontoolbox_palette(void* self);
+QPalette* q_styleoptiontoolbox_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4115,9 +4115,9 @@ void q_styleoptiontoolbox_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionToolBox*
+/// @param self const QStyleOptionToolBox*
 ///
-QObject* q_styleoptiontoolbox_style_object(void* self);
+QObject* q_styleoptiontoolbox_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4135,7 +4135,7 @@ void q_styleoptiontoolbox_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionToolBox*
 /// @param w QWidget*
 ///
-void q_styleoptiontoolbox_init_from(void* self, void* w);
+void q_styleoptiontoolbox_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#dtor.QStyleOptionToolBox)
 ///
@@ -4157,15 +4157,15 @@ QStyleOptionRubberBand* q_styleoptionrubberband_new();
 ///
 /// @param other QStyleOptionRubberBand*
 ///
-QStyleOptionRubberBand* q_styleoptionrubberband_new2(void* other);
+QStyleOptionRubberBand* q_styleoptionrubberband_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#shape-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
 /// @return enum QRubberBand__Shape
 ///
-int32_t q_styleoptionrubberband_shape(void* self);
+int32_t q_styleoptionrubberband_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#shape-var)
 ///
@@ -4176,9 +4176,9 @@ void q_styleoptionrubberband_set_shape(void* self, int32_t shape);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#opaque-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
-bool q_styleoptionrubberband_opaque(void* self);
+bool q_styleoptionrubberband_opaque(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#opaque-var)
 ///
@@ -4192,15 +4192,15 @@ void q_styleoptionrubberband_set_opaque(void* self, bool opaque);
 /// @param self QStyleOptionRubberBand*
 /// @param param1 QStyleOptionRubberBand*
 ///
-void q_styleoptionrubberband_operator_assign(void* self, void* param1);
+void q_styleoptionrubberband_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
-int32_t q_styleoptionrubberband_version(void* self);
+int32_t q_styleoptionrubberband_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4215,9 +4215,9 @@ void q_styleoptionrubberband_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
-int32_t q_styleoptionrubberband_type(void* self);
+int32_t q_styleoptionrubberband_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4232,11 +4232,11 @@ void q_styleoptionrubberband_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionrubberband_state(void* self);
+int32_t q_styleoptionrubberband_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4251,11 +4251,11 @@ void q_styleoptionrubberband_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionrubberband_direction(void* self);
+int32_t q_styleoptionrubberband_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4270,9 +4270,9 @@ void q_styleoptionrubberband_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
-QRect* q_styleoptionrubberband_rect(void* self);
+QRect* q_styleoptionrubberband_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4287,9 +4287,9 @@ void q_styleoptionrubberband_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
-QFontMetrics* q_styleoptionrubberband_font_metrics(void* self);
+QFontMetrics* q_styleoptionrubberband_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4304,9 +4304,9 @@ void q_styleoptionrubberband_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
-QPalette* q_styleoptionrubberband_palette(void* self);
+QPalette* q_styleoptionrubberband_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4321,9 +4321,9 @@ void q_styleoptionrubberband_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionRubberBand*
+/// @param self const QStyleOptionRubberBand*
 ///
-QObject* q_styleoptionrubberband_style_object(void* self);
+QObject* q_styleoptionrubberband_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4341,7 +4341,7 @@ void q_styleoptionrubberband_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionRubberBand*
 /// @param w QWidget*
 ///
-void q_styleoptionrubberband_init_from(void* self, void* w);
+void q_styleoptionrubberband_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#dtor.QStyleOptionRubberBand)
 ///
@@ -4363,7 +4363,7 @@ QStyleOptionComplex* q_styleoptioncomplex_new();
 ///
 /// @param other QStyleOptionComplex*
 ///
-QStyleOptionComplex* q_styleoptioncomplex_new2(void* other);
+QStyleOptionComplex* q_styleoptioncomplex_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html)
 
@@ -4384,11 +4384,11 @@ QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptioncomplex_sub_controls(void* self);
+int32_t q_styleoptioncomplex_sub_controls(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
@@ -4399,11 +4399,11 @@ void q_styleoptioncomplex_set_sub_controls(void* self, int32_t subControls);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptioncomplex_active_sub_controls(void* self);
+int32_t q_styleoptioncomplex_active_sub_controls(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
@@ -4417,15 +4417,15 @@ void q_styleoptioncomplex_set_active_sub_controls(void* self, int32_t activeSubC
 /// @param self QStyleOptionComplex*
 /// @param param1 QStyleOptionComplex*
 ///
-void q_styleoptioncomplex_operator_assign(void* self, void* param1);
+void q_styleoptioncomplex_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
-int32_t q_styleoptioncomplex_version(void* self);
+int32_t q_styleoptioncomplex_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4440,9 +4440,9 @@ void q_styleoptioncomplex_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
-int32_t q_styleoptioncomplex_type(void* self);
+int32_t q_styleoptioncomplex_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4457,11 +4457,11 @@ void q_styleoptioncomplex_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptioncomplex_state(void* self);
+int32_t q_styleoptioncomplex_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4476,11 +4476,11 @@ void q_styleoptioncomplex_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptioncomplex_direction(void* self);
+int32_t q_styleoptioncomplex_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4495,9 +4495,9 @@ void q_styleoptioncomplex_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
-QRect* q_styleoptioncomplex_rect(void* self);
+QRect* q_styleoptioncomplex_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4512,9 +4512,9 @@ void q_styleoptioncomplex_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
-QFontMetrics* q_styleoptioncomplex_font_metrics(void* self);
+QFontMetrics* q_styleoptioncomplex_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4529,9 +4529,9 @@ void q_styleoptioncomplex_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
-QPalette* q_styleoptioncomplex_palette(void* self);
+QPalette* q_styleoptioncomplex_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4546,9 +4546,9 @@ void q_styleoptioncomplex_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionComplex*
+/// @param self const QStyleOptionComplex*
 ///
-QObject* q_styleoptioncomplex_style_object(void* self);
+QObject* q_styleoptioncomplex_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4566,7 +4566,7 @@ void q_styleoptioncomplex_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionComplex*
 /// @param w QWidget*
 ///
-void q_styleoptioncomplex_init_from(void* self, void* w);
+void q_styleoptioncomplex_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#dtor.QStyleOptionComplex)
 ///
@@ -4588,15 +4588,15 @@ QStyleOptionSlider* q_styleoptionslider_new();
 ///
 /// @param other QStyleOptionSlider*
 ///
-QStyleOptionSlider* q_styleoptionslider_new2(void* other);
+QStyleOptionSlider* q_styleoptionslider_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#orientation-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_styleoptionslider_orientation(void* self);
+int32_t q_styleoptionslider_orientation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#orientation-var)
 ///
@@ -4607,9 +4607,9 @@ void q_styleoptionslider_set_orientation(void* self, int32_t orientation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#minimum-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_minimum(void* self);
+int32_t q_styleoptionslider_minimum(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#minimum-var)
 ///
@@ -4620,9 +4620,9 @@ void q_styleoptionslider_set_minimum(void* self, int minimum);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#maximum-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_maximum(void* self);
+int32_t q_styleoptionslider_maximum(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#maximum-var)
 ///
@@ -4633,11 +4633,11 @@ void q_styleoptionslider_set_maximum(void* self, int maximum);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#tickPosition-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
 /// @return enum QSlider__TickPosition
 ///
-int32_t q_styleoptionslider_tick_position(void* self);
+int32_t q_styleoptionslider_tick_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#tickPosition-var)
 ///
@@ -4648,9 +4648,9 @@ void q_styleoptionslider_set_tick_position(void* self, int32_t tickPosition);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#tickInterval-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_tick_interval(void* self);
+int32_t q_styleoptionslider_tick_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#tickInterval-var)
 ///
@@ -4661,9 +4661,9 @@ void q_styleoptionslider_set_tick_interval(void* self, int tickInterval);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#upsideDown-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-bool q_styleoptionslider_upside_down(void* self);
+bool q_styleoptionslider_upside_down(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#upsideDown-var)
 ///
@@ -4674,9 +4674,9 @@ void q_styleoptionslider_set_upside_down(void* self, bool upsideDown);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#sliderPosition-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_slider_position(void* self);
+int32_t q_styleoptionslider_slider_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#sliderPosition-var)
 ///
@@ -4687,9 +4687,9 @@ void q_styleoptionslider_set_slider_position(void* self, int sliderPosition);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#sliderValue-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_slider_value(void* self);
+int32_t q_styleoptionslider_slider_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#sliderValue-var)
 ///
@@ -4700,9 +4700,9 @@ void q_styleoptionslider_set_slider_value(void* self, int sliderValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#singleStep-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_single_step(void* self);
+int32_t q_styleoptionslider_single_step(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#singleStep-var)
 ///
@@ -4713,9 +4713,9 @@ void q_styleoptionslider_set_single_step(void* self, int singleStep);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#pageStep-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_page_step(void* self);
+int32_t q_styleoptionslider_page_step(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#pageStep-var)
 ///
@@ -4726,9 +4726,9 @@ void q_styleoptionslider_set_page_step(void* self, int pageStep);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#notchTarget-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-double q_styleoptionslider_notch_target(void* self);
+double q_styleoptionslider_notch_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#notchTarget-var)
 ///
@@ -4739,9 +4739,9 @@ void q_styleoptionslider_set_notch_target(void* self, double notchTarget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#dialWrapping-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-bool q_styleoptionslider_dial_wrapping(void* self);
+bool q_styleoptionslider_dial_wrapping(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#dialWrapping-var)
 ///
@@ -4752,11 +4752,11 @@ void q_styleoptionslider_set_dial_wrapping(void* self, bool dialWrapping);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#keyboardModifiers-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int32_t q_styleoptionslider_keyboard_modifiers(void* self);
+int32_t q_styleoptionslider_keyboard_modifiers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#keyboardModifiers-var)
 ///
@@ -4770,17 +4770,17 @@ void q_styleoptionslider_set_keyboard_modifiers(void* self, int32_t keyboardModi
 /// @param self QStyleOptionSlider*
 /// @param param1 QStyleOptionSlider*
 ///
-void q_styleoptionslider_operator_assign(void* self, void* param1);
+void q_styleoptionslider_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptionslider_sub_controls(void* self);
+int32_t q_styleoptionslider_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -4795,11 +4795,11 @@ void q_styleoptionslider_set_sub_controls(void* self, int32_t subControls);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptionslider_active_sub_controls(void* self);
+int32_t q_styleoptionslider_active_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -4814,9 +4814,9 @@ void q_styleoptionslider_set_active_sub_controls(void* self, int32_t activeSubCo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_version(void* self);
+int32_t q_styleoptionslider_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4831,9 +4831,9 @@ void q_styleoptionslider_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-int32_t q_styleoptionslider_type(void* self);
+int32_t q_styleoptionslider_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4848,11 +4848,11 @@ void q_styleoptionslider_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionslider_state(void* self);
+int32_t q_styleoptionslider_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4867,11 +4867,11 @@ void q_styleoptionslider_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionslider_direction(void* self);
+int32_t q_styleoptionslider_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4886,9 +4886,9 @@ void q_styleoptionslider_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-QRect* q_styleoptionslider_rect(void* self);
+QRect* q_styleoptionslider_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4903,9 +4903,9 @@ void q_styleoptionslider_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-QFontMetrics* q_styleoptionslider_font_metrics(void* self);
+QFontMetrics* q_styleoptionslider_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4920,9 +4920,9 @@ void q_styleoptionslider_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-QPalette* q_styleoptionslider_palette(void* self);
+QPalette* q_styleoptionslider_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4937,9 +4937,9 @@ void q_styleoptionslider_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionSlider*
+/// @param self const QStyleOptionSlider*
 ///
-QObject* q_styleoptionslider_style_object(void* self);
+QObject* q_styleoptionslider_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -4957,7 +4957,7 @@ void q_styleoptionslider_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionSlider*
 /// @param w QWidget*
 ///
-void q_styleoptionslider_init_from(void* self, void* w);
+void q_styleoptionslider_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionslider.html#dtor.QStyleOptionSlider)
 ///
@@ -4979,15 +4979,15 @@ QStyleOptionSpinBox* q_styleoptionspinbox_new();
 ///
 /// @param other QStyleOptionSpinBox*
 ///
-QStyleOptionSpinBox* q_styleoptionspinbox_new2(void* other);
+QStyleOptionSpinBox* q_styleoptionspinbox_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#buttonSymbols-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
 /// @return enum QAbstractSpinBox__ButtonSymbols
 ///
-int32_t q_styleoptionspinbox_button_symbols(void* self);
+int32_t q_styleoptionspinbox_button_symbols(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#buttonSymbols-var)
 ///
@@ -4998,11 +4998,11 @@ void q_styleoptionspinbox_set_button_symbols(void* self, int32_t buttonSymbols);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#stepEnabled-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_styleoptionspinbox_step_enabled(void* self);
+int32_t q_styleoptionspinbox_step_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#stepEnabled-var)
 ///
@@ -5013,9 +5013,9 @@ void q_styleoptionspinbox_set_step_enabled(void* self, int32_t stepEnabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#frame-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
-bool q_styleoptionspinbox_frame(void* self);
+bool q_styleoptionspinbox_frame(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#frame-var)
 ///
@@ -5029,17 +5029,17 @@ void q_styleoptionspinbox_set_frame(void* self, bool frame);
 /// @param self QStyleOptionSpinBox*
 /// @param param1 QStyleOptionSpinBox*
 ///
-void q_styleoptionspinbox_operator_assign(void* self, void* param1);
+void q_styleoptionspinbox_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptionspinbox_sub_controls(void* self);
+int32_t q_styleoptionspinbox_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5054,11 +5054,11 @@ void q_styleoptionspinbox_set_sub_controls(void* self, int32_t subControls);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptionspinbox_active_sub_controls(void* self);
+int32_t q_styleoptionspinbox_active_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5073,9 +5073,9 @@ void q_styleoptionspinbox_set_active_sub_controls(void* self, int32_t activeSubC
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
-int32_t q_styleoptionspinbox_version(void* self);
+int32_t q_styleoptionspinbox_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5090,9 +5090,9 @@ void q_styleoptionspinbox_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
-int32_t q_styleoptionspinbox_type(void* self);
+int32_t q_styleoptionspinbox_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5107,11 +5107,11 @@ void q_styleoptionspinbox_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionspinbox_state(void* self);
+int32_t q_styleoptionspinbox_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5126,11 +5126,11 @@ void q_styleoptionspinbox_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionspinbox_direction(void* self);
+int32_t q_styleoptionspinbox_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5145,9 +5145,9 @@ void q_styleoptionspinbox_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
-QRect* q_styleoptionspinbox_rect(void* self);
+QRect* q_styleoptionspinbox_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5162,9 +5162,9 @@ void q_styleoptionspinbox_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
-QFontMetrics* q_styleoptionspinbox_font_metrics(void* self);
+QFontMetrics* q_styleoptionspinbox_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5179,9 +5179,9 @@ void q_styleoptionspinbox_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
-QPalette* q_styleoptionspinbox_palette(void* self);
+QPalette* q_styleoptionspinbox_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5196,9 +5196,9 @@ void q_styleoptionspinbox_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionSpinBox*
+/// @param self const QStyleOptionSpinBox*
 ///
-QObject* q_styleoptionspinbox_style_object(void* self);
+QObject* q_styleoptionspinbox_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5216,7 +5216,7 @@ void q_styleoptionspinbox_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionSpinBox*
 /// @param w QWidget*
 ///
-void q_styleoptionspinbox_init_from(void* self, void* w);
+void q_styleoptionspinbox_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#dtor.QStyleOptionSpinBox)
 ///
@@ -5238,15 +5238,15 @@ QStyleOptionToolButton* q_styleoptiontoolbutton_new();
 ///
 /// @param other QStyleOptionToolButton*
 ///
-QStyleOptionToolButton* q_styleoptiontoolbutton_new2(void* other);
+QStyleOptionToolButton* q_styleoptiontoolbutton_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#features-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
 /// @return flag of enum QStyleOptionToolButton__ToolButtonFeature
 ///
-int32_t q_styleoptiontoolbutton_features(void* self);
+int32_t q_styleoptiontoolbutton_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#features-var)
 ///
@@ -5257,9 +5257,9 @@ void q_styleoptiontoolbutton_set_features(void* self, int32_t features);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#icon-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-QIcon* q_styleoptiontoolbutton_icon(void* self);
+QIcon* q_styleoptiontoolbutton_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#icon-var)
 ///
@@ -5270,9 +5270,9 @@ void q_styleoptiontoolbutton_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#iconSize-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-QSize* q_styleoptiontoolbutton_icon_size(void* self);
+QSize* q_styleoptiontoolbutton_icon_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#iconSize-var)
 ///
@@ -5285,9 +5285,9 @@ void q_styleoptiontoolbutton_set_icon_size(void* self, void* iconSize);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-const char* q_styleoptiontoolbutton_text(void* self);
+const char* q_styleoptiontoolbutton_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#text-var)
 ///
@@ -5298,11 +5298,11 @@ void q_styleoptiontoolbutton_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#arrowType-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
 /// @return enum Qt__ArrowType
 ///
-int32_t q_styleoptiontoolbutton_arrow_type(void* self);
+int32_t q_styleoptiontoolbutton_arrow_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#arrowType-var)
 ///
@@ -5313,11 +5313,11 @@ void q_styleoptiontoolbutton_set_arrow_type(void* self, int32_t arrowType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#toolButtonStyle-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
 /// @return enum Qt__ToolButtonStyle
 ///
-int32_t q_styleoptiontoolbutton_tool_button_style(void* self);
+int32_t q_styleoptiontoolbutton_tool_button_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#toolButtonStyle-var)
 ///
@@ -5328,9 +5328,9 @@ void q_styleoptiontoolbutton_set_tool_button_style(void* self, int32_t toolButto
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#pos-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-QPoint* q_styleoptiontoolbutton_pos(void* self);
+QPoint* q_styleoptiontoolbutton_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#pos-var)
 ///
@@ -5341,9 +5341,9 @@ void q_styleoptiontoolbutton_set_pos(void* self, void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#font-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-QFont* q_styleoptiontoolbutton_font(void* self);
+QFont* q_styleoptiontoolbutton_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#font-var)
 ///
@@ -5357,17 +5357,17 @@ void q_styleoptiontoolbutton_set_font(void* self, void* font);
 /// @param self QStyleOptionToolButton*
 /// @param param1 QStyleOptionToolButton*
 ///
-void q_styleoptiontoolbutton_operator_assign(void* self, void* param1);
+void q_styleoptiontoolbutton_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptiontoolbutton_sub_controls(void* self);
+int32_t q_styleoptiontoolbutton_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5382,11 +5382,11 @@ void q_styleoptiontoolbutton_set_sub_controls(void* self, int32_t subControls);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptiontoolbutton_active_sub_controls(void* self);
+int32_t q_styleoptiontoolbutton_active_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5401,9 +5401,9 @@ void q_styleoptiontoolbutton_set_active_sub_controls(void* self, int32_t activeS
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-int32_t q_styleoptiontoolbutton_version(void* self);
+int32_t q_styleoptiontoolbutton_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5418,9 +5418,9 @@ void q_styleoptiontoolbutton_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-int32_t q_styleoptiontoolbutton_type(void* self);
+int32_t q_styleoptiontoolbutton_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5435,11 +5435,11 @@ void q_styleoptiontoolbutton_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiontoolbutton_state(void* self);
+int32_t q_styleoptiontoolbutton_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5454,11 +5454,11 @@ void q_styleoptiontoolbutton_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiontoolbutton_direction(void* self);
+int32_t q_styleoptiontoolbutton_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5473,9 +5473,9 @@ void q_styleoptiontoolbutton_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-QRect* q_styleoptiontoolbutton_rect(void* self);
+QRect* q_styleoptiontoolbutton_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5490,9 +5490,9 @@ void q_styleoptiontoolbutton_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-QFontMetrics* q_styleoptiontoolbutton_font_metrics(void* self);
+QFontMetrics* q_styleoptiontoolbutton_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5507,9 +5507,9 @@ void q_styleoptiontoolbutton_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-QPalette* q_styleoptiontoolbutton_palette(void* self);
+QPalette* q_styleoptiontoolbutton_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5524,9 +5524,9 @@ void q_styleoptiontoolbutton_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionToolButton*
+/// @param self const QStyleOptionToolButton*
 ///
-QObject* q_styleoptiontoolbutton_style_object(void* self);
+QObject* q_styleoptiontoolbutton_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5544,7 +5544,7 @@ void q_styleoptiontoolbutton_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionToolButton*
 /// @param w QWidget*
 ///
-void q_styleoptiontoolbutton_init_from(void* self, void* w);
+void q_styleoptiontoolbutton_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#dtor.QStyleOptionToolButton)
 ///
@@ -5566,13 +5566,13 @@ QStyleOptionComboBox* q_styleoptioncombobox_new();
 ///
 /// @param other QStyleOptionComboBox*
 ///
-QStyleOptionComboBox* q_styleoptioncombobox_new2(void* other);
+QStyleOptionComboBox* q_styleoptioncombobox_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#editable-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-bool q_styleoptioncombobox_editable(void* self);
+bool q_styleoptioncombobox_editable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#editable-var)
 ///
@@ -5583,9 +5583,9 @@ void q_styleoptioncombobox_set_editable(void* self, bool editable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#popupRect-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-QRect* q_styleoptioncombobox_popup_rect(void* self);
+QRect* q_styleoptioncombobox_popup_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#popupRect-var)
 ///
@@ -5596,9 +5596,9 @@ void q_styleoptioncombobox_set_popup_rect(void* self, void* popupRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#frame-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-bool q_styleoptioncombobox_frame(void* self);
+bool q_styleoptioncombobox_frame(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#frame-var)
 ///
@@ -5611,9 +5611,9 @@ void q_styleoptioncombobox_set_frame(void* self, bool frame);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-const char* q_styleoptioncombobox_current_text(void* self);
+const char* q_styleoptioncombobox_current_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#currentText-var)
 ///
@@ -5624,9 +5624,9 @@ void q_styleoptioncombobox_set_current_text(void* self, const char* currentText)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#currentIcon-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-QIcon* q_styleoptioncombobox_current_icon(void* self);
+QIcon* q_styleoptioncombobox_current_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#currentIcon-var)
 ///
@@ -5637,9 +5637,9 @@ void q_styleoptioncombobox_set_current_icon(void* self, void* currentIcon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#iconSize-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-QSize* q_styleoptioncombobox_icon_size(void* self);
+QSize* q_styleoptioncombobox_icon_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#iconSize-var)
 ///
@@ -5650,11 +5650,11 @@ void q_styleoptioncombobox_set_icon_size(void* self, void* iconSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#textAlignment-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptioncombobox_text_alignment(void* self);
+int32_t q_styleoptioncombobox_text_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#textAlignment-var)
 ///
@@ -5668,17 +5668,17 @@ void q_styleoptioncombobox_set_text_alignment(void* self, int32_t textAlignment)
 /// @param self QStyleOptionComboBox*
 /// @param param1 QStyleOptionComboBox*
 ///
-void q_styleoptioncombobox_operator_assign(void* self, void* param1);
+void q_styleoptioncombobox_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptioncombobox_sub_controls(void* self);
+int32_t q_styleoptioncombobox_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5693,11 +5693,11 @@ void q_styleoptioncombobox_set_sub_controls(void* self, int32_t subControls);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptioncombobox_active_sub_controls(void* self);
+int32_t q_styleoptioncombobox_active_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5712,9 +5712,9 @@ void q_styleoptioncombobox_set_active_sub_controls(void* self, int32_t activeSub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-int32_t q_styleoptioncombobox_version(void* self);
+int32_t q_styleoptioncombobox_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5729,9 +5729,9 @@ void q_styleoptioncombobox_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-int32_t q_styleoptioncombobox_type(void* self);
+int32_t q_styleoptioncombobox_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5746,11 +5746,11 @@ void q_styleoptioncombobox_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptioncombobox_state(void* self);
+int32_t q_styleoptioncombobox_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5765,11 +5765,11 @@ void q_styleoptioncombobox_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptioncombobox_direction(void* self);
+int32_t q_styleoptioncombobox_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5784,9 +5784,9 @@ void q_styleoptioncombobox_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-QRect* q_styleoptioncombobox_rect(void* self);
+QRect* q_styleoptioncombobox_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5801,9 +5801,9 @@ void q_styleoptioncombobox_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-QFontMetrics* q_styleoptioncombobox_font_metrics(void* self);
+QFontMetrics* q_styleoptioncombobox_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5818,9 +5818,9 @@ void q_styleoptioncombobox_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-QPalette* q_styleoptioncombobox_palette(void* self);
+QPalette* q_styleoptioncombobox_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5835,9 +5835,9 @@ void q_styleoptioncombobox_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionComboBox*
+/// @param self const QStyleOptionComboBox*
 ///
-QObject* q_styleoptioncombobox_style_object(void* self);
+QObject* q_styleoptioncombobox_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -5855,7 +5855,7 @@ void q_styleoptioncombobox_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionComboBox*
 /// @param w QWidget*
 ///
-void q_styleoptioncombobox_init_from(void* self, void* w);
+void q_styleoptioncombobox_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#dtor.QStyleOptionComboBox)
 ///
@@ -5877,15 +5877,15 @@ QStyleOptionTitleBar* q_styleoptiontitlebar_new();
 ///
 /// @param other QStyleOptionTitleBar*
 ///
-QStyleOptionTitleBar* q_styleoptiontitlebar_new2(void* other);
+QStyleOptionTitleBar* q_styleoptiontitlebar_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#text-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-const char* q_styleoptiontitlebar_text(void* self);
+const char* q_styleoptiontitlebar_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#text-var)
 ///
@@ -5896,9 +5896,9 @@ void q_styleoptiontitlebar_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#icon-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-QIcon* q_styleoptiontitlebar_icon(void* self);
+QIcon* q_styleoptiontitlebar_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#icon-var)
 ///
@@ -5909,9 +5909,9 @@ void q_styleoptiontitlebar_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#titleBarState-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-int32_t q_styleoptiontitlebar_title_bar_state(void* self);
+int32_t q_styleoptiontitlebar_title_bar_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#titleBarState-var)
 ///
@@ -5922,11 +5922,11 @@ void q_styleoptiontitlebar_set_title_bar_state(void* self, int titleBarState);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#titleBarFlags-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_styleoptiontitlebar_title_bar_flags(void* self);
+int32_t q_styleoptiontitlebar_title_bar_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#titleBarFlags-var)
 ///
@@ -5940,17 +5940,17 @@ void q_styleoptiontitlebar_set_title_bar_flags(void* self, int32_t titleBarFlags
 /// @param self QStyleOptionTitleBar*
 /// @param param1 QStyleOptionTitleBar*
 ///
-void q_styleoptiontitlebar_operator_assign(void* self, void* param1);
+void q_styleoptiontitlebar_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptiontitlebar_sub_controls(void* self);
+int32_t q_styleoptiontitlebar_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5965,11 +5965,11 @@ void q_styleoptiontitlebar_set_sub_controls(void* self, int32_t subControls);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptiontitlebar_active_sub_controls(void* self);
+int32_t q_styleoptiontitlebar_active_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -5984,9 +5984,9 @@ void q_styleoptiontitlebar_set_active_sub_controls(void* self, int32_t activeSub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-int32_t q_styleoptiontitlebar_version(void* self);
+int32_t q_styleoptiontitlebar_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6001,9 +6001,9 @@ void q_styleoptiontitlebar_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-int32_t q_styleoptiontitlebar_type(void* self);
+int32_t q_styleoptiontitlebar_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6018,11 +6018,11 @@ void q_styleoptiontitlebar_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiontitlebar_state(void* self);
+int32_t q_styleoptiontitlebar_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6037,11 +6037,11 @@ void q_styleoptiontitlebar_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiontitlebar_direction(void* self);
+int32_t q_styleoptiontitlebar_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6056,9 +6056,9 @@ void q_styleoptiontitlebar_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-QRect* q_styleoptiontitlebar_rect(void* self);
+QRect* q_styleoptiontitlebar_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6073,9 +6073,9 @@ void q_styleoptiontitlebar_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-QFontMetrics* q_styleoptiontitlebar_font_metrics(void* self);
+QFontMetrics* q_styleoptiontitlebar_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6090,9 +6090,9 @@ void q_styleoptiontitlebar_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-QPalette* q_styleoptiontitlebar_palette(void* self);
+QPalette* q_styleoptiontitlebar_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6107,9 +6107,9 @@ void q_styleoptiontitlebar_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionTitleBar*
+/// @param self const QStyleOptionTitleBar*
 ///
-QObject* q_styleoptiontitlebar_style_object(void* self);
+QObject* q_styleoptiontitlebar_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6127,7 +6127,7 @@ void q_styleoptiontitlebar_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionTitleBar*
 /// @param w QWidget*
 ///
-void q_styleoptiontitlebar_init_from(void* self, void* w);
+void q_styleoptiontitlebar_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#dtor.QStyleOptionTitleBar)
 ///
@@ -6149,15 +6149,15 @@ QStyleOptionGroupBox* q_styleoptiongroupbox_new();
 ///
 /// @param other QStyleOptionGroupBox*
 ///
-QStyleOptionGroupBox* q_styleoptiongroupbox_new2(void* other);
+QStyleOptionGroupBox* q_styleoptiongroupbox_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#features-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
 /// @return flag of enum QStyleOptionFrame__FrameFeature
 ///
-int32_t q_styleoptiongroupbox_features(void* self);
+int32_t q_styleoptiongroupbox_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#features-var)
 ///
@@ -6170,9 +6170,9 @@ void q_styleoptiongroupbox_set_features(void* self, int32_t features);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-const char* q_styleoptiongroupbox_text(void* self);
+const char* q_styleoptiongroupbox_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#text-var)
 ///
@@ -6183,11 +6183,11 @@ void q_styleoptiongroupbox_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#textAlignment-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_styleoptiongroupbox_text_alignment(void* self);
+int32_t q_styleoptiongroupbox_text_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#textAlignment-var)
 ///
@@ -6198,9 +6198,9 @@ void q_styleoptiongroupbox_set_text_alignment(void* self, int32_t textAlignment)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#textColor-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-QColor* q_styleoptiongroupbox_text_color(void* self);
+QColor* q_styleoptiongroupbox_text_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#textColor-var)
 ///
@@ -6211,9 +6211,9 @@ void q_styleoptiongroupbox_set_text_color(void* self, void* textColor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#lineWidth-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-int32_t q_styleoptiongroupbox_line_width(void* self);
+int32_t q_styleoptiongroupbox_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#lineWidth-var)
 ///
@@ -6224,9 +6224,9 @@ void q_styleoptiongroupbox_set_line_width(void* self, int lineWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#midLineWidth-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-int32_t q_styleoptiongroupbox_mid_line_width(void* self);
+int32_t q_styleoptiongroupbox_mid_line_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#midLineWidth-var)
 ///
@@ -6240,17 +6240,17 @@ void q_styleoptiongroupbox_set_mid_line_width(void* self, int midLineWidth);
 /// @param self QStyleOptionGroupBox*
 /// @param param1 QStyleOptionGroupBox*
 ///
-void q_styleoptiongroupbox_operator_assign(void* self, void* param1);
+void q_styleoptiongroupbox_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptiongroupbox_sub_controls(void* self);
+int32_t q_styleoptiongroupbox_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6265,11 +6265,11 @@ void q_styleoptiongroupbox_set_sub_controls(void* self, int32_t subControls);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptiongroupbox_active_sub_controls(void* self);
+int32_t q_styleoptiongroupbox_active_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6284,9 +6284,9 @@ void q_styleoptiongroupbox_set_active_sub_controls(void* self, int32_t activeSub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-int32_t q_styleoptiongroupbox_version(void* self);
+int32_t q_styleoptiongroupbox_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6301,9 +6301,9 @@ void q_styleoptiongroupbox_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-int32_t q_styleoptiongroupbox_type(void* self);
+int32_t q_styleoptiongroupbox_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6318,11 +6318,11 @@ void q_styleoptiongroupbox_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiongroupbox_state(void* self);
+int32_t q_styleoptiongroupbox_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6337,11 +6337,11 @@ void q_styleoptiongroupbox_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiongroupbox_direction(void* self);
+int32_t q_styleoptiongroupbox_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6356,9 +6356,9 @@ void q_styleoptiongroupbox_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-QRect* q_styleoptiongroupbox_rect(void* self);
+QRect* q_styleoptiongroupbox_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6373,9 +6373,9 @@ void q_styleoptiongroupbox_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-QFontMetrics* q_styleoptiongroupbox_font_metrics(void* self);
+QFontMetrics* q_styleoptiongroupbox_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6390,9 +6390,9 @@ void q_styleoptiongroupbox_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-QPalette* q_styleoptiongroupbox_palette(void* self);
+QPalette* q_styleoptiongroupbox_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6407,9 +6407,9 @@ void q_styleoptiongroupbox_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionGroupBox*
+/// @param self const QStyleOptionGroupBox*
 ///
-QObject* q_styleoptiongroupbox_style_object(void* self);
+QObject* q_styleoptiongroupbox_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6427,7 +6427,7 @@ void q_styleoptiongroupbox_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionGroupBox*
 /// @param w QWidget*
 ///
-void q_styleoptiongroupbox_init_from(void* self, void* w);
+void q_styleoptiongroupbox_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#dtor.QStyleOptionGroupBox)
 ///
@@ -6449,15 +6449,15 @@ QStyleOptionSizeGrip* q_styleoptionsizegrip_new();
 ///
 /// @param other QStyleOptionSizeGrip*
 ///
-QStyleOptionSizeGrip* q_styleoptionsizegrip_new2(void* other);
+QStyleOptionSizeGrip* q_styleoptionsizegrip_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionsizegrip.html#corner-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
 /// @return enum Qt__Corner
 ///
-int32_t q_styleoptionsizegrip_corner(void* self);
+int32_t q_styleoptionsizegrip_corner(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionsizegrip.html#corner-var)
 ///
@@ -6471,17 +6471,17 @@ void q_styleoptionsizegrip_set_corner(void* self, int32_t corner);
 /// @param self QStyleOptionSizeGrip*
 /// @param param1 QStyleOptionSizeGrip*
 ///
-void q_styleoptionsizegrip_operator_assign(void* self, void* param1);
+void q_styleoptionsizegrip_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleOptionComplex
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#subControls-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptionsizegrip_sub_controls(void* self);
+int32_t q_styleoptionsizegrip_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6496,11 +6496,11 @@ void q_styleoptionsizegrip_set_sub_controls(void* self, int32_t subControls);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#activeSubControls-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
 /// @return flag of enum QStyle__SubControl
 ///
-int32_t q_styleoptionsizegrip_active_sub_controls(void* self);
+int32_t q_styleoptionsizegrip_active_sub_controls(const void* self);
 
 /// Inherited from QStyleOptionComplex
 ///
@@ -6515,9 +6515,9 @@ void q_styleoptionsizegrip_set_active_sub_controls(void* self, int32_t activeSub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
-int32_t q_styleoptionsizegrip_version(void* self);
+int32_t q_styleoptionsizegrip_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6532,9 +6532,9 @@ void q_styleoptionsizegrip_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
-int32_t q_styleoptionsizegrip_type(void* self);
+int32_t q_styleoptionsizegrip_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6549,11 +6549,11 @@ void q_styleoptionsizegrip_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptionsizegrip_state(void* self);
+int32_t q_styleoptionsizegrip_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6568,11 +6568,11 @@ void q_styleoptionsizegrip_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptionsizegrip_direction(void* self);
+int32_t q_styleoptionsizegrip_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6587,9 +6587,9 @@ void q_styleoptionsizegrip_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
-QRect* q_styleoptionsizegrip_rect(void* self);
+QRect* q_styleoptionsizegrip_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6604,9 +6604,9 @@ void q_styleoptionsizegrip_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
-QFontMetrics* q_styleoptionsizegrip_font_metrics(void* self);
+QFontMetrics* q_styleoptionsizegrip_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6621,9 +6621,9 @@ void q_styleoptionsizegrip_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
-QPalette* q_styleoptionsizegrip_palette(void* self);
+QPalette* q_styleoptionsizegrip_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6638,9 +6638,9 @@ void q_styleoptionsizegrip_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionSizeGrip*
+/// @param self const QStyleOptionSizeGrip*
 ///
-QObject* q_styleoptionsizegrip_style_object(void* self);
+QObject* q_styleoptionsizegrip_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6658,7 +6658,7 @@ void q_styleoptionsizegrip_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionSizeGrip*
 /// @param w QWidget*
 ///
-void q_styleoptionsizegrip_init_from(void* self, void* w);
+void q_styleoptionsizegrip_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptionsizegrip.html#dtor.QStyleOptionSizeGrip)
 ///
@@ -6680,13 +6680,13 @@ QStyleOptionGraphicsItem* q_styleoptiongraphicsitem_new();
 ///
 /// @param other QStyleOptionGraphicsItem*
 ///
-QStyleOptionGraphicsItem* q_styleoptiongraphicsitem_new2(void* other);
+QStyleOptionGraphicsItem* q_styleoptiongraphicsitem_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#exposedRect-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
-QRectF* q_styleoptiongraphicsitem_exposed_rect(void* self);
+QRectF* q_styleoptiongraphicsitem_exposed_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#exposedRect-var)
 ///
@@ -6700,21 +6700,21 @@ void q_styleoptiongraphicsitem_set_exposed_rect(void* self, void* exposedRect);
 /// @param self QStyleOptionGraphicsItem*
 /// @param param1 QStyleOptionGraphicsItem*
 ///
-void q_styleoptiongraphicsitem_operator_assign(void* self, void* param1);
+void q_styleoptiongraphicsitem_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#levelOfDetailFromTransform)
 ///
 /// @param worldTransform QTransform*
 ///
-double q_styleoptiongraphicsitem_level_of_detail_from_transform(void* worldTransform);
+double q_styleoptiongraphicsitem_level_of_detail_from_transform(const void* worldTransform);
 
 /// Inherited from QStyleOption
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#version-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
-int32_t q_styleoptiongraphicsitem_version(void* self);
+int32_t q_styleoptiongraphicsitem_version(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6729,9 +6729,9 @@ void q_styleoptiongraphicsitem_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#type-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
-int32_t q_styleoptiongraphicsitem_type(void* self);
+int32_t q_styleoptiongraphicsitem_type(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6746,11 +6746,11 @@ void q_styleoptiongraphicsitem_set_type(void* self, int type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#state-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
 /// @return flag of enum QStyle__StateFlag
 ///
-int32_t q_styleoptiongraphicsitem_state(void* self);
+int32_t q_styleoptiongraphicsitem_state(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6765,11 +6765,11 @@ void q_styleoptiongraphicsitem_set_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#direction-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_styleoptiongraphicsitem_direction(void* self);
+int32_t q_styleoptiongraphicsitem_direction(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6784,9 +6784,9 @@ void q_styleoptiongraphicsitem_set_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#rect-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
-QRect* q_styleoptiongraphicsitem_rect(void* self);
+QRect* q_styleoptiongraphicsitem_rect(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6801,9 +6801,9 @@ void q_styleoptiongraphicsitem_set_rect(void* self, void* rect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#fontMetrics-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
-QFontMetrics* q_styleoptiongraphicsitem_font_metrics(void* self);
+QFontMetrics* q_styleoptiongraphicsitem_font_metrics(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6818,9 +6818,9 @@ void q_styleoptiongraphicsitem_set_font_metrics(void* self, void* fontMetrics);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#palette-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
-QPalette* q_styleoptiongraphicsitem_palette(void* self);
+QPalette* q_styleoptiongraphicsitem_palette(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6835,9 +6835,9 @@ void q_styleoptiongraphicsitem_set_palette(void* self, void* palette);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoption.html#styleObject-var)
 ///
-/// @param self QStyleOptionGraphicsItem*
+/// @param self const QStyleOptionGraphicsItem*
 ///
-QObject* q_styleoptiongraphicsitem_style_object(void* self);
+QObject* q_styleoptiongraphicsitem_style_object(const void* self);
 
 /// Inherited from QStyleOption
 ///
@@ -6855,7 +6855,7 @@ void q_styleoptiongraphicsitem_set_style_object(void* self, void* styleObject);
 /// @param self QStyleOptionGraphicsItem*
 /// @param w QWidget*
 ///
-void q_styleoptiongraphicsitem_init_from(void* self, void* w);
+void q_styleoptiongraphicsitem_init_from(void* self, const void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#dtor.QStyleOptionGraphicsItem)
 ///
@@ -6877,7 +6877,7 @@ QStyleHintReturn* q_stylehintreturn_new();
 ///
 /// @param param1 QStyleHintReturn*
 ///
-QStyleHintReturn* q_stylehintreturn_new2(void* param1);
+QStyleHintReturn* q_stylehintreturn_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html)
 
@@ -6898,9 +6898,9 @@ QStyleHintReturn* q_stylehintreturn_new4(int version, int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#version-var)
 ///
-/// @param self QStyleHintReturn*
+/// @param self const QStyleHintReturn*
 ///
-int32_t q_stylehintreturn_version(void* self);
+int32_t q_stylehintreturn_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#version-var)
 ///
@@ -6911,9 +6911,9 @@ void q_stylehintreturn_set_version(void* self, int version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#type-var)
 ///
-/// @param self QStyleHintReturn*
+/// @param self const QStyleHintReturn*
 ///
-int32_t q_stylehintreturn_type(void* self);
+int32_t q_stylehintreturn_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#type-var)
 ///
@@ -6927,7 +6927,7 @@ void q_stylehintreturn_set_type(void* self, int type);
 /// @param self QStyleHintReturn*
 /// @param param1 QStyleHintReturn*
 ///
-void q_stylehintreturn_operator_assign(void* self, void* param1);
+void q_stylehintreturn_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#dtor.QStyleHintReturn)
 ///
@@ -6949,13 +6949,13 @@ QStyleHintReturnMask* q_stylehintreturnmask_new();
 ///
 /// @param param1 QStyleHintReturnMask*
 ///
-QStyleHintReturnMask* q_stylehintreturnmask_new2(void* param1);
+QStyleHintReturnMask* q_stylehintreturnmask_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturnmask.html#region-var)
 ///
-/// @param self QStyleHintReturnMask*
+/// @param self const QStyleHintReturnMask*
 ///
-QRegion* q_stylehintreturnmask_region(void* self);
+QRegion* q_stylehintreturnmask_region(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturnmask.html#region-var)
 ///
@@ -6969,15 +6969,15 @@ void q_stylehintreturnmask_set_region(void* self, void* region);
 /// @param self QStyleHintReturnMask*
 /// @param param1 QStyleHintReturnMask*
 ///
-void q_stylehintreturnmask_operator_assign(void* self, void* param1);
+void q_stylehintreturnmask_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleHintReturn
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#version-var)
 ///
-/// @param self QStyleHintReturnMask*
+/// @param self const QStyleHintReturnMask*
 ///
-int32_t q_stylehintreturnmask_version(void* self);
+int32_t q_stylehintreturnmask_version(const void* self);
 
 /// Inherited from QStyleHintReturn
 ///
@@ -6992,9 +6992,9 @@ void q_stylehintreturnmask_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#type-var)
 ///
-/// @param self QStyleHintReturnMask*
+/// @param self const QStyleHintReturnMask*
 ///
-int32_t q_stylehintreturnmask_type(void* self);
+int32_t q_stylehintreturnmask_type(const void* self);
 
 /// Inherited from QStyleHintReturn
 ///
@@ -7025,13 +7025,13 @@ QStyleHintReturnVariant* q_stylehintreturnvariant_new();
 ///
 /// @param param1 QStyleHintReturnVariant*
 ///
-QStyleHintReturnVariant* q_stylehintreturnvariant_new2(void* param1);
+QStyleHintReturnVariant* q_stylehintreturnvariant_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturnvariant.html#variant-var)
 ///
-/// @param self QStyleHintReturnVariant*
+/// @param self const QStyleHintReturnVariant*
 ///
-QVariant* q_stylehintreturnvariant_variant(void* self);
+QVariant* q_stylehintreturnvariant_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturnvariant.html#variant-var)
 ///
@@ -7045,15 +7045,15 @@ void q_stylehintreturnvariant_set_variant(void* self, void* variant);
 /// @param self QStyleHintReturnVariant*
 /// @param param1 QStyleHintReturnVariant*
 ///
-void q_stylehintreturnvariant_operator_assign(void* self, void* param1);
+void q_stylehintreturnvariant_operator_assign(void* self, const void* param1);
 
 /// Inherited from QStyleHintReturn
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#version-var)
 ///
-/// @param self QStyleHintReturnVariant*
+/// @param self const QStyleHintReturnVariant*
 ///
-int32_t q_stylehintreturnvariant_version(void* self);
+int32_t q_stylehintreturnvariant_version(const void* self);
 
 /// Inherited from QStyleHintReturn
 ///
@@ -7068,9 +7068,9 @@ void q_stylehintreturnvariant_set_version(void* self, int version);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstylehintreturn.html#type-var)
 ///
-/// @param self QStyleHintReturnVariant*
+/// @param self const QStyleHintReturnVariant*
 ///
-int32_t q_stylehintreturnvariant_type(void* self);
+int32_t q_stylehintreturnvariant_type(const void* self);
 
 /// Inherited from QStyleHintReturn
 ///

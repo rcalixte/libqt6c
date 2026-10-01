@@ -3,7 +3,7 @@
 #include "libqdiriterator.hpp"
 #include "libqdiriterator.h"
 
-QDirIterator* q_diriterator_new(void* dir) {
+QDirIterator* q_diriterator_new(const void* dir) {
     return QDirIterator_New((QDir*)dir);
 }
 
@@ -31,7 +31,7 @@ QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[stati
     return _out;
 }
 
-QDirIterator* q_diriterator_new5(void* dir, int32_t flags) {
+QDirIterator* q_diriterator_new5(const void* dir, int32_t flags) {
     return QDirIterator_New5((QDir*)dir, flags);
 }
 
@@ -86,29 +86,29 @@ QFileInfo* q_diriterator_next_file_info(void* self) {
     return QDirIterator_NextFileInfo((QDirIterator*)self);
 }
 
-bool q_diriterator_has_next(void* self) {
+bool q_diriterator_has_next(const void* self) {
     return QDirIterator_HasNext((QDirIterator*)self);
 }
 
-const char* q_diriterator_file_name(void* self) {
+const char* q_diriterator_file_name(const void* self) {
     libqt_string _str = QDirIterator_FileName((QDirIterator*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_diriterator_file_path(void* self) {
+const char* q_diriterator_file_path(const void* self) {
     libqt_string _str = QDirIterator_FilePath((QDirIterator*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QFileInfo* q_diriterator_file_info(void* self) {
+QFileInfo* q_diriterator_file_info(const void* self) {
     return QDirIterator_FileInfo((QDirIterator*)self);
 }
 
-const char* q_diriterator_path(void* self) {
+const char* q_diriterator_path(const void* self) {
     libqt_string _str = QDirIterator_Path((QDirIterator*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

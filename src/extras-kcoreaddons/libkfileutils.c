@@ -2,7 +2,7 @@
 #include "libkfileutils.hpp"
 #include "libkfileutils.h"
 
-const char* k_fileutils_suggest_name(void* baseURL, const char* oldName) {
+const char* k_fileutils_suggest_name(const void* baseURL, const char* oldName) {
     libqt_string _str = KFileUtils_SuggestName((QUrl*)baseURL, qstring(oldName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

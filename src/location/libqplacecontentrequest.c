@@ -6,11 +6,11 @@ QPlaceContentRequest* q_placecontentrequest_new() {
     return QPlaceContentRequest_New();
 }
 
-QPlaceContentRequest* q_placecontentrequest_new2(void* other) {
+QPlaceContentRequest* q_placecontentrequest_new2(const void* other) {
     return QPlaceContentRequest_New2((QPlaceContentRequest*)other);
 }
 
-void q_placecontentrequest_operator_assign(void* self, void* other) {
+void q_placecontentrequest_operator_assign(void* self, const void* other) {
     QPlaceContentRequest_OperatorAssign((QPlaceContentRequest*)self, (QPlaceContentRequest*)other);
 }
 
@@ -18,7 +18,7 @@ void q_placecontentrequest_swap(void* self, void* other) {
     QPlaceContentRequest_Swap((QPlaceContentRequest*)self, (QPlaceContentRequest*)other);
 }
 
-int32_t q_placecontentrequest_content_type(void* self) {
+int32_t q_placecontentrequest_content_type(const void* self) {
     return QPlaceContentRequest_ContentType((QPlaceContentRequest*)self);
 }
 
@@ -26,7 +26,7 @@ void q_placecontentrequest_set_content_type(void* self, int32_t type) {
     QPlaceContentRequest_SetContentType((QPlaceContentRequest*)self, type);
 }
 
-const char* q_placecontentrequest_place_id(void* self) {
+const char* q_placecontentrequest_place_id(const void* self) {
     libqt_string _str = QPlaceContentRequest_PlaceId((QPlaceContentRequest*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -37,15 +37,15 @@ void q_placecontentrequest_set_place_id(void* self, const char* identifier) {
     QPlaceContentRequest_SetPlaceId((QPlaceContentRequest*)self, qstring(identifier));
 }
 
-QVariant* q_placecontentrequest_content_context(void* self) {
+QVariant* q_placecontentrequest_content_context(const void* self) {
     return QPlaceContentRequest_ContentContext((QPlaceContentRequest*)self);
 }
 
-void q_placecontentrequest_set_content_context(void* self, void* context) {
+void q_placecontentrequest_set_content_context(void* self, const void* context) {
     QPlaceContentRequest_SetContentContext((QPlaceContentRequest*)self, (QVariant*)context);
 }
 
-int32_t q_placecontentrequest_limit(void* self) {
+int32_t q_placecontentrequest_limit(const void* self) {
     return QPlaceContentRequest_Limit((QPlaceContentRequest*)self);
 }
 

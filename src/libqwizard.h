@@ -33,26 +33,26 @@ QWizard* q_wizard_new3(void* parent, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const QMetaObject* q_wizard_meta_object(void* self);
+const QMetaObject* q_wizard_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QWizard*
-/// @param callback const QMetaObject* func()
+/// @param self const QWizard*
+/// @param callback const QMetaObject* func(const QWizard* self)
 ///
-void q_wizard_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_wizard_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const QMetaObject* q_wizard_super_meta_object(void* self);
+const QMetaObject* q_wizard_super_meta_object(const void* self);
 
 /// @param self QWizard*
 /// @param param1 const char*
@@ -128,33 +128,33 @@ void q_wizard_remove_page(void* self, int id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#page)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param id int
 ///
-QWizardPage* q_wizard_page(void* self, int id);
+QWizardPage* q_wizard_page(const void* self, int id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#hasVisitedPage)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param id int
 ///
-bool q_wizard_has_visited_page(void* self, int id);
+bool q_wizard_has_visited_page(const void* self, int id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#visitedIds)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_wizard_visited_ids(void* self);
+libqt_list q_wizard_visited_ids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#pageIds)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_wizard_page_ids(void* self);
+libqt_list q_wizard_page_ids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setStartId)
 ///
@@ -165,21 +165,21 @@ void q_wizard_set_start_id(void* self, int id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#startId)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_start_id(void* self);
+int32_t q_wizard_start_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#currentPage)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWizardPage* q_wizard_current_page(void* self);
+QWizardPage* q_wizard_current_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#currentId)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_current_id(void* self);
+int32_t q_wizard_current_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#validateCurrentPage)
 ///
@@ -192,9 +192,9 @@ bool q_wizard_validate_current_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizard*
-/// @param callback bool func()
+/// @param callback bool func(QWizard* self)
 ///
-void q_wizard_on_validate_current_page(void* self, bool (*callback)());
+void q_wizard_on_validate_current_page(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#validateCurrentPage)
 ///
@@ -206,26 +206,26 @@ bool q_wizard_super_validate_current_page(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#nextId)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_next_id(void* self);
+int32_t q_wizard_next_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#nextId)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QWizard*
-/// @param callback int32_t func()
+/// @param self const QWizard*
+/// @param callback int32_t func(const QWizard* self)
 ///
-void q_wizard_on_next_id(void* self, int32_t (*callback)());
+void q_wizard_on_next_id(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#nextId)
 ///
 /// Base class method implementation
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_super_next_id(void* self);
+int32_t q_wizard_super_next_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setField)
 ///
@@ -233,14 +233,14 @@ int32_t q_wizard_super_next_id(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-void q_wizard_set_field(void* self, const char* name, void* value);
+void q_wizard_set_field(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#field)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param name const char*
 ///
-QVariant* q_wizard_field(void* self, const char* name);
+QVariant* q_wizard_field(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setWizardStyle)
 ///
@@ -251,11 +251,11 @@ void q_wizard_set_wizard_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#wizardStyle)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum QWizard__WizardStyle
 ///
-int32_t q_wizard_wizard_style(void* self);
+int32_t q_wizard_wizard_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setOption)
 ///
@@ -266,10 +266,10 @@ void q_wizard_set_option(void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#testOption)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param option enum QWizard__WizardOption
 ///
-bool q_wizard_test_option(void* self, int32_t option);
+bool q_wizard_test_option(const void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setOptions)
 ///
@@ -280,11 +280,11 @@ void q_wizard_set_options(void* self, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#options)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return flag of enum QWizard__WizardOption
 ///
-int32_t q_wizard_options(void* self);
+int32_t q_wizard_options(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setButtonText)
 ///
@@ -298,10 +298,10 @@ void q_wizard_set_button_text(void* self, int32_t which, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param which enum QWizard__WizardButton
 ///
-const char* q_wizard_button_text(void* self, int32_t which);
+const char* q_wizard_button_text(const void* self, int32_t which);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setButtonLayout)
 ///
@@ -320,10 +320,10 @@ void q_wizard_set_button(void* self, int32_t which, void* button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#button)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param which enum QWizard__WizardButton
 ///
-QAbstractButton* q_wizard_button(void* self, int32_t which);
+QAbstractButton* q_wizard_button(const void* self, int32_t which);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setTitleFormat)
 ///
@@ -334,11 +334,11 @@ void q_wizard_set_title_format(void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#titleFormat)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum Qt__TextFormat
 ///
-int32_t q_wizard_title_format(void* self);
+int32_t q_wizard_title_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setSubTitleFormat)
 ///
@@ -349,11 +349,11 @@ void q_wizard_set_sub_title_format(void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#subTitleFormat)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum Qt__TextFormat
 ///
-int32_t q_wizard_sub_title_format(void* self);
+int32_t q_wizard_sub_title_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setPixmap)
 ///
@@ -361,14 +361,14 @@ int32_t q_wizard_sub_title_format(void* self);
 /// @param which enum QWizard__WizardPixmap
 /// @param pixmap QPixmap*
 ///
-void q_wizard_set_pixmap(void* self, int32_t which, void* pixmap);
+void q_wizard_set_pixmap(void* self, int32_t which, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#pixmap)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param which enum QWizard__WizardPixmap
 ///
-QPixmap* q_wizard_pixmap(void* self, int32_t which);
+QPixmap* q_wizard_pixmap(const void* self, int32_t which);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setSideWidget)
 ///
@@ -379,9 +379,9 @@ void q_wizard_set_side_widget(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#sideWidget)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_side_widget(void* self);
+QWidget* q_wizard_side_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#setDefaultProperty)
 ///
@@ -419,28 +419,28 @@ void q_wizard_super_set_visible(void* self, bool visible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#sizeHint)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_size_hint(void* self);
+QSize* q_wizard_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QWizard*
-/// @param callback QSize* func()
+/// @param self const QWizard*
+/// @param callback QSize* func(const QWizard* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_wizard_on_size_hint(void* self, QSize* (*callback)());
+void q_wizard_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_super_size_hint(void* self);
+QSize* q_wizard_super_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizard.html#currentIdChanged)
 ///
@@ -717,9 +717,9 @@ void q_wizard_set_option2(void* self, int32_t option, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_result(void* self);
+int32_t q_wizard_result(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -734,9 +734,9 @@ void q_wizard_set_size_grip_enabled(void* self, bool sizeGripEnabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_size_grip_enabled(void* self);
+bool q_wizard_is_size_grip_enabled(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -828,9 +828,9 @@ QWizard* q_wizard_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-uintptr_t q_wizard_win_id(void* self);
+uintptr_t q_wizard_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -844,25 +844,25 @@ void q_wizard_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-uintptr_t q_wizard_internal_win_id(void* self);
+uintptr_t q_wizard_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-uintptr_t q_wizard_effective_win_id(void* self);
+uintptr_t q_wizard_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QStyle* q_wizard_style(void* self);
+QStyle* q_wizard_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -877,35 +877,35 @@ void q_wizard_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_top_level(void* self);
+bool q_wizard_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_window(void* self);
+bool q_wizard_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_modal(void* self);
+bool q_wizard_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_wizard_window_modality(void* self);
+int32_t q_wizard_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -920,18 +920,18 @@ void q_wizard_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_enabled(void* self);
+bool q_wizard_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QWidget*
 ///
-bool q_wizard_is_enabled_to(void* self, void* param1);
+bool q_wizard_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -964,153 +964,153 @@ void q_wizard_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QRect* q_wizard_frame_geometry(void* self);
+QRect* q_wizard_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const QRect* q_wizard_geometry(void* self);
+const QRect* q_wizard_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QRect* q_wizard_normal_geometry(void* self);
+QRect* q_wizard_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_x(void* self);
+int32_t q_wizard_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_y(void* self);
+int32_t q_wizard_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QPoint* q_wizard_pos(void* self);
+QPoint* q_wizard_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_frame_size(void* self);
+QSize* q_wizard_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_size(void* self);
+QSize* q_wizard_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_width(void* self);
+int32_t q_wizard_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_height(void* self);
+int32_t q_wizard_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QRect* q_wizard_rect(void* self);
+QRect* q_wizard_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QRect* q_wizard_children_rect(void* self);
+QRect* q_wizard_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QRegion* q_wizard_children_region(void* self);
+QRegion* q_wizard_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_minimum_size(void* self);
+QSize* q_wizard_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_maximum_size(void* self);
+QSize* q_wizard_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_minimum_width(void* self);
+int32_t q_wizard_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_minimum_height(void* self);
+int32_t q_wizard_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_maximum_width(void* self);
+int32_t q_wizard_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_maximum_height(void* self);
+int32_t q_wizard_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1119,7 +1119,7 @@ int32_t q_wizard_maximum_height(void* self);
 /// @param self QWizard*
 /// @param minimumSize QSize*
 ///
-void q_wizard_set_minimum_size(void* self, void* minimumSize);
+void q_wizard_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1138,7 +1138,7 @@ void q_wizard_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QWizard*
 /// @param maximumSize QSize*
 ///
-void q_wizard_set_maximum_size(void* self, void* maximumSize);
+void q_wizard_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1190,9 +1190,9 @@ void q_wizard_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_size_increment(void* self);
+QSize* q_wizard_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1201,7 +1201,7 @@ QSize* q_wizard_size_increment(void* self);
 /// @param self QWizard*
 /// @param sizeIncrement QSize*
 ///
-void q_wizard_set_size_increment(void* self, void* sizeIncrement);
+void q_wizard_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1217,9 +1217,9 @@ void q_wizard_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_base_size(void* self);
+QSize* q_wizard_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1228,7 +1228,7 @@ QSize* q_wizard_base_size(void* self);
 /// @param self QWizard*
 /// @param baseSize QSize*
 ///
-void q_wizard_set_base_size(void* self, void* baseSize);
+void q_wizard_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1247,7 +1247,7 @@ void q_wizard_set_base_size2(void* self, int basew, int baseh);
 /// @param self QWizard*
 /// @param fixedSize QSize*
 ///
-void q_wizard_set_fixed_size(void* self, void* fixedSize);
+void q_wizard_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1281,145 +1281,145 @@ void q_wizard_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QPointF*
 ///
-QPointF* q_wizard_map_to_global(void* self, void* param1);
+QPointF* q_wizard_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QPoint*
 ///
-QPoint* q_wizard_map_to_global2(void* self, void* param1);
+QPoint* q_wizard_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QPointF*
 ///
-QPointF* q_wizard_map_from_global(void* self, void* param1);
+QPointF* q_wizard_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QPoint*
 ///
-QPoint* q_wizard_map_from_global2(void* self, void* param1);
+QPoint* q_wizard_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QPointF*
 ///
-QPointF* q_wizard_map_to_parent(void* self, void* param1);
+QPointF* q_wizard_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QPoint*
 ///
-QPoint* q_wizard_map_to_parent2(void* self, void* param1);
+QPoint* q_wizard_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QPointF*
 ///
-QPointF* q_wizard_map_from_parent(void* self, void* param1);
+QPointF* q_wizard_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QPoint*
 ///
-QPoint* q_wizard_map_from_parent2(void* self, void* param1);
+QPoint* q_wizard_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_wizard_map_to(void* self, void* param1, void* param2);
+QPointF* q_wizard_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_wizard_map_to2(void* self, void* param1, void* param2);
+QPoint* q_wizard_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_wizard_map_from(void* self, void* param1, void* param2);
+QPointF* q_wizard_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_wizard_map_from2(void* self, void* param1, void* param2);
+QPoint* q_wizard_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_window(void* self);
+QWidget* q_wizard_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_native_parent_widget(void* self);
+QWidget* q_wizard_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_top_level_widget(void* self);
+QWidget* q_wizard_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const QPalette* q_wizard_palette(void* self);
+const QPalette* q_wizard_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1428,7 +1428,7 @@ const QPalette* q_wizard_palette(void* self);
 /// @param self QWizard*
 /// @param palette QPalette*
 ///
-void q_wizard_set_palette(void* self, void* palette);
+void q_wizard_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1443,11 +1443,11 @@ void q_wizard_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_wizard_background_role(void* self);
+int32_t q_wizard_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1462,19 +1462,19 @@ void q_wizard_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_wizard_foreground_role(void* self);
+int32_t q_wizard_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const QFont* q_wizard_font(void* self);
+const QFont* q_wizard_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1483,31 +1483,31 @@ const QFont* q_wizard_font(void* self);
 /// @param self QWizard*
 /// @param font QFont*
 ///
-void q_wizard_set_font(void* self, void* font);
+void q_wizard_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QFontMetrics* q_wizard_font_metrics(void* self);
+QFontMetrics* q_wizard_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QFontInfo* q_wizard_font_info(void* self);
+QFontInfo* q_wizard_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QCursor* q_wizard_cursor(void* self);
+QCursor* q_wizard_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1516,7 +1516,7 @@ QCursor* q_wizard_cursor(void* self);
 /// @param self QWizard*
 /// @param cursor QCursor*
 ///
-void q_wizard_set_cursor(void* self, void* cursor);
+void q_wizard_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1539,17 +1539,17 @@ void q_wizard_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_has_mouse_tracking(void* self);
+bool q_wizard_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_under_mouse(void* self);
+bool q_wizard_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1564,9 +1564,9 @@ void q_wizard_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_has_tablet_tracking(void* self);
+bool q_wizard_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1575,7 +1575,7 @@ bool q_wizard_has_tablet_tracking(void* self);
 /// @param self QWizard*
 /// @param mask QBitmap*
 ///
-void q_wizard_set_mask(void* self, void* mask);
+void q_wizard_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1584,15 +1584,15 @@ void q_wizard_set_mask(void* self, void* mask);
 /// @param self QWizard*
 /// @param mask QRegion*
 ///
-void q_wizard_set_mask2(void* self, void* mask);
+void q_wizard_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QRegion* q_wizard_mask(void* self);
+QRegion* q_wizard_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1632,9 +1632,9 @@ QPixmap* q_wizard_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QGraphicsEffect* q_wizard_graphics_effect(void* self);
+QGraphicsEffect* q_wizard_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1687,9 +1687,9 @@ void q_wizard_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_style_sheet(void* self);
+const char* q_wizard_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1697,9 +1697,9 @@ const char* q_wizard_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_window_title(void* self);
+const char* q_wizard_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1708,15 +1708,15 @@ const char* q_wizard_window_title(void* self);
 /// @param self QWizard*
 /// @param icon QIcon*
 ///
-void q_wizard_set_window_icon(void* self, void* icon);
+void q_wizard_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QIcon* q_wizard_window_icon(void* self);
+QIcon* q_wizard_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1733,9 +1733,9 @@ void q_wizard_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_window_icon_text(void* self);
+const char* q_wizard_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1752,9 +1752,9 @@ void q_wizard_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_window_role(void* self);
+const char* q_wizard_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1771,9 +1771,9 @@ void q_wizard_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_window_file_path(void* self);
+const char* q_wizard_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1788,17 +1788,17 @@ void q_wizard_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-double q_wizard_window_opacity(void* self);
+double q_wizard_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_window_modified(void* self);
+bool q_wizard_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1815,9 +1815,9 @@ void q_wizard_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_tool_tip(void* self);
+const char* q_wizard_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1832,9 +1832,9 @@ void q_wizard_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_tool_tip_duration(void* self);
+int32_t q_wizard_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1851,9 +1851,9 @@ void q_wizard_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_status_tip(void* self);
+const char* q_wizard_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1870,9 +1870,9 @@ void q_wizard_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_whats_this(void* self);
+const char* q_wizard_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1880,9 +1880,9 @@ const char* q_wizard_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_accessible_name(void* self);
+const char* q_wizard_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1899,9 +1899,9 @@ void q_wizard_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_accessible_description(void* self);
+const char* q_wizard_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1925,11 +1925,11 @@ void q_wizard_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_wizard_layout_direction(void* self);
+int32_t q_wizard_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1946,15 +1946,15 @@ void q_wizard_unset_layout_direction(void* self);
 /// @param self QWizard*
 /// @param locale QLocale*
 ///
-void q_wizard_set_locale(void* self, void* locale);
+void q_wizard_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QLocale* q_wizard_locale(void* self);
+QLocale* q_wizard_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1968,17 +1968,17 @@ void q_wizard_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_right_to_left(void* self);
+bool q_wizard_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_left_to_right(void* self);
+bool q_wizard_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1992,9 +1992,9 @@ void q_wizard_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_active_window(void* self);
+bool q_wizard_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2025,11 +2025,11 @@ void q_wizard_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_wizard_focus_policy(void* self);
+int32_t q_wizard_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2044,9 +2044,9 @@ void q_wizard_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_has_focus(void* self);
+bool q_wizard_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2070,19 +2070,19 @@ void q_wizard_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_focus_proxy(void* self);
+QWidget* q_wizard_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_wizard_context_menu_policy(void* self);
+int32_t q_wizard_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2108,7 +2108,7 @@ void q_wizard_grab_mouse(void* self);
 /// @param self QWizard*
 /// @param param1 QCursor*
 ///
-void q_wizard_grab_mouse2(void* self, void* param1);
+void q_wizard_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2141,7 +2141,7 @@ void q_wizard_release_keyboard(void* self);
 /// @param self QWizard*
 /// @param key QKeySequence*
 ///
-int32_t q_wizard_grab_shortcut(void* self, void* key);
+int32_t q_wizard_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2186,9 +2186,9 @@ QWidget* q_wizard_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_updates_enabled(void* self);
+bool q_wizard_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2203,9 +2203,9 @@ void q_wizard_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QGraphicsProxyWidget* q_wizard_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_wizard_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2242,7 +2242,7 @@ void q_wizard_update2(void* self, int x, int y, int w, int h);
 /// @param self QWizard*
 /// @param param1 QRect*
 ///
-void q_wizard_update3(void* self, void* param1);
+void q_wizard_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2251,7 +2251,7 @@ void q_wizard_update3(void* self, void* param1);
 /// @param self QWizard*
 /// @param param1 QRegion*
 ///
-void q_wizard_update4(void* self, void* param1);
+void q_wizard_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2272,7 +2272,7 @@ void q_wizard_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QWizard*
 /// @param param1 QRect*
 ///
-void q_wizard_repaint3(void* self, void* param1);
+void q_wizard_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2281,7 +2281,7 @@ void q_wizard_repaint3(void* self, void* param1);
 /// @param self QWizard*
 /// @param param1 QRegion*
 ///
-void q_wizard_repaint4(void* self, void* param1);
+void q_wizard_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2390,7 +2390,7 @@ void q_wizard_move(void* self, int x, int y);
 /// @param self QWizard*
 /// @param param1 QPoint*
 ///
-void q_wizard_move2(void* self, void* param1);
+void q_wizard_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2409,7 +2409,7 @@ void q_wizard_resize(void* self, int w, int h);
 /// @param self QWizard*
 /// @param param1 QSize*
 ///
-void q_wizard_resize2(void* self, void* param1);
+void q_wizard_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2430,7 +2430,7 @@ void q_wizard_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QWizard*
 /// @param geometry QRect*
 ///
-void q_wizard_set_geometry2(void* self, void* geometry);
+void q_wizard_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2438,9 +2438,9 @@ void q_wizard_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-char* q_wizard_save_geometry(void* self);
+char* q_wizard_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2463,60 +2463,60 @@ void q_wizard_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_visible(void* self);
+bool q_wizard_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 QWidget*
 ///
-bool q_wizard_is_visible_to(void* self, void* param1);
+bool q_wizard_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_hidden(void* self);
+bool q_wizard_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_minimized(void* self);
+bool q_wizard_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_maximized(void* self);
+bool q_wizard_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_full_screen(void* self);
+bool q_wizard_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_wizard_window_state(void* self);
+int32_t q_wizard_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2540,9 +2540,9 @@ void q_wizard_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSizePolicy* q_wizard_size_policy(void* self);
+QSizePolicy* q_wizard_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2567,9 +2567,9 @@ void q_wizard_set_size_policy2(void* self, int32_t horizontal, int32_t vertical)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QRegion* q_wizard_visible_region(void* self);
+QRegion* q_wizard_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2590,31 +2590,31 @@ void q_wizard_set_contents_margins(void* self, int left, int top, int right, int
 /// @param self QWizard*
 /// @param margins QMargins*
 ///
-void q_wizard_set_contents_margins2(void* self, void* margins);
+void q_wizard_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QMargins* q_wizard_contents_margins(void* self);
+QMargins* q_wizard_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QRect* q_wizard_contents_rect(void* self);
+QRect* q_wizard_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QLayout* q_wizard_layout(void* self);
+QLayout* q_wizard_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2671,39 +2671,39 @@ void q_wizard_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_wizard_scroll2(void* self, int dx, int dy, void* param3);
+void q_wizard_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_focus_widget(void* self);
+QWidget* q_wizard_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_next_in_focus_chain(void* self);
+QWidget* q_wizard_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_previous_in_focus_chain(void* self);
+QWidget* q_wizard_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_accept_drops(void* self);
+bool q_wizard_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2765,11 +2765,11 @@ void q_wizard_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_wizard_actions(void* self);
+libqt_list q_wizard_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2788,7 +2788,7 @@ QAction* q_wizard_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_wizard_add_action3(void* self, void* icon, const char* text);
+QAction* q_wizard_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2798,7 +2798,7 @@ QAction* q_wizard_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_wizard_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_wizard_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2809,15 +2809,15 @@ QAction* q_wizard_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_wizard_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_wizard_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWidget* q_wizard_parent_widget(void* self);
+QWidget* q_wizard_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2832,11 +2832,11 @@ void q_wizard_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_wizard_window_flags(void* self);
+int32_t q_wizard_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2860,11 +2860,11 @@ void q_wizard_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_wizard_window_type(void* self);
+int32_t q_wizard_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2878,29 +2878,29 @@ QWidget* q_wizard_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_wizard_child_at(void* self, int x, int y);
+QWidget* q_wizard_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param p QPoint*
 ///
-QWidget* q_wizard_child_at2(void* self, void* p);
+QWidget* q_wizard_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param p QPointF*
 ///
-QWidget* q_wizard_child_at3(void* self, void* p);
+QWidget* q_wizard_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2915,35 +2915,35 @@ void q_wizard_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_wizard_test_attribute(void* self, int32_t param1);
+bool q_wizard_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-void q_wizard_ensure_polished(void* self);
+void q_wizard_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param child QWidget*
 ///
-bool q_wizard_is_ancestor_of(void* self, void* child);
+bool q_wizard_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_auto_fill_background(void* self);
+bool q_wizard_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2958,25 +2958,25 @@ void q_wizard_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QBackingStore* q_wizard_backing_store(void* self);
+QBackingStore* q_wizard_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QWindow* q_wizard_window_handle(void* self);
+QWindow* q_wizard_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QScreen* q_wizard_screen(void* self);
+QScreen* q_wizard_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3020,7 +3020,7 @@ void q_wizard_on_window_title_changed(void* self, void (*callback)(void*, const 
 /// @param self QWizard*
 /// @param icon QIcon*
 ///
-void q_wizard_window_icon_changed(void* self, void* icon);
+void q_wizard_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3029,7 +3029,7 @@ void q_wizard_window_icon_changed(void* self, void* icon);
 /// @param self QWizard*
 /// @param callback void func(QWizard* self, QIcon* icon)
 ///
-void q_wizard_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_wizard_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3056,7 +3056,7 @@ void q_wizard_on_window_icon_text_changed(void* self, void (*callback)(void*, co
 /// @param self QWizard*
 /// @param pos QPoint*
 ///
-void q_wizard_custom_context_menu_requested(void* self, void* pos);
+void q_wizard_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3065,17 +3065,17 @@ void q_wizard_custom_context_menu_requested(void* self, void* pos);
 /// @param self QWizard*
 /// @param callback void func(QWizard* self, QPoint* pos)
 ///
-void q_wizard_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_wizard_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_wizard_input_method_hints(void* self);
+int32_t q_wizard_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3094,7 +3094,7 @@ void q_wizard_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_wizard_render22(void* self, void* target, void* targetOffset);
+void q_wizard_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3105,7 +3105,7 @@ void q_wizard_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_wizard_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_wizard_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3117,7 +3117,7 @@ void q_wizard_render3(void* self, void* target, void* targetOffset, void* source
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_wizard_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_wizard_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3127,7 +3127,7 @@ void q_wizard_render4(void* self, void* target, void* targetOffset, void* source
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_wizard_render23(void* self, void* painter, void* targetOffset);
+void q_wizard_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3138,7 +3138,7 @@ void q_wizard_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_wizard_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_wizard_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3150,7 +3150,7 @@ void q_wizard_render32(void* self, void* painter, void* targetOffset, void* sour
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_wizard_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_wizard_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3159,7 +3159,7 @@ void q_wizard_render42(void* self, void* painter, void* targetOffset, void* sour
 /// @param self QWizard*
 /// @param rectangle QRect*
 ///
-QPixmap* q_wizard_grab1(void* self, void* rectangle);
+QPixmap* q_wizard_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3179,7 +3179,7 @@ void q_wizard_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_wizard_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_wizard_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3246,9 +3246,9 @@ QWidget* q_wizard_create_window_container3(void* window, void* parent, int32_t f
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char* q_wizard_object_name(void* self);
+const char* q_wizard_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3263,33 +3263,33 @@ void q_wizard_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_widget_type(void* self);
+bool q_wizard_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_window_type(void* self);
+bool q_wizard_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_is_quick_item_type(void* self);
+bool q_wizard_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_signals_blocked(void* self);
+bool q_wizard_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3304,9 +3304,9 @@ bool q_wizard_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QThread* q_wizard_thread(void* self);
+QThread* q_wizard_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3357,11 +3357,11 @@ void q_wizard_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_wizard_children(void* self);
+libqt_list q_wizard_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3390,7 +3390,7 @@ void q_wizard_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_wizard_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_wizard_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3401,18 +3401,18 @@ QMetaObject__Connection* q_wizard_connect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_wizard_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_wizard_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_wizard_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_wizard_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3423,7 +3423,7 @@ QMetaObject__Connection* q_wizard_connect3(void* self, void* sender, const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_wizard_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_wizard_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3434,24 +3434,24 @@ bool q_wizard_disconnect(void* sender, const char* signal, void* receiver, const
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_wizard_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_wizard_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_disconnect3(void* self);
+bool q_wizard_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param receiver QObject*
 ///
-bool q_wizard_disconnect4(void* self, void* receiver);
+bool q_wizard_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3459,23 +3459,23 @@ bool q_wizard_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_wizard_disconnect5(void* param1);
+bool q_wizard_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-void q_wizard_dump_object_tree(void* self);
+void q_wizard_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-void q_wizard_dump_object_info(void* self);
+void q_wizard_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3485,16 +3485,16 @@ void q_wizard_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_wizard_set_property(void* self, const char* name, void* value);
+bool q_wizard_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param name const char*
 ///
-QVariant* q_wizard_property(void* self, const char* name);
+QVariant* q_wizard_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3502,9 +3502,9 @@ QVariant* q_wizard_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const char** q_wizard_dynamic_property_names(void* self);
+const char** q_wizard_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3518,9 +3518,9 @@ QBindingStorage* q_wizard_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-const QBindingStorage* q_wizard_binding_storage2(void* self);
+const QBindingStorage* q_wizard_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3543,18 +3543,18 @@ void q_wizard_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QObject* q_wizard_parent(void* self);
+QObject* q_wizard_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param classname const char*
 ///
-bool q_wizard_inherits(void* self, const char* classname);
+bool q_wizard_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3594,7 +3594,7 @@ int32_t q_wizard_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_wizard_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_wizard_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3606,59 +3606,59 @@ QMetaObject__Connection* q_wizard_connect5(void* sender, const char* signal, voi
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_wizard_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_wizard_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_wizard_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_wizard_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param signal const char*
 ///
-bool q_wizard_disconnect1(void* self, const char* signal);
+bool q_wizard_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizard*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_wizard_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_wizard_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_wizard_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_wizard_disconnect23(void* self, void* receiver, const char* member);
+bool q_wizard_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QWizard*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_wizard_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3682,89 +3682,89 @@ void q_wizard_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_painting_active(void* self);
+bool q_wizard_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_width_m_m(void* self);
+int32_t q_wizard_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_height_m_m(void* self);
+int32_t q_wizard_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_logical_dpi_x(void* self);
+int32_t q_wizard_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_logical_dpi_y(void* self);
+int32_t q_wizard_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_physical_dpi_x(void* self);
+int32_t q_wizard_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_physical_dpi_y(void* self);
+int32_t q_wizard_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-double q_wizard_device_pixel_ratio(void* self);
+double q_wizard_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-double q_wizard_device_pixel_ratio_f(void* self);
+double q_wizard_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_color_count(void* self);
+int32_t q_wizard_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_depth(void* self);
+int32_t q_wizard_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3787,9 +3787,9 @@ int32_t q_wizard_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_minimum_size_hint(void* self);
+QSize* q_wizard_minimum_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3797,9 +3797,9 @@ QSize* q_wizard_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QSize* q_wizard_super_minimum_size_hint(void* self);
+QSize* q_wizard_super_minimum_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3807,12 +3807,12 @@ QSize* q_wizard_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
-/// @param callback QSize* func()
+/// @param self const QWizard*
+/// @param callback QSize* func(QWizard* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_wizard_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_wizard_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3841,9 +3841,9 @@ void q_wizard_super_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void func()
+/// @param callback void func(QWizard* self)
 ///
-void q_wizard_on_open(void* self, void (*callback)());
+void q_wizard_on_open(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3872,9 +3872,9 @@ int32_t q_wizard_super_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback int32_t func()
+/// @param callback int32_t func(QWizard* self)
 ///
-void q_wizard_on_exec(void* self, int32_t (*callback)());
+void q_wizard_on_exec(void* self, int32_t (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3903,9 +3903,9 @@ void q_wizard_super_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void func()
+/// @param callback void func(QWizard* self)
 ///
-void q_wizard_on_accept(void* self, void (*callback)());
+void q_wizard_on_accept(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3934,9 +3934,9 @@ void q_wizard_super_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void func()
+/// @param callback void func(QWizard* self)
 ///
-void q_wizard_on_reject(void* self, void (*callback)());
+void q_wizard_on_reject(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -4111,9 +4111,9 @@ void q_wizard_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_dev_type(void* self);
+int32_t q_wizard_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4121,9 +4121,9 @@ int32_t q_wizard_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_super_dev_type(void* self);
+int32_t q_wizard_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4131,10 +4131,10 @@ int32_t q_wizard_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
-/// @param callback int32_t func()
+/// @param self const QWizard*
+/// @param callback int32_t func(QWizard* self)
 ///
-void q_wizard_on_dev_type(void* self, int32_t (*callback)());
+void q_wizard_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4142,10 +4142,10 @@ void q_wizard_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 int
 ///
-int32_t q_wizard_height_for_width(void* self, int param1);
+int32_t q_wizard_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4153,10 +4153,10 @@ int32_t q_wizard_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 int
 ///
-int32_t q_wizard_super_height_for_width(void* self, int param1);
+int32_t q_wizard_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4164,10 +4164,10 @@ int32_t q_wizard_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param callback int32_t func(QWizard* self, int param1)
 ///
-void q_wizard_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_wizard_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4175,9 +4175,9 @@ void q_wizard_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_has_height_for_width(void* self);
+bool q_wizard_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4185,9 +4185,9 @@ bool q_wizard_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-bool q_wizard_super_has_height_for_width(void* self);
+bool q_wizard_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4195,10 +4195,10 @@ bool q_wizard_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
-/// @param callback bool func()
+/// @param self const QWizard*
+/// @param callback bool func(QWizard* self)
 ///
-void q_wizard_on_has_height_for_width(void* self, bool (*callback)());
+void q_wizard_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4206,9 +4206,9 @@ void q_wizard_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QPaintEngine* q_wizard_paint_engine(void* self);
+QPaintEngine* q_wizard_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4216,9 +4216,9 @@ QPaintEngine* q_wizard_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QPaintEngine* q_wizard_super_paint_engine(void* self);
+QPaintEngine* q_wizard_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4226,10 +4226,10 @@ QPaintEngine* q_wizard_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
-/// @param callback QPaintEngine* func()
+/// @param self const QWizard*
+/// @param callback QPaintEngine* func(QWizard* self)
 ///
-void q_wizard_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_wizard_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4901,10 +4901,10 @@ void q_wizard_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_wizard_metric(void* self, int32_t param1);
+int32_t q_wizard_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4912,10 +4912,10 @@ int32_t q_wizard_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_wizard_super_metric(void* self, int32_t param1);
+int32_t q_wizard_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4923,10 +4923,10 @@ int32_t q_wizard_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param callback int32_t func(QWizard* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_wizard_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_wizard_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4934,10 +4934,10 @@ void q_wizard_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param painter QPainter*
 ///
-void q_wizard_init_painter(void* self, void* painter);
+void q_wizard_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4945,10 +4945,10 @@ void q_wizard_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param painter QPainter*
 ///
-void q_wizard_super_init_painter(void* self, void* painter);
+void q_wizard_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4956,10 +4956,10 @@ void q_wizard_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param callback void func(QWizard* self, QPainter* painter)
 ///
-void q_wizard_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_wizard_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4967,10 +4967,10 @@ void q_wizard_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_wizard_redirected(void* self, void* offset);
+QPaintDevice* q_wizard_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4978,10 +4978,10 @@ QPaintDevice* q_wizard_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_wizard_super_redirected(void* self, void* offset);
+QPaintDevice* q_wizard_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4989,10 +4989,10 @@ QPaintDevice* q_wizard_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param callback QPaintDevice* func(QWizard* self, QPoint* offset)
 ///
-void q_wizard_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_wizard_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5000,9 +5000,9 @@ void q_wizard_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QPainter* q_wizard_shared_painter(void* self);
+QPainter* q_wizard_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5010,9 +5010,9 @@ QPainter* q_wizard_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QPainter* q_wizard_super_shared_painter(void* self);
+QPainter* q_wizard_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5020,10 +5020,10 @@ QPainter* q_wizard_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
-/// @param callback QPainter* func()
+/// @param self const QWizard*
+/// @param callback QPainter* func(QWizard* self)
 ///
-void q_wizard_on_shared_painter(void* self, QPainter* (*callback)());
+void q_wizard_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5064,10 +5064,10 @@ void q_wizard_on_input_method_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_wizard_input_method_query(void* self, int32_t param1);
+QVariant* q_wizard_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5075,10 +5075,10 @@ QVariant* q_wizard_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_wizard_super_input_method_query(void* self, int32_t param1);
+QVariant* q_wizard_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5086,12 +5086,12 @@ QVariant* q_wizard_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param callback QVariant* func(QWizard* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_wizard_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_wizard_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5234,7 +5234,7 @@ void q_wizard_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QWizard*
 /// @param signal QMetaMethod*
 ///
-void q_wizard_connect_notify(void* self, void* signal);
+void q_wizard_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5245,7 +5245,7 @@ void q_wizard_connect_notify(void* self, void* signal);
 /// @param self QWizard*
 /// @param signal QMetaMethod*
 ///
-void q_wizard_super_connect_notify(void* self, void* signal);
+void q_wizard_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5256,7 +5256,7 @@ void q_wizard_super_connect_notify(void* self, void* signal);
 /// @param self QWizard*
 /// @param callback void func(QWizard* self, QMetaMethod* signal)
 ///
-void q_wizard_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_wizard_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5267,7 +5267,7 @@ void q_wizard_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QWizard*
 /// @param signal QMetaMethod*
 ///
-void q_wizard_disconnect_notify(void* self, void* signal);
+void q_wizard_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5278,7 +5278,7 @@ void q_wizard_disconnect_notify(void* self, void* signal);
 /// @param self QWizard*
 /// @param signal QMetaMethod*
 ///
-void q_wizard_super_disconnect_notify(void* self, void* signal);
+void q_wizard_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5289,7 +5289,7 @@ void q_wizard_super_disconnect_notify(void* self, void* signal);
 /// @param self QWizard*
 /// @param callback void func(QWizard* self, QMetaMethod* signal)
 ///
-void q_wizard_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_wizard_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QDialog
 ///
@@ -5351,9 +5351,9 @@ void q_wizard_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void func()
+/// @param callback void func(QWizard* self)
 ///
-void q_wizard_on_update_micro_focus(void* self, void (*callback)());
+void q_wizard_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5382,9 +5382,9 @@ void q_wizard_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void func()
+/// @param callback void func(QWizard* self)
 ///
-void q_wizard_on_create(void* self, void (*callback)());
+void q_wizard_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5413,9 +5413,9 @@ void q_wizard_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback void func()
+/// @param callback void func(QWizard* self)
 ///
-void q_wizard_on_destroy(void* self, void (*callback)());
+void q_wizard_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5444,9 +5444,9 @@ bool q_wizard_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool func()
+/// @param callback bool func(QWizard* self)
 ///
-void q_wizard_on_focus_next_child(void* self, bool (*callback)());
+void q_wizard_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5475,9 +5475,9 @@ bool q_wizard_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizard*
-/// @param callback bool func()
+/// @param callback bool func(QWizard* self)
 ///
-void q_wizard_on_focus_previous_child(void* self, bool (*callback)());
+void q_wizard_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5485,9 +5485,9 @@ void q_wizard_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QObject* q_wizard_sender(void* self);
+QObject* q_wizard_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5495,9 +5495,9 @@ QObject* q_wizard_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-QObject* q_wizard_super_sender(void* self);
+QObject* q_wizard_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5505,10 +5505,10 @@ QObject* q_wizard_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
-/// @param callback QObject* func()
+/// @param self const QWizard*
+/// @param callback QObject* func(QWizard* self)
 ///
-void q_wizard_on_sender(void* self, QObject* (*callback)());
+void q_wizard_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5516,9 +5516,9 @@ void q_wizard_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_sender_signal_index(void* self);
+int32_t q_wizard_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5526,9 +5526,9 @@ int32_t q_wizard_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 ///
-int32_t q_wizard_super_sender_signal_index(void* self);
+int32_t q_wizard_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5536,10 +5536,10 @@ int32_t q_wizard_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
-/// @param callback int32_t func()
+/// @param self const QWizard*
+/// @param callback int32_t func(QWizard* self)
 ///
-void q_wizard_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_wizard_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5547,10 +5547,10 @@ void q_wizard_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param signal const char*
 ///
-int32_t q_wizard_receivers(void* self, const char* signal);
+int32_t q_wizard_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5558,10 +5558,10 @@ int32_t q_wizard_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param signal const char*
 ///
-int32_t q_wizard_super_receivers(void* self, const char* signal);
+int32_t q_wizard_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5569,10 +5569,10 @@ int32_t q_wizard_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param callback int32_t func(QWizard* self, const char* signal)
 ///
-void q_wizard_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_wizard_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5580,10 +5580,10 @@ void q_wizard_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param signal QMetaMethod*
 ///
-bool q_wizard_is_signal_connected(void* self, void* signal);
+bool q_wizard_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5591,10 +5591,10 @@ bool q_wizard_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param signal QMetaMethod*
 ///
-bool q_wizard_super_is_signal_connected(void* self, void* signal);
+bool q_wizard_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5602,10 +5602,10 @@ bool q_wizard_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param callback bool func(QWizard* self, QMetaMethod* signal)
 ///
-void q_wizard_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_wizard_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5613,11 +5613,11 @@ void q_wizard_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_wizard_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_wizard_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5625,11 +5625,11 @@ double q_wizard_get_decoded_metric_f(void* self, int32_t metricA, int32_t metric
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_wizard_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_wizard_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5637,10 +5637,10 @@ double q_wizard_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizard*
+/// @param self const QWizard*
 /// @param callback double func(QWizard* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_wizard_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_wizard_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5677,26 +5677,26 @@ QWizardPage* q_wizardpage_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const QMetaObject* q_wizardpage_meta_object(void* self);
+const QMetaObject* q_wizardpage_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QWizardPage*
-/// @param callback const QMetaObject* func()
+/// @param self const QWizardPage*
+/// @param callback const QMetaObject* func(const QWizardPage* self)
 ///
-void q_wizardpage_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_wizardpage_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const QMetaObject* q_wizardpage_super_meta_object(void* self);
+const QMetaObject* q_wizardpage_super_meta_object(const void* self);
 
 /// @param self QWizardPage*
 /// @param param1 const char*
@@ -5759,9 +5759,9 @@ void q_wizardpage_set_title(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_title(void* self);
+const char* q_wizardpage_title(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#setSubTitle)
 ///
@@ -5774,9 +5774,9 @@ void q_wizardpage_set_sub_title(void* self, const char* subTitle);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_sub_title(void* self);
+const char* q_wizardpage_sub_title(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#setPixmap)
 ///
@@ -5784,14 +5784,14 @@ const char* q_wizardpage_sub_title(void* self);
 /// @param which enum QWizard__WizardPixmap
 /// @param pixmap QPixmap*
 ///
-void q_wizardpage_set_pixmap(void* self, int32_t which, void* pixmap);
+void q_wizardpage_set_pixmap(void* self, int32_t which, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#pixmap)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param which enum QWizard__WizardPixmap
 ///
-QPixmap* q_wizardpage_pixmap(void* self, int32_t which);
+QPixmap* q_wizardpage_pixmap(const void* self, int32_t which);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#setFinalPage)
 ///
@@ -5802,9 +5802,9 @@ void q_wizardpage_set_final_page(void* self, bool finalPage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#isFinalPage)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_final_page(void* self);
+bool q_wizardpage_is_final_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#setCommitPage)
 ///
@@ -5815,9 +5815,9 @@ void q_wizardpage_set_commit_page(void* self, bool commitPage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#isCommitPage)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_commit_page(void* self);
+bool q_wizardpage_is_commit_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#setButtonText)
 ///
@@ -5831,10 +5831,10 @@ void q_wizardpage_set_button_text(void* self, int32_t which, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param which enum QWizard__WizardButton
 ///
-const char* q_wizardpage_button_text(void* self, int32_t which);
+const char* q_wizardpage_button_text(const void* self, int32_t which);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#initializePage)
 ///
@@ -5847,9 +5847,9 @@ void q_wizardpage_initialize_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback void func()
+/// @param callback void func(QWizardPage* self)
 ///
-void q_wizardpage_on_initialize_page(void* self, void (*callback)());
+void q_wizardpage_on_initialize_page(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#initializePage)
 ///
@@ -5870,9 +5870,9 @@ void q_wizardpage_cleanup_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback void func()
+/// @param callback void func(QWizardPage* self)
 ///
-void q_wizardpage_on_cleanup_page(void* self, void (*callback)());
+void q_wizardpage_on_cleanup_page(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#cleanupPage)
 ///
@@ -5893,9 +5893,9 @@ bool q_wizardpage_validate_page(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QWizardPage*
-/// @param callback bool func()
+/// @param callback bool func(QWizardPage* self)
 ///
-void q_wizardpage_on_validate_page(void* self, bool (*callback)());
+void q_wizardpage_on_validate_page(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#validatePage)
 ///
@@ -5907,49 +5907,49 @@ bool q_wizardpage_super_validate_page(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#isComplete)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_complete(void* self);
+bool q_wizardpage_is_complete(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#isComplete)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QWizardPage*
-/// @param callback bool func()
+/// @param self const QWizardPage*
+/// @param callback bool func(const QWizardPage* self)
 ///
-void q_wizardpage_on_is_complete(void* self, bool (*callback)());
+void q_wizardpage_on_is_complete(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#isComplete)
 ///
 /// Base class method implementation
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_super_is_complete(void* self);
+bool q_wizardpage_super_is_complete(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#nextId)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_next_id(void* self);
+int32_t q_wizardpage_next_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#nextId)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QWizardPage*
-/// @param callback int32_t func()
+/// @param self const QWizardPage*
+/// @param callback int32_t func(const QWizardPage* self)
 ///
-void q_wizardpage_on_next_id(void* self, int32_t (*callback)());
+void q_wizardpage_on_next_id(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#nextId)
 ///
 /// Base class method implementation
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_super_next_id(void* self);
+int32_t q_wizardpage_super_next_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#completeChanged)
 ///
@@ -5970,53 +5970,14 @@ void q_wizardpage_on_complete_changed(void* self, void (*callback)(void*));
 /// @param name const char*
 /// @param value QVariant*
 ///
-void q_wizardpage_set_field(void* self, const char* name, void* value);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#setField)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QWizardPage*
-/// @param callback void func(QWizardPage* self, const char* name, QVariant* value)
-///
-void q_wizardpage_on_set_field(void* self, void (*callback)(void*, const char*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#setField)
-///
-/// Base class method implementation
-///
-/// @param self QWizardPage*
-/// @param name const char*
-/// @param value QVariant*
-///
-void q_wizardpage_super_set_field(void* self, const char* name, void* value);
+void q_wizardpage_set_field(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#field)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param name const char*
 ///
-QVariant* q_wizardpage_field(void* self, const char* name);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#field)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QWizardPage*
-/// @param callback QVariant* func(QWizardPage* self, const char* name)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_wizardpage_on_field(void* self, QVariant* (*callback)(void*, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#field)
-///
-/// Base class method implementation
-///
-/// @param self QWizardPage*
-/// @param name const char*
-///
-QVariant* q_wizardpage_super_field(void* self, const char* name);
+QVariant* q_wizardpage_field(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
 ///
@@ -6026,47 +5987,11 @@ QVariant* q_wizardpage_super_field(void* self, const char* name);
 ///
 void q_wizardpage_register_field(void* self, const char* name, void* widget);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QWizardPage*
-/// @param callback void func(QWizardPage* self, const char* name, QWidget* widget)
-///
-void q_wizardpage_on_register_field(void* self, void (*callback)(void*, const char*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
-///
-/// Base class method implementation
-///
-/// @param self QWizardPage*
-/// @param name const char*
-/// @param widget QWidget*
-///
-void q_wizardpage_super_register_field(void* self, const char* name, void* widget);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#wizard)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWizard* q_wizardpage_wizard(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#wizard)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QWizardPage*
-/// @param callback QWizard* func()
-///
-void q_wizardpage_on_wizard(void* self, QWizard* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#wizard)
-///
-/// Base class method implementation
-///
-/// @param self QWizardPage*
-///
-QWizard* q_wizardpage_super_wizard(void* self);
+QWizard* q_wizardpage_wizard(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -6098,26 +6023,6 @@ void q_wizardpage_register_field3(void* self, const char* name, void* widget, co
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
 ///
-/// Allows for overriding the related default method
-///
-/// @param self QWizardPage*
-/// @param callback void func(QWizardPage* self, const char* name, QWidget* widget, const char* property)
-///
-void q_wizardpage_on_register_field3(void* self, void (*callback)(void*, const char*, void*, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
-///
-/// Base class method implementation
-///
-/// @param self QWizardPage*
-/// @param name const char*
-/// @param widget QWidget*
-/// @param property const char*
-///
-void q_wizardpage_super_register_field3(void* self, const char* name, void* widget, const char* property);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
-///
 /// @param self QWizardPage*
 /// @param name const char*
 /// @param widget QWidget*
@@ -6125,27 +6030,6 @@ void q_wizardpage_super_register_field3(void* self, const char* name, void* widg
 /// @param changedSignal const char*
 ///
 void q_wizardpage_register_field4(void* self, const char* name, void* widget, const char* property, const char* changedSignal);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QWizardPage*
-/// @param callback void func(QWizardPage* self, const char* name, QWidget* widget, const char* property, const char* changedSignal)
-///
-void q_wizardpage_on_register_field4(void* self, void (*callback)(void*, const char*, void*, const char*, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qwizardpage.html#registerField)
-///
-/// Base class method implementation
-///
-/// @param self QWizardPage*
-/// @param name const char*
-/// @param widget QWidget*
-/// @param property const char*
-/// @param changedSignal const char*
-///
-void q_wizardpage_super_register_field4(void* self, const char* name, void* widget, const char* property, const char* changedSignal);
 
 /// Inherited from QWidget
 ///
@@ -6167,9 +6051,9 @@ QWizardPage* q_wizardpage_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-uintptr_t q_wizardpage_win_id(void* self);
+uintptr_t q_wizardpage_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6183,25 +6067,25 @@ void q_wizardpage_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-uintptr_t q_wizardpage_internal_win_id(void* self);
+uintptr_t q_wizardpage_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-uintptr_t q_wizardpage_effective_win_id(void* self);
+uintptr_t q_wizardpage_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QStyle* q_wizardpage_style(void* self);
+QStyle* q_wizardpage_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6216,35 +6100,35 @@ void q_wizardpage_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_top_level(void* self);
+bool q_wizardpage_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_window(void* self);
+bool q_wizardpage_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_modal(void* self);
+bool q_wizardpage_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_wizardpage_window_modality(void* self);
+int32_t q_wizardpage_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6259,18 +6143,18 @@ void q_wizardpage_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_enabled(void* self);
+bool q_wizardpage_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QWidget*
 ///
-bool q_wizardpage_is_enabled_to(void* self, void* param1);
+bool q_wizardpage_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -6303,153 +6187,153 @@ void q_wizardpage_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QRect* q_wizardpage_frame_geometry(void* self);
+QRect* q_wizardpage_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const QRect* q_wizardpage_geometry(void* self);
+const QRect* q_wizardpage_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QRect* q_wizardpage_normal_geometry(void* self);
+QRect* q_wizardpage_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_x(void* self);
+int32_t q_wizardpage_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_y(void* self);
+int32_t q_wizardpage_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QPoint* q_wizardpage_pos(void* self);
+QPoint* q_wizardpage_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_frame_size(void* self);
+QSize* q_wizardpage_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_size(void* self);
+QSize* q_wizardpage_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_width(void* self);
+int32_t q_wizardpage_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_height(void* self);
+int32_t q_wizardpage_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QRect* q_wizardpage_rect(void* self);
+QRect* q_wizardpage_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QRect* q_wizardpage_children_rect(void* self);
+QRect* q_wizardpage_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QRegion* q_wizardpage_children_region(void* self);
+QRegion* q_wizardpage_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_minimum_size(void* self);
+QSize* q_wizardpage_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_maximum_size(void* self);
+QSize* q_wizardpage_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_minimum_width(void* self);
+int32_t q_wizardpage_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_minimum_height(void* self);
+int32_t q_wizardpage_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_maximum_width(void* self);
+int32_t q_wizardpage_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_maximum_height(void* self);
+int32_t q_wizardpage_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6458,7 +6342,7 @@ int32_t q_wizardpage_maximum_height(void* self);
 /// @param self QWizardPage*
 /// @param minimumSize QSize*
 ///
-void q_wizardpage_set_minimum_size(void* self, void* minimumSize);
+void q_wizardpage_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -6477,7 +6361,7 @@ void q_wizardpage_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QWizardPage*
 /// @param maximumSize QSize*
 ///
-void q_wizardpage_set_maximum_size(void* self, void* maximumSize);
+void q_wizardpage_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -6529,9 +6413,9 @@ void q_wizardpage_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_size_increment(void* self);
+QSize* q_wizardpage_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6540,7 +6424,7 @@ QSize* q_wizardpage_size_increment(void* self);
 /// @param self QWizardPage*
 /// @param sizeIncrement QSize*
 ///
-void q_wizardpage_set_size_increment(void* self, void* sizeIncrement);
+void q_wizardpage_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -6556,9 +6440,9 @@ void q_wizardpage_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_base_size(void* self);
+QSize* q_wizardpage_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6567,7 +6451,7 @@ QSize* q_wizardpage_base_size(void* self);
 /// @param self QWizardPage*
 /// @param baseSize QSize*
 ///
-void q_wizardpage_set_base_size(void* self, void* baseSize);
+void q_wizardpage_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -6586,7 +6470,7 @@ void q_wizardpage_set_base_size2(void* self, int basew, int baseh);
 /// @param self QWizardPage*
 /// @param fixedSize QSize*
 ///
-void q_wizardpage_set_fixed_size(void* self, void* fixedSize);
+void q_wizardpage_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -6620,145 +6504,145 @@ void q_wizardpage_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QPointF*
 ///
-QPointF* q_wizardpage_map_to_global(void* self, void* param1);
+QPointF* q_wizardpage_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QPoint*
 ///
-QPoint* q_wizardpage_map_to_global2(void* self, void* param1);
+QPoint* q_wizardpage_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QPointF*
 ///
-QPointF* q_wizardpage_map_from_global(void* self, void* param1);
+QPointF* q_wizardpage_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QPoint*
 ///
-QPoint* q_wizardpage_map_from_global2(void* self, void* param1);
+QPoint* q_wizardpage_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QPointF*
 ///
-QPointF* q_wizardpage_map_to_parent(void* self, void* param1);
+QPointF* q_wizardpage_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QPoint*
 ///
-QPoint* q_wizardpage_map_to_parent2(void* self, void* param1);
+QPoint* q_wizardpage_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QPointF*
 ///
-QPointF* q_wizardpage_map_from_parent(void* self, void* param1);
+QPointF* q_wizardpage_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QPoint*
 ///
-QPoint* q_wizardpage_map_from_parent2(void* self, void* param1);
+QPoint* q_wizardpage_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_wizardpage_map_to(void* self, void* param1, void* param2);
+QPointF* q_wizardpage_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_wizardpage_map_to2(void* self, void* param1, void* param2);
+QPoint* q_wizardpage_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_wizardpage_map_from(void* self, void* param1, void* param2);
+QPointF* q_wizardpage_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_wizardpage_map_from2(void* self, void* param1, void* param2);
+QPoint* q_wizardpage_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWidget* q_wizardpage_window(void* self);
+QWidget* q_wizardpage_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWidget* q_wizardpage_native_parent_widget(void* self);
+QWidget* q_wizardpage_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWidget* q_wizardpage_top_level_widget(void* self);
+QWidget* q_wizardpage_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const QPalette* q_wizardpage_palette(void* self);
+const QPalette* q_wizardpage_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6767,7 +6651,7 @@ const QPalette* q_wizardpage_palette(void* self);
 /// @param self QWizardPage*
 /// @param palette QPalette*
 ///
-void q_wizardpage_set_palette(void* self, void* palette);
+void q_wizardpage_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -6782,11 +6666,11 @@ void q_wizardpage_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_wizardpage_background_role(void* self);
+int32_t q_wizardpage_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6801,19 +6685,19 @@ void q_wizardpage_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_wizardpage_foreground_role(void* self);
+int32_t q_wizardpage_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const QFont* q_wizardpage_font(void* self);
+const QFont* q_wizardpage_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6822,31 +6706,31 @@ const QFont* q_wizardpage_font(void* self);
 /// @param self QWizardPage*
 /// @param font QFont*
 ///
-void q_wizardpage_set_font(void* self, void* font);
+void q_wizardpage_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QFontMetrics* q_wizardpage_font_metrics(void* self);
+QFontMetrics* q_wizardpage_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QFontInfo* q_wizardpage_font_info(void* self);
+QFontInfo* q_wizardpage_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QCursor* q_wizardpage_cursor(void* self);
+QCursor* q_wizardpage_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6855,7 +6739,7 @@ QCursor* q_wizardpage_cursor(void* self);
 /// @param self QWizardPage*
 /// @param cursor QCursor*
 ///
-void q_wizardpage_set_cursor(void* self, void* cursor);
+void q_wizardpage_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -6878,17 +6762,17 @@ void q_wizardpage_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_has_mouse_tracking(void* self);
+bool q_wizardpage_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_under_mouse(void* self);
+bool q_wizardpage_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6903,9 +6787,9 @@ void q_wizardpage_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_has_tablet_tracking(void* self);
+bool q_wizardpage_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6914,7 +6798,7 @@ bool q_wizardpage_has_tablet_tracking(void* self);
 /// @param self QWizardPage*
 /// @param mask QBitmap*
 ///
-void q_wizardpage_set_mask(void* self, void* mask);
+void q_wizardpage_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -6923,15 +6807,15 @@ void q_wizardpage_set_mask(void* self, void* mask);
 /// @param self QWizardPage*
 /// @param mask QRegion*
 ///
-void q_wizardpage_set_mask2(void* self, void* mask);
+void q_wizardpage_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QRegion* q_wizardpage_mask(void* self);
+QRegion* q_wizardpage_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6971,9 +6855,9 @@ QPixmap* q_wizardpage_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QGraphicsEffect* q_wizardpage_graphics_effect(void* self);
+QGraphicsEffect* q_wizardpage_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7026,9 +6910,9 @@ void q_wizardpage_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_style_sheet(void* self);
+const char* q_wizardpage_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7036,9 +6920,9 @@ const char* q_wizardpage_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_window_title(void* self);
+const char* q_wizardpage_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7047,15 +6931,15 @@ const char* q_wizardpage_window_title(void* self);
 /// @param self QWizardPage*
 /// @param icon QIcon*
 ///
-void q_wizardpage_set_window_icon(void* self, void* icon);
+void q_wizardpage_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QIcon* q_wizardpage_window_icon(void* self);
+QIcon* q_wizardpage_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7072,9 +6956,9 @@ void q_wizardpage_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_window_icon_text(void* self);
+const char* q_wizardpage_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7091,9 +6975,9 @@ void q_wizardpage_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_window_role(void* self);
+const char* q_wizardpage_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7110,9 +6994,9 @@ void q_wizardpage_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_window_file_path(void* self);
+const char* q_wizardpage_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7127,17 +7011,17 @@ void q_wizardpage_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-double q_wizardpage_window_opacity(void* self);
+double q_wizardpage_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_window_modified(void* self);
+bool q_wizardpage_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7154,9 +7038,9 @@ void q_wizardpage_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_tool_tip(void* self);
+const char* q_wizardpage_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7171,9 +7055,9 @@ void q_wizardpage_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_tool_tip_duration(void* self);
+int32_t q_wizardpage_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7190,9 +7074,9 @@ void q_wizardpage_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_status_tip(void* self);
+const char* q_wizardpage_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7209,9 +7093,9 @@ void q_wizardpage_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_whats_this(void* self);
+const char* q_wizardpage_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7219,9 +7103,9 @@ const char* q_wizardpage_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_accessible_name(void* self);
+const char* q_wizardpage_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7238,9 +7122,9 @@ void q_wizardpage_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_accessible_description(void* self);
+const char* q_wizardpage_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7264,11 +7148,11 @@ void q_wizardpage_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_wizardpage_layout_direction(void* self);
+int32_t q_wizardpage_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7285,15 +7169,15 @@ void q_wizardpage_unset_layout_direction(void* self);
 /// @param self QWizardPage*
 /// @param locale QLocale*
 ///
-void q_wizardpage_set_locale(void* self, void* locale);
+void q_wizardpage_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QLocale* q_wizardpage_locale(void* self);
+QLocale* q_wizardpage_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7307,17 +7191,17 @@ void q_wizardpage_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_right_to_left(void* self);
+bool q_wizardpage_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_left_to_right(void* self);
+bool q_wizardpage_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7331,9 +7215,9 @@ void q_wizardpage_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_active_window(void* self);
+bool q_wizardpage_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7364,11 +7248,11 @@ void q_wizardpage_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_wizardpage_focus_policy(void* self);
+int32_t q_wizardpage_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7383,9 +7267,9 @@ void q_wizardpage_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_has_focus(void* self);
+bool q_wizardpage_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7409,19 +7293,19 @@ void q_wizardpage_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWidget* q_wizardpage_focus_proxy(void* self);
+QWidget* q_wizardpage_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_wizardpage_context_menu_policy(void* self);
+int32_t q_wizardpage_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7447,7 +7331,7 @@ void q_wizardpage_grab_mouse(void* self);
 /// @param self QWizardPage*
 /// @param param1 QCursor*
 ///
-void q_wizardpage_grab_mouse2(void* self, void* param1);
+void q_wizardpage_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7480,7 +7364,7 @@ void q_wizardpage_release_keyboard(void* self);
 /// @param self QWizardPage*
 /// @param key QKeySequence*
 ///
-int32_t q_wizardpage_grab_shortcut(void* self, void* key);
+int32_t q_wizardpage_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -7525,9 +7409,9 @@ QWidget* q_wizardpage_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_updates_enabled(void* self);
+bool q_wizardpage_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7542,9 +7426,9 @@ void q_wizardpage_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QGraphicsProxyWidget* q_wizardpage_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_wizardpage_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7581,7 +7465,7 @@ void q_wizardpage_update2(void* self, int x, int y, int w, int h);
 /// @param self QWizardPage*
 /// @param param1 QRect*
 ///
-void q_wizardpage_update3(void* self, void* param1);
+void q_wizardpage_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7590,7 +7474,7 @@ void q_wizardpage_update3(void* self, void* param1);
 /// @param self QWizardPage*
 /// @param param1 QRegion*
 ///
-void q_wizardpage_update4(void* self, void* param1);
+void q_wizardpage_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7611,7 +7495,7 @@ void q_wizardpage_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QWizardPage*
 /// @param param1 QRect*
 ///
-void q_wizardpage_repaint3(void* self, void* param1);
+void q_wizardpage_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7620,7 +7504,7 @@ void q_wizardpage_repaint3(void* self, void* param1);
 /// @param self QWizardPage*
 /// @param param1 QRegion*
 ///
-void q_wizardpage_repaint4(void* self, void* param1);
+void q_wizardpage_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7729,7 +7613,7 @@ void q_wizardpage_move(void* self, int x, int y);
 /// @param self QWizardPage*
 /// @param param1 QPoint*
 ///
-void q_wizardpage_move2(void* self, void* param1);
+void q_wizardpage_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7748,7 +7632,7 @@ void q_wizardpage_resize(void* self, int w, int h);
 /// @param self QWizardPage*
 /// @param param1 QSize*
 ///
-void q_wizardpage_resize2(void* self, void* param1);
+void q_wizardpage_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7769,7 +7653,7 @@ void q_wizardpage_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QWizardPage*
 /// @param geometry QRect*
 ///
-void q_wizardpage_set_geometry2(void* self, void* geometry);
+void q_wizardpage_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -7777,9 +7661,9 @@ void q_wizardpage_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-char* q_wizardpage_save_geometry(void* self);
+char* q_wizardpage_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7802,60 +7686,60 @@ void q_wizardpage_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_visible(void* self);
+bool q_wizardpage_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 QWidget*
 ///
-bool q_wizardpage_is_visible_to(void* self, void* param1);
+bool q_wizardpage_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_hidden(void* self);
+bool q_wizardpage_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_minimized(void* self);
+bool q_wizardpage_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_maximized(void* self);
+bool q_wizardpage_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_full_screen(void* self);
+bool q_wizardpage_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_wizardpage_window_state(void* self);
+int32_t q_wizardpage_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7879,9 +7763,9 @@ void q_wizardpage_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSizePolicy* q_wizardpage_size_policy(void* self);
+QSizePolicy* q_wizardpage_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7906,9 +7790,9 @@ void q_wizardpage_set_size_policy2(void* self, int32_t horizontal, int32_t verti
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QRegion* q_wizardpage_visible_region(void* self);
+QRegion* q_wizardpage_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7929,31 +7813,31 @@ void q_wizardpage_set_contents_margins(void* self, int left, int top, int right,
 /// @param self QWizardPage*
 /// @param margins QMargins*
 ///
-void q_wizardpage_set_contents_margins2(void* self, void* margins);
+void q_wizardpage_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QMargins* q_wizardpage_contents_margins(void* self);
+QMargins* q_wizardpage_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QRect* q_wizardpage_contents_rect(void* self);
+QRect* q_wizardpage_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QLayout* q_wizardpage_layout(void* self);
+QLayout* q_wizardpage_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8010,39 +7894,39 @@ void q_wizardpage_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_wizardpage_scroll2(void* self, int dx, int dy, void* param3);
+void q_wizardpage_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWidget* q_wizardpage_focus_widget(void* self);
+QWidget* q_wizardpage_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWidget* q_wizardpage_next_in_focus_chain(void* self);
+QWidget* q_wizardpage_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWidget* q_wizardpage_previous_in_focus_chain(void* self);
+QWidget* q_wizardpage_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_accept_drops(void* self);
+bool q_wizardpage_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8104,11 +7988,11 @@ void q_wizardpage_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_wizardpage_actions(void* self);
+libqt_list q_wizardpage_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8127,7 +8011,7 @@ QAction* q_wizardpage_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_wizardpage_add_action3(void* self, void* icon, const char* text);
+QAction* q_wizardpage_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -8137,7 +8021,7 @@ QAction* q_wizardpage_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_wizardpage_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_wizardpage_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -8148,15 +8032,15 @@ QAction* q_wizardpage_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_wizardpage_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_wizardpage_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWidget* q_wizardpage_parent_widget(void* self);
+QWidget* q_wizardpage_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8171,11 +8055,11 @@ void q_wizardpage_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_wizardpage_window_flags(void* self);
+int32_t q_wizardpage_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8199,11 +8083,11 @@ void q_wizardpage_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_wizardpage_window_type(void* self);
+int32_t q_wizardpage_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8217,29 +8101,29 @@ QWidget* q_wizardpage_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_wizardpage_child_at(void* self, int x, int y);
+QWidget* q_wizardpage_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param p QPoint*
 ///
-QWidget* q_wizardpage_child_at2(void* self, void* p);
+QWidget* q_wizardpage_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param p QPointF*
 ///
-QWidget* q_wizardpage_child_at3(void* self, void* p);
+QWidget* q_wizardpage_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -8254,35 +8138,35 @@ void q_wizardpage_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_wizardpage_test_attribute(void* self, int32_t param1);
+bool q_wizardpage_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-void q_wizardpage_ensure_polished(void* self);
+void q_wizardpage_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param child QWidget*
 ///
-bool q_wizardpage_is_ancestor_of(void* self, void* child);
+bool q_wizardpage_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_auto_fill_background(void* self);
+bool q_wizardpage_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8297,25 +8181,25 @@ void q_wizardpage_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QBackingStore* q_wizardpage_backing_store(void* self);
+QBackingStore* q_wizardpage_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QWindow* q_wizardpage_window_handle(void* self);
+QWindow* q_wizardpage_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QScreen* q_wizardpage_screen(void* self);
+QScreen* q_wizardpage_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8359,7 +8243,7 @@ void q_wizardpage_on_window_title_changed(void* self, void (*callback)(void*, co
 /// @param self QWizardPage*
 /// @param icon QIcon*
 ///
-void q_wizardpage_window_icon_changed(void* self, void* icon);
+void q_wizardpage_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -8368,7 +8252,7 @@ void q_wizardpage_window_icon_changed(void* self, void* icon);
 /// @param self QWizardPage*
 /// @param callback void func(QWizardPage* self, QIcon* icon)
 ///
-void q_wizardpage_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_wizardpage_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -8395,7 +8279,7 @@ void q_wizardpage_on_window_icon_text_changed(void* self, void (*callback)(void*
 /// @param self QWizardPage*
 /// @param pos QPoint*
 ///
-void q_wizardpage_custom_context_menu_requested(void* self, void* pos);
+void q_wizardpage_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -8404,17 +8288,17 @@ void q_wizardpage_custom_context_menu_requested(void* self, void* pos);
 /// @param self QWizardPage*
 /// @param callback void func(QWizardPage* self, QPoint* pos)
 ///
-void q_wizardpage_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_wizardpage_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_wizardpage_input_method_hints(void* self);
+int32_t q_wizardpage_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8433,7 +8317,7 @@ void q_wizardpage_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_wizardpage_render22(void* self, void* target, void* targetOffset);
+void q_wizardpage_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -8444,7 +8328,7 @@ void q_wizardpage_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_wizardpage_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_wizardpage_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -8456,7 +8340,7 @@ void q_wizardpage_render3(void* self, void* target, void* targetOffset, void* so
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_wizardpage_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_wizardpage_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -8466,7 +8350,7 @@ void q_wizardpage_render4(void* self, void* target, void* targetOffset, void* so
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_wizardpage_render23(void* self, void* painter, void* targetOffset);
+void q_wizardpage_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -8477,7 +8361,7 @@ void q_wizardpage_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_wizardpage_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_wizardpage_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -8489,7 +8373,7 @@ void q_wizardpage_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_wizardpage_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_wizardpage_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -8498,7 +8382,7 @@ void q_wizardpage_render42(void* self, void* painter, void* targetOffset, void* 
 /// @param self QWizardPage*
 /// @param rectangle QRect*
 ///
-QPixmap* q_wizardpage_grab1(void* self, void* rectangle);
+QPixmap* q_wizardpage_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -8518,7 +8402,7 @@ void q_wizardpage_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_wizardpage_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_wizardpage_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -8585,9 +8469,9 @@ QWidget* q_wizardpage_create_window_container3(void* window, void* parent, int32
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char* q_wizardpage_object_name(void* self);
+const char* q_wizardpage_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8602,33 +8486,33 @@ void q_wizardpage_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_widget_type(void* self);
+bool q_wizardpage_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_window_type(void* self);
+bool q_wizardpage_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_is_quick_item_type(void* self);
+bool q_wizardpage_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_signals_blocked(void* self);
+bool q_wizardpage_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8643,9 +8527,9 @@ bool q_wizardpage_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QThread* q_wizardpage_thread(void* self);
+QThread* q_wizardpage_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8696,11 +8580,11 @@ void q_wizardpage_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_wizardpage_children(void* self);
+libqt_list q_wizardpage_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8729,7 +8613,7 @@ void q_wizardpage_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_wizardpage_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_wizardpage_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8740,18 +8624,18 @@ QMetaObject__Connection* q_wizardpage_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_wizardpage_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_wizardpage_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_wizardpage_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_wizardpage_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8762,7 +8646,7 @@ QMetaObject__Connection* q_wizardpage_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_wizardpage_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_wizardpage_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8773,24 +8657,24 @@ bool q_wizardpage_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_wizardpage_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_wizardpage_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_disconnect3(void* self);
+bool q_wizardpage_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param receiver QObject*
 ///
-bool q_wizardpage_disconnect4(void* self, void* receiver);
+bool q_wizardpage_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -8798,23 +8682,23 @@ bool q_wizardpage_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_wizardpage_disconnect5(void* param1);
+bool q_wizardpage_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-void q_wizardpage_dump_object_tree(void* self);
+void q_wizardpage_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-void q_wizardpage_dump_object_info(void* self);
+void q_wizardpage_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8824,16 +8708,16 @@ void q_wizardpage_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_wizardpage_set_property(void* self, const char* name, void* value);
+bool q_wizardpage_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param name const char*
 ///
-QVariant* q_wizardpage_property(void* self, const char* name);
+QVariant* q_wizardpage_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -8841,9 +8725,9 @@ QVariant* q_wizardpage_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const char** q_wizardpage_dynamic_property_names(void* self);
+const char** q_wizardpage_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8857,9 +8741,9 @@ QBindingStorage* q_wizardpage_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-const QBindingStorage* q_wizardpage_binding_storage2(void* self);
+const QBindingStorage* q_wizardpage_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8882,18 +8766,18 @@ void q_wizardpage_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QObject* q_wizardpage_parent(void* self);
+QObject* q_wizardpage_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param classname const char*
 ///
-bool q_wizardpage_inherits(void* self, const char* classname);
+bool q_wizardpage_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -8933,7 +8817,7 @@ int32_t q_wizardpage_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_wizardpage_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_wizardpage_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -8945,59 +8829,59 @@ QMetaObject__Connection* q_wizardpage_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_wizardpage_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_wizardpage_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_wizardpage_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_wizardpage_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param signal const char*
 ///
-bool q_wizardpage_disconnect1(void* self, const char* signal);
+bool q_wizardpage_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizardPage*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_wizardpage_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_wizardpage_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_wizardpage_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_wizardpage_disconnect23(void* self, void* receiver, const char* member);
+bool q_wizardpage_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QWizardPage*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_wizardpage_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -9021,89 +8905,89 @@ void q_wizardpage_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_painting_active(void* self);
+bool q_wizardpage_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_width_m_m(void* self);
+int32_t q_wizardpage_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_height_m_m(void* self);
+int32_t q_wizardpage_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_logical_dpi_x(void* self);
+int32_t q_wizardpage_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_logical_dpi_y(void* self);
+int32_t q_wizardpage_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_physical_dpi_x(void* self);
+int32_t q_wizardpage_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_physical_dpi_y(void* self);
+int32_t q_wizardpage_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-double q_wizardpage_device_pixel_ratio(void* self);
+double q_wizardpage_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-double q_wizardpage_device_pixel_ratio_f(void* self);
+double q_wizardpage_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_color_count(void* self);
+int32_t q_wizardpage_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_depth(void* self);
+int32_t q_wizardpage_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -9126,9 +9010,9 @@ int32_t q_wizardpage_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_dev_type(void* self);
+int32_t q_wizardpage_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9136,9 +9020,9 @@ int32_t q_wizardpage_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_super_dev_type(void* self);
+int32_t q_wizardpage_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9146,10 +9030,10 @@ int32_t q_wizardpage_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
-/// @param callback int32_t func()
+/// @param self const QWizardPage*
+/// @param callback int32_t func(QWizardPage* self)
 ///
-void q_wizardpage_on_dev_type(void* self, int32_t (*callback)());
+void q_wizardpage_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -9190,9 +9074,9 @@ void q_wizardpage_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_size_hint(void* self);
+QSize* q_wizardpage_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9200,9 +9084,9 @@ QSize* q_wizardpage_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_super_size_hint(void* self);
+QSize* q_wizardpage_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9210,12 +9094,12 @@ QSize* q_wizardpage_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
-/// @param callback QSize* func()
+/// @param self const QWizardPage*
+/// @param callback QSize* func(QWizardPage* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_wizardpage_on_size_hint(void* self, QSize* (*callback)());
+void q_wizardpage_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -9223,9 +9107,9 @@ void q_wizardpage_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_minimum_size_hint(void* self);
+QSize* q_wizardpage_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9233,9 +9117,9 @@ QSize* q_wizardpage_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QSize* q_wizardpage_super_minimum_size_hint(void* self);
+QSize* q_wizardpage_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9243,12 +9127,12 @@ QSize* q_wizardpage_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
-/// @param callback QSize* func()
+/// @param self const QWizardPage*
+/// @param callback QSize* func(QWizardPage* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_wizardpage_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_wizardpage_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -9256,10 +9140,10 @@ void q_wizardpage_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 int
 ///
-int32_t q_wizardpage_height_for_width(void* self, int param1);
+int32_t q_wizardpage_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -9267,10 +9151,10 @@ int32_t q_wizardpage_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 int
 ///
-int32_t q_wizardpage_super_height_for_width(void* self, int param1);
+int32_t q_wizardpage_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -9278,10 +9162,10 @@ int32_t q_wizardpage_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param callback int32_t func(QWizardPage* self, int param1)
 ///
-void q_wizardpage_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_wizardpage_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -9289,9 +9173,9 @@ void q_wizardpage_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_has_height_for_width(void* self);
+bool q_wizardpage_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9299,9 +9183,9 @@ bool q_wizardpage_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-bool q_wizardpage_super_has_height_for_width(void* self);
+bool q_wizardpage_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9309,10 +9193,10 @@ bool q_wizardpage_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
-/// @param callback bool func()
+/// @param self const QWizardPage*
+/// @param callback bool func(QWizardPage* self)
 ///
-void q_wizardpage_on_has_height_for_width(void* self, bool (*callback)());
+void q_wizardpage_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -9320,9 +9204,9 @@ void q_wizardpage_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QPaintEngine* q_wizardpage_paint_engine(void* self);
+QPaintEngine* q_wizardpage_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9330,9 +9214,9 @@ QPaintEngine* q_wizardpage_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QPaintEngine* q_wizardpage_super_paint_engine(void* self);
+QPaintEngine* q_wizardpage_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9340,10 +9224,10 @@ QPaintEngine* q_wizardpage_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
-/// @param callback QPaintEngine* func()
+/// @param self const QWizardPage*
+/// @param callback QPaintEngine* func(QWizardPage* self)
 ///
-void q_wizardpage_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_wizardpage_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10246,10 +10130,10 @@ void q_wizardpage_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_wizardpage_metric(void* self, int32_t param1);
+int32_t q_wizardpage_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10257,10 +10141,10 @@ int32_t q_wizardpage_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_wizardpage_super_metric(void* self, int32_t param1);
+int32_t q_wizardpage_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10268,10 +10152,10 @@ int32_t q_wizardpage_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param callback int32_t func(QWizardPage* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_wizardpage_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_wizardpage_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -10279,10 +10163,10 @@ void q_wizardpage_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param painter QPainter*
 ///
-void q_wizardpage_init_painter(void* self, void* painter);
+void q_wizardpage_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -10290,10 +10174,10 @@ void q_wizardpage_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param painter QPainter*
 ///
-void q_wizardpage_super_init_painter(void* self, void* painter);
+void q_wizardpage_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -10301,10 +10185,10 @@ void q_wizardpage_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param callback void func(QWizardPage* self, QPainter* painter)
 ///
-void q_wizardpage_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_wizardpage_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -10312,10 +10196,10 @@ void q_wizardpage_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_wizardpage_redirected(void* self, void* offset);
+QPaintDevice* q_wizardpage_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -10323,10 +10207,10 @@ QPaintDevice* q_wizardpage_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_wizardpage_super_redirected(void* self, void* offset);
+QPaintDevice* q_wizardpage_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -10334,10 +10218,10 @@ QPaintDevice* q_wizardpage_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param callback QPaintDevice* func(QWizardPage* self, QPoint* offset)
 ///
-void q_wizardpage_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_wizardpage_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -10345,9 +10229,9 @@ void q_wizardpage_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QPainter* q_wizardpage_shared_painter(void* self);
+QPainter* q_wizardpage_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10355,9 +10239,9 @@ QPainter* q_wizardpage_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QPainter* q_wizardpage_super_shared_painter(void* self);
+QPainter* q_wizardpage_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10365,10 +10249,10 @@ QPainter* q_wizardpage_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
-/// @param callback QPainter* func()
+/// @param self const QWizardPage*
+/// @param callback QPainter* func(QWizardPage* self)
 ///
-void q_wizardpage_on_shared_painter(void* self, QPainter* (*callback)());
+void q_wizardpage_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10409,10 +10293,10 @@ void q_wizardpage_on_input_method_event(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_wizardpage_input_method_query(void* self, int32_t param1);
+QVariant* q_wizardpage_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10420,10 +10304,10 @@ QVariant* q_wizardpage_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_wizardpage_super_input_method_query(void* self, int32_t param1);
+QVariant* q_wizardpage_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10431,12 +10315,12 @@ QVariant* q_wizardpage_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param callback QVariant* func(QWizardPage* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_wizardpage_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_wizardpage_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -10614,7 +10498,7 @@ void q_wizardpage_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QWizardPage*
 /// @param signal QMetaMethod*
 ///
-void q_wizardpage_connect_notify(void* self, void* signal);
+void q_wizardpage_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10625,7 +10509,7 @@ void q_wizardpage_connect_notify(void* self, void* signal);
 /// @param self QWizardPage*
 /// @param signal QMetaMethod*
 ///
-void q_wizardpage_super_connect_notify(void* self, void* signal);
+void q_wizardpage_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10636,7 +10520,7 @@ void q_wizardpage_super_connect_notify(void* self, void* signal);
 /// @param self QWizardPage*
 /// @param callback void func(QWizardPage* self, QMetaMethod* signal)
 ///
-void q_wizardpage_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_wizardpage_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -10647,7 +10531,7 @@ void q_wizardpage_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QWizardPage*
 /// @param signal QMetaMethod*
 ///
-void q_wizardpage_disconnect_notify(void* self, void* signal);
+void q_wizardpage_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10658,7 +10542,7 @@ void q_wizardpage_disconnect_notify(void* self, void* signal);
 /// @param self QWizardPage*
 /// @param signal QMetaMethod*
 ///
-void q_wizardpage_super_disconnect_notify(void* self, void* signal);
+void q_wizardpage_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10669,7 +10553,7 @@ void q_wizardpage_super_disconnect_notify(void* self, void* signal);
 /// @param self QWizardPage*
 /// @param callback void func(QWizardPage* self, QMetaMethod* signal)
 ///
-void q_wizardpage_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_wizardpage_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -10698,9 +10582,9 @@ void q_wizardpage_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void func()
+/// @param callback void func(QWizardPage* self)
 ///
-void q_wizardpage_on_update_micro_focus(void* self, void (*callback)());
+void q_wizardpage_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -10729,9 +10613,9 @@ void q_wizardpage_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void func()
+/// @param callback void func(QWizardPage* self)
 ///
-void q_wizardpage_on_create(void* self, void (*callback)());
+void q_wizardpage_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -10760,9 +10644,9 @@ void q_wizardpage_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback void func()
+/// @param callback void func(QWizardPage* self)
 ///
-void q_wizardpage_on_destroy(void* self, void (*callback)());
+void q_wizardpage_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -10791,9 +10675,9 @@ bool q_wizardpage_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool func()
+/// @param callback bool func(QWizardPage* self)
 ///
-void q_wizardpage_on_focus_next_child(void* self, bool (*callback)());
+void q_wizardpage_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -10822,9 +10706,9 @@ bool q_wizardpage_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWizardPage*
-/// @param callback bool func()
+/// @param callback bool func(QWizardPage* self)
 ///
-void q_wizardpage_on_focus_previous_child(void* self, bool (*callback)());
+void q_wizardpage_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -10832,9 +10716,9 @@ void q_wizardpage_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QObject* q_wizardpage_sender(void* self);
+QObject* q_wizardpage_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -10842,9 +10726,9 @@ QObject* q_wizardpage_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-QObject* q_wizardpage_super_sender(void* self);
+QObject* q_wizardpage_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -10852,10 +10736,10 @@ QObject* q_wizardpage_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
-/// @param callback QObject* func()
+/// @param self const QWizardPage*
+/// @param callback QObject* func(QWizardPage* self)
 ///
-void q_wizardpage_on_sender(void* self, QObject* (*callback)());
+void q_wizardpage_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -10863,9 +10747,9 @@ void q_wizardpage_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_sender_signal_index(void* self);
+int32_t q_wizardpage_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -10873,9 +10757,9 @@ int32_t q_wizardpage_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 ///
-int32_t q_wizardpage_super_sender_signal_index(void* self);
+int32_t q_wizardpage_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -10883,10 +10767,10 @@ int32_t q_wizardpage_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
-/// @param callback int32_t func()
+/// @param self const QWizardPage*
+/// @param callback int32_t func(QWizardPage* self)
 ///
-void q_wizardpage_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_wizardpage_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -10894,10 +10778,10 @@ void q_wizardpage_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param signal const char*
 ///
-int32_t q_wizardpage_receivers(void* self, const char* signal);
+int32_t q_wizardpage_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -10905,10 +10789,10 @@ int32_t q_wizardpage_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param signal const char*
 ///
-int32_t q_wizardpage_super_receivers(void* self, const char* signal);
+int32_t q_wizardpage_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -10916,10 +10800,10 @@ int32_t q_wizardpage_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param callback int32_t func(QWizardPage* self, const char* signal)
 ///
-void q_wizardpage_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_wizardpage_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -10927,10 +10811,10 @@ void q_wizardpage_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param signal QMetaMethod*
 ///
-bool q_wizardpage_is_signal_connected(void* self, void* signal);
+bool q_wizardpage_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10938,10 +10822,10 @@ bool q_wizardpage_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param signal QMetaMethod*
 ///
-bool q_wizardpage_super_is_signal_connected(void* self, void* signal);
+bool q_wizardpage_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10949,10 +10833,10 @@ bool q_wizardpage_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param callback bool func(QWizardPage* self, QMetaMethod* signal)
 ///
-void q_wizardpage_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_wizardpage_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -10960,11 +10844,11 @@ void q_wizardpage_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_wizardpage_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_wizardpage_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -10972,11 +10856,11 @@ double q_wizardpage_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_wizardpage_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_wizardpage_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -10984,10 +10868,10 @@ double q_wizardpage_super_get_decoded_metric_f(void* self, int32_t metricA, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QWizardPage*
+/// @param self const QWizardPage*
 /// @param callback double func(QWizardPage* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_wizardpage_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_wizardpage_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

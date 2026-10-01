@@ -20,14 +20,14 @@ QsciDocument* q_scidocument_new();
 ///
 /// @param param1 QsciDocument*
 ///
-QsciDocument* q_scidocument_new2(void* param1);
+QsciDocument* q_scidocument_new2(const void* param1);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
 ///
 /// @param self QsciDocument*
 /// @param param1 QsciDocument*
 ///
-void q_scidocument_operator_assign(void* self, void* param1);
+void q_scidocument_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
 ///

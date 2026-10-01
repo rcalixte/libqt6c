@@ -24,26 +24,26 @@ KNumberModel* k_numbermodel_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-const QMetaObject* k_numbermodel_meta_object(void* self);
+const QMetaObject* k_numbermodel_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNumberModel*
-/// @param callback const QMetaObject* func()
+/// @param self const KNumberModel*
+/// @param callback const QMetaObject* func(const KNumberModel* self)
 ///
-void k_numbermodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_numbermodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-const QMetaObject* k_numbermodel_super_meta_object(void* self);
+const QMetaObject* k_numbermodel_super_meta_object(const void* self);
 
 /// @param self KNumberModel*
 /// @param param1 const char*
@@ -104,9 +104,9 @@ void k_numbermodel_set_minimum_value(void* self, double minimumValue);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#minimumValue)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-double k_numbermodel_minimum_value(void* self);
+double k_numbermodel_minimum_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#setMaximumValue)
 ///
@@ -117,9 +117,9 @@ void k_numbermodel_set_maximum_value(void* self, double maximumValue);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#maximumValue)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-double k_numbermodel_maximum_value(void* self);
+double k_numbermodel_maximum_value(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#setStepSize)
 ///
@@ -130,9 +130,9 @@ void k_numbermodel_set_step_size(void* self, double stepSize);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#stepSize)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-double k_numbermodel_step_size(void* self);
+double k_numbermodel_step_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#setFormattingOptions)
 ///
@@ -143,72 +143,72 @@ void k_numbermodel_set_formatting_options(void* self, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#formattingOptions)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return flag of enum QLocale__NumberOption
 ///
-int32_t k_numbermodel_formatting_options(void* self);
+int32_t k_numbermodel_formatting_options(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#value)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
-double k_numbermodel_value(void* self, void* index);
+double k_numbermodel_value(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#rowCount)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
-int32_t k_numbermodel_row_count(void* self, void* index);
+int32_t k_numbermodel_row_count(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNumberModel*
-/// @param callback int32_t func(KNumberModel* self, QModelIndex* index)
+/// @param self const KNumberModel*
+/// @param callback int32_t func(const KNumberModel* self, QModelIndex* index)
 ///
-void k_numbermodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
+void k_numbermodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
-int32_t k_numbermodel_super_row_count(void* self, void* index);
+int32_t k_numbermodel_super_row_count(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#data)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* k_numbermodel_data(void* self, void* index, int role);
+QVariant* k_numbermodel_data(const void* self, const void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#data)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNumberModel*
-/// @param callback QVariant* func(KNumberModel* self, QModelIndex* index, int role)
+/// @param self const KNumberModel*
+/// @param callback QVariant* func(const KNumberModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_numbermodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
+void k_numbermodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#data)
 ///
 /// Base class method implementation
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* k_numbermodel_super_data(void* self, void* index, int role);
+QVariant* k_numbermodel_super_data(const void* self, const void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#roleNames)
 ///
@@ -223,30 +223,30 @@ QVariant* k_numbermodel_super_data(void* self, void* index, int role);
 /// free(map.values);
 /// ```
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map k_numbermodel_role_names(void* self);
+libqt_map k_numbermodel_role_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#roleNames)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNumberModel*
-/// @param callback libqt_map of int to char* func()
+/// @param self const KNumberModel*
+/// @param callback libqt_map of int to char* func(const KNumberModel* self)
 ///
-void k_numbermodel_on_role_names(void* self, libqt_map (*callback)());
+void k_numbermodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#roleNames)
 ///
 /// Base class method implementation
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map k_numbermodel_super_role_names(void* self);
+libqt_map k_numbermodel_super_role_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knumbermodel.html#minimumValueChanged)
 ///
@@ -323,20 +323,22 @@ const char* k_numbermodel_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param row int
 /// @param column int
 ///
-bool k_numbermodel_has_index(void* self, int row, int column);
+bool k_numbermodel_has_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
 ///
-/// @param self KNumberModel*
+/// @warning This method must be implemented with `k_numbermodel_on_parent` before it can be called.
+///
+/// @param self const KNumberModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* k_numbermodel_parent(void* self, void* child);
+QModelIndex* k_numbermodel_parent(const void* self, const void* child);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -344,32 +346,23 @@ QModelIndex* k_numbermodel_parent(void* self, void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNumberModel*
-/// @param callback QModelIndex* func(KNumberModel* self, QModelIndex* child)
+/// @param self const KNumberModel*
+/// @param callback QModelIndex* func(const KNumberModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_numbermodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
-
-/// Inherited from QAbstractItemModel
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
-///
-/// Base class method implementation
-///
-/// @param self KNumberModel*
-/// @param child QModelIndex*
-///
-QModelIndex* k_numbermodel_super_parent(void* self, void* child);
+void k_numbermodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
 ///
-/// @param self KNumberModel*
+/// @warning This method must be implemented with `k_numbermodel_on_column_count` before it can be called.
+///
+/// @param self const KNumberModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_numbermodel_column_count(void* self, void* parent);
+int32_t k_numbermodel_column_count(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -377,30 +370,19 @@ int32_t k_numbermodel_column_count(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNumberModel*
-/// @param callback int32_t func(KNumberModel* self, QModelIndex* parent)
+/// @param self const KNumberModel*
+/// @param callback int32_t func(const KNumberModel* self, QModelIndex* parent)
 ///
-void k_numbermodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
-
-/// Inherited from QAbstractItemModel
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
-///
-/// Base class method implementation
-///
-/// @param self KNumberModel*
-/// @param parent QModelIndex*
-///
-int32_t k_numbermodel_super_column_count(void* self, void* parent);
+void k_numbermodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_has_children(void* self, void* parent);
+bool k_numbermodel_has_children(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -408,10 +390,10 @@ bool k_numbermodel_has_children(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNumberModel*
-/// @param callback bool func(KNumberModel* self, QModelIndex* parent)
+/// @param self const KNumberModel*
+/// @param callback bool func(const KNumberModel* self, QModelIndex* parent)
 ///
-void k_numbermodel_on_has_children(void* self, bool (*callback)(void*, void*));
+void k_numbermodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -419,10 +401,10 @@ void k_numbermodel_on_has_children(void* self, bool (*callback)(void*, void*));
 ///
 /// Base class method implementation
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_super_has_children(void* self, void* parent);
+bool k_numbermodel_super_has_children(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -470,7 +452,7 @@ bool k_numbermodel_remove_column(void* self, int column);
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_numbermodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
+bool k_numbermodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -482,16 +464,16 @@ bool k_numbermodel_move_row(void* self, void* sourceParent, int sourceRow, void*
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_numbermodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
+bool k_numbermodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
-bool k_numbermodel_check_index(void* self, void* index);
+bool k_numbermodel_check_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -501,7 +483,7 @@ bool k_numbermodel_check_index(void* self, void* index);
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 ///
-void k_numbermodel_data_changed(void* self, void* topLeft, void* bottomRight);
+void k_numbermodel_data_changed(void* self, const void* topLeft, const void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -510,7 +492,7 @@ void k_numbermodel_data_changed(void* self, void* topLeft, void* bottomRight);
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 ///
-void k_numbermodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
+void k_numbermodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -570,12 +552,12 @@ void k_numbermodel_on_layout_about_to_be_changed(void* self, void (*callback)(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_has_index3(void* self, int row, int column, void* parent);
+bool k_numbermodel_has_index3(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -585,7 +567,7 @@ bool k_numbermodel_has_index3(void* self, int row, int column, void* parent);
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_insert_row2(void* self, int row, void* parent);
+bool k_numbermodel_insert_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -595,7 +577,7 @@ bool k_numbermodel_insert_row2(void* self, int row, void* parent);
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_insert_column2(void* self, int column, void* parent);
+bool k_numbermodel_insert_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -605,7 +587,7 @@ bool k_numbermodel_insert_column2(void* self, int column, void* parent);
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_remove_row2(void* self, int row, void* parent);
+bool k_numbermodel_remove_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -615,17 +597,17 @@ bool k_numbermodel_remove_row2(void* self, int row, void* parent);
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_remove_column2(void* self, int column, void* parent);
+bool k_numbermodel_remove_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
 ///
-bool k_numbermodel_check_index2(void* self, void* index, int32_t options);
+bool k_numbermodel_check_index2(const void* self, const void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -636,7 +618,7 @@ bool k_numbermodel_check_index2(void* self, void* index, int32_t options);
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_numbermodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_numbermodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -645,7 +627,7 @@ void k_numbermodel_data_changed3(void* self, void* topLeft, void* bottomRight, l
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_numbermodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void k_numbermodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -727,9 +709,9 @@ void k_numbermodel_on_layout_about_to_be_changed2(void* self, void (*callback)(v
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-const char* k_numbermodel_object_name(void* self);
+const char* k_numbermodel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -744,33 +726,33 @@ void k_numbermodel_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-bool k_numbermodel_is_widget_type(void* self);
+bool k_numbermodel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-bool k_numbermodel_is_window_type(void* self);
+bool k_numbermodel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-bool k_numbermodel_is_quick_item_type(void* self);
+bool k_numbermodel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-bool k_numbermodel_signals_blocked(void* self);
+bool k_numbermodel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -785,9 +767,9 @@ bool k_numbermodel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-QThread* k_numbermodel_thread(void* self);
+QThread* k_numbermodel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -838,11 +820,11 @@ void k_numbermodel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_numbermodel_children(void* self);
+libqt_list k_numbermodel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -880,7 +862,7 @@ void k_numbermodel_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_numbermodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_numbermodel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -891,18 +873,18 @@ QMetaObject__Connection* k_numbermodel_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_numbermodel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_numbermodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_numbermodel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_numbermodel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -913,7 +895,7 @@ QMetaObject__Connection* k_numbermodel_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_numbermodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_numbermodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -924,24 +906,24 @@ bool k_numbermodel_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_numbermodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_numbermodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-bool k_numbermodel_disconnect3(void* self);
+bool k_numbermodel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param receiver QObject*
 ///
-bool k_numbermodel_disconnect4(void* self, void* receiver);
+bool k_numbermodel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -949,23 +931,23 @@ bool k_numbermodel_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_numbermodel_disconnect5(void* param1);
+bool k_numbermodel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-void k_numbermodel_dump_object_tree(void* self);
+void k_numbermodel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-void k_numbermodel_dump_object_info(void* self);
+void k_numbermodel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -975,16 +957,16 @@ void k_numbermodel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_numbermodel_set_property(void* self, const char* name, void* value);
+bool k_numbermodel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param name const char*
 ///
-QVariant* k_numbermodel_property(void* self, const char* name);
+QVariant* k_numbermodel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -992,9 +974,9 @@ QVariant* k_numbermodel_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-const char** k_numbermodel_dynamic_property_names(void* self);
+const char** k_numbermodel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1008,9 +990,9 @@ QBindingStorage* k_numbermodel_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-const QBindingStorage* k_numbermodel_binding_storage2(void* self);
+const QBindingStorage* k_numbermodel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1033,10 +1015,10 @@ void k_numbermodel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param classname const char*
 ///
-bool k_numbermodel_inherits(void* self, const char* classname);
+bool k_numbermodel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1076,7 +1058,7 @@ int32_t k_numbermodel_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_numbermodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_numbermodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1088,59 +1070,59 @@ QMetaObject__Connection* k_numbermodel_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_numbermodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_numbermodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_numbermodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_numbermodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param signal const char*
 ///
-bool k_numbermodel_disconnect1(void* self, const char* signal);
+bool k_numbermodel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNumberModel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_numbermodel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_numbermodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_numbermodel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_numbermodel_disconnect23(void* self, void* receiver, const char* member);
+bool k_numbermodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KNumberModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_numbermodel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1166,12 +1148,12 @@ void k_numbermodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* k_numbermodel_index(void* self, int row, int column, void* parent);
+QModelIndex* k_numbermodel_index(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1179,12 +1161,12 @@ QModelIndex* k_numbermodel_index(void* self, int row, int column, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* k_numbermodel_super_index(void* self, int row, int column, void* parent);
+QModelIndex* k_numbermodel_super_index(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1192,12 +1174,12 @@ QModelIndex* k_numbermodel_super_index(void* self, int row, int column, void* pa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback QModelIndex* func(KNumberModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_numbermodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void k_numbermodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1205,12 +1187,12 @@ void k_numbermodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* k_numbermodel_sibling(void* self, int row, int column, void* idx);
+QModelIndex* k_numbermodel_sibling(const void* self, int row, int column, const void* idx);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1218,12 +1200,12 @@ QModelIndex* k_numbermodel_sibling(void* self, int row, int column, void* idx);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* k_numbermodel_super_sibling(void* self, int row, int column, void* idx);
+QModelIndex* k_numbermodel_super_sibling(const void* self, int row, int column, const void* idx);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1231,12 +1213,12 @@ QModelIndex* k_numbermodel_super_sibling(void* self, int row, int column, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback QModelIndex* func(KNumberModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_numbermodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void k_numbermodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1251,7 +1233,7 @@ void k_numbermodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, i
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_numbermodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1266,7 +1248,7 @@ bool k_numbermodel_drop_mime_data(void* self, void* data, int32_t action, int ro
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_numbermodel_super_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1277,7 +1259,7 @@ bool k_numbermodel_super_drop_mime_data(void* self, void* data, int32_t action, 
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_numbermodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
+void k_numbermodel_on_drop_mime_data(void* self, bool (*callback)(void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractListModel
 ///
@@ -1285,12 +1267,12 @@ void k_numbermodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t k_numbermodel_flags(void* self, void* index);
+int32_t k_numbermodel_flags(const void* self, const void* index);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1298,12 +1280,12 @@ int32_t k_numbermodel_flags(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t k_numbermodel_super_flags(void* self, void* index);
+int32_t k_numbermodel_super_flags(const void* self, const void* index);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1311,10 +1293,10 @@ int32_t k_numbermodel_super_flags(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback int32_t func(KNumberModel* self, QModelIndex* index)
 ///
-void k_numbermodel_on_flags(void* self, int32_t (*callback)(void*, void*));
+void k_numbermodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1327,7 +1309,7 @@ void k_numbermodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_numbermodel_set_data(void* self, void* index, void* value, int role);
+bool k_numbermodel_set_data(void* self, const void* index, const void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1340,7 +1322,7 @@ bool k_numbermodel_set_data(void* self, void* index, void* value, int role);
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_numbermodel_super_set_data(void* self, void* index, void* value, int role);
+bool k_numbermodel_super_set_data(void* self, const void* index, const void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1351,7 +1333,7 @@ bool k_numbermodel_super_set_data(void* self, void* index, void* value, int role
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, QModelIndex* index, QVariant* value, int role)
 ///
-void k_numbermodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
+void k_numbermodel_on_set_data(void* self, bool (*callback)(void*, const void*, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1359,12 +1341,12 @@ void k_numbermodel_on_set_data(void* self, bool (*callback)(void*, void*, void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* k_numbermodel_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* k_numbermodel_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1372,12 +1354,12 @@ QVariant* k_numbermodel_header_data(void* self, int section, int32_t orientation
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* k_numbermodel_super_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* k_numbermodel_super_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1385,12 +1367,12 @@ QVariant* k_numbermodel_super_header_data(void* self, int section, int32_t orien
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback QVariant* func(KNumberModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_numbermodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
+void k_numbermodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1404,7 +1386,7 @@ void k_numbermodel_on_header_data(void* self, QVariant* (*callback)(void*, int, 
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_numbermodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool k_numbermodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1418,7 +1400,7 @@ bool k_numbermodel_set_header_data(void* self, int section, int32_t orientation,
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_numbermodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool k_numbermodel_super_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1429,7 +1411,7 @@ bool k_numbermodel_super_set_header_data(void* self, int section, int32_t orient
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 ///
-void k_numbermodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
+void k_numbermodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1448,12 +1430,12 @@ void k_numbermodel_on_set_header_data(void* self, bool (*callback)(void*, int, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map k_numbermodel_item_data(void* self, void* index);
+libqt_map k_numbermodel_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1472,12 +1454,12 @@ libqt_map k_numbermodel_item_data(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map k_numbermodel_super_item_data(void* self, void* index);
+libqt_map k_numbermodel_super_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1485,10 +1467,10 @@ libqt_map k_numbermodel_super_item_data(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback libqt_map of int to QVariant* func(KNumberModel* self, QModelIndex* index)
 ///
-void k_numbermodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
+void k_numbermodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1500,7 +1482,7 @@ void k_numbermodel_on_item_data(void* self, libqt_map (*callback)(void*, void*))
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool k_numbermodel_set_item_data(void* self, void* index, libqt_map roles);
+bool k_numbermodel_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1512,7 +1494,7 @@ bool k_numbermodel_set_item_data(void* self, void* index, libqt_map roles);
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool k_numbermodel_super_set_item_data(void* self, void* index, libqt_map roles);
+bool k_numbermodel_super_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1523,7 +1505,7 @@ bool k_numbermodel_super_set_item_data(void* self, void* index, libqt_map roles)
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, QModelIndex* index, libqt_map of int to QVariant* roles)
 ///
-void k_numbermodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
+void k_numbermodel_on_set_item_data(void* self, bool (*callback)(void*, const void*, libqt_map));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1534,7 +1516,7 @@ void k_numbermodel_on_set_item_data(void* self, bool (*callback)(void*, void*, l
 /// @param self KNumberModel*
 /// @param index QModelIndex*
 ///
-bool k_numbermodel_clear_item_data(void* self, void* index);
+bool k_numbermodel_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1545,7 +1527,7 @@ bool k_numbermodel_clear_item_data(void* self, void* index);
 /// @param self KNumberModel*
 /// @param index QModelIndex*
 ///
-bool k_numbermodel_super_clear_item_data(void* self, void* index);
+bool k_numbermodel_super_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1556,7 +1538,7 @@ bool k_numbermodel_super_clear_item_data(void* self, void* index);
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, QModelIndex* index)
 ///
-void k_numbermodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
+void k_numbermodel_on_clear_item_data(void* self, bool (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1566,9 +1548,9 @@ void k_numbermodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-const char** k_numbermodel_mime_types(void* self);
+const char** k_numbermodel_mime_types(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1578,9 +1560,9 @@ const char** k_numbermodel_mime_types(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-const char** k_numbermodel_super_mime_types(void* self);
+const char** k_numbermodel_super_mime_types(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1588,10 +1570,10 @@ const char** k_numbermodel_super_mime_types(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
-/// @param callback const char** func()
+/// @param self const KNumberModel*
+/// @param callback const char** func(KNumberModel* self)
 ///
-void k_numbermodel_on_mime_types(void* self, const char** (*callback)());
+void k_numbermodel_on_mime_types(const void* self, const char** (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1599,10 +1581,10 @@ void k_numbermodel_on_mime_types(void* self, const char** (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_numbermodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_numbermodel_mime_data(const void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1610,10 +1592,10 @@ QMimeData* k_numbermodel_mime_data(void* self, libqt_list indexes);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_numbermodel_super_mime_data(void* self, libqt_list indexes);
+QMimeData* k_numbermodel_super_mime_data(const void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1621,10 +1603,10 @@ QMimeData* k_numbermodel_super_mime_data(void* self, libqt_list indexes);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback QMimeData* func(KNumberModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_numbermodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+void k_numbermodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1632,14 +1614,14 @@ void k_numbermodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_numbermodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1647,14 +1629,14 @@ bool k_numbermodel_can_drop_mime_data(void* self, void* data, int32_t action, in
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_numbermodel_super_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1662,10 +1644,10 @@ bool k_numbermodel_super_can_drop_mime_data(void* self, void* data, int32_t acti
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback bool func(KNumberModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_numbermodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
+void k_numbermodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1673,11 +1655,11 @@ void k_numbermodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_numbermodel_supported_drop_actions(void* self);
+int32_t k_numbermodel_supported_drop_actions(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1685,11 +1667,11 @@ int32_t k_numbermodel_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_numbermodel_super_supported_drop_actions(void* self);
+int32_t k_numbermodel_super_supported_drop_actions(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1697,10 +1679,10 @@ int32_t k_numbermodel_super_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
-/// @param callback int32_t func()
+/// @param self const KNumberModel*
+/// @param callback int32_t func(KNumberModel* self)
 ///
-void k_numbermodel_on_supported_drop_actions(void* self, int32_t (*callback)());
+void k_numbermodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1708,11 +1690,11 @@ void k_numbermodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_numbermodel_supported_drag_actions(void* self);
+int32_t k_numbermodel_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1720,11 +1702,11 @@ int32_t k_numbermodel_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_numbermodel_super_supported_drag_actions(void* self);
+int32_t k_numbermodel_super_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1732,10 +1714,10 @@ int32_t k_numbermodel_super_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
-/// @param callback int32_t func()
+/// @param self const KNumberModel*
+/// @param callback int32_t func(KNumberModel* self)
 ///
-void k_numbermodel_on_supported_drag_actions(void* self, int32_t (*callback)());
+void k_numbermodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1748,7 +1730,7 @@ void k_numbermodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_insert_rows(void* self, int row, int count, void* parent);
+bool k_numbermodel_insert_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1761,7 +1743,7 @@ bool k_numbermodel_insert_rows(void* self, int row, int count, void* parent);
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_super_insert_rows(void* self, int row, int count, void* parent);
+bool k_numbermodel_super_insert_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1772,7 +1754,7 @@ bool k_numbermodel_super_insert_rows(void* self, int row, int count, void* paren
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, int row, int count, QModelIndex* parent)
 ///
-void k_numbermodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
+void k_numbermodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1785,7 +1767,7 @@ void k_numbermodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, 
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_insert_columns(void* self, int column, int count, void* parent);
+bool k_numbermodel_insert_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1798,7 +1780,7 @@ bool k_numbermodel_insert_columns(void* self, int column, int count, void* paren
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_super_insert_columns(void* self, int column, int count, void* parent);
+bool k_numbermodel_super_insert_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1809,7 +1791,7 @@ bool k_numbermodel_super_insert_columns(void* self, int column, int count, void*
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, int column, int count, QModelIndex* parent)
 ///
-void k_numbermodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
+void k_numbermodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1822,7 +1804,7 @@ void k_numbermodel_on_insert_columns(void* self, bool (*callback)(void*, int, in
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_remove_rows(void* self, int row, int count, void* parent);
+bool k_numbermodel_remove_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1835,7 +1817,7 @@ bool k_numbermodel_remove_rows(void* self, int row, int count, void* parent);
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_super_remove_rows(void* self, int row, int count, void* parent);
+bool k_numbermodel_super_remove_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1846,7 +1828,7 @@ bool k_numbermodel_super_remove_rows(void* self, int row, int count, void* paren
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, int row, int count, QModelIndex* parent)
 ///
-void k_numbermodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
+void k_numbermodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1859,7 +1841,7 @@ void k_numbermodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, 
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_remove_columns(void* self, int column, int count, void* parent);
+bool k_numbermodel_remove_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1872,7 +1854,7 @@ bool k_numbermodel_remove_columns(void* self, int column, int count, void* paren
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_super_remove_columns(void* self, int column, int count, void* parent);
+bool k_numbermodel_super_remove_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1883,7 +1865,7 @@ bool k_numbermodel_super_remove_columns(void* self, int column, int count, void*
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, int column, int count, QModelIndex* parent)
 ///
-void k_numbermodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
+void k_numbermodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1898,7 +1880,7 @@ void k_numbermodel_on_remove_columns(void* self, bool (*callback)(void*, int, in
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_numbermodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool k_numbermodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1913,7 +1895,7 @@ bool k_numbermodel_move_rows(void* self, void* sourceParent, int sourceRow, int 
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_numbermodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool k_numbermodel_super_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1924,7 +1906,7 @@ bool k_numbermodel_super_move_rows(void* self, void* sourceParent, int sourceRow
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 ///
-void k_numbermodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_numbermodel_on_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1939,7 +1921,7 @@ void k_numbermodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, 
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_numbermodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool k_numbermodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1954,7 +1936,7 @@ bool k_numbermodel_move_columns(void* self, void* sourceParent, int sourceColumn
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_numbermodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool k_numbermodel_super_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1965,7 +1947,7 @@ bool k_numbermodel_super_move_columns(void* self, void* sourceParent, int source
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 ///
-void k_numbermodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_numbermodel_on_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1976,7 +1958,7 @@ void k_numbermodel_on_move_columns(void* self, bool (*callback)(void*, void*, in
 /// @param self KNumberModel*
 /// @param parent QModelIndex*
 ///
-void k_numbermodel_fetch_more(void* self, void* parent);
+void k_numbermodel_fetch_more(void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1987,7 +1969,7 @@ void k_numbermodel_fetch_more(void* self, void* parent);
 /// @param self KNumberModel*
 /// @param parent QModelIndex*
 ///
-void k_numbermodel_super_fetch_more(void* self, void* parent);
+void k_numbermodel_super_fetch_more(void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1998,7 +1980,7 @@ void k_numbermodel_super_fetch_more(void* self, void* parent);
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent)
 ///
-void k_numbermodel_on_fetch_more(void* self, void (*callback)(void*, void*));
+void k_numbermodel_on_fetch_more(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2006,10 +1988,10 @@ void k_numbermodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_can_fetch_more(void* self, void* parent);
+bool k_numbermodel_can_fetch_more(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2017,10 +1999,10 @@ bool k_numbermodel_can_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param parent QModelIndex*
 ///
-bool k_numbermodel_super_can_fetch_more(void* self, void* parent);
+bool k_numbermodel_super_can_fetch_more(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2028,10 +2010,10 @@ bool k_numbermodel_super_can_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback bool func(KNumberModel* self, QModelIndex* parent)
 ///
-void k_numbermodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
+void k_numbermodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2074,10 +2056,10 @@ void k_numbermodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* k_numbermodel_buddy(void* self, void* index);
+QModelIndex* k_numbermodel_buddy(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2085,10 +2067,10 @@ QModelIndex* k_numbermodel_buddy(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* k_numbermodel_super_buddy(void* self, void* index);
+QModelIndex* k_numbermodel_super_buddy(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2096,12 +2078,12 @@ QModelIndex* k_numbermodel_super_buddy(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback QModelIndex* func(KNumberModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_numbermodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
+void k_numbermodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2109,7 +2091,7 @@ void k_numbermodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -2118,7 +2100,7 @@ void k_numbermodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_numbermodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list k_numbermodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2126,7 +2108,7 @@ libqt_list k_numbermodel_match(void* self, void* start, int role, void* value, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -2135,7 +2117,7 @@ libqt_list k_numbermodel_match(void* self, void* start, int role, void* value, i
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_numbermodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list k_numbermodel_super_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2143,10 +2125,10 @@ libqt_list k_numbermodel_super_match(void* self, void* start, int role, void* va
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback libqt_list of QModelIndex* func(KNumberModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_numbermodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
+void k_numbermodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2154,10 +2136,10 @@ void k_numbermodel_on_match(void* self, libqt_list (*callback)(void*, void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
-QSize* k_numbermodel_span(void* self, void* index);
+QSize* k_numbermodel_span(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2165,10 +2147,10 @@ QSize* k_numbermodel_span(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 ///
-QSize* k_numbermodel_super_span(void* self, void* index);
+QSize* k_numbermodel_super_span(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2176,12 +2158,12 @@ QSize* k_numbermodel_super_span(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback QSize* func(KNumberModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_numbermodel_on_span(void* self, QSize* (*callback)(void*, void*));
+void k_numbermodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2189,11 +2171,11 @@ void k_numbermodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void k_numbermodel_multi_data(void* self, void* index, void* roleDataSpan);
+void k_numbermodel_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2201,11 +2183,11 @@ void k_numbermodel_multi_data(void* self, void* index, void* roleDataSpan);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void k_numbermodel_super_multi_data(void* self, void* index, void* roleDataSpan);
+void k_numbermodel_super_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2213,10 +2195,10 @@ void k_numbermodel_super_multi_data(void* self, void* index, void* roleDataSpan)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void k_numbermodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
+void k_numbermodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2245,9 +2227,9 @@ bool k_numbermodel_super_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback bool func()
+/// @param callback bool func(KNumberModel* self)
 ///
-void k_numbermodel_on_submit(void* self, bool (*callback)());
+void k_numbermodel_on_submit(void* self, bool (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2276,9 +2258,9 @@ void k_numbermodel_super_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_revert(void* self, void (*callback)());
+void k_numbermodel_on_revert(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2307,9 +2289,9 @@ void k_numbermodel_super_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_reset_internal_data(void* self, void (*callback)());
+void k_numbermodel_on_reset_internal_data(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -2487,7 +2469,7 @@ void k_numbermodel_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KNumberModel*
 /// @param signal QMetaMethod*
 ///
-void k_numbermodel_connect_notify(void* self, void* signal);
+void k_numbermodel_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2498,7 +2480,7 @@ void k_numbermodel_connect_notify(void* self, void* signal);
 /// @param self KNumberModel*
 /// @param signal QMetaMethod*
 ///
-void k_numbermodel_super_connect_notify(void* self, void* signal);
+void k_numbermodel_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2509,7 +2491,7 @@ void k_numbermodel_super_connect_notify(void* self, void* signal);
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QMetaMethod* signal)
 ///
-void k_numbermodel_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_numbermodel_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2520,7 +2502,7 @@ void k_numbermodel_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self KNumberModel*
 /// @param signal QMetaMethod*
 ///
-void k_numbermodel_disconnect_notify(void* self, void* signal);
+void k_numbermodel_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2531,7 +2513,7 @@ void k_numbermodel_disconnect_notify(void* self, void* signal);
 /// @param self KNumberModel*
 /// @param signal QMetaMethod*
 ///
-void k_numbermodel_super_disconnect_notify(void* self, void* signal);
+void k_numbermodel_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2542,7 +2524,7 @@ void k_numbermodel_super_disconnect_notify(void* self, void* signal);
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QMetaMethod* signal)
 ///
-void k_numbermodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_numbermodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2550,11 +2532,11 @@ void k_numbermodel_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param row int
 /// @param column int
 ///
-QModelIndex* k_numbermodel_create_index(void* self, int row, int column);
+QModelIndex* k_numbermodel_create_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2562,11 +2544,11 @@ QModelIndex* k_numbermodel_create_index(void* self, int row, int column);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param row int
 /// @param column int
 ///
-QModelIndex* k_numbermodel_super_create_index(void* self, int row, int column);
+QModelIndex* k_numbermodel_super_create_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2574,12 +2556,12 @@ QModelIndex* k_numbermodel_super_create_index(void* self, int row, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback QModelIndex* func(KNumberModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_numbermodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
+void k_numbermodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2587,11 +2569,11 @@ void k_numbermodel_on_create_index(void* self, QModelIndex* (*callback)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_numbermodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_numbermodel_encode_data(const void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2599,11 +2581,11 @@ void k_numbermodel_encode_data(void* self, libqt_list indexes, void* stream);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_numbermodel_super_encode_data(void* self, libqt_list indexes, void* stream);
+void k_numbermodel_super_encode_data(const void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2611,10 +2593,10 @@ void k_numbermodel_super_encode_data(void* self, libqt_list indexes, void* strea
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback void func(KNumberModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_numbermodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
+void k_numbermodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2628,7 +2610,7 @@ void k_numbermodel_on_encode_data(void* self, void (*callback)(void*, libqt_list
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool k_numbermodel_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool k_numbermodel_decode_data(void* self, int row, int column, const void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2642,7 +2624,7 @@ bool k_numbermodel_decode_data(void* self, int row, int column, void* parent, vo
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool k_numbermodel_super_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool k_numbermodel_super_decode_data(void* self, int row, int column, const void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2653,7 +2635,7 @@ bool k_numbermodel_super_decode_data(void* self, int row, int column, void* pare
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 ///
-void k_numbermodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
+void k_numbermodel_on_decode_data(void* self, bool (*callback)(void*, int, int, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2666,7 +2648,7 @@ void k_numbermodel_on_decode_data(void* self, bool (*callback)(void*, int, int, 
 /// @param first int
 /// @param last int
 ///
-void k_numbermodel_begin_insert_rows(void* self, void* parent, int first, int last);
+void k_numbermodel_begin_insert_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2679,7 +2661,7 @@ void k_numbermodel_begin_insert_rows(void* self, void* parent, int first, int la
 /// @param first int
 /// @param last int
 ///
-void k_numbermodel_super_begin_insert_rows(void* self, void* parent, int first, int last);
+void k_numbermodel_super_begin_insert_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2690,7 +2672,7 @@ void k_numbermodel_super_begin_insert_rows(void* self, void* parent, int first, 
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_begin_insert_rows(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2719,9 +2701,9 @@ void k_numbermodel_super_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_end_insert_rows(void* self, void (*callback)());
+void k_numbermodel_on_end_insert_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2734,7 +2716,7 @@ void k_numbermodel_on_end_insert_rows(void* self, void (*callback)());
 /// @param first int
 /// @param last int
 ///
-void k_numbermodel_begin_remove_rows(void* self, void* parent, int first, int last);
+void k_numbermodel_begin_remove_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2747,7 +2729,7 @@ void k_numbermodel_begin_remove_rows(void* self, void* parent, int first, int la
 /// @param first int
 /// @param last int
 ///
-void k_numbermodel_super_begin_remove_rows(void* self, void* parent, int first, int last);
+void k_numbermodel_super_begin_remove_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2758,7 +2740,7 @@ void k_numbermodel_super_begin_remove_rows(void* self, void* parent, int first, 
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_begin_remove_rows(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2787,9 +2769,9 @@ void k_numbermodel_super_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_end_remove_rows(void* self, void (*callback)());
+void k_numbermodel_on_end_remove_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2804,7 +2786,7 @@ void k_numbermodel_on_end_remove_rows(void* self, void (*callback)());
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool k_numbermodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool k_numbermodel_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2819,7 +2801,7 @@ bool k_numbermodel_begin_move_rows(void* self, void* sourceParent, int sourceFir
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool k_numbermodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool k_numbermodel_super_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2830,7 +2812,7 @@ bool k_numbermodel_super_begin_move_rows(void* self, void* sourceParent, int sou
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_numbermodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_numbermodel_on_begin_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2859,9 +2841,9 @@ void k_numbermodel_super_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_end_move_rows(void* self, void (*callback)());
+void k_numbermodel_on_end_move_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2874,7 +2856,7 @@ void k_numbermodel_on_end_move_rows(void* self, void (*callback)());
 /// @param first int
 /// @param last int
 ///
-void k_numbermodel_begin_insert_columns(void* self, void* parent, int first, int last);
+void k_numbermodel_begin_insert_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2887,7 +2869,7 @@ void k_numbermodel_begin_insert_columns(void* self, void* parent, int first, int
 /// @param first int
 /// @param last int
 ///
-void k_numbermodel_super_begin_insert_columns(void* self, void* parent, int first, int last);
+void k_numbermodel_super_begin_insert_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2898,7 +2880,7 @@ void k_numbermodel_super_begin_insert_columns(void* self, void* parent, int firs
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_begin_insert_columns(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2927,9 +2909,9 @@ void k_numbermodel_super_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_end_insert_columns(void* self, void (*callback)());
+void k_numbermodel_on_end_insert_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2942,7 +2924,7 @@ void k_numbermodel_on_end_insert_columns(void* self, void (*callback)());
 /// @param first int
 /// @param last int
 ///
-void k_numbermodel_begin_remove_columns(void* self, void* parent, int first, int last);
+void k_numbermodel_begin_remove_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2955,7 +2937,7 @@ void k_numbermodel_begin_remove_columns(void* self, void* parent, int first, int
 /// @param first int
 /// @param last int
 ///
-void k_numbermodel_super_begin_remove_columns(void* self, void* parent, int first, int last);
+void k_numbermodel_super_begin_remove_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2966,7 +2948,7 @@ void k_numbermodel_super_begin_remove_columns(void* self, void* parent, int firs
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_begin_remove_columns(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2995,9 +2977,9 @@ void k_numbermodel_super_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_end_remove_columns(void* self, void (*callback)());
+void k_numbermodel_on_end_remove_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3012,7 +2994,7 @@ void k_numbermodel_on_end_remove_columns(void* self, void (*callback)());
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool k_numbermodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool k_numbermodel_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3027,7 +3009,7 @@ bool k_numbermodel_begin_move_columns(void* self, void* sourceParent, int source
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool k_numbermodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool k_numbermodel_super_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3038,7 +3020,7 @@ bool k_numbermodel_super_begin_move_columns(void* self, void* sourceParent, int 
 /// @param self KNumberModel*
 /// @param callback bool func(KNumberModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_numbermodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_numbermodel_on_begin_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3067,9 +3049,9 @@ void k_numbermodel_super_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_end_move_columns(void* self, void (*callback)());
+void k_numbermodel_on_end_move_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3098,9 +3080,9 @@ void k_numbermodel_super_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_begin_reset_model(void* self, void (*callback)());
+void k_numbermodel_on_begin_reset_model(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3129,9 +3111,9 @@ void k_numbermodel_super_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KNumberModel*
-/// @param callback void func()
+/// @param callback void func(KNumberModel* self)
 ///
-void k_numbermodel_on_end_reset_model(void* self, void (*callback)());
+void k_numbermodel_on_end_reset_model(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3143,7 +3125,7 @@ void k_numbermodel_on_end_reset_model(void* self, void (*callback)());
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void k_numbermodel_change_persistent_index(void* self, void* from, void* to);
+void k_numbermodel_change_persistent_index(void* self, const void* from, const void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3155,7 +3137,7 @@ void k_numbermodel_change_persistent_index(void* self, void* from, void* to);
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void k_numbermodel_super_change_persistent_index(void* self, void* from, void* to);
+void k_numbermodel_super_change_persistent_index(void* self, const void* from, const void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3166,7 +3148,7 @@ void k_numbermodel_super_change_persistent_index(void* self, void* from, void* t
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* from, QModelIndex* to)
 ///
-void k_numbermodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
+void k_numbermodel_on_change_persistent_index(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3209,11 +3191,11 @@ void k_numbermodel_on_change_persistent_index_list(void* self, void (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_numbermodel_persistent_index_list(void* self);
+libqt_list k_numbermodel_persistent_index_list(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3221,11 +3203,11 @@ libqt_list k_numbermodel_persistent_index_list(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_numbermodel_super_persistent_index_list(void* self);
+libqt_list k_numbermodel_super_persistent_index_list(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3233,10 +3215,10 @@ libqt_list k_numbermodel_super_persistent_index_list(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
-/// @param callback libqt_list of QModelIndex* func()
+/// @param self const KNumberModel*
+/// @param callback libqt_list of QModelIndex* func(KNumberModel* self)
 ///
-void k_numbermodel_on_persistent_index_list(void* self, libqt_list (*callback)());
+void k_numbermodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3244,9 +3226,9 @@ void k_numbermodel_on_persistent_index_list(void* self, libqt_list (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-QObject* k_numbermodel_sender(void* self);
+QObject* k_numbermodel_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3254,9 +3236,9 @@ QObject* k_numbermodel_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-QObject* k_numbermodel_super_sender(void* self);
+QObject* k_numbermodel_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3264,10 +3246,10 @@ QObject* k_numbermodel_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
-/// @param callback QObject* func()
+/// @param self const KNumberModel*
+/// @param callback QObject* func(KNumberModel* self)
 ///
-void k_numbermodel_on_sender(void* self, QObject* (*callback)());
+void k_numbermodel_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3275,9 +3257,9 @@ void k_numbermodel_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-int32_t k_numbermodel_sender_signal_index(void* self);
+int32_t k_numbermodel_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3285,9 +3267,9 @@ int32_t k_numbermodel_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 ///
-int32_t k_numbermodel_super_sender_signal_index(void* self);
+int32_t k_numbermodel_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3295,10 +3277,10 @@ int32_t k_numbermodel_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
-/// @param callback int32_t func()
+/// @param self const KNumberModel*
+/// @param callback int32_t func(KNumberModel* self)
 ///
-void k_numbermodel_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_numbermodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3306,10 +3288,10 @@ void k_numbermodel_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param signal const char*
 ///
-int32_t k_numbermodel_receivers(void* self, const char* signal);
+int32_t k_numbermodel_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3317,10 +3299,10 @@ int32_t k_numbermodel_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param signal const char*
 ///
-int32_t k_numbermodel_super_receivers(void* self, const char* signal);
+int32_t k_numbermodel_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3328,10 +3310,10 @@ int32_t k_numbermodel_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback int32_t func(KNumberModel* self, const char* signal)
 ///
-void k_numbermodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_numbermodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3339,10 +3321,10 @@ void k_numbermodel_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param signal QMetaMethod*
 ///
-bool k_numbermodel_is_signal_connected(void* self, void* signal);
+bool k_numbermodel_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3350,10 +3332,10 @@ bool k_numbermodel_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param signal QMetaMethod*
 ///
-bool k_numbermodel_super_is_signal_connected(void* self, void* signal);
+bool k_numbermodel_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3361,10 +3343,10 @@ bool k_numbermodel_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNumberModel*
+/// @param self const KNumberModel*
 /// @param callback bool func(KNumberModel* self, QMetaMethod* signal)
 ///
-void k_numbermodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_numbermodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3375,7 +3357,7 @@ void k_numbermodel_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3386,7 +3368,7 @@ void k_numbermodel_on_rows_about_to_be_inserted(void* self, void (*callback)(voi
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3397,7 +3379,7 @@ void k_numbermodel_on_rows_inserted(void* self, void (*callback)(void*, void*, i
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3408,7 +3390,7 @@ void k_numbermodel_on_rows_about_to_be_removed(void* self, void (*callback)(void
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3419,7 +3401,7 @@ void k_numbermodel_on_rows_removed(void* self, void (*callback)(void*, void*, in
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3430,7 +3412,7 @@ void k_numbermodel_on_columns_about_to_be_inserted(void* self, void (*callback)(
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3441,7 +3423,7 @@ void k_numbermodel_on_columns_inserted(void* self, void (*callback)(void*, void*
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3452,7 +3434,7 @@ void k_numbermodel_on_columns_about_to_be_removed(void* self, void (*callback)(v
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_numbermodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_numbermodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3485,7 +3467,7 @@ void k_numbermodel_on_model_reset(void* self, void (*callback)(void*));
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_numbermodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_numbermodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3496,7 +3478,7 @@ void k_numbermodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*,
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_numbermodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_numbermodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3507,7 +3489,7 @@ void k_numbermodel_on_rows_moved(void* self, void (*callback)(void*, void*, int,
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_numbermodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_numbermodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3518,7 +3500,7 @@ void k_numbermodel_on_columns_about_to_be_moved(void* self, void (*callback)(voi
 /// @param self KNumberModel*
 /// @param callback void func(KNumberModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_numbermodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_numbermodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QObject
 ///

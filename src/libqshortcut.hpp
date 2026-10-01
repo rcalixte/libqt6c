@@ -56,7 +56,7 @@ void QShortcut_Connect_Activated(QShortcut* self, intptr_t slot);
 void QShortcut_ActivatedAmbiguously(QShortcut* self);
 void QShortcut_Connect_ActivatedAmbiguously(QShortcut* self, intptr_t slot);
 bool QShortcut_Event(QShortcut* self, QEvent* e);
-void QShortcut_OnMetaObject(const QShortcut* self, intptr_t slot);
+void QShortcut_OnMetaObject(QShortcut* self, intptr_t slot);
 QMetaObject* QShortcut_SuperMetaObject(const QShortcut* self);
 void QShortcut_OnMetacast(QShortcut* self, intptr_t slot);
 void* QShortcut_SuperMetacast(QShortcut* self, const char* param1);
@@ -83,17 +83,9 @@ void QShortcut_DisconnectNotify(QShortcut* self, const QMetaMethod* signal);
 void QShortcut_OnDisconnectNotify(QShortcut* self, intptr_t slot);
 void QShortcut_SuperDisconnectNotify(QShortcut* self, const QMetaMethod* signal);
 QObject* QShortcut_Sender(const QShortcut* self);
-void QShortcut_OnSender(const QShortcut* self, intptr_t slot);
-QObject* QShortcut_SuperSender(const QShortcut* self);
 int QShortcut_SenderSignalIndex(const QShortcut* self);
-void QShortcut_OnSenderSignalIndex(const QShortcut* self, intptr_t slot);
-int QShortcut_SuperSenderSignalIndex(const QShortcut* self);
 int QShortcut_Receivers(const QShortcut* self, const char* signal);
-void QShortcut_OnReceivers(const QShortcut* self, intptr_t slot);
-int QShortcut_SuperReceivers(const QShortcut* self, const char* signal);
 bool QShortcut_IsSignalConnected(const QShortcut* self, const QMetaMethod* signal);
-void QShortcut_OnIsSignalConnected(const QShortcut* self, intptr_t slot);
-bool QShortcut_SuperIsSignalConnected(const QShortcut* self, const QMetaMethod* signal);
 void QShortcut_Delete(QShortcut* self);
 
 #ifdef __cplusplus

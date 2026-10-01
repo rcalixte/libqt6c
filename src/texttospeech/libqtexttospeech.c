@@ -84,15 +84,15 @@ QTextToSpeech* q_texttospeech_new6(const char* engine, libqt_map /* of const cha
     return _out;
 }
 
-const QMetaObject* q_texttospeech_meta_object(void* self) {
+const QMetaObject* q_texttospeech_meta_object(const void* self) {
     return QTextToSpeech_MetaObject((QTextToSpeech*)self);
 }
 
-void q_texttospeech_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_texttospeech_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QTextToSpeech_OnMetaObject((QTextToSpeech*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_texttospeech_super_meta_object(void* self) {
+const QMetaObject* q_texttospeech_super_meta_object(const void* self) {
     return QTextToSpeech_SuperMetaObject((QTextToSpeech*)self);
 }
 
@@ -131,59 +131,59 @@ bool q_texttospeech_set_engine(void* self, const char* engine) {
     return QTextToSpeech_SetEngine((QTextToSpeech*)self, qstring(engine));
 }
 
-const char* q_texttospeech_engine(void* self) {
+const char* q_texttospeech_engine(const void* self) {
     libqt_string _str = QTextToSpeech_Engine((QTextToSpeech*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_texttospeech_engine_capabilities(void* self) {
+int32_t q_texttospeech_engine_capabilities(const void* self) {
     return QTextToSpeech_EngineCapabilities((QTextToSpeech*)self);
 }
 
-int32_t q_texttospeech_state(void* self) {
+int32_t q_texttospeech_state(const void* self) {
     return QTextToSpeech_State((QTextToSpeech*)self);
 }
 
-int32_t q_texttospeech_error_reason(void* self) {
+int32_t q_texttospeech_error_reason(const void* self) {
     return QTextToSpeech_ErrorReason((QTextToSpeech*)self);
 }
 
-const char* q_texttospeech_error_string(void* self) {
+const char* q_texttospeech_error_string(const void* self) {
     libqt_string _str = QTextToSpeech_ErrorString((QTextToSpeech*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of QLocale* */ q_texttospeech_available_locales(void* self) {
+libqt_list /* of QLocale* */ q_texttospeech_available_locales(const void* self) {
     libqt_list _arr = QTextToSpeech_AvailableLocales((QTextToSpeech*)self);
     return _arr;
 }
 
-QLocale* q_texttospeech_locale(void* self) {
+QLocale* q_texttospeech_locale(const void* self) {
     return QTextToSpeech_Locale((QTextToSpeech*)self);
 }
 
-QVoice* q_texttospeech_voice(void* self) {
+QVoice* q_texttospeech_voice(const void* self) {
     return QTextToSpeech_Voice((QTextToSpeech*)self);
 }
 
-libqt_list /* of QVoice* */ q_texttospeech_available_voices(void* self) {
+libqt_list /* of QVoice* */ q_texttospeech_available_voices(const void* self) {
     libqt_list _arr = QTextToSpeech_AvailableVoices((QTextToSpeech*)self);
     return _arr;
 }
 
-double q_texttospeech_rate(void* self) {
+double q_texttospeech_rate(const void* self) {
     return QTextToSpeech_Rate((QTextToSpeech*)self);
 }
 
-double q_texttospeech_pitch(void* self) {
+double q_texttospeech_pitch(const void* self) {
     return QTextToSpeech_Pitch((QTextToSpeech*)self);
 }
 
-double q_texttospeech_volume(void* self) {
+double q_texttospeech_volume(const void* self) {
     return QTextToSpeech_Volume((QTextToSpeech*)self);
 }
 
@@ -224,7 +224,7 @@ void q_texttospeech_resume(void* self) {
     QTextToSpeech_Resume((QTextToSpeech*)self);
 }
 
-void q_texttospeech_set_locale(void* self, void* locale) {
+void q_texttospeech_set_locale(void* self, const void* locale) {
     QTextToSpeech_SetLocale((QTextToSpeech*)self, (QLocale*)locale);
 }
 
@@ -240,7 +240,7 @@ void q_texttospeech_set_volume(void* self, double volume) {
     QTextToSpeech_SetVolume((QTextToSpeech*)self, volume);
 }
 
-void q_texttospeech_set_voice(void* self, void* voice) {
+void q_texttospeech_set_voice(void* self, const void* voice) {
     QTextToSpeech_SetVoice((QTextToSpeech*)self, (QVoice*)voice);
 }
 
@@ -268,11 +268,11 @@ void q_texttospeech_on_error_occurred(void* self, void (*callback)(void*, int32_
     QTextToSpeech_Connect_ErrorOccurred((QTextToSpeech*)self, (intptr_t)callback);
 }
 
-void q_texttospeech_locale_changed(void* self, void* locale) {
+void q_texttospeech_locale_changed(void* self, const void* locale) {
     QTextToSpeech_LocaleChanged((QTextToSpeech*)self, (QLocale*)locale);
 }
 
-void q_texttospeech_on_locale_changed(void* self, void (*callback)(void*, void*)) {
+void q_texttospeech_on_locale_changed(void* self, void (*callback)(void*, const void*)) {
     QTextToSpeech_Connect_LocaleChanged((QTextToSpeech*)self, (intptr_t)callback);
 }
 
@@ -300,11 +300,11 @@ void q_texttospeech_on_volume_changed(void* self, void (*callback)(void*, double
     QTextToSpeech_Connect_VolumeChanged((QTextToSpeech*)self, (intptr_t)callback);
 }
 
-void q_texttospeech_voice_changed(void* self, void* voice) {
+void q_texttospeech_voice_changed(void* self, const void* voice) {
     QTextToSpeech_VoiceChanged((QTextToSpeech*)self, (QVoice*)voice);
 }
 
-void q_texttospeech_on_voice_changed(void* self, void (*callback)(void*, void*)) {
+void q_texttospeech_on_voice_changed(void* self, void (*callback)(void*, const void*)) {
     QTextToSpeech_Connect_VoiceChanged((QTextToSpeech*)self, (intptr_t)callback);
 }
 
@@ -324,17 +324,8 @@ void q_texttospeech_on_about_to_synthesize(void* self, void (*callback)(void*, i
     QTextToSpeech_Connect_AboutToSynthesize((QTextToSpeech*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QVoice* */ q_texttospeech_all_voices(void* self, void* locale) {
+libqt_list /* of QVoice* */ q_texttospeech_all_voices(const void* self, const void* locale) {
     libqt_list _arr = QTextToSpeech_AllVoices((QTextToSpeech*)self, (QLocale*)locale);
-    return _arr;
-}
-
-void q_texttospeech_on_all_voices(void* self, libqt_list /* of QVoice* */ (*callback)(void*, void*)) {
-    QTextToSpeech_OnAllVoices((QTextToSpeech*)self, (intptr_t)callback);
-}
-
-libqt_list /* of QVoice* */ q_texttospeech_super_all_voices(void* self, void* locale) {
-    libqt_list _arr = QTextToSpeech_SuperAllVoices((QTextToSpeech*)self, (QLocale*)locale);
     return _arr;
 }
 
@@ -389,7 +380,7 @@ void q_texttospeech_pause1(void* self, int32_t boundaryHint) {
     QTextToSpeech_Pause1((QTextToSpeech*)self, boundaryHint);
 }
 
-const char* q_texttospeech_object_name(void* self) {
+const char* q_texttospeech_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -400,19 +391,19 @@ void q_texttospeech_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_texttospeech_is_widget_type(void* self) {
+bool q_texttospeech_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_texttospeech_is_window_type(void* self) {
+bool q_texttospeech_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_texttospeech_is_quick_item_type(void* self) {
+bool q_texttospeech_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_texttospeech_signals_blocked(void* self) {
+bool q_texttospeech_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -420,7 +411,7 @@ bool q_texttospeech_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_texttospeech_thread(void* self) {
+QThread* q_texttospeech_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -444,7 +435,7 @@ void q_texttospeech_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_texttospeech_children(void* self) {
+libqt_list /* of QObject* */ q_texttospeech_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -461,55 +452,55 @@ void q_texttospeech_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_texttospeech_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_texttospeech_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_texttospeech_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_texttospeech_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_texttospeech_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_texttospeech_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_texttospeech_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_texttospeech_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_texttospeech_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_texttospeech_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_texttospeech_disconnect3(void* self) {
+bool q_texttospeech_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_texttospeech_disconnect4(void* self, void* receiver) {
+bool q_texttospeech_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_texttospeech_disconnect5(void* param1) {
+bool q_texttospeech_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_texttospeech_dump_object_tree(void* self) {
+void q_texttospeech_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_texttospeech_dump_object_info(void* self) {
+void q_texttospeech_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_texttospeech_set_property(void* self, const char* name, void* value) {
+bool q_texttospeech_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_texttospeech_property(void* self, const char* name) {
+QVariant* q_texttospeech_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_texttospeech_dynamic_property_names(void* self) {
+const char** q_texttospeech_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -530,7 +521,7 @@ QBindingStorage* q_texttospeech_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_texttospeech_binding_storage2(void* self) {
+const QBindingStorage* q_texttospeech_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -542,11 +533,11 @@ void q_texttospeech_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_texttospeech_parent(void* self) {
+QObject* q_texttospeech_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_texttospeech_inherits(void* self, const char* classname) {
+bool q_texttospeech_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -562,31 +553,31 @@ int32_t q_texttospeech_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_texttospeech_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_texttospeech_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_texttospeech_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_texttospeech_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_texttospeech_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_texttospeech_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_texttospeech_disconnect1(void* self, const char* signal) {
+bool q_texttospeech_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_texttospeech_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_texttospeech_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_texttospeech_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_texttospeech_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_texttospeech_disconnect23(void* self, void* receiver, const char* member) {
+bool q_texttospeech_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -658,76 +649,44 @@ void q_texttospeech_on_custom_event(void* self, void (*callback)(void*, void*)) 
     QTextToSpeech_OnCustomEvent((QTextToSpeech*)self, (intptr_t)callback);
 }
 
-void q_texttospeech_connect_notify(void* self, void* signal) {
+void q_texttospeech_connect_notify(void* self, const void* signal) {
     QTextToSpeech_ConnectNotify((QTextToSpeech*)self, (QMetaMethod*)signal);
 }
 
-void q_texttospeech_super_connect_notify(void* self, void* signal) {
+void q_texttospeech_super_connect_notify(void* self, const void* signal) {
     QTextToSpeech_SuperConnectNotify((QTextToSpeech*)self, (QMetaMethod*)signal);
 }
 
-void q_texttospeech_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_texttospeech_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QTextToSpeech_OnConnectNotify((QTextToSpeech*)self, (intptr_t)callback);
 }
 
-void q_texttospeech_disconnect_notify(void* self, void* signal) {
+void q_texttospeech_disconnect_notify(void* self, const void* signal) {
     QTextToSpeech_DisconnectNotify((QTextToSpeech*)self, (QMetaMethod*)signal);
 }
 
-void q_texttospeech_super_disconnect_notify(void* self, void* signal) {
+void q_texttospeech_super_disconnect_notify(void* self, const void* signal) {
     QTextToSpeech_SuperDisconnectNotify((QTextToSpeech*)self, (QMetaMethod*)signal);
 }
 
-void q_texttospeech_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_texttospeech_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QTextToSpeech_OnDisconnectNotify((QTextToSpeech*)self, (intptr_t)callback);
 }
 
-QObject* q_texttospeech_sender(void* self) {
+QObject* q_texttospeech_sender(const void* self) {
     return QTextToSpeech_Sender((QTextToSpeech*)self);
 }
 
-QObject* q_texttospeech_super_sender(void* self) {
-    return QTextToSpeech_SuperSender((QTextToSpeech*)self);
-}
-
-void q_texttospeech_on_sender(void* self, QObject* (*callback)()) {
-    QTextToSpeech_OnSender((QTextToSpeech*)self, (intptr_t)callback);
-}
-
-int32_t q_texttospeech_sender_signal_index(void* self) {
+int32_t q_texttospeech_sender_signal_index(const void* self) {
     return QTextToSpeech_SenderSignalIndex((QTextToSpeech*)self);
 }
 
-int32_t q_texttospeech_super_sender_signal_index(void* self) {
-    return QTextToSpeech_SuperSenderSignalIndex((QTextToSpeech*)self);
-}
-
-void q_texttospeech_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QTextToSpeech_OnSenderSignalIndex((QTextToSpeech*)self, (intptr_t)callback);
-}
-
-int32_t q_texttospeech_receivers(void* self, const char* signal) {
+int32_t q_texttospeech_receivers(const void* self, const char* signal) {
     return QTextToSpeech_Receivers((QTextToSpeech*)self, signal);
 }
 
-int32_t q_texttospeech_super_receivers(void* self, const char* signal) {
-    return QTextToSpeech_SuperReceivers((QTextToSpeech*)self, signal);
-}
-
-void q_texttospeech_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QTextToSpeech_OnReceivers((QTextToSpeech*)self, (intptr_t)callback);
-}
-
-bool q_texttospeech_is_signal_connected(void* self, void* signal) {
+bool q_texttospeech_is_signal_connected(const void* self, const void* signal) {
     return QTextToSpeech_IsSignalConnected((QTextToSpeech*)self, (QMetaMethod*)signal);
-}
-
-bool q_texttospeech_super_is_signal_connected(void* self, void* signal) {
-    return QTextToSpeech_SuperIsSignalConnected((QTextToSpeech*)self, (QMetaMethod*)signal);
-}
-
-void q_texttospeech_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QTextToSpeech_OnIsSignalConnected((QTextToSpeech*)self, (intptr_t)callback);
 }
 
 void q_texttospeech_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

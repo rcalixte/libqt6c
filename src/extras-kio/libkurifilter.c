@@ -7,43 +7,43 @@ KUriFilterSearchProvider* k_urifiltersearchprovider_new() {
     return KUriFilterSearchProvider_New();
 }
 
-KUriFilterSearchProvider* k_urifiltersearchprovider_new2(void* param1) {
+KUriFilterSearchProvider* k_urifiltersearchprovider_new2(const void* param1) {
     return KUriFilterSearchProvider_New2((KUriFilterSearchProvider*)param1);
 }
 
-const char* k_urifiltersearchprovider_desktop_entry_name(void* self) {
+const char* k_urifiltersearchprovider_desktop_entry_name(const void* self) {
     libqt_string _str = KUriFilterSearchProvider_DesktopEntryName((KUriFilterSearchProvider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_urifiltersearchprovider_name(void* self) {
+const char* k_urifiltersearchprovider_name(const void* self) {
     libqt_string _str = KUriFilterSearchProvider_Name((KUriFilterSearchProvider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_urifiltersearchprovider_icon_name(void* self) {
+const char* k_urifiltersearchprovider_icon_name(const void* self) {
     libqt_string _str = KUriFilterSearchProvider_IconName((KUriFilterSearchProvider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_urifiltersearchprovider_on_icon_name(void* self, const char* (*callback)()) {
+void k_urifiltersearchprovider_on_icon_name(const void* self, const char* (*callback)(const void*)) {
     KUriFilterSearchProvider_OnIconName((KUriFilterSearchProvider*)self, (intptr_t)callback);
 }
 
-const char* k_urifiltersearchprovider_super_icon_name(void* self) {
+const char* k_urifiltersearchprovider_super_icon_name(const void* self) {
     libqt_string _str = KUriFilterSearchProvider_SuperIconName((KUriFilterSearchProvider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_urifiltersearchprovider_keys(void* self) {
+const char** k_urifiltersearchprovider_keys(const void* self) {
     libqt_list _arr = KUriFilterSearchProvider_Keys((KUriFilterSearchProvider*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -60,14 +60,14 @@ const char** k_urifiltersearchprovider_keys(void* self) {
     return _ret;
 }
 
-const char* k_urifiltersearchprovider_default_key(void* self) {
+const char* k_urifiltersearchprovider_default_key(const void* self) {
     libqt_string _str = KUriFilterSearchProvider_DefaultKey((KUriFilterSearchProvider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_urifiltersearchprovider_operator_assign(void* self, void* param1) {
+void k_urifiltersearchprovider_operator_assign(void* self, const void* param1) {
     KUriFilterSearchProvider_OperatorAssign((KUriFilterSearchProvider*)self, (KUriFilterSearchProvider*)param1);
 }
 
@@ -75,24 +75,8 @@ void k_urifiltersearchprovider_set_desktop_entry_name(void* self, const char* de
     KUriFilterSearchProvider_SetDesktopEntryName((KUriFilterSearchProvider*)self, qstring(desktopEntryName));
 }
 
-void k_urifiltersearchprovider_on_set_desktop_entry_name(void* self, void (*callback)(void*, const char*)) {
-    KUriFilterSearchProvider_OnSetDesktopEntryName((KUriFilterSearchProvider*)self, (intptr_t)callback);
-}
-
-void k_urifiltersearchprovider_super_set_desktop_entry_name(void* self, const char* desktopEntryName) {
-    KUriFilterSearchProvider_SuperSetDesktopEntryName((KUriFilterSearchProvider*)self, qstring(desktopEntryName));
-}
-
 void k_urifiltersearchprovider_set_icon_name(void* self, const char* iconName) {
     KUriFilterSearchProvider_SetIconName((KUriFilterSearchProvider*)self, qstring(iconName));
-}
-
-void k_urifiltersearchprovider_on_set_icon_name(void* self, void (*callback)(void*, const char*)) {
-    KUriFilterSearchProvider_OnSetIconName((KUriFilterSearchProvider*)self, (intptr_t)callback);
-}
-
-void k_urifiltersearchprovider_super_set_icon_name(void* self, const char* iconName) {
-    KUriFilterSearchProvider_SuperSetIconName((KUriFilterSearchProvider*)self, qstring(iconName));
 }
 
 void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]) {
@@ -109,33 +93,8 @@ void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]) 
     free(keys_qstr);
 }
 
-void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, const char**)) {
-    KUriFilterSearchProvider_OnSetKeys((KUriFilterSearchProvider*)self, (intptr_t)callback);
-}
-
-void k_urifiltersearchprovider_super_set_keys(void* self, const char* keys[static 1]) {
-    size_t keys_len = libqt_strv_length(keys);
-    libqt_string* keys_qstr = (libqt_string*)malloc(keys_len * sizeof(libqt_string));
-    if (keys_qstr == NULL) {
-        fprintf(stderr, "Failed to allocate memory for string list in k_urifiltersearchprovider_set_keys\n");
-        abort();
-    }
-    for (size_t i = 0; i < keys_len; ++i)
-        keys_qstr[i] = qstring(keys[i]);
-    libqt_list keys_list = qlist(keys_qstr, keys_len);
-    KUriFilterSearchProvider_SuperSetKeys((KUriFilterSearchProvider*)self, keys_list);
-}
-
 void k_urifiltersearchprovider_set_name(void* self, const char* name) {
     KUriFilterSearchProvider_SetName((KUriFilterSearchProvider*)self, qstring(name));
-}
-
-void k_urifiltersearchprovider_on_set_name(void* self, void (*callback)(void*, const char*)) {
-    KUriFilterSearchProvider_OnSetName((KUriFilterSearchProvider*)self, (intptr_t)callback);
-}
-
-void k_urifiltersearchprovider_super_set_name(void* self, const char* name) {
-    KUriFilterSearchProvider_SuperSetName((KUriFilterSearchProvider*)self, qstring(name));
 }
 
 void k_urifiltersearchprovider_delete(void* self) {
@@ -146,7 +105,7 @@ KUriFilterData* k_urifilterdata_new() {
     return KUriFilterData_New();
 }
 
-KUriFilterData* k_urifilterdata_new2(void* url) {
+KUriFilterData* k_urifilterdata_new2(const void* url) {
     return KUriFilterData_New2((QUrl*)url);
 }
 
@@ -154,77 +113,77 @@ KUriFilterData* k_urifilterdata_new3(const char* url) {
     return KUriFilterData_New3(qstring(url));
 }
 
-KUriFilterData* k_urifilterdata_new4(void* other) {
+KUriFilterData* k_urifilterdata_new4(const void* other) {
     return KUriFilterData_New4((KUriFilterData*)other);
 }
 
-QUrl* k_urifilterdata_uri(void* self) {
+QUrl* k_urifilterdata_uri(const void* self) {
     return KUriFilterData_Uri((KUriFilterData*)self);
 }
 
-const char* k_urifilterdata_error_msg(void* self) {
+const char* k_urifilterdata_error_msg(const void* self) {
     libqt_string _str = KUriFilterData_ErrorMsg((KUriFilterData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_urifilterdata_uri_type(void* self) {
+int32_t k_urifilterdata_uri_type(const void* self) {
     return KUriFilterData_UriType((KUriFilterData*)self);
 }
 
-const char* k_urifilterdata_absolute_path(void* self) {
+const char* k_urifilterdata_absolute_path(const void* self) {
     libqt_string _str = KUriFilterData_AbsolutePath((KUriFilterData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_urifilterdata_has_absolute_path(void* self) {
+bool k_urifilterdata_has_absolute_path(const void* self) {
     return KUriFilterData_HasAbsolutePath((KUriFilterData*)self);
 }
 
-const char* k_urifilterdata_args_and_options(void* self) {
+const char* k_urifilterdata_args_and_options(const void* self) {
     libqt_string _str = KUriFilterData_ArgsAndOptions((KUriFilterData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_urifilterdata_has_args_and_options(void* self) {
+bool k_urifilterdata_has_args_and_options(const void* self) {
     return KUriFilterData_HasArgsAndOptions((KUriFilterData*)self);
 }
 
-bool k_urifilterdata_check_for_executables(void* self) {
+bool k_urifilterdata_check_for_executables(const void* self) {
     return KUriFilterData_CheckForExecutables((KUriFilterData*)self);
 }
 
-const char* k_urifilterdata_typed_string(void* self) {
+const char* k_urifilterdata_typed_string(const void* self) {
     libqt_string _str = KUriFilterData_TypedString((KUriFilterData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_urifilterdata_search_term(void* self) {
+const char* k_urifilterdata_search_term(const void* self) {
     libqt_string _str = KUriFilterData_SearchTerm((KUriFilterData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QChar* k_urifilterdata_search_term_separator(void* self) {
+QChar* k_urifilterdata_search_term_separator(const void* self) {
     return KUriFilterData_SearchTermSeparator((KUriFilterData*)self);
 }
 
-const char* k_urifilterdata_search_provider(void* self) {
+const char* k_urifilterdata_search_provider(const void* self) {
     libqt_string _str = KUriFilterData_SearchProvider((KUriFilterData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_urifilterdata_preferred_search_providers(void* self) {
+const char** k_urifilterdata_preferred_search_providers(const void* self) {
     libqt_list _arr = KUriFilterData_PreferredSearchProviders((KUriFilterData*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -241,18 +200,18 @@ const char** k_urifilterdata_preferred_search_providers(void* self) {
     return _ret;
 }
 
-KUriFilterSearchProvider* k_urifilterdata_query_for_search_provider(void* self, const char* provider) {
+KUriFilterSearchProvider* k_urifilterdata_query_for_search_provider(const void* self, const char* provider) {
     return KUriFilterData_QueryForSearchProvider((KUriFilterData*)self, qstring(provider));
 }
 
-const char* k_urifilterdata_query_for_preferred_search_provider(void* self, const char* provider) {
+const char* k_urifilterdata_query_for_preferred_search_provider(const void* self, const char* provider) {
     libqt_string _str = KUriFilterData_QueryForPreferredSearchProvider((KUriFilterData*)self, qstring(provider));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_urifilterdata_all_queries_for_search_provider(void* self, const char* provider) {
+const char** k_urifilterdata_all_queries_for_search_provider(const void* self, const char* provider) {
     libqt_list _arr = KUriFilterData_AllQueriesForSearchProvider((KUriFilterData*)self, qstring(provider));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -269,14 +228,14 @@ const char** k_urifilterdata_all_queries_for_search_provider(void* self, const c
     return _ret;
 }
 
-const char* k_urifilterdata_icon_name_for_preferred_search_provider(void* self, const char* provider) {
+const char* k_urifilterdata_icon_name_for_preferred_search_provider(const void* self, const char* provider) {
     libqt_string _str = KUriFilterData_IconNameForPreferredSearchProvider((KUriFilterData*)self, qstring(provider));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_urifilterdata_alternate_search_providers(void* self) {
+const char** k_urifilterdata_alternate_search_providers(const void* self) {
     libqt_list _arr = KUriFilterData_AlternateSearchProviders((KUriFilterData*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -293,21 +252,21 @@ const char** k_urifilterdata_alternate_search_providers(void* self) {
     return _ret;
 }
 
-const char* k_urifilterdata_alternate_default_search_provider(void* self) {
+const char* k_urifilterdata_alternate_default_search_provider(const void* self) {
     libqt_string _str = KUriFilterData_AlternateDefaultSearchProvider((KUriFilterData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_urifilterdata_default_url_scheme(void* self) {
+const char* k_urifilterdata_default_url_scheme(const void* self) {
     libqt_string _str = KUriFilterData_DefaultUrlScheme((KUriFilterData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_urifilterdata_search_filtering_options(void* self) {
+int32_t k_urifilterdata_search_filtering_options(const void* self) {
     return KUriFilterData_SearchFilteringOptions((KUriFilterData*)self);
 }
 
@@ -322,7 +281,7 @@ void k_urifilterdata_set_check_for_executables(void* self, bool check) {
     KUriFilterData_SetCheckForExecutables((KUriFilterData*)self, check);
 }
 
-void k_urifilterdata_set_data(void* self, void* url) {
+void k_urifilterdata_set_data(void* self, const void* url) {
     KUriFilterData_SetData((KUriFilterData*)self, (QUrl*)url);
 }
 
@@ -360,7 +319,7 @@ void k_urifilterdata_set_search_filtering_options(void* self, int32_t options) {
     KUriFilterData_SetSearchFilteringOptions((KUriFilterData*)self, options);
 }
 
-void k_urifilterdata_operator_assign(void* self, void* url) {
+void k_urifilterdata_operator_assign(void* self, const void* url) {
     KUriFilterData_OperatorAssign((KUriFilterData*)self, (QUrl*)url);
 }
 
@@ -388,7 +347,7 @@ bool k_urifilter_filter_uri3(void* self, const char* uri) {
     return KUriFilter_FilterUri3((KUriFilter*)self, qstring(uri));
 }
 
-QUrl* k_urifilter_filtered_uri(void* self, void* uri) {
+QUrl* k_urifilter_filtered_uri(void* self, const void* uri) {
     return KUriFilter_FilteredUri((KUriFilter*)self, (QUrl*)uri);
 }
 
@@ -403,7 +362,7 @@ bool k_urifilter_filter_search_uri(void* self, void* data, int32_t types) {
     return KUriFilter_FilterSearchUri((KUriFilter*)self, (KUriFilterData*)data, types);
 }
 
-const char** k_urifilter_plugin_names(void* self) {
+const char** k_urifilter_plugin_names(const void* self) {
     libqt_list _arr = KUriFilter_PluginNames((KUriFilter*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -465,7 +424,7 @@ bool k_urifilter_filter_uri24(void* self, const char* uri, const char* filters[s
     return _out;
 }
 
-QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[static 1]) {
+QUrl* k_urifilter_filtered_uri22(void* self, const void* uri, const char* filters[static 1]) {
     size_t filters_len = libqt_strv_length(filters);
     libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
     if (filters_qstr == NULL) {

@@ -15,15 +15,15 @@ TextGrammarCheck__LanguageToolManager* k_textgrammarcheck__languagetoolmanager_n
     return TextGrammarCheck__LanguageToolManager_New2((QObject*)parent);
 }
 
-const QMetaObject* k_textgrammarcheck__languagetoolmanager_meta_object(void* self) {
+const QMetaObject* k_textgrammarcheck__languagetoolmanager_meta_object(const void* self) {
     return TextGrammarCheck__LanguageToolManager_MetaObject((TextGrammarCheck__LanguageToolManager*)self);
 }
 
-void k_textgrammarcheck__languagetoolmanager_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_textgrammarcheck__languagetoolmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__LanguageToolManager_OnMetaObject((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_textgrammarcheck__languagetoolmanager_super_meta_object(void* self) {
+const QMetaObject* k_textgrammarcheck__languagetoolmanager_super_meta_object(const void* self) {
     return TextGrammarCheck__LanguageToolManager_SuperMetaObject((TextGrammarCheck__LanguageToolManager*)self);
 }
 
@@ -62,11 +62,11 @@ TextGrammarCheck__LanguageToolManager* k_textgrammarcheck__languagetoolmanager_s
     return TextGrammarCheck__LanguageToolManager_Self();
 }
 
-QNetworkAccessManager* k_textgrammarcheck__languagetoolmanager_network_access_manager(void* self) {
+QNetworkAccessManager* k_textgrammarcheck__languagetoolmanager_network_access_manager(const void* self) {
     return TextGrammarCheck__LanguageToolManager_NetworkAccessManager((TextGrammarCheck__LanguageToolManager*)self);
 }
 
-const char* k_textgrammarcheck__languagetoolmanager_language_tool_path(void* self) {
+const char* k_textgrammarcheck__languagetoolmanager_language_tool_path(const void* self) {
     libqt_string _str = TextGrammarCheck__LanguageToolManager_LanguageToolPath((TextGrammarCheck__LanguageToolManager*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -85,7 +85,7 @@ void k_textgrammarcheck__languagetoolmanager_save_settings(void* self) {
     TextGrammarCheck__LanguageToolManager_SaveSettings((TextGrammarCheck__LanguageToolManager*)self);
 }
 
-const char* k_textgrammarcheck__languagetoolmanager_language(void* self) {
+const char* k_textgrammarcheck__languagetoolmanager_language(const void* self) {
     libqt_string _str = TextGrammarCheck__LanguageToolManager_Language((TextGrammarCheck__LanguageToolManager*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -96,7 +96,7 @@ void k_textgrammarcheck__languagetoolmanager_set_language(void* self, const char
     TextGrammarCheck__LanguageToolManager_SetLanguage((TextGrammarCheck__LanguageToolManager*)self, qstring(language));
 }
 
-bool k_textgrammarcheck__languagetoolmanager_use_local_instance(void* self) {
+bool k_textgrammarcheck__languagetoolmanager_use_local_instance(const void* self) {
     return TextGrammarCheck__LanguageToolManager_UseLocalInstance((TextGrammarCheck__LanguageToolManager*)self);
 }
 
@@ -104,14 +104,14 @@ void k_textgrammarcheck__languagetoolmanager_set_use_local_instance(void* self, 
     TextGrammarCheck__LanguageToolManager_SetUseLocalInstance((TextGrammarCheck__LanguageToolManager*)self, useLocalInstance);
 }
 
-const char* k_textgrammarcheck__languagetoolmanager_language_tool_check_path(void* self) {
+const char* k_textgrammarcheck__languagetoolmanager_language_tool_check_path(const void* self) {
     libqt_string _str = TextGrammarCheck__LanguageToolManager_LanguageToolCheckPath((TextGrammarCheck__LanguageToolManager*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_textgrammarcheck__languagetoolmanager_language_tool_languages_path(void* self) {
+const char* k_textgrammarcheck__languagetoolmanager_language_tool_languages_path(const void* self) {
     libqt_string _str = TextGrammarCheck__LanguageToolManager_LanguageToolLanguagesPath((TextGrammarCheck__LanguageToolManager*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -129,7 +129,7 @@ QColor* k_textgrammarcheck__languagetoolmanager_grammar_color_for_error(void* se
     return TextGrammarCheck__LanguageToolManager_GrammarColorForError((TextGrammarCheck__LanguageToolManager*)self, qstring(error));
 }
 
-bool k_textgrammarcheck__languagetoolmanager_allow_to_get_list_of_languages(void* self) {
+bool k_textgrammarcheck__languagetoolmanager_allow_to_get_list_of_languages(const void* self) {
     return TextGrammarCheck__LanguageToolManager_AllowToGetListOfLanguages((TextGrammarCheck__LanguageToolManager*)self);
 }
 
@@ -147,7 +147,7 @@ const char* k_textgrammarcheck__languagetoolmanager_tr3(const char* s, const cha
     return _ret;
 }
 
-const char* k_textgrammarcheck__languagetoolmanager_object_name(void* self) {
+const char* k_textgrammarcheck__languagetoolmanager_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -158,19 +158,19 @@ void k_textgrammarcheck__languagetoolmanager_set_object_name(void* self, const c
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_is_widget_type(void* self) {
+bool k_textgrammarcheck__languagetoolmanager_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_is_window_type(void* self) {
+bool k_textgrammarcheck__languagetoolmanager_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_is_quick_item_type(void* self) {
+bool k_textgrammarcheck__languagetoolmanager_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_signals_blocked(void* self) {
+bool k_textgrammarcheck__languagetoolmanager_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -178,7 +178,7 @@ bool k_textgrammarcheck__languagetoolmanager_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_textgrammarcheck__languagetoolmanager_thread(void* self) {
+QThread* k_textgrammarcheck__languagetoolmanager_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -202,7 +202,7 @@ void k_textgrammarcheck__languagetoolmanager_kill_timer2(void* self, int32_t id)
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_textgrammarcheck__languagetoolmanager_children(void* self) {
+libqt_list /* of QObject* */ k_textgrammarcheck__languagetoolmanager_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -219,55 +219,55 @@ void k_textgrammarcheck__languagetoolmanager_remove_event_filter(void* self, voi
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect3(void* self) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect4(void* self, void* receiver) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect5(void* param1) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_textgrammarcheck__languagetoolmanager_dump_object_tree(void* self) {
+void k_textgrammarcheck__languagetoolmanager_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_textgrammarcheck__languagetoolmanager_dump_object_info(void* self) {
+void k_textgrammarcheck__languagetoolmanager_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_set_property(void* self, const char* name, void* value) {
+bool k_textgrammarcheck__languagetoolmanager_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_textgrammarcheck__languagetoolmanager_property(void* self, const char* name) {
+QVariant* k_textgrammarcheck__languagetoolmanager_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_textgrammarcheck__languagetoolmanager_dynamic_property_names(void* self) {
+const char** k_textgrammarcheck__languagetoolmanager_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -288,7 +288,7 @@ QBindingStorage* k_textgrammarcheck__languagetoolmanager_binding_storage(void* s
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_textgrammarcheck__languagetoolmanager_binding_storage2(void* self) {
+const QBindingStorage* k_textgrammarcheck__languagetoolmanager_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -300,11 +300,11 @@ void k_textgrammarcheck__languagetoolmanager_on_destroyed(void* self, void (*cal
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_textgrammarcheck__languagetoolmanager_parent(void* self) {
+QObject* k_textgrammarcheck__languagetoolmanager_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_inherits(void* self, const char* classname) {
+bool k_textgrammarcheck__languagetoolmanager_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -320,31 +320,31 @@ int32_t k_textgrammarcheck__languagetoolmanager_start_timer23(void* self, int64_
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_textgrammarcheck__languagetoolmanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect1(void* self, const char* signal) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_textgrammarcheck__languagetoolmanager_disconnect23(void* self, void* receiver, const char* member) {
+bool k_textgrammarcheck__languagetoolmanager_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -416,76 +416,44 @@ void k_textgrammarcheck__languagetoolmanager_on_custom_event(void* self, void (*
     TextGrammarCheck__LanguageToolManager_OnCustomEvent((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__languagetoolmanager_connect_notify(void* self, void* signal) {
+void k_textgrammarcheck__languagetoolmanager_connect_notify(void* self, const void* signal) {
     TextGrammarCheck__LanguageToolManager_ConnectNotify((TextGrammarCheck__LanguageToolManager*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__languagetoolmanager_super_connect_notify(void* self, void* signal) {
+void k_textgrammarcheck__languagetoolmanager_super_connect_notify(void* self, const void* signal) {
     TextGrammarCheck__LanguageToolManager_SuperConnectNotify((TextGrammarCheck__LanguageToolManager*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__languagetoolmanager_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textgrammarcheck__languagetoolmanager_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     TextGrammarCheck__LanguageToolManager_OnConnectNotify((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__languagetoolmanager_disconnect_notify(void* self, void* signal) {
+void k_textgrammarcheck__languagetoolmanager_disconnect_notify(void* self, const void* signal) {
     TextGrammarCheck__LanguageToolManager_DisconnectNotify((TextGrammarCheck__LanguageToolManager*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__languagetoolmanager_super_disconnect_notify(void* self, void* signal) {
+void k_textgrammarcheck__languagetoolmanager_super_disconnect_notify(void* self, const void* signal) {
     TextGrammarCheck__LanguageToolManager_SuperDisconnectNotify((TextGrammarCheck__LanguageToolManager*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__languagetoolmanager_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textgrammarcheck__languagetoolmanager_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     TextGrammarCheck__LanguageToolManager_OnDisconnectNotify((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
 }
 
-QObject* k_textgrammarcheck__languagetoolmanager_sender(void* self) {
+QObject* k_textgrammarcheck__languagetoolmanager_sender(const void* self) {
     return TextGrammarCheck__LanguageToolManager_Sender((TextGrammarCheck__LanguageToolManager*)self);
 }
 
-QObject* k_textgrammarcheck__languagetoolmanager_super_sender(void* self) {
-    return TextGrammarCheck__LanguageToolManager_SuperSender((TextGrammarCheck__LanguageToolManager*)self);
-}
-
-void k_textgrammarcheck__languagetoolmanager_on_sender(void* self, QObject* (*callback)()) {
-    TextGrammarCheck__LanguageToolManager_OnSender((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
-}
-
-int32_t k_textgrammarcheck__languagetoolmanager_sender_signal_index(void* self) {
+int32_t k_textgrammarcheck__languagetoolmanager_sender_signal_index(const void* self) {
     return TextGrammarCheck__LanguageToolManager_SenderSignalIndex((TextGrammarCheck__LanguageToolManager*)self);
 }
 
-int32_t k_textgrammarcheck__languagetoolmanager_super_sender_signal_index(void* self) {
-    return TextGrammarCheck__LanguageToolManager_SuperSenderSignalIndex((TextGrammarCheck__LanguageToolManager*)self);
-}
-
-void k_textgrammarcheck__languagetoolmanager_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    TextGrammarCheck__LanguageToolManager_OnSenderSignalIndex((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
-}
-
-int32_t k_textgrammarcheck__languagetoolmanager_receivers(void* self, const char* signal) {
+int32_t k_textgrammarcheck__languagetoolmanager_receivers(const void* self, const char* signal) {
     return TextGrammarCheck__LanguageToolManager_Receivers((TextGrammarCheck__LanguageToolManager*)self, signal);
 }
 
-int32_t k_textgrammarcheck__languagetoolmanager_super_receivers(void* self, const char* signal) {
-    return TextGrammarCheck__LanguageToolManager_SuperReceivers((TextGrammarCheck__LanguageToolManager*)self, signal);
-}
-
-void k_textgrammarcheck__languagetoolmanager_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    TextGrammarCheck__LanguageToolManager_OnReceivers((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
-}
-
-bool k_textgrammarcheck__languagetoolmanager_is_signal_connected(void* self, void* signal) {
+bool k_textgrammarcheck__languagetoolmanager_is_signal_connected(const void* self, const void* signal) {
     return TextGrammarCheck__LanguageToolManager_IsSignalConnected((TextGrammarCheck__LanguageToolManager*)self, (QMetaMethod*)signal);
-}
-
-bool k_textgrammarcheck__languagetoolmanager_super_is_signal_connected(void* self, void* signal) {
-    return TextGrammarCheck__LanguageToolManager_SuperIsSignalConnected((TextGrammarCheck__LanguageToolManager*)self, (QMetaMethod*)signal);
-}
-
-void k_textgrammarcheck__languagetoolmanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    TextGrammarCheck__LanguageToolManager_OnIsSignalConnected((TextGrammarCheck__LanguageToolManager*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__languagetoolmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

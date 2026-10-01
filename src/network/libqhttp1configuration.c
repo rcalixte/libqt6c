@@ -5,11 +5,11 @@ QHttp1Configuration* q_http1configuration_new() {
     return QHttp1Configuration_New();
 }
 
-QHttp1Configuration* q_http1configuration_new2(void* other) {
+QHttp1Configuration* q_http1configuration_new2(const void* other) {
     return QHttp1Configuration_New2((QHttp1Configuration*)other);
 }
 
-void q_http1configuration_operator_assign(void* self, void* other) {
+void q_http1configuration_operator_assign(void* self, const void* other) {
     QHttp1Configuration_OperatorAssign((QHttp1Configuration*)self, (QHttp1Configuration*)other);
 }
 
@@ -17,7 +17,7 @@ void q_http1configuration_set_number_of_connections_per_host(void* self, intptr_
     QHttp1Configuration_SetNumberOfConnectionsPerHost((QHttp1Configuration*)self, amount);
 }
 
-intptr_t q_http1configuration_number_of_connections_per_host(void* self) {
+intptr_t q_http1configuration_number_of_connections_per_host(const void* self) {
     return QHttp1Configuration_NumberOfConnectionsPerHost((QHttp1Configuration*)self);
 }
 

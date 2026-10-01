@@ -10,15 +10,15 @@ QStorageInfo* q_storageinfo_new2(const char* path) {
     return QStorageInfo_New2(qstring(path));
 }
 
-QStorageInfo* q_storageinfo_new3(void* dir) {
+QStorageInfo* q_storageinfo_new3(const void* dir) {
     return QStorageInfo_New3((QDir*)dir);
 }
 
-QStorageInfo* q_storageinfo_new4(void* other) {
+QStorageInfo* q_storageinfo_new4(const void* other) {
     return QStorageInfo_New4((QStorageInfo*)other);
 }
 
-void q_storageinfo_operator_assign(void* self, void* other) {
+void q_storageinfo_operator_assign(void* self, const void* other) {
     QStorageInfo_OperatorAssign((QStorageInfo*)self, (QStorageInfo*)other);
 }
 
@@ -30,77 +30,77 @@ void q_storageinfo_set_path(void* self, const char* path) {
     QStorageInfo_SetPath((QStorageInfo*)self, qstring(path));
 }
 
-const char* q_storageinfo_root_path(void* self) {
+const char* q_storageinfo_root_path(const void* self) {
     libqt_string _str = QStorageInfo_RootPath((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_storageinfo_device(void* self) {
+char* q_storageinfo_device(const void* self) {
     libqt_string _str = QStorageInfo_Device((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_storageinfo_subvolume(void* self) {
+char* q_storageinfo_subvolume(const void* self) {
     libqt_string _str = QStorageInfo_Subvolume((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_storageinfo_file_system_type(void* self) {
+char* q_storageinfo_file_system_type(const void* self) {
     libqt_string _str = QStorageInfo_FileSystemType((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_storageinfo_name(void* self) {
+const char* q_storageinfo_name(const void* self) {
     libqt_string _str = QStorageInfo_Name((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_storageinfo_display_name(void* self) {
+const char* q_storageinfo_display_name(const void* self) {
     libqt_string _str = QStorageInfo_DisplayName((QStorageInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int64_t q_storageinfo_bytes_total(void* self) {
+int64_t q_storageinfo_bytes_total(const void* self) {
     return QStorageInfo_BytesTotal((QStorageInfo*)self);
 }
 
-int64_t q_storageinfo_bytes_free(void* self) {
+int64_t q_storageinfo_bytes_free(const void* self) {
     return QStorageInfo_BytesFree((QStorageInfo*)self);
 }
 
-int64_t q_storageinfo_bytes_available(void* self) {
+int64_t q_storageinfo_bytes_available(const void* self) {
     return QStorageInfo_BytesAvailable((QStorageInfo*)self);
 }
 
-int32_t q_storageinfo_block_size(void* self) {
+int32_t q_storageinfo_block_size(const void* self) {
     return QStorageInfo_BlockSize((QStorageInfo*)self);
 }
 
-bool q_storageinfo_is_root(void* self) {
+bool q_storageinfo_is_root(const void* self) {
     return QStorageInfo_IsRoot((QStorageInfo*)self);
 }
 
-bool q_storageinfo_is_read_only(void* self) {
+bool q_storageinfo_is_read_only(const void* self) {
     return QStorageInfo_IsReadOnly((QStorageInfo*)self);
 }
 
-bool q_storageinfo_is_ready(void* self) {
+bool q_storageinfo_is_ready(const void* self) {
     return QStorageInfo_IsReady((QStorageInfo*)self);
 }
 
-bool q_storageinfo_is_valid(void* self) {
+bool q_storageinfo_is_valid(const void* self) {
     return QStorageInfo_IsValid((QStorageInfo*)self);
 }
 

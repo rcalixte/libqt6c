@@ -44,26 +44,26 @@ QQmlContext* q_qmlcontext_new4(void* parent, void* objParent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-const QMetaObject* q_qmlcontext_meta_object(void* self);
+const QMetaObject* q_qmlcontext_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQmlContext*
-/// @param callback const QMetaObject* func()
+/// @param self const QQmlContext*
+/// @param callback const QMetaObject* func(const QQmlContext* self)
 ///
-void q_qmlcontext_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_qmlcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-const QMetaObject* q_qmlcontext_super_meta_object(void* self);
+const QMetaObject* q_qmlcontext_super_meta_object(const void* self);
 
 /// @param self QQmlContext*
 /// @param param1 const char*
@@ -117,27 +117,27 @@ const char* q_qmlcontext_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#isValid)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-bool q_qmlcontext_is_valid(void* self);
+bool q_qmlcontext_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#engine)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-QQmlEngine* q_qmlcontext_engine(void* self);
+QQmlEngine* q_qmlcontext_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#parentContext)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-QQmlContext* q_qmlcontext_parent_context(void* self);
+QQmlContext* q_qmlcontext_parent_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#contextObject)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-QObject* q_qmlcontext_context_object(void* self);
+QObject* q_qmlcontext_context_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#setContextObject)
 ///
@@ -148,10 +148,10 @@ void q_qmlcontext_set_context_object(void* self, void* contextObject);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#contextProperty)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param param1 const char*
 ///
-QVariant* q_qmlcontext_context_property(void* self, const char* param1);
+QVariant* q_qmlcontext_context_property(const void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#setContextProperty)
 ///
@@ -167,7 +167,7 @@ void q_qmlcontext_set_context_property(void* self, const char* param1, void* par
 /// @param param1 const char*
 /// @param param2 QVariant*
 ///
-void q_qmlcontext_set_context_property2(void* self, const char* param1, void* param2);
+void q_qmlcontext_set_context_property2(void* self, const char* param1, const void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#setContextProperties)
 ///
@@ -180,44 +180,44 @@ void q_qmlcontext_set_context_properties(void* self, libqt_list properties);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param param1 QObject*
 ///
-const char* q_qmlcontext_name_for_object(void* self, void* param1);
+const char* q_qmlcontext_name_for_object(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#objectForName)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param param1 const char*
 ///
-QObject* q_qmlcontext_object_for_name(void* self, const char* param1);
+QObject* q_qmlcontext_object_for_name(const void* self, const char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#resolvedUrl)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param param1 QUrl*
 ///
-QUrl* q_qmlcontext_resolved_url(void* self, void* param1);
+QUrl* q_qmlcontext_resolved_url(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#setBaseUrl)
 ///
 /// @param self QQmlContext*
 /// @param baseUrl QUrl*
 ///
-void q_qmlcontext_set_base_url(void* self, void* baseUrl);
+void q_qmlcontext_set_base_url(void* self, const void* baseUrl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#baseUrl)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-QUrl* q_qmlcontext_base_url(void* self);
+QUrl* q_qmlcontext_base_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext.html#importedScript)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param name const char*
 ///
-QJSValue* q_qmlcontext_imported_script(void* self, const char* name);
+QJSValue* q_qmlcontext_imported_script(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -244,9 +244,9 @@ const char* q_qmlcontext_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-const char* q_qmlcontext_object_name(void* self);
+const char* q_qmlcontext_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -261,33 +261,33 @@ void q_qmlcontext_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-bool q_qmlcontext_is_widget_type(void* self);
+bool q_qmlcontext_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-bool q_qmlcontext_is_window_type(void* self);
+bool q_qmlcontext_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-bool q_qmlcontext_is_quick_item_type(void* self);
+bool q_qmlcontext_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-bool q_qmlcontext_signals_blocked(void* self);
+bool q_qmlcontext_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -302,9 +302,9 @@ bool q_qmlcontext_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-QThread* q_qmlcontext_thread(void* self);
+QThread* q_qmlcontext_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -355,11 +355,11 @@ void q_qmlcontext_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_qmlcontext_children(void* self);
+libqt_list q_qmlcontext_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -397,7 +397,7 @@ void q_qmlcontext_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlcontext_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_qmlcontext_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -408,18 +408,18 @@ QMetaObject__Connection* q_qmlcontext_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_qmlcontext_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_qmlcontext_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlcontext_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_qmlcontext_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -430,7 +430,7 @@ QMetaObject__Connection* q_qmlcontext_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlcontext_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_qmlcontext_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -441,24 +441,24 @@ bool q_qmlcontext_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_qmlcontext_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_qmlcontext_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-bool q_qmlcontext_disconnect3(void* self);
+bool q_qmlcontext_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param receiver QObject*
 ///
-bool q_qmlcontext_disconnect4(void* self, void* receiver);
+bool q_qmlcontext_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -466,23 +466,23 @@ bool q_qmlcontext_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_qmlcontext_disconnect5(void* param1);
+bool q_qmlcontext_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-void q_qmlcontext_dump_object_tree(void* self);
+void q_qmlcontext_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-void q_qmlcontext_dump_object_info(void* self);
+void q_qmlcontext_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -492,16 +492,16 @@ void q_qmlcontext_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_qmlcontext_set_property(void* self, const char* name, void* value);
+bool q_qmlcontext_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param name const char*
 ///
-QVariant* q_qmlcontext_property(void* self, const char* name);
+QVariant* q_qmlcontext_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -509,9 +509,9 @@ QVariant* q_qmlcontext_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-const char** q_qmlcontext_dynamic_property_names(void* self);
+const char** q_qmlcontext_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -525,9 +525,9 @@ QBindingStorage* q_qmlcontext_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-const QBindingStorage* q_qmlcontext_binding_storage2(void* self);
+const QBindingStorage* q_qmlcontext_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -550,18 +550,18 @@ void q_qmlcontext_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-QObject* q_qmlcontext_parent(void* self);
+QObject* q_qmlcontext_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param classname const char*
 ///
-bool q_qmlcontext_inherits(void* self, const char* classname);
+bool q_qmlcontext_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -601,7 +601,7 @@ int32_t q_qmlcontext_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlcontext_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_qmlcontext_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -613,59 +613,59 @@ QMetaObject__Connection* q_qmlcontext_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlcontext_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_qmlcontext_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlcontext_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_qmlcontext_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param signal const char*
 ///
-bool q_qmlcontext_disconnect1(void* self, const char* signal);
+bool q_qmlcontext_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlContext*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_qmlcontext_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_qmlcontext_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_qmlcontext_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlcontext_disconnect23(void* self, void* receiver, const char* member);
+bool q_qmlcontext_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQmlContext*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_qmlcontext_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -861,7 +861,7 @@ void q_qmlcontext_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QQmlContext*
 /// @param signal QMetaMethod*
 ///
-void q_qmlcontext_connect_notify(void* self, void* signal);
+void q_qmlcontext_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -872,7 +872,7 @@ void q_qmlcontext_connect_notify(void* self, void* signal);
 /// @param self QQmlContext*
 /// @param signal QMetaMethod*
 ///
-void q_qmlcontext_super_connect_notify(void* self, void* signal);
+void q_qmlcontext_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -883,7 +883,7 @@ void q_qmlcontext_super_connect_notify(void* self, void* signal);
 /// @param self QQmlContext*
 /// @param callback void func(QQmlContext* self, QMetaMethod* signal)
 ///
-void q_qmlcontext_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_qmlcontext_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -894,7 +894,7 @@ void q_qmlcontext_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QQmlContext*
 /// @param signal QMetaMethod*
 ///
-void q_qmlcontext_disconnect_notify(void* self, void* signal);
+void q_qmlcontext_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -905,7 +905,7 @@ void q_qmlcontext_disconnect_notify(void* self, void* signal);
 /// @param self QQmlContext*
 /// @param signal QMetaMethod*
 ///
-void q_qmlcontext_super_disconnect_notify(void* self, void* signal);
+void q_qmlcontext_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -916,7 +916,7 @@ void q_qmlcontext_super_disconnect_notify(void* self, void* signal);
 /// @param self QQmlContext*
 /// @param callback void func(QQmlContext* self, QMetaMethod* signal)
 ///
-void q_qmlcontext_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_qmlcontext_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -924,9 +924,9 @@ void q_qmlcontext_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-QObject* q_qmlcontext_sender(void* self);
+QObject* q_qmlcontext_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -934,9 +934,9 @@ QObject* q_qmlcontext_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-QObject* q_qmlcontext_super_sender(void* self);
+QObject* q_qmlcontext_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -944,10 +944,10 @@ QObject* q_qmlcontext_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlContext*
-/// @param callback QObject* func()
+/// @param self const QQmlContext*
+/// @param callback QObject* func(QQmlContext* self)
 ///
-void q_qmlcontext_on_sender(void* self, QObject* (*callback)());
+void q_qmlcontext_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -955,9 +955,9 @@ void q_qmlcontext_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-int32_t q_qmlcontext_sender_signal_index(void* self);
+int32_t q_qmlcontext_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -965,9 +965,9 @@ int32_t q_qmlcontext_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 ///
-int32_t q_qmlcontext_super_sender_signal_index(void* self);
+int32_t q_qmlcontext_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -975,10 +975,10 @@ int32_t q_qmlcontext_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlContext*
-/// @param callback int32_t func()
+/// @param self const QQmlContext*
+/// @param callback int32_t func(QQmlContext* self)
 ///
-void q_qmlcontext_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_qmlcontext_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -986,10 +986,10 @@ void q_qmlcontext_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param signal const char*
 ///
-int32_t q_qmlcontext_receivers(void* self, const char* signal);
+int32_t q_qmlcontext_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -997,10 +997,10 @@ int32_t q_qmlcontext_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param signal const char*
 ///
-int32_t q_qmlcontext_super_receivers(void* self, const char* signal);
+int32_t q_qmlcontext_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1008,10 +1008,10 @@ int32_t q_qmlcontext_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param callback int32_t func(QQmlContext* self, const char* signal)
 ///
-void q_qmlcontext_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_qmlcontext_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1019,10 +1019,10 @@ void q_qmlcontext_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param signal QMetaMethod*
 ///
-bool q_qmlcontext_is_signal_connected(void* self, void* signal);
+bool q_qmlcontext_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1030,10 +1030,10 @@ bool q_qmlcontext_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param signal QMetaMethod*
 ///
-bool q_qmlcontext_super_is_signal_connected(void* self, void* signal);
+bool q_qmlcontext_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1041,10 +1041,10 @@ bool q_qmlcontext_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlContext*
+/// @param self const QQmlContext*
 /// @param callback bool func(QQmlContext* self, QMetaMethod* signal)
 ///
-void q_qmlcontext_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_qmlcontext_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1077,15 +1077,15 @@ QQmlContext__PropertyPair* q_qmlcontext__propertypair_new();
 ///
 /// @param param1 QQmlContext__PropertyPair*
 ///
-QQmlContext__PropertyPair* q_qmlcontext__propertypair_new2(void* param1);
+QQmlContext__PropertyPair* q_qmlcontext__propertypair_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext-propertypair.html#name-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlContext__PropertyPair*
+/// @param self const QQmlContext__PropertyPair*
 ///
-const char* q_qmlcontext__propertypair_name(void* self);
+const char* q_qmlcontext__propertypair_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext-propertypair.html#name-var)
 ///
@@ -1096,9 +1096,9 @@ void q_qmlcontext__propertypair_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext-propertypair.html#value-var)
 ///
-/// @param self QQmlContext__PropertyPair*
+/// @param self const QQmlContext__PropertyPair*
 ///
-QVariant* q_qmlcontext__propertypair_value(void* self);
+QVariant* q_qmlcontext__propertypair_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlcontext-propertypair.html#value-var)
 ///
@@ -1112,7 +1112,7 @@ void q_qmlcontext__propertypair_set_value(void* self, void* value);
 /// @param self QQmlContext__PropertyPair*
 /// @param param1 QQmlContext__PropertyPair*
 ///
-void q_qmlcontext__propertypair_operator_assign(void* self, void* param1);
+void q_qmlcontext__propertypair_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

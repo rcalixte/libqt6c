@@ -18,9 +18,9 @@ QGraphicsSceneEvent* q_graphicssceneevent_new(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-QWidget* q_graphicssceneevent_widget(void* self);
+QWidget* q_graphicssceneevent_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#setWidget)
 ///
@@ -31,9 +31,9 @@ void q_graphicssceneevent_set_widget(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-uint64_t q_graphicssceneevent_timestamp(void* self);
+uint64_t q_graphicssceneevent_timestamp(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#setTimestamp)
 ///
@@ -46,27 +46,27 @@ void q_graphicssceneevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicssceneevent_type(void* self);
+int32_t q_graphicssceneevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-bool q_graphicssceneevent_spontaneous(void* self);
+bool q_graphicssceneevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-bool q_graphicssceneevent_is_accepted(void* self);
+bool q_graphicssceneevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -88,25 +88,25 @@ void q_graphicssceneevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-bool q_graphicssceneevent_is_input_event(void* self);
+bool q_graphicssceneevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-bool q_graphicssceneevent_is_pointer_event(void* self);
+bool q_graphicssceneevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-bool q_graphicssceneevent_is_single_point_event(void* self);
+bool q_graphicssceneevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -161,9 +161,9 @@ void q_graphicssceneevent_on_set_accepted(void* self, void (*callback)(void*, bo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-QEvent* q_graphicssceneevent_clone(void* self);
+QEvent* q_graphicssceneevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -171,9 +171,9 @@ QEvent* q_graphicssceneevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneEvent*
+/// @param self const QGraphicsSceneEvent*
 ///
-QEvent* q_graphicssceneevent_super_clone(void* self);
+QEvent* q_graphicssceneevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -181,10 +181,10 @@ QEvent* q_graphicssceneevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneEvent*
+/// @param callback QEvent* func(QGraphicsSceneEvent* self)
 ///
-void q_graphicssceneevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicssceneevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#dtor.QGraphicsSceneEvent)
 ///
@@ -210,49 +210,49 @@ QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new2(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#pos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QPointF* q_graphicsscenemouseevent_pos(void* self);
+QPointF* q_graphicsscenemouseevent_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setPos)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenemouseevent_set_pos(void* self, void* pos);
+void q_graphicsscenemouseevent_set_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#scenePos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QPointF* q_graphicsscenemouseevent_scene_pos(void* self);
+QPointF* q_graphicsscenemouseevent_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setScenePos)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenemouseevent_set_scene_pos(void* self, void* pos);
+void q_graphicsscenemouseevent_set_scene_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#screenPos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QPoint* q_graphicsscenemouseevent_screen_pos(void* self);
+QPoint* q_graphicsscenemouseevent_screen_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setScreenPos)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param pos QPoint*
 ///
-void q_graphicsscenemouseevent_set_screen_pos(void* self, void* pos);
+void q_graphicsscenemouseevent_set_screen_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#buttonDownPos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 /// @param button enum Qt__MouseButton
 ///
-QPointF* q_graphicsscenemouseevent_button_down_pos(void* self, int32_t button);
+QPointF* q_graphicsscenemouseevent_button_down_pos(const void* self, int32_t button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButtonDownPos)
 ///
@@ -260,14 +260,14 @@ QPointF* q_graphicsscenemouseevent_button_down_pos(void* self, int32_t button);
 /// @param button enum Qt__MouseButton
 /// @param pos QPointF*
 ///
-void q_graphicsscenemouseevent_set_button_down_pos(void* self, int32_t button, void* pos);
+void q_graphicsscenemouseevent_set_button_down_pos(void* self, int32_t button, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#buttonDownScenePos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 /// @param button enum Qt__MouseButton
 ///
-QPointF* q_graphicsscenemouseevent_button_down_scene_pos(void* self, int32_t button);
+QPointF* q_graphicsscenemouseevent_button_down_scene_pos(const void* self, int32_t button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButtonDownScenePos)
 ///
@@ -275,14 +275,14 @@ QPointF* q_graphicsscenemouseevent_button_down_scene_pos(void* self, int32_t but
 /// @param button enum Qt__MouseButton
 /// @param pos QPointF*
 ///
-void q_graphicsscenemouseevent_set_button_down_scene_pos(void* self, int32_t button, void* pos);
+void q_graphicsscenemouseevent_set_button_down_scene_pos(void* self, int32_t button, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#buttonDownScreenPos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 /// @param button enum Qt__MouseButton
 ///
-QPoint* q_graphicsscenemouseevent_button_down_screen_pos(void* self, int32_t button);
+QPoint* q_graphicsscenemouseevent_button_down_screen_pos(const void* self, int32_t button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButtonDownScreenPos)
 ///
@@ -290,54 +290,54 @@ QPoint* q_graphicsscenemouseevent_button_down_screen_pos(void* self, int32_t but
 /// @param button enum Qt__MouseButton
 /// @param pos QPoint*
 ///
-void q_graphicsscenemouseevent_set_button_down_screen_pos(void* self, int32_t button, void* pos);
+void q_graphicsscenemouseevent_set_button_down_screen_pos(void* self, int32_t button, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#lastPos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QPointF* q_graphicsscenemouseevent_last_pos(void* self);
+QPointF* q_graphicsscenemouseevent_last_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setLastPos)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenemouseevent_set_last_pos(void* self, void* pos);
+void q_graphicsscenemouseevent_set_last_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#lastScenePos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QPointF* q_graphicsscenemouseevent_last_scene_pos(void* self);
+QPointF* q_graphicsscenemouseevent_last_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setLastScenePos)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenemouseevent_set_last_scene_pos(void* self, void* pos);
+void q_graphicsscenemouseevent_set_last_scene_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#lastScreenPos)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QPoint* q_graphicsscenemouseevent_last_screen_pos(void* self);
+QPoint* q_graphicsscenemouseevent_last_screen_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setLastScreenPos)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param pos QPoint*
 ///
-void q_graphicsscenemouseevent_set_last_screen_pos(void* self, void* pos);
+void q_graphicsscenemouseevent_set_last_screen_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#buttons)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicsscenemouseevent_buttons(void* self);
+int32_t q_graphicsscenemouseevent_buttons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButtons)
 ///
@@ -348,11 +348,11 @@ void q_graphicsscenemouseevent_set_buttons(void* self, int32_t buttons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#button)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
 /// @return enum Qt__MouseButton
 ///
-int32_t q_graphicsscenemouseevent_button(void* self);
+int32_t q_graphicsscenemouseevent_button(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setButton)
 ///
@@ -363,11 +363,11 @@ void q_graphicsscenemouseevent_set_button(void* self, int32_t button);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#modifiers)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int32_t q_graphicsscenemouseevent_modifiers(void* self);
+int32_t q_graphicsscenemouseevent_modifiers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setModifiers)
 ///
@@ -378,11 +378,11 @@ void q_graphicsscenemouseevent_set_modifiers(void* self, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#source)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
 /// @return enum Qt__MouseEventSource
 ///
-int32_t q_graphicsscenemouseevent_source(void* self);
+int32_t q_graphicsscenemouseevent_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setSource)
 ///
@@ -393,11 +393,11 @@ void q_graphicsscenemouseevent_set_source(void* self, int32_t source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#flags)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
 /// @return flag of enum Qt__MouseEventFlag
 ///
-int32_t q_graphicsscenemouseevent_flags(void* self);
+int32_t q_graphicsscenemouseevent_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setFlags)
 ///
@@ -410,9 +410,9 @@ void q_graphicsscenemouseevent_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QWidget* q_graphicsscenemouseevent_widget(void* self);
+QWidget* q_graphicsscenemouseevent_widget(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -427,9 +427,9 @@ void q_graphicsscenemouseevent_set_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-uint64_t q_graphicsscenemouseevent_timestamp(void* self);
+uint64_t q_graphicsscenemouseevent_timestamp(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -444,27 +444,27 @@ void q_graphicsscenemouseevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicsscenemouseevent_type(void* self);
+int32_t q_graphicsscenemouseevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-bool q_graphicsscenemouseevent_spontaneous(void* self);
+bool q_graphicsscenemouseevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-bool q_graphicsscenemouseevent_is_accepted(void* self);
+bool q_graphicsscenemouseevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -486,25 +486,25 @@ void q_graphicsscenemouseevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-bool q_graphicsscenemouseevent_is_input_event(void* self);
+bool q_graphicsscenemouseevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-bool q_graphicsscenemouseevent_is_pointer_event(void* self);
+bool q_graphicsscenemouseevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-bool q_graphicsscenemouseevent_is_single_point_event(void* self);
+bool q_graphicsscenemouseevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -559,9 +559,9 @@ void q_graphicsscenemouseevent_on_set_accepted(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QEvent* q_graphicsscenemouseevent_clone(void* self);
+QEvent* q_graphicsscenemouseevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -569,9 +569,9 @@ QEvent* q_graphicsscenemouseevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneMouseEvent*
+/// @param self const QGraphicsSceneMouseEvent*
 ///
-QEvent* q_graphicsscenemouseevent_super_clone(void* self);
+QEvent* q_graphicsscenemouseevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -579,10 +579,10 @@ QEvent* q_graphicsscenemouseevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneMouseEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneMouseEvent*
+/// @param callback QEvent* func(QGraphicsSceneMouseEvent* self)
 ///
-void q_graphicsscenemouseevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicsscenemouseevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#dtor.QGraphicsSceneMouseEvent)
 ///
@@ -608,50 +608,50 @@ QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new2(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#pos)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-QPointF* q_graphicsscenewheelevent_pos(void* self);
+QPointF* q_graphicsscenewheelevent_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setPos)
 ///
 /// @param self QGraphicsSceneWheelEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenewheelevent_set_pos(void* self, void* pos);
+void q_graphicsscenewheelevent_set_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#scenePos)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-QPointF* q_graphicsscenewheelevent_scene_pos(void* self);
+QPointF* q_graphicsscenewheelevent_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setScenePos)
 ///
 /// @param self QGraphicsSceneWheelEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenewheelevent_set_scene_pos(void* self, void* pos);
+void q_graphicsscenewheelevent_set_scene_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#screenPos)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-QPoint* q_graphicsscenewheelevent_screen_pos(void* self);
+QPoint* q_graphicsscenewheelevent_screen_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setScreenPos)
 ///
 /// @param self QGraphicsSceneWheelEvent*
 /// @param pos QPoint*
 ///
-void q_graphicsscenewheelevent_set_screen_pos(void* self, void* pos);
+void q_graphicsscenewheelevent_set_screen_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#buttons)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicsscenewheelevent_buttons(void* self);
+int32_t q_graphicsscenewheelevent_buttons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setButtons)
 ///
@@ -662,11 +662,11 @@ void q_graphicsscenewheelevent_set_buttons(void* self, int32_t buttons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#modifiers)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int32_t q_graphicsscenewheelevent_modifiers(void* self);
+int32_t q_graphicsscenewheelevent_modifiers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setModifiers)
 ///
@@ -677,9 +677,9 @@ void q_graphicsscenewheelevent_set_modifiers(void* self, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#delta)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-int32_t q_graphicsscenewheelevent_delta(void* self);
+int32_t q_graphicsscenewheelevent_delta(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setDelta)
 ///
@@ -690,11 +690,11 @@ void q_graphicsscenewheelevent_set_delta(void* self, int delta);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#orientation)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_graphicsscenewheelevent_orientation(void* self);
+int32_t q_graphicsscenewheelevent_orientation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setOrientation)
 ///
@@ -705,11 +705,11 @@ void q_graphicsscenewheelevent_set_orientation(void* self, int32_t orientation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#phase)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
 /// @return enum Qt__ScrollPhase
 ///
-int32_t q_graphicsscenewheelevent_phase(void* self);
+int32_t q_graphicsscenewheelevent_phase(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setPhase)
 ///
@@ -720,9 +720,9 @@ void q_graphicsscenewheelevent_set_phase(void* self, int32_t scrollPhase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#pixelDelta)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-QPoint* q_graphicsscenewheelevent_pixel_delta(void* self);
+QPoint* q_graphicsscenewheelevent_pixel_delta(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setPixelDelta)
 ///
@@ -733,9 +733,9 @@ void q_graphicsscenewheelevent_set_pixel_delta(void* self, void* delta);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#isInverted)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-bool q_graphicsscenewheelevent_is_inverted(void* self);
+bool q_graphicsscenewheelevent_is_inverted(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setInverted)
 ///
@@ -748,9 +748,9 @@ void q_graphicsscenewheelevent_set_inverted(void* self, bool inverted);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-QWidget* q_graphicsscenewheelevent_widget(void* self);
+QWidget* q_graphicsscenewheelevent_widget(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -765,9 +765,9 @@ void q_graphicsscenewheelevent_set_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-uint64_t q_graphicsscenewheelevent_timestamp(void* self);
+uint64_t q_graphicsscenewheelevent_timestamp(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -782,27 +782,27 @@ void q_graphicsscenewheelevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicsscenewheelevent_type(void* self);
+int32_t q_graphicsscenewheelevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-bool q_graphicsscenewheelevent_spontaneous(void* self);
+bool q_graphicsscenewheelevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-bool q_graphicsscenewheelevent_is_accepted(void* self);
+bool q_graphicsscenewheelevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -824,25 +824,25 @@ void q_graphicsscenewheelevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-bool q_graphicsscenewheelevent_is_input_event(void* self);
+bool q_graphicsscenewheelevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-bool q_graphicsscenewheelevent_is_pointer_event(void* self);
+bool q_graphicsscenewheelevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-bool q_graphicsscenewheelevent_is_single_point_event(void* self);
+bool q_graphicsscenewheelevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -897,9 +897,9 @@ void q_graphicsscenewheelevent_on_set_accepted(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-QEvent* q_graphicsscenewheelevent_clone(void* self);
+QEvent* q_graphicsscenewheelevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -907,9 +907,9 @@ QEvent* q_graphicsscenewheelevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneWheelEvent*
+/// @param self const QGraphicsSceneWheelEvent*
 ///
-QEvent* q_graphicsscenewheelevent_super_clone(void* self);
+QEvent* q_graphicsscenewheelevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -917,10 +917,10 @@ QEvent* q_graphicsscenewheelevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneWheelEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneWheelEvent*
+/// @param callback QEvent* func(QGraphicsSceneWheelEvent* self)
 ///
-void q_graphicsscenewheelevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicsscenewheelevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#dtor.QGraphicsSceneWheelEvent)
 ///
@@ -946,50 +946,50 @@ QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new2(int32_t typ
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#pos)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-QPointF* q_graphicsscenecontextmenuevent_pos(void* self);
+QPointF* q_graphicsscenecontextmenuevent_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#setPos)
 ///
 /// @param self QGraphicsSceneContextMenuEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenecontextmenuevent_set_pos(void* self, void* pos);
+void q_graphicsscenecontextmenuevent_set_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#scenePos)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-QPointF* q_graphicsscenecontextmenuevent_scene_pos(void* self);
+QPointF* q_graphicsscenecontextmenuevent_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#setScenePos)
 ///
 /// @param self QGraphicsSceneContextMenuEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenecontextmenuevent_set_scene_pos(void* self, void* pos);
+void q_graphicsscenecontextmenuevent_set_scene_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#screenPos)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-QPoint* q_graphicsscenecontextmenuevent_screen_pos(void* self);
+QPoint* q_graphicsscenecontextmenuevent_screen_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#setScreenPos)
 ///
 /// @param self QGraphicsSceneContextMenuEvent*
 /// @param pos QPoint*
 ///
-void q_graphicsscenecontextmenuevent_set_screen_pos(void* self, void* pos);
+void q_graphicsscenecontextmenuevent_set_screen_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#modifiers)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int32_t q_graphicsscenecontextmenuevent_modifiers(void* self);
+int32_t q_graphicsscenecontextmenuevent_modifiers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#setModifiers)
 ///
@@ -1000,11 +1000,11 @@ void q_graphicsscenecontextmenuevent_set_modifiers(void* self, int32_t modifiers
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#reason)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
 /// @return enum QGraphicsSceneContextMenuEvent__Reason
 ///
-int32_t q_graphicsscenecontextmenuevent_reason(void* self);
+int32_t q_graphicsscenecontextmenuevent_reason(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#setReason)
 ///
@@ -1017,9 +1017,9 @@ void q_graphicsscenecontextmenuevent_set_reason(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-QWidget* q_graphicsscenecontextmenuevent_widget(void* self);
+QWidget* q_graphicsscenecontextmenuevent_widget(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1034,9 +1034,9 @@ void q_graphicsscenecontextmenuevent_set_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-uint64_t q_graphicsscenecontextmenuevent_timestamp(void* self);
+uint64_t q_graphicsscenecontextmenuevent_timestamp(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1051,27 +1051,27 @@ void q_graphicsscenecontextmenuevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicsscenecontextmenuevent_type(void* self);
+int32_t q_graphicsscenecontextmenuevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-bool q_graphicsscenecontextmenuevent_spontaneous(void* self);
+bool q_graphicsscenecontextmenuevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-bool q_graphicsscenecontextmenuevent_is_accepted(void* self);
+bool q_graphicsscenecontextmenuevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1093,25 +1093,25 @@ void q_graphicsscenecontextmenuevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-bool q_graphicsscenecontextmenuevent_is_input_event(void* self);
+bool q_graphicsscenecontextmenuevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-bool q_graphicsscenecontextmenuevent_is_pointer_event(void* self);
+bool q_graphicsscenecontextmenuevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-bool q_graphicsscenecontextmenuevent_is_single_point_event(void* self);
+bool q_graphicsscenecontextmenuevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1166,9 +1166,9 @@ void q_graphicsscenecontextmenuevent_on_set_accepted(void* self, void (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-QEvent* q_graphicsscenecontextmenuevent_clone(void* self);
+QEvent* q_graphicsscenecontextmenuevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1176,9 +1176,9 @@ QEvent* q_graphicsscenecontextmenuevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
+/// @param self const QGraphicsSceneContextMenuEvent*
 ///
-QEvent* q_graphicsscenecontextmenuevent_super_clone(void* self);
+QEvent* q_graphicsscenecontextmenuevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1186,10 +1186,10 @@ QEvent* q_graphicsscenecontextmenuevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneContextMenuEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneContextMenuEvent*
+/// @param callback QEvent* func(QGraphicsSceneContextMenuEvent* self)
 ///
-void q_graphicsscenecontextmenuevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicsscenecontextmenuevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#dtor.QGraphicsSceneContextMenuEvent)
 ///
@@ -1215,89 +1215,89 @@ QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new2(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#pos)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QPointF* q_graphicsscenehoverevent_pos(void* self);
+QPointF* q_graphicsscenehoverevent_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#setPos)
 ///
 /// @param self QGraphicsSceneHoverEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenehoverevent_set_pos(void* self, void* pos);
+void q_graphicsscenehoverevent_set_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#scenePos)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QPointF* q_graphicsscenehoverevent_scene_pos(void* self);
+QPointF* q_graphicsscenehoverevent_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#setScenePos)
 ///
 /// @param self QGraphicsSceneHoverEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenehoverevent_set_scene_pos(void* self, void* pos);
+void q_graphicsscenehoverevent_set_scene_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#screenPos)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QPoint* q_graphicsscenehoverevent_screen_pos(void* self);
+QPoint* q_graphicsscenehoverevent_screen_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#setScreenPos)
 ///
 /// @param self QGraphicsSceneHoverEvent*
 /// @param pos QPoint*
 ///
-void q_graphicsscenehoverevent_set_screen_pos(void* self, void* pos);
+void q_graphicsscenehoverevent_set_screen_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#lastPos)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QPointF* q_graphicsscenehoverevent_last_pos(void* self);
+QPointF* q_graphicsscenehoverevent_last_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#setLastPos)
 ///
 /// @param self QGraphicsSceneHoverEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenehoverevent_set_last_pos(void* self, void* pos);
+void q_graphicsscenehoverevent_set_last_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#lastScenePos)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QPointF* q_graphicsscenehoverevent_last_scene_pos(void* self);
+QPointF* q_graphicsscenehoverevent_last_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#setLastScenePos)
 ///
 /// @param self QGraphicsSceneHoverEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenehoverevent_set_last_scene_pos(void* self, void* pos);
+void q_graphicsscenehoverevent_set_last_scene_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#lastScreenPos)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QPoint* q_graphicsscenehoverevent_last_screen_pos(void* self);
+QPoint* q_graphicsscenehoverevent_last_screen_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#setLastScreenPos)
 ///
 /// @param self QGraphicsSceneHoverEvent*
 /// @param pos QPoint*
 ///
-void q_graphicsscenehoverevent_set_last_screen_pos(void* self, void* pos);
+void q_graphicsscenehoverevent_set_last_screen_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#modifiers)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int32_t q_graphicsscenehoverevent_modifiers(void* self);
+int32_t q_graphicsscenehoverevent_modifiers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#setModifiers)
 ///
@@ -1310,9 +1310,9 @@ void q_graphicsscenehoverevent_set_modifiers(void* self, int32_t modifiers);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QWidget* q_graphicsscenehoverevent_widget(void* self);
+QWidget* q_graphicsscenehoverevent_widget(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1327,9 +1327,9 @@ void q_graphicsscenehoverevent_set_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-uint64_t q_graphicsscenehoverevent_timestamp(void* self);
+uint64_t q_graphicsscenehoverevent_timestamp(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1344,27 +1344,27 @@ void q_graphicsscenehoverevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicsscenehoverevent_type(void* self);
+int32_t q_graphicsscenehoverevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-bool q_graphicsscenehoverevent_spontaneous(void* self);
+bool q_graphicsscenehoverevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-bool q_graphicsscenehoverevent_is_accepted(void* self);
+bool q_graphicsscenehoverevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1386,25 +1386,25 @@ void q_graphicsscenehoverevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-bool q_graphicsscenehoverevent_is_input_event(void* self);
+bool q_graphicsscenehoverevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-bool q_graphicsscenehoverevent_is_pointer_event(void* self);
+bool q_graphicsscenehoverevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-bool q_graphicsscenehoverevent_is_single_point_event(void* self);
+bool q_graphicsscenehoverevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1459,9 +1459,9 @@ void q_graphicsscenehoverevent_on_set_accepted(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QEvent* q_graphicsscenehoverevent_clone(void* self);
+QEvent* q_graphicsscenehoverevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1469,9 +1469,9 @@ QEvent* q_graphicsscenehoverevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneHoverEvent*
+/// @param self const QGraphicsSceneHoverEvent*
 ///
-QEvent* q_graphicsscenehoverevent_super_clone(void* self);
+QEvent* q_graphicsscenehoverevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1479,10 +1479,10 @@ QEvent* q_graphicsscenehoverevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneHoverEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneHoverEvent*
+/// @param callback QEvent* func(QGraphicsSceneHoverEvent* self)
 ///
-void q_graphicsscenehoverevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicsscenehoverevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#dtor.QGraphicsSceneHoverEvent)
 ///
@@ -1508,37 +1508,37 @@ QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new2(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#scenePos)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-QPointF* q_graphicsscenehelpevent_scene_pos(void* self);
+QPointF* q_graphicsscenehelpevent_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#setScenePos)
 ///
 /// @param self QGraphicsSceneHelpEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenehelpevent_set_scene_pos(void* self, void* pos);
+void q_graphicsscenehelpevent_set_scene_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#screenPos)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-QPoint* q_graphicsscenehelpevent_screen_pos(void* self);
+QPoint* q_graphicsscenehelpevent_screen_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#setScreenPos)
 ///
 /// @param self QGraphicsSceneHelpEvent*
 /// @param pos QPoint*
 ///
-void q_graphicsscenehelpevent_set_screen_pos(void* self, void* pos);
+void q_graphicsscenehelpevent_set_screen_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsSceneEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-QWidget* q_graphicsscenehelpevent_widget(void* self);
+QWidget* q_graphicsscenehelpevent_widget(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1553,9 +1553,9 @@ void q_graphicsscenehelpevent_set_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-uint64_t q_graphicsscenehelpevent_timestamp(void* self);
+uint64_t q_graphicsscenehelpevent_timestamp(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1570,27 +1570,27 @@ void q_graphicsscenehelpevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicsscenehelpevent_type(void* self);
+int32_t q_graphicsscenehelpevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-bool q_graphicsscenehelpevent_spontaneous(void* self);
+bool q_graphicsscenehelpevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-bool q_graphicsscenehelpevent_is_accepted(void* self);
+bool q_graphicsscenehelpevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1612,25 +1612,25 @@ void q_graphicsscenehelpevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-bool q_graphicsscenehelpevent_is_input_event(void* self);
+bool q_graphicsscenehelpevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-bool q_graphicsscenehelpevent_is_pointer_event(void* self);
+bool q_graphicsscenehelpevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-bool q_graphicsscenehelpevent_is_single_point_event(void* self);
+bool q_graphicsscenehelpevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1685,9 +1685,9 @@ void q_graphicsscenehelpevent_on_set_accepted(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-QEvent* q_graphicsscenehelpevent_clone(void* self);
+QEvent* q_graphicsscenehelpevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1695,9 +1695,9 @@ QEvent* q_graphicsscenehelpevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneHelpEvent*
+/// @param self const QGraphicsSceneHelpEvent*
 ///
-QEvent* q_graphicsscenehelpevent_super_clone(void* self);
+QEvent* q_graphicsscenehelpevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1705,10 +1705,10 @@ QEvent* q_graphicsscenehelpevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneHelpEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneHelpEvent*
+/// @param callback QEvent* func(QGraphicsSceneHelpEvent* self)
 ///
-void q_graphicsscenehelpevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicsscenehelpevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#dtor.QGraphicsSceneHelpEvent)
 ///
@@ -1734,50 +1734,50 @@ QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new2(int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#pos)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-QPointF* q_graphicsscenedragdropevent_pos(void* self);
+QPointF* q_graphicsscenedragdropevent_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setPos)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenedragdropevent_set_pos(void* self, void* pos);
+void q_graphicsscenedragdropevent_set_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#scenePos)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-QPointF* q_graphicsscenedragdropevent_scene_pos(void* self);
+QPointF* q_graphicsscenedragdropevent_scene_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setScenePos)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenedragdropevent_set_scene_pos(void* self, void* pos);
+void q_graphicsscenedragdropevent_set_scene_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#screenPos)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-QPoint* q_graphicsscenedragdropevent_screen_pos(void* self);
+QPoint* q_graphicsscenedragdropevent_screen_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setScreenPos)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param pos QPoint*
 ///
-void q_graphicsscenedragdropevent_set_screen_pos(void* self, void* pos);
+void q_graphicsscenedragdropevent_set_screen_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#buttons)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_graphicsscenedragdropevent_buttons(void* self);
+int32_t q_graphicsscenedragdropevent_buttons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setButtons)
 ///
@@ -1788,11 +1788,11 @@ void q_graphicsscenedragdropevent_set_buttons(void* self, int32_t buttons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#modifiers)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
 /// @return flag of enum Qt__KeyboardModifier
 ///
-int32_t q_graphicsscenedragdropevent_modifiers(void* self);
+int32_t q_graphicsscenedragdropevent_modifiers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setModifiers)
 ///
@@ -1803,11 +1803,11 @@ void q_graphicsscenedragdropevent_set_modifiers(void* self, int32_t modifiers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#possibleActions)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_graphicsscenedragdropevent_possible_actions(void* self);
+int32_t q_graphicsscenedragdropevent_possible_actions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setPossibleActions)
 ///
@@ -1818,11 +1818,11 @@ void q_graphicsscenedragdropevent_set_possible_actions(void* self, int32_t actio
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#proposedAction)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
 /// @return enum Qt__DropAction
 ///
-int32_t q_graphicsscenedragdropevent_proposed_action(void* self);
+int32_t q_graphicsscenedragdropevent_proposed_action(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setProposedAction)
 ///
@@ -1839,11 +1839,11 @@ void q_graphicsscenedragdropevent_accept_proposed_action(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#dropAction)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
 /// @return enum Qt__DropAction
 ///
-int32_t q_graphicsscenedragdropevent_drop_action(void* self);
+int32_t q_graphicsscenedragdropevent_drop_action(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setDropAction)
 ///
@@ -1854,9 +1854,9 @@ void q_graphicsscenedragdropevent_set_drop_action(void* self, int32_t action);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#source)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-QWidget* q_graphicsscenedragdropevent_source(void* self);
+QWidget* q_graphicsscenedragdropevent_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setSource)
 ///
@@ -1867,24 +1867,24 @@ void q_graphicsscenedragdropevent_set_source(void* self, void* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#mimeData)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-const QMimeData* q_graphicsscenedragdropevent_mime_data(void* self);
+const QMimeData* q_graphicsscenedragdropevent_mime_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setMimeData)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param data QMimeData*
 ///
-void q_graphicsscenedragdropevent_set_mime_data(void* self, void* data);
+void q_graphicsscenedragdropevent_set_mime_data(void* self, const void* data);
 
 /// Inherited from QGraphicsSceneEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-QWidget* q_graphicsscenedragdropevent_widget(void* self);
+QWidget* q_graphicsscenedragdropevent_widget(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1899,9 +1899,9 @@ void q_graphicsscenedragdropevent_set_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-uint64_t q_graphicsscenedragdropevent_timestamp(void* self);
+uint64_t q_graphicsscenedragdropevent_timestamp(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -1916,27 +1916,27 @@ void q_graphicsscenedragdropevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicsscenedragdropevent_type(void* self);
+int32_t q_graphicsscenedragdropevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-bool q_graphicsscenedragdropevent_spontaneous(void* self);
+bool q_graphicsscenedragdropevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-bool q_graphicsscenedragdropevent_is_accepted(void* self);
+bool q_graphicsscenedragdropevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -1958,25 +1958,25 @@ void q_graphicsscenedragdropevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-bool q_graphicsscenedragdropevent_is_input_event(void* self);
+bool q_graphicsscenedragdropevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-bool q_graphicsscenedragdropevent_is_pointer_event(void* self);
+bool q_graphicsscenedragdropevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-bool q_graphicsscenedragdropevent_is_single_point_event(void* self);
+bool q_graphicsscenedragdropevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2031,9 +2031,9 @@ void q_graphicsscenedragdropevent_on_set_accepted(void* self, void (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-QEvent* q_graphicsscenedragdropevent_clone(void* self);
+QEvent* q_graphicsscenedragdropevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2041,9 +2041,9 @@ QEvent* q_graphicsscenedragdropevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneDragDropEvent*
+/// @param self const QGraphicsSceneDragDropEvent*
 ///
-QEvent* q_graphicsscenedragdropevent_super_clone(void* self);
+QEvent* q_graphicsscenedragdropevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2051,10 +2051,10 @@ QEvent* q_graphicsscenedragdropevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneDragDropEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneDragDropEvent*
+/// @param callback QEvent* func(QGraphicsSceneDragDropEvent* self)
 ///
-void q_graphicsscenedragdropevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicsscenedragdropevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#dtor.QGraphicsSceneDragDropEvent)
 ///
@@ -2072,37 +2072,37 @@ QGraphicsSceneResizeEvent* q_graphicssceneresizeevent_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneresizeevent.html#oldSize)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-QSizeF* q_graphicssceneresizeevent_old_size(void* self);
+QSizeF* q_graphicssceneresizeevent_old_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneresizeevent.html#setOldSize)
 ///
 /// @param self QGraphicsSceneResizeEvent*
 /// @param size QSizeF*
 ///
-void q_graphicssceneresizeevent_set_old_size(void* self, void* size);
+void q_graphicssceneresizeevent_set_old_size(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneresizeevent.html#newSize)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-QSizeF* q_graphicssceneresizeevent_new_size(void* self);
+QSizeF* q_graphicssceneresizeevent_new_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneresizeevent.html#setNewSize)
 ///
 /// @param self QGraphicsSceneResizeEvent*
 /// @param size QSizeF*
 ///
-void q_graphicssceneresizeevent_set_new_size(void* self, void* size);
+void q_graphicssceneresizeevent_set_new_size(void* self, const void* size);
 
 /// Inherited from QGraphicsSceneEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-QWidget* q_graphicssceneresizeevent_widget(void* self);
+QWidget* q_graphicssceneresizeevent_widget(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -2117,9 +2117,9 @@ void q_graphicssceneresizeevent_set_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-uint64_t q_graphicssceneresizeevent_timestamp(void* self);
+uint64_t q_graphicssceneresizeevent_timestamp(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -2134,27 +2134,27 @@ void q_graphicssceneresizeevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicssceneresizeevent_type(void* self);
+int32_t q_graphicssceneresizeevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-bool q_graphicssceneresizeevent_spontaneous(void* self);
+bool q_graphicssceneresizeevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-bool q_graphicssceneresizeevent_is_accepted(void* self);
+bool q_graphicssceneresizeevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2176,25 +2176,25 @@ void q_graphicssceneresizeevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-bool q_graphicssceneresizeevent_is_input_event(void* self);
+bool q_graphicssceneresizeevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-bool q_graphicssceneresizeevent_is_pointer_event(void* self);
+bool q_graphicssceneresizeevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-bool q_graphicssceneresizeevent_is_single_point_event(void* self);
+bool q_graphicssceneresizeevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2249,9 +2249,9 @@ void q_graphicssceneresizeevent_on_set_accepted(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-QEvent* q_graphicssceneresizeevent_clone(void* self);
+QEvent* q_graphicssceneresizeevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2259,9 +2259,9 @@ QEvent* q_graphicssceneresizeevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneResizeEvent*
+/// @param self const QGraphicsSceneResizeEvent*
 ///
-QEvent* q_graphicssceneresizeevent_super_clone(void* self);
+QEvent* q_graphicssceneresizeevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2269,10 +2269,10 @@ QEvent* q_graphicssceneresizeevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneResizeEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneResizeEvent*
+/// @param callback QEvent* func(QGraphicsSceneResizeEvent* self)
 ///
-void q_graphicssceneresizeevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicssceneresizeevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneresizeevent.html#dtor.QGraphicsSceneResizeEvent)
 ///
@@ -2290,37 +2290,37 @@ QGraphicsSceneMoveEvent* q_graphicsscenemoveevent_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemoveevent.html#oldPos)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-QPointF* q_graphicsscenemoveevent_old_pos(void* self);
+QPointF* q_graphicsscenemoveevent_old_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemoveevent.html#setOldPos)
 ///
 /// @param self QGraphicsSceneMoveEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenemoveevent_set_old_pos(void* self, void* pos);
+void q_graphicsscenemoveevent_set_old_pos(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemoveevent.html#newPos)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-QPointF* q_graphicsscenemoveevent_new_pos(void* self);
+QPointF* q_graphicsscenemoveevent_new_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemoveevent.html#setNewPos)
 ///
 /// @param self QGraphicsSceneMoveEvent*
 /// @param pos QPointF*
 ///
-void q_graphicsscenemoveevent_set_new_pos(void* self, void* pos);
+void q_graphicsscenemoveevent_set_new_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsSceneEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-QWidget* q_graphicsscenemoveevent_widget(void* self);
+QWidget* q_graphicsscenemoveevent_widget(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -2335,9 +2335,9 @@ void q_graphicsscenemoveevent_set_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicssceneevent.html#timestamp)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-uint64_t q_graphicsscenemoveevent_timestamp(void* self);
+uint64_t q_graphicsscenemoveevent_timestamp(const void* self);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -2352,27 +2352,27 @@ void q_graphicsscenemoveevent_set_timestamp(void* self, uint64_t ts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_graphicsscenemoveevent_type(void* self);
+int32_t q_graphicsscenemoveevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-bool q_graphicsscenemoveevent_spontaneous(void* self);
+bool q_graphicsscenemoveevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-bool q_graphicsscenemoveevent_is_accepted(void* self);
+bool q_graphicsscenemoveevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2394,25 +2394,25 @@ void q_graphicsscenemoveevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-bool q_graphicsscenemoveevent_is_input_event(void* self);
+bool q_graphicsscenemoveevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-bool q_graphicsscenemoveevent_is_pointer_event(void* self);
+bool q_graphicsscenemoveevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-bool q_graphicsscenemoveevent_is_single_point_event(void* self);
+bool q_graphicsscenemoveevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2467,9 +2467,9 @@ void q_graphicsscenemoveevent_on_set_accepted(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-QEvent* q_graphicsscenemoveevent_clone(void* self);
+QEvent* q_graphicsscenemoveevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2477,9 +2477,9 @@ QEvent* q_graphicsscenemoveevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsSceneMoveEvent*
+/// @param self const QGraphicsSceneMoveEvent*
 ///
-QEvent* q_graphicsscenemoveevent_super_clone(void* self);
+QEvent* q_graphicsscenemoveevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -2487,10 +2487,10 @@ QEvent* q_graphicsscenemoveevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsSceneMoveEvent*
-/// @param callback QEvent* func()
+/// @param self const QGraphicsSceneMoveEvent*
+/// @param callback QEvent* func(QGraphicsSceneMoveEvent* self)
 ///
-void q_graphicsscenemoveevent_on_clone(void* self, QEvent* (*callback)());
+void q_graphicsscenemoveevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscenemoveevent.html#dtor.QGraphicsSceneMoveEvent)
 ///

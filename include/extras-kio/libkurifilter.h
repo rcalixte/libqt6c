@@ -20,71 +20,71 @@ KUriFilterSearchProvider* k_urifiltersearchprovider_new();
 ///
 /// @param param1 KUriFilterSearchProvider*
 ///
-KUriFilterSearchProvider* k_urifiltersearchprovider_new2(void* param1);
+KUriFilterSearchProvider* k_urifiltersearchprovider_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#desktopEntryName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterSearchProvider*
+/// @param self const KUriFilterSearchProvider*
 ///
-const char* k_urifiltersearchprovider_desktop_entry_name(void* self);
+const char* k_urifiltersearchprovider_desktop_entry_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterSearchProvider*
+/// @param self const KUriFilterSearchProvider*
 ///
-const char* k_urifiltersearchprovider_name(void* self);
+const char* k_urifiltersearchprovider_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterSearchProvider*
+/// @param self const KUriFilterSearchProvider*
 ///
-const char* k_urifiltersearchprovider_icon_name(void* self);
+const char* k_urifiltersearchprovider_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KUriFilterSearchProvider*
-/// @param callback const char* func()
+/// @param self const KUriFilterSearchProvider*
+/// @param callback const char* func(const KUriFilterSearchProvider* self)
 ///
-void k_urifiltersearchprovider_on_icon_name(void* self, const char* (*callback)());
+void k_urifiltersearchprovider_on_icon_name(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#iconName)
 ///
 /// Base class method implementation
 ///
-/// @param self KUriFilterSearchProvider*
+/// @param self const KUriFilterSearchProvider*
 ///
-const char* k_urifiltersearchprovider_super_icon_name(void* self);
+const char* k_urifiltersearchprovider_super_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#keys)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUriFilterSearchProvider*
+/// @param self const KUriFilterSearchProvider*
 ///
-const char** k_urifiltersearchprovider_keys(void* self);
+const char** k_urifiltersearchprovider_keys(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#defaultKey)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterSearchProvider*
+/// @param self const KUriFilterSearchProvider*
 ///
-const char* k_urifiltersearchprovider_default_key(void* self);
+const char* k_urifiltersearchprovider_default_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#operator-eq)
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param param1 KUriFilterSearchProvider*
 ///
-void k_urifiltersearchprovider_operator_assign(void* self, void* param1);
+void k_urifiltersearchprovider_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
 ///
@@ -93,48 +93,12 @@ void k_urifiltersearchprovider_operator_assign(void* self, void* param1);
 ///
 void k_urifiltersearchprovider_set_desktop_entry_name(void* self, const char* desktopEntryName);
 
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KUriFilterSearchProvider*
-/// @param callback void func(KUriFilterSearchProvider* self, const char* desktopEntryName)
-///
-void k_urifiltersearchprovider_on_set_desktop_entry_name(void* self, void (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setDesktopEntryName)
-///
-/// Base class method implementation
-///
-/// @param self KUriFilterSearchProvider*
-/// @param desktopEntryName const char*
-///
-void k_urifiltersearchprovider_super_set_desktop_entry_name(void* self, const char* desktopEntryName);
-
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param iconName const char*
 ///
 void k_urifiltersearchprovider_set_icon_name(void* self, const char* iconName);
-
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KUriFilterSearchProvider*
-/// @param callback void func(KUriFilterSearchProvider* self, const char* iconName)
-///
-void k_urifiltersearchprovider_on_set_icon_name(void* self, void (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setIconName)
-///
-/// Base class method implementation
-///
-/// @param self KUriFilterSearchProvider*
-/// @param iconName const char*
-///
-void k_urifiltersearchprovider_super_set_icon_name(void* self, const char* iconName);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
 ///
@@ -143,48 +107,12 @@ void k_urifiltersearchprovider_super_set_icon_name(void* self, const char* iconN
 ///
 void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]);
 
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KUriFilterSearchProvider*
-/// @param callback void func(KUriFilterSearchProvider* self, const char** keys)
-///
-void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, const char**));
-
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setKeys)
-///
-/// Base class method implementation
-///
-/// @param self KUriFilterSearchProvider*
-/// @param keys const char**
-///
-void k_urifiltersearchprovider_super_set_keys(void* self, const char* keys[static 1]);
-
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setName)
 ///
 /// @param self KUriFilterSearchProvider*
 /// @param name const char*
 ///
 void k_urifiltersearchprovider_set_name(void* self, const char* name);
-
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setName)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KUriFilterSearchProvider*
-/// @param callback void func(KUriFilterSearchProvider* self, const char* name)
-///
-void k_urifiltersearchprovider_on_set_name(void* self, void (*callback)(void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#setName)
-///
-/// Base class method implementation
-///
-/// @param self KUriFilterSearchProvider*
-/// @param name const char*
-///
-void k_urifiltersearchprovider_super_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kurifiltersearchprovider.html#dtor.KUriFilterSearchProvider)
 ///
@@ -206,7 +134,7 @@ KUriFilterData* k_urifilterdata_new();
 ///
 /// @param url QUrl*
 ///
-KUriFilterData* k_urifilterdata_new2(void* url);
+KUriFilterData* k_urifilterdata_new2(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html)
 
@@ -222,167 +150,167 @@ KUriFilterData* k_urifilterdata_new3(const char* url);
 ///
 /// @param other KUriFilterData*
 ///
-KUriFilterData* k_urifilterdata_new4(void* other);
+KUriFilterData* k_urifilterdata_new4(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#uri)
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-QUrl* k_urifilterdata_uri(void* self);
+QUrl* k_urifilterdata_uri(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#errorMsg)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char* k_urifilterdata_error_msg(void* self);
+const char* k_urifilterdata_error_msg(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#uriType)
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
 /// @return enum KUriFilterData__UriTypes
 ///
-int32_t k_urifilterdata_uri_type(void* self);
+int32_t k_urifilterdata_uri_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#absolutePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char* k_urifilterdata_absolute_path(void* self);
+const char* k_urifilterdata_absolute_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#hasAbsolutePath)
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-bool k_urifilterdata_has_absolute_path(void* self);
+bool k_urifilterdata_has_absolute_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#argsAndOptions)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char* k_urifilterdata_args_and_options(void* self);
+const char* k_urifilterdata_args_and_options(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#hasArgsAndOptions)
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-bool k_urifilterdata_has_args_and_options(void* self);
+bool k_urifilterdata_has_args_and_options(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#checkForExecutables)
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-bool k_urifilterdata_check_for_executables(void* self);
+bool k_urifilterdata_check_for_executables(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#typedString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char* k_urifilterdata_typed_string(void* self);
+const char* k_urifilterdata_typed_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchTerm)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char* k_urifilterdata_search_term(void* self);
+const char* k_urifilterdata_search_term(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchTermSeparator)
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-QChar* k_urifilterdata_search_term_separator(void* self);
+QChar* k_urifilterdata_search_term_separator(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchProvider)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char* k_urifilterdata_search_provider(void* self);
+const char* k_urifilterdata_search_provider(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#preferredSearchProviders)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char** k_urifilterdata_preferred_search_providers(void* self);
+const char** k_urifilterdata_preferred_search_providers(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#queryForSearchProvider)
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 /// @param provider const char*
 ///
-KUriFilterSearchProvider* k_urifilterdata_query_for_search_provider(void* self, const char* provider);
+KUriFilterSearchProvider* k_urifilterdata_query_for_search_provider(const void* self, const char* provider);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#queryForPreferredSearchProvider)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 /// @param provider const char*
 ///
-const char* k_urifilterdata_query_for_preferred_search_provider(void* self, const char* provider);
+const char* k_urifilterdata_query_for_preferred_search_provider(const void* self, const char* provider);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#allQueriesForSearchProvider)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 /// @param provider const char*
 ///
-const char** k_urifilterdata_all_queries_for_search_provider(void* self, const char* provider);
+const char** k_urifilterdata_all_queries_for_search_provider(const void* self, const char* provider);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#iconNameForPreferredSearchProvider)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 /// @param provider const char*
 ///
-const char* k_urifilterdata_icon_name_for_preferred_search_provider(void* self, const char* provider);
+const char* k_urifilterdata_icon_name_for_preferred_search_provider(const void* self, const char* provider);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#alternateSearchProviders)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char** k_urifilterdata_alternate_search_providers(void* self);
+const char** k_urifilterdata_alternate_search_providers(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#alternateDefaultSearchProvider)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char* k_urifilterdata_alternate_default_search_provider(void* self);
+const char* k_urifilterdata_alternate_default_search_provider(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#defaultUrlScheme)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
-const char* k_urifilterdata_default_url_scheme(void* self);
+const char* k_urifilterdata_default_url_scheme(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#searchFilteringOptions)
 ///
-/// @param self KUriFilterData*
+/// @param self const KUriFilterData*
 ///
 /// @return flag of enum KUriFilterData__SearchFilterOption
 ///
-int32_t k_urifilterdata_search_filtering_options(void* self);
+int32_t k_urifilterdata_search_filtering_options(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#iconName)
 ///
@@ -404,7 +332,7 @@ void k_urifilterdata_set_check_for_executables(void* self, bool check);
 /// @param self KUriFilterData*
 /// @param url QUrl*
 ///
-void k_urifilterdata_set_data(void* self, void* url);
+void k_urifilterdata_set_data(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#setData)
 ///
@@ -453,7 +381,7 @@ void k_urifilterdata_set_search_filtering_options(void* self, int32_t options);
 /// @param self KUriFilterData*
 /// @param url QUrl*
 ///
-void k_urifilterdata_operator_assign(void* self, void* url);
+void k_urifilterdata_operator_assign(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurifilterdata.html#operator-eq)
 ///
@@ -502,7 +430,7 @@ bool k_urifilter_filter_uri3(void* self, const char* uri);
 /// @param self KUriFilter*
 /// @param uri QUrl*
 ///
-QUrl* k_urifilter_filtered_uri(void* self, void* uri);
+QUrl* k_urifilter_filtered_uri(void* self, const void* uri);
 
 /// [Upstream resources](https://api.kde.org/kurifilter.html#filteredUri)
 ///
@@ -525,9 +453,9 @@ bool k_urifilter_filter_search_uri(void* self, void* data, int32_t types);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUriFilter*
+/// @param self const KUriFilter*
 ///
-const char** k_urifilter_plugin_names(void* self);
+const char** k_urifilter_plugin_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurifilter.html#filterUri)
 ///
@@ -559,7 +487,7 @@ bool k_urifilter_filter_uri24(void* self, const char* uri, const char* filters[s
 /// @param uri QUrl*
 /// @param filters const char**
 ///
-QUrl* k_urifilter_filtered_uri22(void* self, void* uri, const char* filters[static 1]);
+QUrl* k_urifilter_filtered_uri22(void* self, const void* uri, const char* filters[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kurifilter.html#filteredUri)
 ///

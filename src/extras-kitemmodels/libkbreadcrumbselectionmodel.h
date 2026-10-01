@@ -46,26 +46,26 @@ KBreadcrumbSelectionModel* k_breadcrumbselectionmodel_new4(void* selectionModel,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-const QMetaObject* k_breadcrumbselectionmodel_meta_object(void* self);
+const QMetaObject* k_breadcrumbselectionmodel_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KBreadcrumbSelectionModel*
-/// @param callback const QMetaObject* func()
+/// @param self const KBreadcrumbSelectionModel*
+/// @param callback const QMetaObject* func(const KBreadcrumbSelectionModel* self)
 ///
-void k_breadcrumbselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_breadcrumbselectionmodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-const QMetaObject* k_breadcrumbselectionmodel_super_meta_object(void* self);
+const QMetaObject* k_breadcrumbselectionmodel_super_meta_object(const void* self);
 
 /// @param self KBreadcrumbSelectionModel*
 /// @param param1 const char*
@@ -119,9 +119,9 @@ const char* k_breadcrumbselectionmodel_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#isActualSelectionIncluded)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-bool k_breadcrumbselectionmodel_is_actual_selection_included(void* self);
+bool k_breadcrumbselectionmodel_is_actual_selection_included(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#setActualSelectionIncluded)
 ///
@@ -132,9 +132,9 @@ void k_breadcrumbselectionmodel_set_actual_selection_included(void* self, bool i
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#breadcrumbLength)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-int32_t k_breadcrumbselectionmodel_breadcrumb_length(void* self);
+int32_t k_breadcrumbselectionmodel_breadcrumb_length(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#setBreadcrumbLength)
 ///
@@ -149,7 +149,7 @@ void k_breadcrumbselectionmodel_set_breadcrumb_length(void* self, int breadcrumb
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_select(void* self, void* index, int32_t command);
+void k_breadcrumbselectionmodel_select(void* self, const void* index, int32_t command);
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#select)
 ///
@@ -158,7 +158,7 @@ void k_breadcrumbselectionmodel_select(void* self, void* index, int32_t command)
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QModelIndex* index, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
-void k_breadcrumbselectionmodel_on_select(void* self, void (*callback)(void*, void*, int32_t));
+void k_breadcrumbselectionmodel_on_select(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#select)
 ///
@@ -168,7 +168,7 @@ void k_breadcrumbselectionmodel_on_select(void* self, void (*callback)(void*, vo
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_super_select(void* self, void* index, int32_t command);
+void k_breadcrumbselectionmodel_super_select(void* self, const void* index, int32_t command);
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#select)
 ///
@@ -176,7 +176,7 @@ void k_breadcrumbselectionmodel_super_select(void* self, void* index, int32_t co
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_select2(void* self, void* selection, int32_t command);
+void k_breadcrumbselectionmodel_select2(void* self, const void* selection, int32_t command);
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#select)
 ///
@@ -185,7 +185,7 @@ void k_breadcrumbselectionmodel_select2(void* self, void* selection, int32_t com
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QItemSelection* selection, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
-void k_breadcrumbselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int32_t));
+void k_breadcrumbselectionmodel_on_select2(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#select)
 ///
@@ -195,7 +195,7 @@ void k_breadcrumbselectionmodel_on_select2(void* self, void (*callback)(void*, v
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_super_select2(void* self, void* selection, int32_t command);
+void k_breadcrumbselectionmodel_super_select2(void* self, const void* selection, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -220,108 +220,108 @@ const char* k_breadcrumbselectionmodel_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#currentIndex)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-QModelIndex* k_breadcrumbselectionmodel_current_index(void* self);
+QModelIndex* k_breadcrumbselectionmodel_current_index(const void* self);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#isSelected)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param index QModelIndex*
 ///
-bool k_breadcrumbselectionmodel_is_selected(void* self, void* index);
+bool k_breadcrumbselectionmodel_is_selected(const void* self, const void* index);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#isRowSelected)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param row int
 ///
-bool k_breadcrumbselectionmodel_is_row_selected(void* self, int row);
+bool k_breadcrumbselectionmodel_is_row_selected(const void* self, int row);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#isColumnSelected)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param column int
 ///
-bool k_breadcrumbselectionmodel_is_column_selected(void* self, int column);
+bool k_breadcrumbselectionmodel_is_column_selected(const void* self, int column);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#rowIntersectsSelection)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param row int
 ///
-bool k_breadcrumbselectionmodel_row_intersects_selection(void* self, int row);
+bool k_breadcrumbselectionmodel_row_intersects_selection(const void* self, int row);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#columnIntersectsSelection)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param column int
 ///
-bool k_breadcrumbselectionmodel_column_intersects_selection(void* self, int column);
+bool k_breadcrumbselectionmodel_column_intersects_selection(const void* self, int column);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#hasSelection)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-bool k_breadcrumbselectionmodel_has_selection(void* self);
+bool k_breadcrumbselectionmodel_has_selection(const void* self);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectedIndexes)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_breadcrumbselectionmodel_selected_indexes(void* self);
+libqt_list k_breadcrumbselectionmodel_selected_indexes(const void* self);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectedRows)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_breadcrumbselectionmodel_selected_rows(void* self);
+libqt_list k_breadcrumbselectionmodel_selected_rows(const void* self);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectedColumns)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_breadcrumbselectionmodel_selected_columns(void* self);
+libqt_list k_breadcrumbselectionmodel_selected_columns(const void* self);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selection)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-const QItemSelection* k_breadcrumbselectionmodel_selection(void* self);
+const QItemSelection* k_breadcrumbselectionmodel_selection(const void* self);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#model)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-const QAbstractItemModel* k_breadcrumbselectionmodel_model(void* self);
+const QAbstractItemModel* k_breadcrumbselectionmodel_model(const void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -356,7 +356,7 @@ void k_breadcrumbselectionmodel_clear_selection(void* self);
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void k_breadcrumbselectionmodel_selection_changed(void* self, void* selected, void* deselected);
+void k_breadcrumbselectionmodel_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -365,7 +365,7 @@ void k_breadcrumbselectionmodel_selection_changed(void* self, void* selected, vo
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QItemSelection* selected, QItemSelection* deselected)
 ///
-void k_breadcrumbselectionmodel_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
+void k_breadcrumbselectionmodel_on_selection_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QItemSelectionModel
 ///
@@ -375,7 +375,7 @@ void k_breadcrumbselectionmodel_on_selection_changed(void* self, void (*callback
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_breadcrumbselectionmodel_current_changed(void* self, void* current, void* previous);
+void k_breadcrumbselectionmodel_current_changed(void* self, const void* current, const void* previous);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -384,7 +384,7 @@ void k_breadcrumbselectionmodel_current_changed(void* self, void* current, void*
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QModelIndex* current, QModelIndex* previous)
 ///
-void k_breadcrumbselectionmodel_on_current_changed(void* self, void (*callback)(void*, void*, void*));
+void k_breadcrumbselectionmodel_on_current_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QItemSelectionModel
 ///
@@ -394,7 +394,7 @@ void k_breadcrumbselectionmodel_on_current_changed(void* self, void (*callback)(
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_breadcrumbselectionmodel_current_row_changed(void* self, void* current, void* previous);
+void k_breadcrumbselectionmodel_current_row_changed(void* self, const void* current, const void* previous);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -403,7 +403,7 @@ void k_breadcrumbselectionmodel_current_row_changed(void* self, void* current, v
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QModelIndex* current, QModelIndex* previous)
 ///
-void k_breadcrumbselectionmodel_on_current_row_changed(void* self, void (*callback)(void*, void*, void*));
+void k_breadcrumbselectionmodel_on_current_row_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QItemSelectionModel
 ///
@@ -413,7 +413,7 @@ void k_breadcrumbselectionmodel_on_current_row_changed(void* self, void (*callba
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_breadcrumbselectionmodel_current_column_changed(void* self, void* current, void* previous);
+void k_breadcrumbselectionmodel_current_column_changed(void* self, const void* current, const void* previous);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -422,7 +422,7 @@ void k_breadcrumbselectionmodel_current_column_changed(void* self, void* current
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QModelIndex* current, QModelIndex* previous)
 ///
-void k_breadcrumbselectionmodel_on_current_column_changed(void* self, void (*callback)(void*, void*, void*));
+void k_breadcrumbselectionmodel_on_current_column_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QItemSelectionModel
 ///
@@ -446,63 +446,63 @@ void k_breadcrumbselectionmodel_on_model_changed(void* self, void (*callback)(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#isRowSelected)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool k_breadcrumbselectionmodel_is_row_selected2(void* self, int row, void* parent);
+bool k_breadcrumbselectionmodel_is_row_selected2(const void* self, int row, const void* parent);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#isColumnSelected)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_breadcrumbselectionmodel_is_column_selected2(void* self, int column, void* parent);
+bool k_breadcrumbselectionmodel_is_column_selected2(const void* self, int column, const void* parent);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#rowIntersectsSelection)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool k_breadcrumbselectionmodel_row_intersects_selection2(void* self, int row, void* parent);
+bool k_breadcrumbselectionmodel_row_intersects_selection2(const void* self, int row, const void* parent);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#columnIntersectsSelection)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_breadcrumbselectionmodel_column_intersects_selection2(void* self, int column, void* parent);
+bool k_breadcrumbselectionmodel_column_intersects_selection2(const void* self, int column, const void* parent);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectedRows)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param column int
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_breadcrumbselectionmodel_selected_rows1(void* self, int column);
+libqt_list k_breadcrumbselectionmodel_selected_rows1(const void* self, int column);
 
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#selectedColumns)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param row int
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_breadcrumbselectionmodel_selected_columns1(void* self, int row);
+libqt_list k_breadcrumbselectionmodel_selected_columns1(const void* self, int row);
 
 /// Inherited from QObject
 ///
@@ -510,9 +510,9 @@ libqt_list k_breadcrumbselectionmodel_selected_columns1(void* self, int row);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-const char* k_breadcrumbselectionmodel_object_name(void* self);
+const char* k_breadcrumbselectionmodel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -527,33 +527,33 @@ void k_breadcrumbselectionmodel_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-bool k_breadcrumbselectionmodel_is_widget_type(void* self);
+bool k_breadcrumbselectionmodel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-bool k_breadcrumbselectionmodel_is_window_type(void* self);
+bool k_breadcrumbselectionmodel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-bool k_breadcrumbselectionmodel_is_quick_item_type(void* self);
+bool k_breadcrumbselectionmodel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-bool k_breadcrumbselectionmodel_signals_blocked(void* self);
+bool k_breadcrumbselectionmodel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -568,9 +568,9 @@ bool k_breadcrumbselectionmodel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-QThread* k_breadcrumbselectionmodel_thread(void* self);
+QThread* k_breadcrumbselectionmodel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -621,11 +621,11 @@ void k_breadcrumbselectionmodel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_breadcrumbselectionmodel_children(void* self);
+libqt_list k_breadcrumbselectionmodel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -663,7 +663,7 @@ void k_breadcrumbselectionmodel_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_breadcrumbselectionmodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_breadcrumbselectionmodel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -674,18 +674,18 @@ QMetaObject__Connection* k_breadcrumbselectionmodel_connect(void* sender, const 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_breadcrumbselectionmodel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_breadcrumbselectionmodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_breadcrumbselectionmodel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_breadcrumbselectionmodel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -696,7 +696,7 @@ QMetaObject__Connection* k_breadcrumbselectionmodel_connect3(void* self, void* s
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_breadcrumbselectionmodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_breadcrumbselectionmodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -707,24 +707,24 @@ bool k_breadcrumbselectionmodel_disconnect(void* sender, const char* signal, voi
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_breadcrumbselectionmodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_breadcrumbselectionmodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-bool k_breadcrumbselectionmodel_disconnect3(void* self);
+bool k_breadcrumbselectionmodel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param receiver QObject*
 ///
-bool k_breadcrumbselectionmodel_disconnect4(void* self, void* receiver);
+bool k_breadcrumbselectionmodel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -732,23 +732,23 @@ bool k_breadcrumbselectionmodel_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_breadcrumbselectionmodel_disconnect5(void* param1);
+bool k_breadcrumbselectionmodel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-void k_breadcrumbselectionmodel_dump_object_tree(void* self);
+void k_breadcrumbselectionmodel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-void k_breadcrumbselectionmodel_dump_object_info(void* self);
+void k_breadcrumbselectionmodel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -758,16 +758,16 @@ void k_breadcrumbselectionmodel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_breadcrumbselectionmodel_set_property(void* self, const char* name, void* value);
+bool k_breadcrumbselectionmodel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param name const char*
 ///
-QVariant* k_breadcrumbselectionmodel_property(void* self, const char* name);
+QVariant* k_breadcrumbselectionmodel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -775,9 +775,9 @@ QVariant* k_breadcrumbselectionmodel_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-const char** k_breadcrumbselectionmodel_dynamic_property_names(void* self);
+const char** k_breadcrumbselectionmodel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -791,9 +791,9 @@ QBindingStorage* k_breadcrumbselectionmodel_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-const QBindingStorage* k_breadcrumbselectionmodel_binding_storage2(void* self);
+const QBindingStorage* k_breadcrumbselectionmodel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -816,18 +816,18 @@ void k_breadcrumbselectionmodel_on_destroyed(void* self, void (*callback)(void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-QObject* k_breadcrumbselectionmodel_parent(void* self);
+QObject* k_breadcrumbselectionmodel_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param classname const char*
 ///
-bool k_breadcrumbselectionmodel_inherits(void* self, const char* classname);
+bool k_breadcrumbselectionmodel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -867,7 +867,7 @@ int32_t k_breadcrumbselectionmodel_start_timer23(void* self, int64_t time, int32
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_breadcrumbselectionmodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_breadcrumbselectionmodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -879,59 +879,59 @@ QMetaObject__Connection* k_breadcrumbselectionmodel_connect5(void* sender, const
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_breadcrumbselectionmodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_breadcrumbselectionmodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_breadcrumbselectionmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_breadcrumbselectionmodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param signal const char*
 ///
-bool k_breadcrumbselectionmodel_disconnect1(void* self, const char* signal);
+bool k_breadcrumbselectionmodel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBreadcrumbSelectionModel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_breadcrumbselectionmodel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_breadcrumbselectionmodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_breadcrumbselectionmodel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_breadcrumbselectionmodel_disconnect23(void* self, void* receiver, const char* member);
+bool k_breadcrumbselectionmodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KBreadcrumbSelectionModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_breadcrumbselectionmodel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -961,7 +961,7 @@ void k_breadcrumbselectionmodel_on_destroyed1(void* self, void (*callback)(void*
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_set_current_index(void* self, void* index, int32_t command);
+void k_breadcrumbselectionmodel_set_current_index(void* self, const void* index, int32_t command);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -973,7 +973,7 @@ void k_breadcrumbselectionmodel_set_current_index(void* self, void* index, int32
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_super_set_current_index(void* self, void* index, int32_t command);
+void k_breadcrumbselectionmodel_super_set_current_index(void* self, const void* index, int32_t command);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -984,7 +984,7 @@ void k_breadcrumbselectionmodel_super_set_current_index(void* self, void* index,
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QModelIndex* index, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
-void k_breadcrumbselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int32_t));
+void k_breadcrumbselectionmodel_on_set_current_index(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1013,9 +1013,9 @@ void k_breadcrumbselectionmodel_super_clear(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBreadcrumbSelectionModel*
-/// @param callback void func()
+/// @param callback void func(KBreadcrumbSelectionModel* self)
 ///
-void k_breadcrumbselectionmodel_on_clear(void* self, void (*callback)());
+void k_breadcrumbselectionmodel_on_clear(void* self, void (*callback)(void*));
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1044,9 +1044,9 @@ void k_breadcrumbselectionmodel_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBreadcrumbSelectionModel*
-/// @param callback void func()
+/// @param callback void func(KBreadcrumbSelectionModel* self)
 ///
-void k_breadcrumbselectionmodel_on_reset(void* self, void (*callback)());
+void k_breadcrumbselectionmodel_on_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1075,9 +1075,9 @@ void k_breadcrumbselectionmodel_super_clear_current_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBreadcrumbSelectionModel*
-/// @param callback void func()
+/// @param callback void func(KBreadcrumbSelectionModel* self)
 ///
-void k_breadcrumbselectionmodel_on_clear_current_index(void* self, void (*callback)());
+void k_breadcrumbselectionmodel_on_clear_current_index(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -1255,7 +1255,7 @@ void k_breadcrumbselectionmodel_on_custom_event(void* self, void (*callback)(voi
 /// @param self KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void k_breadcrumbselectionmodel_connect_notify(void* self, void* signal);
+void k_breadcrumbselectionmodel_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1266,7 +1266,7 @@ void k_breadcrumbselectionmodel_connect_notify(void* self, void* signal);
 /// @param self KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void k_breadcrumbselectionmodel_super_connect_notify(void* self, void* signal);
+void k_breadcrumbselectionmodel_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1277,7 +1277,7 @@ void k_breadcrumbselectionmodel_super_connect_notify(void* self, void* signal);
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QMetaMethod* signal)
 ///
-void k_breadcrumbselectionmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_breadcrumbselectionmodel_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1288,7 +1288,7 @@ void k_breadcrumbselectionmodel_on_connect_notify(void* self, void (*callback)(v
 /// @param self KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void k_breadcrumbselectionmodel_disconnect_notify(void* self, void* signal);
+void k_breadcrumbselectionmodel_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1299,7 +1299,7 @@ void k_breadcrumbselectionmodel_disconnect_notify(void* self, void* signal);
 /// @param self KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void k_breadcrumbselectionmodel_super_disconnect_notify(void* self, void* signal);
+void k_breadcrumbselectionmodel_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1310,7 +1310,7 @@ void k_breadcrumbselectionmodel_super_disconnect_notify(void* self, void* signal
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QMetaMethod* signal)
 ///
-void k_breadcrumbselectionmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_breadcrumbselectionmodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1322,7 +1322,7 @@ void k_breadcrumbselectionmodel_on_disconnect_notify(void* self, void (*callback
 /// @param newSelection QItemSelection*
 /// @param oldSelection QItemSelection*
 ///
-void k_breadcrumbselectionmodel_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
+void k_breadcrumbselectionmodel_emit_selection_changed(void* self, const void* newSelection, const void* oldSelection);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1334,7 +1334,7 @@ void k_breadcrumbselectionmodel_emit_selection_changed(void* self, void* newSele
 /// @param newSelection QItemSelection*
 /// @param oldSelection QItemSelection*
 ///
-void k_breadcrumbselectionmodel_super_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
+void k_breadcrumbselectionmodel_super_emit_selection_changed(void* self, const void* newSelection, const void* oldSelection);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1345,7 +1345,7 @@ void k_breadcrumbselectionmodel_super_emit_selection_changed(void* self, void* n
 /// @param self KBreadcrumbSelectionModel*
 /// @param callback void func(KBreadcrumbSelectionModel* self, QItemSelection* newSelection, QItemSelection* oldSelection)
 ///
-void k_breadcrumbselectionmodel_on_emit_selection_changed(void* self, void (*callback)(void*, void*, void*));
+void k_breadcrumbselectionmodel_on_emit_selection_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1353,9 +1353,9 @@ void k_breadcrumbselectionmodel_on_emit_selection_changed(void* self, void (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-QObject* k_breadcrumbselectionmodel_sender(void* self);
+QObject* k_breadcrumbselectionmodel_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1363,9 +1363,9 @@ QObject* k_breadcrumbselectionmodel_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-QObject* k_breadcrumbselectionmodel_super_sender(void* self);
+QObject* k_breadcrumbselectionmodel_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1373,10 +1373,10 @@ QObject* k_breadcrumbselectionmodel_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
-/// @param callback QObject* func()
+/// @param self const KBreadcrumbSelectionModel*
+/// @param callback QObject* func(KBreadcrumbSelectionModel* self)
 ///
-void k_breadcrumbselectionmodel_on_sender(void* self, QObject* (*callback)());
+void k_breadcrumbselectionmodel_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1384,9 +1384,9 @@ void k_breadcrumbselectionmodel_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-int32_t k_breadcrumbselectionmodel_sender_signal_index(void* self);
+int32_t k_breadcrumbselectionmodel_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1394,9 +1394,9 @@ int32_t k_breadcrumbselectionmodel_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 ///
-int32_t k_breadcrumbselectionmodel_super_sender_signal_index(void* self);
+int32_t k_breadcrumbselectionmodel_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1404,10 +1404,10 @@ int32_t k_breadcrumbselectionmodel_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
-/// @param callback int32_t func()
+/// @param self const KBreadcrumbSelectionModel*
+/// @param callback int32_t func(KBreadcrumbSelectionModel* self)
 ///
-void k_breadcrumbselectionmodel_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_breadcrumbselectionmodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1415,10 +1415,10 @@ void k_breadcrumbselectionmodel_on_sender_signal_index(void* self, int32_t (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param signal const char*
 ///
-int32_t k_breadcrumbselectionmodel_receivers(void* self, const char* signal);
+int32_t k_breadcrumbselectionmodel_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1426,10 +1426,10 @@ int32_t k_breadcrumbselectionmodel_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param signal const char*
 ///
-int32_t k_breadcrumbselectionmodel_super_receivers(void* self, const char* signal);
+int32_t k_breadcrumbselectionmodel_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1437,10 +1437,10 @@ int32_t k_breadcrumbselectionmodel_super_receivers(void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param callback int32_t func(KBreadcrumbSelectionModel* self, const char* signal)
 ///
-void k_breadcrumbselectionmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_breadcrumbselectionmodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1448,10 +1448,10 @@ void k_breadcrumbselectionmodel_on_receivers(void* self, int32_t (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-bool k_breadcrumbselectionmodel_is_signal_connected(void* self, void* signal);
+bool k_breadcrumbselectionmodel_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1459,10 +1459,10 @@ bool k_breadcrumbselectionmodel_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-bool k_breadcrumbselectionmodel_super_is_signal_connected(void* self, void* signal);
+bool k_breadcrumbselectionmodel_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1470,10 +1470,10 @@ bool k_breadcrumbselectionmodel_super_is_signal_connected(void* self, void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBreadcrumbSelectionModel*
+/// @param self const KBreadcrumbSelectionModel*
 /// @param callback bool func(KBreadcrumbSelectionModel* self, QMetaMethod* signal)
 ///
-void k_breadcrumbselectionmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_breadcrumbselectionmodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

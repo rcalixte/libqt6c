@@ -42,9 +42,9 @@ void q_latin1stringmatcher_set_pattern(void* self, char* pattern);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLatin1StringMatcher*
+/// @param self const QLatin1StringMatcher*
 ///
-char* q_latin1stringmatcher_pattern(void* self);
+char* q_latin1stringmatcher_pattern(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#setCaseSensitivity)
 ///
@@ -55,41 +55,41 @@ void q_latin1stringmatcher_set_case_sensitivity(void* self, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#caseSensitivity)
 ///
-/// @param self QLatin1StringMatcher*
+/// @param self const QLatin1StringMatcher*
 ///
 /// @return enum Qt__CaseSensitivity
 ///
-int32_t q_latin1stringmatcher_case_sensitivity(void* self);
+int32_t q_latin1stringmatcher_case_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#indexIn)
 ///
-/// @param self QLatin1StringMatcher*
+/// @param self const QLatin1StringMatcher*
 /// @param haystack char*
 ///
-intptr_t q_latin1stringmatcher_index_in(void* self, char* haystack);
+intptr_t q_latin1stringmatcher_index_in(const void* self, char* haystack);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#indexIn)
 ///
-/// @param self QLatin1StringMatcher*
+/// @param self const QLatin1StringMatcher*
 /// @param haystack const char*
 ///
-intptr_t q_latin1stringmatcher_index_in2(void* self, const char* haystack);
+intptr_t q_latin1stringmatcher_index_in2(const void* self, const char* haystack);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#indexIn)
 ///
-/// @param self QLatin1StringMatcher*
+/// @param self const QLatin1StringMatcher*
 /// @param haystack char*
 /// @param from intptr_t
 ///
-intptr_t q_latin1stringmatcher_index_in22(void* self, char* haystack, intptr_t from);
+intptr_t q_latin1stringmatcher_index_in22(const void* self, char* haystack, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#indexIn)
 ///
-/// @param self QLatin1StringMatcher*
+/// @param self const QLatin1StringMatcher*
 /// @param haystack const char*
 /// @param from intptr_t
 ///
-intptr_t q_latin1stringmatcher_index_in23(void* self, const char* haystack, intptr_t from);
+intptr_t q_latin1stringmatcher_index_in23(const void* self, const char* haystack, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#dtor.QLatin1StringMatcher)
 ///

@@ -20,14 +20,14 @@ QMediaMetaData* q_mediametadata_new();
 ///
 /// @param param1 QMediaMetaData*
 ///
-QMediaMetaData* q_mediametadata_new2(void* param1);
+QMediaMetaData* q_mediametadata_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#value)
 ///
-/// @param self QMediaMetaData*
+/// @param self const QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
 ///
-QVariant* q_mediametadata_value(void* self, int32_t k);
+QVariant* q_mediametadata_value(const void* self, int32_t k);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#insert)
 ///
@@ -35,7 +35,7 @@ QVariant* q_mediametadata_value(void* self, int32_t k);
 /// @param k enum QMediaMetaData__Key
 /// @param value QVariant*
 ///
-void q_mediametadata_insert(void* self, int32_t k, void* value);
+void q_mediametadata_insert(void* self, int32_t k, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#remove)
 ///
@@ -46,11 +46,11 @@ void q_mediametadata_remove(void* self, int32_t k);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#keys)
 ///
-/// @param self QMediaMetaData*
+/// @param self const QMediaMetaData*
 ///
 /// @return libqt_list of enum QMediaMetaData__Key
 ///
-libqt_list q_mediametadata_keys(void* self);
+libqt_list q_mediametadata_keys(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#operator-5b-5d)
 ///
@@ -67,18 +67,18 @@ void q_mediametadata_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#isEmpty)
 ///
-/// @param self QMediaMetaData*
+/// @param self const QMediaMetaData*
 ///
-bool q_mediametadata_is_empty(void* self);
+bool q_mediametadata_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#stringValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMediaMetaData*
+/// @param self const QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
 ///
-const char* q_mediametadata_string_value(void* self, int32_t k);
+const char* q_mediametadata_string_value(const void* self, int32_t k);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#metaDataKeyToString)
 ///
@@ -93,7 +93,7 @@ const char* q_mediametadata_meta_data_key_to_string(int32_t k);
 /// @param self QMediaMetaData*
 /// @param param1 QMediaMetaData*
 ///
-void q_mediametadata_operator_assign(void* self, void* param1);
+void q_mediametadata_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediametadata.html#dtor.QMediaMetaData)
 ///

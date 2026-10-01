@@ -14,7 +14,7 @@ void q_cryptographichash_reset(void* self) {
     QCryptographicHash_Reset((QCryptographicHash*)self);
 }
 
-int32_t q_cryptographichash_algorithm(void* self) {
+int32_t q_cryptographichash_algorithm(const void* self) {
     return QCryptographicHash_Algorithm((QCryptographicHash*)self);
 }
 
@@ -30,14 +30,14 @@ bool q_cryptographichash_add_data3(void* self, void* device) {
     return QCryptographicHash_AddData3((QCryptographicHash*)self, (QIODevice*)device);
 }
 
-char* q_cryptographichash_result(void* self) {
+char* q_cryptographichash_result(const void* self) {
     libqt_string _str = QCryptographicHash_Result((QCryptographicHash*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_cryptographichash_result_view(void* self) {
+char* q_cryptographichash_result_view(const void* self) {
     libqt_string _str = QCryptographicHash_ResultView((QCryptographicHash*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

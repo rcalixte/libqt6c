@@ -1,7 +1,7 @@
 #include "libshell.hpp"
 #include "libshell.h"
 
-LayerShellQt__Shell* k_layershellqt__shell_new(void* other) {
+LayerShellQt__Shell* k_layershellqt__shell_new(const void* other) {
     return LayerShellQt__Shell_New((LayerShellQt__Shell*)other);
 }
 

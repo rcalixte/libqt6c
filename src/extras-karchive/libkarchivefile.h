@@ -22,7 +22,7 @@
 /// @param pos int64_t
 /// @param size int64_t
 ///
-KArchiveFile* k_archivefile_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, int64_t pos, int64_t size);
+KArchiveFile* k_archivefile_new(void* archive, const char* name, int access, const void* date, const char* user, const char* group, const char* symlink, int64_t pos, int64_t size);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html)
 
@@ -30,19 +30,19 @@ KArchiveFile* k_archivefile_new(void* archive, const char* name, int access, voi
 ///
 /// @param param1 KArchiveFile*
 ///
-KArchiveFile* k_archivefile_new2(void* param1);
+KArchiveFile* k_archivefile_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#position)
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-int64_t k_archivefile_position(void* self);
+int64_t k_archivefile_position(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#size)
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-int64_t k_archivefile_size(void* self);
+int64_t k_archivefile_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#setSize)
 ///
@@ -55,79 +55,79 @@ void k_archivefile_set_size(void* self, int64_t s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-char* k_archivefile_data(void* self);
+char* k_archivefile_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KArchiveFile*
-/// @param callback libqt_string func()
+/// @param self const KArchiveFile*
+/// @param callback libqt_string func(const KArchiveFile* self)
 ///
-void k_archivefile_on_data(void* self, libqt_string (*callback)());
+void k_archivefile_on_data(const void* self, libqt_string (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///
 /// Base class method implementation
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-char* k_archivefile_super_data(void* self);
+char* k_archivefile_super_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#createDevice)
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-QIODevice* k_archivefile_create_device(void* self);
+QIODevice* k_archivefile_create_device(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#createDevice)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KArchiveFile*
-/// @param callback QIODevice* func()
+/// @param self const KArchiveFile*
+/// @param callback QIODevice* func(const KArchiveFile* self)
 ///
-void k_archivefile_on_create_device(void* self, QIODevice* (*callback)());
+void k_archivefile_on_create_device(const void* self, QIODevice* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#createDevice)
 ///
 /// Base class method implementation
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-QIODevice* k_archivefile_super_create_device(void* self);
+QIODevice* k_archivefile_super_create_device(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#isFile)
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-bool k_archivefile_is_file(void* self);
+bool k_archivefile_is_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#isFile)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KArchiveFile*
-/// @param callback bool func()
+/// @param self const KArchiveFile*
+/// @param callback bool func(const KArchiveFile* self)
 ///
-void k_archivefile_on_is_file(void* self, bool (*callback)());
+void k_archivefile_on_is_file(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#isFile)
 ///
 /// Base class method implementation
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-bool k_archivefile_super_is_file(void* self);
+bool k_archivefile_super_is_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#copyTo)
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 /// @param dest const char*
 ///
-bool k_archivefile_copy_to(void* self, const char* dest);
+bool k_archivefile_copy_to(const void* self, const char* dest);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#virtual_hook)
 ///
@@ -160,9 +160,9 @@ void k_archivefile_super_virtual_hook(void* self, int id, void* data);
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#date)
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-QDateTime* k_archivefile_date(void* self);
+QDateTime* k_archivefile_date(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -170,17 +170,17 @@ QDateTime* k_archivefile_date(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-const char* k_archivefile_name(void* self);
+const char* k_archivefile_name(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#permissions)
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-mode_t k_archivefile_permissions(void* self);
+mode_t k_archivefile_permissions(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -188,9 +188,9 @@ mode_t k_archivefile_permissions(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-const char* k_archivefile_user(void* self);
+const char* k_archivefile_user(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -198,9 +198,9 @@ const char* k_archivefile_user(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-const char* k_archivefile_group(void* self);
+const char* k_archivefile_group(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -208,9 +208,9 @@ const char* k_archivefile_group(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-const char* k_archivefile_sym_link_target(void* self);
+const char* k_archivefile_sym_link_target(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -218,9 +218,9 @@ const char* k_archivefile_sym_link_target(void* self);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-bool k_archivefile_is_directory(void* self);
+bool k_archivefile_is_directory(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -228,9 +228,9 @@ bool k_archivefile_is_directory(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-bool k_archivefile_super_is_directory(void* self);
+bool k_archivefile_super_is_directory(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -238,10 +238,10 @@ bool k_archivefile_super_is_directory(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KArchiveFile*
-/// @param callback bool func()
+/// @param self const KArchiveFile*
+/// @param callback bool func(KArchiveFile* self)
 ///
-void k_archivefile_on_is_directory(void* self, bool (*callback)());
+void k_archivefile_on_is_directory(const void* self, bool (*callback)(const void*));
 
 /// Inherited from KArchiveEntry
 ///
@@ -249,9 +249,9 @@ void k_archivefile_on_is_directory(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-KArchive* k_archivefile_archive(void* self);
+KArchive* k_archivefile_archive(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -259,9 +259,9 @@ KArchive* k_archivefile_archive(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KArchiveFile*
+/// @param self const KArchiveFile*
 ///
-KArchive* k_archivefile_super_archive(void* self);
+KArchive* k_archivefile_super_archive(const void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -269,10 +269,10 @@ KArchive* k_archivefile_super_archive(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KArchiveFile*
-/// @param callback KArchive* func()
+/// @param self const KArchiveFile*
+/// @param callback KArchive* func(KArchiveFile* self)
 ///
-void k_archivefile_on_archive(void* self, KArchive* (*callback)());
+void k_archivefile_on_archive(const void* self, KArchive* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#dtor.KArchiveFile)
 ///

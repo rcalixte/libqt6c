@@ -10,7 +10,7 @@ QDBusError* q_dbuserror_new2(void* error) {
     return QDBusError_New2(error);
 }
 
-QDBusError* q_dbuserror_new3(void* msg) {
+QDBusError* q_dbuserror_new3(const void* msg) {
     return QDBusError_New3((QDBusMessage*)msg);
 }
 
@@ -18,15 +18,15 @@ QDBusError* q_dbuserror_new4(int32_t error, const char* message) {
     return QDBusError_New4(error, qstring(message));
 }
 
-QDBusError* q_dbuserror_new5(void* other) {
+QDBusError* q_dbuserror_new5(const void* other) {
     return QDBusError_New5((QDBusError*)other);
 }
 
-void q_dbuserror_operator_assign(void* self, void* other) {
+void q_dbuserror_operator_assign(void* self, const void* other) {
     QDBusError_OperatorAssign((QDBusError*)self, (QDBusError*)other);
 }
 
-void q_dbuserror_operator_assign2(void* self, void* msg) {
+void q_dbuserror_operator_assign2(void* self, const void* msg) {
     QDBusError_OperatorAssign2((QDBusError*)self, (QDBusMessage*)msg);
 }
 
@@ -34,25 +34,25 @@ void q_dbuserror_swap(void* self, void* other) {
     QDBusError_Swap((QDBusError*)self, (QDBusError*)other);
 }
 
-int32_t q_dbuserror_type(void* self) {
+int32_t q_dbuserror_type(const void* self) {
     return QDBusError_Type((QDBusError*)self);
 }
 
-const char* q_dbuserror_name(void* self) {
+const char* q_dbuserror_name(const void* self) {
     libqt_string _str = QDBusError_Name((QDBusError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_dbuserror_message(void* self) {
+const char* q_dbuserror_message(const void* self) {
     libqt_string _str = QDBusError_Message((QDBusError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_dbuserror_is_valid(void* self) {
+bool q_dbuserror_is_valid(const void* self) {
     return QDBusError_IsValid((QDBusError*)self);
 }
 

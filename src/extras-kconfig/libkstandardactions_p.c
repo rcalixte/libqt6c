@@ -5,7 +5,7 @@ KStandardActions__RawStringData* k_standardactions__rawstringdata_new() {
     return KStandardActions__RawStringData_New();
 }
 
-KStandardActions__RawStringData* k_standardactions__rawstringdata_new2(void* other) {
+KStandardActions__RawStringData* k_standardactions__rawstringdata_new2(const void* other) {
     return KStandardActions__RawStringData_New2((KStandardActions__RawStringData*)other);
 }
 
@@ -13,11 +13,11 @@ KStandardActions__RawStringData* k_standardactions__rawstringdata_new3(void* oth
     return KStandardActions__RawStringData_New3((KStandardActions__RawStringData*)other);
 }
 
-KStandardActions__RawStringData* k_standardactions__rawstringdata_new4(void* param1) {
+KStandardActions__RawStringData* k_standardactions__rawstringdata_new4(const void* param1) {
     return KStandardActions__RawStringData_New4((KStandardActions__RawStringData*)param1);
 }
 
-const char* k_standardactions__rawstringdata_to_string(void* self) {
+const char* k_standardactions__rawstringdata_to_string(const void* self) {
     libqt_string _str = KStandardActions__RawStringData_ToString((KStandardActions__RawStringData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -32,11 +32,11 @@ KStandardActions__KStandardActionsInfo* k_standardactions__kstandardactionsinfo_
     return KStandardActions__KStandardActionsInfo_New();
 }
 
-KStandardActions__KStandardActionsInfo* k_standardactions__kstandardactionsinfo_new2(void* param1) {
+KStandardActions__KStandardActionsInfo* k_standardactions__kstandardactionsinfo_new2(const void* param1) {
     return KStandardActions__KStandardActionsInfo_New2((KStandardActions__KStandardActionsInfo*)param1);
 }
 
-int32_t k_standardactions__kstandardactionsinfo_id(void* self) {
+int32_t k_standardactions__kstandardactionsinfo_id(const void* self) {
     return KStandardActions__KStandardActionsInfo_Id((KStandardActions__KStandardActionsInfo*)self);
 }
 
@@ -44,7 +44,7 @@ void k_standardactions__kstandardactionsinfo_set_id(void* self, int32_t id) {
     KStandardActions__KStandardActionsInfo_SetId((KStandardActions__KStandardActionsInfo*)self, id);
 }
 
-int32_t k_standardactions__kstandardactionsinfo_id_accel(void* self) {
+int32_t k_standardactions__kstandardactionsinfo_id_accel(const void* self) {
     return KStandardActions__KStandardActionsInfo_IdAccel((KStandardActions__KStandardActionsInfo*)self);
 }
 
@@ -52,7 +52,7 @@ void k_standardactions__kstandardactionsinfo_set_id_accel(void* self, int32_t id
     KStandardActions__KStandardActionsInfo_SetIdAccel((KStandardActions__KStandardActionsInfo*)self, idAccel);
 }
 
-const char* k_standardactions__kstandardactionsinfo_ps_label(void* self) {
+const char* k_standardactions__kstandardactionsinfo_ps_label(const void* self) {
     return KStandardActions__KStandardActionsInfo_PsLabel((KStandardActions__KStandardActionsInfo*)self);
 }
 
@@ -60,7 +60,7 @@ void k_standardactions__kstandardactionsinfo_set_ps_label(void* self, const char
     KStandardActions__KStandardActionsInfo_SetPsLabel((KStandardActions__KStandardActionsInfo*)self, psLabel);
 }
 
-const char* k_standardactions__kstandardactionsinfo_ps_tool_tip(void* self) {
+const char* k_standardactions__kstandardactionsinfo_ps_tool_tip(const void* self) {
     return KStandardActions__KStandardActionsInfo_PsToolTip((KStandardActions__KStandardActionsInfo*)self);
 }
 

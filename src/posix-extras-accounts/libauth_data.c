@@ -2,29 +2,29 @@
 #include "libauth_data.hpp"
 #include "libauth_data.h"
 
-Accounts__AuthData* q_accounts__authdata_new(void* other) {
+Accounts__AuthData* q_accounts__authdata_new(const void* other) {
     return Accounts__AuthData_New((Accounts__AuthData*)other);
 }
 
-uint32_t q_accounts__authdata_credentials_id(void* self) {
+uint32_t q_accounts__authdata_credentials_id(const void* self) {
     return Accounts__AuthData_CredentialsId((Accounts__AuthData*)self);
 }
 
-const char* q_accounts__authdata_method(void* self) {
+const char* q_accounts__authdata_method(const void* self) {
     libqt_string _str = Accounts__AuthData_Method((Accounts__AuthData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accounts__authdata_mechanism(void* self) {
+const char* q_accounts__authdata_mechanism(const void* self) {
     libqt_string _str = Accounts__AuthData_Mechanism((Accounts__AuthData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_map /* of const char* to QVariant* */ q_accounts__authdata_parameters(void* self) {
+libqt_map /* of const char* to QVariant* */ q_accounts__authdata_parameters(const void* self) {
     // Convert QMap<QString,QVariant> to libqt_map
     libqt_map _out = Accounts__AuthData_Parameters((Accounts__AuthData*)self);
     libqt_map _ret;
@@ -57,7 +57,7 @@ libqt_map /* of const char* to QVariant* */ q_accounts__authdata_parameters(void
     return _ret;
 }
 
-void q_accounts__authdata_operator_assign(void* self, void* param1) {
+void q_accounts__authdata_operator_assign(void* self, const void* param1) {
     Accounts__AuthData_OperatorAssign((Accounts__AuthData*)self, (Accounts__AuthData*)param1);
 }
 

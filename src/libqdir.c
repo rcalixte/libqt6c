@@ -3,7 +3,7 @@
 #include "libqdir.hpp"
 #include "libqdir.h"
 
-QDir* q_dir_new(void* param1) {
+QDir* q_dir_new(const void* param1) {
     return QDir_New((QDir*)param1);
 }
 
@@ -27,7 +27,7 @@ QDir* q_dir_new6(const char* path, const char* nameFilter, int32_t sort, int32_t
     return QDir_New6(qstring(path), qstring(nameFilter), sort, filter);
 }
 
-void q_dir_operator_assign(void* self, void* param1) {
+void q_dir_operator_assign(void* self, const void* param1) {
     QDir_OperatorAssign((QDir*)self, (QDir*)param1);
 }
 
@@ -39,21 +39,21 @@ void q_dir_set_path(void* self, const char* path) {
     QDir_SetPath((QDir*)self, qstring(path));
 }
 
-const char* q_dir_path(void* self) {
+const char* q_dir_path(const void* self) {
     libqt_string _str = QDir_Path((QDir*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_dir_absolute_path(void* self) {
+const char* q_dir_absolute_path(const void* self) {
     libqt_string _str = QDir_AbsolutePath((QDir*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_dir_canonical_path(void* self) {
+const char* q_dir_canonical_path(const void* self) {
     libqt_string _str = QDir_CanonicalPath((QDir*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -95,28 +95,28 @@ const char** q_dir_search_paths(const char* prefix) {
     return _ret;
 }
 
-const char* q_dir_dir_name(void* self) {
+const char* q_dir_dir_name(const void* self) {
     libqt_string _str = QDir_DirName((QDir*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_dir_file_path(void* self, const char* fileName) {
+const char* q_dir_file_path(const void* self, const char* fileName) {
     libqt_string _str = QDir_FilePath((QDir*)self, qstring(fileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_dir_absolute_file_path(void* self, const char* fileName) {
+const char* q_dir_absolute_file_path(const void* self, const char* fileName) {
     libqt_string _str = QDir_AbsoluteFilePath((QDir*)self, qstring(fileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_dir_relative_file_path(void* self, const char* fileName) {
+const char* q_dir_relative_file_path(const void* self, const char* fileName) {
     libqt_string _str = QDir_RelativeFilePath((QDir*)self, qstring(fileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -145,7 +145,7 @@ bool q_dir_cd_up(void* self) {
     return QDir_CdUp((QDir*)self);
 }
 
-const char** q_dir_name_filters(void* self) {
+const char** q_dir_name_filters(const void* self) {
     libqt_list _arr = QDir_NameFilters((QDir*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -176,7 +176,7 @@ void q_dir_set_name_filters(void* self, const char* nameFilters[static 1]) {
     free(nameFilters_qstr);
 }
 
-int32_t q_dir_filter(void* self) {
+int32_t q_dir_filter(const void* self) {
     return QDir_Filter((QDir*)self);
 }
 
@@ -184,7 +184,7 @@ void q_dir_set_filter(void* self, int32_t filter) {
     QDir_SetFilter((QDir*)self, filter);
 }
 
-int32_t q_dir_sorting(void* self) {
+int32_t q_dir_sorting(const void* self) {
     return QDir_Sorting((QDir*)self);
 }
 
@@ -192,15 +192,15 @@ void q_dir_set_sorting(void* self, int32_t sort) {
     QDir_SetSorting((QDir*)self, sort);
 }
 
-intptr_t q_dir_count(void* self) {
+intptr_t q_dir_count(const void* self) {
     return QDir_Count((QDir*)self);
 }
 
-bool q_dir_is_empty(void* self) {
+bool q_dir_is_empty(const void* self) {
     return QDir_IsEmpty((QDir*)self);
 }
 
-const char* q_dir_operator_subscript(void* self, intptr_t param1) {
+const char* q_dir_operator_subscript(const void* self, intptr_t param1) {
     libqt_string _str = QDir_OperatorSubscript((QDir*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -224,7 +224,7 @@ const char** q_dir_name_filters_from_string(const char* nameFilter) {
     return _ret;
 }
 
-const char** q_dir_entry_list(void* self) {
+const char** q_dir_entry_list(const void* self) {
     libqt_list _arr = QDir_EntryList((QDir*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -241,7 +241,7 @@ const char** q_dir_entry_list(void* self) {
     return _ret;
 }
 
-const char** q_dir_entry_list2(void* self, const char* nameFilters[static 1]) {
+const char** q_dir_entry_list2(const void* self, const char* nameFilters[static 1]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -268,12 +268,12 @@ const char** q_dir_entry_list2(void* self, const char* nameFilters[static 1]) {
     return _ret;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list(void* self) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list(const void* self) {
     libqt_list _arr = QDir_EntryInfoList((QDir*)self);
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* nameFilters[static 1]) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(const void* self, const char* nameFilters[static 1]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -288,23 +288,23 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* na
     return _arr;
 }
 
-bool q_dir_mkdir(void* self, const char* dirName) {
+bool q_dir_mkdir(const void* self, const char* dirName) {
     return QDir_Mkdir((QDir*)self, qstring(dirName));
 }
 
-bool q_dir_mkdir2(void* self, const char* dirName, int32_t permissions) {
+bool q_dir_mkdir2(const void* self, const char* dirName, int32_t permissions) {
     return QDir_Mkdir2((QDir*)self, qstring(dirName), permissions);
 }
 
-bool q_dir_rmdir(void* self, const char* dirName) {
+bool q_dir_rmdir(const void* self, const char* dirName) {
     return QDir_Rmdir((QDir*)self, qstring(dirName));
 }
 
-bool q_dir_mkpath(void* self, const char* dirPath) {
+bool q_dir_mkpath(const void* self, const char* dirPath) {
     return QDir_Mkpath((QDir*)self, qstring(dirPath));
 }
 
-bool q_dir_rmpath(void* self, const char* dirPath) {
+bool q_dir_rmpath(const void* self, const char* dirPath) {
     return QDir_Rmpath((QDir*)self, qstring(dirPath));
 }
 
@@ -312,15 +312,15 @@ bool q_dir_remove_recursively(void* self) {
     return QDir_RemoveRecursively((QDir*)self);
 }
 
-bool q_dir_is_readable(void* self) {
+bool q_dir_is_readable(const void* self) {
     return QDir_IsReadable((QDir*)self);
 }
 
-bool q_dir_exists(void* self) {
+bool q_dir_exists(const void* self) {
     return QDir_Exists((QDir*)self);
 }
 
-bool q_dir_is_root(void* self) {
+bool q_dir_is_root(const void* self) {
     return QDir_IsRoot((QDir*)self);
 }
 
@@ -332,11 +332,11 @@ bool q_dir_is_absolute_path(const char* path) {
     return QDir_IsAbsolutePath(qstring(path));
 }
 
-bool q_dir_is_relative(void* self) {
+bool q_dir_is_relative(const void* self) {
     return QDir_IsRelative((QDir*)self);
 }
 
-bool q_dir_is_absolute(void* self) {
+bool q_dir_is_absolute(const void* self) {
     return QDir_IsAbsolute((QDir*)self);
 }
 
@@ -352,7 +352,7 @@ bool q_dir_rename(void* self, const char* oldName, const char* newName) {
     return QDir_Rename((QDir*)self, qstring(oldName), qstring(newName));
 }
 
-bool q_dir_exists2(void* self, const char* name) {
+bool q_dir_exists2(const void* self, const char* name) {
     return QDir_Exists2((QDir*)self, qstring(name));
 }
 
@@ -443,15 +443,15 @@ const char* q_dir_clean_path(const char* path) {
     return _ret;
 }
 
-void q_dir_refresh(void* self) {
+void q_dir_refresh(const void* self) {
     QDir_Refresh((QDir*)self);
 }
 
-bool q_dir_is_empty1(void* self, int32_t filters) {
+bool q_dir_is_empty1(const void* self, int32_t filters) {
     return QDir_IsEmpty1((QDir*)self, filters);
 }
 
-const char** q_dir_entry_list1(void* self, int32_t filters) {
+const char** q_dir_entry_list1(const void* self, int32_t filters) {
     libqt_list _arr = QDir_EntryList1((QDir*)self, filters);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -468,7 +468,7 @@ const char** q_dir_entry_list1(void* self, int32_t filters) {
     return _ret;
 }
 
-const char** q_dir_entry_list22(void* self, int32_t filters, int32_t sort) {
+const char** q_dir_entry_list22(const void* self, int32_t filters, int32_t sort) {
     libqt_list _arr = QDir_EntryList22((QDir*)self, filters, sort);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -485,7 +485,7 @@ const char** q_dir_entry_list22(void* self, int32_t filters, int32_t sort) {
     return _ret;
 }
 
-const char** q_dir_entry_list23(void* self, const char* nameFilters[static 1], int32_t filters) {
+const char** q_dir_entry_list23(const void* self, const char* nameFilters[static 1], int32_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -512,7 +512,7 @@ const char** q_dir_entry_list23(void* self, const char* nameFilters[static 1], i
     return _ret;
 }
 
-const char** q_dir_entry_list3(void* self, const char* nameFilters[static 1], int32_t filters, int32_t sort) {
+const char** q_dir_entry_list3(const void* self, const char* nameFilters[static 1], int32_t filters, int32_t sort) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -539,17 +539,17 @@ const char** q_dir_entry_list3(void* self, const char* nameFilters[static 1], in
     return _ret;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list1(void* self, int32_t filters) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list1(const void* self, int32_t filters) {
     libqt_list _arr = QDir_EntryInfoList1((QDir*)self, filters);
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, int32_t filters, int32_t sort) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(const void* self, int32_t filters, int32_t sort) {
     libqt_list _arr = QDir_EntryInfoList22((QDir*)self, filters, sort);
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[static 1], int32_t filters) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(const void* self, const char* nameFilters[static 1], int32_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {
@@ -564,7 +564,7 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* n
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* nameFilters[static 1], int32_t filters, int32_t sort) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(const void* self, const char* nameFilters[static 1], int32_t filters, int32_t sort) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
     if (nameFilters_qstr == NULL) {

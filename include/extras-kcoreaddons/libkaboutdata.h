@@ -28,7 +28,7 @@ KAboutPerson* k_aboutperson_new();
 ///
 /// @param other KAboutPerson*
 ///
-KAboutPerson* k_aboutperson_new2(void* other);
+KAboutPerson* k_aboutperson_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html)
 
@@ -78,58 +78,58 @@ KAboutPerson* k_aboutperson_new6(const char* name, const char* task, const char*
 /// @param webAddress const char*
 /// @param avatarUrl QUrl*
 ///
-KAboutPerson* k_aboutperson_new7(const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl);
+KAboutPerson* k_aboutperson_new7(const char* name, const char* task, const char* emailAddress, const char* webAddress, const void* avatarUrl);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#operator-eq)
 ///
 /// @param self KAboutPerson*
 /// @param other KAboutPerson*
 ///
-void k_aboutperson_operator_assign(void* self, void* other);
+void k_aboutperson_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutPerson*
+/// @param self const KAboutPerson*
 ///
-const char* k_aboutperson_name(void* self);
+const char* k_aboutperson_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#task)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutPerson*
+/// @param self const KAboutPerson*
 ///
-const char* k_aboutperson_task(void* self);
+const char* k_aboutperson_task(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#emailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutPerson*
+/// @param self const KAboutPerson*
 ///
-const char* k_aboutperson_email_address(void* self);
+const char* k_aboutperson_email_address(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#webAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutPerson*
+/// @param self const KAboutPerson*
 ///
-const char* k_aboutperson_web_address(void* self);
+const char* k_aboutperson_web_address(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#avatarUrl)
 ///
-/// @param self KAboutPerson*
+/// @param self const KAboutPerson*
 ///
-QUrl* k_aboutperson_avatar_url(void* self);
+QUrl* k_aboutperson_avatar_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#fromJSON)
 ///
 /// @param obj QJsonObject*
 ///
-KAboutPerson* k_aboutperson_from_j_s_o_n(void* obj);
+KAboutPerson* k_aboutperson_from_j_s_o_n(const void* obj);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html#dtor.KAboutPerson)
 ///
@@ -151,46 +151,46 @@ KAboutLicense* k_aboutlicense_new();
 ///
 /// @param other KAboutLicense*
 ///
-KAboutLicense* k_aboutlicense_new2(void* other);
+KAboutLicense* k_aboutlicense_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#operator-eq)
 ///
 /// @param self KAboutLicense*
 /// @param other KAboutLicense*
 ///
-void k_aboutlicense_operator_assign(void* self, void* other);
+void k_aboutlicense_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutLicense*
+/// @param self const KAboutLicense*
 ///
-const char* k_aboutlicense_text(void* self);
+const char* k_aboutlicense_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutLicense*
+/// @param self const KAboutLicense*
 ///
-const char* k_aboutlicense_name(void* self);
+const char* k_aboutlicense_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#key)
 ///
-/// @param self KAboutLicense*
+/// @param self const KAboutLicense*
 ///
 /// @return enum KAboutLicense__LicenseKey
 ///
-int32_t k_aboutlicense_key(void* self);
+int32_t k_aboutlicense_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#spdx)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutLicense*
+/// @param self const KAboutLicense*
 ///
-const char* k_aboutlicense_spdx(void* self);
+const char* k_aboutlicense_spdx(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#byKeyword)
 ///
@@ -202,10 +202,10 @@ KAboutLicense* k_aboutlicense_by_keyword(const char* keyword);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutLicense*
+/// @param self const KAboutLicense*
 /// @param formatName enum KAboutLicense__NameFormat
 ///
-const char* k_aboutlicense_name1(void* self, int32_t formatName);
+const char* k_aboutlicense_name1(const void* self, int32_t formatName);
 
 /// [Upstream resources](https://api.kde.org/kaboutlicense.html#dtor.KAboutLicense)
 ///
@@ -239,7 +239,7 @@ KAboutComponent* k_aboutcomponent_new2(const char* name, const char* description
 ///
 /// @param other KAboutComponent*
 ///
-KAboutComponent* k_aboutcomponent_new3(void* other);
+KAboutComponent* k_aboutcomponent_new3(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html)
 
@@ -296,45 +296,45 @@ KAboutComponent* k_aboutcomponent_new8(const char* name, const char* description
 /// @param self KAboutComponent*
 /// @param other KAboutComponent*
 ///
-void k_aboutcomponent_operator_assign(void* self, void* other);
+void k_aboutcomponent_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutComponent*
+/// @param self const KAboutComponent*
 ///
-const char* k_aboutcomponent_name(void* self);
+const char* k_aboutcomponent_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutComponent*
+/// @param self const KAboutComponent*
 ///
-const char* k_aboutcomponent_description(void* self);
+const char* k_aboutcomponent_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#version)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutComponent*
+/// @param self const KAboutComponent*
 ///
-const char* k_aboutcomponent_version(void* self);
+const char* k_aboutcomponent_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#webAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutComponent*
+/// @param self const KAboutComponent*
 ///
-const char* k_aboutcomponent_web_address(void* self);
+const char* k_aboutcomponent_web_address(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#license)
 ///
-/// @param self KAboutComponent*
+/// @param self const KAboutComponent*
 ///
-KAboutLicense* k_aboutcomponent_license(void* self);
+KAboutLicense* k_aboutcomponent_license(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutcomponent.html#dtor.KAboutComponent)
 ///
@@ -368,7 +368,7 @@ KAboutData* k_aboutdata_new2();
 ///
 /// @param other KAboutData*
 ///
-KAboutData* k_aboutdata_new3(void* other);
+KAboutData* k_aboutdata_new3(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html)
 
@@ -463,21 +463,21 @@ KAboutData* k_aboutdata_application_data();
 ///
 /// @param aboutData KAboutData*
 ///
-void k_aboutdata_set_application_data(void* aboutData);
+void k_aboutdata_set_application_data(const void* aboutData);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#operator-eq)
 ///
 /// @param self KAboutData*
 /// @param other KAboutData*
 ///
-void k_aboutdata_operator_assign(void* self, void* other);
+void k_aboutdata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
 /// @param self KAboutData*
 /// @param author KAboutPerson*
 ///
-KAboutData* k_aboutdata_add_author(void* self, void* author);
+KAboutData* k_aboutdata_add_author(void* self, const void* author);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
@@ -502,7 +502,7 @@ KAboutData* k_aboutdata_add_author3(void* self, const char* name, const char* ta
 /// @param self KAboutData*
 /// @param person KAboutPerson*
 ///
-KAboutData* k_aboutdata_add_credit(void* self, void* person);
+KAboutData* k_aboutdata_add_credit(void* self, const void* person);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
@@ -535,7 +535,7 @@ KAboutData* k_aboutdata_set_translator(void* self, const char* name, const char*
 /// @param self KAboutData*
 /// @param component KAboutComponent*
 ///
-KAboutData* k_aboutdata_add_component(void* self, void* component);
+KAboutData* k_aboutdata_add_component(void* self, const void* component);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///
@@ -602,7 +602,7 @@ KAboutData* k_aboutdata_set_display_name(void* self, const char* displayName);
 /// @param self KAboutData*
 /// @param image QVariant*
 ///
-KAboutData* k_aboutdata_set_program_logo(void* self, void* image);
+KAboutData* k_aboutdata_set_program_logo(void* self, const void* image);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#setVersion)
 ///
@@ -694,127 +694,127 @@ KAboutData* k_aboutdata_set_product_name(void* self, char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_component_name(void* self);
+const char* k_aboutdata_component_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#productName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_product_name(void* self);
+const char* k_aboutdata_product_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalProductName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_internal_product_name(void* self);
+const char* k_aboutdata_internal_product_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_display_name(void* self);
+const char* k_aboutdata_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#organizationDomain)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_organization_domain(void* self);
+const char* k_aboutdata_organization_domain(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalProgramName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_internal_program_name(void* self);
+const char* k_aboutdata_internal_program_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#programLogo)
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-QVariant* k_aboutdata_program_logo(void* self);
+QVariant* k_aboutdata_program_logo(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#version)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_version(void* self);
+const char* k_aboutdata_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalVersion)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_internal_version(void* self);
+const char* k_aboutdata_internal_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#shortDescription)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_short_description(void* self);
+const char* k_aboutdata_short_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#homepage)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_homepage(void* self);
+const char* k_aboutdata_homepage(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#bugAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_bug_address(void* self);
+const char* k_aboutdata_bug_address(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#internalBugAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_internal_bug_address(void* self);
+const char* k_aboutdata_internal_bug_address(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#authors)
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
 /// @return libqt_list of KAboutPerson*
 ///
-libqt_list k_aboutdata_authors(void* self);
+libqt_list k_aboutdata_authors(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#credits)
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
 /// @return libqt_list of KAboutPerson*
 ///
-libqt_list k_aboutdata_credits(void* self);
+libqt_list k_aboutdata_credits(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#translators)
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
 /// @return libqt_list of KAboutPerson*
 ///
-libqt_list k_aboutdata_translators(void* self);
+libqt_list k_aboutdata_translators(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#aboutTranslationTeam)
 ///
@@ -824,57 +824,57 @@ const char* k_aboutdata_about_translation_team();
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#components)
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
 /// @return libqt_list of KAboutComponent*
 ///
-libqt_list k_aboutdata_components(void* self);
+libqt_list k_aboutdata_components(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#otherText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_other_text(void* self);
+const char* k_aboutdata_other_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#licenses)
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
 /// @return libqt_list of KAboutLicense*
 ///
-libqt_list k_aboutdata_licenses(void* self);
+libqt_list k_aboutdata_licenses(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#copyrightStatement)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_copyright_statement(void* self);
+const char* k_aboutdata_copyright_statement(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#customAuthorPlainText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_custom_author_plain_text(void* self);
+const char* k_aboutdata_custom_author_plain_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#customAuthorRichText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_custom_author_rich_text(void* self);
+const char* k_aboutdata_custom_author_rich_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#customAuthorTextEnabled)
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-bool k_aboutdata_custom_author_text_enabled(void* self);
+bool k_aboutdata_custom_author_text_enabled(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#setCustomAuthorText)
 ///
@@ -915,9 +915,9 @@ KAboutData* k_aboutdata_set_desktop_file_name(void* self, const char* desktopFil
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KAboutData*
+/// @param self const KAboutData*
 ///
-const char* k_aboutdata_desktop_file_name(void* self);
+const char* k_aboutdata_desktop_file_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#addAuthor)
 ///
@@ -955,7 +955,7 @@ KAboutData* k_aboutdata_add_author4(void* self, const char* name, const char* ta
 /// @param webAddress const char*
 /// @param avatarUrl QUrl*
 ///
-KAboutData* k_aboutdata_add_author5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl);
+KAboutData* k_aboutdata_add_author5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, const void* avatarUrl);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#addCredit)
 ///
@@ -993,7 +993,7 @@ KAboutData* k_aboutdata_add_credit4(void* self, const char* name, const char* ta
 /// @param webAddress const char*
 /// @param avatarUrl QUrl*
 ///
-KAboutData* k_aboutdata_add_credit5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, void* avatarUrl);
+KAboutData* k_aboutdata_add_credit5(void* self, const char* name, const char* task, const char* emailAddress, const char* webAddress, const void* avatarUrl);
 
 /// [Upstream resources](https://api.kde.org/kaboutdata.html#addComponent)
 ///

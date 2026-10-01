@@ -14,7 +14,7 @@
 ///
 /// @param other QPixmapCache*
 ///
-QPixmapCache* q_pixmapcache_new(void* other);
+QPixmapCache* q_pixmapcache_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache.html)
 
@@ -60,27 +60,27 @@ bool q_pixmapcache_find(const char* key, void* pixmap);
 /// @param key QPixmapCache__Key*
 /// @param pixmap QPixmap*
 ///
-bool q_pixmapcache_find2(void* key, void* pixmap);
+bool q_pixmapcache_find2(const void* key, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache.html#insert)
 ///
 /// @param key const char*
 /// @param pixmap QPixmap*
 ///
-bool q_pixmapcache_insert(const char* key, void* pixmap);
+bool q_pixmapcache_insert(const char* key, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache.html#insert)
 ///
 /// @param pixmap QPixmap*
 ///
-QPixmapCache__Key* q_pixmapcache_insert2(void* pixmap);
+QPixmapCache__Key* q_pixmapcache_insert2(const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache.html#replace)
 ///
 /// @param key QPixmapCache__Key*
 /// @param pixmap QPixmap*
 ///
-bool q_pixmapcache_replace(void* key, void* pixmap);
+bool q_pixmapcache_replace(const void* key, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache.html#remove)
 ///
@@ -92,7 +92,7 @@ void q_pixmapcache_remove(const char* key);
 ///
 /// @param key QPixmapCache__Key*
 ///
-void q_pixmapcache_remove2(void* key);
+void q_pixmapcache_remove2(const void* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache.html#clear)
 ///
@@ -118,28 +118,28 @@ QPixmapCache__Key* q_pixmapcache__key_new();
 ///
 /// @param other QPixmapCache__Key*
 ///
-QPixmapCache__Key* q_pixmapcache__key_new2(void* other);
+QPixmapCache__Key* q_pixmapcache__key_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache-key.html#operator-eq-eq)
 ///
-/// @param self QPixmapCache__Key*
+/// @param self const QPixmapCache__Key*
 /// @param key QPixmapCache__Key*
 ///
-bool q_pixmapcache__key_operator_equal(void* self, void* key);
+bool q_pixmapcache__key_operator_equal(const void* self, const void* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache-key.html#operator-not-eq)
 ///
-/// @param self QPixmapCache__Key*
+/// @param self const QPixmapCache__Key*
 /// @param key QPixmapCache__Key*
 ///
-bool q_pixmapcache__key_operator_not_equal(void* self, void* key);
+bool q_pixmapcache__key_operator_not_equal(const void* self, const void* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache-key.html#operator-eq)
 ///
 /// @param self QPixmapCache__Key*
 /// @param other QPixmapCache__Key*
 ///
-void q_pixmapcache__key_operator_assign(void* self, void* other);
+void q_pixmapcache__key_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache-key.html#swap)
 ///
@@ -150,9 +150,9 @@ void q_pixmapcache__key_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmapcache-key.html#isValid)
 ///
-/// @param self QPixmapCache__Key*
+/// @param self const QPixmapCache__Key*
 ///
-bool q_pixmapcache__key_is_valid(void* self);
+bool q_pixmapcache__key_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

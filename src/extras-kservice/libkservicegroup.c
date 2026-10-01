@@ -11,43 +11,43 @@ KServiceGroup* k_servicegroup_new2(const char* _fullpath, const char* _relpath) 
     return KServiceGroup_New2(qstring(_fullpath), qstring(_relpath));
 }
 
-const char* k_servicegroup_rel_path(void* self) {
+const char* k_servicegroup_rel_path(const void* self) {
     libqt_string _str = KServiceGroup_RelPath((KServiceGroup*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_servicegroup_caption(void* self) {
+const char* k_servicegroup_caption(const void* self) {
     libqt_string _str = KServiceGroup_Caption((KServiceGroup*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_servicegroup_icon(void* self) {
+const char* k_servicegroup_icon(const void* self) {
     libqt_string _str = KServiceGroup_Icon((KServiceGroup*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_servicegroup_comment(void* self) {
+const char* k_servicegroup_comment(const void* self) {
     libqt_string _str = KServiceGroup_Comment((KServiceGroup*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_servicegroup_child_count(void* self) {
+int32_t k_servicegroup_child_count(const void* self) {
     return KServiceGroup_ChildCount((KServiceGroup*)self);
 }
 
-bool k_servicegroup_no_display(void* self) {
+bool k_servicegroup_no_display(const void* self) {
     return KServiceGroup_NoDisplay((KServiceGroup*)self);
 }
 
-bool k_servicegroup_show_empty_menu(void* self) {
+bool k_servicegroup_show_empty_menu(const void* self) {
     return KServiceGroup_ShowEmptyMenu((KServiceGroup*)self);
 }
 
@@ -55,7 +55,7 @@ void k_servicegroup_set_show_empty_menu(void* self, bool b) {
     KServiceGroup_SetShowEmptyMenu((KServiceGroup*)self, b);
 }
 
-bool k_servicegroup_show_inline_header(void* self) {
+bool k_servicegroup_show_inline_header(const void* self) {
     return KServiceGroup_ShowInlineHeader((KServiceGroup*)self);
 }
 
@@ -63,7 +63,7 @@ void k_servicegroup_set_show_inline_header(void* self, bool _b) {
     KServiceGroup_SetShowInlineHeader((KServiceGroup*)self, _b);
 }
 
-bool k_servicegroup_inline_alias(void* self) {
+bool k_servicegroup_inline_alias(const void* self) {
     return KServiceGroup_InlineAlias((KServiceGroup*)self);
 }
 
@@ -71,7 +71,7 @@ void k_servicegroup_set_inline_alias(void* self, bool _b) {
     KServiceGroup_SetInlineAlias((KServiceGroup*)self, _b);
 }
 
-bool k_servicegroup_allow_inline(void* self) {
+bool k_servicegroup_allow_inline(const void* self) {
     return KServiceGroup_AllowInline((KServiceGroup*)self);
 }
 
@@ -79,7 +79,7 @@ void k_servicegroup_set_allow_inline(void* self, bool _b) {
     KServiceGroup_SetAllowInline((KServiceGroup*)self, _b);
 }
 
-int32_t k_servicegroup_inline_value(void* self) {
+int32_t k_servicegroup_inline_value(const void* self) {
     return KServiceGroup_InlineValue((KServiceGroup*)self);
 }
 
@@ -87,7 +87,7 @@ void k_servicegroup_set_inline_value(void* self, int _val) {
     KServiceGroup_SetInlineValue((KServiceGroup*)self, _val);
 }
 
-const char** k_servicegroup_suppress_generic_names(void* self) {
+const char** k_servicegroup_suppress_generic_names(const void* self) {
     libqt_list _arr = KServiceGroup_SuppressGenericNames((KServiceGroup*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -118,7 +118,7 @@ void k_servicegroup_set_layout_info(void* self, const char* layout[static 1]) {
     free(layout_qstr);
 }
 
-const char** k_servicegroup_layout_info(void* self) {
+const char** k_servicegroup_layout_info(const void* self) {
     libqt_list _arr = KServiceGroup_LayoutInfo((KServiceGroup*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -135,54 +135,54 @@ const char** k_servicegroup_layout_info(void* self) {
     return _ret;
 }
 
-const char* k_servicegroup_base_group_name(void* self) {
+const char* k_servicegroup_base_group_name(const void* self) {
     libqt_string _str = KServiceGroup_BaseGroupName((KServiceGroup*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_servicegroup_directory_entry_path(void* self) {
+const char* k_servicegroup_directory_entry_path(const void* self) {
     libqt_string _str = KServiceGroup_DirectoryEntryPath((KServiceGroup*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_servicegroup_is_type(void* self, int32_t t) {
+bool k_servicegroup_is_type(const void* self, int32_t t) {
     return KSycocaEntry_IsType((KSycocaEntry*)self, t);
 }
 
-int32_t k_servicegroup_sycoca_type(void* self) {
+int32_t k_servicegroup_sycoca_type(const void* self) {
     return KSycocaEntry_SycocaType((KSycocaEntry*)self);
 }
 
-const char* k_servicegroup_name(void* self) {
+const char* k_servicegroup_name(const void* self) {
     libqt_string _str = KSycocaEntry_Name((KSycocaEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_servicegroup_entry_path(void* self) {
+const char* k_servicegroup_entry_path(const void* self) {
     libqt_string _str = KSycocaEntry_EntryPath((KSycocaEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_servicegroup_storage_id(void* self) {
+const char* k_servicegroup_storage_id(const void* self) {
     libqt_string _str = KSycocaEntry_StorageId((KSycocaEntry*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_servicegroup_is_valid(void* self) {
+bool k_servicegroup_is_valid(const void* self) {
     return KSycocaEntry_IsValid((KSycocaEntry*)self);
 }
 
-bool k_servicegroup_is_deleted(void* self) {
+bool k_servicegroup_is_deleted(const void* self) {
     return KSycocaEntry_IsDeleted((KSycocaEntry*)self);
 }
 
@@ -190,7 +190,7 @@ void k_servicegroup_set_deleted(void* self, bool deleted) {
     KSycocaEntry_SetDeleted((KSycocaEntry*)self, deleted);
 }
 
-bool k_servicegroup_is_separator(void* self) {
+bool k_servicegroup_is_separator(const void* self) {
     return KSycocaEntry_IsSeparator((KSycocaEntry*)self);
 }
 

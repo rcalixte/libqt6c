@@ -24,26 +24,26 @@ QSortFilterProxyModel* q_sortfilterproxymodel_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-const QMetaObject* q_sortfilterproxymodel_meta_object(void* self);
+const QMetaObject* q_sortfilterproxymodel_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback const QMetaObject* func()
+/// @param self const QSortFilterProxyModel*
+/// @param callback const QMetaObject* func(const QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_sortfilterproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-const QMetaObject* q_sortfilterproxymodel_super_meta_object(void* self);
+const QMetaObject* q_sortfilterproxymodel_super_meta_object(const void* self);
 
 /// @param self QSortFilterProxyModel*
 /// @param param1 const char*
@@ -122,123 +122,123 @@ void q_sortfilterproxymodel_super_set_source_model(void* self, void* sourceModel
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param proxyIndex QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_map_to_source(void* self, void* proxyIndex);
+QModelIndex* q_sortfilterproxymodel_map_to_source(const void* self, const void* proxyIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* proxyIndex)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QModelIndex* func(const QSortFilterProxyModel* self, QModelIndex* proxyIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapToSource)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param proxyIndex QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_super_map_to_source(void* self, void* proxyIndex);
+QModelIndex* q_sortfilterproxymodel_super_map_to_source(const void* self, const void* proxyIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param sourceIndex QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_map_from_source(void* self, void* sourceIndex);
+QModelIndex* q_sortfilterproxymodel_map_from_source(const void* self, const void* sourceIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* sourceIndex)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QModelIndex* func(const QSortFilterProxyModel* self, QModelIndex* sourceIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapFromSource)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param sourceIndex QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_super_map_from_source(void* self, void* sourceIndex);
+QModelIndex* q_sortfilterproxymodel_super_map_from_source(const void* self, const void* sourceIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param proxySelection QItemSelection*
 ///
-QItemSelection* q_sortfilterproxymodel_map_selection_to_source(void* self, void* proxySelection);
+QItemSelection* q_sortfilterproxymodel_map_selection_to_source(const void* self, const void* proxySelection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QItemSelection* func(QSortFilterProxyModel* self, QItemSelection* proxySelection)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QItemSelection* func(const QSortFilterProxyModel* self, QItemSelection* proxySelection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionToSource)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param proxySelection QItemSelection*
 ///
-QItemSelection* q_sortfilterproxymodel_super_map_selection_to_source(void* self, void* proxySelection);
+QItemSelection* q_sortfilterproxymodel_super_map_selection_to_source(const void* self, const void* proxySelection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param sourceSelection QItemSelection*
 ///
-QItemSelection* q_sortfilterproxymodel_map_selection_from_source(void* self, void* sourceSelection);
+QItemSelection* q_sortfilterproxymodel_map_selection_from_source(const void* self, const void* sourceSelection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QItemSelection* func(QSortFilterProxyModel* self, QItemSelection* sourceSelection)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QItemSelection* func(const QSortFilterProxyModel* self, QItemSelection* sourceSelection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mapSelectionFromSource)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param sourceSelection QItemSelection*
 ///
-QItemSelection* q_sortfilterproxymodel_super_map_selection_from_source(void* self, void* sourceSelection);
+QItemSelection* q_sortfilterproxymodel_super_map_selection_from_source(const void* self, const void* sourceSelection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRegularExpression)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-QRegularExpression* q_sortfilterproxymodel_filter_regular_expression(void* self);
+QRegularExpression* q_sortfilterproxymodel_filter_regular_expression(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterKeyColumn)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-int32_t q_sortfilterproxymodel_filter_key_column(void* self);
+int32_t q_sortfilterproxymodel_filter_key_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterKeyColumn)
 ///
@@ -249,11 +249,11 @@ void q_sortfilterproxymodel_set_filter_key_column(void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivity)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return enum Qt__CaseSensitivity
 ///
-int32_t q_sortfilterproxymodel_filter_case_sensitivity(void* self);
+int32_t q_sortfilterproxymodel_filter_case_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterCaseSensitivity)
 ///
@@ -264,11 +264,11 @@ void q_sortfilterproxymodel_set_filter_case_sensitivity(void* self, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivity)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return enum Qt__CaseSensitivity
 ///
-int32_t q_sortfilterproxymodel_sort_case_sensitivity(void* self);
+int32_t q_sortfilterproxymodel_sort_case_sensitivity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortCaseSensitivity)
 ///
@@ -279,9 +279,9 @@ void q_sortfilterproxymodel_set_sort_case_sensitivity(void* self, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isSortLocaleAware)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_is_sort_locale_aware(void* self);
+bool q_sortfilterproxymodel_is_sort_locale_aware(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortLocaleAware)
 ///
@@ -292,23 +292,23 @@ void q_sortfilterproxymodel_set_sort_locale_aware(void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortColumn)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-int32_t q_sortfilterproxymodel_sort_column(void* self);
+int32_t q_sortfilterproxymodel_sort_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortOrder)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return enum Qt__SortOrder
 ///
-int32_t q_sortfilterproxymodel_sort_order(void* self);
+int32_t q_sortfilterproxymodel_sort_order(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilter)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_dynamic_sort_filter(void* self);
+bool q_sortfilterproxymodel_dynamic_sort_filter(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setDynamicSortFilter)
 ///
@@ -319,9 +319,9 @@ void q_sortfilterproxymodel_set_dynamic_sort_filter(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRole)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-int32_t q_sortfilterproxymodel_sort_role(void* self);
+int32_t q_sortfilterproxymodel_sort_role(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortRole)
 ///
@@ -332,9 +332,9 @@ void q_sortfilterproxymodel_set_sort_role(void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRole)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-int32_t q_sortfilterproxymodel_filter_role(void* self);
+int32_t q_sortfilterproxymodel_filter_role(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRole)
 ///
@@ -345,9 +345,9 @@ void q_sortfilterproxymodel_set_filter_role(void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isRecursiveFilteringEnabled)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_is_recursive_filtering_enabled(void* self);
+bool q_sortfilterproxymodel_is_recursive_filtering_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setRecursiveFilteringEnabled)
 ///
@@ -358,9 +358,9 @@ void q_sortfilterproxymodel_set_recursive_filtering_enabled(void* self, bool rec
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRows)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_auto_accept_child_rows(void* self);
+bool q_sortfilterproxymodel_auto_accept_child_rows(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setAutoAcceptChildRows)
 ///
@@ -381,7 +381,7 @@ void q_sortfilterproxymodel_set_filter_regular_expression(void* self, const char
 /// @param self QSortFilterProxyModel*
 /// @param regularExpression QRegularExpression*
 ///
-void q_sortfilterproxymodel_set_filter_regular_expression2(void* self, void* regularExpression);
+void q_sortfilterproxymodel_set_filter_regular_expression2(void* self, const void* regularExpression);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterWildcard)
 ///
@@ -405,84 +405,84 @@ void q_sortfilterproxymodel_invalidate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param source_row int
 /// @param source_parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_filter_accepts_row(void* self, int source_row, void* source_parent);
+bool q_sortfilterproxymodel_filter_accepts_row(const void* self, int source_row, const void* source_parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback bool func(QSortFilterProxyModel* self, int source_row, QModelIndex* source_parent)
+/// @param self const QSortFilterProxyModel*
+/// @param callback bool func(const QSortFilterProxyModel* self, int source_row, QModelIndex* source_parent)
 ///
-void q_sortfilterproxymodel_on_filter_accepts_row(void* self, bool (*callback)(void*, int, void*));
+void q_sortfilterproxymodel_on_filter_accepts_row(const void* self, bool (*callback)(const void*, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsRow)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param source_row int
 /// @param source_parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_filter_accepts_row(void* self, int source_row, void* source_parent);
+bool q_sortfilterproxymodel_super_filter_accepts_row(const void* self, int source_row, const void* source_parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param source_column int
 /// @param source_parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_filter_accepts_column(void* self, int source_column, void* source_parent);
+bool q_sortfilterproxymodel_filter_accepts_column(const void* self, int source_column, const void* source_parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback bool func(QSortFilterProxyModel* self, int source_column, QModelIndex* source_parent)
+/// @param self const QSortFilterProxyModel*
+/// @param callback bool func(const QSortFilterProxyModel* self, int source_column, QModelIndex* source_parent)
 ///
-void q_sortfilterproxymodel_on_filter_accepts_column(void* self, bool (*callback)(void*, int, void*));
+void q_sortfilterproxymodel_on_filter_accepts_column(const void* self, bool (*callback)(const void*, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterAcceptsColumn)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param source_column int
 /// @param source_parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_filter_accepts_column(void* self, int source_column, void* source_parent);
+bool q_sortfilterproxymodel_super_filter_accepts_column(const void* self, int source_column, const void* source_parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#lessThan)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param source_left QModelIndex*
 /// @param source_right QModelIndex*
 ///
-bool q_sortfilterproxymodel_less_than(void* self, void* source_left, void* source_right);
+bool q_sortfilterproxymodel_less_than(const void* self, const void* source_left, const void* source_right);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#lessThan)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* source_left, QModelIndex* source_right)
+/// @param self const QSortFilterProxyModel*
+/// @param callback bool func(const QSortFilterProxyModel* self, QModelIndex* source_left, QModelIndex* source_right)
 ///
-void q_sortfilterproxymodel_on_less_than(void* self, bool (*callback)(void*, void*, void*));
+void q_sortfilterproxymodel_on_less_than(const void* self, bool (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#lessThan)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param source_left QModelIndex*
 /// @param source_right QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_less_than(void* self, void* source_left, void* source_right);
+bool q_sortfilterproxymodel_super_less_than(const void* self, const void* source_left, const void* source_right);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
 ///
@@ -490,45 +490,11 @@ bool q_sortfilterproxymodel_super_less_than(void* self, void* source_left, void*
 ///
 void q_sortfilterproxymodel_invalidate_filter(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QSortFilterProxyModel*
-/// @param callback void func()
-///
-void q_sortfilterproxymodel_on_invalidate_filter(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateFilter)
-///
-/// Base class method implementation
-///
-/// @param self QSortFilterProxyModel*
-///
-void q_sortfilterproxymodel_super_invalidate_filter(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
 ///
 /// @param self QSortFilterProxyModel*
 ///
 void q_sortfilterproxymodel_invalidate_rows_filter(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QSortFilterProxyModel*
-/// @param callback void func()
-///
-void q_sortfilterproxymodel_on_invalidate_rows_filter(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateRowsFilter)
-///
-/// Base class method implementation
-///
-/// @param self QSortFilterProxyModel*
-///
-void q_sortfilterproxymodel_super_invalidate_rows_filter(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
 ///
@@ -536,215 +502,198 @@ void q_sortfilterproxymodel_super_invalidate_rows_filter(void* self);
 ///
 void q_sortfilterproxymodel_invalidate_columns_filter(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QSortFilterProxyModel*
-/// @param callback void func()
-///
-void q_sortfilterproxymodel_on_invalidate_columns_filter(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#invalidateColumnsFilter)
-///
-/// Base class method implementation
-///
-/// @param self QSortFilterProxyModel*
-///
-void q_sortfilterproxymodel_super_invalidate_columns_filter(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_index(void* self, int row, int column, void* parent);
+QModelIndex* q_sortfilterproxymodel_index(const void* self, int row, int column, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QModelIndex* func(QSortFilterProxyModel* self, int row, int column, QModelIndex* parent)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QModelIndex* func(const QSortFilterProxyModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void q_sortfilterproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#index)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_super_index(void* self, int row, int column, void* parent);
+QModelIndex* q_sortfilterproxymodel_super_index(const void* self, int row, int column, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_parent(void* self, void* child);
+QModelIndex* q_sortfilterproxymodel_parent(const void* self, const void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* child)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QModelIndex* func(const QSortFilterProxyModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#parent)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_super_parent(void* self, void* child);
+QModelIndex* q_sortfilterproxymodel_super_parent(const void* self, const void* child);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_sibling(void* self, int row, int column, void* idx);
+QModelIndex* q_sortfilterproxymodel_sibling(const void* self, int row, int column, const void* idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QModelIndex* func(QSortFilterProxyModel* self, int row, int column, QModelIndex* idx)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QModelIndex* func(const QSortFilterProxyModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void q_sortfilterproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sibling)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_super_sibling(void* self, int row, int column, void* idx);
+QModelIndex* q_sortfilterproxymodel_super_sibling(const void* self, int row, int column, const void* idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_sortfilterproxymodel_row_count(void* self, void* parent);
+int32_t q_sortfilterproxymodel_row_count(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback int32_t func(QSortFilterProxyModel* self, QModelIndex* parent)
+/// @param self const QSortFilterProxyModel*
+/// @param callback int32_t func(const QSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_sortfilterproxymodel_super_row_count(void* self, void* parent);
+int32_t q_sortfilterproxymodel_super_row_count(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_sortfilterproxymodel_column_count(void* self, void* parent);
+int32_t q_sortfilterproxymodel_column_count(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback int32_t func(QSortFilterProxyModel* self, QModelIndex* parent)
+/// @param self const QSortFilterProxyModel*
+/// @param callback int32_t func(const QSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#columnCount)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_sortfilterproxymodel_super_column_count(void* self, void* parent);
+int32_t q_sortfilterproxymodel_super_column_count(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_has_children(void* self, void* parent);
+bool q_sortfilterproxymodel_has_children(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* parent)
+/// @param self const QSortFilterProxyModel*
+/// @param callback bool func(const QSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#hasChildren)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_has_children(void* self, void* parent);
+bool q_sortfilterproxymodel_super_has_children(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* q_sortfilterproxymodel_data(void* self, void* index, int role);
+QVariant* q_sortfilterproxymodel_data(const void* self, const void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QVariant* func(QSortFilterProxyModel* self, QModelIndex* index, int role)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QVariant* func(const QSortFilterProxyModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
+void q_sortfilterproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#data)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* q_sortfilterproxymodel_super_data(void* self, void* index, int role);
+QVariant* q_sortfilterproxymodel_super_data(const void* self, const void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
@@ -753,7 +702,7 @@ QVariant* q_sortfilterproxymodel_super_data(void* self, void* index, int role);
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_sortfilterproxymodel_set_data(void* self, void* index, void* value, int role);
+bool q_sortfilterproxymodel_set_data(void* self, const void* index, const void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
@@ -762,7 +711,7 @@ bool q_sortfilterproxymodel_set_data(void* self, void* index, void* value, int r
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* index, QVariant* value, int role)
 ///
-void q_sortfilterproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
+void q_sortfilterproxymodel_on_set_data(void* self, bool (*callback)(void*, const void*, const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setData)
 ///
@@ -773,38 +722,38 @@ void q_sortfilterproxymodel_on_set_data(void* self, bool (*callback)(void*, void
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_sortfilterproxymodel_super_set_data(void* self, void* index, void* value, int role);
+bool q_sortfilterproxymodel_super_set_data(void* self, const void* index, const void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* q_sortfilterproxymodel_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* q_sortfilterproxymodel_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QVariant* func(QSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QVariant* func(const QSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
+void q_sortfilterproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* q_sortfilterproxymodel_super_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* q_sortfilterproxymodel_super_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
@@ -814,7 +763,7 @@ QVariant* q_sortfilterproxymodel_super_header_data(void* self, int section, int3
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_sortfilterproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool q_sortfilterproxymodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
@@ -823,7 +772,7 @@ bool q_sortfilterproxymodel_set_header_data(void* self, int section, int32_t ori
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 ///
-void q_sortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
+void q_sortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
@@ -835,32 +784,32 @@ void q_sortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_sortfilterproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool q_sortfilterproxymodel_super_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_sortfilterproxymodel_mime_data(void* self, libqt_list indexes);
+QMimeData* q_sortfilterproxymodel_mime_data(const void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QMimeData* func(QSortFilterProxyModel* self, libqt_list of QModelIndex* indexes)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QMimeData* func(const QSortFilterProxyModel* self, libqt_list of QModelIndex* indexes)
 ///
-void q_sortfilterproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+void q_sortfilterproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_sortfilterproxymodel_super_mime_data(void* self, libqt_list indexes);
+QMimeData* q_sortfilterproxymodel_super_mime_data(const void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
@@ -871,7 +820,7 @@ QMimeData* q_sortfilterproxymodel_super_mime_data(void* self, libqt_list indexes
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_sortfilterproxymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
@@ -880,7 +829,7 @@ bool q_sortfilterproxymodel_drop_mime_data(void* self, void* data, int32_t actio
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
+void q_sortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, const void*, int32_t, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
@@ -893,7 +842,7 @@ void q_sortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_sortfilterproxymodel_super_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
@@ -902,7 +851,7 @@ bool q_sortfilterproxymodel_super_drop_mime_data(void* self, void* data, int32_t
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_insert_rows(void* self, int row, int count, void* parent);
+bool q_sortfilterproxymodel_insert_rows(void* self, int row, int count, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
@@ -911,7 +860,7 @@ bool q_sortfilterproxymodel_insert_rows(void* self, int row, int count, void* pa
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, int row, int count, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
+void q_sortfilterproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
@@ -922,7 +871,7 @@ void q_sortfilterproxymodel_on_insert_rows(void* self, bool (*callback)(void*, i
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_insert_rows(void* self, int row, int count, void* parent);
+bool q_sortfilterproxymodel_super_insert_rows(void* self, int row, int count, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
@@ -931,7 +880,7 @@ bool q_sortfilterproxymodel_super_insert_rows(void* self, int row, int count, vo
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_insert_columns(void* self, int column, int count, void* parent);
+bool q_sortfilterproxymodel_insert_columns(void* self, int column, int count, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
@@ -940,7 +889,7 @@ bool q_sortfilterproxymodel_insert_columns(void* self, int column, int count, vo
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, int column, int count, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
+void q_sortfilterproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertColumns)
 ///
@@ -951,7 +900,7 @@ void q_sortfilterproxymodel_on_insert_columns(void* self, bool (*callback)(void*
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_insert_columns(void* self, int column, int count, void* parent);
+bool q_sortfilterproxymodel_super_insert_columns(void* self, int column, int count, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
@@ -960,7 +909,7 @@ bool q_sortfilterproxymodel_super_insert_columns(void* self, int column, int cou
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_remove_rows(void* self, int row, int count, void* parent);
+bool q_sortfilterproxymodel_remove_rows(void* self, int row, int count, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
@@ -969,7 +918,7 @@ bool q_sortfilterproxymodel_remove_rows(void* self, int row, int count, void* pa
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, int row, int count, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
+void q_sortfilterproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeRows)
 ///
@@ -980,7 +929,7 @@ void q_sortfilterproxymodel_on_remove_rows(void* self, bool (*callback)(void*, i
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_remove_rows(void* self, int row, int count, void* parent);
+bool q_sortfilterproxymodel_super_remove_rows(void* self, int row, int count, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
@@ -989,7 +938,7 @@ bool q_sortfilterproxymodel_super_remove_rows(void* self, int row, int count, vo
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_remove_columns(void* self, int column, int count, void* parent);
+bool q_sortfilterproxymodel_remove_columns(void* self, int column, int count, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
@@ -998,7 +947,7 @@ bool q_sortfilterproxymodel_remove_columns(void* self, int column, int count, vo
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, int column, int count, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
+void q_sortfilterproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#removeColumns)
 ///
@@ -1009,14 +958,14 @@ void q_sortfilterproxymodel_on_remove_columns(void* self, bool (*callback)(void*
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_remove_columns(void* self, int column, int count, void* parent);
+bool q_sortfilterproxymodel_super_remove_columns(void* self, int column, int count, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
 /// @param self QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-void q_sortfilterproxymodel_fetch_more(void* self, void* parent);
+void q_sortfilterproxymodel_fetch_more(void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
@@ -1025,7 +974,7 @@ void q_sortfilterproxymodel_fetch_more(void* self, void* parent);
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_fetch_more(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#fetchMore)
 ///
@@ -1034,92 +983,92 @@ void q_sortfilterproxymodel_on_fetch_more(void* self, void (*callback)(void*, vo
 /// @param self QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-void q_sortfilterproxymodel_super_fetch_more(void* self, void* parent);
+void q_sortfilterproxymodel_super_fetch_more(void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_can_fetch_more(void* self, void* parent);
+bool q_sortfilterproxymodel_can_fetch_more(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* parent)
+/// @param self const QSortFilterProxyModel*
+/// @param callback bool func(const QSortFilterProxyModel* self, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#canFetchMore)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_can_fetch_more(void* self, void* parent);
+bool q_sortfilterproxymodel_super_can_fetch_more(const void* self, const void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t q_sortfilterproxymodel_flags(void* self, void* index);
+int32_t q_sortfilterproxymodel_flags(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback int32_t func(QSortFilterProxyModel* self, QModelIndex* index)
+/// @param self const QSortFilterProxyModel*
+/// @param callback int32_t func(const QSortFilterProxyModel* self, QModelIndex* index)
 ///
-void q_sortfilterproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#flags)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t q_sortfilterproxymodel_super_flags(void* self, void* index);
+int32_t q_sortfilterproxymodel_super_flags(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_buddy(void* self, void* index);
+QModelIndex* q_sortfilterproxymodel_buddy(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* index)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QModelIndex* func(const QSortFilterProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#buddy)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* q_sortfilterproxymodel_super_buddy(void* self, void* index);
+QModelIndex* q_sortfilterproxymodel_super_buddy(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -1128,22 +1077,22 @@ QModelIndex* q_sortfilterproxymodel_super_buddy(void* self, void* index);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_sortfilterproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list q_sortfilterproxymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback libqt_list of QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
+/// @param self const QSortFilterProxyModel*
+/// @param callback libqt_list of QModelIndex* func(const QSortFilterProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void q_sortfilterproxymodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
+void q_sortfilterproxymodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#match)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -1152,34 +1101,34 @@ void q_sortfilterproxymodel_on_match(void* self, libqt_list (*callback)(void*, v
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_sortfilterproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list q_sortfilterproxymodel_super_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-QSize* q_sortfilterproxymodel_span(void* self, void* index);
+QSize* q_sortfilterproxymodel_span(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QSize* func(QSortFilterProxyModel* self, QModelIndex* index)
+/// @param self const QSortFilterProxyModel*
+/// @param callback QSize* func(const QSortFilterProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#span)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-QSize* q_sortfilterproxymodel_super_span(void* self, void* index);
+QSize* q_sortfilterproxymodel_super_span(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sort)
 ///
@@ -1212,53 +1161,53 @@ void q_sortfilterproxymodel_super_sort(void* self, int column, int32_t order);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-const char** q_sortfilterproxymodel_mime_types(void* self);
+const char** q_sortfilterproxymodel_mime_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback const char** func()
+/// @param self const QSortFilterProxyModel*
+/// @param callback const char** func(const QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_mime_types(void* self, const char** (*callback)());
+void q_sortfilterproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-const char** q_sortfilterproxymodel_super_mime_types(void* self);
+const char** q_sortfilterproxymodel_super_mime_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_sortfilterproxymodel_supported_drop_actions(void* self);
+int32_t q_sortfilterproxymodel_supported_drop_actions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback int32_t func()
+/// @param self const QSortFilterProxyModel*
+/// @param callback int32_t func(const QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
+void q_sortfilterproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#supportedDropActions)
 ///
 /// Base class method implementation
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_sortfilterproxymodel_super_supported_drop_actions(void* self);
+int32_t q_sortfilterproxymodel_super_supported_drop_actions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilterChanged)
 ///
@@ -1395,19 +1344,19 @@ const char* q_sortfilterproxymodel_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-QAbstractItemModel* q_sortfilterproxymodel_source_model(void* self);
+QAbstractItemModel* q_sortfilterproxymodel_source_model(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param column int
 ///
-bool q_sortfilterproxymodel_has_index(void* self, int row, int column);
+bool q_sortfilterproxymodel_has_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1455,7 +1404,7 @@ bool q_sortfilterproxymodel_remove_column(void* self, int column);
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_sortfilterproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
+bool q_sortfilterproxymodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1467,16 +1416,16 @@ bool q_sortfilterproxymodel_move_row(void* self, void* sourceParent, int sourceR
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_sortfilterproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
+bool q_sortfilterproxymodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-bool q_sortfilterproxymodel_check_index(void* self, void* index);
+bool q_sortfilterproxymodel_check_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1486,7 +1435,7 @@ bool q_sortfilterproxymodel_check_index(void* self, void* index);
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 ///
-void q_sortfilterproxymodel_data_changed(void* self, void* topLeft, void* bottomRight);
+void q_sortfilterproxymodel_data_changed(void* self, const void* topLeft, const void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1495,7 +1444,7 @@ void q_sortfilterproxymodel_data_changed(void* self, void* topLeft, void* bottom
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 ///
-void q_sortfilterproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
+void q_sortfilterproxymodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1555,12 +1504,12 @@ void q_sortfilterproxymodel_on_layout_about_to_be_changed(void* self, void (*cal
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_has_index3(void* self, int row, int column, void* parent);
+bool q_sortfilterproxymodel_has_index3(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1570,7 +1519,7 @@ bool q_sortfilterproxymodel_has_index3(void* self, int row, int column, void* pa
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_insert_row2(void* self, int row, void* parent);
+bool q_sortfilterproxymodel_insert_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1580,7 +1529,7 @@ bool q_sortfilterproxymodel_insert_row2(void* self, int row, void* parent);
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_insert_column2(void* self, int column, void* parent);
+bool q_sortfilterproxymodel_insert_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1590,7 +1539,7 @@ bool q_sortfilterproxymodel_insert_column2(void* self, int column, void* parent)
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_remove_row2(void* self, int row, void* parent);
+bool q_sortfilterproxymodel_remove_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1600,17 +1549,17 @@ bool q_sortfilterproxymodel_remove_row2(void* self, int row, void* parent);
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_remove_column2(void* self, int column, void* parent);
+bool q_sortfilterproxymodel_remove_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
 ///
-bool q_sortfilterproxymodel_check_index2(void* self, void* index, int32_t options);
+bool q_sortfilterproxymodel_check_index2(const void* self, const void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1621,7 +1570,7 @@ bool q_sortfilterproxymodel_check_index2(void* self, void* index, int32_t option
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_sortfilterproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_sortfilterproxymodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1630,7 +1579,7 @@ void q_sortfilterproxymodel_data_changed3(void* self, void* topLeft, void* botto
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_sortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void q_sortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1712,9 +1661,9 @@ void q_sortfilterproxymodel_on_layout_about_to_be_changed2(void* self, void (*ca
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-const char* q_sortfilterproxymodel_object_name(void* self);
+const char* q_sortfilterproxymodel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1729,33 +1678,33 @@ void q_sortfilterproxymodel_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_is_widget_type(void* self);
+bool q_sortfilterproxymodel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_is_window_type(void* self);
+bool q_sortfilterproxymodel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_is_quick_item_type(void* self);
+bool q_sortfilterproxymodel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_signals_blocked(void* self);
+bool q_sortfilterproxymodel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1770,9 +1719,9 @@ bool q_sortfilterproxymodel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-QThread* q_sortfilterproxymodel_thread(void* self);
+QThread* q_sortfilterproxymodel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1823,11 +1772,11 @@ void q_sortfilterproxymodel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_sortfilterproxymodel_children(void* self);
+libqt_list q_sortfilterproxymodel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1865,7 +1814,7 @@ void q_sortfilterproxymodel_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_sortfilterproxymodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_sortfilterproxymodel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1876,18 +1825,18 @@ QMetaObject__Connection* q_sortfilterproxymodel_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_sortfilterproxymodel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_sortfilterproxymodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_sortfilterproxymodel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_sortfilterproxymodel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1898,7 +1847,7 @@ QMetaObject__Connection* q_sortfilterproxymodel_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_sortfilterproxymodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_sortfilterproxymodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1909,24 +1858,24 @@ bool q_sortfilterproxymodel_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_sortfilterproxymodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_sortfilterproxymodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-bool q_sortfilterproxymodel_disconnect3(void* self);
+bool q_sortfilterproxymodel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param receiver QObject*
 ///
-bool q_sortfilterproxymodel_disconnect4(void* self, void* receiver);
+bool q_sortfilterproxymodel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1934,23 +1883,23 @@ bool q_sortfilterproxymodel_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_sortfilterproxymodel_disconnect5(void* param1);
+bool q_sortfilterproxymodel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-void q_sortfilterproxymodel_dump_object_tree(void* self);
+void q_sortfilterproxymodel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-void q_sortfilterproxymodel_dump_object_info(void* self);
+void q_sortfilterproxymodel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1960,16 +1909,16 @@ void q_sortfilterproxymodel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_sortfilterproxymodel_set_property(void* self, const char* name, void* value);
+bool q_sortfilterproxymodel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param name const char*
 ///
-QVariant* q_sortfilterproxymodel_property(void* self, const char* name);
+QVariant* q_sortfilterproxymodel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1977,9 +1926,9 @@ QVariant* q_sortfilterproxymodel_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-const char** q_sortfilterproxymodel_dynamic_property_names(void* self);
+const char** q_sortfilterproxymodel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1993,9 +1942,9 @@ QBindingStorage* q_sortfilterproxymodel_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-const QBindingStorage* q_sortfilterproxymodel_binding_storage2(void* self);
+const QBindingStorage* q_sortfilterproxymodel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2018,10 +1967,10 @@ void q_sortfilterproxymodel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param classname const char*
 ///
-bool q_sortfilterproxymodel_inherits(void* self, const char* classname);
+bool q_sortfilterproxymodel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2061,7 +2010,7 @@ int32_t q_sortfilterproxymodel_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sortfilterproxymodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_sortfilterproxymodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2073,59 +2022,59 @@ QMetaObject__Connection* q_sortfilterproxymodel_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sortfilterproxymodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_sortfilterproxymodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_sortfilterproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_sortfilterproxymodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param signal const char*
 ///
-bool q_sortfilterproxymodel_disconnect1(void* self, const char* signal);
+bool q_sortfilterproxymodel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSortFilterProxyModel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_sortfilterproxymodel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_sortfilterproxymodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_sortfilterproxymodel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_sortfilterproxymodel_disconnect23(void* self, void* receiver, const char* member);
+bool q_sortfilterproxymodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QSortFilterProxyModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_sortfilterproxymodel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2172,9 +2121,9 @@ bool q_sortfilterproxymodel_super_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback bool func()
+/// @param callback bool func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_submit(void* self, bool (*callback)());
+void q_sortfilterproxymodel_on_submit(void* self, bool (*callback)(void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2203,9 +2152,9 @@ void q_sortfilterproxymodel_super_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_revert(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_revert(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2224,12 +2173,12 @@ void q_sortfilterproxymodel_on_revert(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_sortfilterproxymodel_item_data(void* self, void* index);
+libqt_map q_sortfilterproxymodel_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2248,12 +2197,12 @@ libqt_map q_sortfilterproxymodel_item_data(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_sortfilterproxymodel_super_item_data(void* self, void* index);
+libqt_map q_sortfilterproxymodel_super_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2261,10 +2210,10 @@ libqt_map q_sortfilterproxymodel_super_item_data(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param callback libqt_map of int to QVariant* func(QSortFilterProxyModel* self, QModelIndex* index)
 ///
-void q_sortfilterproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2276,7 +2225,7 @@ void q_sortfilterproxymodel_on_item_data(void* self, libqt_map (*callback)(void*
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool q_sortfilterproxymodel_set_item_data(void* self, void* index, libqt_map roles);
+bool q_sortfilterproxymodel_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2288,7 +2237,7 @@ bool q_sortfilterproxymodel_set_item_data(void* self, void* index, libqt_map rol
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool q_sortfilterproxymodel_super_set_item_data(void* self, void* index, libqt_map roles);
+bool q_sortfilterproxymodel_super_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2299,7 +2248,7 @@ bool q_sortfilterproxymodel_super_set_item_data(void* self, void* index, libqt_m
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* index, libqt_map of int to QVariant* roles)
 ///
-void q_sortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
+void q_sortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*, const void*, libqt_map));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2310,7 +2259,7 @@ void q_sortfilterproxymodel_on_set_item_data(void* self, bool (*callback)(void*,
 /// @param self QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-bool q_sortfilterproxymodel_clear_item_data(void* self, void* index);
+bool q_sortfilterproxymodel_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2321,7 +2270,7 @@ bool q_sortfilterproxymodel_clear_item_data(void* self, void* index);
 /// @param self QSortFilterProxyModel*
 /// @param index QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_clear_item_data(void* self, void* index);
+bool q_sortfilterproxymodel_super_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2332,7 +2281,7 @@ bool q_sortfilterproxymodel_super_clear_item_data(void* self, void* index);
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* index)
 ///
-void q_sortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2340,14 +2289,14 @@ void q_sortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_sortfilterproxymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2355,14 +2304,14 @@ bool q_sortfilterproxymodel_can_drop_mime_data(void* self, void* data, int32_t a
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_sortfilterproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_sortfilterproxymodel_super_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2370,10 +2319,10 @@ bool q_sortfilterproxymodel_super_can_drop_mime_data(void* self, void* data, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void q_sortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
+void q_sortfilterproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2381,11 +2330,11 @@ void q_sortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_sortfilterproxymodel_supported_drag_actions(void* self);
+int32_t q_sortfilterproxymodel_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2393,11 +2342,11 @@ int32_t q_sortfilterproxymodel_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_sortfilterproxymodel_super_supported_drag_actions(void* self);
+int32_t q_sortfilterproxymodel_super_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2405,10 +2354,10 @@ int32_t q_sortfilterproxymodel_super_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback int32_t func()
+/// @param self const QSortFilterProxyModel*
+/// @param callback int32_t func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)());
+void q_sortfilterproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2427,11 +2376,11 @@ void q_sortfilterproxymodel_on_supported_drag_actions(void* self, int32_t (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map q_sortfilterproxymodel_role_names(void* self);
+libqt_map q_sortfilterproxymodel_role_names(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2450,11 +2399,11 @@ libqt_map q_sortfilterproxymodel_role_names(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map q_sortfilterproxymodel_super_role_names(void* self);
+libqt_map q_sortfilterproxymodel_super_role_names(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2462,10 +2411,10 @@ libqt_map q_sortfilterproxymodel_super_role_names(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback libqt_map of int to char* func()
+/// @param self const QSortFilterProxyModel*
+/// @param callback libqt_map of int to char* func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_role_names(void* self, libqt_map (*callback)());
+void q_sortfilterproxymodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2480,7 +2429,7 @@ void q_sortfilterproxymodel_on_role_names(void* self, libqt_map (*callback)());
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_sortfilterproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool q_sortfilterproxymodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2495,7 +2444,7 @@ bool q_sortfilterproxymodel_move_rows(void* self, void* sourceParent, int source
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_sortfilterproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool q_sortfilterproxymodel_super_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2506,7 +2455,7 @@ bool q_sortfilterproxymodel_super_move_rows(void* self, void* sourceParent, int 
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 ///
-void q_sortfilterproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void q_sortfilterproxymodel_on_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2521,7 +2470,7 @@ void q_sortfilterproxymodel_on_move_rows(void* self, bool (*callback)(void*, voi
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_sortfilterproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool q_sortfilterproxymodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2536,7 +2485,7 @@ bool q_sortfilterproxymodel_move_columns(void* self, void* sourceParent, int sou
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_sortfilterproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool q_sortfilterproxymodel_super_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2547,7 +2496,7 @@ bool q_sortfilterproxymodel_super_move_columns(void* self, void* sourceParent, i
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 ///
-void q_sortfilterproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void q_sortfilterproxymodel_on_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2555,11 +2504,11 @@ void q_sortfilterproxymodel_on_move_columns(void* self, bool (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void q_sortfilterproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
+void q_sortfilterproxymodel_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2567,11 +2516,11 @@ void q_sortfilterproxymodel_multi_data(void* self, void* index, void* roleDataSp
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void q_sortfilterproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan);
+void q_sortfilterproxymodel_super_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2579,10 +2528,10 @@ void q_sortfilterproxymodel_super_multi_data(void* self, void* index, void* role
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void q_sortfilterproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
+void q_sortfilterproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2611,9 +2560,9 @@ void q_sortfilterproxymodel_super_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_reset_internal_data(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_reset_internal_data(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -2791,7 +2740,7 @@ void q_sortfilterproxymodel_on_custom_event(void* self, void (*callback)(void*, 
 /// @param self QSortFilterProxyModel*
 /// @param signal QMetaMethod*
 ///
-void q_sortfilterproxymodel_connect_notify(void* self, void* signal);
+void q_sortfilterproxymodel_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2802,7 +2751,7 @@ void q_sortfilterproxymodel_connect_notify(void* self, void* signal);
 /// @param self QSortFilterProxyModel*
 /// @param signal QMetaMethod*
 ///
-void q_sortfilterproxymodel_super_connect_notify(void* self, void* signal);
+void q_sortfilterproxymodel_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2813,7 +2762,7 @@ void q_sortfilterproxymodel_super_connect_notify(void* self, void* signal);
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QMetaMethod* signal)
 ///
-void q_sortfilterproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2824,7 +2773,7 @@ void q_sortfilterproxymodel_on_connect_notify(void* self, void (*callback)(void*
 /// @param self QSortFilterProxyModel*
 /// @param signal QMetaMethod*
 ///
-void q_sortfilterproxymodel_disconnect_notify(void* self, void* signal);
+void q_sortfilterproxymodel_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2835,7 +2784,7 @@ void q_sortfilterproxymodel_disconnect_notify(void* self, void* signal);
 /// @param self QSortFilterProxyModel*
 /// @param signal QMetaMethod*
 ///
-void q_sortfilterproxymodel_super_disconnect_notify(void* self, void* signal);
+void q_sortfilterproxymodel_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2846,7 +2795,7 @@ void q_sortfilterproxymodel_super_disconnect_notify(void* self, void* signal);
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QMetaMethod* signal)
 ///
-void q_sortfilterproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2854,12 +2803,12 @@ void q_sortfilterproxymodel_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param col int
 /// @param internalPtr void*
 ///
-QModelIndex* q_sortfilterproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
+QModelIndex* q_sortfilterproxymodel_create_source_index(const void* self, int row, int col, void* internalPtr);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2867,12 +2816,12 @@ QModelIndex* q_sortfilterproxymodel_create_source_index(void* self, int row, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param col int
 /// @param internalPtr void*
 ///
-QModelIndex* q_sortfilterproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr);
+QModelIndex* q_sortfilterproxymodel_super_create_source_index(const void* self, int row, int col, void* internalPtr);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2880,12 +2829,12 @@ QModelIndex* q_sortfilterproxymodel_super_create_source_index(void* self, int ro
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, int row, int col, void* internalPtr)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void q_sortfilterproxymodel_on_create_source_index(const void* self, QModelIndex* (*callback)(const void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2893,11 +2842,11 @@ void q_sortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param column int
 ///
-QModelIndex* q_sortfilterproxymodel_create_index(void* self, int row, int column);
+QModelIndex* q_sortfilterproxymodel_create_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2905,11 +2854,11 @@ QModelIndex* q_sortfilterproxymodel_create_index(void* self, int row, int column
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param row int
 /// @param column int
 ///
-QModelIndex* q_sortfilterproxymodel_super_create_index(void* self, int row, int column);
+QModelIndex* q_sortfilterproxymodel_super_create_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2917,12 +2866,12 @@ QModelIndex* q_sortfilterproxymodel_super_create_index(void* self, int row, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_sortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
+void q_sortfilterproxymodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2930,11 +2879,11 @@ void q_sortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_sortfilterproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
+void q_sortfilterproxymodel_encode_data(const void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2942,11 +2891,11 @@ void q_sortfilterproxymodel_encode_data(void* self, libqt_list indexes, void* st
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_sortfilterproxymodel_super_encode_data(void* self, libqt_list indexes, void* stream);
+void q_sortfilterproxymodel_super_encode_data(const void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2954,10 +2903,10 @@ void q_sortfilterproxymodel_super_encode_data(void* self, libqt_list indexes, vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void q_sortfilterproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
+void q_sortfilterproxymodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2971,7 +2920,7 @@ void q_sortfilterproxymodel_on_encode_data(void* self, void (*callback)(void*, l
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool q_sortfilterproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool q_sortfilterproxymodel_decode_data(void* self, int row, int column, const void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2985,7 +2934,7 @@ bool q_sortfilterproxymodel_decode_data(void* self, int row, int column, void* p
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool q_sortfilterproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool q_sortfilterproxymodel_super_decode_data(void* self, int row, int column, const void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2996,7 +2945,7 @@ bool q_sortfilterproxymodel_super_decode_data(void* self, int row, int column, v
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 ///
-void q_sortfilterproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
+void q_sortfilterproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3009,7 +2958,7 @@ void q_sortfilterproxymodel_on_decode_data(void* self, bool (*callback)(void*, i
 /// @param first int
 /// @param last int
 ///
-void q_sortfilterproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
+void q_sortfilterproxymodel_begin_insert_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3022,7 +2971,7 @@ void q_sortfilterproxymodel_begin_insert_rows(void* self, void* parent, int firs
 /// @param first int
 /// @param last int
 ///
-void q_sortfilterproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last);
+void q_sortfilterproxymodel_super_begin_insert_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3033,7 +2982,7 @@ void q_sortfilterproxymodel_super_begin_insert_rows(void* self, void* parent, in
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3062,9 +3011,9 @@ void q_sortfilterproxymodel_super_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_end_insert_rows(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_end_insert_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3077,7 +3026,7 @@ void q_sortfilterproxymodel_on_end_insert_rows(void* self, void (*callback)());
 /// @param first int
 /// @param last int
 ///
-void q_sortfilterproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
+void q_sortfilterproxymodel_begin_remove_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3090,7 +3039,7 @@ void q_sortfilterproxymodel_begin_remove_rows(void* self, void* parent, int firs
 /// @param first int
 /// @param last int
 ///
-void q_sortfilterproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last);
+void q_sortfilterproxymodel_super_begin_remove_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3101,7 +3050,7 @@ void q_sortfilterproxymodel_super_begin_remove_rows(void* self, void* parent, in
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3130,9 +3079,9 @@ void q_sortfilterproxymodel_super_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_end_remove_rows(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_end_remove_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3147,7 +3096,7 @@ void q_sortfilterproxymodel_on_end_remove_rows(void* self, void (*callback)());
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool q_sortfilterproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool q_sortfilterproxymodel_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3162,7 +3111,7 @@ bool q_sortfilterproxymodel_begin_move_rows(void* self, void* sourceParent, int 
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool q_sortfilterproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool q_sortfilterproxymodel_super_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3173,7 +3122,7 @@ bool q_sortfilterproxymodel_super_begin_move_rows(void* self, void* sourceParent
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 ///
-void q_sortfilterproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void q_sortfilterproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3202,9 +3151,9 @@ void q_sortfilterproxymodel_super_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_end_move_rows(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_end_move_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3217,7 +3166,7 @@ void q_sortfilterproxymodel_on_end_move_rows(void* self, void (*callback)());
 /// @param first int
 /// @param last int
 ///
-void q_sortfilterproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
+void q_sortfilterproxymodel_begin_insert_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3230,7 +3179,7 @@ void q_sortfilterproxymodel_begin_insert_columns(void* self, void* parent, int f
 /// @param first int
 /// @param last int
 ///
-void q_sortfilterproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last);
+void q_sortfilterproxymodel_super_begin_insert_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3241,7 +3190,7 @@ void q_sortfilterproxymodel_super_begin_insert_columns(void* self, void* parent,
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3270,9 +3219,9 @@ void q_sortfilterproxymodel_super_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_end_insert_columns(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_end_insert_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3285,7 +3234,7 @@ void q_sortfilterproxymodel_on_end_insert_columns(void* self, void (*callback)()
 /// @param first int
 /// @param last int
 ///
-void q_sortfilterproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
+void q_sortfilterproxymodel_begin_remove_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3298,7 +3247,7 @@ void q_sortfilterproxymodel_begin_remove_columns(void* self, void* parent, int f
 /// @param first int
 /// @param last int
 ///
-void q_sortfilterproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last);
+void q_sortfilterproxymodel_super_begin_remove_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3309,7 +3258,7 @@ void q_sortfilterproxymodel_super_begin_remove_columns(void* self, void* parent,
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3338,9 +3287,9 @@ void q_sortfilterproxymodel_super_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_end_remove_columns(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_end_remove_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3355,7 +3304,7 @@ void q_sortfilterproxymodel_on_end_remove_columns(void* self, void (*callback)()
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool q_sortfilterproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool q_sortfilterproxymodel_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3370,7 +3319,7 @@ bool q_sortfilterproxymodel_begin_move_columns(void* self, void* sourceParent, i
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool q_sortfilterproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool q_sortfilterproxymodel_super_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3381,7 +3330,7 @@ bool q_sortfilterproxymodel_super_begin_move_columns(void* self, void* sourcePar
 /// @param self QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 ///
-void q_sortfilterproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void q_sortfilterproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3410,9 +3359,9 @@ void q_sortfilterproxymodel_super_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_end_move_columns(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_end_move_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3441,9 +3390,9 @@ void q_sortfilterproxymodel_super_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_begin_reset_model(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_begin_reset_model(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3472,9 +3421,9 @@ void q_sortfilterproxymodel_super_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void func()
+/// @param callback void func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_end_reset_model(void* self, void (*callback)());
+void q_sortfilterproxymodel_on_end_reset_model(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3486,7 +3435,7 @@ void q_sortfilterproxymodel_on_end_reset_model(void* self, void (*callback)());
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void q_sortfilterproxymodel_change_persistent_index(void* self, void* from, void* to);
+void q_sortfilterproxymodel_change_persistent_index(void* self, const void* from, const void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3498,7 +3447,7 @@ void q_sortfilterproxymodel_change_persistent_index(void* self, void* from, void
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void q_sortfilterproxymodel_super_change_persistent_index(void* self, void* from, void* to);
+void q_sortfilterproxymodel_super_change_persistent_index(void* self, const void* from, const void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3509,7 +3458,7 @@ void q_sortfilterproxymodel_super_change_persistent_index(void* self, void* from
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* from, QModelIndex* to)
 ///
-void q_sortfilterproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
+void q_sortfilterproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3552,11 +3501,11 @@ void q_sortfilterproxymodel_on_change_persistent_index_list(void* self, void (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_sortfilterproxymodel_persistent_index_list(void* self);
+libqt_list q_sortfilterproxymodel_persistent_index_list(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3564,11 +3513,11 @@ libqt_list q_sortfilterproxymodel_persistent_index_list(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_sortfilterproxymodel_super_persistent_index_list(void* self);
+libqt_list q_sortfilterproxymodel_super_persistent_index_list(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3576,10 +3525,10 @@ libqt_list q_sortfilterproxymodel_super_persistent_index_list(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback libqt_list of QModelIndex* func()
+/// @param self const QSortFilterProxyModel*
+/// @param callback libqt_list of QModelIndex* func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_persistent_index_list(void* self, libqt_list (*callback)());
+void q_sortfilterproxymodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3587,9 +3536,9 @@ void q_sortfilterproxymodel_on_persistent_index_list(void* self, libqt_list (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-QObject* q_sortfilterproxymodel_sender(void* self);
+QObject* q_sortfilterproxymodel_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3597,9 +3546,9 @@ QObject* q_sortfilterproxymodel_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-QObject* q_sortfilterproxymodel_super_sender(void* self);
+QObject* q_sortfilterproxymodel_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3607,10 +3556,10 @@ QObject* q_sortfilterproxymodel_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback QObject* func()
+/// @param self const QSortFilterProxyModel*
+/// @param callback QObject* func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_sender(void* self, QObject* (*callback)());
+void q_sortfilterproxymodel_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3618,9 +3567,9 @@ void q_sortfilterproxymodel_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-int32_t q_sortfilterproxymodel_sender_signal_index(void* self);
+int32_t q_sortfilterproxymodel_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3628,9 +3577,9 @@ int32_t q_sortfilterproxymodel_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 ///
-int32_t q_sortfilterproxymodel_super_sender_signal_index(void* self);
+int32_t q_sortfilterproxymodel_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3638,10 +3587,10 @@ int32_t q_sortfilterproxymodel_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
-/// @param callback int32_t func()
+/// @param self const QSortFilterProxyModel*
+/// @param callback int32_t func(QSortFilterProxyModel* self)
 ///
-void q_sortfilterproxymodel_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_sortfilterproxymodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3649,10 +3598,10 @@ void q_sortfilterproxymodel_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param signal const char*
 ///
-int32_t q_sortfilterproxymodel_receivers(void* self, const char* signal);
+int32_t q_sortfilterproxymodel_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3660,10 +3609,10 @@ int32_t q_sortfilterproxymodel_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param signal const char*
 ///
-int32_t q_sortfilterproxymodel_super_receivers(void* self, const char* signal);
+int32_t q_sortfilterproxymodel_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3671,10 +3620,10 @@ int32_t q_sortfilterproxymodel_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param callback int32_t func(QSortFilterProxyModel* self, const char* signal)
 ///
-void q_sortfilterproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_sortfilterproxymodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3682,10 +3631,10 @@ void q_sortfilterproxymodel_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param signal QMetaMethod*
 ///
-bool q_sortfilterproxymodel_is_signal_connected(void* self, void* signal);
+bool q_sortfilterproxymodel_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3693,10 +3642,10 @@ bool q_sortfilterproxymodel_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param signal QMetaMethod*
 ///
-bool q_sortfilterproxymodel_super_is_signal_connected(void* self, void* signal);
+bool q_sortfilterproxymodel_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3704,10 +3653,10 @@ bool q_sortfilterproxymodel_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSortFilterProxyModel*
+/// @param self const QSortFilterProxyModel*
 /// @param callback bool func(QSortFilterProxyModel* self, QMetaMethod* signal)
 ///
-void q_sortfilterproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_sortfilterproxymodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -3729,7 +3678,7 @@ void q_sortfilterproxymodel_on_source_model_changed(void* self, void (*callback)
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3740,7 +3689,7 @@ void q_sortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*call
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3751,7 +3700,7 @@ void q_sortfilterproxymodel_on_rows_inserted(void* self, void (*callback)(void*,
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3762,7 +3711,7 @@ void q_sortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*callb
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3773,7 +3722,7 @@ void q_sortfilterproxymodel_on_rows_removed(void* self, void (*callback)(void*, 
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3784,7 +3733,7 @@ void q_sortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void (*c
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3795,7 +3744,7 @@ void q_sortfilterproxymodel_on_columns_inserted(void* self, void (*callback)(voi
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3806,7 +3755,7 @@ void q_sortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (*ca
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_sortfilterproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_sortfilterproxymodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3839,7 +3788,7 @@ void q_sortfilterproxymodel_on_model_reset(void* self, void (*callback)(void*));
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void q_sortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_sortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3850,7 +3799,7 @@ void q_sortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*callbac
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void q_sortfilterproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_sortfilterproxymodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3861,7 +3810,7 @@ void q_sortfilterproxymodel_on_rows_moved(void* self, void (*callback)(void*, vo
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void q_sortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_sortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3872,7 +3821,7 @@ void q_sortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*call
 /// @param self QSortFilterProxyModel*
 /// @param callback void func(QSortFilterProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void q_sortfilterproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_sortfilterproxymodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QObject
 ///

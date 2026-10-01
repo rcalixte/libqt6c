@@ -6,19 +6,19 @@ Attica__DownloadItem* k_attica__downloaditem_new() {
     return Attica__DownloadItem_New();
 }
 
-Attica__DownloadItem* k_attica__downloaditem_new2(void* other) {
+Attica__DownloadItem* k_attica__downloaditem_new2(const void* other) {
     return Attica__DownloadItem_New2((Attica__DownloadItem*)other);
 }
 
-void k_attica__downloaditem_operator_assign(void* self, void* other) {
+void k_attica__downloaditem_operator_assign(void* self, const void* other) {
     Attica__DownloadItem_OperatorAssign((Attica__DownloadItem*)self, (Attica__DownloadItem*)other);
 }
 
-void k_attica__downloaditem_set_url(void* self, void* url) {
+void k_attica__downloaditem_set_url(void* self, const void* url) {
     Attica__DownloadItem_SetUrl((Attica__DownloadItem*)self, (QUrl*)url);
 }
 
-QUrl* k_attica__downloaditem_url(void* self) {
+QUrl* k_attica__downloaditem_url(const void* self) {
     return Attica__DownloadItem_Url((Attica__DownloadItem*)self);
 }
 
@@ -26,7 +26,7 @@ void k_attica__downloaditem_set_mime_type(void* self, const char* mimeType) {
     Attica__DownloadItem_SetMimeType((Attica__DownloadItem*)self, qstring(mimeType));
 }
 
-const char* k_attica__downloaditem_mime_type(void* self) {
+const char* k_attica__downloaditem_mime_type(const void* self) {
     libqt_string _str = Attica__DownloadItem_MimeType((Attica__DownloadItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -37,7 +37,7 @@ void k_attica__downloaditem_set_package_name(void* self, const char* packageName
     Attica__DownloadItem_SetPackageName((Attica__DownloadItem*)self, qstring(packageName));
 }
 
-const char* k_attica__downloaditem_package_name(void* self) {
+const char* k_attica__downloaditem_package_name(const void* self) {
     libqt_string _str = Attica__DownloadItem_PackageName((Attica__DownloadItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -48,7 +48,7 @@ void k_attica__downloaditem_set_package_repository(void* self, const char* packa
     Attica__DownloadItem_SetPackageRepository((Attica__DownloadItem*)self, qstring(packageRepository));
 }
 
-const char* k_attica__downloaditem_package_repository(void* self) {
+const char* k_attica__downloaditem_package_repository(const void* self) {
     libqt_string _str = Attica__DownloadItem_PackageRepository((Attica__DownloadItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -59,7 +59,7 @@ void k_attica__downloaditem_set_gpg_fingerprint(void* self, const char* gpgFinge
     Attica__DownloadItem_SetGpgFingerprint((Attica__DownloadItem*)self, qstring(gpgFingerprint));
 }
 
-const char* k_attica__downloaditem_gpg_fingerprint(void* self) {
+const char* k_attica__downloaditem_gpg_fingerprint(const void* self) {
     libqt_string _str = Attica__DownloadItem_GpgFingerprint((Attica__DownloadItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -70,7 +70,7 @@ void k_attica__downloaditem_set_gpg_signature(void* self, const char* gpgSignatu
     Attica__DownloadItem_SetGpgSignature((Attica__DownloadItem*)self, qstring(gpgSignature));
 }
 
-const char* k_attica__downloaditem_gpg_signature(void* self) {
+const char* k_attica__downloaditem_gpg_signature(const void* self) {
     libqt_string _str = Attica__DownloadItem_GpgSignature((Attica__DownloadItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

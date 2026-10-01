@@ -20,14 +20,14 @@ QOpenGLPixelTransferOptions* q_openglpixeltransferoptions_new();
 ///
 /// @param param1 QOpenGLPixelTransferOptions*
 ///
-QOpenGLPixelTransferOptions* q_openglpixeltransferoptions_new2(void* param1);
+QOpenGLPixelTransferOptions* q_openglpixeltransferoptions_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#operator-eq)
 ///
 /// @param self QOpenGLPixelTransferOptions*
 /// @param param1 QOpenGLPixelTransferOptions*
 ///
-void q_openglpixeltransferoptions_operator_assign(void* self, void* param1);
+void q_openglpixeltransferoptions_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#swap)
 ///
@@ -45,9 +45,9 @@ void q_openglpixeltransferoptions_set_alignment(void* self, int alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#alignment)
 ///
-/// @param self QOpenGLPixelTransferOptions*
+/// @param self const QOpenGLPixelTransferOptions*
 ///
-int32_t q_openglpixeltransferoptions_alignment(void* self);
+int32_t q_openglpixeltransferoptions_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#setSkipImages)
 ///
@@ -58,9 +58,9 @@ void q_openglpixeltransferoptions_set_skip_images(void* self, int skipImages);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#skipImages)
 ///
-/// @param self QOpenGLPixelTransferOptions*
+/// @param self const QOpenGLPixelTransferOptions*
 ///
-int32_t q_openglpixeltransferoptions_skip_images(void* self);
+int32_t q_openglpixeltransferoptions_skip_images(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#setSkipRows)
 ///
@@ -71,9 +71,9 @@ void q_openglpixeltransferoptions_set_skip_rows(void* self, int skipRows);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#skipRows)
 ///
-/// @param self QOpenGLPixelTransferOptions*
+/// @param self const QOpenGLPixelTransferOptions*
 ///
-int32_t q_openglpixeltransferoptions_skip_rows(void* self);
+int32_t q_openglpixeltransferoptions_skip_rows(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#setSkipPixels)
 ///
@@ -84,9 +84,9 @@ void q_openglpixeltransferoptions_set_skip_pixels(void* self, int skipPixels);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#skipPixels)
 ///
-/// @param self QOpenGLPixelTransferOptions*
+/// @param self const QOpenGLPixelTransferOptions*
 ///
-int32_t q_openglpixeltransferoptions_skip_pixels(void* self);
+int32_t q_openglpixeltransferoptions_skip_pixels(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#setImageHeight)
 ///
@@ -97,9 +97,9 @@ void q_openglpixeltransferoptions_set_image_height(void* self, int imageHeight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#imageHeight)
 ///
-/// @param self QOpenGLPixelTransferOptions*
+/// @param self const QOpenGLPixelTransferOptions*
 ///
-int32_t q_openglpixeltransferoptions_image_height(void* self);
+int32_t q_openglpixeltransferoptions_image_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#setRowLength)
 ///
@@ -110,9 +110,9 @@ void q_openglpixeltransferoptions_set_row_length(void* self, int rowLength);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#rowLength)
 ///
-/// @param self QOpenGLPixelTransferOptions*
+/// @param self const QOpenGLPixelTransferOptions*
 ///
-int32_t q_openglpixeltransferoptions_row_length(void* self);
+int32_t q_openglpixeltransferoptions_row_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#setLeastSignificantByteFirst)
 ///
@@ -123,9 +123,9 @@ void q_openglpixeltransferoptions_set_least_significant_byte_first(void* self, b
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#isLeastSignificantBitFirst)
 ///
-/// @param self QOpenGLPixelTransferOptions*
+/// @param self const QOpenGLPixelTransferOptions*
 ///
-bool q_openglpixeltransferoptions_is_least_significant_bit_first(void* self);
+bool q_openglpixeltransferoptions_is_least_significant_bit_first(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#setSwapBytesEnabled)
 ///
@@ -136,9 +136,9 @@ void q_openglpixeltransferoptions_set_swap_bytes_enabled(void* self, bool swapBy
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#isSwapBytesEnabled)
 ///
-/// @param self QOpenGLPixelTransferOptions*
+/// @param self const QOpenGLPixelTransferOptions*
 ///
-bool q_openglpixeltransferoptions_is_swap_bytes_enabled(void* self);
+bool q_openglpixeltransferoptions_is_swap_bytes_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglpixeltransferoptions.html#dtor.QOpenGLPixelTransferOptions)
 ///

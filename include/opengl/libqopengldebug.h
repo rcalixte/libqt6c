@@ -20,14 +20,14 @@ QOpenGLDebugMessage* q_opengldebugmessage_new();
 ///
 /// @param debugMessage QOpenGLDebugMessage*
 ///
-QOpenGLDebugMessage* q_opengldebugmessage_new2(void* debugMessage);
+QOpenGLDebugMessage* q_opengldebugmessage_new2(const void* debugMessage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#operator-eq)
 ///
 /// @param self QOpenGLDebugMessage*
 /// @param debugMessage QOpenGLDebugMessage*
 ///
-void q_opengldebugmessage_operator_assign(void* self, void* debugMessage);
+void q_opengldebugmessage_operator_assign(void* self, const void* debugMessage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#swap)
 ///
@@ -38,41 +38,41 @@ void q_opengldebugmessage_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#source)
 ///
-/// @param self QOpenGLDebugMessage*
+/// @param self const QOpenGLDebugMessage*
 ///
 /// @return enum QOpenGLDebugMessage__Source
 ///
-int32_t q_opengldebugmessage_source(void* self);
+int32_t q_opengldebugmessage_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#type)
 ///
-/// @param self QOpenGLDebugMessage*
+/// @param self const QOpenGLDebugMessage*
 ///
 /// @return enum QOpenGLDebugMessage__Type
 ///
-int32_t q_opengldebugmessage_type(void* self);
+int32_t q_opengldebugmessage_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#severity)
 ///
-/// @param self QOpenGLDebugMessage*
+/// @param self const QOpenGLDebugMessage*
 ///
 /// @return enum QOpenGLDebugMessage__Severity
 ///
-int32_t q_opengldebugmessage_severity(void* self);
+int32_t q_opengldebugmessage_severity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#id)
 ///
-/// @param self QOpenGLDebugMessage*
+/// @param self const QOpenGLDebugMessage*
 ///
-uint32_t q_opengldebugmessage_id(void* self);
+uint32_t q_opengldebugmessage_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#message)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLDebugMessage*
+/// @param self const QOpenGLDebugMessage*
 ///
-const char* q_opengldebugmessage_message(void* self);
+const char* q_opengldebugmessage_message(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#createApplicationMessage)
 ///
@@ -88,17 +88,17 @@ QOpenGLDebugMessage* q_opengldebugmessage_create_third_party_message(const char*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#operator-eq-eq)
 ///
-/// @param self QOpenGLDebugMessage*
+/// @param self const QOpenGLDebugMessage*
 /// @param debugMessage QOpenGLDebugMessage*
 ///
-bool q_opengldebugmessage_operator_equal(void* self, void* debugMessage);
+bool q_opengldebugmessage_operator_equal(const void* self, const void* debugMessage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#operator-not-eq)
 ///
-/// @param self QOpenGLDebugMessage*
+/// @param self const QOpenGLDebugMessage*
 /// @param debugMessage QOpenGLDebugMessage*
 ///
-bool q_opengldebugmessage_operator_not_equal(void* self, void* debugMessage);
+bool q_opengldebugmessage_operator_not_equal(const void* self, const void* debugMessage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebugmessage.html#createApplicationMessage)
 ///
@@ -172,26 +172,26 @@ QOpenGLDebugLogger* q_opengldebuglogger_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-const QMetaObject* q_opengldebuglogger_meta_object(void* self);
+const QMetaObject* q_opengldebuglogger_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLDebugLogger*
-/// @param callback const QMetaObject* func()
+/// @param self const QOpenGLDebugLogger*
+/// @param callback const QMetaObject* func(const QOpenGLDebugLogger* self)
 ///
-void q_opengldebuglogger_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_opengldebuglogger_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-const QMetaObject* q_opengldebuglogger_super_meta_object(void* self);
+const QMetaObject* q_opengldebuglogger_super_meta_object(const void* self);
 
 /// @param self QOpenGLDebugLogger*
 /// @param param1 const char*
@@ -251,23 +251,23 @@ bool q_opengldebuglogger_initialize(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#isLogging)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-bool q_opengldebuglogger_is_logging(void* self);
+bool q_opengldebuglogger_is_logging(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#loggingMode)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
 /// @return enum QOpenGLDebugLogger__LoggingMode
 ///
-int32_t q_opengldebuglogger_logging_mode(void* self);
+int32_t q_opengldebuglogger_logging_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#maximumMessageLength)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-int64_t q_opengldebuglogger_maximum_message_length(void* self);
+int64_t q_opengldebuglogger_maximum_message_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#pushGroup)
 ///
@@ -310,18 +310,18 @@ void q_opengldebuglogger_disable_messages2(void* self, libqt_list ids);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#loggedMessages)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
 /// @return libqt_list of QOpenGLDebugMessage*
 ///
-libqt_list q_opengldebuglogger_logged_messages(void* self);
+libqt_list q_opengldebuglogger_logged_messages(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#logMessage)
 ///
 /// @param self QOpenGLDebugLogger*
 /// @param debugMessage QOpenGLDebugMessage*
 ///
-void q_opengldebuglogger_log_message(void* self, void* debugMessage);
+void q_opengldebuglogger_log_message(void* self, const void* debugMessage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#startLogging)
 ///
@@ -340,14 +340,14 @@ void q_opengldebuglogger_stop_logging(void* self);
 /// @param self QOpenGLDebugLogger*
 /// @param debugMessage QOpenGLDebugMessage*
 ///
-void q_opengldebuglogger_message_logged(void* self, void* debugMessage);
+void q_opengldebuglogger_message_logged(void* self, const void* debugMessage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#messageLogged)
 ///
 /// @param self QOpenGLDebugLogger*
 /// @param callback void func(QOpenGLDebugLogger* self, QOpenGLDebugMessage* debugMessage)
 ///
-void q_opengldebuglogger_on_message_logged(void* self, void (*callback)(void*, void*));
+void q_opengldebuglogger_on_message_logged(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -480,9 +480,9 @@ void q_opengldebuglogger_start_logging1(void* self, int32_t loggingMode);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-const char* q_opengldebuglogger_object_name(void* self);
+const char* q_opengldebuglogger_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -497,33 +497,33 @@ void q_opengldebuglogger_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-bool q_opengldebuglogger_is_widget_type(void* self);
+bool q_opengldebuglogger_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-bool q_opengldebuglogger_is_window_type(void* self);
+bool q_opengldebuglogger_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-bool q_opengldebuglogger_is_quick_item_type(void* self);
+bool q_opengldebuglogger_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-bool q_opengldebuglogger_signals_blocked(void* self);
+bool q_opengldebuglogger_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -538,9 +538,9 @@ bool q_opengldebuglogger_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-QThread* q_opengldebuglogger_thread(void* self);
+QThread* q_opengldebuglogger_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -591,11 +591,11 @@ void q_opengldebuglogger_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_opengldebuglogger_children(void* self);
+libqt_list q_opengldebuglogger_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -633,7 +633,7 @@ void q_opengldebuglogger_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_opengldebuglogger_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_opengldebuglogger_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -644,18 +644,18 @@ QMetaObject__Connection* q_opengldebuglogger_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_opengldebuglogger_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_opengldebuglogger_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_opengldebuglogger_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_opengldebuglogger_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -666,7 +666,7 @@ QMetaObject__Connection* q_opengldebuglogger_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_opengldebuglogger_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_opengldebuglogger_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -677,24 +677,24 @@ bool q_opengldebuglogger_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_opengldebuglogger_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_opengldebuglogger_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-bool q_opengldebuglogger_disconnect3(void* self);
+bool q_opengldebuglogger_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param receiver QObject*
 ///
-bool q_opengldebuglogger_disconnect4(void* self, void* receiver);
+bool q_opengldebuglogger_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -702,23 +702,23 @@ bool q_opengldebuglogger_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_opengldebuglogger_disconnect5(void* param1);
+bool q_opengldebuglogger_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-void q_opengldebuglogger_dump_object_tree(void* self);
+void q_opengldebuglogger_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-void q_opengldebuglogger_dump_object_info(void* self);
+void q_opengldebuglogger_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -728,16 +728,16 @@ void q_opengldebuglogger_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_opengldebuglogger_set_property(void* self, const char* name, void* value);
+bool q_opengldebuglogger_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param name const char*
 ///
-QVariant* q_opengldebuglogger_property(void* self, const char* name);
+QVariant* q_opengldebuglogger_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -745,9 +745,9 @@ QVariant* q_opengldebuglogger_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-const char** q_opengldebuglogger_dynamic_property_names(void* self);
+const char** q_opengldebuglogger_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -761,9 +761,9 @@ QBindingStorage* q_opengldebuglogger_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-const QBindingStorage* q_opengldebuglogger_binding_storage2(void* self);
+const QBindingStorage* q_opengldebuglogger_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -786,18 +786,18 @@ void q_opengldebuglogger_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-QObject* q_opengldebuglogger_parent(void* self);
+QObject* q_opengldebuglogger_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param classname const char*
 ///
-bool q_opengldebuglogger_inherits(void* self, const char* classname);
+bool q_opengldebuglogger_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -837,7 +837,7 @@ int32_t q_opengldebuglogger_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengldebuglogger_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_opengldebuglogger_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -849,59 +849,59 @@ QMetaObject__Connection* q_opengldebuglogger_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengldebuglogger_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_opengldebuglogger_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengldebuglogger_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_opengldebuglogger_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param signal const char*
 ///
-bool q_opengldebuglogger_disconnect1(void* self, const char* signal);
+bool q_opengldebuglogger_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLDebugLogger*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_opengldebuglogger_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_opengldebuglogger_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_opengldebuglogger_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_opengldebuglogger_disconnect23(void* self, void* receiver, const char* member);
+bool q_opengldebuglogger_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QOpenGLDebugLogger*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_opengldebuglogger_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1097,7 +1097,7 @@ void q_opengldebuglogger_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self QOpenGLDebugLogger*
 /// @param signal QMetaMethod*
 ///
-void q_opengldebuglogger_connect_notify(void* self, void* signal);
+void q_opengldebuglogger_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1108,7 +1108,7 @@ void q_opengldebuglogger_connect_notify(void* self, void* signal);
 /// @param self QOpenGLDebugLogger*
 /// @param signal QMetaMethod*
 ///
-void q_opengldebuglogger_super_connect_notify(void* self, void* signal);
+void q_opengldebuglogger_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1119,7 +1119,7 @@ void q_opengldebuglogger_super_connect_notify(void* self, void* signal);
 /// @param self QOpenGLDebugLogger*
 /// @param callback void func(QOpenGLDebugLogger* self, QMetaMethod* signal)
 ///
-void q_opengldebuglogger_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_opengldebuglogger_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1130,7 +1130,7 @@ void q_opengldebuglogger_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self QOpenGLDebugLogger*
 /// @param signal QMetaMethod*
 ///
-void q_opengldebuglogger_disconnect_notify(void* self, void* signal);
+void q_opengldebuglogger_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1141,7 +1141,7 @@ void q_opengldebuglogger_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLDebugLogger*
 /// @param signal QMetaMethod*
 ///
-void q_opengldebuglogger_super_disconnect_notify(void* self, void* signal);
+void q_opengldebuglogger_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1152,7 +1152,7 @@ void q_opengldebuglogger_super_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLDebugLogger*
 /// @param callback void func(QOpenGLDebugLogger* self, QMetaMethod* signal)
 ///
-void q_opengldebuglogger_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_opengldebuglogger_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1160,9 +1160,9 @@ void q_opengldebuglogger_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-QObject* q_opengldebuglogger_sender(void* self);
+QObject* q_opengldebuglogger_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1170,9 +1170,9 @@ QObject* q_opengldebuglogger_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-QObject* q_opengldebuglogger_super_sender(void* self);
+QObject* q_opengldebuglogger_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1180,10 +1180,10 @@ QObject* q_opengldebuglogger_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
-/// @param callback QObject* func()
+/// @param self const QOpenGLDebugLogger*
+/// @param callback QObject* func(QOpenGLDebugLogger* self)
 ///
-void q_opengldebuglogger_on_sender(void* self, QObject* (*callback)());
+void q_opengldebuglogger_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1191,9 +1191,9 @@ void q_opengldebuglogger_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-int32_t q_opengldebuglogger_sender_signal_index(void* self);
+int32_t q_opengldebuglogger_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1201,9 +1201,9 @@ int32_t q_opengldebuglogger_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 ///
-int32_t q_opengldebuglogger_super_sender_signal_index(void* self);
+int32_t q_opengldebuglogger_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1211,10 +1211,10 @@ int32_t q_opengldebuglogger_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
-/// @param callback int32_t func()
+/// @param self const QOpenGLDebugLogger*
+/// @param callback int32_t func(QOpenGLDebugLogger* self)
 ///
-void q_opengldebuglogger_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_opengldebuglogger_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1222,10 +1222,10 @@ void q_opengldebuglogger_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param signal const char*
 ///
-int32_t q_opengldebuglogger_receivers(void* self, const char* signal);
+int32_t q_opengldebuglogger_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1233,10 +1233,10 @@ int32_t q_opengldebuglogger_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param signal const char*
 ///
-int32_t q_opengldebuglogger_super_receivers(void* self, const char* signal);
+int32_t q_opengldebuglogger_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1244,10 +1244,10 @@ int32_t q_opengldebuglogger_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param callback int32_t func(QOpenGLDebugLogger* self, const char* signal)
 ///
-void q_opengldebuglogger_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_opengldebuglogger_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1255,10 +1255,10 @@ void q_opengldebuglogger_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param signal QMetaMethod*
 ///
-bool q_opengldebuglogger_is_signal_connected(void* self, void* signal);
+bool q_opengldebuglogger_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1266,10 +1266,10 @@ bool q_opengldebuglogger_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param signal QMetaMethod*
 ///
-bool q_opengldebuglogger_super_is_signal_connected(void* self, void* signal);
+bool q_opengldebuglogger_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1277,10 +1277,10 @@ bool q_opengldebuglogger_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLDebugLogger*
+/// @param self const QOpenGLDebugLogger*
 /// @param callback bool func(QOpenGLDebugLogger* self, QMetaMethod* signal)
 ///
-void q_opengldebuglogger_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_opengldebuglogger_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

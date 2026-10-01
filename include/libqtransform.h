@@ -14,7 +14,7 @@
 ///
 /// @param other QTransform*
 ///
-QTransform* q_transform_new(void* other);
+QTransform* q_transform_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html)
 
@@ -73,7 +73,7 @@ QTransform* q_transform_new6(double h11, double h12, double h21, double h22, dou
 ///
 /// @param other QTransform*
 ///
-QTransform* q_transform_new7(void* other);
+QTransform* q_transform_new7(const void* other);
 
 /// q_transform_copy_assign shallow copies `other` into `self`.
 ///
@@ -94,123 +94,123 @@ void q_transform_move_assign(void* self, void* other);
 /// @param self QTransform*
 /// @param param1 QTransform*
 ///
-void q_transform_operator_assign(void* self, void* param1);
+void q_transform_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isAffine)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-bool q_transform_is_affine(void* self);
+bool q_transform_is_affine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isIdentity)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-bool q_transform_is_identity(void* self);
+bool q_transform_is_identity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isInvertible)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-bool q_transform_is_invertible(void* self);
+bool q_transform_is_invertible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isScaling)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-bool q_transform_is_scaling(void* self);
+bool q_transform_is_scaling(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isRotating)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-bool q_transform_is_rotating(void* self);
+bool q_transform_is_rotating(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#isTranslating)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-bool q_transform_is_translating(void* self);
+bool q_transform_is_translating(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#type)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
 /// @return enum QTransform__TransformationType
 ///
-int32_t q_transform_type(void* self);
+int32_t q_transform_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#determinant)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_determinant(void* self);
+double q_transform_determinant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m11)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m11(void* self);
+double q_transform_m11(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m12)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m12(void* self);
+double q_transform_m12(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m13)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m13(void* self);
+double q_transform_m13(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m21)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m21(void* self);
+double q_transform_m21(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m22)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m22(void* self);
+double q_transform_m22(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m23)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m23(void* self);
+double q_transform_m23(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m31)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m31(void* self);
+double q_transform_m31(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m32)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m32(void* self);
+double q_transform_m32(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#m33)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_m33(void* self);
+double q_transform_m33(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#dx)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_dx(void* self);
+double q_transform_dx(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#dy)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-double q_transform_dy(void* self);
+double q_transform_dy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#setMatrix)
 ///
@@ -229,21 +229,21 @@ void q_transform_set_matrix(void* self, double m11, double m12, double m13, doub
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#inverted)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-QTransform* q_transform_inverted(void* self);
+QTransform* q_transform_inverted(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#adjoint)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-QTransform* q_transform_adjoint(void* self);
+QTransform* q_transform_adjoint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#transposed)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-QTransform* q_transform_transposed(void* self);
+QTransform* q_transform_transposed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#translate)
 ///
@@ -306,14 +306,14 @@ QTransform* q_transform_rotate_radians2(void* self, double a);
 /// @param square QPolygonF*
 /// @param result QTransform*
 ///
-bool q_transform_square_to_quad(void* square, void* result);
+bool q_transform_square_to_quad(const void* square, void* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#quadToSquare)
 ///
 /// @param quad QPolygonF*
 /// @param result QTransform*
 ///
-bool q_transform_quad_to_square(void* quad, void* result);
+bool q_transform_quad_to_square(const void* quad, void* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#quadToQuad)
 ///
@@ -321,41 +321,41 @@ bool q_transform_quad_to_square(void* quad, void* result);
 /// @param two QPolygonF*
 /// @param result QTransform*
 ///
-bool q_transform_quad_to_quad(void* one, void* two, void* result);
+bool q_transform_quad_to_quad(const void* one, const void* two, void* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-eq-eq)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param param1 QTransform*
 ///
-bool q_transform_operator_equal(void* self, void* param1);
+bool q_transform_operator_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-not-eq)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param param1 QTransform*
 ///
-bool q_transform_operator_not_equal(void* self, void* param1);
+bool q_transform_operator_not_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-2a-eq)
 ///
 /// @param self QTransform*
 /// @param param1 QTransform*
 ///
-QTransform* q_transform_operator_multiply_assign(void* self, void* param1);
+QTransform* q_transform_operator_multiply_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-2a)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param o QTransform*
 ///
-QTransform* q_transform_operator_multiply(void* self, void* o);
+QTransform* q_transform_operator_multiply(const void* self, const void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-QVariant)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 ///
-QVariant* q_transform_to_q_variant(void* self);
+QVariant* q_transform_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#reset)
 ///
@@ -365,100 +365,100 @@ void q_transform_reset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param p QPoint*
 ///
-QPoint* q_transform_map(void* self, void* p);
+QPoint* q_transform_map(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param p QPointF*
 ///
-QPointF* q_transform_map2(void* self, void* p);
+QPointF* q_transform_map2(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param l QLine*
 ///
-QLine* q_transform_map3(void* self, void* l);
+QLine* q_transform_map3(const void* self, const void* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param l QLineF*
 ///
-QLineF* q_transform_map4(void* self, void* l);
+QLineF* q_transform_map4(const void* self, const void* l);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param a QPolygonF*
 ///
-QPolygonF* q_transform_map5(void* self, void* a);
+QPolygonF* q_transform_map5(const void* self, const void* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param a QPolygon*
 ///
-QPolygon* q_transform_map6(void* self, void* a);
+QPolygon* q_transform_map6(const void* self, const void* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param r QRegion*
 ///
-QRegion* q_transform_map7(void* self, void* r);
+QRegion* q_transform_map7(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param p QPainterPath*
 ///
-QPainterPath* q_transform_map8(void* self, void* p);
+QPainterPath* q_transform_map8(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#mapToPolygon)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param r QRect*
 ///
-QPolygon* q_transform_map_to_polygon(void* self, void* r);
+QPolygon* q_transform_map_to_polygon(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#mapRect)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param param1 QRect*
 ///
-QRect* q_transform_map_rect(void* self, void* param1);
+QRect* q_transform_map_rect(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#mapRect)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param param1 QRectF*
 ///
-QRectF* q_transform_map_rect2(void* self, void* param1);
+QRectF* q_transform_map_rect2(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param x int
 /// @param y int
 /// @param tx int*
 /// @param ty int*
 ///
-void q_transform_map9(void* self, int x, int y, int* tx, int* ty);
+void q_transform_map9(const void* self, int x, int y, int* tx, int* ty);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param x double
 /// @param y double
 /// @param tx double*
 /// @param ty double*
 ///
-void q_transform_map10(void* self, double x, double y, double* tx, double* ty);
+void q_transform_map10(const void* self, double x, double y, double* tx, double* ty);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#operator-2a-eq)
 ///
@@ -504,10 +504,10 @@ QTransform* q_transform_from_scale(double dx, double dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#inverted)
 ///
-/// @param self QTransform*
+/// @param self const QTransform*
 /// @param invertible bool*
 ///
-QTransform* q_transform_inverted1(void* self, bool* invertible);
+QTransform* q_transform_inverted1(const void* self, bool* invertible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#rotate)
 ///
@@ -540,14 +540,14 @@ void q_transform_delete(void* self);
 /// @param key QTransform*
 /// @param seed size_t
 ///
-size_t q_qtransform_h_q_hash(void* key, size_t seed);
+size_t q_qtransform_h_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform-h.html#qFuzzyCompare)
 ///
 /// @param t1 QTransform*
 /// @param t2 QTransform*
 ///
-bool q_qtransform_h_q_fuzzy_compare(void* t1, void* t2);
+bool q_qtransform_h_q_fuzzy_compare(const void* t1, const void* t2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtransform.html#public-types)
 

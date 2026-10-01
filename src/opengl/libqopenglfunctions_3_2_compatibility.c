@@ -10,7 +10,7 @@ bool q_openglfunctions_3_2_compatibility_initialize_open_g_l_functions(void* sel
     return QOpenGLFunctions_3_2_Compatibility_InitializeOpenGLFunctions((QOpenGLFunctions_3_2_Compatibility*)self);
 }
 
-void q_openglfunctions_3_2_compatibility_on_initialize_open_g_l_functions(void* self, bool (*callback)()) {
+void q_openglfunctions_3_2_compatibility_on_initialize_open_g_l_functions(void* self, bool (*callback)(void*)) {
     QOpenGLFunctions_3_2_Compatibility_OnInitializeOpenGLFunctions((QOpenGLFunctions_3_2_Compatibility*)self, (intptr_t)callback);
 }
 
@@ -2762,40 +2762,16 @@ void q_openglfunctions_3_2_compatibility_gl_vertex_attrib_i1i(void* self, uint32
     QOpenGLFunctions_3_2_Compatibility_GlVertexAttribI1i((QOpenGLFunctions_3_2_Compatibility*)self, index, x);
 }
 
-bool q_openglfunctions_3_2_compatibility_is_initialized(void* self) {
+bool q_openglfunctions_3_2_compatibility_is_initialized(const void* self) {
     return QOpenGLFunctions_3_2_Compatibility_IsInitialized((QOpenGLFunctions_3_2_Compatibility*)self);
 }
 
-bool q_openglfunctions_3_2_compatibility_super_is_initialized(void* self) {
-    return QOpenGLFunctions_3_2_Compatibility_SuperIsInitialized((QOpenGLFunctions_3_2_Compatibility*)self);
-}
-
-void q_openglfunctions_3_2_compatibility_on_is_initialized(void* self, bool (*callback)()) {
-    QOpenGLFunctions_3_2_Compatibility_OnIsInitialized((QOpenGLFunctions_3_2_Compatibility*)self, (intptr_t)callback);
-}
-
-void q_openglfunctions_3_2_compatibility_set_owning_context(void* self, void* context) {
+void q_openglfunctions_3_2_compatibility_set_owning_context(void* self, const void* context) {
     QOpenGLFunctions_3_2_Compatibility_SetOwningContext((QOpenGLFunctions_3_2_Compatibility*)self, (QOpenGLContext*)context);
 }
 
-void q_openglfunctions_3_2_compatibility_super_set_owning_context(void* self, void* context) {
-    QOpenGLFunctions_3_2_Compatibility_SuperSetOwningContext((QOpenGLFunctions_3_2_Compatibility*)self, (QOpenGLContext*)context);
-}
-
-void q_openglfunctions_3_2_compatibility_on_set_owning_context(void* self, void (*callback)(void*, void*)) {
-    QOpenGLFunctions_3_2_Compatibility_OnSetOwningContext((QOpenGLFunctions_3_2_Compatibility*)self, (intptr_t)callback);
-}
-
-QOpenGLContext* q_openglfunctions_3_2_compatibility_owning_context(void* self) {
+QOpenGLContext* q_openglfunctions_3_2_compatibility_owning_context(const void* self) {
     return QOpenGLFunctions_3_2_Compatibility_OwningContext((QOpenGLFunctions_3_2_Compatibility*)self);
-}
-
-QOpenGLContext* q_openglfunctions_3_2_compatibility_super_owning_context(void* self) {
-    return QOpenGLFunctions_3_2_Compatibility_SuperOwningContext((QOpenGLFunctions_3_2_Compatibility*)self);
-}
-
-void q_openglfunctions_3_2_compatibility_on_owning_context(void* self, QOpenGLContext* (*callback)()) {
-    QOpenGLFunctions_3_2_Compatibility_OnOwningContext((QOpenGLFunctions_3_2_Compatibility*)self, (intptr_t)callback);
 }
 
 void q_openglfunctions_3_2_compatibility_delete(void* self) {

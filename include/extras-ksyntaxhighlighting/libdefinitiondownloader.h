@@ -27,26 +27,26 @@ KSyntaxHighlighting__DefinitionDownloader* k_syntaxhighlighting__definitiondownl
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-const QMetaObject* k_syntaxhighlighting__definitiondownloader_meta_object(void* self);
+const QMetaObject* k_syntaxhighlighting__definitiondownloader_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
-/// @param callback const QMetaObject* func()
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param callback const QMetaObject* func(const KSyntaxHighlighting__DefinitionDownloader* self)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_syntaxhighlighting__definitiondownloader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-const QMetaObject* k_syntaxhighlighting__definitiondownloader_super_meta_object(void* self);
+const QMetaObject* k_syntaxhighlighting__definitiondownloader_super_meta_object(const void* self);
 
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param param1 const char*
@@ -156,9 +156,9 @@ const char* k_syntaxhighlighting__definitiondownloader_tr3(const char* s, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-const char* k_syntaxhighlighting__definitiondownloader_object_name(void* self);
+const char* k_syntaxhighlighting__definitiondownloader_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -173,33 +173,33 @@ void k_syntaxhighlighting__definitiondownloader_set_object_name(void* self, cons
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-bool k_syntaxhighlighting__definitiondownloader_is_widget_type(void* self);
+bool k_syntaxhighlighting__definitiondownloader_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-bool k_syntaxhighlighting__definitiondownloader_is_window_type(void* self);
+bool k_syntaxhighlighting__definitiondownloader_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-bool k_syntaxhighlighting__definitiondownloader_is_quick_item_type(void* self);
+bool k_syntaxhighlighting__definitiondownloader_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-bool k_syntaxhighlighting__definitiondownloader_signals_blocked(void* self);
+bool k_syntaxhighlighting__definitiondownloader_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -214,9 +214,9 @@ bool k_syntaxhighlighting__definitiondownloader_block_signals(void* self, bool b
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-QThread* k_syntaxhighlighting__definitiondownloader_thread(void* self);
+QThread* k_syntaxhighlighting__definitiondownloader_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -267,11 +267,11 @@ void k_syntaxhighlighting__definitiondownloader_kill_timer2(void* self, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_syntaxhighlighting__definitiondownloader_children(void* self);
+libqt_list k_syntaxhighlighting__definitiondownloader_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -309,7 +309,7 @@ void k_syntaxhighlighting__definitiondownloader_remove_event_filter(void* self, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -320,18 +320,18 @@ QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect(void
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -342,7 +342,7 @@ QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect3(voi
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_syntaxhighlighting__definitiondownloader_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_syntaxhighlighting__definitiondownloader_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -353,24 +353,24 @@ bool k_syntaxhighlighting__definitiondownloader_disconnect(void* sender, const c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_syntaxhighlighting__definitiondownloader_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_syntaxhighlighting__definitiondownloader_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-bool k_syntaxhighlighting__definitiondownloader_disconnect3(void* self);
+bool k_syntaxhighlighting__definitiondownloader_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param receiver QObject*
 ///
-bool k_syntaxhighlighting__definitiondownloader_disconnect4(void* self, void* receiver);
+bool k_syntaxhighlighting__definitiondownloader_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -378,23 +378,23 @@ bool k_syntaxhighlighting__definitiondownloader_disconnect4(void* self, void* re
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_syntaxhighlighting__definitiondownloader_disconnect5(void* param1);
+bool k_syntaxhighlighting__definitiondownloader_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-void k_syntaxhighlighting__definitiondownloader_dump_object_tree(void* self);
+void k_syntaxhighlighting__definitiondownloader_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-void k_syntaxhighlighting__definitiondownloader_dump_object_info(void* self);
+void k_syntaxhighlighting__definitiondownloader_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -404,16 +404,16 @@ void k_syntaxhighlighting__definitiondownloader_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_syntaxhighlighting__definitiondownloader_set_property(void* self, const char* name, void* value);
+bool k_syntaxhighlighting__definitiondownloader_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param name const char*
 ///
-QVariant* k_syntaxhighlighting__definitiondownloader_property(void* self, const char* name);
+QVariant* k_syntaxhighlighting__definitiondownloader_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -421,9 +421,9 @@ QVariant* k_syntaxhighlighting__definitiondownloader_property(void* self, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-const char** k_syntaxhighlighting__definitiondownloader_dynamic_property_names(void* self);
+const char** k_syntaxhighlighting__definitiondownloader_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -437,9 +437,9 @@ QBindingStorage* k_syntaxhighlighting__definitiondownloader_binding_storage(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-const QBindingStorage* k_syntaxhighlighting__definitiondownloader_binding_storage2(void* self);
+const QBindingStorage* k_syntaxhighlighting__definitiondownloader_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -462,18 +462,18 @@ void k_syntaxhighlighting__definitiondownloader_on_destroyed(void* self, void (*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-QObject* k_syntaxhighlighting__definitiondownloader_parent(void* self);
+QObject* k_syntaxhighlighting__definitiondownloader_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param classname const char*
 ///
-bool k_syntaxhighlighting__definitiondownloader_inherits(void* self, const char* classname);
+bool k_syntaxhighlighting__definitiondownloader_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -513,7 +513,7 @@ int32_t k_syntaxhighlighting__definitiondownloader_start_timer23(void* self, int
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -525,59 +525,59 @@ QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect5(voi
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_syntaxhighlighting__definitiondownloader_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal const char*
 ///
-bool k_syntaxhighlighting__definitiondownloader_disconnect1(void* self, const char* signal);
+bool k_syntaxhighlighting__definitiondownloader_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_syntaxhighlighting__definitiondownloader_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_syntaxhighlighting__definitiondownloader_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_syntaxhighlighting__definitiondownloader_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_syntaxhighlighting__definitiondownloader_disconnect23(void* self, void* receiver, const char* member);
+bool k_syntaxhighlighting__definitiondownloader_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_syntaxhighlighting__definitiondownloader_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -773,7 +773,7 @@ void k_syntaxhighlighting__definitiondownloader_on_custom_event(void* self, void
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal QMetaMethod*
 ///
-void k_syntaxhighlighting__definitiondownloader_connect_notify(void* self, void* signal);
+void k_syntaxhighlighting__definitiondownloader_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -784,7 +784,7 @@ void k_syntaxhighlighting__definitiondownloader_connect_notify(void* self, void*
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal QMetaMethod*
 ///
-void k_syntaxhighlighting__definitiondownloader_super_connect_notify(void* self, void* signal);
+void k_syntaxhighlighting__definitiondownloader_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -795,7 +795,7 @@ void k_syntaxhighlighting__definitiondownloader_super_connect_notify(void* self,
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback void func(KSyntaxHighlighting__DefinitionDownloader* self, QMetaMethod* signal)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_syntaxhighlighting__definitiondownloader_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -806,7 +806,7 @@ void k_syntaxhighlighting__definitiondownloader_on_connect_notify(void* self, vo
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal QMetaMethod*
 ///
-void k_syntaxhighlighting__definitiondownloader_disconnect_notify(void* self, void* signal);
+void k_syntaxhighlighting__definitiondownloader_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -817,7 +817,7 @@ void k_syntaxhighlighting__definitiondownloader_disconnect_notify(void* self, vo
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal QMetaMethod*
 ///
-void k_syntaxhighlighting__definitiondownloader_super_disconnect_notify(void* self, void* signal);
+void k_syntaxhighlighting__definitiondownloader_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -828,7 +828,7 @@ void k_syntaxhighlighting__definitiondownloader_super_disconnect_notify(void* se
 /// @param self KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback void func(KSyntaxHighlighting__DefinitionDownloader* self, QMetaMethod* signal)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_syntaxhighlighting__definitiondownloader_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -836,9 +836,9 @@ void k_syntaxhighlighting__definitiondownloader_on_disconnect_notify(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-QObject* k_syntaxhighlighting__definitiondownloader_sender(void* self);
+QObject* k_syntaxhighlighting__definitiondownloader_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -846,9 +846,9 @@ QObject* k_syntaxhighlighting__definitiondownloader_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-QObject* k_syntaxhighlighting__definitiondownloader_super_sender(void* self);
+QObject* k_syntaxhighlighting__definitiondownloader_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -856,10 +856,10 @@ QObject* k_syntaxhighlighting__definitiondownloader_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
-/// @param callback QObject* func()
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param callback QObject* func(KSyntaxHighlighting__DefinitionDownloader* self)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_sender(void* self, QObject* (*callback)());
+void k_syntaxhighlighting__definitiondownloader_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -867,9 +867,9 @@ void k_syntaxhighlighting__definitiondownloader_on_sender(void* self, QObject* (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-int32_t k_syntaxhighlighting__definitiondownloader_sender_signal_index(void* self);
+int32_t k_syntaxhighlighting__definitiondownloader_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -877,9 +877,9 @@ int32_t k_syntaxhighlighting__definitiondownloader_sender_signal_index(void* sel
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 ///
-int32_t k_syntaxhighlighting__definitiondownloader_super_sender_signal_index(void* self);
+int32_t k_syntaxhighlighting__definitiondownloader_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -887,10 +887,10 @@ int32_t k_syntaxhighlighting__definitiondownloader_super_sender_signal_index(voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
-/// @param callback int32_t func()
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
+/// @param callback int32_t func(KSyntaxHighlighting__DefinitionDownloader* self)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_syntaxhighlighting__definitiondownloader_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -898,10 +898,10 @@ void k_syntaxhighlighting__definitiondownloader_on_sender_signal_index(void* sel
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal const char*
 ///
-int32_t k_syntaxhighlighting__definitiondownloader_receivers(void* self, const char* signal);
+int32_t k_syntaxhighlighting__definitiondownloader_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -909,10 +909,10 @@ int32_t k_syntaxhighlighting__definitiondownloader_receivers(void* self, const c
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal const char*
 ///
-int32_t k_syntaxhighlighting__definitiondownloader_super_receivers(void* self, const char* signal);
+int32_t k_syntaxhighlighting__definitiondownloader_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -920,10 +920,10 @@ int32_t k_syntaxhighlighting__definitiondownloader_super_receivers(void* self, c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback int32_t func(KSyntaxHighlighting__DefinitionDownloader* self, const char* signal)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_syntaxhighlighting__definitiondownloader_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -931,10 +931,10 @@ void k_syntaxhighlighting__definitiondownloader_on_receivers(void* self, int32_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal QMetaMethod*
 ///
-bool k_syntaxhighlighting__definitiondownloader_is_signal_connected(void* self, void* signal);
+bool k_syntaxhighlighting__definitiondownloader_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -942,10 +942,10 @@ bool k_syntaxhighlighting__definitiondownloader_is_signal_connected(void* self, 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param signal QMetaMethod*
 ///
-bool k_syntaxhighlighting__definitiondownloader_super_is_signal_connected(void* self, void* signal);
+bool k_syntaxhighlighting__definitiondownloader_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -953,10 +953,10 @@ bool k_syntaxhighlighting__definitiondownloader_super_is_signal_connected(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KSyntaxHighlighting__DefinitionDownloader*
+/// @param self const KSyntaxHighlighting__DefinitionDownloader*
 /// @param callback bool func(KSyntaxHighlighting__DefinitionDownloader* self, QMetaMethod* signal)
 ///
-void k_syntaxhighlighting__definitiondownloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_syntaxhighlighting__definitiondownloader_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

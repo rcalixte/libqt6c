@@ -14,7 +14,7 @@
 ///
 /// @param other QPdfDocumentRenderOptions*
 ///
-QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new(void* other);
+QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html)
 
@@ -36,7 +36,7 @@ QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new3();
 ///
 /// @param param1 QPdfDocumentRenderOptions*
 ///
-QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new4(void* param1);
+QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new4(const void* param1);
 
 /// q_pdfdocumentrenderoptions_copy_assign shallow copies `other` into `self`.
 ///
@@ -54,11 +54,11 @@ void q_pdfdocumentrenderoptions_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#rotation)
 ///
-/// @param self QPdfDocumentRenderOptions*
+/// @param self const QPdfDocumentRenderOptions*
 ///
 /// @return enum QPdfDocumentRenderOptions__Rotation
 ///
-int32_t q_pdfdocumentrenderoptions_rotation(void* self);
+int32_t q_pdfdocumentrenderoptions_rotation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRotation)
 ///
@@ -69,11 +69,11 @@ void q_pdfdocumentrenderoptions_set_rotation(void* self, int32_t r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#renderFlags)
 ///
-/// @param self QPdfDocumentRenderOptions*
+/// @param self const QPdfDocumentRenderOptions*
 ///
 /// @return flag of enum QPdfDocumentRenderOptions__RenderFlag
 ///
-int32_t q_pdfdocumentrenderoptions_render_flags(void* self);
+int32_t q_pdfdocumentrenderoptions_render_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRenderFlags)
 ///
@@ -84,29 +84,29 @@ void q_pdfdocumentrenderoptions_set_render_flags(void* self, int32_t r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledClipRect)
 ///
-/// @param self QPdfDocumentRenderOptions*
+/// @param self const QPdfDocumentRenderOptions*
 ///
-QRect* q_pdfdocumentrenderoptions_scaled_clip_rect(void* self);
+QRect* q_pdfdocumentrenderoptions_scaled_clip_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setScaledClipRect)
 ///
 /// @param self QPdfDocumentRenderOptions*
 /// @param r QRect*
 ///
-void q_pdfdocumentrenderoptions_set_scaled_clip_rect(void* self, void* r);
+void q_pdfdocumentrenderoptions_set_scaled_clip_rect(void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledSize)
 ///
-/// @param self QPdfDocumentRenderOptions*
+/// @param self const QPdfDocumentRenderOptions*
 ///
-QSize* q_pdfdocumentrenderoptions_scaled_size(void* self);
+QSize* q_pdfdocumentrenderoptions_scaled_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setScaledSize)
 ///
 /// @param self QPdfDocumentRenderOptions*
 /// @param s QSize*
 ///
-void q_pdfdocumentrenderoptions_set_scaled_size(void* self, void* s);
+void q_pdfdocumentrenderoptions_set_scaled_size(void* self, const void* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#dtor.QPdfDocumentRenderOptions)
 ///

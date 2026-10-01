@@ -58,7 +58,7 @@ void Sonnet__BackgroundChecker_Done(Sonnet__BackgroundChecker* self);
 void Sonnet__BackgroundChecker_Connect_Done(Sonnet__BackgroundChecker* self, intptr_t slot);
 libqt_string Sonnet__BackgroundChecker_FetchMoreText(Sonnet__BackgroundChecker* self);
 void Sonnet__BackgroundChecker_FinishedCurrentFeed(Sonnet__BackgroundChecker* self);
-void Sonnet__BackgroundChecker_OnMetaObject(const Sonnet__BackgroundChecker* self, intptr_t slot);
+void Sonnet__BackgroundChecker_OnMetaObject(Sonnet__BackgroundChecker* self, intptr_t slot);
 QMetaObject* Sonnet__BackgroundChecker_SuperMetaObject(const Sonnet__BackgroundChecker* self);
 void Sonnet__BackgroundChecker_OnMetacast(Sonnet__BackgroundChecker* self, intptr_t slot);
 void* Sonnet__BackgroundChecker_SuperMetacast(Sonnet__BackgroundChecker* self, const char* param1);
@@ -96,20 +96,10 @@ void Sonnet__BackgroundChecker_DisconnectNotify(Sonnet__BackgroundChecker* self,
 void Sonnet__BackgroundChecker_OnDisconnectNotify(Sonnet__BackgroundChecker* self, intptr_t slot);
 void Sonnet__BackgroundChecker_SuperDisconnectNotify(Sonnet__BackgroundChecker* self, const QMetaMethod* signal);
 void Sonnet__BackgroundChecker_SlotEngineDone(Sonnet__BackgroundChecker* self);
-void Sonnet__BackgroundChecker_OnSlotEngineDone(Sonnet__BackgroundChecker* self, intptr_t slot);
-void Sonnet__BackgroundChecker_SuperSlotEngineDone(Sonnet__BackgroundChecker* self);
 QObject* Sonnet__BackgroundChecker_Sender(const Sonnet__BackgroundChecker* self);
-void Sonnet__BackgroundChecker_OnSender(const Sonnet__BackgroundChecker* self, intptr_t slot);
-QObject* Sonnet__BackgroundChecker_SuperSender(const Sonnet__BackgroundChecker* self);
 int Sonnet__BackgroundChecker_SenderSignalIndex(const Sonnet__BackgroundChecker* self);
-void Sonnet__BackgroundChecker_OnSenderSignalIndex(const Sonnet__BackgroundChecker* self, intptr_t slot);
-int Sonnet__BackgroundChecker_SuperSenderSignalIndex(const Sonnet__BackgroundChecker* self);
 int Sonnet__BackgroundChecker_Receivers(const Sonnet__BackgroundChecker* self, const char* signal);
-void Sonnet__BackgroundChecker_OnReceivers(const Sonnet__BackgroundChecker* self, intptr_t slot);
-int Sonnet__BackgroundChecker_SuperReceivers(const Sonnet__BackgroundChecker* self, const char* signal);
 bool Sonnet__BackgroundChecker_IsSignalConnected(const Sonnet__BackgroundChecker* self, const QMetaMethod* signal);
-void Sonnet__BackgroundChecker_OnIsSignalConnected(const Sonnet__BackgroundChecker* self, intptr_t slot);
-bool Sonnet__BackgroundChecker_SuperIsSignalConnected(const Sonnet__BackgroundChecker* self, const QMetaMethod* signal);
 void Sonnet__BackgroundChecker_Delete(Sonnet__BackgroundChecker* self);
 
 #ifdef __cplusplus

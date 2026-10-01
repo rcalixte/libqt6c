@@ -20,14 +20,14 @@ KNSCore__Author* k_nscore__author_new();
 ///
 /// @param other KNSCore__Author*
 ///
-KNSCore__Author* k_nscore__author_new2(void* other);
+KNSCore__Author* k_nscore__author_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#operator-eq)
 ///
 /// @param self KNSCore__Author*
 /// @param other KNSCore__Author*
 ///
-void k_nscore__author_operator_assign(void* self, void* other);
+void k_nscore__author_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#setId)
 ///
@@ -40,9 +40,9 @@ void k_nscore__author_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Author*
+/// @param self const KNSCore__Author*
 ///
-const char* k_nscore__author_id(void* self);
+const char* k_nscore__author_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#setName)
 ///
@@ -55,9 +55,9 @@ void k_nscore__author_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Author*
+/// @param self const KNSCore__Author*
 ///
-const char* k_nscore__author_name(void* self);
+const char* k_nscore__author_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#setEmail)
 ///
@@ -70,9 +70,9 @@ void k_nscore__author_set_email(void* self, const char* email);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Author*
+/// @param self const KNSCore__Author*
 ///
-const char* k_nscore__author_email(void* self);
+const char* k_nscore__author_email(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#setJabber)
 ///
@@ -85,9 +85,9 @@ void k_nscore__author_set_jabber(void* self, const char* jabber);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Author*
+/// @param self const KNSCore__Author*
 ///
-const char* k_nscore__author_jabber(void* self);
+const char* k_nscore__author_jabber(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#setHomepage)
 ///
@@ -100,9 +100,9 @@ void k_nscore__author_set_homepage(void* self, const char* homepage);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Author*
+/// @param self const KNSCore__Author*
 ///
-const char* k_nscore__author_homepage(void* self);
+const char* k_nscore__author_homepage(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#setProfilepage)
 ///
@@ -115,30 +115,30 @@ void k_nscore__author_set_profilepage(void* self, const char* profilepage);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Author*
+/// @param self const KNSCore__Author*
 ///
-const char* k_nscore__author_profilepage(void* self);
+const char* k_nscore__author_profilepage(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#setAvatarUrl)
 ///
 /// @param self KNSCore__Author*
 /// @param avatarUrl QUrl*
 ///
-void k_nscore__author_set_avatar_url(void* self, void* avatarUrl);
+void k_nscore__author_set_avatar_url(void* self, const void* avatarUrl);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#avatarUrl)
 ///
-/// @param self KNSCore__Author*
+/// @param self const KNSCore__Author*
 ///
-QUrl* k_nscore__author_avatar_url(void* self);
+QUrl* k_nscore__author_avatar_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__Author*
+/// @param self const KNSCore__Author*
 ///
-const char* k_nscore__author_description(void* self);
+const char* k_nscore__author_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-author.html#setDescription)
 ///

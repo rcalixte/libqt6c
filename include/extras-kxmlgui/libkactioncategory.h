@@ -27,26 +27,26 @@ KActionCategory* k_actioncategory_new2(const char* text, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-const QMetaObject* k_actioncategory_meta_object(void* self);
+const QMetaObject* k_actioncategory_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KActionCategory*
-/// @param callback const QMetaObject* func()
+/// @param self const KActionCategory*
+/// @param callback const QMetaObject* func(const KActionCategory* self)
 ///
-void k_actioncategory_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_actioncategory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-const QMetaObject* k_actioncategory_super_meta_object(void* self);
+const QMetaObject* k_actioncategory_super_meta_object(const void* self);
 
 /// @param self KActionCategory*
 /// @param param1 const char*
@@ -137,25 +137,25 @@ QAction* k_actioncategory_add_action5(void* self, int32_t actionType);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#actions)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_actioncategory_actions(void* self);
+libqt_list k_actioncategory_actions(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#collection)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-KActionCollection* k_actioncategory_collection(void* self);
+KActionCollection* k_actioncategory_collection(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-const char* k_actioncategory_text(void* self);
+const char* k_actioncategory_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#setText)
 ///
@@ -189,7 +189,7 @@ const char* k_actioncategory_tr3(const char* s, const char* c, int n);
 /// @param actionType enum KStandardAction__StandardAction
 /// @param receiver QObject*
 ///
-QAction* k_actioncategory_add_action22(void* self, int32_t actionType, void* receiver);
+QAction* k_actioncategory_add_action22(void* self, int32_t actionType, const void* receiver);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#addAction)
 ///
@@ -198,7 +198,7 @@ QAction* k_actioncategory_add_action22(void* self, int32_t actionType, void* rec
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QAction* k_actioncategory_add_action32(void* self, int32_t actionType, void* receiver, const char* member);
+QAction* k_actioncategory_add_action32(void* self, int32_t actionType, const void* receiver, const char* member);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#addAction)
 ///
@@ -207,7 +207,7 @@ QAction* k_actioncategory_add_action32(void* self, int32_t actionType, void* rec
 /// @param name const char*
 /// @param receiver QObject*
 ///
-QAction* k_actioncategory_add_action33(void* self, int32_t actionType, const char* name, void* receiver);
+QAction* k_actioncategory_add_action33(void* self, int32_t actionType, const char* name, const void* receiver);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#addAction)
 ///
@@ -217,7 +217,7 @@ QAction* k_actioncategory_add_action33(void* self, int32_t actionType, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QAction* k_actioncategory_add_action42(void* self, int32_t actionType, const char* name, void* receiver, const char* member);
+QAction* k_actioncategory_add_action42(void* self, int32_t actionType, const char* name, const void* receiver, const char* member);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#addAction)
 ///
@@ -225,7 +225,7 @@ QAction* k_actioncategory_add_action42(void* self, int32_t actionType, const cha
 /// @param name const char*
 /// @param receiver QObject*
 ///
-QAction* k_actioncategory_add_action23(void* self, const char* name, void* receiver);
+QAction* k_actioncategory_add_action23(void* self, const char* name, const void* receiver);
 
 /// [Upstream resources](https://api.kde.org/kactioncategory.html#addAction)
 ///
@@ -234,7 +234,7 @@ QAction* k_actioncategory_add_action23(void* self, const char* name, void* recei
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QAction* k_actioncategory_add_action34(void* self, const char* name, void* receiver, const char* member);
+QAction* k_actioncategory_add_action34(void* self, const char* name, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -242,9 +242,9 @@ QAction* k_actioncategory_add_action34(void* self, const char* name, void* recei
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-const char* k_actioncategory_object_name(void* self);
+const char* k_actioncategory_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -259,33 +259,33 @@ void k_actioncategory_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-bool k_actioncategory_is_widget_type(void* self);
+bool k_actioncategory_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-bool k_actioncategory_is_window_type(void* self);
+bool k_actioncategory_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-bool k_actioncategory_is_quick_item_type(void* self);
+bool k_actioncategory_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-bool k_actioncategory_signals_blocked(void* self);
+bool k_actioncategory_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -300,9 +300,9 @@ bool k_actioncategory_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-QThread* k_actioncategory_thread(void* self);
+QThread* k_actioncategory_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -353,11 +353,11 @@ void k_actioncategory_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_actioncategory_children(void* self);
+libqt_list k_actioncategory_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -395,7 +395,7 @@ void k_actioncategory_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_actioncategory_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_actioncategory_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -406,18 +406,18 @@ QMetaObject__Connection* k_actioncategory_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_actioncategory_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_actioncategory_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_actioncategory_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_actioncategory_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -428,7 +428,7 @@ QMetaObject__Connection* k_actioncategory_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_actioncategory_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_actioncategory_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -439,24 +439,24 @@ bool k_actioncategory_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_actioncategory_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_actioncategory_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-bool k_actioncategory_disconnect3(void* self);
+bool k_actioncategory_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param receiver QObject*
 ///
-bool k_actioncategory_disconnect4(void* self, void* receiver);
+bool k_actioncategory_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -464,23 +464,23 @@ bool k_actioncategory_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_actioncategory_disconnect5(void* param1);
+bool k_actioncategory_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-void k_actioncategory_dump_object_tree(void* self);
+void k_actioncategory_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-void k_actioncategory_dump_object_info(void* self);
+void k_actioncategory_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -490,16 +490,16 @@ void k_actioncategory_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_actioncategory_set_property(void* self, const char* name, void* value);
+bool k_actioncategory_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param name const char*
 ///
-QVariant* k_actioncategory_property(void* self, const char* name);
+QVariant* k_actioncategory_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -507,9 +507,9 @@ QVariant* k_actioncategory_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-const char** k_actioncategory_dynamic_property_names(void* self);
+const char** k_actioncategory_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -523,9 +523,9 @@ QBindingStorage* k_actioncategory_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-const QBindingStorage* k_actioncategory_binding_storage2(void* self);
+const QBindingStorage* k_actioncategory_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -548,18 +548,18 @@ void k_actioncategory_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-QObject* k_actioncategory_parent(void* self);
+QObject* k_actioncategory_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param classname const char*
 ///
-bool k_actioncategory_inherits(void* self, const char* classname);
+bool k_actioncategory_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -599,7 +599,7 @@ int32_t k_actioncategory_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_actioncategory_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_actioncategory_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -611,59 +611,59 @@ QMetaObject__Connection* k_actioncategory_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_actioncategory_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_actioncategory_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_actioncategory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_actioncategory_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param signal const char*
 ///
-bool k_actioncategory_disconnect1(void* self, const char* signal);
+bool k_actioncategory_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCategory*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_actioncategory_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_actioncategory_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_actioncategory_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_actioncategory_disconnect23(void* self, void* receiver, const char* member);
+bool k_actioncategory_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KActionCategory*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_actioncategory_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -859,7 +859,7 @@ void k_actioncategory_on_custom_event(void* self, void (*callback)(void*, void*)
 /// @param self KActionCategory*
 /// @param signal QMetaMethod*
 ///
-void k_actioncategory_connect_notify(void* self, void* signal);
+void k_actioncategory_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -870,7 +870,7 @@ void k_actioncategory_connect_notify(void* self, void* signal);
 /// @param self KActionCategory*
 /// @param signal QMetaMethod*
 ///
-void k_actioncategory_super_connect_notify(void* self, void* signal);
+void k_actioncategory_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -881,7 +881,7 @@ void k_actioncategory_super_connect_notify(void* self, void* signal);
 /// @param self KActionCategory*
 /// @param callback void func(KActionCategory* self, QMetaMethod* signal)
 ///
-void k_actioncategory_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_actioncategory_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -892,7 +892,7 @@ void k_actioncategory_on_connect_notify(void* self, void (*callback)(void*, void
 /// @param self KActionCategory*
 /// @param signal QMetaMethod*
 ///
-void k_actioncategory_disconnect_notify(void* self, void* signal);
+void k_actioncategory_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -903,7 +903,7 @@ void k_actioncategory_disconnect_notify(void* self, void* signal);
 /// @param self KActionCategory*
 /// @param signal QMetaMethod*
 ///
-void k_actioncategory_super_disconnect_notify(void* self, void* signal);
+void k_actioncategory_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -914,7 +914,7 @@ void k_actioncategory_super_disconnect_notify(void* self, void* signal);
 /// @param self KActionCategory*
 /// @param callback void func(KActionCategory* self, QMetaMethod* signal)
 ///
-void k_actioncategory_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_actioncategory_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -922,9 +922,9 @@ void k_actioncategory_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-QObject* k_actioncategory_sender(void* self);
+QObject* k_actioncategory_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -932,9 +932,9 @@ QObject* k_actioncategory_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-QObject* k_actioncategory_super_sender(void* self);
+QObject* k_actioncategory_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -942,10 +942,10 @@ QObject* k_actioncategory_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KActionCategory*
-/// @param callback QObject* func()
+/// @param self const KActionCategory*
+/// @param callback QObject* func(KActionCategory* self)
 ///
-void k_actioncategory_on_sender(void* self, QObject* (*callback)());
+void k_actioncategory_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -953,9 +953,9 @@ void k_actioncategory_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-int32_t k_actioncategory_sender_signal_index(void* self);
+int32_t k_actioncategory_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -963,9 +963,9 @@ int32_t k_actioncategory_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 ///
-int32_t k_actioncategory_super_sender_signal_index(void* self);
+int32_t k_actioncategory_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -973,10 +973,10 @@ int32_t k_actioncategory_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KActionCategory*
-/// @param callback int32_t func()
+/// @param self const KActionCategory*
+/// @param callback int32_t func(KActionCategory* self)
 ///
-void k_actioncategory_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_actioncategory_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -984,10 +984,10 @@ void k_actioncategory_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param signal const char*
 ///
-int32_t k_actioncategory_receivers(void* self, const char* signal);
+int32_t k_actioncategory_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -995,10 +995,10 @@ int32_t k_actioncategory_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param signal const char*
 ///
-int32_t k_actioncategory_super_receivers(void* self, const char* signal);
+int32_t k_actioncategory_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1006,10 +1006,10 @@ int32_t k_actioncategory_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param callback int32_t func(KActionCategory* self, const char* signal)
 ///
-void k_actioncategory_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_actioncategory_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1017,10 +1017,10 @@ void k_actioncategory_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param signal QMetaMethod*
 ///
-bool k_actioncategory_is_signal_connected(void* self, void* signal);
+bool k_actioncategory_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1028,10 +1028,10 @@ bool k_actioncategory_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param signal QMetaMethod*
 ///
-bool k_actioncategory_super_is_signal_connected(void* self, void* signal);
+bool k_actioncategory_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1039,10 +1039,10 @@ bool k_actioncategory_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KActionCategory*
+/// @param self const KActionCategory*
 /// @param callback bool func(KActionCategory* self, QMetaMethod* signal)
 ///
-void k_actioncategory_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_actioncategory_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -14,14 +14,14 @@
 ///
 /// @param other QWebEngineDesktopMediaRequest*
 ///
-QWebEngineDesktopMediaRequest* q_webenginedesktopmediarequest_new(void* other);
+QWebEngineDesktopMediaRequest* q_webenginedesktopmediarequest_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#operator-eq)
 ///
 /// @param self QWebEngineDesktopMediaRequest*
 /// @param other QWebEngineDesktopMediaRequest*
 ///
-void q_webenginedesktopmediarequest_operator_assign(void* self, void* other);
+void q_webenginedesktopmediarequest_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#swap)
 ///
@@ -32,35 +32,35 @@ void q_webenginedesktopmediarequest_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#screensModel)
 ///
-/// @param self QWebEngineDesktopMediaRequest*
+/// @param self const QWebEngineDesktopMediaRequest*
 ///
-QAbstractListModel* q_webenginedesktopmediarequest_screens_model(void* self);
+QAbstractListModel* q_webenginedesktopmediarequest_screens_model(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#windowsModel)
 ///
-/// @param self QWebEngineDesktopMediaRequest*
+/// @param self const QWebEngineDesktopMediaRequest*
 ///
-QAbstractListModel* q_webenginedesktopmediarequest_windows_model(void* self);
+QAbstractListModel* q_webenginedesktopmediarequest_windows_model(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#selectScreen)
 ///
-/// @param self QWebEngineDesktopMediaRequest*
+/// @param self const QWebEngineDesktopMediaRequest*
 /// @param index QModelIndex*
 ///
-void q_webenginedesktopmediarequest_select_screen(void* self, void* index);
+void q_webenginedesktopmediarequest_select_screen(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#selectWindow)
 ///
-/// @param self QWebEngineDesktopMediaRequest*
+/// @param self const QWebEngineDesktopMediaRequest*
 /// @param index QModelIndex*
 ///
-void q_webenginedesktopmediarequest_select_window(void* self, void* index);
+void q_webenginedesktopmediarequest_select_window(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#cancel)
 ///
-/// @param self QWebEngineDesktopMediaRequest*
+/// @param self const QWebEngineDesktopMediaRequest*
 ///
-void q_webenginedesktopmediarequest_cancel(void* self);
+void q_webenginedesktopmediarequest_cancel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#dtor.QWebEngineDesktopMediaRequest)
 ///

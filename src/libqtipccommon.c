@@ -13,7 +13,7 @@ QNativeIpcKey* q_nativeipckey_new3(const char* k) {
     return QNativeIpcKey_New3(qstring(k));
 }
 
-QNativeIpcKey* q_nativeipckey_new4(void* other) {
+QNativeIpcKey* q_nativeipckey_new4(const void* other) {
     return QNativeIpcKey_New4((QNativeIpcKey*)other);
 }
 
@@ -25,7 +25,7 @@ uint16_t q_nativeipckey_legacy_default_type_for_os() {
     return QNativeIpcKey_LegacyDefaultTypeForOs();
 }
 
-void q_nativeipckey_operator_assign(void* self, void* other) {
+void q_nativeipckey_operator_assign(void* self, const void* other) {
     QNativeIpcKey_OperatorAssign((QNativeIpcKey*)self, (QNativeIpcKey*)other);
 }
 
@@ -33,15 +33,15 @@ void q_nativeipckey_swap(void* self, void* other) {
     QNativeIpcKey_Swap((QNativeIpcKey*)self, (QNativeIpcKey*)other);
 }
 
-bool q_nativeipckey_is_empty(void* self) {
+bool q_nativeipckey_is_empty(const void* self) {
     return QNativeIpcKey_IsEmpty((QNativeIpcKey*)self);
 }
 
-bool q_nativeipckey_is_valid(void* self) {
+bool q_nativeipckey_is_valid(const void* self) {
     return QNativeIpcKey_IsValid((QNativeIpcKey*)self);
 }
 
-uint16_t q_nativeipckey_type(void* self) {
+uint16_t q_nativeipckey_type(const void* self) {
     return QNativeIpcKey_Type((QNativeIpcKey*)self);
 }
 
@@ -49,7 +49,7 @@ void q_nativeipckey_set_type(void* self, uint16_t type) {
     QNativeIpcKey_SetType((QNativeIpcKey*)self, type);
 }
 
-const char* q_nativeipckey_native_key(void* self) {
+const char* q_nativeipckey_native_key(const void* self) {
     libqt_string _str = QNativeIpcKey_NativeKey((QNativeIpcKey*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -60,7 +60,7 @@ void q_nativeipckey_set_native_key(void* self, const char* newKey) {
     QNativeIpcKey_SetNativeKey((QNativeIpcKey*)self, qstring(newKey));
 }
 
-const char* q_nativeipckey_to_string(void* self) {
+const char* q_nativeipckey_to_string(const void* self) {
     libqt_string _str = QNativeIpcKey_ToString((QNativeIpcKey*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

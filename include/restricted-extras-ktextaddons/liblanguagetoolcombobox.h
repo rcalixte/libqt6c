@@ -24,26 +24,26 @@ TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1LanguageToolComboBox.html)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const QMetaObject* k_textgrammarcheck__languagetoolcombobox_meta_object(void* self);
+const QMetaObject* k_textgrammarcheck__languagetoolcombobox_meta_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1LanguageToolComboBox.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback const QMetaObject* func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback const QMetaObject* func(const TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1LanguageToolComboBox.html)
 ///
 /// Base class method implementation
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const QMetaObject* k_textgrammarcheck__languagetoolcombobox_super_meta_object(void* self);
+const QMetaObject* k_textgrammarcheck__languagetoolcombobox_super_meta_object(const void* self);
 
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 const char*
@@ -106,9 +106,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_language(void* self, const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_language(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_language(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1LanguageToolComboBox.html)
 ///
@@ -133,9 +133,9 @@ const char* k_textgrammarcheck__languagetoolcombobox_tr3(const char* s, const ch
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#maxVisibleItems)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_max_visible_items(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_max_visible_items(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -150,9 +150,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_max_visible_items(void* self, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#count)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_count(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_count(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -167,17 +167,17 @@ void k_textgrammarcheck__languagetoolcombobox_set_max_count(void* self, int max)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#maxCount)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_max_count(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_max_count(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#duplicatesEnabled)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_duplicates_enabled(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_duplicates_enabled(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -201,37 +201,37 @@ void k_textgrammarcheck__languagetoolcombobox_set_frame(void* self, bool frame);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hasFrame)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_has_frame(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_has_frame(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findText)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param text const char*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_find_text(void* self, const char* text);
+int32_t k_textgrammarcheck__languagetoolcombobox_find_text(const void* self, const char* text);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param data QVariant*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_find_data(void* self, void* data);
+int32_t k_textgrammarcheck__languagetoolcombobox_find_data(const void* self, const void* data);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#insertPolicy)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum QComboBox__InsertPolicy
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_insert_policy(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_insert_policy(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -246,11 +246,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_insert_policy(void* self, int3
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeAdjustPolicy)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum QComboBox__SizeAdjustPolicy
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_size_adjust_policy(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_size_adjust_policy(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -265,9 +265,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_size_adjust_policy(void* self,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#minimumContentsLength)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_minimum_contents_length(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_minimum_contents_length(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -282,9 +282,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_minimum_contents_length(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#iconSize)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_icon_size(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_icon_size(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -293,7 +293,7 @@ QSize* k_textgrammarcheck__languagetoolcombobox_icon_size(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param size QSize*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_icon_size(void* self, void* size);
+void k_textgrammarcheck__languagetoolcombobox_set_icon_size(void* self, const void* size);
 
 /// Inherited from QComboBox
 ///
@@ -310,17 +310,17 @@ void k_textgrammarcheck__languagetoolcombobox_set_placeholder_text(void* self, c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_placeholder_text(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_placeholder_text(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#isEditable)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_editable(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_editable(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -344,9 +344,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_line_edit(void* self, void* ed
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#lineEdit)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QLineEdit* k_textgrammarcheck__languagetoolcombobox_line_edit(void* self);
+QLineEdit* k_textgrammarcheck__languagetoolcombobox_line_edit(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -355,15 +355,15 @@ QLineEdit* k_textgrammarcheck__languagetoolcombobox_line_edit(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param v QValidator*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_validator(void* self, void* v);
+void k_textgrammarcheck__languagetoolcombobox_set_validator(void* self, const void* v);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#validator)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const QValidator* k_textgrammarcheck__languagetoolcombobox_validator(void* self);
+const QValidator* k_textgrammarcheck__languagetoolcombobox_validator(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -378,17 +378,17 @@ void k_textgrammarcheck__languagetoolcombobox_set_completer(void* self, void* c)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#completer)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QCompleter* k_textgrammarcheck__languagetoolcombobox_completer(void* self);
+QCompleter* k_textgrammarcheck__languagetoolcombobox_completer(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemDelegate)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QAbstractItemDelegate* k_textgrammarcheck__languagetoolcombobox_item_delegate(void* self);
+QAbstractItemDelegate* k_textgrammarcheck__languagetoolcombobox_item_delegate(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -403,17 +403,17 @@ void k_textgrammarcheck__languagetoolcombobox_set_item_delegate(void* self, void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#model)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QAbstractItemModel* k_textgrammarcheck__languagetoolcombobox_model(void* self);
+QAbstractItemModel* k_textgrammarcheck__languagetoolcombobox_model(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#rootModelIndex)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QModelIndex* k_textgrammarcheck__languagetoolcombobox_root_model_index(void* self);
+QModelIndex* k_textgrammarcheck__languagetoolcombobox_root_model_index(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -422,15 +422,15 @@ QModelIndex* k_textgrammarcheck__languagetoolcombobox_root_model_index(void* sel
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param index QModelIndex*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_root_model_index(void* self, void* index);
+void k_textgrammarcheck__languagetoolcombobox_set_root_model_index(void* self, const void* index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#modelColumn)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_model_column(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_model_column(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -445,9 +445,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_model_column(void* self, int v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentIndex)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_current_index(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_current_index(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -455,17 +455,17 @@ int32_t k_textgrammarcheck__languagetoolcombobox_current_index(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_current_text(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_current_text(const void* self);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentData)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QVariant* k_textgrammarcheck__languagetoolcombobox_current_data(void* self);
+QVariant* k_textgrammarcheck__languagetoolcombobox_current_data(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -473,28 +473,28 @@ QVariant* k_textgrammarcheck__languagetoolcombobox_current_data(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param index int
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_item_text(void* self, int index);
+const char* k_textgrammarcheck__languagetoolcombobox_item_text(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemIcon)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param index int
 ///
-QIcon* k_textgrammarcheck__languagetoolcombobox_item_icon(void* self, int index);
+QIcon* k_textgrammarcheck__languagetoolcombobox_item_icon(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemData)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param index int
 ///
-QVariant* k_textgrammarcheck__languagetoolcombobox_item_data(void* self, int index);
+QVariant* k_textgrammarcheck__languagetoolcombobox_item_data(const void* self, int index);
 
 /// Inherited from QComboBox
 ///
@@ -513,7 +513,7 @@ void k_textgrammarcheck__languagetoolcombobox_add_item(void* self, const char* t
 /// @param icon QIcon*
 /// @param text const char*
 ///
-void k_textgrammarcheck__languagetoolcombobox_add_item2(void* self, void* icon, const char* text);
+void k_textgrammarcheck__languagetoolcombobox_add_item2(void* self, const void* icon, const char* text);
 
 /// Inherited from QComboBox
 ///
@@ -543,7 +543,7 @@ void k_textgrammarcheck__languagetoolcombobox_insert_item(void* self, int index,
 /// @param icon QIcon*
 /// @param text const char*
 ///
-void k_textgrammarcheck__languagetoolcombobox_insert_item2(void* self, int index, void* icon, const char* text);
+void k_textgrammarcheck__languagetoolcombobox_insert_item2(void* self, int index, const void* icon, const char* text);
 
 /// Inherited from QComboBox
 ///
@@ -591,7 +591,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_item_text(void* self, int inde
 /// @param index int
 /// @param icon QIcon*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_item_icon(void* self, int index, void* icon);
+void k_textgrammarcheck__languagetoolcombobox_set_item_icon(void* self, int index, const void* icon);
 
 /// Inherited from QComboBox
 ///
@@ -601,15 +601,15 @@ void k_textgrammarcheck__languagetoolcombobox_set_item_icon(void* self, int inde
 /// @param index int
 /// @param value QVariant*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_item_data(void* self, int index, void* value);
+void k_textgrammarcheck__languagetoolcombobox_set_item_data(void* self, int index, const void* value);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#view)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QAbstractItemView* k_textgrammarcheck__languagetoolcombobox_view(void* self);
+QAbstractItemView* k_textgrammarcheck__languagetoolcombobox_view(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -624,11 +624,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_view(void* self, void* itemVie
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query2(void* self, int32_t query, void* argument);
+QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query2(const void* self, int32_t query, const void* argument);
 
 /// Inherited from QComboBox
 ///
@@ -803,51 +803,51 @@ void k_textgrammarcheck__languagetoolcombobox_on_current_text_changed(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findText)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_find_text2(void* self, const char* text, int32_t flags);
+int32_t k_textgrammarcheck__languagetoolcombobox_find_text2(const void* self, const char* text, int32_t flags);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param data QVariant*
 /// @param role int
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_find_data2(void* self, void* data, int role);
+int32_t k_textgrammarcheck__languagetoolcombobox_find_data2(const void* self, const void* data, int role);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#findData)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param data QVariant*
 /// @param role int
 /// @param flags flag of enum Qt__MatchFlag
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_find_data3(void* self, void* data, int role, int32_t flags);
+int32_t k_textgrammarcheck__languagetoolcombobox_find_data3(const void* self, const void* data, int role, int32_t flags);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#currentData)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param role int
 ///
-QVariant* k_textgrammarcheck__languagetoolcombobox_current_data1(void* self, int role);
+QVariant* k_textgrammarcheck__languagetoolcombobox_current_data1(const void* self, int role);
 
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#itemData)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param index int
 /// @param role int
 ///
-QVariant* k_textgrammarcheck__languagetoolcombobox_item_data2(void* self, int index, int role);
+QVariant* k_textgrammarcheck__languagetoolcombobox_item_data2(const void* self, int index, int role);
 
 /// Inherited from QComboBox
 ///
@@ -857,7 +857,7 @@ QVariant* k_textgrammarcheck__languagetoolcombobox_item_data2(void* self, int in
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_textgrammarcheck__languagetoolcombobox_add_item22(void* self, const char* text, void* userData);
+void k_textgrammarcheck__languagetoolcombobox_add_item22(void* self, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -868,7 +868,7 @@ void k_textgrammarcheck__languagetoolcombobox_add_item22(void* self, const char*
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_textgrammarcheck__languagetoolcombobox_add_item3(void* self, void* icon, const char* text, void* userData);
+void k_textgrammarcheck__languagetoolcombobox_add_item3(void* self, const void* icon, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -879,7 +879,7 @@ void k_textgrammarcheck__languagetoolcombobox_add_item3(void* self, void* icon, 
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_textgrammarcheck__languagetoolcombobox_insert_item3(void* self, int index, const char* text, void* userData);
+void k_textgrammarcheck__languagetoolcombobox_insert_item3(void* self, int index, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -891,7 +891,7 @@ void k_textgrammarcheck__languagetoolcombobox_insert_item3(void* self, int index
 /// @param text const char*
 /// @param userData QVariant*
 ///
-void k_textgrammarcheck__languagetoolcombobox_insert_item4(void* self, int index, void* icon, const char* text, void* userData);
+void k_textgrammarcheck__languagetoolcombobox_insert_item4(void* self, int index, const void* icon, const char* text, const void* userData);
 
 /// Inherited from QComboBox
 ///
@@ -902,7 +902,7 @@ void k_textgrammarcheck__languagetoolcombobox_insert_item4(void* self, int index
 /// @param value QVariant*
 /// @param role int
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_item_data3(void* self, int index, void* value, int role);
+void k_textgrammarcheck__languagetoolcombobox_set_item_data3(void* self, int index, const void* value, int role);
 
 /// Inherited from QWidget
 ///
@@ -924,9 +924,9 @@ TextGrammarCheck__LanguageToolComboBox* k_textgrammarcheck__languagetoolcombobox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-uintptr_t k_textgrammarcheck__languagetoolcombobox_win_id(void* self);
+uintptr_t k_textgrammarcheck__languagetoolcombobox_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -940,25 +940,25 @@ void k_textgrammarcheck__languagetoolcombobox_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-uintptr_t k_textgrammarcheck__languagetoolcombobox_internal_win_id(void* self);
+uintptr_t k_textgrammarcheck__languagetoolcombobox_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-uintptr_t k_textgrammarcheck__languagetoolcombobox_effective_win_id(void* self);
+uintptr_t k_textgrammarcheck__languagetoolcombobox_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QStyle* k_textgrammarcheck__languagetoolcombobox_style(void* self);
+QStyle* k_textgrammarcheck__languagetoolcombobox_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -973,35 +973,35 @@ void k_textgrammarcheck__languagetoolcombobox_set_style(void* self, void* style)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_top_level(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_window(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_modal(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_window_modality(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1016,18 +1016,18 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_modality(void* self, in
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_enabled(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QWidget*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_enabled_to(void* self, void* param1);
+bool k_textgrammarcheck__languagetoolcombobox_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1060,153 +1060,153 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_modified(void* self, bo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QRect* k_textgrammarcheck__languagetoolcombobox_frame_geometry(void* self);
+QRect* k_textgrammarcheck__languagetoolcombobox_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const QRect* k_textgrammarcheck__languagetoolcombobox_geometry(void* self);
+const QRect* k_textgrammarcheck__languagetoolcombobox_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QRect* k_textgrammarcheck__languagetoolcombobox_normal_geometry(void* self);
+QRect* k_textgrammarcheck__languagetoolcombobox_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_x(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_y(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QPoint* k_textgrammarcheck__languagetoolcombobox_pos(void* self);
+QPoint* k_textgrammarcheck__languagetoolcombobox_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_frame_size(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_size(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_width(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_height(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QRect* k_textgrammarcheck__languagetoolcombobox_rect(void* self);
+QRect* k_textgrammarcheck__languagetoolcombobox_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QRect* k_textgrammarcheck__languagetoolcombobox_children_rect(void* self);
+QRect* k_textgrammarcheck__languagetoolcombobox_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QRegion* k_textgrammarcheck__languagetoolcombobox_children_region(void* self);
+QRegion* k_textgrammarcheck__languagetoolcombobox_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_maximum_size(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_minimum_width(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_minimum_height(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_maximum_width(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_maximum_height(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1215,7 +1215,7 @@ int32_t k_textgrammarcheck__languagetoolcombobox_maximum_height(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param minimumSize QSize*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_minimum_size(void* self, void* minimumSize);
+void k_textgrammarcheck__languagetoolcombobox_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1234,7 +1234,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_minimum_size2(void* self, int 
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param maximumSize QSize*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_maximum_size(void* self, void* maximumSize);
+void k_textgrammarcheck__languagetoolcombobox_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1286,9 +1286,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_maximum_height(void* self, int
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_size_increment(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1297,7 +1297,7 @@ QSize* k_textgrammarcheck__languagetoolcombobox_size_increment(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param sizeIncrement QSize*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_size_increment(void* self, void* sizeIncrement);
+void k_textgrammarcheck__languagetoolcombobox_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1313,9 +1313,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_size_increment2(void* self, in
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_base_size(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1324,7 +1324,7 @@ QSize* k_textgrammarcheck__languagetoolcombobox_base_size(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param baseSize QSize*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_base_size(void* self, void* baseSize);
+void k_textgrammarcheck__languagetoolcombobox_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1343,7 +1343,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_base_size2(void* self, int bas
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param fixedSize QSize*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_fixed_size(void* self, void* fixedSize);
+void k_textgrammarcheck__languagetoolcombobox_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1377,145 +1377,145 @@ void k_textgrammarcheck__languagetoolcombobox_set_fixed_height(void* self, int h
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_to_global(void* self, void* param1);
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_to_global2(void* self, void* param1);
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_from_global(void* self, void* param1);
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_from_global2(void* self, void* param1);
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_to_parent(void* self, void* param1);
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_to_parent2(void* self, void* param1);
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPointF*
 ///
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_from_parent(void* self, void* param1);
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPoint*
 ///
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_from_parent2(void* self, void* param1);
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_to(void* self, void* param1, void* param2);
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_to2(void* self, void* param1, void* param2);
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_textgrammarcheck__languagetoolcombobox_map_from(void* self, void* param1, void* param2);
+QPointF* k_textgrammarcheck__languagetoolcombobox_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_textgrammarcheck__languagetoolcombobox_map_from2(void* self, void* param1, void* param2);
+QPoint* k_textgrammarcheck__languagetoolcombobox_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_window(void* self);
+QWidget* k_textgrammarcheck__languagetoolcombobox_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_native_parent_widget(void* self);
+QWidget* k_textgrammarcheck__languagetoolcombobox_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_top_level_widget(void* self);
+QWidget* k_textgrammarcheck__languagetoolcombobox_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const QPalette* k_textgrammarcheck__languagetoolcombobox_palette(void* self);
+const QPalette* k_textgrammarcheck__languagetoolcombobox_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1524,7 +1524,7 @@ const QPalette* k_textgrammarcheck__languagetoolcombobox_palette(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param palette QPalette*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_palette(void* self, void* palette);
+void k_textgrammarcheck__languagetoolcombobox_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1539,11 +1539,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_background_role(void* self, in
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_background_role(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1558,19 +1558,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_foreground_role(void* self, in
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_foreground_role(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const QFont* k_textgrammarcheck__languagetoolcombobox_font(void* self);
+const QFont* k_textgrammarcheck__languagetoolcombobox_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1579,31 +1579,31 @@ const QFont* k_textgrammarcheck__languagetoolcombobox_font(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param font QFont*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_font(void* self, void* font);
+void k_textgrammarcheck__languagetoolcombobox_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QFontMetrics* k_textgrammarcheck__languagetoolcombobox_font_metrics(void* self);
+QFontMetrics* k_textgrammarcheck__languagetoolcombobox_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QFontInfo* k_textgrammarcheck__languagetoolcombobox_font_info(void* self);
+QFontInfo* k_textgrammarcheck__languagetoolcombobox_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QCursor* k_textgrammarcheck__languagetoolcombobox_cursor(void* self);
+QCursor* k_textgrammarcheck__languagetoolcombobox_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1612,7 +1612,7 @@ QCursor* k_textgrammarcheck__languagetoolcombobox_cursor(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param cursor QCursor*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_cursor(void* self, void* cursor);
+void k_textgrammarcheck__languagetoolcombobox_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1635,17 +1635,17 @@ void k_textgrammarcheck__languagetoolcombobox_set_mouse_tracking(void* self, boo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_has_mouse_tracking(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_under_mouse(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1660,9 +1660,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_tablet_tracking(void* self, bo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_has_tablet_tracking(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1671,7 +1671,7 @@ bool k_textgrammarcheck__languagetoolcombobox_has_tablet_tracking(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param mask QBitmap*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_mask(void* self, void* mask);
+void k_textgrammarcheck__languagetoolcombobox_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1680,15 +1680,15 @@ void k_textgrammarcheck__languagetoolcombobox_set_mask(void* self, void* mask);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param mask QRegion*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_mask2(void* self, void* mask);
+void k_textgrammarcheck__languagetoolcombobox_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QRegion* k_textgrammarcheck__languagetoolcombobox_mask(void* self);
+QRegion* k_textgrammarcheck__languagetoolcombobox_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1728,9 +1728,9 @@ QPixmap* k_textgrammarcheck__languagetoolcombobox_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QGraphicsEffect* k_textgrammarcheck__languagetoolcombobox_graphics_effect(void* self);
+QGraphicsEffect* k_textgrammarcheck__languagetoolcombobox_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1783,9 +1783,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_style_sheet(void* self, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_style_sheet(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1793,9 +1793,9 @@ const char* k_textgrammarcheck__languagetoolcombobox_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_window_title(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1804,15 +1804,15 @@ const char* k_textgrammarcheck__languagetoolcombobox_window_title(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param icon QIcon*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_window_icon(void* self, void* icon);
+void k_textgrammarcheck__languagetoolcombobox_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QIcon* k_textgrammarcheck__languagetoolcombobox_window_icon(void* self);
+QIcon* k_textgrammarcheck__languagetoolcombobox_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1829,9 +1829,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_icon_text(void* self, c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_window_icon_text(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1848,9 +1848,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_role(void* self, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_window_role(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1867,9 +1867,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_file_path(void* self, c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_window_file_path(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1884,17 +1884,17 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_opacity(void* self, dou
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-double k_textgrammarcheck__languagetoolcombobox_window_opacity(void* self);
+double k_textgrammarcheck__languagetoolcombobox_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_window_modified(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1911,9 +1911,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_tool_tip(void* self, const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_tool_tip(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1928,9 +1928,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_tool_tip_duration(void* self, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_tool_tip_duration(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1947,9 +1947,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_status_tip(void* self, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_status_tip(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1966,9 +1966,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_whats_this(void* self, const c
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_whats_this(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1976,9 +1976,9 @@ const char* k_textgrammarcheck__languagetoolcombobox_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_accessible_name(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1995,9 +1995,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_accessible_name(void* self, co
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_accessible_description(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2021,11 +2021,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_layout_direction(void* self, i
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_layout_direction(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2042,15 +2042,15 @@ void k_textgrammarcheck__languagetoolcombobox_unset_layout_direction(void* self)
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param locale QLocale*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_locale(void* self, void* locale);
+void k_textgrammarcheck__languagetoolcombobox_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QLocale* k_textgrammarcheck__languagetoolcombobox_locale(void* self);
+QLocale* k_textgrammarcheck__languagetoolcombobox_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2064,17 +2064,17 @@ void k_textgrammarcheck__languagetoolcombobox_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_right_to_left(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_left_to_right(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2088,9 +2088,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_active_window(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2121,11 +2121,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_focus2(void* self, int32_t rea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_focus_policy(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2140,9 +2140,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_focus_policy(void* self, int32
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_has_focus(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2166,19 +2166,19 @@ void k_textgrammarcheck__languagetoolcombobox_set_focus_proxy(void* self, void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_focus_proxy(void* self);
+QWidget* k_textgrammarcheck__languagetoolcombobox_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_context_menu_policy(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2204,7 +2204,7 @@ void k_textgrammarcheck__languagetoolcombobox_grab_mouse(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QCursor*
 ///
-void k_textgrammarcheck__languagetoolcombobox_grab_mouse2(void* self, void* param1);
+void k_textgrammarcheck__languagetoolcombobox_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2237,7 +2237,7 @@ void k_textgrammarcheck__languagetoolcombobox_release_keyboard(void* self);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param key QKeySequence*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_grab_shortcut(void* self, void* key);
+int32_t k_textgrammarcheck__languagetoolcombobox_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2282,9 +2282,9 @@ QWidget* k_textgrammarcheck__languagetoolcombobox_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_updates_enabled(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2299,9 +2299,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_updates_enabled(void* self, bo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QGraphicsProxyWidget* k_textgrammarcheck__languagetoolcombobox_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_textgrammarcheck__languagetoolcombobox_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2338,7 +2338,7 @@ void k_textgrammarcheck__languagetoolcombobox_update2(void* self, int x, int y, 
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QRect*
 ///
-void k_textgrammarcheck__languagetoolcombobox_update3(void* self, void* param1);
+void k_textgrammarcheck__languagetoolcombobox_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2347,7 +2347,7 @@ void k_textgrammarcheck__languagetoolcombobox_update3(void* self, void* param1);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QRegion*
 ///
-void k_textgrammarcheck__languagetoolcombobox_update4(void* self, void* param1);
+void k_textgrammarcheck__languagetoolcombobox_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2368,7 +2368,7 @@ void k_textgrammarcheck__languagetoolcombobox_repaint2(void* self, int x, int y,
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QRect*
 ///
-void k_textgrammarcheck__languagetoolcombobox_repaint3(void* self, void* param1);
+void k_textgrammarcheck__languagetoolcombobox_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2377,7 +2377,7 @@ void k_textgrammarcheck__languagetoolcombobox_repaint3(void* self, void* param1)
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QRegion*
 ///
-void k_textgrammarcheck__languagetoolcombobox_repaint4(void* self, void* param1);
+void k_textgrammarcheck__languagetoolcombobox_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2486,7 +2486,7 @@ void k_textgrammarcheck__languagetoolcombobox_move(void* self, int x, int y);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QPoint*
 ///
-void k_textgrammarcheck__languagetoolcombobox_move2(void* self, void* param1);
+void k_textgrammarcheck__languagetoolcombobox_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2505,7 +2505,7 @@ void k_textgrammarcheck__languagetoolcombobox_resize(void* self, int w, int h);
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QSize*
 ///
-void k_textgrammarcheck__languagetoolcombobox_resize2(void* self, void* param1);
+void k_textgrammarcheck__languagetoolcombobox_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2526,7 +2526,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_geometry(void* self, int x, in
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param geometry QRect*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_geometry2(void* self, void* geometry);
+void k_textgrammarcheck__languagetoolcombobox_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2534,9 +2534,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_geometry2(void* self, void* ge
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-char* k_textgrammarcheck__languagetoolcombobox_save_geometry(void* self);
+char* k_textgrammarcheck__languagetoolcombobox_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2559,60 +2559,60 @@ void k_textgrammarcheck__languagetoolcombobox_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_visible(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 QWidget*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_visible_to(void* self, void* param1);
+bool k_textgrammarcheck__languagetoolcombobox_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_hidden(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_minimized(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_maximized(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_full_screen(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_window_state(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2636,9 +2636,9 @@ void k_textgrammarcheck__languagetoolcombobox_override_window_state(void* self, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSizePolicy* k_textgrammarcheck__languagetoolcombobox_size_policy(void* self);
+QSizePolicy* k_textgrammarcheck__languagetoolcombobox_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2663,9 +2663,9 @@ void k_textgrammarcheck__languagetoolcombobox_set_size_policy2(void* self, int32
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QRegion* k_textgrammarcheck__languagetoolcombobox_visible_region(void* self);
+QRegion* k_textgrammarcheck__languagetoolcombobox_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2686,31 +2686,31 @@ void k_textgrammarcheck__languagetoolcombobox_set_contents_margins(void* self, i
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param margins QMargins*
 ///
-void k_textgrammarcheck__languagetoolcombobox_set_contents_margins2(void* self, void* margins);
+void k_textgrammarcheck__languagetoolcombobox_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QMargins* k_textgrammarcheck__languagetoolcombobox_contents_margins(void* self);
+QMargins* k_textgrammarcheck__languagetoolcombobox_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QRect* k_textgrammarcheck__languagetoolcombobox_contents_rect(void* self);
+QRect* k_textgrammarcheck__languagetoolcombobox_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QLayout* k_textgrammarcheck__languagetoolcombobox_layout(void* self);
+QLayout* k_textgrammarcheck__languagetoolcombobox_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2767,39 +2767,39 @@ void k_textgrammarcheck__languagetoolcombobox_scroll(void* self, int dx, int dy)
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_textgrammarcheck__languagetoolcombobox_scroll2(void* self, int dx, int dy, void* param3);
+void k_textgrammarcheck__languagetoolcombobox_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_focus_widget(void* self);
+QWidget* k_textgrammarcheck__languagetoolcombobox_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_next_in_focus_chain(void* self);
+QWidget* k_textgrammarcheck__languagetoolcombobox_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_previous_in_focus_chain(void* self);
+QWidget* k_textgrammarcheck__languagetoolcombobox_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_accept_drops(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2861,11 +2861,11 @@ void k_textgrammarcheck__languagetoolcombobox_remove_action(void* self, void* ac
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_textgrammarcheck__languagetoolcombobox_actions(void* self);
+libqt_list k_textgrammarcheck__languagetoolcombobox_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2884,7 +2884,7 @@ QAction* k_textgrammarcheck__languagetoolcombobox_add_action2(void* self, const 
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_textgrammarcheck__languagetoolcombobox_add_action3(void* self, void* icon, const char* text);
+QAction* k_textgrammarcheck__languagetoolcombobox_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2894,7 +2894,7 @@ QAction* k_textgrammarcheck__languagetoolcombobox_add_action3(void* self, void* 
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_textgrammarcheck__languagetoolcombobox_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_textgrammarcheck__languagetoolcombobox_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2905,15 +2905,15 @@ QAction* k_textgrammarcheck__languagetoolcombobox_add_action4(void* self, const 
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_textgrammarcheck__languagetoolcombobox_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_textgrammarcheck__languagetoolcombobox_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_parent_widget(void* self);
+QWidget* k_textgrammarcheck__languagetoolcombobox_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2928,11 +2928,11 @@ void k_textgrammarcheck__languagetoolcombobox_set_window_flags(void* self, int32
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_window_flags(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2956,11 +2956,11 @@ void k_textgrammarcheck__languagetoolcombobox_override_window_flags(void* self, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_window_type(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2974,29 +2974,29 @@ QWidget* k_textgrammarcheck__languagetoolcombobox_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_child_at(void* self, int x, int y);
+QWidget* k_textgrammarcheck__languagetoolcombobox_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param p QPoint*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_child_at2(void* self, void* p);
+QWidget* k_textgrammarcheck__languagetoolcombobox_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param p QPointF*
 ///
-QWidget* k_textgrammarcheck__languagetoolcombobox_child_at3(void* self, void* p);
+QWidget* k_textgrammarcheck__languagetoolcombobox_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -3011,35 +3011,35 @@ void k_textgrammarcheck__languagetoolcombobox_set_attribute(void* self, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_textgrammarcheck__languagetoolcombobox_test_attribute(void* self, int32_t param1);
+bool k_textgrammarcheck__languagetoolcombobox_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-void k_textgrammarcheck__languagetoolcombobox_ensure_polished(void* self);
+void k_textgrammarcheck__languagetoolcombobox_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param child QWidget*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_ancestor_of(void* self, void* child);
+bool k_textgrammarcheck__languagetoolcombobox_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_auto_fill_background(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3054,25 +3054,25 @@ void k_textgrammarcheck__languagetoolcombobox_set_auto_fill_background(void* sel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QBackingStore* k_textgrammarcheck__languagetoolcombobox_backing_store(void* self);
+QBackingStore* k_textgrammarcheck__languagetoolcombobox_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QWindow* k_textgrammarcheck__languagetoolcombobox_window_handle(void* self);
+QWindow* k_textgrammarcheck__languagetoolcombobox_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QScreen* k_textgrammarcheck__languagetoolcombobox_screen(void* self);
+QScreen* k_textgrammarcheck__languagetoolcombobox_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3116,7 +3116,7 @@ void k_textgrammarcheck__languagetoolcombobox_on_window_title_changed(void* self
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param icon QIcon*
 ///
-void k_textgrammarcheck__languagetoolcombobox_window_icon_changed(void* self, void* icon);
+void k_textgrammarcheck__languagetoolcombobox_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3125,7 +3125,7 @@ void k_textgrammarcheck__languagetoolcombobox_window_icon_changed(void* self, vo
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self, QIcon* icon)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3152,7 +3152,7 @@ void k_textgrammarcheck__languagetoolcombobox_on_window_icon_text_changed(void* 
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param pos QPoint*
 ///
-void k_textgrammarcheck__languagetoolcombobox_custom_context_menu_requested(void* self, void* pos);
+void k_textgrammarcheck__languagetoolcombobox_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3161,17 +3161,17 @@ void k_textgrammarcheck__languagetoolcombobox_custom_context_menu_requested(void
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self, QPoint* pos)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_input_method_hints(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3190,7 +3190,7 @@ void k_textgrammarcheck__languagetoolcombobox_set_input_method_hints(void* self,
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_textgrammarcheck__languagetoolcombobox_render22(void* self, void* target, void* targetOffset);
+void k_textgrammarcheck__languagetoolcombobox_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3201,7 +3201,7 @@ void k_textgrammarcheck__languagetoolcombobox_render22(void* self, void* target,
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_textgrammarcheck__languagetoolcombobox_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_textgrammarcheck__languagetoolcombobox_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3213,7 +3213,7 @@ void k_textgrammarcheck__languagetoolcombobox_render3(void* self, void* target, 
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_textgrammarcheck__languagetoolcombobox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_textgrammarcheck__languagetoolcombobox_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3223,7 +3223,7 @@ void k_textgrammarcheck__languagetoolcombobox_render4(void* self, void* target, 
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_textgrammarcheck__languagetoolcombobox_render23(void* self, void* painter, void* targetOffset);
+void k_textgrammarcheck__languagetoolcombobox_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3234,7 +3234,7 @@ void k_textgrammarcheck__languagetoolcombobox_render23(void* self, void* painter
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_textgrammarcheck__languagetoolcombobox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_textgrammarcheck__languagetoolcombobox_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3246,7 +3246,7 @@ void k_textgrammarcheck__languagetoolcombobox_render32(void* self, void* painter
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_textgrammarcheck__languagetoolcombobox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_textgrammarcheck__languagetoolcombobox_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3255,7 +3255,7 @@ void k_textgrammarcheck__languagetoolcombobox_render42(void* self, void* painter
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param rectangle QRect*
 ///
-QPixmap* k_textgrammarcheck__languagetoolcombobox_grab1(void* self, void* rectangle);
+QPixmap* k_textgrammarcheck__languagetoolcombobox_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3275,7 +3275,7 @@ void k_textgrammarcheck__languagetoolcombobox_grab_gesture2(void* self, int32_t 
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_textgrammarcheck__languagetoolcombobox_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3342,9 +3342,9 @@ QWidget* k_textgrammarcheck__languagetoolcombobox_create_window_container3(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char* k_textgrammarcheck__languagetoolcombobox_object_name(void* self);
+const char* k_textgrammarcheck__languagetoolcombobox_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3359,33 +3359,33 @@ void k_textgrammarcheck__languagetoolcombobox_set_object_name(void* self, const 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_widget_type(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_window_type(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_quick_item_type(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_signals_blocked(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3400,9 +3400,9 @@ bool k_textgrammarcheck__languagetoolcombobox_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QThread* k_textgrammarcheck__languagetoolcombobox_thread(void* self);
+QThread* k_textgrammarcheck__languagetoolcombobox_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3453,11 +3453,11 @@ void k_textgrammarcheck__languagetoolcombobox_kill_timer2(void* self, int32_t id
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_textgrammarcheck__languagetoolcombobox_children(void* self);
+libqt_list k_textgrammarcheck__languagetoolcombobox_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3486,7 +3486,7 @@ void k_textgrammarcheck__languagetoolcombobox_remove_event_filter(void* self, vo
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3497,18 +3497,18 @@ QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect(void* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3519,7 +3519,7 @@ QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect3(void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_textgrammarcheck__languagetoolcombobox_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3530,24 +3530,24 @@ bool k_textgrammarcheck__languagetoolcombobox_disconnect(void* sender, const cha
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_textgrammarcheck__languagetoolcombobox_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect3(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param receiver QObject*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect4(void* self, void* receiver);
+bool k_textgrammarcheck__languagetoolcombobox_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3555,23 +3555,23 @@ bool k_textgrammarcheck__languagetoolcombobox_disconnect4(void* self, void* rece
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect5(void* param1);
+bool k_textgrammarcheck__languagetoolcombobox_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-void k_textgrammarcheck__languagetoolcombobox_dump_object_tree(void* self);
+void k_textgrammarcheck__languagetoolcombobox_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-void k_textgrammarcheck__languagetoolcombobox_dump_object_info(void* self);
+void k_textgrammarcheck__languagetoolcombobox_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3581,16 +3581,16 @@ void k_textgrammarcheck__languagetoolcombobox_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_set_property(void* self, const char* name, void* value);
+bool k_textgrammarcheck__languagetoolcombobox_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param name const char*
 ///
-QVariant* k_textgrammarcheck__languagetoolcombobox_property(void* self, const char* name);
+QVariant* k_textgrammarcheck__languagetoolcombobox_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3598,9 +3598,9 @@ QVariant* k_textgrammarcheck__languagetoolcombobox_property(void* self, const ch
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const char** k_textgrammarcheck__languagetoolcombobox_dynamic_property_names(void* self);
+const char** k_textgrammarcheck__languagetoolcombobox_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3614,9 +3614,9 @@ QBindingStorage* k_textgrammarcheck__languagetoolcombobox_binding_storage(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-const QBindingStorage* k_textgrammarcheck__languagetoolcombobox_binding_storage2(void* self);
+const QBindingStorage* k_textgrammarcheck__languagetoolcombobox_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3639,18 +3639,18 @@ void k_textgrammarcheck__languagetoolcombobox_on_destroyed(void* self, void (*ca
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QObject* k_textgrammarcheck__languagetoolcombobox_parent(void* self);
+QObject* k_textgrammarcheck__languagetoolcombobox_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param classname const char*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_inherits(void* self, const char* classname);
+bool k_textgrammarcheck__languagetoolcombobox_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3690,7 +3690,7 @@ int32_t k_textgrammarcheck__languagetoolcombobox_start_timer23(void* self, int64
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3702,59 +3702,59 @@ QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect5(void*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_textgrammarcheck__languagetoolcombobox_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param signal const char*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect1(void* self, const char* signal);
+bool k_textgrammarcheck__languagetoolcombobox_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_textgrammarcheck__languagetoolcombobox_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_disconnect23(void* self, void* receiver, const char* member);
+bool k_textgrammarcheck__languagetoolcombobox_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_textgrammarcheck__languagetoolcombobox_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3778,89 +3778,89 @@ void k_textgrammarcheck__languagetoolcombobox_on_destroyed1(void* self, void (*c
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_painting_active(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_width_m_m(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_height_m_m(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_logical_dpi_x(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_logical_dpi_y(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_physical_dpi_x(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_physical_dpi_y(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-double k_textgrammarcheck__languagetoolcombobox_device_pixel_ratio(void* self);
+double k_textgrammarcheck__languagetoolcombobox_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-double k_textgrammarcheck__languagetoolcombobox_device_pixel_ratio_f(void* self);
+double k_textgrammarcheck__languagetoolcombobox_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_color_count(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_depth(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3916,9 +3916,9 @@ void k_textgrammarcheck__languagetoolcombobox_on_set_model(void* self, void (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_size_hint(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -3926,9 +3926,9 @@ QSize* k_textgrammarcheck__languagetoolcombobox_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_super_size_hint(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_super_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -3936,12 +3936,12 @@ QSize* k_textgrammarcheck__languagetoolcombobox_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback QSize* func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback QSize* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_size_hint(void* self, QSize* (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -3949,9 +3949,9 @@ void k_textgrammarcheck__languagetoolcombobox_on_size_hint(void* self, QSize* (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size_hint(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -3959,9 +3959,9 @@ QSize* k_textgrammarcheck__languagetoolcombobox_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QSize* k_textgrammarcheck__languagetoolcombobox_super_minimum_size_hint(void* self);
+QSize* k_textgrammarcheck__languagetoolcombobox_super_minimum_size_hint(const void* self);
 
 /// Inherited from QComboBox
 ///
@@ -3969,12 +3969,12 @@ QSize* k_textgrammarcheck__languagetoolcombobox_super_minimum_size_hint(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback QSize* func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback QSize* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QComboBox
 ///
@@ -4003,9 +4003,9 @@ void k_textgrammarcheck__languagetoolcombobox_super_show_popup(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_show_popup(void* self, void (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_show_popup(void* self, void (*callback)(void*));
 
 /// Inherited from QComboBox
 ///
@@ -4034,9 +4034,9 @@ void k_textgrammarcheck__languagetoolcombobox_super_hide_popup(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_hide_popup(void* self, void (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_hide_popup(void* self, void (*callback)(void*));
 
 /// Inherited from QComboBox
 ///
@@ -4077,10 +4077,10 @@ void k_textgrammarcheck__languagetoolcombobox_on_event(void* self, bool (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query(void* self, int32_t param1);
+QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4088,10 +4088,10 @@ QVariant* k_textgrammarcheck__languagetoolcombobox_input_method_query(void* self
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_textgrammarcheck__languagetoolcombobox_super_input_method_query(void* self, int32_t param1);
+QVariant* k_textgrammarcheck__languagetoolcombobox_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4099,12 +4099,12 @@ QVariant* k_textgrammarcheck__languagetoolcombobox_super_input_method_query(void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QVariant* func(TextGrammarCheck__LanguageToolComboBox* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_textgrammarcheck__languagetoolcombobox_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QComboBox
 ///
@@ -4574,10 +4574,10 @@ void k_textgrammarcheck__languagetoolcombobox_on_input_method_event(void* self, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param option QStyleOptionComboBox*
 ///
-void k_textgrammarcheck__languagetoolcombobox_init_style_option(void* self, void* option);
+void k_textgrammarcheck__languagetoolcombobox_init_style_option(const void* self, void* option);
 
 /// Inherited from QComboBox
 ///
@@ -4585,10 +4585,10 @@ void k_textgrammarcheck__languagetoolcombobox_init_style_option(void* self, void
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param option QStyleOptionComboBox*
 ///
-void k_textgrammarcheck__languagetoolcombobox_super_init_style_option(void* self, void* option);
+void k_textgrammarcheck__languagetoolcombobox_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QComboBox
 ///
@@ -4596,10 +4596,10 @@ void k_textgrammarcheck__languagetoolcombobox_super_init_style_option(void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self, QStyleOptionComboBox* option)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_init_style_option(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4607,9 +4607,9 @@ void k_textgrammarcheck__languagetoolcombobox_on_init_style_option(void* self, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_dev_type(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4617,9 +4617,9 @@ int32_t k_textgrammarcheck__languagetoolcombobox_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_super_dev_type(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4627,10 +4627,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback int32_t func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_dev_type(void* self, int32_t (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4671,10 +4671,10 @@ void k_textgrammarcheck__languagetoolcombobox_on_set_visible(void* self, void (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 int
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_height_for_width(void* self, int param1);
+int32_t k_textgrammarcheck__languagetoolcombobox_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4682,10 +4682,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_height_for_width(void* self, in
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 int
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_super_height_for_width(void* self, int param1);
+int32_t k_textgrammarcheck__languagetoolcombobox_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4693,10 +4693,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_height_for_width(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self, int param1)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_textgrammarcheck__languagetoolcombobox_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4704,9 +4704,9 @@ void k_textgrammarcheck__languagetoolcombobox_on_height_for_width(void* self, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_has_height_for_width(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4714,9 +4714,9 @@ bool k_textgrammarcheck__languagetoolcombobox_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_super_has_height_for_width(void* self);
+bool k_textgrammarcheck__languagetoolcombobox_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4724,10 +4724,10 @@ bool k_textgrammarcheck__languagetoolcombobox_super_has_height_for_width(void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback bool func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback bool func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_has_height_for_width(void* self, bool (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4735,9 +4735,9 @@ void k_textgrammarcheck__languagetoolcombobox_on_has_height_for_width(void* self
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QPaintEngine* k_textgrammarcheck__languagetoolcombobox_paint_engine(void* self);
+QPaintEngine* k_textgrammarcheck__languagetoolcombobox_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4745,9 +4745,9 @@ QPaintEngine* k_textgrammarcheck__languagetoolcombobox_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QPaintEngine* k_textgrammarcheck__languagetoolcombobox_super_paint_engine(void* self);
+QPaintEngine* k_textgrammarcheck__languagetoolcombobox_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4755,10 +4755,10 @@ QPaintEngine* k_textgrammarcheck__languagetoolcombobox_super_paint_engine(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback QPaintEngine* func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback QPaintEngine* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5199,10 +5199,10 @@ void k_textgrammarcheck__languagetoolcombobox_on_native_event(void* self, bool (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_metric(void* self, int32_t param1);
+int32_t k_textgrammarcheck__languagetoolcombobox_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5210,10 +5210,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_metric(void* self, int32_t para
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_super_metric(void* self, int32_t param1);
+int32_t k_textgrammarcheck__languagetoolcombobox_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5221,10 +5221,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_metric(void* self, int32_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_textgrammarcheck__languagetoolcombobox_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5232,10 +5232,10 @@ void k_textgrammarcheck__languagetoolcombobox_on_metric(void* self, int32_t (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param painter QPainter*
 ///
-void k_textgrammarcheck__languagetoolcombobox_init_painter(void* self, void* painter);
+void k_textgrammarcheck__languagetoolcombobox_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5243,10 +5243,10 @@ void k_textgrammarcheck__languagetoolcombobox_init_painter(void* self, void* pai
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param painter QPainter*
 ///
-void k_textgrammarcheck__languagetoolcombobox_super_init_painter(void* self, void* painter);
+void k_textgrammarcheck__languagetoolcombobox_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5254,10 +5254,10 @@ void k_textgrammarcheck__languagetoolcombobox_super_init_painter(void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self, QPainter* painter)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5265,10 +5265,10 @@ void k_textgrammarcheck__languagetoolcombobox_on_init_painter(void* self, void (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_textgrammarcheck__languagetoolcombobox_redirected(void* self, void* offset);
+QPaintDevice* k_textgrammarcheck__languagetoolcombobox_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5276,10 +5276,10 @@ QPaintDevice* k_textgrammarcheck__languagetoolcombobox_redirected(void* self, vo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_textgrammarcheck__languagetoolcombobox_super_redirected(void* self, void* offset);
+QPaintDevice* k_textgrammarcheck__languagetoolcombobox_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5287,10 +5287,10 @@ QPaintDevice* k_textgrammarcheck__languagetoolcombobox_super_redirected(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback QPaintDevice* func(TextGrammarCheck__LanguageToolComboBox* self, QPoint* offset)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5298,9 +5298,9 @@ void k_textgrammarcheck__languagetoolcombobox_on_redirected(void* self, QPaintDe
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QPainter* k_textgrammarcheck__languagetoolcombobox_shared_painter(void* self);
+QPainter* k_textgrammarcheck__languagetoolcombobox_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5308,9 +5308,9 @@ QPainter* k_textgrammarcheck__languagetoolcombobox_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QPainter* k_textgrammarcheck__languagetoolcombobox_super_shared_painter(void* self);
+QPainter* k_textgrammarcheck__languagetoolcombobox_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5318,10 +5318,10 @@ QPainter* k_textgrammarcheck__languagetoolcombobox_super_shared_painter(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback QPainter* func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback QPainter* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_shared_painter(void* self, QPainter* (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5499,7 +5499,7 @@ void k_textgrammarcheck__languagetoolcombobox_on_custom_event(void* self, void (
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__languagetoolcombobox_connect_notify(void* self, void* signal);
+void k_textgrammarcheck__languagetoolcombobox_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5510,7 +5510,7 @@ void k_textgrammarcheck__languagetoolcombobox_connect_notify(void* self, void* s
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__languagetoolcombobox_super_connect_notify(void* self, void* signal);
+void k_textgrammarcheck__languagetoolcombobox_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5521,7 +5521,7 @@ void k_textgrammarcheck__languagetoolcombobox_super_connect_notify(void* self, v
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5532,7 +5532,7 @@ void k_textgrammarcheck__languagetoolcombobox_on_connect_notify(void* self, void
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__languagetoolcombobox_disconnect_notify(void* self, void* signal);
+void k_textgrammarcheck__languagetoolcombobox_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5543,7 +5543,7 @@ void k_textgrammarcheck__languagetoolcombobox_disconnect_notify(void* self, void
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param signal QMetaMethod*
 ///
-void k_textgrammarcheck__languagetoolcombobox_super_disconnect_notify(void* self, void* signal);
+void k_textgrammarcheck__languagetoolcombobox_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5554,7 +5554,7 @@ void k_textgrammarcheck__languagetoolcombobox_super_disconnect_notify(void* self
 /// @param self TextGrammarCheck__LanguageToolComboBox*
 /// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -5583,9 +5583,9 @@ void k_textgrammarcheck__languagetoolcombobox_super_update_micro_focus(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_update_micro_focus(void* self, void (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5614,9 +5614,9 @@ void k_textgrammarcheck__languagetoolcombobox_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_create(void* self, void (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5645,9 +5645,9 @@ void k_textgrammarcheck__languagetoolcombobox_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback void func()
+/// @param callback void func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_destroy(void* self, void (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5676,9 +5676,9 @@ bool k_textgrammarcheck__languagetoolcombobox_super_focus_next_child(void* self)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback bool func()
+/// @param callback bool func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_focus_next_child(void* self, bool (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5707,9 +5707,9 @@ bool k_textgrammarcheck__languagetoolcombobox_super_focus_previous_child(void* s
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback bool func()
+/// @param callback bool func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_focus_previous_child(void* self, bool (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5717,9 +5717,9 @@ void k_textgrammarcheck__languagetoolcombobox_on_focus_previous_child(void* self
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QObject* k_textgrammarcheck__languagetoolcombobox_sender(void* self);
+QObject* k_textgrammarcheck__languagetoolcombobox_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5727,9 +5727,9 @@ QObject* k_textgrammarcheck__languagetoolcombobox_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-QObject* k_textgrammarcheck__languagetoolcombobox_super_sender(void* self);
+QObject* k_textgrammarcheck__languagetoolcombobox_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5737,10 +5737,10 @@ QObject* k_textgrammarcheck__languagetoolcombobox_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback QObject* func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback QObject* func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_sender(void* self, QObject* (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5748,9 +5748,9 @@ void k_textgrammarcheck__languagetoolcombobox_on_sender(void* self, QObject* (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_sender_signal_index(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5758,9 +5758,9 @@ int32_t k_textgrammarcheck__languagetoolcombobox_sender_signal_index(void* self)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_super_sender_signal_index(void* self);
+int32_t k_textgrammarcheck__languagetoolcombobox_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5768,10 +5768,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_sender_signal_index(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
-/// @param callback int32_t func()
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
+/// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_textgrammarcheck__languagetoolcombobox_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5779,10 +5779,10 @@ void k_textgrammarcheck__languagetoolcombobox_on_sender_signal_index(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param signal const char*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_receivers(void* self, const char* signal);
+int32_t k_textgrammarcheck__languagetoolcombobox_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5790,10 +5790,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_receivers(void* self, const cha
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param signal const char*
 ///
-int32_t k_textgrammarcheck__languagetoolcombobox_super_receivers(void* self, const char* signal);
+int32_t k_textgrammarcheck__languagetoolcombobox_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5801,10 +5801,10 @@ int32_t k_textgrammarcheck__languagetoolcombobox_super_receivers(void* self, con
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback int32_t func(TextGrammarCheck__LanguageToolComboBox* self, const char* signal)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_textgrammarcheck__languagetoolcombobox_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5812,10 +5812,10 @@ void k_textgrammarcheck__languagetoolcombobox_on_receivers(void* self, int32_t (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param signal QMetaMethod*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_is_signal_connected(void* self, void* signal);
+bool k_textgrammarcheck__languagetoolcombobox_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5823,10 +5823,10 @@ bool k_textgrammarcheck__languagetoolcombobox_is_signal_connected(void* self, vo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param signal QMetaMethod*
 ///
-bool k_textgrammarcheck__languagetoolcombobox_super_is_signal_connected(void* self, void* signal);
+bool k_textgrammarcheck__languagetoolcombobox_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5834,10 +5834,10 @@ bool k_textgrammarcheck__languagetoolcombobox_super_is_signal_connected(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback bool func(TextGrammarCheck__LanguageToolComboBox* self, QMetaMethod* signal)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_textgrammarcheck__languagetoolcombobox_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5845,11 +5845,11 @@ void k_textgrammarcheck__languagetoolcombobox_on_is_signal_connected(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_textgrammarcheck__languagetoolcombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_textgrammarcheck__languagetoolcombobox_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5857,11 +5857,11 @@ double k_textgrammarcheck__languagetoolcombobox_get_decoded_metric_f(void* self,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_textgrammarcheck__languagetoolcombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_textgrammarcheck__languagetoolcombobox_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5869,10 +5869,10 @@ double k_textgrammarcheck__languagetoolcombobox_super_get_decoded_metric_f(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextGrammarCheck__LanguageToolComboBox*
+/// @param self const TextGrammarCheck__LanguageToolComboBox*
 /// @param callback double func(TextGrammarCheck__LanguageToolComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_textgrammarcheck__languagetoolcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_textgrammarcheck__languagetoolcombobox_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

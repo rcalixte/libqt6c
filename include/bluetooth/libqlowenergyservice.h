@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-const QMetaObject* q_lowenergyservice_meta_object(void* self);
+const QMetaObject* q_lowenergyservice_meta_object(const void* self);
 
 /// @param self QLowEnergyService*
 /// @param param1 const char*
@@ -38,56 +38,56 @@ const char* q_lowenergyservice_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#includedServices)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
 /// @return libqt_list of QBluetoothUuid*
 ///
-libqt_list q_lowenergyservice_included_services(void* self);
+libqt_list q_lowenergyservice_included_services(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#type)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
 /// @return flag of enum QLowEnergyService__ServiceType
 ///
-int32_t q_lowenergyservice_type(void* self);
+int32_t q_lowenergyservice_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#state)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
 /// @return enum QLowEnergyService__ServiceState
 ///
-int32_t q_lowenergyservice_state(void* self);
+int32_t q_lowenergyservice_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristic)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param uuid QBluetoothUuid*
 ///
-QLowEnergyCharacteristic* q_lowenergyservice_characteristic(void* self, void* uuid);
+QLowEnergyCharacteristic* q_lowenergyservice_characteristic(const void* self, const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristics)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
 /// @return libqt_list of QLowEnergyCharacteristic*
 ///
-libqt_list q_lowenergyservice_characteristics(void* self);
+libqt_list q_lowenergyservice_characteristics(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#serviceUuid)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-QBluetoothUuid* q_lowenergyservice_service_uuid(void* self);
+QBluetoothUuid* q_lowenergyservice_service_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#serviceName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-const char* q_lowenergyservice_service_name(void* self);
+const char* q_lowenergyservice_service_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#discoverDetails)
 ///
@@ -97,25 +97,25 @@ void q_lowenergyservice_discover_details(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#error)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
 /// @return enum QLowEnergyService__ServiceError
 ///
-int32_t q_lowenergyservice_error(void* self);
+int32_t q_lowenergyservice_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#contains)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param characteristic QLowEnergyCharacteristic*
 ///
-bool q_lowenergyservice_contains(void* self, void* characteristic);
+bool q_lowenergyservice_contains(const void* self, const void* characteristic);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#readCharacteristic)
 ///
 /// @param self QLowEnergyService*
 /// @param characteristic QLowEnergyCharacteristic*
 ///
-void q_lowenergyservice_read_characteristic(void* self, void* characteristic);
+void q_lowenergyservice_read_characteristic(void* self, const void* characteristic);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#writeCharacteristic)
 ///
@@ -123,21 +123,21 @@ void q_lowenergyservice_read_characteristic(void* self, void* characteristic);
 /// @param characteristic QLowEnergyCharacteristic*
 /// @param newValue char*
 ///
-void q_lowenergyservice_write_characteristic(void* self, void* characteristic, char* newValue);
+void q_lowenergyservice_write_characteristic(void* self, const void* characteristic, char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#contains)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param descriptor QLowEnergyDescriptor*
 ///
-bool q_lowenergyservice_contains2(void* self, void* descriptor);
+bool q_lowenergyservice_contains2(const void* self, const void* descriptor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#readDescriptor)
 ///
 /// @param self QLowEnergyService*
 /// @param descriptor QLowEnergyDescriptor*
 ///
-void q_lowenergyservice_read_descriptor(void* self, void* descriptor);
+void q_lowenergyservice_read_descriptor(void* self, const void* descriptor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#writeDescriptor)
 ///
@@ -145,7 +145,7 @@ void q_lowenergyservice_read_descriptor(void* self, void* descriptor);
 /// @param descriptor QLowEnergyDescriptor*
 /// @param newValue char*
 ///
-void q_lowenergyservice_write_descriptor(void* self, void* descriptor, char* newValue);
+void q_lowenergyservice_write_descriptor(void* self, const void* descriptor, char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#stateChanged)
 ///
@@ -167,14 +167,14 @@ void q_lowenergyservice_on_state_changed(void* self, void (*callback)(void*, int
 /// @param info QLowEnergyCharacteristic*
 /// @param value char*
 ///
-void q_lowenergyservice_characteristic_changed(void* self, void* info, char* value);
+void q_lowenergyservice_characteristic_changed(void* self, const void* info, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristicChanged)
 ///
 /// @param self QLowEnergyService*
 /// @param callback void func(QLowEnergyService* self, QLowEnergyCharacteristic* info, libqt_string value)
 ///
-void q_lowenergyservice_on_characteristic_changed(void* self, void (*callback)(void*, void*, libqt_string));
+void q_lowenergyservice_on_characteristic_changed(void* self, void (*callback)(void*, const void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristicRead)
 ///
@@ -182,14 +182,14 @@ void q_lowenergyservice_on_characteristic_changed(void* self, void (*callback)(v
 /// @param info QLowEnergyCharacteristic*
 /// @param value char*
 ///
-void q_lowenergyservice_characteristic_read(void* self, void* info, char* value);
+void q_lowenergyservice_characteristic_read(void* self, const void* info, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristicRead)
 ///
 /// @param self QLowEnergyService*
 /// @param callback void func(QLowEnergyService* self, QLowEnergyCharacteristic* info, libqt_string value)
 ///
-void q_lowenergyservice_on_characteristic_read(void* self, void (*callback)(void*, void*, libqt_string));
+void q_lowenergyservice_on_characteristic_read(void* self, void (*callback)(void*, const void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristicWritten)
 ///
@@ -197,14 +197,14 @@ void q_lowenergyservice_on_characteristic_read(void* self, void (*callback)(void
 /// @param info QLowEnergyCharacteristic*
 /// @param value char*
 ///
-void q_lowenergyservice_characteristic_written(void* self, void* info, char* value);
+void q_lowenergyservice_characteristic_written(void* self, const void* info, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#characteristicWritten)
 ///
 /// @param self QLowEnergyService*
 /// @param callback void func(QLowEnergyService* self, QLowEnergyCharacteristic* info, libqt_string value)
 ///
-void q_lowenergyservice_on_characteristic_written(void* self, void (*callback)(void*, void*, libqt_string));
+void q_lowenergyservice_on_characteristic_written(void* self, void (*callback)(void*, const void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#descriptorRead)
 ///
@@ -212,14 +212,14 @@ void q_lowenergyservice_on_characteristic_written(void* self, void (*callback)(v
 /// @param info QLowEnergyDescriptor*
 /// @param value char*
 ///
-void q_lowenergyservice_descriptor_read(void* self, void* info, char* value);
+void q_lowenergyservice_descriptor_read(void* self, const void* info, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#descriptorRead)
 ///
 /// @param self QLowEnergyService*
 /// @param callback void func(QLowEnergyService* self, QLowEnergyDescriptor* info, libqt_string value)
 ///
-void q_lowenergyservice_on_descriptor_read(void* self, void (*callback)(void*, void*, libqt_string));
+void q_lowenergyservice_on_descriptor_read(void* self, void (*callback)(void*, const void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#descriptorWritten)
 ///
@@ -227,14 +227,14 @@ void q_lowenergyservice_on_descriptor_read(void* self, void (*callback)(void*, v
 /// @param info QLowEnergyDescriptor*
 /// @param value char*
 ///
-void q_lowenergyservice_descriptor_written(void* self, void* info, char* value);
+void q_lowenergyservice_descriptor_written(void* self, const void* info, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#descriptorWritten)
 ///
 /// @param self QLowEnergyService*
 /// @param callback void func(QLowEnergyService* self, QLowEnergyDescriptor* info, libqt_string value)
 ///
-void q_lowenergyservice_on_descriptor_written(void* self, void (*callback)(void*, void*, libqt_string));
+void q_lowenergyservice_on_descriptor_written(void* self, void (*callback)(void*, const void*, libqt_string));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservice.html#errorOccurred)
 ///
@@ -283,7 +283,7 @@ void q_lowenergyservice_discover_details1(void* self, int32_t mode);
 /// @param newValue char*
 /// @param mode enum QLowEnergyService__WriteMode
 ///
-void q_lowenergyservice_write_characteristic3(void* self, void* characteristic, char* newValue, int32_t mode);
+void q_lowenergyservice_write_characteristic3(void* self, const void* characteristic, char* newValue, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -310,9 +310,9 @@ bool q_lowenergyservice_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-const char* q_lowenergyservice_object_name(void* self);
+const char* q_lowenergyservice_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -327,33 +327,33 @@ void q_lowenergyservice_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-bool q_lowenergyservice_is_widget_type(void* self);
+bool q_lowenergyservice_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-bool q_lowenergyservice_is_window_type(void* self);
+bool q_lowenergyservice_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-bool q_lowenergyservice_is_quick_item_type(void* self);
+bool q_lowenergyservice_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-bool q_lowenergyservice_signals_blocked(void* self);
+bool q_lowenergyservice_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -368,9 +368,9 @@ bool q_lowenergyservice_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-QThread* q_lowenergyservice_thread(void* self);
+QThread* q_lowenergyservice_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -421,11 +421,11 @@ void q_lowenergyservice_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_lowenergyservice_children(void* self);
+libqt_list q_lowenergyservice_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -463,7 +463,7 @@ void q_lowenergyservice_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_lowenergyservice_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_lowenergyservice_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -474,18 +474,18 @@ QMetaObject__Connection* q_lowenergyservice_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_lowenergyservice_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_lowenergyservice_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_lowenergyservice_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_lowenergyservice_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -496,7 +496,7 @@ QMetaObject__Connection* q_lowenergyservice_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_lowenergyservice_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_lowenergyservice_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -507,24 +507,24 @@ bool q_lowenergyservice_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_lowenergyservice_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_lowenergyservice_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-bool q_lowenergyservice_disconnect3(void* self);
+bool q_lowenergyservice_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param receiver QObject*
 ///
-bool q_lowenergyservice_disconnect4(void* self, void* receiver);
+bool q_lowenergyservice_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -532,23 +532,23 @@ bool q_lowenergyservice_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_lowenergyservice_disconnect5(void* param1);
+bool q_lowenergyservice_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-void q_lowenergyservice_dump_object_tree(void* self);
+void q_lowenergyservice_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-void q_lowenergyservice_dump_object_info(void* self);
+void q_lowenergyservice_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -558,16 +558,16 @@ void q_lowenergyservice_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_lowenergyservice_set_property(void* self, const char* name, void* value);
+bool q_lowenergyservice_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param name const char*
 ///
-QVariant* q_lowenergyservice_property(void* self, const char* name);
+QVariant* q_lowenergyservice_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -575,9 +575,9 @@ QVariant* q_lowenergyservice_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-const char** q_lowenergyservice_dynamic_property_names(void* self);
+const char** q_lowenergyservice_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -591,9 +591,9 @@ QBindingStorage* q_lowenergyservice_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-const QBindingStorage* q_lowenergyservice_binding_storage2(void* self);
+const QBindingStorage* q_lowenergyservice_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -616,18 +616,18 @@ void q_lowenergyservice_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 ///
-QObject* q_lowenergyservice_parent(void* self);
+QObject* q_lowenergyservice_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param classname const char*
 ///
-bool q_lowenergyservice_inherits(void* self, const char* classname);
+bool q_lowenergyservice_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -667,7 +667,7 @@ int32_t q_lowenergyservice_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_lowenergyservice_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_lowenergyservice_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -679,59 +679,59 @@ QMetaObject__Connection* q_lowenergyservice_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_lowenergyservice_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_lowenergyservice_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_lowenergyservice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_lowenergyservice_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param signal const char*
 ///
-bool q_lowenergyservice_disconnect1(void* self, const char* signal);
+bool q_lowenergyservice_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLowEnergyService*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_lowenergyservice_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_lowenergyservice_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_lowenergyservice_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QLowEnergyService*
+/// @param self const QLowEnergyService*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_lowenergyservice_disconnect23(void* self, void* receiver, const char* member);
+bool q_lowenergyservice_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QLowEnergyService*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_lowenergyservice_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

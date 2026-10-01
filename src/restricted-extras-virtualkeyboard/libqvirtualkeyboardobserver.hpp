@@ -33,7 +33,7 @@ int QVirtualKeyboardObserver_Metacall(QVirtualKeyboardObserver* self, int param1
 QVariant* QVirtualKeyboardObserver_Layout(QVirtualKeyboardObserver* self);
 void QVirtualKeyboardObserver_LayoutChanged(QVirtualKeyboardObserver* self);
 void QVirtualKeyboardObserver_Connect_LayoutChanged(QVirtualKeyboardObserver* self, intptr_t slot);
-void QVirtualKeyboardObserver_OnMetaObject(const QVirtualKeyboardObserver* self, intptr_t slot);
+void QVirtualKeyboardObserver_OnMetaObject(QVirtualKeyboardObserver* self, intptr_t slot);
 QMetaObject* QVirtualKeyboardObserver_SuperMetaObject(const QVirtualKeyboardObserver* self);
 void QVirtualKeyboardObserver_OnMetacast(QVirtualKeyboardObserver* self, intptr_t slot);
 void* QVirtualKeyboardObserver_SuperMetacast(QVirtualKeyboardObserver* self, const char* param1);
@@ -61,17 +61,9 @@ void QVirtualKeyboardObserver_DisconnectNotify(QVirtualKeyboardObserver* self, c
 void QVirtualKeyboardObserver_OnDisconnectNotify(QVirtualKeyboardObserver* self, intptr_t slot);
 void QVirtualKeyboardObserver_SuperDisconnectNotify(QVirtualKeyboardObserver* self, const QMetaMethod* signal);
 QObject* QVirtualKeyboardObserver_Sender(const QVirtualKeyboardObserver* self);
-void QVirtualKeyboardObserver_OnSender(const QVirtualKeyboardObserver* self, intptr_t slot);
-QObject* QVirtualKeyboardObserver_SuperSender(const QVirtualKeyboardObserver* self);
 int QVirtualKeyboardObserver_SenderSignalIndex(const QVirtualKeyboardObserver* self);
-void QVirtualKeyboardObserver_OnSenderSignalIndex(const QVirtualKeyboardObserver* self, intptr_t slot);
-int QVirtualKeyboardObserver_SuperSenderSignalIndex(const QVirtualKeyboardObserver* self);
 int QVirtualKeyboardObserver_Receivers(const QVirtualKeyboardObserver* self, const char* signal);
-void QVirtualKeyboardObserver_OnReceivers(const QVirtualKeyboardObserver* self, intptr_t slot);
-int QVirtualKeyboardObserver_SuperReceivers(const QVirtualKeyboardObserver* self, const char* signal);
 bool QVirtualKeyboardObserver_IsSignalConnected(const QVirtualKeyboardObserver* self, const QMetaMethod* signal);
-void QVirtualKeyboardObserver_OnIsSignalConnected(const QVirtualKeyboardObserver* self, intptr_t slot);
-bool QVirtualKeyboardObserver_SuperIsSignalConnected(const QVirtualKeyboardObserver* self, const QMetaMethod* signal);
 void QVirtualKeyboardObserver_Delete(QVirtualKeyboardObserver* self);
 
 #ifdef __cplusplus

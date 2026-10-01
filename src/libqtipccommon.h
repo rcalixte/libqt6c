@@ -36,7 +36,7 @@ QNativeIpcKey* q_nativeipckey_new3(const char* k);
 ///
 /// @param other QNativeIpcKey*
 ///
-QNativeIpcKey* q_nativeipckey_new4(void* other);
+QNativeIpcKey* q_nativeipckey_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html)
 
@@ -58,7 +58,7 @@ uint16_t q_nativeipckey_legacy_default_type_for_os();
 /// @param self QNativeIpcKey*
 /// @param other QNativeIpcKey*
 ///
-void q_nativeipckey_operator_assign(void* self, void* other);
+void q_nativeipckey_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#swap)
 ///
@@ -69,23 +69,23 @@ void q_nativeipckey_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#isEmpty)
 ///
-/// @param self QNativeIpcKey*
+/// @param self const QNativeIpcKey*
 ///
-bool q_nativeipckey_is_empty(void* self);
+bool q_nativeipckey_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#isValid)
 ///
-/// @param self QNativeIpcKey*
+/// @param self const QNativeIpcKey*
 ///
-bool q_nativeipckey_is_valid(void* self);
+bool q_nativeipckey_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#type)
 ///
-/// @param self QNativeIpcKey*
+/// @param self const QNativeIpcKey*
 ///
 /// @return enum QNativeIpcKey__Type
 ///
-uint16_t q_nativeipckey_type(void* self);
+uint16_t q_nativeipckey_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#setType)
 ///
@@ -98,9 +98,9 @@ void q_nativeipckey_set_type(void* self, uint16_t type);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNativeIpcKey*
+/// @param self const QNativeIpcKey*
 ///
-const char* q_nativeipckey_native_key(void* self);
+const char* q_nativeipckey_native_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#setNativeKey)
 ///
@@ -113,9 +113,9 @@ void q_nativeipckey_set_native_key(void* self, const char* newKey);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNativeIpcKey*
+/// @param self const QNativeIpcKey*
 ///
-const char* q_nativeipckey_to_string(void* self);
+const char* q_nativeipckey_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#fromString)
 ///

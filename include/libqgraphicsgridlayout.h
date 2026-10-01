@@ -51,9 +51,9 @@ void q_graphicsgridlayout_set_horizontal_spacing(void* self, double spacing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#horizontalSpacing)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-double q_graphicsgridlayout_horizontal_spacing(void* self);
+double q_graphicsgridlayout_horizontal_spacing(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setVerticalSpacing)
 ///
@@ -64,9 +64,9 @@ void q_graphicsgridlayout_set_vertical_spacing(void* self, double spacing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#verticalSpacing)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-double q_graphicsgridlayout_vertical_spacing(void* self);
+double q_graphicsgridlayout_vertical_spacing(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setSpacing)
 ///
@@ -85,10 +85,10 @@ void q_graphicsgridlayout_set_row_spacing(void* self, int row, double spacing);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowSpacing)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param row int
 ///
-double q_graphicsgridlayout_row_spacing(void* self, int row);
+double q_graphicsgridlayout_row_spacing(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setColumnSpacing)
 ///
@@ -100,10 +100,10 @@ void q_graphicsgridlayout_set_column_spacing(void* self, int column, double spac
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#columnSpacing)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param column int
 ///
-double q_graphicsgridlayout_column_spacing(void* self, int column);
+double q_graphicsgridlayout_column_spacing(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setRowStretchFactor)
 ///
@@ -115,10 +115,10 @@ void q_graphicsgridlayout_set_row_stretch_factor(void* self, int row, int stretc
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowStretchFactor)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param row int
 ///
-int32_t q_graphicsgridlayout_row_stretch_factor(void* self, int row);
+int32_t q_graphicsgridlayout_row_stretch_factor(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setColumnStretchFactor)
 ///
@@ -130,10 +130,10 @@ void q_graphicsgridlayout_set_column_stretch_factor(void* self, int column, int 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#columnStretchFactor)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param column int
 ///
-int32_t q_graphicsgridlayout_column_stretch_factor(void* self, int column);
+int32_t q_graphicsgridlayout_column_stretch_factor(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setRowMinimumHeight)
 ///
@@ -145,10 +145,10 @@ void q_graphicsgridlayout_set_row_minimum_height(void* self, int row, double hei
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowMinimumHeight)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param row int
 ///
-double q_graphicsgridlayout_row_minimum_height(void* self, int row);
+double q_graphicsgridlayout_row_minimum_height(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setRowPreferredHeight)
 ///
@@ -160,10 +160,10 @@ void q_graphicsgridlayout_set_row_preferred_height(void* self, int row, double h
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowPreferredHeight)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param row int
 ///
-double q_graphicsgridlayout_row_preferred_height(void* self, int row);
+double q_graphicsgridlayout_row_preferred_height(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setRowMaximumHeight)
 ///
@@ -175,10 +175,10 @@ void q_graphicsgridlayout_set_row_maximum_height(void* self, int row, double hei
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowMaximumHeight)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param row int
 ///
-double q_graphicsgridlayout_row_maximum_height(void* self, int row);
+double q_graphicsgridlayout_row_maximum_height(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setRowFixedHeight)
 ///
@@ -198,10 +198,10 @@ void q_graphicsgridlayout_set_column_minimum_width(void* self, int column, doubl
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#columnMinimumWidth)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param column int
 ///
-double q_graphicsgridlayout_column_minimum_width(void* self, int column);
+double q_graphicsgridlayout_column_minimum_width(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setColumnPreferredWidth)
 ///
@@ -213,10 +213,10 @@ void q_graphicsgridlayout_set_column_preferred_width(void* self, int column, dou
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#columnPreferredWidth)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param column int
 ///
-double q_graphicsgridlayout_column_preferred_width(void* self, int column);
+double q_graphicsgridlayout_column_preferred_width(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setColumnMaximumWidth)
 ///
@@ -228,10 +228,10 @@ void q_graphicsgridlayout_set_column_maximum_width(void* self, int column, doubl
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#columnMaximumWidth)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param column int
 ///
-double q_graphicsgridlayout_column_maximum_width(void* self, int column);
+double q_graphicsgridlayout_column_maximum_width(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setColumnFixedWidth)
 ///
@@ -251,12 +251,12 @@ void q_graphicsgridlayout_set_row_alignment(void* self, int row, int32_t alignme
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowAlignment)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param row int
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_graphicsgridlayout_row_alignment(void* self, int row);
+int32_t q_graphicsgridlayout_row_alignment(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setColumnAlignment)
 ///
@@ -268,12 +268,12 @@ void q_graphicsgridlayout_set_column_alignment(void* self, int column, int32_t a
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#columnAlignment)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param column int
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_graphicsgridlayout_column_alignment(void* self, int column);
+int32_t q_graphicsgridlayout_column_alignment(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setAlignment)
 ///
@@ -285,80 +285,80 @@ void q_graphicsgridlayout_set_alignment(void* self, void* item, int32_t alignmen
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#alignment)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param item QGraphicsLayoutItem*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_graphicsgridlayout_alignment(void* self, void* item);
+int32_t q_graphicsgridlayout_alignment(const void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#rowCount)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-int32_t q_graphicsgridlayout_row_count(void* self);
+int32_t q_graphicsgridlayout_row_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#columnCount)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-int32_t q_graphicsgridlayout_column_count(void* self);
+int32_t q_graphicsgridlayout_column_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param row int
 /// @param column int
 ///
-QGraphicsLayoutItem* q_graphicsgridlayout_item_at(void* self, int row, int column);
+QGraphicsLayoutItem* q_graphicsgridlayout_item_at(const void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#count)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-int32_t q_graphicsgridlayout_count(void* self);
+int32_t q_graphicsgridlayout_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#count)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsGridLayout*
-/// @param callback int32_t func()
+/// @param self const QGraphicsGridLayout*
+/// @param callback int32_t func(const QGraphicsGridLayout* self)
 ///
-void q_graphicsgridlayout_on_count(void* self, int32_t (*callback)());
+void q_graphicsgridlayout_on_count(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#count)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-int32_t q_graphicsgridlayout_super_count(void* self);
+int32_t q_graphicsgridlayout_super_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param index int
 ///
-QGraphicsLayoutItem* q_graphicsgridlayout_item_at2(void* self, int index);
+QGraphicsLayoutItem* q_graphicsgridlayout_item_at2(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsGridLayout*
-/// @param callback QGraphicsLayoutItem* func(QGraphicsGridLayout* self, int index)
+/// @param self const QGraphicsGridLayout*
+/// @param callback QGraphicsLayoutItem* func(const QGraphicsGridLayout* self, int index)
 ///
-void q_graphicsgridlayout_on_item_at2(void* self, QGraphicsLayoutItem* (*callback)(void*, int));
+void q_graphicsgridlayout_on_item_at2(const void* self, QGraphicsLayoutItem* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param index int
 ///
-QGraphicsLayoutItem* q_graphicsgridlayout_super_item_at2(void* self, int index);
+QGraphicsLayoutItem* q_graphicsgridlayout_super_item_at2(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#removeAt)
 ///
@@ -403,9 +403,9 @@ void q_graphicsgridlayout_invalidate(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void func()
+/// @param callback void func(QGraphicsGridLayout* self)
 ///
-void q_graphicsgridlayout_on_invalidate(void* self, void (*callback)());
+void q_graphicsgridlayout_on_invalidate(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#invalidate)
 ///
@@ -420,7 +420,7 @@ void q_graphicsgridlayout_super_invalidate(void* self);
 /// @param self QGraphicsGridLayout*
 /// @param rect QRectF*
 ///
-void q_graphicsgridlayout_set_geometry(void* self, void* rect);
+void q_graphicsgridlayout_set_geometry(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setGeometry)
 ///
@@ -429,7 +429,7 @@ void q_graphicsgridlayout_set_geometry(void* self, void* rect);
 /// @param self QGraphicsGridLayout*
 /// @param callback void func(QGraphicsGridLayout* self, QRectF* rect)
 ///
-void q_graphicsgridlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
+void q_graphicsgridlayout_on_set_geometry(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setGeometry)
 ///
@@ -438,36 +438,36 @@ void q_graphicsgridlayout_on_set_geometry(void* self, void (*callback)(void*, vo
 /// @param self QGraphicsGridLayout*
 /// @param rect QRectF*
 ///
-void q_graphicsgridlayout_super_set_geometry(void* self, void* rect);
+void q_graphicsgridlayout_super_set_geometry(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#sizeHint)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_graphicsgridlayout_size_hint(void* self, int32_t which, void* constraint);
+QSizeF* q_graphicsgridlayout_size_hint(const void* self, int32_t which, const void* constraint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsGridLayout*
-/// @param callback QSizeF* func(QGraphicsGridLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
+/// @param self const QGraphicsGridLayout*
+/// @param callback QSizeF* func(const QGraphicsGridLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsgridlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
+void q_graphicsgridlayout_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_graphicsgridlayout_super_size_hint(void* self, int32_t which, void* constraint);
+QSizeF* q_graphicsgridlayout_super_size_hint(const void* self, int32_t which, const void* constraint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#addItem)
 ///
@@ -515,9 +515,9 @@ void q_graphicsgridlayout_activate(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#isActivated)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-bool q_graphicsgridlayout_is_activated(void* self);
+bool q_graphicsgridlayout_is_activated(const void* self);
 
 /// Inherited from QGraphicsLayout
 ///
@@ -540,7 +540,7 @@ bool q_graphicsgridlayout_instant_invalidate_propagation();
 /// @param self QGraphicsGridLayout*
 /// @param policy QSizePolicy*
 ///
-void q_graphicsgridlayout_set_size_policy(void* self, void* policy);
+void q_graphicsgridlayout_set_size_policy(void* self, const void* policy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -556,9 +556,9 @@ void q_graphicsgridlayout_set_size_policy2(void* self, int32_t hPolicy, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizePolicy)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-QSizePolicy* q_graphicsgridlayout_size_policy(void* self);
+QSizePolicy* q_graphicsgridlayout_size_policy(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -567,7 +567,7 @@ QSizePolicy* q_graphicsgridlayout_size_policy(void* self);
 /// @param self QGraphicsGridLayout*
 /// @param size QSizeF*
 ///
-void q_graphicsgridlayout_set_minimum_size(void* self, void* size);
+void q_graphicsgridlayout_set_minimum_size(void* self, const void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -583,9 +583,9 @@ void q_graphicsgridlayout_set_minimum_size2(void* self, double w, double h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumSize)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-QSizeF* q_graphicsgridlayout_minimum_size(void* self);
+QSizeF* q_graphicsgridlayout_minimum_size(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -600,9 +600,9 @@ void q_graphicsgridlayout_set_minimum_width(void* self, double width);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumWidth)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-double q_graphicsgridlayout_minimum_width(void* self);
+double q_graphicsgridlayout_minimum_width(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -617,9 +617,9 @@ void q_graphicsgridlayout_set_minimum_height(void* self, double height);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumHeight)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-double q_graphicsgridlayout_minimum_height(void* self);
+double q_graphicsgridlayout_minimum_height(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -628,7 +628,7 @@ double q_graphicsgridlayout_minimum_height(void* self);
 /// @param self QGraphicsGridLayout*
 /// @param size QSizeF*
 ///
-void q_graphicsgridlayout_set_preferred_size(void* self, void* size);
+void q_graphicsgridlayout_set_preferred_size(void* self, const void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -644,9 +644,9 @@ void q_graphicsgridlayout_set_preferred_size2(void* self, double w, double h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredSize)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-QSizeF* q_graphicsgridlayout_preferred_size(void* self);
+QSizeF* q_graphicsgridlayout_preferred_size(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -661,9 +661,9 @@ void q_graphicsgridlayout_set_preferred_width(void* self, double width);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredWidth)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-double q_graphicsgridlayout_preferred_width(void* self);
+double q_graphicsgridlayout_preferred_width(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -678,9 +678,9 @@ void q_graphicsgridlayout_set_preferred_height(void* self, double height);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredHeight)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-double q_graphicsgridlayout_preferred_height(void* self);
+double q_graphicsgridlayout_preferred_height(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -689,7 +689,7 @@ double q_graphicsgridlayout_preferred_height(void* self);
 /// @param self QGraphicsGridLayout*
 /// @param size QSizeF*
 ///
-void q_graphicsgridlayout_set_maximum_size(void* self, void* size);
+void q_graphicsgridlayout_set_maximum_size(void* self, const void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -705,9 +705,9 @@ void q_graphicsgridlayout_set_maximum_size2(void* self, double w, double h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumSize)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-QSizeF* q_graphicsgridlayout_maximum_size(void* self);
+QSizeF* q_graphicsgridlayout_maximum_size(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -722,9 +722,9 @@ void q_graphicsgridlayout_set_maximum_width(void* self, double width);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumWidth)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-double q_graphicsgridlayout_maximum_width(void* self);
+double q_graphicsgridlayout_maximum_width(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -739,42 +739,42 @@ void q_graphicsgridlayout_set_maximum_height(void* self, double height);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumHeight)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-double q_graphicsgridlayout_maximum_height(void* self);
+double q_graphicsgridlayout_maximum_height(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#geometry)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-QRectF* q_graphicsgridlayout_geometry(void* self);
+QRectF* q_graphicsgridlayout_geometry(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#contentsRect)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-QRectF* q_graphicsgridlayout_contents_rect(void* self);
+QRectF* q_graphicsgridlayout_contents_rect(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param which enum Qt__SizeHint
 ///
-QSizeF* q_graphicsgridlayout_effective_size_hint(void* self, int32_t which);
+QSizeF* q_graphicsgridlayout_effective_size_hint(const void* self, int32_t which);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#parentLayoutItem)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-QGraphicsLayoutItem* q_graphicsgridlayout_parent_layout_item(void* self);
+QGraphicsLayoutItem* q_graphicsgridlayout_parent_layout_item(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -789,25 +789,25 @@ void q_graphicsgridlayout_set_parent_layout_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isLayout)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-bool q_graphicsgridlayout_is_layout(void* self);
+bool q_graphicsgridlayout_is_layout(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#graphicsItem)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-QGraphicsItem* q_graphicsgridlayout_graphics_item(void* self);
+QGraphicsItem* q_graphicsgridlayout_graphics_item(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#ownedByLayout)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-bool q_graphicsgridlayout_owned_by_layout(void* self);
+bool q_graphicsgridlayout_owned_by_layout(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -824,11 +824,11 @@ void q_graphicsgridlayout_set_size_policy3(void* self, int32_t hPolicy, int32_t 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_graphicsgridlayout_effective_size_hint2(void* self, int32_t which, void* constraint);
+QSizeF* q_graphicsgridlayout_effective_size_hint2(const void* self, int32_t which, const void* constraint);
 
 /// Inherited from QGraphicsLayout
 ///
@@ -836,13 +836,13 @@ QSizeF* q_graphicsgridlayout_effective_size_hint2(void* self, int32_t which, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param left double*
 /// @param top double*
 /// @param right double*
 /// @param bottom double*
 ///
-void q_graphicsgridlayout_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
+void q_graphicsgridlayout_get_contents_margins(const void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsLayout
 ///
@@ -850,13 +850,13 @@ void q_graphicsgridlayout_get_contents_margins(void* self, double* left, double*
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param left double*
 /// @param top double*
 /// @param right double*
 /// @param bottom double*
 ///
-void q_graphicsgridlayout_super_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
+void q_graphicsgridlayout_super_get_contents_margins(const void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsLayout
 ///
@@ -864,10 +864,10 @@ void q_graphicsgridlayout_super_get_contents_margins(void* self, double* left, d
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 /// @param callback void func(QGraphicsGridLayout* self, double* left, double* top, double* right, double* bottom)
 ///
-void q_graphicsgridlayout_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
+void q_graphicsgridlayout_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsLayout
 ///
@@ -896,9 +896,9 @@ void q_graphicsgridlayout_super_update_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QGraphicsGridLayout*
-/// @param callback void func()
+/// @param callback void func(QGraphicsGridLayout* self)
 ///
-void q_graphicsgridlayout_on_update_geometry(void* self, void (*callback)());
+void q_graphicsgridlayout_on_update_geometry(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsLayout
 ///
@@ -939,9 +939,9 @@ void q_graphicsgridlayout_on_widget_event(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-bool q_graphicsgridlayout_is_empty(void* self);
+bool q_graphicsgridlayout_is_empty(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -949,9 +949,9 @@ bool q_graphicsgridlayout_is_empty(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsGridLayout*
+/// @param self const QGraphicsGridLayout*
 ///
-bool q_graphicsgridlayout_super_is_empty(void* self);
+bool q_graphicsgridlayout_super_is_empty(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -959,10 +959,10 @@ bool q_graphicsgridlayout_super_is_empty(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsGridLayout*
-/// @param callback bool func()
+/// @param self const QGraphicsGridLayout*
+/// @param callback bool func(QGraphicsGridLayout* self)
 ///
-void q_graphicsgridlayout_on_is_empty(void* self, bool (*callback)());
+void q_graphicsgridlayout_on_is_empty(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsLayout
 ///

@@ -20,15 +20,15 @@ KSvg__FrameSvg* k_svg__framesvg_new2(void* parent) {
     return KSvg__FrameSvg_New2((QObject*)parent);
 }
 
-const QMetaObject* k_svg__framesvg_meta_object(void* self) {
+const QMetaObject* k_svg__framesvg_meta_object(const void* self) {
     return KSvg__FrameSvg_MetaObject((KSvg__FrameSvg*)self);
 }
 
-void k_svg__framesvg_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_svg__framesvg_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KSvg__FrameSvg_OnMetaObject((KSvg__FrameSvg*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_svg__framesvg_super_meta_object(void* self) {
+const QMetaObject* k_svg__framesvg_super_meta_object(const void* self) {
     return KSvg__FrameSvg_SuperMetaObject((KSvg__FrameSvg*)self);
 }
 
@@ -79,43 +79,43 @@ void k_svg__framesvg_set_enabled_borders(void* self, const int32_t borders) {
     KSvg__FrameSvg_SetEnabledBorders((KSvg__FrameSvg*)self, borders);
 }
 
-int32_t k_svg__framesvg_enabled_borders(void* self) {
+int32_t k_svg__framesvg_enabled_borders(const void* self) {
     return KSvg__FrameSvg_EnabledBorders((KSvg__FrameSvg*)self);
 }
 
-void k_svg__framesvg_resize_frame(void* self, void* size) {
+void k_svg__framesvg_resize_frame(void* self, const void* size) {
     KSvg__FrameSvg_ResizeFrame((KSvg__FrameSvg*)self, (QSizeF*)size);
 }
 
-QSizeF* k_svg__framesvg_frame_size(void* self) {
+QSizeF* k_svg__framesvg_frame_size(const void* self) {
     return KSvg__FrameSvg_FrameSize((KSvg__FrameSvg*)self);
 }
 
-double k_svg__framesvg_margin_size(void* self, int32_t edge) {
+double k_svg__framesvg_margin_size(const void* self, int32_t edge) {
     return KSvg__FrameSvg_MarginSize((KSvg__FrameSvg*)self, edge);
 }
 
-void k_svg__framesvg_get_margins(void* self, double* left, double* top, double* right, double* bottom) {
+void k_svg__framesvg_get_margins(const void* self, double* left, double* top, double* right, double* bottom) {
     KSvg__FrameSvg_GetMargins((KSvg__FrameSvg*)self, left, top, right, bottom);
 }
 
-double k_svg__framesvg_fixed_margin_size(void* self, int32_t edge) {
+double k_svg__framesvg_fixed_margin_size(const void* self, int32_t edge) {
     return KSvg__FrameSvg_FixedMarginSize((KSvg__FrameSvg*)self, edge);
 }
 
-void k_svg__framesvg_get_fixed_margins(void* self, double* left, double* top, double* right, double* bottom) {
+void k_svg__framesvg_get_fixed_margins(const void* self, double* left, double* top, double* right, double* bottom) {
     KSvg__FrameSvg_GetFixedMargins((KSvg__FrameSvg*)self, left, top, right, bottom);
 }
 
-double k_svg__framesvg_inset_size(void* self, int32_t edge) {
+double k_svg__framesvg_inset_size(const void* self, int32_t edge) {
     return KSvg__FrameSvg_InsetSize((KSvg__FrameSvg*)self, edge);
 }
 
-void k_svg__framesvg_get_inset(void* self, double* left, double* top, double* right, double* bottom) {
+void k_svg__framesvg_get_inset(const void* self, double* left, double* top, double* right, double* bottom) {
     KSvg__FrameSvg_GetInset((KSvg__FrameSvg*)self, left, top, right, bottom);
 }
 
-QRectF* k_svg__framesvg_contents_rect(void* self) {
+QRectF* k_svg__framesvg_contents_rect(const void* self) {
     return KSvg__FrameSvg_ContentsRect((KSvg__FrameSvg*)self);
 }
 
@@ -127,11 +127,11 @@ void k_svg__framesvg_set_element_prefix2(void* self, const char* prefix) {
     KSvg__FrameSvg_SetElementPrefix2((KSvg__FrameSvg*)self, qstring(prefix));
 }
 
-bool k_svg__framesvg_has_element_prefix(void* self, const char* prefix) {
+bool k_svg__framesvg_has_element_prefix(const void* self, const char* prefix) {
     return KSvg__FrameSvg_HasElementPrefix((KSvg__FrameSvg*)self, qstring(prefix));
 }
 
-bool k_svg__framesvg_has_element_prefix2(void* self, int32_t location) {
+bool k_svg__framesvg_has_element_prefix2(const void* self, int32_t location) {
     return KSvg__FrameSvg_HasElementPrefix2((KSvg__FrameSvg*)self, location);
 }
 
@@ -142,11 +142,11 @@ const char* k_svg__framesvg_prefix(void* self) {
     return _ret;
 }
 
-QRegion* k_svg__framesvg_mask(void* self) {
+QRegion* k_svg__framesvg_mask(const void* self) {
     return KSvg__FrameSvg_Mask((KSvg__FrameSvg*)self);
 }
 
-QPixmap* k_svg__framesvg_alpha_mask(void* self) {
+QPixmap* k_svg__framesvg_alpha_mask(const void* self) {
     return KSvg__FrameSvg_AlphaMask((KSvg__FrameSvg*)self);
 }
 
@@ -154,7 +154,7 @@ void k_svg__framesvg_set_cache_all_rendered_frames(void* self, bool cache) {
     KSvg__FrameSvg_SetCacheAllRenderedFrames((KSvg__FrameSvg*)self, cache);
 }
 
-bool k_svg__framesvg_cache_all_rendered_frames(void* self) {
+bool k_svg__framesvg_cache_all_rendered_frames(const void* self) {
     return KSvg__FrameSvg_CacheAllRenderedFrames((KSvg__FrameSvg*)self);
 }
 
@@ -166,7 +166,7 @@ QPixmap* k_svg__framesvg_frame_pixmap(void* self) {
     return KSvg__FrameSvg_FramePixmap((KSvg__FrameSvg*)self);
 }
 
-void k_svg__framesvg_paint_frame(void* self, void* painter, void* target) {
+void k_svg__framesvg_paint_frame(void* self, void* painter, const void* target) {
     KSvg__FrameSvg_PaintFrame((KSvg__FrameSvg*)self, (QPainter*)painter, (QRectF*)target);
 }
 
@@ -174,14 +174,14 @@ void k_svg__framesvg_paint_frame2(void* self, void* painter) {
     KSvg__FrameSvg_PaintFrame2((KSvg__FrameSvg*)self, (QPainter*)painter);
 }
 
-const char* k_svg__framesvg_actual_prefix(void* self) {
+const char* k_svg__framesvg_actual_prefix(const void* self) {
     libqt_string _str = KSvg__FrameSvg_ActualPrefix((KSvg__FrameSvg*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_svg__framesvg_is_repaint_blocked(void* self) {
+bool k_svg__framesvg_is_repaint_blocked(const void* self) {
     return KSvg__FrameSvg_IsRepaintBlocked((KSvg__FrameSvg*)self);
 }
 
@@ -211,11 +211,11 @@ const char* k_svg__framesvg_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_svg__framesvg_paint_frame3(void* self, void* painter, void* target, void* source) {
+void k_svg__framesvg_paint_frame3(void* self, void* painter, const void* target, const void* source) {
     KSvg__FrameSvg_PaintFrame3((KSvg__FrameSvg*)self, (QPainter*)painter, (QRectF*)target, (QRectF*)source);
 }
 
-void k_svg__framesvg_paint_frame22(void* self, void* painter, void* pos) {
+void k_svg__framesvg_paint_frame22(void* self, void* painter, const void* pos) {
     KSvg__FrameSvg_PaintFrame22((KSvg__FrameSvg*)self, (QPainter*)painter, (QPointF*)pos);
 }
 
@@ -223,7 +223,7 @@ void k_svg__framesvg_set_device_pixel_ratio(void* self, double factor) {
     KSvg__Svg_SetDevicePixelRatio((KSvg__Svg*)self, factor);
 }
 
-double k_svg__framesvg_device_pixel_ratio(void* self) {
+double k_svg__framesvg_device_pixel_ratio(const void* self) {
     return KSvg__Svg_DevicePixelRatio((KSvg__Svg*)self);
 }
 
@@ -231,11 +231,11 @@ QPixmap* k_svg__framesvg_pixmap(void* self) {
     return KSvg__Svg_Pixmap((KSvg__Svg*)self);
 }
 
-QImage* k_svg__framesvg_image(void* self, void* size) {
+QImage* k_svg__framesvg_image(void* self, const void* size) {
     return KSvg__Svg_Image((KSvg__Svg*)self, (QSize*)size);
 }
 
-void k_svg__framesvg_paint(void* self, void* painter, void* point) {
+void k_svg__framesvg_paint(void* self, void* painter, const void* point) {
     KSvg__Svg_Paint((KSvg__Svg*)self, (QPainter*)painter, (QPointF*)point);
 }
 
@@ -243,7 +243,7 @@ void k_svg__framesvg_paint2(void* self, void* painter, int x, int y) {
     KSvg__Svg_Paint2((KSvg__Svg*)self, (QPainter*)painter, x, y);
 }
 
-void k_svg__framesvg_paint3(void* self, void* painter, void* rect) {
+void k_svg__framesvg_paint3(void* self, void* painter, const void* rect) {
     KSvg__Svg_Paint3((KSvg__Svg*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
@@ -251,7 +251,7 @@ void k_svg__framesvg_paint4(void* self, void* painter, int x, int y, int width, 
     KSvg__Svg_Paint4((KSvg__Svg*)self, (QPainter*)painter, x, y, width, height);
 }
 
-QSizeF* k_svg__framesvg_size(void* self) {
+QSizeF* k_svg__framesvg_size(const void* self) {
     return KSvg__Svg_Size((KSvg__Svg*)self);
 }
 
@@ -259,7 +259,7 @@ void k_svg__framesvg_resize(void* self, double width, double height) {
     KSvg__Svg_Resize((KSvg__Svg*)self, width, height);
 }
 
-void k_svg__framesvg_resize2(void* self, void* size) {
+void k_svg__framesvg_resize2(void* self, const void* size) {
     KSvg__Svg_Resize2((KSvg__Svg*)self, (QSizeF*)size);
 }
 
@@ -267,31 +267,31 @@ void k_svg__framesvg_resize3(void* self) {
     KSvg__Svg_Resize3((KSvg__Svg*)self);
 }
 
-QSizeF* k_svg__framesvg_element_size(void* self, const char* elementId) {
+QSizeF* k_svg__framesvg_element_size(const void* self, const char* elementId) {
     return KSvg__Svg_ElementSize((KSvg__Svg*)self, qstring(elementId));
 }
 
-QSizeF* k_svg__framesvg_element_size2(void* self, const char* elementId) {
+QSizeF* k_svg__framesvg_element_size2(const void* self, const char* elementId) {
     return KSvg__Svg_ElementSize2((KSvg__Svg*)self, qstring(elementId));
 }
 
-QRectF* k_svg__framesvg_element_rect(void* self, const char* elementId) {
+QRectF* k_svg__framesvg_element_rect(const void* self, const char* elementId) {
     return KSvg__Svg_ElementRect((KSvg__Svg*)self, qstring(elementId));
 }
 
-QRectF* k_svg__framesvg_element_rect2(void* self, const char* elementId) {
+QRectF* k_svg__framesvg_element_rect2(const void* self, const char* elementId) {
     return KSvg__Svg_ElementRect2((KSvg__Svg*)self, qstring(elementId));
 }
 
-bool k_svg__framesvg_has_element(void* self, const char* elementId) {
+bool k_svg__framesvg_has_element(const void* self, const char* elementId) {
     return KSvg__Svg_HasElement((KSvg__Svg*)self, qstring(elementId));
 }
 
-bool k_svg__framesvg_has_element2(void* self, const char* elementId) {
+bool k_svg__framesvg_has_element2(const void* self, const char* elementId) {
     return KSvg__Svg_HasElement2((KSvg__Svg*)self, qstring(elementId));
 }
 
-bool k_svg__framesvg_is_valid(void* self) {
+bool k_svg__framesvg_is_valid(const void* self) {
     return KSvg__Svg_IsValid((KSvg__Svg*)self);
 }
 
@@ -299,11 +299,11 @@ void k_svg__framesvg_set_contains_multiple_images(void* self, bool multiple) {
     KSvg__Svg_SetContainsMultipleImages((KSvg__Svg*)self, multiple);
 }
 
-bool k_svg__framesvg_contains_multiple_images(void* self) {
+bool k_svg__framesvg_contains_multiple_images(const void* self) {
     return KSvg__Svg_ContainsMultipleImages((KSvg__Svg*)self);
 }
 
-const char* k_svg__framesvg_image_path(void* self) {
+const char* k_svg__framesvg_image_path(const void* self) {
     libqt_string _str = KSvg__Svg_ImagePath((KSvg__Svg*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -314,11 +314,11 @@ void k_svg__framesvg_set_using_rendering_cache(void* self, bool useCache) {
     KSvg__Svg_SetUsingRenderingCache((KSvg__Svg*)self, useCache);
 }
 
-bool k_svg__framesvg_is_using_rendering_cache(void* self) {
+bool k_svg__framesvg_is_using_rendering_cache(const void* self) {
     return KSvg__Svg_IsUsingRenderingCache((KSvg__Svg*)self);
 }
 
-bool k_svg__framesvg_from_current_image_set(void* self) {
+bool k_svg__framesvg_from_current_image_set(const void* self) {
     return KSvg__Svg_FromCurrentImageSet((KSvg__Svg*)self);
 }
 
@@ -326,7 +326,7 @@ void k_svg__framesvg_set_image_set(void* self, void* theme) {
     KSvg__Svg_SetImageSet((KSvg__Svg*)self, (KSvg__ImageSet*)theme);
 }
 
-KSvg__ImageSet* k_svg__framesvg_image_set(void* self) {
+KSvg__ImageSet* k_svg__framesvg_image_set(const void* self) {
     return KSvg__Svg_ImageSet((KSvg__Svg*)self);
 }
 
@@ -334,7 +334,7 @@ void k_svg__framesvg_set_status(void* self, int32_t status) {
     KSvg__Svg_SetStatus((KSvg__Svg*)self, status);
 }
 
-int32_t k_svg__framesvg_status(void* self) {
+int32_t k_svg__framesvg_status(const void* self) {
     return KSvg__Svg_Status((KSvg__Svg*)self);
 }
 
@@ -342,15 +342,15 @@ void k_svg__framesvg_set_color_set(void* self, int32_t colorSet) {
     KSvg__Svg_SetColorSet((KSvg__Svg*)self, colorSet);
 }
 
-int32_t k_svg__framesvg_color_set(void* self) {
+int32_t k_svg__framesvg_color_set(const void* self) {
     return KSvg__Svg_ColorSet((KSvg__Svg*)self);
 }
 
-QColor* k_svg__framesvg_color(void* self, int32_t colorName) {
+QColor* k_svg__framesvg_color(const void* self, int32_t colorName) {
     return KSvg__Svg_Color((KSvg__Svg*)self, colorName);
 }
 
-void k_svg__framesvg_set_color(void* self, int32_t colorName, void* color) {
+void k_svg__framesvg_set_color(void* self, int32_t colorName, const void* color) {
     KSvg__Svg_SetColor((KSvg__Svg*)self, colorName, (QColor*)color);
 }
 
@@ -426,11 +426,11 @@ QPixmap* k_svg__framesvg_pixmap1(void* self, const char* elementID) {
     return KSvg__Svg_Pixmap1((KSvg__Svg*)self, qstring(elementID));
 }
 
-QImage* k_svg__framesvg_image2(void* self, void* size, const char* elementID) {
+QImage* k_svg__framesvg_image2(void* self, const void* size, const char* elementID) {
     return KSvg__Svg_Image2((KSvg__Svg*)self, (QSize*)size, qstring(elementID));
 }
 
-void k_svg__framesvg_paint32(void* self, void* painter, void* point, const char* elementID) {
+void k_svg__framesvg_paint32(void* self, void* painter, const void* point, const char* elementID) {
     KSvg__Svg_Paint32((KSvg__Svg*)self, (QPainter*)painter, (QPointF*)point, qstring(elementID));
 }
 
@@ -438,7 +438,7 @@ void k_svg__framesvg_paint42(void* self, void* painter, int x, int y, const char
     KSvg__Svg_Paint42((KSvg__Svg*)self, (QPainter*)painter, x, y, qstring(elementID));
 }
 
-void k_svg__framesvg_paint33(void* self, void* painter, void* rect, const char* elementID) {
+void k_svg__framesvg_paint33(void* self, void* painter, const void* rect, const char* elementID) {
     KSvg__Svg_Paint33((KSvg__Svg*)self, (QPainter*)painter, (QRectF*)rect, qstring(elementID));
 }
 
@@ -458,7 +458,7 @@ bool k_svg__framesvg_super_event_filter(void* self, void* watched, void* event) 
     return QObject_SuperEventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* k_svg__framesvg_object_name(void* self) {
+const char* k_svg__framesvg_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -469,19 +469,19 @@ void k_svg__framesvg_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_svg__framesvg_is_widget_type(void* self) {
+bool k_svg__framesvg_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_svg__framesvg_is_window_type(void* self) {
+bool k_svg__framesvg_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_svg__framesvg_is_quick_item_type(void* self) {
+bool k_svg__framesvg_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_svg__framesvg_signals_blocked(void* self) {
+bool k_svg__framesvg_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -489,7 +489,7 @@ bool k_svg__framesvg_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_svg__framesvg_thread(void* self) {
+QThread* k_svg__framesvg_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -513,7 +513,7 @@ void k_svg__framesvg_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_svg__framesvg_children(void* self) {
+libqt_list /* of QObject* */ k_svg__framesvg_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -530,55 +530,55 @@ void k_svg__framesvg_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_svg__framesvg_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_svg__framesvg_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_svg__framesvg_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_svg__framesvg_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_svg__framesvg_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_svg__framesvg_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_svg__framesvg_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_svg__framesvg_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_svg__framesvg_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_svg__framesvg_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_svg__framesvg_disconnect3(void* self) {
+bool k_svg__framesvg_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_svg__framesvg_disconnect4(void* self, void* receiver) {
+bool k_svg__framesvg_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_svg__framesvg_disconnect5(void* param1) {
+bool k_svg__framesvg_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_svg__framesvg_dump_object_tree(void* self) {
+void k_svg__framesvg_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_svg__framesvg_dump_object_info(void* self) {
+void k_svg__framesvg_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_svg__framesvg_set_property(void* self, const char* name, void* value) {
+bool k_svg__framesvg_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_svg__framesvg_property(void* self, const char* name) {
+QVariant* k_svg__framesvg_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_svg__framesvg_dynamic_property_names(void* self) {
+const char** k_svg__framesvg_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -599,7 +599,7 @@ QBindingStorage* k_svg__framesvg_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_svg__framesvg_binding_storage2(void* self) {
+const QBindingStorage* k_svg__framesvg_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -611,11 +611,11 @@ void k_svg__framesvg_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_svg__framesvg_parent(void* self) {
+QObject* k_svg__framesvg_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_svg__framesvg_inherits(void* self, const char* classname) {
+bool k_svg__framesvg_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -631,31 +631,31 @@ int32_t k_svg__framesvg_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_svg__framesvg_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_svg__framesvg_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_svg__framesvg_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_svg__framesvg_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_svg__framesvg_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_svg__framesvg_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_svg__framesvg_disconnect1(void* self, const char* signal) {
+bool k_svg__framesvg_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_svg__framesvg_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_svg__framesvg_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_svg__framesvg_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_svg__framesvg_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_svg__framesvg_disconnect23(void* self, void* receiver, const char* member) {
+bool k_svg__framesvg_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -715,76 +715,44 @@ void k_svg__framesvg_on_custom_event(void* self, void (*callback)(void*, void*))
     KSvg__FrameSvg_OnCustomEvent((KSvg__FrameSvg*)self, (intptr_t)callback);
 }
 
-void k_svg__framesvg_connect_notify(void* self, void* signal) {
+void k_svg__framesvg_connect_notify(void* self, const void* signal) {
     KSvg__FrameSvg_ConnectNotify((KSvg__FrameSvg*)self, (QMetaMethod*)signal);
 }
 
-void k_svg__framesvg_super_connect_notify(void* self, void* signal) {
+void k_svg__framesvg_super_connect_notify(void* self, const void* signal) {
     KSvg__FrameSvg_SuperConnectNotify((KSvg__FrameSvg*)self, (QMetaMethod*)signal);
 }
 
-void k_svg__framesvg_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_svg__framesvg_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KSvg__FrameSvg_OnConnectNotify((KSvg__FrameSvg*)self, (intptr_t)callback);
 }
 
-void k_svg__framesvg_disconnect_notify(void* self, void* signal) {
+void k_svg__framesvg_disconnect_notify(void* self, const void* signal) {
     KSvg__FrameSvg_DisconnectNotify((KSvg__FrameSvg*)self, (QMetaMethod*)signal);
 }
 
-void k_svg__framesvg_super_disconnect_notify(void* self, void* signal) {
+void k_svg__framesvg_super_disconnect_notify(void* self, const void* signal) {
     KSvg__FrameSvg_SuperDisconnectNotify((KSvg__FrameSvg*)self, (QMetaMethod*)signal);
 }
 
-void k_svg__framesvg_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_svg__framesvg_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KSvg__FrameSvg_OnDisconnectNotify((KSvg__FrameSvg*)self, (intptr_t)callback);
 }
 
-QObject* k_svg__framesvg_sender(void* self) {
+QObject* k_svg__framesvg_sender(const void* self) {
     return KSvg__FrameSvg_Sender((KSvg__FrameSvg*)self);
 }
 
-QObject* k_svg__framesvg_super_sender(void* self) {
-    return KSvg__FrameSvg_SuperSender((KSvg__FrameSvg*)self);
-}
-
-void k_svg__framesvg_on_sender(void* self, QObject* (*callback)()) {
-    KSvg__FrameSvg_OnSender((KSvg__FrameSvg*)self, (intptr_t)callback);
-}
-
-int32_t k_svg__framesvg_sender_signal_index(void* self) {
+int32_t k_svg__framesvg_sender_signal_index(const void* self) {
     return KSvg__FrameSvg_SenderSignalIndex((KSvg__FrameSvg*)self);
 }
 
-int32_t k_svg__framesvg_super_sender_signal_index(void* self) {
-    return KSvg__FrameSvg_SuperSenderSignalIndex((KSvg__FrameSvg*)self);
-}
-
-void k_svg__framesvg_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KSvg__FrameSvg_OnSenderSignalIndex((KSvg__FrameSvg*)self, (intptr_t)callback);
-}
-
-int32_t k_svg__framesvg_receivers(void* self, const char* signal) {
+int32_t k_svg__framesvg_receivers(const void* self, const char* signal) {
     return KSvg__FrameSvg_Receivers((KSvg__FrameSvg*)self, signal);
 }
 
-int32_t k_svg__framesvg_super_receivers(void* self, const char* signal) {
-    return KSvg__FrameSvg_SuperReceivers((KSvg__FrameSvg*)self, signal);
-}
-
-void k_svg__framesvg_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KSvg__FrameSvg_OnReceivers((KSvg__FrameSvg*)self, (intptr_t)callback);
-}
-
-bool k_svg__framesvg_is_signal_connected(void* self, void* signal) {
+bool k_svg__framesvg_is_signal_connected(const void* self, const void* signal) {
     return KSvg__FrameSvg_IsSignalConnected((KSvg__FrameSvg*)self, (QMetaMethod*)signal);
-}
-
-bool k_svg__framesvg_super_is_signal_connected(void* self, void* signal) {
-    return KSvg__FrameSvg_SuperIsSignalConnected((KSvg__FrameSvg*)self, (QMetaMethod*)signal);
-}
-
-void k_svg__framesvg_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KSvg__FrameSvg_OnIsSignalConnected((KSvg__FrameSvg*)self, (intptr_t)callback);
 }
 
 void k_svg__framesvg_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

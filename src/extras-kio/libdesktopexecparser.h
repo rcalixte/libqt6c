@@ -15,7 +15,7 @@
 /// @param service KService*
 /// @param urls libqt_list of QUrl*
 ///
-KIO__DesktopExecParser* k_io__desktopexecparser_new(void* service, libqt_list urls);
+KIO__DesktopExecParser* k_io__desktopexecparser_new(const void* service, libqt_list urls);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#setUrlsAreTempFiles)
 ///
@@ -35,17 +35,17 @@ void k_io__desktopexecparser_set_suggested_file_name(void* self, const char* sug
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__DesktopExecParser*
+/// @param self const KIO__DesktopExecParser*
 ///
-const char** k_io__desktopexecparser_resulting_arguments(void* self);
+const char** k_io__desktopexecparser_resulting_arguments(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#errorMessage)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__DesktopExecParser*
+/// @param self const KIO__DesktopExecParser*
 ///
-const char* k_io__desktopexecparser_error_message(void* self);
+const char* k_io__desktopexecparser_error_message(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#supportedProtocols)
 ///
@@ -53,20 +53,20 @@ const char* k_io__desktopexecparser_error_message(void* self);
 ///
 /// @param service KService*
 ///
-const char** k_io__desktopexecparser_supported_protocols(void* service);
+const char** k_io__desktopexecparser_supported_protocols(const void* service);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#isProtocolInSupportedList)
 ///
 /// @param url QUrl*
 /// @param supportedProtocols const char**
 ///
-bool k_io__desktopexecparser_is_protocol_in_supported_list(void* url, const char* supportedProtocols[static 1]);
+bool k_io__desktopexecparser_is_protocol_in_supported_list(const void* url, const char* supportedProtocols[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#hasSchemeHandler)
 ///
 /// @param url QUrl*
 ///
-bool k_io__desktopexecparser_has_scheme_handler(void* url);
+bool k_io__desktopexecparser_has_scheme_handler(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-desktopexecparser.html#executableName)
 ///

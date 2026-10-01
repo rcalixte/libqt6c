@@ -20,7 +20,7 @@ QAudioBuffer* q_audiobuffer_new();
 ///
 /// @param other QAudioBuffer*
 ///
-QAudioBuffer* q_audiobuffer_new2(void* other);
+QAudioBuffer* q_audiobuffer_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html)
 
@@ -29,7 +29,7 @@ QAudioBuffer* q_audiobuffer_new2(void* other);
 /// @param data char*
 /// @param format QAudioFormat*
 ///
-QAudioBuffer* q_audiobuffer_new3(char* data, void* format);
+QAudioBuffer* q_audiobuffer_new3(char* data, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html)
 
@@ -38,7 +38,7 @@ QAudioBuffer* q_audiobuffer_new3(char* data, void* format);
 /// @param numFrames int
 /// @param format QAudioFormat*
 ///
-QAudioBuffer* q_audiobuffer_new4(int numFrames, void* format);
+QAudioBuffer* q_audiobuffer_new4(int numFrames, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html)
 
@@ -48,7 +48,7 @@ QAudioBuffer* q_audiobuffer_new4(int numFrames, void* format);
 /// @param format QAudioFormat*
 /// @param startTime int64_t
 ///
-QAudioBuffer* q_audiobuffer_new5(char* data, void* format, int64_t startTime);
+QAudioBuffer* q_audiobuffer_new5(char* data, const void* format, int64_t startTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html)
 
@@ -58,14 +58,14 @@ QAudioBuffer* q_audiobuffer_new5(char* data, void* format, int64_t startTime);
 /// @param format QAudioFormat*
 /// @param startTime int64_t
 ///
-QAudioBuffer* q_audiobuffer_new6(int numFrames, void* format, int64_t startTime);
+QAudioBuffer* q_audiobuffer_new6(int numFrames, const void* format, int64_t startTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#operator-eq)
 ///
 /// @param self QAudioBuffer*
 /// @param other QAudioBuffer*
 ///
-void q_audiobuffer_operator_assign(void* self, void* other);
+void q_audiobuffer_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#swap)
 ///
@@ -76,9 +76,9 @@ void q_audiobuffer_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#isValid)
 ///
-/// @param self QAudioBuffer*
+/// @param self const QAudioBuffer*
 ///
-bool q_audiobuffer_is_valid(void* self);
+bool q_audiobuffer_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#detach)
 ///
@@ -88,39 +88,39 @@ void q_audiobuffer_detach(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#format)
 ///
-/// @param self QAudioBuffer*
+/// @param self const QAudioBuffer*
 ///
-QAudioFormat* q_audiobuffer_format(void* self);
+QAudioFormat* q_audiobuffer_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#frameCount)
 ///
-/// @param self QAudioBuffer*
+/// @param self const QAudioBuffer*
 ///
-intptr_t q_audiobuffer_frame_count(void* self);
+intptr_t q_audiobuffer_frame_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#sampleCount)
 ///
-/// @param self QAudioBuffer*
+/// @param self const QAudioBuffer*
 ///
-intptr_t q_audiobuffer_sample_count(void* self);
+intptr_t q_audiobuffer_sample_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#byteCount)
 ///
-/// @param self QAudioBuffer*
+/// @param self const QAudioBuffer*
 ///
-intptr_t q_audiobuffer_byte_count(void* self);
+intptr_t q_audiobuffer_byte_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#duration)
 ///
-/// @param self QAudioBuffer*
+/// @param self const QAudioBuffer*
 ///
-int64_t q_audiobuffer_duration(void* self);
+int64_t q_audiobuffer_duration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#startTime)
 ///
-/// @param self QAudioBuffer*
+/// @param self const QAudioBuffer*
 ///
-int64_t q_audiobuffer_start_time(void* self);
+int64_t q_audiobuffer_start_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiobuffer.html#dtor.QAudioBuffer)
 ///

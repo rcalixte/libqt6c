@@ -14,52 +14,52 @@
 ///
 /// @param param1 KNSCore__SearchPreset*
 ///
-KNSCore__SearchPreset* k_nscore__searchpreset_new(void* param1);
+KNSCore__SearchPreset* k_nscore__searchpreset_new(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#request)
 ///
-/// @param self KNSCore__SearchPreset*
+/// @param self const KNSCore__SearchPreset*
 ///
-KNSCore__SearchRequest* k_nscore__searchpreset_request(void* self);
+KNSCore__SearchRequest* k_nscore__searchpreset_request(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#displayName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__SearchPreset*
+/// @param self const KNSCore__SearchPreset*
 ///
-const char* k_nscore__searchpreset_display_name(void* self);
+const char* k_nscore__searchpreset_display_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#iconName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__SearchPreset*
+/// @param self const KNSCore__SearchPreset*
 ///
-const char* k_nscore__searchpreset_icon_name(void* self);
+const char* k_nscore__searchpreset_icon_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#type)
 ///
-/// @param self KNSCore__SearchPreset*
+/// @param self const KNSCore__SearchPreset*
 ///
 /// @return enum KNSCore__SearchPreset__Type
 ///
-int32_t k_nscore__searchpreset_type(void* self);
+int32_t k_nscore__searchpreset_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#providerId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__SearchPreset*
+/// @param self const KNSCore__SearchPreset*
 ///
-const char* k_nscore__searchpreset_provider_id(void* self);
+const char* k_nscore__searchpreset_provider_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchpreset.html#operator-eq)
 ///
 /// @param self KNSCore__SearchPreset*
 /// @param param1 KNSCore__SearchPreset*
 ///
-void k_nscore__searchpreset_operator_assign(void* self, void* param1);
+void k_nscore__searchpreset_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

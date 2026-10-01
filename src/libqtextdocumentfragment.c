@@ -7,48 +7,48 @@ QTextDocumentFragment* q_textdocumentfragment_new() {
     return QTextDocumentFragment_New();
 }
 
-QTextDocumentFragment* q_textdocumentfragment_new2(void* document) {
+QTextDocumentFragment* q_textdocumentfragment_new2(const void* document) {
     return QTextDocumentFragment_New2((QTextDocument*)document);
 }
 
-QTextDocumentFragment* q_textdocumentfragment_new3(void* range) {
+QTextDocumentFragment* q_textdocumentfragment_new3(const void* range) {
     return QTextDocumentFragment_New3((QTextCursor*)range);
 }
 
-QTextDocumentFragment* q_textdocumentfragment_new4(void* rhs) {
+QTextDocumentFragment* q_textdocumentfragment_new4(const void* rhs) {
     return QTextDocumentFragment_New4((QTextDocumentFragment*)rhs);
 }
 
-void q_textdocumentfragment_operator_assign(void* self, void* rhs) {
+void q_textdocumentfragment_operator_assign(void* self, const void* rhs) {
     QTextDocumentFragment_OperatorAssign((QTextDocumentFragment*)self, (QTextDocumentFragment*)rhs);
 }
 
-bool q_textdocumentfragment_is_empty(void* self) {
+bool q_textdocumentfragment_is_empty(const void* self) {
     return QTextDocumentFragment_IsEmpty((QTextDocumentFragment*)self);
 }
 
-const char* q_textdocumentfragment_to_plain_text(void* self) {
+const char* q_textdocumentfragment_to_plain_text(const void* self) {
     libqt_string _str = QTextDocumentFragment_ToPlainText((QTextDocumentFragment*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_textdocumentfragment_to_raw_text(void* self) {
+const char* q_textdocumentfragment_to_raw_text(const void* self) {
     libqt_string _str = QTextDocumentFragment_ToRawText((QTextDocumentFragment*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_textdocumentfragment_to_html(void* self) {
+const char* q_textdocumentfragment_to_html(const void* self) {
     libqt_string _str = QTextDocumentFragment_ToHtml((QTextDocumentFragment*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_textdocumentfragment_to_markdown(void* self) {
+const char* q_textdocumentfragment_to_markdown(const void* self) {
     libqt_string _str = QTextDocumentFragment_ToMarkdown((QTextDocumentFragment*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -67,14 +67,14 @@ QTextDocumentFragment* q_textdocumentfragment_from_markdown(const char* markdown
     return QTextDocumentFragment_FromMarkdown(qstring(markdown));
 }
 
-const char* q_textdocumentfragment_to_markdown1(void* self, int32_t features) {
+const char* q_textdocumentfragment_to_markdown1(const void* self, int32_t features) {
     libqt_string _str = QTextDocumentFragment_ToMarkdown1((QTextDocumentFragment*)self, features);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QTextDocumentFragment* q_textdocumentfragment_from_html2(const char* html, void* resourceProvider) {
+QTextDocumentFragment* q_textdocumentfragment_from_html2(const char* html, const void* resourceProvider) {
     return QTextDocumentFragment_FromHtml2(qstring(html), (QTextDocument*)resourceProvider);
 }
 

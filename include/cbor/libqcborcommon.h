@@ -12,11 +12,11 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#c-var)
 ///
-/// @param self QCborError*
+/// @param self const QCborError*
 ///
 /// @return enum QCborError__Code
 ///
-int32_t q_cborerror_c(void* self);
+int32_t q_cborerror_c(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#c-var)
 ///
@@ -27,19 +27,19 @@ void q_cborerror_set_c(void* self, int32_t c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#operator-QCborError-3a-3aCode)
 ///
-/// @param self QCborError*
+/// @param self const QCborError*
 ///
 /// @return enum QCborError__Code
 ///
-int32_t q_cborerror_to_q_cbor_error___code(void* self);
+int32_t q_cborerror_to_q_cbor_error___code(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QCborError*
+/// @param self const QCborError*
 ///
-const char* q_cborerror_to_string(void* self);
+const char* q_cborerror_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborerror.html#dtor.QCborError)
 ///

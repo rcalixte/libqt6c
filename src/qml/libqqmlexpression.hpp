@@ -58,7 +58,7 @@ void QQmlExpression_ValueChanged(QQmlExpression* self);
 void QQmlExpression_Connect_ValueChanged(QQmlExpression* self, intptr_t slot);
 void QQmlExpression_SetSourceLocation3(QQmlExpression* self, const libqt_string fileName, int line, int column);
 QVariant* QQmlExpression_Evaluate1(QQmlExpression* self, bool* valueIsUndefined);
-void QQmlExpression_OnMetaObject(const QQmlExpression* self, intptr_t slot);
+void QQmlExpression_OnMetaObject(QQmlExpression* self, intptr_t slot);
 QMetaObject* QQmlExpression_SuperMetaObject(const QQmlExpression* self);
 void QQmlExpression_OnMetacast(QQmlExpression* self, intptr_t slot);
 void* QQmlExpression_SuperMetacast(QQmlExpression* self, const char* param1);
@@ -86,17 +86,9 @@ void QQmlExpression_DisconnectNotify(QQmlExpression* self, const QMetaMethod* si
 void QQmlExpression_OnDisconnectNotify(QQmlExpression* self, intptr_t slot);
 void QQmlExpression_SuperDisconnectNotify(QQmlExpression* self, const QMetaMethod* signal);
 QObject* QQmlExpression_Sender(const QQmlExpression* self);
-void QQmlExpression_OnSender(const QQmlExpression* self, intptr_t slot);
-QObject* QQmlExpression_SuperSender(const QQmlExpression* self);
 int QQmlExpression_SenderSignalIndex(const QQmlExpression* self);
-void QQmlExpression_OnSenderSignalIndex(const QQmlExpression* self, intptr_t slot);
-int QQmlExpression_SuperSenderSignalIndex(const QQmlExpression* self);
 int QQmlExpression_Receivers(const QQmlExpression* self, const char* signal);
-void QQmlExpression_OnReceivers(const QQmlExpression* self, intptr_t slot);
-int QQmlExpression_SuperReceivers(const QQmlExpression* self, const char* signal);
 bool QQmlExpression_IsSignalConnected(const QQmlExpression* self, const QMetaMethod* signal);
-void QQmlExpression_OnIsSignalConnected(const QQmlExpression* self, intptr_t slot);
-bool QQmlExpression_SuperIsSignalConnected(const QQmlExpression* self, const QMetaMethod* signal);
 void QQmlExpression_Delete(QQmlExpression* self);
 
 #ifdef __cplusplus

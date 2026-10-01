@@ -60,26 +60,26 @@ QPrintPreviewDialog* q_printpreviewdialog_new6(void* printer, void* parent, int3
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const QMetaObject* q_printpreviewdialog_meta_object(void* self);
+const QMetaObject* q_printpreviewdialog_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback const QMetaObject* func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback const QMetaObject* func(const QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_printpreviewdialog_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const QMetaObject* q_printpreviewdialog_super_meta_object(void* self);
+const QMetaObject* q_printpreviewdialog_super_meta_object(const void* self);
 
 /// @param self QPrintPreviewDialog*
 /// @param param1 const char*
@@ -224,9 +224,9 @@ const char* q_printpreviewdialog_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_result(void* self);
+int32_t q_printpreviewdialog_result(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -241,9 +241,9 @@ void q_printpreviewdialog_set_size_grip_enabled(void* self, bool sizeGripEnabled
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_size_grip_enabled(void* self);
+bool q_printpreviewdialog_is_size_grip_enabled(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -335,9 +335,9 @@ QPrintPreviewDialog* q_printpreviewdialog_from_q_paint_device(void* _qpaintdevic
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-uintptr_t q_printpreviewdialog_win_id(void* self);
+uintptr_t q_printpreviewdialog_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -351,25 +351,25 @@ void q_printpreviewdialog_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-uintptr_t q_printpreviewdialog_internal_win_id(void* self);
+uintptr_t q_printpreviewdialog_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-uintptr_t q_printpreviewdialog_effective_win_id(void* self);
+uintptr_t q_printpreviewdialog_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QStyle* q_printpreviewdialog_style(void* self);
+QStyle* q_printpreviewdialog_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -384,35 +384,35 @@ void q_printpreviewdialog_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_top_level(void* self);
+bool q_printpreviewdialog_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_window(void* self);
+bool q_printpreviewdialog_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_modal(void* self);
+bool q_printpreviewdialog_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_printpreviewdialog_window_modality(void* self);
+int32_t q_printpreviewdialog_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -427,18 +427,18 @@ void q_printpreviewdialog_set_window_modality(void* self, int32_t windowModality
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_enabled(void* self);
+bool q_printpreviewdialog_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QWidget*
 ///
-bool q_printpreviewdialog_is_enabled_to(void* self, void* param1);
+bool q_printpreviewdialog_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -471,153 +471,153 @@ void q_printpreviewdialog_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QRect* q_printpreviewdialog_frame_geometry(void* self);
+QRect* q_printpreviewdialog_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const QRect* q_printpreviewdialog_geometry(void* self);
+const QRect* q_printpreviewdialog_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QRect* q_printpreviewdialog_normal_geometry(void* self);
+QRect* q_printpreviewdialog_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_x(void* self);
+int32_t q_printpreviewdialog_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_y(void* self);
+int32_t q_printpreviewdialog_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QPoint* q_printpreviewdialog_pos(void* self);
+QPoint* q_printpreviewdialog_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_frame_size(void* self);
+QSize* q_printpreviewdialog_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_size(void* self);
+QSize* q_printpreviewdialog_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_width(void* self);
+int32_t q_printpreviewdialog_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_height(void* self);
+int32_t q_printpreviewdialog_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QRect* q_printpreviewdialog_rect(void* self);
+QRect* q_printpreviewdialog_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QRect* q_printpreviewdialog_children_rect(void* self);
+QRect* q_printpreviewdialog_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QRegion* q_printpreviewdialog_children_region(void* self);
+QRegion* q_printpreviewdialog_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_minimum_size(void* self);
+QSize* q_printpreviewdialog_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_maximum_size(void* self);
+QSize* q_printpreviewdialog_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_minimum_width(void* self);
+int32_t q_printpreviewdialog_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_minimum_height(void* self);
+int32_t q_printpreviewdialog_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_maximum_width(void* self);
+int32_t q_printpreviewdialog_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_maximum_height(void* self);
+int32_t q_printpreviewdialog_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -626,7 +626,7 @@ int32_t q_printpreviewdialog_maximum_height(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param minimumSize QSize*
 ///
-void q_printpreviewdialog_set_minimum_size(void* self, void* minimumSize);
+void q_printpreviewdialog_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -645,7 +645,7 @@ void q_printpreviewdialog_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QPrintPreviewDialog*
 /// @param maximumSize QSize*
 ///
-void q_printpreviewdialog_set_maximum_size(void* self, void* maximumSize);
+void q_printpreviewdialog_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -697,9 +697,9 @@ void q_printpreviewdialog_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_size_increment(void* self);
+QSize* q_printpreviewdialog_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -708,7 +708,7 @@ QSize* q_printpreviewdialog_size_increment(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param sizeIncrement QSize*
 ///
-void q_printpreviewdialog_set_size_increment(void* self, void* sizeIncrement);
+void q_printpreviewdialog_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -724,9 +724,9 @@ void q_printpreviewdialog_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_base_size(void* self);
+QSize* q_printpreviewdialog_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -735,7 +735,7 @@ QSize* q_printpreviewdialog_base_size(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param baseSize QSize*
 ///
-void q_printpreviewdialog_set_base_size(void* self, void* baseSize);
+void q_printpreviewdialog_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -754,7 +754,7 @@ void q_printpreviewdialog_set_base_size2(void* self, int basew, int baseh);
 /// @param self QPrintPreviewDialog*
 /// @param fixedSize QSize*
 ///
-void q_printpreviewdialog_set_fixed_size(void* self, void* fixedSize);
+void q_printpreviewdialog_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -788,145 +788,145 @@ void q_printpreviewdialog_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QPointF*
 ///
-QPointF* q_printpreviewdialog_map_to_global(void* self, void* param1);
+QPointF* q_printpreviewdialog_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QPoint*
 ///
-QPoint* q_printpreviewdialog_map_to_global2(void* self, void* param1);
+QPoint* q_printpreviewdialog_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QPointF*
 ///
-QPointF* q_printpreviewdialog_map_from_global(void* self, void* param1);
+QPointF* q_printpreviewdialog_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QPoint*
 ///
-QPoint* q_printpreviewdialog_map_from_global2(void* self, void* param1);
+QPoint* q_printpreviewdialog_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QPointF*
 ///
-QPointF* q_printpreviewdialog_map_to_parent(void* self, void* param1);
+QPointF* q_printpreviewdialog_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QPoint*
 ///
-QPoint* q_printpreviewdialog_map_to_parent2(void* self, void* param1);
+QPoint* q_printpreviewdialog_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QPointF*
 ///
-QPointF* q_printpreviewdialog_map_from_parent(void* self, void* param1);
+QPointF* q_printpreviewdialog_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QPoint*
 ///
-QPoint* q_printpreviewdialog_map_from_parent2(void* self, void* param1);
+QPoint* q_printpreviewdialog_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_printpreviewdialog_map_to(void* self, void* param1, void* param2);
+QPointF* q_printpreviewdialog_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_printpreviewdialog_map_to2(void* self, void* param1, void* param2);
+QPoint* q_printpreviewdialog_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_printpreviewdialog_map_from(void* self, void* param1, void* param2);
+QPointF* q_printpreviewdialog_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_printpreviewdialog_map_from2(void* self, void* param1, void* param2);
+QPoint* q_printpreviewdialog_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWidget* q_printpreviewdialog_window(void* self);
+QWidget* q_printpreviewdialog_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWidget* q_printpreviewdialog_native_parent_widget(void* self);
+QWidget* q_printpreviewdialog_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWidget* q_printpreviewdialog_top_level_widget(void* self);
+QWidget* q_printpreviewdialog_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const QPalette* q_printpreviewdialog_palette(void* self);
+const QPalette* q_printpreviewdialog_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -935,7 +935,7 @@ const QPalette* q_printpreviewdialog_palette(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param palette QPalette*
 ///
-void q_printpreviewdialog_set_palette(void* self, void* palette);
+void q_printpreviewdialog_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -950,11 +950,11 @@ void q_printpreviewdialog_set_background_role(void* self, int32_t backgroundRole
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_printpreviewdialog_background_role(void* self);
+int32_t q_printpreviewdialog_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -969,19 +969,19 @@ void q_printpreviewdialog_set_foreground_role(void* self, int32_t foregroundRole
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_printpreviewdialog_foreground_role(void* self);
+int32_t q_printpreviewdialog_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const QFont* q_printpreviewdialog_font(void* self);
+const QFont* q_printpreviewdialog_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -990,31 +990,31 @@ const QFont* q_printpreviewdialog_font(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param font QFont*
 ///
-void q_printpreviewdialog_set_font(void* self, void* font);
+void q_printpreviewdialog_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QFontMetrics* q_printpreviewdialog_font_metrics(void* self);
+QFontMetrics* q_printpreviewdialog_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QFontInfo* q_printpreviewdialog_font_info(void* self);
+QFontInfo* q_printpreviewdialog_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QCursor* q_printpreviewdialog_cursor(void* self);
+QCursor* q_printpreviewdialog_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1023,7 +1023,7 @@ QCursor* q_printpreviewdialog_cursor(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param cursor QCursor*
 ///
-void q_printpreviewdialog_set_cursor(void* self, void* cursor);
+void q_printpreviewdialog_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1046,17 +1046,17 @@ void q_printpreviewdialog_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_has_mouse_tracking(void* self);
+bool q_printpreviewdialog_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_under_mouse(void* self);
+bool q_printpreviewdialog_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1071,9 +1071,9 @@ void q_printpreviewdialog_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_has_tablet_tracking(void* self);
+bool q_printpreviewdialog_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1082,7 +1082,7 @@ bool q_printpreviewdialog_has_tablet_tracking(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param mask QBitmap*
 ///
-void q_printpreviewdialog_set_mask(void* self, void* mask);
+void q_printpreviewdialog_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1091,15 +1091,15 @@ void q_printpreviewdialog_set_mask(void* self, void* mask);
 /// @param self QPrintPreviewDialog*
 /// @param mask QRegion*
 ///
-void q_printpreviewdialog_set_mask2(void* self, void* mask);
+void q_printpreviewdialog_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QRegion* q_printpreviewdialog_mask(void* self);
+QRegion* q_printpreviewdialog_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1139,9 +1139,9 @@ QPixmap* q_printpreviewdialog_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QGraphicsEffect* q_printpreviewdialog_graphics_effect(void* self);
+QGraphicsEffect* q_printpreviewdialog_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1194,9 +1194,9 @@ void q_printpreviewdialog_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_style_sheet(void* self);
+const char* q_printpreviewdialog_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1204,9 +1204,9 @@ const char* q_printpreviewdialog_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_window_title(void* self);
+const char* q_printpreviewdialog_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1215,15 +1215,15 @@ const char* q_printpreviewdialog_window_title(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param icon QIcon*
 ///
-void q_printpreviewdialog_set_window_icon(void* self, void* icon);
+void q_printpreviewdialog_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QIcon* q_printpreviewdialog_window_icon(void* self);
+QIcon* q_printpreviewdialog_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1240,9 +1240,9 @@ void q_printpreviewdialog_set_window_icon_text(void* self, const char* windowIco
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_window_icon_text(void* self);
+const char* q_printpreviewdialog_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1259,9 +1259,9 @@ void q_printpreviewdialog_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_window_role(void* self);
+const char* q_printpreviewdialog_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1278,9 +1278,9 @@ void q_printpreviewdialog_set_window_file_path(void* self, const char* filePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_window_file_path(void* self);
+const char* q_printpreviewdialog_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1295,17 +1295,17 @@ void q_printpreviewdialog_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-double q_printpreviewdialog_window_opacity(void* self);
+double q_printpreviewdialog_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_window_modified(void* self);
+bool q_printpreviewdialog_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1322,9 +1322,9 @@ void q_printpreviewdialog_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_tool_tip(void* self);
+const char* q_printpreviewdialog_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1339,9 +1339,9 @@ void q_printpreviewdialog_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_tool_tip_duration(void* self);
+int32_t q_printpreviewdialog_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1358,9 +1358,9 @@ void q_printpreviewdialog_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_status_tip(void* self);
+const char* q_printpreviewdialog_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1377,9 +1377,9 @@ void q_printpreviewdialog_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_whats_this(void* self);
+const char* q_printpreviewdialog_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1387,9 +1387,9 @@ const char* q_printpreviewdialog_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_accessible_name(void* self);
+const char* q_printpreviewdialog_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1406,9 +1406,9 @@ void q_printpreviewdialog_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_accessible_description(void* self);
+const char* q_printpreviewdialog_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1432,11 +1432,11 @@ void q_printpreviewdialog_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_printpreviewdialog_layout_direction(void* self);
+int32_t q_printpreviewdialog_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1453,15 +1453,15 @@ void q_printpreviewdialog_unset_layout_direction(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param locale QLocale*
 ///
-void q_printpreviewdialog_set_locale(void* self, void* locale);
+void q_printpreviewdialog_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QLocale* q_printpreviewdialog_locale(void* self);
+QLocale* q_printpreviewdialog_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1475,17 +1475,17 @@ void q_printpreviewdialog_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_right_to_left(void* self);
+bool q_printpreviewdialog_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_left_to_right(void* self);
+bool q_printpreviewdialog_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1499,9 +1499,9 @@ void q_printpreviewdialog_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_active_window(void* self);
+bool q_printpreviewdialog_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1532,11 +1532,11 @@ void q_printpreviewdialog_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_printpreviewdialog_focus_policy(void* self);
+int32_t q_printpreviewdialog_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1551,9 +1551,9 @@ void q_printpreviewdialog_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_has_focus(void* self);
+bool q_printpreviewdialog_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1577,19 +1577,19 @@ void q_printpreviewdialog_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWidget* q_printpreviewdialog_focus_proxy(void* self);
+QWidget* q_printpreviewdialog_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_printpreviewdialog_context_menu_policy(void* self);
+int32_t q_printpreviewdialog_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1615,7 +1615,7 @@ void q_printpreviewdialog_grab_mouse(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QCursor*
 ///
-void q_printpreviewdialog_grab_mouse2(void* self, void* param1);
+void q_printpreviewdialog_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1648,7 +1648,7 @@ void q_printpreviewdialog_release_keyboard(void* self);
 /// @param self QPrintPreviewDialog*
 /// @param key QKeySequence*
 ///
-int32_t q_printpreviewdialog_grab_shortcut(void* self, void* key);
+int32_t q_printpreviewdialog_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1693,9 +1693,9 @@ QWidget* q_printpreviewdialog_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_updates_enabled(void* self);
+bool q_printpreviewdialog_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1710,9 +1710,9 @@ void q_printpreviewdialog_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QGraphicsProxyWidget* q_printpreviewdialog_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_printpreviewdialog_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1749,7 +1749,7 @@ void q_printpreviewdialog_update2(void* self, int x, int y, int w, int h);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QRect*
 ///
-void q_printpreviewdialog_update3(void* self, void* param1);
+void q_printpreviewdialog_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1758,7 +1758,7 @@ void q_printpreviewdialog_update3(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QRegion*
 ///
-void q_printpreviewdialog_update4(void* self, void* param1);
+void q_printpreviewdialog_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1779,7 +1779,7 @@ void q_printpreviewdialog_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QRect*
 ///
-void q_printpreviewdialog_repaint3(void* self, void* param1);
+void q_printpreviewdialog_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1788,7 +1788,7 @@ void q_printpreviewdialog_repaint3(void* self, void* param1);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QRegion*
 ///
-void q_printpreviewdialog_repaint4(void* self, void* param1);
+void q_printpreviewdialog_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1897,7 +1897,7 @@ void q_printpreviewdialog_move(void* self, int x, int y);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QPoint*
 ///
-void q_printpreviewdialog_move2(void* self, void* param1);
+void q_printpreviewdialog_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1916,7 +1916,7 @@ void q_printpreviewdialog_resize(void* self, int w, int h);
 /// @param self QPrintPreviewDialog*
 /// @param param1 QSize*
 ///
-void q_printpreviewdialog_resize2(void* self, void* param1);
+void q_printpreviewdialog_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1937,7 +1937,7 @@ void q_printpreviewdialog_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QPrintPreviewDialog*
 /// @param geometry QRect*
 ///
-void q_printpreviewdialog_set_geometry2(void* self, void* geometry);
+void q_printpreviewdialog_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -1945,9 +1945,9 @@ void q_printpreviewdialog_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-char* q_printpreviewdialog_save_geometry(void* self);
+char* q_printpreviewdialog_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1970,60 +1970,60 @@ void q_printpreviewdialog_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_visible(void* self);
+bool q_printpreviewdialog_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 QWidget*
 ///
-bool q_printpreviewdialog_is_visible_to(void* self, void* param1);
+bool q_printpreviewdialog_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_hidden(void* self);
+bool q_printpreviewdialog_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_minimized(void* self);
+bool q_printpreviewdialog_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_maximized(void* self);
+bool q_printpreviewdialog_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_full_screen(void* self);
+bool q_printpreviewdialog_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_printpreviewdialog_window_state(void* self);
+int32_t q_printpreviewdialog_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2047,9 +2047,9 @@ void q_printpreviewdialog_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSizePolicy* q_printpreviewdialog_size_policy(void* self);
+QSizePolicy* q_printpreviewdialog_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2074,9 +2074,9 @@ void q_printpreviewdialog_set_size_policy2(void* self, int32_t horizontal, int32
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QRegion* q_printpreviewdialog_visible_region(void* self);
+QRegion* q_printpreviewdialog_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2097,31 +2097,31 @@ void q_printpreviewdialog_set_contents_margins(void* self, int left, int top, in
 /// @param self QPrintPreviewDialog*
 /// @param margins QMargins*
 ///
-void q_printpreviewdialog_set_contents_margins2(void* self, void* margins);
+void q_printpreviewdialog_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QMargins* q_printpreviewdialog_contents_margins(void* self);
+QMargins* q_printpreviewdialog_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QRect* q_printpreviewdialog_contents_rect(void* self);
+QRect* q_printpreviewdialog_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QLayout* q_printpreviewdialog_layout(void* self);
+QLayout* q_printpreviewdialog_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2178,39 +2178,39 @@ void q_printpreviewdialog_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_printpreviewdialog_scroll2(void* self, int dx, int dy, void* param3);
+void q_printpreviewdialog_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWidget* q_printpreviewdialog_focus_widget(void* self);
+QWidget* q_printpreviewdialog_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWidget* q_printpreviewdialog_next_in_focus_chain(void* self);
+QWidget* q_printpreviewdialog_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWidget* q_printpreviewdialog_previous_in_focus_chain(void* self);
+QWidget* q_printpreviewdialog_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_accept_drops(void* self);
+bool q_printpreviewdialog_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2272,11 +2272,11 @@ void q_printpreviewdialog_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_printpreviewdialog_actions(void* self);
+libqt_list q_printpreviewdialog_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2295,7 +2295,7 @@ QAction* q_printpreviewdialog_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_printpreviewdialog_add_action3(void* self, void* icon, const char* text);
+QAction* q_printpreviewdialog_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2305,7 +2305,7 @@ QAction* q_printpreviewdialog_add_action3(void* self, void* icon, const char* te
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_printpreviewdialog_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_printpreviewdialog_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2316,15 +2316,15 @@ QAction* q_printpreviewdialog_add_action4(void* self, const char* text, void* sh
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_printpreviewdialog_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_printpreviewdialog_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWidget* q_printpreviewdialog_parent_widget(void* self);
+QWidget* q_printpreviewdialog_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2339,11 +2339,11 @@ void q_printpreviewdialog_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_printpreviewdialog_window_flags(void* self);
+int32_t q_printpreviewdialog_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2367,11 +2367,11 @@ void q_printpreviewdialog_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_printpreviewdialog_window_type(void* self);
+int32_t q_printpreviewdialog_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2385,29 +2385,29 @@ QWidget* q_printpreviewdialog_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_printpreviewdialog_child_at(void* self, int x, int y);
+QWidget* q_printpreviewdialog_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param p QPoint*
 ///
-QWidget* q_printpreviewdialog_child_at2(void* self, void* p);
+QWidget* q_printpreviewdialog_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param p QPointF*
 ///
-QWidget* q_printpreviewdialog_child_at3(void* self, void* p);
+QWidget* q_printpreviewdialog_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2422,35 +2422,35 @@ void q_printpreviewdialog_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_printpreviewdialog_test_attribute(void* self, int32_t param1);
+bool q_printpreviewdialog_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_ensure_polished(void* self);
+void q_printpreviewdialog_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param child QWidget*
 ///
-bool q_printpreviewdialog_is_ancestor_of(void* self, void* child);
+bool q_printpreviewdialog_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_auto_fill_background(void* self);
+bool q_printpreviewdialog_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2465,25 +2465,25 @@ void q_printpreviewdialog_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QBackingStore* q_printpreviewdialog_backing_store(void* self);
+QBackingStore* q_printpreviewdialog_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QWindow* q_printpreviewdialog_window_handle(void* self);
+QWindow* q_printpreviewdialog_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QScreen* q_printpreviewdialog_screen(void* self);
+QScreen* q_printpreviewdialog_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2527,7 +2527,7 @@ void q_printpreviewdialog_on_window_title_changed(void* self, void (*callback)(v
 /// @param self QPrintPreviewDialog*
 /// @param icon QIcon*
 ///
-void q_printpreviewdialog_window_icon_changed(void* self, void* icon);
+void q_printpreviewdialog_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2536,7 +2536,7 @@ void q_printpreviewdialog_window_icon_changed(void* self, void* icon);
 /// @param self QPrintPreviewDialog*
 /// @param callback void func(QPrintPreviewDialog* self, QIcon* icon)
 ///
-void q_printpreviewdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_printpreviewdialog_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2563,7 +2563,7 @@ void q_printpreviewdialog_on_window_icon_text_changed(void* self, void (*callbac
 /// @param self QPrintPreviewDialog*
 /// @param pos QPoint*
 ///
-void q_printpreviewdialog_custom_context_menu_requested(void* self, void* pos);
+void q_printpreviewdialog_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2572,17 +2572,17 @@ void q_printpreviewdialog_custom_context_menu_requested(void* self, void* pos);
 /// @param self QPrintPreviewDialog*
 /// @param callback void func(QPrintPreviewDialog* self, QPoint* pos)
 ///
-void q_printpreviewdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_printpreviewdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_printpreviewdialog_input_method_hints(void* self);
+int32_t q_printpreviewdialog_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2601,7 +2601,7 @@ void q_printpreviewdialog_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_printpreviewdialog_render22(void* self, void* target, void* targetOffset);
+void q_printpreviewdialog_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2612,7 +2612,7 @@ void q_printpreviewdialog_render22(void* self, void* target, void* targetOffset)
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_printpreviewdialog_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_printpreviewdialog_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2624,7 +2624,7 @@ void q_printpreviewdialog_render3(void* self, void* target, void* targetOffset, 
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_printpreviewdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_printpreviewdialog_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2634,7 +2634,7 @@ void q_printpreviewdialog_render4(void* self, void* target, void* targetOffset, 
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_printpreviewdialog_render23(void* self, void* painter, void* targetOffset);
+void q_printpreviewdialog_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2645,7 +2645,7 @@ void q_printpreviewdialog_render23(void* self, void* painter, void* targetOffset
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_printpreviewdialog_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_printpreviewdialog_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2657,7 +2657,7 @@ void q_printpreviewdialog_render32(void* self, void* painter, void* targetOffset
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_printpreviewdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_printpreviewdialog_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2666,7 +2666,7 @@ void q_printpreviewdialog_render42(void* self, void* painter, void* targetOffset
 /// @param self QPrintPreviewDialog*
 /// @param rectangle QRect*
 ///
-QPixmap* q_printpreviewdialog_grab1(void* self, void* rectangle);
+QPixmap* q_printpreviewdialog_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2686,7 +2686,7 @@ void q_printpreviewdialog_grab_gesture2(void* self, int32_t type, int32_t flags)
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_printpreviewdialog_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_printpreviewdialog_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2753,9 +2753,9 @@ QWidget* q_printpreviewdialog_create_window_container3(void* window, void* paren
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char* q_printpreviewdialog_object_name(void* self);
+const char* q_printpreviewdialog_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2770,33 +2770,33 @@ void q_printpreviewdialog_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_widget_type(void* self);
+bool q_printpreviewdialog_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_window_type(void* self);
+bool q_printpreviewdialog_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_is_quick_item_type(void* self);
+bool q_printpreviewdialog_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_signals_blocked(void* self);
+bool q_printpreviewdialog_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2811,9 +2811,9 @@ bool q_printpreviewdialog_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QThread* q_printpreviewdialog_thread(void* self);
+QThread* q_printpreviewdialog_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2864,11 +2864,11 @@ void q_printpreviewdialog_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_printpreviewdialog_children(void* self);
+libqt_list q_printpreviewdialog_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2897,7 +2897,7 @@ void q_printpreviewdialog_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_printpreviewdialog_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_printpreviewdialog_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2908,18 +2908,18 @@ QMetaObject__Connection* q_printpreviewdialog_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_printpreviewdialog_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_printpreviewdialog_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_printpreviewdialog_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_printpreviewdialog_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2930,7 +2930,7 @@ QMetaObject__Connection* q_printpreviewdialog_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_printpreviewdialog_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_printpreviewdialog_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2941,24 +2941,24 @@ bool q_printpreviewdialog_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_printpreviewdialog_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_printpreviewdialog_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_disconnect3(void* self);
+bool q_printpreviewdialog_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param receiver QObject*
 ///
-bool q_printpreviewdialog_disconnect4(void* self, void* receiver);
+bool q_printpreviewdialog_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2966,23 +2966,23 @@ bool q_printpreviewdialog_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_printpreviewdialog_disconnect5(void* param1);
+bool q_printpreviewdialog_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_dump_object_tree(void* self);
+void q_printpreviewdialog_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-void q_printpreviewdialog_dump_object_info(void* self);
+void q_printpreviewdialog_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2992,16 +2992,16 @@ void q_printpreviewdialog_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_printpreviewdialog_set_property(void* self, const char* name, void* value);
+bool q_printpreviewdialog_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param name const char*
 ///
-QVariant* q_printpreviewdialog_property(void* self, const char* name);
+QVariant* q_printpreviewdialog_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3009,9 +3009,9 @@ QVariant* q_printpreviewdialog_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const char** q_printpreviewdialog_dynamic_property_names(void* self);
+const char** q_printpreviewdialog_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3025,9 +3025,9 @@ QBindingStorage* q_printpreviewdialog_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-const QBindingStorage* q_printpreviewdialog_binding_storage2(void* self);
+const QBindingStorage* q_printpreviewdialog_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3050,18 +3050,18 @@ void q_printpreviewdialog_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QObject* q_printpreviewdialog_parent(void* self);
+QObject* q_printpreviewdialog_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param classname const char*
 ///
-bool q_printpreviewdialog_inherits(void* self, const char* classname);
+bool q_printpreviewdialog_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3101,7 +3101,7 @@ int32_t q_printpreviewdialog_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_printpreviewdialog_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_printpreviewdialog_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3113,59 +3113,59 @@ QMetaObject__Connection* q_printpreviewdialog_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_printpreviewdialog_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_printpreviewdialog_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_printpreviewdialog_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_printpreviewdialog_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param signal const char*
 ///
-bool q_printpreviewdialog_disconnect1(void* self, const char* signal);
+bool q_printpreviewdialog_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPrintPreviewDialog*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_printpreviewdialog_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_printpreviewdialog_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_printpreviewdialog_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_printpreviewdialog_disconnect23(void* self, void* receiver, const char* member);
+bool q_printpreviewdialog_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPrintPreviewDialog*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_printpreviewdialog_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3189,89 +3189,89 @@ void q_printpreviewdialog_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_painting_active(void* self);
+bool q_printpreviewdialog_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_width_m_m(void* self);
+int32_t q_printpreviewdialog_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_height_m_m(void* self);
+int32_t q_printpreviewdialog_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_logical_dpi_x(void* self);
+int32_t q_printpreviewdialog_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_logical_dpi_y(void* self);
+int32_t q_printpreviewdialog_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_physical_dpi_x(void* self);
+int32_t q_printpreviewdialog_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_physical_dpi_y(void* self);
+int32_t q_printpreviewdialog_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-double q_printpreviewdialog_device_pixel_ratio(void* self);
+double q_printpreviewdialog_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-double q_printpreviewdialog_device_pixel_ratio_f(void* self);
+double q_printpreviewdialog_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_color_count(void* self);
+int32_t q_printpreviewdialog_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_depth(void* self);
+int32_t q_printpreviewdialog_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3294,9 +3294,9 @@ int32_t q_printpreviewdialog_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_size_hint(void* self);
+QSize* q_printpreviewdialog_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3304,9 +3304,9 @@ QSize* q_printpreviewdialog_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_super_size_hint(void* self);
+QSize* q_printpreviewdialog_super_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3314,12 +3314,12 @@ QSize* q_printpreviewdialog_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback QSize* func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback QSize* func(QPrintPreviewDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_printpreviewdialog_on_size_hint(void* self, QSize* (*callback)());
+void q_printpreviewdialog_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3327,9 +3327,9 @@ void q_printpreviewdialog_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_minimum_size_hint(void* self);
+QSize* q_printpreviewdialog_minimum_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3337,9 +3337,9 @@ QSize* q_printpreviewdialog_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QSize* q_printpreviewdialog_super_minimum_size_hint(void* self);
+QSize* q_printpreviewdialog_super_minimum_size_hint(const void* self);
 
 /// Inherited from QDialog
 ///
@@ -3347,12 +3347,12 @@ QSize* q_printpreviewdialog_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback QSize* func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback QSize* func(QPrintPreviewDialog* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_printpreviewdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_printpreviewdialog_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QDialog
 ///
@@ -3381,9 +3381,9 @@ void q_printpreviewdialog_super_open(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback void func()
+/// @param callback void func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_open(void* self, void (*callback)());
+void q_printpreviewdialog_on_open(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3412,9 +3412,9 @@ int32_t q_printpreviewdialog_super_exec(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback int32_t func()
+/// @param callback int32_t func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_exec(void* self, int32_t (*callback)());
+void q_printpreviewdialog_on_exec(void* self, int32_t (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3443,9 +3443,9 @@ void q_printpreviewdialog_super_accept(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback void func()
+/// @param callback void func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_accept(void* self, void (*callback)());
+void q_printpreviewdialog_on_accept(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3474,9 +3474,9 @@ void q_printpreviewdialog_super_reject(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback void func()
+/// @param callback void func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_reject(void* self, void (*callback)());
+void q_printpreviewdialog_on_reject(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
@@ -3684,9 +3684,9 @@ void q_printpreviewdialog_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_dev_type(void* self);
+int32_t q_printpreviewdialog_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3694,9 +3694,9 @@ int32_t q_printpreviewdialog_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_super_dev_type(void* self);
+int32_t q_printpreviewdialog_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3704,10 +3704,10 @@ int32_t q_printpreviewdialog_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback int32_t func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback int32_t func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_dev_type(void* self, int32_t (*callback)());
+void q_printpreviewdialog_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3715,10 +3715,10 @@ void q_printpreviewdialog_on_dev_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 int
 ///
-int32_t q_printpreviewdialog_height_for_width(void* self, int param1);
+int32_t q_printpreviewdialog_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3726,10 +3726,10 @@ int32_t q_printpreviewdialog_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 int
 ///
-int32_t q_printpreviewdialog_super_height_for_width(void* self, int param1);
+int32_t q_printpreviewdialog_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3737,10 +3737,10 @@ int32_t q_printpreviewdialog_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param callback int32_t func(QPrintPreviewDialog* self, int param1)
 ///
-void q_printpreviewdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_printpreviewdialog_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3748,9 +3748,9 @@ void q_printpreviewdialog_on_height_for_width(void* self, int32_t (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_has_height_for_width(void* self);
+bool q_printpreviewdialog_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3758,9 +3758,9 @@ bool q_printpreviewdialog_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-bool q_printpreviewdialog_super_has_height_for_width(void* self);
+bool q_printpreviewdialog_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3768,10 +3768,10 @@ bool q_printpreviewdialog_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback bool func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback bool func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_has_height_for_width(void* self, bool (*callback)());
+void q_printpreviewdialog_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3779,9 +3779,9 @@ void q_printpreviewdialog_on_has_height_for_width(void* self, bool (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QPaintEngine* q_printpreviewdialog_paint_engine(void* self);
+QPaintEngine* q_printpreviewdialog_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3789,9 +3789,9 @@ QPaintEngine* q_printpreviewdialog_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QPaintEngine* q_printpreviewdialog_super_paint_engine(void* self);
+QPaintEngine* q_printpreviewdialog_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3799,10 +3799,10 @@ QPaintEngine* q_printpreviewdialog_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback QPaintEngine* func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback QPaintEngine* func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_printpreviewdialog_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4540,10 +4540,10 @@ void q_printpreviewdialog_on_change_event(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_printpreviewdialog_metric(void* self, int32_t param1);
+int32_t q_printpreviewdialog_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4551,10 +4551,10 @@ int32_t q_printpreviewdialog_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_printpreviewdialog_super_metric(void* self, int32_t param1);
+int32_t q_printpreviewdialog_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4562,10 +4562,10 @@ int32_t q_printpreviewdialog_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param callback int32_t func(QPrintPreviewDialog* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_printpreviewdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_printpreviewdialog_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4573,10 +4573,10 @@ void q_printpreviewdialog_on_metric(void* self, int32_t (*callback)(void*, int32
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param painter QPainter*
 ///
-void q_printpreviewdialog_init_painter(void* self, void* painter);
+void q_printpreviewdialog_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4584,10 +4584,10 @@ void q_printpreviewdialog_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param painter QPainter*
 ///
-void q_printpreviewdialog_super_init_painter(void* self, void* painter);
+void q_printpreviewdialog_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4595,10 +4595,10 @@ void q_printpreviewdialog_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param callback void func(QPrintPreviewDialog* self, QPainter* painter)
 ///
-void q_printpreviewdialog_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_printpreviewdialog_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4606,10 +4606,10 @@ void q_printpreviewdialog_on_init_painter(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_printpreviewdialog_redirected(void* self, void* offset);
+QPaintDevice* q_printpreviewdialog_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4617,10 +4617,10 @@ QPaintDevice* q_printpreviewdialog_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_printpreviewdialog_super_redirected(void* self, void* offset);
+QPaintDevice* q_printpreviewdialog_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4628,10 +4628,10 @@ QPaintDevice* q_printpreviewdialog_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param callback QPaintDevice* func(QPrintPreviewDialog* self, QPoint* offset)
 ///
-void q_printpreviewdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_printpreviewdialog_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4639,9 +4639,9 @@ void q_printpreviewdialog_on_redirected(void* self, QPaintDevice* (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QPainter* q_printpreviewdialog_shared_painter(void* self);
+QPainter* q_printpreviewdialog_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4649,9 +4649,9 @@ QPainter* q_printpreviewdialog_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QPainter* q_printpreviewdialog_super_shared_painter(void* self);
+QPainter* q_printpreviewdialog_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4659,10 +4659,10 @@ QPainter* q_printpreviewdialog_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback QPainter* func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback QPainter* func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_shared_painter(void* self, QPainter* (*callback)());
+void q_printpreviewdialog_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4703,10 +4703,10 @@ void q_printpreviewdialog_on_input_method_event(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_printpreviewdialog_input_method_query(void* self, int32_t param1);
+QVariant* q_printpreviewdialog_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4714,10 +4714,10 @@ QVariant* q_printpreviewdialog_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_printpreviewdialog_super_input_method_query(void* self, int32_t param1);
+QVariant* q_printpreviewdialog_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4725,12 +4725,12 @@ QVariant* q_printpreviewdialog_super_input_method_query(void* self, int32_t para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param callback QVariant* func(QPrintPreviewDialog* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_printpreviewdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_printpreviewdialog_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4873,7 +4873,7 @@ void q_printpreviewdialog_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-void q_printpreviewdialog_connect_notify(void* self, void* signal);
+void q_printpreviewdialog_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4884,7 +4884,7 @@ void q_printpreviewdialog_connect_notify(void* self, void* signal);
 /// @param self QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-void q_printpreviewdialog_super_connect_notify(void* self, void* signal);
+void q_printpreviewdialog_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4895,7 +4895,7 @@ void q_printpreviewdialog_super_connect_notify(void* self, void* signal);
 /// @param self QPrintPreviewDialog*
 /// @param callback void func(QPrintPreviewDialog* self, QMetaMethod* signal)
 ///
-void q_printpreviewdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_printpreviewdialog_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4906,7 +4906,7 @@ void q_printpreviewdialog_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-void q_printpreviewdialog_disconnect_notify(void* self, void* signal);
+void q_printpreviewdialog_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4917,7 +4917,7 @@ void q_printpreviewdialog_disconnect_notify(void* self, void* signal);
 /// @param self QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-void q_printpreviewdialog_super_disconnect_notify(void* self, void* signal);
+void q_printpreviewdialog_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4928,7 +4928,7 @@ void q_printpreviewdialog_super_disconnect_notify(void* self, void* signal);
 /// @param self QPrintPreviewDialog*
 /// @param callback void func(QPrintPreviewDialog* self, QMetaMethod* signal)
 ///
-void q_printpreviewdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_printpreviewdialog_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QDialog
 ///
@@ -4990,9 +4990,9 @@ void q_printpreviewdialog_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback void func()
+/// @param callback void func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_update_micro_focus(void* self, void (*callback)());
+void q_printpreviewdialog_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5021,9 +5021,9 @@ void q_printpreviewdialog_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback void func()
+/// @param callback void func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_create(void* self, void (*callback)());
+void q_printpreviewdialog_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5052,9 +5052,9 @@ void q_printpreviewdialog_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback void func()
+/// @param callback void func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_destroy(void* self, void (*callback)());
+void q_printpreviewdialog_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5083,9 +5083,9 @@ bool q_printpreviewdialog_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback bool func()
+/// @param callback bool func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_focus_next_child(void* self, bool (*callback)());
+void q_printpreviewdialog_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5114,9 +5114,9 @@ bool q_printpreviewdialog_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPrintPreviewDialog*
-/// @param callback bool func()
+/// @param callback bool func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_focus_previous_child(void* self, bool (*callback)());
+void q_printpreviewdialog_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5124,9 +5124,9 @@ void q_printpreviewdialog_on_focus_previous_child(void* self, bool (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QObject* q_printpreviewdialog_sender(void* self);
+QObject* q_printpreviewdialog_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5134,9 +5134,9 @@ QObject* q_printpreviewdialog_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-QObject* q_printpreviewdialog_super_sender(void* self);
+QObject* q_printpreviewdialog_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5144,10 +5144,10 @@ QObject* q_printpreviewdialog_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback QObject* func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback QObject* func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_sender(void* self, QObject* (*callback)());
+void q_printpreviewdialog_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5155,9 +5155,9 @@ void q_printpreviewdialog_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_sender_signal_index(void* self);
+int32_t q_printpreviewdialog_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5165,9 +5165,9 @@ int32_t q_printpreviewdialog_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 ///
-int32_t q_printpreviewdialog_super_sender_signal_index(void* self);
+int32_t q_printpreviewdialog_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5175,10 +5175,10 @@ int32_t q_printpreviewdialog_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
-/// @param callback int32_t func()
+/// @param self const QPrintPreviewDialog*
+/// @param callback int32_t func(QPrintPreviewDialog* self)
 ///
-void q_printpreviewdialog_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_printpreviewdialog_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5186,10 +5186,10 @@ void q_printpreviewdialog_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param signal const char*
 ///
-int32_t q_printpreviewdialog_receivers(void* self, const char* signal);
+int32_t q_printpreviewdialog_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5197,10 +5197,10 @@ int32_t q_printpreviewdialog_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param signal const char*
 ///
-int32_t q_printpreviewdialog_super_receivers(void* self, const char* signal);
+int32_t q_printpreviewdialog_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5208,10 +5208,10 @@ int32_t q_printpreviewdialog_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param callback int32_t func(QPrintPreviewDialog* self, const char* signal)
 ///
-void q_printpreviewdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_printpreviewdialog_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5219,10 +5219,10 @@ void q_printpreviewdialog_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-bool q_printpreviewdialog_is_signal_connected(void* self, void* signal);
+bool q_printpreviewdialog_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5230,10 +5230,10 @@ bool q_printpreviewdialog_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param signal QMetaMethod*
 ///
-bool q_printpreviewdialog_super_is_signal_connected(void* self, void* signal);
+bool q_printpreviewdialog_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5241,10 +5241,10 @@ bool q_printpreviewdialog_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param callback bool func(QPrintPreviewDialog* self, QMetaMethod* signal)
 ///
-void q_printpreviewdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_printpreviewdialog_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5252,11 +5252,11 @@ void q_printpreviewdialog_on_is_signal_connected(void* self, bool (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_printpreviewdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_printpreviewdialog_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5264,11 +5264,11 @@ double q_printpreviewdialog_get_decoded_metric_f(void* self, int32_t metricA, in
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_printpreviewdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_printpreviewdialog_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5276,10 +5276,10 @@ double q_printpreviewdialog_super_get_decoded_metric_f(void* self, int32_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPrintPreviewDialog*
+/// @param self const QPrintPreviewDialog*
 /// @param callback double func(QPrintPreviewDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_printpreviewdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_printpreviewdialog_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -24,26 +24,26 @@ QOpenGLTimerQuery* q_opengltimerquery_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-const QMetaObject* q_opengltimerquery_meta_object(void* self);
+const QMetaObject* q_opengltimerquery_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLTimerQuery*
-/// @param callback const QMetaObject* func()
+/// @param self const QOpenGLTimerQuery*
+/// @param callback const QMetaObject* func(const QOpenGLTimerQuery* self)
 ///
-void q_opengltimerquery_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_opengltimerquery_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-const QMetaObject* q_opengltimerquery_super_meta_object(void* self);
+const QMetaObject* q_opengltimerquery_super_meta_object(const void* self);
 
 /// @param self QOpenGLTimerQuery*
 /// @param param1 const char*
@@ -109,15 +109,15 @@ void q_opengltimerquery_destroy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimerquery.html#isCreated)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-bool q_opengltimerquery_is_created(void* self);
+bool q_opengltimerquery_is_created(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimerquery.html#objectId)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-uint32_t q_opengltimerquery_object_id(void* self);
+uint32_t q_opengltimerquery_object_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimerquery.html#begin)
 ///
@@ -133,9 +133,9 @@ void q_opengltimerquery_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimerquery.html#waitForTimestamp)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-uint64_t q_opengltimerquery_wait_for_timestamp(void* self);
+uint64_t q_opengltimerquery_wait_for_timestamp(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimerquery.html#recordTimestamp)
 ///
@@ -145,15 +145,15 @@ void q_opengltimerquery_record_timestamp(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimerquery.html#isResultAvailable)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-bool q_opengltimerquery_is_result_available(void* self);
+bool q_opengltimerquery_is_result_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimerquery.html#waitForResult)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-uint64_t q_opengltimerquery_wait_for_result(void* self);
+uint64_t q_opengltimerquery_wait_for_result(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -180,9 +180,9 @@ const char* q_opengltimerquery_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-const char* q_opengltimerquery_object_name(void* self);
+const char* q_opengltimerquery_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -197,33 +197,33 @@ void q_opengltimerquery_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-bool q_opengltimerquery_is_widget_type(void* self);
+bool q_opengltimerquery_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-bool q_opengltimerquery_is_window_type(void* self);
+bool q_opengltimerquery_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-bool q_opengltimerquery_is_quick_item_type(void* self);
+bool q_opengltimerquery_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-bool q_opengltimerquery_signals_blocked(void* self);
+bool q_opengltimerquery_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -238,9 +238,9 @@ bool q_opengltimerquery_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-QThread* q_opengltimerquery_thread(void* self);
+QThread* q_opengltimerquery_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -291,11 +291,11 @@ void q_opengltimerquery_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_opengltimerquery_children(void* self);
+libqt_list q_opengltimerquery_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -333,7 +333,7 @@ void q_opengltimerquery_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_opengltimerquery_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_opengltimerquery_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -344,18 +344,18 @@ QMetaObject__Connection* q_opengltimerquery_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_opengltimerquery_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_opengltimerquery_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_opengltimerquery_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_opengltimerquery_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -366,7 +366,7 @@ QMetaObject__Connection* q_opengltimerquery_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_opengltimerquery_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_opengltimerquery_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -377,24 +377,24 @@ bool q_opengltimerquery_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_opengltimerquery_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_opengltimerquery_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-bool q_opengltimerquery_disconnect3(void* self);
+bool q_opengltimerquery_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param receiver QObject*
 ///
-bool q_opengltimerquery_disconnect4(void* self, void* receiver);
+bool q_opengltimerquery_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -402,23 +402,23 @@ bool q_opengltimerquery_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_opengltimerquery_disconnect5(void* param1);
+bool q_opengltimerquery_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-void q_opengltimerquery_dump_object_tree(void* self);
+void q_opengltimerquery_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-void q_opengltimerquery_dump_object_info(void* self);
+void q_opengltimerquery_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -428,16 +428,16 @@ void q_opengltimerquery_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_opengltimerquery_set_property(void* self, const char* name, void* value);
+bool q_opengltimerquery_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param name const char*
 ///
-QVariant* q_opengltimerquery_property(void* self, const char* name);
+QVariant* q_opengltimerquery_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -445,9 +445,9 @@ QVariant* q_opengltimerquery_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-const char** q_opengltimerquery_dynamic_property_names(void* self);
+const char** q_opengltimerquery_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -461,9 +461,9 @@ QBindingStorage* q_opengltimerquery_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-const QBindingStorage* q_opengltimerquery_binding_storage2(void* self);
+const QBindingStorage* q_opengltimerquery_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -486,18 +486,18 @@ void q_opengltimerquery_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-QObject* q_opengltimerquery_parent(void* self);
+QObject* q_opengltimerquery_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param classname const char*
 ///
-bool q_opengltimerquery_inherits(void* self, const char* classname);
+bool q_opengltimerquery_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -537,7 +537,7 @@ int32_t q_opengltimerquery_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengltimerquery_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_opengltimerquery_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -549,59 +549,59 @@ QMetaObject__Connection* q_opengltimerquery_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengltimerquery_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_opengltimerquery_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengltimerquery_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_opengltimerquery_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param signal const char*
 ///
-bool q_opengltimerquery_disconnect1(void* self, const char* signal);
+bool q_opengltimerquery_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimerQuery*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_opengltimerquery_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_opengltimerquery_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_opengltimerquery_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_opengltimerquery_disconnect23(void* self, void* receiver, const char* member);
+bool q_opengltimerquery_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QOpenGLTimerQuery*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_opengltimerquery_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -797,7 +797,7 @@ void q_opengltimerquery_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self QOpenGLTimerQuery*
 /// @param signal QMetaMethod*
 ///
-void q_opengltimerquery_connect_notify(void* self, void* signal);
+void q_opengltimerquery_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -808,7 +808,7 @@ void q_opengltimerquery_connect_notify(void* self, void* signal);
 /// @param self QOpenGLTimerQuery*
 /// @param signal QMetaMethod*
 ///
-void q_opengltimerquery_super_connect_notify(void* self, void* signal);
+void q_opengltimerquery_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -819,7 +819,7 @@ void q_opengltimerquery_super_connect_notify(void* self, void* signal);
 /// @param self QOpenGLTimerQuery*
 /// @param callback void func(QOpenGLTimerQuery* self, QMetaMethod* signal)
 ///
-void q_opengltimerquery_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_opengltimerquery_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -830,7 +830,7 @@ void q_opengltimerquery_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self QOpenGLTimerQuery*
 /// @param signal QMetaMethod*
 ///
-void q_opengltimerquery_disconnect_notify(void* self, void* signal);
+void q_opengltimerquery_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -841,7 +841,7 @@ void q_opengltimerquery_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLTimerQuery*
 /// @param signal QMetaMethod*
 ///
-void q_opengltimerquery_super_disconnect_notify(void* self, void* signal);
+void q_opengltimerquery_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -852,7 +852,7 @@ void q_opengltimerquery_super_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLTimerQuery*
 /// @param callback void func(QOpenGLTimerQuery* self, QMetaMethod* signal)
 ///
-void q_opengltimerquery_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_opengltimerquery_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -860,9 +860,9 @@ void q_opengltimerquery_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-QObject* q_opengltimerquery_sender(void* self);
+QObject* q_opengltimerquery_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -870,9 +870,9 @@ QObject* q_opengltimerquery_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-QObject* q_opengltimerquery_super_sender(void* self);
+QObject* q_opengltimerquery_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -880,10 +880,10 @@ QObject* q_opengltimerquery_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
-/// @param callback QObject* func()
+/// @param self const QOpenGLTimerQuery*
+/// @param callback QObject* func(QOpenGLTimerQuery* self)
 ///
-void q_opengltimerquery_on_sender(void* self, QObject* (*callback)());
+void q_opengltimerquery_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -891,9 +891,9 @@ void q_opengltimerquery_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-int32_t q_opengltimerquery_sender_signal_index(void* self);
+int32_t q_opengltimerquery_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -901,9 +901,9 @@ int32_t q_opengltimerquery_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 ///
-int32_t q_opengltimerquery_super_sender_signal_index(void* self);
+int32_t q_opengltimerquery_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -911,10 +911,10 @@ int32_t q_opengltimerquery_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
-/// @param callback int32_t func()
+/// @param self const QOpenGLTimerQuery*
+/// @param callback int32_t func(QOpenGLTimerQuery* self)
 ///
-void q_opengltimerquery_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_opengltimerquery_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -922,10 +922,10 @@ void q_opengltimerquery_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param signal const char*
 ///
-int32_t q_opengltimerquery_receivers(void* self, const char* signal);
+int32_t q_opengltimerquery_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -933,10 +933,10 @@ int32_t q_opengltimerquery_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param signal const char*
 ///
-int32_t q_opengltimerquery_super_receivers(void* self, const char* signal);
+int32_t q_opengltimerquery_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -944,10 +944,10 @@ int32_t q_opengltimerquery_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param callback int32_t func(QOpenGLTimerQuery* self, const char* signal)
 ///
-void q_opengltimerquery_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_opengltimerquery_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -955,10 +955,10 @@ void q_opengltimerquery_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param signal QMetaMethod*
 ///
-bool q_opengltimerquery_is_signal_connected(void* self, void* signal);
+bool q_opengltimerquery_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -966,10 +966,10 @@ bool q_opengltimerquery_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param signal QMetaMethod*
 ///
-bool q_opengltimerquery_super_is_signal_connected(void* self, void* signal);
+bool q_opengltimerquery_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -977,10 +977,10 @@ bool q_opengltimerquery_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLTimerQuery*
+/// @param self const QOpenGLTimerQuery*
 /// @param callback bool func(QOpenGLTimerQuery* self, QMetaMethod* signal)
 ///
-void q_opengltimerquery_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_opengltimerquery_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1017,26 +1017,26 @@ QOpenGLTimeMonitor* q_opengltimemonitor_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-const QMetaObject* q_opengltimemonitor_meta_object(void* self);
+const QMetaObject* q_opengltimemonitor_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLTimeMonitor*
-/// @param callback const QMetaObject* func()
+/// @param self const QOpenGLTimeMonitor*
+/// @param callback const QMetaObject* func(const QOpenGLTimeMonitor* self)
 ///
-void q_opengltimemonitor_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_opengltimemonitor_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-const QMetaObject* q_opengltimemonitor_super_meta_object(void* self);
+const QMetaObject* q_opengltimemonitor_super_meta_object(const void* self);
 
 /// @param self QOpenGLTimeMonitor*
 /// @param param1 const char*
@@ -1097,9 +1097,9 @@ void q_opengltimemonitor_set_sample_count(void* self, int sampleCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#sampleCount)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-int32_t q_opengltimemonitor_sample_count(void* self);
+int32_t q_opengltimemonitor_sample_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#create)
 ///
@@ -1115,17 +1115,17 @@ void q_opengltimemonitor_destroy(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#isCreated)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-bool q_opengltimemonitor_is_created(void* self);
+bool q_opengltimemonitor_is_created(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#objectIds)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
 /// @return libqt_list of uint32_t
 ///
-libqt_list q_opengltimemonitor_object_ids(void* self);
+libqt_list q_opengltimemonitor_object_ids(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#recordSample)
 ///
@@ -1135,25 +1135,25 @@ int32_t q_opengltimemonitor_record_sample(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#isResultAvailable)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-bool q_opengltimemonitor_is_result_available(void* self);
+bool q_opengltimemonitor_is_result_available(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#waitForSamples)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
 /// @return libqt_list of uint64_t
 ///
-libqt_list q_opengltimemonitor_wait_for_samples(void* self);
+libqt_list q_opengltimemonitor_wait_for_samples(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#waitForIntervals)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
 /// @return libqt_list of uint64_t
 ///
-libqt_list q_opengltimemonitor_wait_for_intervals(void* self);
+libqt_list q_opengltimemonitor_wait_for_intervals(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengltimemonitor.html#reset)
 ///
@@ -1186,9 +1186,9 @@ const char* q_opengltimemonitor_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-const char* q_opengltimemonitor_object_name(void* self);
+const char* q_opengltimemonitor_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1203,33 +1203,33 @@ void q_opengltimemonitor_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-bool q_opengltimemonitor_is_widget_type(void* self);
+bool q_opengltimemonitor_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-bool q_opengltimemonitor_is_window_type(void* self);
+bool q_opengltimemonitor_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-bool q_opengltimemonitor_is_quick_item_type(void* self);
+bool q_opengltimemonitor_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-bool q_opengltimemonitor_signals_blocked(void* self);
+bool q_opengltimemonitor_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1244,9 +1244,9 @@ bool q_opengltimemonitor_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-QThread* q_opengltimemonitor_thread(void* self);
+QThread* q_opengltimemonitor_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1297,11 +1297,11 @@ void q_opengltimemonitor_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_opengltimemonitor_children(void* self);
+libqt_list q_opengltimemonitor_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1339,7 +1339,7 @@ void q_opengltimemonitor_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_opengltimemonitor_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_opengltimemonitor_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1350,18 +1350,18 @@ QMetaObject__Connection* q_opengltimemonitor_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_opengltimemonitor_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_opengltimemonitor_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_opengltimemonitor_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_opengltimemonitor_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1372,7 +1372,7 @@ QMetaObject__Connection* q_opengltimemonitor_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_opengltimemonitor_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_opengltimemonitor_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1383,24 +1383,24 @@ bool q_opengltimemonitor_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_opengltimemonitor_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_opengltimemonitor_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-bool q_opengltimemonitor_disconnect3(void* self);
+bool q_opengltimemonitor_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param receiver QObject*
 ///
-bool q_opengltimemonitor_disconnect4(void* self, void* receiver);
+bool q_opengltimemonitor_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1408,23 +1408,23 @@ bool q_opengltimemonitor_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_opengltimemonitor_disconnect5(void* param1);
+bool q_opengltimemonitor_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-void q_opengltimemonitor_dump_object_tree(void* self);
+void q_opengltimemonitor_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-void q_opengltimemonitor_dump_object_info(void* self);
+void q_opengltimemonitor_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1434,16 +1434,16 @@ void q_opengltimemonitor_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_opengltimemonitor_set_property(void* self, const char* name, void* value);
+bool q_opengltimemonitor_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param name const char*
 ///
-QVariant* q_opengltimemonitor_property(void* self, const char* name);
+QVariant* q_opengltimemonitor_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1451,9 +1451,9 @@ QVariant* q_opengltimemonitor_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-const char** q_opengltimemonitor_dynamic_property_names(void* self);
+const char** q_opengltimemonitor_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1467,9 +1467,9 @@ QBindingStorage* q_opengltimemonitor_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-const QBindingStorage* q_opengltimemonitor_binding_storage2(void* self);
+const QBindingStorage* q_opengltimemonitor_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1492,18 +1492,18 @@ void q_opengltimemonitor_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-QObject* q_opengltimemonitor_parent(void* self);
+QObject* q_opengltimemonitor_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param classname const char*
 ///
-bool q_opengltimemonitor_inherits(void* self, const char* classname);
+bool q_opengltimemonitor_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1543,7 +1543,7 @@ int32_t q_opengltimemonitor_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengltimemonitor_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_opengltimemonitor_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1555,59 +1555,59 @@ QMetaObject__Connection* q_opengltimemonitor_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengltimemonitor_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_opengltimemonitor_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_opengltimemonitor_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_opengltimemonitor_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param signal const char*
 ///
-bool q_opengltimemonitor_disconnect1(void* self, const char* signal);
+bool q_opengltimemonitor_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimeMonitor*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_opengltimemonitor_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_opengltimemonitor_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_opengltimemonitor_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_opengltimemonitor_disconnect23(void* self, void* receiver, const char* member);
+bool q_opengltimemonitor_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QOpenGLTimeMonitor*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_opengltimemonitor_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1803,7 +1803,7 @@ void q_opengltimemonitor_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self QOpenGLTimeMonitor*
 /// @param signal QMetaMethod*
 ///
-void q_opengltimemonitor_connect_notify(void* self, void* signal);
+void q_opengltimemonitor_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1814,7 +1814,7 @@ void q_opengltimemonitor_connect_notify(void* self, void* signal);
 /// @param self QOpenGLTimeMonitor*
 /// @param signal QMetaMethod*
 ///
-void q_opengltimemonitor_super_connect_notify(void* self, void* signal);
+void q_opengltimemonitor_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1825,7 +1825,7 @@ void q_opengltimemonitor_super_connect_notify(void* self, void* signal);
 /// @param self QOpenGLTimeMonitor*
 /// @param callback void func(QOpenGLTimeMonitor* self, QMetaMethod* signal)
 ///
-void q_opengltimemonitor_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_opengltimemonitor_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1836,7 +1836,7 @@ void q_opengltimemonitor_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self QOpenGLTimeMonitor*
 /// @param signal QMetaMethod*
 ///
-void q_opengltimemonitor_disconnect_notify(void* self, void* signal);
+void q_opengltimemonitor_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1847,7 +1847,7 @@ void q_opengltimemonitor_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLTimeMonitor*
 /// @param signal QMetaMethod*
 ///
-void q_opengltimemonitor_super_disconnect_notify(void* self, void* signal);
+void q_opengltimemonitor_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1858,7 +1858,7 @@ void q_opengltimemonitor_super_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLTimeMonitor*
 /// @param callback void func(QOpenGLTimeMonitor* self, QMetaMethod* signal)
 ///
-void q_opengltimemonitor_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_opengltimemonitor_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1866,9 +1866,9 @@ void q_opengltimemonitor_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-QObject* q_opengltimemonitor_sender(void* self);
+QObject* q_opengltimemonitor_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1876,9 +1876,9 @@ QObject* q_opengltimemonitor_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-QObject* q_opengltimemonitor_super_sender(void* self);
+QObject* q_opengltimemonitor_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1886,10 +1886,10 @@ QObject* q_opengltimemonitor_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
-/// @param callback QObject* func()
+/// @param self const QOpenGLTimeMonitor*
+/// @param callback QObject* func(QOpenGLTimeMonitor* self)
 ///
-void q_opengltimemonitor_on_sender(void* self, QObject* (*callback)());
+void q_opengltimemonitor_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1897,9 +1897,9 @@ void q_opengltimemonitor_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-int32_t q_opengltimemonitor_sender_signal_index(void* self);
+int32_t q_opengltimemonitor_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1907,9 +1907,9 @@ int32_t q_opengltimemonitor_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 ///
-int32_t q_opengltimemonitor_super_sender_signal_index(void* self);
+int32_t q_opengltimemonitor_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1917,10 +1917,10 @@ int32_t q_opengltimemonitor_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
-/// @param callback int32_t func()
+/// @param self const QOpenGLTimeMonitor*
+/// @param callback int32_t func(QOpenGLTimeMonitor* self)
 ///
-void q_opengltimemonitor_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_opengltimemonitor_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1928,10 +1928,10 @@ void q_opengltimemonitor_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param signal const char*
 ///
-int32_t q_opengltimemonitor_receivers(void* self, const char* signal);
+int32_t q_opengltimemonitor_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1939,10 +1939,10 @@ int32_t q_opengltimemonitor_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param signal const char*
 ///
-int32_t q_opengltimemonitor_super_receivers(void* self, const char* signal);
+int32_t q_opengltimemonitor_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1950,10 +1950,10 @@ int32_t q_opengltimemonitor_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param callback int32_t func(QOpenGLTimeMonitor* self, const char* signal)
 ///
-void q_opengltimemonitor_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_opengltimemonitor_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1961,10 +1961,10 @@ void q_opengltimemonitor_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param signal QMetaMethod*
 ///
-bool q_opengltimemonitor_is_signal_connected(void* self, void* signal);
+bool q_opengltimemonitor_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1972,10 +1972,10 @@ bool q_opengltimemonitor_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param signal QMetaMethod*
 ///
-bool q_opengltimemonitor_super_is_signal_connected(void* self, void* signal);
+bool q_opengltimemonitor_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1983,10 +1983,10 @@ bool q_opengltimemonitor_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLTimeMonitor*
+/// @param self const QOpenGLTimeMonitor*
 /// @param callback bool func(QOpenGLTimeMonitor* self, QMetaMethod* signal)
 ///
-void q_opengltimemonitor_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_opengltimemonitor_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

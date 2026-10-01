@@ -41,26 +41,26 @@ QAreaSeries* q_areaseries_new4(void* upperSeries, void* lowerSeries);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-const QMetaObject* q_areaseries_meta_object(void* self);
+const QMetaObject* q_areaseries_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAreaSeries*
-/// @param callback const QMetaObject* func()
+/// @param self const QAreaSeries*
+/// @param callback const QMetaObject* func(const QAreaSeries* self)
 ///
-void q_areaseries_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_areaseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-const QMetaObject* q_areaseries_super_meta_object(void* self);
+const QMetaObject* q_areaseries_super_meta_object(const void* self);
 
 /// @param self QAreaSeries*
 /// @param param1 const char*
@@ -114,30 +114,30 @@ const char* q_areaseries_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 ///
-int32_t q_areaseries_type(void* self);
+int32_t q_areaseries_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAreaSeries*
-/// @param callback int32_t func()
+/// @param self const QAreaSeries*
+/// @param callback int32_t func(const QAreaSeries* self)
 ///
-void q_areaseries_on_type(void* self, int32_t (*callback)());
+void q_areaseries_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 ///
-int32_t q_areaseries_super_type(void* self);
+int32_t q_areaseries_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setUpperSeries)
 ///
@@ -148,9 +148,9 @@ void q_areaseries_set_upper_series(void* self, void* series);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#upperSeries)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QLineSeries* q_areaseries_upper_series(void* self);
+QLineSeries* q_areaseries_upper_series(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setLowerSeries)
 ///
@@ -161,61 +161,61 @@ void q_areaseries_set_lower_series(void* self, void* series);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#lowerSeries)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QLineSeries* q_areaseries_lower_series(void* self);
+QLineSeries* q_areaseries_lower_series(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPen)
 ///
 /// @param self QAreaSeries*
 /// @param pen QPen*
 ///
-void q_areaseries_set_pen(void* self, void* pen);
+void q_areaseries_set_pen(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pen)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QPen* q_areaseries_pen(void* self);
+QPen* q_areaseries_pen(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setBrush)
 ///
 /// @param self QAreaSeries*
 /// @param brush QBrush*
 ///
-void q_areaseries_set_brush(void* self, void* brush);
+void q_areaseries_set_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#brush)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QBrush* q_areaseries_brush(void* self);
+QBrush* q_areaseries_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setColor)
 ///
 /// @param self QAreaSeries*
 /// @param color QColor*
 ///
-void q_areaseries_set_color(void* self, void* color);
+void q_areaseries_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#color)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QColor* q_areaseries_color(void* self);
+QColor* q_areaseries_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setBorderColor)
 ///
 /// @param self QAreaSeries*
 /// @param color QColor*
 ///
-void q_areaseries_set_border_color(void* self, void* color);
+void q_areaseries_set_border_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#borderColor)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QColor* q_areaseries_border_color(void* self);
+QColor* q_areaseries_border_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointsVisible)
 ///
@@ -225,9 +225,9 @@ void q_areaseries_set_points_visible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointsVisible)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_points_visible(void* self);
+bool q_areaseries_points_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsFormat)
 ///
@@ -240,9 +240,9 @@ void q_areaseries_set_point_labels_format(void* self, const char* format);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-const char* q_areaseries_point_labels_format(void* self);
+const char* q_areaseries_point_labels_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsVisible)
 ///
@@ -252,35 +252,35 @@ void q_areaseries_set_point_labels_visible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsVisible)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_point_labels_visible(void* self);
+bool q_areaseries_point_labels_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsFont)
 ///
 /// @param self QAreaSeries*
 /// @param font QFont*
 ///
-void q_areaseries_set_point_labels_font(void* self, void* font);
+void q_areaseries_set_point_labels_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFont)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QFont* q_areaseries_point_labels_font(void* self);
+QFont* q_areaseries_point_labels_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsColor)
 ///
 /// @param self QAreaSeries*
 /// @param color QColor*
 ///
-void q_areaseries_set_point_labels_color(void* self, void* color);
+void q_areaseries_set_point_labels_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsColor)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QColor* q_areaseries_point_labels_color(void* self);
+QColor* q_areaseries_point_labels_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#setPointLabelsClipping)
 ///
@@ -290,23 +290,23 @@ void q_areaseries_set_point_labels_clipping(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsClipping)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_point_labels_clipping(void* self);
+bool q_areaseries_point_labels_clipping(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#clicked)
 ///
 /// @param self QAreaSeries*
 /// @param point QPointF*
 ///
-void q_areaseries_clicked(void* self, void* point);
+void q_areaseries_clicked(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#clicked)
 ///
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QPointF* point)
 ///
-void q_areaseries_on_clicked(void* self, void (*callback)(void*, void*));
+void q_areaseries_on_clicked(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#hovered)
 ///
@@ -314,56 +314,56 @@ void q_areaseries_on_clicked(void* self, void (*callback)(void*, void*));
 /// @param point QPointF*
 /// @param state bool
 ///
-void q_areaseries_hovered(void* self, void* point, bool state);
+void q_areaseries_hovered(void* self, const void* point, bool state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#hovered)
 ///
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QPointF* point, bool state)
 ///
-void q_areaseries_on_hovered(void* self, void (*callback)(void*, void*, bool));
+void q_areaseries_on_hovered(void* self, void (*callback)(void*, const void*, bool));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pressed)
 ///
 /// @param self QAreaSeries*
 /// @param point QPointF*
 ///
-void q_areaseries_pressed(void* self, void* point);
+void q_areaseries_pressed(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pressed)
 ///
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QPointF* point)
 ///
-void q_areaseries_on_pressed(void* self, void (*callback)(void*, void*));
+void q_areaseries_on_pressed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#released)
 ///
 /// @param self QAreaSeries*
 /// @param point QPointF*
 ///
-void q_areaseries_released(void* self, void* point);
+void q_areaseries_released(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#released)
 ///
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QPointF* point)
 ///
-void q_areaseries_on_released(void* self, void (*callback)(void*, void*));
+void q_areaseries_on_released(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QAreaSeries*
 /// @param point QPointF*
 ///
-void q_areaseries_double_clicked(void* self, void* point);
+void q_areaseries_double_clicked(void* self, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#doubleClicked)
 ///
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QPointF* point)
 ///
-void q_areaseries_on_double_clicked(void* self, void (*callback)(void*, void*));
+void q_areaseries_on_double_clicked(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#selected)
 ///
@@ -439,28 +439,28 @@ void q_areaseries_on_point_labels_visibility_changed(void* self, void (*callback
 /// @param self QAreaSeries*
 /// @param font QFont*
 ///
-void q_areaseries_point_labels_font_changed(void* self, void* font);
+void q_areaseries_point_labels_font_changed(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsFontChanged)
 ///
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QFont* font)
 ///
-void q_areaseries_on_point_labels_font_changed(void* self, void (*callback)(void*, void*));
+void q_areaseries_on_point_labels_font_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsColorChanged)
 ///
 /// @param self QAreaSeries*
 /// @param color QColor*
 ///
-void q_areaseries_point_labels_color_changed(void* self, void* color);
+void q_areaseries_point_labels_color_changed(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsColorChanged)
 ///
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QColor* color)
 ///
-void q_areaseries_on_point_labels_color_changed(void* self, void (*callback)(void*, void*));
+void q_areaseries_on_point_labels_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qareaseries-qtcharts.html#pointLabelsClippingChanged)
 ///
@@ -531,9 +531,9 @@ void q_areaseries_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-const char* q_areaseries_name(void* self);
+const char* q_areaseries_name(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -547,17 +547,17 @@ void q_areaseries_set_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_is_visible(void* self);
+bool q_areaseries_is_visible(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-double q_areaseries_opacity(void* self);
+double q_areaseries_opacity(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -580,17 +580,17 @@ void q_areaseries_set_use_open_g_l(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_use_open_g_l(void* self);
+bool q_areaseries_use_open_g_l(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#chart)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QChart* q_areaseries_chart(void* self);
+QChart* q_areaseries_chart(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -728,9 +728,9 @@ void q_areaseries_set_use_open_g_l1(void* self, bool enable);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-const char* q_areaseries_object_name(void* self);
+const char* q_areaseries_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -745,33 +745,33 @@ void q_areaseries_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_is_widget_type(void* self);
+bool q_areaseries_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_is_window_type(void* self);
+bool q_areaseries_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_is_quick_item_type(void* self);
+bool q_areaseries_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_signals_blocked(void* self);
+bool q_areaseries_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -786,9 +786,9 @@ bool q_areaseries_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QThread* q_areaseries_thread(void* self);
+QThread* q_areaseries_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -839,11 +839,11 @@ void q_areaseries_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_areaseries_children(void* self);
+libqt_list q_areaseries_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -881,7 +881,7 @@ void q_areaseries_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_areaseries_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_areaseries_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -892,18 +892,18 @@ QMetaObject__Connection* q_areaseries_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_areaseries_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_areaseries_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_areaseries_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_areaseries_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -914,7 +914,7 @@ QMetaObject__Connection* q_areaseries_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_areaseries_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_areaseries_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -925,24 +925,24 @@ bool q_areaseries_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_areaseries_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_areaseries_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-bool q_areaseries_disconnect3(void* self);
+bool q_areaseries_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param receiver QObject*
 ///
-bool q_areaseries_disconnect4(void* self, void* receiver);
+bool q_areaseries_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -950,23 +950,23 @@ bool q_areaseries_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_areaseries_disconnect5(void* param1);
+bool q_areaseries_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-void q_areaseries_dump_object_tree(void* self);
+void q_areaseries_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-void q_areaseries_dump_object_info(void* self);
+void q_areaseries_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -976,16 +976,16 @@ void q_areaseries_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_areaseries_set_property(void* self, const char* name, void* value);
+bool q_areaseries_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param name const char*
 ///
-QVariant* q_areaseries_property(void* self, const char* name);
+QVariant* q_areaseries_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -993,9 +993,9 @@ QVariant* q_areaseries_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-const char** q_areaseries_dynamic_property_names(void* self);
+const char** q_areaseries_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1009,9 +1009,9 @@ QBindingStorage* q_areaseries_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-const QBindingStorage* q_areaseries_binding_storage2(void* self);
+const QBindingStorage* q_areaseries_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1034,18 +1034,18 @@ void q_areaseries_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QObject* q_areaseries_parent(void* self);
+QObject* q_areaseries_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param classname const char*
 ///
-bool q_areaseries_inherits(void* self, const char* classname);
+bool q_areaseries_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1085,7 +1085,7 @@ int32_t q_areaseries_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_areaseries_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_areaseries_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1097,59 +1097,59 @@ QMetaObject__Connection* q_areaseries_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_areaseries_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_areaseries_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_areaseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_areaseries_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param signal const char*
 ///
-bool q_areaseries_disconnect1(void* self, const char* signal);
+bool q_areaseries_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAreaSeries*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_areaseries_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_areaseries_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_areaseries_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_areaseries_disconnect23(void* self, void* receiver, const char* member);
+bool q_areaseries_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QAreaSeries*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_areaseries_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1345,7 +1345,7 @@ void q_areaseries_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QAreaSeries*
 /// @param signal QMetaMethod*
 ///
-void q_areaseries_connect_notify(void* self, void* signal);
+void q_areaseries_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1356,7 +1356,7 @@ void q_areaseries_connect_notify(void* self, void* signal);
 /// @param self QAreaSeries*
 /// @param signal QMetaMethod*
 ///
-void q_areaseries_super_connect_notify(void* self, void* signal);
+void q_areaseries_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1367,7 +1367,7 @@ void q_areaseries_super_connect_notify(void* self, void* signal);
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QMetaMethod* signal)
 ///
-void q_areaseries_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_areaseries_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1378,7 +1378,7 @@ void q_areaseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QAreaSeries*
 /// @param signal QMetaMethod*
 ///
-void q_areaseries_disconnect_notify(void* self, void* signal);
+void q_areaseries_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1389,7 +1389,7 @@ void q_areaseries_disconnect_notify(void* self, void* signal);
 /// @param self QAreaSeries*
 /// @param signal QMetaMethod*
 ///
-void q_areaseries_super_disconnect_notify(void* self, void* signal);
+void q_areaseries_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1400,7 +1400,7 @@ void q_areaseries_super_disconnect_notify(void* self, void* signal);
 /// @param self QAreaSeries*
 /// @param callback void func(QAreaSeries* self, QMetaMethod* signal)
 ///
-void q_areaseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_areaseries_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1408,9 +1408,9 @@ void q_areaseries_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QObject* q_areaseries_sender(void* self);
+QObject* q_areaseries_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1418,9 +1418,9 @@ QObject* q_areaseries_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-QObject* q_areaseries_super_sender(void* self);
+QObject* q_areaseries_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1428,10 +1428,10 @@ QObject* q_areaseries_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAreaSeries*
-/// @param callback QObject* func()
+/// @param self const QAreaSeries*
+/// @param callback QObject* func(QAreaSeries* self)
 ///
-void q_areaseries_on_sender(void* self, QObject* (*callback)());
+void q_areaseries_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1439,9 +1439,9 @@ void q_areaseries_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-int32_t q_areaseries_sender_signal_index(void* self);
+int32_t q_areaseries_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1449,9 +1449,9 @@ int32_t q_areaseries_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 ///
-int32_t q_areaseries_super_sender_signal_index(void* self);
+int32_t q_areaseries_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1459,10 +1459,10 @@ int32_t q_areaseries_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAreaSeries*
-/// @param callback int32_t func()
+/// @param self const QAreaSeries*
+/// @param callback int32_t func(QAreaSeries* self)
 ///
-void q_areaseries_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_areaseries_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1470,10 +1470,10 @@ void q_areaseries_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param signal const char*
 ///
-int32_t q_areaseries_receivers(void* self, const char* signal);
+int32_t q_areaseries_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1481,10 +1481,10 @@ int32_t q_areaseries_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param signal const char*
 ///
-int32_t q_areaseries_super_receivers(void* self, const char* signal);
+int32_t q_areaseries_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1492,10 +1492,10 @@ int32_t q_areaseries_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param callback int32_t func(QAreaSeries* self, const char* signal)
 ///
-void q_areaseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_areaseries_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1503,10 +1503,10 @@ void q_areaseries_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param signal QMetaMethod*
 ///
-bool q_areaseries_is_signal_connected(void* self, void* signal);
+bool q_areaseries_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1514,10 +1514,10 @@ bool q_areaseries_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param signal QMetaMethod*
 ///
-bool q_areaseries_super_is_signal_connected(void* self, void* signal);
+bool q_areaseries_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1525,10 +1525,10 @@ bool q_areaseries_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAreaSeries*
+/// @param self const QAreaSeries*
 /// @param callback bool func(QAreaSeries* self, QMetaMethod* signal)
 ///
-void q_areaseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_areaseries_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

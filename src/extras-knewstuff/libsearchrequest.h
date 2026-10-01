@@ -50,7 +50,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new();
 ///
 /// @param param1 KNSCore__SearchRequest*
 ///
-KNSCore__SearchRequest* k_nscore__searchrequest_new2(void* param1);
+KNSCore__SearchRequest* k_nscore__searchrequest_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html)
 
@@ -117,60 +117,60 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t 
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#sortMode)
 ///
-/// @param self KNSCore__SearchRequest*
+/// @param self const KNSCore__SearchRequest*
 ///
 /// @return enum KNSCore__SortMode
 ///
-int32_t k_nscore__searchrequest_sort_mode(void* self);
+int32_t k_nscore__searchrequest_sort_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#filter)
 ///
-/// @param self KNSCore__SearchRequest*
+/// @param self const KNSCore__SearchRequest*
 ///
 /// @return enum KNSCore__Filter
 ///
-int32_t k_nscore__searchrequest_filter(void* self);
+int32_t k_nscore__searchrequest_filter(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#searchTerm)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__SearchRequest*
+/// @param self const KNSCore__SearchRequest*
 ///
-const char* k_nscore__searchrequest_search_term(void* self);
+const char* k_nscore__searchrequest_search_term(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#categories)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__SearchRequest*
+/// @param self const KNSCore__SearchRequest*
 ///
-const char** k_nscore__searchrequest_categories(void* self);
+const char** k_nscore__searchrequest_categories(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#page)
 ///
-/// @param self KNSCore__SearchRequest*
+/// @param self const KNSCore__SearchRequest*
 ///
-int32_t k_nscore__searchrequest_page(void* self);
+int32_t k_nscore__searchrequest_page(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#pageSize)
 ///
-/// @param self KNSCore__SearchRequest*
+/// @param self const KNSCore__SearchRequest*
 ///
-int32_t k_nscore__searchrequest_page_size(void* self);
+int32_t k_nscore__searchrequest_page_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#nextPage)
 ///
-/// @param self KNSCore__SearchRequest*
+/// @param self const KNSCore__SearchRequest*
 ///
-KNSCore__SearchRequest* k_nscore__searchrequest_next_page(void* self);
+KNSCore__SearchRequest* k_nscore__searchrequest_next_page(const void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-searchrequest.html#operator-eq)
 ///
 /// @param self KNSCore__SearchRequest*
 /// @param param1 KNSCore__SearchRequest*
 ///
-void k_nscore__searchrequest_operator_assign(void* self, void* param1);
+void k_nscore__searchrequest_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

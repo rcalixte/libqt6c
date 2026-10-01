@@ -6,7 +6,7 @@ QMediaFormat* q_mediaformat_new() {
     return QMediaFormat_New();
 }
 
-QMediaFormat* q_mediaformat_new2(void* other) {
+QMediaFormat* q_mediaformat_new2(const void* other) {
     return QMediaFormat_New2((QMediaFormat*)other);
 }
 
@@ -14,7 +14,7 @@ QMediaFormat* q_mediaformat_new3(int32_t format) {
     return QMediaFormat_New3(format);
 }
 
-void q_mediaformat_operator_assign(void* self, void* other) {
+void q_mediaformat_operator_assign(void* self, const void* other) {
     QMediaFormat_OperatorAssign((QMediaFormat*)self, (QMediaFormat*)other);
 }
 
@@ -22,7 +22,7 @@ void q_mediaformat_swap(void* self, void* other) {
     QMediaFormat_Swap((QMediaFormat*)self, (QMediaFormat*)other);
 }
 
-int32_t q_mediaformat_file_format(void* self) {
+int32_t q_mediaformat_file_format(const void* self) {
     return QMediaFormat_FileFormat((QMediaFormat*)self);
 }
 
@@ -34,7 +34,7 @@ void q_mediaformat_set_video_codec(void* self, int32_t codec) {
     QMediaFormat_SetVideoCodec((QMediaFormat*)self, codec);
 }
 
-int32_t q_mediaformat_video_codec(void* self) {
+int32_t q_mediaformat_video_codec(const void* self) {
     return QMediaFormat_VideoCodec((QMediaFormat*)self);
 }
 
@@ -42,15 +42,15 @@ void q_mediaformat_set_audio_codec(void* self, int32_t codec) {
     QMediaFormat_SetAudioCodec((QMediaFormat*)self, codec);
 }
 
-int32_t q_mediaformat_audio_codec(void* self) {
+int32_t q_mediaformat_audio_codec(const void* self) {
     return QMediaFormat_AudioCodec((QMediaFormat*)self);
 }
 
-bool q_mediaformat_is_supported(void* self, int32_t mode) {
+bool q_mediaformat_is_supported(const void* self, int32_t mode) {
     return QMediaFormat_IsSupported((QMediaFormat*)self, mode);
 }
 
-QMimeType* q_mediaformat_mime_type(void* self) {
+QMimeType* q_mediaformat_mime_type(const void* self) {
     return QMediaFormat_MimeType((QMediaFormat*)self);
 }
 
@@ -111,11 +111,11 @@ const char* q_mediaformat_video_codec_description(int32_t codec) {
     return _ret;
 }
 
-bool q_mediaformat_operator_equal(void* self, void* other) {
+bool q_mediaformat_operator_equal(const void* self, const void* other) {
     return QMediaFormat_OperatorEqual((QMediaFormat*)self, (QMediaFormat*)other);
 }
 
-bool q_mediaformat_operator_not_equal(void* self, void* other) {
+bool q_mediaformat_operator_not_equal(const void* self, const void* other) {
     return QMediaFormat_OperatorNotEqual((QMediaFormat*)self, (QMediaFormat*)other);
 }
 

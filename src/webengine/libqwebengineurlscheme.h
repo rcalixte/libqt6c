@@ -28,36 +28,36 @@ QWebEngineUrlScheme* q_webengineurlscheme_new2(char* name);
 ///
 /// @param that QWebEngineUrlScheme*
 ///
-QWebEngineUrlScheme* q_webengineurlscheme_new3(void* that);
+QWebEngineUrlScheme* q_webengineurlscheme_new3(const void* that);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator-eq)
 ///
 /// @param self QWebEngineUrlScheme*
 /// @param that QWebEngineUrlScheme*
 ///
-void q_webengineurlscheme_operator_assign(void* self, void* that);
+void q_webengineurlscheme_operator_assign(void* self, const void* that);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator-eq-eq)
 ///
-/// @param self QWebEngineUrlScheme*
+/// @param self const QWebEngineUrlScheme*
 /// @param that QWebEngineUrlScheme*
 ///
-bool q_webengineurlscheme_operator_equal(void* self, void* that);
+bool q_webengineurlscheme_operator_equal(const void* self, const void* that);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator-not-eq)
 ///
-/// @param self QWebEngineUrlScheme*
+/// @param self const QWebEngineUrlScheme*
 /// @param that QWebEngineUrlScheme*
 ///
-bool q_webengineurlscheme_operator_not_equal(void* self, void* that);
+bool q_webengineurlscheme_operator_not_equal(const void* self, const void* that);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineUrlScheme*
+/// @param self const QWebEngineUrlScheme*
 ///
-char* q_webengineurlscheme_name(void* self);
+char* q_webengineurlscheme_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#setName)
 ///
@@ -68,11 +68,11 @@ void q_webengineurlscheme_set_name(void* self, char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#syntax)
 ///
-/// @param self QWebEngineUrlScheme*
+/// @param self const QWebEngineUrlScheme*
 ///
 /// @return enum QWebEngineUrlScheme__Syntax
 ///
-int32_t q_webengineurlscheme_syntax(void* self);
+int32_t q_webengineurlscheme_syntax(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#setSyntax)
 ///
@@ -83,9 +83,9 @@ void q_webengineurlscheme_set_syntax(void* self, int32_t newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#defaultPort)
 ///
-/// @param self QWebEngineUrlScheme*
+/// @param self const QWebEngineUrlScheme*
 ///
-int32_t q_webengineurlscheme_default_port(void* self);
+int32_t q_webengineurlscheme_default_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#setDefaultPort)
 ///
@@ -96,11 +96,11 @@ void q_webengineurlscheme_set_default_port(void* self, int newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#flags)
 ///
-/// @param self QWebEngineUrlScheme*
+/// @param self const QWebEngineUrlScheme*
 ///
 /// @return flag of enum QWebEngineUrlScheme__Flag
 ///
-int32_t q_webengineurlscheme_flags(void* self);
+int32_t q_webengineurlscheme_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#setFlags)
 ///
@@ -113,7 +113,7 @@ void q_webengineurlscheme_set_flags(void* self, int32_t newValue);
 ///
 /// @param scheme QWebEngineUrlScheme*
 ///
-void q_webengineurlscheme_register_scheme(void* scheme);
+void q_webengineurlscheme_register_scheme(const void* scheme);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlscheme.html#schemeByName)
 ///

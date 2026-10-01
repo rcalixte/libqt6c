@@ -6,7 +6,7 @@ QOperatingSystemVersionBase* q_operatingsystemversionbase_new(int32_t osType, in
     return QOperatingSystemVersionBase_New(osType, vmajor);
 }
 
-QOperatingSystemVersionBase* q_operatingsystemversionbase_new2(void* param1) {
+QOperatingSystemVersionBase* q_operatingsystemversionbase_new2(const void* param1) {
     return QOperatingSystemVersionBase_New2((QOperatingSystemVersionBase*)param1);
 }
 
@@ -33,31 +33,31 @@ int32_t q_operatingsystemversionbase_current_type() {
     return QOperatingSystemVersionBase_CurrentType();
 }
 
-QVersionNumber* q_operatingsystemversionbase_version(void* self) {
+QVersionNumber* q_operatingsystemversionbase_version(const void* self) {
     return QOperatingSystemVersionBase_Version((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionbase_major_version(void* self) {
+int32_t q_operatingsystemversionbase_major_version(const void* self) {
     return QOperatingSystemVersionBase_MajorVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionbase_minor_version(void* self) {
+int32_t q_operatingsystemversionbase_minor_version(const void* self) {
     return QOperatingSystemVersionBase_MinorVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionbase_micro_version(void* self) {
+int32_t q_operatingsystemversionbase_micro_version(const void* self) {
     return QOperatingSystemVersionBase_MicroVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionbase_segment_count(void* self) {
+int32_t q_operatingsystemversionbase_segment_count(const void* self) {
     return QOperatingSystemVersionBase_SegmentCount((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionbase_type(void* self) {
+int32_t q_operatingsystemversionbase_type(const void* self) {
     return QOperatingSystemVersionBase_Type((QOperatingSystemVersionBase*)self);
 }
 
-const char* q_operatingsystemversionbase_name2(void* self) {
+const char* q_operatingsystemversionbase_name2(const void* self) {
     libqt_string _str = QOperatingSystemVersionBase_Name2((QOperatingSystemVersionBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -76,7 +76,7 @@ QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new2() {
     return QOperatingSystemVersionUnexported_New2();
 }
 
-QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new3(void* param1) {
+QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new3(const void* param1) {
     return QOperatingSystemVersionUnexported_New3((QOperatingSystemVersionUnexported*)param1);
 }
 
@@ -99,31 +99,31 @@ int32_t q_operatingsystemversionunexported_current_type() {
     return QOperatingSystemVersionBase_CurrentType();
 }
 
-QVersionNumber* q_operatingsystemversionunexported_version(void* self) {
+QVersionNumber* q_operatingsystemversionunexported_version(const void* self) {
     return QOperatingSystemVersionBase_Version((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionunexported_major_version(void* self) {
+int32_t q_operatingsystemversionunexported_major_version(const void* self) {
     return QOperatingSystemVersionBase_MajorVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionunexported_minor_version(void* self) {
+int32_t q_operatingsystemversionunexported_minor_version(const void* self) {
     return QOperatingSystemVersionBase_MinorVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionunexported_micro_version(void* self) {
+int32_t q_operatingsystemversionunexported_micro_version(const void* self) {
     return QOperatingSystemVersionBase_MicroVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionunexported_segment_count(void* self) {
+int32_t q_operatingsystemversionunexported_segment_count(const void* self) {
     return QOperatingSystemVersionBase_SegmentCount((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversionunexported_type(void* self) {
+int32_t q_operatingsystemversionunexported_type(const void* self) {
     return QOperatingSystemVersionBase_Type((QOperatingSystemVersionBase*)self);
 }
 
-const char* q_operatingsystemversionunexported_name2(void* self) {
+const char* q_operatingsystemversionunexported_name2(const void* self) {
     libqt_string _str = QOperatingSystemVersionBase_Name2((QOperatingSystemVersionBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -134,7 +134,7 @@ void q_operatingsystemversionunexported_delete(void* self) {
     QOperatingSystemVersionUnexported_Delete((QOperatingSystemVersionUnexported*)(self));
 }
 
-QOperatingSystemVersion* q_operatingsystemversion_new(void* osversion) {
+QOperatingSystemVersion* q_operatingsystemversion_new(const void* osversion) {
     return QOperatingSystemVersion_New((QOperatingSystemVersionBase*)osversion);
 }
 
@@ -142,7 +142,7 @@ QOperatingSystemVersion* q_operatingsystemversion_new2(int32_t osType, int vmajo
     return QOperatingSystemVersion_New2(osType, vmajor);
 }
 
-QOperatingSystemVersion* q_operatingsystemversion_new3(void* param1) {
+QOperatingSystemVersion* q_operatingsystemversion_new3(const void* param1) {
     return QOperatingSystemVersion_New3((QOperatingSystemVersion*)param1);
 }
 
@@ -158,7 +158,7 @@ int32_t q_operatingsystemversion_current_type() {
     return QOperatingSystemVersion_CurrentType();
 }
 
-int32_t q_operatingsystemversion_type(void* self) {
+int32_t q_operatingsystemversion_type(const void* self) {
     return QOperatingSystemVersion_Type((QOperatingSystemVersion*)self);
 }
 
@@ -173,27 +173,27 @@ const char* q_operatingsystemversion_name(void* osversion) {
     return _ret;
 }
 
-QVersionNumber* q_operatingsystemversion_version(void* self) {
+QVersionNumber* q_operatingsystemversion_version(const void* self) {
     return QOperatingSystemVersionBase_Version((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversion_major_version(void* self) {
+int32_t q_operatingsystemversion_major_version(const void* self) {
     return QOperatingSystemVersionBase_MajorVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversion_minor_version(void* self) {
+int32_t q_operatingsystemversion_minor_version(const void* self) {
     return QOperatingSystemVersionBase_MinorVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversion_micro_version(void* self) {
+int32_t q_operatingsystemversion_micro_version(const void* self) {
     return QOperatingSystemVersionBase_MicroVersion((QOperatingSystemVersionBase*)self);
 }
 
-int32_t q_operatingsystemversion_segment_count(void* self) {
+int32_t q_operatingsystemversion_segment_count(const void* self) {
     return QOperatingSystemVersionBase_SegmentCount((QOperatingSystemVersionBase*)self);
 }
 
-const char* q_operatingsystemversion_name2(void* self) {
+const char* q_operatingsystemversion_name2(const void* self) {
     libqt_string _str = QOperatingSystemVersionBase_Name2((QOperatingSystemVersionBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

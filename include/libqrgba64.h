@@ -20,7 +20,7 @@ QRgba64* q_rgba64_new();
 ///
 /// @param param1 QRgba64*
 ///
-QRgba64* q_rgba64_new2(void* param1);
+QRgba64* q_rgba64_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#fromRgba64)
 ///
@@ -54,39 +54,39 @@ QRgba64* q_rgba64_from_argb32(uint32_t rgb);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#isOpaque)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-bool q_rgba64_is_opaque(void* self);
+bool q_rgba64_is_opaque(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#isTransparent)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-bool q_rgba64_is_transparent(void* self);
+bool q_rgba64_is_transparent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#red)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint16_t q_rgba64_red(void* self);
+uint16_t q_rgba64_red(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#green)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint16_t q_rgba64_green(void* self);
+uint16_t q_rgba64_green(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#blue)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint16_t q_rgba64_blue(void* self);
+uint16_t q_rgba64_blue(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#alpha)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint16_t q_rgba64_alpha(void* self);
+uint16_t q_rgba64_alpha(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#setRed)
 ///
@@ -118,57 +118,57 @@ void q_rgba64_set_alpha(void* self, uint16_t _alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#red8)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint8_t q_rgba64_red8(void* self);
+uint8_t q_rgba64_red8(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#green8)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint8_t q_rgba64_green8(void* self);
+uint8_t q_rgba64_green8(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#blue8)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint8_t q_rgba64_blue8(void* self);
+uint8_t q_rgba64_blue8(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#alpha8)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint8_t q_rgba64_alpha8(void* self);
+uint8_t q_rgba64_alpha8(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#toArgb32)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint32_t q_rgba64_to_argb32(void* self);
+uint32_t q_rgba64_to_argb32(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#toRgb16)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint16_t q_rgba64_to_rgb16(void* self);
+uint16_t q_rgba64_to_rgb16(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#premultiplied)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-QRgba64* q_rgba64_premultiplied(void* self);
+QRgba64* q_rgba64_premultiplied(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#unpremultiplied)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-QRgba64* q_rgba64_unpremultiplied(void* self);
+QRgba64* q_rgba64_unpremultiplied(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#operator-unsigned-long-long)
 ///
-/// @param self QRgba64*
+/// @param self const QRgba64*
 ///
-uint64_t q_rgba64_to_unsigned_long_long(void* self);
+uint64_t q_rgba64_to_unsigned_long_long(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#operator-eq)
 ///

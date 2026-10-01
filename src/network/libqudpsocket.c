@@ -20,15 +20,15 @@ QUdpSocket* q_udpsocket_new2(void* parent) {
     return QUdpSocket_New2((QObject*)parent);
 }
 
-const QMetaObject* q_udpsocket_meta_object(void* self) {
+const QMetaObject* q_udpsocket_meta_object(const void* self) {
     return QUdpSocket_MetaObject((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_udpsocket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QUdpSocket_OnMetaObject((QUdpSocket*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_udpsocket_super_meta_object(void* self) {
+const QMetaObject* q_udpsocket_super_meta_object(const void* self) {
     return QUdpSocket_SuperMetaObject((QUdpSocket*)self);
 }
 
@@ -67,35 +67,35 @@ bool q_udpsocket_bind(void* self, int32_t addr) {
     return QUdpSocket_Bind((QUdpSocket*)self, addr);
 }
 
-bool q_udpsocket_join_multicast_group(void* self, void* groupAddress) {
+bool q_udpsocket_join_multicast_group(void* self, const void* groupAddress) {
     return QUdpSocket_JoinMulticastGroup((QUdpSocket*)self, (QHostAddress*)groupAddress);
 }
 
-bool q_udpsocket_join_multicast_group2(void* self, void* groupAddress, void* iface) {
+bool q_udpsocket_join_multicast_group2(void* self, const void* groupAddress, const void* iface) {
     return QUdpSocket_JoinMulticastGroup2((QUdpSocket*)self, (QHostAddress*)groupAddress, (QNetworkInterface*)iface);
 }
 
-bool q_udpsocket_leave_multicast_group(void* self, void* groupAddress) {
+bool q_udpsocket_leave_multicast_group(void* self, const void* groupAddress) {
     return QUdpSocket_LeaveMulticastGroup((QUdpSocket*)self, (QHostAddress*)groupAddress);
 }
 
-bool q_udpsocket_leave_multicast_group2(void* self, void* groupAddress, void* iface) {
+bool q_udpsocket_leave_multicast_group2(void* self, const void* groupAddress, const void* iface) {
     return QUdpSocket_LeaveMulticastGroup2((QUdpSocket*)self, (QHostAddress*)groupAddress, (QNetworkInterface*)iface);
 }
 
-QNetworkInterface* q_udpsocket_multicast_interface(void* self) {
+QNetworkInterface* q_udpsocket_multicast_interface(const void* self) {
     return QUdpSocket_MulticastInterface((QUdpSocket*)self);
 }
 
-void q_udpsocket_set_multicast_interface(void* self, void* iface) {
+void q_udpsocket_set_multicast_interface(void* self, const void* iface) {
     QUdpSocket_SetMulticastInterface((QUdpSocket*)self, (QNetworkInterface*)iface);
 }
 
-bool q_udpsocket_has_pending_datagrams(void* self) {
+bool q_udpsocket_has_pending_datagrams(const void* self) {
     return QUdpSocket_HasPendingDatagrams((QUdpSocket*)self);
 }
 
-int64_t q_udpsocket_pending_datagram_size(void* self) {
+int64_t q_udpsocket_pending_datagram_size(const void* self) {
     return QUdpSocket_PendingDatagramSize((QUdpSocket*)self);
 }
 
@@ -107,15 +107,15 @@ int64_t q_udpsocket_read_datagram(void* self, char* data, int64_t maxlen) {
     return QUdpSocket_ReadDatagram((QUdpSocket*)self, data, maxlen);
 }
 
-int64_t q_udpsocket_write_datagram(void* self, void* datagram) {
+int64_t q_udpsocket_write_datagram(void* self, const void* datagram) {
     return QUdpSocket_WriteDatagram((QUdpSocket*)self, (QNetworkDatagram*)datagram);
 }
 
-int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t lenVal, void* host, uint16_t port) {
+int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t lenVal, const void* host, uint16_t port) {
     return QUdpSocket_WriteDatagram2((QUdpSocket*)self, data, lenVal, (QHostAddress*)host, port);
 }
 
-int64_t q_udpsocket_write_datagram3(void* self, char* datagram, void* host, uint16_t port) {
+int64_t q_udpsocket_write_datagram3(void* self, char* datagram, const void* host, uint16_t port) {
     return QUdpSocket_WriteDatagram3((QUdpSocket*)self, qstring(datagram), (QHostAddress*)host, port);
 }
 
@@ -153,7 +153,7 @@ int64_t q_udpsocket_read_datagram4(void* self, char* data, int64_t maxlen, void*
     return QUdpSocket_ReadDatagram4((QUdpSocket*)self, data, maxlen, (QHostAddress*)host, port);
 }
 
-int32_t q_udpsocket_pause_mode(void* self) {
+int32_t q_udpsocket_pause_mode(const void* self) {
     return QAbstractSocket_PauseMode((QAbstractSocket*)self);
 }
 
@@ -161,38 +161,38 @@ void q_udpsocket_set_pause_mode(void* self, int32_t pauseMode) {
     QAbstractSocket_SetPauseMode((QAbstractSocket*)self, pauseMode);
 }
 
-void q_udpsocket_connect_to_host2(void* self, void* address, uint16_t port) {
+void q_udpsocket_connect_to_host2(void* self, const void* address, uint16_t port) {
     QAbstractSocket_ConnectToHost2((QAbstractSocket*)self, (QHostAddress*)address, port);
 }
 
-bool q_udpsocket_is_valid(void* self) {
+bool q_udpsocket_is_valid(const void* self) {
     return QAbstractSocket_IsValid((QAbstractSocket*)self);
 }
 
-uint16_t q_udpsocket_local_port(void* self) {
+uint16_t q_udpsocket_local_port(const void* self) {
     return QAbstractSocket_LocalPort((QAbstractSocket*)self);
 }
 
-QHostAddress* q_udpsocket_local_address(void* self) {
+QHostAddress* q_udpsocket_local_address(const void* self) {
     return QAbstractSocket_LocalAddress((QAbstractSocket*)self);
 }
 
-uint16_t q_udpsocket_peer_port(void* self) {
+uint16_t q_udpsocket_peer_port(const void* self) {
     return QAbstractSocket_PeerPort((QAbstractSocket*)self);
 }
 
-QHostAddress* q_udpsocket_peer_address(void* self) {
+QHostAddress* q_udpsocket_peer_address(const void* self) {
     return QAbstractSocket_PeerAddress((QAbstractSocket*)self);
 }
 
-const char* q_udpsocket_peer_name(void* self) {
+const char* q_udpsocket_peer_name(const void* self) {
     libqt_string _str = QAbstractSocket_PeerName((QAbstractSocket*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int64_t q_udpsocket_read_buffer_size(void* self) {
+int64_t q_udpsocket_read_buffer_size(const void* self) {
     return QAbstractSocket_ReadBufferSize((QAbstractSocket*)self);
 }
 
@@ -200,15 +200,15 @@ void q_udpsocket_abort(void* self) {
     QAbstractSocket_Abort((QAbstractSocket*)self);
 }
 
-int32_t q_udpsocket_socket_type(void* self) {
+int32_t q_udpsocket_socket_type(const void* self) {
     return QAbstractSocket_SocketType((QAbstractSocket*)self);
 }
 
-int32_t q_udpsocket_state(void* self) {
+int32_t q_udpsocket_state(const void* self) {
     return QAbstractSocket_State((QAbstractSocket*)self);
 }
 
-int32_t q_udpsocket_error(void* self) {
+int32_t q_udpsocket_error(const void* self) {
     return QAbstractSocket_Error((QAbstractSocket*)self);
 }
 
@@ -216,15 +216,15 @@ bool q_udpsocket_flush(void* self) {
     return QAbstractSocket_Flush((QAbstractSocket*)self);
 }
 
-void q_udpsocket_set_proxy(void* self, void* networkProxy) {
+void q_udpsocket_set_proxy(void* self, const void* networkProxy) {
     QAbstractSocket_SetProxy((QAbstractSocket*)self, (QNetworkProxy*)networkProxy);
 }
 
-QNetworkProxy* q_udpsocket_proxy(void* self) {
+QNetworkProxy* q_udpsocket_proxy(const void* self) {
     return QAbstractSocket_Proxy((QAbstractSocket*)self);
 }
 
-const char* q_udpsocket_protocol_tag(void* self) {
+const char* q_udpsocket_protocol_tag(const void* self) {
     libqt_string _str = QAbstractSocket_ProtocolTag((QAbstractSocket*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -275,11 +275,11 @@ void q_udpsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t))
     QAbstractSocket_Connect_ErrorOccurred((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_proxy_authentication_required(void* self, void* proxy, void* authenticator) {
+void q_udpsocket_proxy_authentication_required(void* self, const void* proxy, void* authenticator) {
     QAbstractSocket_ProxyAuthenticationRequired((QAbstractSocket*)self, (QNetworkProxy*)proxy, (QAuthenticator*)authenticator);
 }
 
-void q_udpsocket_on_proxy_authentication_required(void* self, void (*callback)(void*, void*, void*)) {
+void q_udpsocket_on_proxy_authentication_required(void* self, void (*callback)(void*, const void*, void*)) {
     QAbstractSocket_Connect_ProxyAuthenticationRequired((QAbstractSocket*)self, (intptr_t)callback);
 }
 
@@ -291,7 +291,7 @@ bool q_udpsocket_bind22(void* self, uint16_t port, int32_t mode) {
     return QAbstractSocket_Bind22((QAbstractSocket*)self, port, mode);
 }
 
-void q_udpsocket_connect_to_host3(void* self, void* address, uint16_t port, int32_t mode) {
+void q_udpsocket_connect_to_host3(void* self, const void* address, uint16_t port, int32_t mode) {
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
@@ -299,7 +299,7 @@ QIODeviceBase* q_udpsocket_as_q_i_o_device_base(void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
-int32_t q_udpsocket_open_mode(void* self) {
+int32_t q_udpsocket_open_mode(const void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -307,31 +307,31 @@ void q_udpsocket_set_text_mode_enabled(void* self, bool enabled) {
     QIODevice_SetTextModeEnabled((QIODevice*)self, enabled);
 }
 
-bool q_udpsocket_is_text_mode_enabled(void* self) {
+bool q_udpsocket_is_text_mode_enabled(const void* self) {
     return QIODevice_IsTextModeEnabled((QIODevice*)self);
 }
 
-bool q_udpsocket_is_open(void* self) {
+bool q_udpsocket_is_open(const void* self) {
     return QIODevice_IsOpen((QIODevice*)self);
 }
 
-bool q_udpsocket_is_readable(void* self) {
+bool q_udpsocket_is_readable(const void* self) {
     return QIODevice_IsReadable((QIODevice*)self);
 }
 
-bool q_udpsocket_is_writable(void* self) {
+bool q_udpsocket_is_writable(const void* self) {
     return QIODevice_IsWritable((QIODevice*)self);
 }
 
-int32_t q_udpsocket_read_channel_count(void* self) {
+int32_t q_udpsocket_read_channel_count(const void* self) {
     return QIODevice_ReadChannelCount((QIODevice*)self);
 }
 
-int32_t q_udpsocket_write_channel_count(void* self) {
+int32_t q_udpsocket_write_channel_count(const void* self) {
     return QIODevice_WriteChannelCount((QIODevice*)self);
 }
 
-int32_t q_udpsocket_current_read_channel(void* self) {
+int32_t q_udpsocket_current_read_channel(const void* self) {
     return QIODevice_CurrentReadChannel((QIODevice*)self);
 }
 
@@ -339,7 +339,7 @@ void q_udpsocket_set_current_read_channel(void* self, int channel) {
     QIODevice_SetCurrentReadChannel((QIODevice*)self, channel);
 }
 
-int32_t q_udpsocket_current_write_channel(void* self) {
+int32_t q_udpsocket_current_write_channel(const void* self) {
     return QIODevice_CurrentWriteChannel((QIODevice*)self);
 }
 
@@ -388,7 +388,7 @@ void q_udpsocket_rollback_transaction(void* self) {
     QIODevice_RollbackTransaction((QIODevice*)self);
 }
 
-bool q_udpsocket_is_transaction_started(void* self) {
+bool q_udpsocket_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
@@ -431,7 +431,7 @@ bool q_udpsocket_get_char(void* self, char* c) {
     return QIODevice_GetChar((QIODevice*)self, c);
 }
 
-const char* q_udpsocket_error_string(void* self) {
+const char* q_udpsocket_error_string(const void* self) {
     libqt_string _str = QIODevice_ErrorString((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -493,7 +493,7 @@ char* q_udpsocket_read_line1(void* self, int64_t maxlen) {
     return _ret;
 }
 
-const char* q_udpsocket_object_name(void* self) {
+const char* q_udpsocket_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -504,19 +504,19 @@ void q_udpsocket_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_udpsocket_is_widget_type(void* self) {
+bool q_udpsocket_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_udpsocket_is_window_type(void* self) {
+bool q_udpsocket_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_udpsocket_is_quick_item_type(void* self) {
+bool q_udpsocket_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_udpsocket_signals_blocked(void* self) {
+bool q_udpsocket_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -524,7 +524,7 @@ bool q_udpsocket_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_udpsocket_thread(void* self) {
+QThread* q_udpsocket_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -548,7 +548,7 @@ void q_udpsocket_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_udpsocket_children(void* self) {
+libqt_list /* of QObject* */ q_udpsocket_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -565,55 +565,55 @@ void q_udpsocket_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_udpsocket_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_udpsocket_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_udpsocket_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_udpsocket_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_udpsocket_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_udpsocket_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_udpsocket_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_udpsocket_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_udpsocket_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_udpsocket_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_udpsocket_disconnect3(void* self) {
+bool q_udpsocket_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_udpsocket_disconnect4(void* self, void* receiver) {
+bool q_udpsocket_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_udpsocket_disconnect5(void* param1) {
+bool q_udpsocket_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_udpsocket_dump_object_tree(void* self) {
+void q_udpsocket_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_udpsocket_dump_object_info(void* self) {
+void q_udpsocket_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_udpsocket_set_property(void* self, const char* name, void* value) {
+bool q_udpsocket_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_udpsocket_property(void* self, const char* name) {
+QVariant* q_udpsocket_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_udpsocket_dynamic_property_names(void* self) {
+const char** q_udpsocket_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -634,7 +634,7 @@ QBindingStorage* q_udpsocket_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_udpsocket_binding_storage2(void* self) {
+const QBindingStorage* q_udpsocket_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -646,11 +646,11 @@ void q_udpsocket_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_udpsocket_parent(void* self) {
+QObject* q_udpsocket_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_udpsocket_inherits(void* self, const char* classname) {
+bool q_udpsocket_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -666,31 +666,31 @@ int32_t q_udpsocket_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_udpsocket_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_udpsocket_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_udpsocket_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_udpsocket_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_udpsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_udpsocket_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_udpsocket_disconnect1(void* self, const char* signal) {
+bool q_udpsocket_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_udpsocket_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_udpsocket_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_udpsocket_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_udpsocket_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_udpsocket_disconnect23(void* self, void* receiver, const char* member) {
+bool q_udpsocket_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -710,7 +710,7 @@ void q_udpsocket_super_resume(void* self) {
     QUdpSocket_SuperResume((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_resume(void* self, void (*callback)()) {
+void q_udpsocket_on_resume(void* self, void (*callback)(void*)) {
     QUdpSocket_OnResume((QUdpSocket*)self, (intptr_t)callback);
 }
 
@@ -734,32 +734,32 @@ void q_udpsocket_super_disconnect_from_host(void* self) {
     QUdpSocket_SuperDisconnectFromHost((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_disconnect_from_host(void* self, void (*callback)()) {
+void q_udpsocket_on_disconnect_from_host(void* self, void (*callback)(void*)) {
     QUdpSocket_OnDisconnectFromHost((QUdpSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_udpsocket_bytes_available(void* self) {
+int64_t q_udpsocket_bytes_available(const void* self) {
     return QUdpSocket_BytesAvailable((QUdpSocket*)self);
 }
 
-int64_t q_udpsocket_super_bytes_available(void* self) {
+int64_t q_udpsocket_super_bytes_available(const void* self) {
     return QUdpSocket_SuperBytesAvailable((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_bytes_available(void* self, int64_t (*callback)()) {
-    QUdpSocket_OnBytesAvailable((QUdpSocket*)self, (intptr_t)callback);
+void q_udpsocket_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
+    QUdpSocket_OnBytesAvailable((const QUdpSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_udpsocket_bytes_to_write(void* self) {
+int64_t q_udpsocket_bytes_to_write(const void* self) {
     return QUdpSocket_BytesToWrite((QUdpSocket*)self);
 }
 
-int64_t q_udpsocket_super_bytes_to_write(void* self) {
+int64_t q_udpsocket_super_bytes_to_write(const void* self) {
     return QUdpSocket_SuperBytesToWrite((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_bytes_to_write(void* self, int64_t (*callback)()) {
-    QUdpSocket_OnBytesToWrite((QUdpSocket*)self, (intptr_t)callback);
+void q_udpsocket_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
+    QUdpSocket_OnBytesToWrite((const QUdpSocket*)self, (intptr_t)callback);
 }
 
 void q_udpsocket_set_read_buffer_size(void* self, int64_t size) {
@@ -774,16 +774,16 @@ void q_udpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, int
     QUdpSocket_OnSetReadBufferSize((QUdpSocket*)self, (intptr_t)callback);
 }
 
-intptr_t q_udpsocket_socket_descriptor(void* self) {
+intptr_t q_udpsocket_socket_descriptor(const void* self) {
     return QUdpSocket_SocketDescriptor((QUdpSocket*)self);
 }
 
-intptr_t q_udpsocket_super_socket_descriptor(void* self) {
+intptr_t q_udpsocket_super_socket_descriptor(const void* self) {
     return QUdpSocket_SuperSocketDescriptor((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_socket_descriptor(void* self, intptr_t (*callback)()) {
-    QUdpSocket_OnSocketDescriptor((QUdpSocket*)self, (intptr_t)callback);
+void q_udpsocket_on_socket_descriptor(const void* self, intptr_t (*callback)(const void*)) {
+    QUdpSocket_OnSocketDescriptor((const QUdpSocket*)self, (intptr_t)callback);
 }
 
 bool q_udpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int32_t openMode) {
@@ -798,15 +798,15 @@ void q_udpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, in
     QUdpSocket_OnSetSocketDescriptor((QUdpSocket*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_set_socket_option(void* self, int32_t option, void* value) {
+void q_udpsocket_set_socket_option(void* self, int32_t option, const void* value) {
     QUdpSocket_SetSocketOption((QUdpSocket*)self, option, (QVariant*)value);
 }
 
-void q_udpsocket_super_set_socket_option(void* self, int32_t option, void* value) {
+void q_udpsocket_super_set_socket_option(void* self, int32_t option, const void* value) {
     QUdpSocket_SuperSetSocketOption((QUdpSocket*)self, option, (QVariant*)value);
 }
 
-void q_udpsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*)) {
+void q_udpsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, const void*)) {
     QUdpSocket_OnSetSocketOption((QUdpSocket*)self, (intptr_t)callback);
 }
 
@@ -830,20 +830,20 @@ void q_udpsocket_super_close(void* self) {
     QUdpSocket_SuperClose((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_close(void* self, void (*callback)()) {
+void q_udpsocket_on_close(void* self, void (*callback)(void*)) {
     QUdpSocket_OnClose((QUdpSocket*)self, (intptr_t)callback);
 }
 
-bool q_udpsocket_is_sequential(void* self) {
+bool q_udpsocket_is_sequential(const void* self) {
     return QUdpSocket_IsSequential((QUdpSocket*)self);
 }
 
-bool q_udpsocket_super_is_sequential(void* self) {
+bool q_udpsocket_super_is_sequential(const void* self) {
     return QUdpSocket_SuperIsSequential((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_is_sequential(void* self, bool (*callback)()) {
-    QUdpSocket_OnIsSequential((QUdpSocket*)self, (intptr_t)callback);
+void q_udpsocket_on_is_sequential(const void* self, bool (*callback)(const void*)) {
+    QUdpSocket_OnIsSequential((const QUdpSocket*)self, (intptr_t)callback);
 }
 
 bool q_udpsocket_wait_for_connected(void* self, int msecs) {
@@ -954,28 +954,28 @@ void q_udpsocket_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QUdpSocket_OnOpen((QUdpSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_udpsocket_pos(void* self) {
+int64_t q_udpsocket_pos(const void* self) {
     return QUdpSocket_Pos((QUdpSocket*)self);
 }
 
-int64_t q_udpsocket_super_pos(void* self) {
+int64_t q_udpsocket_super_pos(const void* self) {
     return QUdpSocket_SuperPos((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_pos(void* self, int64_t (*callback)()) {
-    QUdpSocket_OnPos((QUdpSocket*)self, (intptr_t)callback);
+void q_udpsocket_on_pos(const void* self, int64_t (*callback)(const void*)) {
+    QUdpSocket_OnPos((const QUdpSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_udpsocket_size(void* self) {
+int64_t q_udpsocket_size(const void* self) {
     return QUdpSocket_Size((QUdpSocket*)self);
 }
 
-int64_t q_udpsocket_super_size(void* self) {
+int64_t q_udpsocket_super_size(const void* self) {
     return QUdpSocket_SuperSize((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_size(void* self, int64_t (*callback)()) {
-    QUdpSocket_OnSize((QUdpSocket*)self, (intptr_t)callback);
+void q_udpsocket_on_size(const void* self, int64_t (*callback)(const void*)) {
+    QUdpSocket_OnSize((const QUdpSocket*)self, (intptr_t)callback);
 }
 
 bool q_udpsocket_seek(void* self, int64_t pos) {
@@ -990,16 +990,16 @@ void q_udpsocket_on_seek(void* self, bool (*callback)(void*, int64_t)) {
     QUdpSocket_OnSeek((QUdpSocket*)self, (intptr_t)callback);
 }
 
-bool q_udpsocket_at_end(void* self) {
+bool q_udpsocket_at_end(const void* self) {
     return QUdpSocket_AtEnd((QUdpSocket*)self);
 }
 
-bool q_udpsocket_super_at_end(void* self) {
+bool q_udpsocket_super_at_end(const void* self) {
     return QUdpSocket_SuperAtEnd((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_at_end(void* self, bool (*callback)()) {
-    QUdpSocket_OnAtEnd((QUdpSocket*)self, (intptr_t)callback);
+void q_udpsocket_on_at_end(const void* self, bool (*callback)(const void*)) {
+    QUdpSocket_OnAtEnd((const QUdpSocket*)self, (intptr_t)callback);
 }
 
 bool q_udpsocket_reset(void* self) {
@@ -1010,20 +1010,20 @@ bool q_udpsocket_super_reset(void* self) {
     return QUdpSocket_SuperReset((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_reset(void* self, bool (*callback)()) {
+void q_udpsocket_on_reset(void* self, bool (*callback)(void*)) {
     QUdpSocket_OnReset((QUdpSocket*)self, (intptr_t)callback);
 }
 
-bool q_udpsocket_can_read_line(void* self) {
+bool q_udpsocket_can_read_line(const void* self) {
     return QUdpSocket_CanReadLine((QUdpSocket*)self);
 }
 
-bool q_udpsocket_super_can_read_line(void* self) {
+bool q_udpsocket_super_can_read_line(const void* self) {
     return QUdpSocket_SuperCanReadLine((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_can_read_line(void* self, bool (*callback)()) {
-    QUdpSocket_OnCanReadLine((QUdpSocket*)self, (intptr_t)callback);
+void q_udpsocket_on_can_read_line(const void* self, bool (*callback)(const void*)) {
+    QUdpSocket_OnCanReadLine((const QUdpSocket*)self, (intptr_t)callback);
 }
 
 bool q_udpsocket_event(void* self, void* event) {
@@ -1086,27 +1086,27 @@ void q_udpsocket_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QUdpSocket_OnCustomEvent((QUdpSocket*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_connect_notify(void* self, void* signal) {
+void q_udpsocket_connect_notify(void* self, const void* signal) {
     QUdpSocket_ConnectNotify((QUdpSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_udpsocket_super_connect_notify(void* self, void* signal) {
+void q_udpsocket_super_connect_notify(void* self, const void* signal) {
     QUdpSocket_SuperConnectNotify((QUdpSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_udpsocket_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_udpsocket_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QUdpSocket_OnConnectNotify((QUdpSocket*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_disconnect_notify(void* self, void* signal) {
+void q_udpsocket_disconnect_notify(void* self, const void* signal) {
     QUdpSocket_DisconnectNotify((QUdpSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_udpsocket_super_disconnect_notify(void* self, void* signal) {
+void q_udpsocket_super_disconnect_notify(void* self, const void* signal) {
     QUdpSocket_SuperDisconnectNotify((QUdpSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_udpsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_udpsocket_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QUdpSocket_OnDisconnectNotify((QUdpSocket*)self, (intptr_t)callback);
 }
 
@@ -1114,156 +1114,52 @@ void q_udpsocket_set_socket_state(void* self, int32_t state) {
     QUdpSocket_SetSocketState((QUdpSocket*)self, state);
 }
 
-void q_udpsocket_super_set_socket_state(void* self, int32_t state) {
-    QUdpSocket_SuperSetSocketState((QUdpSocket*)self, state);
-}
-
-void q_udpsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t)) {
-    QUdpSocket_OnSetSocketState((QUdpSocket*)self, (intptr_t)callback);
-}
-
 void q_udpsocket_set_socket_error(void* self, int32_t socketError) {
     QUdpSocket_SetSocketError((QUdpSocket*)self, socketError);
-}
-
-void q_udpsocket_super_set_socket_error(void* self, int32_t socketError) {
-    QUdpSocket_SuperSetSocketError((QUdpSocket*)self, socketError);
-}
-
-void q_udpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t)) {
-    QUdpSocket_OnSetSocketError((QUdpSocket*)self, (intptr_t)callback);
 }
 
 void q_udpsocket_set_local_port(void* self, uint16_t port) {
     QUdpSocket_SetLocalPort((QUdpSocket*)self, port);
 }
 
-void q_udpsocket_super_set_local_port(void* self, uint16_t port) {
-    QUdpSocket_SuperSetLocalPort((QUdpSocket*)self, port);
-}
-
-void q_udpsocket_on_set_local_port(void* self, void (*callback)(void*, uint16_t)) {
-    QUdpSocket_OnSetLocalPort((QUdpSocket*)self, (intptr_t)callback);
-}
-
-void q_udpsocket_set_local_address(void* self, void* address) {
+void q_udpsocket_set_local_address(void* self, const void* address) {
     QUdpSocket_SetLocalAddress((QUdpSocket*)self, (QHostAddress*)address);
-}
-
-void q_udpsocket_super_set_local_address(void* self, void* address) {
-    QUdpSocket_SuperSetLocalAddress((QUdpSocket*)self, (QHostAddress*)address);
-}
-
-void q_udpsocket_on_set_local_address(void* self, void (*callback)(void*, void*)) {
-    QUdpSocket_OnSetLocalAddress((QUdpSocket*)self, (intptr_t)callback);
 }
 
 void q_udpsocket_set_peer_port(void* self, uint16_t port) {
     QUdpSocket_SetPeerPort((QUdpSocket*)self, port);
 }
 
-void q_udpsocket_super_set_peer_port(void* self, uint16_t port) {
-    QUdpSocket_SuperSetPeerPort((QUdpSocket*)self, port);
-}
-
-void q_udpsocket_on_set_peer_port(void* self, void (*callback)(void*, uint16_t)) {
-    QUdpSocket_OnSetPeerPort((QUdpSocket*)self, (intptr_t)callback);
-}
-
-void q_udpsocket_set_peer_address(void* self, void* address) {
+void q_udpsocket_set_peer_address(void* self, const void* address) {
     QUdpSocket_SetPeerAddress((QUdpSocket*)self, (QHostAddress*)address);
-}
-
-void q_udpsocket_super_set_peer_address(void* self, void* address) {
-    QUdpSocket_SuperSetPeerAddress((QUdpSocket*)self, (QHostAddress*)address);
-}
-
-void q_udpsocket_on_set_peer_address(void* self, void (*callback)(void*, void*)) {
-    QUdpSocket_OnSetPeerAddress((QUdpSocket*)self, (intptr_t)callback);
 }
 
 void q_udpsocket_set_peer_name(void* self, const char* name) {
     QUdpSocket_SetPeerName((QUdpSocket*)self, qstring(name));
 }
 
-void q_udpsocket_super_set_peer_name(void* self, const char* name) {
-    QUdpSocket_SuperSetPeerName((QUdpSocket*)self, qstring(name));
-}
-
-void q_udpsocket_on_set_peer_name(void* self, void (*callback)(void*, const char*)) {
-    QUdpSocket_OnSetPeerName((QUdpSocket*)self, (intptr_t)callback);
-}
-
 void q_udpsocket_set_open_mode(void* self, int32_t openMode) {
     QUdpSocket_SetOpenMode((QUdpSocket*)self, openMode);
-}
-
-void q_udpsocket_super_set_open_mode(void* self, int32_t openMode) {
-    QUdpSocket_SuperSetOpenMode((QUdpSocket*)self, openMode);
-}
-
-void q_udpsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
-    QUdpSocket_OnSetOpenMode((QUdpSocket*)self, (intptr_t)callback);
 }
 
 void q_udpsocket_set_error_string(void* self, const char* errorString) {
     QUdpSocket_SetErrorString((QUdpSocket*)self, qstring(errorString));
 }
 
-void q_udpsocket_super_set_error_string(void* self, const char* errorString) {
-    QUdpSocket_SuperSetErrorString((QUdpSocket*)self, qstring(errorString));
-}
-
-void q_udpsocket_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
-    QUdpSocket_OnSetErrorString((QUdpSocket*)self, (intptr_t)callback);
-}
-
-QObject* q_udpsocket_sender(void* self) {
+QObject* q_udpsocket_sender(const void* self) {
     return QUdpSocket_Sender((QUdpSocket*)self);
 }
 
-QObject* q_udpsocket_super_sender(void* self) {
-    return QUdpSocket_SuperSender((QUdpSocket*)self);
-}
-
-void q_udpsocket_on_sender(void* self, QObject* (*callback)()) {
-    QUdpSocket_OnSender((QUdpSocket*)self, (intptr_t)callback);
-}
-
-int32_t q_udpsocket_sender_signal_index(void* self) {
+int32_t q_udpsocket_sender_signal_index(const void* self) {
     return QUdpSocket_SenderSignalIndex((QUdpSocket*)self);
 }
 
-int32_t q_udpsocket_super_sender_signal_index(void* self) {
-    return QUdpSocket_SuperSenderSignalIndex((QUdpSocket*)self);
-}
-
-void q_udpsocket_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QUdpSocket_OnSenderSignalIndex((QUdpSocket*)self, (intptr_t)callback);
-}
-
-int32_t q_udpsocket_receivers(void* self, const char* signal) {
+int32_t q_udpsocket_receivers(const void* self, const char* signal) {
     return QUdpSocket_Receivers((QUdpSocket*)self, signal);
 }
 
-int32_t q_udpsocket_super_receivers(void* self, const char* signal) {
-    return QUdpSocket_SuperReceivers((QUdpSocket*)self, signal);
-}
-
-void q_udpsocket_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QUdpSocket_OnReceivers((QUdpSocket*)self, (intptr_t)callback);
-}
-
-bool q_udpsocket_is_signal_connected(void* self, void* signal) {
+bool q_udpsocket_is_signal_connected(const void* self, const void* signal) {
     return QUdpSocket_IsSignalConnected((QUdpSocket*)self, (QMetaMethod*)signal);
-}
-
-bool q_udpsocket_super_is_signal_connected(void* self, void* signal) {
-    return QUdpSocket_SuperIsSignalConnected((QUdpSocket*)self, (QMetaMethod*)signal);
-}
-
-void q_udpsocket_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QUdpSocket_OnIsSignalConnected((QUdpSocket*)self, (intptr_t)callback);
 }
 
 void q_udpsocket_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -20,27 +20,27 @@ Attica__DownloadItem* k_attica__downloaditem_new();
 ///
 /// @param other Attica__DownloadItem*
 ///
-Attica__DownloadItem* k_attica__downloaditem_new2(void* other);
+Attica__DownloadItem* k_attica__downloaditem_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#operator-eq)
 ///
 /// @param self Attica__DownloadItem*
 /// @param other Attica__DownloadItem*
 ///
-void k_attica__downloaditem_operator_assign(void* self, void* other);
+void k_attica__downloaditem_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#setUrl)
 ///
 /// @param self Attica__DownloadItem*
 /// @param url QUrl*
 ///
-void k_attica__downloaditem_set_url(void* self, void* url);
+void k_attica__downloaditem_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#url)
 ///
-/// @param self Attica__DownloadItem*
+/// @param self const Attica__DownloadItem*
 ///
-QUrl* k_attica__downloaditem_url(void* self);
+QUrl* k_attica__downloaditem_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#setMimeType)
 ///
@@ -53,9 +53,9 @@ void k_attica__downloaditem_set_mime_type(void* self, const char* mimeType);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__DownloadItem*
+/// @param self const Attica__DownloadItem*
 ///
-const char* k_attica__downloaditem_mime_type(void* self);
+const char* k_attica__downloaditem_mime_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#setPackageName)
 ///
@@ -68,9 +68,9 @@ void k_attica__downloaditem_set_package_name(void* self, const char* packageName
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__DownloadItem*
+/// @param self const Attica__DownloadItem*
 ///
-const char* k_attica__downloaditem_package_name(void* self);
+const char* k_attica__downloaditem_package_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#setPackageRepository)
 ///
@@ -83,9 +83,9 @@ void k_attica__downloaditem_set_package_repository(void* self, const char* packa
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__DownloadItem*
+/// @param self const Attica__DownloadItem*
 ///
-const char* k_attica__downloaditem_package_repository(void* self);
+const char* k_attica__downloaditem_package_repository(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#setGpgFingerprint)
 ///
@@ -98,9 +98,9 @@ void k_attica__downloaditem_set_gpg_fingerprint(void* self, const char* gpgFinge
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__DownloadItem*
+/// @param self const Attica__DownloadItem*
 ///
-const char* k_attica__downloaditem_gpg_fingerprint(void* self);
+const char* k_attica__downloaditem_gpg_fingerprint(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#setGpgSignature)
 ///
@@ -113,9 +113,9 @@ void k_attica__downloaditem_set_gpg_signature(void* self, const char* gpgSignatu
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__DownloadItem*
+/// @param self const Attica__DownloadItem*
 ///
-const char* k_attica__downloaditem_gpg_signature(void* self);
+const char* k_attica__downloaditem_gpg_signature(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-downloaditem.html#setType)
 ///

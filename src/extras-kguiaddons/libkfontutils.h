@@ -31,7 +31,7 @@ double k_fontutils_adapt_font_size(void* painter, const char* text, double width
 /// @param minFontSize double
 /// @param flags flag of enum KFontUtils__AdaptFontSizeOption
 ///
-double k_fontutils_adapt_font_size2(void* painter, const char* text, void* availableSize, double maxFontSize, double minFontSize, int32_t flags);
+double k_fontutils_adapt_font_size2(void* painter, const char* text, const void* availableSize, double maxFontSize, double minFontSize, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kfontutils.html#public-types)
 

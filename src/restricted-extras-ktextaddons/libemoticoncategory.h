@@ -20,15 +20,15 @@ TextEmoticonsCore__EmoticonCategory* k_textemoticonscore__emoticoncategory_new()
 ///
 /// @param param1 TextEmoticonsCore__EmoticonCategory*
 ///
-TextEmoticonsCore__EmoticonCategory* k_textemoticonscore__emoticoncategory_new2(void* param1);
+TextEmoticonsCore__EmoticonCategory* k_textemoticonscore__emoticoncategory_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__EmoticonCategory*
+/// @param self const TextEmoticonsCore__EmoticonCategory*
 ///
-const char* k_textemoticonscore__emoticoncategory_name(void* self);
+const char* k_textemoticonscore__emoticoncategory_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///
@@ -41,9 +41,9 @@ void k_textemoticonscore__emoticoncategory_set_name(void* self, const char* name
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__EmoticonCategory*
+/// @param self const TextEmoticonsCore__EmoticonCategory*
 ///
-const char* k_textemoticonscore__emoticoncategory_category(void* self);
+const char* k_textemoticonscore__emoticoncategory_category(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///
@@ -56,9 +56,9 @@ void k_textemoticonscore__emoticoncategory_set_category(void* self, const char* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__EmoticonCategory*
+/// @param self const TextEmoticonsCore__EmoticonCategory*
 ///
-const char* k_textemoticonscore__emoticoncategory_i18n_name(void* self);
+const char* k_textemoticonscore__emoticoncategory_i18n_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///
@@ -69,16 +69,16 @@ void k_textemoticonscore__emoticoncategory_set_i18n_name(void* self, const char*
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///
-/// @param self TextEmoticonsCore__EmoticonCategory*
+/// @param self const TextEmoticonsCore__EmoticonCategory*
 /// @param other TextEmoticonsCore__EmoticonCategory*
 ///
-bool k_textemoticonscore__emoticoncategory_operator_lesser(void* self, void* other);
+bool k_textemoticonscore__emoticoncategory_operator_lesser(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///
-/// @param self TextEmoticonsCore__EmoticonCategory*
+/// @param self const TextEmoticonsCore__EmoticonCategory*
 ///
-int32_t k_textemoticonscore__emoticoncategory_order(void* self);
+int32_t k_textemoticonscore__emoticoncategory_order(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///
@@ -92,7 +92,7 @@ void k_textemoticonscore__emoticoncategory_set_order(void* self, int newOrder);
 /// @param self TextEmoticonsCore__EmoticonCategory*
 /// @param param1 TextEmoticonsCore__EmoticonCategory*
 ///
-void k_textemoticonscore__emoticoncategory_operator_assign(void* self, void* param1);
+void k_textemoticonscore__emoticoncategory_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmoticonCategory.html)
 ///

@@ -75,14 +75,14 @@ QQmlProperty* q_qmlproperty_new7(void* param1, const char* param2, void* param3)
 ///
 /// @param param1 QQmlProperty*
 ///
-QQmlProperty* q_qmlproperty_new8(void* param1);
+QQmlProperty* q_qmlproperty_new8(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#operator-eq)
 ///
 /// @param self QQmlProperty*
 /// @param param1 QQmlProperty*
 ///
-void q_qmlproperty_operator_assign(void* self, void* param1);
+void q_qmlproperty_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#swap)
 ///
@@ -93,85 +93,85 @@ void q_qmlproperty_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#operator-eq-eq)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 /// @param param1 QQmlProperty*
 ///
-bool q_qmlproperty_operator_equal(void* self, void* param1);
+bool q_qmlproperty_operator_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#type)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
 /// @return enum QQmlProperty__Type
 ///
-int32_t q_qmlproperty_type(void* self);
+int32_t q_qmlproperty_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#isValid)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_is_valid(void* self);
+bool q_qmlproperty_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#isProperty)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_is_property(void* self);
+bool q_qmlproperty_is_property(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#isSignalProperty)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_is_signal_property(void* self);
+bool q_qmlproperty_is_signal_property(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#propertyType)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-int32_t q_qmlproperty_property_type(void* self);
+int32_t q_qmlproperty_property_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#propertyMetaType)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-QMetaType* q_qmlproperty_property_meta_type(void* self);
+QMetaType* q_qmlproperty_property_meta_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#propertyTypeCategory)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
 /// @return enum QQmlProperty__PropertyTypeCategory
 ///
-int32_t q_qmlproperty_property_type_category(void* self);
+int32_t q_qmlproperty_property_type_category(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#propertyTypeName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-const char* q_qmlproperty_property_type_name(void* self);
+const char* q_qmlproperty_property_type_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-const char* q_qmlproperty_name(void* self);
+const char* q_qmlproperty_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#read)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-QVariant* q_qmlproperty_read(void* self);
+QVariant* q_qmlproperty_read(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#read)
 ///
 /// @param param1 QObject*
 /// @param param2 const char*
 ///
-QVariant* q_qmlproperty_read2(void* param1, const char* param2);
+QVariant* q_qmlproperty_read2(const void* param1, const char* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#read)
 ///
@@ -179,7 +179,7 @@ QVariant* q_qmlproperty_read2(void* param1, const char* param2);
 /// @param param2 const char*
 /// @param param3 QQmlContext*
 ///
-QVariant* q_qmlproperty_read3(void* param1, const char* param2, void* param3);
+QVariant* q_qmlproperty_read3(const void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#read)
 ///
@@ -187,14 +187,14 @@ QVariant* q_qmlproperty_read3(void* param1, const char* param2, void* param3);
 /// @param param2 const char*
 /// @param param3 QQmlEngine*
 ///
-QVariant* q_qmlproperty_read4(void* param1, const char* param2, void* param3);
+QVariant* q_qmlproperty_read4(const void* param1, const char* param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#write)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 /// @param param1 QVariant*
 ///
-bool q_qmlproperty_write(void* self, void* param1);
+bool q_qmlproperty_write(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#write)
 ///
@@ -202,7 +202,7 @@ bool q_qmlproperty_write(void* self, void* param1);
 /// @param param2 const char*
 /// @param param3 QVariant*
 ///
-bool q_qmlproperty_write2(void* param1, const char* param2, void* param3);
+bool q_qmlproperty_write2(void* param1, const char* param2, const void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#write)
 ///
@@ -211,7 +211,7 @@ bool q_qmlproperty_write2(void* param1, const char* param2, void* param3);
 /// @param param3 QVariant*
 /// @param param4 QQmlContext*
 ///
-bool q_qmlproperty_write3(void* param1, const char* param2, void* param3, void* param4);
+bool q_qmlproperty_write3(void* param1, const char* param2, const void* param3, void* param4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#write)
 ///
@@ -220,89 +220,89 @@ bool q_qmlproperty_write3(void* param1, const char* param2, void* param3, void* 
 /// @param param3 QVariant*
 /// @param param4 QQmlEngine*
 ///
-bool q_qmlproperty_write4(void* param1, const char* param2, void* param3, void* param4);
+bool q_qmlproperty_write4(void* param1, const char* param2, const void* param3, void* param4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#reset)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_reset(void* self);
+bool q_qmlproperty_reset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#hasNotifySignal)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_has_notify_signal(void* self);
+bool q_qmlproperty_has_notify_signal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#needsNotifySignal)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_needs_notify_signal(void* self);
+bool q_qmlproperty_needs_notify_signal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#connectNotifySignal)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 /// @param dest QObject*
 /// @param slot const char*
 ///
-bool q_qmlproperty_connect_notify_signal(void* self, void* dest, const char* slot);
+bool q_qmlproperty_connect_notify_signal(const void* self, void* dest, const char* slot);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#connectNotifySignal)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 /// @param dest QObject*
 /// @param method int
 ///
-bool q_qmlproperty_connect_notify_signal2(void* self, void* dest, int method);
+bool q_qmlproperty_connect_notify_signal2(const void* self, void* dest, int method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#isWritable)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_is_writable(void* self);
+bool q_qmlproperty_is_writable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#isBindable)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_is_bindable(void* self);
+bool q_qmlproperty_is_bindable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#isDesignable)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_is_designable(void* self);
+bool q_qmlproperty_is_designable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#isResettable)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-bool q_qmlproperty_is_resettable(void* self);
+bool q_qmlproperty_is_resettable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#object)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-QObject* q_qmlproperty_object(void* self);
+QObject* q_qmlproperty_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#index)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-int32_t q_qmlproperty_index(void* self);
+int32_t q_qmlproperty_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#property)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-QMetaProperty* q_qmlproperty_property(void* self);
+QMetaProperty* q_qmlproperty_property(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#method)
 ///
-/// @param self QQmlProperty*
+/// @param self const QQmlProperty*
 ///
-QMetaMethod* q_qmlproperty_method(void* self);
+QMetaMethod* q_qmlproperty_method(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#dtor.QQmlProperty)
 ///
@@ -319,7 +319,7 @@ void q_qmlproperty_delete(void* self);
 /// @param key QQmlProperty*
 /// @param seed size_t
 ///
-size_t q_qqmlproperty_h_q_hash(void* key, size_t seed);
+size_t q_qqmlproperty_h_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlproperty.html#public-types)
 

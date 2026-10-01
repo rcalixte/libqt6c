@@ -92,7 +92,7 @@ const char** k_stringhandler_perl_split2(const char* sep, const char* s, int max
     return _ret;
 }
 
-const char** k_stringhandler_perl_split3(void* sep, const char* s, int max) {
+const char** k_stringhandler_perl_split3(const void* sep, const char* s, int max) {
     libqt_list _arr = KStringHandler_PerlSplit3((QChar*)sep, qstring(s), max);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -109,7 +109,7 @@ const char** k_stringhandler_perl_split3(void* sep, const char* s, int max) {
     return _ret;
 }
 
-const char** k_stringhandler_perl_split4(void* sep, const char* s, int max) {
+const char** k_stringhandler_perl_split4(const void* sep, const char* s, int max) {
     libqt_list _arr = KStringHandler_PerlSplit4((QRegularExpression*)sep, qstring(s), max);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

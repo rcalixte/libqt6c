@@ -20,15 +20,15 @@ KDescendantsProxyModel* k_descendantsproxymodel_new2(void* parent) {
     return KDescendantsProxyModel_New2((QObject*)parent);
 }
 
-const QMetaObject* k_descendantsproxymodel_meta_object(void* self) {
+const QMetaObject* k_descendantsproxymodel_meta_object(const void* self) {
     return KDescendantsProxyModel_MetaObject((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_descendantsproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KDescendantsProxyModel_OnMetaObject((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_descendantsproxymodel_super_meta_object(void* self) {
+const QMetaObject* k_descendantsproxymodel_super_meta_object(const void* self) {
     return KDescendantsProxyModel_SuperMetaObject((KDescendantsProxyModel*)self);
 }
 
@@ -79,7 +79,7 @@ void k_descendantsproxymodel_set_display_ancestor_data(void* self, bool display)
     KDescendantsProxyModel_SetDisplayAncestorData((KDescendantsProxyModel*)self, display);
 }
 
-bool k_descendantsproxymodel_display_ancestor_data(void* self) {
+bool k_descendantsproxymodel_display_ancestor_data(const void* self) {
     return KDescendantsProxyModel_DisplayAncestorData((KDescendantsProxyModel*)self);
 }
 
@@ -87,98 +87,98 @@ void k_descendantsproxymodel_set_ancestor_separator(void* self, const char* sepa
     KDescendantsProxyModel_SetAncestorSeparator((KDescendantsProxyModel*)self, qstring(separator));
 }
 
-const char* k_descendantsproxymodel_ancestor_separator(void* self) {
+const char* k_descendantsproxymodel_ancestor_separator(const void* self) {
     libqt_string _str = KDescendantsProxyModel_AncestorSeparator((KDescendantsProxyModel*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QModelIndex* k_descendantsproxymodel_map_from_source(void* self, void* sourceIndex) {
+QModelIndex* k_descendantsproxymodel_map_from_source(const void* self, const void* sourceIndex) {
     return KDescendantsProxyModel_MapFromSource((KDescendantsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_descendantsproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KDescendantsProxyModel_OnMapFromSource((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_descendantsproxymodel_super_map_from_source(void* self, void* sourceIndex) {
+QModelIndex* k_descendantsproxymodel_super_map_from_source(const void* self, const void* sourceIndex) {
     return KDescendantsProxyModel_SuperMapFromSource((KDescendantsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-QModelIndex* k_descendantsproxymodel_map_to_source(void* self, void* proxyIndex) {
+QModelIndex* k_descendantsproxymodel_map_to_source(const void* self, const void* proxyIndex) {
     return KDescendantsProxyModel_MapToSource((KDescendantsProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-void k_descendantsproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KDescendantsProxyModel_OnMapToSource((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_descendantsproxymodel_super_map_to_source(void* self, void* proxyIndex) {
+QModelIndex* k_descendantsproxymodel_super_map_to_source(const void* self, const void* proxyIndex) {
     return KDescendantsProxyModel_SuperMapToSource((KDescendantsProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
-int32_t k_descendantsproxymodel_flags(void* self, void* index) {
+int32_t k_descendantsproxymodel_flags(const void* self, const void* index) {
     return KDescendantsProxyModel_Flags((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_descendantsproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
     KDescendantsProxyModel_OnFlags((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_descendantsproxymodel_super_flags(void* self, void* index) {
+int32_t k_descendantsproxymodel_super_flags(const void* self, const void* index) {
     return KDescendantsProxyModel_SuperFlags((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-QVariant* k_descendantsproxymodel_data(void* self, void* index, int role) {
+QVariant* k_descendantsproxymodel_data(const void* self, const void* index, int role) {
     return KDescendantsProxyModel_Data((KDescendantsProxyModel*)self, (QModelIndex*)index, role);
 }
 
-void k_descendantsproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)) {
+void k_descendantsproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
     KDescendantsProxyModel_OnData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_descendantsproxymodel_super_data(void* self, void* index, int role) {
+QVariant* k_descendantsproxymodel_super_data(const void* self, const void* index, int role) {
     return KDescendantsProxyModel_SuperData((KDescendantsProxyModel*)self, (QModelIndex*)index, role);
 }
 
-int32_t k_descendantsproxymodel_row_count(void* self, void* parent) {
+int32_t k_descendantsproxymodel_row_count(const void* self, const void* parent) {
     return KDescendantsProxyModel_RowCount((KDescendantsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
     KDescendantsProxyModel_OnRowCount((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_descendantsproxymodel_super_row_count(void* self, void* parent) {
+int32_t k_descendantsproxymodel_super_row_count(const void* self, const void* parent) {
     return KDescendantsProxyModel_SuperRowCount((KDescendantsProxyModel*)self, (QModelIndex*)parent);
 }
 
-QVariant* k_descendantsproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* k_descendantsproxymodel_header_data(const void* self, int section, int32_t orientation, int role) {
     return KDescendantsProxyModel_HeaderData((KDescendantsProxyModel*)self, section, orientation, role);
 }
 
-void k_descendantsproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
+void k_descendantsproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
     KDescendantsProxyModel_OnHeaderData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_descendantsproxymodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* k_descendantsproxymodel_super_header_data(const void* self, int section, int32_t orientation, int role) {
     return KDescendantsProxyModel_SuperHeaderData((KDescendantsProxyModel*)self, section, orientation, role);
 }
 
-QMimeData* k_descendantsproxymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* k_descendantsproxymodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return KDescendantsProxyModel_MimeData((KDescendantsProxyModel*)self, indexes);
 }
 
-void k_descendantsproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
+void k_descendantsproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
     KDescendantsProxyModel_OnMimeData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QMimeData* k_descendantsproxymodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* k_descendantsproxymodel_super_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return KDescendantsProxyModel_SuperMimeData((KDescendantsProxyModel*)self, indexes);
 }
 
-const char** k_descendantsproxymodel_mime_types(void* self) {
+const char** k_descendantsproxymodel_mime_types(const void* self) {
     libqt_list _arr = KDescendantsProxyModel_MimeTypes((KDescendantsProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -195,11 +195,11 @@ const char** k_descendantsproxymodel_mime_types(void* self) {
     return _ret;
 }
 
-void k_descendantsproxymodel_on_mime_types(void* self, const char** (*callback)()) {
+void k_descendantsproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
     KDescendantsProxyModel_OnMimeTypes((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-const char** k_descendantsproxymodel_super_mime_types(void* self) {
+const char** k_descendantsproxymodel_super_mime_types(const void* self) {
     libqt_list _arr = KDescendantsProxyModel_SuperMimeTypes((KDescendantsProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -216,55 +216,55 @@ const char** k_descendantsproxymodel_super_mime_types(void* self) {
     return _ret;
 }
 
-bool k_descendantsproxymodel_has_children(void* self, void* parent) {
+bool k_descendantsproxymodel_has_children(const void* self, const void* parent) {
     return KDescendantsProxyModel_HasChildren((KDescendantsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
     KDescendantsProxyModel_OnHasChildren((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_super_has_children(void* self, void* parent) {
+bool k_descendantsproxymodel_super_has_children(const void* self, const void* parent) {
     return KDescendantsProxyModel_SuperHasChildren((KDescendantsProxyModel*)self, (QModelIndex*)parent);
 }
 
-QModelIndex* k_descendantsproxymodel_index(void* self, int param1, int param2, void* parent) {
+QModelIndex* k_descendantsproxymodel_index(const void* self, int param1, int param2, const void* parent) {
     return KDescendantsProxyModel_Index((KDescendantsProxyModel*)self, param1, param2, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
+void k_descendantsproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
     KDescendantsProxyModel_OnIndex((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_descendantsproxymodel_super_index(void* self, int param1, int param2, void* parent) {
+QModelIndex* k_descendantsproxymodel_super_index(const void* self, int param1, int param2, const void* parent) {
     return KDescendantsProxyModel_SuperIndex((KDescendantsProxyModel*)self, param1, param2, (QModelIndex*)parent);
 }
 
-QModelIndex* k_descendantsproxymodel_parent(void* self, void* param1) {
+QModelIndex* k_descendantsproxymodel_parent(const void* self, const void* param1) {
     return KDescendantsProxyModel_Parent((KDescendantsProxyModel*)self, (QModelIndex*)param1);
 }
 
-void k_descendantsproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
     KDescendantsProxyModel_OnParent((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_descendantsproxymodel_super_parent(void* self, void* param1) {
+QModelIndex* k_descendantsproxymodel_super_parent(const void* self, const void* param1) {
     return KDescendantsProxyModel_SuperParent((KDescendantsProxyModel*)self, (QModelIndex*)param1);
 }
 
-int32_t k_descendantsproxymodel_column_count(void* self, void* index) {
+int32_t k_descendantsproxymodel_column_count(const void* self, const void* index) {
     return KDescendantsProxyModel_ColumnCount((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_descendantsproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
     KDescendantsProxyModel_OnColumnCount((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_descendantsproxymodel_super_column_count(void* self, void* index) {
+int32_t k_descendantsproxymodel_super_column_count(const void* self, const void* index) {
     return KDescendantsProxyModel_SuperColumnCount((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-libqt_map /* of int to char* */ k_descendantsproxymodel_role_names(void* self) {
+libqt_map /* of int to char* */ k_descendantsproxymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KDescendantsProxyModel_RoleNames((KDescendantsProxyModel*)self);
     libqt_map _ret;
@@ -297,11 +297,11 @@ libqt_map /* of int to char* */ k_descendantsproxymodel_role_names(void* self) {
     return _ret;
 }
 
-void k_descendantsproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {
+void k_descendantsproxymodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
     KDescendantsProxyModel_OnRoleNames((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_descendantsproxymodel_super_role_names(void* self) {
+libqt_map /* of int to char* */ k_descendantsproxymodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = KDescendantsProxyModel_SuperRoleNames((KDescendantsProxyModel*)self);
     libqt_map _ret;
@@ -338,48 +338,48 @@ void k_descendantsproxymodel_set_expands_by_default(void* self, bool expand) {
     KDescendantsProxyModel_SetExpandsByDefault((KDescendantsProxyModel*)self, expand);
 }
 
-bool k_descendantsproxymodel_expands_by_default(void* self) {
+bool k_descendantsproxymodel_expands_by_default(const void* self) {
     return KDescendantsProxyModel_ExpandsByDefault((KDescendantsProxyModel*)self);
 }
 
-bool k_descendantsproxymodel_is_source_index_expanded(void* self, void* sourceIndex) {
+bool k_descendantsproxymodel_is_source_index_expanded(const void* self, const void* sourceIndex) {
     return KDescendantsProxyModel_IsSourceIndexExpanded((KDescendantsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-bool k_descendantsproxymodel_is_source_index_visible(void* self, void* sourceIndex) {
+bool k_descendantsproxymodel_is_source_index_visible(const void* self, const void* sourceIndex) {
     return KDescendantsProxyModel_IsSourceIndexVisible((KDescendantsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_descendantsproxymodel_expand_source_index(void* self, void* sourceIndex) {
+void k_descendantsproxymodel_expand_source_index(void* self, const void* sourceIndex) {
     KDescendantsProxyModel_ExpandSourceIndex((KDescendantsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_descendantsproxymodel_collapse_source_index(void* self, void* sourceIndex) {
+void k_descendantsproxymodel_collapse_source_index(void* self, const void* sourceIndex) {
     KDescendantsProxyModel_CollapseSourceIndex((KDescendantsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-int32_t k_descendantsproxymodel_supported_drop_actions(void* self) {
+int32_t k_descendantsproxymodel_supported_drop_actions(const void* self) {
     return KDescendantsProxyModel_SupportedDropActions((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
+void k_descendantsproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
     KDescendantsProxyModel_OnSupportedDropActions((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_descendantsproxymodel_super_supported_drop_actions(void* self) {
+int32_t k_descendantsproxymodel_super_supported_drop_actions(const void* self) {
     return KDescendantsProxyModel_SuperSupportedDropActions((KDescendantsProxyModel*)self);
 }
 
-libqt_list /* of QModelIndex* */ k_descendantsproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ k_descendantsproxymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = KDescendantsProxyModel_Match((KDescendantsProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void k_descendantsproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
+void k_descendantsproxymodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
     KDescendantsProxyModel_OnMatch((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ k_descendantsproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ k_descendantsproxymodel_super_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = KDescendantsProxyModel_SuperMatch((KDescendantsProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
@@ -416,19 +416,19 @@ void k_descendantsproxymodel_on_expands_by_default_changed(void* self, void (*ca
     KDescendantsProxyModel_Connect_ExpandsByDefaultChanged((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_source_index_expanded(void* self, void* sourceIndex) {
+void k_descendantsproxymodel_source_index_expanded(void* self, const void* sourceIndex) {
     KDescendantsProxyModel_SourceIndexExpanded((KDescendantsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_descendantsproxymodel_on_source_index_expanded(void* self, void (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_source_index_expanded(void* self, void (*callback)(void*, const void*)) {
     KDescendantsProxyModel_Connect_SourceIndexExpanded((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_source_index_collapsed(void* self, void* sourceIndex) {
+void k_descendantsproxymodel_source_index_collapsed(void* self, const void* sourceIndex) {
     KDescendantsProxyModel_SourceIndexCollapsed((KDescendantsProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
-void k_descendantsproxymodel_on_source_index_collapsed(void* self, void (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_source_index_collapsed(void* self, void (*callback)(void*, const void*)) {
     KDescendantsProxyModel_Connect_SourceIndexCollapsed((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -446,11 +446,11 @@ const char* k_descendantsproxymodel_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QAbstractItemModel* k_descendantsproxymodel_source_model(void* self) {
+QAbstractItemModel* k_descendantsproxymodel_source_model(const void* self) {
     return QAbstractProxyModel_SourceModel((QAbstractProxyModel*)self);
 }
 
-bool k_descendantsproxymodel_has_index(void* self, int row, int column) {
+bool k_descendantsproxymodel_has_index(const void* self, int row, int column) {
     return QAbstractItemModel_HasIndex((QAbstractItemModel*)self, row, column);
 }
 
@@ -470,23 +470,23 @@ bool k_descendantsproxymodel_remove_column(void* self, int column) {
     return QAbstractItemModel_RemoveColumn((QAbstractItemModel*)self, column);
 }
 
-bool k_descendantsproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild) {
+bool k_descendantsproxymodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveRow((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceRow, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_descendantsproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild) {
+bool k_descendantsproxymodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveColumn((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceColumn, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_descendantsproxymodel_check_index(void* self, void* index) {
+bool k_descendantsproxymodel_check_index(const void* self, const void* index) {
     return QAbstractItemModel_CheckIndex((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void k_descendantsproxymodel_data_changed(void* self, void* topLeft, void* bottomRight) {
+void k_descendantsproxymodel_data_changed(void* self, const void* topLeft, const void* bottomRight) {
     QAbstractItemModel_DataChanged((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
-void k_descendantsproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*)) {
+void k_descendantsproxymodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -514,35 +514,35 @@ void k_descendantsproxymodel_on_layout_about_to_be_changed(void* self, void (*ca
     QAbstractItemModel_Connect_LayoutAboutToBeChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_has_index3(void* self, int row, int column, void* parent) {
+bool k_descendantsproxymodel_has_index3(const void* self, int row, int column, const void* parent) {
     return QAbstractItemModel_HasIndex3((QAbstractItemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_insert_row2(void* self, int row, void* parent) {
+bool k_descendantsproxymodel_insert_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_InsertRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_insert_column2(void* self, int column, void* parent) {
+bool k_descendantsproxymodel_insert_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_InsertColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_remove_row2(void* self, int row, void* parent) {
+bool k_descendantsproxymodel_remove_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_RemoveRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_remove_column2(void* self, int column, void* parent) {
+bool k_descendantsproxymodel_remove_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_check_index2(void* self, void* index, int32_t options) {
+bool k_descendantsproxymodel_check_index2(const void* self, const void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void k_descendantsproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+void k_descendantsproxymodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void k_descendantsproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
+void k_descendantsproxymodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -578,7 +578,7 @@ void k_descendantsproxymodel_on_layout_about_to_be_changed2(void* self, void (*c
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-const char* k_descendantsproxymodel_object_name(void* self) {
+const char* k_descendantsproxymodel_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -589,19 +589,19 @@ void k_descendantsproxymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_descendantsproxymodel_is_widget_type(void* self) {
+bool k_descendantsproxymodel_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_descendantsproxymodel_is_window_type(void* self) {
+bool k_descendantsproxymodel_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_descendantsproxymodel_is_quick_item_type(void* self) {
+bool k_descendantsproxymodel_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_descendantsproxymodel_signals_blocked(void* self) {
+bool k_descendantsproxymodel_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -609,7 +609,7 @@ bool k_descendantsproxymodel_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_descendantsproxymodel_thread(void* self) {
+QThread* k_descendantsproxymodel_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -633,7 +633,7 @@ void k_descendantsproxymodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_descendantsproxymodel_children(void* self) {
+libqt_list /* of QObject* */ k_descendantsproxymodel_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -650,55 +650,55 @@ void k_descendantsproxymodel_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_descendantsproxymodel_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_descendantsproxymodel_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_descendantsproxymodel_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_descendantsproxymodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_descendantsproxymodel_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_descendantsproxymodel_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_descendantsproxymodel_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_descendantsproxymodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_descendantsproxymodel_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_descendantsproxymodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_descendantsproxymodel_disconnect3(void* self) {
+bool k_descendantsproxymodel_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_descendantsproxymodel_disconnect4(void* self, void* receiver) {
+bool k_descendantsproxymodel_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_descendantsproxymodel_disconnect5(void* param1) {
+bool k_descendantsproxymodel_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_descendantsproxymodel_dump_object_tree(void* self) {
+void k_descendantsproxymodel_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_descendantsproxymodel_dump_object_info(void* self) {
+void k_descendantsproxymodel_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_descendantsproxymodel_set_property(void* self, const char* name, void* value) {
+bool k_descendantsproxymodel_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_descendantsproxymodel_property(void* self, const char* name) {
+QVariant* k_descendantsproxymodel_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_descendantsproxymodel_dynamic_property_names(void* self) {
+const char** k_descendantsproxymodel_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -719,7 +719,7 @@ QBindingStorage* k_descendantsproxymodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_descendantsproxymodel_binding_storage2(void* self) {
+const QBindingStorage* k_descendantsproxymodel_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -731,7 +731,7 @@ void k_descendantsproxymodel_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_inherits(void* self, const char* classname) {
+bool k_descendantsproxymodel_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -747,31 +747,31 @@ int32_t k_descendantsproxymodel_start_timer23(void* self, int64_t time, int32_t 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_descendantsproxymodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_descendantsproxymodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_descendantsproxymodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_descendantsproxymodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_descendantsproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_descendantsproxymodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_descendantsproxymodel_disconnect1(void* self, const char* signal) {
+bool k_descendantsproxymodel_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_descendantsproxymodel_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_descendantsproxymodel_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_descendantsproxymodel_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_descendantsproxymodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_descendantsproxymodel_disconnect23(void* self, void* receiver, const char* member) {
+bool k_descendantsproxymodel_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -783,28 +783,28 @@ void k_descendantsproxymodel_on_destroyed1(void* self, void (*callback)(void*, v
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-QItemSelection* k_descendantsproxymodel_map_selection_to_source(void* self, void* selection) {
+QItemSelection* k_descendantsproxymodel_map_selection_to_source(const void* self, const void* selection) {
     return KDescendantsProxyModel_MapSelectionToSource((KDescendantsProxyModel*)self, (QItemSelection*)selection);
 }
 
-QItemSelection* k_descendantsproxymodel_super_map_selection_to_source(void* self, void* selection) {
+QItemSelection* k_descendantsproxymodel_super_map_selection_to_source(const void* self, const void* selection) {
     return KDescendantsProxyModel_SuperMapSelectionToSource((KDescendantsProxyModel*)self, (QItemSelection*)selection);
 }
 
-void k_descendantsproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*)) {
-    KDescendantsProxyModel_OnMapSelectionToSource((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    KDescendantsProxyModel_OnMapSelectionToSource((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QItemSelection* k_descendantsproxymodel_map_selection_from_source(void* self, void* selection) {
+QItemSelection* k_descendantsproxymodel_map_selection_from_source(const void* self, const void* selection) {
     return KDescendantsProxyModel_MapSelectionFromSource((KDescendantsProxyModel*)self, (QItemSelection*)selection);
 }
 
-QItemSelection* k_descendantsproxymodel_super_map_selection_from_source(void* self, void* selection) {
+QItemSelection* k_descendantsproxymodel_super_map_selection_from_source(const void* self, const void* selection) {
     return KDescendantsProxyModel_SuperMapSelectionFromSource((KDescendantsProxyModel*)self, (QItemSelection*)selection);
 }
 
-void k_descendantsproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*)) {
-    KDescendantsProxyModel_OnMapSelectionFromSource((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*)) {
+    KDescendantsProxyModel_OnMapSelectionFromSource((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 bool k_descendantsproxymodel_submit(void* self) {
@@ -815,7 +815,7 @@ bool k_descendantsproxymodel_super_submit(void* self) {
     return KDescendantsProxyModel_SuperSubmit((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_on_submit(void* self, bool (*callback)()) {
+void k_descendantsproxymodel_on_submit(void* self, bool (*callback)(void*)) {
     KDescendantsProxyModel_OnSubmit((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -827,11 +827,11 @@ void k_descendantsproxymodel_super_revert(void* self) {
     KDescendantsProxyModel_SuperRevert((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_on_revert(void* self, void (*callback)()) {
+void k_descendantsproxymodel_on_revert(void* self, void (*callback)(void*)) {
     KDescendantsProxyModel_OnRevert((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to QVariant* */ k_descendantsproxymodel_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_descendantsproxymodel_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = KDescendantsProxyModel_ItemData((KDescendantsProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -841,7 +841,7 @@ libqt_map /* of int to QVariant* */ k_descendantsproxymodel_item_data(void* self
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_descendantsproxymodel_super_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_descendantsproxymodel_super_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = KDescendantsProxyModel_SuperItemData((KDescendantsProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -851,23 +851,23 @@ libqt_map /* of int to QVariant* */ k_descendantsproxymodel_super_item_data(void
     return _ret;
 }
 
-void k_descendantsproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
-    KDescendantsProxyModel_OnItemData((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    KDescendantsProxyModel_OnItemData((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_set_data(void* self, void* index, void* value, int role) {
+bool k_descendantsproxymodel_set_data(void* self, const void* index, const void* value, int role) {
     return KDescendantsProxyModel_SetData((KDescendantsProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool k_descendantsproxymodel_super_set_data(void* self, void* index, void* value, int role) {
+bool k_descendantsproxymodel_super_set_data(void* self, const void* index, const void* value, int role) {
     return KDescendantsProxyModel_SuperSetData((KDescendantsProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-void k_descendantsproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
+void k_descendantsproxymodel_on_set_data(void* self, bool (*callback)(void*, const void*, const void*, int)) {
     KDescendantsProxyModel_OnSetData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_descendantsproxymodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -896,7 +896,7 @@ bool k_descendantsproxymodel_set_item_data(void* self, void* index, libqt_map /*
     return _out;
 }
 
-bool k_descendantsproxymodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_descendantsproxymodel_super_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -925,67 +925,67 @@ bool k_descendantsproxymodel_super_set_item_data(void* self, void* index, libqt_
     return _out;
 }
 
-void k_descendantsproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
+void k_descendantsproxymodel_on_set_item_data(void* self, bool (*callback)(void*, const void*, libqt_map /* of int to QVariant* */)) {
     KDescendantsProxyModel_OnSetItemData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool k_descendantsproxymodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return KDescendantsProxyModel_SetHeaderData((KDescendantsProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_descendantsproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool k_descendantsproxymodel_super_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return KDescendantsProxyModel_SuperSetHeaderData((KDescendantsProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void k_descendantsproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
+void k_descendantsproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, const void*, int)) {
     KDescendantsProxyModel_OnSetHeaderData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_clear_item_data(void* self, void* index) {
+bool k_descendantsproxymodel_clear_item_data(void* self, const void* index) {
     return KDescendantsProxyModel_ClearItemData((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-bool k_descendantsproxymodel_super_clear_item_data(void* self, void* index) {
+bool k_descendantsproxymodel_super_clear_item_data(void* self, const void* index) {
     return KDescendantsProxyModel_SuperClearItemData((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_descendantsproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, const void*)) {
     KDescendantsProxyModel_OnClearItemData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_descendantsproxymodel_buddy(void* self, void* index) {
+QModelIndex* k_descendantsproxymodel_buddy(const void* self, const void* index) {
     return KDescendantsProxyModel_Buddy((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_descendantsproxymodel_super_buddy(void* self, void* index) {
+QModelIndex* k_descendantsproxymodel_super_buddy(const void* self, const void* index) {
     return KDescendantsProxyModel_SuperBuddy((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_descendantsproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
-    KDescendantsProxyModel_OnBuddy((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    KDescendantsProxyModel_OnBuddy((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_can_fetch_more(void* self, void* parent) {
+bool k_descendantsproxymodel_can_fetch_more(const void* self, const void* parent) {
     return KDescendantsProxyModel_CanFetchMore((KDescendantsProxyModel*)self, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_super_can_fetch_more(void* self, void* parent) {
+bool k_descendantsproxymodel_super_can_fetch_more(const void* self, const void* parent) {
     return KDescendantsProxyModel_SuperCanFetchMore((KDescendantsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
-    KDescendantsProxyModel_OnCanFetchMore((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
+    KDescendantsProxyModel_OnCanFetchMore((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_fetch_more(void* self, void* parent) {
+void k_descendantsproxymodel_fetch_more(void* self, const void* parent) {
     KDescendantsProxyModel_FetchMore((KDescendantsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_super_fetch_more(void* self, void* parent) {
+void k_descendantsproxymodel_super_fetch_more(void* self, const void* parent) {
     KDescendantsProxyModel_SuperFetchMore((KDescendantsProxyModel*)self, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_fetch_more(void* self, void (*callback)(void*, const void*)) {
     KDescendantsProxyModel_OnFetchMore((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1001,148 +1001,148 @@ void k_descendantsproxymodel_on_sort(void* self, void (*callback)(void*, int, in
     KDescendantsProxyModel_OnSort((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QSize* k_descendantsproxymodel_span(void* self, void* index) {
+QSize* k_descendantsproxymodel_span(const void* self, const void* index) {
     return KDescendantsProxyModel_Span((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_descendantsproxymodel_super_span(void* self, void* index) {
+QSize* k_descendantsproxymodel_super_span(const void* self, const void* index) {
     return KDescendantsProxyModel_SuperSpan((KDescendantsProxyModel*)self, (QModelIndex*)index);
 }
 
-void k_descendantsproxymodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
-    KDescendantsProxyModel_OnSpan((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
+    KDescendantsProxyModel_OnSpan((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_descendantsproxymodel_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* k_descendantsproxymodel_sibling(const void* self, int row, int column, const void* idx) {
     return KDescendantsProxyModel_Sibling((KDescendantsProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_descendantsproxymodel_super_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* k_descendantsproxymodel_super_sibling(const void* self, int row, int column, const void* idx) {
     return KDescendantsProxyModel_SuperSibling((KDescendantsProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void k_descendantsproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
-    KDescendantsProxyModel_OnSibling((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    KDescendantsProxyModel_OnSibling((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_descendantsproxymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KDescendantsProxyModel_CanDropMimeData((KDescendantsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_descendantsproxymodel_super_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KDescendantsProxyModel_SuperCanDropMimeData((KDescendantsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
-    KDescendantsProxyModel_OnCanDropMimeData((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    KDescendantsProxyModel_OnCanDropMimeData((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_descendantsproxymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KDescendantsProxyModel_DropMimeData((KDescendantsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool k_descendantsproxymodel_super_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return KDescendantsProxyModel_SuperDropMimeData((KDescendantsProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
+void k_descendantsproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, const void*, int32_t, int, int, const void*)) {
     KDescendantsProxyModel_OnDropMimeData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t k_descendantsproxymodel_supported_drag_actions(void* self) {
+int32_t k_descendantsproxymodel_supported_drag_actions(const void* self) {
     return KDescendantsProxyModel_SupportedDragActions((KDescendantsProxyModel*)self);
 }
 
-int32_t k_descendantsproxymodel_super_supported_drag_actions(void* self) {
+int32_t k_descendantsproxymodel_super_supported_drag_actions(const void* self) {
     return KDescendantsProxyModel_SuperSupportedDragActions((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
-    KDescendantsProxyModel_OnSupportedDragActions((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
+    KDescendantsProxyModel_OnSupportedDragActions((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_insert_rows(void* self, int row, int count, void* parent) {
+bool k_descendantsproxymodel_insert_rows(void* self, int row, int count, const void* parent) {
     return KDescendantsProxyModel_InsertRows((KDescendantsProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_super_insert_rows(void* self, int row, int count, void* parent) {
+bool k_descendantsproxymodel_super_insert_rows(void* self, int row, int count, const void* parent) {
     return KDescendantsProxyModel_SuperInsertRows((KDescendantsProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_descendantsproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, const void*)) {
     KDescendantsProxyModel_OnInsertRows((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_insert_columns(void* self, int column, int count, void* parent) {
+bool k_descendantsproxymodel_insert_columns(void* self, int column, int count, const void* parent) {
     return KDescendantsProxyModel_InsertColumns((KDescendantsProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_super_insert_columns(void* self, int column, int count, void* parent) {
+bool k_descendantsproxymodel_super_insert_columns(void* self, int column, int count, const void* parent) {
     return KDescendantsProxyModel_SuperInsertColumns((KDescendantsProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_descendantsproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, const void*)) {
     KDescendantsProxyModel_OnInsertColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_remove_rows(void* self, int row, int count, void* parent) {
+bool k_descendantsproxymodel_remove_rows(void* self, int row, int count, const void* parent) {
     return KDescendantsProxyModel_RemoveRows((KDescendantsProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_super_remove_rows(void* self, int row, int count, void* parent) {
+bool k_descendantsproxymodel_super_remove_rows(void* self, int row, int count, const void* parent) {
     return KDescendantsProxyModel_SuperRemoveRows((KDescendantsProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_descendantsproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, const void*)) {
     KDescendantsProxyModel_OnRemoveRows((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_remove_columns(void* self, int column, int count, void* parent) {
+bool k_descendantsproxymodel_remove_columns(void* self, int column, int count, const void* parent) {
     return KDescendantsProxyModel_RemoveColumns((KDescendantsProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_descendantsproxymodel_super_remove_columns(void* self, int column, int count, void* parent) {
+bool k_descendantsproxymodel_super_remove_columns(void* self, int column, int count, const void* parent) {
     return KDescendantsProxyModel_SuperRemoveColumns((KDescendantsProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void k_descendantsproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+void k_descendantsproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, const void*)) {
     KDescendantsProxyModel_OnRemoveColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool k_descendantsproxymodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return KDescendantsProxyModel_MoveRows((KDescendantsProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_descendantsproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool k_descendantsproxymodel_super_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return KDescendantsProxyModel_SuperMoveRows((KDescendantsProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void k_descendantsproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void k_descendantsproxymodel_on_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     KDescendantsProxyModel_OnMoveRows((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-bool k_descendantsproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool k_descendantsproxymodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return KDescendantsProxyModel_MoveColumns((KDescendantsProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_descendantsproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool k_descendantsproxymodel_super_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return KDescendantsProxyModel_SuperMoveColumns((KDescendantsProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void k_descendantsproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void k_descendantsproxymodel_on_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     KDescendantsProxyModel_OnMoveColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_multi_data(void* self, void* index, void* roleDataSpan) {
+void k_descendantsproxymodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
     KDescendantsProxyModel_MultiData((KDescendantsProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_descendantsproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+void k_descendantsproxymodel_super_multi_data(const void* self, const void* index, void* roleDataSpan) {
     KDescendantsProxyModel_SuperMultiData((KDescendantsProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_descendantsproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
-    KDescendantsProxyModel_OnMultiData((KDescendantsProxyModel*)self, (intptr_t)callback);
+void k_descendantsproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
+    KDescendantsProxyModel_OnMultiData((const KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_reset_internal_data(void* self) {
@@ -1153,7 +1153,7 @@ void k_descendantsproxymodel_super_reset_internal_data(void* self) {
     KDescendantsProxyModel_SuperResetInternalData((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_on_reset_internal_data(void* self, void (*callback)()) {
+void k_descendantsproxymodel_on_reset_internal_data(void* self, void (*callback)(void*)) {
     KDescendantsProxyModel_OnResetInternalData((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
@@ -1217,361 +1217,160 @@ void k_descendantsproxymodel_on_custom_event(void* self, void (*callback)(void*,
     KDescendantsProxyModel_OnCustomEvent((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_connect_notify(void* self, void* signal) {
+void k_descendantsproxymodel_connect_notify(void* self, const void* signal) {
     KDescendantsProxyModel_ConnectNotify((KDescendantsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_descendantsproxymodel_super_connect_notify(void* self, void* signal) {
+void k_descendantsproxymodel_super_connect_notify(void* self, const void* signal) {
     KDescendantsProxyModel_SuperConnectNotify((KDescendantsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_descendantsproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KDescendantsProxyModel_OnConnectNotify((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_disconnect_notify(void* self, void* signal) {
+void k_descendantsproxymodel_disconnect_notify(void* self, const void* signal) {
     KDescendantsProxyModel_DisconnectNotify((KDescendantsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_descendantsproxymodel_super_disconnect_notify(void* self, void* signal) {
+void k_descendantsproxymodel_super_disconnect_notify(void* self, const void* signal) {
     KDescendantsProxyModel_SuperDisconnectNotify((KDescendantsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void k_descendantsproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_descendantsproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KDescendantsProxyModel_OnDisconnectNotify((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_descendantsproxymodel_create_source_index(void* self, int row, int col, void* internalPtr) {
+QModelIndex* k_descendantsproxymodel_create_source_index(const void* self, int row, int col, void* internalPtr) {
     return KDescendantsProxyModel_CreateSourceIndex((KDescendantsProxyModel*)self, row, col, internalPtr);
 }
 
-QModelIndex* k_descendantsproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr) {
-    return KDescendantsProxyModel_SuperCreateSourceIndex((KDescendantsProxyModel*)self, row, col, internalPtr);
-}
-
-void k_descendantsproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
-    KDescendantsProxyModel_OnCreateSourceIndex((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-QModelIndex* k_descendantsproxymodel_create_index(void* self, int row, int column) {
+QModelIndex* k_descendantsproxymodel_create_index(const void* self, int row, int column) {
     return KDescendantsProxyModel_CreateIndex((KDescendantsProxyModel*)self, row, column);
 }
 
-QModelIndex* k_descendantsproxymodel_super_create_index(void* self, int row, int column) {
-    return KDescendantsProxyModel_SuperCreateIndex((KDescendantsProxyModel*)self, row, column);
-}
-
-void k_descendantsproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
-    KDescendantsProxyModel_OnCreateIndex((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_descendantsproxymodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+void k_descendantsproxymodel_encode_data(const void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     KDescendantsProxyModel_EncodeData((KDescendantsProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_descendantsproxymodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KDescendantsProxyModel_SuperEncodeData((KDescendantsProxyModel*)self, indexes, (QDataStream*)stream);
-}
-
-void k_descendantsproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
-    KDescendantsProxyModel_OnEncodeData((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_descendantsproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream) {
+bool k_descendantsproxymodel_decode_data(void* self, int row, int column, const void* parent, void* stream) {
     return KDescendantsProxyModel_DecodeData((KDescendantsProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_descendantsproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KDescendantsProxyModel_SuperDecodeData((KDescendantsProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
-}
-
-void k_descendantsproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
-    KDescendantsProxyModel_OnDecodeData((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_descendantsproxymodel_begin_insert_rows(void* self, void* parent, int first, int last) {
+void k_descendantsproxymodel_begin_insert_rows(void* self, const void* parent, int first, int last) {
     KDescendantsProxyModel_BeginInsertRows((KDescendantsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_descendantsproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KDescendantsProxyModel_SuperBeginInsertRows((KDescendantsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_descendantsproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
-    KDescendantsProxyModel_OnBeginInsertRows((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_end_insert_rows(void* self) {
     KDescendantsProxyModel_EndInsertRows((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_super_end_insert_rows(void* self) {
-    KDescendantsProxyModel_SuperEndInsertRows((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_end_insert_rows(void* self, void (*callback)()) {
-    KDescendantsProxyModel_OnEndInsertRows((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_descendantsproxymodel_begin_remove_rows(void* self, void* parent, int first, int last) {
+void k_descendantsproxymodel_begin_remove_rows(void* self, const void* parent, int first, int last) {
     KDescendantsProxyModel_BeginRemoveRows((KDescendantsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_descendantsproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KDescendantsProxyModel_SuperBeginRemoveRows((KDescendantsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_descendantsproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
-    KDescendantsProxyModel_OnBeginRemoveRows((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_end_remove_rows(void* self) {
     KDescendantsProxyModel_EndRemoveRows((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_super_end_remove_rows(void* self) {
-    KDescendantsProxyModel_SuperEndRemoveRows((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_end_remove_rows(void* self, void (*callback)()) {
-    KDescendantsProxyModel_OnEndRemoveRows((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_descendantsproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+bool k_descendantsproxymodel_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow) {
     return KDescendantsProxyModel_BeginMoveRows((KDescendantsProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
-}
-
-bool k_descendantsproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KDescendantsProxyModel_SuperBeginMoveRows((KDescendantsProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
-}
-
-void k_descendantsproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
-    KDescendantsProxyModel_OnBeginMoveRows((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_end_move_rows(void* self) {
     KDescendantsProxyModel_EndMoveRows((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_super_end_move_rows(void* self) {
-    KDescendantsProxyModel_SuperEndMoveRows((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_end_move_rows(void* self, void (*callback)()) {
-    KDescendantsProxyModel_OnEndMoveRows((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_descendantsproxymodel_begin_insert_columns(void* self, void* parent, int first, int last) {
+void k_descendantsproxymodel_begin_insert_columns(void* self, const void* parent, int first, int last) {
     KDescendantsProxyModel_BeginInsertColumns((KDescendantsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_descendantsproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KDescendantsProxyModel_SuperBeginInsertColumns((KDescendantsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_descendantsproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
-    KDescendantsProxyModel_OnBeginInsertColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_end_insert_columns(void* self) {
     KDescendantsProxyModel_EndInsertColumns((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_super_end_insert_columns(void* self) {
-    KDescendantsProxyModel_SuperEndInsertColumns((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_end_insert_columns(void* self, void (*callback)()) {
-    KDescendantsProxyModel_OnEndInsertColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_descendantsproxymodel_begin_remove_columns(void* self, void* parent, int first, int last) {
+void k_descendantsproxymodel_begin_remove_columns(void* self, const void* parent, int first, int last) {
     KDescendantsProxyModel_BeginRemoveColumns((KDescendantsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_descendantsproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KDescendantsProxyModel_SuperBeginRemoveColumns((KDescendantsProxyModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void k_descendantsproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
-    KDescendantsProxyModel_OnBeginRemoveColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_end_remove_columns(void* self) {
     KDescendantsProxyModel_EndRemoveColumns((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_super_end_remove_columns(void* self) {
-    KDescendantsProxyModel_SuperEndRemoveColumns((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_end_remove_columns(void* self, void (*callback)()) {
-    KDescendantsProxyModel_OnEndRemoveColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_descendantsproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+bool k_descendantsproxymodel_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn) {
     return KDescendantsProxyModel_BeginMoveColumns((KDescendantsProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
-}
-
-bool k_descendantsproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KDescendantsProxyModel_SuperBeginMoveColumns((KDescendantsProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
-}
-
-void k_descendantsproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
-    KDescendantsProxyModel_OnBeginMoveColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_end_move_columns(void* self) {
     KDescendantsProxyModel_EndMoveColumns((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_super_end_move_columns(void* self) {
-    KDescendantsProxyModel_SuperEndMoveColumns((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_end_move_columns(void* self, void (*callback)()) {
-    KDescendantsProxyModel_OnEndMoveColumns((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
 void k_descendantsproxymodel_begin_reset_model(void* self) {
     KDescendantsProxyModel_BeginResetModel((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_super_begin_reset_model(void* self) {
-    KDescendantsProxyModel_SuperBeginResetModel((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_begin_reset_model(void* self, void (*callback)()) {
-    KDescendantsProxyModel_OnBeginResetModel((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_end_reset_model(void* self) {
     KDescendantsProxyModel_EndResetModel((KDescendantsProxyModel*)self);
 }
 
-void k_descendantsproxymodel_super_end_reset_model(void* self) {
-    KDescendantsProxyModel_SuperEndResetModel((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_end_reset_model(void* self, void (*callback)()) {
-    KDescendantsProxyModel_OnEndResetModel((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_descendantsproxymodel_change_persistent_index(void* self, void* from, void* to) {
+void k_descendantsproxymodel_change_persistent_index(void* self, const void* from, const void* to) {
     KDescendantsProxyModel_ChangePersistentIndex((KDescendantsProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
-}
-
-void k_descendantsproxymodel_super_change_persistent_index(void* self, void* from, void* to) {
-    KDescendantsProxyModel_SuperChangePersistentIndex((KDescendantsProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
-}
-
-void k_descendantsproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
-    KDescendantsProxyModel_OnChangePersistentIndex((KDescendantsProxyModel*)self, (intptr_t)callback);
 }
 
 void k_descendantsproxymodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     KDescendantsProxyModel_ChangePersistentIndexList((KDescendantsProxyModel*)self, from, to);
 }
 
-void k_descendantsproxymodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KDescendantsProxyModel_SuperChangePersistentIndexList((KDescendantsProxyModel*)self, from, to);
-}
-
-void k_descendantsproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
-    KDescendantsProxyModel_OnChangePersistentIndexList((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-libqt_list /* of QModelIndex* */ k_descendantsproxymodel_persistent_index_list(void* self) {
+libqt_list /* of QModelIndex* */ k_descendantsproxymodel_persistent_index_list(const void* self) {
     libqt_list _arr = KDescendantsProxyModel_PersistentIndexList((KDescendantsProxyModel*)self);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_descendantsproxymodel_super_persistent_index_list(void* self) {
-    libqt_list _arr = KDescendantsProxyModel_SuperPersistentIndexList((KDescendantsProxyModel*)self);
-    return _arr;
-}
-
-void k_descendantsproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
-    KDescendantsProxyModel_OnPersistentIndexList((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-QObject* k_descendantsproxymodel_sender(void* self) {
+QObject* k_descendantsproxymodel_sender(const void* self) {
     return KDescendantsProxyModel_Sender((KDescendantsProxyModel*)self);
 }
 
-QObject* k_descendantsproxymodel_super_sender(void* self) {
-    return KDescendantsProxyModel_SuperSender((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_sender(void* self, QObject* (*callback)()) {
-    KDescendantsProxyModel_OnSender((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-int32_t k_descendantsproxymodel_sender_signal_index(void* self) {
+int32_t k_descendantsproxymodel_sender_signal_index(const void* self) {
     return KDescendantsProxyModel_SenderSignalIndex((KDescendantsProxyModel*)self);
 }
 
-int32_t k_descendantsproxymodel_super_sender_signal_index(void* self) {
-    return KDescendantsProxyModel_SuperSenderSignalIndex((KDescendantsProxyModel*)self);
-}
-
-void k_descendantsproxymodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KDescendantsProxyModel_OnSenderSignalIndex((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-int32_t k_descendantsproxymodel_receivers(void* self, const char* signal) {
+int32_t k_descendantsproxymodel_receivers(const void* self, const char* signal) {
     return KDescendantsProxyModel_Receivers((KDescendantsProxyModel*)self, signal);
 }
 
-int32_t k_descendantsproxymodel_super_receivers(void* self, const char* signal) {
-    return KDescendantsProxyModel_SuperReceivers((KDescendantsProxyModel*)self, signal);
-}
-
-void k_descendantsproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KDescendantsProxyModel_OnReceivers((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-bool k_descendantsproxymodel_is_signal_connected(void* self, void* signal) {
+bool k_descendantsproxymodel_is_signal_connected(const void* self, const void* signal) {
     return KDescendantsProxyModel_IsSignalConnected((KDescendantsProxyModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_descendantsproxymodel_super_is_signal_connected(void* self, void* signal) {
-    return KDescendantsProxyModel_SuperIsSignalConnected((KDescendantsProxyModel*)self, (QMetaMethod*)signal);
-}
-
-void k_descendantsproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KDescendantsProxyModel_OnIsSignalConnected((KDescendantsProxyModel*)self, (intptr_t)callback);
-}
-
-void k_descendantsproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_descendantsproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_descendantsproxymodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_descendantsproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_descendantsproxymodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_descendantsproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void k_descendantsproxymodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_descendantsproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void k_descendantsproxymodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1583,19 +1382,19 @@ void k_descendantsproxymodel_on_model_reset(void* self, void (*callback)(void*))
     QAbstractItemModel_Connect_ModelReset((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_descendantsproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_descendantsproxymodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_descendantsproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void k_descendantsproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void k_descendantsproxymodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 

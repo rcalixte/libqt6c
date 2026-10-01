@@ -6,7 +6,7 @@ SignOn__IdentityInfo* q_signon__identityinfo_new() {
     return SignOn__IdentityInfo_New();
 }
 
-SignOn__IdentityInfo* q_signon__identityinfo_new2(void* other) {
+SignOn__IdentityInfo* q_signon__identityinfo_new2(const void* other) {
     return SignOn__IdentityInfo_New2((SignOn__IdentityInfo*)other);
 }
 
@@ -40,7 +40,7 @@ SignOn__IdentityInfo* q_signon__identityinfo_new3(const char* caption, const cha
     return _out;
 }
 
-void q_signon__identityinfo_operator_assign(void* self, void* other) {
+void q_signon__identityinfo_operator_assign(void* self, const void* other) {
     SignOn__IdentityInfo_OperatorAssign((SignOn__IdentityInfo*)self, (SignOn__IdentityInfo*)other);
 }
 
@@ -48,7 +48,7 @@ void q_signon__identityinfo_set_id(void* self, uint32_t id) {
     SignOn__IdentityInfo_SetId((SignOn__IdentityInfo*)self, id);
 }
 
-uint32_t q_signon__identityinfo_id(void* self) {
+uint32_t q_signon__identityinfo_id(const void* self) {
     return SignOn__IdentityInfo_Id((SignOn__IdentityInfo*)self);
 }
 
@@ -56,14 +56,14 @@ void q_signon__identityinfo_set_secret(void* self, const char* secret) {
     SignOn__IdentityInfo_SetSecret((SignOn__IdentityInfo*)self, qstring(secret));
 }
 
-const char* q_signon__identityinfo_secret(void* self) {
+const char* q_signon__identityinfo_secret(const void* self) {
     libqt_string _str = SignOn__IdentityInfo_Secret((SignOn__IdentityInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_signon__identityinfo_is_storing_secret(void* self) {
+bool q_signon__identityinfo_is_storing_secret(const void* self) {
     return SignOn__IdentityInfo_IsStoringSecret((SignOn__IdentityInfo*)self);
 }
 
@@ -75,7 +75,7 @@ void q_signon__identityinfo_set_user_name(void* self, const char* userName) {
     SignOn__IdentityInfo_SetUserName((SignOn__IdentityInfo*)self, qstring(userName));
 }
 
-const char* q_signon__identityinfo_user_name(void* self) {
+const char* q_signon__identityinfo_user_name(const void* self) {
     libqt_string _str = SignOn__IdentityInfo_UserName((SignOn__IdentityInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -86,7 +86,7 @@ void q_signon__identityinfo_set_caption(void* self, const char* caption) {
     SignOn__IdentityInfo_SetCaption((SignOn__IdentityInfo*)self, qstring(caption));
 }
 
-const char* q_signon__identityinfo_caption(void* self) {
+const char* q_signon__identityinfo_caption(const void* self) {
     libqt_string _str = SignOn__IdentityInfo_Caption((SignOn__IdentityInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -107,7 +107,7 @@ void q_signon__identityinfo_set_realms(void* self, const char* realms[static 1])
     free(realms_qstr);
 }
 
-const char** q_signon__identityinfo_realms(void* self) {
+const char** q_signon__identityinfo_realms(const void* self) {
     libqt_list _arr = SignOn__IdentityInfo_Realms((SignOn__IdentityInfo*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -128,7 +128,7 @@ void q_signon__identityinfo_set_owner(void* self, const char* ownerToken) {
     SignOn__IdentityInfo_SetOwner((SignOn__IdentityInfo*)self, qstring(ownerToken));
 }
 
-const char* q_signon__identityinfo_owner(void* self) {
+const char* q_signon__identityinfo_owner(const void* self) {
     libqt_string _str = SignOn__IdentityInfo_Owner((SignOn__IdentityInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -153,7 +153,7 @@ void q_signon__identityinfo_set_access_control_list2(void* self, libqt_list /* o
     SignOn__IdentityInfo_SetAccessControlList2((SignOn__IdentityInfo*)self, accessControlList);
 }
 
-const char** q_signon__identityinfo_access_control_list(void* self) {
+const char** q_signon__identityinfo_access_control_list(const void* self) {
     libqt_list _arr = SignOn__IdentityInfo_AccessControlList((SignOn__IdentityInfo*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -170,7 +170,7 @@ const char** q_signon__identityinfo_access_control_list(void* self) {
     return _ret;
 }
 
-libqt_list /* of SignOn__SecurityContext* */ q_signon__identityinfo_access_control_list_full(void* self) {
+libqt_list /* of SignOn__SecurityContext* */ q_signon__identityinfo_access_control_list_full(const void* self) {
     libqt_list _arr = SignOn__IdentityInfo_AccessControlListFull((SignOn__IdentityInfo*)self);
     return _arr;
 }
@@ -197,11 +197,11 @@ void q_signon__identityinfo_set_type(void* self, int32_t type) {
     SignOn__IdentityInfo_SetType((SignOn__IdentityInfo*)self, type);
 }
 
-int32_t q_signon__identityinfo_type(void* self) {
+int32_t q_signon__identityinfo_type(const void* self) {
     return SignOn__IdentityInfo_Type((SignOn__IdentityInfo*)self);
 }
 
-const char** q_signon__identityinfo_methods(void* self) {
+const char** q_signon__identityinfo_methods(const void* self) {
     libqt_list _arr = SignOn__IdentityInfo_Methods((SignOn__IdentityInfo*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -218,7 +218,7 @@ const char** q_signon__identityinfo_methods(void* self) {
     return _ret;
 }
 
-const char** q_signon__identityinfo_mechanisms(void* self, const char* method) {
+const char** q_signon__identityinfo_mechanisms(const void* self, const char* method) {
     libqt_list _arr = SignOn__IdentityInfo_Mechanisms((SignOn__IdentityInfo*)self, qstring(method));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -239,7 +239,7 @@ void q_signon__identityinfo_set_ref_count(void* self, int32_t refCount) {
     SignOn__IdentityInfo_SetRefCount((SignOn__IdentityInfo*)self, refCount);
 }
 
-int32_t q_signon__identityinfo_ref_count(void* self) {
+int32_t q_signon__identityinfo_ref_count(const void* self) {
     return SignOn__IdentityInfo_RefCount((SignOn__IdentityInfo*)self);
 }
 

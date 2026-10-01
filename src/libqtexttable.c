@@ -13,75 +13,75 @@ QTextTableCell* q_texttablecell_new() {
     return QTextTableCell_New();
 }
 
-QTextTableCell* q_texttablecell_new2(void* o) {
+QTextTableCell* q_texttablecell_new2(const void* o) {
     return QTextTableCell_New2((QTextTableCell*)o);
 }
 
-void q_texttablecell_operator_assign(void* self, void* o) {
+void q_texttablecell_operator_assign(void* self, const void* o) {
     QTextTableCell_OperatorAssign((QTextTableCell*)self, (QTextTableCell*)o);
 }
 
-void q_texttablecell_set_format(void* self, void* format) {
+void q_texttablecell_set_format(void* self, const void* format) {
     QTextTableCell_SetFormat((QTextTableCell*)self, (QTextCharFormat*)format);
 }
 
-QTextCharFormat* q_texttablecell_format(void* self) {
+QTextCharFormat* q_texttablecell_format(const void* self) {
     return QTextTableCell_Format((QTextTableCell*)self);
 }
 
-int32_t q_texttablecell_row(void* self) {
+int32_t q_texttablecell_row(const void* self) {
     return QTextTableCell_Row((QTextTableCell*)self);
 }
 
-int32_t q_texttablecell_column(void* self) {
+int32_t q_texttablecell_column(const void* self) {
     return QTextTableCell_Column((QTextTableCell*)self);
 }
 
-int32_t q_texttablecell_row_span(void* self) {
+int32_t q_texttablecell_row_span(const void* self) {
     return QTextTableCell_RowSpan((QTextTableCell*)self);
 }
 
-int32_t q_texttablecell_column_span(void* self) {
+int32_t q_texttablecell_column_span(const void* self) {
     return QTextTableCell_ColumnSpan((QTextTableCell*)self);
 }
 
-bool q_texttablecell_is_valid(void* self) {
+bool q_texttablecell_is_valid(const void* self) {
     return QTextTableCell_IsValid((QTextTableCell*)self);
 }
 
-QTextCursor* q_texttablecell_first_cursor_position(void* self) {
+QTextCursor* q_texttablecell_first_cursor_position(const void* self) {
     return QTextTableCell_FirstCursorPosition((QTextTableCell*)self);
 }
 
-QTextCursor* q_texttablecell_last_cursor_position(void* self) {
+QTextCursor* q_texttablecell_last_cursor_position(const void* self) {
     return QTextTableCell_LastCursorPosition((QTextTableCell*)self);
 }
 
-int32_t q_texttablecell_first_position(void* self) {
+int32_t q_texttablecell_first_position(const void* self) {
     return QTextTableCell_FirstPosition((QTextTableCell*)self);
 }
 
-int32_t q_texttablecell_last_position(void* self) {
+int32_t q_texttablecell_last_position(const void* self) {
     return QTextTableCell_LastPosition((QTextTableCell*)self);
 }
 
-bool q_texttablecell_operator_equal(void* self, void* other) {
+bool q_texttablecell_operator_equal(const void* self, const void* other) {
     return QTextTableCell_OperatorEqual((QTextTableCell*)self, (QTextTableCell*)other);
 }
 
-bool q_texttablecell_operator_not_equal(void* self, void* other) {
+bool q_texttablecell_operator_not_equal(const void* self, const void* other) {
     return QTextTableCell_OperatorNotEqual((QTextTableCell*)self, (QTextTableCell*)other);
 }
 
-QTextFrame__iterator* q_texttablecell_begin(void* self) {
+QTextFrame__iterator* q_texttablecell_begin(const void* self) {
     return QTextTableCell_Begin((QTextTableCell*)self);
 }
 
-QTextFrame__iterator* q_texttablecell_end(void* self) {
+QTextFrame__iterator* q_texttablecell_end(const void* self) {
     return QTextTableCell_End((QTextTableCell*)self);
 }
 
-int32_t q_texttablecell_table_cell_format_index(void* self) {
+int32_t q_texttablecell_table_cell_format_index(const void* self) {
     return QTextTableCell_TableCellFormatIndex((QTextTableCell*)self);
 }
 
@@ -93,15 +93,15 @@ QTextTable* q_texttable_new(void* doc) {
     return QTextTable_New((QTextDocument*)doc);
 }
 
-const QMetaObject* q_texttable_meta_object(void* self) {
+const QMetaObject* q_texttable_meta_object(const void* self) {
     return QTextTable_MetaObject((QTextTable*)self);
 }
 
-void q_texttable_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_texttable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QTextTable_OnMetaObject((QTextTable*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_texttable_super_meta_object(void* self) {
+const QMetaObject* q_texttable_super_meta_object(const void* self) {
     return QTextTable_SuperMetaObject((QTextTable*)self);
 }
 
@@ -168,7 +168,7 @@ void q_texttable_merge_cells(void* self, int row, int col, int numRows, int numC
     QTextTable_MergeCells((QTextTable*)self, row, col, numRows, numCols);
 }
 
-void q_texttable_merge_cells2(void* self, void* cursor) {
+void q_texttable_merge_cells2(void* self, const void* cursor) {
     QTextTable_MergeCells2((QTextTable*)self, (QTextCursor*)cursor);
 }
 
@@ -176,39 +176,39 @@ void q_texttable_split_cell(void* self, int row, int col, int numRows, int numCo
     QTextTable_SplitCell((QTextTable*)self, row, col, numRows, numCols);
 }
 
-int32_t q_texttable_rows(void* self) {
+int32_t q_texttable_rows(const void* self) {
     return QTextTable_Rows((QTextTable*)self);
 }
 
-int32_t q_texttable_columns(void* self) {
+int32_t q_texttable_columns(const void* self) {
     return QTextTable_Columns((QTextTable*)self);
 }
 
-QTextTableCell* q_texttable_cell_at(void* self, int row, int col) {
+QTextTableCell* q_texttable_cell_at(const void* self, int row, int col) {
     return QTextTable_CellAt((QTextTable*)self, row, col);
 }
 
-QTextTableCell* q_texttable_cell_at2(void* self, int position) {
+QTextTableCell* q_texttable_cell_at2(const void* self, int position) {
     return QTextTable_CellAt2((QTextTable*)self, position);
 }
 
-QTextTableCell* q_texttable_cell_at3(void* self, void* c) {
+QTextTableCell* q_texttable_cell_at3(const void* self, const void* c) {
     return QTextTable_CellAt3((QTextTable*)self, (QTextCursor*)c);
 }
 
-QTextCursor* q_texttable_row_start(void* self, void* c) {
+QTextCursor* q_texttable_row_start(const void* self, const void* c) {
     return QTextTable_RowStart((QTextTable*)self, (QTextCursor*)c);
 }
 
-QTextCursor* q_texttable_row_end(void* self, void* c) {
+QTextCursor* q_texttable_row_end(const void* self, const void* c) {
     return QTextTable_RowEnd((QTextTable*)self, (QTextCursor*)c);
 }
 
-void q_texttable_set_format(void* self, void* format) {
+void q_texttable_set_format(void* self, const void* format) {
     QTextTable_SetFormat((QTextTable*)self, (QTextTableFormat*)format);
 }
 
-QTextTableFormat* q_texttable_format(void* self) {
+QTextTableFormat* q_texttable_format(const void* self) {
     return QTextTable_Format((QTextTable*)self);
 }
 
@@ -226,60 +226,60 @@ const char* q_texttable_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_texttable_set_frame_format(void* self, void* format) {
+void q_texttable_set_frame_format(void* self, const void* format) {
     QTextFrame_SetFrameFormat((QTextFrame*)self, (QTextFrameFormat*)format);
 }
 
-QTextFrameFormat* q_texttable_frame_format(void* self) {
+QTextFrameFormat* q_texttable_frame_format(const void* self) {
     return QTextFrame_FrameFormat((QTextFrame*)self);
 }
 
-QTextCursor* q_texttable_first_cursor_position(void* self) {
+QTextCursor* q_texttable_first_cursor_position(const void* self) {
     return QTextFrame_FirstCursorPosition((QTextFrame*)self);
 }
 
-QTextCursor* q_texttable_last_cursor_position(void* self) {
+QTextCursor* q_texttable_last_cursor_position(const void* self) {
     return QTextFrame_LastCursorPosition((QTextFrame*)self);
 }
 
-int32_t q_texttable_first_position(void* self) {
+int32_t q_texttable_first_position(const void* self) {
     return QTextFrame_FirstPosition((QTextFrame*)self);
 }
 
-int32_t q_texttable_last_position(void* self) {
+int32_t q_texttable_last_position(const void* self) {
     return QTextFrame_LastPosition((QTextFrame*)self);
 }
 
-libqt_list /* of QTextFrame* */ q_texttable_child_frames(void* self) {
+libqt_list /* of QTextFrame* */ q_texttable_child_frames(const void* self) {
     libqt_list _arr = QTextFrame_ChildFrames((QTextFrame*)self);
     return _arr;
 }
 
-QTextFrame* q_texttable_parent_frame(void* self) {
+QTextFrame* q_texttable_parent_frame(const void* self) {
     return QTextFrame_ParentFrame((QTextFrame*)self);
 }
 
-QTextFrame__iterator* q_texttable_begin(void* self) {
+QTextFrame__iterator* q_texttable_begin(const void* self) {
     return QTextFrame_Begin((QTextFrame*)self);
 }
 
-QTextFrame__iterator* q_texttable_end(void* self) {
+QTextFrame__iterator* q_texttable_end(const void* self) {
     return QTextFrame_End((QTextFrame*)self);
 }
 
-int32_t q_texttable_format_index(void* self) {
+int32_t q_texttable_format_index(const void* self) {
     return QTextObject_FormatIndex((QTextObject*)self);
 }
 
-QTextDocument* q_texttable_document(void* self) {
+QTextDocument* q_texttable_document(const void* self) {
     return QTextObject_Document((QTextObject*)self);
 }
 
-int32_t q_texttable_object_index(void* self) {
+int32_t q_texttable_object_index(const void* self) {
     return QTextObject_ObjectIndex((QTextObject*)self);
 }
 
-const char* q_texttable_object_name(void* self) {
+const char* q_texttable_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -290,19 +290,19 @@ void q_texttable_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_texttable_is_widget_type(void* self) {
+bool q_texttable_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_texttable_is_window_type(void* self) {
+bool q_texttable_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_texttable_is_quick_item_type(void* self) {
+bool q_texttable_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_texttable_signals_blocked(void* self) {
+bool q_texttable_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -310,7 +310,7 @@ bool q_texttable_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_texttable_thread(void* self) {
+QThread* q_texttable_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -334,7 +334,7 @@ void q_texttable_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_texttable_children(void* self) {
+libqt_list /* of QObject* */ q_texttable_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -351,55 +351,55 @@ void q_texttable_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_texttable_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_texttable_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_texttable_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_texttable_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_texttable_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_texttable_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_texttable_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_texttable_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_texttable_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_texttable_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_texttable_disconnect3(void* self) {
+bool q_texttable_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_texttable_disconnect4(void* self, void* receiver) {
+bool q_texttable_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_texttable_disconnect5(void* param1) {
+bool q_texttable_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_texttable_dump_object_tree(void* self) {
+void q_texttable_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_texttable_dump_object_info(void* self) {
+void q_texttable_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_texttable_set_property(void* self, const char* name, void* value) {
+bool q_texttable_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_texttable_property(void* self, const char* name) {
+QVariant* q_texttable_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_texttable_dynamic_property_names(void* self) {
+const char** q_texttable_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -420,7 +420,7 @@ QBindingStorage* q_texttable_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_texttable_binding_storage2(void* self) {
+const QBindingStorage* q_texttable_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -432,11 +432,11 @@ void q_texttable_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_texttable_parent(void* self) {
+QObject* q_texttable_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_texttable_inherits(void* self, const char* classname) {
+bool q_texttable_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -452,31 +452,31 @@ int32_t q_texttable_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_texttable_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_texttable_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_texttable_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_texttable_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_texttable_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_texttable_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_texttable_disconnect1(void* self, const char* signal) {
+bool q_texttable_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_texttable_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_texttable_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_texttable_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_texttable_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_texttable_disconnect23(void* self, void* receiver, const char* member) {
+bool q_texttable_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -548,76 +548,44 @@ void q_texttable_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QTextTable_OnCustomEvent((QTextTable*)self, (intptr_t)callback);
 }
 
-void q_texttable_connect_notify(void* self, void* signal) {
+void q_texttable_connect_notify(void* self, const void* signal) {
     QTextTable_ConnectNotify((QTextTable*)self, (QMetaMethod*)signal);
 }
 
-void q_texttable_super_connect_notify(void* self, void* signal) {
+void q_texttable_super_connect_notify(void* self, const void* signal) {
     QTextTable_SuperConnectNotify((QTextTable*)self, (QMetaMethod*)signal);
 }
 
-void q_texttable_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_texttable_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QTextTable_OnConnectNotify((QTextTable*)self, (intptr_t)callback);
 }
 
-void q_texttable_disconnect_notify(void* self, void* signal) {
+void q_texttable_disconnect_notify(void* self, const void* signal) {
     QTextTable_DisconnectNotify((QTextTable*)self, (QMetaMethod*)signal);
 }
 
-void q_texttable_super_disconnect_notify(void* self, void* signal) {
+void q_texttable_super_disconnect_notify(void* self, const void* signal) {
     QTextTable_SuperDisconnectNotify((QTextTable*)self, (QMetaMethod*)signal);
 }
 
-void q_texttable_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_texttable_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QTextTable_OnDisconnectNotify((QTextTable*)self, (intptr_t)callback);
 }
 
-QObject* q_texttable_sender(void* self) {
+QObject* q_texttable_sender(const void* self) {
     return QTextTable_Sender((QTextTable*)self);
 }
 
-QObject* q_texttable_super_sender(void* self) {
-    return QTextTable_SuperSender((QTextTable*)self);
-}
-
-void q_texttable_on_sender(void* self, QObject* (*callback)()) {
-    QTextTable_OnSender((QTextTable*)self, (intptr_t)callback);
-}
-
-int32_t q_texttable_sender_signal_index(void* self) {
+int32_t q_texttable_sender_signal_index(const void* self) {
     return QTextTable_SenderSignalIndex((QTextTable*)self);
 }
 
-int32_t q_texttable_super_sender_signal_index(void* self) {
-    return QTextTable_SuperSenderSignalIndex((QTextTable*)self);
-}
-
-void q_texttable_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QTextTable_OnSenderSignalIndex((QTextTable*)self, (intptr_t)callback);
-}
-
-int32_t q_texttable_receivers(void* self, const char* signal) {
+int32_t q_texttable_receivers(const void* self, const char* signal) {
     return QTextTable_Receivers((QTextTable*)self, signal);
 }
 
-int32_t q_texttable_super_receivers(void* self, const char* signal) {
-    return QTextTable_SuperReceivers((QTextTable*)self, signal);
-}
-
-void q_texttable_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QTextTable_OnReceivers((QTextTable*)self, (intptr_t)callback);
-}
-
-bool q_texttable_is_signal_connected(void* self, void* signal) {
+bool q_texttable_is_signal_connected(const void* self, const void* signal) {
     return QTextTable_IsSignalConnected((QTextTable*)self, (QMetaMethod*)signal);
-}
-
-bool q_texttable_super_is_signal_connected(void* self, void* signal) {
-    return QTextTable_SuperIsSignalConnected((QTextTable*)self, (QMetaMethod*)signal);
-}
-
-void q_texttable_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QTextTable_OnIsSignalConnected((QTextTable*)self, (intptr_t)callback);
 }
 
 void q_texttable_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

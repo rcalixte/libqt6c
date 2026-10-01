@@ -24,26 +24,26 @@ QQuick3DTextureData* q_quick3dtexturedata_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-const QMetaObject* q_quick3dtexturedata_meta_object(void* self);
+const QMetaObject* q_quick3dtexturedata_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuick3DTextureData*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuick3DTextureData*
+/// @param callback const QMetaObject* func(const QQuick3DTextureData* self)
 ///
-void q_quick3dtexturedata_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quick3dtexturedata_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-const QMetaObject* q_quick3dtexturedata_super_meta_object(void* self);
+const QMetaObject* q_quick3dtexturedata_super_meta_object(const void* self);
 
 /// @param self QQuick3DTextureData*
 /// @param param1 const char*
@@ -99,9 +99,9 @@ const char* q_quick3dtexturedata_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-const char* q_quick3dtexturedata_texture_data(void* self);
+const char* q_quick3dtexturedata_texture_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#setTextureData)
 ///
@@ -112,22 +112,22 @@ void q_quick3dtexturedata_set_texture_data(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#size)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-QSize* q_quick3dtexturedata_size(void* self);
+QSize* q_quick3dtexturedata_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#setSize)
 ///
 /// @param self QQuick3DTextureData*
 /// @param size QSize*
 ///
-void q_quick3dtexturedata_set_size(void* self, void* size);
+void q_quick3dtexturedata_set_size(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#depth)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-int32_t q_quick3dtexturedata_depth(void* self);
+int32_t q_quick3dtexturedata_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#setDepth)
 ///
@@ -138,11 +138,11 @@ void q_quick3dtexturedata_set_depth(void* self, int depth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#format)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
 /// @return enum QQuick3DTextureData__Format
 ///
-int32_t q_quick3dtexturedata_format(void* self);
+int32_t q_quick3dtexturedata_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#setFormat)
 ///
@@ -153,9 +153,9 @@ void q_quick3dtexturedata_set_format(void* self, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#hasTransparency)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-bool q_quick3dtexturedata_has_transparency(void* self);
+bool q_quick3dtexturedata_has_transparency(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#setHasTransparency)
 ///
@@ -188,9 +188,9 @@ void q_quick3dtexturedata_mark_all_dirty(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QQuick3DTextureData*
-/// @param callback void func()
+/// @param callback void func(QQuick3DTextureData* self)
 ///
-void q_quick3dtexturedata_on_mark_all_dirty(void* self, void (*callback)());
+void q_quick3dtexturedata_on_mark_all_dirty(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dtexturedata.html#markAllDirty)
 ///
@@ -241,9 +241,9 @@ QQuick3DTextureData* q_quick3dtexturedata_from_q_qml_parser_status(void* _qqmlpa
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-const char* q_quick3dtexturedata_state(void* self);
+const char* q_quick3dtexturedata_state(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -258,19 +258,19 @@ void q_quick3dtexturedata_set_state(void* self, const char* state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dobject.html#childItems)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
 /// @return libqt_list of QQuick3DObject*
 ///
-libqt_list q_quick3dtexturedata_child_items(void* self);
+libqt_list q_quick3dtexturedata_child_items(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dobject.html#parentItem)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-QQuick3DObject* q_quick3dtexturedata_parent_item(void* self);
+QQuick3DObject* q_quick3dtexturedata_parent_item(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -346,9 +346,9 @@ void q_quick3dtexturedata_on_state_changed(void* self, void (*callback)(void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-const char* q_quick3dtexturedata_object_name(void* self);
+const char* q_quick3dtexturedata_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -363,33 +363,33 @@ void q_quick3dtexturedata_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-bool q_quick3dtexturedata_is_widget_type(void* self);
+bool q_quick3dtexturedata_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-bool q_quick3dtexturedata_is_window_type(void* self);
+bool q_quick3dtexturedata_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-bool q_quick3dtexturedata_is_quick_item_type(void* self);
+bool q_quick3dtexturedata_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-bool q_quick3dtexturedata_signals_blocked(void* self);
+bool q_quick3dtexturedata_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -404,9 +404,9 @@ bool q_quick3dtexturedata_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-QThread* q_quick3dtexturedata_thread(void* self);
+QThread* q_quick3dtexturedata_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -457,11 +457,11 @@ void q_quick3dtexturedata_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quick3dtexturedata_children(void* self);
+libqt_list q_quick3dtexturedata_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -499,7 +499,7 @@ void q_quick3dtexturedata_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quick3dtexturedata_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quick3dtexturedata_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -510,18 +510,18 @@ QMetaObject__Connection* q_quick3dtexturedata_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quick3dtexturedata_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quick3dtexturedata_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quick3dtexturedata_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quick3dtexturedata_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -532,7 +532,7 @@ QMetaObject__Connection* q_quick3dtexturedata_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quick3dtexturedata_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quick3dtexturedata_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -543,24 +543,24 @@ bool q_quick3dtexturedata_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quick3dtexturedata_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quick3dtexturedata_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-bool q_quick3dtexturedata_disconnect3(void* self);
+bool q_quick3dtexturedata_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param receiver QObject*
 ///
-bool q_quick3dtexturedata_disconnect4(void* self, void* receiver);
+bool q_quick3dtexturedata_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -568,23 +568,23 @@ bool q_quick3dtexturedata_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quick3dtexturedata_disconnect5(void* param1);
+bool q_quick3dtexturedata_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-void q_quick3dtexturedata_dump_object_tree(void* self);
+void q_quick3dtexturedata_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-void q_quick3dtexturedata_dump_object_info(void* self);
+void q_quick3dtexturedata_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -594,16 +594,16 @@ void q_quick3dtexturedata_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quick3dtexturedata_set_property(void* self, const char* name, void* value);
+bool q_quick3dtexturedata_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param name const char*
 ///
-QVariant* q_quick3dtexturedata_property(void* self, const char* name);
+QVariant* q_quick3dtexturedata_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -611,9 +611,9 @@ QVariant* q_quick3dtexturedata_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-const char** q_quick3dtexturedata_dynamic_property_names(void* self);
+const char** q_quick3dtexturedata_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -627,9 +627,9 @@ QBindingStorage* q_quick3dtexturedata_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-const QBindingStorage* q_quick3dtexturedata_binding_storage2(void* self);
+const QBindingStorage* q_quick3dtexturedata_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -652,18 +652,18 @@ void q_quick3dtexturedata_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-QObject* q_quick3dtexturedata_parent(void* self);
+QObject* q_quick3dtexturedata_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param classname const char*
 ///
-bool q_quick3dtexturedata_inherits(void* self, const char* classname);
+bool q_quick3dtexturedata_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -703,7 +703,7 @@ int32_t q_quick3dtexturedata_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3dtexturedata_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quick3dtexturedata_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -715,59 +715,59 @@ QMetaObject__Connection* q_quick3dtexturedata_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3dtexturedata_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quick3dtexturedata_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3dtexturedata_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quick3dtexturedata_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param signal const char*
 ///
-bool q_quick3dtexturedata_disconnect1(void* self, const char* signal);
+bool q_quick3dtexturedata_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DTextureData*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quick3dtexturedata_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quick3dtexturedata_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quick3dtexturedata_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quick3dtexturedata_disconnect23(void* self, void* receiver, const char* member);
+bool q_quick3dtexturedata_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuick3DTextureData*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quick3dtexturedata_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -794,7 +794,7 @@ void q_quick3dtexturedata_on_destroyed1(void* self, void (*callback)(void*, void
 /// @param self QQuick3DTextureData*
 /// @param param1 QQmlParserStatus*
 ///
-void q_quick3dtexturedata_operator_assign(void* self, void* param1);
+void q_quick3dtexturedata_operator_assign(void* self, const void* param1);
 
 /// Inherited from QQuick3DObject
 ///
@@ -806,7 +806,7 @@ void q_quick3dtexturedata_operator_assign(void* self, void* param1);
 /// @param param1 enum QQuick3DObject__ItemChange
 /// @param param2 QQuick3DObject__ItemChangeData*
 ///
-void q_quick3dtexturedata_item_change(void* self, int32_t param1, void* param2);
+void q_quick3dtexturedata_item_change(void* self, int32_t param1, const void* param2);
 
 /// Inherited from QQuick3DObject
 ///
@@ -818,7 +818,7 @@ void q_quick3dtexturedata_item_change(void* self, int32_t param1, void* param2);
 /// @param param1 enum QQuick3DObject__ItemChange
 /// @param param2 QQuick3DObject__ItemChangeData*
 ///
-void q_quick3dtexturedata_super_item_change(void* self, int32_t param1, void* param2);
+void q_quick3dtexturedata_super_item_change(void* self, int32_t param1, const void* param2);
 
 /// Inherited from QQuick3DObject
 ///
@@ -829,7 +829,7 @@ void q_quick3dtexturedata_super_item_change(void* self, int32_t param1, void* pa
 /// @param self QQuick3DTextureData*
 /// @param callback void func(QQuick3DTextureData* self, enum QQuick3DObject__ItemChange param1, QQuick3DObject__ItemChangeData* param2)
 ///
-void q_quick3dtexturedata_on_item_change(void* self, void (*callback)(void*, int32_t, void*));
+void q_quick3dtexturedata_on_item_change(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -858,9 +858,9 @@ void q_quick3dtexturedata_super_class_begin(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DTextureData*
-/// @param callback void func()
+/// @param callback void func(QQuick3DTextureData* self)
 ///
-void q_quick3dtexturedata_on_class_begin(void* self, void (*callback)());
+void q_quick3dtexturedata_on_class_begin(void* self, void (*callback)(void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -889,9 +889,9 @@ void q_quick3dtexturedata_super_component_complete(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DTextureData*
-/// @param callback void func()
+/// @param callback void func(QQuick3DTextureData* self)
 ///
-void q_quick3dtexturedata_on_component_complete(void* self, void (*callback)());
+void q_quick3dtexturedata_on_component_complete(void* self, void (*callback)(void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -920,9 +920,9 @@ void q_quick3dtexturedata_super_pre_sync(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DTextureData*
-/// @param callback void func()
+/// @param callback void func(QQuick3DTextureData* self)
 ///
-void q_quick3dtexturedata_on_pre_sync(void* self, void (*callback)());
+void q_quick3dtexturedata_on_pre_sync(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -1100,7 +1100,7 @@ void q_quick3dtexturedata_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self QQuick3DTextureData*
 /// @param signal QMetaMethod*
 ///
-void q_quick3dtexturedata_connect_notify(void* self, void* signal);
+void q_quick3dtexturedata_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1111,7 +1111,7 @@ void q_quick3dtexturedata_connect_notify(void* self, void* signal);
 /// @param self QQuick3DTextureData*
 /// @param signal QMetaMethod*
 ///
-void q_quick3dtexturedata_super_connect_notify(void* self, void* signal);
+void q_quick3dtexturedata_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1122,7 +1122,7 @@ void q_quick3dtexturedata_super_connect_notify(void* self, void* signal);
 /// @param self QQuick3DTextureData*
 /// @param callback void func(QQuick3DTextureData* self, QMetaMethod* signal)
 ///
-void q_quick3dtexturedata_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quick3dtexturedata_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1133,7 +1133,7 @@ void q_quick3dtexturedata_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self QQuick3DTextureData*
 /// @param signal QMetaMethod*
 ///
-void q_quick3dtexturedata_disconnect_notify(void* self, void* signal);
+void q_quick3dtexturedata_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1144,7 +1144,7 @@ void q_quick3dtexturedata_disconnect_notify(void* self, void* signal);
 /// @param self QQuick3DTextureData*
 /// @param signal QMetaMethod*
 ///
-void q_quick3dtexturedata_super_disconnect_notify(void* self, void* signal);
+void q_quick3dtexturedata_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1155,7 +1155,7 @@ void q_quick3dtexturedata_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuick3DTextureData*
 /// @param callback void func(QQuick3DTextureData* self, QMetaMethod* signal)
 ///
-void q_quick3dtexturedata_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quick3dtexturedata_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -1163,9 +1163,9 @@ void q_quick3dtexturedata_on_disconnect_notify(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-bool q_quick3dtexturedata_is_component_complete(void* self);
+bool q_quick3dtexturedata_is_component_complete(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1173,9 +1173,9 @@ bool q_quick3dtexturedata_is_component_complete(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-bool q_quick3dtexturedata_super_is_component_complete(void* self);
+bool q_quick3dtexturedata_super_is_component_complete(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1183,10 +1183,10 @@ bool q_quick3dtexturedata_super_is_component_complete(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
-/// @param callback bool func()
+/// @param self const QQuick3DTextureData*
+/// @param callback bool func(QQuick3DTextureData* self)
 ///
-void q_quick3dtexturedata_on_is_component_complete(void* self, bool (*callback)());
+void q_quick3dtexturedata_on_is_component_complete(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1194,9 +1194,9 @@ void q_quick3dtexturedata_on_is_component_complete(void* self, bool (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-QObject* q_quick3dtexturedata_sender(void* self);
+QObject* q_quick3dtexturedata_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1204,9 +1204,9 @@ QObject* q_quick3dtexturedata_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-QObject* q_quick3dtexturedata_super_sender(void* self);
+QObject* q_quick3dtexturedata_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1214,10 +1214,10 @@ QObject* q_quick3dtexturedata_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
-/// @param callback QObject* func()
+/// @param self const QQuick3DTextureData*
+/// @param callback QObject* func(QQuick3DTextureData* self)
 ///
-void q_quick3dtexturedata_on_sender(void* self, QObject* (*callback)());
+void q_quick3dtexturedata_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1225,9 +1225,9 @@ void q_quick3dtexturedata_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-int32_t q_quick3dtexturedata_sender_signal_index(void* self);
+int32_t q_quick3dtexturedata_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1235,9 +1235,9 @@ int32_t q_quick3dtexturedata_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 ///
-int32_t q_quick3dtexturedata_super_sender_signal_index(void* self);
+int32_t q_quick3dtexturedata_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1245,10 +1245,10 @@ int32_t q_quick3dtexturedata_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
-/// @param callback int32_t func()
+/// @param self const QQuick3DTextureData*
+/// @param callback int32_t func(QQuick3DTextureData* self)
 ///
-void q_quick3dtexturedata_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quick3dtexturedata_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1256,10 +1256,10 @@ void q_quick3dtexturedata_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param signal const char*
 ///
-int32_t q_quick3dtexturedata_receivers(void* self, const char* signal);
+int32_t q_quick3dtexturedata_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1267,10 +1267,10 @@ int32_t q_quick3dtexturedata_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param signal const char*
 ///
-int32_t q_quick3dtexturedata_super_receivers(void* self, const char* signal);
+int32_t q_quick3dtexturedata_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1278,10 +1278,10 @@ int32_t q_quick3dtexturedata_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param callback int32_t func(QQuick3DTextureData* self, const char* signal)
 ///
-void q_quick3dtexturedata_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quick3dtexturedata_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1289,10 +1289,10 @@ void q_quick3dtexturedata_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param signal QMetaMethod*
 ///
-bool q_quick3dtexturedata_is_signal_connected(void* self, void* signal);
+bool q_quick3dtexturedata_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1300,10 +1300,10 @@ bool q_quick3dtexturedata_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param signal QMetaMethod*
 ///
-bool q_quick3dtexturedata_super_is_signal_connected(void* self, void* signal);
+bool q_quick3dtexturedata_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1311,10 +1311,10 @@ bool q_quick3dtexturedata_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DTextureData*
+/// @param self const QQuick3DTextureData*
 /// @param callback bool func(QQuick3DTextureData* self, QMetaMethod* signal)
 ///
-void q_quick3dtexturedata_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quick3dtexturedata_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

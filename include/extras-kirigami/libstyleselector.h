@@ -14,7 +14,7 @@
 ///
 /// @param other Kirigami__Platform__StyleSelector*
 ///
-Kirigami__Platform__StyleSelector* k_kirigami__platform__styleselector_new(void* other);
+Kirigami__Platform__StyleSelector* k_kirigami__platform__styleselector_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-styleselector.html)
 
@@ -60,7 +60,7 @@ QUrl* k_kirigami__platform__styleselector_component_url(const char* fileName);
 ///
 /// @param baseUrl QUrl*
 ///
-void k_kirigami__platform__styleselector_set_base_url(void* baseUrl);
+void k_kirigami__platform__styleselector_set_base_url(const void* baseUrl);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-styleselector.html#resolveFilePath)
 ///

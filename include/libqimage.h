@@ -21,7 +21,7 @@ QImage* q_image_new();
 /// @param size QSize*
 /// @param format enum QImage__Format
 ///
-QImage* q_image_new2(void* size, int32_t format);
+QImage* q_image_new2(const void* size, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
@@ -101,7 +101,7 @@ QImage* q_image_new9(const char* fileName);
 ///
 /// @param param1 QImage*
 ///
-QImage* q_image_new10(void* param1);
+QImage* q_image_new10(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
@@ -221,7 +221,7 @@ QImage* q_image_new19(const char* fileName, const char* format);
 /// @param self QImage*
 /// @param param1 QImage*
 ///
-void q_image_operator_assign(void* self, void* param1);
+void q_image_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#swap)
 ///
@@ -232,52 +232,52 @@ void q_image_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#isNull)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-bool q_image_is_null(void* self);
+bool q_image_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#devType)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_dev_type(void* self);
+int32_t q_image_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#devType)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QImage*
-/// @param callback int32_t func()
+/// @param self const QImage*
+/// @param callback int32_t func(const QImage* self)
 ///
-void q_image_on_dev_type(void* self, int32_t (*callback)());
+void q_image_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#devType)
 ///
 /// Base class method implementation
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_super_dev_type(void* self);
+int32_t q_image_super_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator-eq-eq)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param param1 QImage*
 ///
-bool q_image_operator_equal(void* self, void* param1);
+bool q_image_operator_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator-not-eq)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param param1 QImage*
 ///
-bool q_image_operator_not_equal(void* self, void* param1);
+bool q_image_operator_not_equal(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator-QVariant)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QVariant* q_image_to_q_variant(void* self);
+QVariant* q_image_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detach)
 ///
@@ -287,48 +287,48 @@ void q_image_detach(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#isDetached)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-bool q_image_is_detached(void* self);
+bool q_image_is_detached(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#copy)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QImage* q_image_copy(void* self);
+QImage* q_image_copy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#copy)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param x int
 /// @param y int
 /// @param w int
 /// @param h int
 ///
-QImage* q_image_copy2(void* self, int x, int y, int w, int h);
+QImage* q_image_copy2(const void* self, int x, int y, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#format)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
 /// @return enum QImage__Format
 ///
-int32_t q_image_format(void* self);
+int32_t q_image_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param f enum QImage__Format
 ///
-QImage* q_image_convert_to_format(void* self, int32_t f);
+QImage* q_image_convert_to_format(const void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param f enum QImage__Format
 /// @param colorTable libqt_list of uint32_t
 ///
-QImage* q_image_convert_to_format2(void* self, int32_t f, libqt_list colorTable);
+QImage* q_image_convert_to_format2(const void* self, int32_t f, libqt_list colorTable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#reinterpretAsFormat)
 ///
@@ -339,10 +339,10 @@ bool q_image_reinterpret_as_format(void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertedTo)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param f enum QImage__Format
 ///
-QImage* q_image_converted_to(void* self, int32_t f);
+QImage* q_image_converted_to(const void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertTo)
 ///
@@ -353,52 +353,52 @@ void q_image_convert_to(void* self, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#width)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_width(void* self);
+int32_t q_image_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#height)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_height(void* self);
+int32_t q_image_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#size)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QSize* q_image_size(void* self);
+QSize* q_image_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rect)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QRect* q_image_rect(void* self);
+QRect* q_image_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#depth)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_depth(void* self);
+int32_t q_image_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#colorCount)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_color_count(void* self);
+int32_t q_image_color_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#bitPlaneCount)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_bit_plane_count(void* self);
+int32_t q_image_bit_plane_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#color)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param i int
 ///
-uint32_t q_image_color(void* self, int i);
+uint32_t q_image_color(const void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setColor)
 ///
@@ -417,15 +417,15 @@ void q_image_set_color_count(void* self, int colorCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#allGray)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-bool q_image_all_gray(void* self);
+bool q_image_all_gray(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#isGrayscale)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-bool q_image_is_grayscale(void* self);
+bool q_image_is_grayscale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#bits)
 ///
@@ -435,21 +435,21 @@ unsigned char* q_image_bits(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#bits)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-const unsigned char* q_image_bits2(void* self);
+const unsigned char* q_image_bits2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#constBits)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-const unsigned char* q_image_const_bits(void* self);
+const unsigned char* q_image_const_bits(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#sizeInBytes)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-intptr_t q_image_size_in_bytes(void* self);
+intptr_t q_image_size_in_bytes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scanLine)
 ///
@@ -460,68 +460,68 @@ unsigned char* q_image_scan_line(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scanLine)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param param1 int
 ///
-const unsigned char* q_image_scan_line2(void* self, int param1);
+const unsigned char* q_image_scan_line2(const void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#constScanLine)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param param1 int
 ///
-const unsigned char* q_image_const_scan_line(void* self, int param1);
+const unsigned char* q_image_const_scan_line(const void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#bytesPerLine)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-intptr_t q_image_bytes_per_line(void* self);
+intptr_t q_image_bytes_per_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#valid)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param x int
 /// @param y int
 ///
-bool q_image_valid(void* self, int x, int y);
+bool q_image_valid(const void* self, int x, int y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#valid)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param pt QPoint*
 ///
-bool q_image_valid2(void* self, void* pt);
+bool q_image_valid2(const void* self, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#pixelIndex)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param x int
 /// @param y int
 ///
-int32_t q_image_pixel_index(void* self, int x, int y);
+int32_t q_image_pixel_index(const void* self, int x, int y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#pixelIndex)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param pt QPoint*
 ///
-int32_t q_image_pixel_index2(void* self, void* pt);
+int32_t q_image_pixel_index2(const void* self, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#pixel)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param x int
 /// @param y int
 ///
-uint32_t q_image_pixel(void* self, int x, int y);
+uint32_t q_image_pixel(const void* self, int x, int y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#pixel)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param pt QPoint*
 ///
-uint32_t q_image_pixel2(void* self, void* pt);
+uint32_t q_image_pixel2(const void* self, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setPixel)
 ///
@@ -538,22 +538,22 @@ void q_image_set_pixel(void* self, int x, int y, uint32_t index_or_rgb);
 /// @param pt QPoint*
 /// @param index_or_rgb uint32_t
 ///
-void q_image_set_pixel2(void* self, void* pt, uint32_t index_or_rgb);
+void q_image_set_pixel2(void* self, const void* pt, uint32_t index_or_rgb);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#pixelColor)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param x int
 /// @param y int
 ///
-QColor* q_image_pixel_color(void* self, int x, int y);
+QColor* q_image_pixel_color(const void* self, int x, int y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#pixelColor)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param pt QPoint*
 ///
-QColor* q_image_pixel_color2(void* self, void* pt);
+QColor* q_image_pixel_color2(const void* self, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setPixelColor)
 ///
@@ -562,7 +562,7 @@ QColor* q_image_pixel_color2(void* self, void* pt);
 /// @param y int
 /// @param c QColor*
 ///
-void q_image_set_pixel_color(void* self, int x, int y, void* c);
+void q_image_set_pixel_color(void* self, int x, int y, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setPixelColor)
 ///
@@ -570,15 +570,15 @@ void q_image_set_pixel_color(void* self, int x, int y, void* c);
 /// @param pt QPoint*
 /// @param c QColor*
 ///
-void q_image_set_pixel_color2(void* self, void* pt, void* c);
+void q_image_set_pixel_color2(void* self, const void* pt, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#colorTable)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
 /// @return libqt_list of uint32_t
 ///
-libqt_list q_image_color_table(void* self);
+libqt_list q_image_color_table(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setColorTable)
 ///
@@ -589,9 +589,9 @@ void q_image_set_color_table(void* self, libqt_list colors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#devicePixelRatio)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-double q_image_device_pixel_ratio(void* self);
+double q_image_device_pixel_ratio(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setDevicePixelRatio)
 ///
@@ -602,9 +602,9 @@ void q_image_set_device_pixel_ratio(void* self, double scaleFactor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#deviceIndependentSize)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QSizeF* q_image_device_independent_size(void* self);
+QSizeF* q_image_device_independent_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fill)
 ///
@@ -618,7 +618,7 @@ void q_image_fill(void* self, uint32_t pixel);
 /// @param self QImage*
 /// @param color QColor*
 ///
-void q_image_fill2(void* self, void* color);
+void q_image_fill2(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fill)
 ///
@@ -629,71 +629,71 @@ void q_image_fill3(void* self, int32_t color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#hasAlphaChannel)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-bool q_image_has_alpha_channel(void* self);
+bool q_image_has_alpha_channel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setAlphaChannel)
 ///
 /// @param self QImage*
 /// @param alphaChannel QImage*
 ///
-void q_image_set_alpha_channel(void* self, void* alphaChannel);
+void q_image_set_alpha_channel(void* self, const void* alphaChannel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#createAlphaMask)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QImage* q_image_create_alpha_mask(void* self);
+QImage* q_image_create_alpha_mask(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#createHeuristicMask)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QImage* q_image_create_heuristic_mask(void* self);
+QImage* q_image_create_heuristic_mask(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#createMaskFromColor)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param color uint32_t
 ///
-QImage* q_image_create_mask_from_color(void* self, uint32_t color);
+QImage* q_image_create_mask_from_color(const void* self, uint32_t color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param w int
 /// @param h int
 ///
-QImage* q_image_scaled(void* self, int w, int h);
+QImage* q_image_scaled(const void* self, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param s QSize*
 ///
-QImage* q_image_scaled2(void* self, void* s);
+QImage* q_image_scaled2(const void* self, const void* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaledToWidth)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param w int
 ///
-QImage* q_image_scaled_to_width(void* self, int w);
+QImage* q_image_scaled_to_width(const void* self, int w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaledToHeight)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param h int
 ///
-QImage* q_image_scaled_to_height(void* self, int h);
+QImage* q_image_scaled_to_height(const void* self, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#transformed)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param matrix QTransform*
 ///
-QImage* q_image_transformed(void* self, void* matrix);
+QImage* q_image_transformed(const void* self, const void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#trueMatrix)
 ///
@@ -701,19 +701,19 @@ QImage* q_image_transformed(void* self, void* matrix);
 /// @param w int
 /// @param h int
 ///
-QTransform* q_image_true_matrix(void* param1, int w, int h);
+QTransform* q_image_true_matrix(const void* param1, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QImage* q_image_mirrored(void* self);
+QImage* q_image_mirrored(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QImage* q_image_rgb_swapped(void* self);
+QImage* q_image_rgb_swapped(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirror)
 ///
@@ -735,31 +735,31 @@ void q_image_invert_pixels(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#colorSpace)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QColorSpace* q_image_color_space(void* self);
+QColorSpace* q_image_color_space(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertedToColorSpace)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param colorSpace QColorSpace*
 ///
-QImage* q_image_converted_to_color_space(void* self, void* colorSpace);
+QImage* q_image_converted_to_color_space(const void* self, const void* colorSpace);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertedToColorSpace)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param colorSpace QColorSpace*
 /// @param format enum QImage__Format
 ///
-QImage* q_image_converted_to_color_space2(void* self, void* colorSpace, int32_t format);
+QImage* q_image_converted_to_color_space2(const void* self, const void* colorSpace, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToColorSpace)
 ///
 /// @param self QImage*
 /// @param colorSpace QColorSpace*
 ///
-void q_image_convert_to_color_space(void* self, void* colorSpace);
+void q_image_convert_to_color_space(void* self, const void* colorSpace);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToColorSpace)
 ///
@@ -767,36 +767,36 @@ void q_image_convert_to_color_space(void* self, void* colorSpace);
 /// @param colorSpace QColorSpace*
 /// @param format enum QImage__Format
 ///
-void q_image_convert_to_color_space2(void* self, void* colorSpace, int32_t format);
+void q_image_convert_to_color_space2(void* self, const void* colorSpace, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setColorSpace)
 ///
 /// @param self QImage*
 /// @param colorSpace QColorSpace*
 ///
-void q_image_set_color_space(void* self, void* colorSpace);
+void q_image_set_color_space(void* self, const void* colorSpace);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#colorTransformed)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param transform QColorTransform*
 ///
-QImage* q_image_color_transformed(void* self, void* transform);
+QImage* q_image_color_transformed(const void* self, const void* transform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#colorTransformed)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param transform QColorTransform*
 /// @param format enum QImage__Format
 ///
-QImage* q_image_color_transformed2(void* self, void* transform, int32_t format);
+QImage* q_image_color_transformed2(const void* self, const void* transform, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#applyColorTransform)
 ///
 /// @param self QImage*
 /// @param transform QColorTransform*
 ///
-void q_image_apply_color_transform(void* self, void* transform);
+void q_image_apply_color_transform(void* self, const void* transform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#applyColorTransform)
 ///
@@ -804,7 +804,7 @@ void q_image_apply_color_transform(void* self, void* transform);
 /// @param transform QColorTransform*
 /// @param format enum QImage__Format
 ///
-void q_image_apply_color_transform2(void* self, void* transform, int32_t format);
+void q_image_apply_color_transform2(void* self, const void* transform, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#load)
 ///
@@ -845,17 +845,17 @@ bool q_image_load_from_data3(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#save)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param fileName const char*
 ///
-bool q_image_save(void* self, const char* fileName);
+bool q_image_save(const void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#save)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param device QIODevice*
 ///
-bool q_image_save2(void* self, void* device);
+bool q_image_save2(const void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
@@ -878,44 +878,44 @@ QImage* q_image_from_data3(char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#cacheKey)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int64_t q_image_cache_key(void* self);
+int64_t q_image_cache_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#paintEngine)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QPaintEngine* q_image_paint_engine(void* self);
+QPaintEngine* q_image_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#paintEngine)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QImage*
-/// @param callback QPaintEngine* func()
+/// @param self const QImage*
+/// @param callback QPaintEngine* func(const QImage* self)
 ///
-void q_image_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_image_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#paintEngine)
 ///
 /// Base class method implementation
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QPaintEngine* q_image_super_paint_engine(void* self);
+QPaintEngine* q_image_super_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#dotsPerMeterX)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_dots_per_meter_x(void* self);
+int32_t q_image_dots_per_meter_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#dotsPerMeterY)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_dots_per_meter_y(void* self);
+int32_t q_image_dots_per_meter_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setDotsPerMeterX)
 ///
@@ -933,32 +933,32 @@ void q_image_set_dots_per_meter_y(void* self, int dotsPerMeterY);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#offset)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QPoint* q_image_offset(void* self);
+QPoint* q_image_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setOffset)
 ///
 /// @param self QImage*
 /// @param offset QPoint*
 ///
-void q_image_set_offset(void* self, void* offset);
+void q_image_set_offset(void* self, const void* offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#textKeys)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-const char** q_image_text_keys(void* self);
+const char** q_image_text_keys(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-const char* q_image_text(void* self);
+const char* q_image_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#setText)
 ///
@@ -970,9 +970,9 @@ void q_image_set_text(void* self, const char* key, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#pixelFormat)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QPixelFormat* q_image_pixel_format(void* self);
+QPixelFormat* q_image_pixel_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#toPixelFormat)
 ///
@@ -990,82 +990,42 @@ int32_t q_image_to_image_format(void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#metric)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_image_metric(void* self, int32_t metric);
+int32_t q_image_metric(const void* self, int32_t metric);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QImage*
-/// @param callback int32_t func(QImage* self, enum QPaintDevice__PaintDeviceMetric metric)
+/// @param self const QImage*
+/// @param callback int32_t func(const QImage* self, enum QPaintDevice__PaintDeviceMetric metric)
 ///
-void q_image_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_image_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#metric)
 ///
 /// Base class method implementation
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_image_super_metric(void* self, int32_t metric);
+int32_t q_image_super_metric(const void* self, int32_t metric);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param horizontal bool
 /// @param vertical bool
 ///
-QImage* q_image_mirrored_helper(void* self, bool horizontal, bool vertical);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback QImage* func(QImage* self, bool horizontal, bool vertical)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_image_on_mirrored_helper(void* self, QImage* (*callback)(void*, bool, bool));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-/// @param horizontal bool
-/// @param vertical bool
-///
-QImage* q_image_super_mirrored_helper(void* self, bool horizontal, bool vertical);
+QImage* q_image_mirrored_helper(const void* self, bool horizontal, bool vertical);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_helper)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QImage* q_image_rgb_swapped_helper(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_helper)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback QImage* func()
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_image_on_rgb_swapped_helper(void* self, QImage* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_helper)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-///
-QImage* q_image_super_rgb_swapped_helper(void* self);
+QImage* q_image_rgb_swapped_helper(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_inplace)
 ///
@@ -1075,76 +1035,19 @@ QImage* q_image_super_rgb_swapped_helper(void* self);
 ///
 void q_image_mirrored_inplace(void* self, bool horizontal, bool vertical);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_inplace)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback void func(QImage* self, bool horizontal, bool vertical)
-///
-void q_image_on_mirrored_inplace(void* self, void (*callback)(void*, bool, bool));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_inplace)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-/// @param horizontal bool
-/// @param vertical bool
-///
-void q_image_super_mirrored_inplace(void* self, bool horizontal, bool vertical);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_inplace)
 ///
 /// @param self QImage*
 ///
 void q_image_rgb_swapped_inplace(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_inplace)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback void func()
-///
-void q_image_on_rgb_swapped_inplace(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_inplace)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-///
-void q_image_super_rgb_swapped_inplace(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_convert_to_format_helper(void* self, int32_t format, int32_t flags);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback QImage* func(QImage* self, enum QImage__Format format, flag of enum Qt__ImageConversionFlag flags)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int32_t, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-/// @param format enum QImage__Format
-/// @param flags flag of enum Qt__ImageConversionFlag
-///
-QImage* q_image_super_convert_to_format_helper(void* self, int32_t format, int32_t flags);
+QImage* q_image_convert_to_format_helper(const void* self, int32_t format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
 ///
@@ -1154,53 +1057,13 @@ QImage* q_image_super_convert_to_format_helper(void* self, int32_t format, int32
 ///
 bool q_image_convert_to_format_inplace(void* self, int32_t format, int32_t flags);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback bool func(QImage* self, enum QImage__Format format, flag of enum Qt__ImageConversionFlag flags)
-///
-void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, int32_t, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-/// @param format enum QImage__Format
-/// @param flags flag of enum Qt__ImageConversionFlag
-///
-bool q_image_super_convert_to_format_inplace(void* self, int32_t format, int32_t flags);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param w int
 /// @param h int
 ///
-QImage* q_image_smooth_scaled(void* self, int w, int h);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback QImage* func(QImage* self, int w, int h)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_image_on_smooth_scaled(void* self, QImage* (*callback)(void*, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-/// @param w int
-/// @param h int
-///
-QImage* q_image_super_smooth_scaled(void* self, int w, int h);
+QImage* q_image_smooth_scaled(const void* self, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
 ///
@@ -1208,54 +1071,37 @@ QImage* q_image_super_smooth_scaled(void* self, int w, int h);
 ///
 void q_image_detach_metadata(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback void func()
-///
-void q_image_on_detach_metadata(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-///
-void q_image_super_detach_metadata(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#copy)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param rect QRect*
 ///
-QImage* q_image_copy1(void* self, void* rect);
+QImage* q_image_copy1(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param f enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_convert_to_format22(void* self, int32_t f, int32_t flags);
+QImage* q_image_convert_to_format22(const void* self, int32_t f, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param f enum QImage__Format
 /// @param colorTable libqt_list of uint32_t
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_convert_to_format3(void* self, int32_t f, libqt_list colorTable, int32_t flags);
+QImage* q_image_convert_to_format3(const void* self, int32_t f, libqt_list colorTable, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertedTo)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param f enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_converted_to2(void* self, int32_t f, int32_t flags);
+QImage* q_image_converted_to2(const void* self, int32_t f, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertTo)
 ///
@@ -1267,100 +1113,100 @@ void q_image_convert_to2(void* self, int32_t f, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#createAlphaMask)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_create_alpha_mask1(void* self, int32_t flags);
+QImage* q_image_create_alpha_mask1(const void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#createHeuristicMask)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param clipTight bool
 ///
-QImage* q_image_create_heuristic_mask1(void* self, bool clipTight);
+QImage* q_image_create_heuristic_mask1(const void* self, bool clipTight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#createMaskFromColor)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param color uint32_t
 /// @param mode enum Qt__MaskMode
 ///
-QImage* q_image_create_mask_from_color2(void* self, uint32_t color, int32_t mode);
+QImage* q_image_create_mask_from_color2(const void* self, uint32_t color, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param w int
 /// @param h int
 /// @param aspectMode enum Qt__AspectRatioMode
 ///
-QImage* q_image_scaled3(void* self, int w, int h, int32_t aspectMode);
+QImage* q_image_scaled3(const void* self, int w, int h, int32_t aspectMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param w int
 /// @param h int
 /// @param aspectMode enum Qt__AspectRatioMode
 /// @param mode enum Qt__TransformationMode
 ///
-QImage* q_image_scaled4(void* self, int w, int h, int32_t aspectMode, int32_t mode);
+QImage* q_image_scaled4(const void* self, int w, int h, int32_t aspectMode, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param s QSize*
 /// @param aspectMode enum Qt__AspectRatioMode
 ///
-QImage* q_image_scaled22(void* self, void* s, int32_t aspectMode);
+QImage* q_image_scaled22(const void* self, const void* s, int32_t aspectMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param s QSize*
 /// @param aspectMode enum Qt__AspectRatioMode
 /// @param mode enum Qt__TransformationMode
 ///
-QImage* q_image_scaled32(void* self, void* s, int32_t aspectMode, int32_t mode);
+QImage* q_image_scaled32(const void* self, const void* s, int32_t aspectMode, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaledToWidth)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param w int
 /// @param mode enum Qt__TransformationMode
 ///
-QImage* q_image_scaled_to_width2(void* self, int w, int32_t mode);
+QImage* q_image_scaled_to_width2(const void* self, int w, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scaledToHeight)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param h int
 /// @param mode enum Qt__TransformationMode
 ///
-QImage* q_image_scaled_to_height2(void* self, int h, int32_t mode);
+QImage* q_image_scaled_to_height2(const void* self, int h, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#transformed)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param matrix QTransform*
 /// @param mode enum Qt__TransformationMode
 ///
-QImage* q_image_transformed2(void* self, void* matrix, int32_t mode);
+QImage* q_image_transformed2(const void* self, const void* matrix, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param horizontally bool
 ///
-QImage* q_image_mirrored1(void* self, bool horizontally);
+QImage* q_image_mirrored1(const void* self, bool horizontally);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param horizontally bool
 /// @param vertically bool
 ///
-QImage* q_image_mirrored2(void* self, bool horizontally, bool vertically);
+QImage* q_image_mirrored2(const void* self, bool horizontally, bool vertically);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirror)
 ///
@@ -1386,12 +1232,12 @@ void q_image_invert_pixels1(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertedToColorSpace)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param colorSpace QColorSpace*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_converted_to_color_space3(void* self, void* colorSpace, int32_t format, int32_t flags);
+QImage* q_image_converted_to_color_space3(const void* self, const void* colorSpace, int32_t format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToColorSpace)
 ///
@@ -1400,16 +1246,16 @@ QImage* q_image_converted_to_color_space3(void* self, void* colorSpace, int32_t 
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-void q_image_convert_to_color_space3(void* self, void* colorSpace, int32_t format, int32_t flags);
+void q_image_convert_to_color_space3(void* self, const void* colorSpace, int32_t format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#colorTransformed)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param transform QColorTransform*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_color_transformed3(void* self, void* transform, int32_t format, int32_t flags);
+QImage* q_image_color_transformed3(const void* self, const void* transform, int32_t format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#applyColorTransform)
 ///
@@ -1418,7 +1264,7 @@ QImage* q_image_color_transformed3(void* self, void* transform, int32_t format, 
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-void q_image_apply_color_transform3(void* self, void* transform, int32_t format, int32_t flags);
+void q_image_apply_color_transform3(void* self, const void* transform, int32_t format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#load)
 ///
@@ -1455,37 +1301,37 @@ bool q_image_load_from_data23(void* self, char* data, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#save)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param fileName const char*
 /// @param format const char*
 ///
-bool q_image_save22(void* self, const char* fileName, const char* format);
+bool q_image_save22(const void* self, const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#save)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param fileName const char*
 /// @param format const char*
 /// @param quality int
 ///
-bool q_image_save3(void* self, const char* fileName, const char* format, int quality);
+bool q_image_save3(const void* self, const char* fileName, const char* format, int quality);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#save)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param device QIODevice*
 /// @param format const char*
 ///
-bool q_image_save23(void* self, void* device, const char* format);
+bool q_image_save23(const void* self, void* device, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#save)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param device QIODevice*
 /// @param format const char*
 /// @param quality int
 ///
-bool q_image_save32(void* self, void* device, const char* format, int quality);
+bool q_image_save32(const void* self, void* device, const char* format, int quality);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
@@ -1513,10 +1359,10 @@ QImage* q_image_from_data23(char* data, const char* format);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param key const char*
 ///
-const char* q_image_text1(void* self, const char* key);
+const char* q_image_text1(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
 ///
@@ -1525,87 +1371,69 @@ const char* q_image_text1(void* self, const char* key);
 ///
 void q_image_detach_metadata1(void* self, bool invalidateCache);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QImage*
-/// @param callback void func(QImage* self, bool invalidateCache)
-///
-void q_image_on_detach_metadata1(void* self, void (*callback)(void*, bool));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
-///
-/// Base class method implementation
-///
-/// @param self QImage*
-/// @param invalidateCache bool
-///
-void q_image_super_detach_metadata1(void* self, bool invalidateCache);
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-bool q_image_painting_active(void* self);
+bool q_image_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_width_m_m(void* self);
+int32_t q_image_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_height_m_m(void* self);
+int32_t q_image_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_logical_dpi_x(void* self);
+int32_t q_image_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_logical_dpi_y(void* self);
+int32_t q_image_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_physical_dpi_x(void* self);
+int32_t q_image_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-int32_t q_image_physical_dpi_y(void* self);
+int32_t q_image_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-double q_image_device_pixel_ratio_f(void* self);
+double q_image_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -1628,10 +1456,10 @@ int32_t q_image_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param painter QPainter*
 ///
-void q_image_init_painter(void* self, void* painter);
+void q_image_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -1639,10 +1467,10 @@ void q_image_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param painter QPainter*
 ///
-void q_image_super_init_painter(void* self, void* painter);
+void q_image_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -1650,10 +1478,10 @@ void q_image_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param callback void func(QImage* self, QPainter* painter)
 ///
-void q_image_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_image_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1661,10 +1489,10 @@ void q_image_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_image_redirected(void* self, void* offset);
+QPaintDevice* q_image_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -1672,10 +1500,10 @@ QPaintDevice* q_image_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_image_super_redirected(void* self, void* offset);
+QPaintDevice* q_image_super_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -1683,10 +1511,10 @@ QPaintDevice* q_image_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param callback QPaintDevice* func(QImage* self, QPoint* offset)
 ///
-void q_image_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_image_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1694,9 +1522,9 @@ void q_image_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QPainter* q_image_shared_painter(void* self);
+QPainter* q_image_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -1704,9 +1532,9 @@ QPainter* q_image_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 ///
-QPainter* q_image_super_shared_painter(void* self);
+QPainter* q_image_super_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -1714,10 +1542,10 @@ QPainter* q_image_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QImage*
-/// @param callback QPainter* func()
+/// @param self const QImage*
+/// @param callback QPainter* func(QImage* self)
 ///
-void q_image_on_shared_painter(void* self, QPainter* (*callback)());
+void q_image_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1725,11 +1553,11 @@ void q_image_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_image_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_image_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1737,11 +1565,11 @@ double q_image_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_image_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_image_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1749,10 +1577,10 @@ double q_image_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QImage*
+/// @param self const QImage*
 /// @param callback double func(QImage* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_image_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_image_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#dtor.QImage)
 ///

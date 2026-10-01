@@ -16,6 +16,8 @@ KMessageBoxDontAskAgainInterface* k_messageboxdontaskagaininterface_new();
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownTwoActions)
 ///
+/// @warning This method must be implemented with `k_messageboxdontaskagaininterface_on_should_be_shown_two_actions` before it can be called.
+///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
 /// @param result enum KMessageBox__ButtonCode*
@@ -31,17 +33,9 @@ bool k_messageboxdontaskagaininterface_should_be_shown_two_actions(void* self, c
 ///
 void k_messageboxdontaskagaininterface_on_should_be_shown_two_actions(void* self, bool (*callback)(void*, const char*, int32_t*));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownTwoActions)
-///
-/// Base class method implementation
-///
-/// @param self KMessageBoxDontAskAgainInterface*
-/// @param dontShowAgainName const char*
-/// @param result enum KMessageBox__ButtonCode*
-///
-bool k_messageboxdontaskagaininterface_super_should_be_shown_two_actions(void* self, const char* dontShowAgainName, int32_t* result);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownContinue)
+///
+/// @warning This method must be implemented with `k_messageboxdontaskagaininterface_on_should_be_shown_continue` before it can be called.
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
@@ -57,16 +51,9 @@ bool k_messageboxdontaskagaininterface_should_be_shown_continue(void* self, cons
 ///
 void k_messageboxdontaskagaininterface_on_should_be_shown_continue(void* self, bool (*callback)(void*, const char*));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#shouldBeShownContinue)
-///
-/// Base class method implementation
-///
-/// @param self KMessageBoxDontAskAgainInterface*
-/// @param dontShowAgainName const char*
-///
-bool k_messageboxdontaskagaininterface_super_should_be_shown_continue(void* self, const char* dontShowAgainName);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainTwoActions)
+///
+/// @warning This method must be implemented with `k_messageboxdontaskagaininterface_on_save_dont_show_again_two_actions` before it can be called.
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
@@ -83,17 +70,9 @@ void k_messageboxdontaskagaininterface_save_dont_show_again_two_actions(void* se
 ///
 void k_messageboxdontaskagaininterface_on_save_dont_show_again_two_actions(void* self, void (*callback)(void*, const char*, int32_t));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainTwoActions)
-///
-/// Base class method implementation
-///
-/// @param self KMessageBoxDontAskAgainInterface*
-/// @param dontShowAgainName const char*
-/// @param result enum KMessageBox__ButtonCode
-///
-void k_messageboxdontaskagaininterface_super_save_dont_show_again_two_actions(void* self, const char* dontShowAgainName, int32_t result);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainContinue)
+///
+/// @warning This method must be implemented with `k_messageboxdontaskagaininterface_on_save_dont_show_again_continue` before it can be called.
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
@@ -109,16 +88,9 @@ void k_messageboxdontaskagaininterface_save_dont_show_again_continue(void* self,
 ///
 void k_messageboxdontaskagaininterface_on_save_dont_show_again_continue(void* self, void (*callback)(void*, const char*));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#saveDontShowAgainContinue)
-///
-/// Base class method implementation
-///
-/// @param self KMessageBoxDontAskAgainInterface*
-/// @param dontShowAgainName const char*
-///
-void k_messageboxdontaskagaininterface_super_save_dont_show_again_continue(void* self, const char* dontShowAgainName);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableAllMessages)
+///
+/// @warning This method must be implemented with `k_messageboxdontaskagaininterface_on_enable_all_messages` before it can be called.
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 ///
@@ -129,19 +101,13 @@ void k_messageboxdontaskagaininterface_enable_all_messages(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
-/// @param callback void func()
+/// @param callback void func(KMessageBoxDontAskAgainInterface* self)
 ///
-void k_messageboxdontaskagaininterface_on_enable_all_messages(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableAllMessages)
-///
-/// Base class method implementation
-///
-/// @param self KMessageBoxDontAskAgainInterface*
-///
-void k_messageboxdontaskagaininterface_super_enable_all_messages(void* self);
+void k_messageboxdontaskagaininterface_on_enable_all_messages(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableMessage)
+///
+/// @warning This method must be implemented with `k_messageboxdontaskagaininterface_on_enable_message` before it can be called.
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param dontShowAgainName const char*
@@ -157,16 +123,9 @@ void k_messageboxdontaskagaininterface_enable_message(void* self, const char* do
 ///
 void k_messageboxdontaskagaininterface_on_enable_message(void* self, void (*callback)(void*, const char*));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#enableMessage)
-///
-/// Base class method implementation
-///
-/// @param self KMessageBoxDontAskAgainInterface*
-/// @param dontShowAgainName const char*
-///
-void k_messageboxdontaskagaininterface_super_enable_message(void* self, const char* dontShowAgainName);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#setConfig)
+///
+/// @warning This method must be implemented with `k_messageboxdontaskagaininterface_on_set_config` before it can be called.
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param config KConfig*
@@ -182,21 +141,12 @@ void k_messageboxdontaskagaininterface_set_config(void* self, void* config);
 ///
 void k_messageboxdontaskagaininterface_on_set_config(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#setConfig)
-///
-/// Base class method implementation
-///
-/// @param self KMessageBoxDontAskAgainInterface*
-/// @param config KConfig*
-///
-void k_messageboxdontaskagaininterface_super_set_config(void* self, void* config);
-
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#operator-eq)
 ///
 /// @param self KMessageBoxDontAskAgainInterface*
 /// @param param1 KMessageBoxDontAskAgainInterface*
 ///
-void k_messageboxdontaskagaininterface_operator_assign(void* self, void* param1);
+void k_messageboxdontaskagaininterface_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kmessageboxdontaskagaininterface.html#dtor.KMessageBoxDontAskAgainInterface)
 ///

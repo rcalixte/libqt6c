@@ -12,15 +12,15 @@ KIO__DeleteOrTrashJob* k_io__deleteortrashjob_new(libqt_list /* of QUrl* */ urls
     return KIO__DeleteOrTrashJob_New(urls, deletionType, confirm, (QObject*)parent);
 }
 
-const QMetaObject* k_io__deleteortrashjob_meta_object(void* self) {
+const QMetaObject* k_io__deleteortrashjob_meta_object(const void* self) {
     return KIO__DeleteOrTrashJob_MetaObject((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_io__deleteortrashjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__DeleteOrTrashJob_OnMetaObject((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__deleteortrashjob_super_meta_object(void* self) {
+const QMetaObject* k_io__deleteortrashjob_super_meta_object(const void* self) {
     return KIO__DeleteOrTrashJob_SuperMetaObject((KIO__DeleteOrTrashJob*)self);
 }
 
@@ -59,7 +59,7 @@ void k_io__deleteortrashjob_start(void* self) {
     KIO__DeleteOrTrashJob_Start((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_on_start(void* self, void (*callback)()) {
+void k_io__deleteortrashjob_on_start(void* self, void (*callback)(void*)) {
     KIO__DeleteOrTrashJob_OnStart((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
@@ -93,15 +93,15 @@ void k_io__deleteortrashjob_set_ui_delegate(void* self, void* delegate) {
     KJob_SetUiDelegate((KJob*)self, (KJobUiDelegate*)delegate);
 }
 
-KJobUiDelegate* k_io__deleteortrashjob_ui_delegate(void* self) {
+KJobUiDelegate* k_io__deleteortrashjob_ui_delegate(const void* self) {
     return KJob_UiDelegate((KJob*)self);
 }
 
-int32_t k_io__deleteortrashjob_capabilities(void* self) {
+int32_t k_io__deleteortrashjob_capabilities(const void* self) {
     return KJob_Capabilities((KJob*)self);
 }
 
-bool k_io__deleteortrashjob_is_suspended(void* self) {
+bool k_io__deleteortrashjob_is_suspended(const void* self) {
     return KJob_IsSuspended((KJob*)self);
 }
 
@@ -121,26 +121,26 @@ bool k_io__deleteortrashjob_exec(void* self) {
     return KJob_Exec((KJob*)self);
 }
 
-int32_t k_io__deleteortrashjob_error(void* self) {
+int32_t k_io__deleteortrashjob_error(const void* self) {
     return KJob_Error((KJob*)self);
 }
 
-const char* k_io__deleteortrashjob_error_text(void* self) {
+const char* k_io__deleteortrashjob_error_text(const void* self) {
     libqt_string _str = KJob_ErrorText((KJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uintptr_t k_io__deleteortrashjob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_io__deleteortrashjob_processed_amount(const void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uintptr_t k_io__deleteortrashjob_total_amount(void* self, int32_t unit) {
+uintptr_t k_io__deleteortrashjob_total_amount(const void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uintptr_t k_io__deleteortrashjob_percent(void* self) {
+uintptr_t k_io__deleteortrashjob_percent(const void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -148,7 +148,7 @@ void k_io__deleteortrashjob_set_auto_delete(void* self, bool autodelete) {
     KJob_SetAutoDelete((KJob*)self, autodelete);
 }
 
-bool k_io__deleteortrashjob_is_auto_delete(void* self) {
+bool k_io__deleteortrashjob_is_auto_delete(const void* self) {
     return KJob_IsAutoDelete((KJob*)self);
 }
 
@@ -156,15 +156,15 @@ void k_io__deleteortrashjob_set_finished_notification_hidden(void* self) {
     KJob_SetFinishedNotificationHidden((KJob*)self);
 }
 
-bool k_io__deleteortrashjob_is_finished_notification_hidden(void* self) {
+bool k_io__deleteortrashjob_is_finished_notification_hidden(const void* self) {
     return KJob_IsFinishedNotificationHidden((KJob*)self);
 }
 
-bool k_io__deleteortrashjob_is_started_with_exec(void* self) {
+bool k_io__deleteortrashjob_is_started_with_exec(const void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-int64_t k_io__deleteortrashjob_elapsed_time(void* self) {
+int64_t k_io__deleteortrashjob_elapsed_time(const void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -216,7 +216,7 @@ void k_io__deleteortrashjob_set_finished_notification_hidden1(void* self, bool h
     KJob_SetFinishedNotificationHidden1((KJob*)self, hide);
 }
 
-const char* k_io__deleteortrashjob_object_name(void* self) {
+const char* k_io__deleteortrashjob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -227,19 +227,19 @@ void k_io__deleteortrashjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_io__deleteortrashjob_is_widget_type(void* self) {
+bool k_io__deleteortrashjob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_io__deleteortrashjob_is_window_type(void* self) {
+bool k_io__deleteortrashjob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_io__deleteortrashjob_is_quick_item_type(void* self) {
+bool k_io__deleteortrashjob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_io__deleteortrashjob_signals_blocked(void* self) {
+bool k_io__deleteortrashjob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -247,7 +247,7 @@ bool k_io__deleteortrashjob_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_io__deleteortrashjob_thread(void* self) {
+QThread* k_io__deleteortrashjob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -271,7 +271,7 @@ void k_io__deleteortrashjob_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_io__deleteortrashjob_children(void* self) {
+libqt_list /* of QObject* */ k_io__deleteortrashjob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -288,55 +288,55 @@ void k_io__deleteortrashjob_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_io__deleteortrashjob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_io__deleteortrashjob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_io__deleteortrashjob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_io__deleteortrashjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_io__deleteortrashjob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_io__deleteortrashjob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_io__deleteortrashjob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_io__deleteortrashjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_io__deleteortrashjob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_io__deleteortrashjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_io__deleteortrashjob_disconnect3(void* self) {
+bool k_io__deleteortrashjob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_io__deleteortrashjob_disconnect4(void* self, void* receiver) {
+bool k_io__deleteortrashjob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_io__deleteortrashjob_disconnect5(void* param1) {
+bool k_io__deleteortrashjob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_io__deleteortrashjob_dump_object_tree(void* self) {
+void k_io__deleteortrashjob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_io__deleteortrashjob_dump_object_info(void* self) {
+void k_io__deleteortrashjob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_io__deleteortrashjob_set_property(void* self, const char* name, void* value) {
+bool k_io__deleteortrashjob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_io__deleteortrashjob_property(void* self, const char* name) {
+QVariant* k_io__deleteortrashjob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_io__deleteortrashjob_dynamic_property_names(void* self) {
+const char** k_io__deleteortrashjob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -357,7 +357,7 @@ QBindingStorage* k_io__deleteortrashjob_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_io__deleteortrashjob_binding_storage2(void* self) {
+const QBindingStorage* k_io__deleteortrashjob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -369,11 +369,11 @@ void k_io__deleteortrashjob_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_io__deleteortrashjob_parent(void* self) {
+QObject* k_io__deleteortrashjob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_io__deleteortrashjob_inherits(void* self, const char* classname) {
+bool k_io__deleteortrashjob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -389,31 +389,31 @@ int32_t k_io__deleteortrashjob_start_timer23(void* self, int64_t time, int32_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_io__deleteortrashjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_io__deleteortrashjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_io__deleteortrashjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_io__deleteortrashjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_io__deleteortrashjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_io__deleteortrashjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_io__deleteortrashjob_disconnect1(void* self, const char* signal) {
+bool k_io__deleteortrashjob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_io__deleteortrashjob_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_io__deleteortrashjob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_io__deleteortrashjob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_io__deleteortrashjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_io__deleteortrashjob_disconnect23(void* self, void* receiver, const char* member) {
+bool k_io__deleteortrashjob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -469,7 +469,7 @@ bool k_io__deleteortrashjob_super_do_kill(void* self) {
     return KIO__DeleteOrTrashJob_SuperDoKill((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_on_do_kill(void* self, bool (*callback)()) {
+void k_io__deleteortrashjob_on_do_kill(void* self, bool (*callback)(void*)) {
     KIO__DeleteOrTrashJob_OnDoKill((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
@@ -481,7 +481,7 @@ bool k_io__deleteortrashjob_super_do_suspend(void* self) {
     return KIO__DeleteOrTrashJob_SuperDoSuspend((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_on_do_suspend(void* self, bool (*callback)()) {
+void k_io__deleteortrashjob_on_do_suspend(void* self, bool (*callback)(void*)) {
     KIO__DeleteOrTrashJob_OnDoSuspend((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
@@ -493,26 +493,26 @@ bool k_io__deleteortrashjob_super_do_resume(void* self) {
     return KIO__DeleteOrTrashJob_SuperDoResume((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_on_do_resume(void* self, bool (*callback)()) {
+void k_io__deleteortrashjob_on_do_resume(void* self, bool (*callback)(void*)) {
     KIO__DeleteOrTrashJob_OnDoResume((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
-const char* k_io__deleteortrashjob_error_string(void* self) {
+const char* k_io__deleteortrashjob_error_string(const void* self) {
     libqt_string _str = KIO__DeleteOrTrashJob_ErrorString((KIO__DeleteOrTrashJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_io__deleteortrashjob_super_error_string(void* self) {
+const char* k_io__deleteortrashjob_super_error_string(const void* self) {
     libqt_string _str = KIO__DeleteOrTrashJob_SuperErrorString((KIO__DeleteOrTrashJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_io__deleteortrashjob_on_error_string(void* self, const char* (*callback)()) {
-    KIO__DeleteOrTrashJob_OnErrorString((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
+void k_io__deleteortrashjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
+    KIO__DeleteOrTrashJob_OnErrorString((const KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 bool k_io__deleteortrashjob_event(void* self, void* event) {
@@ -575,258 +575,105 @@ void k_io__deleteortrashjob_on_custom_event(void* self, void (*callback)(void*, 
     KIO__DeleteOrTrashJob_OnCustomEvent((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
-void k_io__deleteortrashjob_connect_notify(void* self, void* signal) {
+void k_io__deleteortrashjob_connect_notify(void* self, const void* signal) {
     KIO__DeleteOrTrashJob_ConnectNotify((KIO__DeleteOrTrashJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__deleteortrashjob_super_connect_notify(void* self, void* signal) {
+void k_io__deleteortrashjob_super_connect_notify(void* self, const void* signal) {
     KIO__DeleteOrTrashJob_SuperConnectNotify((KIO__DeleteOrTrashJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__deleteortrashjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_io__deleteortrashjob_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KIO__DeleteOrTrashJob_OnConnectNotify((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
-void k_io__deleteortrashjob_disconnect_notify(void* self, void* signal) {
+void k_io__deleteortrashjob_disconnect_notify(void* self, const void* signal) {
     KIO__DeleteOrTrashJob_DisconnectNotify((KIO__DeleteOrTrashJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__deleteortrashjob_super_disconnect_notify(void* self, void* signal) {
+void k_io__deleteortrashjob_super_disconnect_notify(void* self, const void* signal) {
     KIO__DeleteOrTrashJob_SuperDisconnectNotify((KIO__DeleteOrTrashJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__deleteortrashjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_io__deleteortrashjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KIO__DeleteOrTrashJob_OnDisconnectNotify((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
-bool k_io__deleteortrashjob_has_subjobs(void* self) {
+bool k_io__deleteortrashjob_has_subjobs(const void* self) {
     return KIO__DeleteOrTrashJob_HasSubjobs((KIO__DeleteOrTrashJob*)self);
 }
 
-bool k_io__deleteortrashjob_super_has_subjobs(void* self) {
-    return KIO__DeleteOrTrashJob_SuperHasSubjobs((KIO__DeleteOrTrashJob*)self);
-}
-
-void k_io__deleteortrashjob_on_has_subjobs(void* self, bool (*callback)()) {
-    KIO__DeleteOrTrashJob_OnHasSubjobs((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
-libqt_list /* of KJob* */ k_io__deleteortrashjob_subjobs(void* self) {
+libqt_list /* of KJob* */ k_io__deleteortrashjob_subjobs(const void* self) {
     libqt_list _arr = KIO__DeleteOrTrashJob_Subjobs((KIO__DeleteOrTrashJob*)self);
     return _arr;
-}
-
-libqt_list /* of KJob* */ k_io__deleteortrashjob_super_subjobs(void* self) {
-    libqt_list _arr = KIO__DeleteOrTrashJob_SuperSubjobs((KIO__DeleteOrTrashJob*)self);
-    return _arr;
-}
-
-void k_io__deleteortrashjob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
-    KIO__DeleteOrTrashJob_OnSubjobs((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 void k_io__deleteortrashjob_clear_subjobs(void* self) {
     KIO__DeleteOrTrashJob_ClearSubjobs((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_super_clear_subjobs(void* self) {
-    KIO__DeleteOrTrashJob_SuperClearSubjobs((KIO__DeleteOrTrashJob*)self);
-}
-
-void k_io__deleteortrashjob_on_clear_subjobs(void* self, void (*callback)()) {
-    KIO__DeleteOrTrashJob_OnClearSubjobs((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
 void k_io__deleteortrashjob_set_capabilities(void* self, int32_t capabilities) {
     KIO__DeleteOrTrashJob_SetCapabilities((KIO__DeleteOrTrashJob*)self, capabilities);
 }
 
-void k_io__deleteortrashjob_super_set_capabilities(void* self, int32_t capabilities) {
-    KIO__DeleteOrTrashJob_SuperSetCapabilities((KIO__DeleteOrTrashJob*)self, capabilities);
-}
-
-void k_io__deleteortrashjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
-    KIO__DeleteOrTrashJob_OnSetCapabilities((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
-bool k_io__deleteortrashjob_is_finished(void* self) {
+bool k_io__deleteortrashjob_is_finished(const void* self) {
     return KIO__DeleteOrTrashJob_IsFinished((KIO__DeleteOrTrashJob*)self);
-}
-
-bool k_io__deleteortrashjob_super_is_finished(void* self) {
-    return KIO__DeleteOrTrashJob_SuperIsFinished((KIO__DeleteOrTrashJob*)self);
-}
-
-void k_io__deleteortrashjob_on_is_finished(void* self, bool (*callback)()) {
-    KIO__DeleteOrTrashJob_OnIsFinished((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 void k_io__deleteortrashjob_set_error(void* self, int errorCode) {
     KIO__DeleteOrTrashJob_SetError((KIO__DeleteOrTrashJob*)self, errorCode);
 }
 
-void k_io__deleteortrashjob_super_set_error(void* self, int errorCode) {
-    KIO__DeleteOrTrashJob_SuperSetError((KIO__DeleteOrTrashJob*)self, errorCode);
-}
-
-void k_io__deleteortrashjob_on_set_error(void* self, void (*callback)(void*, int)) {
-    KIO__DeleteOrTrashJob_OnSetError((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
 void k_io__deleteortrashjob_set_error_text(void* self, const char* errorText) {
     KIO__DeleteOrTrashJob_SetErrorText((KIO__DeleteOrTrashJob*)self, qstring(errorText));
-}
-
-void k_io__deleteortrashjob_super_set_error_text(void* self, const char* errorText) {
-    KIO__DeleteOrTrashJob_SuperSetErrorText((KIO__DeleteOrTrashJob*)self, qstring(errorText));
-}
-
-void k_io__deleteortrashjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
-    KIO__DeleteOrTrashJob_OnSetErrorText((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 void k_io__deleteortrashjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__DeleteOrTrashJob_SetProcessedAmount((KIO__DeleteOrTrashJob*)self, unit, amount);
 }
 
-void k_io__deleteortrashjob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
-    KIO__DeleteOrTrashJob_SuperSetProcessedAmount((KIO__DeleteOrTrashJob*)self, unit, amount);
-}
-
-void k_io__deleteortrashjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
-    KIO__DeleteOrTrashJob_OnSetProcessedAmount((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
 void k_io__deleteortrashjob_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__DeleteOrTrashJob_SetTotalAmount((KIO__DeleteOrTrashJob*)self, unit, amount);
-}
-
-void k_io__deleteortrashjob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
-    KIO__DeleteOrTrashJob_SuperSetTotalAmount((KIO__DeleteOrTrashJob*)self, unit, amount);
-}
-
-void k_io__deleteortrashjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
-    KIO__DeleteOrTrashJob_OnSetTotalAmount((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 void k_io__deleteortrashjob_set_progress_unit(void* self, int32_t unit) {
     KIO__DeleteOrTrashJob_SetProgressUnit((KIO__DeleteOrTrashJob*)self, unit);
 }
 
-void k_io__deleteortrashjob_super_set_progress_unit(void* self, int32_t unit) {
-    KIO__DeleteOrTrashJob_SuperSetProgressUnit((KIO__DeleteOrTrashJob*)self, unit);
-}
-
-void k_io__deleteortrashjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
-    KIO__DeleteOrTrashJob_OnSetProgressUnit((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
 void k_io__deleteortrashjob_set_percent(void* self, uintptr_t percentage) {
     KIO__DeleteOrTrashJob_SetPercent((KIO__DeleteOrTrashJob*)self, percentage);
-}
-
-void k_io__deleteortrashjob_super_set_percent(void* self, uintptr_t percentage) {
-    KIO__DeleteOrTrashJob_SuperSetPercent((KIO__DeleteOrTrashJob*)self, percentage);
-}
-
-void k_io__deleteortrashjob_on_set_percent(void* self, void (*callback)(void*, uintptr_t)) {
-    KIO__DeleteOrTrashJob_OnSetPercent((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 void k_io__deleteortrashjob_emit_result(void* self) {
     KIO__DeleteOrTrashJob_EmitResult((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_super_emit_result(void* self) {
-    KIO__DeleteOrTrashJob_SuperEmitResult((KIO__DeleteOrTrashJob*)self);
-}
-
-void k_io__deleteortrashjob_on_emit_result(void* self, void (*callback)()) {
-    KIO__DeleteOrTrashJob_OnEmitResult((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
 void k_io__deleteortrashjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__DeleteOrTrashJob_EmitPercent((KIO__DeleteOrTrashJob*)self, processedAmount, totalAmount);
-}
-
-void k_io__deleteortrashjob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
-    KIO__DeleteOrTrashJob_SuperEmitPercent((KIO__DeleteOrTrashJob*)self, processedAmount, totalAmount);
-}
-
-void k_io__deleteortrashjob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t)) {
-    KIO__DeleteOrTrashJob_OnEmitPercent((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 void k_io__deleteortrashjob_emit_speed(void* self, uintptr_t speed) {
     KIO__DeleteOrTrashJob_EmitSpeed((KIO__DeleteOrTrashJob*)self, speed);
 }
 
-void k_io__deleteortrashjob_super_emit_speed(void* self, uintptr_t speed) {
-    KIO__DeleteOrTrashJob_SuperEmitSpeed((KIO__DeleteOrTrashJob*)self, speed);
-}
-
-void k_io__deleteortrashjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t)) {
-    KIO__DeleteOrTrashJob_OnEmitSpeed((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
 void k_io__deleteortrashjob_start_elapsed_timer(void* self) {
     KIO__DeleteOrTrashJob_StartElapsedTimer((KIO__DeleteOrTrashJob*)self);
 }
 
-void k_io__deleteortrashjob_super_start_elapsed_timer(void* self) {
-    KIO__DeleteOrTrashJob_SuperStartElapsedTimer((KIO__DeleteOrTrashJob*)self);
-}
-
-void k_io__deleteortrashjob_on_start_elapsed_timer(void* self, void (*callback)()) {
-    KIO__DeleteOrTrashJob_OnStartElapsedTimer((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
-QObject* k_io__deleteortrashjob_sender(void* self) {
+QObject* k_io__deleteortrashjob_sender(const void* self) {
     return KIO__DeleteOrTrashJob_Sender((KIO__DeleteOrTrashJob*)self);
 }
 
-QObject* k_io__deleteortrashjob_super_sender(void* self) {
-    return KIO__DeleteOrTrashJob_SuperSender((KIO__DeleteOrTrashJob*)self);
-}
-
-void k_io__deleteortrashjob_on_sender(void* self, QObject* (*callback)()) {
-    KIO__DeleteOrTrashJob_OnSender((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
-int32_t k_io__deleteortrashjob_sender_signal_index(void* self) {
+int32_t k_io__deleteortrashjob_sender_signal_index(const void* self) {
     return KIO__DeleteOrTrashJob_SenderSignalIndex((KIO__DeleteOrTrashJob*)self);
 }
 
-int32_t k_io__deleteortrashjob_super_sender_signal_index(void* self) {
-    return KIO__DeleteOrTrashJob_SuperSenderSignalIndex((KIO__DeleteOrTrashJob*)self);
-}
-
-void k_io__deleteortrashjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KIO__DeleteOrTrashJob_OnSenderSignalIndex((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
-int32_t k_io__deleteortrashjob_receivers(void* self, const char* signal) {
+int32_t k_io__deleteortrashjob_receivers(const void* self, const char* signal) {
     return KIO__DeleteOrTrashJob_Receivers((KIO__DeleteOrTrashJob*)self, signal);
 }
 
-int32_t k_io__deleteortrashjob_super_receivers(void* self, const char* signal) {
-    return KIO__DeleteOrTrashJob_SuperReceivers((KIO__DeleteOrTrashJob*)self, signal);
-}
-
-void k_io__deleteortrashjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KIO__DeleteOrTrashJob_OnReceivers((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
-}
-
-bool k_io__deleteortrashjob_is_signal_connected(void* self, void* signal) {
+bool k_io__deleteortrashjob_is_signal_connected(const void* self, const void* signal) {
     return KIO__DeleteOrTrashJob_IsSignalConnected((KIO__DeleteOrTrashJob*)self, (QMetaMethod*)signal);
-}
-
-bool k_io__deleteortrashjob_super_is_signal_connected(void* self, void* signal) {
-    return KIO__DeleteOrTrashJob_SuperIsSignalConnected((KIO__DeleteOrTrashJob*)self, (QMetaMethod*)signal);
-}
-
-void k_io__deleteortrashjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KIO__DeleteOrTrashJob_OnIsSignalConnected((KIO__DeleteOrTrashJob*)self, (intptr_t)callback);
 }
 
 void k_io__deleteortrashjob_on_finished(void* self, void (*callback)(void*, void*)) {

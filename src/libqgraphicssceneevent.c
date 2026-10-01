@@ -10,7 +10,7 @@ QGraphicsSceneEvent* q_graphicssceneevent_new(int32_t type) {
     return QGraphicsSceneEvent_New(type);
 }
 
-QWidget* q_graphicssceneevent_widget(void* self) {
+QWidget* q_graphicssceneevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -18,7 +18,7 @@ void q_graphicssceneevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicssceneevent_timestamp(void* self) {
+uint64_t q_graphicssceneevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -26,15 +26,15 @@ void q_graphicssceneevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicssceneevent_type(void* self) {
+int32_t q_graphicssceneevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicssceneevent_spontaneous(void* self) {
+bool q_graphicssceneevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicssceneevent_is_accepted(void* self) {
+bool q_graphicssceneevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -46,15 +46,15 @@ void q_graphicssceneevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicssceneevent_is_input_event(void* self) {
+bool q_graphicssceneevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicssceneevent_is_pointer_event(void* self) {
+bool q_graphicssceneevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicssceneevent_is_single_point_event(void* self) {
+bool q_graphicssceneevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -78,16 +78,16 @@ void q_graphicssceneevent_on_set_accepted(void* self, void (*callback)(void*, bo
     QGraphicsSceneEvent_OnSetAccepted((QGraphicsSceneEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicssceneevent_clone(void* self) {
+QEvent* q_graphicssceneevent_clone(const void* self) {
     return QGraphicsSceneEvent_Clone((QGraphicsSceneEvent*)self);
 }
 
-QEvent* q_graphicssceneevent_super_clone(void* self) {
+QEvent* q_graphicssceneevent_super_clone(const void* self) {
     return QGraphicsSceneEvent_SuperClone((QGraphicsSceneEvent*)self);
 }
 
-void q_graphicssceneevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneEvent_OnClone((QGraphicsSceneEvent*)self, (intptr_t)callback);
+void q_graphicssceneevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneEvent_OnClone((const QGraphicsSceneEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicssceneevent_delete(void* self) {
@@ -102,79 +102,79 @@ QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new2(int32_t type) {
     return QGraphicsSceneMouseEvent_New2(type);
 }
 
-QPointF* q_graphicsscenemouseevent_pos(void* self) {
+QPointF* q_graphicsscenemouseevent_pos(const void* self) {
     return QGraphicsSceneMouseEvent_Pos((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_set_pos(void* self, void* pos) {
+void q_graphicsscenemouseevent_set_pos(void* self, const void* pos) {
     QGraphicsSceneMouseEvent_SetPos((QGraphicsSceneMouseEvent*)self, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenemouseevent_scene_pos(void* self) {
+QPointF* q_graphicsscenemouseevent_scene_pos(const void* self) {
     return QGraphicsSceneMouseEvent_ScenePos((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_set_scene_pos(void* self, void* pos) {
+void q_graphicsscenemouseevent_set_scene_pos(void* self, const void* pos) {
     QGraphicsSceneMouseEvent_SetScenePos((QGraphicsSceneMouseEvent*)self, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenemouseevent_screen_pos(void* self) {
+QPoint* q_graphicsscenemouseevent_screen_pos(const void* self) {
     return QGraphicsSceneMouseEvent_ScreenPos((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_set_screen_pos(void* self, void* pos) {
+void q_graphicsscenemouseevent_set_screen_pos(void* self, const void* pos) {
     QGraphicsSceneMouseEvent_SetScreenPos((QGraphicsSceneMouseEvent*)self, (QPoint*)pos);
 }
 
-QPointF* q_graphicsscenemouseevent_button_down_pos(void* self, int32_t button) {
+QPointF* q_graphicsscenemouseevent_button_down_pos(const void* self, int32_t button) {
     return QGraphicsSceneMouseEvent_ButtonDownPos((QGraphicsSceneMouseEvent*)self, button);
 }
 
-void q_graphicsscenemouseevent_set_button_down_pos(void* self, int32_t button, void* pos) {
+void q_graphicsscenemouseevent_set_button_down_pos(void* self, int32_t button, const void* pos) {
     QGraphicsSceneMouseEvent_SetButtonDownPos((QGraphicsSceneMouseEvent*)self, button, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenemouseevent_button_down_scene_pos(void* self, int32_t button) {
+QPointF* q_graphicsscenemouseevent_button_down_scene_pos(const void* self, int32_t button) {
     return QGraphicsSceneMouseEvent_ButtonDownScenePos((QGraphicsSceneMouseEvent*)self, button);
 }
 
-void q_graphicsscenemouseevent_set_button_down_scene_pos(void* self, int32_t button, void* pos) {
+void q_graphicsscenemouseevent_set_button_down_scene_pos(void* self, int32_t button, const void* pos) {
     QGraphicsSceneMouseEvent_SetButtonDownScenePos((QGraphicsSceneMouseEvent*)self, button, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenemouseevent_button_down_screen_pos(void* self, int32_t button) {
+QPoint* q_graphicsscenemouseevent_button_down_screen_pos(const void* self, int32_t button) {
     return QGraphicsSceneMouseEvent_ButtonDownScreenPos((QGraphicsSceneMouseEvent*)self, button);
 }
 
-void q_graphicsscenemouseevent_set_button_down_screen_pos(void* self, int32_t button, void* pos) {
+void q_graphicsscenemouseevent_set_button_down_screen_pos(void* self, int32_t button, const void* pos) {
     QGraphicsSceneMouseEvent_SetButtonDownScreenPos((QGraphicsSceneMouseEvent*)self, button, (QPoint*)pos);
 }
 
-QPointF* q_graphicsscenemouseevent_last_pos(void* self) {
+QPointF* q_graphicsscenemouseevent_last_pos(const void* self) {
     return QGraphicsSceneMouseEvent_LastPos((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_set_last_pos(void* self, void* pos) {
+void q_graphicsscenemouseevent_set_last_pos(void* self, const void* pos) {
     QGraphicsSceneMouseEvent_SetLastPos((QGraphicsSceneMouseEvent*)self, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenemouseevent_last_scene_pos(void* self) {
+QPointF* q_graphicsscenemouseevent_last_scene_pos(const void* self) {
     return QGraphicsSceneMouseEvent_LastScenePos((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_set_last_scene_pos(void* self, void* pos) {
+void q_graphicsscenemouseevent_set_last_scene_pos(void* self, const void* pos) {
     QGraphicsSceneMouseEvent_SetLastScenePos((QGraphicsSceneMouseEvent*)self, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenemouseevent_last_screen_pos(void* self) {
+QPoint* q_graphicsscenemouseevent_last_screen_pos(const void* self) {
     return QGraphicsSceneMouseEvent_LastScreenPos((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_set_last_screen_pos(void* self, void* pos) {
+void q_graphicsscenemouseevent_set_last_screen_pos(void* self, const void* pos) {
     QGraphicsSceneMouseEvent_SetLastScreenPos((QGraphicsSceneMouseEvent*)self, (QPoint*)pos);
 }
 
-int32_t q_graphicsscenemouseevent_buttons(void* self) {
+int32_t q_graphicsscenemouseevent_buttons(const void* self) {
     return QGraphicsSceneMouseEvent_Buttons((QGraphicsSceneMouseEvent*)self);
 }
 
@@ -182,7 +182,7 @@ void q_graphicsscenemouseevent_set_buttons(void* self, int32_t buttons) {
     QGraphicsSceneMouseEvent_SetButtons((QGraphicsSceneMouseEvent*)self, buttons);
 }
 
-int32_t q_graphicsscenemouseevent_button(void* self) {
+int32_t q_graphicsscenemouseevent_button(const void* self) {
     return QGraphicsSceneMouseEvent_Button((QGraphicsSceneMouseEvent*)self);
 }
 
@@ -190,7 +190,7 @@ void q_graphicsscenemouseevent_set_button(void* self, int32_t button) {
     QGraphicsSceneMouseEvent_SetButton((QGraphicsSceneMouseEvent*)self, button);
 }
 
-int32_t q_graphicsscenemouseevent_modifiers(void* self) {
+int32_t q_graphicsscenemouseevent_modifiers(const void* self) {
     return QGraphicsSceneMouseEvent_Modifiers((QGraphicsSceneMouseEvent*)self);
 }
 
@@ -198,7 +198,7 @@ void q_graphicsscenemouseevent_set_modifiers(void* self, int32_t modifiers) {
     QGraphicsSceneMouseEvent_SetModifiers((QGraphicsSceneMouseEvent*)self, modifiers);
 }
 
-int32_t q_graphicsscenemouseevent_source(void* self) {
+int32_t q_graphicsscenemouseevent_source(const void* self) {
     return QGraphicsSceneMouseEvent_Source((QGraphicsSceneMouseEvent*)self);
 }
 
@@ -206,7 +206,7 @@ void q_graphicsscenemouseevent_set_source(void* self, int32_t source) {
     QGraphicsSceneMouseEvent_SetSource((QGraphicsSceneMouseEvent*)self, source);
 }
 
-int32_t q_graphicsscenemouseevent_flags(void* self) {
+int32_t q_graphicsscenemouseevent_flags(const void* self) {
     return QGraphicsSceneMouseEvent_Flags((QGraphicsSceneMouseEvent*)self);
 }
 
@@ -214,7 +214,7 @@ void q_graphicsscenemouseevent_set_flags(void* self, int32_t flags) {
     QGraphicsSceneMouseEvent_SetFlags((QGraphicsSceneMouseEvent*)self, flags);
 }
 
-QWidget* q_graphicsscenemouseevent_widget(void* self) {
+QWidget* q_graphicsscenemouseevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -222,7 +222,7 @@ void q_graphicsscenemouseevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicsscenemouseevent_timestamp(void* self) {
+uint64_t q_graphicsscenemouseevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -230,15 +230,15 @@ void q_graphicsscenemouseevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicsscenemouseevent_type(void* self) {
+int32_t q_graphicsscenemouseevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicsscenemouseevent_spontaneous(void* self) {
+bool q_graphicsscenemouseevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicsscenemouseevent_is_accepted(void* self) {
+bool q_graphicsscenemouseevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -250,15 +250,15 @@ void q_graphicsscenemouseevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicsscenemouseevent_is_input_event(void* self) {
+bool q_graphicsscenemouseevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicsscenemouseevent_is_pointer_event(void* self) {
+bool q_graphicsscenemouseevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicsscenemouseevent_is_single_point_event(void* self) {
+bool q_graphicsscenemouseevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -282,16 +282,16 @@ void q_graphicsscenemouseevent_on_set_accepted(void* self, void (*callback)(void
     QGraphicsSceneMouseEvent_OnSetAccepted((QGraphicsSceneMouseEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicsscenemouseevent_clone(void* self) {
+QEvent* q_graphicsscenemouseevent_clone(const void* self) {
     return QGraphicsSceneMouseEvent_Clone((QGraphicsSceneMouseEvent*)self);
 }
 
-QEvent* q_graphicsscenemouseevent_super_clone(void* self) {
+QEvent* q_graphicsscenemouseevent_super_clone(const void* self) {
     return QGraphicsSceneMouseEvent_SuperClone((QGraphicsSceneMouseEvent*)self);
 }
 
-void q_graphicsscenemouseevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneMouseEvent_OnClone((QGraphicsSceneMouseEvent*)self, (intptr_t)callback);
+void q_graphicsscenemouseevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneMouseEvent_OnClone((const QGraphicsSceneMouseEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenemouseevent_delete(void* self) {
@@ -306,31 +306,31 @@ QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new2(int32_t type) {
     return QGraphicsSceneWheelEvent_New2(type);
 }
 
-QPointF* q_graphicsscenewheelevent_pos(void* self) {
+QPointF* q_graphicsscenewheelevent_pos(const void* self) {
     return QGraphicsSceneWheelEvent_Pos((QGraphicsSceneWheelEvent*)self);
 }
 
-void q_graphicsscenewheelevent_set_pos(void* self, void* pos) {
+void q_graphicsscenewheelevent_set_pos(void* self, const void* pos) {
     QGraphicsSceneWheelEvent_SetPos((QGraphicsSceneWheelEvent*)self, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenewheelevent_scene_pos(void* self) {
+QPointF* q_graphicsscenewheelevent_scene_pos(const void* self) {
     return QGraphicsSceneWheelEvent_ScenePos((QGraphicsSceneWheelEvent*)self);
 }
 
-void q_graphicsscenewheelevent_set_scene_pos(void* self, void* pos) {
+void q_graphicsscenewheelevent_set_scene_pos(void* self, const void* pos) {
     QGraphicsSceneWheelEvent_SetScenePos((QGraphicsSceneWheelEvent*)self, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenewheelevent_screen_pos(void* self) {
+QPoint* q_graphicsscenewheelevent_screen_pos(const void* self) {
     return QGraphicsSceneWheelEvent_ScreenPos((QGraphicsSceneWheelEvent*)self);
 }
 
-void q_graphicsscenewheelevent_set_screen_pos(void* self, void* pos) {
+void q_graphicsscenewheelevent_set_screen_pos(void* self, const void* pos) {
     QGraphicsSceneWheelEvent_SetScreenPos((QGraphicsSceneWheelEvent*)self, (QPoint*)pos);
 }
 
-int32_t q_graphicsscenewheelevent_buttons(void* self) {
+int32_t q_graphicsscenewheelevent_buttons(const void* self) {
     return QGraphicsSceneWheelEvent_Buttons((QGraphicsSceneWheelEvent*)self);
 }
 
@@ -338,7 +338,7 @@ void q_graphicsscenewheelevent_set_buttons(void* self, int32_t buttons) {
     QGraphicsSceneWheelEvent_SetButtons((QGraphicsSceneWheelEvent*)self, buttons);
 }
 
-int32_t q_graphicsscenewheelevent_modifiers(void* self) {
+int32_t q_graphicsscenewheelevent_modifiers(const void* self) {
     return QGraphicsSceneWheelEvent_Modifiers((QGraphicsSceneWheelEvent*)self);
 }
 
@@ -346,7 +346,7 @@ void q_graphicsscenewheelevent_set_modifiers(void* self, int32_t modifiers) {
     QGraphicsSceneWheelEvent_SetModifiers((QGraphicsSceneWheelEvent*)self, modifiers);
 }
 
-int32_t q_graphicsscenewheelevent_delta(void* self) {
+int32_t q_graphicsscenewheelevent_delta(const void* self) {
     return QGraphicsSceneWheelEvent_Delta((QGraphicsSceneWheelEvent*)self);
 }
 
@@ -354,7 +354,7 @@ void q_graphicsscenewheelevent_set_delta(void* self, int delta) {
     QGraphicsSceneWheelEvent_SetDelta((QGraphicsSceneWheelEvent*)self, delta);
 }
 
-int32_t q_graphicsscenewheelevent_orientation(void* self) {
+int32_t q_graphicsscenewheelevent_orientation(const void* self) {
     return QGraphicsSceneWheelEvent_Orientation((QGraphicsSceneWheelEvent*)self);
 }
 
@@ -362,7 +362,7 @@ void q_graphicsscenewheelevent_set_orientation(void* self, int32_t orientation) 
     QGraphicsSceneWheelEvent_SetOrientation((QGraphicsSceneWheelEvent*)self, orientation);
 }
 
-int32_t q_graphicsscenewheelevent_phase(void* self) {
+int32_t q_graphicsscenewheelevent_phase(const void* self) {
     return QGraphicsSceneWheelEvent_Phase((QGraphicsSceneWheelEvent*)self);
 }
 
@@ -370,7 +370,7 @@ void q_graphicsscenewheelevent_set_phase(void* self, int32_t scrollPhase) {
     QGraphicsSceneWheelEvent_SetPhase((QGraphicsSceneWheelEvent*)self, scrollPhase);
 }
 
-QPoint* q_graphicsscenewheelevent_pixel_delta(void* self) {
+QPoint* q_graphicsscenewheelevent_pixel_delta(const void* self) {
     return QGraphicsSceneWheelEvent_PixelDelta((QGraphicsSceneWheelEvent*)self);
 }
 
@@ -378,7 +378,7 @@ void q_graphicsscenewheelevent_set_pixel_delta(void* self, void* delta) {
     QGraphicsSceneWheelEvent_SetPixelDelta((QGraphicsSceneWheelEvent*)self, (QPoint*)delta);
 }
 
-bool q_graphicsscenewheelevent_is_inverted(void* self) {
+bool q_graphicsscenewheelevent_is_inverted(const void* self) {
     return QGraphicsSceneWheelEvent_IsInverted((QGraphicsSceneWheelEvent*)self);
 }
 
@@ -386,7 +386,7 @@ void q_graphicsscenewheelevent_set_inverted(void* self, bool inverted) {
     QGraphicsSceneWheelEvent_SetInverted((QGraphicsSceneWheelEvent*)self, inverted);
 }
 
-QWidget* q_graphicsscenewheelevent_widget(void* self) {
+QWidget* q_graphicsscenewheelevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -394,7 +394,7 @@ void q_graphicsscenewheelevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicsscenewheelevent_timestamp(void* self) {
+uint64_t q_graphicsscenewheelevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -402,15 +402,15 @@ void q_graphicsscenewheelevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicsscenewheelevent_type(void* self) {
+int32_t q_graphicsscenewheelevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicsscenewheelevent_spontaneous(void* self) {
+bool q_graphicsscenewheelevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicsscenewheelevent_is_accepted(void* self) {
+bool q_graphicsscenewheelevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -422,15 +422,15 @@ void q_graphicsscenewheelevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicsscenewheelevent_is_input_event(void* self) {
+bool q_graphicsscenewheelevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicsscenewheelevent_is_pointer_event(void* self) {
+bool q_graphicsscenewheelevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicsscenewheelevent_is_single_point_event(void* self) {
+bool q_graphicsscenewheelevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -454,16 +454,16 @@ void q_graphicsscenewheelevent_on_set_accepted(void* self, void (*callback)(void
     QGraphicsSceneWheelEvent_OnSetAccepted((QGraphicsSceneWheelEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicsscenewheelevent_clone(void* self) {
+QEvent* q_graphicsscenewheelevent_clone(const void* self) {
     return QGraphicsSceneWheelEvent_Clone((QGraphicsSceneWheelEvent*)self);
 }
 
-QEvent* q_graphicsscenewheelevent_super_clone(void* self) {
+QEvent* q_graphicsscenewheelevent_super_clone(const void* self) {
     return QGraphicsSceneWheelEvent_SuperClone((QGraphicsSceneWheelEvent*)self);
 }
 
-void q_graphicsscenewheelevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneWheelEvent_OnClone((QGraphicsSceneWheelEvent*)self, (intptr_t)callback);
+void q_graphicsscenewheelevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneWheelEvent_OnClone((const QGraphicsSceneWheelEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenewheelevent_delete(void* self) {
@@ -478,31 +478,31 @@ QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new2(int32_t typ
     return QGraphicsSceneContextMenuEvent_New2(type);
 }
 
-QPointF* q_graphicsscenecontextmenuevent_pos(void* self) {
+QPointF* q_graphicsscenecontextmenuevent_pos(const void* self) {
     return QGraphicsSceneContextMenuEvent_Pos((QGraphicsSceneContextMenuEvent*)self);
 }
 
-void q_graphicsscenecontextmenuevent_set_pos(void* self, void* pos) {
+void q_graphicsscenecontextmenuevent_set_pos(void* self, const void* pos) {
     QGraphicsSceneContextMenuEvent_SetPos((QGraphicsSceneContextMenuEvent*)self, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenecontextmenuevent_scene_pos(void* self) {
+QPointF* q_graphicsscenecontextmenuevent_scene_pos(const void* self) {
     return QGraphicsSceneContextMenuEvent_ScenePos((QGraphicsSceneContextMenuEvent*)self);
 }
 
-void q_graphicsscenecontextmenuevent_set_scene_pos(void* self, void* pos) {
+void q_graphicsscenecontextmenuevent_set_scene_pos(void* self, const void* pos) {
     QGraphicsSceneContextMenuEvent_SetScenePos((QGraphicsSceneContextMenuEvent*)self, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenecontextmenuevent_screen_pos(void* self) {
+QPoint* q_graphicsscenecontextmenuevent_screen_pos(const void* self) {
     return QGraphicsSceneContextMenuEvent_ScreenPos((QGraphicsSceneContextMenuEvent*)self);
 }
 
-void q_graphicsscenecontextmenuevent_set_screen_pos(void* self, void* pos) {
+void q_graphicsscenecontextmenuevent_set_screen_pos(void* self, const void* pos) {
     QGraphicsSceneContextMenuEvent_SetScreenPos((QGraphicsSceneContextMenuEvent*)self, (QPoint*)pos);
 }
 
-int32_t q_graphicsscenecontextmenuevent_modifiers(void* self) {
+int32_t q_graphicsscenecontextmenuevent_modifiers(const void* self) {
     return QGraphicsSceneContextMenuEvent_Modifiers((QGraphicsSceneContextMenuEvent*)self);
 }
 
@@ -510,7 +510,7 @@ void q_graphicsscenecontextmenuevent_set_modifiers(void* self, int32_t modifiers
     QGraphicsSceneContextMenuEvent_SetModifiers((QGraphicsSceneContextMenuEvent*)self, modifiers);
 }
 
-int32_t q_graphicsscenecontextmenuevent_reason(void* self) {
+int32_t q_graphicsscenecontextmenuevent_reason(const void* self) {
     return QGraphicsSceneContextMenuEvent_Reason((QGraphicsSceneContextMenuEvent*)self);
 }
 
@@ -518,7 +518,7 @@ void q_graphicsscenecontextmenuevent_set_reason(void* self, int32_t reason) {
     QGraphicsSceneContextMenuEvent_SetReason((QGraphicsSceneContextMenuEvent*)self, reason);
 }
 
-QWidget* q_graphicsscenecontextmenuevent_widget(void* self) {
+QWidget* q_graphicsscenecontextmenuevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -526,7 +526,7 @@ void q_graphicsscenecontextmenuevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicsscenecontextmenuevent_timestamp(void* self) {
+uint64_t q_graphicsscenecontextmenuevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -534,15 +534,15 @@ void q_graphicsscenecontextmenuevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicsscenecontextmenuevent_type(void* self) {
+int32_t q_graphicsscenecontextmenuevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicsscenecontextmenuevent_spontaneous(void* self) {
+bool q_graphicsscenecontextmenuevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicsscenecontextmenuevent_is_accepted(void* self) {
+bool q_graphicsscenecontextmenuevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -554,15 +554,15 @@ void q_graphicsscenecontextmenuevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicsscenecontextmenuevent_is_input_event(void* self) {
+bool q_graphicsscenecontextmenuevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicsscenecontextmenuevent_is_pointer_event(void* self) {
+bool q_graphicsscenecontextmenuevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicsscenecontextmenuevent_is_single_point_event(void* self) {
+bool q_graphicsscenecontextmenuevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -586,16 +586,16 @@ void q_graphicsscenecontextmenuevent_on_set_accepted(void* self, void (*callback
     QGraphicsSceneContextMenuEvent_OnSetAccepted((QGraphicsSceneContextMenuEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicsscenecontextmenuevent_clone(void* self) {
+QEvent* q_graphicsscenecontextmenuevent_clone(const void* self) {
     return QGraphicsSceneContextMenuEvent_Clone((QGraphicsSceneContextMenuEvent*)self);
 }
 
-QEvent* q_graphicsscenecontextmenuevent_super_clone(void* self) {
+QEvent* q_graphicsscenecontextmenuevent_super_clone(const void* self) {
     return QGraphicsSceneContextMenuEvent_SuperClone((QGraphicsSceneContextMenuEvent*)self);
 }
 
-void q_graphicsscenecontextmenuevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneContextMenuEvent_OnClone((QGraphicsSceneContextMenuEvent*)self, (intptr_t)callback);
+void q_graphicsscenecontextmenuevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneContextMenuEvent_OnClone((const QGraphicsSceneContextMenuEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenecontextmenuevent_delete(void* self) {
@@ -610,55 +610,55 @@ QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new2(int32_t type) {
     return QGraphicsSceneHoverEvent_New2(type);
 }
 
-QPointF* q_graphicsscenehoverevent_pos(void* self) {
+QPointF* q_graphicsscenehoverevent_pos(const void* self) {
     return QGraphicsSceneHoverEvent_Pos((QGraphicsSceneHoverEvent*)self);
 }
 
-void q_graphicsscenehoverevent_set_pos(void* self, void* pos) {
+void q_graphicsscenehoverevent_set_pos(void* self, const void* pos) {
     QGraphicsSceneHoverEvent_SetPos((QGraphicsSceneHoverEvent*)self, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenehoverevent_scene_pos(void* self) {
+QPointF* q_graphicsscenehoverevent_scene_pos(const void* self) {
     return QGraphicsSceneHoverEvent_ScenePos((QGraphicsSceneHoverEvent*)self);
 }
 
-void q_graphicsscenehoverevent_set_scene_pos(void* self, void* pos) {
+void q_graphicsscenehoverevent_set_scene_pos(void* self, const void* pos) {
     QGraphicsSceneHoverEvent_SetScenePos((QGraphicsSceneHoverEvent*)self, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenehoverevent_screen_pos(void* self) {
+QPoint* q_graphicsscenehoverevent_screen_pos(const void* self) {
     return QGraphicsSceneHoverEvent_ScreenPos((QGraphicsSceneHoverEvent*)self);
 }
 
-void q_graphicsscenehoverevent_set_screen_pos(void* self, void* pos) {
+void q_graphicsscenehoverevent_set_screen_pos(void* self, const void* pos) {
     QGraphicsSceneHoverEvent_SetScreenPos((QGraphicsSceneHoverEvent*)self, (QPoint*)pos);
 }
 
-QPointF* q_graphicsscenehoverevent_last_pos(void* self) {
+QPointF* q_graphicsscenehoverevent_last_pos(const void* self) {
     return QGraphicsSceneHoverEvent_LastPos((QGraphicsSceneHoverEvent*)self);
 }
 
-void q_graphicsscenehoverevent_set_last_pos(void* self, void* pos) {
+void q_graphicsscenehoverevent_set_last_pos(void* self, const void* pos) {
     QGraphicsSceneHoverEvent_SetLastPos((QGraphicsSceneHoverEvent*)self, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenehoverevent_last_scene_pos(void* self) {
+QPointF* q_graphicsscenehoverevent_last_scene_pos(const void* self) {
     return QGraphicsSceneHoverEvent_LastScenePos((QGraphicsSceneHoverEvent*)self);
 }
 
-void q_graphicsscenehoverevent_set_last_scene_pos(void* self, void* pos) {
+void q_graphicsscenehoverevent_set_last_scene_pos(void* self, const void* pos) {
     QGraphicsSceneHoverEvent_SetLastScenePos((QGraphicsSceneHoverEvent*)self, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenehoverevent_last_screen_pos(void* self) {
+QPoint* q_graphicsscenehoverevent_last_screen_pos(const void* self) {
     return QGraphicsSceneHoverEvent_LastScreenPos((QGraphicsSceneHoverEvent*)self);
 }
 
-void q_graphicsscenehoverevent_set_last_screen_pos(void* self, void* pos) {
+void q_graphicsscenehoverevent_set_last_screen_pos(void* self, const void* pos) {
     QGraphicsSceneHoverEvent_SetLastScreenPos((QGraphicsSceneHoverEvent*)self, (QPoint*)pos);
 }
 
-int32_t q_graphicsscenehoverevent_modifiers(void* self) {
+int32_t q_graphicsscenehoverevent_modifiers(const void* self) {
     return QGraphicsSceneHoverEvent_Modifiers((QGraphicsSceneHoverEvent*)self);
 }
 
@@ -666,7 +666,7 @@ void q_graphicsscenehoverevent_set_modifiers(void* self, int32_t modifiers) {
     QGraphicsSceneHoverEvent_SetModifiers((QGraphicsSceneHoverEvent*)self, modifiers);
 }
 
-QWidget* q_graphicsscenehoverevent_widget(void* self) {
+QWidget* q_graphicsscenehoverevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -674,7 +674,7 @@ void q_graphicsscenehoverevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicsscenehoverevent_timestamp(void* self) {
+uint64_t q_graphicsscenehoverevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -682,15 +682,15 @@ void q_graphicsscenehoverevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicsscenehoverevent_type(void* self) {
+int32_t q_graphicsscenehoverevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicsscenehoverevent_spontaneous(void* self) {
+bool q_graphicsscenehoverevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicsscenehoverevent_is_accepted(void* self) {
+bool q_graphicsscenehoverevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -702,15 +702,15 @@ void q_graphicsscenehoverevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicsscenehoverevent_is_input_event(void* self) {
+bool q_graphicsscenehoverevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicsscenehoverevent_is_pointer_event(void* self) {
+bool q_graphicsscenehoverevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicsscenehoverevent_is_single_point_event(void* self) {
+bool q_graphicsscenehoverevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -734,16 +734,16 @@ void q_graphicsscenehoverevent_on_set_accepted(void* self, void (*callback)(void
     QGraphicsSceneHoverEvent_OnSetAccepted((QGraphicsSceneHoverEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicsscenehoverevent_clone(void* self) {
+QEvent* q_graphicsscenehoverevent_clone(const void* self) {
     return QGraphicsSceneHoverEvent_Clone((QGraphicsSceneHoverEvent*)self);
 }
 
-QEvent* q_graphicsscenehoverevent_super_clone(void* self) {
+QEvent* q_graphicsscenehoverevent_super_clone(const void* self) {
     return QGraphicsSceneHoverEvent_SuperClone((QGraphicsSceneHoverEvent*)self);
 }
 
-void q_graphicsscenehoverevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneHoverEvent_OnClone((QGraphicsSceneHoverEvent*)self, (intptr_t)callback);
+void q_graphicsscenehoverevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneHoverEvent_OnClone((const QGraphicsSceneHoverEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenehoverevent_delete(void* self) {
@@ -758,23 +758,23 @@ QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new2(int32_t type) {
     return QGraphicsSceneHelpEvent_New2(type);
 }
 
-QPointF* q_graphicsscenehelpevent_scene_pos(void* self) {
+QPointF* q_graphicsscenehelpevent_scene_pos(const void* self) {
     return QGraphicsSceneHelpEvent_ScenePos((QGraphicsSceneHelpEvent*)self);
 }
 
-void q_graphicsscenehelpevent_set_scene_pos(void* self, void* pos) {
+void q_graphicsscenehelpevent_set_scene_pos(void* self, const void* pos) {
     QGraphicsSceneHelpEvent_SetScenePos((QGraphicsSceneHelpEvent*)self, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenehelpevent_screen_pos(void* self) {
+QPoint* q_graphicsscenehelpevent_screen_pos(const void* self) {
     return QGraphicsSceneHelpEvent_ScreenPos((QGraphicsSceneHelpEvent*)self);
 }
 
-void q_graphicsscenehelpevent_set_screen_pos(void* self, void* pos) {
+void q_graphicsscenehelpevent_set_screen_pos(void* self, const void* pos) {
     QGraphicsSceneHelpEvent_SetScreenPos((QGraphicsSceneHelpEvent*)self, (QPoint*)pos);
 }
 
-QWidget* q_graphicsscenehelpevent_widget(void* self) {
+QWidget* q_graphicsscenehelpevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -782,7 +782,7 @@ void q_graphicsscenehelpevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicsscenehelpevent_timestamp(void* self) {
+uint64_t q_graphicsscenehelpevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -790,15 +790,15 @@ void q_graphicsscenehelpevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicsscenehelpevent_type(void* self) {
+int32_t q_graphicsscenehelpevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicsscenehelpevent_spontaneous(void* self) {
+bool q_graphicsscenehelpevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicsscenehelpevent_is_accepted(void* self) {
+bool q_graphicsscenehelpevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -810,15 +810,15 @@ void q_graphicsscenehelpevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicsscenehelpevent_is_input_event(void* self) {
+bool q_graphicsscenehelpevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicsscenehelpevent_is_pointer_event(void* self) {
+bool q_graphicsscenehelpevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicsscenehelpevent_is_single_point_event(void* self) {
+bool q_graphicsscenehelpevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -842,16 +842,16 @@ void q_graphicsscenehelpevent_on_set_accepted(void* self, void (*callback)(void*
     QGraphicsSceneHelpEvent_OnSetAccepted((QGraphicsSceneHelpEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicsscenehelpevent_clone(void* self) {
+QEvent* q_graphicsscenehelpevent_clone(const void* self) {
     return QGraphicsSceneHelpEvent_Clone((QGraphicsSceneHelpEvent*)self);
 }
 
-QEvent* q_graphicsscenehelpevent_super_clone(void* self) {
+QEvent* q_graphicsscenehelpevent_super_clone(const void* self) {
     return QGraphicsSceneHelpEvent_SuperClone((QGraphicsSceneHelpEvent*)self);
 }
 
-void q_graphicsscenehelpevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneHelpEvent_OnClone((QGraphicsSceneHelpEvent*)self, (intptr_t)callback);
+void q_graphicsscenehelpevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneHelpEvent_OnClone((const QGraphicsSceneHelpEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenehelpevent_delete(void* self) {
@@ -866,31 +866,31 @@ QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new2(int32_t type) {
     return QGraphicsSceneDragDropEvent_New2(type);
 }
 
-QPointF* q_graphicsscenedragdropevent_pos(void* self) {
+QPointF* q_graphicsscenedragdropevent_pos(const void* self) {
     return QGraphicsSceneDragDropEvent_Pos((QGraphicsSceneDragDropEvent*)self);
 }
 
-void q_graphicsscenedragdropevent_set_pos(void* self, void* pos) {
+void q_graphicsscenedragdropevent_set_pos(void* self, const void* pos) {
     QGraphicsSceneDragDropEvent_SetPos((QGraphicsSceneDragDropEvent*)self, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenedragdropevent_scene_pos(void* self) {
+QPointF* q_graphicsscenedragdropevent_scene_pos(const void* self) {
     return QGraphicsSceneDragDropEvent_ScenePos((QGraphicsSceneDragDropEvent*)self);
 }
 
-void q_graphicsscenedragdropevent_set_scene_pos(void* self, void* pos) {
+void q_graphicsscenedragdropevent_set_scene_pos(void* self, const void* pos) {
     QGraphicsSceneDragDropEvent_SetScenePos((QGraphicsSceneDragDropEvent*)self, (QPointF*)pos);
 }
 
-QPoint* q_graphicsscenedragdropevent_screen_pos(void* self) {
+QPoint* q_graphicsscenedragdropevent_screen_pos(const void* self) {
     return QGraphicsSceneDragDropEvent_ScreenPos((QGraphicsSceneDragDropEvent*)self);
 }
 
-void q_graphicsscenedragdropevent_set_screen_pos(void* self, void* pos) {
+void q_graphicsscenedragdropevent_set_screen_pos(void* self, const void* pos) {
     QGraphicsSceneDragDropEvent_SetScreenPos((QGraphicsSceneDragDropEvent*)self, (QPoint*)pos);
 }
 
-int32_t q_graphicsscenedragdropevent_buttons(void* self) {
+int32_t q_graphicsscenedragdropevent_buttons(const void* self) {
     return QGraphicsSceneDragDropEvent_Buttons((QGraphicsSceneDragDropEvent*)self);
 }
 
@@ -898,7 +898,7 @@ void q_graphicsscenedragdropevent_set_buttons(void* self, int32_t buttons) {
     QGraphicsSceneDragDropEvent_SetButtons((QGraphicsSceneDragDropEvent*)self, buttons);
 }
 
-int32_t q_graphicsscenedragdropevent_modifiers(void* self) {
+int32_t q_graphicsscenedragdropevent_modifiers(const void* self) {
     return QGraphicsSceneDragDropEvent_Modifiers((QGraphicsSceneDragDropEvent*)self);
 }
 
@@ -906,7 +906,7 @@ void q_graphicsscenedragdropevent_set_modifiers(void* self, int32_t modifiers) {
     QGraphicsSceneDragDropEvent_SetModifiers((QGraphicsSceneDragDropEvent*)self, modifiers);
 }
 
-int32_t q_graphicsscenedragdropevent_possible_actions(void* self) {
+int32_t q_graphicsscenedragdropevent_possible_actions(const void* self) {
     return QGraphicsSceneDragDropEvent_PossibleActions((QGraphicsSceneDragDropEvent*)self);
 }
 
@@ -914,7 +914,7 @@ void q_graphicsscenedragdropevent_set_possible_actions(void* self, int32_t actio
     QGraphicsSceneDragDropEvent_SetPossibleActions((QGraphicsSceneDragDropEvent*)self, actions);
 }
 
-int32_t q_graphicsscenedragdropevent_proposed_action(void* self) {
+int32_t q_graphicsscenedragdropevent_proposed_action(const void* self) {
     return QGraphicsSceneDragDropEvent_ProposedAction((QGraphicsSceneDragDropEvent*)self);
 }
 
@@ -926,7 +926,7 @@ void q_graphicsscenedragdropevent_accept_proposed_action(void* self) {
     QGraphicsSceneDragDropEvent_AcceptProposedAction((QGraphicsSceneDragDropEvent*)self);
 }
 
-int32_t q_graphicsscenedragdropevent_drop_action(void* self) {
+int32_t q_graphicsscenedragdropevent_drop_action(const void* self) {
     return QGraphicsSceneDragDropEvent_DropAction((QGraphicsSceneDragDropEvent*)self);
 }
 
@@ -934,7 +934,7 @@ void q_graphicsscenedragdropevent_set_drop_action(void* self, int32_t action) {
     QGraphicsSceneDragDropEvent_SetDropAction((QGraphicsSceneDragDropEvent*)self, action);
 }
 
-QWidget* q_graphicsscenedragdropevent_source(void* self) {
+QWidget* q_graphicsscenedragdropevent_source(const void* self) {
     return QGraphicsSceneDragDropEvent_Source((QGraphicsSceneDragDropEvent*)self);
 }
 
@@ -942,15 +942,15 @@ void q_graphicsscenedragdropevent_set_source(void* self, void* source) {
     QGraphicsSceneDragDropEvent_SetSource((QGraphicsSceneDragDropEvent*)self, (QWidget*)source);
 }
 
-const QMimeData* q_graphicsscenedragdropevent_mime_data(void* self) {
+const QMimeData* q_graphicsscenedragdropevent_mime_data(const void* self) {
     return QGraphicsSceneDragDropEvent_MimeData((QGraphicsSceneDragDropEvent*)self);
 }
 
-void q_graphicsscenedragdropevent_set_mime_data(void* self, void* data) {
+void q_graphicsscenedragdropevent_set_mime_data(void* self, const void* data) {
     QGraphicsSceneDragDropEvent_SetMimeData((QGraphicsSceneDragDropEvent*)self, (QMimeData*)data);
 }
 
-QWidget* q_graphicsscenedragdropevent_widget(void* self) {
+QWidget* q_graphicsscenedragdropevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -958,7 +958,7 @@ void q_graphicsscenedragdropevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicsscenedragdropevent_timestamp(void* self) {
+uint64_t q_graphicsscenedragdropevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -966,15 +966,15 @@ void q_graphicsscenedragdropevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicsscenedragdropevent_type(void* self) {
+int32_t q_graphicsscenedragdropevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicsscenedragdropevent_spontaneous(void* self) {
+bool q_graphicsscenedragdropevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicsscenedragdropevent_is_accepted(void* self) {
+bool q_graphicsscenedragdropevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -986,15 +986,15 @@ void q_graphicsscenedragdropevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicsscenedragdropevent_is_input_event(void* self) {
+bool q_graphicsscenedragdropevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicsscenedragdropevent_is_pointer_event(void* self) {
+bool q_graphicsscenedragdropevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicsscenedragdropevent_is_single_point_event(void* self) {
+bool q_graphicsscenedragdropevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -1018,16 +1018,16 @@ void q_graphicsscenedragdropevent_on_set_accepted(void* self, void (*callback)(v
     QGraphicsSceneDragDropEvent_OnSetAccepted((QGraphicsSceneDragDropEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicsscenedragdropevent_clone(void* self) {
+QEvent* q_graphicsscenedragdropevent_clone(const void* self) {
     return QGraphicsSceneDragDropEvent_Clone((QGraphicsSceneDragDropEvent*)self);
 }
 
-QEvent* q_graphicsscenedragdropevent_super_clone(void* self) {
+QEvent* q_graphicsscenedragdropevent_super_clone(const void* self) {
     return QGraphicsSceneDragDropEvent_SuperClone((QGraphicsSceneDragDropEvent*)self);
 }
 
-void q_graphicsscenedragdropevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneDragDropEvent_OnClone((QGraphicsSceneDragDropEvent*)self, (intptr_t)callback);
+void q_graphicsscenedragdropevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneDragDropEvent_OnClone((const QGraphicsSceneDragDropEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenedragdropevent_delete(void* self) {
@@ -1038,23 +1038,23 @@ QGraphicsSceneResizeEvent* q_graphicssceneresizeevent_new() {
     return QGraphicsSceneResizeEvent_New();
 }
 
-QSizeF* q_graphicssceneresizeevent_old_size(void* self) {
+QSizeF* q_graphicssceneresizeevent_old_size(const void* self) {
     return QGraphicsSceneResizeEvent_OldSize((QGraphicsSceneResizeEvent*)self);
 }
 
-void q_graphicssceneresizeevent_set_old_size(void* self, void* size) {
+void q_graphicssceneresizeevent_set_old_size(void* self, const void* size) {
     QGraphicsSceneResizeEvent_SetOldSize((QGraphicsSceneResizeEvent*)self, (QSizeF*)size);
 }
 
-QSizeF* q_graphicssceneresizeevent_new_size(void* self) {
+QSizeF* q_graphicssceneresizeevent_new_size(const void* self) {
     return QGraphicsSceneResizeEvent_NewSize((QGraphicsSceneResizeEvent*)self);
 }
 
-void q_graphicssceneresizeevent_set_new_size(void* self, void* size) {
+void q_graphicssceneresizeevent_set_new_size(void* self, const void* size) {
     QGraphicsSceneResizeEvent_SetNewSize((QGraphicsSceneResizeEvent*)self, (QSizeF*)size);
 }
 
-QWidget* q_graphicssceneresizeevent_widget(void* self) {
+QWidget* q_graphicssceneresizeevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -1062,7 +1062,7 @@ void q_graphicssceneresizeevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicssceneresizeevent_timestamp(void* self) {
+uint64_t q_graphicssceneresizeevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -1070,15 +1070,15 @@ void q_graphicssceneresizeevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicssceneresizeevent_type(void* self) {
+int32_t q_graphicssceneresizeevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicssceneresizeevent_spontaneous(void* self) {
+bool q_graphicssceneresizeevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicssceneresizeevent_is_accepted(void* self) {
+bool q_graphicssceneresizeevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -1090,15 +1090,15 @@ void q_graphicssceneresizeevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicssceneresizeevent_is_input_event(void* self) {
+bool q_graphicssceneresizeevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicssceneresizeevent_is_pointer_event(void* self) {
+bool q_graphicssceneresizeevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicssceneresizeevent_is_single_point_event(void* self) {
+bool q_graphicssceneresizeevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -1122,16 +1122,16 @@ void q_graphicssceneresizeevent_on_set_accepted(void* self, void (*callback)(voi
     QGraphicsSceneResizeEvent_OnSetAccepted((QGraphicsSceneResizeEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicssceneresizeevent_clone(void* self) {
+QEvent* q_graphicssceneresizeevent_clone(const void* self) {
     return QGraphicsSceneResizeEvent_Clone((QGraphicsSceneResizeEvent*)self);
 }
 
-QEvent* q_graphicssceneresizeevent_super_clone(void* self) {
+QEvent* q_graphicssceneresizeevent_super_clone(const void* self) {
     return QGraphicsSceneResizeEvent_SuperClone((QGraphicsSceneResizeEvent*)self);
 }
 
-void q_graphicssceneresizeevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneResizeEvent_OnClone((QGraphicsSceneResizeEvent*)self, (intptr_t)callback);
+void q_graphicssceneresizeevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneResizeEvent_OnClone((const QGraphicsSceneResizeEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicssceneresizeevent_delete(void* self) {
@@ -1142,23 +1142,23 @@ QGraphicsSceneMoveEvent* q_graphicsscenemoveevent_new() {
     return QGraphicsSceneMoveEvent_New();
 }
 
-QPointF* q_graphicsscenemoveevent_old_pos(void* self) {
+QPointF* q_graphicsscenemoveevent_old_pos(const void* self) {
     return QGraphicsSceneMoveEvent_OldPos((QGraphicsSceneMoveEvent*)self);
 }
 
-void q_graphicsscenemoveevent_set_old_pos(void* self, void* pos) {
+void q_graphicsscenemoveevent_set_old_pos(void* self, const void* pos) {
     QGraphicsSceneMoveEvent_SetOldPos((QGraphicsSceneMoveEvent*)self, (QPointF*)pos);
 }
 
-QPointF* q_graphicsscenemoveevent_new_pos(void* self) {
+QPointF* q_graphicsscenemoveevent_new_pos(const void* self) {
     return QGraphicsSceneMoveEvent_NewPos((QGraphicsSceneMoveEvent*)self);
 }
 
-void q_graphicsscenemoveevent_set_new_pos(void* self, void* pos) {
+void q_graphicsscenemoveevent_set_new_pos(void* self, const void* pos) {
     QGraphicsSceneMoveEvent_SetNewPos((QGraphicsSceneMoveEvent*)self, (QPointF*)pos);
 }
 
-QWidget* q_graphicsscenemoveevent_widget(void* self) {
+QWidget* q_graphicsscenemoveevent_widget(const void* self) {
     return QGraphicsSceneEvent_Widget((QGraphicsSceneEvent*)self);
 }
 
@@ -1166,7 +1166,7 @@ void q_graphicsscenemoveevent_set_widget(void* self, void* widget) {
     QGraphicsSceneEvent_SetWidget((QGraphicsSceneEvent*)self, (QWidget*)widget);
 }
 
-uint64_t q_graphicsscenemoveevent_timestamp(void* self) {
+uint64_t q_graphicsscenemoveevent_timestamp(const void* self) {
     return QGraphicsSceneEvent_Timestamp((QGraphicsSceneEvent*)self);
 }
 
@@ -1174,15 +1174,15 @@ void q_graphicsscenemoveevent_set_timestamp(void* self, uint64_t ts) {
     QGraphicsSceneEvent_SetTimestamp((QGraphicsSceneEvent*)self, ts);
 }
 
-int32_t q_graphicsscenemoveevent_type(void* self) {
+int32_t q_graphicsscenemoveevent_type(const void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
-bool q_graphicsscenemoveevent_spontaneous(void* self) {
+bool q_graphicsscenemoveevent_spontaneous(const void* self) {
     return QEvent_Spontaneous((QEvent*)self);
 }
 
-bool q_graphicsscenemoveevent_is_accepted(void* self) {
+bool q_graphicsscenemoveevent_is_accepted(const void* self) {
     return QEvent_IsAccepted((QEvent*)self);
 }
 
@@ -1194,15 +1194,15 @@ void q_graphicsscenemoveevent_ignore(void* self) {
     QEvent_Ignore((QEvent*)self);
 }
 
-bool q_graphicsscenemoveevent_is_input_event(void* self) {
+bool q_graphicsscenemoveevent_is_input_event(const void* self) {
     return QEvent_IsInputEvent((QEvent*)self);
 }
 
-bool q_graphicsscenemoveevent_is_pointer_event(void* self) {
+bool q_graphicsscenemoveevent_is_pointer_event(const void* self) {
     return QEvent_IsPointerEvent((QEvent*)self);
 }
 
-bool q_graphicsscenemoveevent_is_single_point_event(void* self) {
+bool q_graphicsscenemoveevent_is_single_point_event(const void* self) {
     return QEvent_IsSinglePointEvent((QEvent*)self);
 }
 
@@ -1226,16 +1226,16 @@ void q_graphicsscenemoveevent_on_set_accepted(void* self, void (*callback)(void*
     QGraphicsSceneMoveEvent_OnSetAccepted((QGraphicsSceneMoveEvent*)self, (intptr_t)callback);
 }
 
-QEvent* q_graphicsscenemoveevent_clone(void* self) {
+QEvent* q_graphicsscenemoveevent_clone(const void* self) {
     return QGraphicsSceneMoveEvent_Clone((QGraphicsSceneMoveEvent*)self);
 }
 
-QEvent* q_graphicsscenemoveevent_super_clone(void* self) {
+QEvent* q_graphicsscenemoveevent_super_clone(const void* self) {
     return QGraphicsSceneMoveEvent_SuperClone((QGraphicsSceneMoveEvent*)self);
 }
 
-void q_graphicsscenemoveevent_on_clone(void* self, QEvent* (*callback)()) {
-    QGraphicsSceneMoveEvent_OnClone((QGraphicsSceneMoveEvent*)self, (intptr_t)callback);
+void q_graphicsscenemoveevent_on_clone(const void* self, QEvent* (*callback)(const void*)) {
+    QGraphicsSceneMoveEvent_OnClone((const QGraphicsSceneMoveEvent*)self, (intptr_t)callback);
 }
 
 void q_graphicsscenemoveevent_delete(void* self) {

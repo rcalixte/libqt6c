@@ -1,11 +1,11 @@
 #include "libqstringtokenizer.hpp"
 #include "libqstringtokenizer.h"
 
-QStringTokenizerBaseBase* q_stringtokenizerbasebase_new(void* other) {
+QStringTokenizerBaseBase* q_stringtokenizerbasebase_new(const void* other) {
     return QStringTokenizerBaseBase_New((QStringTokenizerBaseBase*)other);
 }
 
-QStringTokenizerBaseBase* q_stringtokenizerbasebase_new2(void* param1) {
+QStringTokenizerBaseBase* q_stringtokenizerbasebase_new2(const void* param1) {
     return QStringTokenizerBaseBase_New2((QStringTokenizerBaseBase*)param1);
 }
 

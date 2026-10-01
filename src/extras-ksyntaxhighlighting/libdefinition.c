@@ -7,41 +7,41 @@ KSyntaxHighlighting__Definition* k_syntaxhighlighting__definition_new() {
     return KSyntaxHighlighting__Definition_New();
 }
 
-KSyntaxHighlighting__Definition* k_syntaxhighlighting__definition_new2(void* other) {
+KSyntaxHighlighting__Definition* k_syntaxhighlighting__definition_new2(const void* other) {
     return KSyntaxHighlighting__Definition_New2((KSyntaxHighlighting__Definition*)other);
 }
 
-void k_syntaxhighlighting__definition_operator_assign(void* self, void* rhs) {
+void k_syntaxhighlighting__definition_operator_assign(void* self, const void* rhs) {
     KSyntaxHighlighting__Definition_OperatorAssign((KSyntaxHighlighting__Definition*)self, (KSyntaxHighlighting__Definition*)rhs);
 }
 
-bool k_syntaxhighlighting__definition_operator_equal(void* self, void* other) {
+bool k_syntaxhighlighting__definition_operator_equal(const void* self, const void* other) {
     return KSyntaxHighlighting__Definition_OperatorEqual((KSyntaxHighlighting__Definition*)self, (KSyntaxHighlighting__Definition*)other);
 }
 
-bool k_syntaxhighlighting__definition_operator_not_equal(void* self, void* other) {
+bool k_syntaxhighlighting__definition_operator_not_equal(const void* self, const void* other) {
     return KSyntaxHighlighting__Definition_OperatorNotEqual((KSyntaxHighlighting__Definition*)self, (KSyntaxHighlighting__Definition*)other);
 }
 
-bool k_syntaxhighlighting__definition_is_valid(void* self) {
+bool k_syntaxhighlighting__definition_is_valid(const void* self) {
     return KSyntaxHighlighting__Definition_IsValid((KSyntaxHighlighting__Definition*)self);
 }
 
-const char* k_syntaxhighlighting__definition_file_path(void* self) {
+const char* k_syntaxhighlighting__definition_file_path(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_FilePath((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_syntaxhighlighting__definition_name(void* self) {
+const char* k_syntaxhighlighting__definition_name(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_Name((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_syntaxhighlighting__definition_alternative_names(void* self) {
+const char** k_syntaxhighlighting__definition_alternative_names(const void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_AlternativeNames((KSyntaxHighlighting__Definition*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -58,28 +58,28 @@ const char** k_syntaxhighlighting__definition_alternative_names(void* self) {
     return _ret;
 }
 
-const char* k_syntaxhighlighting__definition_translated_name(void* self) {
+const char* k_syntaxhighlighting__definition_translated_name(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_TranslatedName((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_syntaxhighlighting__definition_section(void* self) {
+const char* k_syntaxhighlighting__definition_section(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_Section((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_syntaxhighlighting__definition_translated_section(void* self) {
+const char* k_syntaxhighlighting__definition_translated_section(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_TranslatedSection((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_syntaxhighlighting__definition_mime_types(void* self) {
+const char** k_syntaxhighlighting__definition_mime_types(const void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_MimeTypes((KSyntaxHighlighting__Definition*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -96,7 +96,7 @@ const char** k_syntaxhighlighting__definition_mime_types(void* self) {
     return _ret;
 }
 
-const char** k_syntaxhighlighting__definition_extensions(void* self) {
+const char** k_syntaxhighlighting__definition_extensions(const void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_Extensions((KSyntaxHighlighting__Definition*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -113,63 +113,63 @@ const char** k_syntaxhighlighting__definition_extensions(void* self) {
     return _ret;
 }
 
-int32_t k_syntaxhighlighting__definition_version(void* self) {
+int32_t k_syntaxhighlighting__definition_version(const void* self) {
     return KSyntaxHighlighting__Definition_Version((KSyntaxHighlighting__Definition*)self);
 }
 
-int32_t k_syntaxhighlighting__definition_priority(void* self) {
+int32_t k_syntaxhighlighting__definition_priority(const void* self) {
     return KSyntaxHighlighting__Definition_Priority((KSyntaxHighlighting__Definition*)self);
 }
 
-bool k_syntaxhighlighting__definition_is_hidden(void* self) {
+bool k_syntaxhighlighting__definition_is_hidden(const void* self) {
     return KSyntaxHighlighting__Definition_IsHidden((KSyntaxHighlighting__Definition*)self);
 }
 
-const char* k_syntaxhighlighting__definition_style(void* self) {
+const char* k_syntaxhighlighting__definition_style(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_Style((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_syntaxhighlighting__definition_indenter(void* self) {
+const char* k_syntaxhighlighting__definition_indenter(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_Indenter((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_syntaxhighlighting__definition_author(void* self) {
+const char* k_syntaxhighlighting__definition_author(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_Author((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_syntaxhighlighting__definition_license(void* self) {
+const char* k_syntaxhighlighting__definition_license(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_License((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_syntaxhighlighting__definition_is_word_delimiter(void* self, void* c) {
+bool k_syntaxhighlighting__definition_is_word_delimiter(const void* self, void* c) {
     return KSyntaxHighlighting__Definition_IsWordDelimiter((KSyntaxHighlighting__Definition*)self, (QChar*)c);
 }
 
-bool k_syntaxhighlighting__definition_is_word_wrap_delimiter(void* self, void* c) {
+bool k_syntaxhighlighting__definition_is_word_wrap_delimiter(const void* self, void* c) {
     return KSyntaxHighlighting__Definition_IsWordWrapDelimiter((KSyntaxHighlighting__Definition*)self, (QChar*)c);
 }
 
-bool k_syntaxhighlighting__definition_folding_enabled(void* self) {
+bool k_syntaxhighlighting__definition_folding_enabled(const void* self) {
     return KSyntaxHighlighting__Definition_FoldingEnabled((KSyntaxHighlighting__Definition*)self);
 }
 
-bool k_syntaxhighlighting__definition_indentation_based_folding_enabled(void* self) {
+bool k_syntaxhighlighting__definition_indentation_based_folding_enabled(const void* self) {
     return KSyntaxHighlighting__Definition_IndentationBasedFoldingEnabled((KSyntaxHighlighting__Definition*)self);
 }
 
-const char** k_syntaxhighlighting__definition_folding_ignore_list(void* self) {
+const char** k_syntaxhighlighting__definition_folding_ignore_list(const void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_FoldingIgnoreList((KSyntaxHighlighting__Definition*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -186,7 +186,7 @@ const char** k_syntaxhighlighting__definition_folding_ignore_list(void* self) {
     return _ret;
 }
 
-const char** k_syntaxhighlighting__definition_keyword_lists(void* self) {
+const char** k_syntaxhighlighting__definition_keyword_lists(const void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_KeywordLists((KSyntaxHighlighting__Definition*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -203,7 +203,7 @@ const char** k_syntaxhighlighting__definition_keyword_lists(void* self) {
     return _ret;
 }
 
-const char** k_syntaxhighlighting__definition_keyword_list(void* self, const char* name) {
+const char** k_syntaxhighlighting__definition_keyword_list(const void* self, const char* name) {
     libqt_list _arr = KSyntaxHighlighting__Definition_KeywordList((KSyntaxHighlighting__Definition*)self, qstring(name));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -235,28 +235,28 @@ bool k_syntaxhighlighting__definition_set_keyword_list(void* self, const char* n
     return _out;
 }
 
-libqt_list /* of KSyntaxHighlighting__Format* */ k_syntaxhighlighting__definition_formats(void* self) {
+libqt_list /* of KSyntaxHighlighting__Format* */ k_syntaxhighlighting__definition_formats(const void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_Formats((KSyntaxHighlighting__Definition*)self);
     return _arr;
 }
 
-libqt_list /* of KSyntaxHighlighting__Definition* */ k_syntaxhighlighting__definition_included_definitions(void* self) {
+libqt_list /* of KSyntaxHighlighting__Definition* */ k_syntaxhighlighting__definition_included_definitions(const void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_IncludedDefinitions((KSyntaxHighlighting__Definition*)self);
     return _arr;
 }
 
-const char* k_syntaxhighlighting__definition_single_line_comment_marker(void* self) {
+const char* k_syntaxhighlighting__definition_single_line_comment_marker(const void* self) {
     libqt_string _str = KSyntaxHighlighting__Definition_SingleLineCommentMarker((KSyntaxHighlighting__Definition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_syntaxhighlighting__definition_single_line_comment_position(void* self) {
+int32_t k_syntaxhighlighting__definition_single_line_comment_position(const void* self) {
     return KSyntaxHighlighting__Definition_SingleLineCommentPosition((KSyntaxHighlighting__Definition*)self);
 }
 
-libqt_pair /* tuple of const char* and const char* */ k_syntaxhighlighting__definition_multi_line_comment_marker(void* self) {
+libqt_pair /* tuple of const char* and const char* */ k_syntaxhighlighting__definition_multi_line_comment_marker(const void* self) {
     libqt_pair _ret = KSyntaxHighlighting__Definition_MultiLineCommentMarker((KSyntaxHighlighting__Definition*)self);
     libqt_string* _first = (libqt_string*)_ret.first;
     libqt_string* _second = (libqt_string*)_ret.second;
@@ -268,7 +268,7 @@ libqt_pair /* tuple of const char* and const char* */ k_syntaxhighlighting__defi
     return _out;
 }
 
-libqt_list /* of libqt_pair tuple of QChar* and const char* */ k_syntaxhighlighting__definition_character_encodings(void* self) {
+libqt_list /* of libqt_pair tuple of QChar* and const char* */ k_syntaxhighlighting__definition_character_encodings(const void* self) {
     libqt_list _arr = KSyntaxHighlighting__Definition_CharacterEncodings((KSyntaxHighlighting__Definition*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {

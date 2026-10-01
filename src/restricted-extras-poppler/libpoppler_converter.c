@@ -12,11 +12,7 @@ void q_poppler__baseconverter_set_output_device(void* self, void* device) {
     Poppler__BaseConverter_SetOutputDevice((Poppler__BaseConverter*)self, (QIODevice*)device);
 }
 
-bool q_poppler__baseconverter_convert(void* self) {
-    return Poppler__BaseConverter_Convert((Poppler__BaseConverter*)self);
-}
-
-int32_t q_poppler__baseconverter_last_error(void* self) {
+int32_t q_poppler__baseconverter_last_error(const void* self) {
     return Poppler__BaseConverter_LastError((Poppler__BaseConverter*)self);
 }
 
@@ -84,7 +80,7 @@ void q_poppler__psconverter_set_p_s_options(void* self, int32_t options) {
     Poppler__PSConverter_SetPSOptions((Poppler__PSConverter*)self, options);
 }
 
-int32_t q_poppler__psconverter_ps_options(void* self) {
+int32_t q_poppler__psconverter_ps_options(const void* self) {
     return Poppler__PSConverter_PsOptions((Poppler__PSConverter*)self);
 }
 
@@ -100,7 +96,7 @@ void q_poppler__psconverter_set_output_device(void* self, void* device) {
     Poppler__BaseConverter_SetOutputDevice((Poppler__BaseConverter*)self, (QIODevice*)device);
 }
 
-int32_t q_poppler__psconverter_last_error(void* self) {
+int32_t q_poppler__psconverter_last_error(const void* self) {
     return Poppler__BaseConverter_LastError((Poppler__BaseConverter*)self);
 }
 
@@ -112,11 +108,11 @@ void q_poppler__pdfconverter_set_p_d_f_options(void* self, int32_t options) {
     Poppler__PDFConverter_SetPDFOptions((Poppler__PDFConverter*)self, options);
 }
 
-int32_t q_poppler__pdfconverter_pdf_options(void* self) {
+int32_t q_poppler__pdfconverter_pdf_options(const void* self) {
     return Poppler__PDFConverter_PdfOptions((Poppler__PDFConverter*)self);
 }
 
-bool q_poppler__pdfconverter_sign(void* self, void* data) {
+bool q_poppler__pdfconverter_sign(void* self, const void* data) {
     return Poppler__PDFConverter_Sign((Poppler__PDFConverter*)self, (Poppler__PDFConverter__NewSignatureData*)data);
 }
 
@@ -132,7 +128,7 @@ void q_poppler__pdfconverter_set_output_device(void* self, void* device) {
     Poppler__BaseConverter_SetOutputDevice((Poppler__BaseConverter*)self, (QIODevice*)device);
 }
 
-int32_t q_poppler__pdfconverter_last_error(void* self) {
+int32_t q_poppler__pdfconverter_last_error(const void* self) {
     return Poppler__BaseConverter_LastError((Poppler__BaseConverter*)self);
 }
 
@@ -144,7 +140,7 @@ Poppler__PDFConverter__NewSignatureData* q_poppler__pdfconverter__newsignatureda
     return Poppler__PDFConverter__NewSignatureData_New();
 }
 
-const char* q_poppler__pdfconverter__newsignaturedata_cert_nickname(void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_cert_nickname(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_CertNickname((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -155,7 +151,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_cert_nickname(void* self, con
     Poppler__PDFConverter__NewSignatureData_SetCertNickname((Poppler__PDFConverter__NewSignatureData*)self, qstring(certNickname));
 }
 
-const char* q_poppler__pdfconverter__newsignaturedata_password(void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_password(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_Password((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -166,7 +162,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_password(void* self, const ch
     Poppler__PDFConverter__NewSignatureData_SetPassword((Poppler__PDFConverter__NewSignatureData*)self, qstring(password));
 }
 
-int32_t q_poppler__pdfconverter__newsignaturedata_page(void* self) {
+int32_t q_poppler__pdfconverter__newsignaturedata_page(const void* self) {
     return Poppler__PDFConverter__NewSignatureData_Page((Poppler__PDFConverter__NewSignatureData*)self);
 }
 
@@ -174,15 +170,15 @@ void q_poppler__pdfconverter__newsignaturedata_set_page(void* self, int page) {
     Poppler__PDFConverter__NewSignatureData_SetPage((Poppler__PDFConverter__NewSignatureData*)self, page);
 }
 
-QRectF* q_poppler__pdfconverter__newsignaturedata_bounding_rectangle(void* self) {
+QRectF* q_poppler__pdfconverter__newsignaturedata_bounding_rectangle(const void* self) {
     return Poppler__PDFConverter__NewSignatureData_BoundingRectangle((Poppler__PDFConverter__NewSignatureData*)self);
 }
 
-void q_poppler__pdfconverter__newsignaturedata_set_bounding_rectangle(void* self, void* rect) {
+void q_poppler__pdfconverter__newsignaturedata_set_bounding_rectangle(void* self, const void* rect) {
     Poppler__PDFConverter__NewSignatureData_SetBoundingRectangle((Poppler__PDFConverter__NewSignatureData*)self, (QRectF*)rect);
 }
 
-const char* q_poppler__pdfconverter__newsignaturedata_signature_text(void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_signature_text(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_SignatureText((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -193,7 +189,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_signature_text(void* self, co
     Poppler__PDFConverter__NewSignatureData_SetSignatureText((Poppler__PDFConverter__NewSignatureData*)self, qstring(text));
 }
 
-const char* q_poppler__pdfconverter__newsignaturedata_signature_left_text(void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_signature_left_text(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_SignatureLeftText((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -204,7 +200,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_signature_left_text(void* sel
     Poppler__PDFConverter__NewSignatureData_SetSignatureLeftText((Poppler__PDFConverter__NewSignatureData*)self, qstring(text));
 }
 
-const char* q_poppler__pdfconverter__newsignaturedata_reason(void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_reason(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_Reason((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -215,7 +211,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_reason(void* self, const char
     Poppler__PDFConverter__NewSignatureData_SetReason((Poppler__PDFConverter__NewSignatureData*)self, qstring(reason));
 }
 
-const char* q_poppler__pdfconverter__newsignaturedata_location(void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_location(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_Location((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -226,7 +222,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_location(void* self, const ch
     Poppler__PDFConverter__NewSignatureData_SetLocation((Poppler__PDFConverter__NewSignatureData*)self, qstring(location));
 }
 
-double q_poppler__pdfconverter__newsignaturedata_font_size(void* self) {
+double q_poppler__pdfconverter__newsignaturedata_font_size(const void* self) {
     return Poppler__PDFConverter__NewSignatureData_FontSize((Poppler__PDFConverter__NewSignatureData*)self);
 }
 
@@ -234,7 +230,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_font_size(void* self, double 
     Poppler__PDFConverter__NewSignatureData_SetFontSize((Poppler__PDFConverter__NewSignatureData*)self, fontSize);
 }
 
-double q_poppler__pdfconverter__newsignaturedata_left_font_size(void* self) {
+double q_poppler__pdfconverter__newsignaturedata_left_font_size(const void* self) {
     return Poppler__PDFConverter__NewSignatureData_LeftFontSize((Poppler__PDFConverter__NewSignatureData*)self);
 }
 
@@ -242,23 +238,23 @@ void q_poppler__pdfconverter__newsignaturedata_set_left_font_size(void* self, do
     Poppler__PDFConverter__NewSignatureData_SetLeftFontSize((Poppler__PDFConverter__NewSignatureData*)self, fontSize);
 }
 
-QColor* q_poppler__pdfconverter__newsignaturedata_font_color(void* self) {
+QColor* q_poppler__pdfconverter__newsignaturedata_font_color(const void* self) {
     return Poppler__PDFConverter__NewSignatureData_FontColor((Poppler__PDFConverter__NewSignatureData*)self);
 }
 
-void q_poppler__pdfconverter__newsignaturedata_set_font_color(void* self, void* color) {
+void q_poppler__pdfconverter__newsignaturedata_set_font_color(void* self, const void* color) {
     Poppler__PDFConverter__NewSignatureData_SetFontColor((Poppler__PDFConverter__NewSignatureData*)self, (QColor*)color);
 }
 
-QColor* q_poppler__pdfconverter__newsignaturedata_border_color(void* self) {
+QColor* q_poppler__pdfconverter__newsignaturedata_border_color(const void* self) {
     return Poppler__PDFConverter__NewSignatureData_BorderColor((Poppler__PDFConverter__NewSignatureData*)self);
 }
 
-void q_poppler__pdfconverter__newsignaturedata_set_border_color(void* self, void* color) {
+void q_poppler__pdfconverter__newsignaturedata_set_border_color(void* self, const void* color) {
     Poppler__PDFConverter__NewSignatureData_SetBorderColor((Poppler__PDFConverter__NewSignatureData*)self, (QColor*)color);
 }
 
-double q_poppler__pdfconverter__newsignaturedata_border_width(void* self) {
+double q_poppler__pdfconverter__newsignaturedata_border_width(const void* self) {
     return Poppler__PDFConverter__NewSignatureData_BorderWidth((Poppler__PDFConverter__NewSignatureData*)self);
 }
 
@@ -266,15 +262,15 @@ void q_poppler__pdfconverter__newsignaturedata_set_border_width(void* self, doub
     Poppler__PDFConverter__NewSignatureData_SetBorderWidth((Poppler__PDFConverter__NewSignatureData*)self, width);
 }
 
-QColor* q_poppler__pdfconverter__newsignaturedata_background_color(void* self) {
+QColor* q_poppler__pdfconverter__newsignaturedata_background_color(const void* self) {
     return Poppler__PDFConverter__NewSignatureData_BackgroundColor((Poppler__PDFConverter__NewSignatureData*)self);
 }
 
-void q_poppler__pdfconverter__newsignaturedata_set_background_color(void* self, void* color) {
+void q_poppler__pdfconverter__newsignaturedata_set_background_color(void* self, const void* color) {
     Poppler__PDFConverter__NewSignatureData_SetBackgroundColor((Poppler__PDFConverter__NewSignatureData*)self, (QColor*)color);
 }
 
-const char* q_poppler__pdfconverter__newsignaturedata_field_partial_name(void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_field_partial_name(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_FieldPartialName((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -285,7 +281,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_field_partial_name(void* self
     Poppler__PDFConverter__NewSignatureData_SetFieldPartialName((Poppler__PDFConverter__NewSignatureData*)self, qstring(name));
 }
 
-char* q_poppler__pdfconverter__newsignaturedata_document_owner_password(void* self) {
+char* q_poppler__pdfconverter__newsignaturedata_document_owner_password(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_DocumentOwnerPassword((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -296,7 +292,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_document_owner_password(void*
     Poppler__PDFConverter__NewSignatureData_SetDocumentOwnerPassword((Poppler__PDFConverter__NewSignatureData*)self, qstring(password));
 }
 
-char* q_poppler__pdfconverter__newsignaturedata_document_user_password(void* self) {
+char* q_poppler__pdfconverter__newsignaturedata_document_user_password(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_DocumentUserPassword((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -307,7 +303,7 @@ void q_poppler__pdfconverter__newsignaturedata_set_document_user_password(void* 
     Poppler__PDFConverter__NewSignatureData_SetDocumentUserPassword((Poppler__PDFConverter__NewSignatureData*)self, qstring(password));
 }
 
-const char* q_poppler__pdfconverter__newsignaturedata_image_path(void* self) {
+const char* q_poppler__pdfconverter__newsignaturedata_image_path(const void* self) {
     libqt_string _str = Poppler__PDFConverter__NewSignatureData_ImagePath((Poppler__PDFConverter__NewSignatureData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

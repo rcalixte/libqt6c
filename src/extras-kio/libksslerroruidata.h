@@ -20,7 +20,7 @@ KSslErrorUiData* k_sslerroruidata_new();
 ///
 /// @param socket QSslSocket*
 ///
-KSslErrorUiData* k_sslerroruidata_new2(void* socket);
+KSslErrorUiData* k_sslerroruidata_new2(const void* socket);
 
 /// [Upstream resources](https://api.kde.org/ksslerroruidata.html)
 
@@ -29,7 +29,7 @@ KSslErrorUiData* k_sslerroruidata_new2(void* socket);
 /// @param reply QNetworkReply*
 /// @param sslErrors libqt_list of QSslError*
 ///
-KSslErrorUiData* k_sslerroruidata_new3(void* reply, libqt_list sslErrors);
+KSslErrorUiData* k_sslerroruidata_new3(const void* reply, libqt_list sslErrors);
 
 /// [Upstream resources](https://api.kde.org/ksslerroruidata.html)
 
@@ -37,14 +37,14 @@ KSslErrorUiData* k_sslerroruidata_new3(void* reply, libqt_list sslErrors);
 ///
 /// @param other KSslErrorUiData*
 ///
-KSslErrorUiData* k_sslerroruidata_new4(void* other);
+KSslErrorUiData* k_sslerroruidata_new4(const void* other);
 
 /// [Upstream resources](https://api.kde.org/ksslerroruidata.html#operator-eq)
 ///
 /// @param self KSslErrorUiData*
 /// @param param1 KSslErrorUiData*
 ///
-void k_sslerroruidata_operator_assign(void* self, void* param1);
+void k_sslerroruidata_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/ksslerroruidata.html#dtor.KSslErrorUiData)
 ///

@@ -15,15 +15,15 @@ QGeoRouteReply* q_georoutereply_new2(int32_t error, const char* errorString, voi
     return QGeoRouteReply_New2(error, qstring(errorString), (QObject*)parent);
 }
 
-const QMetaObject* q_georoutereply_meta_object(void* self) {
+const QMetaObject* q_georoutereply_meta_object(const void* self) {
     return QGeoRouteReply_MetaObject((QGeoRouteReply*)self);
 }
 
-void q_georoutereply_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_georoutereply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QGeoRouteReply_OnMetaObject((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_georoutereply_super_meta_object(void* self) {
+const QMetaObject* q_georoutereply_super_meta_object(const void* self) {
     return QGeoRouteReply_SuperMetaObject((QGeoRouteReply*)self);
 }
 
@@ -58,26 +58,26 @@ const char* q_georoutereply_tr(const char* s) {
     return _ret;
 }
 
-bool q_georoutereply_is_finished(void* self) {
+bool q_georoutereply_is_finished(const void* self) {
     return QGeoRouteReply_IsFinished((QGeoRouteReply*)self);
 }
 
-int32_t q_georoutereply_error(void* self) {
+int32_t q_georoutereply_error(const void* self) {
     return QGeoRouteReply_Error((QGeoRouteReply*)self);
 }
 
-const char* q_georoutereply_error_string(void* self) {
+const char* q_georoutereply_error_string(const void* self) {
     libqt_string _str = QGeoRouteReply_ErrorString((QGeoRouteReply*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QGeoRouteRequest* q_georoutereply_request(void* self) {
+QGeoRouteRequest* q_georoutereply_request(const void* self) {
     return QGeoRouteReply_Request((QGeoRouteReply*)self);
 }
 
-libqt_list /* of QGeoRoute* */ q_georoutereply_routes(void* self) {
+libqt_list /* of QGeoRoute* */ q_georoutereply_routes(const void* self) {
     libqt_list _arr = QGeoRouteReply_Routes((QGeoRouteReply*)self);
     return _arr;
 }
@@ -86,7 +86,7 @@ void q_georoutereply_abort(void* self) {
     QGeoRouteReply_Abort((QGeoRouteReply*)self);
 }
 
-void q_georoutereply_on_abort(void* self, void (*callback)()) {
+void q_georoutereply_on_abort(void* self, void (*callback)(void*)) {
     QGeoRouteReply_OnAbort((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
@@ -122,48 +122,16 @@ void q_georoutereply_set_error(void* self, int32_t error, const char* errorStrin
     QGeoRouteReply_SetError((QGeoRouteReply*)self, error, qstring(errorString));
 }
 
-void q_georoutereply_on_set_error(void* self, void (*callback)(void*, int32_t, const char*)) {
-    QGeoRouteReply_OnSetError((QGeoRouteReply*)self, (intptr_t)callback);
-}
-
-void q_georoutereply_super_set_error(void* self, int32_t error, const char* errorString) {
-    QGeoRouteReply_SuperSetError((QGeoRouteReply*)self, error, qstring(errorString));
-}
-
 void q_georoutereply_set_finished(void* self, bool finished) {
     QGeoRouteReply_SetFinished((QGeoRouteReply*)self, finished);
-}
-
-void q_georoutereply_on_set_finished(void* self, void (*callback)(void*, bool)) {
-    QGeoRouteReply_OnSetFinished((QGeoRouteReply*)self, (intptr_t)callback);
-}
-
-void q_georoutereply_super_set_finished(void* self, bool finished) {
-    QGeoRouteReply_SuperSetFinished((QGeoRouteReply*)self, finished);
 }
 
 void q_georoutereply_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
     QGeoRouteReply_SetRoutes((QGeoRouteReply*)self, routes);
 }
 
-void q_georoutereply_on_set_routes(void* self, void (*callback)(void*, libqt_list /* of QGeoRoute* */)) {
-    QGeoRouteReply_OnSetRoutes((QGeoRouteReply*)self, (intptr_t)callback);
-}
-
-void q_georoutereply_super_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
-    QGeoRouteReply_SuperSetRoutes((QGeoRouteReply*)self, routes);
-}
-
 void q_georoutereply_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
     QGeoRouteReply_AddRoutes((QGeoRouteReply*)self, routes);
-}
-
-void q_georoutereply_on_add_routes(void* self, void (*callback)(void*, libqt_list /* of QGeoRoute* */)) {
-    QGeoRouteReply_OnAddRoutes((QGeoRouteReply*)self, (intptr_t)callback);
-}
-
-void q_georoutereply_super_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
-    QGeoRouteReply_SuperAddRoutes((QGeoRouteReply*)self, routes);
 }
 
 const char* q_georoutereply_tr2(const char* s, const char* c) {
@@ -188,7 +156,7 @@ void q_georoutereply_on_error_occurred2(void* self, void (*callback)(void*, int3
     QGeoRouteReply_Connect_ErrorOccurred2((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-const char* q_georoutereply_object_name(void* self) {
+const char* q_georoutereply_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -199,19 +167,19 @@ void q_georoutereply_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_georoutereply_is_widget_type(void* self) {
+bool q_georoutereply_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_georoutereply_is_window_type(void* self) {
+bool q_georoutereply_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_georoutereply_is_quick_item_type(void* self) {
+bool q_georoutereply_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_georoutereply_signals_blocked(void* self) {
+bool q_georoutereply_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -219,7 +187,7 @@ bool q_georoutereply_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_georoutereply_thread(void* self) {
+QThread* q_georoutereply_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -243,7 +211,7 @@ void q_georoutereply_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_georoutereply_children(void* self) {
+libqt_list /* of QObject* */ q_georoutereply_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -260,55 +228,55 @@ void q_georoutereply_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_georoutereply_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_georoutereply_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_georoutereply_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_georoutereply_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_georoutereply_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_georoutereply_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_georoutereply_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_georoutereply_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_georoutereply_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_georoutereply_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_georoutereply_disconnect3(void* self) {
+bool q_georoutereply_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_georoutereply_disconnect4(void* self, void* receiver) {
+bool q_georoutereply_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_georoutereply_disconnect5(void* param1) {
+bool q_georoutereply_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_georoutereply_dump_object_tree(void* self) {
+void q_georoutereply_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_georoutereply_dump_object_info(void* self) {
+void q_georoutereply_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_georoutereply_set_property(void* self, const char* name, void* value) {
+bool q_georoutereply_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_georoutereply_property(void* self, const char* name) {
+QVariant* q_georoutereply_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_georoutereply_dynamic_property_names(void* self) {
+const char** q_georoutereply_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -329,7 +297,7 @@ QBindingStorage* q_georoutereply_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_georoutereply_binding_storage2(void* self) {
+const QBindingStorage* q_georoutereply_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -341,11 +309,11 @@ void q_georoutereply_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_georoutereply_parent(void* self) {
+QObject* q_georoutereply_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_georoutereply_inherits(void* self, const char* classname) {
+bool q_georoutereply_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -361,31 +329,31 @@ int32_t q_georoutereply_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_georoutereply_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_georoutereply_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_georoutereply_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_georoutereply_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_georoutereply_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_georoutereply_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_georoutereply_disconnect1(void* self, const char* signal) {
+bool q_georoutereply_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_georoutereply_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_georoutereply_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_georoutereply_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_georoutereply_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_georoutereply_disconnect23(void* self, void* receiver, const char* member) {
+bool q_georoutereply_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -457,76 +425,44 @@ void q_georoutereply_on_custom_event(void* self, void (*callback)(void*, void*))
     QGeoRouteReply_OnCustomEvent((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_connect_notify(void* self, void* signal) {
+void q_georoutereply_connect_notify(void* self, const void* signal) {
     QGeoRouteReply_ConnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutereply_super_connect_notify(void* self, void* signal) {
+void q_georoutereply_super_connect_notify(void* self, const void* signal) {
     QGeoRouteReply_SuperConnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutereply_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_georoutereply_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QGeoRouteReply_OnConnectNotify((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_disconnect_notify(void* self, void* signal) {
+void q_georoutereply_disconnect_notify(void* self, const void* signal) {
     QGeoRouteReply_DisconnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutereply_super_disconnect_notify(void* self, void* signal) {
+void q_georoutereply_super_disconnect_notify(void* self, const void* signal) {
     QGeoRouteReply_SuperDisconnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutereply_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_georoutereply_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QGeoRouteReply_OnDisconnectNotify((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-QObject* q_georoutereply_sender(void* self) {
+QObject* q_georoutereply_sender(const void* self) {
     return QGeoRouteReply_Sender((QGeoRouteReply*)self);
 }
 
-QObject* q_georoutereply_super_sender(void* self) {
-    return QGeoRouteReply_SuperSender((QGeoRouteReply*)self);
-}
-
-void q_georoutereply_on_sender(void* self, QObject* (*callback)()) {
-    QGeoRouteReply_OnSender((QGeoRouteReply*)self, (intptr_t)callback);
-}
-
-int32_t q_georoutereply_sender_signal_index(void* self) {
+int32_t q_georoutereply_sender_signal_index(const void* self) {
     return QGeoRouteReply_SenderSignalIndex((QGeoRouteReply*)self);
 }
 
-int32_t q_georoutereply_super_sender_signal_index(void* self) {
-    return QGeoRouteReply_SuperSenderSignalIndex((QGeoRouteReply*)self);
-}
-
-void q_georoutereply_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QGeoRouteReply_OnSenderSignalIndex((QGeoRouteReply*)self, (intptr_t)callback);
-}
-
-int32_t q_georoutereply_receivers(void* self, const char* signal) {
+int32_t q_georoutereply_receivers(const void* self, const char* signal) {
     return QGeoRouteReply_Receivers((QGeoRouteReply*)self, signal);
 }
 
-int32_t q_georoutereply_super_receivers(void* self, const char* signal) {
-    return QGeoRouteReply_SuperReceivers((QGeoRouteReply*)self, signal);
-}
-
-void q_georoutereply_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QGeoRouteReply_OnReceivers((QGeoRouteReply*)self, (intptr_t)callback);
-}
-
-bool q_georoutereply_is_signal_connected(void* self, void* signal) {
+bool q_georoutereply_is_signal_connected(const void* self, const void* signal) {
     return QGeoRouteReply_IsSignalConnected((QGeoRouteReply*)self, (QMetaMethod*)signal);
-}
-
-bool q_georoutereply_super_is_signal_connected(void* self, void* signal) {
-    return QGeoRouteReply_SuperIsSignalConnected((QGeoRouteReply*)self, (QMetaMethod*)signal);
-}
-
-void q_georoutereply_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QGeoRouteReply_OnIsSignalConnected((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
 void q_georoutereply_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -150,26 +150,26 @@ QSettings* q_settings_new15(int32_t scope, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const QMetaObject* q_settings_meta_object(void* self);
+const QMetaObject* q_settings_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSettings*
-/// @param callback const QMetaObject* func()
+/// @param self const QSettings*
+/// @param callback const QMetaObject* func(const QSettings* self)
 ///
-void q_settings_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_settings_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const QMetaObject* q_settings_super_meta_object(void* self);
+const QMetaObject* q_settings_super_meta_object(const void* self);
 
 /// @param self QSettings*
 /// @param param1 const char*
@@ -235,17 +235,17 @@ void q_settings_sync(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#status)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
 /// @return enum QSettings__Status
 ///
-int32_t q_settings_status(void* self);
+int32_t q_settings_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#isAtomicSyncRequired)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-bool q_settings_is_atomic_sync_required(void* self);
+bool q_settings_is_atomic_sync_required(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#setAtomicSyncRequired)
 ///
@@ -271,9 +271,9 @@ void q_settings_end_group(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char* q_settings_group(void* self);
+const char* q_settings_group(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#beginReadArray)
 ///
@@ -306,31 +306,31 @@ void q_settings_set_array_index(void* self, int i);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char** q_settings_all_keys(void* self);
+const char** q_settings_all_keys(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#childKeys)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char** q_settings_child_keys(void* self);
+const char** q_settings_child_keys(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#childGroups)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char** q_settings_child_groups(void* self);
+const char** q_settings_child_groups(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#isWritable)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-bool q_settings_is_writable(void* self);
+bool q_settings_is_writable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#setValue)
 ///
@@ -338,22 +338,22 @@ bool q_settings_is_writable(void* self);
 /// @param key const char*
 /// @param value QVariant*
 ///
-void q_settings_set_value(void* self, const char* key, void* value);
+void q_settings_set_value(void* self, const char* key, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#value)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param key const char*
 /// @param defaultValue QVariant*
 ///
-QVariant* q_settings_value(void* self, const char* key, void* defaultValue);
+QVariant* q_settings_value(const void* self, const char* key, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#value)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param key const char*
 ///
-QVariant* q_settings_value2(void* self, const char* key);
+QVariant* q_settings_value2(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#remove)
 ///
@@ -364,10 +364,10 @@ void q_settings_remove(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#contains)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param key const char*
 ///
-bool q_settings_contains(void* self, const char* key);
+bool q_settings_contains(const void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#setFallbacksEnabled)
 ///
@@ -378,49 +378,49 @@ void q_settings_set_fallbacks_enabled(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#fallbacksEnabled)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-bool q_settings_fallbacks_enabled(void* self);
+bool q_settings_fallbacks_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#fileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char* q_settings_file_name(void* self);
+const char* q_settings_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#format)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
 /// @return enum QSettings__Format
 ///
-int32_t q_settings_format(void* self);
+int32_t q_settings_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#scope)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
 /// @return enum QSettings__Scope
 ///
-int32_t q_settings_scope(void* self);
+int32_t q_settings_scope(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#organizationName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char* q_settings_organization_name(void* self);
+const char* q_settings_organization_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#applicationName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char* q_settings_application_name(void* self);
+const char* q_settings_application_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsettings.html#setDefaultFormat)
 ///
@@ -500,9 +500,9 @@ void q_settings_begin_write_array2(void* self, const char* prefix, int size);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char* q_settings_object_name(void* self);
+const char* q_settings_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -517,33 +517,33 @@ void q_settings_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-bool q_settings_is_widget_type(void* self);
+bool q_settings_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-bool q_settings_is_window_type(void* self);
+bool q_settings_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-bool q_settings_is_quick_item_type(void* self);
+bool q_settings_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-bool q_settings_signals_blocked(void* self);
+bool q_settings_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -558,9 +558,9 @@ bool q_settings_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-QThread* q_settings_thread(void* self);
+QThread* q_settings_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -611,11 +611,11 @@ void q_settings_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_settings_children(void* self);
+libqt_list q_settings_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -653,7 +653,7 @@ void q_settings_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_settings_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_settings_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -664,18 +664,18 @@ QMetaObject__Connection* q_settings_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_settings_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_settings_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_settings_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_settings_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -686,7 +686,7 @@ QMetaObject__Connection* q_settings_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_settings_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_settings_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -697,24 +697,24 @@ bool q_settings_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_settings_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_settings_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-bool q_settings_disconnect3(void* self);
+bool q_settings_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param receiver QObject*
 ///
-bool q_settings_disconnect4(void* self, void* receiver);
+bool q_settings_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -722,23 +722,23 @@ bool q_settings_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_settings_disconnect5(void* param1);
+bool q_settings_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-void q_settings_dump_object_tree(void* self);
+void q_settings_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-void q_settings_dump_object_info(void* self);
+void q_settings_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -748,16 +748,16 @@ void q_settings_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_settings_set_property(void* self, const char* name, void* value);
+bool q_settings_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param name const char*
 ///
-QVariant* q_settings_property(void* self, const char* name);
+QVariant* q_settings_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -765,9 +765,9 @@ QVariant* q_settings_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const char** q_settings_dynamic_property_names(void* self);
+const char** q_settings_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -781,9 +781,9 @@ QBindingStorage* q_settings_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-const QBindingStorage* q_settings_binding_storage2(void* self);
+const QBindingStorage* q_settings_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -806,18 +806,18 @@ void q_settings_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-QObject* q_settings_parent(void* self);
+QObject* q_settings_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param classname const char*
 ///
-bool q_settings_inherits(void* self, const char* classname);
+bool q_settings_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -857,7 +857,7 @@ int32_t q_settings_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_settings_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_settings_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -869,59 +869,59 @@ QMetaObject__Connection* q_settings_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_settings_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_settings_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_settings_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_settings_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param signal const char*
 ///
-bool q_settings_disconnect1(void* self, const char* signal);
+bool q_settings_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSettings*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_settings_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_settings_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_settings_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_settings_disconnect23(void* self, void* receiver, const char* member);
+bool q_settings_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QSettings*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_settings_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1084,7 +1084,7 @@ void q_settings_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QSettings*
 /// @param signal QMetaMethod*
 ///
-void q_settings_connect_notify(void* self, void* signal);
+void q_settings_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1095,7 +1095,7 @@ void q_settings_connect_notify(void* self, void* signal);
 /// @param self QSettings*
 /// @param signal QMetaMethod*
 ///
-void q_settings_super_connect_notify(void* self, void* signal);
+void q_settings_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1106,7 +1106,7 @@ void q_settings_super_connect_notify(void* self, void* signal);
 /// @param self QSettings*
 /// @param callback void func(QSettings* self, QMetaMethod* signal)
 ///
-void q_settings_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_settings_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1117,7 +1117,7 @@ void q_settings_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QSettings*
 /// @param signal QMetaMethod*
 ///
-void q_settings_disconnect_notify(void* self, void* signal);
+void q_settings_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1128,7 +1128,7 @@ void q_settings_disconnect_notify(void* self, void* signal);
 /// @param self QSettings*
 /// @param signal QMetaMethod*
 ///
-void q_settings_super_disconnect_notify(void* self, void* signal);
+void q_settings_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1139,7 +1139,7 @@ void q_settings_super_disconnect_notify(void* self, void* signal);
 /// @param self QSettings*
 /// @param callback void func(QSettings* self, QMetaMethod* signal)
 ///
-void q_settings_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_settings_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1147,9 +1147,9 @@ void q_settings_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-QObject* q_settings_sender(void* self);
+QObject* q_settings_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1157,9 +1157,9 @@ QObject* q_settings_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-QObject* q_settings_super_sender(void* self);
+QObject* q_settings_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1167,10 +1167,10 @@ QObject* q_settings_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSettings*
-/// @param callback QObject* func()
+/// @param self const QSettings*
+/// @param callback QObject* func(QSettings* self)
 ///
-void q_settings_on_sender(void* self, QObject* (*callback)());
+void q_settings_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1178,9 +1178,9 @@ void q_settings_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-int32_t q_settings_sender_signal_index(void* self);
+int32_t q_settings_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1188,9 +1188,9 @@ int32_t q_settings_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 ///
-int32_t q_settings_super_sender_signal_index(void* self);
+int32_t q_settings_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1198,10 +1198,10 @@ int32_t q_settings_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSettings*
-/// @param callback int32_t func()
+/// @param self const QSettings*
+/// @param callback int32_t func(QSettings* self)
 ///
-void q_settings_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_settings_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1209,10 +1209,10 @@ void q_settings_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param signal const char*
 ///
-int32_t q_settings_receivers(void* self, const char* signal);
+int32_t q_settings_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1220,10 +1220,10 @@ int32_t q_settings_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param signal const char*
 ///
-int32_t q_settings_super_receivers(void* self, const char* signal);
+int32_t q_settings_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1231,10 +1231,10 @@ int32_t q_settings_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param callback int32_t func(QSettings* self, const char* signal)
 ///
-void q_settings_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_settings_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1242,10 +1242,10 @@ void q_settings_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param signal QMetaMethod*
 ///
-bool q_settings_is_signal_connected(void* self, void* signal);
+bool q_settings_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1253,10 +1253,10 @@ bool q_settings_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param signal QMetaMethod*
 ///
-bool q_settings_super_is_signal_connected(void* self, void* signal);
+bool q_settings_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1264,10 +1264,10 @@ bool q_settings_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSettings*
+/// @param self const QSettings*
 /// @param callback bool func(QSettings* self, QMetaMethod* signal)
 ///
-void q_settings_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_settings_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

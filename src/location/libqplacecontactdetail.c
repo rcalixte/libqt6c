@@ -5,11 +5,11 @@ QPlaceContactDetail* q_placecontactdetail_new() {
     return QPlaceContactDetail_New();
 }
 
-QPlaceContactDetail* q_placecontactdetail_new2(void* other) {
+QPlaceContactDetail* q_placecontactdetail_new2(const void* other) {
     return QPlaceContactDetail_New2((QPlaceContactDetail*)other);
 }
 
-void q_placecontactdetail_operator_assign(void* self, void* other) {
+void q_placecontactdetail_operator_assign(void* self, const void* other) {
     QPlaceContactDetail_OperatorAssign((QPlaceContactDetail*)self, (QPlaceContactDetail*)other);
 }
 
@@ -17,7 +17,7 @@ void q_placecontactdetail_swap(void* self, void* other) {
     QPlaceContactDetail_Swap((QPlaceContactDetail*)self, (QPlaceContactDetail*)other);
 }
 
-const char* q_placecontactdetail_label(void* self) {
+const char* q_placecontactdetail_label(const void* self) {
     libqt_string _str = QPlaceContactDetail_Label((QPlaceContactDetail*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -28,7 +28,7 @@ void q_placecontactdetail_set_label(void* self, const char* label) {
     QPlaceContactDetail_SetLabel((QPlaceContactDetail*)self, qstring(label));
 }
 
-const char* q_placecontactdetail_value(void* self) {
+const char* q_placecontactdetail_value(const void* self) {
     libqt_string _str = QPlaceContactDetail_Value((QPlaceContactDetail*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

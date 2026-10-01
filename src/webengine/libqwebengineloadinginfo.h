@@ -14,56 +14,56 @@
 ///
 /// @param other QWebEngineLoadingInfo*
 ///
-QWebEngineLoadingInfo* q_webengineloadinginfo_new(void* other);
+QWebEngineLoadingInfo* q_webengineloadinginfo_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#operator-eq)
 ///
 /// @param self QWebEngineLoadingInfo*
 /// @param other QWebEngineLoadingInfo*
 ///
-void q_webengineloadinginfo_operator_assign(void* self, void* other);
+void q_webengineloadinginfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#url)
 ///
-/// @param self QWebEngineLoadingInfo*
+/// @param self const QWebEngineLoadingInfo*
 ///
-QUrl* q_webengineloadinginfo_url(void* self);
+QUrl* q_webengineloadinginfo_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#isErrorPage)
 ///
-/// @param self QWebEngineLoadingInfo*
+/// @param self const QWebEngineLoadingInfo*
 ///
-bool q_webengineloadinginfo_is_error_page(void* self);
+bool q_webengineloadinginfo_is_error_page(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#status)
 ///
-/// @param self QWebEngineLoadingInfo*
+/// @param self const QWebEngineLoadingInfo*
 ///
 /// @return enum QWebEngineLoadingInfo__LoadStatus
 ///
-int32_t q_webengineloadinginfo_status(void* self);
+int32_t q_webengineloadinginfo_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineLoadingInfo*
+/// @param self const QWebEngineLoadingInfo*
 ///
-const char* q_webengineloadinginfo_error_string(void* self);
+const char* q_webengineloadinginfo_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorDomain)
 ///
-/// @param self QWebEngineLoadingInfo*
+/// @param self const QWebEngineLoadingInfo*
 ///
 /// @return enum QWebEngineLoadingInfo__ErrorDomain
 ///
-int32_t q_webengineloadinginfo_error_domain(void* self);
+int32_t q_webengineloadinginfo_error_domain(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorCode)
 ///
-/// @param self QWebEngineLoadingInfo*
+/// @param self const QWebEngineLoadingInfo*
 ///
-int32_t q_webengineloadinginfo_error_code(void* self);
+int32_t q_webengineloadinginfo_error_code(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#responseHeaders)
 ///
@@ -81,11 +81,11 @@ int32_t q_webengineloadinginfo_error_code(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self QWebEngineLoadingInfo*
+/// @param self const QWebEngineLoadingInfo*
 ///
 /// @return libqt_map of char* to char**
 ///
-libqt_map q_webengineloadinginfo_response_headers(void* self);
+libqt_map q_webengineloadinginfo_response_headers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#dtor.QWebEngineLoadingInfo)
 ///

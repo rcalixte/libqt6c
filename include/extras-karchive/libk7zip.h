@@ -30,7 +30,7 @@ K7Zip* k_7zip_new2(void* dev);
 ///
 /// @param param1 K7Zip*
 ///
-K7Zip* k_7zip_new3(void* param1);
+K7Zip* k_7zip_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -49,9 +49,9 @@ void k_7zip_set_password(void* self, const char* password);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#passwordNeeded)
 ///
-/// @param self K7Zip*
+/// @param self const K7Zip*
 ///
-bool k_7zip_password_needed(void* self);
+bool k_7zip_password_needed(const void* self);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteSymLink)
 ///
@@ -65,7 +65,7 @@ bool k_7zip_password_needed(void* self);
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteSymLink)
 ///
@@ -74,7 +74,7 @@ bool k_7zip_do_write_sym_link(void* self, const char* name, const char* target, 
 /// @param self K7Zip*
 /// @param callback bool func(K7Zip* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_7zip_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, void*, void*, void*));
+void k_7zip_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteSymLink)
 ///
@@ -90,7 +90,7 @@ void k_7zip_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteDir)
 ///
@@ -103,7 +103,7 @@ bool k_7zip_super_do_write_sym_link(void* self, const char* name, const char* ta
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteDir)
 ///
@@ -112,7 +112,7 @@ bool k_7zip_do_write_dir(void* self, const char* name, const char* user, const c
 /// @param self K7Zip*
 /// @param callback bool func(K7Zip* self, const char* name, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_7zip_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, void*, void*, void*));
+void k_7zip_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteDir)
 ///
@@ -127,7 +127,7 @@ void k_7zip_on_do_write_dir(void* self, bool (*callback)(void*, const char*, con
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doPrepareWriting)
 ///
@@ -141,7 +141,7 @@ bool k_7zip_super_do_write_dir(void* self, const char* name, const char* user, c
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doPrepareWriting)
 ///
@@ -150,7 +150,7 @@ bool k_7zip_do_prepare_writing(void* self, const char* name, const char* user, c
 /// @param self K7Zip*
 /// @param callback bool func(K7Zip* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_7zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, void*, void*, void*));
+void k_7zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doPrepareWriting)
 ///
@@ -166,7 +166,7 @@ void k_7zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doFinishWriting)
 ///
@@ -256,9 +256,9 @@ bool k_7zip_close_archive(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self K7Zip*
-/// @param callback bool func()
+/// @param callback bool func(K7Zip* self)
 ///
-void k_7zip_on_close_archive(void* self, bool (*callback)());
+void k_7zip_on_close_archive(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#closeArchive)
 ///
@@ -320,35 +320,35 @@ const char* k_7zip_tr3(const char* sourceText, const char* disambiguation, int n
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self K7Zip*
+/// @param self const K7Zip*
 ///
-const char* k_7zip_error_string(void* self);
+const char* k_7zip_error_string(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#isOpen)
 ///
-/// @param self K7Zip*
+/// @param self const K7Zip*
 ///
-bool k_7zip_is_open(void* self);
+bool k_7zip_is_open(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#mode)
 ///
-/// @param self K7Zip*
+/// @param self const K7Zip*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
 ///
-int32_t k_7zip_mode(void* self);
+int32_t k_7zip_mode(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#device)
 ///
-/// @param self K7Zip*
+/// @param self const K7Zip*
 ///
-QIODevice* k_7zip_device(void* self);
+QIODevice* k_7zip_device(const void* self);
 
 /// Inherited from KArchive
 ///
@@ -356,17 +356,17 @@ QIODevice* k_7zip_device(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self K7Zip*
+/// @param self const K7Zip*
 ///
-const char* k_7zip_file_name(void* self);
+const char* k_7zip_file_name(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#directory)
 ///
-/// @param self K7Zip*
+/// @param self const K7Zip*
 ///
-const KArchiveDirectory* k_7zip_directory(void* self);
+const KArchiveDirectory* k_7zip_directory(const void* self);
 
 /// Inherited from KArchive
 ///
@@ -501,7 +501,7 @@ bool k_7zip_write_dir4(void* self, const char* name, const char* user, const cha
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_7zip_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime);
+bool k_7zip_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -515,7 +515,7 @@ bool k_7zip_write_dir5(void* self, const char* name, const char* user, const cha
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_7zip_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+bool k_7zip_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -530,7 +530,7 @@ bool k_7zip_write_dir6(void* self, const char* name, const char* user, const cha
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -580,7 +580,7 @@ bool k_7zip_write_sym_link5(void* self, const char* name, const char* target, co
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_7zip_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime);
+bool k_7zip_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -595,7 +595,7 @@ bool k_7zip_write_sym_link6(void* self, const char* name, const char* target, co
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_7zip_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+bool k_7zip_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -611,7 +611,7 @@ bool k_7zip_write_sym_link7(void* self, const char* name, const char* target, co
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -661,7 +661,7 @@ bool k_7zip_write_file5(void* self, const char* name, char* data, mode_t perm, c
 /// @param group const char*
 /// @param atime QDateTime*
 ///
-bool k_7zip_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime);
+bool k_7zip_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -676,7 +676,7 @@ bool k_7zip_write_file6(void* self, const char* name, char* data, mode_t perm, c
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_7zip_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime);
+bool k_7zip_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -692,7 +692,7 @@ bool k_7zip_write_file7(void* self, const char* name, char* data, mode_t perm, c
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime);
+bool k_7zip_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -719,7 +719,7 @@ bool k_7zip_prepare_writing5(void* self, const char* name, const char* user, con
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_7zip_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime);
+bool k_7zip_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -734,7 +734,7 @@ bool k_7zip_prepare_writing6(void* self, const char* name, const char* user, con
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_7zip_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime);
+bool k_7zip_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -750,7 +750,7 @@ bool k_7zip_prepare_writing7(void* self, const char* name, const char* user, con
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -812,9 +812,9 @@ bool k_7zip_super_close(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self K7Zip*
-/// @param callback bool func()
+/// @param callback bool func(K7Zip* self)
 ///
-void k_7zip_on_close(void* self, bool (*callback)());
+void k_7zip_on_close(void* self, bool (*callback)(void*));
 
 /// Inherited from KArchive
 ///
@@ -843,9 +843,9 @@ KArchiveDirectory* k_7zip_super_root_dir(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self K7Zip*
-/// @param callback KArchiveDirectory* func()
+/// @param callback KArchiveDirectory* func(K7Zip* self)
 ///
-void k_7zip_on_root_dir(void* self, KArchiveDirectory* (*callback)());
+void k_7zip_on_root_dir(void* self, KArchiveDirectory* (*callback)(void*));
 
 /// Inherited from KArchive
 ///

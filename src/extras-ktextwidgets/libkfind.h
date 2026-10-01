@@ -31,26 +31,26 @@ KFind* k_find_new2(const char* pattern, long options, void* parent, void* findDi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-const QMetaObject* k_find_meta_object(void* self);
+const QMetaObject* k_find_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFind*
-/// @param callback const QMetaObject* func()
+/// @param self const KFind*
+/// @param callback const QMetaObject* func(const KFind* self)
 ///
-void k_find_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_find_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-const QMetaObject* k_find_super_meta_object(void* self);
+const QMetaObject* k_find_super_meta_object(const void* self);
 
 /// @param self KFind*
 /// @param param1 const char*
@@ -104,9 +104,9 @@ const char* k_find_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#needData)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-bool k_find_need_data(void* self);
+bool k_find_need_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#setData)
 ///
@@ -133,9 +133,9 @@ int32_t k_find_find(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#options)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-long k_find_options(void* self);
+long k_find_options(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#setOptions)
 ///
@@ -166,9 +166,9 @@ void k_find_super_set_options(void* self, long options);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-const char* k_find_pattern(void* self);
+const char* k_find_pattern(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#setPattern)
 ///
@@ -179,9 +179,9 @@ void k_find_set_pattern(void* self, const char* pattern);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#numMatches)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-int32_t k_find_num_matches(void* self);
+int32_t k_find_num_matches(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#resetCounts)
 ///
@@ -194,9 +194,9 @@ void k_find_reset_counts(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KFind*
-/// @param callback void func()
+/// @param callback void func(KFind* self)
 ///
-void k_find_on_reset_counts(void* self, void (*callback)());
+void k_find_on_reset_counts(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kfind.html#resetCounts)
 ///
@@ -237,30 +237,30 @@ bool k_find_super_validate_match(void* self, const char* text, int index, int ma
 
 /// [Upstream resources](https://api.kde.org/kfind.html#shouldRestart)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param forceAsking bool
 /// @param showNumMatches bool
 ///
-bool k_find_should_restart(void* self, bool forceAsking, bool showNumMatches);
+bool k_find_should_restart(const void* self, bool forceAsking, bool showNumMatches);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#shouldRestart)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFind*
-/// @param callback bool func(KFind* self, bool forceAsking, bool showNumMatches)
+/// @param self const KFind*
+/// @param callback bool func(const KFind* self, bool forceAsking, bool showNumMatches)
 ///
-void k_find_on_should_restart(void* self, bool (*callback)(void*, bool, bool));
+void k_find_on_should_restart(const void* self, bool (*callback)(const void*, bool, bool));
 
 /// [Upstream resources](https://api.kde.org/kfind.html#shouldRestart)
 ///
 /// Base class method implementation
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param forceAsking bool
 /// @param showNumMatches bool
 ///
-bool k_find_super_should_restart(void* self, bool forceAsking, bool showNumMatches);
+bool k_find_super_should_restart(const void* self, bool forceAsking, bool showNumMatches);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#find)
 ///
@@ -275,26 +275,26 @@ int32_t k_find_find2(const char* text, const char* pattern, int index, long opti
 
 /// [Upstream resources](https://api.kde.org/kfind.html#displayFinalDialog)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-void k_find_display_final_dialog(void* self);
+void k_find_display_final_dialog(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#displayFinalDialog)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFind*
-/// @param callback void func()
+/// @param self const KFind*
+/// @param callback void func(const KFind* self)
 ///
-void k_find_on_display_final_dialog(void* self, void (*callback)());
+void k_find_on_display_final_dialog(const void* self, void (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfind.html#displayFinalDialog)
 ///
 /// Base class method implementation
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-void k_find_super_display_final_dialog(void* self);
+void k_find_super_display_final_dialog(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#findNextDialog)
 ///
@@ -310,9 +310,9 @@ void k_find_close_find_next_dialog(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#index)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-int32_t k_find_index(void* self);
+int32_t k_find_index(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#textFound)
 ///
@@ -387,49 +387,15 @@ void k_find_on_dialog_closed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kfind.html#parentWidget)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-QWidget* k_find_parent_widget(void* self);
-
-/// [Upstream resources](https://api.kde.org/kfind.html#parentWidget)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KFind*
-/// @param callback QWidget* func()
-///
-void k_find_on_parent_widget(void* self, QWidget* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kfind.html#parentWidget)
-///
-/// Base class method implementation
-///
-/// @param self KFind*
-///
-QWidget* k_find_super_parent_widget(void* self);
+QWidget* k_find_parent_widget(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#dialogsParent)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-QWidget* k_find_dialogs_parent(void* self);
-
-/// [Upstream resources](https://api.kde.org/kfind.html#dialogsParent)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KFind*
-/// @param callback QWidget* func()
-///
-void k_find_on_dialogs_parent(void* self, QWidget* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kfind.html#dialogsParent)
-///
-/// Base class method implementation
-///
-/// @param self KFind*
-///
-QWidget* k_find_super_dialogs_parent(void* self);
+QWidget* k_find_dialogs_parent(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -480,9 +446,9 @@ QDialog* k_find_find_next_dialog1(void* self, bool create);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-const char* k_find_object_name(void* self);
+const char* k_find_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -497,33 +463,33 @@ void k_find_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-bool k_find_is_widget_type(void* self);
+bool k_find_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-bool k_find_is_window_type(void* self);
+bool k_find_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-bool k_find_is_quick_item_type(void* self);
+bool k_find_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-bool k_find_signals_blocked(void* self);
+bool k_find_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -538,9 +504,9 @@ bool k_find_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-QThread* k_find_thread(void* self);
+QThread* k_find_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -591,11 +557,11 @@ void k_find_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_find_children(void* self);
+libqt_list k_find_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -633,7 +599,7 @@ void k_find_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_find_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_find_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -644,18 +610,18 @@ QMetaObject__Connection* k_find_connect(void* sender, const char* signal, void* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_find_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_find_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_find_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_find_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -666,7 +632,7 @@ QMetaObject__Connection* k_find_connect3(void* self, void* sender, const char* s
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_find_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_find_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -677,24 +643,24 @@ bool k_find_disconnect(void* sender, const char* signal, void* receiver, const c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_find_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_find_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-bool k_find_disconnect3(void* self);
+bool k_find_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param receiver QObject*
 ///
-bool k_find_disconnect4(void* self, void* receiver);
+bool k_find_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -702,23 +668,23 @@ bool k_find_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_find_disconnect5(void* param1);
+bool k_find_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-void k_find_dump_object_tree(void* self);
+void k_find_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-void k_find_dump_object_info(void* self);
+void k_find_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -728,16 +694,16 @@ void k_find_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_find_set_property(void* self, const char* name, void* value);
+bool k_find_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param name const char*
 ///
-QVariant* k_find_property(void* self, const char* name);
+QVariant* k_find_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -745,9 +711,9 @@ QVariant* k_find_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-const char** k_find_dynamic_property_names(void* self);
+const char** k_find_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -761,9 +727,9 @@ QBindingStorage* k_find_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-const QBindingStorage* k_find_binding_storage2(void* self);
+const QBindingStorage* k_find_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -786,18 +752,18 @@ void k_find_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-QObject* k_find_parent(void* self);
+QObject* k_find_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param classname const char*
 ///
-bool k_find_inherits(void* self, const char* classname);
+bool k_find_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -837,7 +803,7 @@ int32_t k_find_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_find_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_find_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -849,59 +815,59 @@ QMetaObject__Connection* k_find_connect5(void* sender, const char* signal, void*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_find_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_find_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_find_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_find_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param signal const char*
 ///
-bool k_find_disconnect1(void* self, const char* signal);
+bool k_find_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFind*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_find_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_find_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_find_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFind*
+/// @param self const KFind*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_find_disconnect23(void* self, void* receiver, const char* member);
+bool k_find_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KFind*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_find_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1097,7 +1063,7 @@ void k_find_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KFind*
 /// @param signal QMetaMethod*
 ///
-void k_find_connect_notify(void* self, void* signal);
+void k_find_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1108,7 +1074,7 @@ void k_find_connect_notify(void* self, void* signal);
 /// @param self KFind*
 /// @param signal QMetaMethod*
 ///
-void k_find_super_connect_notify(void* self, void* signal);
+void k_find_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1119,7 +1085,7 @@ void k_find_super_connect_notify(void* self, void* signal);
 /// @param self KFind*
 /// @param callback void func(KFind* self, QMetaMethod* signal)
 ///
-void k_find_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_find_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1130,7 +1096,7 @@ void k_find_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self KFind*
 /// @param signal QMetaMethod*
 ///
-void k_find_disconnect_notify(void* self, void* signal);
+void k_find_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1141,7 +1107,7 @@ void k_find_disconnect_notify(void* self, void* signal);
 /// @param self KFind*
 /// @param signal QMetaMethod*
 ///
-void k_find_super_disconnect_notify(void* self, void* signal);
+void k_find_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1152,7 +1118,7 @@ void k_find_super_disconnect_notify(void* self, void* signal);
 /// @param self KFind*
 /// @param callback void func(KFind* self, QMetaMethod* signal)
 ///
-void k_find_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_find_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1160,9 +1126,9 @@ void k_find_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-QObject* k_find_sender(void* self);
+QObject* k_find_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1170,9 +1136,9 @@ QObject* k_find_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-QObject* k_find_super_sender(void* self);
+QObject* k_find_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1180,10 +1146,10 @@ QObject* k_find_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFind*
-/// @param callback QObject* func()
+/// @param self const KFind*
+/// @param callback QObject* func(KFind* self)
 ///
-void k_find_on_sender(void* self, QObject* (*callback)());
+void k_find_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1191,9 +1157,9 @@ void k_find_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-int32_t k_find_sender_signal_index(void* self);
+int32_t k_find_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1201,9 +1167,9 @@ int32_t k_find_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 ///
-int32_t k_find_super_sender_signal_index(void* self);
+int32_t k_find_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1211,10 +1177,10 @@ int32_t k_find_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFind*
-/// @param callback int32_t func()
+/// @param self const KFind*
+/// @param callback int32_t func(KFind* self)
 ///
-void k_find_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_find_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1222,10 +1188,10 @@ void k_find_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param signal const char*
 ///
-int32_t k_find_receivers(void* self, const char* signal);
+int32_t k_find_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1233,10 +1199,10 @@ int32_t k_find_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param signal const char*
 ///
-int32_t k_find_super_receivers(void* self, const char* signal);
+int32_t k_find_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1244,10 +1210,10 @@ int32_t k_find_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param callback int32_t func(KFind* self, const char* signal)
 ///
-void k_find_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_find_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1255,10 +1221,10 @@ void k_find_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param signal QMetaMethod*
 ///
-bool k_find_is_signal_connected(void* self, void* signal);
+bool k_find_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1266,10 +1232,10 @@ bool k_find_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param signal QMetaMethod*
 ///
-bool k_find_super_is_signal_connected(void* self, void* signal);
+bool k_find_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1277,10 +1243,10 @@ bool k_find_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFind*
+/// @param self const KFind*
 /// @param callback bool func(KFind* self, QMetaMethod* signal)
 ///
-void k_find_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_find_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

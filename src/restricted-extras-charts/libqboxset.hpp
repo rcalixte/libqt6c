@@ -69,7 +69,7 @@ void QBoxSet_ValueChanged(QBoxSet* self, int index);
 void QBoxSet_Connect_ValueChanged(QBoxSet* self, intptr_t slot);
 void QBoxSet_Cleared(QBoxSet* self);
 void QBoxSet_Connect_Cleared(QBoxSet* self, intptr_t slot);
-void QBoxSet_OnMetaObject(const QBoxSet* self, intptr_t slot);
+void QBoxSet_OnMetaObject(QBoxSet* self, intptr_t slot);
 QMetaObject* QBoxSet_SuperMetaObject(const QBoxSet* self);
 void QBoxSet_OnMetacast(QBoxSet* self, intptr_t slot);
 void* QBoxSet_SuperMetacast(QBoxSet* self, const char* param1);
@@ -97,17 +97,9 @@ void QBoxSet_DisconnectNotify(QBoxSet* self, const QMetaMethod* signal);
 void QBoxSet_OnDisconnectNotify(QBoxSet* self, intptr_t slot);
 void QBoxSet_SuperDisconnectNotify(QBoxSet* self, const QMetaMethod* signal);
 QObject* QBoxSet_Sender(const QBoxSet* self);
-void QBoxSet_OnSender(const QBoxSet* self, intptr_t slot);
-QObject* QBoxSet_SuperSender(const QBoxSet* self);
 int QBoxSet_SenderSignalIndex(const QBoxSet* self);
-void QBoxSet_OnSenderSignalIndex(const QBoxSet* self, intptr_t slot);
-int QBoxSet_SuperSenderSignalIndex(const QBoxSet* self);
 int QBoxSet_Receivers(const QBoxSet* self, const char* signal);
-void QBoxSet_OnReceivers(const QBoxSet* self, intptr_t slot);
-int QBoxSet_SuperReceivers(const QBoxSet* self, const char* signal);
 bool QBoxSet_IsSignalConnected(const QBoxSet* self, const QMetaMethod* signal);
-void QBoxSet_OnIsSignalConnected(const QBoxSet* self, intptr_t slot);
-bool QBoxSet_SuperIsSignalConnected(const QBoxSet* self, const QMetaMethod* signal);
 void QBoxSet_Delete(QBoxSet* self);
 
 #ifdef __cplusplus

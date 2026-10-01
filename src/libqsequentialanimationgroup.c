@@ -16,15 +16,15 @@ QSequentialAnimationGroup* q_sequentialanimationgroup_new2(void* parent) {
     return QSequentialAnimationGroup_New2((QObject*)parent);
 }
 
-const QMetaObject* q_sequentialanimationgroup_meta_object(void* self) {
+const QMetaObject* q_sequentialanimationgroup_meta_object(const void* self) {
     return QSequentialAnimationGroup_MetaObject((QSequentialAnimationGroup*)self);
 }
 
-void q_sequentialanimationgroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_sequentialanimationgroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QSequentialAnimationGroup_OnMetaObject((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_sequentialanimationgroup_super_meta_object(void* self) {
+const QMetaObject* q_sequentialanimationgroup_super_meta_object(const void* self) {
     return QSequentialAnimationGroup_SuperMetaObject((QSequentialAnimationGroup*)self);
 }
 
@@ -67,19 +67,19 @@ QPauseAnimation* q_sequentialanimationgroup_insert_pause(void* self, int index, 
     return QSequentialAnimationGroup_InsertPause((QSequentialAnimationGroup*)self, index, msecs);
 }
 
-QAbstractAnimation* q_sequentialanimationgroup_current_animation(void* self) {
+QAbstractAnimation* q_sequentialanimationgroup_current_animation(const void* self) {
     return QSequentialAnimationGroup_CurrentAnimation((QSequentialAnimationGroup*)self);
 }
 
-int32_t q_sequentialanimationgroup_duration(void* self) {
+int32_t q_sequentialanimationgroup_duration(const void* self) {
     return QSequentialAnimationGroup_Duration((QSequentialAnimationGroup*)self);
 }
 
-void q_sequentialanimationgroup_on_duration(void* self, int32_t (*callback)()) {
+void q_sequentialanimationgroup_on_duration(const void* self, int32_t (*callback)(const void*)) {
     QSequentialAnimationGroup_OnDuration((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
-int32_t q_sequentialanimationgroup_super_duration(void* self) {
+int32_t q_sequentialanimationgroup_super_duration(const void* self) {
     return QSequentialAnimationGroup_SuperDuration((QSequentialAnimationGroup*)self);
 }
 
@@ -153,15 +153,15 @@ const char* q_sequentialanimationgroup_tr3(const char* s, const char* c, int n) 
     return _ret;
 }
 
-QAbstractAnimation* q_sequentialanimationgroup_animation_at(void* self, int index) {
+QAbstractAnimation* q_sequentialanimationgroup_animation_at(const void* self, int index) {
     return QAnimationGroup_AnimationAt((QAnimationGroup*)self, index);
 }
 
-int32_t q_sequentialanimationgroup_animation_count(void* self) {
+int32_t q_sequentialanimationgroup_animation_count(const void* self) {
     return QAnimationGroup_AnimationCount((QAnimationGroup*)self);
 }
 
-int32_t q_sequentialanimationgroup_index_of_animation(void* self, void* animation) {
+int32_t q_sequentialanimationgroup_index_of_animation(const void* self, void* animation) {
     return QAnimationGroup_IndexOfAnimation((QAnimationGroup*)self, (QAbstractAnimation*)animation);
 }
 
@@ -185,15 +185,15 @@ void q_sequentialanimationgroup_clear(void* self) {
     QAnimationGroup_Clear((QAnimationGroup*)self);
 }
 
-int32_t q_sequentialanimationgroup_state(void* self) {
+int32_t q_sequentialanimationgroup_state(const void* self) {
     return QAbstractAnimation_State((QAbstractAnimation*)self);
 }
 
-QAnimationGroup* q_sequentialanimationgroup_group(void* self) {
+QAnimationGroup* q_sequentialanimationgroup_group(const void* self) {
     return QAbstractAnimation_Group((QAbstractAnimation*)self);
 }
 
-int32_t q_sequentialanimationgroup_direction(void* self) {
+int32_t q_sequentialanimationgroup_direction(const void* self) {
     return QAbstractAnimation_Direction((QAbstractAnimation*)self);
 }
 
@@ -201,15 +201,15 @@ void q_sequentialanimationgroup_set_direction(void* self, int32_t direction) {
     QAbstractAnimation_SetDirection((QAbstractAnimation*)self, direction);
 }
 
-int32_t q_sequentialanimationgroup_current_time(void* self) {
+int32_t q_sequentialanimationgroup_current_time(const void* self) {
     return QAbstractAnimation_CurrentTime((QAbstractAnimation*)self);
 }
 
-int32_t q_sequentialanimationgroup_current_loop_time(void* self) {
+int32_t q_sequentialanimationgroup_current_loop_time(const void* self) {
     return QAbstractAnimation_CurrentLoopTime((QAbstractAnimation*)self);
 }
 
-int32_t q_sequentialanimationgroup_loop_count(void* self) {
+int32_t q_sequentialanimationgroup_loop_count(const void* self) {
     return QAbstractAnimation_LoopCount((QAbstractAnimation*)self);
 }
 
@@ -217,11 +217,11 @@ void q_sequentialanimationgroup_set_loop_count(void* self, int loopCount) {
     QAbstractAnimation_SetLoopCount((QAbstractAnimation*)self, loopCount);
 }
 
-int32_t q_sequentialanimationgroup_current_loop(void* self) {
+int32_t q_sequentialanimationgroup_current_loop(const void* self) {
     return QAbstractAnimation_CurrentLoop((QAbstractAnimation*)self);
 }
 
-int32_t q_sequentialanimationgroup_total_duration(void* self) {
+int32_t q_sequentialanimationgroup_total_duration(const void* self) {
     return QAbstractAnimation_TotalDuration((QAbstractAnimation*)self);
 }
 
@@ -285,7 +285,7 @@ void q_sequentialanimationgroup_start1(void* self, int32_t policy) {
     QAbstractAnimation_Start1((QAbstractAnimation*)self, policy);
 }
 
-const char* q_sequentialanimationgroup_object_name(void* self) {
+const char* q_sequentialanimationgroup_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -296,19 +296,19 @@ void q_sequentialanimationgroup_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_sequentialanimationgroup_is_widget_type(void* self) {
+bool q_sequentialanimationgroup_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_sequentialanimationgroup_is_window_type(void* self) {
+bool q_sequentialanimationgroup_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_sequentialanimationgroup_is_quick_item_type(void* self) {
+bool q_sequentialanimationgroup_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_sequentialanimationgroup_signals_blocked(void* self) {
+bool q_sequentialanimationgroup_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -316,7 +316,7 @@ bool q_sequentialanimationgroup_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_sequentialanimationgroup_thread(void* self) {
+QThread* q_sequentialanimationgroup_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -340,7 +340,7 @@ void q_sequentialanimationgroup_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sequentialanimationgroup_children(void* self) {
+libqt_list /* of QObject* */ q_sequentialanimationgroup_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -357,55 +357,55 @@ void q_sequentialanimationgroup_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_sequentialanimationgroup_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_sequentialanimationgroup_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_sequentialanimationgroup_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_sequentialanimationgroup_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_sequentialanimationgroup_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_sequentialanimationgroup_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_sequentialanimationgroup_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_sequentialanimationgroup_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_sequentialanimationgroup_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_sequentialanimationgroup_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_sequentialanimationgroup_disconnect3(void* self) {
+bool q_sequentialanimationgroup_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_sequentialanimationgroup_disconnect4(void* self, void* receiver) {
+bool q_sequentialanimationgroup_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_sequentialanimationgroup_disconnect5(void* param1) {
+bool q_sequentialanimationgroup_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_sequentialanimationgroup_dump_object_tree(void* self) {
+void q_sequentialanimationgroup_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_sequentialanimationgroup_dump_object_info(void* self) {
+void q_sequentialanimationgroup_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_sequentialanimationgroup_set_property(void* self, const char* name, void* value) {
+bool q_sequentialanimationgroup_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_sequentialanimationgroup_property(void* self, const char* name) {
+QVariant* q_sequentialanimationgroup_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_sequentialanimationgroup_dynamic_property_names(void* self) {
+const char** q_sequentialanimationgroup_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -426,7 +426,7 @@ QBindingStorage* q_sequentialanimationgroup_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_sequentialanimationgroup_binding_storage2(void* self) {
+const QBindingStorage* q_sequentialanimationgroup_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -438,11 +438,11 @@ void q_sequentialanimationgroup_on_destroyed(void* self, void (*callback)(void*)
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_sequentialanimationgroup_parent(void* self) {
+QObject* q_sequentialanimationgroup_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_sequentialanimationgroup_inherits(void* self, const char* classname) {
+bool q_sequentialanimationgroup_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -458,31 +458,31 @@ int32_t q_sequentialanimationgroup_start_timer23(void* self, int64_t time, int32
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_sequentialanimationgroup_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_sequentialanimationgroup_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_sequentialanimationgroup_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_sequentialanimationgroup_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_sequentialanimationgroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_sequentialanimationgroup_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_sequentialanimationgroup_disconnect1(void* self, const char* signal) {
+bool q_sequentialanimationgroup_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_sequentialanimationgroup_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_sequentialanimationgroup_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_sequentialanimationgroup_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_sequentialanimationgroup_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_sequentialanimationgroup_disconnect23(void* self, void* receiver, const char* member) {
+bool q_sequentialanimationgroup_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -542,76 +542,44 @@ void q_sequentialanimationgroup_on_custom_event(void* self, void (*callback)(voi
     QSequentialAnimationGroup_OnCustomEvent((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
-void q_sequentialanimationgroup_connect_notify(void* self, void* signal) {
+void q_sequentialanimationgroup_connect_notify(void* self, const void* signal) {
     QSequentialAnimationGroup_ConnectNotify((QSequentialAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_sequentialanimationgroup_super_connect_notify(void* self, void* signal) {
+void q_sequentialanimationgroup_super_connect_notify(void* self, const void* signal) {
     QSequentialAnimationGroup_SuperConnectNotify((QSequentialAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_sequentialanimationgroup_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_sequentialanimationgroup_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QSequentialAnimationGroup_OnConnectNotify((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
-void q_sequentialanimationgroup_disconnect_notify(void* self, void* signal) {
+void q_sequentialanimationgroup_disconnect_notify(void* self, const void* signal) {
     QSequentialAnimationGroup_DisconnectNotify((QSequentialAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_sequentialanimationgroup_super_disconnect_notify(void* self, void* signal) {
+void q_sequentialanimationgroup_super_disconnect_notify(void* self, const void* signal) {
     QSequentialAnimationGroup_SuperDisconnectNotify((QSequentialAnimationGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_sequentialanimationgroup_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_sequentialanimationgroup_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QSequentialAnimationGroup_OnDisconnectNotify((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
-QObject* q_sequentialanimationgroup_sender(void* self) {
+QObject* q_sequentialanimationgroup_sender(const void* self) {
     return QSequentialAnimationGroup_Sender((QSequentialAnimationGroup*)self);
 }
 
-QObject* q_sequentialanimationgroup_super_sender(void* self) {
-    return QSequentialAnimationGroup_SuperSender((QSequentialAnimationGroup*)self);
-}
-
-void q_sequentialanimationgroup_on_sender(void* self, QObject* (*callback)()) {
-    QSequentialAnimationGroup_OnSender((QSequentialAnimationGroup*)self, (intptr_t)callback);
-}
-
-int32_t q_sequentialanimationgroup_sender_signal_index(void* self) {
+int32_t q_sequentialanimationgroup_sender_signal_index(const void* self) {
     return QSequentialAnimationGroup_SenderSignalIndex((QSequentialAnimationGroup*)self);
 }
 
-int32_t q_sequentialanimationgroup_super_sender_signal_index(void* self) {
-    return QSequentialAnimationGroup_SuperSenderSignalIndex((QSequentialAnimationGroup*)self);
-}
-
-void q_sequentialanimationgroup_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QSequentialAnimationGroup_OnSenderSignalIndex((QSequentialAnimationGroup*)self, (intptr_t)callback);
-}
-
-int32_t q_sequentialanimationgroup_receivers(void* self, const char* signal) {
+int32_t q_sequentialanimationgroup_receivers(const void* self, const char* signal) {
     return QSequentialAnimationGroup_Receivers((QSequentialAnimationGroup*)self, signal);
 }
 
-int32_t q_sequentialanimationgroup_super_receivers(void* self, const char* signal) {
-    return QSequentialAnimationGroup_SuperReceivers((QSequentialAnimationGroup*)self, signal);
-}
-
-void q_sequentialanimationgroup_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QSequentialAnimationGroup_OnReceivers((QSequentialAnimationGroup*)self, (intptr_t)callback);
-}
-
-bool q_sequentialanimationgroup_is_signal_connected(void* self, void* signal) {
+bool q_sequentialanimationgroup_is_signal_connected(const void* self, const void* signal) {
     return QSequentialAnimationGroup_IsSignalConnected((QSequentialAnimationGroup*)self, (QMetaMethod*)signal);
-}
-
-bool q_sequentialanimationgroup_super_is_signal_connected(void* self, void* signal) {
-    return QSequentialAnimationGroup_SuperIsSignalConnected((QSequentialAnimationGroup*)self, (QMetaMethod*)signal);
-}
-
-void q_sequentialanimationgroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QSequentialAnimationGroup_OnIsSignalConnected((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
 void q_sequentialanimationgroup_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

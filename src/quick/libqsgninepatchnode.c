@@ -10,7 +10,7 @@ void q_sgninepatchnode_set_texture(void* self, void* texture) {
     QSGNinePatchNode_SetTexture((QSGNinePatchNode*)self, (QSGTexture*)texture);
 }
 
-void q_sgninepatchnode_set_bounds(void* self, void* bounds) {
+void q_sgninepatchnode_set_bounds(void* self, const void* bounds) {
     QSGNinePatchNode_SetBounds((QSGNinePatchNode*)self, (QRectF*)bounds);
 }
 
@@ -26,7 +26,7 @@ void q_sgninepatchnode_update(void* self) {
     QSGNinePatchNode_Update((QSGNinePatchNode*)self);
 }
 
-void q_sgninepatchnode_rebuild_geometry(void* texture, void* geometry, void* padding, void* bounds, double dpr) {
+void q_sgninepatchnode_rebuild_geometry(void* texture, void* geometry, const void* padding, const void* bounds, double dpr) {
     QSGNinePatchNode_RebuildGeometry((QSGTexture*)texture, (QSGGeometry*)geometry, (QVector4D*)padding, (QRectF*)bounds, dpr);
 }
 
@@ -34,7 +34,7 @@ void q_sgninepatchnode_set_material(void* self, void* material) {
     QSGGeometryNode_SetMaterial((QSGGeometryNode*)self, (QSGMaterial*)material);
 }
 
-QSGMaterial* q_sgninepatchnode_material(void* self) {
+QSGMaterial* q_sgninepatchnode_material(const void* self) {
     return QSGGeometryNode_Material((QSGGeometryNode*)self);
 }
 
@@ -42,11 +42,11 @@ void q_sgninepatchnode_set_opaque_material(void* self, void* material) {
     QSGGeometryNode_SetOpaqueMaterial((QSGGeometryNode*)self, (QSGMaterial*)material);
 }
 
-QSGMaterial* q_sgninepatchnode_opaque_material(void* self) {
+QSGMaterial* q_sgninepatchnode_opaque_material(const void* self) {
     return QSGGeometryNode_OpaqueMaterial((QSGGeometryNode*)self);
 }
 
-QSGMaterial* q_sgninepatchnode_active_material(void* self) {
+QSGMaterial* q_sgninepatchnode_active_material(const void* self) {
     return QSGGeometryNode_ActiveMaterial((QSGGeometryNode*)self);
 }
 
@@ -54,7 +54,7 @@ void q_sgninepatchnode_set_render_order(void* self, int order) {
     QSGGeometryNode_SetRenderOrder((QSGGeometryNode*)self, order);
 }
 
-int32_t q_sgninepatchnode_render_order(void* self) {
+int32_t q_sgninepatchnode_render_order(const void* self) {
     return QSGGeometryNode_RenderOrder((QSGGeometryNode*)self);
 }
 
@@ -62,7 +62,7 @@ void q_sgninepatchnode_set_inherited_opacity(void* self, double opacity) {
     QSGGeometryNode_SetInheritedOpacity((QSGGeometryNode*)self, opacity);
 }
 
-double q_sgninepatchnode_inherited_opacity(void* self) {
+double q_sgninepatchnode_inherited_opacity(const void* self) {
     return QSGGeometryNode_InheritedOpacity((QSGGeometryNode*)self);
 }
 
@@ -70,7 +70,7 @@ void q_sgninepatchnode_set_geometry(void* self, void* geometry) {
     QSGBasicGeometryNode_SetGeometry((QSGBasicGeometryNode*)self, (QSGGeometry*)geometry);
 }
 
-const QSGGeometry* q_sgninepatchnode_geometry(void* self) {
+const QSGGeometry* q_sgninepatchnode_geometry(const void* self) {
     return QSGBasicGeometryNode_Geometry((QSGBasicGeometryNode*)self);
 }
 
@@ -78,23 +78,23 @@ QSGGeometry* q_sgninepatchnode_geometry2(void* self) {
     return QSGBasicGeometryNode_Geometry2((QSGBasicGeometryNode*)self);
 }
 
-const QMatrix4x4* q_sgninepatchnode_matrix(void* self) {
+const QMatrix4x4* q_sgninepatchnode_matrix(const void* self) {
     return QSGBasicGeometryNode_Matrix((QSGBasicGeometryNode*)self);
 }
 
-const QSGClipNode* q_sgninepatchnode_clip_list(void* self) {
+const QSGClipNode* q_sgninepatchnode_clip_list(const void* self) {
     return QSGBasicGeometryNode_ClipList((QSGBasicGeometryNode*)self);
 }
 
-void q_sgninepatchnode_set_renderer_matrix(void* self, void* m) {
+void q_sgninepatchnode_set_renderer_matrix(void* self, const void* m) {
     QSGBasicGeometryNode_SetRendererMatrix((QSGBasicGeometryNode*)self, (QMatrix4x4*)m);
 }
 
-void q_sgninepatchnode_set_renderer_clip_list(void* self, void* c) {
+void q_sgninepatchnode_set_renderer_clip_list(void* self, const void* c) {
     QSGBasicGeometryNode_SetRendererClipList((QSGBasicGeometryNode*)self, (QSGClipNode*)c);
 }
 
-QSGNode* q_sgninepatchnode_parent(void* self) {
+QSGNode* q_sgninepatchnode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -126,31 +126,31 @@ void q_sgninepatchnode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgninepatchnode_child_count(void* self) {
+int32_t q_sgninepatchnode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgninepatchnode_child_at_index(void* self, int i) {
+QSGNode* q_sgninepatchnode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgninepatchnode_first_child(void* self) {
+QSGNode* q_sgninepatchnode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgninepatchnode_last_child(void* self) {
+QSGNode* q_sgninepatchnode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgninepatchnode_next_sibling(void* self) {
+QSGNode* q_sgninepatchnode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgninepatchnode_previous_sibling(void* self) {
+QSGNode* q_sgninepatchnode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgninepatchnode_type(void* self) {
+int32_t q_sgninepatchnode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -162,15 +162,15 @@ void q_sgninepatchnode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgninepatchnode_dirty_state(void* self) {
+int32_t q_sgninepatchnode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-bool q_sgninepatchnode_is_subtree_blocked(void* self) {
+bool q_sgninepatchnode_is_subtree_blocked(const void* self) {
     return QSGNode_IsSubtreeBlocked((QSGNode*)self);
 }
 
-int32_t q_sgninepatchnode_flags(void* self) {
+int32_t q_sgninepatchnode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 

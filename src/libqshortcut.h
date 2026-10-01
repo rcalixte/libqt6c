@@ -23,7 +23,7 @@ QShortcut* q_shortcut_new(void* parent);
 /// @param key QKeySequence*
 /// @param parent QObject*
 ///
-QShortcut* q_shortcut_new2(void* key, void* parent);
+QShortcut* q_shortcut_new2(const void* key, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html)
 
@@ -42,7 +42,7 @@ QShortcut* q_shortcut_new3(int32_t key, void* parent);
 /// @param parent QObject*
 /// @param member const char*
 ///
-QShortcut* q_shortcut_new4(void* key, void* parent, const char* member);
+QShortcut* q_shortcut_new4(const void* key, void* parent, const char* member);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html)
 
@@ -53,7 +53,7 @@ QShortcut* q_shortcut_new4(void* key, void* parent, const char* member);
 /// @param member const char*
 /// @param ambiguousMember const char*
 ///
-QShortcut* q_shortcut_new5(void* key, void* parent, const char* member, const char* ambiguousMember);
+QShortcut* q_shortcut_new5(const void* key, void* parent, const char* member, const char* ambiguousMember);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html)
 
@@ -65,7 +65,7 @@ QShortcut* q_shortcut_new5(void* key, void* parent, const char* member, const ch
 /// @param ambiguousMember const char*
 /// @param context enum Qt__ShortcutContext
 ///
-QShortcut* q_shortcut_new6(void* key, void* parent, const char* member, const char* ambiguousMember, int32_t context);
+QShortcut* q_shortcut_new6(const void* key, void* parent, const char* member, const char* ambiguousMember, int32_t context);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html)
 
@@ -102,26 +102,26 @@ QShortcut* q_shortcut_new9(int32_t key, void* parent, const char* member, const 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-const QMetaObject* q_shortcut_meta_object(void* self);
+const QMetaObject* q_shortcut_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QShortcut*
-/// @param callback const QMetaObject* func()
+/// @param self const QShortcut*
+/// @param callback const QMetaObject* func(const QShortcut* self)
 ///
-void q_shortcut_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_shortcut_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-const QMetaObject* q_shortcut_super_meta_object(void* self);
+const QMetaObject* q_shortcut_super_meta_object(const void* self);
 
 /// @param self QShortcut*
 /// @param param1 const char*
@@ -178,13 +178,13 @@ const char* q_shortcut_tr(const char* s);
 /// @param self QShortcut*
 /// @param key QKeySequence*
 ///
-void q_shortcut_set_key(void* self, void* key);
+void q_shortcut_set_key(void* self, const void* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#key)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-QKeySequence* q_shortcut_key(void* self);
+QKeySequence* q_shortcut_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#setKeys)
 ///
@@ -202,11 +202,11 @@ void q_shortcut_set_keys2(void* self, libqt_list keys);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#keys)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list q_shortcut_keys(void* self);
+libqt_list q_shortcut_keys(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#setEnabled)
 ///
@@ -217,9 +217,9 @@ void q_shortcut_set_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#isEnabled)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-bool q_shortcut_is_enabled(void* self);
+bool q_shortcut_is_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#setContext)
 ///
@@ -230,11 +230,11 @@ void q_shortcut_set_context(void* self, int32_t context);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#context)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
 /// @return enum Qt__ShortcutContext
 ///
-int32_t q_shortcut_context(void* self);
+int32_t q_shortcut_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#setAutoRepeat)
 ///
@@ -245,15 +245,15 @@ void q_shortcut_set_auto_repeat(void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#autoRepeat)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-bool q_shortcut_auto_repeat(void* self);
+bool q_shortcut_auto_repeat(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#id)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-int32_t q_shortcut_id(void* self);
+int32_t q_shortcut_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#setWhatsThis)
 ///
@@ -266,9 +266,9 @@ void q_shortcut_set_whats_this(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-const char* q_shortcut_whats_this(void* self);
+const char* q_shortcut_whats_this(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshortcut.html#activated)
 ///
@@ -346,9 +346,9 @@ const char* q_shortcut_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-const char* q_shortcut_object_name(void* self);
+const char* q_shortcut_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -363,33 +363,33 @@ void q_shortcut_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-bool q_shortcut_is_widget_type(void* self);
+bool q_shortcut_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-bool q_shortcut_is_window_type(void* self);
+bool q_shortcut_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-bool q_shortcut_is_quick_item_type(void* self);
+bool q_shortcut_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-bool q_shortcut_signals_blocked(void* self);
+bool q_shortcut_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -404,9 +404,9 @@ bool q_shortcut_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-QThread* q_shortcut_thread(void* self);
+QThread* q_shortcut_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -457,11 +457,11 @@ void q_shortcut_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_shortcut_children(void* self);
+libqt_list q_shortcut_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -499,7 +499,7 @@ void q_shortcut_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_shortcut_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_shortcut_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -510,18 +510,18 @@ QMetaObject__Connection* q_shortcut_connect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_shortcut_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_shortcut_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_shortcut_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_shortcut_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -532,7 +532,7 @@ QMetaObject__Connection* q_shortcut_connect3(void* self, void* sender, const cha
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_shortcut_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_shortcut_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -543,24 +543,24 @@ bool q_shortcut_disconnect(void* sender, const char* signal, void* receiver, con
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_shortcut_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_shortcut_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-bool q_shortcut_disconnect3(void* self);
+bool q_shortcut_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param receiver QObject*
 ///
-bool q_shortcut_disconnect4(void* self, void* receiver);
+bool q_shortcut_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -568,23 +568,23 @@ bool q_shortcut_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_shortcut_disconnect5(void* param1);
+bool q_shortcut_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-void q_shortcut_dump_object_tree(void* self);
+void q_shortcut_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-void q_shortcut_dump_object_info(void* self);
+void q_shortcut_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -594,16 +594,16 @@ void q_shortcut_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_shortcut_set_property(void* self, const char* name, void* value);
+bool q_shortcut_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param name const char*
 ///
-QVariant* q_shortcut_property(void* self, const char* name);
+QVariant* q_shortcut_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -611,9 +611,9 @@ QVariant* q_shortcut_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-const char** q_shortcut_dynamic_property_names(void* self);
+const char** q_shortcut_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -627,9 +627,9 @@ QBindingStorage* q_shortcut_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-const QBindingStorage* q_shortcut_binding_storage2(void* self);
+const QBindingStorage* q_shortcut_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -652,18 +652,18 @@ void q_shortcut_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-QObject* q_shortcut_parent(void* self);
+QObject* q_shortcut_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param classname const char*
 ///
-bool q_shortcut_inherits(void* self, const char* classname);
+bool q_shortcut_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -703,7 +703,7 @@ int32_t q_shortcut_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_shortcut_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_shortcut_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -715,59 +715,59 @@ QMetaObject__Connection* q_shortcut_connect5(void* sender, const char* signal, v
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_shortcut_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_shortcut_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_shortcut_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_shortcut_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param signal const char*
 ///
-bool q_shortcut_disconnect1(void* self, const char* signal);
+bool q_shortcut_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QShortcut*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_shortcut_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_shortcut_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_shortcut_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_shortcut_disconnect23(void* self, void* receiver, const char* member);
+bool q_shortcut_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QShortcut*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_shortcut_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -930,7 +930,7 @@ void q_shortcut_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QShortcut*
 /// @param signal QMetaMethod*
 ///
-void q_shortcut_connect_notify(void* self, void* signal);
+void q_shortcut_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -941,7 +941,7 @@ void q_shortcut_connect_notify(void* self, void* signal);
 /// @param self QShortcut*
 /// @param signal QMetaMethod*
 ///
-void q_shortcut_super_connect_notify(void* self, void* signal);
+void q_shortcut_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -952,7 +952,7 @@ void q_shortcut_super_connect_notify(void* self, void* signal);
 /// @param self QShortcut*
 /// @param callback void func(QShortcut* self, QMetaMethod* signal)
 ///
-void q_shortcut_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_shortcut_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -963,7 +963,7 @@ void q_shortcut_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QShortcut*
 /// @param signal QMetaMethod*
 ///
-void q_shortcut_disconnect_notify(void* self, void* signal);
+void q_shortcut_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -974,7 +974,7 @@ void q_shortcut_disconnect_notify(void* self, void* signal);
 /// @param self QShortcut*
 /// @param signal QMetaMethod*
 ///
-void q_shortcut_super_disconnect_notify(void* self, void* signal);
+void q_shortcut_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -985,7 +985,7 @@ void q_shortcut_super_disconnect_notify(void* self, void* signal);
 /// @param self QShortcut*
 /// @param callback void func(QShortcut* self, QMetaMethod* signal)
 ///
-void q_shortcut_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_shortcut_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -993,9 +993,9 @@ void q_shortcut_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-QObject* q_shortcut_sender(void* self);
+QObject* q_shortcut_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1003,9 +1003,9 @@ QObject* q_shortcut_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-QObject* q_shortcut_super_sender(void* self);
+QObject* q_shortcut_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1013,10 +1013,10 @@ QObject* q_shortcut_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QShortcut*
-/// @param callback QObject* func()
+/// @param self const QShortcut*
+/// @param callback QObject* func(QShortcut* self)
 ///
-void q_shortcut_on_sender(void* self, QObject* (*callback)());
+void q_shortcut_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1024,9 +1024,9 @@ void q_shortcut_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-int32_t q_shortcut_sender_signal_index(void* self);
+int32_t q_shortcut_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1034,9 +1034,9 @@ int32_t q_shortcut_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 ///
-int32_t q_shortcut_super_sender_signal_index(void* self);
+int32_t q_shortcut_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1044,10 +1044,10 @@ int32_t q_shortcut_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QShortcut*
-/// @param callback int32_t func()
+/// @param self const QShortcut*
+/// @param callback int32_t func(QShortcut* self)
 ///
-void q_shortcut_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_shortcut_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1055,10 +1055,10 @@ void q_shortcut_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param signal const char*
 ///
-int32_t q_shortcut_receivers(void* self, const char* signal);
+int32_t q_shortcut_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1066,10 +1066,10 @@ int32_t q_shortcut_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param signal const char*
 ///
-int32_t q_shortcut_super_receivers(void* self, const char* signal);
+int32_t q_shortcut_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1077,10 +1077,10 @@ int32_t q_shortcut_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param callback int32_t func(QShortcut* self, const char* signal)
 ///
-void q_shortcut_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_shortcut_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1088,10 +1088,10 @@ void q_shortcut_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param signal QMetaMethod*
 ///
-bool q_shortcut_is_signal_connected(void* self, void* signal);
+bool q_shortcut_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1099,10 +1099,10 @@ bool q_shortcut_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param signal QMetaMethod*
 ///
-bool q_shortcut_super_is_signal_connected(void* self, void* signal);
+bool q_shortcut_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1110,10 +1110,10 @@ bool q_shortcut_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QShortcut*
+/// @param self const QShortcut*
 /// @param callback bool func(QShortcut* self, QMetaMethod* signal)
 ///
-void q_shortcut_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_shortcut_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

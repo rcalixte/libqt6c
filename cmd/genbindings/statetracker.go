@@ -28,10 +28,11 @@ type lookupResultInclude struct {
 }
 
 var (
-	KnownClassnames = make(map[string]lookupResultClass) // Entries of the form QFoo::Bar if it is an inner class
-	KnownTypedefs   = make(map[string]lookupResultTypedef)
-	KnownEnums      = make(map[string]lookupResultEnum)
-	KnownIncludes   = make(map[string]lookupResultInclude)
+	KnownClassnames       = make(map[string]lookupResultClass) // Entries of the form QFoo::Bar if it is an inner class
+	KnownReturnClassnames = make(map[string]struct{})
+	KnownTypedefs         = make(map[string]lookupResultTypedef)
+	KnownEnums            = make(map[string]lookupResultEnum)
+	KnownIncludes         = make(map[string]lookupResultInclude)
 )
 
 // Handle child classes recursively

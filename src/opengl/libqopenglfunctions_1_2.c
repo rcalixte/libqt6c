@@ -10,7 +10,7 @@ bool q_openglfunctions_1_2_initialize_open_g_l_functions(void* self) {
     return QOpenGLFunctions_1_2_InitializeOpenGLFunctions((QOpenGLFunctions_1_2*)self);
 }
 
-void q_openglfunctions_1_2_on_initialize_open_g_l_functions(void* self, bool (*callback)()) {
+void q_openglfunctions_1_2_on_initialize_open_g_l_functions(void* self, bool (*callback)(void*)) {
     QOpenGLFunctions_1_2_OnInitializeOpenGLFunctions((QOpenGLFunctions_1_2*)self, (intptr_t)callback);
 }
 
@@ -1510,40 +1510,16 @@ void q_openglfunctions_1_2_gl_color_table(void* self, uint32_t target, uint32_t 
     QOpenGLFunctions_1_2_GlColorTable((QOpenGLFunctions_1_2*)self, target, internalformat, width, format, type, table);
 }
 
-bool q_openglfunctions_1_2_is_initialized(void* self) {
+bool q_openglfunctions_1_2_is_initialized(const void* self) {
     return QOpenGLFunctions_1_2_IsInitialized((QOpenGLFunctions_1_2*)self);
 }
 
-bool q_openglfunctions_1_2_super_is_initialized(void* self) {
-    return QOpenGLFunctions_1_2_SuperIsInitialized((QOpenGLFunctions_1_2*)self);
-}
-
-void q_openglfunctions_1_2_on_is_initialized(void* self, bool (*callback)()) {
-    QOpenGLFunctions_1_2_OnIsInitialized((QOpenGLFunctions_1_2*)self, (intptr_t)callback);
-}
-
-void q_openglfunctions_1_2_set_owning_context(void* self, void* context) {
+void q_openglfunctions_1_2_set_owning_context(void* self, const void* context) {
     QOpenGLFunctions_1_2_SetOwningContext((QOpenGLFunctions_1_2*)self, (QOpenGLContext*)context);
 }
 
-void q_openglfunctions_1_2_super_set_owning_context(void* self, void* context) {
-    QOpenGLFunctions_1_2_SuperSetOwningContext((QOpenGLFunctions_1_2*)self, (QOpenGLContext*)context);
-}
-
-void q_openglfunctions_1_2_on_set_owning_context(void* self, void (*callback)(void*, void*)) {
-    QOpenGLFunctions_1_2_OnSetOwningContext((QOpenGLFunctions_1_2*)self, (intptr_t)callback);
-}
-
-QOpenGLContext* q_openglfunctions_1_2_owning_context(void* self) {
+QOpenGLContext* q_openglfunctions_1_2_owning_context(const void* self) {
     return QOpenGLFunctions_1_2_OwningContext((QOpenGLFunctions_1_2*)self);
-}
-
-QOpenGLContext* q_openglfunctions_1_2_super_owning_context(void* self) {
-    return QOpenGLFunctions_1_2_SuperOwningContext((QOpenGLFunctions_1_2*)self);
-}
-
-void q_openglfunctions_1_2_on_owning_context(void* self, QOpenGLContext* (*callback)()) {
-    QOpenGLFunctions_1_2_OnOwningContext((QOpenGLFunctions_1_2*)self, (intptr_t)callback);
 }
 
 void q_openglfunctions_1_2_delete(void* self) {

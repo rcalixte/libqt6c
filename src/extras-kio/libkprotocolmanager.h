@@ -14,7 +14,7 @@
 ///
 /// @param other KProtocolManager*
 ///
-KProtocolManager* k_protocolmanager_new(void* other);
+KProtocolManager* k_protocolmanager_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html)
 
@@ -70,85 +70,85 @@ int32_t k_protocolmanager_minimum_keep_size();
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_listing(void* url);
+bool k_protocolmanager_supports_listing(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsReading)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_reading(void* url);
+bool k_protocolmanager_supports_reading(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsWriting)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_writing(void* url);
+bool k_protocolmanager_supports_writing(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsMakeDir)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_make_dir(void* url);
+bool k_protocolmanager_supports_make_dir(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsDeleting)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_deleting(void* url);
+bool k_protocolmanager_supports_deleting(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsLinking)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_linking(void* url);
+bool k_protocolmanager_supports_linking(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsMoving)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_moving(void* url);
+bool k_protocolmanager_supports_moving(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsOpening)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_opening(void* url);
+bool k_protocolmanager_supports_opening(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsTruncating)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_truncating(void* url);
+bool k_protocolmanager_supports_truncating(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#canCopyFromFile)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_can_copy_from_file(void* url);
+bool k_protocolmanager_can_copy_from_file(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#canCopyToFile)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_can_copy_to_file(void* url);
+bool k_protocolmanager_can_copy_to_file(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#canRenameFromFile)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_can_rename_from_file(void* url);
+bool k_protocolmanager_can_rename_from_file(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#canRenameToFile)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_can_rename_to_file(void* url);
+bool k_protocolmanager_can_rename_to_file(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#canDeleteRecursive)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_can_delete_recursive(void* url);
+bool k_protocolmanager_can_delete_recursive(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#fileNameUsedForCopying)
 ///
@@ -156,7 +156,7 @@ bool k_protocolmanager_can_delete_recursive(void* url);
 ///
 /// @return enum KProtocolInfo__FileNameUsedForCopying
 ///
-int32_t k_protocolmanager_file_name_used_for_copying(void* url);
+int32_t k_protocolmanager_file_name_used_for_copying(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#defaultMimetype)
 ///
@@ -164,7 +164,7 @@ int32_t k_protocolmanager_file_name_used_for_copying(void* url);
 ///
 /// @param url QUrl*
 ///
-const char* k_protocolmanager_default_mimetype(void* url);
+const char* k_protocolmanager_default_mimetype(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#inputType)
 ///
@@ -172,7 +172,7 @@ const char* k_protocolmanager_default_mimetype(void* url);
 ///
 /// @return enum KProtocolInfo__ExtraField__Type
 ///
-int32_t k_protocolmanager_input_type(void* url);
+int32_t k_protocolmanager_input_type(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#outputType)
 ///
@@ -180,7 +180,7 @@ int32_t k_protocolmanager_input_type(void* url);
 ///
 /// @return enum KProtocolInfo__ExtraField__Type
 ///
-int32_t k_protocolmanager_output_type(void* url);
+int32_t k_protocolmanager_output_type(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#listing)
 ///
@@ -188,13 +188,13 @@ int32_t k_protocolmanager_output_type(void* url);
 ///
 /// @param url QUrl*
 ///
-const char** k_protocolmanager_listing(void* url);
+const char** k_protocolmanager_listing(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#isSourceProtocol)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_is_source_protocol(void* url);
+bool k_protocolmanager_is_source_protocol(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#protocolForArchiveMimetype)
 ///
@@ -214,13 +214,13 @@ void k_protocolmanager_reparse_configuration();
 ///
 /// @param url QUrl*
 ///
-const char* k_protocolmanager_charset_for(void* url);
+const char* k_protocolmanager_charset_for(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#supportsPermissions)
 ///
 /// @param url QUrl*
 ///
-bool k_protocolmanager_supports_permissions(void* url);
+bool k_protocolmanager_supports_permissions(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kprotocolmanager.html#dtor.KProtocolManager)
 ///

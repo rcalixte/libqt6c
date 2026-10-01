@@ -28,7 +28,7 @@ QOpenGLExtraFunctions* q_openglextrafunctions_new2(void* context);
 ///
 /// @param param1 QOpenGLExtraFunctions*
 ///
-QOpenGLExtraFunctions* q_openglextrafunctions_new3(void* param1);
+QOpenGLExtraFunctions* q_openglextrafunctions_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglextrafunctions.html#glReadBuffer)
 ///
@@ -1974,20 +1974,20 @@ void q_openglextrafunctions_gl_tex_storage3_d_multisample(void* self, uint32_t t
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#openGLFeatures)
 ///
-/// @param self QOpenGLExtraFunctions*
+/// @param self const QOpenGLExtraFunctions*
 ///
 /// @return flag of enum QOpenGLFunctions__OpenGLFeature
 ///
-int32_t q_openglextrafunctions_open_g_l_features(void* self);
+int32_t q_openglextrafunctions_open_g_l_features(const void* self);
 
 /// Inherited from QOpenGLFunctions
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#hasOpenGLFeature)
 ///
-/// @param self QOpenGLExtraFunctions*
+/// @param self const QOpenGLExtraFunctions*
 /// @param feature enum QOpenGLFunctions__OpenGLFeature
 ///
-bool q_openglextrafunctions_has_open_g_l_feature(void* self, int32_t feature);
+bool q_openglextrafunctions_has_open_g_l_feature(const void* self, int32_t feature);
 
 /// Inherited from QOpenGLFunctions
 ///

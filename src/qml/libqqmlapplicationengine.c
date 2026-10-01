@@ -13,7 +13,7 @@ QQmlApplicationEngine* q_qmlapplicationengine_new() {
     return QQmlApplicationEngine_New();
 }
 
-QQmlApplicationEngine* q_qmlapplicationengine_new2(void* url) {
+QQmlApplicationEngine* q_qmlapplicationengine_new2(const void* url) {
     return QQmlApplicationEngine_New2((QUrl*)url);
 }
 
@@ -29,7 +29,7 @@ QQmlApplicationEngine* q_qmlapplicationengine_new5(void* parent) {
     return QQmlApplicationEngine_New5((QObject*)parent);
 }
 
-QQmlApplicationEngine* q_qmlapplicationengine_new6(void* url, void* parent) {
+QQmlApplicationEngine* q_qmlapplicationengine_new6(const void* url, void* parent) {
     return QQmlApplicationEngine_New6((QUrl*)url, (QObject*)parent);
 }
 
@@ -41,15 +41,15 @@ QQmlApplicationEngine* q_qmlapplicationengine_new8(const char* filePath, void* p
     return QQmlApplicationEngine_New8(qstring(filePath), (QObject*)parent);
 }
 
-const QMetaObject* q_qmlapplicationengine_meta_object(void* self) {
+const QMetaObject* q_qmlapplicationengine_meta_object(const void* self) {
     return QQmlApplicationEngine_MetaObject((QQmlApplicationEngine*)self);
 }
 
-void q_qmlapplicationengine_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_qmlapplicationengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlApplicationEngine_OnMetaObject((QQmlApplicationEngine*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_qmlapplicationengine_super_meta_object(void* self) {
+const QMetaObject* q_qmlapplicationengine_super_meta_object(const void* self) {
     return QQmlApplicationEngine_SuperMetaObject((QQmlApplicationEngine*)self);
 }
 
@@ -84,12 +84,12 @@ const char* q_qmlapplicationengine_tr(const char* s) {
     return _ret;
 }
 
-libqt_list /* of QObject* */ q_qmlapplicationengine_root_objects(void* self) {
+libqt_list /* of QObject* */ q_qmlapplicationengine_root_objects(const void* self) {
     libqt_list _arr = QQmlApplicationEngine_RootObjects((QQmlApplicationEngine*)self);
     return _arr;
 }
 
-void q_qmlapplicationengine_load(void* self, void* url) {
+void q_qmlapplicationengine_load(void* self, const void* url) {
     QQmlApplicationEngine_Load((QQmlApplicationEngine*)self, (QUrl*)url);
 }
 
@@ -147,19 +147,19 @@ void q_qmlapplicationengine_load_data(void* self, char* data) {
     QQmlApplicationEngine_LoadData((QQmlApplicationEngine*)self, qstring(data));
 }
 
-void q_qmlapplicationengine_object_created(void* self, void* object, void* url) {
+void q_qmlapplicationengine_object_created(void* self, void* object, const void* url) {
     QQmlApplicationEngine_ObjectCreated((QQmlApplicationEngine*)self, (QObject*)object, (QUrl*)url);
 }
 
-void q_qmlapplicationengine_on_object_created(void* self, void (*callback)(void*, void*, void*)) {
+void q_qmlapplicationengine_on_object_created(void* self, void (*callback)(void*, void*, const void*)) {
     QQmlApplicationEngine_Connect_ObjectCreated((QQmlApplicationEngine*)self, (intptr_t)callback);
 }
 
-void q_qmlapplicationengine_object_creation_failed(void* self, void* url) {
+void q_qmlapplicationengine_object_creation_failed(void* self, const void* url) {
     QQmlApplicationEngine_ObjectCreationFailed((QQmlApplicationEngine*)self, (QUrl*)url);
 }
 
-void q_qmlapplicationengine_on_object_creation_failed(void* self, void (*callback)(void*, void*)) {
+void q_qmlapplicationengine_on_object_creation_failed(void* self, void (*callback)(void*, const void*)) {
     QQmlApplicationEngine_Connect_ObjectCreationFailed((QQmlApplicationEngine*)self, (intptr_t)callback);
 }
 
@@ -177,11 +177,11 @@ const char* q_qmlapplicationengine_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_qmlapplicationengine_load_data2(void* self, char* data, void* url) {
+void q_qmlapplicationengine_load_data2(void* self, char* data, const void* url) {
     QQmlApplicationEngine_LoadData2((QQmlApplicationEngine*)self, qstring(data), (QUrl*)url);
 }
 
-QQmlContext* q_qmlapplicationengine_root_context(void* self) {
+QQmlContext* q_qmlapplicationengine_root_context(const void* self) {
     return QQmlEngine_RootContext((QQmlEngine*)self);
 }
 
@@ -197,7 +197,7 @@ void q_qmlapplicationengine_clear_singletons(void* self) {
     QQmlEngine_ClearSingletons((QQmlEngine*)self);
 }
 
-const char** q_qmlapplicationengine_import_path_list(void* self) {
+const char** q_qmlapplicationengine_import_path_list(const void* self) {
     libqt_list _arr = QQmlEngine_ImportPathList((QQmlEngine*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -232,7 +232,7 @@ void q_qmlapplicationengine_add_import_path(void* self, const char* dir) {
     QQmlEngine_AddImportPath((QQmlEngine*)self, qstring(dir));
 }
 
-const char** q_qmlapplicationengine_plugin_path_list(void* self) {
+const char** q_qmlapplicationengine_plugin_path_list(const void* self) {
     libqt_list _arr = QQmlEngine_PluginPathList((QQmlEngine*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -279,11 +279,11 @@ void q_qmlapplicationengine_set_network_access_manager_factory(void* self, void*
     QQmlEngine_SetNetworkAccessManagerFactory((QQmlEngine*)self, (QQmlNetworkAccessManagerFactory*)networkAccessManagerFactory);
 }
 
-QQmlNetworkAccessManagerFactory* q_qmlapplicationengine_network_access_manager_factory(void* self) {
+QQmlNetworkAccessManagerFactory* q_qmlapplicationengine_network_access_manager_factory(const void* self) {
     return QQmlEngine_NetworkAccessManagerFactory((QQmlEngine*)self);
 }
 
-QNetworkAccessManager* q_qmlapplicationengine_network_access_manager(void* self) {
+QNetworkAccessManager* q_qmlapplicationengine_network_access_manager(const void* self) {
     return QQmlEngine_NetworkAccessManager((QQmlEngine*)self);
 }
 
@@ -291,7 +291,7 @@ void q_qmlapplicationengine_set_url_interceptor(void* self, void* urlInterceptor
     QQmlEngine_SetUrlInterceptor((QQmlEngine*)self, (QQmlAbstractUrlInterceptor*)urlInterceptor);
 }
 
-QQmlAbstractUrlInterceptor* q_qmlapplicationengine_url_interceptor(void* self) {
+QQmlAbstractUrlInterceptor* q_qmlapplicationengine_url_interceptor(const void* self) {
     return QQmlEngine_UrlInterceptor((QQmlEngine*)self);
 }
 
@@ -303,12 +303,12 @@ void q_qmlapplicationengine_remove_url_interceptor(void* self, void* urlIntercep
     QQmlEngine_RemoveUrlInterceptor((QQmlEngine*)self, (QQmlAbstractUrlInterceptor*)urlInterceptor);
 }
 
-libqt_list /* of QQmlAbstractUrlInterceptor* */ q_qmlapplicationengine_url_interceptors(void* self) {
+libqt_list /* of QQmlAbstractUrlInterceptor* */ q_qmlapplicationengine_url_interceptors(const void* self) {
     libqt_list _arr = QQmlEngine_UrlInterceptors((QQmlEngine*)self);
     return _arr;
 }
 
-QUrl* q_qmlapplicationengine_intercept_url(void* self, void* url, int32_t type) {
+QUrl* q_qmlapplicationengine_intercept_url(const void* self, const void* url, int32_t type) {
     return QQmlEngine_InterceptUrl((QQmlEngine*)self, (QUrl*)url, type);
 }
 
@@ -316,7 +316,7 @@ void q_qmlapplicationengine_add_image_provider(void* self, const char* id, void*
     QQmlEngine_AddImageProvider((QQmlEngine*)self, qstring(id), (QQmlImageProviderBase*)param2);
 }
 
-QQmlImageProviderBase* q_qmlapplicationengine_image_provider(void* self, const char* id) {
+QQmlImageProviderBase* q_qmlapplicationengine_image_provider(const void* self, const char* id) {
     return QQmlEngine_ImageProvider((QQmlEngine*)self, qstring(id));
 }
 
@@ -328,7 +328,7 @@ void q_qmlapplicationengine_set_incubation_controller(void* self, void* incubati
     QQmlEngine_SetIncubationController((QQmlEngine*)self, (QQmlIncubationController*)incubationController);
 }
 
-QQmlIncubationController* q_qmlapplicationengine_incubation_controller(void* self) {
+QQmlIncubationController* q_qmlapplicationengine_incubation_controller(const void* self) {
     return QQmlEngine_IncubationController((QQmlEngine*)self);
 }
 
@@ -336,29 +336,29 @@ void q_qmlapplicationengine_set_offline_storage_path(void* self, const char* dir
     QQmlEngine_SetOfflineStoragePath((QQmlEngine*)self, qstring(dir));
 }
 
-const char* q_qmlapplicationengine_offline_storage_path(void* self) {
+const char* q_qmlapplicationengine_offline_storage_path(const void* self) {
     libqt_string _str = QQmlEngine_OfflineStoragePath((QQmlEngine*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_qmlapplicationengine_offline_storage_database_file_path(void* self, const char* databaseName) {
+const char* q_qmlapplicationengine_offline_storage_database_file_path(const void* self, const char* databaseName) {
     libqt_string _str = QQmlEngine_OfflineStorageDatabaseFilePath((QQmlEngine*)self, qstring(databaseName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* q_qmlapplicationengine_base_url(void* self) {
+QUrl* q_qmlapplicationengine_base_url(const void* self) {
     return QQmlEngine_BaseUrl((QQmlEngine*)self);
 }
 
-void q_qmlapplicationengine_set_base_url(void* self, void* baseUrl) {
+void q_qmlapplicationengine_set_base_url(void* self, const void* baseUrl) {
     QQmlEngine_SetBaseUrl((QQmlEngine*)self, (QUrl*)baseUrl);
 }
 
-bool q_qmlapplicationengine_output_warnings_to_standard_error(void* self) {
+bool q_qmlapplicationengine_output_warnings_to_standard_error(const void* self) {
     return QQmlEngine_OutputWarningsToStandardError((QQmlEngine*)self);
 }
 
@@ -370,7 +370,7 @@ void q_qmlapplicationengine_mark_current_function_as_translation_binding(void* s
     QQmlEngine_MarkCurrentFunctionAsTranslationBinding((QQmlEngine*)self);
 }
 
-void q_qmlapplicationengine_capture_property(void* self, void* object, void* property) {
+void q_qmlapplicationengine_capture_property(const void* self, void* object, const void* property) {
     QQmlEngine_CaptureProperty((QQmlEngine*)self, (QObject*)object, (QMetaProperty*)property);
 }
 
@@ -386,7 +386,7 @@ void q_qmlapplicationengine_on_offline_storage_path_changed(void* self, void (*c
     QQmlEngine_Connect_OfflineStoragePathChanged((QQmlEngine*)self, (intptr_t)callback);
 }
 
-QQmlContext* q_qmlapplicationengine_context_for_object(void* param1) {
+QQmlContext* q_qmlapplicationengine_context_for_object(const void* param1) {
     return QQmlEngine_ContextForObject((QObject*)param1);
 }
 
@@ -418,7 +418,7 @@ void q_qmlapplicationengine_on_warnings(void* self, void (*callback)(void*, libq
     QQmlEngine_Connect_Warnings((QQmlEngine*)self, (intptr_t)callback);
 }
 
-QJSValue* q_qmlapplicationengine_global_object(void* self) {
+QJSValue* q_qmlapplicationengine_global_object(const void* self) {
     return QJSEngine_GlobalObject((QJSEngine*)self);
 }
 
@@ -430,7 +430,7 @@ QJSValue* q_qmlapplicationengine_import_module(void* self, const char* fileName)
     return QJSEngine_ImportModule((QJSEngine*)self, qstring(fileName));
 }
 
-bool q_qmlapplicationengine_register_module(void* self, const char* moduleName, void* value) {
+bool q_qmlapplicationengine_register_module(void* self, const char* moduleName, const void* value) {
     return QJSEngine_RegisterModule((QJSEngine*)self, qstring(moduleName), (QJSValue*)value);
 }
 
@@ -450,7 +450,7 @@ QJSValue* q_qmlapplicationengine_new_q_object(void* self, void* object) {
     return QJSEngine_NewQObject((QJSEngine*)self, (QObject*)object);
 }
 
-QJSValue* q_qmlapplicationengine_new_q_meta_object(void* self, void* metaObject) {
+QJSValue* q_qmlapplicationengine_new_q_meta_object(void* self, const void* metaObject) {
     return QJSEngine_NewQMetaObject((QJSEngine*)self, (QMetaObject*)metaObject);
 }
 
@@ -478,7 +478,7 @@ void q_qmlapplicationengine_set_interrupted(void* self, bool interrupted) {
     QJSEngine_SetInterrupted((QJSEngine*)self, interrupted);
 }
 
-bool q_qmlapplicationengine_is_interrupted(void* self) {
+bool q_qmlapplicationengine_is_interrupted(const void* self) {
     return QJSEngine_IsInterrupted((QJSEngine*)self);
 }
 
@@ -490,11 +490,11 @@ void q_qmlapplicationengine_throw_error2(void* self, int32_t errorType) {
     QJSEngine_ThrowError2((QJSEngine*)self, errorType);
 }
 
-void q_qmlapplicationengine_throw_error3(void* self, void* error) {
+void q_qmlapplicationengine_throw_error3(void* self, const void* error) {
     QJSEngine_ThrowError3((QJSEngine*)self, (QJSValue*)error);
 }
 
-bool q_qmlapplicationengine_has_error(void* self) {
+bool q_qmlapplicationengine_has_error(const void* self) {
     return QJSEngine_HasError((QJSEngine*)self);
 }
 
@@ -502,7 +502,7 @@ QJSValue* q_qmlapplicationengine_catch_error(void* self) {
     return QJSEngine_CatchError((QJSEngine*)self);
 }
 
-const char* q_qmlapplicationengine_ui_language(void* self) {
+const char* q_qmlapplicationengine_ui_language(const void* self) {
     libqt_string _str = QJSEngine_UiLanguage((QJSEngine*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -552,7 +552,7 @@ QJSValue* q_qmlapplicationengine_new_error_object2(void* self, int32_t errorType
     return QJSEngine_NewErrorObject2((QJSEngine*)self, errorType, qstring(message));
 }
 
-void q_qmlapplicationengine_install_extensions2(void* self, int32_t extensions, void* object) {
+void q_qmlapplicationengine_install_extensions2(void* self, int32_t extensions, const void* object) {
     QJSEngine_InstallExtensions2((QJSEngine*)self, extensions, (QJSValue*)object);
 }
 
@@ -560,7 +560,7 @@ void q_qmlapplicationengine_throw_error22(void* self, int32_t errorType, const c
     QJSEngine_ThrowError22((QJSEngine*)self, errorType, qstring(message));
 }
 
-const char* q_qmlapplicationengine_object_name(void* self) {
+const char* q_qmlapplicationengine_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -571,19 +571,19 @@ void q_qmlapplicationengine_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_qmlapplicationengine_is_widget_type(void* self) {
+bool q_qmlapplicationengine_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_qmlapplicationengine_is_window_type(void* self) {
+bool q_qmlapplicationengine_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_qmlapplicationengine_is_quick_item_type(void* self) {
+bool q_qmlapplicationengine_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_qmlapplicationengine_signals_blocked(void* self) {
+bool q_qmlapplicationengine_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -591,7 +591,7 @@ bool q_qmlapplicationengine_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_qmlapplicationengine_thread(void* self) {
+QThread* q_qmlapplicationengine_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -615,7 +615,7 @@ void q_qmlapplicationengine_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_qmlapplicationengine_children(void* self) {
+libqt_list /* of QObject* */ q_qmlapplicationengine_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -632,55 +632,55 @@ void q_qmlapplicationengine_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_qmlapplicationengine_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_qmlapplicationengine_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_qmlapplicationengine_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_qmlapplicationengine_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_qmlapplicationengine_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_qmlapplicationengine_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_qmlapplicationengine_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_qmlapplicationengine_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_qmlapplicationengine_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_qmlapplicationengine_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_qmlapplicationengine_disconnect3(void* self) {
+bool q_qmlapplicationengine_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_qmlapplicationengine_disconnect4(void* self, void* receiver) {
+bool q_qmlapplicationengine_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_qmlapplicationengine_disconnect5(void* param1) {
+bool q_qmlapplicationengine_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_qmlapplicationengine_dump_object_tree(void* self) {
+void q_qmlapplicationengine_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_qmlapplicationengine_dump_object_info(void* self) {
+void q_qmlapplicationengine_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_qmlapplicationengine_set_property(void* self, const char* name, void* value) {
+bool q_qmlapplicationengine_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_qmlapplicationengine_property(void* self, const char* name) {
+QVariant* q_qmlapplicationengine_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_qmlapplicationengine_dynamic_property_names(void* self) {
+const char** q_qmlapplicationengine_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -701,7 +701,7 @@ QBindingStorage* q_qmlapplicationengine_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_qmlapplicationengine_binding_storage2(void* self) {
+const QBindingStorage* q_qmlapplicationengine_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -713,11 +713,11 @@ void q_qmlapplicationengine_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_qmlapplicationengine_parent(void* self) {
+QObject* q_qmlapplicationengine_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_qmlapplicationengine_inherits(void* self, const char* classname) {
+bool q_qmlapplicationengine_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -733,31 +733,31 @@ int32_t q_qmlapplicationengine_start_timer23(void* self, int64_t time, int32_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_qmlapplicationengine_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_qmlapplicationengine_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_qmlapplicationengine_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_qmlapplicationengine_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_qmlapplicationengine_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_qmlapplicationengine_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_qmlapplicationengine_disconnect1(void* self, const char* signal) {
+bool q_qmlapplicationengine_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_qmlapplicationengine_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_qmlapplicationengine_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_qmlapplicationengine_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_qmlapplicationengine_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_qmlapplicationengine_disconnect23(void* self, void* receiver, const char* member) {
+bool q_qmlapplicationengine_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -829,76 +829,44 @@ void q_qmlapplicationengine_on_custom_event(void* self, void (*callback)(void*, 
     QQmlApplicationEngine_OnCustomEvent((QQmlApplicationEngine*)self, (intptr_t)callback);
 }
 
-void q_qmlapplicationengine_connect_notify(void* self, void* signal) {
+void q_qmlapplicationengine_connect_notify(void* self, const void* signal) {
     QQmlApplicationEngine_ConnectNotify((QQmlApplicationEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_qmlapplicationengine_super_connect_notify(void* self, void* signal) {
+void q_qmlapplicationengine_super_connect_notify(void* self, const void* signal) {
     QQmlApplicationEngine_SuperConnectNotify((QQmlApplicationEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_qmlapplicationengine_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_qmlapplicationengine_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QQmlApplicationEngine_OnConnectNotify((QQmlApplicationEngine*)self, (intptr_t)callback);
 }
 
-void q_qmlapplicationengine_disconnect_notify(void* self, void* signal) {
+void q_qmlapplicationengine_disconnect_notify(void* self, const void* signal) {
     QQmlApplicationEngine_DisconnectNotify((QQmlApplicationEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_qmlapplicationengine_super_disconnect_notify(void* self, void* signal) {
+void q_qmlapplicationengine_super_disconnect_notify(void* self, const void* signal) {
     QQmlApplicationEngine_SuperDisconnectNotify((QQmlApplicationEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_qmlapplicationengine_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_qmlapplicationengine_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QQmlApplicationEngine_OnDisconnectNotify((QQmlApplicationEngine*)self, (intptr_t)callback);
 }
 
-QObject* q_qmlapplicationengine_sender(void* self) {
+QObject* q_qmlapplicationengine_sender(const void* self) {
     return QQmlApplicationEngine_Sender((QQmlApplicationEngine*)self);
 }
 
-QObject* q_qmlapplicationengine_super_sender(void* self) {
-    return QQmlApplicationEngine_SuperSender((QQmlApplicationEngine*)self);
-}
-
-void q_qmlapplicationengine_on_sender(void* self, QObject* (*callback)()) {
-    QQmlApplicationEngine_OnSender((QQmlApplicationEngine*)self, (intptr_t)callback);
-}
-
-int32_t q_qmlapplicationengine_sender_signal_index(void* self) {
+int32_t q_qmlapplicationengine_sender_signal_index(const void* self) {
     return QQmlApplicationEngine_SenderSignalIndex((QQmlApplicationEngine*)self);
 }
 
-int32_t q_qmlapplicationengine_super_sender_signal_index(void* self) {
-    return QQmlApplicationEngine_SuperSenderSignalIndex((QQmlApplicationEngine*)self);
-}
-
-void q_qmlapplicationengine_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QQmlApplicationEngine_OnSenderSignalIndex((QQmlApplicationEngine*)self, (intptr_t)callback);
-}
-
-int32_t q_qmlapplicationengine_receivers(void* self, const char* signal) {
+int32_t q_qmlapplicationengine_receivers(const void* self, const char* signal) {
     return QQmlApplicationEngine_Receivers((QQmlApplicationEngine*)self, signal);
 }
 
-int32_t q_qmlapplicationengine_super_receivers(void* self, const char* signal) {
-    return QQmlApplicationEngine_SuperReceivers((QQmlApplicationEngine*)self, signal);
-}
-
-void q_qmlapplicationengine_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QQmlApplicationEngine_OnReceivers((QQmlApplicationEngine*)self, (intptr_t)callback);
-}
-
-bool q_qmlapplicationengine_is_signal_connected(void* self, void* signal) {
+bool q_qmlapplicationengine_is_signal_connected(const void* self, const void* signal) {
     return QQmlApplicationEngine_IsSignalConnected((QQmlApplicationEngine*)self, (QMetaMethod*)signal);
-}
-
-bool q_qmlapplicationengine_super_is_signal_connected(void* self, void* signal) {
-    return QQmlApplicationEngine_SuperIsSignalConnected((QQmlApplicationEngine*)self, (QMetaMethod*)signal);
-}
-
-void q_qmlapplicationengine_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QQmlApplicationEngine_OnIsSignalConnected((QQmlApplicationEngine*)self, (intptr_t)callback);
 }
 
 void q_qmlapplicationengine_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

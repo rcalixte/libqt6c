@@ -18,26 +18,26 @@ QDrag* q_drag_new(void* dragSource);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-const QMetaObject* q_drag_meta_object(void* self);
+const QMetaObject* q_drag_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDrag*
-/// @param callback const QMetaObject* func()
+/// @param self const QDrag*
+/// @param callback const QMetaObject* func(const QDrag* self)
 ///
-void q_drag_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_drag_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-const QMetaObject* q_drag_super_meta_object(void* self);
+const QMetaObject* q_drag_super_meta_object(const void* self);
 
 /// @param self QDrag*
 /// @param param1 const char*
@@ -98,47 +98,47 @@ void q_drag_set_mime_data(void* self, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#mimeData)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QMimeData* q_drag_mime_data(void* self);
+QMimeData* q_drag_mime_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#setPixmap)
 ///
 /// @param self QDrag*
 /// @param pixmap QPixmap*
 ///
-void q_drag_set_pixmap(void* self, void* pixmap);
+void q_drag_set_pixmap(void* self, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#pixmap)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QPixmap* q_drag_pixmap(void* self);
+QPixmap* q_drag_pixmap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#setHotSpot)
 ///
 /// @param self QDrag*
 /// @param hotspot QPoint*
 ///
-void q_drag_set_hot_spot(void* self, void* hotspot);
+void q_drag_set_hot_spot(void* self, const void* hotspot);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#hotSpot)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QPoint* q_drag_hot_spot(void* self);
+QPoint* q_drag_hot_spot(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#source)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QObject* q_drag_source(void* self);
+QObject* q_drag_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#target)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QObject* q_drag_target(void* self);
+QObject* q_drag_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#exec)
 ///
@@ -164,30 +164,30 @@ int32_t q_drag_exec2(void* self, int32_t supportedActions, int32_t defaultAction
 /// @param cursor QPixmap*
 /// @param action enum Qt__DropAction
 ///
-void q_drag_set_drag_cursor(void* self, void* cursor, int32_t action);
+void q_drag_set_drag_cursor(void* self, const void* cursor, int32_t action);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#dragCursor)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param action enum Qt__DropAction
 ///
-QPixmap* q_drag_drag_cursor(void* self, int32_t action);
+QPixmap* q_drag_drag_cursor(const void* self, int32_t action);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#supportedActions)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_drag_supported_actions(void* self);
+int32_t q_drag_supported_actions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#defaultAction)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
 /// @return enum Qt__DropAction
 ///
-int32_t q_drag_default_action(void* self);
+int32_t q_drag_default_action(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrag.html#cancel)
 ///
@@ -255,9 +255,9 @@ int32_t q_drag_exec1(void* self, int32_t supportedActions);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-const char* q_drag_object_name(void* self);
+const char* q_drag_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -272,33 +272,33 @@ void q_drag_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-bool q_drag_is_widget_type(void* self);
+bool q_drag_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-bool q_drag_is_window_type(void* self);
+bool q_drag_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-bool q_drag_is_quick_item_type(void* self);
+bool q_drag_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-bool q_drag_signals_blocked(void* self);
+bool q_drag_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -313,9 +313,9 @@ bool q_drag_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QThread* q_drag_thread(void* self);
+QThread* q_drag_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -366,11 +366,11 @@ void q_drag_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_drag_children(void* self);
+libqt_list q_drag_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -408,7 +408,7 @@ void q_drag_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_drag_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_drag_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -419,18 +419,18 @@ QMetaObject__Connection* q_drag_connect(void* sender, const char* signal, void* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_drag_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_drag_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_drag_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_drag_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -441,7 +441,7 @@ QMetaObject__Connection* q_drag_connect3(void* self, void* sender, const char* s
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_drag_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_drag_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -452,24 +452,24 @@ bool q_drag_disconnect(void* sender, const char* signal, void* receiver, const c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_drag_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_drag_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-bool q_drag_disconnect3(void* self);
+bool q_drag_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param receiver QObject*
 ///
-bool q_drag_disconnect4(void* self, void* receiver);
+bool q_drag_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -477,23 +477,23 @@ bool q_drag_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_drag_disconnect5(void* param1);
+bool q_drag_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-void q_drag_dump_object_tree(void* self);
+void q_drag_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-void q_drag_dump_object_info(void* self);
+void q_drag_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -503,16 +503,16 @@ void q_drag_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_drag_set_property(void* self, const char* name, void* value);
+bool q_drag_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param name const char*
 ///
-QVariant* q_drag_property(void* self, const char* name);
+QVariant* q_drag_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -520,9 +520,9 @@ QVariant* q_drag_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-const char** q_drag_dynamic_property_names(void* self);
+const char** q_drag_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -536,9 +536,9 @@ QBindingStorage* q_drag_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-const QBindingStorage* q_drag_binding_storage2(void* self);
+const QBindingStorage* q_drag_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -561,18 +561,18 @@ void q_drag_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QObject* q_drag_parent(void* self);
+QObject* q_drag_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param classname const char*
 ///
-bool q_drag_inherits(void* self, const char* classname);
+bool q_drag_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -612,7 +612,7 @@ int32_t q_drag_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_drag_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_drag_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -624,59 +624,59 @@ QMetaObject__Connection* q_drag_connect5(void* sender, const char* signal, void*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_drag_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_drag_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_drag_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_drag_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param signal const char*
 ///
-bool q_drag_disconnect1(void* self, const char* signal);
+bool q_drag_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDrag*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_drag_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_drag_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_drag_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_drag_disconnect23(void* self, void* receiver, const char* member);
+bool q_drag_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QDrag*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_drag_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -872,7 +872,7 @@ void q_drag_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QDrag*
 /// @param signal QMetaMethod*
 ///
-void q_drag_connect_notify(void* self, void* signal);
+void q_drag_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -883,7 +883,7 @@ void q_drag_connect_notify(void* self, void* signal);
 /// @param self QDrag*
 /// @param signal QMetaMethod*
 ///
-void q_drag_super_connect_notify(void* self, void* signal);
+void q_drag_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -894,7 +894,7 @@ void q_drag_super_connect_notify(void* self, void* signal);
 /// @param self QDrag*
 /// @param callback void func(QDrag* self, QMetaMethod* signal)
 ///
-void q_drag_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_drag_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -905,7 +905,7 @@ void q_drag_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QDrag*
 /// @param signal QMetaMethod*
 ///
-void q_drag_disconnect_notify(void* self, void* signal);
+void q_drag_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -916,7 +916,7 @@ void q_drag_disconnect_notify(void* self, void* signal);
 /// @param self QDrag*
 /// @param signal QMetaMethod*
 ///
-void q_drag_super_disconnect_notify(void* self, void* signal);
+void q_drag_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -927,7 +927,7 @@ void q_drag_super_disconnect_notify(void* self, void* signal);
 /// @param self QDrag*
 /// @param callback void func(QDrag* self, QMetaMethod* signal)
 ///
-void q_drag_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_drag_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -935,9 +935,9 @@ void q_drag_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QObject* q_drag_sender(void* self);
+QObject* q_drag_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -945,9 +945,9 @@ QObject* q_drag_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-QObject* q_drag_super_sender(void* self);
+QObject* q_drag_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -955,10 +955,10 @@ QObject* q_drag_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDrag*
-/// @param callback QObject* func()
+/// @param self const QDrag*
+/// @param callback QObject* func(QDrag* self)
 ///
-void q_drag_on_sender(void* self, QObject* (*callback)());
+void q_drag_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -966,9 +966,9 @@ void q_drag_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-int32_t q_drag_sender_signal_index(void* self);
+int32_t q_drag_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -976,9 +976,9 @@ int32_t q_drag_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 ///
-int32_t q_drag_super_sender_signal_index(void* self);
+int32_t q_drag_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -986,10 +986,10 @@ int32_t q_drag_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDrag*
-/// @param callback int32_t func()
+/// @param self const QDrag*
+/// @param callback int32_t func(QDrag* self)
 ///
-void q_drag_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_drag_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -997,10 +997,10 @@ void q_drag_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param signal const char*
 ///
-int32_t q_drag_receivers(void* self, const char* signal);
+int32_t q_drag_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1008,10 +1008,10 @@ int32_t q_drag_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param signal const char*
 ///
-int32_t q_drag_super_receivers(void* self, const char* signal);
+int32_t q_drag_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1019,10 +1019,10 @@ int32_t q_drag_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param callback int32_t func(QDrag* self, const char* signal)
 ///
-void q_drag_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_drag_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1030,10 +1030,10 @@ void q_drag_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param signal QMetaMethod*
 ///
-bool q_drag_is_signal_connected(void* self, void* signal);
+bool q_drag_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1041,10 +1041,10 @@ bool q_drag_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param signal QMetaMethod*
 ///
-bool q_drag_super_is_signal_connected(void* self, void* signal);
+bool q_drag_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1052,10 +1052,10 @@ bool q_drag_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDrag*
+/// @param self const QDrag*
 /// @param callback bool func(QDrag* self, QMetaMethod* signal)
 ///
-void q_drag_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_drag_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

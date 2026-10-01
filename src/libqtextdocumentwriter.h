@@ -51,9 +51,9 @@ void q_textdocumentwriter_set_format(void* self, char* format);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTextDocumentWriter*
+/// @param self const QTextDocumentWriter*
 ///
-char* q_textdocumentwriter_format(void* self);
+char* q_textdocumentwriter_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#setDevice)
 ///
@@ -64,9 +64,9 @@ void q_textdocumentwriter_set_device(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#device)
 ///
-/// @param self QTextDocumentWriter*
+/// @param self const QTextDocumentWriter*
 ///
-QIODevice* q_textdocumentwriter_device(void* self);
+QIODevice* q_textdocumentwriter_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#setFileName)
 ///
@@ -79,23 +79,23 @@ void q_textdocumentwriter_set_file_name(void* self, const char* fileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextDocumentWriter*
+/// @param self const QTextDocumentWriter*
 ///
-const char* q_textdocumentwriter_file_name(void* self);
+const char* q_textdocumentwriter_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#write)
 ///
 /// @param self QTextDocumentWriter*
 /// @param document QTextDocument*
 ///
-bool q_textdocumentwriter_write(void* self, void* document);
+bool q_textdocumentwriter_write(void* self, const void* document);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#write)
 ///
 /// @param self QTextDocumentWriter*
 /// @param fragment QTextDocumentFragment*
 ///
-bool q_textdocumentwriter_write2(void* self, void* fragment);
+bool q_textdocumentwriter_write2(void* self, const void* fragment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocumentwriter.html#supportedDocumentFormats)
 ///

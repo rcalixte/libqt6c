@@ -20,7 +20,7 @@ KIconColors* k_iconcolors_new();
 ///
 /// @param color QColor*
 ///
-KIconColors* k_iconcolors_new2(void* color);
+KIconColors* k_iconcolors_new2(const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html)
 
@@ -28,7 +28,7 @@ KIconColors* k_iconcolors_new2(void* color);
 ///
 /// @param palette QPalette*
 ///
-KIconColors* k_iconcolors_new3(void* palette);
+KIconColors* k_iconcolors_new3(const void* palette);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html)
 
@@ -36,131 +36,131 @@ KIconColors* k_iconcolors_new3(void* palette);
 ///
 /// @param other KIconColors*
 ///
-KIconColors* k_iconcolors_new4(void* other);
+KIconColors* k_iconcolors_new4(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#operator-eq)
 ///
 /// @param self KIconColors*
 /// @param other KIconColors*
 ///
-void k_iconcolors_operator_assign(void* self, void* other);
+void k_iconcolors_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#text)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_text(void* self);
+QColor* k_iconcolors_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#highlight)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_highlight(void* self);
+QColor* k_iconcolors_highlight(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#highlightedText)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_highlighted_text(void* self);
+QColor* k_iconcolors_highlighted_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#accent)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_accent(void* self);
+QColor* k_iconcolors_accent(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#background)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_background(void* self);
+QColor* k_iconcolors_background(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#neutralText)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_neutral_text(void* self);
+QColor* k_iconcolors_neutral_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#positiveText)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_positive_text(void* self);
+QColor* k_iconcolors_positive_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#negativeText)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_negative_text(void* self);
+QColor* k_iconcolors_negative_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#activeText)
 ///
-/// @param self KIconColors*
+/// @param self const KIconColors*
 ///
-QColor* k_iconcolors_active_text(void* self);
+QColor* k_iconcolors_active_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_text(void* self, void* color);
+void k_iconcolors_set_text(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setHighlight)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_highlight(void* self, void* color);
+void k_iconcolors_set_highlight(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setHighlightedText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_highlighted_text(void* self, void* color);
+void k_iconcolors_set_highlighted_text(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setAccent)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_accent(void* self, void* color);
+void k_iconcolors_set_accent(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setBackground)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_background(void* self, void* color);
+void k_iconcolors_set_background(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setNeutralText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_neutral_text(void* self, void* color);
+void k_iconcolors_set_neutral_text(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setPositiveText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_positive_text(void* self, void* color);
+void k_iconcolors_set_positive_text(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setNegativeText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_negative_text(void* self, void* color);
+void k_iconcolors_set_negative_text(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#setActiveText)
 ///
 /// @param self KIconColors*
 /// @param color QColor*
 ///
-void k_iconcolors_set_active_text(void* self, void* color);
+void k_iconcolors_set_active_text(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kiconcolors.html#dtor.KIconColors)
 ///

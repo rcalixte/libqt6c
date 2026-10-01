@@ -20,71 +20,71 @@ KServiceAction* k_serviceaction_new();
 ///
 /// @param other KServiceAction*
 ///
-KServiceAction* k_serviceaction_new2(void* other);
+KServiceAction* k_serviceaction_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#operator-eq)
 ///
 /// @param self KServiceAction*
 /// @param other KServiceAction*
 ///
-void k_serviceaction_operator_assign(void* self, void* other);
+void k_serviceaction_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#setData)
 ///
 /// @param self KServiceAction*
 /// @param userData QVariant*
 ///
-void k_serviceaction_set_data(void* self, void* userData);
+void k_serviceaction_set_data(void* self, const void* userData);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#data)
 ///
-/// @param self KServiceAction*
+/// @param self const KServiceAction*
 ///
-QVariant* k_serviceaction_data(void* self);
+QVariant* k_serviceaction_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KServiceAction*
+/// @param self const KServiceAction*
 ///
-const char* k_serviceaction_name(void* self);
+const char* k_serviceaction_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KServiceAction*
+/// @param self const KServiceAction*
 ///
-const char* k_serviceaction_text(void* self);
+const char* k_serviceaction_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#icon)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KServiceAction*
+/// @param self const KServiceAction*
 ///
-const char* k_serviceaction_icon(void* self);
+const char* k_serviceaction_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#exec)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KServiceAction*
+/// @param self const KServiceAction*
 ///
-const char* k_serviceaction_exec(void* self);
+const char* k_serviceaction_exec(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#noDisplay)
 ///
-/// @param self KServiceAction*
+/// @param self const KServiceAction*
 ///
-bool k_serviceaction_no_display(void* self);
+bool k_serviceaction_no_display(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#isSeparator)
 ///
-/// @param self KServiceAction*
+/// @param self const KServiceAction*
 ///
-bool k_serviceaction_is_separator(void* self);
+bool k_serviceaction_is_separator(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kserviceaction.html#dtor.KServiceAction)
 ///

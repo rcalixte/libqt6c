@@ -28,10 +28,6 @@ void q_gesturerecognizer_on_recognize(void* self, int32_t (*callback)(void*, voi
     QGestureRecognizer_OnRecognize((QGestureRecognizer*)self, (intptr_t)callback);
 }
 
-int32_t q_gesturerecognizer_super_recognize(void* self, void* state, void* watched, void* event) {
-    return QGestureRecognizer_SuperRecognize((QGestureRecognizer*)self, (QGesture*)state, (QObject*)watched, (QEvent*)event);
-}
-
 void q_gesturerecognizer_reset(void* self, void* state) {
     QGestureRecognizer_Reset((QGestureRecognizer*)self, (QGesture*)state);
 }
@@ -52,7 +48,7 @@ void q_gesturerecognizer_unregister_recognizer(int32_t type) {
     QGestureRecognizer_UnregisterRecognizer(type);
 }
 
-void q_gesturerecognizer_operator_assign(void* self, void* param1) {
+void q_gesturerecognizer_operator_assign(void* self, const void* param1) {
     QGestureRecognizer_OperatorAssign((QGestureRecognizer*)self, (QGestureRecognizer*)param1);
 }
 

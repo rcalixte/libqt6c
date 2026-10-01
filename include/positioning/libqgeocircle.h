@@ -20,7 +20,7 @@ QGeoCircle* q_geocircle_new();
 ///
 /// @param center QGeoCoordinate*
 ///
-QGeoCircle* q_geocircle_new2(void* center);
+QGeoCircle* q_geocircle_new2(const void* center);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html)
 
@@ -28,7 +28,7 @@ QGeoCircle* q_geocircle_new2(void* center);
 ///
 /// @param other QGeoCircle*
 ///
-QGeoCircle* q_geocircle_new3(void* other);
+QGeoCircle* q_geocircle_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html)
 
@@ -36,7 +36,7 @@ QGeoCircle* q_geocircle_new3(void* other);
 ///
 /// @param other QGeoShape*
 ///
-QGeoCircle* q_geocircle_new4(void* other);
+QGeoCircle* q_geocircle_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html)
 
@@ -45,27 +45,27 @@ QGeoCircle* q_geocircle_new4(void* other);
 /// @param center QGeoCoordinate*
 /// @param radius double
 ///
-QGeoCircle* q_geocircle_new5(void* center, double radius);
+QGeoCircle* q_geocircle_new5(const void* center, double radius);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#operator-eq)
 ///
 /// @param self QGeoCircle*
 /// @param other QGeoCircle*
 ///
-void q_geocircle_operator_assign(void* self, void* other);
+void q_geocircle_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#setCenter)
 ///
 /// @param self QGeoCircle*
 /// @param center QGeoCoordinate*
 ///
-void q_geocircle_set_center(void* self, void* center);
+void q_geocircle_set_center(void* self, const void* center);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#center)
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 ///
-QGeoCoordinate* q_geocircle_center(void* self);
+QGeoCoordinate* q_geocircle_center(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#setRadius)
 ///
@@ -76,9 +76,9 @@ void q_geocircle_set_radius(void* self, double radius);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#radius)
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 ///
-double q_geocircle_radius(void* self);
+double q_geocircle_radius(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#translate)
 ///
@@ -90,69 +90,69 @@ void q_geocircle_translate(void* self, double degreesLatitude, double degreesLon
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#translated)
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 /// @param degreesLatitude double
 /// @param degreesLongitude double
 ///
-QGeoCircle* q_geocircle_translated(void* self, double degreesLatitude, double degreesLongitude);
+QGeoCircle* q_geocircle_translated(const void* self, double degreesLatitude, double degreesLongitude);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#extendCircle)
 ///
 /// @param self QGeoCircle*
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geocircle_extend_circle(void* self, void* coordinate);
+void q_geocircle_extend_circle(void* self, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 ///
-const char* q_geocircle_to_string(void* self);
+const char* q_geocircle_to_string(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#type)
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 ///
 /// @return enum QGeoShape__ShapeType
 ///
-int32_t q_geocircle_type(void* self);
+int32_t q_geocircle_type(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#isValid)
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 ///
-bool q_geocircle_is_valid(void* self);
+bool q_geocircle_is_valid(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#isEmpty)
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 ///
-bool q_geocircle_is_empty(void* self);
+bool q_geocircle_is_empty(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#contains)
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 /// @param coordinate QGeoCoordinate*
 ///
-bool q_geocircle_contains(void* self, void* coordinate);
+bool q_geocircle_contains(const void* self, const void* coordinate);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#boundingGeoRectangle)
 ///
-/// @param self QGeoCircle*
+/// @param self const QGeoCircle*
 ///
-QGeoRectangle* q_geocircle_bounding_geo_rectangle(void* self);
+QGeoRectangle* q_geocircle_bounding_geo_rectangle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocircle.html#dtor.QGeoCircle)
 ///

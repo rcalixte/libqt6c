@@ -14,7 +14,7 @@
 ///
 /// @param other LayerShellQt__Shell*
 ///
-LayerShellQt__Shell* k_layershellqt__shell_new(void* other);
+LayerShellQt__Shell* k_layershellqt__shell_new(const void* other);
 
 /// [Upstream resources](https://invent.kde.org/plasma/layer-shell-qt)
 

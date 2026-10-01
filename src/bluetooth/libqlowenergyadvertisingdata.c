@@ -6,11 +6,11 @@ QLowEnergyAdvertisingData* q_lowenergyadvertisingdata_new() {
     return QLowEnergyAdvertisingData_New();
 }
 
-QLowEnergyAdvertisingData* q_lowenergyadvertisingdata_new2(void* other) {
+QLowEnergyAdvertisingData* q_lowenergyadvertisingdata_new2(const void* other) {
     return QLowEnergyAdvertisingData_New2((QLowEnergyAdvertisingData*)other);
 }
 
-void q_lowenergyadvertisingdata_operator_assign(void* self, void* other) {
+void q_lowenergyadvertisingdata_operator_assign(void* self, const void* other) {
     QLowEnergyAdvertisingData_OperatorAssign((QLowEnergyAdvertisingData*)self, (QLowEnergyAdvertisingData*)other);
 }
 
@@ -18,7 +18,7 @@ void q_lowenergyadvertisingdata_set_local_name(void* self, const char* name) {
     QLowEnergyAdvertisingData_SetLocalName((QLowEnergyAdvertisingData*)self, qstring(name));
 }
 
-const char* q_lowenergyadvertisingdata_local_name(void* self) {
+const char* q_lowenergyadvertisingdata_local_name(const void* self) {
     libqt_string _str = QLowEnergyAdvertisingData_LocalName((QLowEnergyAdvertisingData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -33,11 +33,11 @@ void q_lowenergyadvertisingdata_set_manufacturer_data(void* self, uint16_t id, c
     QLowEnergyAdvertisingData_SetManufacturerData((QLowEnergyAdvertisingData*)self, id, qstring(data));
 }
 
-uint16_t q_lowenergyadvertisingdata_manufacturer_id(void* self) {
+uint16_t q_lowenergyadvertisingdata_manufacturer_id(const void* self) {
     return QLowEnergyAdvertisingData_ManufacturerId((QLowEnergyAdvertisingData*)self);
 }
 
-char* q_lowenergyadvertisingdata_manufacturer_data(void* self) {
+char* q_lowenergyadvertisingdata_manufacturer_data(const void* self) {
     libqt_string _str = QLowEnergyAdvertisingData_ManufacturerData((QLowEnergyAdvertisingData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -48,7 +48,7 @@ void q_lowenergyadvertisingdata_set_include_power_level(void* self, bool doInclu
     QLowEnergyAdvertisingData_SetIncludePowerLevel((QLowEnergyAdvertisingData*)self, doInclude);
 }
 
-bool q_lowenergyadvertisingdata_include_power_level(void* self) {
+bool q_lowenergyadvertisingdata_include_power_level(const void* self) {
     return QLowEnergyAdvertisingData_IncludePowerLevel((QLowEnergyAdvertisingData*)self);
 }
 
@@ -56,7 +56,7 @@ void q_lowenergyadvertisingdata_set_discoverability(void* self, int32_t mode) {
     QLowEnergyAdvertisingData_SetDiscoverability((QLowEnergyAdvertisingData*)self, mode);
 }
 
-int32_t q_lowenergyadvertisingdata_discoverability(void* self) {
+int32_t q_lowenergyadvertisingdata_discoverability(const void* self) {
     return QLowEnergyAdvertisingData_Discoverability((QLowEnergyAdvertisingData*)self);
 }
 
@@ -64,7 +64,7 @@ void q_lowenergyadvertisingdata_set_services(void* self, libqt_list /* of QBluet
     QLowEnergyAdvertisingData_SetServices((QLowEnergyAdvertisingData*)self, services);
 }
 
-libqt_list /* of QBluetoothUuid* */ q_lowenergyadvertisingdata_services(void* self) {
+libqt_list /* of QBluetoothUuid* */ q_lowenergyadvertisingdata_services(const void* self) {
     libqt_list _arr = QLowEnergyAdvertisingData_Services((QLowEnergyAdvertisingData*)self);
     return _arr;
 }
@@ -73,7 +73,7 @@ void q_lowenergyadvertisingdata_set_raw_data(void* self, char* data) {
     QLowEnergyAdvertisingData_SetRawData((QLowEnergyAdvertisingData*)self, qstring(data));
 }
 
-char* q_lowenergyadvertisingdata_raw_data(void* self) {
+char* q_lowenergyadvertisingdata_raw_data(const void* self) {
     libqt_string _str = QLowEnergyAdvertisingData_RawData((QLowEnergyAdvertisingData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

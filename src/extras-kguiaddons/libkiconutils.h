@@ -16,21 +16,21 @@
 /// @param overlay QIcon*
 /// @param position enum Qt__Corner
 ///
-QIcon* k_iconutils_add_overlay(void* icon, void* overlay, int32_t position);
+QIcon* k_iconutils_add_overlay(const void* icon, const void* overlay, int32_t position);
 
 /// [Upstream resources](https://api.kde.org/kiconutils.html#addOverlays)
 ///
 /// @param icon QIcon*
 /// @param overlays libqt_map of enum Qt__Corner to QIcon*
 ///
-QIcon* k_iconutils_add_overlays(void* icon, libqt_map overlays);
+QIcon* k_iconutils_add_overlays(const void* icon, libqt_map overlays);
 
 /// [Upstream resources](https://api.kde.org/kiconutils.html#addOverlays)
 ///
 /// @param icon QIcon*
 /// @param overlays const char**
 ///
-QIcon* k_iconutils_add_overlays2(void* icon, const char* overlays[static 1]);
+QIcon* k_iconutils_add_overlays2(const void* icon, const char* overlays[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kiconutils.html#addOverlays)
 ///

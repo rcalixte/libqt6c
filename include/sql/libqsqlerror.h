@@ -20,7 +20,7 @@ QSqlError* q_sqlerror_new();
 ///
 /// @param other QSqlError*
 ///
-QSqlError* q_sqlerror_new2(void* other);
+QSqlError* q_sqlerror_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html)
 
@@ -65,21 +65,21 @@ QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int
 /// @param self QSqlError*
 /// @param other QSqlError*
 ///
-void q_sqlerror_operator_assign(void* self, void* other);
+void q_sqlerror_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#operator-eq-eq)
 ///
-/// @param self QSqlError*
+/// @param self const QSqlError*
 /// @param other QSqlError*
 ///
-bool q_sqlerror_operator_equal(void* self, void* other);
+bool q_sqlerror_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#operator-not-eq)
 ///
-/// @param self QSqlError*
+/// @param self const QSqlError*
 /// @param other QSqlError*
 ///
-bool q_sqlerror_operator_not_equal(void* self, void* other);
+bool q_sqlerror_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#swap)
 ///
@@ -92,47 +92,47 @@ void q_sqlerror_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlError*
+/// @param self const QSqlError*
 ///
-const char* q_sqlerror_driver_text(void* self);
+const char* q_sqlerror_driver_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#databaseText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlError*
+/// @param self const QSqlError*
 ///
-const char* q_sqlerror_database_text(void* self);
+const char* q_sqlerror_database_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#type)
 ///
-/// @param self QSqlError*
+/// @param self const QSqlError*
 ///
 /// @return enum QSqlError__ErrorType
 ///
-int32_t q_sqlerror_type(void* self);
+int32_t q_sqlerror_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#nativeErrorCode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlError*
+/// @param self const QSqlError*
 ///
-const char* q_sqlerror_native_error_code(void* self);
+const char* q_sqlerror_native_error_code(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlError*
+/// @param self const QSqlError*
 ///
-const char* q_sqlerror_text(void* self);
+const char* q_sqlerror_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#isValid)
 ///
-/// @param self QSqlError*
+/// @param self const QSqlError*
 ///
-bool q_sqlerror_is_valid(void* self);
+bool q_sqlerror_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlerror.html#dtor.QSqlError)
 ///

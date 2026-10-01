@@ -67,7 +67,7 @@ void QAudioDecoder_PositionChanged(QAudioDecoder* self, long long position);
 void QAudioDecoder_Connect_PositionChanged(QAudioDecoder* self, intptr_t slot);
 void QAudioDecoder_DurationChanged(QAudioDecoder* self, long long duration);
 void QAudioDecoder_Connect_DurationChanged(QAudioDecoder* self, intptr_t slot);
-void QAudioDecoder_OnMetaObject(const QAudioDecoder* self, intptr_t slot);
+void QAudioDecoder_OnMetaObject(QAudioDecoder* self, intptr_t slot);
 QMetaObject* QAudioDecoder_SuperMetaObject(const QAudioDecoder* self);
 void QAudioDecoder_OnMetacast(QAudioDecoder* self, intptr_t slot);
 void* QAudioDecoder_SuperMetacast(QAudioDecoder* self, const char* param1);
@@ -95,17 +95,9 @@ void QAudioDecoder_DisconnectNotify(QAudioDecoder* self, const QMetaMethod* sign
 void QAudioDecoder_OnDisconnectNotify(QAudioDecoder* self, intptr_t slot);
 void QAudioDecoder_SuperDisconnectNotify(QAudioDecoder* self, const QMetaMethod* signal);
 QObject* QAudioDecoder_Sender(const QAudioDecoder* self);
-void QAudioDecoder_OnSender(const QAudioDecoder* self, intptr_t slot);
-QObject* QAudioDecoder_SuperSender(const QAudioDecoder* self);
 int QAudioDecoder_SenderSignalIndex(const QAudioDecoder* self);
-void QAudioDecoder_OnSenderSignalIndex(const QAudioDecoder* self, intptr_t slot);
-int QAudioDecoder_SuperSenderSignalIndex(const QAudioDecoder* self);
 int QAudioDecoder_Receivers(const QAudioDecoder* self, const char* signal);
-void QAudioDecoder_OnReceivers(const QAudioDecoder* self, intptr_t slot);
-int QAudioDecoder_SuperReceivers(const QAudioDecoder* self, const char* signal);
 bool QAudioDecoder_IsSignalConnected(const QAudioDecoder* self, const QMetaMethod* signal);
-void QAudioDecoder_OnIsSignalConnected(const QAudioDecoder* self, intptr_t slot);
-bool QAudioDecoder_SuperIsSignalConnected(const QAudioDecoder* self, const QMetaMethod* signal);
 void QAudioDecoder_Delete(QAudioDecoder* self);
 
 #ifdef __cplusplus

@@ -7,67 +7,67 @@ TextAutoCorrectionCore__AutoCorrectionSettings* k_textautocorrectioncore__autoco
     return TextAutoCorrectionCore__AutoCorrectionSettings_New();
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_enabled_auto_correction(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_enabled_auto_correction(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsEnabledAutoCorrection((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_uppercase_first_char_of_sentence(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_uppercase_first_char_of_sentence(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsUppercaseFirstCharOfSentence((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_fix_two_uppercase_chars(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_fix_two_uppercase_chars(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsFixTwoUppercaseChars((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_single_spaces(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_single_spaces(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsSingleSpaces((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_auto_fractions(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_auto_fractions(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsAutoFractions((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_capitalize_week_days(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_capitalize_week_days(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsCapitalizeWeekDays((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_replace_double_quotes(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_replace_double_quotes(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsReplaceDoubleQuotes((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_replace_single_quotes(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_replace_single_quotes(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsReplaceSingleQuotes((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_advanced_autocorrect(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_advanced_autocorrect(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsAdvancedAutocorrect((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_auto_format_url(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_auto_format_url(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsAutoFormatUrl((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_auto_bold_underline(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_auto_bold_underline(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsAutoBoldUnderline((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_super_script(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_super_script(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsSuperScript((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_add_non_breaking_space(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_add_non_breaking_space(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsAddNonBreakingSpace((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_replace_double_quotes_by_french_quotes(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_replace_double_quotes_by_french_quotes(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsReplaceDoubleQuotesByFrenchQuotes((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionsettings_typographic_single_quotes(void* self) {
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionsettings_typographic_single_quotes(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_TypographicSingleQuotes((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionsettings_typographic_double_quotes(void* self) {
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionsettings_typographic_double_quotes(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_TypographicDoubleQuotes((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
@@ -151,11 +151,11 @@ void k_textautocorrectioncore__autocorrectionsettings_set_two_upper_letter_excep
     TextAutoCorrectionCore__AutoCorrectionSettings_SetTwoUpperLetterExceptions((TextAutoCorrectionCore__AutoCorrectionSettings*)self, exceptions);
 }
 
-libqt_list /* set of const char* */ k_textautocorrectioncore__autocorrectionsettings_upper_case_exceptions(void* self) {
+libqt_list /* set of const char* */ k_textautocorrectioncore__autocorrectionsettings_upper_case_exceptions(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_UpperCaseExceptions((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-libqt_list /* set of const char* */ k_textautocorrectioncore__autocorrectionsettings_two_upper_letter_exceptions(void* self) {
+libqt_list /* set of const char* */ k_textautocorrectioncore__autocorrectionsettings_two_upper_letter_exceptions(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_TwoUpperLetterExceptions((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
@@ -163,14 +163,14 @@ void k_textautocorrectioncore__autocorrectionsettings_set_language(void* self, c
     TextAutoCorrectionCore__AutoCorrectionSettings_SetLanguage((TextAutoCorrectionCore__AutoCorrectionSettings*)self, qstring(lang));
 }
 
-const char* k_textautocorrectioncore__autocorrectionsettings_language(void* self) {
+const char* k_textautocorrectioncore__autocorrectionsettings_language(const void* self) {
     libqt_string _str = TextAutoCorrectionCore__AutoCorrectionSettings_Language((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_textautocorrectioncore__autocorrectionsettings_is_french_language(void* self) {
+bool k_textautocorrectioncore__autocorrectionsettings_is_french_language(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_IsFrenchLanguage((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
@@ -202,7 +202,7 @@ void k_textautocorrectioncore__autocorrectionsettings_set_autocorrect_entries(vo
     free(entries_ret.values);
 }
 
-libqt_map /* of const char* to const char* */ k_textautocorrectioncore__autocorrectionsettings_autocorrect_entries(void* self) {
+libqt_map /* of const char* to const char* */ k_textautocorrectioncore__autocorrectionsettings_autocorrect_entries(const void* self) {
     // Convert QHash<QString,QString> to libqt_map
     libqt_map _out = TextAutoCorrectionCore__AutoCorrectionSettings_AutocorrectEntries((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
     libqt_map _ret;
@@ -261,15 +261,15 @@ bool k_textautocorrectioncore__autocorrectionsettings_add_auto_correct(void* sel
     return TextAutoCorrectionCore__AutoCorrectionSettings_AddAutoCorrect((TextAutoCorrectionCore__AutoCorrectionSettings*)self, qstring(currentWord), qstring(replaceWord));
 }
 
-QChar* k_textautocorrectioncore__autocorrectionsettings_non_breaking_space(void* self) {
+QChar* k_textautocorrectioncore__autocorrectionsettings_non_breaking_space(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_NonBreakingSpace((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-void k_textautocorrectioncore__autocorrectionsettings_set_non_breaking_space(void* self, void* newNonBreakingSpace) {
+void k_textautocorrectioncore__autocorrectionsettings_set_non_breaking_space(void* self, const void* newNonBreakingSpace) {
     TextAutoCorrectionCore__AutoCorrectionSettings_SetNonBreakingSpace((TextAutoCorrectionCore__AutoCorrectionSettings*)self, (QChar*)newNonBreakingSpace);
 }
 
-libqt_map /* of const char* to const char* */ k_textautocorrectioncore__autocorrectionsettings_super_script_entries(void* self) {
+libqt_map /* of const char* to const char* */ k_textautocorrectioncore__autocorrectionsettings_super_script_entries(const void* self) {
     // Convert QHash<QString,QString> to libqt_map
     libqt_map _out = TextAutoCorrectionCore__AutoCorrectionSettings_SuperScriptEntries((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
     libqt_map _ret;
@@ -356,11 +356,11 @@ void k_textautocorrectioncore__autocorrectionsettings_write_auto_correction_file
     TextAutoCorrectionCore__AutoCorrectionSettings_WriteAutoCorrectionFile((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-int32_t k_textautocorrectioncore__autocorrectionsettings_max_find_string_length(void* self) {
+int32_t k_textautocorrectioncore__autocorrectionsettings_max_find_string_length(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_MaxFindStringLength((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-int32_t k_textautocorrectioncore__autocorrectionsettings_min_find_string_length(void* self) {
+int32_t k_textautocorrectioncore__autocorrectionsettings_min_find_string_length(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_MinFindStringLength((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
@@ -372,15 +372,15 @@ void k_textautocorrectioncore__autocorrectionsettings_load_global_file_name(void
     TextAutoCorrectionCore__AutoCorrectionSettings_LoadGlobalFileName((TextAutoCorrectionCore__AutoCorrectionSettings*)self, qstring(fname));
 }
 
-TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionsettings_double_french_quotes(void* self) {
+TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrectioncore__autocorrectionsettings_double_french_quotes(const void* self) {
     return TextAutoCorrectionCore__AutoCorrectionSettings_DoubleFrenchQuotes((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
 }
 
-void k_textautocorrectioncore__autocorrectionsettings_set_double_french_quotes(void* self, void* newDoubleFrenchQuotes) {
+void k_textautocorrectioncore__autocorrectionsettings_set_double_french_quotes(void* self, const void* newDoubleFrenchQuotes) {
     TextAutoCorrectionCore__AutoCorrectionSettings_SetDoubleFrenchQuotes((TextAutoCorrectionCore__AutoCorrectionSettings*)self, (TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes*)newDoubleFrenchQuotes);
 }
 
-const char* k_textautocorrectioncore__autocorrectionsettings_custom_writable_path(void* self) {
+const char* k_textautocorrectioncore__autocorrectionsettings_custom_writable_path(const void* self) {
     libqt_string _str = TextAutoCorrectionCore__AutoCorrectionSettings_CustomWritablePath((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -391,7 +391,7 @@ void k_textautocorrectioncore__autocorrectionsettings_set_custom_writable_path(v
     TextAutoCorrectionCore__AutoCorrectionSettings_SetCustomWritablePath((TextAutoCorrectionCore__AutoCorrectionSettings*)self, qstring(path));
 }
 
-const char* k_textautocorrectioncore__autocorrectionsettings_custom_system_path(void* self) {
+const char* k_textautocorrectioncore__autocorrectionsettings_custom_system_path(const void* self) {
     libqt_string _str = TextAutoCorrectionCore__AutoCorrectionSettings_CustomSystemPath((TextAutoCorrectionCore__AutoCorrectionSettings*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

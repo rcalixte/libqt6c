@@ -31,11 +31,11 @@ void q_cryptographichash_reset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#algorithm)
 ///
-/// @param self QCryptographicHash*
+/// @param self const QCryptographicHash*
 ///
 /// @return enum QCryptographicHash__Algorithm
 ///
-int32_t q_cryptographichash_algorithm(void* self);
+int32_t q_cryptographichash_algorithm(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
 ///
@@ -63,17 +63,17 @@ bool q_cryptographichash_add_data3(void* self, void* device);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCryptographicHash*
+/// @param self const QCryptographicHash*
 ///
-char* q_cryptographichash_result(void* self);
+char* q_cryptographichash_result(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#resultView)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QCryptographicHash*
+/// @param self const QCryptographicHash*
 ///
-char* q_cryptographichash_result_view(void* self);
+char* q_cryptographichash_result_view(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#hash)
 ///

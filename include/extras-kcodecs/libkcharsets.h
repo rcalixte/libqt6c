@@ -41,7 +41,7 @@ QChar* k_charsets_from_entity2(const char* str, int* lenVal);
 ///
 /// @param ch QChar*
 ///
-const char* k_charsets_to_entity(void* ch);
+const char* k_charsets_to_entity(const void* ch);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#resolveEntities)
 ///
@@ -55,43 +55,43 @@ const char* k_charsets_resolve_entities(const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCharsets*
+/// @param self const KCharsets*
 ///
-const char** k_charsets_available_encoding_names(void* self);
+const char** k_charsets_available_encoding_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#descriptiveEncodingNames)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KCharsets*
+/// @param self const KCharsets*
 ///
-const char** k_charsets_descriptive_encoding_names(void* self);
+const char** k_charsets_descriptive_encoding_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#encodingsByScript)
 ///
-/// @param self KCharsets*
+/// @param self const KCharsets*
 ///
 /// @return libqt_list of const char**
 ///
-libqt_list k_charsets_encodings_by_script(void* self);
+libqt_list k_charsets_encodings_by_script(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#descriptionForEncoding)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCharsets*
+/// @param self const KCharsets*
 /// @param encoding const char*
 ///
-const char* k_charsets_description_for_encoding(void* self, const char* encoding);
+const char* k_charsets_description_for_encoding(const void* self, const char* encoding);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#encodingForName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KCharsets*
+/// @param self const KCharsets*
 /// @param descriptiveName const char*
 ///
-const char* k_charsets_encoding_for_name(void* self, const char* descriptiveName);
+const char* k_charsets_encoding_for_name(const void* self, const char* descriptiveName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

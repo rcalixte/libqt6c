@@ -20,7 +20,7 @@ KTextEditor__LineRange* k_texteditor__linerange_new();
 ///
 /// @param other KTextEditor__LineRange*
 ///
-KTextEditor__LineRange* k_texteditor__linerange_new2(void* other);
+KTextEditor__LineRange* k_texteditor__linerange_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html)
 
@@ -45,7 +45,7 @@ KTextEditor__LineRange* k_texteditor__linerange_new4(int start, int end);
 ///
 /// @param param1 KTextEditor__LineRange*
 ///
-KTextEditor__LineRange* k_texteditor__linerange_new5(void* param1);
+KTextEditor__LineRange* k_texteditor__linerange_new5(const void* param1);
 
 /// k_texteditor__linerange_copy_assign shallow copies `other` into `self`.
 ///
@@ -63,9 +63,9 @@ void k_texteditor__linerange_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#isValid)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 ///
-bool k_texteditor__linerange_is_valid(void* self);
+bool k_texteditor__linerange_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#invalid)
 ///
@@ -75,9 +75,9 @@ KTextEditor__LineRange* k_texteditor__linerange_invalid();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 ///
-const char* k_texteditor__linerange_to_string(void* self);
+const char* k_texteditor__linerange_to_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#fromString)
 ///
@@ -87,15 +87,15 @@ KTextEditor__LineRange* k_texteditor__linerange_from_string(const char* str);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#start)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 ///
-int32_t k_texteditor__linerange_start(void* self);
+int32_t k_texteditor__linerange_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#end)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 ///
-int32_t k_texteditor__linerange_end(void* self);
+int32_t k_texteditor__linerange_end(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#setRange)
 ///
@@ -149,57 +149,57 @@ bool k_texteditor__linerange_confine_to_range(void* self, void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#onSingleLine)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 ///
-bool k_texteditor__linerange_on_single_line(void* self);
+bool k_texteditor__linerange_on_single_line(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#numberOfLines)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 ///
-int32_t k_texteditor__linerange_number_of_lines(void* self);
+int32_t k_texteditor__linerange_number_of_lines(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#contains)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 ///
-bool k_texteditor__linerange_contains(void* self, void* range);
+bool k_texteditor__linerange_contains(const void* self, void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#containsLine)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 /// @param line int
 ///
-bool k_texteditor__linerange_contains_line(void* self, int line);
+bool k_texteditor__linerange_contains_line(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#overlaps)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 ///
-bool k_texteditor__linerange_overlaps(void* self, void* range);
+bool k_texteditor__linerange_overlaps(const void* self, void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#overlapsLine)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 /// @param line int
 ///
-bool k_texteditor__linerange_overlaps_line(void* self, int line);
+bool k_texteditor__linerange_overlaps_line(const void* self, int line);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#intersect)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 ///
-KTextEditor__LineRange* k_texteditor__linerange_intersect(void* self, void* range);
+KTextEditor__LineRange* k_texteditor__linerange_intersect(const void* self, void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#encompass)
 ///
-/// @param self KTextEditor__LineRange*
+/// @param self const KTextEditor__LineRange*
 /// @param range KTextEditor__LineRange*
 ///
-KTextEditor__LineRange* k_texteditor__linerange_encompass(void* self, void* range);
+KTextEditor__LineRange* k_texteditor__linerange_encompass(const void* self, void* range);
 
 /// Delete this object from C++ memory.
 ///

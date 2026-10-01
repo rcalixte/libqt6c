@@ -26,7 +26,7 @@ void q_qplugin_q_register_static_plugin_function(void* staticPlugin);
 ///
 /// @param other QStaticPlugin*
 ///
-QStaticPlugin* q_staticplugin_new(void* other);
+QStaticPlugin* q_staticplugin_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html)
 
@@ -42,7 +42,7 @@ QStaticPlugin* q_staticplugin_new2(void* other);
 ///
 /// @param param1 QStaticPlugin*
 ///
-QStaticPlugin* q_staticplugin_new3(void* param1);
+QStaticPlugin* q_staticplugin_new3(const void* param1);
 
 /// q_staticplugin_copy_assign shallow copies `other` into `self`.
 ///
@@ -60,11 +60,11 @@ void q_staticplugin_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html#instance-var)
 ///
-/// @param self QStaticPlugin*
+/// @param self const QStaticPlugin*
 ///
 /// @return QObject* (*QObject__void__Function)()
 ///
-QObject__void__Function q_staticplugin_instance(void* self);
+QObject__void__Function q_staticplugin_instance(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html#instance-var)
 ///
@@ -75,9 +75,9 @@ void q_staticplugin_set_instance(void* self, QObject* (*instance)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html#metaData)
 ///
-/// @param self QStaticPlugin*
+/// @param self const QStaticPlugin*
 ///
-QJsonObject* q_staticplugin_meta_data(void* self);
+QJsonObject* q_staticplugin_meta_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html#dtor.QStaticPlugin)
 ///

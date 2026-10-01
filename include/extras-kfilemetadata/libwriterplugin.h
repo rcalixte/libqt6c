@@ -18,26 +18,26 @@ KFileMetaData__WriterPlugin* k_filemetadata__writerplugin_new(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-const QMetaObject* k_filemetadata__writerplugin_meta_object(void* self);
+const QMetaObject* k_filemetadata__writerplugin_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileMetaData__WriterPlugin*
-/// @param callback const QMetaObject* func()
+/// @param self const KFileMetaData__WriterPlugin*
+/// @param callback const QMetaObject* func(const KFileMetaData__WriterPlugin* self)
 ///
-void k_filemetadata__writerplugin_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_filemetadata__writerplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-const QMetaObject* k_filemetadata__writerplugin_super_meta_object(void* self);
+const QMetaObject* k_filemetadata__writerplugin_super_meta_object(const void* self);
 
 /// @param self KFileMetaData__WriterPlugin*
 /// @param param1 const char*
@@ -91,35 +91,31 @@ const char* k_filemetadata__writerplugin_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writerplugin.html#writeMimetypes)
 ///
+/// @warning This method must be implemented with `k_filemetadata__writerplugin_on_write_mimetypes` before it can be called.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-const char** k_filemetadata__writerplugin_write_mimetypes(void* self);
+const char** k_filemetadata__writerplugin_write_mimetypes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writerplugin.html#writeMimetypes)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFileMetaData__WriterPlugin*
-/// @param callback const char** func()
+/// @param self const KFileMetaData__WriterPlugin*
+/// @param callback const char** func(const KFileMetaData__WriterPlugin* self)
 ///
-void k_filemetadata__writerplugin_on_write_mimetypes(void* self, const char** (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kfilemetadata-writerplugin.html#writeMimetypes)
-///
-/// Base class method implementation
-///
-/// @param self KFileMetaData__WriterPlugin*
-///
-const char** k_filemetadata__writerplugin_super_write_mimetypes(void* self);
+void k_filemetadata__writerplugin_on_write_mimetypes(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writerplugin.html#write)
+///
+/// @warning This method must be implemented with `k_filemetadata__writerplugin_on_write` before it can be called.
 ///
 /// @param self KFileMetaData__WriterPlugin*
 /// @param data KFileMetaData__WriteData*
 ///
-void k_filemetadata__writerplugin_write(void* self, void* data);
+void k_filemetadata__writerplugin_write(void* self, const void* data);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writerplugin.html#write)
 ///
@@ -128,16 +124,7 @@ void k_filemetadata__writerplugin_write(void* self, void* data);
 /// @param self KFileMetaData__WriterPlugin*
 /// @param callback void func(KFileMetaData__WriterPlugin* self, KFileMetaData__WriteData* data)
 ///
-void k_filemetadata__writerplugin_on_write(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kfilemetadata-writerplugin.html#write)
-///
-/// Base class method implementation
-///
-/// @param self KFileMetaData__WriterPlugin*
-/// @param data KFileMetaData__WriteData*
-///
-void k_filemetadata__writerplugin_super_write(void* self, void* data);
+void k_filemetadata__writerplugin_on_write(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -164,9 +151,9 @@ const char* k_filemetadata__writerplugin_tr3(const char* s, const char* c, int n
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-const char* k_filemetadata__writerplugin_object_name(void* self);
+const char* k_filemetadata__writerplugin_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -181,33 +168,33 @@ void k_filemetadata__writerplugin_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-bool k_filemetadata__writerplugin_is_widget_type(void* self);
+bool k_filemetadata__writerplugin_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-bool k_filemetadata__writerplugin_is_window_type(void* self);
+bool k_filemetadata__writerplugin_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-bool k_filemetadata__writerplugin_is_quick_item_type(void* self);
+bool k_filemetadata__writerplugin_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-bool k_filemetadata__writerplugin_signals_blocked(void* self);
+bool k_filemetadata__writerplugin_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -222,9 +209,9 @@ bool k_filemetadata__writerplugin_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-QThread* k_filemetadata__writerplugin_thread(void* self);
+QThread* k_filemetadata__writerplugin_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -275,11 +262,11 @@ void k_filemetadata__writerplugin_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_filemetadata__writerplugin_children(void* self);
+libqt_list k_filemetadata__writerplugin_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -317,7 +304,7 @@ void k_filemetadata__writerplugin_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_filemetadata__writerplugin_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_filemetadata__writerplugin_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -328,18 +315,18 @@ QMetaObject__Connection* k_filemetadata__writerplugin_connect(void* sender, cons
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_filemetadata__writerplugin_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_filemetadata__writerplugin_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_filemetadata__writerplugin_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_filemetadata__writerplugin_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -350,7 +337,7 @@ QMetaObject__Connection* k_filemetadata__writerplugin_connect3(void* self, void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_filemetadata__writerplugin_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_filemetadata__writerplugin_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -361,24 +348,24 @@ bool k_filemetadata__writerplugin_disconnect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_filemetadata__writerplugin_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_filemetadata__writerplugin_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-bool k_filemetadata__writerplugin_disconnect3(void* self);
+bool k_filemetadata__writerplugin_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param receiver QObject*
 ///
-bool k_filemetadata__writerplugin_disconnect4(void* self, void* receiver);
+bool k_filemetadata__writerplugin_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -386,23 +373,23 @@ bool k_filemetadata__writerplugin_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_filemetadata__writerplugin_disconnect5(void* param1);
+bool k_filemetadata__writerplugin_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-void k_filemetadata__writerplugin_dump_object_tree(void* self);
+void k_filemetadata__writerplugin_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-void k_filemetadata__writerplugin_dump_object_info(void* self);
+void k_filemetadata__writerplugin_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -412,16 +399,16 @@ void k_filemetadata__writerplugin_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_filemetadata__writerplugin_set_property(void* self, const char* name, void* value);
+bool k_filemetadata__writerplugin_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param name const char*
 ///
-QVariant* k_filemetadata__writerplugin_property(void* self, const char* name);
+QVariant* k_filemetadata__writerplugin_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -429,9 +416,9 @@ QVariant* k_filemetadata__writerplugin_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-const char** k_filemetadata__writerplugin_dynamic_property_names(void* self);
+const char** k_filemetadata__writerplugin_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -445,9 +432,9 @@ QBindingStorage* k_filemetadata__writerplugin_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-const QBindingStorage* k_filemetadata__writerplugin_binding_storage2(void* self);
+const QBindingStorage* k_filemetadata__writerplugin_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -470,18 +457,18 @@ void k_filemetadata__writerplugin_on_destroyed(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-QObject* k_filemetadata__writerplugin_parent(void* self);
+QObject* k_filemetadata__writerplugin_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param classname const char*
 ///
-bool k_filemetadata__writerplugin_inherits(void* self, const char* classname);
+bool k_filemetadata__writerplugin_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -521,7 +508,7 @@ int32_t k_filemetadata__writerplugin_start_timer23(void* self, int64_t time, int
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_filemetadata__writerplugin_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_filemetadata__writerplugin_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -533,59 +520,59 @@ QMetaObject__Connection* k_filemetadata__writerplugin_connect5(void* sender, con
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_filemetadata__writerplugin_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_filemetadata__writerplugin_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_filemetadata__writerplugin_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_filemetadata__writerplugin_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param signal const char*
 ///
-bool k_filemetadata__writerplugin_disconnect1(void* self, const char* signal);
+bool k_filemetadata__writerplugin_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileMetaData__WriterPlugin*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_filemetadata__writerplugin_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_filemetadata__writerplugin_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_filemetadata__writerplugin_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_filemetadata__writerplugin_disconnect23(void* self, void* receiver, const char* member);
+bool k_filemetadata__writerplugin_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KFileMetaData__WriterPlugin*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_filemetadata__writerplugin_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -781,7 +768,7 @@ void k_filemetadata__writerplugin_on_custom_event(void* self, void (*callback)(v
 /// @param self KFileMetaData__WriterPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_filemetadata__writerplugin_connect_notify(void* self, void* signal);
+void k_filemetadata__writerplugin_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -792,7 +779,7 @@ void k_filemetadata__writerplugin_connect_notify(void* self, void* signal);
 /// @param self KFileMetaData__WriterPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_filemetadata__writerplugin_super_connect_notify(void* self, void* signal);
+void k_filemetadata__writerplugin_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -803,7 +790,7 @@ void k_filemetadata__writerplugin_super_connect_notify(void* self, void* signal)
 /// @param self KFileMetaData__WriterPlugin*
 /// @param callback void func(KFileMetaData__WriterPlugin* self, QMetaMethod* signal)
 ///
-void k_filemetadata__writerplugin_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_filemetadata__writerplugin_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -814,7 +801,7 @@ void k_filemetadata__writerplugin_on_connect_notify(void* self, void (*callback)
 /// @param self KFileMetaData__WriterPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_filemetadata__writerplugin_disconnect_notify(void* self, void* signal);
+void k_filemetadata__writerplugin_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -825,7 +812,7 @@ void k_filemetadata__writerplugin_disconnect_notify(void* self, void* signal);
 /// @param self KFileMetaData__WriterPlugin*
 /// @param signal QMetaMethod*
 ///
-void k_filemetadata__writerplugin_super_disconnect_notify(void* self, void* signal);
+void k_filemetadata__writerplugin_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -836,7 +823,7 @@ void k_filemetadata__writerplugin_super_disconnect_notify(void* self, void* sign
 /// @param self KFileMetaData__WriterPlugin*
 /// @param callback void func(KFileMetaData__WriterPlugin* self, QMetaMethod* signal)
 ///
-void k_filemetadata__writerplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_filemetadata__writerplugin_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -844,9 +831,9 @@ void k_filemetadata__writerplugin_on_disconnect_notify(void* self, void (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-QObject* k_filemetadata__writerplugin_sender(void* self);
+QObject* k_filemetadata__writerplugin_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -854,9 +841,9 @@ QObject* k_filemetadata__writerplugin_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-QObject* k_filemetadata__writerplugin_super_sender(void* self);
+QObject* k_filemetadata__writerplugin_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -864,10 +851,10 @@ QObject* k_filemetadata__writerplugin_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
-/// @param callback QObject* func()
+/// @param self const KFileMetaData__WriterPlugin*
+/// @param callback QObject* func(KFileMetaData__WriterPlugin* self)
 ///
-void k_filemetadata__writerplugin_on_sender(void* self, QObject* (*callback)());
+void k_filemetadata__writerplugin_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -875,9 +862,9 @@ void k_filemetadata__writerplugin_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-int32_t k_filemetadata__writerplugin_sender_signal_index(void* self);
+int32_t k_filemetadata__writerplugin_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -885,9 +872,9 @@ int32_t k_filemetadata__writerplugin_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 ///
-int32_t k_filemetadata__writerplugin_super_sender_signal_index(void* self);
+int32_t k_filemetadata__writerplugin_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -895,10 +882,10 @@ int32_t k_filemetadata__writerplugin_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
-/// @param callback int32_t func()
+/// @param self const KFileMetaData__WriterPlugin*
+/// @param callback int32_t func(KFileMetaData__WriterPlugin* self)
 ///
-void k_filemetadata__writerplugin_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_filemetadata__writerplugin_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -906,10 +893,10 @@ void k_filemetadata__writerplugin_on_sender_signal_index(void* self, int32_t (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param signal const char*
 ///
-int32_t k_filemetadata__writerplugin_receivers(void* self, const char* signal);
+int32_t k_filemetadata__writerplugin_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -917,10 +904,10 @@ int32_t k_filemetadata__writerplugin_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param signal const char*
 ///
-int32_t k_filemetadata__writerplugin_super_receivers(void* self, const char* signal);
+int32_t k_filemetadata__writerplugin_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -928,10 +915,10 @@ int32_t k_filemetadata__writerplugin_super_receivers(void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param callback int32_t func(KFileMetaData__WriterPlugin* self, const char* signal)
 ///
-void k_filemetadata__writerplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_filemetadata__writerplugin_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -939,10 +926,10 @@ void k_filemetadata__writerplugin_on_receivers(void* self, int32_t (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param signal QMetaMethod*
 ///
-bool k_filemetadata__writerplugin_is_signal_connected(void* self, void* signal);
+bool k_filemetadata__writerplugin_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -950,10 +937,10 @@ bool k_filemetadata__writerplugin_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param signal QMetaMethod*
 ///
-bool k_filemetadata__writerplugin_super_is_signal_connected(void* self, void* signal);
+bool k_filemetadata__writerplugin_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -961,10 +948,10 @@ bool k_filemetadata__writerplugin_super_is_signal_connected(void* self, void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KFileMetaData__WriterPlugin*
+/// @param self const KFileMetaData__WriterPlugin*
 /// @param callback bool func(KFileMetaData__WriterPlugin* self, QMetaMethod* signal)
 ///
-void k_filemetadata__writerplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_filemetadata__writerplugin_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

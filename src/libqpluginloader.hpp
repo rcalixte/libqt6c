@@ -45,7 +45,7 @@ libqt_string QPluginLoader_FileName(const QPluginLoader* self);
 libqt_string QPluginLoader_ErrorString(const QPluginLoader* self);
 void QPluginLoader_SetLoadHints(QPluginLoader* self, int loadHints);
 int QPluginLoader_LoadHints(const QPluginLoader* self);
-void QPluginLoader_OnMetaObject(const QPluginLoader* self, intptr_t slot);
+void QPluginLoader_OnMetaObject(QPluginLoader* self, intptr_t slot);
 QMetaObject* QPluginLoader_SuperMetaObject(const QPluginLoader* self);
 void QPluginLoader_OnMetacast(QPluginLoader* self, intptr_t slot);
 void* QPluginLoader_SuperMetacast(QPluginLoader* self, const char* param1);
@@ -73,17 +73,9 @@ void QPluginLoader_DisconnectNotify(QPluginLoader* self, const QMetaMethod* sign
 void QPluginLoader_OnDisconnectNotify(QPluginLoader* self, intptr_t slot);
 void QPluginLoader_SuperDisconnectNotify(QPluginLoader* self, const QMetaMethod* signal);
 QObject* QPluginLoader_Sender(const QPluginLoader* self);
-void QPluginLoader_OnSender(const QPluginLoader* self, intptr_t slot);
-QObject* QPluginLoader_SuperSender(const QPluginLoader* self);
 int QPluginLoader_SenderSignalIndex(const QPluginLoader* self);
-void QPluginLoader_OnSenderSignalIndex(const QPluginLoader* self, intptr_t slot);
-int QPluginLoader_SuperSenderSignalIndex(const QPluginLoader* self);
 int QPluginLoader_Receivers(const QPluginLoader* self, const char* signal);
-void QPluginLoader_OnReceivers(const QPluginLoader* self, intptr_t slot);
-int QPluginLoader_SuperReceivers(const QPluginLoader* self, const char* signal);
 bool QPluginLoader_IsSignalConnected(const QPluginLoader* self, const QMetaMethod* signal);
-void QPluginLoader_OnIsSignalConnected(const QPluginLoader* self, intptr_t slot);
-bool QPluginLoader_SuperIsSignalConnected(const QPluginLoader* self, const QMetaMethod* signal);
 void QPluginLoader_Delete(QPluginLoader* self);
 
 #ifdef __cplusplus

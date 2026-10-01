@@ -10,94 +10,86 @@ QIconEngine* q_iconengine_new() {
     return QIconEngine_New();
 }
 
-void q_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state) {
+void q_iconengine_paint(void* self, void* painter, const void* rect, int32_t mode, int32_t state) {
     QIconEngine_Paint((QIconEngine*)self, (QPainter*)painter, (QRect*)rect, mode, state);
 }
 
-void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t)) {
+void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, const void*, int32_t, int32_t)) {
     QIconEngine_OnPaint((QIconEngine*)self, (intptr_t)callback);
 }
 
-void q_iconengine_super_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state) {
-    QIconEngine_SuperPaint((QIconEngine*)self, (QPainter*)painter, (QRect*)rect, mode, state);
-}
-
-QSize* q_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t state) {
+QSize* q_iconengine_actual_size(void* self, const void* size, int32_t mode, int32_t state) {
     return QIconEngine_ActualSize((QIconEngine*)self, (QSize*)size, mode, state);
 }
 
-void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t)) {
+void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, const void*, int32_t, int32_t)) {
     QIconEngine_OnActualSize((QIconEngine*)self, (intptr_t)callback);
 }
 
-QSize* q_iconengine_super_actual_size(void* self, void* size, int32_t mode, int32_t state) {
+QSize* q_iconengine_super_actual_size(void* self, const void* size, int32_t mode, int32_t state) {
     return QIconEngine_SuperActualSize((QIconEngine*)self, (QSize*)size, mode, state);
 }
 
-QPixmap* q_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state) {
+QPixmap* q_iconengine_pixmap(void* self, const void* size, int32_t mode, int32_t state) {
     return QIconEngine_Pixmap((QIconEngine*)self, (QSize*)size, mode, state);
 }
 
-void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t)) {
+void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, const void*, int32_t, int32_t)) {
     QIconEngine_OnPixmap((QIconEngine*)self, (intptr_t)callback);
 }
 
-QPixmap* q_iconengine_super_pixmap(void* self, void* size, int32_t mode, int32_t state) {
+QPixmap* q_iconengine_super_pixmap(void* self, const void* size, int32_t mode, int32_t state) {
     return QIconEngine_SuperPixmap((QIconEngine*)self, (QSize*)size, mode, state);
 }
 
-void q_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state) {
+void q_iconengine_add_pixmap(void* self, const void* pixmap, int32_t mode, int32_t state) {
     QIconEngine_AddPixmap((QIconEngine*)self, (QPixmap*)pixmap, mode, state);
 }
 
-void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32_t, int32_t)) {
+void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, const void*, int32_t, int32_t)) {
     QIconEngine_OnAddPixmap((QIconEngine*)self, (intptr_t)callback);
 }
 
-void q_iconengine_super_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state) {
+void q_iconengine_super_add_pixmap(void* self, const void* pixmap, int32_t mode, int32_t state) {
     QIconEngine_SuperAddPixmap((QIconEngine*)self, (QPixmap*)pixmap, mode, state);
 }
 
-void q_iconengine_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state) {
+void q_iconengine_add_file(void* self, const char* fileName, const void* size, int32_t mode, int32_t state) {
     QIconEngine_AddFile((QIconEngine*)self, qstring(fileName), (QSize*)size, mode, state);
 }
 
-void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int32_t, int32_t)) {
+void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, const void*, int32_t, int32_t)) {
     QIconEngine_OnAddFile((QIconEngine*)self, (intptr_t)callback);
 }
 
-void q_iconengine_super_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state) {
+void q_iconengine_super_add_file(void* self, const char* fileName, const void* size, int32_t mode, int32_t state) {
     QIconEngine_SuperAddFile((QIconEngine*)self, qstring(fileName), (QSize*)size, mode, state);
 }
 
-const char* q_iconengine_key(void* self) {
+const char* q_iconengine_key(const void* self) {
     libqt_string _str = QIconEngine_Key((QIconEngine*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_iconengine_on_key(void* self, const char* (*callback)()) {
+void q_iconengine_on_key(const void* self, const char* (*callback)(const void*)) {
     QIconEngine_OnKey((QIconEngine*)self, (intptr_t)callback);
 }
 
-const char* q_iconengine_super_key(void* self) {
+const char* q_iconengine_super_key(const void* self) {
     libqt_string _str = QIconEngine_SuperKey((QIconEngine*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QIconEngine* q_iconengine_clone(void* self) {
+QIconEngine* q_iconengine_clone(const void* self) {
     return QIconEngine_Clone((QIconEngine*)self);
 }
 
-void q_iconengine_on_clone(void* self, QIconEngine* (*callback)()) {
+void q_iconengine_on_clone(const void* self, QIconEngine* (*callback)(const void*)) {
     QIconEngine_OnClone((QIconEngine*)self, (intptr_t)callback);
-}
-
-QIconEngine* q_iconengine_super_clone(void* self) {
-    return QIconEngine_SuperClone((QIconEngine*)self);
 }
 
 bool q_iconengine_read(void* self, void* in) {
@@ -112,15 +104,15 @@ bool q_iconengine_super_read(void* self, void* in) {
     return QIconEngine_SuperRead((QIconEngine*)self, (QDataStream*)in);
 }
 
-bool q_iconengine_write(void* self, void* out) {
+bool q_iconengine_write(const void* self, void* out) {
     return QIconEngine_Write((QIconEngine*)self, (QDataStream*)out);
 }
 
-void q_iconengine_on_write(void* self, bool (*callback)(void*, void*)) {
+void q_iconengine_on_write(const void* self, bool (*callback)(const void*, void*)) {
     QIconEngine_OnWrite((QIconEngine*)self, (intptr_t)callback);
 }
 
-bool q_iconengine_super_write(void* self, void* out) {
+bool q_iconengine_super_write(const void* self, void* out) {
     return QIconEngine_SuperWrite((QIconEngine*)self, (QDataStream*)out);
 }
 
@@ -145,7 +137,7 @@ const char* q_iconengine_icon_name(void* self) {
     return _ret;
 }
 
-void q_iconengine_on_icon_name(void* self, const char* (*callback)()) {
+void q_iconengine_on_icon_name(void* self, const char* (*callback)(void*)) {
     QIconEngine_OnIconName((QIconEngine*)self, (intptr_t)callback);
 }
 
@@ -160,7 +152,7 @@ bool q_iconengine_is_null(void* self) {
     return QIconEngine_IsNull((QIconEngine*)self);
 }
 
-void q_iconengine_on_is_null(void* self, bool (*callback)()) {
+void q_iconengine_on_is_null(void* self, bool (*callback)(void*)) {
     QIconEngine_OnIsNull((QIconEngine*)self, (intptr_t)callback);
 }
 
@@ -168,15 +160,15 @@ bool q_iconengine_super_is_null(void* self) {
     return QIconEngine_SuperIsNull((QIconEngine*)self);
 }
 
-QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale) {
+QPixmap* q_iconengine_scaled_pixmap(void* self, const void* size, int32_t mode, int32_t state, double scale) {
     return QIconEngine_ScaledPixmap((QIconEngine*)self, (QSize*)size, mode, state, scale);
 }
 
-void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double)) {
+void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, const void*, int32_t, int32_t, double)) {
     QIconEngine_OnScaledPixmap((QIconEngine*)self, (intptr_t)callback);
 }
 
-QPixmap* q_iconengine_super_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale) {
+QPixmap* q_iconengine_super_scaled_pixmap(void* self, const void* size, int32_t mode, int32_t state, double scale) {
     return QIconEngine_SuperScaledPixmap((QIconEngine*)self, (QSize*)size, mode, state, scale);
 }
 
@@ -200,11 +192,11 @@ QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new() {
     return QIconEngine__ScaledPixmapArgument_New();
 }
 
-QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new2(void* param1) {
+QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new2(const void* param1) {
     return QIconEngine__ScaledPixmapArgument_New2((QIconEngine__ScaledPixmapArgument*)param1);
 }
 
-QSize* q_iconengine__scaledpixmapargument_size(void* self) {
+QSize* q_iconengine__scaledpixmapargument_size(const void* self) {
     return QIconEngine__ScaledPixmapArgument_Size((QIconEngine__ScaledPixmapArgument*)self);
 }
 
@@ -212,7 +204,7 @@ void q_iconengine__scaledpixmapargument_set_size(void* self, void* size) {
     QIconEngine__ScaledPixmapArgument_SetSize((QIconEngine__ScaledPixmapArgument*)self, (QSize*)size);
 }
 
-int32_t q_iconengine__scaledpixmapargument_mode(void* self) {
+int32_t q_iconengine__scaledpixmapargument_mode(const void* self) {
     return QIconEngine__ScaledPixmapArgument_Mode((QIconEngine__ScaledPixmapArgument*)self);
 }
 
@@ -220,7 +212,7 @@ void q_iconengine__scaledpixmapargument_set_mode(void* self, int32_t mode) {
     QIconEngine__ScaledPixmapArgument_SetMode((QIconEngine__ScaledPixmapArgument*)self, mode);
 }
 
-int32_t q_iconengine__scaledpixmapargument_state(void* self) {
+int32_t q_iconengine__scaledpixmapargument_state(const void* self) {
     return QIconEngine__ScaledPixmapArgument_State((QIconEngine__ScaledPixmapArgument*)self);
 }
 
@@ -228,7 +220,7 @@ void q_iconengine__scaledpixmapargument_set_state(void* self, int32_t state) {
     QIconEngine__ScaledPixmapArgument_SetState((QIconEngine__ScaledPixmapArgument*)self, state);
 }
 
-double q_iconengine__scaledpixmapargument_scale(void* self) {
+double q_iconengine__scaledpixmapargument_scale(const void* self) {
     return QIconEngine__ScaledPixmapArgument_Scale((QIconEngine__ScaledPixmapArgument*)self);
 }
 
@@ -236,7 +228,7 @@ void q_iconengine__scaledpixmapargument_set_scale(void* self, double scale) {
     QIconEngine__ScaledPixmapArgument_SetScale((QIconEngine__ScaledPixmapArgument*)self, scale);
 }
 
-QPixmap* q_iconengine__scaledpixmapargument_pixmap(void* self) {
+QPixmap* q_iconengine__scaledpixmapargument_pixmap(const void* self) {
     return QIconEngine__ScaledPixmapArgument_Pixmap((QIconEngine__ScaledPixmapArgument*)self);
 }
 
@@ -244,7 +236,7 @@ void q_iconengine__scaledpixmapargument_set_pixmap(void* self, void* pixmap) {
     QIconEngine__ScaledPixmapArgument_SetPixmap((QIconEngine__ScaledPixmapArgument*)self, (QPixmap*)pixmap);
 }
 
-void q_iconengine__scaledpixmapargument_operator_assign(void* self, void* param1) {
+void q_iconengine__scaledpixmapargument_operator_assign(void* self, const void* param1) {
     QIconEngine__ScaledPixmapArgument_OperatorAssign((QIconEngine__ScaledPixmapArgument*)self, (QIconEngine__ScaledPixmapArgument*)param1);
 }
 

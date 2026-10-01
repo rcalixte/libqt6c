@@ -20,14 +20,14 @@ QPlaceRatings* q_placeratings_new();
 ///
 /// @param other QPlaceRatings*
 ///
-QPlaceRatings* q_placeratings_new2(void* other);
+QPlaceRatings* q_placeratings_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#operator-eq)
 ///
 /// @param self QPlaceRatings*
 /// @param other QPlaceRatings*
 ///
-void q_placeratings_operator_assign(void* self, void* other);
+void q_placeratings_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#swap)
 ///
@@ -38,9 +38,9 @@ void q_placeratings_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#average)
 ///
-/// @param self QPlaceRatings*
+/// @param self const QPlaceRatings*
 ///
-double q_placeratings_average(void* self);
+double q_placeratings_average(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#setAverage)
 ///
@@ -51,9 +51,9 @@ void q_placeratings_set_average(void* self, double average);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#count)
 ///
-/// @param self QPlaceRatings*
+/// @param self const QPlaceRatings*
 ///
-int32_t q_placeratings_count(void* self);
+int32_t q_placeratings_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#setCount)
 ///
@@ -64,9 +64,9 @@ void q_placeratings_set_count(void* self, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#maximum)
 ///
-/// @param self QPlaceRatings*
+/// @param self const QPlaceRatings*
 ///
-double q_placeratings_maximum(void* self);
+double q_placeratings_maximum(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#setMaximum)
 ///
@@ -77,9 +77,9 @@ void q_placeratings_set_maximum(void* self, double max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#isEmpty)
 ///
-/// @param self QPlaceRatings*
+/// @param self const QPlaceRatings*
 ///
-bool q_placeratings_is_empty(void* self);
+bool q_placeratings_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceratings.html#dtor.QPlaceRatings)
 ///

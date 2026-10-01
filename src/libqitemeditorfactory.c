@@ -2,18 +2,7 @@
 #include "libqitemeditorfactory.hpp"
 #include "libqitemeditorfactory.h"
 
-QWidget* q_itemeditorcreatorbase_create_widget(void* self, void* parent) {
-    return QItemEditorCreatorBase_CreateWidget((QItemEditorCreatorBase*)self, (QWidget*)parent);
-}
-
-char* q_itemeditorcreatorbase_value_property_name(void* self) {
-    libqt_string _str = QItemEditorCreatorBase_ValuePropertyName((QItemEditorCreatorBase*)self);
-    char* _ret = qstring_to_char(_str);
-    libqt_string_free(&_str);
-    return _ret;
-}
-
-void q_itemeditorcreatorbase_operator_assign(void* self, void* param1) {
+void q_itemeditorcreatorbase_operator_assign(void* self, const void* param1) {
     QItemEditorCreatorBase_OperatorAssign((QItemEditorCreatorBase*)self, (QItemEditorCreatorBase*)param1);
 }
 
@@ -25,34 +14,34 @@ QItemEditorFactory* q_itemeditorfactory_new() {
     return QItemEditorFactory_New();
 }
 
-QItemEditorFactory* q_itemeditorfactory_new2(void* param1) {
+QItemEditorFactory* q_itemeditorfactory_new2(const void* param1) {
     return QItemEditorFactory_New2((QItemEditorFactory*)param1);
 }
 
-QWidget* q_itemeditorfactory_create_editor(void* self, int userType, void* parent) {
+QWidget* q_itemeditorfactory_create_editor(const void* self, int userType, void* parent) {
     return QItemEditorFactory_CreateEditor((QItemEditorFactory*)self, userType, (QWidget*)parent);
 }
 
-void q_itemeditorfactory_on_create_editor(void* self, QWidget* (*callback)(void*, int, void*)) {
+void q_itemeditorfactory_on_create_editor(const void* self, QWidget* (*callback)(const void*, int, void*)) {
     QItemEditorFactory_OnCreateEditor((QItemEditorFactory*)self, (intptr_t)callback);
 }
 
-QWidget* q_itemeditorfactory_super_create_editor(void* self, int userType, void* parent) {
+QWidget* q_itemeditorfactory_super_create_editor(const void* self, int userType, void* parent) {
     return QItemEditorFactory_SuperCreateEditor((QItemEditorFactory*)self, userType, (QWidget*)parent);
 }
 
-char* q_itemeditorfactory_value_property_name(void* self, int userType) {
+char* q_itemeditorfactory_value_property_name(const void* self, int userType) {
     libqt_string _str = QItemEditorFactory_ValuePropertyName((QItemEditorFactory*)self, userType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_itemeditorfactory_on_value_property_name(void* self, libqt_string (*callback)(void*, int)) {
+void q_itemeditorfactory_on_value_property_name(const void* self, libqt_string (*callback)(const void*, int)) {
     QItemEditorFactory_OnValuePropertyName((QItemEditorFactory*)self, (intptr_t)callback);
 }
 
-char* q_itemeditorfactory_super_value_property_name(void* self, int userType) {
+char* q_itemeditorfactory_super_value_property_name(const void* self, int userType) {
     libqt_string _str = QItemEditorFactory_SuperValuePropertyName((QItemEditorFactory*)self, userType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -71,7 +60,7 @@ void q_itemeditorfactory_set_default_factory(void* factory) {
     QItemEditorFactory_SetDefaultFactory((QItemEditorFactory*)factory);
 }
 
-void q_itemeditorfactory_operator_assign(void* self, void* param1) {
+void q_itemeditorfactory_operator_assign(void* self, const void* param1) {
     QItemEditorFactory_OperatorAssign((QItemEditorFactory*)self, (QItemEditorFactory*)param1);
 }
 

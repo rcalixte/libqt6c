@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlresult.html#handle)
 ///
-/// @param self QSqlResult*
+/// @param self const QSqlResult*
 ///
-QVariant* q_sqlresult_handle(void* self);
+QVariant* q_sqlresult_handle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlresult.html#dtor.QSqlResult)
 ///

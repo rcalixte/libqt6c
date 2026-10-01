@@ -19,15 +19,15 @@ QSslServer* q_sslserver_new2(void* parent) {
     return QSslServer_New2((QObject*)parent);
 }
 
-const QMetaObject* q_sslserver_meta_object(void* self) {
+const QMetaObject* q_sslserver_meta_object(const void* self) {
     return QSslServer_MetaObject((QSslServer*)self);
 }
 
-void q_sslserver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_sslserver_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QSslServer_OnMetaObject((QSslServer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_sslserver_super_meta_object(void* self) {
+const QMetaObject* q_sslserver_super_meta_object(const void* self) {
     return QSslServer_SuperMetaObject((QSslServer*)self);
 }
 
@@ -62,11 +62,11 @@ const char* q_sslserver_tr(const char* s) {
     return _ret;
 }
 
-void q_sslserver_set_ssl_configuration(void* self, void* sslConfiguration) {
+void q_sslserver_set_ssl_configuration(void* self, const void* sslConfiguration) {
     QSslServer_SetSslConfiguration((QSslServer*)self, (QSslConfiguration*)sslConfiguration);
 }
 
-QSslConfiguration* q_sslserver_ssl_configuration(void* self) {
+QSslConfiguration* q_sslserver_ssl_configuration(const void* self) {
     return QSslServer_SslConfiguration((QSslServer*)self);
 }
 
@@ -74,7 +74,7 @@ void q_sslserver_set_handshake_timeout(void* self, int timeout) {
     QSslServer_SetHandshakeTimeout((QSslServer*)self, timeout);
 }
 
-int32_t q_sslserver_handshake_timeout(void* self) {
+int32_t q_sslserver_handshake_timeout(const void* self) {
     return QSslServer_HandshakeTimeout((QSslServer*)self);
 }
 
@@ -86,11 +86,11 @@ void q_sslserver_on_ssl_errors(void* self, void (*callback)(void*, void*, libqt_
     QSslServer_Connect_SslErrors((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_peer_verify_error(void* self, void* socket, void* error) {
+void q_sslserver_peer_verify_error(void* self, void* socket, const void* error) {
     QSslServer_PeerVerifyError((QSslServer*)self, (QSslSocket*)socket, (QSslError*)error);
 }
 
-void q_sslserver_on_peer_verify_error(void* self, void (*callback)(void*, void*, void*)) {
+void q_sslserver_on_peer_verify_error(void* self, void (*callback)(void*, void*, const void*)) {
     QSslServer_Connect_PeerVerifyError((QSslServer*)self, (intptr_t)callback);
 }
 
@@ -126,11 +126,11 @@ void q_sslserver_on_alert_received(void* self, void (*callback)(void*, void*, in
     QSslServer_Connect_AlertReceived((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_handshake_interrupted_on_error(void* self, void* socket, void* error) {
+void q_sslserver_handshake_interrupted_on_error(void* self, void* socket, const void* error) {
     QSslServer_HandshakeInterruptedOnError((QSslServer*)self, (QSslSocket*)socket, (QSslError*)error);
 }
 
-void q_sslserver_on_handshake_interrupted_on_error(void* self, void (*callback)(void*, void*, void*)) {
+void q_sslserver_on_handshake_interrupted_on_error(void* self, void (*callback)(void*, void*, const void*)) {
     QSslServer_Connect_HandshakeInterruptedOnError((QSslServer*)self, (intptr_t)callback);
 }
 
@@ -176,7 +176,7 @@ void q_sslserver_close(void* self) {
     QTcpServer_Close((QTcpServer*)self);
 }
 
-bool q_sslserver_is_listening(void* self) {
+bool q_sslserver_is_listening(const void* self) {
     return QTcpServer_IsListening((QTcpServer*)self);
 }
 
@@ -184,7 +184,7 @@ void q_sslserver_set_max_pending_connections(void* self, int numConnections) {
     QTcpServer_SetMaxPendingConnections((QTcpServer*)self, numConnections);
 }
 
-int32_t q_sslserver_max_pending_connections(void* self) {
+int32_t q_sslserver_max_pending_connections(const void* self) {
     return QTcpServer_MaxPendingConnections((QTcpServer*)self);
 }
 
@@ -192,19 +192,19 @@ void q_sslserver_set_listen_backlog_size(void* self, int size) {
     QTcpServer_SetListenBacklogSize((QTcpServer*)self, size);
 }
 
-int32_t q_sslserver_listen_backlog_size(void* self) {
+int32_t q_sslserver_listen_backlog_size(const void* self) {
     return QTcpServer_ListenBacklogSize((QTcpServer*)self);
 }
 
-uint16_t q_sslserver_server_port(void* self) {
+uint16_t q_sslserver_server_port(const void* self) {
     return QTcpServer_ServerPort((QTcpServer*)self);
 }
 
-QHostAddress* q_sslserver_server_address(void* self) {
+QHostAddress* q_sslserver_server_address(const void* self) {
     return QTcpServer_ServerAddress((QTcpServer*)self);
 }
 
-intptr_t q_sslserver_socket_descriptor(void* self) {
+intptr_t q_sslserver_socket_descriptor(const void* self) {
     return QTcpServer_SocketDescriptor((QTcpServer*)self);
 }
 
@@ -216,11 +216,11 @@ bool q_sslserver_wait_for_new_connection(void* self) {
     return QTcpServer_WaitForNewConnection((QTcpServer*)self);
 }
 
-int32_t q_sslserver_server_error(void* self) {
+int32_t q_sslserver_server_error(const void* self) {
     return QTcpServer_ServerError((QTcpServer*)self);
 }
 
-const char* q_sslserver_error_string(void* self) {
+const char* q_sslserver_error_string(const void* self) {
     libqt_string _str = QTcpServer_ErrorString((QTcpServer*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -235,11 +235,11 @@ void q_sslserver_resume_accepting(void* self) {
     QTcpServer_ResumeAccepting((QTcpServer*)self);
 }
 
-void q_sslserver_set_proxy(void* self, void* networkProxy) {
+void q_sslserver_set_proxy(void* self, const void* networkProxy) {
     QTcpServer_SetProxy((QTcpServer*)self, (QNetworkProxy*)networkProxy);
 }
 
-QNetworkProxy* q_sslserver_proxy(void* self) {
+QNetworkProxy* q_sslserver_proxy(const void* self) {
     return QTcpServer_Proxy((QTcpServer*)self);
 }
 
@@ -259,11 +259,11 @@ void q_sslserver_on_accept_error(void* self, void (*callback)(void*, int32_t)) {
     QTcpServer_Connect_AcceptError((QTcpServer*)self, (intptr_t)callback);
 }
 
-bool q_sslserver_listen1(void* self, void* address) {
+bool q_sslserver_listen1(void* self, const void* address) {
     return QTcpServer_Listen1((QTcpServer*)self, (QHostAddress*)address);
 }
 
-bool q_sslserver_listen2(void* self, void* address, uint16_t port) {
+bool q_sslserver_listen2(void* self, const void* address, uint16_t port) {
     return QTcpServer_Listen2((QTcpServer*)self, (QHostAddress*)address, port);
 }
 
@@ -275,7 +275,7 @@ bool q_sslserver_wait_for_new_connection2(void* self, int msec, bool* timedOut) 
     return QTcpServer_WaitForNewConnection2((QTcpServer*)self, msec, (bool*)timedOut);
 }
 
-const char* q_sslserver_object_name(void* self) {
+const char* q_sslserver_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -286,19 +286,19 @@ void q_sslserver_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_sslserver_is_widget_type(void* self) {
+bool q_sslserver_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_sslserver_is_window_type(void* self) {
+bool q_sslserver_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_sslserver_is_quick_item_type(void* self) {
+bool q_sslserver_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_sslserver_signals_blocked(void* self) {
+bool q_sslserver_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -306,7 +306,7 @@ bool q_sslserver_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_sslserver_thread(void* self) {
+QThread* q_sslserver_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -330,7 +330,7 @@ void q_sslserver_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sslserver_children(void* self) {
+libqt_list /* of QObject* */ q_sslserver_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -347,55 +347,55 @@ void q_sslserver_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_sslserver_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_sslserver_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_sslserver_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_sslserver_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_sslserver_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_sslserver_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_sslserver_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_sslserver_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_sslserver_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_sslserver_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_sslserver_disconnect3(void* self) {
+bool q_sslserver_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_sslserver_disconnect4(void* self, void* receiver) {
+bool q_sslserver_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_sslserver_disconnect5(void* param1) {
+bool q_sslserver_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_sslserver_dump_object_tree(void* self) {
+void q_sslserver_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_sslserver_dump_object_info(void* self) {
+void q_sslserver_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_sslserver_set_property(void* self, const char* name, void* value) {
+bool q_sslserver_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_sslserver_property(void* self, const char* name) {
+QVariant* q_sslserver_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_sslserver_dynamic_property_names(void* self) {
+const char** q_sslserver_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -416,7 +416,7 @@ QBindingStorage* q_sslserver_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_sslserver_binding_storage2(void* self) {
+const QBindingStorage* q_sslserver_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -428,11 +428,11 @@ void q_sslserver_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_sslserver_parent(void* self) {
+QObject* q_sslserver_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_sslserver_inherits(void* self, const char* classname) {
+bool q_sslserver_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -448,31 +448,31 @@ int32_t q_sslserver_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_sslserver_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_sslserver_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_sslserver_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_sslserver_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_sslserver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_sslserver_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_sslserver_disconnect1(void* self, const char* signal) {
+bool q_sslserver_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_sslserver_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_sslserver_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_sslserver_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_sslserver_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_sslserver_disconnect23(void* self, void* receiver, const char* member) {
+bool q_sslserver_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -484,16 +484,16 @@ void q_sslserver_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool q_sslserver_has_pending_connections(void* self) {
+bool q_sslserver_has_pending_connections(const void* self) {
     return QSslServer_HasPendingConnections((QSslServer*)self);
 }
 
-bool q_sslserver_super_has_pending_connections(void* self) {
+bool q_sslserver_super_has_pending_connections(const void* self) {
     return QSslServer_SuperHasPendingConnections((QSslServer*)self);
 }
 
-void q_sslserver_on_has_pending_connections(void* self, bool (*callback)()) {
-    QSslServer_OnHasPendingConnections((QSslServer*)self, (intptr_t)callback);
+void q_sslserver_on_has_pending_connections(const void* self, bool (*callback)(const void*)) {
+    QSslServer_OnHasPendingConnections((const QSslServer*)self, (intptr_t)callback);
 }
 
 QTcpSocket* q_sslserver_next_pending_connection(void* self) {
@@ -504,7 +504,7 @@ QTcpSocket* q_sslserver_super_next_pending_connection(void* self) {
     return QSslServer_SuperNextPendingConnection((QSslServer*)self);
 }
 
-void q_sslserver_on_next_pending_connection(void* self, QTcpSocket* (*callback)()) {
+void q_sslserver_on_next_pending_connection(void* self, QTcpSocket* (*callback)(void*)) {
     QSslServer_OnNextPendingConnection((QSslServer*)self, (intptr_t)callback);
 }
 
@@ -568,27 +568,27 @@ void q_sslserver_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QSslServer_OnCustomEvent((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_connect_notify(void* self, void* signal) {
+void q_sslserver_connect_notify(void* self, const void* signal) {
     QSslServer_ConnectNotify((QSslServer*)self, (QMetaMethod*)signal);
 }
 
-void q_sslserver_super_connect_notify(void* self, void* signal) {
+void q_sslserver_super_connect_notify(void* self, const void* signal) {
     QSslServer_SuperConnectNotify((QSslServer*)self, (QMetaMethod*)signal);
 }
 
-void q_sslserver_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_sslserver_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QSslServer_OnConnectNotify((QSslServer*)self, (intptr_t)callback);
 }
 
-void q_sslserver_disconnect_notify(void* self, void* signal) {
+void q_sslserver_disconnect_notify(void* self, const void* signal) {
     QSslServer_DisconnectNotify((QSslServer*)self, (QMetaMethod*)signal);
 }
 
-void q_sslserver_super_disconnect_notify(void* self, void* signal) {
+void q_sslserver_super_disconnect_notify(void* self, const void* signal) {
     QSslServer_SuperDisconnectNotify((QSslServer*)self, (QMetaMethod*)signal);
 }
 
-void q_sslserver_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_sslserver_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QSslServer_OnDisconnectNotify((QSslServer*)self, (intptr_t)callback);
 }
 
@@ -596,60 +596,20 @@ void q_sslserver_add_pending_connection(void* self, void* socket) {
     QSslServer_AddPendingConnection((QSslServer*)self, (QTcpSocket*)socket);
 }
 
-void q_sslserver_super_add_pending_connection(void* self, void* socket) {
-    QSslServer_SuperAddPendingConnection((QSslServer*)self, (QTcpSocket*)socket);
-}
-
-void q_sslserver_on_add_pending_connection(void* self, void (*callback)(void*, void*)) {
-    QSslServer_OnAddPendingConnection((QSslServer*)self, (intptr_t)callback);
-}
-
-QObject* q_sslserver_sender(void* self) {
+QObject* q_sslserver_sender(const void* self) {
     return QSslServer_Sender((QSslServer*)self);
 }
 
-QObject* q_sslserver_super_sender(void* self) {
-    return QSslServer_SuperSender((QSslServer*)self);
-}
-
-void q_sslserver_on_sender(void* self, QObject* (*callback)()) {
-    QSslServer_OnSender((QSslServer*)self, (intptr_t)callback);
-}
-
-int32_t q_sslserver_sender_signal_index(void* self) {
+int32_t q_sslserver_sender_signal_index(const void* self) {
     return QSslServer_SenderSignalIndex((QSslServer*)self);
 }
 
-int32_t q_sslserver_super_sender_signal_index(void* self) {
-    return QSslServer_SuperSenderSignalIndex((QSslServer*)self);
-}
-
-void q_sslserver_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QSslServer_OnSenderSignalIndex((QSslServer*)self, (intptr_t)callback);
-}
-
-int32_t q_sslserver_receivers(void* self, const char* signal) {
+int32_t q_sslserver_receivers(const void* self, const char* signal) {
     return QSslServer_Receivers((QSslServer*)self, signal);
 }
 
-int32_t q_sslserver_super_receivers(void* self, const char* signal) {
-    return QSslServer_SuperReceivers((QSslServer*)self, signal);
-}
-
-void q_sslserver_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QSslServer_OnReceivers((QSslServer*)self, (intptr_t)callback);
-}
-
-bool q_sslserver_is_signal_connected(void* self, void* signal) {
+bool q_sslserver_is_signal_connected(const void* self, const void* signal) {
     return QSslServer_IsSignalConnected((QSslServer*)self, (QMetaMethod*)signal);
-}
-
-bool q_sslserver_super_is_signal_connected(void* self, void* signal) {
-    return QSslServer_SuperIsSignalConnected((QSslServer*)self, (QMetaMethod*)signal);
-}
-
-void q_sslserver_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QSslServer_OnIsSignalConnected((QSslServer*)self, (intptr_t)callback);
 }
 
 void q_sslserver_on_pending_connection_available(void* self, void (*callback)(void*)) {

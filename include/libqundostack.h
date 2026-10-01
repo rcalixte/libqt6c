@@ -50,9 +50,9 @@ void q_undocommand_undo(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QUndoCommand*
-/// @param callback void func()
+/// @param callback void func(QUndoCommand* self)
 ///
-void q_undocommand_on_undo(void* self, void (*callback)());
+void q_undocommand_on_undo(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#undo)
 ///
@@ -73,9 +73,9 @@ void q_undocommand_redo(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QUndoCommand*
-/// @param callback void func()
+/// @param callback void func(QUndoCommand* self)
 ///
-void q_undocommand_on_redo(void* self, void (*callback)());
+void q_undocommand_on_redo(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#redo)
 ///
@@ -89,17 +89,17 @@ void q_undocommand_super_redo(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUndoCommand*
+/// @param self const QUndoCommand*
 ///
-const char* q_undocommand_text(void* self);
+const char* q_undocommand_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#actionText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUndoCommand*
+/// @param self const QUndoCommand*
 ///
-const char* q_undocommand_action_text(void* self);
+const char* q_undocommand_action_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#setText)
 ///
@@ -110,9 +110,9 @@ void q_undocommand_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#isObsolete)
 ///
-/// @param self QUndoCommand*
+/// @param self const QUndoCommand*
 ///
-bool q_undocommand_is_obsolete(void* self);
+bool q_undocommand_is_obsolete(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#setObsolete)
 ///
@@ -123,33 +123,33 @@ void q_undocommand_set_obsolete(void* self, bool obsolete);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#id)
 ///
-/// @param self QUndoCommand*
+/// @param self const QUndoCommand*
 ///
-int32_t q_undocommand_id(void* self);
+int32_t q_undocommand_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#id)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QUndoCommand*
-/// @param callback int32_t func()
+/// @param self const QUndoCommand*
+/// @param callback int32_t func(const QUndoCommand* self)
 ///
-void q_undocommand_on_id(void* self, int32_t (*callback)());
+void q_undocommand_on_id(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#id)
 ///
 /// Base class method implementation
 ///
-/// @param self QUndoCommand*
+/// @param self const QUndoCommand*
 ///
-int32_t q_undocommand_super_id(void* self);
+int32_t q_undocommand_super_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#mergeWith)
 ///
 /// @param self QUndoCommand*
 /// @param other QUndoCommand*
 ///
-bool q_undocommand_merge_with(void* self, void* other);
+bool q_undocommand_merge_with(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#mergeWith)
 ///
@@ -158,7 +158,7 @@ bool q_undocommand_merge_with(void* self, void* other);
 /// @param self QUndoCommand*
 /// @param callback bool func(QUndoCommand* self, QUndoCommand* other)
 ///
-void q_undocommand_on_merge_with(void* self, bool (*callback)(void*, void*));
+void q_undocommand_on_merge_with(void* self, bool (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#mergeWith)
 ///
@@ -167,20 +167,20 @@ void q_undocommand_on_merge_with(void* self, bool (*callback)(void*, void*));
 /// @param self QUndoCommand*
 /// @param other QUndoCommand*
 ///
-bool q_undocommand_super_merge_with(void* self, void* other);
+bool q_undocommand_super_merge_with(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#childCount)
 ///
-/// @param self QUndoCommand*
+/// @param self const QUndoCommand*
 ///
-int32_t q_undocommand_child_count(void* self);
+int32_t q_undocommand_child_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#child)
 ///
-/// @param self QUndoCommand*
+/// @param self const QUndoCommand*
 /// @param index int
 ///
-const QUndoCommand* q_undocommand_child(void* self, int index);
+const QUndoCommand* q_undocommand_child(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundocommand.html#dtor.QUndoCommand)
 ///
@@ -206,26 +206,26 @@ QUndoStack* q_undostack_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-const QMetaObject* q_undostack_meta_object(void* self);
+const QMetaObject* q_undostack_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QUndoStack*
-/// @param callback const QMetaObject* func()
+/// @param self const QUndoStack*
+/// @param callback const QMetaObject* func(const QUndoStack* self)
 ///
-void q_undostack_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_undostack_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-const QMetaObject* q_undostack_super_meta_object(void* self);
+const QMetaObject* q_undostack_super_meta_object(const void* self);
 
 /// @param self QUndoStack*
 /// @param param1 const char*
@@ -292,84 +292,84 @@ void q_undostack_push(void* self, void* cmd);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#canUndo)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_can_undo(void* self);
+bool q_undostack_can_undo(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#canRedo)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_can_redo(void* self);
+bool q_undostack_can_redo(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#undoText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-const char* q_undostack_undo_text(void* self);
+const char* q_undostack_undo_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#redoText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-const char* q_undostack_redo_text(void* self);
+const char* q_undostack_redo_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#count)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-int32_t q_undostack_count(void* self);
+int32_t q_undostack_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#index)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-int32_t q_undostack_index(void* self);
+int32_t q_undostack_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param idx int
 ///
-const char* q_undostack_text(void* self, int idx);
+const char* q_undostack_text(const void* self, int idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#createUndoAction)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param parent QObject*
 ///
-QAction* q_undostack_create_undo_action(void* self, void* parent);
+QAction* q_undostack_create_undo_action(const void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#createRedoAction)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param parent QObject*
 ///
-QAction* q_undostack_create_redo_action(void* self, void* parent);
+QAction* q_undostack_create_redo_action(const void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#isActive)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_is_active(void* self);
+bool q_undostack_is_active(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#isClean)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_is_clean(void* self);
+bool q_undostack_is_clean(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#cleanIndex)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-int32_t q_undostack_clean_index(void* self);
+int32_t q_undostack_clean_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#beginMacro)
 ///
@@ -393,16 +393,16 @@ void q_undostack_set_undo_limit(void* self, int limit);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#undoLimit)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-int32_t q_undostack_undo_limit(void* self);
+int32_t q_undostack_undo_limit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#command)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param index int
 ///
-const QUndoCommand* q_undostack_command(void* self, int index);
+const QUndoCommand* q_undostack_command(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#setClean)
 ///
@@ -546,19 +546,19 @@ const char* q_undostack_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#createUndoAction)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param parent QObject*
 /// @param prefix const char*
 ///
-QAction* q_undostack_create_undo_action2(void* self, void* parent, const char* prefix);
+QAction* q_undostack_create_undo_action2(const void* self, void* parent, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#createRedoAction)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param parent QObject*
 /// @param prefix const char*
 ///
-QAction* q_undostack_create_redo_action2(void* self, void* parent, const char* prefix);
+QAction* q_undostack_create_redo_action2(const void* self, void* parent, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qundostack.html#setActive)
 ///
@@ -573,9 +573,9 @@ void q_undostack_set_active1(void* self, bool active);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-const char* q_undostack_object_name(void* self);
+const char* q_undostack_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -590,33 +590,33 @@ void q_undostack_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_is_widget_type(void* self);
+bool q_undostack_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_is_window_type(void* self);
+bool q_undostack_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_is_quick_item_type(void* self);
+bool q_undostack_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_signals_blocked(void* self);
+bool q_undostack_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -631,9 +631,9 @@ bool q_undostack_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-QThread* q_undostack_thread(void* self);
+QThread* q_undostack_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -684,11 +684,11 @@ void q_undostack_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_undostack_children(void* self);
+libqt_list q_undostack_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -726,7 +726,7 @@ void q_undostack_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_undostack_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_undostack_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -737,18 +737,18 @@ QMetaObject__Connection* q_undostack_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_undostack_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_undostack_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_undostack_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_undostack_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -759,7 +759,7 @@ QMetaObject__Connection* q_undostack_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_undostack_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_undostack_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -770,24 +770,24 @@ bool q_undostack_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_undostack_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_undostack_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-bool q_undostack_disconnect3(void* self);
+bool q_undostack_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param receiver QObject*
 ///
-bool q_undostack_disconnect4(void* self, void* receiver);
+bool q_undostack_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -795,23 +795,23 @@ bool q_undostack_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_undostack_disconnect5(void* param1);
+bool q_undostack_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-void q_undostack_dump_object_tree(void* self);
+void q_undostack_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-void q_undostack_dump_object_info(void* self);
+void q_undostack_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -821,16 +821,16 @@ void q_undostack_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_undostack_set_property(void* self, const char* name, void* value);
+bool q_undostack_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param name const char*
 ///
-QVariant* q_undostack_property(void* self, const char* name);
+QVariant* q_undostack_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -838,9 +838,9 @@ QVariant* q_undostack_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-const char** q_undostack_dynamic_property_names(void* self);
+const char** q_undostack_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -854,9 +854,9 @@ QBindingStorage* q_undostack_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-const QBindingStorage* q_undostack_binding_storage2(void* self);
+const QBindingStorage* q_undostack_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -879,18 +879,18 @@ void q_undostack_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-QObject* q_undostack_parent(void* self);
+QObject* q_undostack_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param classname const char*
 ///
-bool q_undostack_inherits(void* self, const char* classname);
+bool q_undostack_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -930,7 +930,7 @@ int32_t q_undostack_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_undostack_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_undostack_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -942,59 +942,59 @@ QMetaObject__Connection* q_undostack_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_undostack_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_undostack_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_undostack_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_undostack_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param signal const char*
 ///
-bool q_undostack_disconnect1(void* self, const char* signal);
+bool q_undostack_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QUndoStack*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_undostack_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_undostack_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_undostack_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_undostack_disconnect23(void* self, void* receiver, const char* member);
+bool q_undostack_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QUndoStack*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_undostack_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1190,7 +1190,7 @@ void q_undostack_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QUndoStack*
 /// @param signal QMetaMethod*
 ///
-void q_undostack_connect_notify(void* self, void* signal);
+void q_undostack_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1201,7 +1201,7 @@ void q_undostack_connect_notify(void* self, void* signal);
 /// @param self QUndoStack*
 /// @param signal QMetaMethod*
 ///
-void q_undostack_super_connect_notify(void* self, void* signal);
+void q_undostack_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1212,7 +1212,7 @@ void q_undostack_super_connect_notify(void* self, void* signal);
 /// @param self QUndoStack*
 /// @param callback void func(QUndoStack* self, QMetaMethod* signal)
 ///
-void q_undostack_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_undostack_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1223,7 +1223,7 @@ void q_undostack_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QUndoStack*
 /// @param signal QMetaMethod*
 ///
-void q_undostack_disconnect_notify(void* self, void* signal);
+void q_undostack_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1234,7 +1234,7 @@ void q_undostack_disconnect_notify(void* self, void* signal);
 /// @param self QUndoStack*
 /// @param signal QMetaMethod*
 ///
-void q_undostack_super_disconnect_notify(void* self, void* signal);
+void q_undostack_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1245,7 +1245,7 @@ void q_undostack_super_disconnect_notify(void* self, void* signal);
 /// @param self QUndoStack*
 /// @param callback void func(QUndoStack* self, QMetaMethod* signal)
 ///
-void q_undostack_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_undostack_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1253,9 +1253,9 @@ void q_undostack_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-QObject* q_undostack_sender(void* self);
+QObject* q_undostack_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1263,9 +1263,9 @@ QObject* q_undostack_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-QObject* q_undostack_super_sender(void* self);
+QObject* q_undostack_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1273,10 +1273,10 @@ QObject* q_undostack_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QUndoStack*
-/// @param callback QObject* func()
+/// @param self const QUndoStack*
+/// @param callback QObject* func(QUndoStack* self)
 ///
-void q_undostack_on_sender(void* self, QObject* (*callback)());
+void q_undostack_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1284,9 +1284,9 @@ void q_undostack_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-int32_t q_undostack_sender_signal_index(void* self);
+int32_t q_undostack_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1294,9 +1294,9 @@ int32_t q_undostack_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 ///
-int32_t q_undostack_super_sender_signal_index(void* self);
+int32_t q_undostack_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1304,10 +1304,10 @@ int32_t q_undostack_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QUndoStack*
-/// @param callback int32_t func()
+/// @param self const QUndoStack*
+/// @param callback int32_t func(QUndoStack* self)
 ///
-void q_undostack_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_undostack_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1315,10 +1315,10 @@ void q_undostack_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param signal const char*
 ///
-int32_t q_undostack_receivers(void* self, const char* signal);
+int32_t q_undostack_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1326,10 +1326,10 @@ int32_t q_undostack_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param signal const char*
 ///
-int32_t q_undostack_super_receivers(void* self, const char* signal);
+int32_t q_undostack_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1337,10 +1337,10 @@ int32_t q_undostack_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param callback int32_t func(QUndoStack* self, const char* signal)
 ///
-void q_undostack_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_undostack_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1348,10 +1348,10 @@ void q_undostack_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param signal QMetaMethod*
 ///
-bool q_undostack_is_signal_connected(void* self, void* signal);
+bool q_undostack_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1359,10 +1359,10 @@ bool q_undostack_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param signal QMetaMethod*
 ///
-bool q_undostack_super_is_signal_connected(void* self, void* signal);
+bool q_undostack_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1370,10 +1370,10 @@ bool q_undostack_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QUndoStack*
+/// @param self const QUndoStack*
 /// @param callback bool func(QUndoStack* self, QMetaMethod* signal)
 ///
-void q_undostack_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_undostack_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

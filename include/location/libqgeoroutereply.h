@@ -29,26 +29,26 @@ QGeoRouteReply* q_georoutereply_new2(int32_t error, const char* errorString, voi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-const QMetaObject* q_georoutereply_meta_object(void* self);
+const QMetaObject* q_georoutereply_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGeoRouteReply*
-/// @param callback const QMetaObject* func()
+/// @param self const QGeoRouteReply*
+/// @param callback const QMetaObject* func(const QGeoRouteReply* self)
 ///
-void q_georoutereply_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_georoutereply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-const QMetaObject* q_georoutereply_super_meta_object(void* self);
+const QMetaObject* q_georoutereply_super_meta_object(const void* self);
 
 /// @param self QGeoRouteReply*
 /// @param param1 const char*
@@ -102,39 +102,39 @@ const char* q_georoutereply_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#isFinished)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-bool q_georoutereply_is_finished(void* self);
+bool q_georoutereply_is_finished(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#error)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
 /// @return enum QGeoRouteReply__Error
 ///
-int32_t q_georoutereply_error(void* self);
+int32_t q_georoutereply_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-const char* q_georoutereply_error_string(void* self);
+const char* q_georoutereply_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#request)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-QGeoRouteRequest* q_georoutereply_request(void* self);
+QGeoRouteRequest* q_georoutereply_request(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#routes)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
 /// @return libqt_list of QGeoRoute*
 ///
-libqt_list q_georoutereply_routes(void* self);
+libqt_list q_georoutereply_routes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#abort)
 ///
@@ -147,9 +147,9 @@ void q_georoutereply_abort(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoRouteReply*
-/// @param callback void func()
+/// @param callback void func(QGeoRouteReply* self)
 ///
-void q_georoutereply_on_abort(void* self, void (*callback)());
+void q_georoutereply_on_abort(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#abort)
 ///
@@ -207,49 +207,12 @@ void q_georoutereply_on_error_occurred(void* self, void (*callback)(void*, int32
 ///
 void q_georoutereply_set_error(void* self, int32_t error, const char* errorString);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setError)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoRouteReply*
-/// @param callback void func(QGeoRouteReply* self, enum QGeoRouteReply__Error error, const char* errorString)
-///
-void q_georoutereply_on_set_error(void* self, void (*callback)(void*, int32_t, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setError)
-///
-/// Base class method implementation
-///
-/// @param self QGeoRouteReply*
-/// @param error enum QGeoRouteReply__Error
-/// @param errorString const char*
-///
-void q_georoutereply_super_set_error(void* self, int32_t error, const char* errorString);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setFinished)
 ///
 /// @param self QGeoRouteReply*
 /// @param finished bool
 ///
 void q_georoutereply_set_finished(void* self, bool finished);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setFinished)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoRouteReply*
-/// @param callback void func(QGeoRouteReply* self, bool finished)
-///
-void q_georoutereply_on_set_finished(void* self, void (*callback)(void*, bool));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setFinished)
-///
-/// Base class method implementation
-///
-/// @param self QGeoRouteReply*
-/// @param finished bool
-///
-void q_georoutereply_super_set_finished(void* self, bool finished);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setRoutes)
 ///
@@ -258,48 +221,12 @@ void q_georoutereply_super_set_finished(void* self, bool finished);
 ///
 void q_georoutereply_set_routes(void* self, libqt_list routes);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setRoutes)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoRouteReply*
-/// @param callback void func(QGeoRouteReply* self, libqt_list of QGeoRoute* routes)
-///
-void q_georoutereply_on_set_routes(void* self, void (*callback)(void*, libqt_list));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#setRoutes)
-///
-/// Base class method implementation
-///
-/// @param self QGeoRouteReply*
-/// @param routes libqt_list of QGeoRoute*
-///
-void q_georoutereply_super_set_routes(void* self, libqt_list routes);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#addRoutes)
 ///
 /// @param self QGeoRouteReply*
 /// @param routes libqt_list of QGeoRoute*
 ///
 void q_georoutereply_add_routes(void* self, libqt_list routes);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#addRoutes)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QGeoRouteReply*
-/// @param callback void func(QGeoRouteReply* self, libqt_list of QGeoRoute* routes)
-///
-void q_georoutereply_on_add_routes(void* self, void (*callback)(void*, libqt_list));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qgeoroutereply.html#addRoutes)
-///
-/// Base class method implementation
-///
-/// @param self QGeoRouteReply*
-/// @param routes libqt_list of QGeoRoute*
-///
-void q_georoutereply_super_add_routes(void* self, libqt_list routes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -341,9 +268,9 @@ void q_georoutereply_on_error_occurred2(void* self, void (*callback)(void*, int3
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-const char* q_georoutereply_object_name(void* self);
+const char* q_georoutereply_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -358,33 +285,33 @@ void q_georoutereply_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-bool q_georoutereply_is_widget_type(void* self);
+bool q_georoutereply_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-bool q_georoutereply_is_window_type(void* self);
+bool q_georoutereply_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-bool q_georoutereply_is_quick_item_type(void* self);
+bool q_georoutereply_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-bool q_georoutereply_signals_blocked(void* self);
+bool q_georoutereply_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -399,9 +326,9 @@ bool q_georoutereply_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-QThread* q_georoutereply_thread(void* self);
+QThread* q_georoutereply_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -452,11 +379,11 @@ void q_georoutereply_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_georoutereply_children(void* self);
+libqt_list q_georoutereply_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -494,7 +421,7 @@ void q_georoutereply_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_georoutereply_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_georoutereply_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -505,18 +432,18 @@ QMetaObject__Connection* q_georoutereply_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_georoutereply_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_georoutereply_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_georoutereply_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_georoutereply_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -527,7 +454,7 @@ QMetaObject__Connection* q_georoutereply_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_georoutereply_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_georoutereply_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -538,24 +465,24 @@ bool q_georoutereply_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_georoutereply_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_georoutereply_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-bool q_georoutereply_disconnect3(void* self);
+bool q_georoutereply_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param receiver QObject*
 ///
-bool q_georoutereply_disconnect4(void* self, void* receiver);
+bool q_georoutereply_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -563,23 +490,23 @@ bool q_georoutereply_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_georoutereply_disconnect5(void* param1);
+bool q_georoutereply_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-void q_georoutereply_dump_object_tree(void* self);
+void q_georoutereply_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-void q_georoutereply_dump_object_info(void* self);
+void q_georoutereply_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -589,16 +516,16 @@ void q_georoutereply_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_georoutereply_set_property(void* self, const char* name, void* value);
+bool q_georoutereply_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param name const char*
 ///
-QVariant* q_georoutereply_property(void* self, const char* name);
+QVariant* q_georoutereply_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -606,9 +533,9 @@ QVariant* q_georoutereply_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-const char** q_georoutereply_dynamic_property_names(void* self);
+const char** q_georoutereply_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -622,9 +549,9 @@ QBindingStorage* q_georoutereply_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-const QBindingStorage* q_georoutereply_binding_storage2(void* self);
+const QBindingStorage* q_georoutereply_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -647,18 +574,18 @@ void q_georoutereply_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-QObject* q_georoutereply_parent(void* self);
+QObject* q_georoutereply_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param classname const char*
 ///
-bool q_georoutereply_inherits(void* self, const char* classname);
+bool q_georoutereply_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -698,7 +625,7 @@ int32_t q_georoutereply_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_georoutereply_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_georoutereply_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -710,59 +637,59 @@ QMetaObject__Connection* q_georoutereply_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_georoutereply_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_georoutereply_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_georoutereply_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_georoutereply_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param signal const char*
 ///
-bool q_georoutereply_disconnect1(void* self, const char* signal);
+bool q_georoutereply_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoRouteReply*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_georoutereply_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_georoutereply_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_georoutereply_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_georoutereply_disconnect23(void* self, void* receiver, const char* member);
+bool q_georoutereply_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGeoRouteReply*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_georoutereply_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -958,7 +885,7 @@ void q_georoutereply_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QGeoRouteReply*
 /// @param signal QMetaMethod*
 ///
-void q_georoutereply_connect_notify(void* self, void* signal);
+void q_georoutereply_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -969,7 +896,7 @@ void q_georoutereply_connect_notify(void* self, void* signal);
 /// @param self QGeoRouteReply*
 /// @param signal QMetaMethod*
 ///
-void q_georoutereply_super_connect_notify(void* self, void* signal);
+void q_georoutereply_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -980,7 +907,7 @@ void q_georoutereply_super_connect_notify(void* self, void* signal);
 /// @param self QGeoRouteReply*
 /// @param callback void func(QGeoRouteReply* self, QMetaMethod* signal)
 ///
-void q_georoutereply_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_georoutereply_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -991,7 +918,7 @@ void q_georoutereply_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QGeoRouteReply*
 /// @param signal QMetaMethod*
 ///
-void q_georoutereply_disconnect_notify(void* self, void* signal);
+void q_georoutereply_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1002,7 +929,7 @@ void q_georoutereply_disconnect_notify(void* self, void* signal);
 /// @param self QGeoRouteReply*
 /// @param signal QMetaMethod*
 ///
-void q_georoutereply_super_disconnect_notify(void* self, void* signal);
+void q_georoutereply_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1013,7 +940,7 @@ void q_georoutereply_super_disconnect_notify(void* self, void* signal);
 /// @param self QGeoRouteReply*
 /// @param callback void func(QGeoRouteReply* self, QMetaMethod* signal)
 ///
-void q_georoutereply_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_georoutereply_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1021,9 +948,9 @@ void q_georoutereply_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-QObject* q_georoutereply_sender(void* self);
+QObject* q_georoutereply_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1031,9 +958,9 @@ QObject* q_georoutereply_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-QObject* q_georoutereply_super_sender(void* self);
+QObject* q_georoutereply_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1041,10 +968,10 @@ QObject* q_georoutereply_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGeoRouteReply*
-/// @param callback QObject* func()
+/// @param self const QGeoRouteReply*
+/// @param callback QObject* func(QGeoRouteReply* self)
 ///
-void q_georoutereply_on_sender(void* self, QObject* (*callback)());
+void q_georoutereply_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1052,9 +979,9 @@ void q_georoutereply_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-int32_t q_georoutereply_sender_signal_index(void* self);
+int32_t q_georoutereply_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1062,9 +989,9 @@ int32_t q_georoutereply_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 ///
-int32_t q_georoutereply_super_sender_signal_index(void* self);
+int32_t q_georoutereply_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1072,10 +999,10 @@ int32_t q_georoutereply_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGeoRouteReply*
-/// @param callback int32_t func()
+/// @param self const QGeoRouteReply*
+/// @param callback int32_t func(QGeoRouteReply* self)
 ///
-void q_georoutereply_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_georoutereply_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1083,10 +1010,10 @@ void q_georoutereply_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param signal const char*
 ///
-int32_t q_georoutereply_receivers(void* self, const char* signal);
+int32_t q_georoutereply_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1094,10 +1021,10 @@ int32_t q_georoutereply_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param signal const char*
 ///
-int32_t q_georoutereply_super_receivers(void* self, const char* signal);
+int32_t q_georoutereply_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1105,10 +1032,10 @@ int32_t q_georoutereply_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param callback int32_t func(QGeoRouteReply* self, const char* signal)
 ///
-void q_georoutereply_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_georoutereply_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1116,10 +1043,10 @@ void q_georoutereply_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param signal QMetaMethod*
 ///
-bool q_georoutereply_is_signal_connected(void* self, void* signal);
+bool q_georoutereply_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1127,10 +1054,10 @@ bool q_georoutereply_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param signal QMetaMethod*
 ///
-bool q_georoutereply_super_is_signal_connected(void* self, void* signal);
+bool q_georoutereply_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1138,10 +1065,10 @@ bool q_georoutereply_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGeoRouteReply*
+/// @param self const QGeoRouteReply*
 /// @param callback bool func(QGeoRouteReply* self, QMetaMethod* signal)
 ///
-void q_georoutereply_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_georoutereply_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

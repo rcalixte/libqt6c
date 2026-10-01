@@ -16,22 +16,22 @@
 /// @param certificate QSslCertificate*
 /// @param privateKey QSslKey*
 ///
-void q_webengineclientcertificatestore_add(void* self, void* certificate, void* privateKey);
+void q_webengineclientcertificatestore_add(void* self, const void* certificate, const void* privateKey);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#certificates)
 ///
-/// @param self QWebEngineClientCertificateStore*
+/// @param self const QWebEngineClientCertificateStore*
 ///
 /// @return libqt_list of QSslCertificate*
 ///
-libqt_list q_webengineclientcertificatestore_certificates(void* self);
+libqt_list q_webengineclientcertificatestore_certificates(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#remove)
 ///
 /// @param self QWebEngineClientCertificateStore*
 /// @param certificate QSslCertificate*
 ///
-void q_webengineclientcertificatestore_remove(void* self, void* certificate);
+void q_webengineclientcertificatestore_remove(void* self, const void* certificate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#clear)
 ///

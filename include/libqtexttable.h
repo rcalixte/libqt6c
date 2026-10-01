@@ -20,113 +20,113 @@ QTextTableCell* q_texttablecell_new();
 ///
 /// @param o QTextTableCell*
 ///
-QTextTableCell* q_texttablecell_new2(void* o);
+QTextTableCell* q_texttablecell_new2(const void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#operator-eq)
 ///
 /// @param self QTextTableCell*
 /// @param o QTextTableCell*
 ///
-void q_texttablecell_operator_assign(void* self, void* o);
+void q_texttablecell_operator_assign(void* self, const void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#setFormat)
 ///
 /// @param self QTextTableCell*
 /// @param format QTextCharFormat*
 ///
-void q_texttablecell_set_format(void* self, void* format);
+void q_texttablecell_set_format(void* self, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#format)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-QTextCharFormat* q_texttablecell_format(void* self);
+QTextCharFormat* q_texttablecell_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#row)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-int32_t q_texttablecell_row(void* self);
+int32_t q_texttablecell_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#column)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-int32_t q_texttablecell_column(void* self);
+int32_t q_texttablecell_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#rowSpan)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-int32_t q_texttablecell_row_span(void* self);
+int32_t q_texttablecell_row_span(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#columnSpan)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-int32_t q_texttablecell_column_span(void* self);
+int32_t q_texttablecell_column_span(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#isValid)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-bool q_texttablecell_is_valid(void* self);
+bool q_texttablecell_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#firstCursorPosition)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-QTextCursor* q_texttablecell_first_cursor_position(void* self);
+QTextCursor* q_texttablecell_first_cursor_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#lastCursorPosition)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-QTextCursor* q_texttablecell_last_cursor_position(void* self);
+QTextCursor* q_texttablecell_last_cursor_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#firstPosition)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-int32_t q_texttablecell_first_position(void* self);
+int32_t q_texttablecell_first_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#lastPosition)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-int32_t q_texttablecell_last_position(void* self);
+int32_t q_texttablecell_last_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#operator-eq-eq)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 /// @param other QTextTableCell*
 ///
-bool q_texttablecell_operator_equal(void* self, void* other);
+bool q_texttablecell_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#operator-not-eq)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 /// @param other QTextTableCell*
 ///
-bool q_texttablecell_operator_not_equal(void* self, void* other);
+bool q_texttablecell_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#begin)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-QTextFrame__iterator* q_texttablecell_begin(void* self);
+QTextFrame__iterator* q_texttablecell_begin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#end)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-QTextFrame__iterator* q_texttablecell_end(void* self);
+QTextFrame__iterator* q_texttablecell_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#tableCellFormatIndex)
 ///
-/// @param self QTextTableCell*
+/// @param self const QTextTableCell*
 ///
-int32_t q_texttablecell_table_cell_format_index(void* self);
+int32_t q_texttablecell_table_cell_format_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttablecell.html#dtor.QTextTableCell)
 ///
@@ -146,26 +146,26 @@ QTextTable* q_texttable_new(void* doc);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-const QMetaObject* q_texttable_meta_object(void* self);
+const QMetaObject* q_texttable_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTextTable*
-/// @param callback const QMetaObject* func()
+/// @param self const QTextTable*
+/// @param callback const QMetaObject* func(const QTextTable* self)
 ///
-void q_texttable_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_texttable_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-const QMetaObject* q_texttable_super_meta_object(void* self);
+const QMetaObject* q_texttable_super_meta_object(const void* self);
 
 /// @param self QTextTable*
 /// @param param1 const char*
@@ -286,7 +286,7 @@ void q_texttable_merge_cells(void* self, int row, int col, int numRows, int numC
 /// @param self QTextTable*
 /// @param cursor QTextCursor*
 ///
-void q_texttable_merge_cells2(void* self, void* cursor);
+void q_texttable_merge_cells2(void* self, const void* cursor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#splitCell)
 ///
@@ -300,64 +300,64 @@ void q_texttable_split_cell(void* self, int row, int col, int numRows, int numCo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#rows)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-int32_t q_texttable_rows(void* self);
+int32_t q_texttable_rows(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#columns)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-int32_t q_texttable_columns(void* self);
+int32_t q_texttable_columns(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#cellAt)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param row int
 /// @param col int
 ///
-QTextTableCell* q_texttable_cell_at(void* self, int row, int col);
+QTextTableCell* q_texttable_cell_at(const void* self, int row, int col);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#cellAt)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param position int
 ///
-QTextTableCell* q_texttable_cell_at2(void* self, int position);
+QTextTableCell* q_texttable_cell_at2(const void* self, int position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#cellAt)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param c QTextCursor*
 ///
-QTextTableCell* q_texttable_cell_at3(void* self, void* c);
+QTextTableCell* q_texttable_cell_at3(const void* self, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#rowStart)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param c QTextCursor*
 ///
-QTextCursor* q_texttable_row_start(void* self, void* c);
+QTextCursor* q_texttable_row_start(const void* self, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#rowEnd)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param c QTextCursor*
 ///
-QTextCursor* q_texttable_row_end(void* self, void* c);
+QTextCursor* q_texttable_row_end(const void* self, const void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#setFormat)
 ///
 /// @param self QTextTable*
 /// @param format QTextTableFormat*
 ///
-void q_texttable_set_format(void* self, void* format);
+void q_texttable_set_format(void* self, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttable.html#format)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QTextTableFormat* q_texttable_format(void* self);
+QTextTableFormat* q_texttable_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -385,105 +385,105 @@ const char* q_texttable_tr3(const char* s, const char* c, int n);
 /// @param self QTextTable*
 /// @param format QTextFrameFormat*
 ///
-void q_texttable_set_frame_format(void* self, void* format);
+void q_texttable_set_frame_format(void* self, const void* format);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#frameFormat)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QTextFrameFormat* q_texttable_frame_format(void* self);
+QTextFrameFormat* q_texttable_frame_format(const void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#firstCursorPosition)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QTextCursor* q_texttable_first_cursor_position(void* self);
+QTextCursor* q_texttable_first_cursor_position(const void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#lastCursorPosition)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QTextCursor* q_texttable_last_cursor_position(void* self);
+QTextCursor* q_texttable_last_cursor_position(const void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#firstPosition)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-int32_t q_texttable_first_position(void* self);
+int32_t q_texttable_first_position(const void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#lastPosition)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-int32_t q_texttable_last_position(void* self);
+int32_t q_texttable_last_position(const void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#childFrames)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
 /// @return libqt_list of QTextFrame*
 ///
-libqt_list q_texttable_child_frames(void* self);
+libqt_list q_texttable_child_frames(const void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#parentFrame)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QTextFrame* q_texttable_parent_frame(void* self);
+QTextFrame* q_texttable_parent_frame(const void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#begin)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QTextFrame__iterator* q_texttable_begin(void* self);
+QTextFrame__iterator* q_texttable_begin(const void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextframe.html#end)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QTextFrame__iterator* q_texttable_end(void* self);
+QTextFrame__iterator* q_texttable_end(const void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextobject.html#formatIndex)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-int32_t q_texttable_format_index(void* self);
+int32_t q_texttable_format_index(const void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextobject.html#document)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QTextDocument* q_texttable_document(void* self);
+QTextDocument* q_texttable_document(const void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextobject.html#objectIndex)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-int32_t q_texttable_object_index(void* self);
+int32_t q_texttable_object_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -491,9 +491,9 @@ int32_t q_texttable_object_index(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-const char* q_texttable_object_name(void* self);
+const char* q_texttable_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -508,33 +508,33 @@ void q_texttable_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-bool q_texttable_is_widget_type(void* self);
+bool q_texttable_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-bool q_texttable_is_window_type(void* self);
+bool q_texttable_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-bool q_texttable_is_quick_item_type(void* self);
+bool q_texttable_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-bool q_texttable_signals_blocked(void* self);
+bool q_texttable_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -549,9 +549,9 @@ bool q_texttable_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QThread* q_texttable_thread(void* self);
+QThread* q_texttable_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -602,11 +602,11 @@ void q_texttable_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_texttable_children(void* self);
+libqt_list q_texttable_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -644,7 +644,7 @@ void q_texttable_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_texttable_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_texttable_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -655,18 +655,18 @@ QMetaObject__Connection* q_texttable_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_texttable_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_texttable_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_texttable_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_texttable_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -677,7 +677,7 @@ QMetaObject__Connection* q_texttable_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_texttable_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_texttable_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -688,24 +688,24 @@ bool q_texttable_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_texttable_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_texttable_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-bool q_texttable_disconnect3(void* self);
+bool q_texttable_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param receiver QObject*
 ///
-bool q_texttable_disconnect4(void* self, void* receiver);
+bool q_texttable_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -713,23 +713,23 @@ bool q_texttable_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_texttable_disconnect5(void* param1);
+bool q_texttable_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-void q_texttable_dump_object_tree(void* self);
+void q_texttable_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-void q_texttable_dump_object_info(void* self);
+void q_texttable_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -739,16 +739,16 @@ void q_texttable_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_texttable_set_property(void* self, const char* name, void* value);
+bool q_texttable_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param name const char*
 ///
-QVariant* q_texttable_property(void* self, const char* name);
+QVariant* q_texttable_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -756,9 +756,9 @@ QVariant* q_texttable_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-const char** q_texttable_dynamic_property_names(void* self);
+const char** q_texttable_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -772,9 +772,9 @@ QBindingStorage* q_texttable_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-const QBindingStorage* q_texttable_binding_storage2(void* self);
+const QBindingStorage* q_texttable_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -797,18 +797,18 @@ void q_texttable_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QObject* q_texttable_parent(void* self);
+QObject* q_texttable_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param classname const char*
 ///
-bool q_texttable_inherits(void* self, const char* classname);
+bool q_texttable_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -848,7 +848,7 @@ int32_t q_texttable_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_texttable_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_texttable_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -860,59 +860,59 @@ QMetaObject__Connection* q_texttable_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_texttable_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_texttable_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_texttable_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_texttable_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param signal const char*
 ///
-bool q_texttable_disconnect1(void* self, const char* signal);
+bool q_texttable_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextTable*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_texttable_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_texttable_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_texttable_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_texttable_disconnect23(void* self, void* receiver, const char* member);
+bool q_texttable_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTextTable*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_texttable_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1108,7 +1108,7 @@ void q_texttable_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QTextTable*
 /// @param signal QMetaMethod*
 ///
-void q_texttable_connect_notify(void* self, void* signal);
+void q_texttable_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1119,7 +1119,7 @@ void q_texttable_connect_notify(void* self, void* signal);
 /// @param self QTextTable*
 /// @param signal QMetaMethod*
 ///
-void q_texttable_super_connect_notify(void* self, void* signal);
+void q_texttable_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1130,7 +1130,7 @@ void q_texttable_super_connect_notify(void* self, void* signal);
 /// @param self QTextTable*
 /// @param callback void func(QTextTable* self, QMetaMethod* signal)
 ///
-void q_texttable_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_texttable_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1141,7 +1141,7 @@ void q_texttable_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QTextTable*
 /// @param signal QMetaMethod*
 ///
-void q_texttable_disconnect_notify(void* self, void* signal);
+void q_texttable_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1152,7 +1152,7 @@ void q_texttable_disconnect_notify(void* self, void* signal);
 /// @param self QTextTable*
 /// @param signal QMetaMethod*
 ///
-void q_texttable_super_disconnect_notify(void* self, void* signal);
+void q_texttable_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1163,7 +1163,7 @@ void q_texttable_super_disconnect_notify(void* self, void* signal);
 /// @param self QTextTable*
 /// @param callback void func(QTextTable* self, QMetaMethod* signal)
 ///
-void q_texttable_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_texttable_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1171,9 +1171,9 @@ void q_texttable_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QObject* q_texttable_sender(void* self);
+QObject* q_texttable_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1181,9 +1181,9 @@ QObject* q_texttable_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-QObject* q_texttable_super_sender(void* self);
+QObject* q_texttable_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1191,10 +1191,10 @@ QObject* q_texttable_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextTable*
-/// @param callback QObject* func()
+/// @param self const QTextTable*
+/// @param callback QObject* func(QTextTable* self)
 ///
-void q_texttable_on_sender(void* self, QObject* (*callback)());
+void q_texttable_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1202,9 +1202,9 @@ void q_texttable_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-int32_t q_texttable_sender_signal_index(void* self);
+int32_t q_texttable_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1212,9 +1212,9 @@ int32_t q_texttable_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 ///
-int32_t q_texttable_super_sender_signal_index(void* self);
+int32_t q_texttable_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1222,10 +1222,10 @@ int32_t q_texttable_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextTable*
-/// @param callback int32_t func()
+/// @param self const QTextTable*
+/// @param callback int32_t func(QTextTable* self)
 ///
-void q_texttable_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_texttable_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1233,10 +1233,10 @@ void q_texttable_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param signal const char*
 ///
-int32_t q_texttable_receivers(void* self, const char* signal);
+int32_t q_texttable_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1244,10 +1244,10 @@ int32_t q_texttable_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param signal const char*
 ///
-int32_t q_texttable_super_receivers(void* self, const char* signal);
+int32_t q_texttable_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1255,10 +1255,10 @@ int32_t q_texttable_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param callback int32_t func(QTextTable* self, const char* signal)
 ///
-void q_texttable_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_texttable_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1266,10 +1266,10 @@ void q_texttable_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param signal QMetaMethod*
 ///
-bool q_texttable_is_signal_connected(void* self, void* signal);
+bool q_texttable_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1277,10 +1277,10 @@ bool q_texttable_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param signal QMetaMethod*
 ///
-bool q_texttable_super_is_signal_connected(void* self, void* signal);
+bool q_texttable_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1288,10 +1288,10 @@ bool q_texttable_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextTable*
+/// @param self const QTextTable*
 /// @param callback bool func(QTextTable* self, QMetaMethod* signal)
 ///
-void q_texttable_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_texttable_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

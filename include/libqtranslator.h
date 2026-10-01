@@ -24,26 +24,26 @@ QTranslator* q_translator_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-const QMetaObject* q_translator_meta_object(void* self);
+const QMetaObject* q_translator_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTranslator*
-/// @param callback const QMetaObject* func()
+/// @param self const QTranslator*
+/// @param callback const QMetaObject* func(const QTranslator* self)
 ///
-void q_translator_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_translator_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-const QMetaObject* q_translator_super_meta_object(void* self);
+const QMetaObject* q_translator_super_meta_object(const void* self);
 
 /// @param self QTranslator*
 /// @param param1 const char*
@@ -99,73 +99,73 @@ const char* q_translator_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param context const char*
 /// @param sourceText const char*
 /// @param disambiguation const char*
 /// @param n int
 ///
-const char* q_translator_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n);
+const char* q_translator_translate(const void* self, const char* context, const char* sourceText, const char* disambiguation, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#translate)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTranslator*
-/// @param callback const char* func(QTranslator* self, const char* context, const char* sourceText, const char* disambiguation, int n)
+/// @param self const QTranslator*
+/// @param callback const char* func(const QTranslator* self, const char* context, const char* sourceText, const char* disambiguation, int n)
 ///
-void q_translator_on_translate(void* self, const char* (*callback)(void*, const char*, const char*, const char*, int));
+void q_translator_on_translate(const void* self, const char* (*callback)(const void*, const char*, const char*, const char*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#translate)
 ///
 /// Base class method implementation
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param context const char*
 /// @param sourceText const char*
 /// @param disambiguation const char*
 /// @param n int
 ///
-const char* q_translator_super_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n);
+const char* q_translator_super_translate(const void* self, const char* context, const char* sourceText, const char* disambiguation, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#isEmpty)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-bool q_translator_is_empty(void* self);
+bool q_translator_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#isEmpty)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTranslator*
-/// @param callback bool func()
+/// @param self const QTranslator*
+/// @param callback bool func(const QTranslator* self)
 ///
-void q_translator_on_is_empty(void* self, bool (*callback)());
+void q_translator_on_is_empty(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#isEmpty)
 ///
 /// Base class method implementation
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-bool q_translator_super_is_empty(void* self);
+bool q_translator_super_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#language)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-const char* q_translator_language(void* self);
+const char* q_translator_language(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#filePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-const char* q_translator_file_path(void* self);
+const char* q_translator_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#load)
 ///
@@ -180,7 +180,7 @@ bool q_translator_load(void* self, const char* filename);
 /// @param locale QLocale*
 /// @param filename const char*
 ///
-bool q_translator_load2(void* self, void* locale, const char* filename);
+bool q_translator_load2(void* self, const void* locale, const char* filename);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#load)
 ///
@@ -243,7 +243,7 @@ bool q_translator_load4(void* self, const char* filename, const char* directory,
 /// @param filename const char*
 /// @param prefix const char*
 ///
-bool q_translator_load33(void* self, void* locale, const char* filename, const char* prefix);
+bool q_translator_load33(void* self, const void* locale, const char* filename, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#load)
 ///
@@ -253,7 +253,7 @@ bool q_translator_load33(void* self, void* locale, const char* filename, const c
 /// @param prefix const char*
 /// @param directory const char*
 ///
-bool q_translator_load42(void* self, void* locale, const char* filename, const char* prefix, const char* directory);
+bool q_translator_load42(void* self, const void* locale, const char* filename, const char* prefix, const char* directory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#load)
 ///
@@ -264,7 +264,7 @@ bool q_translator_load42(void* self, void* locale, const char* filename, const c
 /// @param directory const char*
 /// @param suffix const char*
 ///
-bool q_translator_load5(void* self, void* locale, const char* filename, const char* prefix, const char* directory, const char* suffix);
+bool q_translator_load5(void* self, const void* locale, const char* filename, const char* prefix, const char* directory, const char* suffix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtranslator.html#load)
 ///
@@ -281,9 +281,9 @@ bool q_translator_load34(void* self, unsigned char* data, int lenVal, const char
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-const char* q_translator_object_name(void* self);
+const char* q_translator_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -298,33 +298,33 @@ void q_translator_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-bool q_translator_is_widget_type(void* self);
+bool q_translator_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-bool q_translator_is_window_type(void* self);
+bool q_translator_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-bool q_translator_is_quick_item_type(void* self);
+bool q_translator_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-bool q_translator_signals_blocked(void* self);
+bool q_translator_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -339,9 +339,9 @@ bool q_translator_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-QThread* q_translator_thread(void* self);
+QThread* q_translator_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -392,11 +392,11 @@ void q_translator_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_translator_children(void* self);
+libqt_list q_translator_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -434,7 +434,7 @@ void q_translator_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_translator_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_translator_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -445,18 +445,18 @@ QMetaObject__Connection* q_translator_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_translator_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_translator_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_translator_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_translator_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -467,7 +467,7 @@ QMetaObject__Connection* q_translator_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_translator_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_translator_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -478,24 +478,24 @@ bool q_translator_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_translator_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_translator_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-bool q_translator_disconnect3(void* self);
+bool q_translator_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param receiver QObject*
 ///
-bool q_translator_disconnect4(void* self, void* receiver);
+bool q_translator_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -503,23 +503,23 @@ bool q_translator_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_translator_disconnect5(void* param1);
+bool q_translator_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-void q_translator_dump_object_tree(void* self);
+void q_translator_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-void q_translator_dump_object_info(void* self);
+void q_translator_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -529,16 +529,16 @@ void q_translator_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_translator_set_property(void* self, const char* name, void* value);
+bool q_translator_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param name const char*
 ///
-QVariant* q_translator_property(void* self, const char* name);
+QVariant* q_translator_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -546,9 +546,9 @@ QVariant* q_translator_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-const char** q_translator_dynamic_property_names(void* self);
+const char** q_translator_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -562,9 +562,9 @@ QBindingStorage* q_translator_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-const QBindingStorage* q_translator_binding_storage2(void* self);
+const QBindingStorage* q_translator_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -587,18 +587,18 @@ void q_translator_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-QObject* q_translator_parent(void* self);
+QObject* q_translator_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param classname const char*
 ///
-bool q_translator_inherits(void* self, const char* classname);
+bool q_translator_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -638,7 +638,7 @@ int32_t q_translator_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_translator_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_translator_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -650,59 +650,59 @@ QMetaObject__Connection* q_translator_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_translator_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_translator_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_translator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_translator_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param signal const char*
 ///
-bool q_translator_disconnect1(void* self, const char* signal);
+bool q_translator_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTranslator*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_translator_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_translator_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_translator_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_translator_disconnect23(void* self, void* receiver, const char* member);
+bool q_translator_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTranslator*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_translator_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -898,7 +898,7 @@ void q_translator_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QTranslator*
 /// @param signal QMetaMethod*
 ///
-void q_translator_connect_notify(void* self, void* signal);
+void q_translator_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -909,7 +909,7 @@ void q_translator_connect_notify(void* self, void* signal);
 /// @param self QTranslator*
 /// @param signal QMetaMethod*
 ///
-void q_translator_super_connect_notify(void* self, void* signal);
+void q_translator_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -920,7 +920,7 @@ void q_translator_super_connect_notify(void* self, void* signal);
 /// @param self QTranslator*
 /// @param callback void func(QTranslator* self, QMetaMethod* signal)
 ///
-void q_translator_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_translator_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -931,7 +931,7 @@ void q_translator_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QTranslator*
 /// @param signal QMetaMethod*
 ///
-void q_translator_disconnect_notify(void* self, void* signal);
+void q_translator_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -942,7 +942,7 @@ void q_translator_disconnect_notify(void* self, void* signal);
 /// @param self QTranslator*
 /// @param signal QMetaMethod*
 ///
-void q_translator_super_disconnect_notify(void* self, void* signal);
+void q_translator_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -953,7 +953,7 @@ void q_translator_super_disconnect_notify(void* self, void* signal);
 /// @param self QTranslator*
 /// @param callback void func(QTranslator* self, QMetaMethod* signal)
 ///
-void q_translator_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_translator_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -961,9 +961,9 @@ void q_translator_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-QObject* q_translator_sender(void* self);
+QObject* q_translator_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -971,9 +971,9 @@ QObject* q_translator_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-QObject* q_translator_super_sender(void* self);
+QObject* q_translator_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -981,10 +981,10 @@ QObject* q_translator_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTranslator*
-/// @param callback QObject* func()
+/// @param self const QTranslator*
+/// @param callback QObject* func(QTranslator* self)
 ///
-void q_translator_on_sender(void* self, QObject* (*callback)());
+void q_translator_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -992,9 +992,9 @@ void q_translator_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-int32_t q_translator_sender_signal_index(void* self);
+int32_t q_translator_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1002,9 +1002,9 @@ int32_t q_translator_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 ///
-int32_t q_translator_super_sender_signal_index(void* self);
+int32_t q_translator_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1012,10 +1012,10 @@ int32_t q_translator_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTranslator*
-/// @param callback int32_t func()
+/// @param self const QTranslator*
+/// @param callback int32_t func(QTranslator* self)
 ///
-void q_translator_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_translator_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1023,10 +1023,10 @@ void q_translator_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param signal const char*
 ///
-int32_t q_translator_receivers(void* self, const char* signal);
+int32_t q_translator_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1034,10 +1034,10 @@ int32_t q_translator_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param signal const char*
 ///
-int32_t q_translator_super_receivers(void* self, const char* signal);
+int32_t q_translator_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1045,10 +1045,10 @@ int32_t q_translator_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param callback int32_t func(QTranslator* self, const char* signal)
 ///
-void q_translator_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_translator_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1056,10 +1056,10 @@ void q_translator_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param signal QMetaMethod*
 ///
-bool q_translator_is_signal_connected(void* self, void* signal);
+bool q_translator_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1067,10 +1067,10 @@ bool q_translator_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param signal QMetaMethod*
 ///
-bool q_translator_super_is_signal_connected(void* self, void* signal);
+bool q_translator_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1078,10 +1078,10 @@ bool q_translator_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTranslator*
+/// @param self const QTranslator*
 /// @param callback bool func(QTranslator* self, QMetaMethod* signal)
 ///
-void q_translator_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_translator_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

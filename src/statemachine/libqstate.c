@@ -25,15 +25,15 @@ QState* q_state_new4(int32_t childMode, void* parent) {
     return QState_New4(childMode, (QState*)parent);
 }
 
-const QMetaObject* q_state_meta_object(void* self) {
+const QMetaObject* q_state_meta_object(const void* self) {
     return QState_MetaObject((QState*)self);
 }
 
-void q_state_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_state_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QState_OnMetaObject((QState*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_state_super_meta_object(void* self) {
+const QMetaObject* q_state_super_meta_object(const void* self) {
     return QState_SuperMetaObject((QState*)self);
 }
 
@@ -68,7 +68,7 @@ const char* q_state_tr(const char* s) {
     return _ret;
 }
 
-QAbstractState* q_state_error_state(void* self) {
+QAbstractState* q_state_error_state(const void* self) {
     return QState_ErrorState((QState*)self);
 }
 
@@ -80,7 +80,7 @@ void q_state_add_transition(void* self, void* transition) {
     QState_AddTransition((QState*)self, (QAbstractTransition*)transition);
 }
 
-QSignalTransition* q_state_add_transition2(void* self, void* sender, const char* signal, void* target) {
+QSignalTransition* q_state_add_transition2(void* self, const void* sender, const char* signal, void* target) {
     return QState_AddTransition2((QState*)self, (QObject*)sender, signal, (QAbstractState*)target);
 }
 
@@ -92,12 +92,12 @@ void q_state_remove_transition(void* self, void* transition) {
     QState_RemoveTransition((QState*)self, (QAbstractTransition*)transition);
 }
 
-libqt_list /* of QAbstractTransition* */ q_state_transitions(void* self) {
+libqt_list /* of QAbstractTransition* */ q_state_transitions(const void* self) {
     libqt_list _arr = QState_Transitions((QState*)self);
     return _arr;
 }
 
-QAbstractState* q_state_initial_state(void* self) {
+QAbstractState* q_state_initial_state(const void* self) {
     return QState_InitialState((QState*)self);
 }
 
@@ -105,7 +105,7 @@ void q_state_set_initial_state(void* self, void* state) {
     QState_SetInitialState((QState*)self, (QAbstractState*)state);
 }
 
-int32_t q_state_child_mode(void* self) {
+int32_t q_state_child_mode(const void* self) {
     return QState_ChildMode((QState*)self);
 }
 
@@ -113,7 +113,7 @@ void q_state_set_child_mode(void* self, int32_t mode) {
     QState_SetChildMode((QState*)self, mode);
 }
 
-void q_state_assign_property(void* self, void* object, const char* name, void* value) {
+void q_state_assign_property(void* self, void* object, const char* name, const void* value) {
     QState_AssignProperty((QState*)self, (QObject*)object, name, (QVariant*)value);
 }
 
@@ -167,15 +167,15 @@ const char* q_state_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QState* q_state_parent_state(void* self) {
+QState* q_state_parent_state(const void* self) {
     return QAbstractState_ParentState((QAbstractState*)self);
 }
 
-QStateMachine* q_state_machine(void* self) {
+QStateMachine* q_state_machine(const void* self) {
     return QAbstractState_Machine((QAbstractState*)self);
 }
 
-bool q_state_active(void* self) {
+bool q_state_active(const void* self) {
     return QAbstractState_Active((QAbstractState*)self);
 }
 
@@ -187,7 +187,7 @@ void q_state_on_active_changed(void* self, void (*callback)(void*, bool)) {
     QAbstractState_Connect_ActiveChanged((QAbstractState*)self, (intptr_t)callback);
 }
 
-const char* q_state_object_name(void* self) {
+const char* q_state_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -198,19 +198,19 @@ void q_state_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_state_is_widget_type(void* self) {
+bool q_state_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_state_is_window_type(void* self) {
+bool q_state_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_state_is_quick_item_type(void* self) {
+bool q_state_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_state_signals_blocked(void* self) {
+bool q_state_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -218,7 +218,7 @@ bool q_state_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_state_thread(void* self) {
+QThread* q_state_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -242,7 +242,7 @@ void q_state_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_state_children(void* self) {
+libqt_list /* of QObject* */ q_state_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -259,55 +259,55 @@ void q_state_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_state_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_state_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_state_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_state_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_state_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_state_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_state_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_state_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_state_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_state_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_state_disconnect3(void* self) {
+bool q_state_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_state_disconnect4(void* self, void* receiver) {
+bool q_state_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_state_disconnect5(void* param1) {
+bool q_state_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_state_dump_object_tree(void* self) {
+void q_state_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_state_dump_object_info(void* self) {
+void q_state_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_state_set_property(void* self, const char* name, void* value) {
+bool q_state_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_state_property(void* self, const char* name) {
+QVariant* q_state_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_state_dynamic_property_names(void* self) {
+const char** q_state_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -328,7 +328,7 @@ QBindingStorage* q_state_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_state_binding_storage2(void* self) {
+const QBindingStorage* q_state_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -340,11 +340,11 @@ void q_state_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_state_parent(void* self) {
+QObject* q_state_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_state_inherits(void* self, const char* classname) {
+bool q_state_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -360,31 +360,31 @@ int32_t q_state_start_timer23(void* self, int64_t time, int32_t timerType) {
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_state_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_state_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_state_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_state_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_state_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_state_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_state_disconnect1(void* self, const char* signal) {
+bool q_state_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_state_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_state_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_state_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_state_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_state_disconnect23(void* self, void* receiver, const char* member) {
+bool q_state_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -444,76 +444,44 @@ void q_state_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QState_OnCustomEvent((QState*)self, (intptr_t)callback);
 }
 
-void q_state_connect_notify(void* self, void* signal) {
+void q_state_connect_notify(void* self, const void* signal) {
     QState_ConnectNotify((QState*)self, (QMetaMethod*)signal);
 }
 
-void q_state_super_connect_notify(void* self, void* signal) {
+void q_state_super_connect_notify(void* self, const void* signal) {
     QState_SuperConnectNotify((QState*)self, (QMetaMethod*)signal);
 }
 
-void q_state_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_state_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QState_OnConnectNotify((QState*)self, (intptr_t)callback);
 }
 
-void q_state_disconnect_notify(void* self, void* signal) {
+void q_state_disconnect_notify(void* self, const void* signal) {
     QState_DisconnectNotify((QState*)self, (QMetaMethod*)signal);
 }
 
-void q_state_super_disconnect_notify(void* self, void* signal) {
+void q_state_super_disconnect_notify(void* self, const void* signal) {
     QState_SuperDisconnectNotify((QState*)self, (QMetaMethod*)signal);
 }
 
-void q_state_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_state_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QState_OnDisconnectNotify((QState*)self, (intptr_t)callback);
 }
 
-QObject* q_state_sender(void* self) {
+QObject* q_state_sender(const void* self) {
     return QState_Sender((QState*)self);
 }
 
-QObject* q_state_super_sender(void* self) {
-    return QState_SuperSender((QState*)self);
-}
-
-void q_state_on_sender(void* self, QObject* (*callback)()) {
-    QState_OnSender((QState*)self, (intptr_t)callback);
-}
-
-int32_t q_state_sender_signal_index(void* self) {
+int32_t q_state_sender_signal_index(const void* self) {
     return QState_SenderSignalIndex((QState*)self);
 }
 
-int32_t q_state_super_sender_signal_index(void* self) {
-    return QState_SuperSenderSignalIndex((QState*)self);
-}
-
-void q_state_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QState_OnSenderSignalIndex((QState*)self, (intptr_t)callback);
-}
-
-int32_t q_state_receivers(void* self, const char* signal) {
+int32_t q_state_receivers(const void* self, const char* signal) {
     return QState_Receivers((QState*)self, signal);
 }
 
-int32_t q_state_super_receivers(void* self, const char* signal) {
-    return QState_SuperReceivers((QState*)self, signal);
-}
-
-void q_state_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QState_OnReceivers((QState*)self, (intptr_t)callback);
-}
-
-bool q_state_is_signal_connected(void* self, void* signal) {
+bool q_state_is_signal_connected(const void* self, const void* signal) {
     return QState_IsSignalConnected((QState*)self, (QMetaMethod*)signal);
-}
-
-bool q_state_super_is_signal_connected(void* self, void* signal) {
-    return QState_SuperIsSignalConnected((QState*)self, (QMetaMethod*)signal);
-}
-
-void q_state_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QState_OnIsSignalConnected((QState*)self, (intptr_t)callback);
 }
 
 void q_state_on_finished(void* self, void (*callback)(void*)) {

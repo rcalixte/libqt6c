@@ -40,7 +40,7 @@ int QKeyEventTransition_ModifierMask(const QKeyEventTransition* self);
 void QKeyEventTransition_SetModifierMask(QKeyEventTransition* self, int modifiers);
 void QKeyEventTransition_OnTransition(QKeyEventTransition* self, QEvent* event);
 bool QKeyEventTransition_EventTest(QKeyEventTransition* self, QEvent* event);
-void QKeyEventTransition_OnMetaObject(const QKeyEventTransition* self, intptr_t slot);
+void QKeyEventTransition_OnMetaObject(QKeyEventTransition* self, intptr_t slot);
 QMetaObject* QKeyEventTransition_SuperMetaObject(const QKeyEventTransition* self);
 void QKeyEventTransition_OnMetacast(QKeyEventTransition* self, intptr_t slot);
 void* QKeyEventTransition_SuperMetacast(QKeyEventTransition* self, const char* param1);
@@ -72,17 +72,9 @@ void QKeyEventTransition_DisconnectNotify(QKeyEventTransition* self, const QMeta
 void QKeyEventTransition_OnDisconnectNotify(QKeyEventTransition* self, intptr_t slot);
 void QKeyEventTransition_SuperDisconnectNotify(QKeyEventTransition* self, const QMetaMethod* signal);
 QObject* QKeyEventTransition_Sender(const QKeyEventTransition* self);
-void QKeyEventTransition_OnSender(const QKeyEventTransition* self, intptr_t slot);
-QObject* QKeyEventTransition_SuperSender(const QKeyEventTransition* self);
 int QKeyEventTransition_SenderSignalIndex(const QKeyEventTransition* self);
-void QKeyEventTransition_OnSenderSignalIndex(const QKeyEventTransition* self, intptr_t slot);
-int QKeyEventTransition_SuperSenderSignalIndex(const QKeyEventTransition* self);
 int QKeyEventTransition_Receivers(const QKeyEventTransition* self, const char* signal);
-void QKeyEventTransition_OnReceivers(const QKeyEventTransition* self, intptr_t slot);
-int QKeyEventTransition_SuperReceivers(const QKeyEventTransition* self, const char* signal);
 bool QKeyEventTransition_IsSignalConnected(const QKeyEventTransition* self, const QMetaMethod* signal);
-void QKeyEventTransition_OnIsSignalConnected(const QKeyEventTransition* self, intptr_t slot);
-bool QKeyEventTransition_SuperIsSignalConnected(const QKeyEventTransition* self, const QMetaMethod* signal);
 void QKeyEventTransition_Delete(QKeyEventTransition* self);
 
 #ifdef __cplusplus

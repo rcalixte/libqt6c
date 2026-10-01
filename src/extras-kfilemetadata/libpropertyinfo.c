@@ -10,41 +10,41 @@ KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new2(int32_t property)
     return KFileMetaData__PropertyInfo_New2(property);
 }
 
-KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new3(void* pi) {
+KFileMetaData__PropertyInfo* k_filemetadata__propertyinfo_new3(const void* pi) {
     return KFileMetaData__PropertyInfo_New3((KFileMetaData__PropertyInfo*)pi);
 }
 
-void k_filemetadata__propertyinfo_operator_assign(void* self, void* rhs) {
+void k_filemetadata__propertyinfo_operator_assign(void* self, const void* rhs) {
     KFileMetaData__PropertyInfo_OperatorAssign((KFileMetaData__PropertyInfo*)self, (KFileMetaData__PropertyInfo*)rhs);
 }
 
-bool k_filemetadata__propertyinfo_operator_equal(void* self, void* rhs) {
+bool k_filemetadata__propertyinfo_operator_equal(const void* self, const void* rhs) {
     return KFileMetaData__PropertyInfo_OperatorEqual((KFileMetaData__PropertyInfo*)self, (KFileMetaData__PropertyInfo*)rhs);
 }
 
-int32_t k_filemetadata__propertyinfo_property(void* self) {
+int32_t k_filemetadata__propertyinfo_property(const void* self) {
     return KFileMetaData__PropertyInfo_Property((KFileMetaData__PropertyInfo*)self);
 }
 
-const char* k_filemetadata__propertyinfo_name(void* self) {
+const char* k_filemetadata__propertyinfo_name(const void* self) {
     libqt_string _str = KFileMetaData__PropertyInfo_Name((KFileMetaData__PropertyInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_filemetadata__propertyinfo_display_name(void* self) {
+const char* k_filemetadata__propertyinfo_display_name(const void* self) {
     libqt_string _str = KFileMetaData__PropertyInfo_DisplayName((KFileMetaData__PropertyInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_filemetadata__propertyinfo_value_type(void* self) {
+int32_t k_filemetadata__propertyinfo_value_type(const void* self) {
     return KFileMetaData__PropertyInfo_ValueType((KFileMetaData__PropertyInfo*)self);
 }
 
-bool k_filemetadata__propertyinfo_should_be_indexed(void* self) {
+bool k_filemetadata__propertyinfo_should_be_indexed(const void* self) {
     return KFileMetaData__PropertyInfo_ShouldBeIndexed((KFileMetaData__PropertyInfo*)self);
 }
 
@@ -69,7 +69,7 @@ const char** k_filemetadata__propertyinfo_all_names() {
     return _ret;
 }
 
-const char* k_filemetadata__propertyinfo_format_as_display_string(void* self, void* value) {
+const char* k_filemetadata__propertyinfo_format_as_display_string(const void* self, const void* value) {
     libqt_string _str = KFileMetaData__PropertyInfo_FormatAsDisplayString((KFileMetaData__PropertyInfo*)self, (QVariant*)value);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

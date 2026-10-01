@@ -3,11 +3,11 @@
 #include "libjobuidelegatefactory.hpp"
 #include "libjobuidelegatefactory.h"
 
-KJobUiDelegate* k_io__jobuidelegatefactory_create_delegate(void* self) {
+KJobUiDelegate* k_io__jobuidelegatefactory_create_delegate(const void* self) {
     return KIO__JobUiDelegateFactory_CreateDelegate((KIO__JobUiDelegateFactory*)self);
 }
 
-KJobUiDelegate* k_io__jobuidelegatefactory_create_delegate2(void* self, int32_t flags, void* window) {
+KJobUiDelegate* k_io__jobuidelegatefactory_create_delegate2(const void* self, int32_t flags, void* window) {
     return KIO__JobUiDelegateFactory_CreateDelegate2((KIO__JobUiDelegateFactory*)self, flags, (QWidget*)window);
 }
 

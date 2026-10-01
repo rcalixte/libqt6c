@@ -14,7 +14,7 @@
 ///
 /// @param other QLibraryInfo*
 ///
-QLibraryInfo* q_libraryinfo_new(void* other);
+QLibraryInfo* q_libraryinfo_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibraryinfo.html)
 

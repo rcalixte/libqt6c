@@ -15,15 +15,15 @@ QLocalSocket* q_localsocket_new2(void* parent) {
     return QLocalSocket_New2((QObject*)parent);
 }
 
-const QMetaObject* q_localsocket_meta_object(void* self) {
+const QMetaObject* q_localsocket_meta_object(const void* self) {
     return QLocalSocket_MetaObject((QLocalSocket*)self);
 }
 
-void q_localsocket_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_localsocket_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QLocalSocket_OnMetaObject((QLocalSocket*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_localsocket_super_meta_object(void* self) {
+const QMetaObject* q_localsocket_super_meta_object(const void* self) {
     return QLocalSocket_SuperMetaObject((QLocalSocket*)self);
 }
 
@@ -74,14 +74,14 @@ void q_localsocket_set_server_name(void* self, const char* name) {
     QLocalSocket_SetServerName((QLocalSocket*)self, qstring(name));
 }
 
-const char* q_localsocket_server_name(void* self) {
+const char* q_localsocket_server_name(const void* self) {
     libqt_string _str = QLocalSocket_ServerName((QLocalSocket*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_localsocket_full_server_name(void* self) {
+const char* q_localsocket_full_server_name(const void* self) {
     libqt_string _str = QLocalSocket_FullServerName((QLocalSocket*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -92,51 +92,51 @@ void q_localsocket_abort(void* self) {
     QLocalSocket_Abort((QLocalSocket*)self);
 }
 
-bool q_localsocket_is_sequential(void* self) {
+bool q_localsocket_is_sequential(const void* self) {
     return QLocalSocket_IsSequential((QLocalSocket*)self);
 }
 
-void q_localsocket_on_is_sequential(void* self, bool (*callback)()) {
+void q_localsocket_on_is_sequential(const void* self, bool (*callback)(const void*)) {
     QLocalSocket_OnIsSequential((QLocalSocket*)self, (intptr_t)callback);
 }
 
-bool q_localsocket_super_is_sequential(void* self) {
+bool q_localsocket_super_is_sequential(const void* self) {
     return QLocalSocket_SuperIsSequential((QLocalSocket*)self);
 }
 
-int64_t q_localsocket_bytes_available(void* self) {
+int64_t q_localsocket_bytes_available(const void* self) {
     return QLocalSocket_BytesAvailable((QLocalSocket*)self);
 }
 
-void q_localsocket_on_bytes_available(void* self, int64_t (*callback)()) {
+void q_localsocket_on_bytes_available(const void* self, int64_t (*callback)(const void*)) {
     QLocalSocket_OnBytesAvailable((QLocalSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_localsocket_super_bytes_available(void* self) {
+int64_t q_localsocket_super_bytes_available(const void* self) {
     return QLocalSocket_SuperBytesAvailable((QLocalSocket*)self);
 }
 
-int64_t q_localsocket_bytes_to_write(void* self) {
+int64_t q_localsocket_bytes_to_write(const void* self) {
     return QLocalSocket_BytesToWrite((QLocalSocket*)self);
 }
 
-void q_localsocket_on_bytes_to_write(void* self, int64_t (*callback)()) {
+void q_localsocket_on_bytes_to_write(const void* self, int64_t (*callback)(const void*)) {
     QLocalSocket_OnBytesToWrite((QLocalSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_localsocket_super_bytes_to_write(void* self) {
+int64_t q_localsocket_super_bytes_to_write(const void* self) {
     return QLocalSocket_SuperBytesToWrite((QLocalSocket*)self);
 }
 
-bool q_localsocket_can_read_line(void* self) {
+bool q_localsocket_can_read_line(const void* self) {
     return QLocalSocket_CanReadLine((QLocalSocket*)self);
 }
 
-void q_localsocket_on_can_read_line(void* self, bool (*callback)()) {
+void q_localsocket_on_can_read_line(const void* self, bool (*callback)(const void*)) {
     QLocalSocket_OnCanReadLine((QLocalSocket*)self, (intptr_t)callback);
 }
 
-bool q_localsocket_super_can_read_line(void* self) {
+bool q_localsocket_super_can_read_line(const void* self) {
     return QLocalSocket_SuperCanReadLine((QLocalSocket*)self);
 }
 
@@ -156,7 +156,7 @@ void q_localsocket_close(void* self) {
     QLocalSocket_Close((QLocalSocket*)self);
 }
 
-void q_localsocket_on_close(void* self, void (*callback)()) {
+void q_localsocket_on_close(void* self, void (*callback)(void*)) {
     QLocalSocket_OnClose((QLocalSocket*)self, (intptr_t)callback);
 }
 
@@ -164,7 +164,7 @@ void q_localsocket_super_close(void* self) {
     QLocalSocket_SuperClose((QLocalSocket*)self);
 }
 
-int32_t q_localsocket_error(void* self) {
+int32_t q_localsocket_error(const void* self) {
     return QLocalSocket_Error((QLocalSocket*)self);
 }
 
@@ -172,11 +172,11 @@ bool q_localsocket_flush(void* self) {
     return QLocalSocket_Flush((QLocalSocket*)self);
 }
 
-bool q_localsocket_is_valid(void* self) {
+bool q_localsocket_is_valid(const void* self) {
     return QLocalSocket_IsValid((QLocalSocket*)self);
 }
 
-int64_t q_localsocket_read_buffer_size(void* self) {
+int64_t q_localsocket_read_buffer_size(const void* self) {
     return QLocalSocket_ReadBufferSize((QLocalSocket*)self);
 }
 
@@ -188,7 +188,7 @@ bool q_localsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor) 
     return QLocalSocket_SetSocketDescriptor((QLocalSocket*)self, socketDescriptor);
 }
 
-intptr_t q_localsocket_socket_descriptor(void* self) {
+intptr_t q_localsocket_socket_descriptor(const void* self) {
     return QLocalSocket_SocketDescriptor((QLocalSocket*)self);
 }
 
@@ -196,11 +196,11 @@ void q_localsocket_set_socket_options(void* self, int32_t option) {
     QLocalSocket_SetSocketOptions((QLocalSocket*)self, option);
 }
 
-int32_t q_localsocket_socket_options(void* self) {
+int32_t q_localsocket_socket_options(const void* self) {
     return QLocalSocket_SocketOptions((QLocalSocket*)self);
 }
 
-int32_t q_localsocket_state(void* self) {
+int32_t q_localsocket_state(const void* self) {
     return QLocalSocket_State((QLocalSocket*)self);
 }
 
@@ -358,7 +358,7 @@ QIODeviceBase* q_localsocket_as_q_i_o_device_base(void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
-int32_t q_localsocket_open_mode(void* self) {
+int32_t q_localsocket_open_mode(const void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -366,31 +366,31 @@ void q_localsocket_set_text_mode_enabled(void* self, bool enabled) {
     QIODevice_SetTextModeEnabled((QIODevice*)self, enabled);
 }
 
-bool q_localsocket_is_text_mode_enabled(void* self) {
+bool q_localsocket_is_text_mode_enabled(const void* self) {
     return QIODevice_IsTextModeEnabled((QIODevice*)self);
 }
 
-bool q_localsocket_is_open(void* self) {
+bool q_localsocket_is_open(const void* self) {
     return QIODevice_IsOpen((QIODevice*)self);
 }
 
-bool q_localsocket_is_readable(void* self) {
+bool q_localsocket_is_readable(const void* self) {
     return QIODevice_IsReadable((QIODevice*)self);
 }
 
-bool q_localsocket_is_writable(void* self) {
+bool q_localsocket_is_writable(const void* self) {
     return QIODevice_IsWritable((QIODevice*)self);
 }
 
-int32_t q_localsocket_read_channel_count(void* self) {
+int32_t q_localsocket_read_channel_count(const void* self) {
     return QIODevice_ReadChannelCount((QIODevice*)self);
 }
 
-int32_t q_localsocket_write_channel_count(void* self) {
+int32_t q_localsocket_write_channel_count(const void* self) {
     return QIODevice_WriteChannelCount((QIODevice*)self);
 }
 
-int32_t q_localsocket_current_read_channel(void* self) {
+int32_t q_localsocket_current_read_channel(const void* self) {
     return QIODevice_CurrentReadChannel((QIODevice*)self);
 }
 
@@ -398,7 +398,7 @@ void q_localsocket_set_current_read_channel(void* self, int channel) {
     QIODevice_SetCurrentReadChannel((QIODevice*)self, channel);
 }
 
-int32_t q_localsocket_current_write_channel(void* self) {
+int32_t q_localsocket_current_write_channel(const void* self) {
     return QIODevice_CurrentWriteChannel((QIODevice*)self);
 }
 
@@ -447,7 +447,7 @@ void q_localsocket_rollback_transaction(void* self) {
     QIODevice_RollbackTransaction((QIODevice*)self);
 }
 
-bool q_localsocket_is_transaction_started(void* self) {
+bool q_localsocket_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
@@ -490,7 +490,7 @@ bool q_localsocket_get_char(void* self, char* c) {
     return QIODevice_GetChar((QIODevice*)self, c);
 }
 
-const char* q_localsocket_error_string(void* self) {
+const char* q_localsocket_error_string(const void* self) {
     libqt_string _str = QIODevice_ErrorString((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -552,7 +552,7 @@ char* q_localsocket_read_line1(void* self, int64_t maxlen) {
     return _ret;
 }
 
-const char* q_localsocket_object_name(void* self) {
+const char* q_localsocket_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -563,19 +563,19 @@ void q_localsocket_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_localsocket_is_widget_type(void* self) {
+bool q_localsocket_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_localsocket_is_window_type(void* self) {
+bool q_localsocket_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_localsocket_is_quick_item_type(void* self) {
+bool q_localsocket_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_localsocket_signals_blocked(void* self) {
+bool q_localsocket_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -583,7 +583,7 @@ bool q_localsocket_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_localsocket_thread(void* self) {
+QThread* q_localsocket_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -607,7 +607,7 @@ void q_localsocket_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_localsocket_children(void* self) {
+libqt_list /* of QObject* */ q_localsocket_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -624,55 +624,55 @@ void q_localsocket_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_localsocket_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_localsocket_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_localsocket_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_localsocket_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_localsocket_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_localsocket_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_localsocket_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_localsocket_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_localsocket_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_localsocket_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_localsocket_disconnect3(void* self) {
+bool q_localsocket_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_localsocket_disconnect4(void* self, void* receiver) {
+bool q_localsocket_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_localsocket_disconnect5(void* param1) {
+bool q_localsocket_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_localsocket_dump_object_tree(void* self) {
+void q_localsocket_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_localsocket_dump_object_info(void* self) {
+void q_localsocket_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_localsocket_set_property(void* self, const char* name, void* value) {
+bool q_localsocket_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_localsocket_property(void* self, const char* name) {
+QVariant* q_localsocket_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_localsocket_dynamic_property_names(void* self) {
+const char** q_localsocket_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -693,7 +693,7 @@ QBindingStorage* q_localsocket_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_localsocket_binding_storage2(void* self) {
+const QBindingStorage* q_localsocket_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -705,11 +705,11 @@ void q_localsocket_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_localsocket_parent(void* self) {
+QObject* q_localsocket_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_localsocket_inherits(void* self, const char* classname) {
+bool q_localsocket_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -725,31 +725,31 @@ int32_t q_localsocket_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_localsocket_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_localsocket_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_localsocket_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_localsocket_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_localsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_localsocket_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_localsocket_disconnect1(void* self, const char* signal) {
+bool q_localsocket_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_localsocket_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_localsocket_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_localsocket_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_localsocket_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_localsocket_disconnect23(void* self, void* receiver, const char* member) {
+bool q_localsocket_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -761,28 +761,28 @@ void q_localsocket_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_localsocket_pos(void* self) {
+int64_t q_localsocket_pos(const void* self) {
     return QLocalSocket_Pos((QLocalSocket*)self);
 }
 
-int64_t q_localsocket_super_pos(void* self) {
+int64_t q_localsocket_super_pos(const void* self) {
     return QLocalSocket_SuperPos((QLocalSocket*)self);
 }
 
-void q_localsocket_on_pos(void* self, int64_t (*callback)()) {
-    QLocalSocket_OnPos((QLocalSocket*)self, (intptr_t)callback);
+void q_localsocket_on_pos(const void* self, int64_t (*callback)(const void*)) {
+    QLocalSocket_OnPos((const QLocalSocket*)self, (intptr_t)callback);
 }
 
-int64_t q_localsocket_size(void* self) {
+int64_t q_localsocket_size(const void* self) {
     return QLocalSocket_Size((QLocalSocket*)self);
 }
 
-int64_t q_localsocket_super_size(void* self) {
+int64_t q_localsocket_super_size(const void* self) {
     return QLocalSocket_SuperSize((QLocalSocket*)self);
 }
 
-void q_localsocket_on_size(void* self, int64_t (*callback)()) {
-    QLocalSocket_OnSize((QLocalSocket*)self, (intptr_t)callback);
+void q_localsocket_on_size(const void* self, int64_t (*callback)(const void*)) {
+    QLocalSocket_OnSize((const QLocalSocket*)self, (intptr_t)callback);
 }
 
 bool q_localsocket_seek(void* self, int64_t pos) {
@@ -797,16 +797,16 @@ void q_localsocket_on_seek(void* self, bool (*callback)(void*, int64_t)) {
     QLocalSocket_OnSeek((QLocalSocket*)self, (intptr_t)callback);
 }
 
-bool q_localsocket_at_end(void* self) {
+bool q_localsocket_at_end(const void* self) {
     return QLocalSocket_AtEnd((QLocalSocket*)self);
 }
 
-bool q_localsocket_super_at_end(void* self) {
+bool q_localsocket_super_at_end(const void* self) {
     return QLocalSocket_SuperAtEnd((QLocalSocket*)self);
 }
 
-void q_localsocket_on_at_end(void* self, bool (*callback)()) {
-    QLocalSocket_OnAtEnd((QLocalSocket*)self, (intptr_t)callback);
+void q_localsocket_on_at_end(const void* self, bool (*callback)(const void*)) {
+    QLocalSocket_OnAtEnd((const QLocalSocket*)self, (intptr_t)callback);
 }
 
 bool q_localsocket_reset(void* self) {
@@ -817,7 +817,7 @@ bool q_localsocket_super_reset(void* self) {
     return QLocalSocket_SuperReset((QLocalSocket*)self);
 }
 
-void q_localsocket_on_reset(void* self, bool (*callback)()) {
+void q_localsocket_on_reset(void* self, bool (*callback)(void*)) {
     QLocalSocket_OnReset((QLocalSocket*)self, (intptr_t)callback);
 }
 
@@ -881,27 +881,27 @@ void q_localsocket_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QLocalSocket_OnCustomEvent((QLocalSocket*)self, (intptr_t)callback);
 }
 
-void q_localsocket_connect_notify(void* self, void* signal) {
+void q_localsocket_connect_notify(void* self, const void* signal) {
     QLocalSocket_ConnectNotify((QLocalSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_localsocket_super_connect_notify(void* self, void* signal) {
+void q_localsocket_super_connect_notify(void* self, const void* signal) {
     QLocalSocket_SuperConnectNotify((QLocalSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_localsocket_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_localsocket_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QLocalSocket_OnConnectNotify((QLocalSocket*)self, (intptr_t)callback);
 }
 
-void q_localsocket_disconnect_notify(void* self, void* signal) {
+void q_localsocket_disconnect_notify(void* self, const void* signal) {
     QLocalSocket_DisconnectNotify((QLocalSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_localsocket_super_disconnect_notify(void* self, void* signal) {
+void q_localsocket_super_disconnect_notify(void* self, const void* signal) {
     QLocalSocket_SuperDisconnectNotify((QLocalSocket*)self, (QMetaMethod*)signal);
 }
 
-void q_localsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_localsocket_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QLocalSocket_OnDisconnectNotify((QLocalSocket*)self, (intptr_t)callback);
 }
 
@@ -909,72 +909,24 @@ void q_localsocket_set_open_mode(void* self, int32_t openMode) {
     QLocalSocket_SetOpenMode((QLocalSocket*)self, openMode);
 }
 
-void q_localsocket_super_set_open_mode(void* self, int32_t openMode) {
-    QLocalSocket_SuperSetOpenMode((QLocalSocket*)self, openMode);
-}
-
-void q_localsocket_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
-    QLocalSocket_OnSetOpenMode((QLocalSocket*)self, (intptr_t)callback);
-}
-
 void q_localsocket_set_error_string(void* self, const char* errorString) {
     QLocalSocket_SetErrorString((QLocalSocket*)self, qstring(errorString));
 }
 
-void q_localsocket_super_set_error_string(void* self, const char* errorString) {
-    QLocalSocket_SuperSetErrorString((QLocalSocket*)self, qstring(errorString));
-}
-
-void q_localsocket_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
-    QLocalSocket_OnSetErrorString((QLocalSocket*)self, (intptr_t)callback);
-}
-
-QObject* q_localsocket_sender(void* self) {
+QObject* q_localsocket_sender(const void* self) {
     return QLocalSocket_Sender((QLocalSocket*)self);
 }
 
-QObject* q_localsocket_super_sender(void* self) {
-    return QLocalSocket_SuperSender((QLocalSocket*)self);
-}
-
-void q_localsocket_on_sender(void* self, QObject* (*callback)()) {
-    QLocalSocket_OnSender((QLocalSocket*)self, (intptr_t)callback);
-}
-
-int32_t q_localsocket_sender_signal_index(void* self) {
+int32_t q_localsocket_sender_signal_index(const void* self) {
     return QLocalSocket_SenderSignalIndex((QLocalSocket*)self);
 }
 
-int32_t q_localsocket_super_sender_signal_index(void* self) {
-    return QLocalSocket_SuperSenderSignalIndex((QLocalSocket*)self);
-}
-
-void q_localsocket_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QLocalSocket_OnSenderSignalIndex((QLocalSocket*)self, (intptr_t)callback);
-}
-
-int32_t q_localsocket_receivers(void* self, const char* signal) {
+int32_t q_localsocket_receivers(const void* self, const char* signal) {
     return QLocalSocket_Receivers((QLocalSocket*)self, signal);
 }
 
-int32_t q_localsocket_super_receivers(void* self, const char* signal) {
-    return QLocalSocket_SuperReceivers((QLocalSocket*)self, signal);
-}
-
-void q_localsocket_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QLocalSocket_OnReceivers((QLocalSocket*)self, (intptr_t)callback);
-}
-
-bool q_localsocket_is_signal_connected(void* self, void* signal) {
+bool q_localsocket_is_signal_connected(const void* self, const void* signal) {
     return QLocalSocket_IsSignalConnected((QLocalSocket*)self, (QMetaMethod*)signal);
-}
-
-bool q_localsocket_super_is_signal_connected(void* self, void* signal) {
-    return QLocalSocket_SuperIsSignalConnected((QLocalSocket*)self, (QMetaMethod*)signal);
-}
-
-void q_localsocket_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QLocalSocket_OnIsSignalConnected((QLocalSocket*)self, (intptr_t)callback);
 }
 
 void q_localsocket_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

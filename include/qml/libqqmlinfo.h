@@ -14,61 +14,61 @@
 ///
 /// @param me QObject*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_debug(void* me);
+QQmlInfo* q_qqmlinfo_h_qml_debug(const void* me);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo-h.html#qmlDebug)
 ///
 /// @param me QObject*
 /// @param error QQmlError*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_debug2(void* me, void* error);
+QQmlInfo* q_qqmlinfo_h_qml_debug2(const void* me, const void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo-h.html#qmlDebug)
 ///
 /// @param me QObject*
 /// @param errors libqt_list of QQmlError*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_debug3(void* me, libqt_list errors);
+QQmlInfo* q_qqmlinfo_h_qml_debug3(const void* me, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo-h.html#qmlInfo)
 ///
 /// @param me QObject*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_info(void* me);
+QQmlInfo* q_qqmlinfo_h_qml_info(const void* me);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo-h.html#qmlInfo)
 ///
 /// @param me QObject*
 /// @param error QQmlError*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_info2(void* me, void* error);
+QQmlInfo* q_qqmlinfo_h_qml_info2(const void* me, const void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo-h.html#qmlInfo)
 ///
 /// @param me QObject*
 /// @param errors libqt_list of QQmlError*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_info3(void* me, libqt_list errors);
+QQmlInfo* q_qqmlinfo_h_qml_info3(const void* me, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo-h.html#qmlWarning)
 ///
 /// @param me QObject*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_warning(void* me);
+QQmlInfo* q_qqmlinfo_h_qml_warning(const void* me);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo-h.html#qmlWarning)
 ///
 /// @param me QObject*
 /// @param error QQmlError*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_warning2(void* me, void* error);
+QQmlInfo* q_qqmlinfo_h_qml_warning2(const void* me, const void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo-h.html#qmlWarning)
 ///
 /// @param me QObject*
 /// @param errors libqt_list of QQmlError*
 ///
-QQmlInfo* q_qqmlinfo_h_qml_warning3(void* me, libqt_list errors);
+QQmlInfo* q_qqmlinfo_h_qml_warning3(const void* me, libqt_list errors);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo.html)
 
@@ -76,7 +76,7 @@ QQmlInfo* q_qqmlinfo_h_qml_warning3(void* me, libqt_list errors);
 ///
 /// @param param1 QQmlInfo*
 ///
-QQmlInfo* q_qmlinfo_new(void* param1);
+QQmlInfo* q_qmlinfo_new(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo.html#operator-lt-lt)
 ///
@@ -223,14 +223,14 @@ QQmlInfo* q_qmlinfo_operator_shift_left20(void* self, QTextStream* (*f)(void* fu
 /// @param self QQmlInfo*
 /// @param t QUrl*
 ///
-QQmlInfo* q_qmlinfo_operator_shift_left22(void* self, void* t);
+QQmlInfo* q_qmlinfo_operator_shift_left22(void* self, const void* t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlinfo.html#operator-eq)
 ///
 /// @param self QQmlInfo*
 /// @param param1 QQmlInfo*
 ///
-void q_qmlinfo_operator_assign(void* self, void* param1);
+void q_qmlinfo_operator_assign(void* self, const void* param1);
 
 /// Inherited from QDebug
 ///
@@ -286,9 +286,9 @@ QDebug* q_qmlinfo_verbosity(void* self, int verbosityLevel);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#verbosity)
 ///
-/// @param self QQmlInfo*
+/// @param self const QQmlInfo*
 ///
-int32_t q_qmlinfo_verbosity2(void* self);
+int32_t q_qmlinfo_verbosity2(const void* self);
 
 /// Inherited from QDebug
 ///
@@ -303,9 +303,9 @@ void q_qmlinfo_set_verbosity(void* self, int verbosityLevel);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#autoInsertSpaces)
 ///
-/// @param self QQmlInfo*
+/// @param self const QQmlInfo*
 ///
-bool q_qmlinfo_auto_insert_spaces(void* self);
+bool q_qmlinfo_auto_insert_spaces(const void* self);
 
 /// Inherited from QDebug
 ///
@@ -320,9 +320,9 @@ void q_qmlinfo_set_auto_insert_spaces(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#quoteStrings)
 ///
-/// @param self QQmlInfo*
+/// @param self const QQmlInfo*
 ///
-bool q_qmlinfo_quote_strings(void* self);
+bool q_qmlinfo_quote_strings(const void* self);
 
 /// Inherited from QDebug
 ///

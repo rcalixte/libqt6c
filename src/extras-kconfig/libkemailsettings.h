@@ -26,9 +26,9 @@ const char* k_emailsettings_tr(const char* sourceText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KEMailSettings*
+/// @param self const KEMailSettings*
 ///
-const char** k_emailsettings_profiles(void* self);
+const char** k_emailsettings_profiles(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#setProfile)
 ///
@@ -41,9 +41,9 @@ void k_emailsettings_set_profile(void* self, const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KEMailSettings*
+/// @param self const KEMailSettings*
 ///
-const char* k_emailsettings_default_profile_name(void* self);
+const char* k_emailsettings_default_profile_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#setDefault)
 ///
@@ -56,10 +56,10 @@ void k_emailsettings_set_default(void* self, const char* def);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KEMailSettings*
+/// @param self const KEMailSettings*
 /// @param s enum KEMailSettings__Setting
 ///
-const char* k_emailsettings_get_setting(void* self, int32_t s);
+const char* k_emailsettings_get_setting(const void* self, int32_t s);
 
 /// [Upstream resources](https://api.kde.org/kemailsettings.html#setSetting)
 ///

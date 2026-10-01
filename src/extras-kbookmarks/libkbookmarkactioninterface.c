@@ -2,15 +2,15 @@
 #include "libkbookmarkactioninterface.hpp"
 #include "libkbookmarkactioninterface.h"
 
-KBookmarkActionInterface* k_bookmarkactioninterface_new(void* bk) {
+KBookmarkActionInterface* k_bookmarkactioninterface_new(const void* bk) {
     return KBookmarkActionInterface_New((KBookmark*)bk);
 }
 
-KBookmarkActionInterface* k_bookmarkactioninterface_new2(void* param1) {
+KBookmarkActionInterface* k_bookmarkactioninterface_new2(const void* param1) {
     return KBookmarkActionInterface_New2((KBookmarkActionInterface*)param1);
 }
 
-const KBookmark* k_bookmarkactioninterface_bookmark(void* self) {
+const KBookmark* k_bookmarkactioninterface_bookmark(const void* self) {
     return KBookmarkActionInterface_Bookmark((KBookmarkActionInterface*)self);
 }
 

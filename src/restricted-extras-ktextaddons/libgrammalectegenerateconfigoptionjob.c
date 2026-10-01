@@ -13,15 +13,15 @@ TextGrammarCheck__GrammalecteGenerateConfigOptionJob* k_textgrammarcheck__gramma
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_New2((QObject*)parent);
 }
 
-const QMetaObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_meta_object(void* self) {
+const QMetaObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_meta_object(const void* self) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_MetaObject((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnMetaObject((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_meta_object(void* self) {
+const QMetaObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_meta_object(const void* self) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SuperMetaObject((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
 }
 
@@ -60,11 +60,11 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_start(void* self) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_Start((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_can_start(void* self) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_can_start(const void* self) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_CanStart((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
 }
 
-const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob_python_path(void* self) {
+const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob_python_path(const void* self) {
     libqt_string _str = TextGrammarCheck__GrammalecteGenerateConfigOptionJob_PythonPath((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -75,7 +75,7 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_set_python_path(void
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SetPythonPath((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, qstring(pythonPath));
 }
 
-const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob_grammarlecte_cli_path(void* self) {
+const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob_grammarlecte_cli_path(const void* self) {
     libqt_string _str = TextGrammarCheck__GrammalecteGenerateConfigOptionJob_GrammarlecteCliPath((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -116,7 +116,7 @@ const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob_tr3(const cha
     return _ret;
 }
 
-const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob_object_name(void* self) {
+const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -127,19 +127,19 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_set_object_name(void
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_is_widget_type(void* self) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_is_window_type(void* self) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_is_quick_item_type(void* self) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_signals_blocked(void* self) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -147,7 +147,7 @@ bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_block_signals(void* 
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_textgrammarcheck__grammalectegenerateconfigoptionjob_thread(void* self) {
+QThread* k_textgrammarcheck__grammalectegenerateconfigoptionjob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -171,7 +171,7 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_kill_timer2(void* se
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_textgrammarcheck__grammalectegenerateconfigoptionjob_children(void* self) {
+libqt_list /* of QObject* */ k_textgrammarcheck__grammalectegenerateconfigoptionjob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -188,55 +188,55 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_remove_event_filter(
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect3(void* self) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect4(void* self, void* receiver) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect5(void* param1) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_dump_object_tree(void* self) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_dump_object_info(void* self) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_set_property(void* self, const char* name, void* value) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_textgrammarcheck__grammalectegenerateconfigoptionjob_property(void* self, const char* name) {
+QVariant* k_textgrammarcheck__grammalectegenerateconfigoptionjob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_textgrammarcheck__grammalectegenerateconfigoptionjob_dynamic_property_names(void* self) {
+const char** k_textgrammarcheck__grammalectegenerateconfigoptionjob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -257,7 +257,7 @@ QBindingStorage* k_textgrammarcheck__grammalectegenerateconfigoptionjob_binding_
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_textgrammarcheck__grammalectegenerateconfigoptionjob_binding_storage2(void* self) {
+const QBindingStorage* k_textgrammarcheck__grammalectegenerateconfigoptionjob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -269,11 +269,11 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_destroyed(void* s
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_parent(void* self) {
+QObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_inherits(void* self, const char* classname) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -289,31 +289,31 @@ int32_t k_textgrammarcheck__grammalectegenerateconfigoptionjob_start_timer23(voi
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect1(void* self, const char* signal) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect23(void* self, void* receiver, const char* member) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -385,76 +385,44 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_custom_event(void
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnCustomEvent((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect_notify(void* self, void* signal) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_connect_notify(void* self, const void* signal) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_ConnectNotify((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_connect_notify(void* self, void* signal) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_connect_notify(void* self, const void* signal) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SuperConnectNotify((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnConnectNotify((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect_notify(void* self, void* signal) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_disconnect_notify(void* self, const void* signal) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_DisconnectNotify((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_disconnect_notify(void* self, void* signal) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_disconnect_notify(void* self, const void* signal) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SuperDisconnectNotify((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (QMetaMethod*)signal);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnDisconnectNotify((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
 }
 
-QObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_sender(void* self) {
+QObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_sender(const void* self) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_Sender((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
 }
 
-QObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_sender(void* self) {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SuperSender((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
-}
-
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_sender(void* self, QObject* (*callback)()) {
-    TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnSender((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
-}
-
-int32_t k_textgrammarcheck__grammalectegenerateconfigoptionjob_sender_signal_index(void* self) {
+int32_t k_textgrammarcheck__grammalectegenerateconfigoptionjob_sender_signal_index(const void* self) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SenderSignalIndex((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
 }
 
-int32_t k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_sender_signal_index(void* self) {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SuperSenderSignalIndex((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self);
-}
-
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnSenderSignalIndex((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
-}
-
-int32_t k_textgrammarcheck__grammalectegenerateconfigoptionjob_receivers(void* self, const char* signal) {
+int32_t k_textgrammarcheck__grammalectegenerateconfigoptionjob_receivers(const void* self, const char* signal) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_Receivers((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, signal);
 }
 
-int32_t k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_receivers(void* self, const char* signal) {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SuperReceivers((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, signal);
-}
-
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnReceivers((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
-}
-
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_is_signal_connected(void* self, void* signal) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_is_signal_connected(const void* self, const void* signal) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_IsSignalConnected((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (QMetaMethod*)signal);
-}
-
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob_super_is_signal_connected(void* self, void* signal) {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_SuperIsSignalConnected((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (QMetaMethod*)signal);
-}
-
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    TextGrammarCheck__GrammalecteGenerateConfigOptionJob_OnIsSignalConnected((TextGrammarCheck__GrammalecteGenerateConfigOptionJob*)self, (intptr_t)callback);
 }
 
 void k_textgrammarcheck__grammalectegenerateconfigoptionjob_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -469,11 +437,11 @@ TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New();
 }
 
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new2(void* param1) {
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new2(const void* param1) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New2((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)param1);
 }
 
-const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_option_name(void* self) {
+const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_option_name(const void* self) {
     libqt_string optionName_str = TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_OptionName((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)self);
     char* optionName_ret = qstring_to_char(optionName_str);
     libqt_string_free(&optionName_str);
@@ -484,7 +452,7 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_set_option_n
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_SetOptionName((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)self, qstring(optionName));
 }
 
-const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_description(void* self) {
+const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_description(const void* self) {
     libqt_string description_str = TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_Description((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)self);
     char* description_ret = qstring_to_char(description_str);
     libqt_string_free(&description_str);
@@ -495,7 +463,7 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_set_descript
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_SetDescription((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)self, qstring(description));
 }
 
-bool k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_default_value(void* self) {
+bool k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_default_value(const void* self) {
     return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_DefaultValue((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)self);
 }
 
@@ -503,7 +471,7 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_set_default_
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_SetDefaultValue((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)self, defaultValue);
 }
 
-void k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_operator_assign(void* self, void* param1) {
+void k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_operator_assign(void* self, const void* param1) {
     TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_OperatorAssign((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)self, (TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)param1);
 }
 

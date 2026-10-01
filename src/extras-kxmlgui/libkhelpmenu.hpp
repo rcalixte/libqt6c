@@ -49,7 +49,7 @@ void KHelpMenu_SwitchApplicationLanguage(KHelpMenu* self);
 void KHelpMenu_Donate(KHelpMenu* self);
 void KHelpMenu_ShowAboutApplication(KHelpMenu* self);
 void KHelpMenu_Connect_ShowAboutApplication(KHelpMenu* self, intptr_t slot);
-void KHelpMenu_OnMetaObject(const KHelpMenu* self, intptr_t slot);
+void KHelpMenu_OnMetaObject(KHelpMenu* self, intptr_t slot);
 QMetaObject* KHelpMenu_SuperMetaObject(const KHelpMenu* self);
 void KHelpMenu_OnMetacast(KHelpMenu* self, intptr_t slot);
 void* KHelpMenu_SuperMetacast(KHelpMenu* self, const char* param1);
@@ -77,17 +77,9 @@ void KHelpMenu_DisconnectNotify(KHelpMenu* self, const QMetaMethod* signal);
 void KHelpMenu_OnDisconnectNotify(KHelpMenu* self, intptr_t slot);
 void KHelpMenu_SuperDisconnectNotify(KHelpMenu* self, const QMetaMethod* signal);
 QObject* KHelpMenu_Sender(const KHelpMenu* self);
-void KHelpMenu_OnSender(const KHelpMenu* self, intptr_t slot);
-QObject* KHelpMenu_SuperSender(const KHelpMenu* self);
 int KHelpMenu_SenderSignalIndex(const KHelpMenu* self);
-void KHelpMenu_OnSenderSignalIndex(const KHelpMenu* self, intptr_t slot);
-int KHelpMenu_SuperSenderSignalIndex(const KHelpMenu* self);
 int KHelpMenu_Receivers(const KHelpMenu* self, const char* signal);
-void KHelpMenu_OnReceivers(const KHelpMenu* self, intptr_t slot);
-int KHelpMenu_SuperReceivers(const KHelpMenu* self, const char* signal);
 bool KHelpMenu_IsSignalConnected(const KHelpMenu* self, const QMetaMethod* signal);
-void KHelpMenu_OnIsSignalConnected(const KHelpMenu* self, intptr_t slot);
-bool KHelpMenu_SuperIsSignalConnected(const KHelpMenu* self, const QMetaMethod* signal);
 void KHelpMenu_Delete(KHelpMenu* self);
 
 #ifdef __cplusplus

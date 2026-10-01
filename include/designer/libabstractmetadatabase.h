@@ -16,30 +16,26 @@ QDesignerMetaDataBaseItemInterface* q_designermetadatabaseiteminterface_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#name)
 ///
+/// @warning This method must be implemented with `q_designermetadatabaseiteminterface_on_name` before it can be called.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerMetaDataBaseItemInterface*
+/// @param self const QDesignerMetaDataBaseItemInterface*
 ///
-const char* q_designermetadatabaseiteminterface_name(void* self);
+const char* q_designermetadatabaseiteminterface_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#name)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerMetaDataBaseItemInterface*
-/// @param callback const char* func()
+/// @param self const QDesignerMetaDataBaseItemInterface*
+/// @param callback const char* func(const QDesignerMetaDataBaseItemInterface* self)
 ///
-void q_designermetadatabaseiteminterface_on_name(void* self, const char* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#name)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseItemInterface*
-///
-const char* q_designermetadatabaseiteminterface_super_name(void* self);
+void q_designermetadatabaseiteminterface_on_name(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setName)
+///
+/// @warning This method must be implemented with `q_designermetadatabaseiteminterface_on_set_name` before it can be called.
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
 /// @param name const char*
@@ -55,43 +51,28 @@ void q_designermetadatabaseiteminterface_set_name(void* self, const char* name);
 ///
 void q_designermetadatabaseiteminterface_on_set_name(void* self, void (*callback)(void*, const char*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setName)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseItemInterface*
-/// @param name const char*
-///
-void q_designermetadatabaseiteminterface_super_set_name(void* self, const char* name);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#tabOrder)
 ///
-/// @param self QDesignerMetaDataBaseItemInterface*
+/// @warning This method must be implemented with `q_designermetadatabaseiteminterface_on_tab_order` before it can be called.
+///
+/// @param self const QDesignerMetaDataBaseItemInterface*
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list q_designermetadatabaseiteminterface_tab_order(void* self);
+libqt_list q_designermetadatabaseiteminterface_tab_order(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#tabOrder)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerMetaDataBaseItemInterface*
-/// @param callback libqt_list of QWidget* func()
+/// @param self const QDesignerMetaDataBaseItemInterface*
+/// @param callback libqt_list of QWidget* func(const QDesignerMetaDataBaseItemInterface* self)
 ///
-void q_designermetadatabaseiteminterface_on_tab_order(void* self, libqt_list (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#tabOrder)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseItemInterface*
-///
-/// @return libqt_list of QWidget*
-///
-libqt_list q_designermetadatabaseiteminterface_super_tab_order(void* self);
+void q_designermetadatabaseiteminterface_on_tab_order(const void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setTabOrder)
+///
+/// @warning This method must be implemented with `q_designermetadatabaseiteminterface_on_set_tab_order` before it can be called.
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
 /// @param tabOrder libqt_list of QWidget*
@@ -107,39 +88,26 @@ void q_designermetadatabaseiteminterface_set_tab_order(void* self, libqt_list ta
 ///
 void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*callback)(void*, libqt_list));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setTabOrder)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseItemInterface*
-/// @param tabOrder libqt_list of QWidget*
-///
-void q_designermetadatabaseiteminterface_super_set_tab_order(void* self, libqt_list tabOrder);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#enabled)
 ///
-/// @param self QDesignerMetaDataBaseItemInterface*
+/// @warning This method must be implemented with `q_designermetadatabaseiteminterface_on_enabled` before it can be called.
 ///
-bool q_designermetadatabaseiteminterface_enabled(void* self);
+/// @param self const QDesignerMetaDataBaseItemInterface*
+///
+bool q_designermetadatabaseiteminterface_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#enabled)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerMetaDataBaseItemInterface*
-/// @param callback bool func()
+/// @param self const QDesignerMetaDataBaseItemInterface*
+/// @param callback bool func(const QDesignerMetaDataBaseItemInterface* self)
 ///
-void q_designermetadatabaseiteminterface_on_enabled(void* self, bool (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#enabled)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseItemInterface*
-///
-bool q_designermetadatabaseiteminterface_super_enabled(void* self);
+void q_designermetadatabaseiteminterface_on_enabled(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setEnabled)
+///
+/// @warning This method must be implemented with `q_designermetadatabaseiteminterface_on_set_enabled` before it can be called.
 ///
 /// @param self QDesignerMetaDataBaseItemInterface*
 /// @param b bool
@@ -154,15 +122,6 @@ void q_designermetadatabaseiteminterface_set_enabled(void* self, bool b);
 /// @param callback void func(QDesignerMetaDataBaseItemInterface* self, bool b)
 ///
 void q_designermetadatabaseiteminterface_on_set_enabled(void* self, void (*callback)(void*, bool));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#setEnabled)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseItemInterface*
-/// @param b bool
-///
-void q_designermetadatabaseiteminterface_super_set_enabled(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseiteminterface.html#dtor.QDesignerMetaDataBaseItemInterface)
 ///
@@ -188,26 +147,26 @@ QDesignerMetaDataBaseInterface* q_designermetadatabaseinterface_new2(void* paren
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-const QMetaObject* q_designermetadatabaseinterface_meta_object(void* self);
+const QMetaObject* q_designermetadatabaseinterface_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param callback const QMetaObject* func()
+/// @param self const QDesignerMetaDataBaseInterface*
+/// @param callback const QMetaObject* func(const QDesignerMetaDataBaseInterface* self)
 ///
-void q_designermetadatabaseinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_designermetadatabaseinterface_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-const QMetaObject* q_designermetadatabaseinterface_super_meta_object(void* self);
+const QMetaObject* q_designermetadatabaseinterface_super_meta_object(const void* self);
 
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param param1 const char*
@@ -261,30 +220,25 @@ const char* q_designermetadatabaseinterface_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#item)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @warning This method must be implemented with `q_designermetadatabaseinterface_on_item` before it can be called.
+///
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param object QObject*
 ///
-QDesignerMetaDataBaseItemInterface* q_designermetadatabaseinterface_item(void* self, void* object);
+QDesignerMetaDataBaseItemInterface* q_designermetadatabaseinterface_item(const void* self, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#item)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param callback QDesignerMetaDataBaseItemInterface* func(QDesignerMetaDataBaseInterface* self, QObject* object)
+/// @param self const QDesignerMetaDataBaseInterface*
+/// @param callback QDesignerMetaDataBaseItemInterface* func(const QDesignerMetaDataBaseInterface* self, QObject* object)
 ///
-void q_designermetadatabaseinterface_on_item(void* self, QDesignerMetaDataBaseItemInterface* (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#item)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param object QObject*
-///
-QDesignerMetaDataBaseItemInterface* q_designermetadatabaseinterface_super_item(void* self, void* object);
+void q_designermetadatabaseinterface_on_item(const void* self, QDesignerMetaDataBaseItemInterface* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#add)
+///
+/// @warning This method must be implemented with `q_designermetadatabaseinterface_on_add` before it can be called.
 ///
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param object QObject*
@@ -300,16 +254,9 @@ void q_designermetadatabaseinterface_add(void* self, void* object);
 ///
 void q_designermetadatabaseinterface_on_add(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#add)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param object QObject*
-///
-void q_designermetadatabaseinterface_super_add(void* self, void* object);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#remove)
+///
+/// @warning This method must be implemented with `q_designermetadatabaseinterface_on_remove` before it can be called.
 ///
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param object QObject*
@@ -325,64 +272,41 @@ void q_designermetadatabaseinterface_remove(void* self, void* object);
 ///
 void q_designermetadatabaseinterface_on_remove(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#remove)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param object QObject*
-///
-void q_designermetadatabaseinterface_super_remove(void* self, void* object);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#objects)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @warning This method must be implemented with `q_designermetadatabaseinterface_on_objects` before it can be called.
+///
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_designermetadatabaseinterface_objects(void* self);
+libqt_list q_designermetadatabaseinterface_objects(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#objects)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param callback libqt_list of QObject* func()
+/// @param self const QDesignerMetaDataBaseInterface*
+/// @param callback libqt_list of QObject* func(const QDesignerMetaDataBaseInterface* self)
 ///
-void q_designermetadatabaseinterface_on_objects(void* self, libqt_list (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#objects)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseInterface*
-///
-/// @return libqt_list of QObject*
-///
-libqt_list q_designermetadatabaseinterface_super_objects(void* self);
+void q_designermetadatabaseinterface_on_objects(const void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#core)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @warning This method must be implemented with `q_designermetadatabaseinterface_on_core` before it can be called.
 ///
-QDesignerFormEditorInterface* q_designermetadatabaseinterface_core(void* self);
+/// @param self const QDesignerMetaDataBaseInterface*
+///
+QDesignerFormEditorInterface* q_designermetadatabaseinterface_core(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#core)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param callback QDesignerFormEditorInterface* func()
+/// @param self const QDesignerMetaDataBaseInterface*
+/// @param callback QDesignerFormEditorInterface* func(const QDesignerMetaDataBaseInterface* self)
 ///
-void q_designermetadatabaseinterface_on_core(void* self, QDesignerFormEditorInterface* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#core)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerMetaDataBaseInterface*
-///
-QDesignerFormEditorInterface* q_designermetadatabaseinterface_super_core(void* self);
+void q_designermetadatabaseinterface_on_core(const void* self, QDesignerFormEditorInterface* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignermetadatabaseinterface.html#changed)
 ///
@@ -422,9 +346,9 @@ const char* q_designermetadatabaseinterface_tr3(const char* s, const char* c, in
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-const char* q_designermetadatabaseinterface_object_name(void* self);
+const char* q_designermetadatabaseinterface_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -439,33 +363,33 @@ void q_designermetadatabaseinterface_set_object_name(void* self, const char* nam
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-bool q_designermetadatabaseinterface_is_widget_type(void* self);
+bool q_designermetadatabaseinterface_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-bool q_designermetadatabaseinterface_is_window_type(void* self);
+bool q_designermetadatabaseinterface_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-bool q_designermetadatabaseinterface_is_quick_item_type(void* self);
+bool q_designermetadatabaseinterface_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-bool q_designermetadatabaseinterface_signals_blocked(void* self);
+bool q_designermetadatabaseinterface_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -480,9 +404,9 @@ bool q_designermetadatabaseinterface_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-QThread* q_designermetadatabaseinterface_thread(void* self);
+QThread* q_designermetadatabaseinterface_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -533,11 +457,11 @@ void q_designermetadatabaseinterface_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_designermetadatabaseinterface_children(void* self);
+libqt_list q_designermetadatabaseinterface_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -575,7 +499,7 @@ void q_designermetadatabaseinterface_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_designermetadatabaseinterface_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_designermetadatabaseinterface_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -586,18 +510,18 @@ QMetaObject__Connection* q_designermetadatabaseinterface_connect(void* sender, c
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_designermetadatabaseinterface_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_designermetadatabaseinterface_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_designermetadatabaseinterface_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_designermetadatabaseinterface_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -608,7 +532,7 @@ QMetaObject__Connection* q_designermetadatabaseinterface_connect3(void* self, vo
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_designermetadatabaseinterface_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_designermetadatabaseinterface_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -619,24 +543,24 @@ bool q_designermetadatabaseinterface_disconnect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_designermetadatabaseinterface_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_designermetadatabaseinterface_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-bool q_designermetadatabaseinterface_disconnect3(void* self);
+bool q_designermetadatabaseinterface_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param receiver QObject*
 ///
-bool q_designermetadatabaseinterface_disconnect4(void* self, void* receiver);
+bool q_designermetadatabaseinterface_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -644,23 +568,23 @@ bool q_designermetadatabaseinterface_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_designermetadatabaseinterface_disconnect5(void* param1);
+bool q_designermetadatabaseinterface_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-void q_designermetadatabaseinterface_dump_object_tree(void* self);
+void q_designermetadatabaseinterface_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-void q_designermetadatabaseinterface_dump_object_info(void* self);
+void q_designermetadatabaseinterface_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -670,16 +594,16 @@ void q_designermetadatabaseinterface_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_designermetadatabaseinterface_set_property(void* self, const char* name, void* value);
+bool q_designermetadatabaseinterface_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param name const char*
 ///
-QVariant* q_designermetadatabaseinterface_property(void* self, const char* name);
+QVariant* q_designermetadatabaseinterface_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -687,9 +611,9 @@ QVariant* q_designermetadatabaseinterface_property(void* self, const char* name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-const char** q_designermetadatabaseinterface_dynamic_property_names(void* self);
+const char** q_designermetadatabaseinterface_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -703,9 +627,9 @@ QBindingStorage* q_designermetadatabaseinterface_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-const QBindingStorage* q_designermetadatabaseinterface_binding_storage2(void* self);
+const QBindingStorage* q_designermetadatabaseinterface_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -728,18 +652,18 @@ void q_designermetadatabaseinterface_on_destroyed(void* self, void (*callback)(v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-QObject* q_designermetadatabaseinterface_parent(void* self);
+QObject* q_designermetadatabaseinterface_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param classname const char*
 ///
-bool q_designermetadatabaseinterface_inherits(void* self, const char* classname);
+bool q_designermetadatabaseinterface_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -779,7 +703,7 @@ int32_t q_designermetadatabaseinterface_start_timer23(void* self, int64_t time, 
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designermetadatabaseinterface_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_designermetadatabaseinterface_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -791,59 +715,59 @@ QMetaObject__Connection* q_designermetadatabaseinterface_connect5(void* sender, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designermetadatabaseinterface_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_designermetadatabaseinterface_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_designermetadatabaseinterface_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_designermetadatabaseinterface_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param signal const char*
 ///
-bool q_designermetadatabaseinterface_disconnect1(void* self, const char* signal);
+bool q_designermetadatabaseinterface_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_designermetadatabaseinterface_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_designermetadatabaseinterface_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_designermetadatabaseinterface_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_designermetadatabaseinterface_disconnect23(void* self, void* receiver, const char* member);
+bool q_designermetadatabaseinterface_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QDesignerMetaDataBaseInterface*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_designermetadatabaseinterface_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1039,7 +963,7 @@ void q_designermetadatabaseinterface_on_custom_event(void* self, void (*callback
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designermetadatabaseinterface_connect_notify(void* self, void* signal);
+void q_designermetadatabaseinterface_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1050,7 +974,7 @@ void q_designermetadatabaseinterface_connect_notify(void* self, void* signal);
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designermetadatabaseinterface_super_connect_notify(void* self, void* signal);
+void q_designermetadatabaseinterface_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1061,7 +985,7 @@ void q_designermetadatabaseinterface_super_connect_notify(void* self, void* sign
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param callback void func(QDesignerMetaDataBaseInterface* self, QMetaMethod* signal)
 ///
-void q_designermetadatabaseinterface_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_designermetadatabaseinterface_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1072,7 +996,7 @@ void q_designermetadatabaseinterface_on_connect_notify(void* self, void (*callba
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designermetadatabaseinterface_disconnect_notify(void* self, void* signal);
+void q_designermetadatabaseinterface_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1083,7 +1007,7 @@ void q_designermetadatabaseinterface_disconnect_notify(void* self, void* signal)
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designermetadatabaseinterface_super_disconnect_notify(void* self, void* signal);
+void q_designermetadatabaseinterface_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1094,7 +1018,7 @@ void q_designermetadatabaseinterface_super_disconnect_notify(void* self, void* s
 /// @param self QDesignerMetaDataBaseInterface*
 /// @param callback void func(QDesignerMetaDataBaseInterface* self, QMetaMethod* signal)
 ///
-void q_designermetadatabaseinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_designermetadatabaseinterface_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1102,9 +1026,9 @@ void q_designermetadatabaseinterface_on_disconnect_notify(void* self, void (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-QObject* q_designermetadatabaseinterface_sender(void* self);
+QObject* q_designermetadatabaseinterface_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1112,9 +1036,9 @@ QObject* q_designermetadatabaseinterface_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-QObject* q_designermetadatabaseinterface_super_sender(void* self);
+QObject* q_designermetadatabaseinterface_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1122,10 +1046,10 @@ QObject* q_designermetadatabaseinterface_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param callback QObject* func()
+/// @param self const QDesignerMetaDataBaseInterface*
+/// @param callback QObject* func(QDesignerMetaDataBaseInterface* self)
 ///
-void q_designermetadatabaseinterface_on_sender(void* self, QObject* (*callback)());
+void q_designermetadatabaseinterface_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1133,9 +1057,9 @@ void q_designermetadatabaseinterface_on_sender(void* self, QObject* (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-int32_t q_designermetadatabaseinterface_sender_signal_index(void* self);
+int32_t q_designermetadatabaseinterface_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1143,9 +1067,9 @@ int32_t q_designermetadatabaseinterface_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 ///
-int32_t q_designermetadatabaseinterface_super_sender_signal_index(void* self);
+int32_t q_designermetadatabaseinterface_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1153,10 +1077,10 @@ int32_t q_designermetadatabaseinterface_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
-/// @param callback int32_t func()
+/// @param self const QDesignerMetaDataBaseInterface*
+/// @param callback int32_t func(QDesignerMetaDataBaseInterface* self)
 ///
-void q_designermetadatabaseinterface_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_designermetadatabaseinterface_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1164,10 +1088,10 @@ void q_designermetadatabaseinterface_on_sender_signal_index(void* self, int32_t 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param signal const char*
 ///
-int32_t q_designermetadatabaseinterface_receivers(void* self, const char* signal);
+int32_t q_designermetadatabaseinterface_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1175,10 +1099,10 @@ int32_t q_designermetadatabaseinterface_receivers(void* self, const char* signal
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param signal const char*
 ///
-int32_t q_designermetadatabaseinterface_super_receivers(void* self, const char* signal);
+int32_t q_designermetadatabaseinterface_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1186,10 +1110,10 @@ int32_t q_designermetadatabaseinterface_super_receivers(void* self, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param callback int32_t func(QDesignerMetaDataBaseInterface* self, const char* signal)
 ///
-void q_designermetadatabaseinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_designermetadatabaseinterface_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1197,10 +1121,10 @@ void q_designermetadatabaseinterface_on_receivers(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param signal QMetaMethod*
 ///
-bool q_designermetadatabaseinterface_is_signal_connected(void* self, void* signal);
+bool q_designermetadatabaseinterface_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1208,10 +1132,10 @@ bool q_designermetadatabaseinterface_is_signal_connected(void* self, void* signa
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param signal QMetaMethod*
 ///
-bool q_designermetadatabaseinterface_super_is_signal_connected(void* self, void* signal);
+bool q_designermetadatabaseinterface_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1219,10 +1143,10 @@ bool q_designermetadatabaseinterface_super_is_signal_connected(void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDesignerMetaDataBaseInterface*
+/// @param self const QDesignerMetaDataBaseInterface*
 /// @param callback bool func(QDesignerMetaDataBaseInterface* self, QMetaMethod* signal)
 ///
-void q_designermetadatabaseinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_designermetadatabaseinterface_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

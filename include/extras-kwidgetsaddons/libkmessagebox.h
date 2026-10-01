@@ -22,7 +22,7 @@
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_question_two_actions(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_question_two_actions(void* parent, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#questionTwoActionsCancel)
 ///
@@ -37,7 +37,7 @@ int32_t k_messagebox_question_two_actions(void* parent, const char* text, const 
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_question_two_actions_cancel(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_question_two_actions_cancel(void* parent, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#questionTwoActionsList)
 ///
@@ -52,7 +52,7 @@ int32_t k_messagebox_question_two_actions_cancel(void* parent, const char* text,
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_question_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_question_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningTwoActions)
 ///
@@ -66,7 +66,7 @@ int32_t k_messagebox_question_two_actions_list(void* parent, const char* text, c
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_two_actions(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_two_actions(void* parent, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningTwoActionsList)
 ///
@@ -81,7 +81,7 @@ int32_t k_messagebox_warning_two_actions(void* parent, const char* text, const c
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningContinueCancel)
 ///
@@ -95,7 +95,7 @@ int32_t k_messagebox_warning_two_actions_list(void* parent, const char* text, co
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_continue_cancel(void* parent, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_continue_cancel(void* parent, const char* text, const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningContinueCancelDetailed)
 ///
@@ -110,7 +110,7 @@ int32_t k_messagebox_warning_continue_cancel(void* parent, const char* text, con
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_continue_cancel_detailed(void* parent, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options, const char* details);
+int32_t k_messagebox_warning_continue_cancel_detailed(void* parent, const char* text, const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options, const char* details);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningContinueCancelList)
 ///
@@ -125,7 +125,7 @@ int32_t k_messagebox_warning_continue_cancel_detailed(void* parent, const char* 
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_continue_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_continue_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningTwoActionsCancel)
 ///
@@ -140,7 +140,7 @@ int32_t k_messagebox_warning_continue_cancel_list(void* parent, const char* text
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_two_actions_cancel(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_two_actions_cancel(void* parent, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningTwoActionsCancelList)
 ///
@@ -156,7 +156,7 @@ int32_t k_messagebox_warning_two_actions_cancel(void* parent, const char* text, 
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_two_actions_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_two_actions_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#error)
 ///
@@ -175,7 +175,7 @@ void k_messagebox_error(void* parent, const char* text, const char* title, int32
 /// @param buttonOk KGuiItem*
 /// @param options flag of enum KMessageBox__Option
 ///
-void k_messagebox_error2(void* parent, const char* text, const char* title, void* buttonOk, int32_t options);
+void k_messagebox_error2(void* parent, const char* text, const char* title, const void* buttonOk, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#errorList)
 ///
@@ -206,7 +206,7 @@ void k_messagebox_detailed_error(void* parent, const char* text, const char* det
 /// @param buttonOk KGuiItem*
 /// @param options flag of enum KMessageBox__Option
 ///
-void k_messagebox_detailed_error2(void* parent, const char* text, const char* details, const char* title, void* buttonOk, int32_t options);
+void k_messagebox_detailed_error2(void* parent, const char* text, const char* details, const char* title, const void* buttonOk, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#information)
 ///
@@ -253,7 +253,7 @@ void k_messagebox_enable_message(const char* dontShowAgainName);
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_message_box(void* parent, int32_t type, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontShowAskAgainName, int32_t options);
+int32_t k_messagebox_message_box(void* parent, int32_t type, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontShowAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#shouldBeShownTwoActions)
 ///
@@ -330,7 +330,7 @@ int32_t k_messagebox_create_k_message_box(void* dialog, void* buttons, int32_t i
 ///
 /// @return enum QDialogButtonBox__StandardButton
 ///
-int32_t k_messagebox_create_k_message_box2(void* dialog, void* buttons, void* icon, const char* text, const char* strlist[static 1], const char* ask, bool* checkboxReturn, int32_t options, const char* details, int32_t notifyType);
+int32_t k_messagebox_create_k_message_box2(void* dialog, void* buttons, const void* icon, const char* text, const char* strlist[static 1], const char* ask, bool* checkboxReturn, int32_t options, const char* details, int32_t notifyType);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#questionTwoActionsWId)
 ///
@@ -344,7 +344,7 @@ int32_t k_messagebox_create_k_message_box2(void* dialog, void* buttons, void* ic
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_question_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_question_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#questionTwoActionsCancelWId)
 ///
@@ -359,7 +359,7 @@ int32_t k_messagebox_question_two_actions_w_id(uintptr_t parent_id, const char* 
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#questionTwoActionsListWId)
 ///
@@ -374,7 +374,7 @@ int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t parent_id, const
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningTwoActionsWId)
 ///
@@ -388,7 +388,7 @@ int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t parent_id, const c
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningTwoActionsListWId)
 ///
@@ -403,7 +403,7 @@ int32_t k_messagebox_warning_two_actions_w_id(uintptr_t parent_id, const char* t
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningContinueCancelWId)
 ///
@@ -417,7 +417,7 @@ int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t parent_id, const ch
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningContinueCancelListWId)
 ///
@@ -432,7 +432,7 @@ int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t parent_id, const cha
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const void* buttonContinue, const void* buttonCancel, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningTwoActionsCancelWId)
 ///
@@ -447,7 +447,7 @@ int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t parent_id, cons
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#warningTwoActionsCancelListWId)
 ///
@@ -463,7 +463,7 @@ int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t parent_id, const 
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options);
+int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#errorWId)
 ///
@@ -503,7 +503,7 @@ void k_messagebox_detailed_error_w_id(uintptr_t parent_id, const char* text, con
 /// @param buttonOk KGuiItem*
 /// @param options flag of enum KMessageBox__Option
 ///
-void k_messagebox_detailed_error_w_id2(uintptr_t parent_id, const char* text, const char* details, const char* title, void* buttonOk, int32_t options);
+void k_messagebox_detailed_error_w_id2(uintptr_t parent_id, const char* text, const char* details, const char* title, const void* buttonOk, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#informationWId)
 ///
@@ -540,7 +540,7 @@ void k_messagebox_information_list_w_id(uintptr_t parent_id, const char* text, c
 ///
 /// @return enum KMessageBox__ButtonCode
 ///
-int32_t k_messagebox_message_box_w_id(uintptr_t parent_id, int32_t type, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontShowAskAgainName, int32_t options);
+int32_t k_messagebox_message_box_w_id(uintptr_t parent_id, int32_t type, const char* text, const char* title, const void* primaryAction, const void* secondaryAction, const void* cancelAction, const char* dontShowAskAgainName, int32_t options);
 
 /// [Upstream resources](https://api.kde.org/kmessagebox.html#public-types)
 

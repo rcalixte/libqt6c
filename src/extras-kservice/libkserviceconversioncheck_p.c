@@ -1,7 +1,7 @@
 #include "libkserviceconversioncheck_p.hpp"
 #include "libkserviceconversioncheck_p.h"
 
-KServiceConversionCheck__supported* k_serviceconversioncheck__supported_new(void* other) {
+KServiceConversionCheck__supported* k_serviceconversioncheck__supported_new(const void* other) {
     return KServiceConversionCheck__supported_New((KServiceConversionCheck__supported*)other);
 }
 
@@ -21,7 +21,7 @@ void k_serviceconversioncheck__supported_delete(void* self) {
     KServiceConversionCheck__supported_Delete((KServiceConversionCheck__supported*)(self));
 }
 
-KServiceConversionCheck__unsupported* k_serviceconversioncheck__unsupported_new(void* other) {
+KServiceConversionCheck__unsupported* k_serviceconversioncheck__unsupported_new(const void* other) {
     return KServiceConversionCheck__unsupported_New((KServiceConversionCheck__unsupported*)other);
 }
 

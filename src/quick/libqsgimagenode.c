@@ -5,7 +5,7 @@
 #include "libqsgimagenode.hpp"
 #include "libqsgimagenode.h"
 
-void q_sgimagenode_set_rect(void* self, void* rect) {
+void q_sgimagenode_set_rect(void* self, const void* rect) {
     QSGImageNode_SetRect((QSGImageNode*)self, (QRectF*)rect);
 }
 
@@ -13,11 +13,11 @@ void q_sgimagenode_set_rect2(void* self, double x, double y, double w, double h)
     QSGImageNode_SetRect2((QSGImageNode*)self, x, y, w, h);
 }
 
-QRectF* q_sgimagenode_rect(void* self) {
+QRectF* q_sgimagenode_rect(const void* self) {
     return QSGImageNode_Rect((QSGImageNode*)self);
 }
 
-void q_sgimagenode_set_source_rect(void* self, void* r) {
+void q_sgimagenode_set_source_rect(void* self, const void* r) {
     QSGImageNode_SetSourceRect((QSGImageNode*)self, (QRectF*)r);
 }
 
@@ -25,7 +25,7 @@ void q_sgimagenode_set_source_rect2(void* self, double x, double y, double w, do
     QSGImageNode_SetSourceRect2((QSGImageNode*)self, x, y, w, h);
 }
 
-QRectF* q_sgimagenode_source_rect(void* self) {
+QRectF* q_sgimagenode_source_rect(const void* self) {
     return QSGImageNode_SourceRect((QSGImageNode*)self);
 }
 
@@ -33,7 +33,7 @@ void q_sgimagenode_set_texture(void* self, void* texture) {
     QSGImageNode_SetTexture((QSGImageNode*)self, (QSGTexture*)texture);
 }
 
-QSGTexture* q_sgimagenode_texture(void* self) {
+QSGTexture* q_sgimagenode_texture(const void* self) {
     return QSGImageNode_Texture((QSGImageNode*)self);
 }
 
@@ -41,7 +41,7 @@ void q_sgimagenode_set_filtering(void* self, int32_t filtering) {
     QSGImageNode_SetFiltering((QSGImageNode*)self, filtering);
 }
 
-int32_t q_sgimagenode_filtering(void* self) {
+int32_t q_sgimagenode_filtering(const void* self) {
     return QSGImageNode_Filtering((QSGImageNode*)self);
 }
 
@@ -49,7 +49,7 @@ void q_sgimagenode_set_mipmap_filtering(void* self, int32_t filtering) {
     QSGImageNode_SetMipmapFiltering((QSGImageNode*)self, filtering);
 }
 
-int32_t q_sgimagenode_mipmap_filtering(void* self) {
+int32_t q_sgimagenode_mipmap_filtering(const void* self) {
     return QSGImageNode_MipmapFiltering((QSGImageNode*)self);
 }
 
@@ -57,7 +57,7 @@ void q_sgimagenode_set_anisotropy_level(void* self, int32_t level) {
     QSGImageNode_SetAnisotropyLevel((QSGImageNode*)self, level);
 }
 
-int32_t q_sgimagenode_anisotropy_level(void* self) {
+int32_t q_sgimagenode_anisotropy_level(const void* self) {
     return QSGImageNode_AnisotropyLevel((QSGImageNode*)self);
 }
 
@@ -65,7 +65,7 @@ void q_sgimagenode_set_texture_coordinates_transform(void* self, int32_t mode) {
     QSGImageNode_SetTextureCoordinatesTransform((QSGImageNode*)self, mode);
 }
 
-int32_t q_sgimagenode_texture_coordinates_transform(void* self) {
+int32_t q_sgimagenode_texture_coordinates_transform(const void* self) {
     return QSGImageNode_TextureCoordinatesTransform((QSGImageNode*)self);
 }
 
@@ -73,11 +73,11 @@ void q_sgimagenode_set_owns_texture(void* self, bool owns) {
     QSGImageNode_SetOwnsTexture((QSGImageNode*)self, owns);
 }
 
-bool q_sgimagenode_owns_texture(void* self) {
+bool q_sgimagenode_owns_texture(const void* self) {
     return QSGImageNode_OwnsTexture((QSGImageNode*)self);
 }
 
-void q_sgimagenode_rebuild_geometry(void* g, void* texture, void* rect, void* sourceRect, int32_t texCoordMode) {
+void q_sgimagenode_rebuild_geometry(void* g, void* texture, const void* rect, void* sourceRect, int32_t texCoordMode) {
     QSGImageNode_RebuildGeometry((QSGGeometry*)g, (QSGTexture*)texture, (QRectF*)rect, (QRectF*)sourceRect, texCoordMode);
 }
 
@@ -85,7 +85,7 @@ void q_sgimagenode_set_material(void* self, void* material) {
     QSGGeometryNode_SetMaterial((QSGGeometryNode*)self, (QSGMaterial*)material);
 }
 
-QSGMaterial* q_sgimagenode_material(void* self) {
+QSGMaterial* q_sgimagenode_material(const void* self) {
     return QSGGeometryNode_Material((QSGGeometryNode*)self);
 }
 
@@ -93,11 +93,11 @@ void q_sgimagenode_set_opaque_material(void* self, void* material) {
     QSGGeometryNode_SetOpaqueMaterial((QSGGeometryNode*)self, (QSGMaterial*)material);
 }
 
-QSGMaterial* q_sgimagenode_opaque_material(void* self) {
+QSGMaterial* q_sgimagenode_opaque_material(const void* self) {
     return QSGGeometryNode_OpaqueMaterial((QSGGeometryNode*)self);
 }
 
-QSGMaterial* q_sgimagenode_active_material(void* self) {
+QSGMaterial* q_sgimagenode_active_material(const void* self) {
     return QSGGeometryNode_ActiveMaterial((QSGGeometryNode*)self);
 }
 
@@ -105,7 +105,7 @@ void q_sgimagenode_set_render_order(void* self, int order) {
     QSGGeometryNode_SetRenderOrder((QSGGeometryNode*)self, order);
 }
 
-int32_t q_sgimagenode_render_order(void* self) {
+int32_t q_sgimagenode_render_order(const void* self) {
     return QSGGeometryNode_RenderOrder((QSGGeometryNode*)self);
 }
 
@@ -113,7 +113,7 @@ void q_sgimagenode_set_inherited_opacity(void* self, double opacity) {
     QSGGeometryNode_SetInheritedOpacity((QSGGeometryNode*)self, opacity);
 }
 
-double q_sgimagenode_inherited_opacity(void* self) {
+double q_sgimagenode_inherited_opacity(const void* self) {
     return QSGGeometryNode_InheritedOpacity((QSGGeometryNode*)self);
 }
 
@@ -121,7 +121,7 @@ void q_sgimagenode_set_geometry(void* self, void* geometry) {
     QSGBasicGeometryNode_SetGeometry((QSGBasicGeometryNode*)self, (QSGGeometry*)geometry);
 }
 
-const QSGGeometry* q_sgimagenode_geometry(void* self) {
+const QSGGeometry* q_sgimagenode_geometry(const void* self) {
     return QSGBasicGeometryNode_Geometry((QSGBasicGeometryNode*)self);
 }
 
@@ -129,23 +129,23 @@ QSGGeometry* q_sgimagenode_geometry2(void* self) {
     return QSGBasicGeometryNode_Geometry2((QSGBasicGeometryNode*)self);
 }
 
-const QMatrix4x4* q_sgimagenode_matrix(void* self) {
+const QMatrix4x4* q_sgimagenode_matrix(const void* self) {
     return QSGBasicGeometryNode_Matrix((QSGBasicGeometryNode*)self);
 }
 
-const QSGClipNode* q_sgimagenode_clip_list(void* self) {
+const QSGClipNode* q_sgimagenode_clip_list(const void* self) {
     return QSGBasicGeometryNode_ClipList((QSGBasicGeometryNode*)self);
 }
 
-void q_sgimagenode_set_renderer_matrix(void* self, void* m) {
+void q_sgimagenode_set_renderer_matrix(void* self, const void* m) {
     QSGBasicGeometryNode_SetRendererMatrix((QSGBasicGeometryNode*)self, (QMatrix4x4*)m);
 }
 
-void q_sgimagenode_set_renderer_clip_list(void* self, void* c) {
+void q_sgimagenode_set_renderer_clip_list(void* self, const void* c) {
     QSGBasicGeometryNode_SetRendererClipList((QSGBasicGeometryNode*)self, (QSGClipNode*)c);
 }
 
-QSGNode* q_sgimagenode_parent(void* self) {
+QSGNode* q_sgimagenode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -177,31 +177,31 @@ void q_sgimagenode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgimagenode_child_count(void* self) {
+int32_t q_sgimagenode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgimagenode_child_at_index(void* self, int i) {
+QSGNode* q_sgimagenode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgimagenode_first_child(void* self) {
+QSGNode* q_sgimagenode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgimagenode_last_child(void* self) {
+QSGNode* q_sgimagenode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgimagenode_next_sibling(void* self) {
+QSGNode* q_sgimagenode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgimagenode_previous_sibling(void* self) {
+QSGNode* q_sgimagenode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgimagenode_type(void* self) {
+int32_t q_sgimagenode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -213,15 +213,15 @@ void q_sgimagenode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgimagenode_dirty_state(void* self) {
+int32_t q_sgimagenode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-bool q_sgimagenode_is_subtree_blocked(void* self) {
+bool q_sgimagenode_is_subtree_blocked(const void* self) {
     return QSGNode_IsSubtreeBlocked((QSGNode*)self);
 }
 
-int32_t q_sgimagenode_flags(void* self) {
+int32_t q_sgimagenode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 

@@ -13,7 +13,7 @@ const char* k_emailsettings_tr(const char* sourceText) {
     return _ret;
 }
 
-const char** k_emailsettings_profiles(void* self) {
+const char** k_emailsettings_profiles(const void* self) {
     libqt_list _arr = KEMailSettings_Profiles((KEMailSettings*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -34,7 +34,7 @@ void k_emailsettings_set_profile(void* self, const char* s) {
     KEMailSettings_SetProfile((KEMailSettings*)self, qstring(s));
 }
 
-const char* k_emailsettings_default_profile_name(void* self) {
+const char* k_emailsettings_default_profile_name(const void* self) {
     libqt_string _str = KEMailSettings_DefaultProfileName((KEMailSettings*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -45,7 +45,7 @@ void k_emailsettings_set_default(void* self, const char* def) {
     KEMailSettings_SetDefault((KEMailSettings*)self, qstring(def));
 }
 
-const char* k_emailsettings_get_setting(void* self, int32_t s) {
+const char* k_emailsettings_get_setting(const void* self, int32_t s) {
     libqt_string _str = KEMailSettings_GetSetting((KEMailSettings*)self, s);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

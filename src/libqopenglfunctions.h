@@ -24,18 +24,18 @@ QOpenGLFunctions* q_openglfunctions_new2(void* context);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#openGLFeatures)
 ///
-/// @param self QOpenGLFunctions*
+/// @param self const QOpenGLFunctions*
 ///
 /// @return flag of enum QOpenGLFunctions__OpenGLFeature
 ///
-int32_t q_openglfunctions_open_g_l_features(void* self);
+int32_t q_openglfunctions_open_g_l_features(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#hasOpenGLFeature)
 ///
-/// @param self QOpenGLFunctions*
+/// @param self const QOpenGLFunctions*
 /// @param feature enum QOpenGLFunctions__OpenGLFeature
 ///
-bool q_openglfunctions_has_open_g_l_feature(void* self, int32_t feature);
+bool q_openglfunctions_has_open_g_l_feature(const void* self, int32_t feature);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#initializeOpenGLFunctions)
 ///

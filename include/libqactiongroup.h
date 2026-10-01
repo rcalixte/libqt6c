@@ -18,26 +18,26 @@ QActionGroup* q_actiongroup_new(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-const QMetaObject* q_actiongroup_meta_object(void* self);
+const QMetaObject* q_actiongroup_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QActionGroup*
-/// @param callback const QMetaObject* func()
+/// @param self const QActionGroup*
+/// @param callback const QMetaObject* func(const QActionGroup* self)
 ///
-void q_actiongroup_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_actiongroup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-const QMetaObject* q_actiongroup_super_meta_object(void* self);
+const QMetaObject* q_actiongroup_super_meta_object(const void* self);
 
 /// @param self QActionGroup*
 /// @param param1 const char*
@@ -109,7 +109,7 @@ QAction* q_actiongroup_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_actiongroup_add_action3(void* self, void* icon, const char* text);
+QAction* q_actiongroup_add_action3(void* self, const void* icon, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#removeAction)
 ///
@@ -120,43 +120,43 @@ void q_actiongroup_remove_action(void* self, void* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#actions)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_actiongroup_actions(void* self);
+libqt_list q_actiongroup_actions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#checkedAction)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-QAction* q_actiongroup_checked_action(void* self);
+QAction* q_actiongroup_checked_action(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#isExclusive)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-bool q_actiongroup_is_exclusive(void* self);
+bool q_actiongroup_is_exclusive(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#isEnabled)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-bool q_actiongroup_is_enabled(void* self);
+bool q_actiongroup_is_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#isVisible)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-bool q_actiongroup_is_visible(void* self);
+bool q_actiongroup_is_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#exclusionPolicy)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
 /// @return enum QActionGroup__ExclusionPolicy
 ///
-int32_t q_actiongroup_exclusion_policy(void* self);
+int32_t q_actiongroup_exclusion_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qactiongroup.html#setEnabled)
 ///
@@ -246,9 +246,9 @@ const char* q_actiongroup_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-const char* q_actiongroup_object_name(void* self);
+const char* q_actiongroup_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -263,33 +263,33 @@ void q_actiongroup_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-bool q_actiongroup_is_widget_type(void* self);
+bool q_actiongroup_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-bool q_actiongroup_is_window_type(void* self);
+bool q_actiongroup_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-bool q_actiongroup_is_quick_item_type(void* self);
+bool q_actiongroup_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-bool q_actiongroup_signals_blocked(void* self);
+bool q_actiongroup_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -304,9 +304,9 @@ bool q_actiongroup_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-QThread* q_actiongroup_thread(void* self);
+QThread* q_actiongroup_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -357,11 +357,11 @@ void q_actiongroup_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_actiongroup_children(void* self);
+libqt_list q_actiongroup_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -399,7 +399,7 @@ void q_actiongroup_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_actiongroup_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_actiongroup_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -410,18 +410,18 @@ QMetaObject__Connection* q_actiongroup_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_actiongroup_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_actiongroup_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_actiongroup_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_actiongroup_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -432,7 +432,7 @@ QMetaObject__Connection* q_actiongroup_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_actiongroup_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_actiongroup_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -443,24 +443,24 @@ bool q_actiongroup_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_actiongroup_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_actiongroup_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-bool q_actiongroup_disconnect3(void* self);
+bool q_actiongroup_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param receiver QObject*
 ///
-bool q_actiongroup_disconnect4(void* self, void* receiver);
+bool q_actiongroup_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -468,23 +468,23 @@ bool q_actiongroup_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_actiongroup_disconnect5(void* param1);
+bool q_actiongroup_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-void q_actiongroup_dump_object_tree(void* self);
+void q_actiongroup_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-void q_actiongroup_dump_object_info(void* self);
+void q_actiongroup_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -494,16 +494,16 @@ void q_actiongroup_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_actiongroup_set_property(void* self, const char* name, void* value);
+bool q_actiongroup_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param name const char*
 ///
-QVariant* q_actiongroup_property(void* self, const char* name);
+QVariant* q_actiongroup_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -511,9 +511,9 @@ QVariant* q_actiongroup_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-const char** q_actiongroup_dynamic_property_names(void* self);
+const char** q_actiongroup_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -527,9 +527,9 @@ QBindingStorage* q_actiongroup_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-const QBindingStorage* q_actiongroup_binding_storage2(void* self);
+const QBindingStorage* q_actiongroup_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -552,18 +552,18 @@ void q_actiongroup_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-QObject* q_actiongroup_parent(void* self);
+QObject* q_actiongroup_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param classname const char*
 ///
-bool q_actiongroup_inherits(void* self, const char* classname);
+bool q_actiongroup_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -603,7 +603,7 @@ int32_t q_actiongroup_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_actiongroup_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_actiongroup_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -615,59 +615,59 @@ QMetaObject__Connection* q_actiongroup_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_actiongroup_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_actiongroup_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_actiongroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_actiongroup_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param signal const char*
 ///
-bool q_actiongroup_disconnect1(void* self, const char* signal);
+bool q_actiongroup_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QActionGroup*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_actiongroup_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_actiongroup_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_actiongroup_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_actiongroup_disconnect23(void* self, void* receiver, const char* member);
+bool q_actiongroup_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QActionGroup*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_actiongroup_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -863,7 +863,7 @@ void q_actiongroup_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QActionGroup*
 /// @param signal QMetaMethod*
 ///
-void q_actiongroup_connect_notify(void* self, void* signal);
+void q_actiongroup_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -874,7 +874,7 @@ void q_actiongroup_connect_notify(void* self, void* signal);
 /// @param self QActionGroup*
 /// @param signal QMetaMethod*
 ///
-void q_actiongroup_super_connect_notify(void* self, void* signal);
+void q_actiongroup_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -885,7 +885,7 @@ void q_actiongroup_super_connect_notify(void* self, void* signal);
 /// @param self QActionGroup*
 /// @param callback void func(QActionGroup* self, QMetaMethod* signal)
 ///
-void q_actiongroup_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_actiongroup_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -896,7 +896,7 @@ void q_actiongroup_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self QActionGroup*
 /// @param signal QMetaMethod*
 ///
-void q_actiongroup_disconnect_notify(void* self, void* signal);
+void q_actiongroup_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -907,7 +907,7 @@ void q_actiongroup_disconnect_notify(void* self, void* signal);
 /// @param self QActionGroup*
 /// @param signal QMetaMethod*
 ///
-void q_actiongroup_super_disconnect_notify(void* self, void* signal);
+void q_actiongroup_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -918,7 +918,7 @@ void q_actiongroup_super_disconnect_notify(void* self, void* signal);
 /// @param self QActionGroup*
 /// @param callback void func(QActionGroup* self, QMetaMethod* signal)
 ///
-void q_actiongroup_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_actiongroup_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -926,9 +926,9 @@ void q_actiongroup_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-QObject* q_actiongroup_sender(void* self);
+QObject* q_actiongroup_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -936,9 +936,9 @@ QObject* q_actiongroup_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-QObject* q_actiongroup_super_sender(void* self);
+QObject* q_actiongroup_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -946,10 +946,10 @@ QObject* q_actiongroup_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QActionGroup*
-/// @param callback QObject* func()
+/// @param self const QActionGroup*
+/// @param callback QObject* func(QActionGroup* self)
 ///
-void q_actiongroup_on_sender(void* self, QObject* (*callback)());
+void q_actiongroup_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -957,9 +957,9 @@ void q_actiongroup_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-int32_t q_actiongroup_sender_signal_index(void* self);
+int32_t q_actiongroup_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -967,9 +967,9 @@ int32_t q_actiongroup_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 ///
-int32_t q_actiongroup_super_sender_signal_index(void* self);
+int32_t q_actiongroup_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -977,10 +977,10 @@ int32_t q_actiongroup_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QActionGroup*
-/// @param callback int32_t func()
+/// @param self const QActionGroup*
+/// @param callback int32_t func(QActionGroup* self)
 ///
-void q_actiongroup_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_actiongroup_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -988,10 +988,10 @@ void q_actiongroup_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param signal const char*
 ///
-int32_t q_actiongroup_receivers(void* self, const char* signal);
+int32_t q_actiongroup_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -999,10 +999,10 @@ int32_t q_actiongroup_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param signal const char*
 ///
-int32_t q_actiongroup_super_receivers(void* self, const char* signal);
+int32_t q_actiongroup_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1010,10 +1010,10 @@ int32_t q_actiongroup_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param callback int32_t func(QActionGroup* self, const char* signal)
 ///
-void q_actiongroup_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_actiongroup_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1021,10 +1021,10 @@ void q_actiongroup_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param signal QMetaMethod*
 ///
-bool q_actiongroup_is_signal_connected(void* self, void* signal);
+bool q_actiongroup_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1032,10 +1032,10 @@ bool q_actiongroup_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param signal QMetaMethod*
 ///
-bool q_actiongroup_super_is_signal_connected(void* self, void* signal);
+bool q_actiongroup_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1043,10 +1043,10 @@ bool q_actiongroup_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QActionGroup*
+/// @param self const QActionGroup*
 /// @param callback bool func(QActionGroup* self, QMetaMethod* signal)
 ///
-void q_actiongroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_actiongroup_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

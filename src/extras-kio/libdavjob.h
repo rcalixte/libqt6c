@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const QMetaObject* k_io__davjob_meta_object(void* self);
+const QMetaObject* k_io__davjob_meta_object(const void* self);
 
 /// @param self KIO__DavJob*
 /// @param param1 const char*
@@ -40,9 +40,9 @@ const char* k_io__davjob_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-char* k_io__davjob_response_data(void* self);
+char* k_io__davjob_response_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -70,15 +70,15 @@ const char* k_io__davjob_tr3(const char* s, const char* c, int n);
 /// @param self KIO__DavJob*
 /// @param mtime QDateTime*
 ///
-void k_io__davjob_set_modification_time(void* self, void* mtime);
+void k_io__davjob_set_modification_time(void* self, const void* mtime);
 
 /// Inherited from KIO::TransferJob
 ///
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#isErrorPage)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_error_page(void* self);
+bool k_io__davjob_is_error_page(const void* self);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -104,17 +104,17 @@ void k_io__davjob_send_async_data(void* self, char* data);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const char* k_io__davjob_mimetype(void* self);
+const char* k_io__davjob_mimetype(const void* self);
 
 /// Inherited from KIO::TransferJob
 ///
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#redirectUrl)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-QUrl* k_io__davjob_redirect_url(void* self);
+QUrl* k_io__davjob_redirect_url(const void* self);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -171,7 +171,7 @@ void k_io__davjob_on_data_req(void* self, void (*callback)(void*, void*, libqt_s
 /// @param job KIO__Job*
 /// @param url QUrl*
 ///
-void k_io__davjob_redirection(void* self, void* job, void* url);
+void k_io__davjob_redirection(void* self, void* job, const void* url);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -180,7 +180,7 @@ void k_io__davjob_redirection(void* self, void* job, void* url);
 /// @param self KIO__DavJob*
 /// @param callback void func(KIO__DavJob* self, KIO__Job* job, QUrl* url)
 ///
-void k_io__davjob_on_redirection(void* self, void (*callback)(void*, void*, void*));
+void k_io__davjob_on_redirection(void* self, void (*callback)(void*, void*, const void*));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -191,7 +191,7 @@ void k_io__davjob_on_redirection(void* self, void (*callback)(void*, void*, void
 /// @param fromUrl QUrl*
 /// @param toUrl QUrl*
 ///
-void k_io__davjob_permanent_redirection(void* self, void* job, void* fromUrl, void* toUrl);
+void k_io__davjob_permanent_redirection(void* self, void* job, const void* fromUrl, const void* toUrl);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -200,7 +200,7 @@ void k_io__davjob_permanent_redirection(void* self, void* job, void* fromUrl, vo
 /// @param self KIO__DavJob*
 /// @param callback void func(KIO__DavJob* self, KIO__Job* job, QUrl* fromUrl, QUrl* toUrl)
 ///
-void k_io__davjob_on_permanent_redirection(void* self, void (*callback)(void*, void*, void*, void*));
+void k_io__davjob_on_permanent_redirection(void* self, void (*callback)(void*, void*, const void*, const void*));
 
 /// Inherited from KIO::TransferJob
 ///
@@ -244,9 +244,9 @@ void k_io__davjob_on_can_resume(void* self, void (*callback)(void*, void*, uintp
 ///
 /// [Upstream resources](https://api.kde.org/kio-simplejob.html#url)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const QUrl* k_io__davjob_url(void* self);
+const QUrl* k_io__davjob_url(const void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -266,9 +266,9 @@ void k_io__davjob_remove_on_hold();
 ///
 /// [Upstream resources](https://api.kde.org/kio-simplejob.html#isRedirectionHandlingEnabled)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_redirection_handling_enabled(void* self);
+bool k_io__davjob_is_redirection_handling_enabled(const void* self);
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -301,9 +301,9 @@ void k_io__davjob_start(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#uiDelegateExtension)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-KIO__JobUiDelegateExtension* k_io__davjob_ui_delegate_extension(void* self);
+KIO__JobUiDelegateExtension* k_io__davjob_ui_delegate_extension(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -320,9 +320,9 @@ void k_io__davjob_set_ui_delegate_extension(void* self, void* extension);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const char* k_io__davjob_error_string(void* self);
+const char* k_io__davjob_error_string(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -330,9 +330,9 @@ const char* k_io__davjob_error_string(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const char** k_io__davjob_detailed_error_strings(void* self);
+const char** k_io__davjob_detailed_error_strings(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -347,9 +347,9 @@ void k_io__davjob_set_parent_job(void* self, void* parentJob);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#parentJob)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-KIO__Job* k_io__davjob_parent_job(void* self);
+KIO__Job* k_io__davjob_parent_job(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -358,7 +358,7 @@ KIO__Job* k_io__davjob_parent_job(void* self);
 /// @param self KIO__DavJob*
 /// @param metaData KIO__MetaData*
 ///
-void k_io__davjob_set_meta_data(void* self, void* metaData);
+void k_io__davjob_set_meta_data(void* self, const void* metaData);
 
 /// Inherited from KIO::Job
 ///
@@ -392,17 +392,17 @@ void k_io__davjob_merge_meta_data(void* self, libqt_map values);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#outgoingMetaData)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-KIO__MetaData* k_io__davjob_outgoing_meta_data(void* self);
+KIO__MetaData* k_io__davjob_outgoing_meta_data(const void* self);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#metaData)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-KIO__MetaData* k_io__davjob_meta_data(void* self);
+KIO__MetaData* k_io__davjob_meta_data(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -439,10 +439,10 @@ void k_io__davjob_on_connected(void* self, void (*callback)(void*, void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param reqUrl QUrl*
 ///
-const char** k_io__davjob_detailed_error_strings1(void* self, void* reqUrl);
+const char** k_io__davjob_detailed_error_strings1(const void* self, const void* reqUrl);
 
 /// Inherited from KIO::Job
 ///
@@ -450,11 +450,11 @@ const char** k_io__davjob_detailed_error_strings1(void* self, void* reqUrl);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param reqUrl QUrl*
 /// @param method int
 ///
-const char** k_io__davjob_detailed_error_strings2(void* self, void* reqUrl, int method);
+const char** k_io__davjob_detailed_error_strings2(const void* self, const void* reqUrl, int method);
 
 /// Inherited from KJob
 ///
@@ -469,27 +469,27 @@ void k_io__davjob_set_ui_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-KJobUiDelegate* k_io__davjob_ui_delegate(void* self);
+KJobUiDelegate* k_io__davjob_ui_delegate(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
 /// @return flag of enum KJob__Capability
 ///
-int32_t k_io__davjob_capabilities(void* self);
+int32_t k_io__davjob_capabilities(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_suspended(void* self);
+bool k_io__davjob_is_suspended(const void* self);
 
 /// Inherited from KJob
 ///
@@ -527,9 +527,9 @@ bool k_io__davjob_exec(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-int32_t k_io__davjob_error(void* self);
+int32_t k_io__davjob_error(const void* self);
 
 /// Inherited from KJob
 ///
@@ -537,35 +537,35 @@ int32_t k_io__davjob_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const char* k_io__davjob_error_text(void* self);
+const char* k_io__davjob_error_text(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_io__davjob_processed_amount(void* self, int32_t unit);
+uintptr_t k_io__davjob_processed_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_io__davjob_total_amount(void* self, int32_t unit);
+uintptr_t k_io__davjob_total_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-uintptr_t k_io__davjob_percent(void* self);
+uintptr_t k_io__davjob_percent(const void* self);
 
 /// Inherited from KJob
 ///
@@ -580,9 +580,9 @@ void k_io__davjob_set_auto_delete(void* self, bool autodelete);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_auto_delete(void* self);
+bool k_io__davjob_is_auto_delete(const void* self);
 
 /// Inherited from KJob
 ///
@@ -596,25 +596,25 @@ void k_io__davjob_set_finished_notification_hidden(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_finished_notification_hidden(void* self);
+bool k_io__davjob_is_finished_notification_hidden(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_started_with_exec(void* self);
+bool k_io__davjob_is_started_with_exec(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-int64_t k_io__davjob_elapsed_time(void* self);
+int64_t k_io__davjob_elapsed_time(const void* self);
 
 /// Inherited from KJob
 ///
@@ -754,9 +754,9 @@ bool k_io__davjob_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const char* k_io__davjob_object_name(void* self);
+const char* k_io__davjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -771,33 +771,33 @@ void k_io__davjob_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_widget_type(void* self);
+bool k_io__davjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_window_type(void* self);
+bool k_io__davjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_is_quick_item_type(void* self);
+bool k_io__davjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_signals_blocked(void* self);
+bool k_io__davjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -812,9 +812,9 @@ bool k_io__davjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-QThread* k_io__davjob_thread(void* self);
+QThread* k_io__davjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -865,11 +865,11 @@ void k_io__davjob_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_io__davjob_children(void* self);
+libqt_list k_io__davjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -907,7 +907,7 @@ void k_io__davjob_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__davjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_io__davjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -918,18 +918,18 @@ QMetaObject__Connection* k_io__davjob_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_io__davjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_io__davjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__davjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_io__davjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -940,7 +940,7 @@ QMetaObject__Connection* k_io__davjob_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__davjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_io__davjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -951,24 +951,24 @@ bool k_io__davjob_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_io__davjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_io__davjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-bool k_io__davjob_disconnect3(void* self);
+bool k_io__davjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param receiver QObject*
 ///
-bool k_io__davjob_disconnect4(void* self, void* receiver);
+bool k_io__davjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -976,23 +976,23 @@ bool k_io__davjob_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_io__davjob_disconnect5(void* param1);
+bool k_io__davjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-void k_io__davjob_dump_object_tree(void* self);
+void k_io__davjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-void k_io__davjob_dump_object_info(void* self);
+void k_io__davjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1002,16 +1002,16 @@ void k_io__davjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_io__davjob_set_property(void* self, const char* name, void* value);
+bool k_io__davjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param name const char*
 ///
-QVariant* k_io__davjob_property(void* self, const char* name);
+QVariant* k_io__davjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1019,9 +1019,9 @@ QVariant* k_io__davjob_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const char** k_io__davjob_dynamic_property_names(void* self);
+const char** k_io__davjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1035,9 +1035,9 @@ QBindingStorage* k_io__davjob_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-const QBindingStorage* k_io__davjob_binding_storage2(void* self);
+const QBindingStorage* k_io__davjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1060,18 +1060,18 @@ void k_io__davjob_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 ///
-QObject* k_io__davjob_parent(void* self);
+QObject* k_io__davjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param classname const char*
 ///
-bool k_io__davjob_inherits(void* self, const char* classname);
+bool k_io__davjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1111,7 +1111,7 @@ int32_t k_io__davjob_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__davjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_io__davjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1123,59 +1123,59 @@ QMetaObject__Connection* k_io__davjob_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__davjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_io__davjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__davjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_io__davjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param signal const char*
 ///
-bool k_io__davjob_disconnect1(void* self, const char* signal);
+bool k_io__davjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__DavJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_io__davjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_io__davjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_io__davjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__DavJob*
+/// @param self const KIO__DavJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__davjob_disconnect23(void* self, void* receiver, const char* member);
+bool k_io__davjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KIO__DavJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_io__davjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1298,7 +1298,7 @@ void k_io__davjob_delete(void* self);
 /// @param depth const char*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DavJob* k_io_dav_prop_find(void* url, const char* properties, const char* depth, int32_t flags);
+KIO__DavJob* k_io_dav_prop_find(const void* url, const char* properties, const char* depth, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#davPropPatch)
 ///
@@ -1306,7 +1306,7 @@ KIO__DavJob* k_io_dav_prop_find(void* url, const char* properties, const char* d
 /// @param properties const char*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DavJob* k_io_dav_prop_patch(void* url, const char* properties, int32_t flags);
+KIO__DavJob* k_io_dav_prop_patch(const void* url, const char* properties, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#davSearch)
 ///
@@ -1316,7 +1316,7 @@ KIO__DavJob* k_io_dav_prop_patch(void* url, const char* properties, int32_t flag
 /// @param query const char*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DavJob* k_io_dav_search(void* url, const char* nsURI, const char* qName, const char* query, int32_t flags);
+KIO__DavJob* k_io_dav_search(const void* url, const char* nsURI, const char* qName, const char* query, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#davReport)
 ///
@@ -1325,5 +1325,5 @@ KIO__DavJob* k_io_dav_search(void* url, const char* nsURI, const char* qName, co
 /// @param depth const char*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DavJob* k_io_dav_report(void* url, const char* report, const char* depth, int32_t flags);
+KIO__DavJob* k_io_dav_report(const void* url, const char* report, const char* depth, int32_t flags);
 #endif

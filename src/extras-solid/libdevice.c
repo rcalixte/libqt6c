@@ -7,7 +7,7 @@ Solid__Device* k_solid__device_new() {
     return Solid__Device_New();
 }
 
-Solid__Device* k_solid__device_new2(void* device) {
+Solid__Device* k_solid__device_new2(const void* device) {
     return Solid__Device_New2((Solid__Device*)device);
 }
 
@@ -25,7 +25,7 @@ libqt_list /* of Solid__Device* */ k_solid__device_list_from_type(int32_t* type)
     return _arr;
 }
 
-libqt_list /* of Solid__Device* */ k_solid__device_list_from_query(void* predicate) {
+libqt_list /* of Solid__Device* */ k_solid__device_list_from_query(const void* predicate) {
     libqt_list _arr = Solid__Device_ListFromQuery((Solid__Predicate*)predicate);
     return _arr;
 }
@@ -39,54 +39,54 @@ Solid__Device* k_solid__device_storage_access_from_path(const char* path) {
     return Solid__Device_StorageAccessFromPath(qstring(path));
 }
 
-void k_solid__device_operator_assign(void* self, void* device) {
+void k_solid__device_operator_assign(void* self, const void* device) {
     Solid__Device_OperatorAssign((Solid__Device*)self, (Solid__Device*)device);
 }
 
-bool k_solid__device_is_valid(void* self) {
+bool k_solid__device_is_valid(const void* self) {
     return Solid__Device_IsValid((Solid__Device*)self);
 }
 
-const char* k_solid__device_udi(void* self) {
+const char* k_solid__device_udi(const void* self) {
     libqt_string _str = Solid__Device_Udi((Solid__Device*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_solid__device_parent_udi(void* self) {
+const char* k_solid__device_parent_udi(const void* self) {
     libqt_string _str = Solid__Device_ParentUdi((Solid__Device*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-Solid__Device* k_solid__device_parent(void* self) {
+Solid__Device* k_solid__device_parent(const void* self) {
     return Solid__Device_Parent((Solid__Device*)self);
 }
 
-const char* k_solid__device_vendor(void* self) {
+const char* k_solid__device_vendor(const void* self) {
     libqt_string _str = Solid__Device_Vendor((Solid__Device*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_solid__device_product(void* self) {
+const char* k_solid__device_product(const void* self) {
     libqt_string _str = Solid__Device_Product((Solid__Device*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_solid__device_icon(void* self) {
+const char* k_solid__device_icon(const void* self) {
     libqt_string _str = Solid__Device_Icon((Solid__Device*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_solid__device_emblems(void* self) {
+const char** k_solid__device_emblems(const void* self) {
     libqt_list _arr = Solid__Device_Emblems((Solid__Device*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -103,21 +103,21 @@ const char** k_solid__device_emblems(void* self) {
     return _ret;
 }
 
-const char* k_solid__device_display_name(void* self) {
+const char* k_solid__device_display_name(const void* self) {
     libqt_string _str = Solid__Device_DisplayName((Solid__Device*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_solid__device_description(void* self) {
+const char* k_solid__device_description(const void* self) {
     libqt_string _str = Solid__Device_Description((Solid__Device*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_solid__device_is_device_interface(void* self, int32_t* type) {
+bool k_solid__device_is_device_interface(const void* self, int32_t* type) {
     return Solid__Device_IsDeviceInterface((Solid__Device*)self, type);
 }
 
@@ -125,7 +125,7 @@ Solid__DeviceInterface* k_solid__device_as_device_interface(void* self, int32_t*
     return Solid__Device_AsDeviceInterface((Solid__Device*)self, type);
 }
 
-const Solid__DeviceInterface* k_solid__device_as_device_interface2(void* self, int32_t* type) {
+const Solid__DeviceInterface* k_solid__device_as_device_interface2(const void* self, int32_t* type) {
     return Solid__Device_AsDeviceInterface2((Solid__Device*)self, type);
 }
 
@@ -134,7 +134,7 @@ libqt_list /* of Solid__Device* */ k_solid__device_list_from_type2(int32_t* type
     return _arr;
 }
 
-libqt_list /* of Solid__Device* */ k_solid__device_list_from_query22(void* predicate, const char* parentUdi) {
+libqt_list /* of Solid__Device* */ k_solid__device_list_from_query22(const void* predicate, const char* parentUdi) {
     libqt_list _arr = Solid__Device_ListFromQuery22((Solid__Predicate*)predicate, qstring(parentUdi));
     return _arr;
 }

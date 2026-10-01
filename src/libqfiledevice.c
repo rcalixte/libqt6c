@@ -7,7 +7,7 @@
 #include "libqfiledevice.hpp"
 #include "libqfiledevice.h"
 
-const QMetaObject* q_filedevice_meta_object(void* self) {
+const QMetaObject* q_filedevice_meta_object(const void* self) {
     return QFileDevice_MetaObject((QFileDevice*)self);
 }
 
@@ -26,7 +26,7 @@ const char* q_filedevice_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_filedevice_error(void* self) {
+int32_t q_filedevice_error(const void* self) {
     return QFileDevice_Error((QFileDevice*)self);
 }
 
@@ -38,22 +38,22 @@ void q_filedevice_close(void* self) {
     QFileDevice_Close((QFileDevice*)self);
 }
 
-bool q_filedevice_is_sequential(void* self) {
+bool q_filedevice_is_sequential(const void* self) {
     return QFileDevice_IsSequential((QFileDevice*)self);
 }
 
-int32_t q_filedevice_handle(void* self) {
+int32_t q_filedevice_handle(const void* self) {
     return QFileDevice_Handle((QFileDevice*)self);
 }
 
-const char* q_filedevice_file_name(void* self) {
+const char* q_filedevice_file_name(const void* self) {
     libqt_string _str = QFileDevice_FileName((QFileDevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int64_t q_filedevice_pos(void* self) {
+int64_t q_filedevice_pos(const void* self) {
     return QFileDevice_Pos((QFileDevice*)self);
 }
 
@@ -61,7 +61,7 @@ bool q_filedevice_seek(void* self, int64_t offset) {
     return QFileDevice_Seek((QFileDevice*)self, offset);
 }
 
-bool q_filedevice_at_end(void* self) {
+bool q_filedevice_at_end(const void* self) {
     return QFileDevice_AtEnd((QFileDevice*)self);
 }
 
@@ -69,7 +69,7 @@ bool q_filedevice_flush(void* self) {
     return QFileDevice_Flush((QFileDevice*)self);
 }
 
-int64_t q_filedevice_size(void* self) {
+int64_t q_filedevice_size(const void* self) {
     return QFileDevice_Size((QFileDevice*)self);
 }
 
@@ -77,7 +77,7 @@ bool q_filedevice_resize(void* self, int64_t sz) {
     return QFileDevice_Resize((QFileDevice*)self, sz);
 }
 
-int32_t q_filedevice_permissions(void* self) {
+int32_t q_filedevice_permissions(const void* self) {
     return QFileDevice_Permissions((QFileDevice*)self);
 }
 
@@ -93,11 +93,11 @@ bool q_filedevice_unmap(void* self, unsigned char* address) {
     return QFileDevice_Unmap((QFileDevice*)self, address);
 }
 
-QDateTime* q_filedevice_file_time(void* self, int32_t time) {
+QDateTime* q_filedevice_file_time(const void* self, int32_t time) {
     return QFileDevice_FileTime((QFileDevice*)self, time);
 }
 
-bool q_filedevice_set_file_time(void* self, void* newDate, int32_t fileTime) {
+bool q_filedevice_set_file_time(void* self, const void* newDate, int32_t fileTime) {
     return QFileDevice_SetFileTime((QFileDevice*)self, (QDateTime*)newDate, fileTime);
 }
 
@@ -123,7 +123,7 @@ QIODeviceBase* q_filedevice_as_q_i_o_device_base(void* self) {
     return QIODevice_AsQIODeviceBase((QIODevice*)self);
 }
 
-int32_t q_filedevice_open_mode(void* self) {
+int32_t q_filedevice_open_mode(const void* self) {
     return QIODevice_OpenMode((QIODevice*)self);
 }
 
@@ -131,31 +131,31 @@ void q_filedevice_set_text_mode_enabled(void* self, bool enabled) {
     QIODevice_SetTextModeEnabled((QIODevice*)self, enabled);
 }
 
-bool q_filedevice_is_text_mode_enabled(void* self) {
+bool q_filedevice_is_text_mode_enabled(const void* self) {
     return QIODevice_IsTextModeEnabled((QIODevice*)self);
 }
 
-bool q_filedevice_is_open(void* self) {
+bool q_filedevice_is_open(const void* self) {
     return QIODevice_IsOpen((QIODevice*)self);
 }
 
-bool q_filedevice_is_readable(void* self) {
+bool q_filedevice_is_readable(const void* self) {
     return QIODevice_IsReadable((QIODevice*)self);
 }
 
-bool q_filedevice_is_writable(void* self) {
+bool q_filedevice_is_writable(const void* self) {
     return QIODevice_IsWritable((QIODevice*)self);
 }
 
-int32_t q_filedevice_read_channel_count(void* self) {
+int32_t q_filedevice_read_channel_count(const void* self) {
     return QIODevice_ReadChannelCount((QIODevice*)self);
 }
 
-int32_t q_filedevice_write_channel_count(void* self) {
+int32_t q_filedevice_write_channel_count(const void* self) {
     return QIODevice_WriteChannelCount((QIODevice*)self);
 }
 
-int32_t q_filedevice_current_read_channel(void* self) {
+int32_t q_filedevice_current_read_channel(const void* self) {
     return QIODevice_CurrentReadChannel((QIODevice*)self);
 }
 
@@ -163,7 +163,7 @@ void q_filedevice_set_current_read_channel(void* self, int channel) {
     QIODevice_SetCurrentReadChannel((QIODevice*)self, channel);
 }
 
-int32_t q_filedevice_current_write_channel(void* self) {
+int32_t q_filedevice_current_write_channel(const void* self) {
     return QIODevice_CurrentWriteChannel((QIODevice*)self);
 }
 
@@ -179,11 +179,11 @@ bool q_filedevice_reset(void* self) {
     return QIODevice_Reset((QIODevice*)self);
 }
 
-int64_t q_filedevice_bytes_available(void* self) {
+int64_t q_filedevice_bytes_available(const void* self) {
     return QIODevice_BytesAvailable((QIODevice*)self);
 }
 
-int64_t q_filedevice_bytes_to_write(void* self) {
+int64_t q_filedevice_bytes_to_write(const void* self) {
     return QIODevice_BytesToWrite((QIODevice*)self);
 }
 
@@ -216,7 +216,7 @@ char* q_filedevice_read_line2(void* self) {
     return _ret;
 }
 
-bool q_filedevice_can_read_line(void* self) {
+bool q_filedevice_can_read_line(const void* self) {
     return QIODevice_CanReadLine((QIODevice*)self);
 }
 
@@ -232,7 +232,7 @@ void q_filedevice_rollback_transaction(void* self) {
     QIODevice_RollbackTransaction((QIODevice*)self);
 }
 
-bool q_filedevice_is_transaction_started(void* self) {
+bool q_filedevice_is_transaction_started(const void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
@@ -283,7 +283,7 @@ bool q_filedevice_get_char(void* self, char* c) {
     return QIODevice_GetChar((QIODevice*)self, c);
 }
 
-const char* q_filedevice_error_string(void* self) {
+const char* q_filedevice_error_string(const void* self) {
     libqt_string _str = QIODevice_ErrorString((QIODevice*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -353,7 +353,7 @@ bool q_filedevice_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* q_filedevice_object_name(void* self) {
+const char* q_filedevice_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -364,19 +364,19 @@ void q_filedevice_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_filedevice_is_widget_type(void* self) {
+bool q_filedevice_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_filedevice_is_window_type(void* self) {
+bool q_filedevice_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_filedevice_is_quick_item_type(void* self) {
+bool q_filedevice_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_filedevice_signals_blocked(void* self) {
+bool q_filedevice_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -384,7 +384,7 @@ bool q_filedevice_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_filedevice_thread(void* self) {
+QThread* q_filedevice_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -408,7 +408,7 @@ void q_filedevice_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_filedevice_children(void* self) {
+libqt_list /* of QObject* */ q_filedevice_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -425,55 +425,55 @@ void q_filedevice_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_filedevice_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_filedevice_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_filedevice_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_filedevice_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_filedevice_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_filedevice_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_filedevice_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_filedevice_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_filedevice_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_filedevice_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_filedevice_disconnect3(void* self) {
+bool q_filedevice_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_filedevice_disconnect4(void* self, void* receiver) {
+bool q_filedevice_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_filedevice_disconnect5(void* param1) {
+bool q_filedevice_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_filedevice_dump_object_tree(void* self) {
+void q_filedevice_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_filedevice_dump_object_info(void* self) {
+void q_filedevice_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_filedevice_set_property(void* self, const char* name, void* value) {
+bool q_filedevice_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_filedevice_property(void* self, const char* name) {
+QVariant* q_filedevice_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_filedevice_dynamic_property_names(void* self) {
+const char** q_filedevice_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -494,7 +494,7 @@ QBindingStorage* q_filedevice_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_filedevice_binding_storage2(void* self) {
+const QBindingStorage* q_filedevice_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -506,11 +506,11 @@ void q_filedevice_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_filedevice_parent(void* self) {
+QObject* q_filedevice_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_filedevice_inherits(void* self, const char* classname) {
+bool q_filedevice_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -526,31 +526,31 @@ int32_t q_filedevice_start_timer23(void* self, int64_t time, int32_t timerType) 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_filedevice_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_filedevice_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_filedevice_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_filedevice_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_filedevice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_filedevice_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_filedevice_disconnect1(void* self, const char* signal) {
+bool q_filedevice_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_filedevice_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_filedevice_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_filedevice_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_filedevice_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_filedevice_disconnect23(void* self, void* receiver, const char* member) {
+bool q_filedevice_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 

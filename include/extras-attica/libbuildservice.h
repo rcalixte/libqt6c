@@ -20,15 +20,15 @@ Attica__Target* k_attica__target_new();
 ///
 /// @param param1 Attica__Target*
 ///
-Attica__Target* k_attica__target_new2(void* param1);
+Attica__Target* k_attica__target_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-target.html#id-var)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Target*
+/// @param self const Attica__Target*
 ///
-const char* k_attica__target_id(void* self);
+const char* k_attica__target_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-target.html#id-var)
 ///
@@ -41,9 +41,9 @@ void k_attica__target_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Target*
+/// @param self const Attica__Target*
 ///
-const char* k_attica__target_name(void* self);
+const char* k_attica__target_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-target.html#name-var)
 ///
@@ -57,7 +57,7 @@ void k_attica__target_set_name(void* self, const char* name);
 /// @param self Attica__Target*
 /// @param param1 Attica__Target*
 ///
-void k_attica__target_operator_assign(void* self, void* param1);
+void k_attica__target_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///
@@ -77,14 +77,14 @@ Attica__BuildService* k_attica__buildservice_new();
 ///
 /// @param other Attica__BuildService*
 ///
-Attica__BuildService* k_attica__buildservice_new2(void* other);
+Attica__BuildService* k_attica__buildservice_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#operator-eq)
 ///
 /// @param self Attica__BuildService*
 /// @param other Attica__BuildService*
 ///
-void k_attica__buildservice_operator_assign(void* self, void* other);
+void k_attica__buildservice_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#setId)
 ///
@@ -97,9 +97,9 @@ void k_attica__buildservice_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__BuildService*
+/// @param self const Attica__BuildService*
 ///
-const char* k_attica__buildservice_id(void* self);
+const char* k_attica__buildservice_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#setName)
 ///
@@ -112,9 +112,9 @@ void k_attica__buildservice_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__BuildService*
+/// @param self const Attica__BuildService*
 ///
-const char* k_attica__buildservice_name(void* self);
+const char* k_attica__buildservice_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#setUrl)
 ///
@@ -127,30 +127,30 @@ void k_attica__buildservice_set_url(void* self, const char* url);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__BuildService*
+/// @param self const Attica__BuildService*
 ///
-const char* k_attica__buildservice_url(void* self);
+const char* k_attica__buildservice_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#addTarget)
 ///
 /// @param self Attica__BuildService*
 /// @param param1 Attica__Target*
 ///
-void k_attica__buildservice_add_target(void* self, void* param1);
+void k_attica__buildservice_add_target(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#targets)
 ///
-/// @param self Attica__BuildService*
+/// @param self const Attica__BuildService*
 ///
 /// @return libqt_list of Attica__Target*
 ///
-libqt_list k_attica__buildservice_targets(void* self);
+libqt_list k_attica__buildservice_targets(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-buildservice.html#isValid)
 ///
-/// @param self Attica__BuildService*
+/// @param self const Attica__BuildService*
 ///
-bool k_attica__buildservice_is_valid(void* self);
+bool k_attica__buildservice_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

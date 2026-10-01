@@ -12,93 +12,95 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_dev_type(void* self);
+int32_t q_paintdevice_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-bool q_paintdevice_painting_active(void* self);
+bool q_paintdevice_painting_active(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintEngine)
 ///
-/// @param self QPaintDevice*
+/// @warning Use caution when calling this method as it might not be defined.
 ///
-QPaintEngine* q_paintdevice_paint_engine(void* self);
+/// @param self const QPaintDevice*
+///
+QPaintEngine* q_paintdevice_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#width)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_width(void* self);
+int32_t q_paintdevice_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#height)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_height(void* self);
+int32_t q_paintdevice_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_width_m_m(void* self);
+int32_t q_paintdevice_width_m_m(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_height_m_m(void* self);
+int32_t q_paintdevice_height_m_m(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_logical_dpi_x(void* self);
+int32_t q_paintdevice_logical_dpi_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_logical_dpi_y(void* self);
+int32_t q_paintdevice_logical_dpi_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_physical_dpi_x(void* self);
+int32_t q_paintdevice_physical_dpi_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_physical_dpi_y(void* self);
+int32_t q_paintdevice_physical_dpi_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-double q_paintdevice_device_pixel_ratio(void* self);
+double q_paintdevice_device_pixel_ratio(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-double q_paintdevice_device_pixel_ratio_f(void* self);
+double q_paintdevice_device_pixel_ratio_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_color_count(void* self);
+int32_t q_paintdevice_color_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QPaintDevice*
+/// @param self const QPaintDevice*
 ///
-int32_t q_paintdevice_depth(void* self);
+int32_t q_paintdevice_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
 ///

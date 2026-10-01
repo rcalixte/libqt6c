@@ -16,16 +16,16 @@ QAbstractFormBuilder* q_abstractformbuilder_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#workingDirectory)
 ///
-/// @param self QAbstractFormBuilder*
+/// @param self const QAbstractFormBuilder*
 ///
-QDir* q_abstractformbuilder_working_directory(void* self);
+QDir* q_abstractformbuilder_working_directory(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#setWorkingDirectory)
 ///
 /// @param self QAbstractFormBuilder*
 /// @param directory QDir*
 ///
-void q_abstractformbuilder_set_working_directory(void* self, void* directory);
+void q_abstractformbuilder_set_working_directory(void* self, const void* directory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#load)
 ///
@@ -85,9 +85,9 @@ void q_abstractformbuilder_super_save(void* self, void* dev, void* widget);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAbstractFormBuilder*
+/// @param self const QAbstractFormBuilder*
 ///
-const char* q_abstractformbuilder_error_string(void* self);
+const char* q_abstractformbuilder_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#addMenuAction)
 ///
@@ -121,27 +121,7 @@ void q_abstractformbuilder_super_add_menu_action(void* self, void* action);
 /// @param propertyName const char*
 /// @param value QVariant*
 ///
-bool q_abstractformbuilder_apply_property_internally(void* self, void* o, const char* propertyName, void* value);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#applyPropertyInternally)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QAbstractFormBuilder*
-/// @param callback bool func(QAbstractFormBuilder* self, QObject* o, const char* propertyName, QVariant* value)
-///
-void q_abstractformbuilder_on_apply_property_internally(void* self, bool (*callback)(void*, void*, const char*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#applyPropertyInternally)
-///
-/// Base class method implementation
-///
-/// @param self QAbstractFormBuilder*
-/// @param o QObject*
-/// @param propertyName const char*
-/// @param value QVariant*
-///
-bool q_abstractformbuilder_super_apply_property_internally(void* self, void* o, const char* propertyName, void* value);
+bool q_abstractformbuilder_apply_property_internally(void* self, void* o, const char* propertyName, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createWidget)
 ///
@@ -257,30 +237,30 @@ QActionGroup* q_abstractformbuilder_super_create_action_group(void* self, void* 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#checkProperty)
 ///
-/// @param self QAbstractFormBuilder*
+/// @param self const QAbstractFormBuilder*
 /// @param obj QObject*
 /// @param prop const char*
 ///
-bool q_abstractformbuilder_check_property(void* self, void* obj, const char* prop);
+bool q_abstractformbuilder_check_property(const void* self, void* obj, const char* prop);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#checkProperty)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractFormBuilder*
-/// @param callback bool func(QAbstractFormBuilder* self, QObject* obj, const char* prop)
+/// @param self const QAbstractFormBuilder*
+/// @param callback bool func(const QAbstractFormBuilder* self, QObject* obj, const char* prop)
 ///
-void q_abstractformbuilder_on_check_property(void* self, bool (*callback)(void*, void*, const char*));
+void q_abstractformbuilder_on_check_property(const void* self, bool (*callback)(const void*, void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#checkProperty)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractFormBuilder*
+/// @param self const QAbstractFormBuilder*
 /// @param obj QObject*
 /// @param prop const char*
 ///
-bool q_abstractformbuilder_super_check_property(void* self, void* obj, const char* prop);
+bool q_abstractformbuilder_super_check_property(const void* self, void* obj, const char* prop);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#reset)
 ///
@@ -288,47 +268,11 @@ bool q_abstractformbuilder_super_check_property(void* self, void* obj, const cha
 ///
 void q_abstractformbuilder_reset(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#reset)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QAbstractFormBuilder*
-/// @param callback void func()
-///
-void q_abstractformbuilder_on_reset(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#reset)
-///
-/// Base class method implementation
-///
-/// @param self QAbstractFormBuilder*
-///
-void q_abstractformbuilder_super_reset(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#toolBarAreaMetaEnum)
 ///
 /// @param self QAbstractFormBuilder*
 ///
 QMetaEnum* q_abstractformbuilder_tool_bar_area_meta_enum(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#toolBarAreaMetaEnum)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QAbstractFormBuilder*
-/// @param callback QMetaEnum* func()
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_abstractformbuilder_on_tool_bar_area_meta_enum(void* self, QMetaEnum* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#toolBarAreaMetaEnum)
-///
-/// Base class method implementation
-///
-/// @param self QAbstractFormBuilder*
-///
-QMetaEnum* q_abstractformbuilder_super_tool_bar_area_meta_enum(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#dtor.QAbstractFormBuilder)
 ///

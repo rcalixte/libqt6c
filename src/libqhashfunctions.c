@@ -68,7 +68,7 @@ size_t q_qhashfunctions_q_hash13(double key, size_t seed) {
     return qhashfunctions_QHash13(key, seed);
 }
 
-size_t q_qhashfunctions_q_hash19(void* key, size_t seed) {
+size_t q_qhashfunctions_q_hash19(const void* key, size_t seed) {
     return qhashfunctions_QHash19((QChar*)key, seed);
 }
 
@@ -84,7 +84,7 @@ size_t q_qhashfunctions_q_hash23(const char* key, size_t seed) {
     return qhashfunctions_QHash23(qstring(key), seed);
 }
 
-size_t q_qhashfunctions_q_hash24(void* key, size_t seed) {
+size_t q_qhashfunctions_q_hash24(const void* key, size_t seed) {
     return qhashfunctions_QHash24((QBitArray*)key, seed);
 }
 
@@ -100,7 +100,7 @@ uint32_t q_qhashfunctions_hash(const char* key, uint32_t chained) {
     return qhashfunctions_Hash(qstring(key), chained);
 }
 
-QHashSeed* q_hashseed_new(void* other) {
+QHashSeed* q_hashseed_new(const void* other) {
     return QHashSeed_New((QHashSeed*)other);
 }
 
@@ -124,7 +124,7 @@ void q_hashseed_move_assign(void* self, void* other) {
     QHashSeed_MoveAssign((QHashSeed*)self, (QHashSeed*)other);
 }
 
-size_t q_hashseed_to_unsigned_long(void* self) {
+size_t q_hashseed_to_unsigned_long(const void* self) {
     return QHashSeed_ToUnsignedLong((QHashSeed*)self);
 }
 

@@ -20,42 +20,42 @@ KIO__UDSEntry* k_io__udsentry_new();
 ///
 /// @param param1 KIO__UDSEntry*
 ///
-KIO__UDSEntry* k_io__udsentry_new2(void* param1);
+KIO__UDSEntry* k_io__udsentry_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#operator-eq)
 ///
 /// @param self KIO__UDSEntry*
 /// @param param1 KIO__UDSEntry*
 ///
-void k_io__udsentry_operator_assign(void* self, void* param1);
+void k_io__udsentry_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#stringValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__UDSEntry*
+/// @param self const KIO__UDSEntry*
 /// @param field uint32_t
 ///
-const char* k_io__udsentry_string_value(void* self, uint32_t field);
+const char* k_io__udsentry_string_value(const void* self, uint32_t field);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#numberValue)
 ///
-/// @param self KIO__UDSEntry*
+/// @param self const KIO__UDSEntry*
 /// @param field uint32_t
 ///
-long long k_io__udsentry_number_value(void* self, uint32_t field);
+long long k_io__udsentry_number_value(const void* self, uint32_t field);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#isDir)
 ///
-/// @param self KIO__UDSEntry*
+/// @param self const KIO__UDSEntry*
 ///
-bool k_io__udsentry_is_dir(void* self);
+bool k_io__udsentry_is_dir(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#isLink)
 ///
-/// @param self KIO__UDSEntry*
+/// @param self const KIO__UDSEntry*
 ///
-bool k_io__udsentry_is_link(void* self);
+bool k_io__udsentry_is_link(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#reserve)
 ///
@@ -82,24 +82,24 @@ void k_io__udsentry_fast_insert2(void* self, uint32_t field, long long l);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#count)
 ///
-/// @param self KIO__UDSEntry*
+/// @param self const KIO__UDSEntry*
 ///
-int32_t k_io__udsentry_count(void* self);
+int32_t k_io__udsentry_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#contains)
 ///
-/// @param self KIO__UDSEntry*
+/// @param self const KIO__UDSEntry*
 /// @param field uint32_t
 ///
-bool k_io__udsentry_contains(void* self, uint32_t field);
+bool k_io__udsentry_contains(const void* self, uint32_t field);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#fields)
 ///
-/// @param self KIO__UDSEntry*
+/// @param self const KIO__UDSEntry*
 ///
 /// @return libqt_list of uint32_t
 ///
-libqt_list k_io__udsentry_fields(void* self);
+libqt_list k_io__udsentry_fields(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#clear)
 ///
@@ -125,11 +125,11 @@ void k_io__udsentry_replace2(void* self, uint32_t field, long long l);
 
 /// [Upstream resources](https://api.kde.org/kio-udsentry.html#numberValue)
 ///
-/// @param self KIO__UDSEntry*
+/// @param self const KIO__UDSEntry*
 /// @param field uint32_t
 /// @param defaultValue long long
 ///
-long long k_io__udsentry_number_value2(void* self, uint32_t field, long long defaultValue);
+long long k_io__udsentry_number_value2(const void* self, uint32_t field, long long defaultValue);
 
 /// Delete this object from C++ memory.
 ///

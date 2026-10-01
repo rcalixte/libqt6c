@@ -23,37 +23,37 @@ KFileMetaData__WriteData* k_filemetadata__writedata_new(const char* url, const c
 ///
 /// @param rhs KFileMetaData__WriteData*
 ///
-KFileMetaData__WriteData* k_filemetadata__writedata_new2(void* rhs);
+KFileMetaData__WriteData* k_filemetadata__writedata_new2(const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#operator-eq)
 ///
 /// @param self KFileMetaData__WriteData*
 /// @param rhs KFileMetaData__WriteData*
 ///
-void k_filemetadata__writedata_operator_assign(void* self, void* rhs);
+void k_filemetadata__writedata_operator_assign(void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#operator-eq-eq)
 ///
-/// @param self KFileMetaData__WriteData*
+/// @param self const KFileMetaData__WriteData*
 /// @param rhs KFileMetaData__WriteData*
 ///
-bool k_filemetadata__writedata_operator_equal(void* self, void* rhs);
+bool k_filemetadata__writedata_operator_equal(const void* self, const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#inputUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__WriteData*
+/// @param self const KFileMetaData__WriteData*
 ///
-const char* k_filemetadata__writedata_input_url(void* self);
+const char* k_filemetadata__writedata_input_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#inputMimetype)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__WriteData*
+/// @param self const KFileMetaData__WriteData*
 ///
-const char* k_filemetadata__writedata_input_mimetype(void* self);
+const char* k_filemetadata__writedata_input_mimetype(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#add)
 ///
@@ -61,7 +61,7 @@ const char* k_filemetadata__writedata_input_mimetype(void* self);
 /// @param property enum KFileMetaData__Property__Property
 /// @param value QVariant*
 ///
-void k_filemetadata__writedata_add(void* self, int32_t property, void* value);
+void k_filemetadata__writedata_add(void* self, int32_t property, const void* value);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#addImageData)
 ///
@@ -85,11 +85,11 @@ void k_filemetadata__writedata_add_image_data(void* self, libqt_map images);
 /// free(map.values);
 /// ```
 ///
-/// @param self KFileMetaData__WriteData*
+/// @param self const KFileMetaData__WriteData*
 ///
 /// @return libqt_map of enum KFileMetaData__Property__Property to QVariant**
 ///
-libqt_map k_filemetadata__writedata_properties(void* self);
+libqt_map k_filemetadata__writedata_properties(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writedata.html#imageData)
 ///
@@ -104,11 +104,11 @@ libqt_map k_filemetadata__writedata_properties(void* self);
 /// free(map.values);
 /// ```
 ///
-/// @param self KFileMetaData__WriteData*
+/// @param self const KFileMetaData__WriteData*
 ///
 /// @return libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to char*
 ///
-libqt_map k_filemetadata__writedata_image_data(void* self);
+libqt_map k_filemetadata__writedata_image_data(const void* self);
 
 /// Delete this object from C++ memory.
 ///

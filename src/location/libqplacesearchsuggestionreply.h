@@ -24,26 +24,26 @@ QPlaceSearchSuggestionReply* q_placesearchsuggestionreply_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-const QMetaObject* q_placesearchsuggestionreply_meta_object(void* self);
+const QMetaObject* q_placesearchsuggestionreply_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceSearchSuggestionReply*
-/// @param callback const QMetaObject* func()
+/// @param self const QPlaceSearchSuggestionReply*
+/// @param callback const QMetaObject* func(const QPlaceSearchSuggestionReply* self)
 ///
-void q_placesearchsuggestionreply_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_placesearchsuggestionreply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-const QMetaObject* q_placesearchsuggestionreply_super_meta_object(void* self);
+const QMetaObject* q_placesearchsuggestionreply_super_meta_object(const void* self);
 
 /// @param self QPlaceSearchSuggestionReply*
 /// @param param1 const char*
@@ -99,36 +99,36 @@ const char* q_placesearchsuggestionreply_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-const char** q_placesearchsuggestionreply_suggestions(void* self);
+const char** q_placesearchsuggestionreply_suggestions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchsuggestionreply.html#type)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
 /// @return enum QPlaceReply__Type
 ///
-int32_t q_placesearchsuggestionreply_type(void* self);
+int32_t q_placesearchsuggestionreply_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchsuggestionreply.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceSearchSuggestionReply*
-/// @param callback int32_t func()
+/// @param self const QPlaceSearchSuggestionReply*
+/// @param callback int32_t func(const QPlaceSearchSuggestionReply* self)
 ///
-void q_placesearchsuggestionreply_on_type(void* self, int32_t (*callback)());
+void q_placesearchsuggestionreply_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchsuggestionreply.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
 /// @return enum QPlaceReply__Type
 ///
-int32_t q_placesearchsuggestionreply_super_type(void* self);
+int32_t q_placesearchsuggestionreply_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchsuggestionreply.html#setSuggestions)
 ///
@@ -136,24 +136,6 @@ int32_t q_placesearchsuggestionreply_super_type(void* self);
 /// @param suggestions const char**
 ///
 void q_placesearchsuggestionreply_set_suggestions(void* self, const char* suggestions[static 1]);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchsuggestionreply.html#setSuggestions)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QPlaceSearchSuggestionReply*
-/// @param callback void func(QPlaceSearchSuggestionReply* self, const char** suggestions)
-///
-void q_placesearchsuggestionreply_on_set_suggestions(void* self, void (*callback)(void*, const char**));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchsuggestionreply.html#setSuggestions)
-///
-/// Base class method implementation
-///
-/// @param self QPlaceSearchSuggestionReply*
-/// @param suggestions const char**
-///
-void q_placesearchsuggestionreply_super_set_suggestions(void* self, const char* suggestions[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -178,9 +160,9 @@ const char* q_placesearchsuggestionreply_tr3(const char* s, const char* c, int n
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacereply.html#isFinished)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-bool q_placesearchsuggestionreply_is_finished(void* self);
+bool q_placesearchsuggestionreply_is_finished(const void* self);
 
 /// Inherited from QPlaceReply
 ///
@@ -188,19 +170,19 @@ bool q_placesearchsuggestionreply_is_finished(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-const char* q_placesearchsuggestionreply_error_string(void* self);
+const char* q_placesearchsuggestionreply_error_string(const void* self);
 
 /// Inherited from QPlaceReply
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacereply.html#error)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
 /// @return enum QPlaceReply__Error
 ///
-int32_t q_placesearchsuggestionreply_error(void* self);
+int32_t q_placesearchsuggestionreply_error(const void* self);
 
 /// Inherited from QPlaceReply
 ///
@@ -296,9 +278,9 @@ void q_placesearchsuggestionreply_on_error_occurred2(void* self, void (*callback
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-const char* q_placesearchsuggestionreply_object_name(void* self);
+const char* q_placesearchsuggestionreply_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -313,33 +295,33 @@ void q_placesearchsuggestionreply_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-bool q_placesearchsuggestionreply_is_widget_type(void* self);
+bool q_placesearchsuggestionreply_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-bool q_placesearchsuggestionreply_is_window_type(void* self);
+bool q_placesearchsuggestionreply_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-bool q_placesearchsuggestionreply_is_quick_item_type(void* self);
+bool q_placesearchsuggestionreply_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-bool q_placesearchsuggestionreply_signals_blocked(void* self);
+bool q_placesearchsuggestionreply_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -354,9 +336,9 @@ bool q_placesearchsuggestionreply_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-QThread* q_placesearchsuggestionreply_thread(void* self);
+QThread* q_placesearchsuggestionreply_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -407,11 +389,11 @@ void q_placesearchsuggestionreply_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_placesearchsuggestionreply_children(void* self);
+libqt_list q_placesearchsuggestionreply_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -449,7 +431,7 @@ void q_placesearchsuggestionreply_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_placesearchsuggestionreply_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_placesearchsuggestionreply_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -460,18 +442,18 @@ QMetaObject__Connection* q_placesearchsuggestionreply_connect(void* sender, cons
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_placesearchsuggestionreply_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_placesearchsuggestionreply_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_placesearchsuggestionreply_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_placesearchsuggestionreply_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -482,7 +464,7 @@ QMetaObject__Connection* q_placesearchsuggestionreply_connect3(void* self, void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_placesearchsuggestionreply_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_placesearchsuggestionreply_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -493,24 +475,24 @@ bool q_placesearchsuggestionreply_disconnect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_placesearchsuggestionreply_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_placesearchsuggestionreply_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-bool q_placesearchsuggestionreply_disconnect3(void* self);
+bool q_placesearchsuggestionreply_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param receiver QObject*
 ///
-bool q_placesearchsuggestionreply_disconnect4(void* self, void* receiver);
+bool q_placesearchsuggestionreply_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -518,23 +500,23 @@ bool q_placesearchsuggestionreply_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_placesearchsuggestionreply_disconnect5(void* param1);
+bool q_placesearchsuggestionreply_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-void q_placesearchsuggestionreply_dump_object_tree(void* self);
+void q_placesearchsuggestionreply_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-void q_placesearchsuggestionreply_dump_object_info(void* self);
+void q_placesearchsuggestionreply_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -544,16 +526,16 @@ void q_placesearchsuggestionreply_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_placesearchsuggestionreply_set_property(void* self, const char* name, void* value);
+bool q_placesearchsuggestionreply_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param name const char*
 ///
-QVariant* q_placesearchsuggestionreply_property(void* self, const char* name);
+QVariant* q_placesearchsuggestionreply_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -561,9 +543,9 @@ QVariant* q_placesearchsuggestionreply_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-const char** q_placesearchsuggestionreply_dynamic_property_names(void* self);
+const char** q_placesearchsuggestionreply_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -577,9 +559,9 @@ QBindingStorage* q_placesearchsuggestionreply_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-const QBindingStorage* q_placesearchsuggestionreply_binding_storage2(void* self);
+const QBindingStorage* q_placesearchsuggestionreply_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -602,18 +584,18 @@ void q_placesearchsuggestionreply_on_destroyed(void* self, void (*callback)(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-QObject* q_placesearchsuggestionreply_parent(void* self);
+QObject* q_placesearchsuggestionreply_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param classname const char*
 ///
-bool q_placesearchsuggestionreply_inherits(void* self, const char* classname);
+bool q_placesearchsuggestionreply_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -653,7 +635,7 @@ int32_t q_placesearchsuggestionreply_start_timer23(void* self, int64_t time, int
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placesearchsuggestionreply_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_placesearchsuggestionreply_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -665,59 +647,59 @@ QMetaObject__Connection* q_placesearchsuggestionreply_connect5(void* sender, con
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placesearchsuggestionreply_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_placesearchsuggestionreply_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placesearchsuggestionreply_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_placesearchsuggestionreply_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param signal const char*
 ///
-bool q_placesearchsuggestionreply_disconnect1(void* self, const char* signal);
+bool q_placesearchsuggestionreply_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceSearchSuggestionReply*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_placesearchsuggestionreply_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_placesearchsuggestionreply_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_placesearchsuggestionreply_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_placesearchsuggestionreply_disconnect23(void* self, void* receiver, const char* member);
+bool q_placesearchsuggestionreply_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPlaceSearchSuggestionReply*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_placesearchsuggestionreply_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -764,9 +746,9 @@ void q_placesearchsuggestionreply_super_abort(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPlaceSearchSuggestionReply*
-/// @param callback void func()
+/// @param callback void func(QPlaceSearchSuggestionReply* self)
 ///
-void q_placesearchsuggestionreply_on_abort(void* self, void (*callback)());
+void q_placesearchsuggestionreply_on_abort(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -944,7 +926,7 @@ void q_placesearchsuggestionreply_on_custom_event(void* self, void (*callback)(v
 /// @param self QPlaceSearchSuggestionReply*
 /// @param signal QMetaMethod*
 ///
-void q_placesearchsuggestionreply_connect_notify(void* self, void* signal);
+void q_placesearchsuggestionreply_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -955,7 +937,7 @@ void q_placesearchsuggestionreply_connect_notify(void* self, void* signal);
 /// @param self QPlaceSearchSuggestionReply*
 /// @param signal QMetaMethod*
 ///
-void q_placesearchsuggestionreply_super_connect_notify(void* self, void* signal);
+void q_placesearchsuggestionreply_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -966,7 +948,7 @@ void q_placesearchsuggestionreply_super_connect_notify(void* self, void* signal)
 /// @param self QPlaceSearchSuggestionReply*
 /// @param callback void func(QPlaceSearchSuggestionReply* self, QMetaMethod* signal)
 ///
-void q_placesearchsuggestionreply_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_placesearchsuggestionreply_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -977,7 +959,7 @@ void q_placesearchsuggestionreply_on_connect_notify(void* self, void (*callback)
 /// @param self QPlaceSearchSuggestionReply*
 /// @param signal QMetaMethod*
 ///
-void q_placesearchsuggestionreply_disconnect_notify(void* self, void* signal);
+void q_placesearchsuggestionreply_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -988,7 +970,7 @@ void q_placesearchsuggestionreply_disconnect_notify(void* self, void* signal);
 /// @param self QPlaceSearchSuggestionReply*
 /// @param signal QMetaMethod*
 ///
-void q_placesearchsuggestionreply_super_disconnect_notify(void* self, void* signal);
+void q_placesearchsuggestionreply_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -999,7 +981,7 @@ void q_placesearchsuggestionreply_super_disconnect_notify(void* self, void* sign
 /// @param self QPlaceSearchSuggestionReply*
 /// @param callback void func(QPlaceSearchSuggestionReply* self, QMetaMethod* signal)
 ///
-void q_placesearchsuggestionreply_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_placesearchsuggestionreply_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QPlaceReply
 ///
@@ -1075,9 +1057,9 @@ void q_placesearchsuggestionreply_on_set_error(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-QObject* q_placesearchsuggestionreply_sender(void* self);
+QObject* q_placesearchsuggestionreply_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1085,9 +1067,9 @@ QObject* q_placesearchsuggestionreply_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-QObject* q_placesearchsuggestionreply_super_sender(void* self);
+QObject* q_placesearchsuggestionreply_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1095,10 +1077,10 @@ QObject* q_placesearchsuggestionreply_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
-/// @param callback QObject* func()
+/// @param self const QPlaceSearchSuggestionReply*
+/// @param callback QObject* func(QPlaceSearchSuggestionReply* self)
 ///
-void q_placesearchsuggestionreply_on_sender(void* self, QObject* (*callback)());
+void q_placesearchsuggestionreply_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1106,9 +1088,9 @@ void q_placesearchsuggestionreply_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-int32_t q_placesearchsuggestionreply_sender_signal_index(void* self);
+int32_t q_placesearchsuggestionreply_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1116,9 +1098,9 @@ int32_t q_placesearchsuggestionreply_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 ///
-int32_t q_placesearchsuggestionreply_super_sender_signal_index(void* self);
+int32_t q_placesearchsuggestionreply_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1126,10 +1108,10 @@ int32_t q_placesearchsuggestionreply_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
-/// @param callback int32_t func()
+/// @param self const QPlaceSearchSuggestionReply*
+/// @param callback int32_t func(QPlaceSearchSuggestionReply* self)
 ///
-void q_placesearchsuggestionreply_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_placesearchsuggestionreply_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1137,10 +1119,10 @@ void q_placesearchsuggestionreply_on_sender_signal_index(void* self, int32_t (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param signal const char*
 ///
-int32_t q_placesearchsuggestionreply_receivers(void* self, const char* signal);
+int32_t q_placesearchsuggestionreply_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1148,10 +1130,10 @@ int32_t q_placesearchsuggestionreply_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param signal const char*
 ///
-int32_t q_placesearchsuggestionreply_super_receivers(void* self, const char* signal);
+int32_t q_placesearchsuggestionreply_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1159,10 +1141,10 @@ int32_t q_placesearchsuggestionreply_super_receivers(void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param callback int32_t func(QPlaceSearchSuggestionReply* self, const char* signal)
 ///
-void q_placesearchsuggestionreply_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_placesearchsuggestionreply_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1170,10 +1152,10 @@ void q_placesearchsuggestionreply_on_receivers(void* self, int32_t (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param signal QMetaMethod*
 ///
-bool q_placesearchsuggestionreply_is_signal_connected(void* self, void* signal);
+bool q_placesearchsuggestionreply_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1181,10 +1163,10 @@ bool q_placesearchsuggestionreply_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param signal QMetaMethod*
 ///
-bool q_placesearchsuggestionreply_super_is_signal_connected(void* self, void* signal);
+bool q_placesearchsuggestionreply_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1192,10 +1174,10 @@ bool q_placesearchsuggestionreply_super_is_signal_connected(void* self, void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPlaceSearchSuggestionReply*
+/// @param self const QPlaceSearchSuggestionReply*
 /// @param callback bool func(QPlaceSearchSuggestionReply* self, QMetaMethod* signal)
 ///
-void q_placesearchsuggestionreply_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_placesearchsuggestionreply_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

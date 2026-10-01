@@ -26,162 +26,162 @@ KOSRelease* k_osrelease_new2(const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_name(void* self);
+const char* k_osrelease_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#version)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_version(void* self);
+const char* k_osrelease_version(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#id)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_id(void* self);
+const char* k_osrelease_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#idLike)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char** k_osrelease_id_like(void* self);
+const char** k_osrelease_id_like(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#versionCodename)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_version_codename(void* self);
+const char* k_osrelease_version_codename(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#versionId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_version_id(void* self);
+const char* k_osrelease_version_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#prettyName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_pretty_name(void* self);
+const char* k_osrelease_pretty_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#ansiColor)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_ansi_color(void* self);
+const char* k_osrelease_ansi_color(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#cpeName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_cpe_name(void* self);
+const char* k_osrelease_cpe_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#homeUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_home_url(void* self);
+const char* k_osrelease_home_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#documentationUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_documentation_url(void* self);
+const char* k_osrelease_documentation_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#supportUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_support_url(void* self);
+const char* k_osrelease_support_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#bugReportUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_bug_report_url(void* self);
+const char* k_osrelease_bug_report_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#privacyPolicyUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_privacy_policy_url(void* self);
+const char* k_osrelease_privacy_policy_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#buildId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_build_id(void* self);
+const char* k_osrelease_build_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#variant)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_variant(void* self);
+const char* k_osrelease_variant(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#variantId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_variant_id(void* self);
+const char* k_osrelease_variant_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#logo)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char* k_osrelease_logo(void* self);
+const char* k_osrelease_logo(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#extraKeys)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 ///
-const char** k_osrelease_extra_keys(void* self);
+const char** k_osrelease_extra_keys(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#extraValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KOSRelease*
+/// @param self const KOSRelease*
 /// @param key const char*
 ///
-const char* k_osrelease_extra_value(void* self, const char* key);
+const char* k_osrelease_extra_value(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kosrelease.html#dtor.KOSRelease)
 ///

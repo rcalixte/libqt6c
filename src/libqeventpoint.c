@@ -9,11 +9,11 @@ QEventPoint* q_eventpoint_new() {
     return QEventPoint_New();
 }
 
-QEventPoint* q_eventpoint_new2(int pointId, uint8_t state, void* scenePosition, void* globalPosition) {
+QEventPoint* q_eventpoint_new2(int pointId, uint8_t state, const void* scenePosition, const void* globalPosition) {
     return QEventPoint_New2(pointId, state, (QPointF*)scenePosition, (QPointF*)globalPosition);
 }
 
-QEventPoint* q_eventpoint_new3(void* other) {
+QEventPoint* q_eventpoint_new3(const void* other) {
     return QEventPoint_New3((QEventPoint*)other);
 }
 
@@ -21,19 +21,19 @@ QEventPoint* q_eventpoint_new4(int id) {
     return QEventPoint_New4(id);
 }
 
-QEventPoint* q_eventpoint_new5(int id, void* device) {
+QEventPoint* q_eventpoint_new5(int id, const void* device) {
     return QEventPoint_New5(id, (QPointingDevice*)device);
 }
 
-void q_eventpoint_operator_assign(void* self, void* other) {
+void q_eventpoint_operator_assign(void* self, const void* other) {
     QEventPoint_OperatorAssign((QEventPoint*)self, (QEventPoint*)other);
 }
 
-bool q_eventpoint_operator_equal(void* self, void* other) {
+bool q_eventpoint_operator_equal(const void* self, const void* other) {
     return QEventPoint_OperatorEqual((QEventPoint*)self, (QEventPoint*)other);
 }
 
-bool q_eventpoint_operator_not_equal(void* self, void* other) {
+bool q_eventpoint_operator_not_equal(const void* self, const void* other) {
     return QEventPoint_OperatorNotEqual((QEventPoint*)self, (QEventPoint*)other);
 }
 
@@ -41,155 +41,155 @@ void q_eventpoint_swap(void* self, void* other) {
     QEventPoint_Swap((QEventPoint*)self, (QEventPoint*)other);
 }
 
-QPointF* q_eventpoint_position(void* self) {
+QPointF* q_eventpoint_position(const void* self) {
     return QEventPoint_Position((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_press_position(void* self) {
+QPointF* q_eventpoint_press_position(const void* self) {
     return QEventPoint_PressPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_grab_position(void* self) {
+QPointF* q_eventpoint_grab_position(const void* self) {
     return QEventPoint_GrabPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_last_position(void* self) {
+QPointF* q_eventpoint_last_position(const void* self) {
     return QEventPoint_LastPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_scene_position(void* self) {
+QPointF* q_eventpoint_scene_position(const void* self) {
     return QEventPoint_ScenePosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_scene_press_position(void* self) {
+QPointF* q_eventpoint_scene_press_position(const void* self) {
     return QEventPoint_ScenePressPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_scene_grab_position(void* self) {
+QPointF* q_eventpoint_scene_grab_position(const void* self) {
     return QEventPoint_SceneGrabPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_scene_last_position(void* self) {
+QPointF* q_eventpoint_scene_last_position(const void* self) {
     return QEventPoint_SceneLastPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_global_position(void* self) {
+QPointF* q_eventpoint_global_position(const void* self) {
     return QEventPoint_GlobalPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_global_press_position(void* self) {
+QPointF* q_eventpoint_global_press_position(const void* self) {
     return QEventPoint_GlobalPressPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_global_grab_position(void* self) {
+QPointF* q_eventpoint_global_grab_position(const void* self) {
     return QEventPoint_GlobalGrabPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_global_last_position(void* self) {
+QPointF* q_eventpoint_global_last_position(const void* self) {
     return QEventPoint_GlobalLastPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_normalized_position(void* self) {
+QPointF* q_eventpoint_normalized_position(const void* self) {
     return QEventPoint_NormalizedPosition((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_pos(void* self) {
+QPointF* q_eventpoint_pos(const void* self) {
     return QEventPoint_Pos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_start_pos(void* self) {
+QPointF* q_eventpoint_start_pos(const void* self) {
     return QEventPoint_StartPos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_scene_pos(void* self) {
+QPointF* q_eventpoint_scene_pos(const void* self) {
     return QEventPoint_ScenePos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_start_scene_pos(void* self) {
+QPointF* q_eventpoint_start_scene_pos(const void* self) {
     return QEventPoint_StartScenePos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_screen_pos(void* self) {
+QPointF* q_eventpoint_screen_pos(const void* self) {
     return QEventPoint_ScreenPos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_start_screen_pos(void* self) {
+QPointF* q_eventpoint_start_screen_pos(const void* self) {
     return QEventPoint_StartScreenPos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_start_normalized_pos(void* self) {
+QPointF* q_eventpoint_start_normalized_pos(const void* self) {
     return QEventPoint_StartNormalizedPos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_normalized_pos(void* self) {
+QPointF* q_eventpoint_normalized_pos(const void* self) {
     return QEventPoint_NormalizedPos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_last_pos(void* self) {
+QPointF* q_eventpoint_last_pos(const void* self) {
     return QEventPoint_LastPos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_last_scene_pos(void* self) {
+QPointF* q_eventpoint_last_scene_pos(const void* self) {
     return QEventPoint_LastScenePos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_last_screen_pos(void* self) {
+QPointF* q_eventpoint_last_screen_pos(const void* self) {
     return QEventPoint_LastScreenPos((QEventPoint*)self);
 }
 
-QPointF* q_eventpoint_last_normalized_pos(void* self) {
+QPointF* q_eventpoint_last_normalized_pos(const void* self) {
     return QEventPoint_LastNormalizedPos((QEventPoint*)self);
 }
 
-QVector2D* q_eventpoint_velocity(void* self) {
+QVector2D* q_eventpoint_velocity(const void* self) {
     return QEventPoint_Velocity((QEventPoint*)self);
 }
 
-uint8_t q_eventpoint_state(void* self) {
+uint8_t q_eventpoint_state(const void* self) {
     return QEventPoint_State((QEventPoint*)self);
 }
 
-const QPointingDevice* q_eventpoint_device(void* self) {
+const QPointingDevice* q_eventpoint_device(const void* self) {
     return QEventPoint_Device((QEventPoint*)self);
 }
 
-int32_t q_eventpoint_id(void* self) {
+int32_t q_eventpoint_id(const void* self) {
     return QEventPoint_Id((QEventPoint*)self);
 }
 
-QPointingDeviceUniqueId* q_eventpoint_unique_id(void* self) {
+QPointingDeviceUniqueId* q_eventpoint_unique_id(const void* self) {
     return QEventPoint_UniqueId((QEventPoint*)self);
 }
 
-uintptr_t q_eventpoint_timestamp(void* self) {
+uintptr_t q_eventpoint_timestamp(const void* self) {
     return QEventPoint_Timestamp((QEventPoint*)self);
 }
 
-uintptr_t q_eventpoint_last_timestamp(void* self) {
+uintptr_t q_eventpoint_last_timestamp(const void* self) {
     return QEventPoint_LastTimestamp((QEventPoint*)self);
 }
 
-uintptr_t q_eventpoint_press_timestamp(void* self) {
+uintptr_t q_eventpoint_press_timestamp(const void* self) {
     return QEventPoint_PressTimestamp((QEventPoint*)self);
 }
 
-double q_eventpoint_time_held(void* self) {
+double q_eventpoint_time_held(const void* self) {
     return QEventPoint_TimeHeld((QEventPoint*)self);
 }
 
-double q_eventpoint_pressure(void* self) {
+double q_eventpoint_pressure(const void* self) {
     return QEventPoint_Pressure((QEventPoint*)self);
 }
 
-double q_eventpoint_rotation(void* self) {
+double q_eventpoint_rotation(const void* self) {
     return QEventPoint_Rotation((QEventPoint*)self);
 }
 
-QSizeF* q_eventpoint_ellipse_diameters(void* self) {
+QSizeF* q_eventpoint_ellipse_diameters(const void* self) {
     return QEventPoint_EllipseDiameters((QEventPoint*)self);
 }
 
-bool q_eventpoint_is_accepted(void* self) {
+bool q_eventpoint_is_accepted(const void* self) {
     return QEventPoint_IsAccepted((QEventPoint*)self);
 }
 

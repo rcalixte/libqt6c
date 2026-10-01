@@ -29,6 +29,8 @@ QIODevice* k_filterbase_device(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#init)
 ///
+/// @warning This method must be implemented with `k_filterbase_on_init` before it can be called.
+///
 /// @param self KFilterBase*
 /// @param mode int
 ///
@@ -43,37 +45,22 @@ bool k_filterbase_init(void* self, int mode);
 ///
 void k_filterbase_on_init(void* self, bool (*callback)(void*, int));
 
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#init)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-/// @param mode int
-///
-bool k_filterbase_super_init(void* self, int mode);
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#mode)
 ///
-/// @param self KFilterBase*
+/// @warning This method must be implemented with `k_filterbase_on_mode` before it can be called.
 ///
-int32_t k_filterbase_mode(void* self);
+/// @param self const KFilterBase*
+///
+int32_t k_filterbase_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#mode)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFilterBase*
-/// @param callback int32_t func()
+/// @param self const KFilterBase*
+/// @param callback int32_t func(const KFilterBase* self)
 ///
-void k_filterbase_on_mode(void* self, int32_t (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#mode)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-///
-int32_t k_filterbase_super_mode(void* self);
+void k_filterbase_on_mode(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#terminate)
 ///
@@ -86,9 +73,9 @@ bool k_filterbase_terminate(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KFilterBase*
-/// @param callback bool func()
+/// @param callback bool func(KFilterBase* self)
 ///
-void k_filterbase_on_terminate(void* self, bool (*callback)());
+void k_filterbase_on_terminate(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#terminate)
 ///
@@ -109,9 +96,9 @@ void k_filterbase_reset(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KFilterBase*
-/// @param callback void func()
+/// @param callback void func(KFilterBase* self)
 ///
-void k_filterbase_on_reset(void* self, void (*callback)());
+void k_filterbase_on_reset(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#reset)
 ///
@@ -123,6 +110,8 @@ void k_filterbase_super_reset(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#readHeader)
 ///
+/// @warning This method must be implemented with `k_filterbase_on_read_header` before it can be called.
+///
 /// @param self KFilterBase*
 ///
 bool k_filterbase_read_header(void* self);
@@ -132,19 +121,13 @@ bool k_filterbase_read_header(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KFilterBase*
-/// @param callback bool func()
+/// @param callback bool func(KFilterBase* self)
 ///
-void k_filterbase_on_read_header(void* self, bool (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#readHeader)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-///
-bool k_filterbase_super_read_header(void* self);
+void k_filterbase_on_read_header(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#writeHeader)
+///
+/// @warning This method must be implemented with `k_filterbase_on_write_header` before it can be called.
 ///
 /// @param self KFilterBase*
 /// @param filename char*
@@ -160,16 +143,9 @@ bool k_filterbase_write_header(void* self, char* filename);
 ///
 void k_filterbase_on_write_header(void* self, bool (*callback)(void*, libqt_string));
 
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#writeHeader)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-/// @param filename char*
-///
-bool k_filterbase_super_write_header(void* self, char* filename);
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#setOutBuffer)
+///
+/// @warning This method must be implemented with `k_filterbase_on_set_out_buffer` before it can be called.
 ///
 /// @param self KFilterBase*
 /// @param data char*
@@ -186,17 +162,9 @@ void k_filterbase_set_out_buffer(void* self, char* data, uint32_t maxlen);
 ///
 void k_filterbase_on_set_out_buffer(void* self, void (*callback)(void*, char*, uint32_t));
 
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#setOutBuffer)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-/// @param data char*
-/// @param maxlen uint32_t
-///
-void k_filterbase_super_set_out_buffer(void* self, char* data, uint32_t maxlen);
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#setInBuffer)
+///
+/// @warning This method must be implemented with `k_filterbase_on_set_in_buffer` before it can be called.
 ///
 /// @param self KFilterBase*
 /// @param data const char*
@@ -213,109 +181,89 @@ void k_filterbase_set_in_buffer(void* self, const char* data, uint32_t size);
 ///
 void k_filterbase_on_set_in_buffer(void* self, void (*callback)(void*, const char*, uint32_t));
 
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#setInBuffer)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-/// @param data const char*
-/// @param size uint32_t
-///
-void k_filterbase_super_set_in_buffer(void* self, const char* data, uint32_t size);
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#inBufferEmpty)
 ///
-/// @param self KFilterBase*
+/// @param self const KFilterBase*
 ///
-bool k_filterbase_in_buffer_empty(void* self);
+bool k_filterbase_in_buffer_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#inBufferEmpty)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFilterBase*
-/// @param callback bool func()
+/// @param self const KFilterBase*
+/// @param callback bool func(const KFilterBase* self)
 ///
-void k_filterbase_on_in_buffer_empty(void* self, bool (*callback)());
+void k_filterbase_on_in_buffer_empty(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#inBufferEmpty)
 ///
 /// Base class method implementation
 ///
-/// @param self KFilterBase*
+/// @param self const KFilterBase*
 ///
-bool k_filterbase_super_in_buffer_empty(void* self);
+bool k_filterbase_super_in_buffer_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#inBufferAvailable)
 ///
-/// @param self KFilterBase*
+/// @warning This method must be implemented with `k_filterbase_on_in_buffer_available` before it can be called.
 ///
-int32_t k_filterbase_in_buffer_available(void* self);
+/// @param self const KFilterBase*
+///
+int32_t k_filterbase_in_buffer_available(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#inBufferAvailable)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFilterBase*
-/// @param callback int32_t func()
+/// @param self const KFilterBase*
+/// @param callback int32_t func(const KFilterBase* self)
 ///
-void k_filterbase_on_in_buffer_available(void* self, int32_t (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#inBufferAvailable)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-///
-int32_t k_filterbase_super_in_buffer_available(void* self);
+void k_filterbase_on_in_buffer_available(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#outBufferFull)
 ///
-/// @param self KFilterBase*
+/// @param self const KFilterBase*
 ///
-bool k_filterbase_out_buffer_full(void* self);
+bool k_filterbase_out_buffer_full(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#outBufferFull)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFilterBase*
-/// @param callback bool func()
+/// @param self const KFilterBase*
+/// @param callback bool func(const KFilterBase* self)
 ///
-void k_filterbase_on_out_buffer_full(void* self, bool (*callback)());
+void k_filterbase_on_out_buffer_full(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#outBufferFull)
 ///
 /// Base class method implementation
 ///
-/// @param self KFilterBase*
+/// @param self const KFilterBase*
 ///
-bool k_filterbase_super_out_buffer_full(void* self);
+bool k_filterbase_super_out_buffer_full(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#outBufferAvailable)
 ///
-/// @param self KFilterBase*
+/// @warning This method must be implemented with `k_filterbase_on_out_buffer_available` before it can be called.
 ///
-int32_t k_filterbase_out_buffer_available(void* self);
+/// @param self const KFilterBase*
+///
+int32_t k_filterbase_out_buffer_available(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#outBufferAvailable)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KFilterBase*
-/// @param callback int32_t func()
+/// @param self const KFilterBase*
+/// @param callback int32_t func(const KFilterBase* self)
 ///
-void k_filterbase_on_out_buffer_available(void* self, int32_t (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#outBufferAvailable)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-///
-int32_t k_filterbase_super_out_buffer_available(void* self);
+void k_filterbase_on_out_buffer_available(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#uncompress)
+///
+/// @warning This method must be implemented with `k_filterbase_on_uncompress` before it can be called.
 ///
 /// @param self KFilterBase*
 ///
@@ -328,21 +276,13 @@ int32_t k_filterbase_uncompress(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KFilterBase*
-/// @param callback int32_t func()
+/// @param callback int32_t func(KFilterBase* self)
 ///
-void k_filterbase_on_uncompress(void* self, int32_t (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#uncompress)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-///
-/// @return enum KFilterBase__Result
-///
-int32_t k_filterbase_super_uncompress(void* self);
+void k_filterbase_on_uncompress(void* self, int32_t (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#compress)
+///
+/// @warning This method must be implemented with `k_filterbase_on_compress` before it can be called.
 ///
 /// @param self KFilterBase*
 /// @param finish bool
@@ -360,17 +300,6 @@ int32_t k_filterbase_compress(void* self, bool finish);
 ///
 void k_filterbase_on_compress(void* self, int32_t (*callback)(void*, bool));
 
-/// [Upstream resources](https://api.kde.org/kfilterbase.html#compress)
-///
-/// Base class method implementation
-///
-/// @param self KFilterBase*
-/// @param finish bool
-///
-/// @return enum KFilterBase__Result
-///
-int32_t k_filterbase_super_compress(void* self, bool finish);
-
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#setFilterFlags)
 ///
 /// @param self KFilterBase*
@@ -380,11 +309,11 @@ void k_filterbase_set_filter_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#filterFlags)
 ///
-/// @param self KFilterBase*
+/// @param self const KFilterBase*
 ///
 /// @return enum KFilterBase__FilterFlags
 ///
-int32_t k_filterbase_filter_flags(void* self);
+int32_t k_filterbase_filter_flags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilterbase.html#virtual_hook)
 ///

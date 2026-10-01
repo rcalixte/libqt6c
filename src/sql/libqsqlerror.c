@@ -5,7 +5,7 @@ QSqlError* q_sqlerror_new() {
     return QSqlError_New();
 }
 
-QSqlError* q_sqlerror_new2(void* other) {
+QSqlError* q_sqlerror_new2(const void* other) {
     return QSqlError_New2((QSqlError*)other);
 }
 
@@ -25,15 +25,15 @@ QSqlError* q_sqlerror_new6(const char* driverText, const char* databaseText, int
     return QSqlError_New6(qstring(driverText), qstring(databaseText), type, qstring(errorCode));
 }
 
-void q_sqlerror_operator_assign(void* self, void* other) {
+void q_sqlerror_operator_assign(void* self, const void* other) {
     QSqlError_OperatorAssign((QSqlError*)self, (QSqlError*)other);
 }
 
-bool q_sqlerror_operator_equal(void* self, void* other) {
+bool q_sqlerror_operator_equal(const void* self, const void* other) {
     return QSqlError_OperatorEqual((QSqlError*)self, (QSqlError*)other);
 }
 
-bool q_sqlerror_operator_not_equal(void* self, void* other) {
+bool q_sqlerror_operator_not_equal(const void* self, const void* other) {
     return QSqlError_OperatorNotEqual((QSqlError*)self, (QSqlError*)other);
 }
 
@@ -41,39 +41,39 @@ void q_sqlerror_swap(void* self, void* other) {
     QSqlError_Swap((QSqlError*)self, (QSqlError*)other);
 }
 
-const char* q_sqlerror_driver_text(void* self) {
+const char* q_sqlerror_driver_text(const void* self) {
     libqt_string _str = QSqlError_DriverText((QSqlError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_sqlerror_database_text(void* self) {
+const char* q_sqlerror_database_text(const void* self) {
     libqt_string _str = QSqlError_DatabaseText((QSqlError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_sqlerror_type(void* self) {
+int32_t q_sqlerror_type(const void* self) {
     return QSqlError_Type((QSqlError*)self);
 }
 
-const char* q_sqlerror_native_error_code(void* self) {
+const char* q_sqlerror_native_error_code(const void* self) {
     libqt_string _str = QSqlError_NativeErrorCode((QSqlError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_sqlerror_text(void* self) {
+const char* q_sqlerror_text(const void* self) {
     libqt_string _str = QSqlError_Text((QSqlError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_sqlerror_is_valid(void* self) {
+bool q_sqlerror_is_valid(const void* self) {
     return QSqlError_IsValid((QSqlError*)self);
 }
 

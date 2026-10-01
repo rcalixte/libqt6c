@@ -20,14 +20,14 @@ QHttp1Configuration* q_http1configuration_new();
 ///
 /// @param other QHttp1Configuration*
 ///
-QHttp1Configuration* q_http1configuration_new2(void* other);
+QHttp1Configuration* q_http1configuration_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttp1configuration.html#operator-eq)
 ///
 /// @param self QHttp1Configuration*
 /// @param other QHttp1Configuration*
 ///
-void q_http1configuration_operator_assign(void* self, void* other);
+void q_http1configuration_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttp1configuration.html#setNumberOfConnectionsPerHost)
 ///
@@ -38,9 +38,9 @@ void q_http1configuration_set_number_of_connections_per_host(void* self, intptr_
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttp1configuration.html#numberOfConnectionsPerHost)
 ///
-/// @param self QHttp1Configuration*
+/// @param self const QHttp1Configuration*
 ///
-intptr_t q_http1configuration_number_of_connections_per_host(void* self);
+intptr_t q_http1configuration_number_of_connections_per_host(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttp1configuration.html#swap)
 ///

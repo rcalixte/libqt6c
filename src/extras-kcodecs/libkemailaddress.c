@@ -163,7 +163,7 @@ QUrl* k_emailaddress_encode_mailto_url(const char* mailbox) {
     return KEmailAddress_EncodeMailtoUrl(qstring(mailbox));
 }
 
-const char* k_emailaddress_decode_mailto_url(void* mailtoUrl) {
+const char* k_emailaddress_decode_mailto_url(const void* mailtoUrl) {
     libqt_string _str = KEmailAddress_DecodeMailtoUrl((QUrl*)mailtoUrl);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

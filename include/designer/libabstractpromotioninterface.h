@@ -12,27 +12,33 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface.html#promotedClasses)
 ///
-/// @param self QDesignerPromotionInterface*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QDesignerPromotionInterface*
 ///
 /// @return libqt_list of QDesignerPromotionInterface__PromotedClass*
 ///
-libqt_list q_designerpromotioninterface_promoted_classes(void* self);
+libqt_list q_designerpromotioninterface_promoted_classes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface.html#referencedPromotedClassNames)
 ///
-/// @param self QDesignerPromotionInterface*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QDesignerPromotionInterface*
 ///
 /// @return libqt_list set of const char*
 ///
-libqt_list q_designerpromotioninterface_referenced_promoted_class_names(void* self);
+libqt_list q_designerpromotioninterface_referenced_promoted_class_names(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface.html#promotionBaseClasses)
 ///
-/// @param self QDesignerPromotionInterface*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QDesignerPromotionInterface*
 ///
 /// @return libqt_list of QDesignerWidgetDataBaseItemInterface*
 ///
-libqt_list q_designerpromotioninterface_promotion_base_classes(void* self);
+libqt_list q_designerpromotioninterface_promotion_base_classes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface.html#dtor.QDesignerPromotionInterface)
 ///
@@ -46,9 +52,9 @@ void q_designerpromotioninterface_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface-promotedclass.html#baseItem-var)
 ///
-/// @param self QDesignerPromotionInterface__PromotedClass*
+/// @param self const QDesignerPromotionInterface__PromotedClass*
 ///
-QDesignerWidgetDataBaseItemInterface* q_designerpromotioninterface__promotedclass_base_item(void* self);
+QDesignerWidgetDataBaseItemInterface* q_designerpromotioninterface__promotedclass_base_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface-promotedclass.html#baseItem-var)
 ///
@@ -59,9 +65,9 @@ void q_designerpromotioninterface__promotedclass_set_base_item(void* self, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface-promotedclass.html#promotedItem-var)
 ///
-/// @param self QDesignerPromotionInterface__PromotedClass*
+/// @param self const QDesignerPromotionInterface__PromotedClass*
 ///
-QDesignerWidgetDataBaseItemInterface* q_designerpromotioninterface__promotedclass_promoted_item(void* self);
+QDesignerWidgetDataBaseItemInterface* q_designerpromotioninterface__promotedclass_promoted_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerpromotioninterface-promotedclass.html#promotedItem-var)
 ///

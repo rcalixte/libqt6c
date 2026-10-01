@@ -13,49 +13,49 @@ KIconTheme* k_icontheme_new3(const char* name, const char* appName, const char* 
     return KIconTheme_New3(qstring(name), qstring(appName), qstring(basePathHint));
 }
 
-const char* k_icontheme_name(void* self) {
+const char* k_icontheme_name(const void* self) {
     libqt_string _str = KIconTheme_Name((KIconTheme*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_icontheme_internal_name(void* self) {
+const char* k_icontheme_internal_name(const void* self) {
     libqt_string _str = KIconTheme_InternalName((KIconTheme*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_icontheme_description(void* self) {
+const char* k_icontheme_description(const void* self) {
     libqt_string _str = KIconTheme_Description((KIconTheme*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_icontheme_example(void* self) {
+const char* k_icontheme_example(const void* self) {
     libqt_string _str = KIconTheme_Example((KIconTheme*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_icontheme_screenshot(void* self) {
+const char* k_icontheme_screenshot(const void* self) {
     libqt_string _str = KIconTheme_Screenshot((KIconTheme*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_icontheme_dir(void* self) {
+const char* k_icontheme_dir(const void* self) {
     libqt_string _str = KIconTheme_Dir((KIconTheme*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_icontheme_inherits(void* self) {
+const char** k_icontheme_inherits(const void* self) {
     libqt_list _arr = KIconTheme_Inherits((KIconTheme*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -72,28 +72,28 @@ const char** k_icontheme_inherits(void* self) {
     return _ret;
 }
 
-bool k_icontheme_is_valid(void* self) {
+bool k_icontheme_is_valid(const void* self) {
     return KIconTheme_IsValid((KIconTheme*)self);
 }
 
-bool k_icontheme_is_hidden(void* self) {
+bool k_icontheme_is_hidden(const void* self) {
     return KIconTheme_IsHidden((KIconTheme*)self);
 }
 
-int32_t k_icontheme_depth(void* self) {
+int32_t k_icontheme_depth(const void* self) {
     return KIconTheme_Depth((KIconTheme*)self);
 }
 
-int32_t k_icontheme_default_size(void* self, int32_t group) {
+int32_t k_icontheme_default_size(const void* self, int32_t group) {
     return KIconTheme_DefaultSize((KIconTheme*)self, group);
 }
 
-libqt_list /* of int */ k_icontheme_query_sizes(void* self, int32_t group) {
+libqt_list /* of int */ k_icontheme_query_sizes(const void* self, int32_t group) {
     libqt_list _arr = KIconTheme_QuerySizes((KIconTheme*)self, group);
     return _arr;
 }
 
-const char** k_icontheme_query_icons(void* self) {
+const char** k_icontheme_query_icons(const void* self) {
     libqt_list _arr = KIconTheme_QueryIcons((KIconTheme*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -110,7 +110,7 @@ const char** k_icontheme_query_icons(void* self) {
     return _ret;
 }
 
-const char** k_icontheme_query_icons2(void* self, int size) {
+const char** k_icontheme_query_icons2(const void* self, int size) {
     libqt_list _arr = KIconTheme_QueryIcons2((KIconTheme*)self, size);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -127,7 +127,7 @@ const char** k_icontheme_query_icons2(void* self, int size) {
     return _ret;
 }
 
-const char** k_icontheme_query_icons_by_context(void* self, int size) {
+const char** k_icontheme_query_icons_by_context(const void* self, int size) {
     libqt_list _arr = KIconTheme_QueryIconsByContext((KIconTheme*)self, size);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -144,39 +144,39 @@ const char** k_icontheme_query_icons_by_context(void* self, int size) {
     return _ret;
 }
 
-const char* k_icontheme_icon_path(void* self, const char* name, int size, int32_t match) {
+const char* k_icontheme_icon_path(const void* self, const char* name, int size, int32_t match) {
     libqt_string _str = KIconTheme_IconPath((KIconTheme*)self, qstring(name), size, match);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_icontheme_icon_path2(void* self, const char* name, int size, int32_t match, double scale) {
+const char* k_icontheme_icon_path2(const void* self, const char* name, int size, int32_t match, double scale) {
     libqt_string _str = KIconTheme_IconPath2((KIconTheme*)self, qstring(name), size, match, scale);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_icontheme_icon_path_by_name(void* self, const char* name, int size, int32_t match) {
+const char* k_icontheme_icon_path_by_name(const void* self, const char* name, int size, int32_t match) {
     libqt_string _str = KIconTheme_IconPathByName((KIconTheme*)self, qstring(name), size, match);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_icontheme_icon_path_by_name2(void* self, const char* name, int size, int32_t match, double scale) {
+const char* k_icontheme_icon_path_by_name2(const void* self, const char* name, int size, int32_t match, double scale) {
     libqt_string _str = KIconTheme_IconPathByName2((KIconTheme*)self, qstring(name), size, match, scale);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_icontheme_has_context(void* self, int32_t context) {
+bool k_icontheme_has_context(const void* self, int32_t context) {
     return KIconTheme_HasContext((KIconTheme*)self, context);
 }
 
-bool k_icontheme_follows_color_scheme(void* self) {
+bool k_icontheme_follows_color_scheme(const void* self) {
     return KIconTheme_FollowsColorScheme((KIconTheme*)self);
 }
 
@@ -223,7 +223,7 @@ void k_icontheme_init_theme() {
     KIconTheme_InitTheme();
 }
 
-const char** k_icontheme_query_icons22(void* self, int size, int32_t context) {
+const char** k_icontheme_query_icons22(const void* self, int size, int32_t context) {
     libqt_list _arr = KIconTheme_QueryIcons22((KIconTheme*)self, size, context);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -240,7 +240,7 @@ const char** k_icontheme_query_icons22(void* self, int size, int32_t context) {
     return _ret;
 }
 
-const char** k_icontheme_query_icons_by_context2(void* self, int size, int32_t context) {
+const char** k_icontheme_query_icons_by_context2(const void* self, int size, int32_t context) {
     libqt_list _arr = KIconTheme_QueryIconsByContext2((KIconTheme*)self, size, context);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

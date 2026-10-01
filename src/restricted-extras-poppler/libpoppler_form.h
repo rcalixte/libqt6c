@@ -14,14 +14,14 @@
 ///
 /// @param ffIcon Poppler__FormFieldIcon*
 ///
-Poppler__FormFieldIcon* q_poppler__formfieldicon_new(void* ffIcon);
+Poppler__FormFieldIcon* q_poppler__formfieldicon_new(const void* ffIcon);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldIcon.html)
 ///
 /// @param self Poppler__FormFieldIcon*
 /// @param ffIcon Poppler__FormFieldIcon*
 ///
-void q_poppler__formfieldicon_operator_assign(void* self, void* ffIcon);
+void q_poppler__formfieldicon_operator_assign(void* self, const void* ffIcon);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldIcon.html)
 ///
@@ -35,60 +35,52 @@ void q_poppler__formfieldicon_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-/// @return enum Poppler__FormField__FormType
-///
-int32_t q_poppler__formfield_type(void* self);
+QRectF* q_poppler__formfield_rect(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-QRectF* q_poppler__formfield_rect(void* self);
-
-/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
-///
-/// @param self Poppler__FormField*
-///
-int32_t q_poppler__formfield_id(void* self);
+int32_t q_poppler__formfield_id(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-const char* q_poppler__formfield_name(void* self);
+const char* q_poppler__formfield_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 /// @param name const char*
 ///
-void q_poppler__formfield_set_name(void* self, const char* name);
+void q_poppler__formfield_set_name(const void* self, const char* name);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-const char* q_poppler__formfield_fully_qualified_name(void* self);
+const char* q_poppler__formfield_fully_qualified_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-const char* q_poppler__formfield_ui_name(void* self);
+const char* q_poppler__formfield_ui_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-bool q_poppler__formfield_is_read_only(void* self);
+bool q_poppler__formfield_is_read_only(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
@@ -99,9 +91,9 @@ void q_poppler__formfield_set_read_only(void* self, bool value);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-bool q_poppler__formfield_is_visible(void* self);
+bool q_poppler__formfield_is_visible(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
@@ -112,9 +104,9 @@ void q_poppler__formfield_set_visible(void* self, bool value);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-bool q_poppler__formfield_is_printable(void* self);
+bool q_poppler__formfield_is_printable(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
@@ -125,23 +117,23 @@ void q_poppler__formfield_set_printable(void* self, bool value);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 ///
-Poppler__Link* q_poppler__formfield_activation_action(void* self);
+Poppler__Link* q_poppler__formfield_activation_action(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 /// @param type enum Poppler__FormField__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfield_additional_action(void* self, int32_t type);
+Poppler__Link* q_poppler__formfield_additional_action(const void* self, int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
-/// @param self Poppler__FormField*
+/// @param self const Poppler__FormField*
 /// @param type enum Poppler__Annotation__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfield_additional_action2(void* self, int32_t type);
+Poppler__Link* q_poppler__formfield_additional_action2(const void* self, int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormField.html)
 ///
@@ -155,46 +147,46 @@ void q_poppler__formfield_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
 /// @return enum Poppler__FormField__FormType
 ///
-int32_t q_poppler__formfieldbutton_type(void* self);
+int32_t q_poppler__formfieldbutton_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
 /// @return enum Poppler__FormFieldButton__ButtonType
 ///
-int32_t q_poppler__formfieldbutton_button_type(void* self);
+int32_t q_poppler__formfieldbutton_button_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-const char* q_poppler__formfieldbutton_caption(void* self);
+const char* q_poppler__formfieldbutton_caption(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-Poppler__FormFieldIcon* q_poppler__formfieldbutton_icon(void* self);
+Poppler__FormFieldIcon* q_poppler__formfieldbutton_icon(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
 /// @param self Poppler__FormFieldButton*
 /// @param icon Poppler__FormFieldIcon*
 ///
-void q_poppler__formfieldbutton_set_icon(void* self, void* icon);
+void q_poppler__formfieldbutton_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-bool q_poppler__formfieldbutton_state(void* self);
+bool q_poppler__formfieldbutton_state(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
@@ -205,27 +197,27 @@ void q_poppler__formfieldbutton_set_state(void* self, bool state);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_poppler__formfieldbutton_siblings(void* self);
+libqt_list q_poppler__formfieldbutton_siblings(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-QRectF* q_poppler__formfieldbutton_rect(void* self);
+QRectF* q_poppler__formfieldbutton_rect(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-int32_t q_poppler__formfieldbutton_id(void* self);
+int32_t q_poppler__formfieldbutton_id(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -233,18 +225,18 @@ int32_t q_poppler__formfieldbutton_id(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-const char* q_poppler__formfieldbutton_name(void* self);
+const char* q_poppler__formfieldbutton_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 /// @param name const char*
 ///
-void q_poppler__formfieldbutton_set_name(void* self, const char* name);
+void q_poppler__formfieldbutton_set_name(const void* self, const char* name);
 
 /// Inherited from Poppler::FormField
 ///
@@ -252,9 +244,9 @@ void q_poppler__formfieldbutton_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-const char* q_poppler__formfieldbutton_fully_qualified_name(void* self);
+const char* q_poppler__formfieldbutton_fully_qualified_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -262,17 +254,17 @@ const char* q_poppler__formfieldbutton_fully_qualified_name(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-const char* q_poppler__formfieldbutton_ui_name(void* self);
+const char* q_poppler__formfieldbutton_ui_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-bool q_poppler__formfieldbutton_is_read_only(void* self);
+bool q_poppler__formfieldbutton_is_read_only(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -287,9 +279,9 @@ void q_poppler__formfieldbutton_set_read_only(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-bool q_poppler__formfieldbutton_is_visible(void* self);
+bool q_poppler__formfieldbutton_is_visible(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -304,9 +296,9 @@ void q_poppler__formfieldbutton_set_visible(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-bool q_poppler__formfieldbutton_is_printable(void* self);
+bool q_poppler__formfieldbutton_is_printable(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -321,27 +313,27 @@ void q_poppler__formfieldbutton_set_printable(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 ///
-Poppler__Link* q_poppler__formfieldbutton_activation_action(void* self);
+Poppler__Link* q_poppler__formfieldbutton_activation_action(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 /// @param type enum Poppler__FormField__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfieldbutton_additional_action(void* self, int32_t type);
+Poppler__Link* q_poppler__formfieldbutton_additional_action(const void* self, int32_t type);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
-/// @param self Poppler__FormFieldButton*
+/// @param self const Poppler__FormFieldButton*
 /// @param type enum Poppler__Annotation__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfieldbutton_additional_action2(void* self, int32_t type);
+Poppler__Link* q_poppler__formfieldbutton_additional_action2(const void* self, int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldButton.html)
 ///
@@ -355,27 +347,27 @@ void q_poppler__formfieldbutton_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
 /// @return enum Poppler__FormField__FormType
 ///
-int32_t q_poppler__formfieldtext_type(void* self);
+int32_t q_poppler__formfieldtext_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
 /// @return enum Poppler__FormFieldText__TextType
 ///
-int32_t q_poppler__formfieldtext_text_type(void* self);
+int32_t q_poppler__formfieldtext_text_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-const char* q_poppler__formfieldtext_text(void* self);
+const char* q_poppler__formfieldtext_text(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
@@ -393,41 +385,41 @@ void q_poppler__formfieldtext_set_appearance_text(void* self, const char* text);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-bool q_poppler__formfieldtext_is_password(void* self);
+bool q_poppler__formfieldtext_is_password(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-bool q_poppler__formfieldtext_is_rich_text(void* self);
+bool q_poppler__formfieldtext_is_rich_text(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-int32_t q_poppler__formfieldtext_maximum_length(void* self);
+int32_t q_poppler__formfieldtext_maximum_length(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_poppler__formfieldtext_text_alignment(void* self);
+int32_t q_poppler__formfieldtext_text_alignment(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-bool q_poppler__formfieldtext_can_be_spell_checked(void* self);
+bool q_poppler__formfieldtext_can_be_spell_checked(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-double q_poppler__formfieldtext_get_font_size(void* self);
+double q_poppler__formfieldtext_get_font_size(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
@@ -440,17 +432,17 @@ void q_poppler__formfieldtext_set_font_size(void* self, int fontSize);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-QRectF* q_poppler__formfieldtext_rect(void* self);
+QRectF* q_poppler__formfieldtext_rect(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-int32_t q_poppler__formfieldtext_id(void* self);
+int32_t q_poppler__formfieldtext_id(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -458,18 +450,18 @@ int32_t q_poppler__formfieldtext_id(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-const char* q_poppler__formfieldtext_name(void* self);
+const char* q_poppler__formfieldtext_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 /// @param name const char*
 ///
-void q_poppler__formfieldtext_set_name(void* self, const char* name);
+void q_poppler__formfieldtext_set_name(const void* self, const char* name);
 
 /// Inherited from Poppler::FormField
 ///
@@ -477,9 +469,9 @@ void q_poppler__formfieldtext_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-const char* q_poppler__formfieldtext_fully_qualified_name(void* self);
+const char* q_poppler__formfieldtext_fully_qualified_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -487,17 +479,17 @@ const char* q_poppler__formfieldtext_fully_qualified_name(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-const char* q_poppler__formfieldtext_ui_name(void* self);
+const char* q_poppler__formfieldtext_ui_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-bool q_poppler__formfieldtext_is_read_only(void* self);
+bool q_poppler__formfieldtext_is_read_only(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -512,9 +504,9 @@ void q_poppler__formfieldtext_set_read_only(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-bool q_poppler__formfieldtext_is_visible(void* self);
+bool q_poppler__formfieldtext_is_visible(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -529,9 +521,9 @@ void q_poppler__formfieldtext_set_visible(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-bool q_poppler__formfieldtext_is_printable(void* self);
+bool q_poppler__formfieldtext_is_printable(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -546,27 +538,27 @@ void q_poppler__formfieldtext_set_printable(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 ///
-Poppler__Link* q_poppler__formfieldtext_activation_action(void* self);
+Poppler__Link* q_poppler__formfieldtext_activation_action(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 /// @param type enum Poppler__FormField__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfieldtext_additional_action(void* self, int32_t type);
+Poppler__Link* q_poppler__formfieldtext_additional_action(const void* self, int32_t type);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
-/// @param self Poppler__FormFieldText*
+/// @param self const Poppler__FormFieldText*
 /// @param type enum Poppler__Annotation__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfieldtext_additional_action2(void* self, int32_t type);
+Poppler__Link* q_poppler__formfieldtext_additional_action2(const void* self, int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldText.html)
 ///
@@ -580,55 +572,55 @@ void q_poppler__formfieldtext_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
 /// @return enum Poppler__FormField__FormType
 ///
-int32_t q_poppler__formfieldchoice_type(void* self);
+int32_t q_poppler__formfieldchoice_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
 /// @return enum Poppler__FormFieldChoice__ChoiceType
 ///
-int32_t q_poppler__formfieldchoice_choice_type(void* self);
+int32_t q_poppler__formfieldchoice_choice_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-const char** q_poppler__formfieldchoice_choices(void* self);
+const char** q_poppler__formfieldchoice_choices(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
 /// @return libqt_list of libqt_pair tuple of const char* and const char*
 ///
-libqt_list q_poppler__formfieldchoice_choices_with_export_values(void* self);
+libqt_list q_poppler__formfieldchoice_choices_with_export_values(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-bool q_poppler__formfieldchoice_is_editable(void* self);
+bool q_poppler__formfieldchoice_is_editable(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-bool q_poppler__formfieldchoice_multi_select(void* self);
+bool q_poppler__formfieldchoice_multi_select(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_poppler__formfieldchoice_current_choices(void* self);
+libqt_list q_poppler__formfieldchoice_current_choices(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
@@ -641,9 +633,9 @@ void q_poppler__formfieldchoice_set_current_choices(void* self, libqt_list choic
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-const char* q_poppler__formfieldchoice_edit_choice(void* self);
+const char* q_poppler__formfieldchoice_edit_choice(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
@@ -654,17 +646,17 @@ void q_poppler__formfieldchoice_set_edit_choice(void* self, const char* text);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_poppler__formfieldchoice_text_alignment(void* self);
+int32_t q_poppler__formfieldchoice_text_alignment(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-bool q_poppler__formfieldchoice_can_be_spell_checked(void* self);
+bool q_poppler__formfieldchoice_can_be_spell_checked(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
@@ -677,17 +669,17 @@ void q_poppler__formfieldchoice_set_appearance_choice_text(void* self, const cha
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-QRectF* q_poppler__formfieldchoice_rect(void* self);
+QRectF* q_poppler__formfieldchoice_rect(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-int32_t q_poppler__formfieldchoice_id(void* self);
+int32_t q_poppler__formfieldchoice_id(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -695,18 +687,18 @@ int32_t q_poppler__formfieldchoice_id(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-const char* q_poppler__formfieldchoice_name(void* self);
+const char* q_poppler__formfieldchoice_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 /// @param name const char*
 ///
-void q_poppler__formfieldchoice_set_name(void* self, const char* name);
+void q_poppler__formfieldchoice_set_name(const void* self, const char* name);
 
 /// Inherited from Poppler::FormField
 ///
@@ -714,9 +706,9 @@ void q_poppler__formfieldchoice_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-const char* q_poppler__formfieldchoice_fully_qualified_name(void* self);
+const char* q_poppler__formfieldchoice_fully_qualified_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -724,17 +716,17 @@ const char* q_poppler__formfieldchoice_fully_qualified_name(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-const char* q_poppler__formfieldchoice_ui_name(void* self);
+const char* q_poppler__formfieldchoice_ui_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-bool q_poppler__formfieldchoice_is_read_only(void* self);
+bool q_poppler__formfieldchoice_is_read_only(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -749,9 +741,9 @@ void q_poppler__formfieldchoice_set_read_only(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-bool q_poppler__formfieldchoice_is_visible(void* self);
+bool q_poppler__formfieldchoice_is_visible(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -766,9 +758,9 @@ void q_poppler__formfieldchoice_set_visible(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-bool q_poppler__formfieldchoice_is_printable(void* self);
+bool q_poppler__formfieldchoice_is_printable(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -783,27 +775,27 @@ void q_poppler__formfieldchoice_set_printable(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 ///
-Poppler__Link* q_poppler__formfieldchoice_activation_action(void* self);
+Poppler__Link* q_poppler__formfieldchoice_activation_action(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 /// @param type enum Poppler__FormField__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfieldchoice_additional_action(void* self, int32_t type);
+Poppler__Link* q_poppler__formfieldchoice_additional_action(const void* self, int32_t type);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
-/// @param self Poppler__FormFieldChoice*
+/// @param self const Poppler__FormFieldChoice*
 /// @param type enum Poppler__Annotation__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfieldchoice_additional_action2(void* self, int32_t type);
+Poppler__Link* q_poppler__formfieldchoice_additional_action2(const void* self, int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldChoice.html)
 ///
@@ -825,145 +817,145 @@ Poppler__CertificateInfo* q_poppler__certificateinfo_new();
 ///
 /// @param other Poppler__CertificateInfo*
 ///
-Poppler__CertificateInfo* q_poppler__certificateinfo_new2(void* other);
+Poppler__CertificateInfo* q_poppler__certificateinfo_new2(const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-bool q_poppler__certificateinfo_is_null(void* self);
+bool q_poppler__certificateinfo_is_null(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-int32_t q_poppler__certificateinfo_version(void* self);
+int32_t q_poppler__certificateinfo_version(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-char* q_poppler__certificateinfo_serial_number(void* self);
+char* q_poppler__certificateinfo_serial_number(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 /// @param key enum Poppler__CertificateInfo__EntityInfoKey
 ///
-const char* q_poppler__certificateinfo_issuer_info(void* self, int32_t key);
+const char* q_poppler__certificateinfo_issuer_info(const void* self, int32_t key);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 /// @param key enum Poppler__CertificateInfo__EntityInfoKey
 ///
-const char* q_poppler__certificateinfo_subject_info(void* self, int32_t key);
+const char* q_poppler__certificateinfo_subject_info(const void* self, int32_t key);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-const char* q_poppler__certificateinfo_nick_name(void* self);
+const char* q_poppler__certificateinfo_nick_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-QDateTime* q_poppler__certificateinfo_validity_start(void* self);
+QDateTime* q_poppler__certificateinfo_validity_start(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-QDateTime* q_poppler__certificateinfo_validity_end(void* self);
+QDateTime* q_poppler__certificateinfo_validity_end(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
 /// @return flag of enum Poppler__CertificateInfo__KeyUsageExtension
 ///
-int32_t q_poppler__certificateinfo_key_usage_extensions(void* self);
+int32_t q_poppler__certificateinfo_key_usage_extensions(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-char* q_poppler__certificateinfo_public_key(void* self);
+char* q_poppler__certificateinfo_public_key(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
 /// @return enum Poppler__CertificateInfo__PublicKeyType
 ///
-int32_t q_poppler__certificateinfo_public_key_type(void* self);
+int32_t q_poppler__certificateinfo_public_key_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-int32_t q_poppler__certificateinfo_public_key_strength(void* self);
+int32_t q_poppler__certificateinfo_public_key_strength(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-bool q_poppler__certificateinfo_is_self_signed(void* self);
+bool q_poppler__certificateinfo_is_self_signed(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-bool q_poppler__certificateinfo_is_qualified(void* self);
+bool q_poppler__certificateinfo_is_qualified(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
 /// @return enum Poppler__CertificateInfo__CertificateType
 ///
-int32_t q_poppler__certificateinfo_certificate_type(void* self);
+int32_t q_poppler__certificateinfo_certificate_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
-char* q_poppler__certificateinfo_certificate_data(void* self);
+char* q_poppler__certificateinfo_certificate_data(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 /// @param password const char*
 ///
-bool q_poppler__certificateinfo_check_password(void* self, const char* password);
+bool q_poppler__certificateinfo_check_password(const void* self, const char* password);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
-/// @param self Poppler__CertificateInfo*
+/// @param self const Poppler__CertificateInfo*
 ///
 /// @return enum Poppler__CertificateInfo__KeyLocation
 ///
-int32_t q_poppler__certificateinfo_key_location(void* self);
+int32_t q_poppler__certificateinfo_key_location(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
 /// @param self Poppler__CertificateInfo*
 /// @param other Poppler__CertificateInfo*
 ///
-void q_poppler__certificateinfo_operator_assign(void* self, void* other);
+void q_poppler__certificateinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1CertificateInfo.html)
 ///
@@ -979,104 +971,104 @@ void q_poppler__certificateinfo_delete(void* self);
 ///
 /// @param other Poppler__SignatureValidationInfo*
 ///
-Poppler__SignatureValidationInfo* q_poppler__signaturevalidationinfo_new(void* other);
+Poppler__SignatureValidationInfo* q_poppler__signaturevalidationinfo_new(const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
 /// @return enum Poppler__SignatureValidationInfo__SignatureStatus
 ///
-int32_t q_poppler__signaturevalidationinfo_signature_status(void* self);
+int32_t q_poppler__signaturevalidationinfo_signature_status(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
 /// @return enum Poppler__SignatureValidationInfo__CertificateStatus
 ///
-int32_t q_poppler__signaturevalidationinfo_certificate_status(void* self);
+int32_t q_poppler__signaturevalidationinfo_certificate_status(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
-const char* q_poppler__signaturevalidationinfo_signer_name(void* self);
+const char* q_poppler__signaturevalidationinfo_signer_name(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
-const char* q_poppler__signaturevalidationinfo_signer_subject_d_n(void* self);
+const char* q_poppler__signaturevalidationinfo_signer_subject_d_n(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
-const char* q_poppler__signaturevalidationinfo_location(void* self);
+const char* q_poppler__signaturevalidationinfo_location(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
-const char* q_poppler__signaturevalidationinfo_reason(void* self);
+const char* q_poppler__signaturevalidationinfo_reason(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
 /// @return enum Poppler__SignatureValidationInfo__HashAlgorithm
 ///
-int32_t q_poppler__signaturevalidationinfo_hash_algorithm(void* self);
+int32_t q_poppler__signaturevalidationinfo_hash_algorithm(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
-time_t q_poppler__signaturevalidationinfo_signing_time(void* self);
+time_t q_poppler__signaturevalidationinfo_signing_time(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
-char* q_poppler__signaturevalidationinfo_signature(void* self);
+char* q_poppler__signaturevalidationinfo_signature(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
 /// @return libqt_list of long long
 ///
-libqt_list q_poppler__signaturevalidationinfo_signed_range_bounds(void* self);
+libqt_list q_poppler__signaturevalidationinfo_signed_range_bounds(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
-bool q_poppler__signaturevalidationinfo_signs_total_document(void* self);
+bool q_poppler__signaturevalidationinfo_signs_total_document(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
-/// @param self Poppler__SignatureValidationInfo*
+/// @param self const Poppler__SignatureValidationInfo*
 ///
-Poppler__CertificateInfo* q_poppler__signaturevalidationinfo_certificate_info(void* self);
+Poppler__CertificateInfo* q_poppler__signaturevalidationinfo_certificate_info(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
 /// @param self Poppler__SignatureValidationInfo*
 /// @param other Poppler__SignatureValidationInfo*
 ///
-void q_poppler__signaturevalidationinfo_operator_assign(void* self, void* other);
+void q_poppler__signaturevalidationinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1SignatureValidationInfo.html)
 ///
@@ -1094,26 +1086,26 @@ Poppler__AsyncObject* q_poppler__asyncobject_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-const QMetaObject* q_poppler__asyncobject_meta_object(void* self);
+const QMetaObject* q_poppler__asyncobject_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Poppler__AsyncObject*
-/// @param callback const QMetaObject* func()
+/// @param self const Poppler__AsyncObject*
+/// @param callback const QMetaObject* func(const Poppler__AsyncObject* self)
 ///
-void q_poppler__asyncobject_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_poppler__asyncobject_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-const QMetaObject* q_poppler__asyncobject_super_meta_object(void* self);
+const QMetaObject* q_poppler__asyncobject_super_meta_object(const void* self);
 
 /// @param self Poppler__AsyncObject*
 /// @param param1 const char*
@@ -1203,9 +1195,9 @@ const char* q_poppler__asyncobject_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-const char* q_poppler__asyncobject_object_name(void* self);
+const char* q_poppler__asyncobject_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1220,33 +1212,33 @@ void q_poppler__asyncobject_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-bool q_poppler__asyncobject_is_widget_type(void* self);
+bool q_poppler__asyncobject_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-bool q_poppler__asyncobject_is_window_type(void* self);
+bool q_poppler__asyncobject_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-bool q_poppler__asyncobject_is_quick_item_type(void* self);
+bool q_poppler__asyncobject_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-bool q_poppler__asyncobject_signals_blocked(void* self);
+bool q_poppler__asyncobject_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1261,9 +1253,9 @@ bool q_poppler__asyncobject_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-QThread* q_poppler__asyncobject_thread(void* self);
+QThread* q_poppler__asyncobject_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1314,11 +1306,11 @@ void q_poppler__asyncobject_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_poppler__asyncobject_children(void* self);
+libqt_list q_poppler__asyncobject_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1356,7 +1348,7 @@ void q_poppler__asyncobject_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_poppler__asyncobject_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_poppler__asyncobject_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1367,18 +1359,18 @@ QMetaObject__Connection* q_poppler__asyncobject_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_poppler__asyncobject_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_poppler__asyncobject_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_poppler__asyncobject_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_poppler__asyncobject_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1389,7 +1381,7 @@ QMetaObject__Connection* q_poppler__asyncobject_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_poppler__asyncobject_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_poppler__asyncobject_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1400,24 +1392,24 @@ bool q_poppler__asyncobject_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_poppler__asyncobject_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_poppler__asyncobject_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-bool q_poppler__asyncobject_disconnect3(void* self);
+bool q_poppler__asyncobject_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param receiver QObject*
 ///
-bool q_poppler__asyncobject_disconnect4(void* self, void* receiver);
+bool q_poppler__asyncobject_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1425,23 +1417,23 @@ bool q_poppler__asyncobject_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_poppler__asyncobject_disconnect5(void* param1);
+bool q_poppler__asyncobject_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-void q_poppler__asyncobject_dump_object_tree(void* self);
+void q_poppler__asyncobject_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-void q_poppler__asyncobject_dump_object_info(void* self);
+void q_poppler__asyncobject_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1451,16 +1443,16 @@ void q_poppler__asyncobject_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_poppler__asyncobject_set_property(void* self, const char* name, void* value);
+bool q_poppler__asyncobject_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param name const char*
 ///
-QVariant* q_poppler__asyncobject_property(void* self, const char* name);
+QVariant* q_poppler__asyncobject_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1468,9 +1460,9 @@ QVariant* q_poppler__asyncobject_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-const char** q_poppler__asyncobject_dynamic_property_names(void* self);
+const char** q_poppler__asyncobject_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1484,9 +1476,9 @@ QBindingStorage* q_poppler__asyncobject_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-const QBindingStorage* q_poppler__asyncobject_binding_storage2(void* self);
+const QBindingStorage* q_poppler__asyncobject_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1509,18 +1501,18 @@ void q_poppler__asyncobject_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-QObject* q_poppler__asyncobject_parent(void* self);
+QObject* q_poppler__asyncobject_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param classname const char*
 ///
-bool q_poppler__asyncobject_inherits(void* self, const char* classname);
+bool q_poppler__asyncobject_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1560,7 +1552,7 @@ int32_t q_poppler__asyncobject_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_poppler__asyncobject_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_poppler__asyncobject_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1572,59 +1564,59 @@ QMetaObject__Connection* q_poppler__asyncobject_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_poppler__asyncobject_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_poppler__asyncobject_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_poppler__asyncobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_poppler__asyncobject_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param signal const char*
 ///
-bool q_poppler__asyncobject_disconnect1(void* self, const char* signal);
+bool q_poppler__asyncobject_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__AsyncObject*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_poppler__asyncobject_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_poppler__asyncobject_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_poppler__asyncobject_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_poppler__asyncobject_disconnect23(void* self, void* receiver, const char* member);
+bool q_poppler__asyncobject_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Poppler__AsyncObject*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_poppler__asyncobject_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1820,7 +1812,7 @@ void q_poppler__asyncobject_on_custom_event(void* self, void (*callback)(void*, 
 /// @param self Poppler__AsyncObject*
 /// @param signal QMetaMethod*
 ///
-void q_poppler__asyncobject_connect_notify(void* self, void* signal);
+void q_poppler__asyncobject_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1831,7 +1823,7 @@ void q_poppler__asyncobject_connect_notify(void* self, void* signal);
 /// @param self Poppler__AsyncObject*
 /// @param signal QMetaMethod*
 ///
-void q_poppler__asyncobject_super_connect_notify(void* self, void* signal);
+void q_poppler__asyncobject_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1842,7 +1834,7 @@ void q_poppler__asyncobject_super_connect_notify(void* self, void* signal);
 /// @param self Poppler__AsyncObject*
 /// @param callback void func(Poppler__AsyncObject* self, QMetaMethod* signal)
 ///
-void q_poppler__asyncobject_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_poppler__asyncobject_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1853,7 +1845,7 @@ void q_poppler__asyncobject_on_connect_notify(void* self, void (*callback)(void*
 /// @param self Poppler__AsyncObject*
 /// @param signal QMetaMethod*
 ///
-void q_poppler__asyncobject_disconnect_notify(void* self, void* signal);
+void q_poppler__asyncobject_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1864,7 +1856,7 @@ void q_poppler__asyncobject_disconnect_notify(void* self, void* signal);
 /// @param self Poppler__AsyncObject*
 /// @param signal QMetaMethod*
 ///
-void q_poppler__asyncobject_super_disconnect_notify(void* self, void* signal);
+void q_poppler__asyncobject_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1875,7 +1867,7 @@ void q_poppler__asyncobject_super_disconnect_notify(void* self, void* signal);
 /// @param self Poppler__AsyncObject*
 /// @param callback void func(Poppler__AsyncObject* self, QMetaMethod* signal)
 ///
-void q_poppler__asyncobject_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_poppler__asyncobject_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1883,9 +1875,9 @@ void q_poppler__asyncobject_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-QObject* q_poppler__asyncobject_sender(void* self);
+QObject* q_poppler__asyncobject_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1893,9 +1885,9 @@ QObject* q_poppler__asyncobject_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-QObject* q_poppler__asyncobject_super_sender(void* self);
+QObject* q_poppler__asyncobject_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1903,10 +1895,10 @@ QObject* q_poppler__asyncobject_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
-/// @param callback QObject* func()
+/// @param self const Poppler__AsyncObject*
+/// @param callback QObject* func(Poppler__AsyncObject* self)
 ///
-void q_poppler__asyncobject_on_sender(void* self, QObject* (*callback)());
+void q_poppler__asyncobject_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1914,9 +1906,9 @@ void q_poppler__asyncobject_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-int32_t q_poppler__asyncobject_sender_signal_index(void* self);
+int32_t q_poppler__asyncobject_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1924,9 +1916,9 @@ int32_t q_poppler__asyncobject_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 ///
-int32_t q_poppler__asyncobject_super_sender_signal_index(void* self);
+int32_t q_poppler__asyncobject_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1934,10 +1926,10 @@ int32_t q_poppler__asyncobject_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
-/// @param callback int32_t func()
+/// @param self const Poppler__AsyncObject*
+/// @param callback int32_t func(Poppler__AsyncObject* self)
 ///
-void q_poppler__asyncobject_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_poppler__asyncobject_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1945,10 +1937,10 @@ void q_poppler__asyncobject_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param signal const char*
 ///
-int32_t q_poppler__asyncobject_receivers(void* self, const char* signal);
+int32_t q_poppler__asyncobject_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1956,10 +1948,10 @@ int32_t q_poppler__asyncobject_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param signal const char*
 ///
-int32_t q_poppler__asyncobject_super_receivers(void* self, const char* signal);
+int32_t q_poppler__asyncobject_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1967,10 +1959,10 @@ int32_t q_poppler__asyncobject_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param callback int32_t func(Poppler__AsyncObject* self, const char* signal)
 ///
-void q_poppler__asyncobject_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_poppler__asyncobject_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1978,10 +1970,10 @@ void q_poppler__asyncobject_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param signal QMetaMethod*
 ///
-bool q_poppler__asyncobject_is_signal_connected(void* self, void* signal);
+bool q_poppler__asyncobject_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1989,10 +1981,10 @@ bool q_poppler__asyncobject_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param signal QMetaMethod*
 ///
-bool q_poppler__asyncobject_super_is_signal_connected(void* self, void* signal);
+bool q_poppler__asyncobject_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2000,10 +1992,10 @@ bool q_poppler__asyncobject_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Poppler__AsyncObject*
+/// @param self const Poppler__AsyncObject*
 /// @param callback bool func(Poppler__AsyncObject* self, QMetaMethod* signal)
 ///
-void q_poppler__asyncobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_poppler__asyncobject_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2028,68 +2020,68 @@ void q_poppler__asyncobject_delete(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
 /// @return enum Poppler__FormField__FormType
 ///
-int32_t q_poppler__formfieldsignature_type(void* self);
+int32_t q_poppler__formfieldsignature_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
 /// @return enum Poppler__FormFieldSignature__SignatureType
 ///
-int32_t q_poppler__formfieldsignature_signature_type(void* self);
+int32_t q_poppler__formfieldsignature_signature_type(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 /// @param opt enum Poppler__FormFieldSignature__ValidateOptions
 ///
-Poppler__SignatureValidationInfo* q_poppler__formfieldsignature_validate(void* self, int32_t opt);
+Poppler__SignatureValidationInfo* q_poppler__formfieldsignature_validate(const void* self, int32_t opt);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 /// @param opt int
 /// @param validationTime QDateTime*
 ///
-Poppler__SignatureValidationInfo* q_poppler__formfieldsignature_validate2(void* self, int opt, void* validationTime);
+Poppler__SignatureValidationInfo* q_poppler__formfieldsignature_validate2(const void* self, int opt, const void* validationTime);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
 /// @return enum Poppler__SignatureValidationInfo__CertificateStatus
 ///
-int32_t q_poppler__formfieldsignature_validate_result(void* self);
+int32_t q_poppler__formfieldsignature_validate_result(const void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 /// @param outputFileName const char*
 /// @param data Poppler__PDFConverter__NewSignatureData*
 ///
 /// @return enum Poppler__FormFieldSignature__SigningResult
 ///
-int32_t q_poppler__formfieldsignature_sign(void* self, const char* outputFileName, void* data);
+int32_t q_poppler__formfieldsignature_sign(const void* self, const char* outputFileName, const void* data);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-QRectF* q_poppler__formfieldsignature_rect(void* self);
+QRectF* q_poppler__formfieldsignature_rect(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-int32_t q_poppler__formfieldsignature_id(void* self);
+int32_t q_poppler__formfieldsignature_id(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -2097,18 +2089,18 @@ int32_t q_poppler__formfieldsignature_id(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-const char* q_poppler__formfieldsignature_name(void* self);
+const char* q_poppler__formfieldsignature_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 /// @param name const char*
 ///
-void q_poppler__formfieldsignature_set_name(void* self, const char* name);
+void q_poppler__formfieldsignature_set_name(const void* self, const char* name);
 
 /// Inherited from Poppler::FormField
 ///
@@ -2116,9 +2108,9 @@ void q_poppler__formfieldsignature_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-const char* q_poppler__formfieldsignature_fully_qualified_name(void* self);
+const char* q_poppler__formfieldsignature_fully_qualified_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -2126,17 +2118,17 @@ const char* q_poppler__formfieldsignature_fully_qualified_name(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-const char* q_poppler__formfieldsignature_ui_name(void* self);
+const char* q_poppler__formfieldsignature_ui_name(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-bool q_poppler__formfieldsignature_is_read_only(void* self);
+bool q_poppler__formfieldsignature_is_read_only(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -2151,9 +2143,9 @@ void q_poppler__formfieldsignature_set_read_only(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-bool q_poppler__formfieldsignature_is_visible(void* self);
+bool q_poppler__formfieldsignature_is_visible(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -2168,9 +2160,9 @@ void q_poppler__formfieldsignature_set_visible(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-bool q_poppler__formfieldsignature_is_printable(void* self);
+bool q_poppler__formfieldsignature_is_printable(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
@@ -2185,27 +2177,27 @@ void q_poppler__formfieldsignature_set_printable(void* self, bool value);
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 ///
-Poppler__Link* q_poppler__formfieldsignature_activation_action(void* self);
+Poppler__Link* q_poppler__formfieldsignature_activation_action(const void* self);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 /// @param type enum Poppler__FormField__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfieldsignature_additional_action(void* self, int32_t type);
+Poppler__Link* q_poppler__formfieldsignature_additional_action(const void* self, int32_t type);
 
 /// Inherited from Poppler::FormField
 ///
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///
-/// @param self Poppler__FormFieldSignature*
+/// @param self const Poppler__FormFieldSignature*
 /// @param type enum Poppler__Annotation__AdditionalActionType
 ///
-Poppler__Link* q_poppler__formfieldsignature_additional_action2(void* self, int32_t type);
+Poppler__Link* q_poppler__formfieldsignature_additional_action2(const void* self, int32_t type);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1FormFieldSignature.html)
 ///

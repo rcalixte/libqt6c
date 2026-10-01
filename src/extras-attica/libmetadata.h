@@ -20,22 +20,22 @@ Attica__Metadata* k_attica__metadata_new();
 ///
 /// @param other Attica__Metadata*
 ///
-Attica__Metadata* k_attica__metadata_new2(void* other);
+Attica__Metadata* k_attica__metadata_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#operator-eq)
 ///
 /// @param self Attica__Metadata*
 /// @param other Attica__Metadata*
 ///
-void k_attica__metadata_operator_assign(void* self, void* other);
+void k_attica__metadata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#error)
 ///
-/// @param self Attica__Metadata*
+/// @param self const Attica__Metadata*
 ///
 /// @return enum Attica__Metadata__Error
 ///
-int32_t k_attica__metadata_error(void* self);
+int32_t k_attica__metadata_error(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#setError)
 ///
@@ -46,9 +46,9 @@ void k_attica__metadata_set_error(void* self, int32_t error);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#statusCode)
 ///
-/// @param self Attica__Metadata*
+/// @param self const Attica__Metadata*
 ///
-int32_t k_attica__metadata_status_code(void* self);
+int32_t k_attica__metadata_status_code(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#setStatusCode)
 ///
@@ -61,9 +61,9 @@ void k_attica__metadata_set_status_code(void* self, int code);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Metadata*
+/// @param self const Attica__Metadata*
 ///
-const char* k_attica__metadata_status_string(void* self);
+const char* k_attica__metadata_status_string(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#setStatusString)
 ///
@@ -130,11 +130,11 @@ void k_attica__metadata_set_resulting_id(void* self, const char* id);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#headers)
 ///
-/// @param self Attica__Metadata*
+/// @param self const Attica__Metadata*
 ///
 /// @return libqt_list of libqt_pair tuple of char* and char*
 ///
-libqt_list k_attica__metadata_headers(void* self);
+libqt_list k_attica__metadata_headers(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-metadata.html#setHeaders)
 ///

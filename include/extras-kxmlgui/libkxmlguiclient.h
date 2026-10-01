@@ -24,171 +24,171 @@ KXMLGUIClient* k_xmlguiclient_new2(void* parent);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 /// @param name const char*
 ///
-QAction* k_xmlguiclient_action(void* self, const char* name);
+QAction* k_xmlguiclient_action(const void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 /// @param element QDomElement*
 ///
-QAction* k_xmlguiclient_action2(void* self, void* element);
+QAction* k_xmlguiclient_action2(const void* self, const void* element);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KXMLGUIClient*
-/// @param callback QAction* func(KXMLGUIClient* self, QDomElement* element)
+/// @param self const KXMLGUIClient*
+/// @param callback QAction* func(const KXMLGUIClient* self, QDomElement* element)
 ///
-void k_xmlguiclient_on_action2(void* self, QAction* (*callback)(void*, void*));
+void k_xmlguiclient_on_action2(const void* self, QAction* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
 ///
 /// Base class method implementation
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 /// @param element QDomElement*
 ///
-QAction* k_xmlguiclient_super_action2(void* self, void* element);
+QAction* k_xmlguiclient_super_action2(const void* self, const void* element);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-KActionCollection* k_xmlguiclient_action_collection(void* self);
+KActionCollection* k_xmlguiclient_action_collection(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KXMLGUIClient*
-/// @param callback KActionCollection* func()
+/// @param self const KXMLGUIClient*
+/// @param callback KActionCollection* func(const KXMLGUIClient* self)
 ///
-void k_xmlguiclient_on_action_collection(void* self, KActionCollection* (*callback)());
+void k_xmlguiclient_on_action_collection(const void* self, KActionCollection* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
 ///
 /// Base class method implementation
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-KActionCollection* k_xmlguiclient_super_action_collection(void* self);
+KActionCollection* k_xmlguiclient_super_action_collection(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-const char* k_xmlguiclient_component_name(void* self);
+const char* k_xmlguiclient_component_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KXMLGUIClient*
-/// @param callback const char* func()
+/// @param self const KXMLGUIClient*
+/// @param callback const char* func(const KXMLGUIClient* self)
 ///
-void k_xmlguiclient_on_component_name(void* self, const char* (*callback)());
+void k_xmlguiclient_on_component_name(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
 ///
 /// Base class method implementation
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-const char* k_xmlguiclient_super_component_name(void* self);
+const char* k_xmlguiclient_super_component_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-QDomDocument* k_xmlguiclient_dom_document(void* self);
+QDomDocument* k_xmlguiclient_dom_document(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KXMLGUIClient*
-/// @param callback QDomDocument* func()
+/// @param self const KXMLGUIClient*
+/// @param callback QDomDocument* func(const KXMLGUIClient* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_xmlguiclient_on_dom_document(void* self, QDomDocument* (*callback)());
+void k_xmlguiclient_on_dom_document(const void* self, QDomDocument* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
 ///
 /// Base class method implementation
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-QDomDocument* k_xmlguiclient_super_dom_document(void* self);
+QDomDocument* k_xmlguiclient_super_dom_document(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-const char* k_xmlguiclient_xml_file(void* self);
+const char* k_xmlguiclient_xml_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KXMLGUIClient*
-/// @param callback const char* func()
+/// @param self const KXMLGUIClient*
+/// @param callback const char* func(const KXMLGUIClient* self)
 ///
-void k_xmlguiclient_on_xml_file(void* self, const char* (*callback)());
+void k_xmlguiclient_on_xml_file(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
 ///
 /// Base class method implementation
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-const char* k_xmlguiclient_super_xml_file(void* self);
+const char* k_xmlguiclient_super_xml_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-const char* k_xmlguiclient_local_x_m_l_file(void* self);
+const char* k_xmlguiclient_local_x_m_l_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KXMLGUIClient*
-/// @param callback const char* func()
+/// @param self const KXMLGUIClient*
+/// @param callback const char* func(const KXMLGUIClient* self)
 ///
-void k_xmlguiclient_on_local_x_m_l_file(void* self, const char* (*callback)());
+void k_xmlguiclient_on_local_x_m_l_file(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
 ///
 /// Base class method implementation
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-const char* k_xmlguiclient_super_local_x_m_l_file(void* self);
+const char* k_xmlguiclient_super_local_x_m_l_file(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLGUIBuildDocument)
 ///
 /// @param self KXMLGUIClient*
 /// @param doc QDomDocument*
 ///
-void k_xmlguiclient_set_x_m_l_g_u_i_build_document(void* self, void* doc);
+void k_xmlguiclient_set_x_m_l_g_u_i_build_document(void* self, const void* doc);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlguiBuildDocument)
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-QDomDocument* k_xmlguiclient_xmlgui_build_document(void* self);
+QDomDocument* k_xmlguiclient_xmlgui_build_document(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setFactory)
 ///
@@ -199,15 +199,15 @@ void k_xmlguiclient_set_factory(void* self, void* factory);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#factory)
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-KXMLGUIFactory* k_xmlguiclient_factory(void* self);
+KXMLGUIFactory* k_xmlguiclient_factory(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#parentClient)
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-KXMLGUIClient* k_xmlguiclient_parent_client(void* self);
+KXMLGUIClient* k_xmlguiclient_parent_client(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#insertChildClient)
 ///
@@ -240,9 +240,9 @@ void k_xmlguiclient_set_client_builder(void* self, void* builder);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#clientBuilder)
 ///
-/// @param self KXMLGUIClient*
+/// @param self const KXMLGUIClient*
 ///
-KXMLGUIBuilder* k_xmlguiclient_client_builder(void* self);
+KXMLGUIBuilder* k_xmlguiclient_client_builder(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#reloadXML)
 ///
@@ -397,45 +397,11 @@ void k_xmlguiclient_super_set_x_m_l_file(void* self, const char* file, bool merg
 ///
 const char* k_xmlguiclient_standards_xml_file_location(void* self);
 
-/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KXMLGUIClient*
-/// @param callback const char* func()
-///
-void k_xmlguiclient_on_standards_xml_file_location(void* self, const char* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
-///
-/// Base class method implementation
-///
-/// @param self KXMLGUIClient*
-///
-const char* k_xmlguiclient_super_standards_xml_file_location(void* self);
-
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
 ///
 /// @param self KXMLGUIClient*
 ///
 void k_xmlguiclient_load_standards_xml_file(void* self);
-
-/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KXMLGUIClient*
-/// @param callback void func()
-///
-void k_xmlguiclient_on_load_standards_xml_file(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
-///
-/// Base class method implementation
-///
-/// @param self KXMLGUIClient*
-///
-void k_xmlguiclient_super_load_standards_xml_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
 ///
@@ -495,7 +461,7 @@ void k_xmlguiclient_super_set_x_m_l(void* self, const char* document, bool merge
 /// @param document QDomDocument*
 /// @param merge bool
 ///
-void k_xmlguiclient_set_d_o_m_document(void* self, void* document, bool merge);
+void k_xmlguiclient_set_d_o_m_document(void* self, const void* document, bool merge);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
@@ -504,7 +470,7 @@ void k_xmlguiclient_set_d_o_m_document(void* self, void* document, bool merge);
 /// @param self KXMLGUIClient*
 /// @param callback void func(KXMLGUIClient* self, QDomDocument* document, bool merge)
 ///
-void k_xmlguiclient_on_set_d_o_m_document(void* self, void (*callback)(void*, void*, bool));
+void k_xmlguiclient_on_set_d_o_m_document(void* self, void (*callback)(void*, const void*, bool));
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
 ///
@@ -514,7 +480,7 @@ void k_xmlguiclient_on_set_d_o_m_document(void* self, void (*callback)(void*, vo
 /// @param document QDomDocument*
 /// @param merge bool
 ///
-void k_xmlguiclient_super_set_d_o_m_document(void* self, void* document, bool merge);
+void k_xmlguiclient_super_set_d_o_m_document(void* self, const void* document, bool merge);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
 ///
@@ -570,9 +536,9 @@ KXMLGUIClient__StateChange* k_xmlguiclient__statechange_new();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KXMLGUIClient__StateChange*
+/// @param self const KXMLGUIClient__StateChange*
 ///
-const char** k_xmlguiclient__statechange_actions_to_enable(void* self);
+const char** k_xmlguiclient__statechange_actions_to_enable(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient-statechange.html#actionsToEnable-var)
 ///
@@ -585,9 +551,9 @@ void k_xmlguiclient__statechange_set_actions_to_enable(void* self, const char* a
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KXMLGUIClient__StateChange*
+/// @param self const KXMLGUIClient__StateChange*
 ///
-const char** k_xmlguiclient__statechange_actions_to_disable(void* self);
+const char** k_xmlguiclient__statechange_actions_to_disable(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiclient-statechange.html#actionsToDisable-var)
 ///

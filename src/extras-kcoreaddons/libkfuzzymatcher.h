@@ -20,7 +20,7 @@ KFuzzyMatcher__Result* k_fuzzymatcher__result_new();
 ///
 /// @param other KFuzzyMatcher__Result*
 ///
-KFuzzyMatcher__Result* k_fuzzymatcher__result_new2(void* other);
+KFuzzyMatcher__Result* k_fuzzymatcher__result_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html)
 
@@ -46,9 +46,9 @@ void k_fuzzymatcher__result_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html#score-var)
 ///
-/// @param self KFuzzyMatcher__Result*
+/// @param self const KFuzzyMatcher__Result*
 ///
-int32_t k_fuzzymatcher__result_score(void* self);
+int32_t k_fuzzymatcher__result_score(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html#score-var)
 ///
@@ -59,9 +59,9 @@ void k_fuzzymatcher__result_set_score(void* self, int score);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html#matched-var)
 ///
-/// @param self KFuzzyMatcher__Result*
+/// @param self const KFuzzyMatcher__Result*
 ///
-bool k_fuzzymatcher__result_matched(void* self);
+bool k_fuzzymatcher__result_matched(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-result.html#matched-var)
 ///
@@ -88,13 +88,13 @@ KFuzzyMatcher__Range* k_fuzzymatcher__range_new();
 ///
 /// @param param1 KFuzzyMatcher__Range*
 ///
-KFuzzyMatcher__Range* k_fuzzymatcher__range_new2(void* param1);
+KFuzzyMatcher__Range* k_fuzzymatcher__range_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-range.html#start-var)
 ///
-/// @param self KFuzzyMatcher__Range*
+/// @param self const KFuzzyMatcher__Range*
 ///
-int32_t k_fuzzymatcher__range_start(void* self);
+int32_t k_fuzzymatcher__range_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-range.html#start-var)
 ///
@@ -105,9 +105,9 @@ void k_fuzzymatcher__range_set_start(void* self, int start);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-range.html#length-var)
 ///
-/// @param self KFuzzyMatcher__Range*
+/// @param self const KFuzzyMatcher__Range*
 ///
-int32_t k_fuzzymatcher__range_length(void* self);
+int32_t k_fuzzymatcher__range_length(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher-range.html#length-var)
 ///

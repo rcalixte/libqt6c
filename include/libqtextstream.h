@@ -48,11 +48,11 @@ void q_textstream_set_encoding(void* self, int32_t encoding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#encoding)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
 /// @return enum QStringConverter__Encoding
 ///
-int32_t q_textstream_encoding(void* self);
+int32_t q_textstream_encoding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setAutoDetectUnicode)
 ///
@@ -63,9 +63,9 @@ void q_textstream_set_auto_detect_unicode(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#autoDetectUnicode)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-bool q_textstream_auto_detect_unicode(void* self);
+bool q_textstream_auto_detect_unicode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setGenerateByteOrderMark)
 ///
@@ -76,22 +76,22 @@ void q_textstream_set_generate_byte_order_mark(void* self, bool generate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#generateByteOrderMark)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-bool q_textstream_generate_byte_order_mark(void* self);
+bool q_textstream_generate_byte_order_mark(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setLocale)
 ///
 /// @param self QTextStream*
 /// @param locale QLocale*
 ///
-void q_textstream_set_locale(void* self, void* locale);
+void q_textstream_set_locale(void* self, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#locale)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-QLocale* q_textstream_locale(void* self);
+QLocale* q_textstream_locale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setDevice)
 ///
@@ -102,25 +102,25 @@ void q_textstream_set_device(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#device)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-QIODevice* q_textstream_device(void* self);
+QIODevice* q_textstream_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#string)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-const char* q_textstream_string(void* self);
+const char* q_textstream_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#status)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
 /// @return enum QTextStream__Status
 ///
-int32_t q_textstream_status(void* self);
+int32_t q_textstream_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setStatus)
 ///
@@ -137,9 +137,9 @@ void q_textstream_reset_status(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#atEnd)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-bool q_textstream_at_end(void* self);
+bool q_textstream_at_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#reset)
 ///
@@ -162,9 +162,9 @@ bool q_textstream_seek(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#pos)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-int64_t q_textstream_pos(void* self);
+int64_t q_textstream_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#skipWhiteSpace)
 ///
@@ -206,11 +206,11 @@ void q_textstream_set_field_alignment(void* self, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#fieldAlignment)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
 /// @return enum QTextStream__FieldAlignment
 ///
-int32_t q_textstream_field_alignment(void* self);
+int32_t q_textstream_field_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setPadChar)
 ///
@@ -221,9 +221,9 @@ void q_textstream_set_pad_char(void* self, void* ch);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#padChar)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-QChar* q_textstream_pad_char(void* self);
+QChar* q_textstream_pad_char(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setFieldWidth)
 ///
@@ -234,9 +234,9 @@ void q_textstream_set_field_width(void* self, int width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#fieldWidth)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-int32_t q_textstream_field_width(void* self);
+int32_t q_textstream_field_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setNumberFlags)
 ///
@@ -247,11 +247,11 @@ void q_textstream_set_number_flags(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#numberFlags)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
 /// @return flag of enum QTextStream__NumberFlag
 ///
-int32_t q_textstream_number_flags(void* self);
+int32_t q_textstream_number_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setIntegerBase)
 ///
@@ -262,9 +262,9 @@ void q_textstream_set_integer_base(void* self, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#integerBase)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-int32_t q_textstream_integer_base(void* self);
+int32_t q_textstream_integer_base(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setRealNumberNotation)
 ///
@@ -275,11 +275,11 @@ void q_textstream_set_real_number_notation(void* self, int32_t notation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#realNumberNotation)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
 /// @return enum QTextStream__RealNumberNotation
 ///
-int32_t q_textstream_real_number_notation(void* self);
+int32_t q_textstream_real_number_notation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setRealNumberPrecision)
 ///
@@ -290,9 +290,9 @@ void q_textstream_set_real_number_precision(void* self, int precision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#realNumberPrecision)
 ///
-/// @param self QTextStream*
+/// @param self const QTextStream*
 ///
-int32_t q_textstream_real_number_precision(void* self);
+int32_t q_textstream_real_number_precision(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///

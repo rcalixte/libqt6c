@@ -7,11 +7,11 @@
 #include "libqdbuspendingcall.hpp"
 #include "libqdbuspendingcall.h"
 
-QDBusPendingCall* q_dbuspendingcall_new(void* other) {
+QDBusPendingCall* q_dbuspendingcall_new(const void* other) {
     return QDBusPendingCall_New((QDBusPendingCall*)other);
 }
 
-void q_dbuspendingcall_operator_assign(void* self, void* other) {
+void q_dbuspendingcall_operator_assign(void* self, const void* other) {
     QDBusPendingCall_OperatorAssign((QDBusPendingCall*)self, (QDBusPendingCall*)other);
 }
 
@@ -19,7 +19,7 @@ void q_dbuspendingcall_swap(void* self, void* other) {
     QDBusPendingCall_Swap((QDBusPendingCall*)self, (QDBusPendingCall*)other);
 }
 
-bool q_dbuspendingcall_is_finished(void* self) {
+bool q_dbuspendingcall_is_finished(const void* self) {
     return QDBusPendingCall_IsFinished((QDBusPendingCall*)self);
 }
 
@@ -27,27 +27,27 @@ void q_dbuspendingcall_wait_for_finished(void* self) {
     QDBusPendingCall_WaitForFinished((QDBusPendingCall*)self);
 }
 
-bool q_dbuspendingcall_is_error(void* self) {
+bool q_dbuspendingcall_is_error(const void* self) {
     return QDBusPendingCall_IsError((QDBusPendingCall*)self);
 }
 
-bool q_dbuspendingcall_is_valid(void* self) {
+bool q_dbuspendingcall_is_valid(const void* self) {
     return QDBusPendingCall_IsValid((QDBusPendingCall*)self);
 }
 
-QDBusError* q_dbuspendingcall_error(void* self) {
+QDBusError* q_dbuspendingcall_error(const void* self) {
     return QDBusPendingCall_Error((QDBusPendingCall*)self);
 }
 
-QDBusMessage* q_dbuspendingcall_reply(void* self) {
+QDBusMessage* q_dbuspendingcall_reply(const void* self) {
     return QDBusPendingCall_Reply((QDBusPendingCall*)self);
 }
 
-QDBusPendingCall* q_dbuspendingcall_from_error(void* error) {
+QDBusPendingCall* q_dbuspendingcall_from_error(const void* error) {
     return QDBusPendingCall_FromError((QDBusError*)error);
 }
 
-QDBusPendingCall* q_dbuspendingcall_from_completed_call(void* message) {
+QDBusPendingCall* q_dbuspendingcall_from_completed_call(const void* message) {
     return QDBusPendingCall_FromCompletedCall((QDBusMessage*)message);
 }
 
@@ -55,11 +55,11 @@ void q_dbuspendingcall_delete(void* self) {
     QDBusPendingCall_Delete((QDBusPendingCall*)(self));
 }
 
-QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new(void* call) {
+QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new(const void* call) {
     return QDBusPendingCallWatcher_New((QDBusPendingCall*)call);
 }
 
-QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(void* call, void* parent) {
+QDBusPendingCallWatcher* q_dbuspendingcallwatcher_new2(const void* call, void* parent) {
     return QDBusPendingCallWatcher_New2((QDBusPendingCall*)call, (QObject*)parent);
 }
 
@@ -67,15 +67,15 @@ QDBusPendingCall* q_dbuspendingcallwatcher_as_q_d_bus_pending_call(void* self) {
     return QDBusPendingCallWatcher_AsQDBusPendingCall((QDBusPendingCallWatcher*)self);
 }
 
-const QMetaObject* q_dbuspendingcallwatcher_meta_object(void* self) {
+const QMetaObject* q_dbuspendingcallwatcher_meta_object(const void* self) {
     return QDBusPendingCallWatcher_MetaObject((QDBusPendingCallWatcher*)self);
 }
 
-void q_dbuspendingcallwatcher_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_dbuspendingcallwatcher_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QDBusPendingCallWatcher_OnMetaObject((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_dbuspendingcallwatcher_super_meta_object(void* self) {
+const QMetaObject* q_dbuspendingcallwatcher_super_meta_object(const void* self) {
     return QDBusPendingCallWatcher_SuperMetaObject((QDBusPendingCallWatcher*)self);
 }
 
@@ -144,7 +144,7 @@ void q_dbuspendingcallwatcher_on_finished1(void* self, void (*callback)(void*, v
     QDBusPendingCallWatcher_Connect_Finished1((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
-const char* q_dbuspendingcallwatcher_object_name(void* self) {
+const char* q_dbuspendingcallwatcher_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -155,19 +155,19 @@ void q_dbuspendingcallwatcher_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_dbuspendingcallwatcher_is_widget_type(void* self) {
+bool q_dbuspendingcallwatcher_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_dbuspendingcallwatcher_is_window_type(void* self) {
+bool q_dbuspendingcallwatcher_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_dbuspendingcallwatcher_is_quick_item_type(void* self) {
+bool q_dbuspendingcallwatcher_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_dbuspendingcallwatcher_signals_blocked(void* self) {
+bool q_dbuspendingcallwatcher_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -175,7 +175,7 @@ bool q_dbuspendingcallwatcher_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_dbuspendingcallwatcher_thread(void* self) {
+QThread* q_dbuspendingcallwatcher_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -199,7 +199,7 @@ void q_dbuspendingcallwatcher_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_dbuspendingcallwatcher_children(void* self) {
+libqt_list /* of QObject* */ q_dbuspendingcallwatcher_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -216,55 +216,55 @@ void q_dbuspendingcallwatcher_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_dbuspendingcallwatcher_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_dbuspendingcallwatcher_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_dbuspendingcallwatcher_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_dbuspendingcallwatcher_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_dbuspendingcallwatcher_disconnect3(void* self) {
+bool q_dbuspendingcallwatcher_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_dbuspendingcallwatcher_disconnect4(void* self, void* receiver) {
+bool q_dbuspendingcallwatcher_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_dbuspendingcallwatcher_disconnect5(void* param1) {
+bool q_dbuspendingcallwatcher_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_dbuspendingcallwatcher_dump_object_tree(void* self) {
+void q_dbuspendingcallwatcher_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_dbuspendingcallwatcher_dump_object_info(void* self) {
+void q_dbuspendingcallwatcher_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_dbuspendingcallwatcher_set_property(void* self, const char* name, void* value) {
+bool q_dbuspendingcallwatcher_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_dbuspendingcallwatcher_property(void* self, const char* name) {
+QVariant* q_dbuspendingcallwatcher_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_dbuspendingcallwatcher_dynamic_property_names(void* self) {
+const char** q_dbuspendingcallwatcher_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -285,7 +285,7 @@ QBindingStorage* q_dbuspendingcallwatcher_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_dbuspendingcallwatcher_binding_storage2(void* self) {
+const QBindingStorage* q_dbuspendingcallwatcher_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -297,11 +297,11 @@ void q_dbuspendingcallwatcher_on_destroyed(void* self, void (*callback)(void*)) 
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_dbuspendingcallwatcher_parent(void* self) {
+QObject* q_dbuspendingcallwatcher_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_dbuspendingcallwatcher_inherits(void* self, const char* classname) {
+bool q_dbuspendingcallwatcher_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -317,31 +317,31 @@ int32_t q_dbuspendingcallwatcher_start_timer23(void* self, int64_t time, int32_t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_dbuspendingcallwatcher_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_dbuspendingcallwatcher_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_dbuspendingcallwatcher_disconnect1(void* self, const char* signal) {
+bool q_dbuspendingcallwatcher_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_dbuspendingcallwatcher_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_dbuspendingcallwatcher_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_dbuspendingcallwatcher_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_dbuspendingcallwatcher_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_dbuspendingcallwatcher_disconnect23(void* self, void* receiver, const char* member) {
+bool q_dbuspendingcallwatcher_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -353,7 +353,7 @@ void q_dbuspendingcallwatcher_on_destroyed1(void* self, void (*callback)(void*, 
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_dbuspendingcallwatcher_operator_assign(void* self, void* other) {
+void q_dbuspendingcallwatcher_operator_assign(void* self, const void* other) {
     QDBusPendingCall_OperatorAssign(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self), (QDBusPendingCall*)other);
 }
 
@@ -361,31 +361,31 @@ void q_dbuspendingcallwatcher_swap(void* self, void* other) {
     QDBusPendingCall_Swap(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self), (QDBusPendingCall*)other);
 }
 
-bool q_dbuspendingcallwatcher_is_finished(void* self) {
+bool q_dbuspendingcallwatcher_is_finished(const void* self) {
     return QDBusPendingCall_IsFinished(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
-bool q_dbuspendingcallwatcher_is_error(void* self) {
+bool q_dbuspendingcallwatcher_is_error(const void* self) {
     return QDBusPendingCall_IsError(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
-bool q_dbuspendingcallwatcher_is_valid(void* self) {
+bool q_dbuspendingcallwatcher_is_valid(const void* self) {
     return QDBusPendingCall_IsValid(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
-QDBusError* q_dbuspendingcallwatcher_error(void* self) {
+QDBusError* q_dbuspendingcallwatcher_error(const void* self) {
     return QDBusPendingCall_Error(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
-QDBusMessage* q_dbuspendingcallwatcher_reply(void* self) {
+QDBusMessage* q_dbuspendingcallwatcher_reply(const void* self) {
     return QDBusPendingCall_Reply(q_dbuspendingcallwatcher_as_q_d_bus_pending_call(self));
 }
 
-QDBusPendingCall* q_dbuspendingcallwatcher_from_error(void* error) {
+QDBusPendingCall* q_dbuspendingcallwatcher_from_error(const void* error) {
     return QDBusPendingCall_FromError((QDBusError*)error);
 }
 
-QDBusPendingCall* q_dbuspendingcallwatcher_from_completed_call(void* message) {
+QDBusPendingCall* q_dbuspendingcallwatcher_from_completed_call(const void* message) {
     return QDBusPendingCall_FromCompletedCall((QDBusMessage*)message);
 }
 
@@ -449,76 +449,44 @@ void q_dbuspendingcallwatcher_on_custom_event(void* self, void (*callback)(void*
     QDBusPendingCallWatcher_OnCustomEvent((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
-void q_dbuspendingcallwatcher_connect_notify(void* self, void* signal) {
+void q_dbuspendingcallwatcher_connect_notify(void* self, const void* signal) {
     QDBusPendingCallWatcher_ConnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_dbuspendingcallwatcher_super_connect_notify(void* self, void* signal) {
+void q_dbuspendingcallwatcher_super_connect_notify(void* self, const void* signal) {
     QDBusPendingCallWatcher_SuperConnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_dbuspendingcallwatcher_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_dbuspendingcallwatcher_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QDBusPendingCallWatcher_OnConnectNotify((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
-void q_dbuspendingcallwatcher_disconnect_notify(void* self, void* signal) {
+void q_dbuspendingcallwatcher_disconnect_notify(void* self, const void* signal) {
     QDBusPendingCallWatcher_DisconnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_dbuspendingcallwatcher_super_disconnect_notify(void* self, void* signal) {
+void q_dbuspendingcallwatcher_super_disconnect_notify(void* self, const void* signal) {
     QDBusPendingCallWatcher_SuperDisconnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_dbuspendingcallwatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_dbuspendingcallwatcher_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QDBusPendingCallWatcher_OnDisconnectNotify((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
-QObject* q_dbuspendingcallwatcher_sender(void* self) {
+QObject* q_dbuspendingcallwatcher_sender(const void* self) {
     return QDBusPendingCallWatcher_Sender((QDBusPendingCallWatcher*)self);
 }
 
-QObject* q_dbuspendingcallwatcher_super_sender(void* self) {
-    return QDBusPendingCallWatcher_SuperSender((QDBusPendingCallWatcher*)self);
-}
-
-void q_dbuspendingcallwatcher_on_sender(void* self, QObject* (*callback)()) {
-    QDBusPendingCallWatcher_OnSender((QDBusPendingCallWatcher*)self, (intptr_t)callback);
-}
-
-int32_t q_dbuspendingcallwatcher_sender_signal_index(void* self) {
+int32_t q_dbuspendingcallwatcher_sender_signal_index(const void* self) {
     return QDBusPendingCallWatcher_SenderSignalIndex((QDBusPendingCallWatcher*)self);
 }
 
-int32_t q_dbuspendingcallwatcher_super_sender_signal_index(void* self) {
-    return QDBusPendingCallWatcher_SuperSenderSignalIndex((QDBusPendingCallWatcher*)self);
-}
-
-void q_dbuspendingcallwatcher_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QDBusPendingCallWatcher_OnSenderSignalIndex((QDBusPendingCallWatcher*)self, (intptr_t)callback);
-}
-
-int32_t q_dbuspendingcallwatcher_receivers(void* self, const char* signal) {
+int32_t q_dbuspendingcallwatcher_receivers(const void* self, const char* signal) {
     return QDBusPendingCallWatcher_Receivers((QDBusPendingCallWatcher*)self, signal);
 }
 
-int32_t q_dbuspendingcallwatcher_super_receivers(void* self, const char* signal) {
-    return QDBusPendingCallWatcher_SuperReceivers((QDBusPendingCallWatcher*)self, signal);
-}
-
-void q_dbuspendingcallwatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QDBusPendingCallWatcher_OnReceivers((QDBusPendingCallWatcher*)self, (intptr_t)callback);
-}
-
-bool q_dbuspendingcallwatcher_is_signal_connected(void* self, void* signal) {
+bool q_dbuspendingcallwatcher_is_signal_connected(const void* self, const void* signal) {
     return QDBusPendingCallWatcher_IsSignalConnected((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
-}
-
-bool q_dbuspendingcallwatcher_super_is_signal_connected(void* self, void* signal) {
-    return QDBusPendingCallWatcher_SuperIsSignalConnected((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
-}
-
-void q_dbuspendingcallwatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QDBusPendingCallWatcher_OnIsSignalConnected((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
 void q_dbuspendingcallwatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

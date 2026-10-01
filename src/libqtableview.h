@@ -24,26 +24,26 @@ QTableView* q_tableview_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const QMetaObject* q_tableview_meta_object(void* self);
+const QMetaObject* q_tableview_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback const QMetaObject* func()
+/// @param self const QTableView*
+/// @param callback const QMetaObject* func(const QTableView* self)
 ///
-void q_tableview_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_tableview_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const QMetaObject* q_tableview_super_meta_object(void* self);
+const QMetaObject* q_tableview_super_meta_object(const void* self);
 
 /// @param self QTableView*
 /// @param param1 const char*
@@ -125,7 +125,7 @@ void q_tableview_super_set_model(void* self, void* model);
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_set_root_index(void* self, void* index);
+void q_tableview_set_root_index(void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setRootIndex)
 ///
@@ -134,7 +134,7 @@ void q_tableview_set_root_index(void* self, void* index);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* index)
 ///
-void q_tableview_on_set_root_index(void* self, void (*callback)(void*, void*));
+void q_tableview_on_set_root_index(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setRootIndex)
 ///
@@ -143,7 +143,7 @@ void q_tableview_on_set_root_index(void* self, void (*callback)(void*, void*));
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_super_set_root_index(void* self, void* index);
+void q_tableview_super_set_root_index(void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setSelectionModel)
 ///
@@ -181,9 +181,9 @@ void q_tableview_do_items_layout(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_do_items_layout(void* self, void (*callback)());
+void q_tableview_on_do_items_layout(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#doItemsLayout)
 ///
@@ -195,15 +195,15 @@ void q_tableview_super_do_items_layout(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#horizontalHeader)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QHeaderView* q_tableview_horizontal_header(void* self);
+QHeaderView* q_tableview_horizontal_header(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#verticalHeader)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QHeaderView* q_tableview_vertical_header(void* self);
+QHeaderView* q_tableview_vertical_header(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setHorizontalHeader)
 ///
@@ -221,17 +221,17 @@ void q_tableview_set_vertical_header(void* self, void* header);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowViewportPosition)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param row int
 ///
-int32_t q_tableview_row_viewport_position(void* self, int row);
+int32_t q_tableview_row_viewport_position(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowAt)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param y int
 ///
-int32_t q_tableview_row_at(void* self, int y);
+int32_t q_tableview_row_at(const void* self, int y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setRowHeight)
 ///
@@ -243,24 +243,24 @@ void q_tableview_set_row_height(void* self, int row, int height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowHeight)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param row int
 ///
-int32_t q_tableview_row_height(void* self, int row);
+int32_t q_tableview_row_height(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnViewportPosition)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param column int
 ///
-int32_t q_tableview_column_viewport_position(void* self, int column);
+int32_t q_tableview_column_viewport_position(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnAt)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param x int
 ///
-int32_t q_tableview_column_at(void* self, int x);
+int32_t q_tableview_column_at(const void* self, int x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setColumnWidth)
 ///
@@ -272,17 +272,17 @@ void q_tableview_set_column_width(void* self, int column, int width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnWidth)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param column int
 ///
-int32_t q_tableview_column_width(void* self, int column);
+int32_t q_tableview_column_width(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#isRowHidden)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param row int
 ///
-bool q_tableview_is_row_hidden(void* self, int row);
+bool q_tableview_is_row_hidden(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setRowHidden)
 ///
@@ -294,10 +294,10 @@ void q_tableview_set_row_hidden(void* self, int row, bool hide);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#isColumnHidden)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param column int
 ///
-bool q_tableview_is_column_hidden(void* self, int column);
+bool q_tableview_is_column_hidden(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setColumnHidden)
 ///
@@ -316,23 +316,23 @@ void q_tableview_set_sorting_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#isSortingEnabled)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_sorting_enabled(void* self);
+bool q_tableview_is_sorting_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#showGrid)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_show_grid(void* self);
+bool q_tableview_show_grid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#gridStyle)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__PenStyle
 ///
-int32_t q_tableview_grid_style(void* self);
+int32_t q_tableview_grid_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setGridStyle)
 ///
@@ -350,9 +350,9 @@ void q_tableview_set_word_wrap(void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#wordWrap)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_word_wrap(void* self);
+bool q_tableview_word_wrap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setCornerButtonEnabled)
 ///
@@ -363,36 +363,36 @@ void q_tableview_set_corner_button_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#isCornerButtonEnabled)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_corner_button_enabled(void* self);
+bool q_tableview_is_corner_button_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#visualRect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-QRect* q_tableview_visual_rect(void* self, void* index);
+QRect* q_tableview_visual_rect(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#visualRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback QRect* func(QTableView* self, QModelIndex* index)
+/// @param self const QTableView*
+/// @param callback QRect* func(const QTableView* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
+void q_tableview_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#visualRect)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-QRect* q_tableview_super_visual_rect(void* self, void* index);
+QRect* q_tableview_super_visual_rect(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#scrollTo)
 ///
@@ -400,7 +400,7 @@ QRect* q_tableview_super_visual_rect(void* self, void* index);
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void q_tableview_scroll_to(void* self, void* index, int32_t hint);
+void q_tableview_scroll_to(void* self, const void* index, int32_t hint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#scrollTo)
 ///
@@ -409,7 +409,7 @@ void q_tableview_scroll_to(void* self, void* index, int32_t hint);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 ///
-void q_tableview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
+void q_tableview_on_scroll_to(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#scrollTo)
 ///
@@ -419,34 +419,34 @@ void q_tableview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void q_tableview_super_scroll_to(void* self, void* index, int32_t hint);
+void q_tableview_super_scroll_to(void* self, const void* index, int32_t hint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#indexAt)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param p QPoint*
 ///
-QModelIndex* q_tableview_index_at(void* self, void* p);
+QModelIndex* q_tableview_index_at(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#indexAt)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback QModelIndex* func(QTableView* self, QPoint* p)
+/// @param self const QTableView*
+/// @param callback QModelIndex* func(const QTableView* self, QPoint* p)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
+void q_tableview_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#indexAt)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param p QPoint*
 ///
-QModelIndex* q_tableview_super_index_at(void* self, void* p);
+QModelIndex* q_tableview_super_index_at(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setSpan)
 ///
@@ -460,19 +460,19 @@ void q_tableview_set_span(void* self, int row, int column, int rowSpan, int colu
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowSpan)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param row int
 /// @param column int
 ///
-int32_t q_tableview_row_span(void* self, int row, int column);
+int32_t q_tableview_row_span(const void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnSpan)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param row int
 /// @param column int
 ///
-int32_t q_tableview_column_span(void* self, int row, int column);
+int32_t q_tableview_column_span(const void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#clearSpans)
 ///
@@ -572,26 +572,6 @@ void q_tableview_set_show_grid(void* self, bool show);
 ///
 void q_tableview_row_moved(void* self, int row, int oldIndex, int newIndex);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowMoved)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QTableView*
-/// @param callback void func(QTableView* self, int row, int oldIndex, int newIndex)
-///
-void q_tableview_on_row_moved(void* self, void (*callback)(void*, int, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowMoved)
-///
-/// Base class method implementation
-///
-/// @param self QTableView*
-/// @param row int
-/// @param oldIndex int
-/// @param newIndex int
-///
-void q_tableview_super_row_moved(void* self, int row, int oldIndex, int newIndex);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnMoved)
 ///
 /// @param self QTableView*
@@ -600,26 +580,6 @@ void q_tableview_super_row_moved(void* self, int row, int oldIndex, int newIndex
 /// @param newIndex int
 ///
 void q_tableview_column_moved(void* self, int column, int oldIndex, int newIndex);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnMoved)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QTableView*
-/// @param callback void func(QTableView* self, int column, int oldIndex, int newIndex)
-///
-void q_tableview_on_column_moved(void* self, void (*callback)(void*, int, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnMoved)
-///
-/// Base class method implementation
-///
-/// @param self QTableView*
-/// @param column int
-/// @param oldIndex int
-/// @param newIndex int
-///
-void q_tableview_super_column_moved(void* self, int column, int oldIndex, int newIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowResized)
 ///
@@ -630,26 +590,6 @@ void q_tableview_super_column_moved(void* self, int column, int oldIndex, int ne
 ///
 void q_tableview_row_resized(void* self, int row, int oldHeight, int newHeight);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowResized)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QTableView*
-/// @param callback void func(QTableView* self, int row, int oldHeight, int newHeight)
-///
-void q_tableview_on_row_resized(void* self, void (*callback)(void*, int, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowResized)
-///
-/// Base class method implementation
-///
-/// @param self QTableView*
-/// @param row int
-/// @param oldHeight int
-/// @param newHeight int
-///
-void q_tableview_super_row_resized(void* self, int row, int oldHeight, int newHeight);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnResized)
 ///
 /// @param self QTableView*
@@ -659,26 +599,6 @@ void q_tableview_super_row_resized(void* self, int row, int oldHeight, int newHe
 ///
 void q_tableview_column_resized(void* self, int column, int oldWidth, int newWidth);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnResized)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QTableView*
-/// @param callback void func(QTableView* self, int column, int oldWidth, int newWidth)
-///
-void q_tableview_on_column_resized(void* self, void (*callback)(void*, int, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnResized)
-///
-/// Base class method implementation
-///
-/// @param self QTableView*
-/// @param column int
-/// @param oldWidth int
-/// @param newWidth int
-///
-void q_tableview_super_column_resized(void* self, int column, int oldWidth, int newWidth);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowCountChanged)
 ///
 /// @param self QTableView*
@@ -687,25 +607,6 @@ void q_tableview_super_column_resized(void* self, int column, int oldWidth, int 
 ///
 void q_tableview_row_count_changed(void* self, int oldCount, int newCount);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowCountChanged)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QTableView*
-/// @param callback void func(QTableView* self, int oldCount, int newCount)
-///
-void q_tableview_on_row_count_changed(void* self, void (*callback)(void*, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#rowCountChanged)
-///
-/// Base class method implementation
-///
-/// @param self QTableView*
-/// @param oldCount int
-/// @param newCount int
-///
-void q_tableview_super_row_count_changed(void* self, int oldCount, int newCount);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnCountChanged)
 ///
 /// @param self QTableView*
@@ -713,25 +614,6 @@ void q_tableview_super_row_count_changed(void* self, int oldCount, int newCount)
 /// @param newCount int
 ///
 void q_tableview_column_count_changed(void* self, int oldCount, int newCount);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnCountChanged)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QTableView*
-/// @param callback void func(QTableView* self, int oldCount, int newCount)
-///
-void q_tableview_on_column_count_changed(void* self, void (*callback)(void*, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#columnCountChanged)
-///
-/// Base class method implementation
-///
-/// @param self QTableView*
-/// @param oldCount int
-/// @param newCount int
-///
-void q_tableview_super_column_count_changed(void* self, int oldCount, int newCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#scrollContentsBy)
 ///
@@ -762,28 +644,28 @@ void q_tableview_super_scroll_contents_by(void* self, int dx, int dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#initViewItemOption)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param option QStyleOptionViewItem*
 ///
-void q_tableview_init_view_item_option(void* self, void* option);
+void q_tableview_init_view_item_option(const void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#initViewItemOption)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback void func(QTableView* self, QStyleOptionViewItem* option)
+/// @param self const QTableView*
+/// @param callback void func(const QTableView* self, QStyleOptionViewItem* option)
 ///
-void q_tableview_on_init_view_item_option(void* self, void (*callback)(void*, void*));
+void q_tableview_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#initViewItemOption)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param option QStyleOptionViewItem*
 ///
-void q_tableview_super_init_view_item_option(void* self, void* option);
+void q_tableview_super_init_view_item_option(const void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#paintEvent)
 ///
@@ -862,49 +744,49 @@ void q_tableview_super_drop_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#horizontalOffset)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_horizontal_offset(void* self);
+int32_t q_tableview_horizontal_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#horizontalOffset)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback int32_t func()
+/// @param self const QTableView*
+/// @param callback int32_t func(const QTableView* self)
 ///
-void q_tableview_on_horizontal_offset(void* self, int32_t (*callback)());
+void q_tableview_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#horizontalOffset)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_super_horizontal_offset(void* self);
+int32_t q_tableview_super_horizontal_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#verticalOffset)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_vertical_offset(void* self);
+int32_t q_tableview_vertical_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#verticalOffset)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback int32_t func()
+/// @param self const QTableView*
+/// @param callback int32_t func(const QTableView* self)
 ///
-void q_tableview_on_vertical_offset(void* self, int32_t (*callback)());
+void q_tableview_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#verticalOffset)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_super_vertical_offset(void* self);
+int32_t q_tableview_super_vertical_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#moveCursor)
 ///
@@ -941,7 +823,7 @@ QModelIndex* q_tableview_super_move_cursor(void* self, int32_t cursorAction, int
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void q_tableview_set_selection(void* self, void* rect, int32_t command);
+void q_tableview_set_selection(void* self, const void* rect, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setSelection)
 ///
@@ -950,7 +832,7 @@ void q_tableview_set_selection(void* self, void* rect, int32_t command);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
-void q_tableview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
+void q_tableview_on_set_selection(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#setSelection)
 ///
@@ -960,61 +842,61 @@ void q_tableview_on_set_selection(void* self, void (*callback)(void*, void*, int
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void q_tableview_super_set_selection(void* self, void* rect, int32_t command);
+void q_tableview_super_set_selection(void* self, const void* rect, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#visualRegionForSelection)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param selection QItemSelection*
 ///
-QRegion* q_tableview_visual_region_for_selection(void* self, void* selection);
+QRegion* q_tableview_visual_region_for_selection(const void* self, const void* selection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#visualRegionForSelection)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback QRegion* func(QTableView* self, QItemSelection* selection)
+/// @param self const QTableView*
+/// @param callback QRegion* func(const QTableView* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
+void q_tableview_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#visualRegionForSelection)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param selection QItemSelection*
 ///
-QRegion* q_tableview_super_visual_region_for_selection(void* self, void* selection);
+QRegion* q_tableview_super_visual_region_for_selection(const void* self, const void* selection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectedIndexes)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_tableview_selected_indexes(void* self);
+libqt_list q_tableview_selected_indexes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectedIndexes)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback libqt_list of QModelIndex* func()
+/// @param self const QTableView*
+/// @param callback libqt_list of QModelIndex* func(const QTableView* self)
 ///
-void q_tableview_on_selected_indexes(void* self, libqt_list (*callback)());
+void q_tableview_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectedIndexes)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_tableview_super_selected_indexes(void* self);
+libqt_list q_tableview_super_selected_indexes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#updateGeometries)
 ///
@@ -1027,9 +909,9 @@ void q_tableview_update_geometries(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_update_geometries(void* self, void (*callback)());
+void q_tableview_on_update_geometries(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#updateGeometries)
 ///
@@ -1041,78 +923,78 @@ void q_tableview_super_update_geometries(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#viewportSizeHint)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_viewport_size_hint(void* self);
+QSize* q_tableview_viewport_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#viewportSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback QSize* func()
+/// @param self const QTableView*
+/// @param callback QSize* func(const QTableView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_viewport_size_hint(void* self, QSize* (*callback)());
+void q_tableview_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#viewportSizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_super_viewport_size_hint(void* self);
+QSize* q_tableview_super_viewport_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#sizeHintForRow)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param row int
 ///
-int32_t q_tableview_size_hint_for_row(void* self, int row);
+int32_t q_tableview_size_hint_for_row(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#sizeHintForRow)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback int32_t func(QTableView* self, int row)
+/// @param self const QTableView*
+/// @param callback int32_t func(const QTableView* self, int row)
 ///
-void q_tableview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
+void q_tableview_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#sizeHintForRow)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param row int
 ///
-int32_t q_tableview_super_size_hint_for_row(void* self, int row);
+int32_t q_tableview_super_size_hint_for_row(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#sizeHintForColumn)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param column int
 ///
-int32_t q_tableview_size_hint_for_column(void* self, int column);
+int32_t q_tableview_size_hint_for_column(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#sizeHintForColumn)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback int32_t func(QTableView* self, int column)
+/// @param self const QTableView*
+/// @param callback int32_t func(const QTableView* self, int column)
 ///
-void q_tableview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
+void q_tableview_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#sizeHintForColumn)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param column int
 ///
-int32_t q_tableview_super_size_hint_for_column(void* self, int column);
+int32_t q_tableview_super_size_hint_for_column(const void* self, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#verticalScrollbarAction)
 ///
@@ -1166,28 +1048,28 @@ void q_tableview_super_horizontal_scrollbar_action(void* self, int action);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#isIndexHidden)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-bool q_tableview_is_index_hidden(void* self, void* index);
+bool q_tableview_is_index_hidden(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#isIndexHidden)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTableView*
-/// @param callback bool func(QTableView* self, QModelIndex* index)
+/// @param self const QTableView*
+/// @param callback bool func(const QTableView* self, QModelIndex* index)
 ///
-void q_tableview_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
+void q_tableview_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#isIndexHidden)
 ///
 /// Base class method implementation
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-bool q_tableview_super_is_index_hidden(void* self, void* index);
+bool q_tableview_super_is_index_hidden(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectionChanged)
 ///
@@ -1195,7 +1077,7 @@ bool q_tableview_super_is_index_hidden(void* self, void* index);
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void q_tableview_selection_changed(void* self, void* selected, void* deselected);
+void q_tableview_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectionChanged)
 ///
@@ -1204,7 +1086,7 @@ void q_tableview_selection_changed(void* self, void* selected, void* deselected)
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QItemSelection* selected, QItemSelection* deselected)
 ///
-void q_tableview_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
+void q_tableview_on_selection_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#selectionChanged)
 ///
@@ -1214,7 +1096,7 @@ void q_tableview_on_selection_changed(void* self, void (*callback)(void*, void*,
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void q_tableview_super_selection_changed(void* self, void* selected, void* deselected);
+void q_tableview_super_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#currentChanged)
 ///
@@ -1222,7 +1104,7 @@ void q_tableview_super_selection_changed(void* self, void* selected, void* desel
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void q_tableview_current_changed(void* self, void* current, void* previous);
+void q_tableview_current_changed(void* self, const void* current, const void* previous);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#currentChanged)
 ///
@@ -1231,7 +1113,7 @@ void q_tableview_current_changed(void* self, void* current, void* previous);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* current, QModelIndex* previous)
 ///
-void q_tableview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
+void q_tableview_on_current_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtableview.html#currentChanged)
 ///
@@ -1241,7 +1123,7 @@ void q_tableview_on_current_changed(void* self, void (*callback)(void*, void*, v
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void q_tableview_super_current_changed(void* self, void* current, void* previous);
+void q_tableview_super_current_changed(void* self, const void* current, const void* previous);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1266,17 +1148,17 @@ const char* q_tableview_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#model)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QAbstractItemModel* q_tableview_model(void* self);
+QAbstractItemModel* q_tableview_model(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionModel)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QItemSelectionModel* q_tableview_selection_model(void* self);
+QItemSelectionModel* q_tableview_selection_model(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1291,9 +1173,9 @@ void q_tableview_set_item_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QAbstractItemDelegate* q_tableview_item_delegate(void* self);
+QAbstractItemDelegate* q_tableview_item_delegate(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1308,11 +1190,11 @@ void q_tableview_set_selection_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionMode)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__SelectionMode
 ///
-int32_t q_tableview_selection_mode(void* self);
+int32_t q_tableview_selection_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1327,27 +1209,27 @@ void q_tableview_set_selection_behavior(void* self, int32_t behavior);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionBehavior)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
 ///
-int32_t q_tableview_selection_behavior(void* self);
+int32_t q_tableview_selection_behavior(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#currentIndex)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QModelIndex* q_tableview_current_index(void* self);
+QModelIndex* q_tableview_current_index(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#rootIndex)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QModelIndex* q_tableview_root_index(void* self);
+QModelIndex* q_tableview_root_index(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1362,11 +1244,11 @@ void q_tableview_set_edit_triggers(void* self, int32_t triggers);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#editTriggers)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
 ///
-int32_t q_tableview_edit_triggers(void* self);
+int32_t q_tableview_edit_triggers(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1381,11 +1263,11 @@ void q_tableview_set_vertical_scroll_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollMode)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
 ///
-int32_t q_tableview_vertical_scroll_mode(void* self);
+int32_t q_tableview_vertical_scroll_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1408,11 +1290,11 @@ void q_tableview_set_horizontal_scroll_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollMode)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
 ///
-int32_t q_tableview_horizontal_scroll_mode(void* self);
+int32_t q_tableview_horizontal_scroll_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1435,9 +1317,9 @@ void q_tableview_set_auto_scroll(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#hasAutoScroll)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_has_auto_scroll(void* self);
+bool q_tableview_has_auto_scroll(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1452,9 +1334,9 @@ void q_tableview_set_auto_scroll_margin(void* self, int margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#autoScrollMargin)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_auto_scroll_margin(void* self);
+int32_t q_tableview_auto_scroll_margin(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1469,9 +1351,9 @@ void q_tableview_set_tab_key_navigation(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#tabKeyNavigation)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_tab_key_navigation(void* self);
+bool q_tableview_tab_key_navigation(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1486,9 +1368,9 @@ void q_tableview_set_drop_indicator_shown(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#showDropIndicator)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_show_drop_indicator(void* self);
+bool q_tableview_show_drop_indicator(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1503,9 +1385,9 @@ void q_tableview_set_drag_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnabled)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_drag_enabled(void* self);
+bool q_tableview_drag_enabled(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1520,9 +1402,9 @@ void q_tableview_set_drag_drop_overwrite_mode(void* self, bool overwrite);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropOverwriteMode)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_drag_drop_overwrite_mode(void* self);
+bool q_tableview_drag_drop_overwrite_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1537,11 +1419,11 @@ void q_tableview_set_drag_drop_mode(void* self, int32_t behavior);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropMode)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__DragDropMode
 ///
-int32_t q_tableview_drag_drop_mode(void* self);
+int32_t q_tableview_drag_drop_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1556,11 +1438,11 @@ void q_tableview_set_default_drop_action(void* self, int32_t dropAction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#defaultDropAction)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__DropAction
 ///
-int32_t q_tableview_default_drop_action(void* self);
+int32_t q_tableview_default_drop_action(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1575,9 +1457,9 @@ void q_tableview_set_alternating_row_colors(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#alternatingRowColors)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_alternating_row_colors(void* self);
+bool q_tableview_alternating_row_colors(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1586,15 +1468,15 @@ bool q_tableview_alternating_row_colors(void* self);
 /// @param self QTableView*
 /// @param size QSize*
 ///
-void q_tableview_set_icon_size(void* self, void* size);
+void q_tableview_set_icon_size(void* self, const void* size);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#iconSize)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_icon_size(void* self);
+QSize* q_tableview_icon_size(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1609,20 +1491,20 @@ void q_tableview_set_text_elide_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#textElideMode)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__TextElideMode
 ///
-int32_t q_tableview_text_elide_mode(void* self);
+int32_t q_tableview_text_elide_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForIndex)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-QSize* q_tableview_size_hint_for_index(void* self, void* index);
+QSize* q_tableview_size_hint_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1631,7 +1513,7 @@ QSize* q_tableview_size_hint_for_index(void* self, void* index);
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_open_persistent_editor(void* self, void* index);
+void q_tableview_open_persistent_editor(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1640,16 +1522,16 @@ void q_tableview_open_persistent_editor(void* self, void* index);
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_close_persistent_editor(void* self, void* index);
+void q_tableview_close_persistent_editor(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#isPersistentEditorOpen)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-bool q_tableview_is_persistent_editor_open(void* self, void* index);
+bool q_tableview_is_persistent_editor_open(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1659,16 +1541,16 @@ bool q_tableview_is_persistent_editor_open(void* self, void* index);
 /// @param index QModelIndex*
 /// @param widget QWidget*
 ///
-void q_tableview_set_index_widget(void* self, void* index, void* widget);
+void q_tableview_set_index_widget(void* self, const void* index, void* widget);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#indexWidget)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-QWidget* q_tableview_index_widget(void* self, void* index);
+QWidget* q_tableview_index_widget(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1684,10 +1566,10 @@ void q_tableview_set_item_delegate_for_row(void* self, int row, void* delegate);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForRow)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param row int
 ///
-QAbstractItemDelegate* q_tableview_item_delegate_for_row(void* self, int row);
+QAbstractItemDelegate* q_tableview_item_delegate_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1703,19 +1585,19 @@ void q_tableview_set_item_delegate_for_column(void* self, int column, void* dele
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForColumn)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param column int
 ///
-QAbstractItemDelegate* q_tableview_item_delegate_for_column(void* self, int column);
+QAbstractItemDelegate* q_tableview_item_delegate_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* q_tableview_item_delegate2(void* self, void* index);
+QAbstractItemDelegate* q_tableview_item_delegate2(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1724,7 +1606,7 @@ QAbstractItemDelegate* q_tableview_item_delegate2(void* self, void* index);
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_edit(void* self, void* index);
+void q_tableview_edit(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1741,7 +1623,7 @@ void q_tableview_clear_selection(void* self);
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_set_current_index(void* self, void* index);
+void q_tableview_set_current_index(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1766,7 +1648,7 @@ void q_tableview_scroll_to_bottom(void* self);
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_update(void* self, void* index);
+void q_tableview_update(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1775,7 +1657,7 @@ void q_tableview_update(void* self, void* index);
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_pressed(void* self, void* index);
+void q_tableview_pressed(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1784,7 +1666,7 @@ void q_tableview_pressed(void* self, void* index);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* index)
 ///
-void q_tableview_on_pressed(void* self, void (*callback)(void*, void*));
+void q_tableview_on_pressed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1793,7 +1675,7 @@ void q_tableview_on_pressed(void* self, void (*callback)(void*, void*));
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_clicked(void* self, void* index);
+void q_tableview_clicked(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1802,7 +1684,7 @@ void q_tableview_clicked(void* self, void* index);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* index)
 ///
-void q_tableview_on_clicked(void* self, void (*callback)(void*, void*));
+void q_tableview_on_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1811,7 +1693,7 @@ void q_tableview_on_clicked(void* self, void (*callback)(void*, void*));
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_double_clicked(void* self, void* index);
+void q_tableview_double_clicked(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1820,7 +1702,7 @@ void q_tableview_double_clicked(void* self, void* index);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* index)
 ///
-void q_tableview_on_double_clicked(void* self, void (*callback)(void*, void*));
+void q_tableview_on_double_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1829,7 +1711,7 @@ void q_tableview_on_double_clicked(void* self, void (*callback)(void*, void*));
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_activated(void* self, void* index);
+void q_tableview_activated(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1838,7 +1720,7 @@ void q_tableview_activated(void* self, void* index);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* index)
 ///
-void q_tableview_on_activated(void* self, void (*callback)(void*, void*));
+void q_tableview_on_activated(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1847,7 +1729,7 @@ void q_tableview_on_activated(void* self, void (*callback)(void*, void*));
 /// @param self QTableView*
 /// @param index QModelIndex*
 ///
-void q_tableview_entered(void* self, void* index);
+void q_tableview_entered(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1856,7 +1738,7 @@ void q_tableview_entered(void* self, void* index);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* index)
 ///
-void q_tableview_on_entered(void* self, void (*callback)(void*, void*));
+void q_tableview_on_entered(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -1882,7 +1764,7 @@ void q_tableview_on_viewport_entered(void* self, void (*callback)(void*));
 /// @param self QTableView*
 /// @param size QSize*
 ///
-void q_tableview_icon_size_changed(void* self, void* size);
+void q_tableview_icon_size_changed(void* self, const void* size);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1891,17 +1773,17 @@ void q_tableview_icon_size_changed(void* self, void* size);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QSize* size)
 ///
-void q_tableview_on_icon_size_changed(void* self, void (*callback)(void*, void*));
+void q_tableview_on_icon_size_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBarPolicy)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t q_tableview_vertical_scroll_bar_policy(void* self);
+int32_t q_tableview_vertical_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1916,9 +1798,9 @@ void q_tableview_set_vertical_scroll_bar_policy(void* self, int32_t verticalScro
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QScrollBar* q_tableview_vertical_scroll_bar(void* self);
+QScrollBar* q_tableview_vertical_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1933,11 +1815,11 @@ void q_tableview_set_vertical_scroll_bar(void* self, void* scrollbar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBarPolicy)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t q_tableview_horizontal_scroll_bar_policy(void* self);
+int32_t q_tableview_horizontal_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1952,9 +1834,9 @@ void q_tableview_set_horizontal_scroll_bar_policy(void* self, int32_t horizontal
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QScrollBar* q_tableview_horizontal_scroll_bar(void* self);
+QScrollBar* q_tableview_horizontal_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1969,9 +1851,9 @@ void q_tableview_set_horizontal_scroll_bar(void* self, void* scrollbar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_corner_widget(void* self);
+QWidget* q_tableview_corner_widget(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2007,9 +1889,9 @@ libqt_list q_tableview_scroll_bar_widgets(void* self, int32_t alignment);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_viewport(void* self);
+QWidget* q_tableview_viewport(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2024,19 +1906,19 @@ void q_tableview_set_viewport(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_maximum_viewport_size(void* self);
+QSize* q_tableview_maximum_viewport_size(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeAdjustPolicy)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
 ///
-int32_t q_tableview_size_adjust_policy(void* self);
+int32_t q_tableview_size_adjust_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2051,9 +1933,9 @@ void q_tableview_set_size_adjust_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_frame_style(void* self);
+int32_t q_tableview_frame_style(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2068,19 +1950,19 @@ void q_tableview_set_frame_style(void* self, int frameStyle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_frame_width(void* self);
+int32_t q_tableview_frame_width(const void* self);
 
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QFrame__Shape
 ///
-int32_t q_tableview_frame_shape(void* self);
+int32_t q_tableview_frame_shape(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2095,11 +1977,11 @@ void q_tableview_set_frame_shape(void* self, int32_t frameShape);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QFrame__Shadow
 ///
-int32_t q_tableview_frame_shadow(void* self);
+int32_t q_tableview_frame_shadow(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2114,9 +1996,9 @@ void q_tableview_set_frame_shadow(void* self, int32_t frameShadow);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_line_width(void* self);
+int32_t q_tableview_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2131,9 +2013,9 @@ void q_tableview_set_line_width(void* self, int lineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_mid_line_width(void* self);
+int32_t q_tableview_mid_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2148,9 +2030,9 @@ void q_tableview_set_mid_line_width(void* self, int midLineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRect* q_tableview_frame_rect(void* self);
+QRect* q_tableview_frame_rect(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2159,7 +2041,7 @@ QRect* q_tableview_frame_rect(void* self);
 /// @param self QTableView*
 /// @param frameRect QRect*
 ///
-void q_tableview_set_frame_rect(void* self, void* frameRect);
+void q_tableview_set_frame_rect(void* self, const void* frameRect);
 
 /// Inherited from QWidget
 ///
@@ -2181,9 +2063,9 @@ QTableView* q_tableview_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-uintptr_t q_tableview_win_id(void* self);
+uintptr_t q_tableview_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2197,25 +2079,25 @@ void q_tableview_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-uintptr_t q_tableview_internal_win_id(void* self);
+uintptr_t q_tableview_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-uintptr_t q_tableview_effective_win_id(void* self);
+uintptr_t q_tableview_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QStyle* q_tableview_style(void* self);
+QStyle* q_tableview_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2230,35 +2112,35 @@ void q_tableview_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_top_level(void* self);
+bool q_tableview_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_window(void* self);
+bool q_tableview_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_modal(void* self);
+bool q_tableview_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_tableview_window_modality(void* self);
+int32_t q_tableview_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2273,18 +2155,18 @@ void q_tableview_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_enabled(void* self);
+bool q_tableview_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QWidget*
 ///
-bool q_tableview_is_enabled_to(void* self, void* param1);
+bool q_tableview_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2317,153 +2199,153 @@ void q_tableview_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRect* q_tableview_frame_geometry(void* self);
+QRect* q_tableview_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const QRect* q_tableview_geometry(void* self);
+const QRect* q_tableview_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRect* q_tableview_normal_geometry(void* self);
+QRect* q_tableview_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_x(void* self);
+int32_t q_tableview_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_y(void* self);
+int32_t q_tableview_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QPoint* q_tableview_pos(void* self);
+QPoint* q_tableview_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_frame_size(void* self);
+QSize* q_tableview_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_size(void* self);
+QSize* q_tableview_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_width(void* self);
+int32_t q_tableview_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_height(void* self);
+int32_t q_tableview_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRect* q_tableview_rect(void* self);
+QRect* q_tableview_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRect* q_tableview_children_rect(void* self);
+QRect* q_tableview_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRegion* q_tableview_children_region(void* self);
+QRegion* q_tableview_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_minimum_size(void* self);
+QSize* q_tableview_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_maximum_size(void* self);
+QSize* q_tableview_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_minimum_width(void* self);
+int32_t q_tableview_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_minimum_height(void* self);
+int32_t q_tableview_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_maximum_width(void* self);
+int32_t q_tableview_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_maximum_height(void* self);
+int32_t q_tableview_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2472,7 +2354,7 @@ int32_t q_tableview_maximum_height(void* self);
 /// @param self QTableView*
 /// @param minimumSize QSize*
 ///
-void q_tableview_set_minimum_size(void* self, void* minimumSize);
+void q_tableview_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -2491,7 +2373,7 @@ void q_tableview_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QTableView*
 /// @param maximumSize QSize*
 ///
-void q_tableview_set_maximum_size(void* self, void* maximumSize);
+void q_tableview_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -2543,9 +2425,9 @@ void q_tableview_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_size_increment(void* self);
+QSize* q_tableview_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2554,7 +2436,7 @@ QSize* q_tableview_size_increment(void* self);
 /// @param self QTableView*
 /// @param sizeIncrement QSize*
 ///
-void q_tableview_set_size_increment(void* self, void* sizeIncrement);
+void q_tableview_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -2570,9 +2452,9 @@ void q_tableview_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_base_size(void* self);
+QSize* q_tableview_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2581,7 +2463,7 @@ QSize* q_tableview_base_size(void* self);
 /// @param self QTableView*
 /// @param baseSize QSize*
 ///
-void q_tableview_set_base_size(void* self, void* baseSize);
+void q_tableview_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -2600,7 +2482,7 @@ void q_tableview_set_base_size2(void* self, int basew, int baseh);
 /// @param self QTableView*
 /// @param fixedSize QSize*
 ///
-void q_tableview_set_fixed_size(void* self, void* fixedSize);
+void q_tableview_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -2634,145 +2516,145 @@ void q_tableview_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QPointF*
 ///
-QPointF* q_tableview_map_to_global(void* self, void* param1);
+QPointF* q_tableview_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QPoint*
 ///
-QPoint* q_tableview_map_to_global2(void* self, void* param1);
+QPoint* q_tableview_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QPointF*
 ///
-QPointF* q_tableview_map_from_global(void* self, void* param1);
+QPointF* q_tableview_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QPoint*
 ///
-QPoint* q_tableview_map_from_global2(void* self, void* param1);
+QPoint* q_tableview_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QPointF*
 ///
-QPointF* q_tableview_map_to_parent(void* self, void* param1);
+QPointF* q_tableview_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QPoint*
 ///
-QPoint* q_tableview_map_to_parent2(void* self, void* param1);
+QPoint* q_tableview_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QPointF*
 ///
-QPointF* q_tableview_map_from_parent(void* self, void* param1);
+QPointF* q_tableview_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QPoint*
 ///
-QPoint* q_tableview_map_from_parent2(void* self, void* param1);
+QPoint* q_tableview_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_tableview_map_to(void* self, void* param1, void* param2);
+QPointF* q_tableview_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_tableview_map_to2(void* self, void* param1, void* param2);
+QPoint* q_tableview_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_tableview_map_from(void* self, void* param1, void* param2);
+QPointF* q_tableview_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_tableview_map_from2(void* self, void* param1, void* param2);
+QPoint* q_tableview_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_window(void* self);
+QWidget* q_tableview_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_native_parent_widget(void* self);
+QWidget* q_tableview_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_top_level_widget(void* self);
+QWidget* q_tableview_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const QPalette* q_tableview_palette(void* self);
+const QPalette* q_tableview_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2781,7 +2663,7 @@ const QPalette* q_tableview_palette(void* self);
 /// @param self QTableView*
 /// @param palette QPalette*
 ///
-void q_tableview_set_palette(void* self, void* palette);
+void q_tableview_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -2796,11 +2678,11 @@ void q_tableview_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_tableview_background_role(void* self);
+int32_t q_tableview_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2815,19 +2697,19 @@ void q_tableview_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_tableview_foreground_role(void* self);
+int32_t q_tableview_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const QFont* q_tableview_font(void* self);
+const QFont* q_tableview_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2836,31 +2718,31 @@ const QFont* q_tableview_font(void* self);
 /// @param self QTableView*
 /// @param font QFont*
 ///
-void q_tableview_set_font(void* self, void* font);
+void q_tableview_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QFontMetrics* q_tableview_font_metrics(void* self);
+QFontMetrics* q_tableview_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QFontInfo* q_tableview_font_info(void* self);
+QFontInfo* q_tableview_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QCursor* q_tableview_cursor(void* self);
+QCursor* q_tableview_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2869,7 +2751,7 @@ QCursor* q_tableview_cursor(void* self);
 /// @param self QTableView*
 /// @param cursor QCursor*
 ///
-void q_tableview_set_cursor(void* self, void* cursor);
+void q_tableview_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -2892,17 +2774,17 @@ void q_tableview_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_has_mouse_tracking(void* self);
+bool q_tableview_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_under_mouse(void* self);
+bool q_tableview_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2917,9 +2799,9 @@ void q_tableview_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_has_tablet_tracking(void* self);
+bool q_tableview_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2928,7 +2810,7 @@ bool q_tableview_has_tablet_tracking(void* self);
 /// @param self QTableView*
 /// @param mask QBitmap*
 ///
-void q_tableview_set_mask(void* self, void* mask);
+void q_tableview_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -2937,15 +2819,15 @@ void q_tableview_set_mask(void* self, void* mask);
 /// @param self QTableView*
 /// @param mask QRegion*
 ///
-void q_tableview_set_mask2(void* self, void* mask);
+void q_tableview_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRegion* q_tableview_mask(void* self);
+QRegion* q_tableview_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2985,9 +2867,9 @@ QPixmap* q_tableview_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QGraphicsEffect* q_tableview_graphics_effect(void* self);
+QGraphicsEffect* q_tableview_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3040,9 +2922,9 @@ void q_tableview_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_style_sheet(void* self);
+const char* q_tableview_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3050,9 +2932,9 @@ const char* q_tableview_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_window_title(void* self);
+const char* q_tableview_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3061,15 +2943,15 @@ const char* q_tableview_window_title(void* self);
 /// @param self QTableView*
 /// @param icon QIcon*
 ///
-void q_tableview_set_window_icon(void* self, void* icon);
+void q_tableview_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QIcon* q_tableview_window_icon(void* self);
+QIcon* q_tableview_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3086,9 +2968,9 @@ void q_tableview_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_window_icon_text(void* self);
+const char* q_tableview_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3105,9 +2987,9 @@ void q_tableview_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_window_role(void* self);
+const char* q_tableview_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3124,9 +3006,9 @@ void q_tableview_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_window_file_path(void* self);
+const char* q_tableview_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3141,17 +3023,17 @@ void q_tableview_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-double q_tableview_window_opacity(void* self);
+double q_tableview_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_window_modified(void* self);
+bool q_tableview_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3168,9 +3050,9 @@ void q_tableview_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_tool_tip(void* self);
+const char* q_tableview_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3185,9 +3067,9 @@ void q_tableview_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_tool_tip_duration(void* self);
+int32_t q_tableview_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3204,9 +3086,9 @@ void q_tableview_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_status_tip(void* self);
+const char* q_tableview_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3223,9 +3105,9 @@ void q_tableview_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_whats_this(void* self);
+const char* q_tableview_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3233,9 +3115,9 @@ const char* q_tableview_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_accessible_name(void* self);
+const char* q_tableview_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3252,9 +3134,9 @@ void q_tableview_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_accessible_description(void* self);
+const char* q_tableview_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3278,11 +3160,11 @@ void q_tableview_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_tableview_layout_direction(void* self);
+int32_t q_tableview_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3299,15 +3181,15 @@ void q_tableview_unset_layout_direction(void* self);
 /// @param self QTableView*
 /// @param locale QLocale*
 ///
-void q_tableview_set_locale(void* self, void* locale);
+void q_tableview_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QLocale* q_tableview_locale(void* self);
+QLocale* q_tableview_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3321,17 +3203,17 @@ void q_tableview_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_right_to_left(void* self);
+bool q_tableview_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_left_to_right(void* self);
+bool q_tableview_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3345,9 +3227,9 @@ void q_tableview_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_active_window(void* self);
+bool q_tableview_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3378,11 +3260,11 @@ void q_tableview_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_tableview_focus_policy(void* self);
+int32_t q_tableview_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3397,9 +3279,9 @@ void q_tableview_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_has_focus(void* self);
+bool q_tableview_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3423,19 +3305,19 @@ void q_tableview_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_focus_proxy(void* self);
+QWidget* q_tableview_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_tableview_context_menu_policy(void* self);
+int32_t q_tableview_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3461,7 +3343,7 @@ void q_tableview_grab_mouse(void* self);
 /// @param self QTableView*
 /// @param param1 QCursor*
 ///
-void q_tableview_grab_mouse2(void* self, void* param1);
+void q_tableview_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3494,7 +3376,7 @@ void q_tableview_release_keyboard(void* self);
 /// @param self QTableView*
 /// @param key QKeySequence*
 ///
-int32_t q_tableview_grab_shortcut(void* self, void* key);
+int32_t q_tableview_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -3539,9 +3421,9 @@ QWidget* q_tableview_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_updates_enabled(void* self);
+bool q_tableview_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3556,9 +3438,9 @@ void q_tableview_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QGraphicsProxyWidget* q_tableview_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_tableview_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3587,7 +3469,7 @@ void q_tableview_update2(void* self, int x, int y, int w, int h);
 /// @param self QTableView*
 /// @param param1 QRect*
 ///
-void q_tableview_update3(void* self, void* param1);
+void q_tableview_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3596,7 +3478,7 @@ void q_tableview_update3(void* self, void* param1);
 /// @param self QTableView*
 /// @param param1 QRegion*
 ///
-void q_tableview_update4(void* self, void* param1);
+void q_tableview_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3617,7 +3499,7 @@ void q_tableview_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QTableView*
 /// @param param1 QRect*
 ///
-void q_tableview_repaint3(void* self, void* param1);
+void q_tableview_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3626,7 +3508,7 @@ void q_tableview_repaint3(void* self, void* param1);
 /// @param self QTableView*
 /// @param param1 QRegion*
 ///
-void q_tableview_repaint4(void* self, void* param1);
+void q_tableview_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3735,7 +3617,7 @@ void q_tableview_move(void* self, int x, int y);
 /// @param self QTableView*
 /// @param param1 QPoint*
 ///
-void q_tableview_move2(void* self, void* param1);
+void q_tableview_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3754,7 +3636,7 @@ void q_tableview_resize(void* self, int w, int h);
 /// @param self QTableView*
 /// @param param1 QSize*
 ///
-void q_tableview_resize2(void* self, void* param1);
+void q_tableview_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3775,7 +3657,7 @@ void q_tableview_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QTableView*
 /// @param geometry QRect*
 ///
-void q_tableview_set_geometry2(void* self, void* geometry);
+void q_tableview_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -3783,9 +3665,9 @@ void q_tableview_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-char* q_tableview_save_geometry(void* self);
+char* q_tableview_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3808,60 +3690,60 @@ void q_tableview_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_visible(void* self);
+bool q_tableview_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 QWidget*
 ///
-bool q_tableview_is_visible_to(void* self, void* param1);
+bool q_tableview_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_hidden(void* self);
+bool q_tableview_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_minimized(void* self);
+bool q_tableview_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_maximized(void* self);
+bool q_tableview_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_full_screen(void* self);
+bool q_tableview_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_tableview_window_state(void* self);
+int32_t q_tableview_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3885,9 +3767,9 @@ void q_tableview_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSizePolicy* q_tableview_size_policy(void* self);
+QSizePolicy* q_tableview_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3912,9 +3794,9 @@ void q_tableview_set_size_policy2(void* self, int32_t horizontal, int32_t vertic
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRegion* q_tableview_visible_region(void* self);
+QRegion* q_tableview_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3935,31 +3817,31 @@ void q_tableview_set_contents_margins(void* self, int left, int top, int right, 
 /// @param self QTableView*
 /// @param margins QMargins*
 ///
-void q_tableview_set_contents_margins2(void* self, void* margins);
+void q_tableview_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QMargins* q_tableview_contents_margins(void* self);
+QMargins* q_tableview_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QRect* q_tableview_contents_rect(void* self);
+QRect* q_tableview_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QLayout* q_tableview_layout(void* self);
+QLayout* q_tableview_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4016,39 +3898,39 @@ void q_tableview_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_tableview_scroll2(void* self, int dx, int dy, void* param3);
+void q_tableview_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_focus_widget(void* self);
+QWidget* q_tableview_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_next_in_focus_chain(void* self);
+QWidget* q_tableview_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_previous_in_focus_chain(void* self);
+QWidget* q_tableview_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_accept_drops(void* self);
+bool q_tableview_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4110,11 +3992,11 @@ void q_tableview_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_tableview_actions(void* self);
+libqt_list q_tableview_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4133,7 +4015,7 @@ QAction* q_tableview_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_tableview_add_action3(void* self, void* icon, const char* text);
+QAction* q_tableview_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -4143,7 +4025,7 @@ QAction* q_tableview_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_tableview_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_tableview_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -4154,15 +4036,15 @@ QAction* q_tableview_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_tableview_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_tableview_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWidget* q_tableview_parent_widget(void* self);
+QWidget* q_tableview_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4177,11 +4059,11 @@ void q_tableview_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_tableview_window_flags(void* self);
+int32_t q_tableview_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4205,11 +4087,11 @@ void q_tableview_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_tableview_window_type(void* self);
+int32_t q_tableview_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4223,29 +4105,29 @@ QWidget* q_tableview_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_tableview_child_at(void* self, int x, int y);
+QWidget* q_tableview_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param p QPoint*
 ///
-QWidget* q_tableview_child_at2(void* self, void* p);
+QWidget* q_tableview_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param p QPointF*
 ///
-QWidget* q_tableview_child_at3(void* self, void* p);
+QWidget* q_tableview_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -4260,35 +4142,35 @@ void q_tableview_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_tableview_test_attribute(void* self, int32_t param1);
+bool q_tableview_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-void q_tableview_ensure_polished(void* self);
+void q_tableview_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param child QWidget*
 ///
-bool q_tableview_is_ancestor_of(void* self, void* child);
+bool q_tableview_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_auto_fill_background(void* self);
+bool q_tableview_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4303,25 +4185,25 @@ void q_tableview_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QBackingStore* q_tableview_backing_store(void* self);
+QBackingStore* q_tableview_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QWindow* q_tableview_window_handle(void* self);
+QWindow* q_tableview_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QScreen* q_tableview_screen(void* self);
+QScreen* q_tableview_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4365,7 +4247,7 @@ void q_tableview_on_window_title_changed(void* self, void (*callback)(void*, con
 /// @param self QTableView*
 /// @param icon QIcon*
 ///
-void q_tableview_window_icon_changed(void* self, void* icon);
+void q_tableview_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -4374,7 +4256,7 @@ void q_tableview_window_icon_changed(void* self, void* icon);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QIcon* icon)
 ///
-void q_tableview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_tableview_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4401,7 +4283,7 @@ void q_tableview_on_window_icon_text_changed(void* self, void (*callback)(void*,
 /// @param self QTableView*
 /// @param pos QPoint*
 ///
-void q_tableview_custom_context_menu_requested(void* self, void* pos);
+void q_tableview_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -4410,17 +4292,17 @@ void q_tableview_custom_context_menu_requested(void* self, void* pos);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QPoint* pos)
 ///
-void q_tableview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_tableview_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_tableview_input_method_hints(void* self);
+int32_t q_tableview_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4439,7 +4321,7 @@ void q_tableview_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_tableview_render22(void* self, void* target, void* targetOffset);
+void q_tableview_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4450,7 +4332,7 @@ void q_tableview_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_tableview_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_tableview_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4462,7 +4344,7 @@ void q_tableview_render3(void* self, void* target, void* targetOffset, void* sou
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_tableview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_tableview_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4472,7 +4354,7 @@ void q_tableview_render4(void* self, void* target, void* targetOffset, void* sou
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_tableview_render23(void* self, void* painter, void* targetOffset);
+void q_tableview_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4483,7 +4365,7 @@ void q_tableview_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_tableview_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_tableview_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4495,7 +4377,7 @@ void q_tableview_render32(void* self, void* painter, void* targetOffset, void* s
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_tableview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_tableview_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4504,7 +4386,7 @@ void q_tableview_render42(void* self, void* painter, void* targetOffset, void* s
 /// @param self QTableView*
 /// @param rectangle QRect*
 ///
-QPixmap* q_tableview_grab1(void* self, void* rectangle);
+QPixmap* q_tableview_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -4524,7 +4406,7 @@ void q_tableview_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_tableview_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_tableview_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4591,9 +4473,9 @@ QWidget* q_tableview_create_window_container3(void* window, void* parent, int32_
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char* q_tableview_object_name(void* self);
+const char* q_tableview_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4608,33 +4490,33 @@ void q_tableview_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_widget_type(void* self);
+bool q_tableview_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_window_type(void* self);
+bool q_tableview_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_is_quick_item_type(void* self);
+bool q_tableview_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_signals_blocked(void* self);
+bool q_tableview_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4649,9 +4531,9 @@ bool q_tableview_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QThread* q_tableview_thread(void* self);
+QThread* q_tableview_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4702,11 +4584,11 @@ void q_tableview_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_tableview_children(void* self);
+libqt_list q_tableview_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4735,7 +4617,7 @@ void q_tableview_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_tableview_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_tableview_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4746,18 +4628,18 @@ QMetaObject__Connection* q_tableview_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_tableview_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_tableview_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_tableview_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_tableview_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4768,7 +4650,7 @@ QMetaObject__Connection* q_tableview_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_tableview_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_tableview_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4779,24 +4661,24 @@ bool q_tableview_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_tableview_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_tableview_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_disconnect3(void* self);
+bool q_tableview_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param receiver QObject*
 ///
-bool q_tableview_disconnect4(void* self, void* receiver);
+bool q_tableview_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4804,23 +4686,23 @@ bool q_tableview_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_tableview_disconnect5(void* param1);
+bool q_tableview_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-void q_tableview_dump_object_tree(void* self);
+void q_tableview_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-void q_tableview_dump_object_info(void* self);
+void q_tableview_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4830,16 +4712,16 @@ void q_tableview_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_tableview_set_property(void* self, const char* name, void* value);
+bool q_tableview_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param name const char*
 ///
-QVariant* q_tableview_property(void* self, const char* name);
+QVariant* q_tableview_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4847,9 +4729,9 @@ QVariant* q_tableview_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const char** q_tableview_dynamic_property_names(void* self);
+const char** q_tableview_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4863,9 +4745,9 @@ QBindingStorage* q_tableview_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-const QBindingStorage* q_tableview_binding_storage2(void* self);
+const QBindingStorage* q_tableview_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4888,18 +4770,18 @@ void q_tableview_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QObject* q_tableview_parent(void* self);
+QObject* q_tableview_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param classname const char*
 ///
-bool q_tableview_inherits(void* self, const char* classname);
+bool q_tableview_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4939,7 +4821,7 @@ int32_t q_tableview_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tableview_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_tableview_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4951,59 +4833,59 @@ QMetaObject__Connection* q_tableview_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tableview_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_tableview_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tableview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_tableview_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param signal const char*
 ///
-bool q_tableview_disconnect1(void* self, const char* signal);
+bool q_tableview_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTableView*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_tableview_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_tableview_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_tableview_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_tableview_disconnect23(void* self, void* receiver, const char* member);
+bool q_tableview_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTableView*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_tableview_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5027,89 +4909,89 @@ void q_tableview_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_painting_active(void* self);
+bool q_tableview_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_width_m_m(void* self);
+int32_t q_tableview_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_height_m_m(void* self);
+int32_t q_tableview_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_logical_dpi_x(void* self);
+int32_t q_tableview_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_logical_dpi_y(void* self);
+int32_t q_tableview_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_physical_dpi_x(void* self);
+int32_t q_tableview_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_physical_dpi_y(void* self);
+int32_t q_tableview_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-double q_tableview_device_pixel_ratio(void* self);
+double q_tableview_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-double q_tableview_device_pixel_ratio_f(void* self);
+double q_tableview_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_color_count(void* self);
+int32_t q_tableview_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_depth(void* self);
+int32_t q_tableview_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -5165,10 +5047,10 @@ void q_tableview_on_keyboard_search(void* self, void (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* q_tableview_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* q_tableview_item_delegate_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5176,10 +5058,10 @@ QAbstractItemDelegate* q_tableview_item_delegate_for_index(void* self, void* ind
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* q_tableview_super_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* q_tableview_super_item_delegate_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5187,10 +5069,10 @@ QAbstractItemDelegate* q_tableview_super_item_delegate_for_index(void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback QAbstractItemDelegate* func(QTableView* self, QModelIndex* index)
 ///
-void q_tableview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
+void q_tableview_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5198,10 +5080,10 @@ void q_tableview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_tableview_input_method_query(void* self, int32_t query);
+QVariant* q_tableview_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5209,10 +5091,10 @@ QVariant* q_tableview_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_tableview_super_input_method_query(void* self, int32_t query);
+QVariant* q_tableview_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5220,12 +5102,12 @@ QVariant* q_tableview_super_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback QVariant* func(QTableView* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_tableview_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5254,9 +5136,9 @@ void q_tableview_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_reset(void* self, void (*callback)());
+void q_tableview_on_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5285,9 +5167,9 @@ void q_tableview_super_select_all(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_select_all(void* self, void (*callback)());
+void q_tableview_on_select_all(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5300,7 +5182,7 @@ void q_tableview_on_select_all(void* self, void (*callback)());
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_tableview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_tableview_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5313,7 +5195,7 @@ void q_tableview_data_changed(void* self, void* topLeft, void* bottomRight, libq
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_tableview_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_tableview_super_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5324,7 +5206,7 @@ void q_tableview_super_data_changed(void* self, void* topLeft, void* bottomRight
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void q_tableview_on_data_changed(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5337,7 +5219,7 @@ void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void
 /// @param start int
 /// @param end int
 ///
-void q_tableview_rows_inserted(void* self, void* parent, int start, int end);
+void q_tableview_rows_inserted(void* self, const void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5350,7 +5232,7 @@ void q_tableview_rows_inserted(void* self, void* parent, int start, int end);
 /// @param start int
 /// @param end int
 ///
-void q_tableview_super_rows_inserted(void* self, void* parent, int start, int end);
+void q_tableview_super_rows_inserted(void* self, const void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5361,7 +5243,7 @@ void q_tableview_super_rows_inserted(void* self, void* parent, int start, int en
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* parent, int start, int end)
 ///
-void q_tableview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_tableview_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5374,7 +5256,7 @@ void q_tableview_on_rows_inserted(void* self, void (*callback)(void*, void*, int
 /// @param start int
 /// @param end int
 ///
-void q_tableview_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void q_tableview_rows_about_to_be_removed(void* self, const void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5387,7 +5269,7 @@ void q_tableview_rows_about_to_be_removed(void* self, void* parent, int start, i
 /// @param start int
 /// @param end int
 ///
-void q_tableview_super_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void q_tableview_super_rows_about_to_be_removed(void* self, const void* parent, int start, int end);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5398,7 +5280,7 @@ void q_tableview_super_rows_about_to_be_removed(void* self, void* parent, int st
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QModelIndex* parent, int start, int end)
 ///
-void q_tableview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_tableview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5427,9 +5309,9 @@ void q_tableview_super_update_editor_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_update_editor_data(void* self, void (*callback)());
+void q_tableview_on_update_editor_data(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5458,9 +5340,9 @@ void q_tableview_super_update_editor_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_update_editor_geometries(void* self, void (*callback)());
+void q_tableview_on_update_editor_geometries(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5640,7 +5522,7 @@ void q_tableview_on_editor_destroyed(void* self, void (*callback)(void*, void*))
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool q_tableview_edit2(void* self, void* index, int32_t trigger, void* event);
+bool q_tableview_edit2(void* self, const void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5653,7 +5535,7 @@ bool q_tableview_edit2(void* self, void* index, int32_t trigger, void* event);
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool q_tableview_super_edit2(void* self, void* index, int32_t trigger, void* event);
+bool q_tableview_super_edit2(void* self, const void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5664,7 +5546,7 @@ bool q_tableview_super_edit2(void* self, void* index, int32_t trigger, void* eve
 /// @param self QTableView*
 /// @param callback bool func(QTableView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
 ///
-void q_tableview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
+void q_tableview_on_edit2(void* self, bool (*callback)(void*, const void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5672,13 +5554,13 @@ void q_tableview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t q_tableview_selection_command(void* self, void* index, void* event);
+int32_t q_tableview_selection_command(const void* self, const void* index, const void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5686,13 +5568,13 @@ int32_t q_tableview_selection_command(void* self, void* index, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param index QModelIndex*
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t q_tableview_super_selection_command(void* self, void* index, void* event);
+int32_t q_tableview_super_selection_command(const void* self, const void* index, const void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5700,10 +5582,10 @@ int32_t q_tableview_super_selection_command(void* self, void* index, void* event
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback int32_t func(QTableView* self, QModelIndex* index, QEvent* event)
 ///
-void q_tableview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
+void q_tableview_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6274,9 +6156,9 @@ void q_tableview_on_event_filter(void* self, bool (*callback)(void*, void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_minimum_size_hint(void* self);
+QSize* q_tableview_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6284,9 +6166,9 @@ QSize* q_tableview_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_super_minimum_size_hint(void* self);
+QSize* q_tableview_super_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6294,12 +6176,12 @@ QSize* q_tableview_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback QSize* func()
+/// @param self const QTableView*
+/// @param callback QSize* func(QTableView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_tableview_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6307,9 +6189,9 @@ void q_tableview_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_size_hint(void* self);
+QSize* q_tableview_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6317,9 +6199,9 @@ QSize* q_tableview_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QSize* q_tableview_super_size_hint(void* self);
+QSize* q_tableview_super_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6327,12 +6209,12 @@ QSize* q_tableview_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback QSize* func()
+/// @param self const QTableView*
+/// @param callback QSize* func(QTableView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_size_hint(void* self, QSize* (*callback)());
+void q_tableview_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6472,10 +6354,10 @@ void q_tableview_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param option QStyleOptionFrame*
 ///
-void q_tableview_init_style_option(void* self, void* option);
+void q_tableview_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -6483,10 +6365,10 @@ void q_tableview_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param option QStyleOptionFrame*
 ///
-void q_tableview_super_init_style_option(void* self, void* option);
+void q_tableview_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -6494,10 +6376,10 @@ void q_tableview_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback void func(QTableView* self, QStyleOptionFrame* option)
 ///
-void q_tableview_on_init_style_option(void* self, void (*callback)(void*, void*));
+void q_tableview_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6505,9 +6387,9 @@ void q_tableview_on_init_style_option(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_dev_type(void* self);
+int32_t q_tableview_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6515,9 +6397,9 @@ int32_t q_tableview_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_super_dev_type(void* self);
+int32_t q_tableview_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6525,10 +6407,10 @@ int32_t q_tableview_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback int32_t func()
+/// @param self const QTableView*
+/// @param callback int32_t func(QTableView* self)
 ///
-void q_tableview_on_dev_type(void* self, int32_t (*callback)());
+void q_tableview_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6569,10 +6451,10 @@ void q_tableview_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 int
 ///
-int32_t q_tableview_height_for_width(void* self, int param1);
+int32_t q_tableview_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -6580,10 +6462,10 @@ int32_t q_tableview_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 int
 ///
-int32_t q_tableview_super_height_for_width(void* self, int param1);
+int32_t q_tableview_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -6591,10 +6473,10 @@ int32_t q_tableview_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback int32_t func(QTableView* self, int param1)
 ///
-void q_tableview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_tableview_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -6602,9 +6484,9 @@ void q_tableview_on_height_for_width(void* self, int32_t (*callback)(void*, int)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_has_height_for_width(void* self);
+bool q_tableview_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6612,9 +6494,9 @@ bool q_tableview_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-bool q_tableview_super_has_height_for_width(void* self);
+bool q_tableview_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6622,10 +6504,10 @@ bool q_tableview_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback bool func()
+/// @param self const QTableView*
+/// @param callback bool func(QTableView* self)
 ///
-void q_tableview_on_has_height_for_width(void* self, bool (*callback)());
+void q_tableview_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6633,9 +6515,9 @@ void q_tableview_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QPaintEngine* q_tableview_paint_engine(void* self);
+QPaintEngine* q_tableview_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6643,9 +6525,9 @@ QPaintEngine* q_tableview_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QPaintEngine* q_tableview_super_paint_engine(void* self);
+QPaintEngine* q_tableview_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6653,10 +6535,10 @@ QPaintEngine* q_tableview_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback QPaintEngine* func()
+/// @param self const QTableView*
+/// @param callback QPaintEngine* func(QTableView* self)
 ///
-void q_tableview_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_tableview_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -6998,10 +6880,10 @@ void q_tableview_on_native_event(void* self, bool (*callback)(void*, libqt_strin
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_tableview_metric(void* self, int32_t param1);
+int32_t q_tableview_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7009,10 +6891,10 @@ int32_t q_tableview_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_tableview_super_metric(void* self, int32_t param1);
+int32_t q_tableview_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7020,10 +6902,10 @@ int32_t q_tableview_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback int32_t func(QTableView* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_tableview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_tableview_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -7031,10 +6913,10 @@ void q_tableview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param painter QPainter*
 ///
-void q_tableview_init_painter(void* self, void* painter);
+void q_tableview_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -7042,10 +6924,10 @@ void q_tableview_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param painter QPainter*
 ///
-void q_tableview_super_init_painter(void* self, void* painter);
+void q_tableview_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -7053,10 +6935,10 @@ void q_tableview_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback void func(QTableView* self, QPainter* painter)
 ///
-void q_tableview_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_tableview_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -7064,10 +6946,10 @@ void q_tableview_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_tableview_redirected(void* self, void* offset);
+QPaintDevice* q_tableview_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -7075,10 +6957,10 @@ QPaintDevice* q_tableview_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_tableview_super_redirected(void* self, void* offset);
+QPaintDevice* q_tableview_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -7086,10 +6968,10 @@ QPaintDevice* q_tableview_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback QPaintDevice* func(QTableView* self, QPoint* offset)
 ///
-void q_tableview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_tableview_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -7097,9 +6979,9 @@ void q_tableview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QPainter* q_tableview_shared_painter(void* self);
+QPainter* q_tableview_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7107,9 +6989,9 @@ QPainter* q_tableview_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QPainter* q_tableview_super_shared_painter(void* self);
+QPainter* q_tableview_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7117,10 +6999,10 @@ QPainter* q_tableview_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback QPainter* func()
+/// @param self const QTableView*
+/// @param callback QPainter* func(QTableView* self)
 ///
-void q_tableview_on_shared_painter(void* self, QPainter* (*callback)());
+void q_tableview_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7197,7 +7079,7 @@ void q_tableview_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QTableView*
 /// @param signal QMetaMethod*
 ///
-void q_tableview_connect_notify(void* self, void* signal);
+void q_tableview_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7208,7 +7090,7 @@ void q_tableview_connect_notify(void* self, void* signal);
 /// @param self QTableView*
 /// @param signal QMetaMethod*
 ///
-void q_tableview_super_connect_notify(void* self, void* signal);
+void q_tableview_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7219,7 +7101,7 @@ void q_tableview_super_connect_notify(void* self, void* signal);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QMetaMethod* signal)
 ///
-void q_tableview_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_tableview_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -7230,7 +7112,7 @@ void q_tableview_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QTableView*
 /// @param signal QMetaMethod*
 ///
-void q_tableview_disconnect_notify(void* self, void* signal);
+void q_tableview_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7241,7 +7123,7 @@ void q_tableview_disconnect_notify(void* self, void* signal);
 /// @param self QTableView*
 /// @param signal QMetaMethod*
 ///
-void q_tableview_super_disconnect_notify(void* self, void* signal);
+void q_tableview_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7252,7 +7134,7 @@ void q_tableview_super_disconnect_notify(void* self, void* signal);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QMetaMethod* signal)
 ///
-void q_tableview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_tableview_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7260,11 +7142,11 @@ void q_tableview_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t q_tableview_state(void* self);
+int32_t q_tableview_state(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7272,11 +7154,11 @@ int32_t q_tableview_state(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t q_tableview_super_state(void* self);
+int32_t q_tableview_super_state(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7284,10 +7166,10 @@ int32_t q_tableview_super_state(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback int32_t func()
+/// @param self const QTableView*
+/// @param callback int32_t func(QTableView* self)
 ///
-void q_tableview_on_state(void* self, int32_t (*callback)());
+void q_tableview_on_state(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7349,9 +7231,9 @@ void q_tableview_super_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_schedule_delayed_items_layout(void* self, void (*callback)());
+void q_tableview_on_schedule_delayed_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7380,9 +7262,9 @@ void q_tableview_super_execute_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_execute_delayed_items_layout(void* self, void (*callback)());
+void q_tableview_on_execute_delayed_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7393,7 +7275,7 @@ void q_tableview_on_execute_delayed_items_layout(void* self, void (*callback)())
 /// @param self QTableView*
 /// @param region QRegion*
 ///
-void q_tableview_set_dirty_region(void* self, void* region);
+void q_tableview_set_dirty_region(void* self, const void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7404,7 +7286,7 @@ void q_tableview_set_dirty_region(void* self, void* region);
 /// @param self QTableView*
 /// @param region QRegion*
 ///
-void q_tableview_super_set_dirty_region(void* self, void* region);
+void q_tableview_super_set_dirty_region(void* self, const void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7415,7 +7297,7 @@ void q_tableview_super_set_dirty_region(void* self, void* region);
 /// @param self QTableView*
 /// @param callback void func(QTableView* self, QRegion* region)
 ///
-void q_tableview_on_set_dirty_region(void* self, void (*callback)(void*, void*));
+void q_tableview_on_set_dirty_region(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7458,9 +7340,9 @@ void q_tableview_on_scroll_dirty_region(void* self, void (*callback)(void*, int,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QPoint* q_tableview_dirty_region_offset(void* self);
+QPoint* q_tableview_dirty_region_offset(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7468,9 +7350,9 @@ QPoint* q_tableview_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QPoint* q_tableview_super_dirty_region_offset(void* self);
+QPoint* q_tableview_super_dirty_region_offset(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7478,12 +7360,12 @@ QPoint* q_tableview_super_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback QPoint* func()
+/// @param self const QTableView*
+/// @param callback QPoint* func(QTableView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_dirty_region_offset(void* self, QPoint* (*callback)());
+void q_tableview_on_dirty_region_offset(const void* self, QPoint* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7512,9 +7394,9 @@ void q_tableview_super_start_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_start_auto_scroll(void* self, void (*callback)());
+void q_tableview_on_start_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7543,9 +7425,9 @@ void q_tableview_super_stop_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_stop_auto_scroll(void* self, void (*callback)());
+void q_tableview_on_stop_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7574,9 +7456,9 @@ void q_tableview_super_do_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_do_auto_scroll(void* self, void (*callback)());
+void q_tableview_on_do_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7584,11 +7466,11 @@ void q_tableview_on_do_auto_scroll(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t q_tableview_drop_indicator_position(void* self);
+int32_t q_tableview_drop_indicator_position(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7596,11 +7478,11 @@ int32_t q_tableview_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t q_tableview_super_drop_indicator_position(void* self);
+int32_t q_tableview_super_drop_indicator_position(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7608,10 +7490,10 @@ int32_t q_tableview_super_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback int32_t func()
+/// @param self const QTableView*
+/// @param callback int32_t func(QTableView* self)
 ///
-void q_tableview_on_drop_indicator_position(void* self, int32_t (*callback)());
+void q_tableview_on_drop_indicator_position(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7658,9 +7540,9 @@ void q_tableview_on_set_viewport_margins(void* self, void (*callback)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QMargins* q_tableview_viewport_margins(void* self);
+QMargins* q_tableview_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7668,9 +7550,9 @@ QMargins* q_tableview_viewport_margins(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QMargins* q_tableview_super_viewport_margins(void* self);
+QMargins* q_tableview_super_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7678,12 +7560,12 @@ QMargins* q_tableview_super_viewport_margins(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback QMargins* func()
+/// @param self const QTableView*
+/// @param callback QMargins* func(QTableView* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tableview_on_viewport_margins(void* self, QMargins* (*callback)());
+void q_tableview_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -7745,9 +7627,9 @@ void q_tableview_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_update_micro_focus(void* self, void (*callback)());
+void q_tableview_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -7776,9 +7658,9 @@ void q_tableview_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_create(void* self, void (*callback)());
+void q_tableview_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -7807,9 +7689,9 @@ void q_tableview_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void func()
+/// @param callback void func(QTableView* self)
 ///
-void q_tableview_on_destroy(void* self, void (*callback)());
+void q_tableview_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -7838,9 +7720,9 @@ bool q_tableview_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback bool func()
+/// @param callback bool func(QTableView* self)
 ///
-void q_tableview_on_focus_next_child(void* self, bool (*callback)());
+void q_tableview_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -7869,9 +7751,9 @@ bool q_tableview_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback bool func()
+/// @param callback bool func(QTableView* self)
 ///
-void q_tableview_on_focus_previous_child(void* self, bool (*callback)());
+void q_tableview_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -7879,9 +7761,9 @@ void q_tableview_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QObject* q_tableview_sender(void* self);
+QObject* q_tableview_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -7889,9 +7771,9 @@ QObject* q_tableview_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-QObject* q_tableview_super_sender(void* self);
+QObject* q_tableview_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -7899,10 +7781,10 @@ QObject* q_tableview_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback QObject* func()
+/// @param self const QTableView*
+/// @param callback QObject* func(QTableView* self)
 ///
-void q_tableview_on_sender(void* self, QObject* (*callback)());
+void q_tableview_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7910,9 +7792,9 @@ void q_tableview_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_sender_signal_index(void* self);
+int32_t q_tableview_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -7920,9 +7802,9 @@ int32_t q_tableview_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 ///
-int32_t q_tableview_super_sender_signal_index(void* self);
+int32_t q_tableview_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -7930,10 +7812,10 @@ int32_t q_tableview_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
-/// @param callback int32_t func()
+/// @param self const QTableView*
+/// @param callback int32_t func(QTableView* self)
 ///
-void q_tableview_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_tableview_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -7941,10 +7823,10 @@ void q_tableview_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param signal const char*
 ///
-int32_t q_tableview_receivers(void* self, const char* signal);
+int32_t q_tableview_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -7952,10 +7834,10 @@ int32_t q_tableview_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param signal const char*
 ///
-int32_t q_tableview_super_receivers(void* self, const char* signal);
+int32_t q_tableview_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -7963,10 +7845,10 @@ int32_t q_tableview_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback int32_t func(QTableView* self, const char* signal)
 ///
-void q_tableview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_tableview_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -7974,10 +7856,10 @@ void q_tableview_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param signal QMetaMethod*
 ///
-bool q_tableview_is_signal_connected(void* self, void* signal);
+bool q_tableview_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7985,10 +7867,10 @@ bool q_tableview_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param signal QMetaMethod*
 ///
-bool q_tableview_super_is_signal_connected(void* self, void* signal);
+bool q_tableview_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -7996,10 +7878,10 @@ bool q_tableview_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback bool func(QTableView* self, QMetaMethod* signal)
 ///
-void q_tableview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_tableview_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -8007,11 +7889,11 @@ void q_tableview_on_is_signal_connected(void* self, bool (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_tableview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_tableview_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -8019,11 +7901,11 @@ double q_tableview_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_tableview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_tableview_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -8031,10 +7913,10 @@ double q_tableview_super_get_decoded_metric_f(void* self, int32_t metricA, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTableView*
+/// @param self const QTableView*
 /// @param callback double func(QTableView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_tableview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_tableview_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

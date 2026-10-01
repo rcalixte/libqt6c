@@ -6,23 +6,23 @@ QBluetoothHostInfo* q_bluetoothhostinfo_new() {
     return QBluetoothHostInfo_New();
 }
 
-QBluetoothHostInfo* q_bluetoothhostinfo_new2(void* other) {
+QBluetoothHostInfo* q_bluetoothhostinfo_new2(const void* other) {
     return QBluetoothHostInfo_New2((QBluetoothHostInfo*)other);
 }
 
-void q_bluetoothhostinfo_operator_assign(void* self, void* other) {
+void q_bluetoothhostinfo_operator_assign(void* self, const void* other) {
     QBluetoothHostInfo_OperatorAssign((QBluetoothHostInfo*)self, (QBluetoothHostInfo*)other);
 }
 
-QBluetoothAddress* q_bluetoothhostinfo_address(void* self) {
+QBluetoothAddress* q_bluetoothhostinfo_address(const void* self) {
     return QBluetoothHostInfo_Address((QBluetoothHostInfo*)self);
 }
 
-void q_bluetoothhostinfo_set_address(void* self, void* address) {
+void q_bluetoothhostinfo_set_address(void* self, const void* address) {
     QBluetoothHostInfo_SetAddress((QBluetoothHostInfo*)self, (QBluetoothAddress*)address);
 }
 
-const char* q_bluetoothhostinfo_name(void* self) {
+const char* q_bluetoothhostinfo_name(const void* self) {
     libqt_string _str = QBluetoothHostInfo_Name((QBluetoothHostInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

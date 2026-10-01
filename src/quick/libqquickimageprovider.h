@@ -16,26 +16,26 @@ QQuickTextureFactory* q_quicktexturefactory_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-const QMetaObject* q_quicktexturefactory_meta_object(void* self);
+const QMetaObject* q_quicktexturefactory_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickTextureFactory*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuickTextureFactory*
+/// @param callback const QMetaObject* func(const QQuickTextureFactory* self)
 ///
-void q_quicktexturefactory_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quicktexturefactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-const QMetaObject* q_quicktexturefactory_super_meta_object(void* self);
+const QMetaObject* q_quicktexturefactory_super_meta_object(const void* self);
 
 /// @param self QQuickTextureFactory*
 /// @param param1 const char*
@@ -89,107 +89,88 @@ const char* q_quicktexturefactory_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#createTexture)
 ///
-/// @param self QQuickTextureFactory*
+/// @warning This method must be implemented with `q_quicktexturefactory_on_create_texture` before it can be called.
+///
+/// @param self const QQuickTextureFactory*
 /// @param window QQuickWindow*
 ///
-QSGTexture* q_quicktexturefactory_create_texture(void* self, void* window);
+QSGTexture* q_quicktexturefactory_create_texture(const void* self, void* window);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#createTexture)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickTextureFactory*
-/// @param callback QSGTexture* func(QQuickTextureFactory* self, QQuickWindow* window)
+/// @param self const QQuickTextureFactory*
+/// @param callback QSGTexture* func(const QQuickTextureFactory* self, QQuickWindow* window)
 ///
-void q_quicktexturefactory_on_create_texture(void* self, QSGTexture* (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#createTexture)
-///
-/// Base class method implementation
-///
-/// @param self QQuickTextureFactory*
-/// @param window QQuickWindow*
-///
-QSGTexture* q_quicktexturefactory_super_create_texture(void* self, void* window);
+void q_quicktexturefactory_on_create_texture(const void* self, QSGTexture* (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureSize)
 ///
-/// @param self QQuickTextureFactory*
+/// @warning This method must be implemented with `q_quicktexturefactory_on_texture_size` before it can be called.
 ///
-QSize* q_quicktexturefactory_texture_size(void* self);
+/// @param self const QQuickTextureFactory*
+///
+QSize* q_quicktexturefactory_texture_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureSize)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickTextureFactory*
-/// @param callback QSize* func()
+/// @param self const QQuickTextureFactory*
+/// @param callback QSize* func(const QQuickTextureFactory* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quicktexturefactory_on_texture_size(void* self, QSize* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureSize)
-///
-/// Base class method implementation
-///
-/// @param self QQuickTextureFactory*
-///
-QSize* q_quicktexturefactory_super_texture_size(void* self);
+void q_quicktexturefactory_on_texture_size(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureByteCount)
 ///
-/// @param self QQuickTextureFactory*
+/// @warning This method must be implemented with `q_quicktexturefactory_on_texture_byte_count` before it can be called.
 ///
-int32_t q_quicktexturefactory_texture_byte_count(void* self);
+/// @param self const QQuickTextureFactory*
+///
+int32_t q_quicktexturefactory_texture_byte_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureByteCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickTextureFactory*
-/// @param callback int32_t func()
+/// @param self const QQuickTextureFactory*
+/// @param callback int32_t func(const QQuickTextureFactory* self)
 ///
-void q_quicktexturefactory_on_texture_byte_count(void* self, int32_t (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureByteCount)
-///
-/// Base class method implementation
-///
-/// @param self QQuickTextureFactory*
-///
-int32_t q_quicktexturefactory_super_texture_byte_count(void* self);
+void q_quicktexturefactory_on_texture_byte_count(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#image)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-QImage* q_quicktexturefactory_image(void* self);
+QImage* q_quicktexturefactory_image(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#image)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickTextureFactory*
-/// @param callback QImage* func()
+/// @param self const QQuickTextureFactory*
+/// @param callback QImage* func(const QQuickTextureFactory* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quicktexturefactory_on_image(void* self, QImage* (*callback)());
+void q_quicktexturefactory_on_image(const void* self, QImage* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#image)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-QImage* q_quicktexturefactory_super_image(void* self);
+QImage* q_quicktexturefactory_super_image(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquicktexturefactory.html#textureFactoryForImage)
 ///
 /// @param image QImage*
 ///
-QQuickTextureFactory* q_quicktexturefactory_texture_factory_for_image(void* image);
+QQuickTextureFactory* q_quicktexturefactory_texture_factory_for_image(const void* image);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -216,9 +197,9 @@ const char* q_quicktexturefactory_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-const char* q_quicktexturefactory_object_name(void* self);
+const char* q_quicktexturefactory_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -233,33 +214,33 @@ void q_quicktexturefactory_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-bool q_quicktexturefactory_is_widget_type(void* self);
+bool q_quicktexturefactory_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-bool q_quicktexturefactory_is_window_type(void* self);
+bool q_quicktexturefactory_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-bool q_quicktexturefactory_is_quick_item_type(void* self);
+bool q_quicktexturefactory_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-bool q_quicktexturefactory_signals_blocked(void* self);
+bool q_quicktexturefactory_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -274,9 +255,9 @@ bool q_quicktexturefactory_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-QThread* q_quicktexturefactory_thread(void* self);
+QThread* q_quicktexturefactory_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -327,11 +308,11 @@ void q_quicktexturefactory_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quicktexturefactory_children(void* self);
+libqt_list q_quicktexturefactory_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -369,7 +350,7 @@ void q_quicktexturefactory_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quicktexturefactory_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quicktexturefactory_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -380,18 +361,18 @@ QMetaObject__Connection* q_quicktexturefactory_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quicktexturefactory_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quicktexturefactory_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quicktexturefactory_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quicktexturefactory_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -402,7 +383,7 @@ QMetaObject__Connection* q_quicktexturefactory_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quicktexturefactory_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quicktexturefactory_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -413,24 +394,24 @@ bool q_quicktexturefactory_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quicktexturefactory_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quicktexturefactory_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-bool q_quicktexturefactory_disconnect3(void* self);
+bool q_quicktexturefactory_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param receiver QObject*
 ///
-bool q_quicktexturefactory_disconnect4(void* self, void* receiver);
+bool q_quicktexturefactory_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -438,23 +419,23 @@ bool q_quicktexturefactory_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quicktexturefactory_disconnect5(void* param1);
+bool q_quicktexturefactory_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-void q_quicktexturefactory_dump_object_tree(void* self);
+void q_quicktexturefactory_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-void q_quicktexturefactory_dump_object_info(void* self);
+void q_quicktexturefactory_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -464,16 +445,16 @@ void q_quicktexturefactory_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quicktexturefactory_set_property(void* self, const char* name, void* value);
+bool q_quicktexturefactory_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param name const char*
 ///
-QVariant* q_quicktexturefactory_property(void* self, const char* name);
+QVariant* q_quicktexturefactory_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -481,9 +462,9 @@ QVariant* q_quicktexturefactory_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-const char** q_quicktexturefactory_dynamic_property_names(void* self);
+const char** q_quicktexturefactory_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -497,9 +478,9 @@ QBindingStorage* q_quicktexturefactory_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-const QBindingStorage* q_quicktexturefactory_binding_storage2(void* self);
+const QBindingStorage* q_quicktexturefactory_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -522,18 +503,18 @@ void q_quicktexturefactory_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-QObject* q_quicktexturefactory_parent(void* self);
+QObject* q_quicktexturefactory_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param classname const char*
 ///
-bool q_quicktexturefactory_inherits(void* self, const char* classname);
+bool q_quicktexturefactory_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -573,7 +554,7 @@ int32_t q_quicktexturefactory_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quicktexturefactory_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quicktexturefactory_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -585,59 +566,59 @@ QMetaObject__Connection* q_quicktexturefactory_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quicktexturefactory_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quicktexturefactory_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quicktexturefactory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quicktexturefactory_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param signal const char*
 ///
-bool q_quicktexturefactory_disconnect1(void* self, const char* signal);
+bool q_quicktexturefactory_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTextureFactory*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quicktexturefactory_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quicktexturefactory_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quicktexturefactory_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quicktexturefactory_disconnect23(void* self, void* receiver, const char* member);
+bool q_quicktexturefactory_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuickTextureFactory*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quicktexturefactory_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -833,7 +814,7 @@ void q_quicktexturefactory_on_custom_event(void* self, void (*callback)(void*, v
 /// @param self QQuickTextureFactory*
 /// @param signal QMetaMethod*
 ///
-void q_quicktexturefactory_connect_notify(void* self, void* signal);
+void q_quicktexturefactory_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -844,7 +825,7 @@ void q_quicktexturefactory_connect_notify(void* self, void* signal);
 /// @param self QQuickTextureFactory*
 /// @param signal QMetaMethod*
 ///
-void q_quicktexturefactory_super_connect_notify(void* self, void* signal);
+void q_quicktexturefactory_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -855,7 +836,7 @@ void q_quicktexturefactory_super_connect_notify(void* self, void* signal);
 /// @param self QQuickTextureFactory*
 /// @param callback void func(QQuickTextureFactory* self, QMetaMethod* signal)
 ///
-void q_quicktexturefactory_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quicktexturefactory_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -866,7 +847,7 @@ void q_quicktexturefactory_on_connect_notify(void* self, void (*callback)(void*,
 /// @param self QQuickTextureFactory*
 /// @param signal QMetaMethod*
 ///
-void q_quicktexturefactory_disconnect_notify(void* self, void* signal);
+void q_quicktexturefactory_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -877,7 +858,7 @@ void q_quicktexturefactory_disconnect_notify(void* self, void* signal);
 /// @param self QQuickTextureFactory*
 /// @param signal QMetaMethod*
 ///
-void q_quicktexturefactory_super_disconnect_notify(void* self, void* signal);
+void q_quicktexturefactory_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -888,7 +869,7 @@ void q_quicktexturefactory_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuickTextureFactory*
 /// @param callback void func(QQuickTextureFactory* self, QMetaMethod* signal)
 ///
-void q_quicktexturefactory_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quicktexturefactory_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -896,9 +877,9 @@ void q_quicktexturefactory_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-QObject* q_quicktexturefactory_sender(void* self);
+QObject* q_quicktexturefactory_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -906,9 +887,9 @@ QObject* q_quicktexturefactory_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-QObject* q_quicktexturefactory_super_sender(void* self);
+QObject* q_quicktexturefactory_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -916,10 +897,10 @@ QObject* q_quicktexturefactory_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
-/// @param callback QObject* func()
+/// @param self const QQuickTextureFactory*
+/// @param callback QObject* func(QQuickTextureFactory* self)
 ///
-void q_quicktexturefactory_on_sender(void* self, QObject* (*callback)());
+void q_quicktexturefactory_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -927,9 +908,9 @@ void q_quicktexturefactory_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-int32_t q_quicktexturefactory_sender_signal_index(void* self);
+int32_t q_quicktexturefactory_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -937,9 +918,9 @@ int32_t q_quicktexturefactory_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 ///
-int32_t q_quicktexturefactory_super_sender_signal_index(void* self);
+int32_t q_quicktexturefactory_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -947,10 +928,10 @@ int32_t q_quicktexturefactory_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
-/// @param callback int32_t func()
+/// @param self const QQuickTextureFactory*
+/// @param callback int32_t func(QQuickTextureFactory* self)
 ///
-void q_quicktexturefactory_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quicktexturefactory_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -958,10 +939,10 @@ void q_quicktexturefactory_on_sender_signal_index(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param signal const char*
 ///
-int32_t q_quicktexturefactory_receivers(void* self, const char* signal);
+int32_t q_quicktexturefactory_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -969,10 +950,10 @@ int32_t q_quicktexturefactory_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param signal const char*
 ///
-int32_t q_quicktexturefactory_super_receivers(void* self, const char* signal);
+int32_t q_quicktexturefactory_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -980,10 +961,10 @@ int32_t q_quicktexturefactory_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param callback int32_t func(QQuickTextureFactory* self, const char* signal)
 ///
-void q_quicktexturefactory_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quicktexturefactory_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -991,10 +972,10 @@ void q_quicktexturefactory_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param signal QMetaMethod*
 ///
-bool q_quicktexturefactory_is_signal_connected(void* self, void* signal);
+bool q_quicktexturefactory_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1002,10 +983,10 @@ bool q_quicktexturefactory_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param signal QMetaMethod*
 ///
-bool q_quicktexturefactory_super_is_signal_connected(void* self, void* signal);
+bool q_quicktexturefactory_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1013,10 +994,10 @@ bool q_quicktexturefactory_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickTextureFactory*
+/// @param self const QQuickTextureFactory*
 /// @param callback bool func(QQuickTextureFactory* self, QMetaMethod* signal)
 ///
-void q_quicktexturefactory_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quicktexturefactory_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1045,26 +1026,26 @@ QQuickImageResponse* q_quickimageresponse_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-const QMetaObject* q_quickimageresponse_meta_object(void* self);
+const QMetaObject* q_quickimageresponse_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickImageResponse*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuickImageResponse*
+/// @param callback const QMetaObject* func(const QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quickimageresponse_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-const QMetaObject* q_quickimageresponse_super_meta_object(void* self);
+const QMetaObject* q_quickimageresponse_super_meta_object(const void* self);
 
 /// @param self QQuickImageResponse*
 /// @param param1 const char*
@@ -1118,51 +1099,45 @@ const char* q_quickimageresponse_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#textureFactory)
 ///
-/// @param self QQuickImageResponse*
+/// @warning This method must be implemented with `q_quickimageresponse_on_texture_factory` before it can be called.
 ///
-QQuickTextureFactory* q_quickimageresponse_texture_factory(void* self);
+/// @param self const QQuickImageResponse*
+///
+QQuickTextureFactory* q_quickimageresponse_texture_factory(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#textureFactory)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickImageResponse*
-/// @param callback QQuickTextureFactory* func()
+/// @param self const QQuickImageResponse*
+/// @param callback QQuickTextureFactory* func(const QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_texture_factory(void* self, QQuickTextureFactory* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#textureFactory)
-///
-/// Base class method implementation
-///
-/// @param self QQuickImageResponse*
-///
-QQuickTextureFactory* q_quickimageresponse_super_texture_factory(void* self);
+void q_quickimageresponse_on_texture_factory(const void* self, QQuickTextureFactory* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-const char* q_quickimageresponse_error_string(void* self);
+const char* q_quickimageresponse_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#errorString)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickImageResponse*
-/// @param callback const char* func()
+/// @param self const QQuickImageResponse*
+/// @param callback const char* func(const QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_error_string(void* self, const char* (*callback)());
+void q_quickimageresponse_on_error_string(const void* self, const char* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#errorString)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-const char* q_quickimageresponse_super_error_string(void* self);
+const char* q_quickimageresponse_super_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#cancel)
 ///
@@ -1175,9 +1150,9 @@ void q_quickimageresponse_cancel(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QQuickImageResponse*
-/// @param callback void func()
+/// @param callback void func(QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_cancel(void* self, void (*callback)());
+void q_quickimageresponse_on_cancel(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageresponse.html#cancel)
 ///
@@ -1225,9 +1200,9 @@ const char* q_quickimageresponse_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-const char* q_quickimageresponse_object_name(void* self);
+const char* q_quickimageresponse_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1242,33 +1217,33 @@ void q_quickimageresponse_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-bool q_quickimageresponse_is_widget_type(void* self);
+bool q_quickimageresponse_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-bool q_quickimageresponse_is_window_type(void* self);
+bool q_quickimageresponse_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-bool q_quickimageresponse_is_quick_item_type(void* self);
+bool q_quickimageresponse_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-bool q_quickimageresponse_signals_blocked(void* self);
+bool q_quickimageresponse_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1283,9 +1258,9 @@ bool q_quickimageresponse_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-QThread* q_quickimageresponse_thread(void* self);
+QThread* q_quickimageresponse_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1336,11 +1311,11 @@ void q_quickimageresponse_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quickimageresponse_children(void* self);
+libqt_list q_quickimageresponse_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1378,7 +1353,7 @@ void q_quickimageresponse_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickimageresponse_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quickimageresponse_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1389,18 +1364,18 @@ QMetaObject__Connection* q_quickimageresponse_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quickimageresponse_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quickimageresponse_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickimageresponse_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quickimageresponse_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1411,7 +1386,7 @@ QMetaObject__Connection* q_quickimageresponse_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickimageresponse_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quickimageresponse_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1422,24 +1397,24 @@ bool q_quickimageresponse_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quickimageresponse_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quickimageresponse_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-bool q_quickimageresponse_disconnect3(void* self);
+bool q_quickimageresponse_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param receiver QObject*
 ///
-bool q_quickimageresponse_disconnect4(void* self, void* receiver);
+bool q_quickimageresponse_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1447,23 +1422,23 @@ bool q_quickimageresponse_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quickimageresponse_disconnect5(void* param1);
+bool q_quickimageresponse_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-void q_quickimageresponse_dump_object_tree(void* self);
+void q_quickimageresponse_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-void q_quickimageresponse_dump_object_info(void* self);
+void q_quickimageresponse_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1473,16 +1448,16 @@ void q_quickimageresponse_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quickimageresponse_set_property(void* self, const char* name, void* value);
+bool q_quickimageresponse_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param name const char*
 ///
-QVariant* q_quickimageresponse_property(void* self, const char* name);
+QVariant* q_quickimageresponse_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1490,9 +1465,9 @@ QVariant* q_quickimageresponse_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-const char** q_quickimageresponse_dynamic_property_names(void* self);
+const char** q_quickimageresponse_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1506,9 +1481,9 @@ QBindingStorage* q_quickimageresponse_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-const QBindingStorage* q_quickimageresponse_binding_storage2(void* self);
+const QBindingStorage* q_quickimageresponse_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1531,18 +1506,18 @@ void q_quickimageresponse_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-QObject* q_quickimageresponse_parent(void* self);
+QObject* q_quickimageresponse_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param classname const char*
 ///
-bool q_quickimageresponse_inherits(void* self, const char* classname);
+bool q_quickimageresponse_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1582,7 +1557,7 @@ int32_t q_quickimageresponse_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickimageresponse_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quickimageresponse_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1594,59 +1569,59 @@ QMetaObject__Connection* q_quickimageresponse_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickimageresponse_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quickimageresponse_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickimageresponse_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quickimageresponse_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param signal const char*
 ///
-bool q_quickimageresponse_disconnect1(void* self, const char* signal);
+bool q_quickimageresponse_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageResponse*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quickimageresponse_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quickimageresponse_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quickimageresponse_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickimageresponse_disconnect23(void* self, void* receiver, const char* member);
+bool q_quickimageresponse_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuickImageResponse*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quickimageresponse_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1842,7 +1817,7 @@ void q_quickimageresponse_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self QQuickImageResponse*
 /// @param signal QMetaMethod*
 ///
-void q_quickimageresponse_connect_notify(void* self, void* signal);
+void q_quickimageresponse_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1853,7 +1828,7 @@ void q_quickimageresponse_connect_notify(void* self, void* signal);
 /// @param self QQuickImageResponse*
 /// @param signal QMetaMethod*
 ///
-void q_quickimageresponse_super_connect_notify(void* self, void* signal);
+void q_quickimageresponse_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1864,7 +1839,7 @@ void q_quickimageresponse_super_connect_notify(void* self, void* signal);
 /// @param self QQuickImageResponse*
 /// @param callback void func(QQuickImageResponse* self, QMetaMethod* signal)
 ///
-void q_quickimageresponse_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quickimageresponse_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1875,7 +1850,7 @@ void q_quickimageresponse_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self QQuickImageResponse*
 /// @param signal QMetaMethod*
 ///
-void q_quickimageresponse_disconnect_notify(void* self, void* signal);
+void q_quickimageresponse_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1886,7 +1861,7 @@ void q_quickimageresponse_disconnect_notify(void* self, void* signal);
 /// @param self QQuickImageResponse*
 /// @param signal QMetaMethod*
 ///
-void q_quickimageresponse_super_disconnect_notify(void* self, void* signal);
+void q_quickimageresponse_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1897,7 +1872,7 @@ void q_quickimageresponse_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuickImageResponse*
 /// @param callback void func(QQuickImageResponse* self, QMetaMethod* signal)
 ///
-void q_quickimageresponse_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quickimageresponse_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1905,9 +1880,9 @@ void q_quickimageresponse_on_disconnect_notify(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-QObject* q_quickimageresponse_sender(void* self);
+QObject* q_quickimageresponse_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1915,9 +1890,9 @@ QObject* q_quickimageresponse_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-QObject* q_quickimageresponse_super_sender(void* self);
+QObject* q_quickimageresponse_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1925,10 +1900,10 @@ QObject* q_quickimageresponse_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickImageResponse*
-/// @param callback QObject* func()
+/// @param self const QQuickImageResponse*
+/// @param callback QObject* func(QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_sender(void* self, QObject* (*callback)());
+void q_quickimageresponse_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1936,9 +1911,9 @@ void q_quickimageresponse_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-int32_t q_quickimageresponse_sender_signal_index(void* self);
+int32_t q_quickimageresponse_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1946,9 +1921,9 @@ int32_t q_quickimageresponse_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 ///
-int32_t q_quickimageresponse_super_sender_signal_index(void* self);
+int32_t q_quickimageresponse_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1956,10 +1931,10 @@ int32_t q_quickimageresponse_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickImageResponse*
-/// @param callback int32_t func()
+/// @param self const QQuickImageResponse*
+/// @param callback int32_t func(QQuickImageResponse* self)
 ///
-void q_quickimageresponse_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quickimageresponse_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1967,10 +1942,10 @@ void q_quickimageresponse_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param signal const char*
 ///
-int32_t q_quickimageresponse_receivers(void* self, const char* signal);
+int32_t q_quickimageresponse_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1978,10 +1953,10 @@ int32_t q_quickimageresponse_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param signal const char*
 ///
-int32_t q_quickimageresponse_super_receivers(void* self, const char* signal);
+int32_t q_quickimageresponse_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1989,10 +1964,10 @@ int32_t q_quickimageresponse_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param callback int32_t func(QQuickImageResponse* self, const char* signal)
 ///
-void q_quickimageresponse_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quickimageresponse_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2000,10 +1975,10 @@ void q_quickimageresponse_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param signal QMetaMethod*
 ///
-bool q_quickimageresponse_is_signal_connected(void* self, void* signal);
+bool q_quickimageresponse_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2011,10 +1986,10 @@ bool q_quickimageresponse_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param signal QMetaMethod*
 ///
-bool q_quickimageresponse_super_is_signal_connected(void* self, void* signal);
+bool q_quickimageresponse_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2022,10 +1997,10 @@ bool q_quickimageresponse_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickImageResponse*
+/// @param self const QQuickImageResponse*
 /// @param callback bool func(QQuickImageResponse* self, QMetaMethod* signal)
 ///
-void q_quickimageresponse_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quickimageresponse_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2065,26 +2040,26 @@ QQuickImageProvider* q_quickimageprovider_new2(int32_t type, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-const QMetaObject* q_quickimageprovider_meta_object(void* self);
+const QMetaObject* q_quickimageprovider_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickImageProvider*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuickImageProvider*
+/// @param callback const QMetaObject* func(const QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quickimageprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-const QMetaObject* q_quickimageprovider_super_meta_object(void* self);
+const QMetaObject* q_quickimageprovider_super_meta_object(const void* self);
 
 /// @param self QQuickImageProvider*
 /// @param param1 const char*
@@ -2138,57 +2113,57 @@ const char* q_quickimageprovider_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#imageType)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
 /// @return enum QQmlImageProviderBase__ImageType
 ///
-int32_t q_quickimageprovider_image_type(void* self);
+int32_t q_quickimageprovider_image_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#imageType)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickImageProvider*
-/// @param callback int32_t func()
+/// @param self const QQuickImageProvider*
+/// @param callback int32_t func(const QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_image_type(void* self, int32_t (*callback)());
+void q_quickimageprovider_on_image_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#imageType)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
 /// @return enum QQmlImageProviderBase__ImageType
 ///
-int32_t q_quickimageprovider_super_image_type(void* self);
+int32_t q_quickimageprovider_super_image_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#flags)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
 /// @return flag of enum QQmlImageProviderBase__Flag
 ///
-int32_t q_quickimageprovider_flags(void* self);
+int32_t q_quickimageprovider_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuickImageProvider*
-/// @param callback int32_t func()
+/// @param self const QQuickImageProvider*
+/// @param callback int32_t func(const QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_flags(void* self, int32_t (*callback)());
+void q_quickimageprovider_on_flags(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#flags)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
 /// @return flag of enum QQmlImageProviderBase__Flag
 ///
-int32_t q_quickimageprovider_super_flags(void* self);
+int32_t q_quickimageprovider_super_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestImage)
 ///
@@ -2197,7 +2172,7 @@ int32_t q_quickimageprovider_super_flags(void* self);
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QImage* q_quickimageprovider_request_image(void* self, const char* id, void* size, void* requestedSize);
+QImage* q_quickimageprovider_request_image(void* self, const char* id, void* size, const void* requestedSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestImage)
 ///
@@ -2208,7 +2183,7 @@ QImage* q_quickimageprovider_request_image(void* self, const char* id, void* siz
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickimageprovider_on_request_image(void* self, QImage* (*callback)(void*, const char*, void*, void*));
+void q_quickimageprovider_on_request_image(void* self, QImage* (*callback)(void*, const char*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestImage)
 ///
@@ -2219,7 +2194,7 @@ void q_quickimageprovider_on_request_image(void* self, QImage* (*callback)(void*
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QImage* q_quickimageprovider_super_request_image(void* self, const char* id, void* size, void* requestedSize);
+QImage* q_quickimageprovider_super_request_image(void* self, const char* id, void* size, const void* requestedSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestPixmap)
 ///
@@ -2228,7 +2203,7 @@ QImage* q_quickimageprovider_super_request_image(void* self, const char* id, voi
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QPixmap* q_quickimageprovider_request_pixmap(void* self, const char* id, void* size, void* requestedSize);
+QPixmap* q_quickimageprovider_request_pixmap(void* self, const char* id, void* size, const void* requestedSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestPixmap)
 ///
@@ -2239,7 +2214,7 @@ QPixmap* q_quickimageprovider_request_pixmap(void* self, const char* id, void* s
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickimageprovider_on_request_pixmap(void* self, QPixmap* (*callback)(void*, const char*, void*, void*));
+void q_quickimageprovider_on_request_pixmap(void* self, QPixmap* (*callback)(void*, const char*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestPixmap)
 ///
@@ -2250,7 +2225,7 @@ void q_quickimageprovider_on_request_pixmap(void* self, QPixmap* (*callback)(voi
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QPixmap* q_quickimageprovider_super_request_pixmap(void* self, const char* id, void* size, void* requestedSize);
+QPixmap* q_quickimageprovider_super_request_pixmap(void* self, const char* id, void* size, const void* requestedSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestTexture)
 ///
@@ -2259,7 +2234,7 @@ QPixmap* q_quickimageprovider_super_request_pixmap(void* self, const char* id, v
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QQuickTextureFactory* q_quickimageprovider_request_texture(void* self, const char* id, void* size, void* requestedSize);
+QQuickTextureFactory* q_quickimageprovider_request_texture(void* self, const char* id, void* size, const void* requestedSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestTexture)
 ///
@@ -2268,7 +2243,7 @@ QQuickTextureFactory* q_quickimageprovider_request_texture(void* self, const cha
 /// @param self QQuickImageProvider*
 /// @param callback QQuickTextureFactory* func(QQuickImageProvider* self, const char* id, QSize* size, QSize* requestedSize)
 ///
-void q_quickimageprovider_on_request_texture(void* self, QQuickTextureFactory* (*callback)(void*, const char*, void*, void*));
+void q_quickimageprovider_on_request_texture(void* self, QQuickTextureFactory* (*callback)(void*, const char*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickimageprovider.html#requestTexture)
 ///
@@ -2279,7 +2254,7 @@ void q_quickimageprovider_on_request_texture(void* self, QQuickTextureFactory* (
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QQuickTextureFactory* q_quickimageprovider_super_request_texture(void* self, const char* id, void* size, void* requestedSize);
+QQuickTextureFactory* q_quickimageprovider_super_request_texture(void* self, const char* id, void* size, const void* requestedSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2306,9 +2281,9 @@ const char* q_quickimageprovider_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-const char* q_quickimageprovider_object_name(void* self);
+const char* q_quickimageprovider_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2323,33 +2298,33 @@ void q_quickimageprovider_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-bool q_quickimageprovider_is_widget_type(void* self);
+bool q_quickimageprovider_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-bool q_quickimageprovider_is_window_type(void* self);
+bool q_quickimageprovider_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-bool q_quickimageprovider_is_quick_item_type(void* self);
+bool q_quickimageprovider_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-bool q_quickimageprovider_signals_blocked(void* self);
+bool q_quickimageprovider_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2364,9 +2339,9 @@ bool q_quickimageprovider_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-QThread* q_quickimageprovider_thread(void* self);
+QThread* q_quickimageprovider_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2417,11 +2392,11 @@ void q_quickimageprovider_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quickimageprovider_children(void* self);
+libqt_list q_quickimageprovider_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2459,7 +2434,7 @@ void q_quickimageprovider_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickimageprovider_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quickimageprovider_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2470,18 +2445,18 @@ QMetaObject__Connection* q_quickimageprovider_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quickimageprovider_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quickimageprovider_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickimageprovider_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quickimageprovider_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2492,7 +2467,7 @@ QMetaObject__Connection* q_quickimageprovider_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickimageprovider_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quickimageprovider_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2503,24 +2478,24 @@ bool q_quickimageprovider_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quickimageprovider_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quickimageprovider_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-bool q_quickimageprovider_disconnect3(void* self);
+bool q_quickimageprovider_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param receiver QObject*
 ///
-bool q_quickimageprovider_disconnect4(void* self, void* receiver);
+bool q_quickimageprovider_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2528,23 +2503,23 @@ bool q_quickimageprovider_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quickimageprovider_disconnect5(void* param1);
+bool q_quickimageprovider_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-void q_quickimageprovider_dump_object_tree(void* self);
+void q_quickimageprovider_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-void q_quickimageprovider_dump_object_info(void* self);
+void q_quickimageprovider_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2554,16 +2529,16 @@ void q_quickimageprovider_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quickimageprovider_set_property(void* self, const char* name, void* value);
+bool q_quickimageprovider_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param name const char*
 ///
-QVariant* q_quickimageprovider_property(void* self, const char* name);
+QVariant* q_quickimageprovider_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2571,9 +2546,9 @@ QVariant* q_quickimageprovider_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-const char** q_quickimageprovider_dynamic_property_names(void* self);
+const char** q_quickimageprovider_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2587,9 +2562,9 @@ QBindingStorage* q_quickimageprovider_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-const QBindingStorage* q_quickimageprovider_binding_storage2(void* self);
+const QBindingStorage* q_quickimageprovider_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2612,18 +2587,18 @@ void q_quickimageprovider_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-QObject* q_quickimageprovider_parent(void* self);
+QObject* q_quickimageprovider_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param classname const char*
 ///
-bool q_quickimageprovider_inherits(void* self, const char* classname);
+bool q_quickimageprovider_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2663,7 +2638,7 @@ int32_t q_quickimageprovider_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickimageprovider_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quickimageprovider_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2675,59 +2650,59 @@ QMetaObject__Connection* q_quickimageprovider_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickimageprovider_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quickimageprovider_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickimageprovider_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quickimageprovider_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param signal const char*
 ///
-bool q_quickimageprovider_disconnect1(void* self, const char* signal);
+bool q_quickimageprovider_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageProvider*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quickimageprovider_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quickimageprovider_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quickimageprovider_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickimageprovider_disconnect23(void* self, void* receiver, const char* member);
+bool q_quickimageprovider_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuickImageProvider*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quickimageprovider_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2923,7 +2898,7 @@ void q_quickimageprovider_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self QQuickImageProvider*
 /// @param signal QMetaMethod*
 ///
-void q_quickimageprovider_connect_notify(void* self, void* signal);
+void q_quickimageprovider_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2934,7 +2909,7 @@ void q_quickimageprovider_connect_notify(void* self, void* signal);
 /// @param self QQuickImageProvider*
 /// @param signal QMetaMethod*
 ///
-void q_quickimageprovider_super_connect_notify(void* self, void* signal);
+void q_quickimageprovider_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2945,7 +2920,7 @@ void q_quickimageprovider_super_connect_notify(void* self, void* signal);
 /// @param self QQuickImageProvider*
 /// @param callback void func(QQuickImageProvider* self, QMetaMethod* signal)
 ///
-void q_quickimageprovider_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quickimageprovider_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2956,7 +2931,7 @@ void q_quickimageprovider_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self QQuickImageProvider*
 /// @param signal QMetaMethod*
 ///
-void q_quickimageprovider_disconnect_notify(void* self, void* signal);
+void q_quickimageprovider_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2967,7 +2942,7 @@ void q_quickimageprovider_disconnect_notify(void* self, void* signal);
 /// @param self QQuickImageProvider*
 /// @param signal QMetaMethod*
 ///
-void q_quickimageprovider_super_disconnect_notify(void* self, void* signal);
+void q_quickimageprovider_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2978,7 +2953,7 @@ void q_quickimageprovider_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuickImageProvider*
 /// @param callback void func(QQuickImageProvider* self, QMetaMethod* signal)
 ///
-void q_quickimageprovider_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quickimageprovider_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2986,9 +2961,9 @@ void q_quickimageprovider_on_disconnect_notify(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-QObject* q_quickimageprovider_sender(void* self);
+QObject* q_quickimageprovider_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2996,9 +2971,9 @@ QObject* q_quickimageprovider_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-QObject* q_quickimageprovider_super_sender(void* self);
+QObject* q_quickimageprovider_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3006,10 +2981,10 @@ QObject* q_quickimageprovider_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickImageProvider*
-/// @param callback QObject* func()
+/// @param self const QQuickImageProvider*
+/// @param callback QObject* func(QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_sender(void* self, QObject* (*callback)());
+void q_quickimageprovider_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3017,9 +2992,9 @@ void q_quickimageprovider_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-int32_t q_quickimageprovider_sender_signal_index(void* self);
+int32_t q_quickimageprovider_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3027,9 +3002,9 @@ int32_t q_quickimageprovider_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 ///
-int32_t q_quickimageprovider_super_sender_signal_index(void* self);
+int32_t q_quickimageprovider_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3037,10 +3012,10 @@ int32_t q_quickimageprovider_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickImageProvider*
-/// @param callback int32_t func()
+/// @param self const QQuickImageProvider*
+/// @param callback int32_t func(QQuickImageProvider* self)
 ///
-void q_quickimageprovider_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quickimageprovider_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3048,10 +3023,10 @@ void q_quickimageprovider_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param signal const char*
 ///
-int32_t q_quickimageprovider_receivers(void* self, const char* signal);
+int32_t q_quickimageprovider_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3059,10 +3034,10 @@ int32_t q_quickimageprovider_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param signal const char*
 ///
-int32_t q_quickimageprovider_super_receivers(void* self, const char* signal);
+int32_t q_quickimageprovider_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3070,10 +3045,10 @@ int32_t q_quickimageprovider_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param callback int32_t func(QQuickImageProvider* self, const char* signal)
 ///
-void q_quickimageprovider_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quickimageprovider_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3081,10 +3056,10 @@ void q_quickimageprovider_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param signal QMetaMethod*
 ///
-bool q_quickimageprovider_is_signal_connected(void* self, void* signal);
+bool q_quickimageprovider_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3092,10 +3067,10 @@ bool q_quickimageprovider_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param signal QMetaMethod*
 ///
-bool q_quickimageprovider_super_is_signal_connected(void* self, void* signal);
+bool q_quickimageprovider_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3103,10 +3078,10 @@ bool q_quickimageprovider_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickImageProvider*
+/// @param self const QQuickImageProvider*
 /// @param callback bool func(QQuickImageProvider* self, QMetaMethod* signal)
 ///
-void q_quickimageprovider_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quickimageprovider_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3135,11 +3110,13 @@ QQuickAsyncImageProvider* q_quickasyncimageprovider_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickasyncimageprovider.html#requestImageResponse)
 ///
+/// @warning This method must be implemented with `q_quickasyncimageprovider_on_request_image_response` before it can be called.
+///
 /// @param self QQuickAsyncImageProvider*
 /// @param id const char*
 /// @param requestedSize QSize*
 ///
-QQuickImageResponse* q_quickasyncimageprovider_request_image_response(void* self, const char* id, void* requestedSize);
+QQuickImageResponse* q_quickasyncimageprovider_request_image_response(void* self, const char* id, const void* requestedSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickasyncimageprovider.html#requestImageResponse)
 ///
@@ -3148,17 +3125,7 @@ QQuickImageResponse* q_quickasyncimageprovider_request_image_response(void* self
 /// @param self QQuickAsyncImageProvider*
 /// @param callback QQuickImageResponse* func(QQuickAsyncImageProvider* self, const char* id, QSize* requestedSize)
 ///
-void q_quickasyncimageprovider_on_request_image_response(void* self, QQuickImageResponse* (*callback)(void*, const char*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquickasyncimageprovider.html#requestImageResponse)
-///
-/// Base class method implementation
-///
-/// @param self QQuickAsyncImageProvider*
-/// @param id const char*
-/// @param requestedSize QSize*
-///
-QQuickImageResponse* q_quickasyncimageprovider_super_request_image_response(void* self, const char* id, void* requestedSize);
+void q_quickasyncimageprovider_on_request_image_response(void* self, QQuickImageResponse* (*callback)(void*, const char*, const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3199,9 +3166,9 @@ const char* q_quickasyncimageprovider_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-const char* q_quickasyncimageprovider_object_name(void* self);
+const char* q_quickasyncimageprovider_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3216,33 +3183,33 @@ void q_quickasyncimageprovider_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-bool q_quickasyncimageprovider_is_widget_type(void* self);
+bool q_quickasyncimageprovider_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-bool q_quickasyncimageprovider_is_window_type(void* self);
+bool q_quickasyncimageprovider_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-bool q_quickasyncimageprovider_is_quick_item_type(void* self);
+bool q_quickasyncimageprovider_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-bool q_quickasyncimageprovider_signals_blocked(void* self);
+bool q_quickasyncimageprovider_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3257,9 +3224,9 @@ bool q_quickasyncimageprovider_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-QThread* q_quickasyncimageprovider_thread(void* self);
+QThread* q_quickasyncimageprovider_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3310,11 +3277,11 @@ void q_quickasyncimageprovider_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quickasyncimageprovider_children(void* self);
+libqt_list q_quickasyncimageprovider_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3352,7 +3319,7 @@ void q_quickasyncimageprovider_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickasyncimageprovider_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quickasyncimageprovider_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3363,18 +3330,18 @@ QMetaObject__Connection* q_quickasyncimageprovider_connect(void* sender, const c
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quickasyncimageprovider_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quickasyncimageprovider_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quickasyncimageprovider_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quickasyncimageprovider_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3385,7 +3352,7 @@ QMetaObject__Connection* q_quickasyncimageprovider_connect3(void* self, void* se
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickasyncimageprovider_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quickasyncimageprovider_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3396,24 +3363,24 @@ bool q_quickasyncimageprovider_disconnect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quickasyncimageprovider_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quickasyncimageprovider_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-bool q_quickasyncimageprovider_disconnect3(void* self);
+bool q_quickasyncimageprovider_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param receiver QObject*
 ///
-bool q_quickasyncimageprovider_disconnect4(void* self, void* receiver);
+bool q_quickasyncimageprovider_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3421,23 +3388,23 @@ bool q_quickasyncimageprovider_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quickasyncimageprovider_disconnect5(void* param1);
+bool q_quickasyncimageprovider_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-void q_quickasyncimageprovider_dump_object_tree(void* self);
+void q_quickasyncimageprovider_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-void q_quickasyncimageprovider_dump_object_info(void* self);
+void q_quickasyncimageprovider_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3447,16 +3414,16 @@ void q_quickasyncimageprovider_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quickasyncimageprovider_set_property(void* self, const char* name, void* value);
+bool q_quickasyncimageprovider_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param name const char*
 ///
-QVariant* q_quickasyncimageprovider_property(void* self, const char* name);
+QVariant* q_quickasyncimageprovider_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3464,9 +3431,9 @@ QVariant* q_quickasyncimageprovider_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-const char** q_quickasyncimageprovider_dynamic_property_names(void* self);
+const char** q_quickasyncimageprovider_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3480,9 +3447,9 @@ QBindingStorage* q_quickasyncimageprovider_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-const QBindingStorage* q_quickasyncimageprovider_binding_storage2(void* self);
+const QBindingStorage* q_quickasyncimageprovider_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3505,18 +3472,18 @@ void q_quickasyncimageprovider_on_destroyed(void* self, void (*callback)(void*))
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-QObject* q_quickasyncimageprovider_parent(void* self);
+QObject* q_quickasyncimageprovider_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param classname const char*
 ///
-bool q_quickasyncimageprovider_inherits(void* self, const char* classname);
+bool q_quickasyncimageprovider_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3556,7 +3523,7 @@ int32_t q_quickasyncimageprovider_start_timer23(void* self, int64_t time, int32_
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickasyncimageprovider_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quickasyncimageprovider_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3568,59 +3535,59 @@ QMetaObject__Connection* q_quickasyncimageprovider_connect5(void* sender, const 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickasyncimageprovider_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quickasyncimageprovider_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quickasyncimageprovider_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quickasyncimageprovider_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param signal const char*
 ///
-bool q_quickasyncimageprovider_disconnect1(void* self, const char* signal);
+bool q_quickasyncimageprovider_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickAsyncImageProvider*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quickasyncimageprovider_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quickasyncimageprovider_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quickasyncimageprovider_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quickasyncimageprovider_disconnect23(void* self, void* receiver, const char* member);
+bool q_quickasyncimageprovider_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuickAsyncImageProvider*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quickasyncimageprovider_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3646,9 +3613,9 @@ void q_quickasyncimageprovider_on_destroyed1(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-const QMetaObject* q_quickasyncimageprovider_meta_object(void* self);
+const QMetaObject* q_quickasyncimageprovider_meta_object(const void* self);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3656,9 +3623,9 @@ const QMetaObject* q_quickasyncimageprovider_meta_object(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-const QMetaObject* q_quickasyncimageprovider_super_meta_object(void* self);
+const QMetaObject* q_quickasyncimageprovider_super_meta_object(const void* self);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3666,10 +3633,10 @@ const QMetaObject* q_quickasyncimageprovider_super_meta_object(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuickAsyncImageProvider*
+/// @param callback const QMetaObject* func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quickasyncimageprovider_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3747,11 +3714,11 @@ void q_quickasyncimageprovider_on_metacall(void* self, int32_t (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
 /// @return enum QQmlImageProviderBase__ImageType
 ///
-int32_t q_quickasyncimageprovider_image_type(void* self);
+int32_t q_quickasyncimageprovider_image_type(const void* self);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3759,11 +3726,11 @@ int32_t q_quickasyncimageprovider_image_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
 /// @return enum QQmlImageProviderBase__ImageType
 ///
-int32_t q_quickasyncimageprovider_super_image_type(void* self);
+int32_t q_quickasyncimageprovider_super_image_type(const void* self);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3771,10 +3738,10 @@ int32_t q_quickasyncimageprovider_super_image_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
-/// @param callback int32_t func()
+/// @param self const QQuickAsyncImageProvider*
+/// @param callback int32_t func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_image_type(void* self, int32_t (*callback)());
+void q_quickasyncimageprovider_on_image_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3782,11 +3749,11 @@ void q_quickasyncimageprovider_on_image_type(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
 /// @return flag of enum QQmlImageProviderBase__Flag
 ///
-int32_t q_quickasyncimageprovider_flags(void* self);
+int32_t q_quickasyncimageprovider_flags(const void* self);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3794,11 +3761,11 @@ int32_t q_quickasyncimageprovider_flags(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
 /// @return flag of enum QQmlImageProviderBase__Flag
 ///
-int32_t q_quickasyncimageprovider_super_flags(void* self);
+int32_t q_quickasyncimageprovider_super_flags(const void* self);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3806,10 +3773,10 @@ int32_t q_quickasyncimageprovider_super_flags(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
-/// @param callback int32_t func()
+/// @param self const QQuickAsyncImageProvider*
+/// @param callback int32_t func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_flags(void* self, int32_t (*callback)());
+void q_quickasyncimageprovider_on_flags(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3822,7 +3789,7 @@ void q_quickasyncimageprovider_on_flags(void* self, int32_t (*callback)());
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QImage* q_quickasyncimageprovider_request_image(void* self, const char* id, void* size, void* requestedSize);
+QImage* q_quickasyncimageprovider_request_image(void* self, const char* id, void* size, const void* requestedSize);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3835,7 +3802,7 @@ QImage* q_quickasyncimageprovider_request_image(void* self, const char* id, void
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QImage* q_quickasyncimageprovider_super_request_image(void* self, const char* id, void* size, void* requestedSize);
+QImage* q_quickasyncimageprovider_super_request_image(void* self, const char* id, void* size, const void* requestedSize);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3848,7 +3815,7 @@ QImage* q_quickasyncimageprovider_super_request_image(void* self, const char* id
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickasyncimageprovider_on_request_image(void* self, QImage* (*callback)(void*, const char*, void*, void*));
+void q_quickasyncimageprovider_on_request_image(void* self, QImage* (*callback)(void*, const char*, void*, const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3861,7 +3828,7 @@ void q_quickasyncimageprovider_on_request_image(void* self, QImage* (*callback)(
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QPixmap* q_quickasyncimageprovider_request_pixmap(void* self, const char* id, void* size, void* requestedSize);
+QPixmap* q_quickasyncimageprovider_request_pixmap(void* self, const char* id, void* size, const void* requestedSize);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3874,7 +3841,7 @@ QPixmap* q_quickasyncimageprovider_request_pixmap(void* self, const char* id, vo
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QPixmap* q_quickasyncimageprovider_super_request_pixmap(void* self, const char* id, void* size, void* requestedSize);
+QPixmap* q_quickasyncimageprovider_super_request_pixmap(void* self, const char* id, void* size, const void* requestedSize);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3887,7 +3854,7 @@ QPixmap* q_quickasyncimageprovider_super_request_pixmap(void* self, const char* 
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_quickasyncimageprovider_on_request_pixmap(void* self, QPixmap* (*callback)(void*, const char*, void*, void*));
+void q_quickasyncimageprovider_on_request_pixmap(void* self, QPixmap* (*callback)(void*, const char*, void*, const void*));
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3900,7 +3867,7 @@ void q_quickasyncimageprovider_on_request_pixmap(void* self, QPixmap* (*callback
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QQuickTextureFactory* q_quickasyncimageprovider_request_texture(void* self, const char* id, void* size, void* requestedSize);
+QQuickTextureFactory* q_quickasyncimageprovider_request_texture(void* self, const char* id, void* size, const void* requestedSize);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3913,7 +3880,7 @@ QQuickTextureFactory* q_quickasyncimageprovider_request_texture(void* self, cons
 /// @param size QSize*
 /// @param requestedSize QSize*
 ///
-QQuickTextureFactory* q_quickasyncimageprovider_super_request_texture(void* self, const char* id, void* size, void* requestedSize);
+QQuickTextureFactory* q_quickasyncimageprovider_super_request_texture(void* self, const char* id, void* size, const void* requestedSize);
 
 /// Inherited from QQuickImageProvider
 ///
@@ -3924,7 +3891,7 @@ QQuickTextureFactory* q_quickasyncimageprovider_super_request_texture(void* self
 /// @param self QQuickAsyncImageProvider*
 /// @param callback QQuickTextureFactory* func(QQuickAsyncImageProvider* self, const char* id, QSize* size, QSize* requestedSize)
 ///
-void q_quickasyncimageprovider_on_request_texture(void* self, QQuickTextureFactory* (*callback)(void*, const char*, void*, void*));
+void q_quickasyncimageprovider_on_request_texture(void* self, QQuickTextureFactory* (*callback)(void*, const char*, void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4102,7 +4069,7 @@ void q_quickasyncimageprovider_on_custom_event(void* self, void (*callback)(void
 /// @param self QQuickAsyncImageProvider*
 /// @param signal QMetaMethod*
 ///
-void q_quickasyncimageprovider_connect_notify(void* self, void* signal);
+void q_quickasyncimageprovider_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4113,7 +4080,7 @@ void q_quickasyncimageprovider_connect_notify(void* self, void* signal);
 /// @param self QQuickAsyncImageProvider*
 /// @param signal QMetaMethod*
 ///
-void q_quickasyncimageprovider_super_connect_notify(void* self, void* signal);
+void q_quickasyncimageprovider_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4124,7 +4091,7 @@ void q_quickasyncimageprovider_super_connect_notify(void* self, void* signal);
 /// @param self QQuickAsyncImageProvider*
 /// @param callback void func(QQuickAsyncImageProvider* self, QMetaMethod* signal)
 ///
-void q_quickasyncimageprovider_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quickasyncimageprovider_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4135,7 +4102,7 @@ void q_quickasyncimageprovider_on_connect_notify(void* self, void (*callback)(vo
 /// @param self QQuickAsyncImageProvider*
 /// @param signal QMetaMethod*
 ///
-void q_quickasyncimageprovider_disconnect_notify(void* self, void* signal);
+void q_quickasyncimageprovider_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4146,7 +4113,7 @@ void q_quickasyncimageprovider_disconnect_notify(void* self, void* signal);
 /// @param self QQuickAsyncImageProvider*
 /// @param signal QMetaMethod*
 ///
-void q_quickasyncimageprovider_super_disconnect_notify(void* self, void* signal);
+void q_quickasyncimageprovider_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4157,7 +4124,7 @@ void q_quickasyncimageprovider_super_disconnect_notify(void* self, void* signal)
 /// @param self QQuickAsyncImageProvider*
 /// @param callback void func(QQuickAsyncImageProvider* self, QMetaMethod* signal)
 ///
-void q_quickasyncimageprovider_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quickasyncimageprovider_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4165,9 +4132,9 @@ void q_quickasyncimageprovider_on_disconnect_notify(void* self, void (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-QObject* q_quickasyncimageprovider_sender(void* self);
+QObject* q_quickasyncimageprovider_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4175,9 +4142,9 @@ QObject* q_quickasyncimageprovider_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-QObject* q_quickasyncimageprovider_super_sender(void* self);
+QObject* q_quickasyncimageprovider_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4185,10 +4152,10 @@ QObject* q_quickasyncimageprovider_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
-/// @param callback QObject* func()
+/// @param self const QQuickAsyncImageProvider*
+/// @param callback QObject* func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_sender(void* self, QObject* (*callback)());
+void q_quickasyncimageprovider_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4196,9 +4163,9 @@ void q_quickasyncimageprovider_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-int32_t q_quickasyncimageprovider_sender_signal_index(void* self);
+int32_t q_quickasyncimageprovider_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4206,9 +4173,9 @@ int32_t q_quickasyncimageprovider_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 ///
-int32_t q_quickasyncimageprovider_super_sender_signal_index(void* self);
+int32_t q_quickasyncimageprovider_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4216,10 +4183,10 @@ int32_t q_quickasyncimageprovider_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
-/// @param callback int32_t func()
+/// @param self const QQuickAsyncImageProvider*
+/// @param callback int32_t func(QQuickAsyncImageProvider* self)
 ///
-void q_quickasyncimageprovider_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quickasyncimageprovider_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4227,10 +4194,10 @@ void q_quickasyncimageprovider_on_sender_signal_index(void* self, int32_t (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param signal const char*
 ///
-int32_t q_quickasyncimageprovider_receivers(void* self, const char* signal);
+int32_t q_quickasyncimageprovider_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4238,10 +4205,10 @@ int32_t q_quickasyncimageprovider_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param signal const char*
 ///
-int32_t q_quickasyncimageprovider_super_receivers(void* self, const char* signal);
+int32_t q_quickasyncimageprovider_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4249,10 +4216,10 @@ int32_t q_quickasyncimageprovider_super_receivers(void* self, const char* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param callback int32_t func(QQuickAsyncImageProvider* self, const char* signal)
 ///
-void q_quickasyncimageprovider_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quickasyncimageprovider_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4260,10 +4227,10 @@ void q_quickasyncimageprovider_on_receivers(void* self, int32_t (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param signal QMetaMethod*
 ///
-bool q_quickasyncimageprovider_is_signal_connected(void* self, void* signal);
+bool q_quickasyncimageprovider_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4271,10 +4238,10 @@ bool q_quickasyncimageprovider_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param signal QMetaMethod*
 ///
-bool q_quickasyncimageprovider_super_is_signal_connected(void* self, void* signal);
+bool q_quickasyncimageprovider_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4282,10 +4249,10 @@ bool q_quickasyncimageprovider_super_is_signal_connected(void* self, void* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuickAsyncImageProvider*
+/// @param self const QQuickAsyncImageProvider*
 /// @param callback bool func(QQuickAsyncImageProvider* self, QMetaMethod* signal)
 ///
-void q_quickasyncimageprovider_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quickasyncimageprovider_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -28,7 +28,7 @@ KUrlRequester* k_urlrequester_new2();
 ///
 /// @param url QUrl*
 ///
-KUrlRequester* k_urlrequester_new3(void* url);
+KUrlRequester* k_urlrequester_new3(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html)
 
@@ -46,30 +46,30 @@ KUrlRequester* k_urlrequester_new4(void* editWidget, void* parent);
 /// @param url QUrl*
 /// @param parent QWidget*
 ///
-KUrlRequester* k_urlrequester_new5(void* url, void* parent);
+KUrlRequester* k_urlrequester_new5(const void* url, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const QMetaObject* k_urlrequester_meta_object(void* self);
+const QMetaObject* k_urlrequester_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KUrlRequester*
-/// @param callback const QMetaObject* func()
+/// @param self const KUrlRequester*
+/// @param callback const QMetaObject* func(const KUrlRequester* self)
 ///
-void k_urlrequester_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_urlrequester_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const QMetaObject* k_urlrequester_super_meta_object(void* self);
+const QMetaObject* k_urlrequester_super_meta_object(const void* self);
 
 /// @param self KUrlRequester*
 /// @param param1 const char*
@@ -123,23 +123,23 @@ const char* k_urlrequester_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#url)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QUrl* k_urlrequester_url(void* self);
+QUrl* k_urlrequester_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#startDir)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QUrl* k_urlrequester_start_dir(void* self);
+QUrl* k_urlrequester_start_dir(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#text)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_text(void* self);
+const char* k_urlrequester_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#setMode)
 ///
@@ -150,11 +150,11 @@ void k_urlrequester_set_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#mode)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return flag of enum KFile__Mode
 ///
-int32_t k_urlrequester_mode(void* self);
+int32_t k_urlrequester_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#setAcceptMode)
 ///
@@ -165,11 +165,11 @@ void k_urlrequester_set_accept_mode(void* self, int32_t m);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#acceptMode)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum QFileDialog__AcceptMode
 ///
-int32_t k_urlrequester_accept_mode(void* self);
+int32_t k_urlrequester_accept_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#setNameFilters)
 ///
@@ -189,9 +189,9 @@ void k_urlrequester_set_name_filter(void* self, const char* filter);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char** k_urlrequester_name_filters(void* self);
+const char** k_urlrequester_name_filters(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#setMimeTypeFilters)
 ///
@@ -204,56 +204,56 @@ void k_urlrequester_set_mime_type_filters(void* self, const char* mimeTypes[stat
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char** k_urlrequester_mime_type_filters(void* self);
+const char** k_urlrequester_mime_type_filters(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#fileDialog)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QFileDialog* k_urlrequester_file_dialog(void* self);
+QFileDialog* k_urlrequester_file_dialog(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#fileDialog)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KUrlRequester*
-/// @param callback QFileDialog* func()
+/// @param self const KUrlRequester*
+/// @param callback QFileDialog* func(const KUrlRequester* self)
 ///
-void k_urlrequester_on_file_dialog(void* self, QFileDialog* (*callback)());
+void k_urlrequester_on_file_dialog(const void* self, QFileDialog* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#fileDialog)
 ///
 /// Base class method implementation
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QFileDialog* k_urlrequester_super_file_dialog(void* self);
+QFileDialog* k_urlrequester_super_file_dialog(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#lineEdit)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-KLineEdit* k_urlrequester_line_edit(void* self);
+KLineEdit* k_urlrequester_line_edit(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#comboBox)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-KComboBox* k_urlrequester_combo_box(void* self);
+KComboBox* k_urlrequester_combo_box(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#button)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QPushButton* k_urlrequester_button(void* self);
+QPushButton* k_urlrequester_button(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#completionObject)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-KUrlCompletion* k_urlrequester_completion_object(void* self);
+KUrlCompletion* k_urlrequester_completion_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#customEditor)
 ///
@@ -265,9 +265,9 @@ const KEditListWidget__CustomEditor* k_urlrequester_custom_editor(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_placeholder_text(void* self);
+const char* k_urlrequester_placeholder_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#setPlaceholderText)
 ///
@@ -278,11 +278,11 @@ void k_urlrequester_set_placeholder_text(void* self, const char* msg);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#fileDialogModality)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_urlrequester_file_dialog_modality(void* self);
+int32_t k_urlrequester_file_dialog_modality(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#setFileDialogModality)
 ///
@@ -296,14 +296,14 @@ void k_urlrequester_set_file_dialog_modality(void* self, int32_t modality);
 /// @param self KUrlRequester*
 /// @param url QUrl*
 ///
-void k_urlrequester_set_url(void* self, void* url);
+void k_urlrequester_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#setStartDir)
 ///
 /// @param self KUrlRequester*
 /// @param startDir QUrl*
 ///
-void k_urlrequester_set_start_dir(void* self, void* startDir);
+void k_urlrequester_set_start_dir(void* self, const void* startDir);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#setText)
 ///
@@ -379,14 +379,14 @@ void k_urlrequester_on_open_file_dialog(void* self, void (*callback)(void*, void
 /// @param self KUrlRequester*
 /// @param param1 QUrl*
 ///
-void k_urlrequester_url_selected(void* self, void* param1);
+void k_urlrequester_url_selected(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#urlSelected)
 ///
 /// @param self KUrlRequester*
 /// @param callback void func(KUrlRequester* self, QUrl* param1)
 ///
-void k_urlrequester_on_url_selected(void* self, void (*callback)(void*, void*));
+void k_urlrequester_on_url_selected(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#changeEvent)
 ///
@@ -479,9 +479,9 @@ KUrlRequester* k_urlrequester_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-uintptr_t k_urlrequester_win_id(void* self);
+uintptr_t k_urlrequester_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -495,25 +495,25 @@ void k_urlrequester_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-uintptr_t k_urlrequester_internal_win_id(void* self);
+uintptr_t k_urlrequester_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-uintptr_t k_urlrequester_effective_win_id(void* self);
+uintptr_t k_urlrequester_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QStyle* k_urlrequester_style(void* self);
+QStyle* k_urlrequester_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -528,35 +528,35 @@ void k_urlrequester_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_top_level(void* self);
+bool k_urlrequester_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_window(void* self);
+bool k_urlrequester_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_modal(void* self);
+bool k_urlrequester_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_urlrequester_window_modality(void* self);
+int32_t k_urlrequester_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -571,18 +571,18 @@ void k_urlrequester_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_enabled(void* self);
+bool k_urlrequester_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QWidget*
 ///
-bool k_urlrequester_is_enabled_to(void* self, void* param1);
+bool k_urlrequester_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -615,153 +615,153 @@ void k_urlrequester_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QRect* k_urlrequester_frame_geometry(void* self);
+QRect* k_urlrequester_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const QRect* k_urlrequester_geometry(void* self);
+const QRect* k_urlrequester_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QRect* k_urlrequester_normal_geometry(void* self);
+QRect* k_urlrequester_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_x(void* self);
+int32_t k_urlrequester_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_y(void* self);
+int32_t k_urlrequester_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QPoint* k_urlrequester_pos(void* self);
+QPoint* k_urlrequester_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_frame_size(void* self);
+QSize* k_urlrequester_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_size(void* self);
+QSize* k_urlrequester_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_width(void* self);
+int32_t k_urlrequester_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_height(void* self);
+int32_t k_urlrequester_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QRect* k_urlrequester_rect(void* self);
+QRect* k_urlrequester_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QRect* k_urlrequester_children_rect(void* self);
+QRect* k_urlrequester_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QRegion* k_urlrequester_children_region(void* self);
+QRegion* k_urlrequester_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_minimum_size(void* self);
+QSize* k_urlrequester_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_maximum_size(void* self);
+QSize* k_urlrequester_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_minimum_width(void* self);
+int32_t k_urlrequester_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_minimum_height(void* self);
+int32_t k_urlrequester_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_maximum_width(void* self);
+int32_t k_urlrequester_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_maximum_height(void* self);
+int32_t k_urlrequester_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -770,7 +770,7 @@ int32_t k_urlrequester_maximum_height(void* self);
 /// @param self KUrlRequester*
 /// @param minimumSize QSize*
 ///
-void k_urlrequester_set_minimum_size(void* self, void* minimumSize);
+void k_urlrequester_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -789,7 +789,7 @@ void k_urlrequester_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KUrlRequester*
 /// @param maximumSize QSize*
 ///
-void k_urlrequester_set_maximum_size(void* self, void* maximumSize);
+void k_urlrequester_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -841,9 +841,9 @@ void k_urlrequester_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_size_increment(void* self);
+QSize* k_urlrequester_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -852,7 +852,7 @@ QSize* k_urlrequester_size_increment(void* self);
 /// @param self KUrlRequester*
 /// @param sizeIncrement QSize*
 ///
-void k_urlrequester_set_size_increment(void* self, void* sizeIncrement);
+void k_urlrequester_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -868,9 +868,9 @@ void k_urlrequester_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_base_size(void* self);
+QSize* k_urlrequester_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -879,7 +879,7 @@ QSize* k_urlrequester_base_size(void* self);
 /// @param self KUrlRequester*
 /// @param baseSize QSize*
 ///
-void k_urlrequester_set_base_size(void* self, void* baseSize);
+void k_urlrequester_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -898,7 +898,7 @@ void k_urlrequester_set_base_size2(void* self, int basew, int baseh);
 /// @param self KUrlRequester*
 /// @param fixedSize QSize*
 ///
-void k_urlrequester_set_fixed_size(void* self, void* fixedSize);
+void k_urlrequester_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -932,145 +932,145 @@ void k_urlrequester_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlrequester_map_to_global(void* self, void* param1);
+QPointF* k_urlrequester_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlrequester_map_to_global2(void* self, void* param1);
+QPoint* k_urlrequester_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlrequester_map_from_global(void* self, void* param1);
+QPointF* k_urlrequester_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlrequester_map_from_global2(void* self, void* param1);
+QPoint* k_urlrequester_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlrequester_map_to_parent(void* self, void* param1);
+QPointF* k_urlrequester_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlrequester_map_to_parent2(void* self, void* param1);
+QPoint* k_urlrequester_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlrequester_map_from_parent(void* self, void* param1);
+QPointF* k_urlrequester_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlrequester_map_from_parent2(void* self, void* param1);
+QPoint* k_urlrequester_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_urlrequester_map_to(void* self, void* param1, void* param2);
+QPointF* k_urlrequester_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_urlrequester_map_to2(void* self, void* param1, void* param2);
+QPoint* k_urlrequester_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_urlrequester_map_from(void* self, void* param1, void* param2);
+QPointF* k_urlrequester_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_urlrequester_map_from2(void* self, void* param1, void* param2);
+QPoint* k_urlrequester_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWidget* k_urlrequester_window(void* self);
+QWidget* k_urlrequester_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWidget* k_urlrequester_native_parent_widget(void* self);
+QWidget* k_urlrequester_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWidget* k_urlrequester_top_level_widget(void* self);
+QWidget* k_urlrequester_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const QPalette* k_urlrequester_palette(void* self);
+const QPalette* k_urlrequester_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1079,7 +1079,7 @@ const QPalette* k_urlrequester_palette(void* self);
 /// @param self KUrlRequester*
 /// @param palette QPalette*
 ///
-void k_urlrequester_set_palette(void* self, void* palette);
+void k_urlrequester_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1094,11 +1094,11 @@ void k_urlrequester_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_urlrequester_background_role(void* self);
+int32_t k_urlrequester_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1113,19 +1113,19 @@ void k_urlrequester_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_urlrequester_foreground_role(void* self);
+int32_t k_urlrequester_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const QFont* k_urlrequester_font(void* self);
+const QFont* k_urlrequester_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1134,31 +1134,31 @@ const QFont* k_urlrequester_font(void* self);
 /// @param self KUrlRequester*
 /// @param font QFont*
 ///
-void k_urlrequester_set_font(void* self, void* font);
+void k_urlrequester_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QFontMetrics* k_urlrequester_font_metrics(void* self);
+QFontMetrics* k_urlrequester_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QFontInfo* k_urlrequester_font_info(void* self);
+QFontInfo* k_urlrequester_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QCursor* k_urlrequester_cursor(void* self);
+QCursor* k_urlrequester_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1167,7 +1167,7 @@ QCursor* k_urlrequester_cursor(void* self);
 /// @param self KUrlRequester*
 /// @param cursor QCursor*
 ///
-void k_urlrequester_set_cursor(void* self, void* cursor);
+void k_urlrequester_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1190,17 +1190,17 @@ void k_urlrequester_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_has_mouse_tracking(void* self);
+bool k_urlrequester_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_under_mouse(void* self);
+bool k_urlrequester_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1215,9 +1215,9 @@ void k_urlrequester_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_has_tablet_tracking(void* self);
+bool k_urlrequester_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1226,7 +1226,7 @@ bool k_urlrequester_has_tablet_tracking(void* self);
 /// @param self KUrlRequester*
 /// @param mask QBitmap*
 ///
-void k_urlrequester_set_mask(void* self, void* mask);
+void k_urlrequester_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1235,15 +1235,15 @@ void k_urlrequester_set_mask(void* self, void* mask);
 /// @param self KUrlRequester*
 /// @param mask QRegion*
 ///
-void k_urlrequester_set_mask2(void* self, void* mask);
+void k_urlrequester_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QRegion* k_urlrequester_mask(void* self);
+QRegion* k_urlrequester_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1283,9 +1283,9 @@ QPixmap* k_urlrequester_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QGraphicsEffect* k_urlrequester_graphics_effect(void* self);
+QGraphicsEffect* k_urlrequester_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1338,9 +1338,9 @@ void k_urlrequester_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_style_sheet(void* self);
+const char* k_urlrequester_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1348,9 +1348,9 @@ const char* k_urlrequester_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_window_title(void* self);
+const char* k_urlrequester_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1359,15 +1359,15 @@ const char* k_urlrequester_window_title(void* self);
 /// @param self KUrlRequester*
 /// @param icon QIcon*
 ///
-void k_urlrequester_set_window_icon(void* self, void* icon);
+void k_urlrequester_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QIcon* k_urlrequester_window_icon(void* self);
+QIcon* k_urlrequester_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1384,9 +1384,9 @@ void k_urlrequester_set_window_icon_text(void* self, const char* windowIconText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_window_icon_text(void* self);
+const char* k_urlrequester_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1403,9 +1403,9 @@ void k_urlrequester_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_window_role(void* self);
+const char* k_urlrequester_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1422,9 +1422,9 @@ void k_urlrequester_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_window_file_path(void* self);
+const char* k_urlrequester_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1439,17 +1439,17 @@ void k_urlrequester_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-double k_urlrequester_window_opacity(void* self);
+double k_urlrequester_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_window_modified(void* self);
+bool k_urlrequester_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1466,9 +1466,9 @@ void k_urlrequester_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_tool_tip(void* self);
+const char* k_urlrequester_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1483,9 +1483,9 @@ void k_urlrequester_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_tool_tip_duration(void* self);
+int32_t k_urlrequester_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1502,9 +1502,9 @@ void k_urlrequester_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_status_tip(void* self);
+const char* k_urlrequester_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1521,9 +1521,9 @@ void k_urlrequester_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_whats_this(void* self);
+const char* k_urlrequester_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1531,9 +1531,9 @@ const char* k_urlrequester_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_accessible_name(void* self);
+const char* k_urlrequester_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1550,9 +1550,9 @@ void k_urlrequester_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_accessible_description(void* self);
+const char* k_urlrequester_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1576,11 +1576,11 @@ void k_urlrequester_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_urlrequester_layout_direction(void* self);
+int32_t k_urlrequester_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1597,15 +1597,15 @@ void k_urlrequester_unset_layout_direction(void* self);
 /// @param self KUrlRequester*
 /// @param locale QLocale*
 ///
-void k_urlrequester_set_locale(void* self, void* locale);
+void k_urlrequester_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QLocale* k_urlrequester_locale(void* self);
+QLocale* k_urlrequester_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1619,17 +1619,17 @@ void k_urlrequester_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_right_to_left(void* self);
+bool k_urlrequester_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_left_to_right(void* self);
+bool k_urlrequester_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1643,9 +1643,9 @@ void k_urlrequester_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_active_window(void* self);
+bool k_urlrequester_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1676,11 +1676,11 @@ void k_urlrequester_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_urlrequester_focus_policy(void* self);
+int32_t k_urlrequester_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1695,9 +1695,9 @@ void k_urlrequester_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_has_focus(void* self);
+bool k_urlrequester_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1721,19 +1721,19 @@ void k_urlrequester_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWidget* k_urlrequester_focus_proxy(void* self);
+QWidget* k_urlrequester_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_urlrequester_context_menu_policy(void* self);
+int32_t k_urlrequester_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1759,7 +1759,7 @@ void k_urlrequester_grab_mouse(void* self);
 /// @param self KUrlRequester*
 /// @param param1 QCursor*
 ///
-void k_urlrequester_grab_mouse2(void* self, void* param1);
+void k_urlrequester_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1792,7 +1792,7 @@ void k_urlrequester_release_keyboard(void* self);
 /// @param self KUrlRequester*
 /// @param key QKeySequence*
 ///
-int32_t k_urlrequester_grab_shortcut(void* self, void* key);
+int32_t k_urlrequester_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1837,9 +1837,9 @@ QWidget* k_urlrequester_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_updates_enabled(void* self);
+bool k_urlrequester_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1854,9 +1854,9 @@ void k_urlrequester_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QGraphicsProxyWidget* k_urlrequester_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_urlrequester_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1893,7 +1893,7 @@ void k_urlrequester_update2(void* self, int x, int y, int w, int h);
 /// @param self KUrlRequester*
 /// @param param1 QRect*
 ///
-void k_urlrequester_update3(void* self, void* param1);
+void k_urlrequester_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1902,7 +1902,7 @@ void k_urlrequester_update3(void* self, void* param1);
 /// @param self KUrlRequester*
 /// @param param1 QRegion*
 ///
-void k_urlrequester_update4(void* self, void* param1);
+void k_urlrequester_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1923,7 +1923,7 @@ void k_urlrequester_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KUrlRequester*
 /// @param param1 QRect*
 ///
-void k_urlrequester_repaint3(void* self, void* param1);
+void k_urlrequester_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1932,7 +1932,7 @@ void k_urlrequester_repaint3(void* self, void* param1);
 /// @param self KUrlRequester*
 /// @param param1 QRegion*
 ///
-void k_urlrequester_repaint4(void* self, void* param1);
+void k_urlrequester_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2041,7 +2041,7 @@ void k_urlrequester_move(void* self, int x, int y);
 /// @param self KUrlRequester*
 /// @param param1 QPoint*
 ///
-void k_urlrequester_move2(void* self, void* param1);
+void k_urlrequester_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2060,7 +2060,7 @@ void k_urlrequester_resize(void* self, int w, int h);
 /// @param self KUrlRequester*
 /// @param param1 QSize*
 ///
-void k_urlrequester_resize2(void* self, void* param1);
+void k_urlrequester_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2081,7 +2081,7 @@ void k_urlrequester_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KUrlRequester*
 /// @param geometry QRect*
 ///
-void k_urlrequester_set_geometry2(void* self, void* geometry);
+void k_urlrequester_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2089,9 +2089,9 @@ void k_urlrequester_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-char* k_urlrequester_save_geometry(void* self);
+char* k_urlrequester_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2114,60 +2114,60 @@ void k_urlrequester_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_visible(void* self);
+bool k_urlrequester_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 QWidget*
 ///
-bool k_urlrequester_is_visible_to(void* self, void* param1);
+bool k_urlrequester_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_hidden(void* self);
+bool k_urlrequester_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_minimized(void* self);
+bool k_urlrequester_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_maximized(void* self);
+bool k_urlrequester_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_full_screen(void* self);
+bool k_urlrequester_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_urlrequester_window_state(void* self);
+int32_t k_urlrequester_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2191,9 +2191,9 @@ void k_urlrequester_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSizePolicy* k_urlrequester_size_policy(void* self);
+QSizePolicy* k_urlrequester_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2218,9 +2218,9 @@ void k_urlrequester_set_size_policy2(void* self, int32_t horizontal, int32_t ver
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QRegion* k_urlrequester_visible_region(void* self);
+QRegion* k_urlrequester_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2241,31 +2241,31 @@ void k_urlrequester_set_contents_margins(void* self, int left, int top, int righ
 /// @param self KUrlRequester*
 /// @param margins QMargins*
 ///
-void k_urlrequester_set_contents_margins2(void* self, void* margins);
+void k_urlrequester_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QMargins* k_urlrequester_contents_margins(void* self);
+QMargins* k_urlrequester_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QRect* k_urlrequester_contents_rect(void* self);
+QRect* k_urlrequester_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QLayout* k_urlrequester_layout(void* self);
+QLayout* k_urlrequester_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2322,39 +2322,39 @@ void k_urlrequester_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_urlrequester_scroll2(void* self, int dx, int dy, void* param3);
+void k_urlrequester_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWidget* k_urlrequester_focus_widget(void* self);
+QWidget* k_urlrequester_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWidget* k_urlrequester_next_in_focus_chain(void* self);
+QWidget* k_urlrequester_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWidget* k_urlrequester_previous_in_focus_chain(void* self);
+QWidget* k_urlrequester_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_accept_drops(void* self);
+bool k_urlrequester_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2416,11 +2416,11 @@ void k_urlrequester_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_urlrequester_actions(void* self);
+libqt_list k_urlrequester_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2439,7 +2439,7 @@ QAction* k_urlrequester_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_urlrequester_add_action3(void* self, void* icon, const char* text);
+QAction* k_urlrequester_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2449,7 +2449,7 @@ QAction* k_urlrequester_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_urlrequester_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_urlrequester_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2460,15 +2460,15 @@ QAction* k_urlrequester_add_action4(void* self, const char* text, void* shortcut
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_urlrequester_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_urlrequester_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWidget* k_urlrequester_parent_widget(void* self);
+QWidget* k_urlrequester_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2483,11 +2483,11 @@ void k_urlrequester_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_urlrequester_window_flags(void* self);
+int32_t k_urlrequester_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2511,11 +2511,11 @@ void k_urlrequester_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_urlrequester_window_type(void* self);
+int32_t k_urlrequester_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2529,29 +2529,29 @@ QWidget* k_urlrequester_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_urlrequester_child_at(void* self, int x, int y);
+QWidget* k_urlrequester_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param p QPoint*
 ///
-QWidget* k_urlrequester_child_at2(void* self, void* p);
+QWidget* k_urlrequester_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param p QPointF*
 ///
-QWidget* k_urlrequester_child_at3(void* self, void* p);
+QWidget* k_urlrequester_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2566,35 +2566,35 @@ void k_urlrequester_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_urlrequester_test_attribute(void* self, int32_t param1);
+bool k_urlrequester_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-void k_urlrequester_ensure_polished(void* self);
+void k_urlrequester_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param child QWidget*
 ///
-bool k_urlrequester_is_ancestor_of(void* self, void* child);
+bool k_urlrequester_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_auto_fill_background(void* self);
+bool k_urlrequester_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2609,25 +2609,25 @@ void k_urlrequester_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QBackingStore* k_urlrequester_backing_store(void* self);
+QBackingStore* k_urlrequester_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QWindow* k_urlrequester_window_handle(void* self);
+QWindow* k_urlrequester_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QScreen* k_urlrequester_screen(void* self);
+QScreen* k_urlrequester_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2671,7 +2671,7 @@ void k_urlrequester_on_window_title_changed(void* self, void (*callback)(void*, 
 /// @param self KUrlRequester*
 /// @param icon QIcon*
 ///
-void k_urlrequester_window_icon_changed(void* self, void* icon);
+void k_urlrequester_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2680,7 +2680,7 @@ void k_urlrequester_window_icon_changed(void* self, void* icon);
 /// @param self KUrlRequester*
 /// @param callback void func(KUrlRequester* self, QIcon* icon)
 ///
-void k_urlrequester_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_urlrequester_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2707,7 +2707,7 @@ void k_urlrequester_on_window_icon_text_changed(void* self, void (*callback)(voi
 /// @param self KUrlRequester*
 /// @param pos QPoint*
 ///
-void k_urlrequester_custom_context_menu_requested(void* self, void* pos);
+void k_urlrequester_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2716,17 +2716,17 @@ void k_urlrequester_custom_context_menu_requested(void* self, void* pos);
 /// @param self KUrlRequester*
 /// @param callback void func(KUrlRequester* self, QPoint* pos)
 ///
-void k_urlrequester_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_urlrequester_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_urlrequester_input_method_hints(void* self);
+int32_t k_urlrequester_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2745,7 +2745,7 @@ void k_urlrequester_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_urlrequester_render22(void* self, void* target, void* targetOffset);
+void k_urlrequester_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2756,7 +2756,7 @@ void k_urlrequester_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_urlrequester_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_urlrequester_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2768,7 +2768,7 @@ void k_urlrequester_render3(void* self, void* target, void* targetOffset, void* 
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_urlrequester_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_urlrequester_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2778,7 +2778,7 @@ void k_urlrequester_render4(void* self, void* target, void* targetOffset, void* 
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_urlrequester_render23(void* self, void* painter, void* targetOffset);
+void k_urlrequester_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2789,7 +2789,7 @@ void k_urlrequester_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_urlrequester_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_urlrequester_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2801,7 +2801,7 @@ void k_urlrequester_render32(void* self, void* painter, void* targetOffset, void
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_urlrequester_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_urlrequester_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2810,7 +2810,7 @@ void k_urlrequester_render42(void* self, void* painter, void* targetOffset, void
 /// @param self KUrlRequester*
 /// @param rectangle QRect*
 ///
-QPixmap* k_urlrequester_grab1(void* self, void* rectangle);
+QPixmap* k_urlrequester_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2830,7 +2830,7 @@ void k_urlrequester_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_urlrequester_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_urlrequester_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2897,9 +2897,9 @@ QWidget* k_urlrequester_create_window_container3(void* window, void* parent, int
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char* k_urlrequester_object_name(void* self);
+const char* k_urlrequester_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2914,33 +2914,33 @@ void k_urlrequester_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_widget_type(void* self);
+bool k_urlrequester_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_window_type(void* self);
+bool k_urlrequester_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_is_quick_item_type(void* self);
+bool k_urlrequester_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_signals_blocked(void* self);
+bool k_urlrequester_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2955,9 +2955,9 @@ bool k_urlrequester_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QThread* k_urlrequester_thread(void* self);
+QThread* k_urlrequester_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3008,11 +3008,11 @@ void k_urlrequester_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_urlrequester_children(void* self);
+libqt_list k_urlrequester_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3041,7 +3041,7 @@ void k_urlrequester_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_urlrequester_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_urlrequester_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3052,18 +3052,18 @@ QMetaObject__Connection* k_urlrequester_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_urlrequester_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_urlrequester_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_urlrequester_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_urlrequester_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3074,7 +3074,7 @@ QMetaObject__Connection* k_urlrequester_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_urlrequester_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_urlrequester_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3085,24 +3085,24 @@ bool k_urlrequester_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_urlrequester_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_urlrequester_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_disconnect3(void* self);
+bool k_urlrequester_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param receiver QObject*
 ///
-bool k_urlrequester_disconnect4(void* self, void* receiver);
+bool k_urlrequester_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3110,23 +3110,23 @@ bool k_urlrequester_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_urlrequester_disconnect5(void* param1);
+bool k_urlrequester_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-void k_urlrequester_dump_object_tree(void* self);
+void k_urlrequester_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-void k_urlrequester_dump_object_info(void* self);
+void k_urlrequester_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3136,16 +3136,16 @@ void k_urlrequester_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_urlrequester_set_property(void* self, const char* name, void* value);
+bool k_urlrequester_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param name const char*
 ///
-QVariant* k_urlrequester_property(void* self, const char* name);
+QVariant* k_urlrequester_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3153,9 +3153,9 @@ QVariant* k_urlrequester_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const char** k_urlrequester_dynamic_property_names(void* self);
+const char** k_urlrequester_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3169,9 +3169,9 @@ QBindingStorage* k_urlrequester_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-const QBindingStorage* k_urlrequester_binding_storage2(void* self);
+const QBindingStorage* k_urlrequester_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3194,18 +3194,18 @@ void k_urlrequester_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QObject* k_urlrequester_parent(void* self);
+QObject* k_urlrequester_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param classname const char*
 ///
-bool k_urlrequester_inherits(void* self, const char* classname);
+bool k_urlrequester_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3245,7 +3245,7 @@ int32_t k_urlrequester_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlrequester_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_urlrequester_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3257,59 +3257,59 @@ QMetaObject__Connection* k_urlrequester_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlrequester_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_urlrequester_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlrequester_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_urlrequester_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param signal const char*
 ///
-bool k_urlrequester_disconnect1(void* self, const char* signal);
+bool k_urlrequester_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlRequester*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_urlrequester_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_urlrequester_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_urlrequester_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_urlrequester_disconnect23(void* self, void* receiver, const char* member);
+bool k_urlrequester_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KUrlRequester*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_urlrequester_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3333,89 +3333,89 @@ void k_urlrequester_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_painting_active(void* self);
+bool k_urlrequester_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_width_m_m(void* self);
+int32_t k_urlrequester_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_height_m_m(void* self);
+int32_t k_urlrequester_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_logical_dpi_x(void* self);
+int32_t k_urlrequester_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_logical_dpi_y(void* self);
+int32_t k_urlrequester_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_physical_dpi_x(void* self);
+int32_t k_urlrequester_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_physical_dpi_y(void* self);
+int32_t k_urlrequester_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-double k_urlrequester_device_pixel_ratio(void* self);
+double k_urlrequester_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-double k_urlrequester_device_pixel_ratio_f(void* self);
+double k_urlrequester_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_color_count(void* self);
+int32_t k_urlrequester_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_depth(void* self);
+int32_t k_urlrequester_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3438,9 +3438,9 @@ int32_t k_urlrequester_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_dev_type(void* self);
+int32_t k_urlrequester_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3448,9 +3448,9 @@ int32_t k_urlrequester_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_super_dev_type(void* self);
+int32_t k_urlrequester_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3458,10 +3458,10 @@ int32_t k_urlrequester_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
-/// @param callback int32_t func()
+/// @param self const KUrlRequester*
+/// @param callback int32_t func(KUrlRequester* self)
 ///
-void k_urlrequester_on_dev_type(void* self, int32_t (*callback)());
+void k_urlrequester_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3502,9 +3502,9 @@ void k_urlrequester_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_size_hint(void* self);
+QSize* k_urlrequester_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3512,9 +3512,9 @@ QSize* k_urlrequester_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_super_size_hint(void* self);
+QSize* k_urlrequester_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3522,12 +3522,12 @@ QSize* k_urlrequester_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
-/// @param callback QSize* func()
+/// @param self const KUrlRequester*
+/// @param callback QSize* func(KUrlRequester* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlrequester_on_size_hint(void* self, QSize* (*callback)());
+void k_urlrequester_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3535,9 +3535,9 @@ void k_urlrequester_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_minimum_size_hint(void* self);
+QSize* k_urlrequester_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3545,9 +3545,9 @@ QSize* k_urlrequester_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QSize* k_urlrequester_super_minimum_size_hint(void* self);
+QSize* k_urlrequester_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3555,12 +3555,12 @@ QSize* k_urlrequester_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
-/// @param callback QSize* func()
+/// @param self const KUrlRequester*
+/// @param callback QSize* func(KUrlRequester* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlrequester_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_urlrequester_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3568,10 +3568,10 @@ void k_urlrequester_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 int
 ///
-int32_t k_urlrequester_height_for_width(void* self, int param1);
+int32_t k_urlrequester_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3579,10 +3579,10 @@ int32_t k_urlrequester_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 int
 ///
-int32_t k_urlrequester_super_height_for_width(void* self, int param1);
+int32_t k_urlrequester_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3590,10 +3590,10 @@ int32_t k_urlrequester_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param callback int32_t func(KUrlRequester* self, int param1)
 ///
-void k_urlrequester_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_urlrequester_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3601,9 +3601,9 @@ void k_urlrequester_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_has_height_for_width(void* self);
+bool k_urlrequester_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3611,9 +3611,9 @@ bool k_urlrequester_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-bool k_urlrequester_super_has_height_for_width(void* self);
+bool k_urlrequester_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3621,10 +3621,10 @@ bool k_urlrequester_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
-/// @param callback bool func()
+/// @param self const KUrlRequester*
+/// @param callback bool func(KUrlRequester* self)
 ///
-void k_urlrequester_on_has_height_for_width(void* self, bool (*callback)());
+void k_urlrequester_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3632,9 +3632,9 @@ void k_urlrequester_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QPaintEngine* k_urlrequester_paint_engine(void* self);
+QPaintEngine* k_urlrequester_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3642,9 +3642,9 @@ QPaintEngine* k_urlrequester_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QPaintEngine* k_urlrequester_super_paint_engine(void* self);
+QPaintEngine* k_urlrequester_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3652,10 +3652,10 @@ QPaintEngine* k_urlrequester_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
-/// @param callback QPaintEngine* func()
+/// @param self const KUrlRequester*
+/// @param callback QPaintEngine* func(KUrlRequester* self)
 ///
-void k_urlrequester_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_urlrequester_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4525,10 +4525,10 @@ void k_urlrequester_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_urlrequester_metric(void* self, int32_t param1);
+int32_t k_urlrequester_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4536,10 +4536,10 @@ int32_t k_urlrequester_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_urlrequester_super_metric(void* self, int32_t param1);
+int32_t k_urlrequester_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4547,10 +4547,10 @@ int32_t k_urlrequester_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param callback int32_t func(KUrlRequester* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_urlrequester_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_urlrequester_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4558,10 +4558,10 @@ void k_urlrequester_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param painter QPainter*
 ///
-void k_urlrequester_init_painter(void* self, void* painter);
+void k_urlrequester_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4569,10 +4569,10 @@ void k_urlrequester_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param painter QPainter*
 ///
-void k_urlrequester_super_init_painter(void* self, void* painter);
+void k_urlrequester_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4580,10 +4580,10 @@ void k_urlrequester_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param callback void func(KUrlRequester* self, QPainter* painter)
 ///
-void k_urlrequester_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_urlrequester_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4591,10 +4591,10 @@ void k_urlrequester_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_urlrequester_redirected(void* self, void* offset);
+QPaintDevice* k_urlrequester_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4602,10 +4602,10 @@ QPaintDevice* k_urlrequester_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_urlrequester_super_redirected(void* self, void* offset);
+QPaintDevice* k_urlrequester_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4613,10 +4613,10 @@ QPaintDevice* k_urlrequester_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param callback QPaintDevice* func(KUrlRequester* self, QPoint* offset)
 ///
-void k_urlrequester_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_urlrequester_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4624,9 +4624,9 @@ void k_urlrequester_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QPainter* k_urlrequester_shared_painter(void* self);
+QPainter* k_urlrequester_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4634,9 +4634,9 @@ QPainter* k_urlrequester_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QPainter* k_urlrequester_super_shared_painter(void* self);
+QPainter* k_urlrequester_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4644,10 +4644,10 @@ QPainter* k_urlrequester_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
-/// @param callback QPainter* func()
+/// @param self const KUrlRequester*
+/// @param callback QPainter* func(KUrlRequester* self)
 ///
-void k_urlrequester_on_shared_painter(void* self, QPainter* (*callback)());
+void k_urlrequester_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4688,10 +4688,10 @@ void k_urlrequester_on_input_method_event(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_urlrequester_input_method_query(void* self, int32_t param1);
+QVariant* k_urlrequester_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4699,10 +4699,10 @@ QVariant* k_urlrequester_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_urlrequester_super_input_method_query(void* self, int32_t param1);
+QVariant* k_urlrequester_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4710,12 +4710,12 @@ QVariant* k_urlrequester_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param callback QVariant* func(KUrlRequester* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlrequester_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_urlrequester_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4858,7 +4858,7 @@ void k_urlrequester_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlrequester_connect_notify(void* self, void* signal);
+void k_urlrequester_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4869,7 +4869,7 @@ void k_urlrequester_connect_notify(void* self, void* signal);
 /// @param self KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlrequester_super_connect_notify(void* self, void* signal);
+void k_urlrequester_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4880,7 +4880,7 @@ void k_urlrequester_super_connect_notify(void* self, void* signal);
 /// @param self KUrlRequester*
 /// @param callback void func(KUrlRequester* self, QMetaMethod* signal)
 ///
-void k_urlrequester_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_urlrequester_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4891,7 +4891,7 @@ void k_urlrequester_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlrequester_disconnect_notify(void* self, void* signal);
+void k_urlrequester_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4902,7 +4902,7 @@ void k_urlrequester_disconnect_notify(void* self, void* signal);
 /// @param self KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlrequester_super_disconnect_notify(void* self, void* signal);
+void k_urlrequester_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4913,7 +4913,7 @@ void k_urlrequester_super_disconnect_notify(void* self, void* signal);
 /// @param self KUrlRequester*
 /// @param callback void func(KUrlRequester* self, QMetaMethod* signal)
 ///
-void k_urlrequester_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_urlrequester_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4942,9 +4942,9 @@ void k_urlrequester_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlRequester*
-/// @param callback void func()
+/// @param callback void func(KUrlRequester* self)
 ///
-void k_urlrequester_on_update_micro_focus(void* self, void (*callback)());
+void k_urlrequester_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4973,9 +4973,9 @@ void k_urlrequester_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlRequester*
-/// @param callback void func()
+/// @param callback void func(KUrlRequester* self)
 ///
-void k_urlrequester_on_create(void* self, void (*callback)());
+void k_urlrequester_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5004,9 +5004,9 @@ void k_urlrequester_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlRequester*
-/// @param callback void func()
+/// @param callback void func(KUrlRequester* self)
 ///
-void k_urlrequester_on_destroy(void* self, void (*callback)());
+void k_urlrequester_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5035,9 +5035,9 @@ bool k_urlrequester_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlRequester*
-/// @param callback bool func()
+/// @param callback bool func(KUrlRequester* self)
 ///
-void k_urlrequester_on_focus_next_child(void* self, bool (*callback)());
+void k_urlrequester_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5066,9 +5066,9 @@ bool k_urlrequester_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlRequester*
-/// @param callback bool func()
+/// @param callback bool func(KUrlRequester* self)
 ///
-void k_urlrequester_on_focus_previous_child(void* self, bool (*callback)());
+void k_urlrequester_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5076,9 +5076,9 @@ void k_urlrequester_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QObject* k_urlrequester_sender(void* self);
+QObject* k_urlrequester_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5086,9 +5086,9 @@ QObject* k_urlrequester_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-QObject* k_urlrequester_super_sender(void* self);
+QObject* k_urlrequester_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5096,10 +5096,10 @@ QObject* k_urlrequester_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
-/// @param callback QObject* func()
+/// @param self const KUrlRequester*
+/// @param callback QObject* func(KUrlRequester* self)
 ///
-void k_urlrequester_on_sender(void* self, QObject* (*callback)());
+void k_urlrequester_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5107,9 +5107,9 @@ void k_urlrequester_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_sender_signal_index(void* self);
+int32_t k_urlrequester_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5117,9 +5117,9 @@ int32_t k_urlrequester_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 ///
-int32_t k_urlrequester_super_sender_signal_index(void* self);
+int32_t k_urlrequester_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5127,10 +5127,10 @@ int32_t k_urlrequester_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
-/// @param callback int32_t func()
+/// @param self const KUrlRequester*
+/// @param callback int32_t func(KUrlRequester* self)
 ///
-void k_urlrequester_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_urlrequester_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5138,10 +5138,10 @@ void k_urlrequester_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param signal const char*
 ///
-int32_t k_urlrequester_receivers(void* self, const char* signal);
+int32_t k_urlrequester_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5149,10 +5149,10 @@ int32_t k_urlrequester_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param signal const char*
 ///
-int32_t k_urlrequester_super_receivers(void* self, const char* signal);
+int32_t k_urlrequester_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5160,10 +5160,10 @@ int32_t k_urlrequester_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param callback int32_t func(KUrlRequester* self, const char* signal)
 ///
-void k_urlrequester_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_urlrequester_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5171,10 +5171,10 @@ void k_urlrequester_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-bool k_urlrequester_is_signal_connected(void* self, void* signal);
+bool k_urlrequester_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5182,10 +5182,10 @@ bool k_urlrequester_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param signal QMetaMethod*
 ///
-bool k_urlrequester_super_is_signal_connected(void* self, void* signal);
+bool k_urlrequester_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5193,10 +5193,10 @@ bool k_urlrequester_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param callback bool func(KUrlRequester* self, QMetaMethod* signal)
 ///
-void k_urlrequester_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_urlrequester_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5204,11 +5204,11 @@ void k_urlrequester_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_urlrequester_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_urlrequester_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5216,11 +5216,11 @@ double k_urlrequester_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_urlrequester_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_urlrequester_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5228,10 +5228,10 @@ double k_urlrequester_super_get_decoded_metric_f(void* self, int32_t metricA, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlRequester*
+/// @param self const KUrlRequester*
 /// @param callback double func(KUrlRequester* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_urlrequester_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_urlrequester_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5268,26 +5268,26 @@ KUrlComboRequester* k_urlcomborequester_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const QMetaObject* k_urlcomborequester_meta_object(void* self);
+const QMetaObject* k_urlcomborequester_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback const QMetaObject* func()
+/// @param self const KUrlComboRequester*
+/// @param callback const QMetaObject* func(const KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_urlcomborequester_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const QMetaObject* k_urlcomborequester_super_meta_object(void* self);
+const QMetaObject* k_urlcomborequester_super_meta_object(const void* self);
 
 /// @param self KUrlComboRequester*
 /// @param param1 const char*
@@ -5362,17 +5362,17 @@ const char* k_urlcomborequester_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#url)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QUrl* k_urlcomborequester_url(void* self);
+QUrl* k_urlcomborequester_url(const void* self);
 
 /// Inherited from KUrlRequester
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#startDir)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QUrl* k_urlcomborequester_start_dir(void* self);
+QUrl* k_urlcomborequester_start_dir(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -5380,9 +5380,9 @@ QUrl* k_urlcomborequester_start_dir(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_text(void* self);
+const char* k_urlcomborequester_text(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -5397,11 +5397,11 @@ void k_urlcomborequester_set_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#mode)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return flag of enum KFile__Mode
 ///
-int32_t k_urlcomborequester_mode(void* self);
+int32_t k_urlcomborequester_mode(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -5416,11 +5416,11 @@ void k_urlcomborequester_set_accept_mode(void* self, int32_t m);
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#acceptMode)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum QFileDialog__AcceptMode
 ///
-int32_t k_urlcomborequester_accept_mode(void* self);
+int32_t k_urlcomborequester_accept_mode(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -5446,9 +5446,9 @@ void k_urlcomborequester_set_name_filter(void* self, const char* filter);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char** k_urlcomborequester_name_filters(void* self);
+const char** k_urlcomborequester_name_filters(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -5465,41 +5465,41 @@ void k_urlcomborequester_set_mime_type_filters(void* self, const char* mimeTypes
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char** k_urlcomborequester_mime_type_filters(void* self);
+const char** k_urlcomborequester_mime_type_filters(const void* self);
 
 /// Inherited from KUrlRequester
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#lineEdit)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-KLineEdit* k_urlcomborequester_line_edit(void* self);
+KLineEdit* k_urlcomborequester_line_edit(const void* self);
 
 /// Inherited from KUrlRequester
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#comboBox)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-KComboBox* k_urlcomborequester_combo_box(void* self);
+KComboBox* k_urlcomborequester_combo_box(const void* self);
 
 /// Inherited from KUrlRequester
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#button)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QPushButton* k_urlcomborequester_button(void* self);
+QPushButton* k_urlcomborequester_button(const void* self);
 
 /// Inherited from KUrlRequester
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#completionObject)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-KUrlCompletion* k_urlcomborequester_completion_object(void* self);
+KUrlCompletion* k_urlcomborequester_completion_object(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -5515,9 +5515,9 @@ const KEditListWidget__CustomEditor* k_urlcomborequester_custom_editor(void* sel
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_placeholder_text(void* self);
+const char* k_urlcomborequester_placeholder_text(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -5532,11 +5532,11 @@ void k_urlcomborequester_set_placeholder_text(void* self, const char* msg);
 ///
 /// [Upstream resources](https://api.kde.org/kurlrequester.html#fileDialogModality)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_urlcomborequester_file_dialog_modality(void* self);
+int32_t k_urlcomborequester_file_dialog_modality(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -5554,7 +5554,7 @@ void k_urlcomborequester_set_file_dialog_modality(void* self, int32_t modality);
 /// @param self KUrlComboRequester*
 /// @param url QUrl*
 ///
-void k_urlcomborequester_set_url(void* self, void* url);
+void k_urlcomborequester_set_url(void* self, const void* url);
 
 /// Inherited from KUrlRequester
 ///
@@ -5563,7 +5563,7 @@ void k_urlcomborequester_set_url(void* self, void* url);
 /// @param self KUrlComboRequester*
 /// @param startDir QUrl*
 ///
-void k_urlcomborequester_set_start_dir(void* self, void* startDir);
+void k_urlcomborequester_set_start_dir(void* self, const void* startDir);
 
 /// Inherited from KUrlRequester
 ///
@@ -5661,7 +5661,7 @@ void k_urlcomborequester_on_open_file_dialog(void* self, void (*callback)(void*,
 /// @param self KUrlComboRequester*
 /// @param param1 QUrl*
 ///
-void k_urlcomborequester_url_selected(void* self, void* param1);
+void k_urlcomborequester_url_selected(void* self, const void* param1);
 
 /// Inherited from KUrlRequester
 ///
@@ -5670,7 +5670,7 @@ void k_urlcomborequester_url_selected(void* self, void* param1);
 /// @param self KUrlComboRequester*
 /// @param callback void func(KUrlComboRequester* self, QUrl* param1)
 ///
-void k_urlcomborequester_on_url_selected(void* self, void (*callback)(void*, void*));
+void k_urlcomborequester_on_url_selected(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -5692,9 +5692,9 @@ KUrlComboRequester* k_urlcomborequester_from_q_paint_device(void* _qpaintdevice)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-uintptr_t k_urlcomborequester_win_id(void* self);
+uintptr_t k_urlcomborequester_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5708,25 +5708,25 @@ void k_urlcomborequester_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-uintptr_t k_urlcomborequester_internal_win_id(void* self);
+uintptr_t k_urlcomborequester_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-uintptr_t k_urlcomborequester_effective_win_id(void* self);
+uintptr_t k_urlcomborequester_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QStyle* k_urlcomborequester_style(void* self);
+QStyle* k_urlcomborequester_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5741,35 +5741,35 @@ void k_urlcomborequester_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_top_level(void* self);
+bool k_urlcomborequester_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_window(void* self);
+bool k_urlcomborequester_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_modal(void* self);
+bool k_urlcomborequester_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_urlcomborequester_window_modality(void* self);
+int32_t k_urlcomborequester_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5784,18 +5784,18 @@ void k_urlcomborequester_set_window_modality(void* self, int32_t windowModality)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_enabled(void* self);
+bool k_urlcomborequester_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QWidget*
 ///
-bool k_urlcomborequester_is_enabled_to(void* self, void* param1);
+bool k_urlcomborequester_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -5828,153 +5828,153 @@ void k_urlcomborequester_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QRect* k_urlcomborequester_frame_geometry(void* self);
+QRect* k_urlcomborequester_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const QRect* k_urlcomborequester_geometry(void* self);
+const QRect* k_urlcomborequester_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QRect* k_urlcomborequester_normal_geometry(void* self);
+QRect* k_urlcomborequester_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_x(void* self);
+int32_t k_urlcomborequester_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_y(void* self);
+int32_t k_urlcomborequester_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QPoint* k_urlcomborequester_pos(void* self);
+QPoint* k_urlcomborequester_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_frame_size(void* self);
+QSize* k_urlcomborequester_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_size(void* self);
+QSize* k_urlcomborequester_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_width(void* self);
+int32_t k_urlcomborequester_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_height(void* self);
+int32_t k_urlcomborequester_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QRect* k_urlcomborequester_rect(void* self);
+QRect* k_urlcomborequester_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QRect* k_urlcomborequester_children_rect(void* self);
+QRect* k_urlcomborequester_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QRegion* k_urlcomborequester_children_region(void* self);
+QRegion* k_urlcomborequester_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_minimum_size(void* self);
+QSize* k_urlcomborequester_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_maximum_size(void* self);
+QSize* k_urlcomborequester_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_minimum_width(void* self);
+int32_t k_urlcomborequester_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_minimum_height(void* self);
+int32_t k_urlcomborequester_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_maximum_width(void* self);
+int32_t k_urlcomborequester_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_maximum_height(void* self);
+int32_t k_urlcomborequester_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5983,7 +5983,7 @@ int32_t k_urlcomborequester_maximum_height(void* self);
 /// @param self KUrlComboRequester*
 /// @param minimumSize QSize*
 ///
-void k_urlcomborequester_set_minimum_size(void* self, void* minimumSize);
+void k_urlcomborequester_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -6002,7 +6002,7 @@ void k_urlcomborequester_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KUrlComboRequester*
 /// @param maximumSize QSize*
 ///
-void k_urlcomborequester_set_maximum_size(void* self, void* maximumSize);
+void k_urlcomborequester_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -6054,9 +6054,9 @@ void k_urlcomborequester_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_size_increment(void* self);
+QSize* k_urlcomborequester_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6065,7 +6065,7 @@ QSize* k_urlcomborequester_size_increment(void* self);
 /// @param self KUrlComboRequester*
 /// @param sizeIncrement QSize*
 ///
-void k_urlcomborequester_set_size_increment(void* self, void* sizeIncrement);
+void k_urlcomborequester_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -6081,9 +6081,9 @@ void k_urlcomborequester_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_base_size(void* self);
+QSize* k_urlcomborequester_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6092,7 +6092,7 @@ QSize* k_urlcomborequester_base_size(void* self);
 /// @param self KUrlComboRequester*
 /// @param baseSize QSize*
 ///
-void k_urlcomborequester_set_base_size(void* self, void* baseSize);
+void k_urlcomborequester_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -6111,7 +6111,7 @@ void k_urlcomborequester_set_base_size2(void* self, int basew, int baseh);
 /// @param self KUrlComboRequester*
 /// @param fixedSize QSize*
 ///
-void k_urlcomborequester_set_fixed_size(void* self, void* fixedSize);
+void k_urlcomborequester_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -6145,145 +6145,145 @@ void k_urlcomborequester_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlcomborequester_map_to_global(void* self, void* param1);
+QPointF* k_urlcomborequester_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlcomborequester_map_to_global2(void* self, void* param1);
+QPoint* k_urlcomborequester_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlcomborequester_map_from_global(void* self, void* param1);
+QPointF* k_urlcomborequester_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlcomborequester_map_from_global2(void* self, void* param1);
+QPoint* k_urlcomborequester_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlcomborequester_map_to_parent(void* self, void* param1);
+QPointF* k_urlcomborequester_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlcomborequester_map_to_parent2(void* self, void* param1);
+QPoint* k_urlcomborequester_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QPointF*
 ///
-QPointF* k_urlcomborequester_map_from_parent(void* self, void* param1);
+QPointF* k_urlcomborequester_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QPoint*
 ///
-QPoint* k_urlcomborequester_map_from_parent2(void* self, void* param1);
+QPoint* k_urlcomborequester_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_urlcomborequester_map_to(void* self, void* param1, void* param2);
+QPointF* k_urlcomborequester_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_urlcomborequester_map_to2(void* self, void* param1, void* param2);
+QPoint* k_urlcomborequester_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_urlcomborequester_map_from(void* self, void* param1, void* param2);
+QPointF* k_urlcomborequester_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_urlcomborequester_map_from2(void* self, void* param1, void* param2);
+QPoint* k_urlcomborequester_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWidget* k_urlcomborequester_window(void* self);
+QWidget* k_urlcomborequester_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWidget* k_urlcomborequester_native_parent_widget(void* self);
+QWidget* k_urlcomborequester_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWidget* k_urlcomborequester_top_level_widget(void* self);
+QWidget* k_urlcomborequester_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const QPalette* k_urlcomborequester_palette(void* self);
+const QPalette* k_urlcomborequester_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6292,7 +6292,7 @@ const QPalette* k_urlcomborequester_palette(void* self);
 /// @param self KUrlComboRequester*
 /// @param palette QPalette*
 ///
-void k_urlcomborequester_set_palette(void* self, void* palette);
+void k_urlcomborequester_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -6307,11 +6307,11 @@ void k_urlcomborequester_set_background_role(void* self, int32_t backgroundRole)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_urlcomborequester_background_role(void* self);
+int32_t k_urlcomborequester_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6326,19 +6326,19 @@ void k_urlcomborequester_set_foreground_role(void* self, int32_t foregroundRole)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_urlcomborequester_foreground_role(void* self);
+int32_t k_urlcomborequester_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const QFont* k_urlcomborequester_font(void* self);
+const QFont* k_urlcomborequester_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6347,31 +6347,31 @@ const QFont* k_urlcomborequester_font(void* self);
 /// @param self KUrlComboRequester*
 /// @param font QFont*
 ///
-void k_urlcomborequester_set_font(void* self, void* font);
+void k_urlcomborequester_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QFontMetrics* k_urlcomborequester_font_metrics(void* self);
+QFontMetrics* k_urlcomborequester_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QFontInfo* k_urlcomborequester_font_info(void* self);
+QFontInfo* k_urlcomborequester_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QCursor* k_urlcomborequester_cursor(void* self);
+QCursor* k_urlcomborequester_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6380,7 +6380,7 @@ QCursor* k_urlcomborequester_cursor(void* self);
 /// @param self KUrlComboRequester*
 /// @param cursor QCursor*
 ///
-void k_urlcomborequester_set_cursor(void* self, void* cursor);
+void k_urlcomborequester_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -6403,17 +6403,17 @@ void k_urlcomborequester_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_has_mouse_tracking(void* self);
+bool k_urlcomborequester_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_under_mouse(void* self);
+bool k_urlcomborequester_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6428,9 +6428,9 @@ void k_urlcomborequester_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_has_tablet_tracking(void* self);
+bool k_urlcomborequester_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6439,7 +6439,7 @@ bool k_urlcomborequester_has_tablet_tracking(void* self);
 /// @param self KUrlComboRequester*
 /// @param mask QBitmap*
 ///
-void k_urlcomborequester_set_mask(void* self, void* mask);
+void k_urlcomborequester_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -6448,15 +6448,15 @@ void k_urlcomborequester_set_mask(void* self, void* mask);
 /// @param self KUrlComboRequester*
 /// @param mask QRegion*
 ///
-void k_urlcomborequester_set_mask2(void* self, void* mask);
+void k_urlcomborequester_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QRegion* k_urlcomborequester_mask(void* self);
+QRegion* k_urlcomborequester_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6496,9 +6496,9 @@ QPixmap* k_urlcomborequester_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QGraphicsEffect* k_urlcomborequester_graphics_effect(void* self);
+QGraphicsEffect* k_urlcomborequester_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6551,9 +6551,9 @@ void k_urlcomborequester_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_style_sheet(void* self);
+const char* k_urlcomborequester_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6561,9 +6561,9 @@ const char* k_urlcomborequester_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_window_title(void* self);
+const char* k_urlcomborequester_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6572,15 +6572,15 @@ const char* k_urlcomborequester_window_title(void* self);
 /// @param self KUrlComboRequester*
 /// @param icon QIcon*
 ///
-void k_urlcomborequester_set_window_icon(void* self, void* icon);
+void k_urlcomborequester_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QIcon* k_urlcomborequester_window_icon(void* self);
+QIcon* k_urlcomborequester_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6597,9 +6597,9 @@ void k_urlcomborequester_set_window_icon_text(void* self, const char* windowIcon
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_window_icon_text(void* self);
+const char* k_urlcomborequester_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6616,9 +6616,9 @@ void k_urlcomborequester_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_window_role(void* self);
+const char* k_urlcomborequester_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6635,9 +6635,9 @@ void k_urlcomborequester_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_window_file_path(void* self);
+const char* k_urlcomborequester_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6652,17 +6652,17 @@ void k_urlcomborequester_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-double k_urlcomborequester_window_opacity(void* self);
+double k_urlcomborequester_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_window_modified(void* self);
+bool k_urlcomborequester_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6679,9 +6679,9 @@ void k_urlcomborequester_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_tool_tip(void* self);
+const char* k_urlcomborequester_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6696,9 +6696,9 @@ void k_urlcomborequester_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_tool_tip_duration(void* self);
+int32_t k_urlcomborequester_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6715,9 +6715,9 @@ void k_urlcomborequester_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_status_tip(void* self);
+const char* k_urlcomborequester_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6734,9 +6734,9 @@ void k_urlcomborequester_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_whats_this(void* self);
+const char* k_urlcomborequester_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6744,9 +6744,9 @@ const char* k_urlcomborequester_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_accessible_name(void* self);
+const char* k_urlcomborequester_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6763,9 +6763,9 @@ void k_urlcomborequester_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_accessible_description(void* self);
+const char* k_urlcomborequester_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6789,11 +6789,11 @@ void k_urlcomborequester_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_urlcomborequester_layout_direction(void* self);
+int32_t k_urlcomborequester_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6810,15 +6810,15 @@ void k_urlcomborequester_unset_layout_direction(void* self);
 /// @param self KUrlComboRequester*
 /// @param locale QLocale*
 ///
-void k_urlcomborequester_set_locale(void* self, void* locale);
+void k_urlcomborequester_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QLocale* k_urlcomborequester_locale(void* self);
+QLocale* k_urlcomborequester_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6832,17 +6832,17 @@ void k_urlcomborequester_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_right_to_left(void* self);
+bool k_urlcomborequester_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_left_to_right(void* self);
+bool k_urlcomborequester_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6856,9 +6856,9 @@ void k_urlcomborequester_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_active_window(void* self);
+bool k_urlcomborequester_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6889,11 +6889,11 @@ void k_urlcomborequester_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_urlcomborequester_focus_policy(void* self);
+int32_t k_urlcomborequester_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6908,9 +6908,9 @@ void k_urlcomborequester_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_has_focus(void* self);
+bool k_urlcomborequester_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6934,19 +6934,19 @@ void k_urlcomborequester_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWidget* k_urlcomborequester_focus_proxy(void* self);
+QWidget* k_urlcomborequester_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_urlcomborequester_context_menu_policy(void* self);
+int32_t k_urlcomborequester_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6972,7 +6972,7 @@ void k_urlcomborequester_grab_mouse(void* self);
 /// @param self KUrlComboRequester*
 /// @param param1 QCursor*
 ///
-void k_urlcomborequester_grab_mouse2(void* self, void* param1);
+void k_urlcomborequester_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7005,7 +7005,7 @@ void k_urlcomborequester_release_keyboard(void* self);
 /// @param self KUrlComboRequester*
 /// @param key QKeySequence*
 ///
-int32_t k_urlcomborequester_grab_shortcut(void* self, void* key);
+int32_t k_urlcomborequester_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -7050,9 +7050,9 @@ QWidget* k_urlcomborequester_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_updates_enabled(void* self);
+bool k_urlcomborequester_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7067,9 +7067,9 @@ void k_urlcomborequester_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QGraphicsProxyWidget* k_urlcomborequester_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_urlcomborequester_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7106,7 +7106,7 @@ void k_urlcomborequester_update2(void* self, int x, int y, int w, int h);
 /// @param self KUrlComboRequester*
 /// @param param1 QRect*
 ///
-void k_urlcomborequester_update3(void* self, void* param1);
+void k_urlcomborequester_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7115,7 +7115,7 @@ void k_urlcomborequester_update3(void* self, void* param1);
 /// @param self KUrlComboRequester*
 /// @param param1 QRegion*
 ///
-void k_urlcomborequester_update4(void* self, void* param1);
+void k_urlcomborequester_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7136,7 +7136,7 @@ void k_urlcomborequester_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KUrlComboRequester*
 /// @param param1 QRect*
 ///
-void k_urlcomborequester_repaint3(void* self, void* param1);
+void k_urlcomborequester_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7145,7 +7145,7 @@ void k_urlcomborequester_repaint3(void* self, void* param1);
 /// @param self KUrlComboRequester*
 /// @param param1 QRegion*
 ///
-void k_urlcomborequester_repaint4(void* self, void* param1);
+void k_urlcomborequester_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7254,7 +7254,7 @@ void k_urlcomborequester_move(void* self, int x, int y);
 /// @param self KUrlComboRequester*
 /// @param param1 QPoint*
 ///
-void k_urlcomborequester_move2(void* self, void* param1);
+void k_urlcomborequester_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7273,7 +7273,7 @@ void k_urlcomborequester_resize(void* self, int w, int h);
 /// @param self KUrlComboRequester*
 /// @param param1 QSize*
 ///
-void k_urlcomborequester_resize2(void* self, void* param1);
+void k_urlcomborequester_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7294,7 +7294,7 @@ void k_urlcomborequester_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KUrlComboRequester*
 /// @param geometry QRect*
 ///
-void k_urlcomborequester_set_geometry2(void* self, void* geometry);
+void k_urlcomborequester_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -7302,9 +7302,9 @@ void k_urlcomborequester_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-char* k_urlcomborequester_save_geometry(void* self);
+char* k_urlcomborequester_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7327,60 +7327,60 @@ void k_urlcomborequester_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_visible(void* self);
+bool k_urlcomborequester_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 QWidget*
 ///
-bool k_urlcomborequester_is_visible_to(void* self, void* param1);
+bool k_urlcomborequester_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_hidden(void* self);
+bool k_urlcomborequester_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_minimized(void* self);
+bool k_urlcomborequester_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_maximized(void* self);
+bool k_urlcomborequester_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_full_screen(void* self);
+bool k_urlcomborequester_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_urlcomborequester_window_state(void* self);
+int32_t k_urlcomborequester_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7404,9 +7404,9 @@ void k_urlcomborequester_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSizePolicy* k_urlcomborequester_size_policy(void* self);
+QSizePolicy* k_urlcomborequester_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7431,9 +7431,9 @@ void k_urlcomborequester_set_size_policy2(void* self, int32_t horizontal, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QRegion* k_urlcomborequester_visible_region(void* self);
+QRegion* k_urlcomborequester_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7454,31 +7454,31 @@ void k_urlcomborequester_set_contents_margins(void* self, int left, int top, int
 /// @param self KUrlComboRequester*
 /// @param margins QMargins*
 ///
-void k_urlcomborequester_set_contents_margins2(void* self, void* margins);
+void k_urlcomborequester_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QMargins* k_urlcomborequester_contents_margins(void* self);
+QMargins* k_urlcomborequester_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QRect* k_urlcomborequester_contents_rect(void* self);
+QRect* k_urlcomborequester_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QLayout* k_urlcomborequester_layout(void* self);
+QLayout* k_urlcomborequester_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7535,39 +7535,39 @@ void k_urlcomborequester_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_urlcomborequester_scroll2(void* self, int dx, int dy, void* param3);
+void k_urlcomborequester_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWidget* k_urlcomborequester_focus_widget(void* self);
+QWidget* k_urlcomborequester_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWidget* k_urlcomborequester_next_in_focus_chain(void* self);
+QWidget* k_urlcomborequester_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWidget* k_urlcomborequester_previous_in_focus_chain(void* self);
+QWidget* k_urlcomborequester_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_accept_drops(void* self);
+bool k_urlcomborequester_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7629,11 +7629,11 @@ void k_urlcomborequester_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_urlcomborequester_actions(void* self);
+libqt_list k_urlcomborequester_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7652,7 +7652,7 @@ QAction* k_urlcomborequester_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_urlcomborequester_add_action3(void* self, void* icon, const char* text);
+QAction* k_urlcomborequester_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -7662,7 +7662,7 @@ QAction* k_urlcomborequester_add_action3(void* self, void* icon, const char* tex
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_urlcomborequester_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_urlcomborequester_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -7673,15 +7673,15 @@ QAction* k_urlcomborequester_add_action4(void* self, const char* text, void* sho
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_urlcomborequester_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_urlcomborequester_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWidget* k_urlcomborequester_parent_widget(void* self);
+QWidget* k_urlcomborequester_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7696,11 +7696,11 @@ void k_urlcomborequester_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_urlcomborequester_window_flags(void* self);
+int32_t k_urlcomborequester_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7724,11 +7724,11 @@ void k_urlcomborequester_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_urlcomborequester_window_type(void* self);
+int32_t k_urlcomborequester_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7742,29 +7742,29 @@ QWidget* k_urlcomborequester_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_urlcomborequester_child_at(void* self, int x, int y);
+QWidget* k_urlcomborequester_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param p QPoint*
 ///
-QWidget* k_urlcomborequester_child_at2(void* self, void* p);
+QWidget* k_urlcomborequester_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param p QPointF*
 ///
-QWidget* k_urlcomborequester_child_at3(void* self, void* p);
+QWidget* k_urlcomborequester_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -7779,35 +7779,35 @@ void k_urlcomborequester_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_urlcomborequester_test_attribute(void* self, int32_t param1);
+bool k_urlcomborequester_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-void k_urlcomborequester_ensure_polished(void* self);
+void k_urlcomborequester_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param child QWidget*
 ///
-bool k_urlcomborequester_is_ancestor_of(void* self, void* child);
+bool k_urlcomborequester_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_auto_fill_background(void* self);
+bool k_urlcomborequester_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7822,25 +7822,25 @@ void k_urlcomborequester_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QBackingStore* k_urlcomborequester_backing_store(void* self);
+QBackingStore* k_urlcomborequester_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QWindow* k_urlcomborequester_window_handle(void* self);
+QWindow* k_urlcomborequester_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QScreen* k_urlcomborequester_screen(void* self);
+QScreen* k_urlcomborequester_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7884,7 +7884,7 @@ void k_urlcomborequester_on_window_title_changed(void* self, void (*callback)(vo
 /// @param self KUrlComboRequester*
 /// @param icon QIcon*
 ///
-void k_urlcomborequester_window_icon_changed(void* self, void* icon);
+void k_urlcomborequester_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -7893,7 +7893,7 @@ void k_urlcomborequester_window_icon_changed(void* self, void* icon);
 /// @param self KUrlComboRequester*
 /// @param callback void func(KUrlComboRequester* self, QIcon* icon)
 ///
-void k_urlcomborequester_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_urlcomborequester_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -7920,7 +7920,7 @@ void k_urlcomborequester_on_window_icon_text_changed(void* self, void (*callback
 /// @param self KUrlComboRequester*
 /// @param pos QPoint*
 ///
-void k_urlcomborequester_custom_context_menu_requested(void* self, void* pos);
+void k_urlcomborequester_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -7929,17 +7929,17 @@ void k_urlcomborequester_custom_context_menu_requested(void* self, void* pos);
 /// @param self KUrlComboRequester*
 /// @param callback void func(KUrlComboRequester* self, QPoint* pos)
 ///
-void k_urlcomborequester_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_urlcomborequester_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_urlcomborequester_input_method_hints(void* self);
+int32_t k_urlcomborequester_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7958,7 +7958,7 @@ void k_urlcomborequester_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_urlcomborequester_render22(void* self, void* target, void* targetOffset);
+void k_urlcomborequester_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -7969,7 +7969,7 @@ void k_urlcomborequester_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_urlcomborequester_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_urlcomborequester_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -7981,7 +7981,7 @@ void k_urlcomborequester_render3(void* self, void* target, void* targetOffset, v
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_urlcomborequester_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_urlcomborequester_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -7991,7 +7991,7 @@ void k_urlcomborequester_render4(void* self, void* target, void* targetOffset, v
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_urlcomborequester_render23(void* self, void* painter, void* targetOffset);
+void k_urlcomborequester_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -8002,7 +8002,7 @@ void k_urlcomborequester_render23(void* self, void* painter, void* targetOffset)
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_urlcomborequester_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_urlcomborequester_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -8014,7 +8014,7 @@ void k_urlcomborequester_render32(void* self, void* painter, void* targetOffset,
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_urlcomborequester_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_urlcomborequester_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -8023,7 +8023,7 @@ void k_urlcomborequester_render42(void* self, void* painter, void* targetOffset,
 /// @param self KUrlComboRequester*
 /// @param rectangle QRect*
 ///
-QPixmap* k_urlcomborequester_grab1(void* self, void* rectangle);
+QPixmap* k_urlcomborequester_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -8043,7 +8043,7 @@ void k_urlcomborequester_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_urlcomborequester_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_urlcomborequester_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -8110,9 +8110,9 @@ QWidget* k_urlcomborequester_create_window_container3(void* window, void* parent
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char* k_urlcomborequester_object_name(void* self);
+const char* k_urlcomborequester_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8127,33 +8127,33 @@ void k_urlcomborequester_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_widget_type(void* self);
+bool k_urlcomborequester_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_window_type(void* self);
+bool k_urlcomborequester_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_is_quick_item_type(void* self);
+bool k_urlcomborequester_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_signals_blocked(void* self);
+bool k_urlcomborequester_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8168,9 +8168,9 @@ bool k_urlcomborequester_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QThread* k_urlcomborequester_thread(void* self);
+QThread* k_urlcomborequester_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8221,11 +8221,11 @@ void k_urlcomborequester_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_urlcomborequester_children(void* self);
+libqt_list k_urlcomborequester_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8254,7 +8254,7 @@ void k_urlcomborequester_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_urlcomborequester_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_urlcomborequester_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8265,18 +8265,18 @@ QMetaObject__Connection* k_urlcomborequester_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_urlcomborequester_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_urlcomborequester_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_urlcomborequester_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_urlcomborequester_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8287,7 +8287,7 @@ QMetaObject__Connection* k_urlcomborequester_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_urlcomborequester_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_urlcomborequester_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8298,24 +8298,24 @@ bool k_urlcomborequester_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_urlcomborequester_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_urlcomborequester_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_disconnect3(void* self);
+bool k_urlcomborequester_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param receiver QObject*
 ///
-bool k_urlcomborequester_disconnect4(void* self, void* receiver);
+bool k_urlcomborequester_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -8323,23 +8323,23 @@ bool k_urlcomborequester_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_urlcomborequester_disconnect5(void* param1);
+bool k_urlcomborequester_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-void k_urlcomborequester_dump_object_tree(void* self);
+void k_urlcomborequester_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-void k_urlcomborequester_dump_object_info(void* self);
+void k_urlcomborequester_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8349,16 +8349,16 @@ void k_urlcomborequester_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_urlcomborequester_set_property(void* self, const char* name, void* value);
+bool k_urlcomborequester_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param name const char*
 ///
-QVariant* k_urlcomborequester_property(void* self, const char* name);
+QVariant* k_urlcomborequester_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -8366,9 +8366,9 @@ QVariant* k_urlcomborequester_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const char** k_urlcomborequester_dynamic_property_names(void* self);
+const char** k_urlcomborequester_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8382,9 +8382,9 @@ QBindingStorage* k_urlcomborequester_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-const QBindingStorage* k_urlcomborequester_binding_storage2(void* self);
+const QBindingStorage* k_urlcomborequester_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8407,18 +8407,18 @@ void k_urlcomborequester_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QObject* k_urlcomborequester_parent(void* self);
+QObject* k_urlcomborequester_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param classname const char*
 ///
-bool k_urlcomborequester_inherits(void* self, const char* classname);
+bool k_urlcomborequester_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -8458,7 +8458,7 @@ int32_t k_urlcomborequester_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlcomborequester_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_urlcomborequester_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -8470,59 +8470,59 @@ QMetaObject__Connection* k_urlcomborequester_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlcomborequester_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_urlcomborequester_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_urlcomborequester_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_urlcomborequester_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param signal const char*
 ///
-bool k_urlcomborequester_disconnect1(void* self, const char* signal);
+bool k_urlcomborequester_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboRequester*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_urlcomborequester_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_urlcomborequester_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_urlcomborequester_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_urlcomborequester_disconnect23(void* self, void* receiver, const char* member);
+bool k_urlcomborequester_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KUrlComboRequester*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_urlcomborequester_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8546,89 +8546,89 @@ void k_urlcomborequester_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_painting_active(void* self);
+bool k_urlcomborequester_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_width_m_m(void* self);
+int32_t k_urlcomborequester_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_height_m_m(void* self);
+int32_t k_urlcomborequester_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_logical_dpi_x(void* self);
+int32_t k_urlcomborequester_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_logical_dpi_y(void* self);
+int32_t k_urlcomborequester_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_physical_dpi_x(void* self);
+int32_t k_urlcomborequester_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_physical_dpi_y(void* self);
+int32_t k_urlcomborequester_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-double k_urlcomborequester_device_pixel_ratio(void* self);
+double k_urlcomborequester_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-double k_urlcomborequester_device_pixel_ratio_f(void* self);
+double k_urlcomborequester_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_color_count(void* self);
+int32_t k_urlcomborequester_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_depth(void* self);
+int32_t k_urlcomborequester_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -8651,9 +8651,9 @@ int32_t k_urlcomborequester_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QFileDialog* k_urlcomborequester_file_dialog(void* self);
+QFileDialog* k_urlcomborequester_file_dialog(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -8661,9 +8661,9 @@ QFileDialog* k_urlcomborequester_file_dialog(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QFileDialog* k_urlcomborequester_super_file_dialog(void* self);
+QFileDialog* k_urlcomborequester_super_file_dialog(const void* self);
 
 /// Inherited from KUrlRequester
 ///
@@ -8671,10 +8671,10 @@ QFileDialog* k_urlcomborequester_super_file_dialog(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback QFileDialog* func()
+/// @param self const KUrlComboRequester*
+/// @param callback QFileDialog* func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_file_dialog(void* self, QFileDialog* (*callback)());
+void k_urlcomborequester_on_file_dialog(const void* self, QFileDialog* (*callback)(const void*));
 
 /// Inherited from KUrlRequester
 ///
@@ -8750,9 +8750,9 @@ void k_urlcomborequester_on_event_filter(void* self, bool (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_dev_type(void* self);
+int32_t k_urlcomborequester_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8760,9 +8760,9 @@ int32_t k_urlcomborequester_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_super_dev_type(void* self);
+int32_t k_urlcomborequester_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8770,10 +8770,10 @@ int32_t k_urlcomborequester_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback int32_t func()
+/// @param self const KUrlComboRequester*
+/// @param callback int32_t func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_dev_type(void* self, int32_t (*callback)());
+void k_urlcomborequester_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8814,9 +8814,9 @@ void k_urlcomborequester_on_set_visible(void* self, void (*callback)(void*, bool
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_size_hint(void* self);
+QSize* k_urlcomborequester_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8824,9 +8824,9 @@ QSize* k_urlcomborequester_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_super_size_hint(void* self);
+QSize* k_urlcomborequester_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8834,12 +8834,12 @@ QSize* k_urlcomborequester_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback QSize* func()
+/// @param self const KUrlComboRequester*
+/// @param callback QSize* func(KUrlComboRequester* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlcomborequester_on_size_hint(void* self, QSize* (*callback)());
+void k_urlcomborequester_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8847,9 +8847,9 @@ void k_urlcomborequester_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_minimum_size_hint(void* self);
+QSize* k_urlcomborequester_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8857,9 +8857,9 @@ QSize* k_urlcomborequester_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QSize* k_urlcomborequester_super_minimum_size_hint(void* self);
+QSize* k_urlcomborequester_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8867,12 +8867,12 @@ QSize* k_urlcomborequester_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback QSize* func()
+/// @param self const KUrlComboRequester*
+/// @param callback QSize* func(KUrlComboRequester* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlcomborequester_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_urlcomborequester_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8880,10 +8880,10 @@ void k_urlcomborequester_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 int
 ///
-int32_t k_urlcomborequester_height_for_width(void* self, int param1);
+int32_t k_urlcomborequester_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -8891,10 +8891,10 @@ int32_t k_urlcomborequester_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 int
 ///
-int32_t k_urlcomborequester_super_height_for_width(void* self, int param1);
+int32_t k_urlcomborequester_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -8902,10 +8902,10 @@ int32_t k_urlcomborequester_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param callback int32_t func(KUrlComboRequester* self, int param1)
 ///
-void k_urlcomborequester_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_urlcomborequester_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -8913,9 +8913,9 @@ void k_urlcomborequester_on_height_for_width(void* self, int32_t (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_has_height_for_width(void* self);
+bool k_urlcomborequester_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8923,9 +8923,9 @@ bool k_urlcomborequester_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-bool k_urlcomborequester_super_has_height_for_width(void* self);
+bool k_urlcomborequester_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8933,10 +8933,10 @@ bool k_urlcomborequester_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback bool func()
+/// @param self const KUrlComboRequester*
+/// @param callback bool func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_has_height_for_width(void* self, bool (*callback)());
+void k_urlcomborequester_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -8944,9 +8944,9 @@ void k_urlcomborequester_on_has_height_for_width(void* self, bool (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QPaintEngine* k_urlcomborequester_paint_engine(void* self);
+QPaintEngine* k_urlcomborequester_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8954,9 +8954,9 @@ QPaintEngine* k_urlcomborequester_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QPaintEngine* k_urlcomborequester_super_paint_engine(void* self);
+QPaintEngine* k_urlcomborequester_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8964,10 +8964,10 @@ QPaintEngine* k_urlcomborequester_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback QPaintEngine* func()
+/// @param self const KUrlComboRequester*
+/// @param callback QPaintEngine* func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_urlcomborequester_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -9837,10 +9837,10 @@ void k_urlcomborequester_on_native_event(void* self, bool (*callback)(void*, lib
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_urlcomborequester_metric(void* self, int32_t param1);
+int32_t k_urlcomborequester_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9848,10 +9848,10 @@ int32_t k_urlcomborequester_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_urlcomborequester_super_metric(void* self, int32_t param1);
+int32_t k_urlcomborequester_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9859,10 +9859,10 @@ int32_t k_urlcomborequester_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param callback int32_t func(KUrlComboRequester* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_urlcomborequester_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_urlcomborequester_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -9870,10 +9870,10 @@ void k_urlcomborequester_on_metric(void* self, int32_t (*callback)(void*, int32_
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param painter QPainter*
 ///
-void k_urlcomborequester_init_painter(void* self, void* painter);
+void k_urlcomborequester_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -9881,10 +9881,10 @@ void k_urlcomborequester_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param painter QPainter*
 ///
-void k_urlcomborequester_super_init_painter(void* self, void* painter);
+void k_urlcomborequester_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -9892,10 +9892,10 @@ void k_urlcomborequester_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param callback void func(KUrlComboRequester* self, QPainter* painter)
 ///
-void k_urlcomborequester_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_urlcomborequester_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -9903,10 +9903,10 @@ void k_urlcomborequester_on_init_painter(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_urlcomborequester_redirected(void* self, void* offset);
+QPaintDevice* k_urlcomborequester_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -9914,10 +9914,10 @@ QPaintDevice* k_urlcomborequester_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_urlcomborequester_super_redirected(void* self, void* offset);
+QPaintDevice* k_urlcomborequester_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -9925,10 +9925,10 @@ QPaintDevice* k_urlcomborequester_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param callback QPaintDevice* func(KUrlComboRequester* self, QPoint* offset)
 ///
-void k_urlcomborequester_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_urlcomborequester_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -9936,9 +9936,9 @@ void k_urlcomborequester_on_redirected(void* self, QPaintDevice* (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QPainter* k_urlcomborequester_shared_painter(void* self);
+QPainter* k_urlcomborequester_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9946,9 +9946,9 @@ QPainter* k_urlcomborequester_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QPainter* k_urlcomborequester_super_shared_painter(void* self);
+QPainter* k_urlcomborequester_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9956,10 +9956,10 @@ QPainter* k_urlcomborequester_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback QPainter* func()
+/// @param self const KUrlComboRequester*
+/// @param callback QPainter* func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_shared_painter(void* self, QPainter* (*callback)());
+void k_urlcomborequester_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -10000,10 +10000,10 @@ void k_urlcomborequester_on_input_method_event(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_urlcomborequester_input_method_query(void* self, int32_t param1);
+QVariant* k_urlcomborequester_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10011,10 +10011,10 @@ QVariant* k_urlcomborequester_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_urlcomborequester_super_input_method_query(void* self, int32_t param1);
+QVariant* k_urlcomborequester_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -10022,12 +10022,12 @@ QVariant* k_urlcomborequester_super_input_method_query(void* self, int32_t param
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param callback QVariant* func(KUrlComboRequester* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_urlcomborequester_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_urlcomborequester_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -10170,7 +10170,7 @@ void k_urlcomborequester_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlcomborequester_connect_notify(void* self, void* signal);
+void k_urlcomborequester_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10181,7 +10181,7 @@ void k_urlcomborequester_connect_notify(void* self, void* signal);
 /// @param self KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlcomborequester_super_connect_notify(void* self, void* signal);
+void k_urlcomborequester_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10192,7 +10192,7 @@ void k_urlcomborequester_super_connect_notify(void* self, void* signal);
 /// @param self KUrlComboRequester*
 /// @param callback void func(KUrlComboRequester* self, QMetaMethod* signal)
 ///
-void k_urlcomborequester_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_urlcomborequester_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -10203,7 +10203,7 @@ void k_urlcomborequester_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlcomborequester_disconnect_notify(void* self, void* signal);
+void k_urlcomborequester_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10214,7 +10214,7 @@ void k_urlcomborequester_disconnect_notify(void* self, void* signal);
 /// @param self KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-void k_urlcomborequester_super_disconnect_notify(void* self, void* signal);
+void k_urlcomborequester_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10225,7 +10225,7 @@ void k_urlcomborequester_super_disconnect_notify(void* self, void* signal);
 /// @param self KUrlComboRequester*
 /// @param callback void func(KUrlComboRequester* self, QMetaMethod* signal)
 ///
-void k_urlcomborequester_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_urlcomborequester_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -10254,9 +10254,9 @@ void k_urlcomborequester_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboRequester*
-/// @param callback void func()
+/// @param callback void func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_update_micro_focus(void* self, void (*callback)());
+void k_urlcomborequester_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -10285,9 +10285,9 @@ void k_urlcomborequester_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboRequester*
-/// @param callback void func()
+/// @param callback void func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_create(void* self, void (*callback)());
+void k_urlcomborequester_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -10316,9 +10316,9 @@ void k_urlcomborequester_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboRequester*
-/// @param callback void func()
+/// @param callback void func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_destroy(void* self, void (*callback)());
+void k_urlcomborequester_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -10347,9 +10347,9 @@ bool k_urlcomborequester_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboRequester*
-/// @param callback bool func()
+/// @param callback bool func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_focus_next_child(void* self, bool (*callback)());
+void k_urlcomborequester_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -10378,9 +10378,9 @@ bool k_urlcomborequester_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KUrlComboRequester*
-/// @param callback bool func()
+/// @param callback bool func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_focus_previous_child(void* self, bool (*callback)());
+void k_urlcomborequester_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -10388,9 +10388,9 @@ void k_urlcomborequester_on_focus_previous_child(void* self, bool (*callback)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QObject* k_urlcomborequester_sender(void* self);
+QObject* k_urlcomborequester_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -10398,9 +10398,9 @@ QObject* k_urlcomborequester_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-QObject* k_urlcomborequester_super_sender(void* self);
+QObject* k_urlcomborequester_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -10408,10 +10408,10 @@ QObject* k_urlcomborequester_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback QObject* func()
+/// @param self const KUrlComboRequester*
+/// @param callback QObject* func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_sender(void* self, QObject* (*callback)());
+void k_urlcomborequester_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -10419,9 +10419,9 @@ void k_urlcomborequester_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_sender_signal_index(void* self);
+int32_t k_urlcomborequester_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -10429,9 +10429,9 @@ int32_t k_urlcomborequester_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 ///
-int32_t k_urlcomborequester_super_sender_signal_index(void* self);
+int32_t k_urlcomborequester_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -10439,10 +10439,10 @@ int32_t k_urlcomborequester_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
-/// @param callback int32_t func()
+/// @param self const KUrlComboRequester*
+/// @param callback int32_t func(KUrlComboRequester* self)
 ///
-void k_urlcomborequester_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_urlcomborequester_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -10450,10 +10450,10 @@ void k_urlcomborequester_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param signal const char*
 ///
-int32_t k_urlcomborequester_receivers(void* self, const char* signal);
+int32_t k_urlcomborequester_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -10461,10 +10461,10 @@ int32_t k_urlcomborequester_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param signal const char*
 ///
-int32_t k_urlcomborequester_super_receivers(void* self, const char* signal);
+int32_t k_urlcomborequester_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -10472,10 +10472,10 @@ int32_t k_urlcomborequester_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param callback int32_t func(KUrlComboRequester* self, const char* signal)
 ///
-void k_urlcomborequester_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_urlcomborequester_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -10483,10 +10483,10 @@ void k_urlcomborequester_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-bool k_urlcomborequester_is_signal_connected(void* self, void* signal);
+bool k_urlcomborequester_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10494,10 +10494,10 @@ bool k_urlcomborequester_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param signal QMetaMethod*
 ///
-bool k_urlcomborequester_super_is_signal_connected(void* self, void* signal);
+bool k_urlcomborequester_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -10505,10 +10505,10 @@ bool k_urlcomborequester_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param callback bool func(KUrlComboRequester* self, QMetaMethod* signal)
 ///
-void k_urlcomborequester_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_urlcomborequester_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -10516,11 +10516,11 @@ void k_urlcomborequester_on_is_signal_connected(void* self, bool (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_urlcomborequester_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_urlcomborequester_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -10528,11 +10528,11 @@ double k_urlcomborequester_get_decoded_metric_f(void* self, int32_t metricA, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_urlcomborequester_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_urlcomborequester_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -10540,10 +10540,10 @@ double k_urlcomborequester_super_get_decoded_metric_f(void* self, int32_t metric
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KUrlComboRequester*
+/// @param self const KUrlComboRequester*
 /// @param callback double func(KUrlComboRequester* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_urlcomborequester_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_urlcomborequester_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -20,7 +20,7 @@ QPlaceContent* q_placecontent_new();
 ///
 /// @param other QPlaceContent*
 ///
-QPlaceContent* q_placecontent_new2(void* other);
+QPlaceContent* q_placecontent_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html)
 
@@ -35,7 +35,7 @@ QPlaceContent* q_placecontent_new3(int32_t type);
 /// @param self QPlaceContent*
 /// @param other QPlaceContent*
 ///
-void q_placecontent_operator_assign(void* self, void* other);
+void q_placecontent_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#swap)
 ///
@@ -52,40 +52,40 @@ void q_placecontent_detach(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#operator-eq-eq)
 ///
-/// @param self QPlaceContent*
+/// @param self const QPlaceContent*
 /// @param other QPlaceContent*
 ///
-bool q_placecontent_operator_equal(void* self, void* other);
+bool q_placecontent_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#operator-not-eq)
 ///
-/// @param self QPlaceContent*
+/// @param self const QPlaceContent*
 /// @param other QPlaceContent*
 ///
-bool q_placecontent_operator_not_equal(void* self, void* other);
+bool q_placecontent_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#type)
 ///
-/// @param self QPlaceContent*
+/// @param self const QPlaceContent*
 ///
 /// @return enum QPlaceContent__Type
 ///
-int32_t q_placecontent_type(void* self);
+int32_t q_placecontent_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#dataTags)
 ///
-/// @param self QPlaceContent*
+/// @param self const QPlaceContent*
 ///
 /// @return libqt_list of enum QPlaceContent__DataTag
 ///
-libqt_list q_placecontent_data_tags(void* self);
+libqt_list q_placecontent_data_tags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#value)
 ///
-/// @param self QPlaceContent*
+/// @param self const QPlaceContent*
 /// @param tag enum QPlaceContent__DataTag
 ///
-QVariant* q_placecontent_value(void* self, int32_t tag);
+QVariant* q_placecontent_value(const void* self, int32_t tag);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#setValue)
 ///
@@ -93,41 +93,41 @@ QVariant* q_placecontent_value(void* self, int32_t tag);
 /// @param tag enum QPlaceContent__DataTag
 /// @param param2 QVariant*
 ///
-void q_placecontent_set_value(void* self, int32_t tag, void* param2);
+void q_placecontent_set_value(void* self, int32_t tag, const void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#supplier)
 ///
-/// @param self QPlaceContent*
+/// @param self const QPlaceContent*
 ///
-QPlaceSupplier* q_placecontent_supplier(void* self);
+QPlaceSupplier* q_placecontent_supplier(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#setSupplier)
 ///
 /// @param self QPlaceContent*
 /// @param supplier QPlaceSupplier*
 ///
-void q_placecontent_set_supplier(void* self, void* supplier);
+void q_placecontent_set_supplier(void* self, const void* supplier);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#user)
 ///
-/// @param self QPlaceContent*
+/// @param self const QPlaceContent*
 ///
-QPlaceUser* q_placecontent_user(void* self);
+QPlaceUser* q_placecontent_user(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#setUser)
 ///
 /// @param self QPlaceContent*
 /// @param user QPlaceUser*
 ///
-void q_placecontent_set_user(void* self, void* user);
+void q_placecontent_set_user(void* self, const void* user);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#attribution)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceContent*
+/// @param self const QPlaceContent*
 ///
-const char* q_placecontent_attribution(void* self);
+const char* q_placecontent_attribution(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacecontent.html#setAttribution)
 ///

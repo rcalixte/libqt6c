@@ -5,19 +5,19 @@ QWebEngineFindTextResult* q_webenginefindtextresult_new() {
     return QWebEngineFindTextResult_New();
 }
 
-QWebEngineFindTextResult* q_webenginefindtextresult_new2(void* other) {
+QWebEngineFindTextResult* q_webenginefindtextresult_new2(const void* other) {
     return QWebEngineFindTextResult_New2((QWebEngineFindTextResult*)other);
 }
 
-int32_t q_webenginefindtextresult_number_of_matches(void* self) {
+int32_t q_webenginefindtextresult_number_of_matches(const void* self) {
     return QWebEngineFindTextResult_NumberOfMatches((QWebEngineFindTextResult*)self);
 }
 
-int32_t q_webenginefindtextresult_active_match(void* self) {
+int32_t q_webenginefindtextresult_active_match(const void* self) {
     return QWebEngineFindTextResult_ActiveMatch((QWebEngineFindTextResult*)self);
 }
 
-void q_webenginefindtextresult_operator_assign(void* self, void* other) {
+void q_webenginefindtextresult_operator_assign(void* self, const void* other) {
     QWebEngineFindTextResult_OperatorAssign((QWebEngineFindTextResult*)self, (QWebEngineFindTextResult*)other);
 }
 

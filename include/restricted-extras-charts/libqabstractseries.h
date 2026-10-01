@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-const QMetaObject* q_abstractseries_meta_object(void* self);
+const QMetaObject* q_abstractseries_meta_object(const void* self);
 
 /// @param self QAbstractSeries*
 /// @param param1 const char*
@@ -36,14 +36,6 @@ int32_t q_abstractseries_metacall(void* self, int32_t param1, int param2, void* 
 ///
 const char* q_abstractseries_tr(const char* s);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#type)
-///
-/// @param self QAbstractSeries*
-///
-/// @return enum QAbstractSeries__SeriesType
-///
-int32_t q_abstractseries_type(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setName)
 ///
 /// @param self QAbstractSeries*
@@ -55,9 +47,9 @@ void q_abstractseries_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-const char* q_abstractseries_name(void* self);
+const char* q_abstractseries_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setVisible)
 ///
@@ -67,15 +59,15 @@ void q_abstractseries_set_visible(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#isVisible)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-bool q_abstractseries_is_visible(void* self);
+bool q_abstractseries_is_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#opacity)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-double q_abstractseries_opacity(void* self);
+double q_abstractseries_opacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#setOpacity)
 ///
@@ -92,15 +84,15 @@ void q_abstractseries_set_use_open_g_l(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#useOpenGL)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-bool q_abstractseries_use_open_g_l(void* self);
+bool q_abstractseries_use_open_g_l(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#chart)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-QChart* q_abstractseries_chart(void* self);
+QChart* q_abstractseries_chart(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries-qtcharts.html#attachAxis)
 ///
@@ -246,9 +238,9 @@ bool q_abstractseries_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-const char* q_abstractseries_object_name(void* self);
+const char* q_abstractseries_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -263,33 +255,33 @@ void q_abstractseries_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-bool q_abstractseries_is_widget_type(void* self);
+bool q_abstractseries_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-bool q_abstractseries_is_window_type(void* self);
+bool q_abstractseries_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-bool q_abstractseries_is_quick_item_type(void* self);
+bool q_abstractseries_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-bool q_abstractseries_signals_blocked(void* self);
+bool q_abstractseries_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -304,9 +296,9 @@ bool q_abstractseries_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-QThread* q_abstractseries_thread(void* self);
+QThread* q_abstractseries_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -357,11 +349,11 @@ void q_abstractseries_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_abstractseries_children(void* self);
+libqt_list q_abstractseries_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -399,7 +391,7 @@ void q_abstractseries_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_abstractseries_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_abstractseries_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -410,18 +402,18 @@ QMetaObject__Connection* q_abstractseries_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_abstractseries_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_abstractseries_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_abstractseries_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_abstractseries_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -432,7 +424,7 @@ QMetaObject__Connection* q_abstractseries_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_abstractseries_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_abstractseries_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -443,24 +435,24 @@ bool q_abstractseries_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_abstractseries_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_abstractseries_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-bool q_abstractseries_disconnect3(void* self);
+bool q_abstractseries_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 /// @param receiver QObject*
 ///
-bool q_abstractseries_disconnect4(void* self, void* receiver);
+bool q_abstractseries_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -468,23 +460,23 @@ bool q_abstractseries_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_abstractseries_disconnect5(void* param1);
+bool q_abstractseries_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-void q_abstractseries_dump_object_tree(void* self);
+void q_abstractseries_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-void q_abstractseries_dump_object_info(void* self);
+void q_abstractseries_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -494,16 +486,16 @@ void q_abstractseries_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_abstractseries_set_property(void* self, const char* name, void* value);
+bool q_abstractseries_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 /// @param name const char*
 ///
-QVariant* q_abstractseries_property(void* self, const char* name);
+QVariant* q_abstractseries_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -511,9 +503,9 @@ QVariant* q_abstractseries_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-const char** q_abstractseries_dynamic_property_names(void* self);
+const char** q_abstractseries_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -527,9 +519,9 @@ QBindingStorage* q_abstractseries_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-const QBindingStorage* q_abstractseries_binding_storage2(void* self);
+const QBindingStorage* q_abstractseries_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -552,18 +544,18 @@ void q_abstractseries_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 ///
-QObject* q_abstractseries_parent(void* self);
+QObject* q_abstractseries_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 /// @param classname const char*
 ///
-bool q_abstractseries_inherits(void* self, const char* classname);
+bool q_abstractseries_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -603,7 +595,7 @@ int32_t q_abstractseries_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstractseries_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_abstractseries_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -615,59 +607,59 @@ QMetaObject__Connection* q_abstractseries_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstractseries_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_abstractseries_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstractseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_abstractseries_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 /// @param signal const char*
 ///
-bool q_abstractseries_disconnect1(void* self, const char* signal);
+bool q_abstractseries_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractSeries*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_abstractseries_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_abstractseries_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_abstractseries_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractSeries*
+/// @param self const QAbstractSeries*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_abstractseries_disconnect23(void* self, void* receiver, const char* member);
+bool q_abstractseries_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QAbstractSeries*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_abstractseries_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

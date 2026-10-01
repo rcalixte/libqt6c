@@ -117,7 +117,7 @@ void QQuickWebEngineProfile_DownloadFinished(QQuickWebEngineProfile* self, QQuic
 void QQuickWebEngineProfile_Connect_DownloadFinished(QQuickWebEngineProfile* self, intptr_t slot);
 void QQuickWebEngineProfile_PresentNotification(QQuickWebEngineProfile* self, QWebEngineNotification* notification);
 void QQuickWebEngineProfile_Connect_PresentNotification(QQuickWebEngineProfile* self, intptr_t slot);
-void QQuickWebEngineProfile_OnMetaObject(const QQuickWebEngineProfile* self, intptr_t slot);
+void QQuickWebEngineProfile_OnMetaObject(QQuickWebEngineProfile* self, intptr_t slot);
 QMetaObject* QQuickWebEngineProfile_SuperMetaObject(const QQuickWebEngineProfile* self);
 void QQuickWebEngineProfile_OnMetacast(QQuickWebEngineProfile* self, intptr_t slot);
 void* QQuickWebEngineProfile_SuperMetacast(QQuickWebEngineProfile* self, const char* param1);
@@ -145,17 +145,9 @@ void QQuickWebEngineProfile_DisconnectNotify(QQuickWebEngineProfile* self, const
 void QQuickWebEngineProfile_OnDisconnectNotify(QQuickWebEngineProfile* self, intptr_t slot);
 void QQuickWebEngineProfile_SuperDisconnectNotify(QQuickWebEngineProfile* self, const QMetaMethod* signal);
 QObject* QQuickWebEngineProfile_Sender(const QQuickWebEngineProfile* self);
-void QQuickWebEngineProfile_OnSender(const QQuickWebEngineProfile* self, intptr_t slot);
-QObject* QQuickWebEngineProfile_SuperSender(const QQuickWebEngineProfile* self);
 int QQuickWebEngineProfile_SenderSignalIndex(const QQuickWebEngineProfile* self);
-void QQuickWebEngineProfile_OnSenderSignalIndex(const QQuickWebEngineProfile* self, intptr_t slot);
-int QQuickWebEngineProfile_SuperSenderSignalIndex(const QQuickWebEngineProfile* self);
 int QQuickWebEngineProfile_Receivers(const QQuickWebEngineProfile* self, const char* signal);
-void QQuickWebEngineProfile_OnReceivers(const QQuickWebEngineProfile* self, intptr_t slot);
-int QQuickWebEngineProfile_SuperReceivers(const QQuickWebEngineProfile* self, const char* signal);
 bool QQuickWebEngineProfile_IsSignalConnected(const QQuickWebEngineProfile* self, const QMetaMethod* signal);
-void QQuickWebEngineProfile_OnIsSignalConnected(const QQuickWebEngineProfile* self, intptr_t slot);
-bool QQuickWebEngineProfile_SuperIsSignalConnected(const QQuickWebEngineProfile* self, const QMetaMethod* signal);
 void QQuickWebEngineProfile_Delete(QQuickWebEngineProfile* self);
 
 #ifdef __cplusplus

@@ -4,7 +4,7 @@
 #include "libkcursor.hpp"
 #include "libkcursor.h"
 
-KCursor* k_cursor_new(void* other) {
+KCursor* k_cursor_new(const void* other) {
     return KCursor_New((KCursor*)other);
 }
 

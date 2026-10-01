@@ -20,14 +20,14 @@ QSslConfiguration* q_sslconfiguration_new();
 ///
 /// @param other QSslConfiguration*
 ///
-QSslConfiguration* q_sslconfiguration_new2(void* other);
+QSslConfiguration* q_sslconfiguration_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#operator-eq)
 ///
 /// @param self QSslConfiguration*
 /// @param other QSslConfiguration*
 ///
-void q_sslconfiguration_operator_assign(void* self, void* other);
+void q_sslconfiguration_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#swap)
 ///
@@ -38,31 +38,31 @@ void q_sslconfiguration_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#operator-eq-eq)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 /// @param other QSslConfiguration*
 ///
-bool q_sslconfiguration_operator_equal(void* self, void* other);
+bool q_sslconfiguration_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#operator-not-eq)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 /// @param other QSslConfiguration*
 ///
-bool q_sslconfiguration_operator_not_equal(void* self, void* other);
+bool q_sslconfiguration_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#isNull)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-bool q_sslconfiguration_is_null(void* self);
+bool q_sslconfiguration_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#protocol)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return enum QSsl__SslProtocol
 ///
-int32_t q_sslconfiguration_protocol(void* self);
+int32_t q_sslconfiguration_protocol(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setProtocol)
 ///
@@ -73,11 +73,11 @@ void q_sslconfiguration_set_protocol(void* self, int32_t protocol);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#peerVerifyMode)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return enum QSslSocket__PeerVerifyMode
 ///
-int32_t q_sslconfiguration_peer_verify_mode(void* self);
+int32_t q_sslconfiguration_peer_verify_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setPeerVerifyMode)
 ///
@@ -88,9 +88,9 @@ void q_sslconfiguration_set_peer_verify_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#peerVerifyDepth)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-int32_t q_sslconfiguration_peer_verify_depth(void* self);
+int32_t q_sslconfiguration_peer_verify_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setPeerVerifyDepth)
 ///
@@ -101,11 +101,11 @@ void q_sslconfiguration_set_peer_verify_depth(void* self, int depth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#localCertificateChain)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return libqt_list of QSslCertificate*
 ///
-libqt_list q_sslconfiguration_local_certificate_chain(void* self);
+libqt_list q_sslconfiguration_local_certificate_chain(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setLocalCertificateChain)
 ///
@@ -116,65 +116,65 @@ void q_sslconfiguration_set_local_certificate_chain(void* self, libqt_list local
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#localCertificate)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-QSslCertificate* q_sslconfiguration_local_certificate(void* self);
+QSslCertificate* q_sslconfiguration_local_certificate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setLocalCertificate)
 ///
 /// @param self QSslConfiguration*
 /// @param certificate QSslCertificate*
 ///
-void q_sslconfiguration_set_local_certificate(void* self, void* certificate);
+void q_sslconfiguration_set_local_certificate(void* self, const void* certificate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#peerCertificate)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-QSslCertificate* q_sslconfiguration_peer_certificate(void* self);
+QSslCertificate* q_sslconfiguration_peer_certificate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#peerCertificateChain)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return libqt_list of QSslCertificate*
 ///
-libqt_list q_sslconfiguration_peer_certificate_chain(void* self);
+libqt_list q_sslconfiguration_peer_certificate_chain(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionCipher)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-QSslCipher* q_sslconfiguration_session_cipher(void* self);
+QSslCipher* q_sslconfiguration_session_cipher(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionProtocol)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return enum QSsl__SslProtocol
 ///
-int32_t q_sslconfiguration_session_protocol(void* self);
+int32_t q_sslconfiguration_session_protocol(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#privateKey)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-QSslKey* q_sslconfiguration_private_key(void* self);
+QSslKey* q_sslconfiguration_private_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setPrivateKey)
 ///
 /// @param self QSslConfiguration*
 /// @param key QSslKey*
 ///
-void q_sslconfiguration_set_private_key(void* self, void* key);
+void q_sslconfiguration_set_private_key(void* self, const void* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#ciphers)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return libqt_list of QSslCipher*
 ///
-libqt_list q_sslconfiguration_ciphers(void* self);
+libqt_list q_sslconfiguration_ciphers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setCiphers)
 ///
@@ -198,11 +198,11 @@ libqt_list q_sslconfiguration_supported_ciphers();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#caCertificates)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return libqt_list of QSslCertificate*
 ///
-libqt_list q_sslconfiguration_ca_certificates(void* self);
+libqt_list q_sslconfiguration_ca_certificates(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setCaCertificates)
 ///
@@ -223,7 +223,7 @@ bool q_sslconfiguration_add_ca_certificates(void* self, const char* path);
 /// @param self QSslConfiguration*
 /// @param certificate QSslCertificate*
 ///
-void q_sslconfiguration_add_ca_certificate(void* self, void* certificate);
+void q_sslconfiguration_add_ca_certificate(void* self, const void* certificate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///
@@ -248,18 +248,18 @@ void q_sslconfiguration_set_ssl_option(void* self, int32_t option, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#testSslOption)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 /// @param option enum QSsl__SslOption
 ///
-bool q_sslconfiguration_test_ssl_option(void* self, int32_t option);
+bool q_sslconfiguration_test_ssl_option(const void* self, int32_t option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionTicket)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-char* q_sslconfiguration_session_ticket(void* self);
+char* q_sslconfiguration_session_ticket(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setSessionTicket)
 ///
@@ -270,23 +270,23 @@ void q_sslconfiguration_set_session_ticket(void* self, char* sessionTicket);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionTicketLifeTimeHint)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-int32_t q_sslconfiguration_session_ticket_life_time_hint(void* self);
+int32_t q_sslconfiguration_session_ticket_life_time_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#ephemeralServerKey)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-QSslKey* q_sslconfiguration_ephemeral_server_key(void* self);
+QSslKey* q_sslconfiguration_ephemeral_server_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#ellipticCurves)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return libqt_list of QSslEllipticCurve*
 ///
-libqt_list q_sslconfiguration_elliptic_curves(void* self);
+libqt_list q_sslconfiguration_elliptic_curves(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setEllipticCurves)
 ///
@@ -305,9 +305,9 @@ libqt_list q_sslconfiguration_supported_elliptic_curves();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-char* q_sslconfiguration_pre_shared_key_identity_hint(void* self);
+char* q_sslconfiguration_pre_shared_key_identity_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setPreSharedKeyIdentityHint)
 ///
@@ -318,16 +318,16 @@ void q_sslconfiguration_set_pre_shared_key_identity_hint(void* self, char* hint)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#diffieHellmanParameters)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-QSslDiffieHellmanParameters* q_sslconfiguration_diffie_hellman_parameters(void* self);
+QSslDiffieHellmanParameters* q_sslconfiguration_diffie_hellman_parameters(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setDiffieHellmanParameters)
 ///
 /// @param self QSslConfiguration*
 /// @param dhparams QSslDiffieHellmanParameters*
 ///
-void q_sslconfiguration_set_diffie_hellman_parameters(void* self, void* dhparams);
+void q_sslconfiguration_set_diffie_hellman_parameters(void* self, const void* dhparams);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#backendConfiguration)
 ///
@@ -343,11 +343,11 @@ void q_sslconfiguration_set_diffie_hellman_parameters(void* self, void* dhparams
 /// free(map.values);
 /// ```
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return libqt_map of char* to QVariant*
 ///
-libqt_map q_sslconfiguration_backend_configuration(void* self);
+libqt_map q_sslconfiguration_backend_configuration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfigurationOption)
 ///
@@ -355,7 +355,7 @@ libqt_map q_sslconfiguration_backend_configuration(void* self);
 /// @param name char*
 /// @param value QVariant*
 ///
-void q_sslconfiguration_set_backend_configuration_option(void* self, char* name, void* value);
+void q_sslconfiguration_set_backend_configuration_option(void* self, char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setBackendConfiguration)
 ///
@@ -371,13 +371,13 @@ QSslConfiguration* q_sslconfiguration_default_configuration();
 ///
 /// @param configuration QSslConfiguration*
 ///
-void q_sslconfiguration_set_default_configuration(void* configuration);
+void q_sslconfiguration_set_default_configuration(const void* configuration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#dtlsCookieVerificationEnabled)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-bool q_sslconfiguration_dtls_cookie_verification_enabled(void* self);
+bool q_sslconfiguration_dtls_cookie_verification_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setDtlsCookieVerificationEnabled)
 ///
@@ -394,13 +394,13 @@ QSslConfiguration* q_sslconfiguration_default_dtls_configuration();
 ///
 /// @param configuration QSslConfiguration*
 ///
-void q_sslconfiguration_set_default_dtls_configuration(void* configuration);
+void q_sslconfiguration_set_default_dtls_configuration(const void* configuration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#handshakeMustInterruptOnError)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-bool q_sslconfiguration_handshake_must_interrupt_on_error(void* self);
+bool q_sslconfiguration_handshake_must_interrupt_on_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setHandshakeMustInterruptOnError)
 ///
@@ -411,9 +411,9 @@ void q_sslconfiguration_set_handshake_must_interrupt_on_error(void* self, bool i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#missingCertificateIsFatal)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-bool q_sslconfiguration_missing_certificate_is_fatal(void* self);
+bool q_sslconfiguration_missing_certificate_is_fatal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setMissingCertificateIsFatal)
 ///
@@ -431,9 +431,9 @@ void q_sslconfiguration_set_ocsp_stapling_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#ocspStaplingEnabled)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-bool q_sslconfiguration_ocsp_stapling_enabled(void* self);
+bool q_sslconfiguration_ocsp_stapling_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#setAllowedNextProtocols)
 ///
@@ -446,25 +446,25 @@ void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* proto
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-const char** q_sslconfiguration_allowed_next_protocols(void* self);
+const char** q_sslconfiguration_allowed_next_protocols(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#nextNegotiatedProtocol)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
-char* q_sslconfiguration_next_negotiated_protocol(void* self);
+char* q_sslconfiguration_next_negotiated_protocol(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#nextProtocolNegotiationStatus)
 ///
-/// @param self QSslConfiguration*
+/// @param self const QSslConfiguration*
 ///
 /// @return enum QSslConfiguration__NextProtocolNegotiationStatus
 ///
-int32_t q_sslconfiguration_next_protocol_negotiation_status(void* self);
+int32_t q_sslconfiguration_next_protocol_negotiation_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///

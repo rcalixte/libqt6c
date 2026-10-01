@@ -4,7 +4,7 @@
 #include "libkcolorscheme.hpp"
 #include "libkcolorscheme.h"
 
-KColorScheme* k_colorscheme_new(void* param1) {
+KColorScheme* k_colorscheme_new(const void* param1) {
     return KColorScheme_New((KColorScheme*)param1);
 }
 
@@ -20,23 +20,23 @@ KColorScheme* k_colorscheme_new4(int32_t param1, int32_t param2) {
     return KColorScheme_New4(param1, param2);
 }
 
-void k_colorscheme_operator_assign(void* self, void* param1) {
+void k_colorscheme_operator_assign(void* self, const void* param1) {
     KColorScheme_OperatorAssign((KColorScheme*)self, (KColorScheme*)param1);
 }
 
-QBrush* k_colorscheme_background(void* self) {
+QBrush* k_colorscheme_background(const void* self) {
     return KColorScheme_Background((KColorScheme*)self);
 }
 
-QBrush* k_colorscheme_foreground(void* self) {
+QBrush* k_colorscheme_foreground(const void* self) {
     return KColorScheme_Foreground((KColorScheme*)self);
 }
 
-QBrush* k_colorscheme_decoration(void* self, int32_t param1) {
+QBrush* k_colorscheme_decoration(const void* self, int32_t param1) {
     return KColorScheme_Decoration((KColorScheme*)self, param1);
 }
 
-QColor* k_colorscheme_shade(void* self, int32_t param1) {
+QColor* k_colorscheme_shade(const void* self, int32_t param1) {
     return KColorScheme_Shade((KColorScheme*)self, param1);
 }
 
@@ -44,11 +44,11 @@ double k_colorscheme_contrast_f() {
     return KColorScheme_ContrastF();
 }
 
-QColor* k_colorscheme_shade2(void* param1, int32_t param2) {
+QColor* k_colorscheme_shade2(const void* param1, int32_t param2) {
     return KColorScheme_Shade2((QColor*)param1, param2);
 }
 
-QColor* k_colorscheme_shade3(void* param1, int32_t param2, double contrast) {
+QColor* k_colorscheme_shade3(const void* param1, int32_t param2, double contrast) {
     return KColorScheme_Shade3((QColor*)param1, param2, contrast);
 }
 
@@ -60,19 +60,19 @@ void k_colorscheme_adjust_foreground(void* param1) {
     KColorScheme_AdjustForeground((QPalette*)param1);
 }
 
-bool k_colorscheme_operator_equal(void* self, void* other) {
+bool k_colorscheme_operator_equal(const void* self, const void* other) {
     return KColorScheme_OperatorEqual((KColorScheme*)self, (KColorScheme*)other);
 }
 
-QBrush* k_colorscheme_background1(void* self, int32_t param1) {
+QBrush* k_colorscheme_background1(const void* self, int32_t param1) {
     return KColorScheme_Background1((KColorScheme*)self, param1);
 }
 
-QBrush* k_colorscheme_foreground1(void* self, int32_t param1) {
+QBrush* k_colorscheme_foreground1(const void* self, int32_t param1) {
     return KColorScheme_Foreground1((KColorScheme*)self, param1);
 }
 
-QColor* k_colorscheme_shade4(void* param1, int32_t param2, double contrast, double chromaAdjust) {
+QColor* k_colorscheme_shade4(const void* param1, int32_t param2, double contrast, double chromaAdjust) {
     return KColorScheme_Shade4((QColor*)param1, param2, contrast, chromaAdjust);
 }
 

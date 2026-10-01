@@ -24,26 +24,26 @@ QQmlWebChannel* q_qmlwebchannel_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-const QMetaObject* q_qmlwebchannel_meta_object(void* self);
+const QMetaObject* q_qmlwebchannel_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQmlWebChannel*
-/// @param callback const QMetaObject* func()
+/// @param self const QQmlWebChannel*
+/// @param callback const QMetaObject* func(const QQmlWebChannel* self)
 ///
-void q_qmlwebchannel_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_qmlwebchannel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-const QMetaObject* q_qmlwebchannel_super_meta_object(void* self);
+const QMetaObject* q_qmlwebchannel_super_meta_object(const void* self);
 
 /// @param self QQmlWebChannel*
 /// @param param1 const char*
@@ -151,11 +151,11 @@ const char* q_qmlwebchannel_tr3(const char* s, const char* c, int n);
 /// free(map.values);
 /// ```
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
 /// @return libqt_map of const char* to QObject*
 ///
-libqt_map q_qmlwebchannel_registered_objects(void* self);
+libqt_map q_qmlwebchannel_registered_objects(const void* self);
 
 /// Inherited from QWebChannel
 ///
@@ -180,9 +180,9 @@ void q_qmlwebchannel_deregister_object(void* self, void* object);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebchannel.html#blockUpdates)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-bool q_qmlwebchannel_block_updates(void* self);
+bool q_qmlwebchannel_block_updates(const void* self);
 
 /// Inherited from QWebChannel
 ///
@@ -197,9 +197,9 @@ void q_qmlwebchannel_set_block_updates(void* self, bool block);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebchannel.html#propertyUpdateInterval)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-int32_t q_qmlwebchannel_property_update_interval(void* self);
+int32_t q_qmlwebchannel_property_update_interval(const void* self);
 
 /// Inherited from QWebChannel
 ///
@@ -234,9 +234,9 @@ void q_qmlwebchannel_on_block_updates_changed(void* self, void (*callback)(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-const char* q_qmlwebchannel_object_name(void* self);
+const char* q_qmlwebchannel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -251,33 +251,33 @@ void q_qmlwebchannel_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-bool q_qmlwebchannel_is_widget_type(void* self);
+bool q_qmlwebchannel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-bool q_qmlwebchannel_is_window_type(void* self);
+bool q_qmlwebchannel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-bool q_qmlwebchannel_is_quick_item_type(void* self);
+bool q_qmlwebchannel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-bool q_qmlwebchannel_signals_blocked(void* self);
+bool q_qmlwebchannel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -292,9 +292,9 @@ bool q_qmlwebchannel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-QThread* q_qmlwebchannel_thread(void* self);
+QThread* q_qmlwebchannel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -345,11 +345,11 @@ void q_qmlwebchannel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_qmlwebchannel_children(void* self);
+libqt_list q_qmlwebchannel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -387,7 +387,7 @@ void q_qmlwebchannel_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlwebchannel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_qmlwebchannel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -398,18 +398,18 @@ QMetaObject__Connection* q_qmlwebchannel_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_qmlwebchannel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_qmlwebchannel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlwebchannel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_qmlwebchannel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -420,7 +420,7 @@ QMetaObject__Connection* q_qmlwebchannel_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlwebchannel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_qmlwebchannel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -431,24 +431,24 @@ bool q_qmlwebchannel_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_qmlwebchannel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_qmlwebchannel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-bool q_qmlwebchannel_disconnect3(void* self);
+bool q_qmlwebchannel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param receiver QObject*
 ///
-bool q_qmlwebchannel_disconnect4(void* self, void* receiver);
+bool q_qmlwebchannel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -456,23 +456,23 @@ bool q_qmlwebchannel_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_qmlwebchannel_disconnect5(void* param1);
+bool q_qmlwebchannel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-void q_qmlwebchannel_dump_object_tree(void* self);
+void q_qmlwebchannel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-void q_qmlwebchannel_dump_object_info(void* self);
+void q_qmlwebchannel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -482,16 +482,16 @@ void q_qmlwebchannel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_qmlwebchannel_set_property(void* self, const char* name, void* value);
+bool q_qmlwebchannel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param name const char*
 ///
-QVariant* q_qmlwebchannel_property(void* self, const char* name);
+QVariant* q_qmlwebchannel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -499,9 +499,9 @@ QVariant* q_qmlwebchannel_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-const char** q_qmlwebchannel_dynamic_property_names(void* self);
+const char** q_qmlwebchannel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -515,9 +515,9 @@ QBindingStorage* q_qmlwebchannel_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-const QBindingStorage* q_qmlwebchannel_binding_storage2(void* self);
+const QBindingStorage* q_qmlwebchannel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -540,18 +540,18 @@ void q_qmlwebchannel_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-QObject* q_qmlwebchannel_parent(void* self);
+QObject* q_qmlwebchannel_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param classname const char*
 ///
-bool q_qmlwebchannel_inherits(void* self, const char* classname);
+bool q_qmlwebchannel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -591,7 +591,7 @@ int32_t q_qmlwebchannel_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlwebchannel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_qmlwebchannel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -603,59 +603,59 @@ QMetaObject__Connection* q_qmlwebchannel_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlwebchannel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_qmlwebchannel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlwebchannel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_qmlwebchannel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param signal const char*
 ///
-bool q_qmlwebchannel_disconnect1(void* self, const char* signal);
+bool q_qmlwebchannel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlWebChannel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_qmlwebchannel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_qmlwebchannel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_qmlwebchannel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlwebchannel_disconnect23(void* self, void* receiver, const char* member);
+bool q_qmlwebchannel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQmlWebChannel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_qmlwebchannel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -851,7 +851,7 @@ void q_qmlwebchannel_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QQmlWebChannel*
 /// @param signal QMetaMethod*
 ///
-void q_qmlwebchannel_connect_notify(void* self, void* signal);
+void q_qmlwebchannel_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -862,7 +862,7 @@ void q_qmlwebchannel_connect_notify(void* self, void* signal);
 /// @param self QQmlWebChannel*
 /// @param signal QMetaMethod*
 ///
-void q_qmlwebchannel_super_connect_notify(void* self, void* signal);
+void q_qmlwebchannel_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -873,7 +873,7 @@ void q_qmlwebchannel_super_connect_notify(void* self, void* signal);
 /// @param self QQmlWebChannel*
 /// @param callback void func(QQmlWebChannel* self, QMetaMethod* signal)
 ///
-void q_qmlwebchannel_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_qmlwebchannel_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -884,7 +884,7 @@ void q_qmlwebchannel_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QQmlWebChannel*
 /// @param signal QMetaMethod*
 ///
-void q_qmlwebchannel_disconnect_notify(void* self, void* signal);
+void q_qmlwebchannel_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -895,7 +895,7 @@ void q_qmlwebchannel_disconnect_notify(void* self, void* signal);
 /// @param self QQmlWebChannel*
 /// @param signal QMetaMethod*
 ///
-void q_qmlwebchannel_super_disconnect_notify(void* self, void* signal);
+void q_qmlwebchannel_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -906,7 +906,7 @@ void q_qmlwebchannel_super_disconnect_notify(void* self, void* signal);
 /// @param self QQmlWebChannel*
 /// @param callback void func(QQmlWebChannel* self, QMetaMethod* signal)
 ///
-void q_qmlwebchannel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_qmlwebchannel_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -914,9 +914,9 @@ void q_qmlwebchannel_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-QObject* q_qmlwebchannel_sender(void* self);
+QObject* q_qmlwebchannel_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -924,9 +924,9 @@ QObject* q_qmlwebchannel_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-QObject* q_qmlwebchannel_super_sender(void* self);
+QObject* q_qmlwebchannel_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -934,10 +934,10 @@ QObject* q_qmlwebchannel_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlWebChannel*
-/// @param callback QObject* func()
+/// @param self const QQmlWebChannel*
+/// @param callback QObject* func(QQmlWebChannel* self)
 ///
-void q_qmlwebchannel_on_sender(void* self, QObject* (*callback)());
+void q_qmlwebchannel_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -945,9 +945,9 @@ void q_qmlwebchannel_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-int32_t q_qmlwebchannel_sender_signal_index(void* self);
+int32_t q_qmlwebchannel_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -955,9 +955,9 @@ int32_t q_qmlwebchannel_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 ///
-int32_t q_qmlwebchannel_super_sender_signal_index(void* self);
+int32_t q_qmlwebchannel_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -965,10 +965,10 @@ int32_t q_qmlwebchannel_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlWebChannel*
-/// @param callback int32_t func()
+/// @param self const QQmlWebChannel*
+/// @param callback int32_t func(QQmlWebChannel* self)
 ///
-void q_qmlwebchannel_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_qmlwebchannel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -976,10 +976,10 @@ void q_qmlwebchannel_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param signal const char*
 ///
-int32_t q_qmlwebchannel_receivers(void* self, const char* signal);
+int32_t q_qmlwebchannel_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -987,10 +987,10 @@ int32_t q_qmlwebchannel_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param signal const char*
 ///
-int32_t q_qmlwebchannel_super_receivers(void* self, const char* signal);
+int32_t q_qmlwebchannel_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -998,10 +998,10 @@ int32_t q_qmlwebchannel_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param callback int32_t func(QQmlWebChannel* self, const char* signal)
 ///
-void q_qmlwebchannel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_qmlwebchannel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1009,10 +1009,10 @@ void q_qmlwebchannel_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param signal QMetaMethod*
 ///
-bool q_qmlwebchannel_is_signal_connected(void* self, void* signal);
+bool q_qmlwebchannel_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1020,10 +1020,10 @@ bool q_qmlwebchannel_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param signal QMetaMethod*
 ///
-bool q_qmlwebchannel_super_is_signal_connected(void* self, void* signal);
+bool q_qmlwebchannel_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1031,10 +1031,10 @@ bool q_qmlwebchannel_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlWebChannel*
+/// @param self const QQmlWebChannel*
 /// @param callback bool func(QQmlWebChannel* self, QMetaMethod* signal)
 ///
-void q_qmlwebchannel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_qmlwebchannel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

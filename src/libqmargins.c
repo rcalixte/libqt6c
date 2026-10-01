@@ -1,7 +1,7 @@
 #include "libqmargins.hpp"
 #include "libqmargins.h"
 
-QMargins* q_margins_new(void* other) {
+QMargins* q_margins_new(const void* other) {
     return QMargins_New((QMargins*)other);
 }
 
@@ -17,7 +17,7 @@ QMargins* q_margins_new4(int left, int top, int right, int bottom) {
     return QMargins_New4(left, top, right, bottom);
 }
 
-QMargins* q_margins_new5(void* param1) {
+QMargins* q_margins_new5(const void* param1) {
     return QMargins_New5((QMargins*)param1);
 }
 
@@ -29,23 +29,23 @@ void q_margins_move_assign(void* self, void* other) {
     QMargins_MoveAssign((QMargins*)self, (QMargins*)other);
 }
 
-bool q_margins_is_null(void* self) {
+bool q_margins_is_null(const void* self) {
     return QMargins_IsNull((QMargins*)self);
 }
 
-int32_t q_margins_left(void* self) {
+int32_t q_margins_left(const void* self) {
     return QMargins_Left((QMargins*)self);
 }
 
-int32_t q_margins_top(void* self) {
+int32_t q_margins_top(const void* self) {
     return QMargins_Top((QMargins*)self);
 }
 
-int32_t q_margins_right(void* self) {
+int32_t q_margins_right(const void* self) {
     return QMargins_Right((QMargins*)self);
 }
 
-int32_t q_margins_bottom(void* self) {
+int32_t q_margins_bottom(const void* self) {
     return QMargins_Bottom((QMargins*)self);
 }
 
@@ -65,11 +65,11 @@ void q_margins_set_bottom(void* self, int bottom) {
     QMargins_SetBottom((QMargins*)self, bottom);
 }
 
-QMargins* q_margins_operator_plus_assign(void* self, void* margins) {
+QMargins* q_margins_operator_plus_assign(void* self, const void* margins) {
     return QMargins_OperatorPlusAssign((QMargins*)self, (QMargins*)margins);
 }
 
-QMargins* q_margins_operator_minus_assign(void* self, void* margins) {
+QMargins* q_margins_operator_minus_assign(void* self, const void* margins) {
     return QMargins_OperatorMinusAssign((QMargins*)self, (QMargins*)margins);
 }
 
@@ -97,11 +97,11 @@ QMargins* q_margins_operator_divide_assign2(void* self, double param1) {
     return QMargins_OperatorDivideAssign2((QMargins*)self, param1);
 }
 
-QMarginsF* q_margins_to_margins_f(void* self) {
+QMarginsF* q_margins_to_margins_f(const void* self) {
     return QMargins_ToMarginsF((QMargins*)self);
 }
 
-void q_margins_operator_assign(void* self, void* param1) {
+void q_margins_operator_assign(void* self, const void* param1) {
     QMargins_OperatorAssign((QMargins*)self, (QMargins*)param1);
 }
 
@@ -109,7 +109,7 @@ void q_margins_delete(void* self) {
     QMargins_Delete((QMargins*)(self));
 }
 
-QMarginsF* q_marginsf_new(void* other) {
+QMarginsF* q_marginsf_new(const void* other) {
     return QMarginsF_New((QMarginsF*)other);
 }
 
@@ -125,11 +125,11 @@ QMarginsF* q_marginsf_new4(double left, double top, double right, double bottom)
     return QMarginsF_New4(left, top, right, bottom);
 }
 
-QMarginsF* q_marginsf_new5(void* margins) {
+QMarginsF* q_marginsf_new5(const void* margins) {
     return QMarginsF_New5((QMargins*)margins);
 }
 
-QMarginsF* q_marginsf_new6(void* param1) {
+QMarginsF* q_marginsf_new6(const void* param1) {
     return QMarginsF_New6((QMarginsF*)param1);
 }
 
@@ -141,23 +141,23 @@ void q_marginsf_move_assign(void* self, void* other) {
     QMarginsF_MoveAssign((QMarginsF*)self, (QMarginsF*)other);
 }
 
-bool q_marginsf_is_null(void* self) {
+bool q_marginsf_is_null(const void* self) {
     return QMarginsF_IsNull((QMarginsF*)self);
 }
 
-double q_marginsf_left(void* self) {
+double q_marginsf_left(const void* self) {
     return QMarginsF_Left((QMarginsF*)self);
 }
 
-double q_marginsf_top(void* self) {
+double q_marginsf_top(const void* self) {
     return QMarginsF_Top((QMarginsF*)self);
 }
 
-double q_marginsf_right(void* self) {
+double q_marginsf_right(const void* self) {
     return QMarginsF_Right((QMarginsF*)self);
 }
 
-double q_marginsf_bottom(void* self) {
+double q_marginsf_bottom(const void* self) {
     return QMarginsF_Bottom((QMarginsF*)self);
 }
 
@@ -177,11 +177,11 @@ void q_marginsf_set_bottom(void* self, double abottom) {
     QMarginsF_SetBottom((QMarginsF*)self, abottom);
 }
 
-QMarginsF* q_marginsf_operator_plus_assign(void* self, void* margins) {
+QMarginsF* q_marginsf_operator_plus_assign(void* self, const void* margins) {
     return QMarginsF_OperatorPlusAssign((QMarginsF*)self, (QMarginsF*)margins);
 }
 
-QMarginsF* q_marginsf_operator_minus_assign(void* self, void* margins) {
+QMarginsF* q_marginsf_operator_minus_assign(void* self, const void* margins) {
     return QMarginsF_OperatorMinusAssign((QMarginsF*)self, (QMarginsF*)margins);
 }
 
@@ -201,11 +201,11 @@ QMarginsF* q_marginsf_operator_divide_assign(void* self, double divisor) {
     return QMarginsF_OperatorDivideAssign((QMarginsF*)self, divisor);
 }
 
-QMargins* q_marginsf_to_margins(void* self) {
+QMargins* q_marginsf_to_margins(const void* self) {
     return QMarginsF_ToMargins((QMarginsF*)self);
 }
 
-void q_marginsf_operator_assign(void* self, void* param1) {
+void q_marginsf_operator_assign(void* self, const void* param1) {
     QMarginsF_OperatorAssign((QMarginsF*)self, (QMarginsF*)param1);
 }
 

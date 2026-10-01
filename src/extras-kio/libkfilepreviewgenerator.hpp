@@ -38,7 +38,7 @@ void KFilePreviewGenerator_SetEnabledPlugins(KFilePreviewGenerator* self, const 
 libqt_list /* of libqt_string */ KFilePreviewGenerator_EnabledPlugins(const KFilePreviewGenerator* self);
 void KFilePreviewGenerator_UpdateIcons(KFilePreviewGenerator* self);
 void KFilePreviewGenerator_CancelPreviews(KFilePreviewGenerator* self);
-void KFilePreviewGenerator_OnMetaObject(const KFilePreviewGenerator* self, intptr_t slot);
+void KFilePreviewGenerator_OnMetaObject(KFilePreviewGenerator* self, intptr_t slot);
 QMetaObject* KFilePreviewGenerator_SuperMetaObject(const KFilePreviewGenerator* self);
 void KFilePreviewGenerator_OnMetacast(KFilePreviewGenerator* self, intptr_t slot);
 void* KFilePreviewGenerator_SuperMetacast(KFilePreviewGenerator* self, const char* param1);
@@ -66,17 +66,9 @@ void KFilePreviewGenerator_DisconnectNotify(KFilePreviewGenerator* self, const Q
 void KFilePreviewGenerator_OnDisconnectNotify(KFilePreviewGenerator* self, intptr_t slot);
 void KFilePreviewGenerator_SuperDisconnectNotify(KFilePreviewGenerator* self, const QMetaMethod* signal);
 QObject* KFilePreviewGenerator_Sender(const KFilePreviewGenerator* self);
-void KFilePreviewGenerator_OnSender(const KFilePreviewGenerator* self, intptr_t slot);
-QObject* KFilePreviewGenerator_SuperSender(const KFilePreviewGenerator* self);
 int KFilePreviewGenerator_SenderSignalIndex(const KFilePreviewGenerator* self);
-void KFilePreviewGenerator_OnSenderSignalIndex(const KFilePreviewGenerator* self, intptr_t slot);
-int KFilePreviewGenerator_SuperSenderSignalIndex(const KFilePreviewGenerator* self);
 int KFilePreviewGenerator_Receivers(const KFilePreviewGenerator* self, const char* signal);
-void KFilePreviewGenerator_OnReceivers(const KFilePreviewGenerator* self, intptr_t slot);
-int KFilePreviewGenerator_SuperReceivers(const KFilePreviewGenerator* self, const char* signal);
 bool KFilePreviewGenerator_IsSignalConnected(const KFilePreviewGenerator* self, const QMetaMethod* signal);
-void KFilePreviewGenerator_OnIsSignalConnected(const KFilePreviewGenerator* self, intptr_t slot);
-bool KFilePreviewGenerator_SuperIsSignalConnected(const KFilePreviewGenerator* self, const QMetaMethod* signal);
 void KFilePreviewGenerator_Delete(KFilePreviewGenerator* self);
 
 #ifdef __cplusplus

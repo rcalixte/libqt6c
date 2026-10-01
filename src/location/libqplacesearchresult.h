@@ -20,44 +20,44 @@ QPlaceSearchResult* q_placesearchresult_new();
 ///
 /// @param other QPlaceSearchResult*
 ///
-QPlaceSearchResult* q_placesearchresult_new2(void* other);
+QPlaceSearchResult* q_placesearchresult_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-eq)
 ///
 /// @param self QPlaceSearchResult*
 /// @param other QPlaceSearchResult*
 ///
-void q_placesearchresult_operator_assign(void* self, void* other);
+void q_placesearchresult_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-eq-eq)
 ///
-/// @param self QPlaceSearchResult*
+/// @param self const QPlaceSearchResult*
 /// @param other QPlaceSearchResult*
 ///
-bool q_placesearchresult_operator_equal(void* self, void* other);
+bool q_placesearchresult_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#operator-not-eq)
 ///
-/// @param self QPlaceSearchResult*
+/// @param self const QPlaceSearchResult*
 /// @param other QPlaceSearchResult*
 ///
-bool q_placesearchresult_operator_not_equal(void* self, void* other);
+bool q_placesearchresult_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#type)
 ///
-/// @param self QPlaceSearchResult*
+/// @param self const QPlaceSearchResult*
 ///
 /// @return enum QPlaceSearchResult__SearchResultType
 ///
-int32_t q_placesearchresult_type(void* self);
+int32_t q_placesearchresult_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#title)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceSearchResult*
+/// @param self const QPlaceSearchResult*
 ///
-const char* q_placesearchresult_title(void* self);
+const char* q_placesearchresult_title(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#setTitle)
 ///
@@ -68,16 +68,16 @@ void q_placesearchresult_set_title(void* self, const char* title);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#icon)
 ///
-/// @param self QPlaceSearchResult*
+/// @param self const QPlaceSearchResult*
 ///
-QPlaceIcon* q_placesearchresult_icon(void* self);
+QPlaceIcon* q_placesearchresult_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#setIcon)
 ///
 /// @param self QPlaceSearchResult*
 /// @param icon QPlaceIcon*
 ///
-void q_placesearchresult_set_icon(void* self, void* icon);
+void q_placesearchresult_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacesearchresult.html#dtor.QPlaceSearchResult)
 ///

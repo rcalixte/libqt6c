@@ -34,7 +34,7 @@ QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new();
 ///
 /// @param other QPropertyBindingSourceLocation*
 ///
-QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new2(void* other);
+QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html)
 
@@ -50,7 +50,7 @@ QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new3(void* other
 ///
 /// @param param1 QPropertyBindingSourceLocation*
 ///
-QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new4(void* param1);
+QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new4(const void* param1);
 
 /// q_propertybindingsourcelocation_copy_assign shallow copies `other` into `self`.
 ///
@@ -70,9 +70,9 @@ void q_propertybindingsourcelocation_move_assign(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPropertyBindingSourceLocation*
+/// @param self const QPropertyBindingSourceLocation*
 ///
-const char* q_propertybindingsourcelocation_file_name(void* self);
+const char* q_propertybindingsourcelocation_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#fileName-var)
 ///
@@ -85,9 +85,9 @@ void q_propertybindingsourcelocation_set_file_name(void* self, const char* fileN
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPropertyBindingSourceLocation*
+/// @param self const QPropertyBindingSourceLocation*
 ///
-const char* q_propertybindingsourcelocation_function_name(void* self);
+const char* q_propertybindingsourcelocation_function_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#functionName-var)
 ///
@@ -98,9 +98,9 @@ void q_propertybindingsourcelocation_set_function_name(void* self, const char* f
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#line-var)
 ///
-/// @param self QPropertyBindingSourceLocation*
+/// @param self const QPropertyBindingSourceLocation*
 ///
-uint32_t q_propertybindingsourcelocation_line(void* self);
+uint32_t q_propertybindingsourcelocation_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#line-var)
 ///
@@ -111,9 +111,9 @@ void q_propertybindingsourcelocation_set_line(void* self, uint32_t line);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#column-var)
 ///
-/// @param self QPropertyBindingSourceLocation*
+/// @param self const QPropertyBindingSourceLocation*
 ///
-uint32_t q_propertybindingsourcelocation_column(void* self);
+uint32_t q_propertybindingsourcelocation_column(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#column-var)
 ///
@@ -150,7 +150,7 @@ QPropertyBindingError* q_propertybindingerror_new2(int32_t type);
 ///
 /// @param other QPropertyBindingError*
 ///
-QPropertyBindingError* q_propertybindingerror_new3(void* other);
+QPropertyBindingError* q_propertybindingerror_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html)
 
@@ -166,29 +166,29 @@ QPropertyBindingError* q_propertybindingerror_new4(int32_t type, const char* des
 /// @param self QPropertyBindingError*
 /// @param other QPropertyBindingError*
 ///
-void q_propertybindingerror_operator_assign(void* self, void* other);
+void q_propertybindingerror_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#hasError)
 ///
-/// @param self QPropertyBindingError*
+/// @param self const QPropertyBindingError*
 ///
-bool q_propertybindingerror_has_error(void* self);
+bool q_propertybindingerror_has_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#type)
 ///
-/// @param self QPropertyBindingError*
+/// @param self const QPropertyBindingError*
 ///
 /// @return enum QPropertyBindingError__Type
 ///
-int32_t q_propertybindingerror_type(void* self);
+int32_t q_propertybindingerror_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPropertyBindingError*
+/// @param self const QPropertyBindingError*
 ///
-const char* q_propertybindingerror_description(void* self);
+const char* q_propertybindingerror_description(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertybindingerror.html#dtor.QPropertyBindingError)
 ///
@@ -210,32 +210,32 @@ QUntypedPropertyBinding* q_untypedpropertybinding_new();
 ///
 /// @param other QUntypedPropertyBinding*
 ///
-QUntypedPropertyBinding* q_untypedpropertybinding_new2(void* other);
+QUntypedPropertyBinding* q_untypedpropertybinding_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#operator-eq)
 ///
 /// @param self QUntypedPropertyBinding*
 /// @param other QUntypedPropertyBinding*
 ///
-void q_untypedpropertybinding_operator_assign(void* self, void* other);
+void q_untypedpropertybinding_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#isNull)
 ///
-/// @param self QUntypedPropertyBinding*
+/// @param self const QUntypedPropertyBinding*
 ///
-bool q_untypedpropertybinding_is_null(void* self);
+bool q_untypedpropertybinding_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#error)
 ///
-/// @param self QUntypedPropertyBinding*
+/// @param self const QUntypedPropertyBinding*
 ///
-QPropertyBindingError* q_untypedpropertybinding_error(void* self);
+QPropertyBindingError* q_untypedpropertybinding_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#valueMetaType)
 ///
-/// @param self QUntypedPropertyBinding*
+/// @param self const QUntypedPropertyBinding*
 ///
-QMetaType* q_untypedpropertybinding_value_meta_type(void* self);
+QMetaType* q_untypedpropertybinding_value_meta_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedpropertybinding.html#dtor.QUntypedPropertyBinding)
 ///
@@ -257,14 +257,14 @@ QPropertyObserverBase* q_propertyobserverbase_new();
 ///
 /// @param param1 QPropertyObserverBase*
 ///
-QPropertyObserverBase* q_propertyobserverbase_new2(void* param1);
+QPropertyObserverBase* q_propertyobserverbase_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserverbase.html#operator-eq)
 ///
 /// @param self QPropertyObserverBase*
 /// @param param1 QPropertyObserverBase*
 ///
-void q_propertyobserverbase_operator_assign(void* self, void* param1);
+void q_propertyobserverbase_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserverbase.html#dtor.QPropertyObserverBase)
 ///
@@ -287,7 +287,7 @@ QPropertyObserver* q_propertyobserver_new();
 /// @param self QPropertyObserver*
 /// @param param1 QPropertyObserverBase*
 ///
-void q_propertyobserver_operator_assign(void* self, void* param1);
+void q_propertyobserver_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertyobserver.html#dtor.QPropertyObserver)
 ///
@@ -310,7 +310,7 @@ QPropertyNotifier* q_propertynotifier_new();
 /// @param self QPropertyNotifier*
 /// @param param1 QPropertyObserverBase*
 ///
-void q_propertynotifier_operator_assign(void* self, void* param1);
+void q_propertynotifier_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpropertynotifier.html#dtor.QPropertyNotifier)
 ///
@@ -332,7 +332,7 @@ QUntypedBindable* q_untypedbindable_new();
 ///
 /// @param other QUntypedBindable*
 ///
-QUntypedBindable* q_untypedbindable_new2(void* other);
+QUntypedBindable* q_untypedbindable_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html)
 
@@ -348,7 +348,7 @@ QUntypedBindable* q_untypedbindable_new3(void* other);
 ///
 /// @param param1 QUntypedBindable*
 ///
-QUntypedBindable* q_untypedbindable_new4(void* param1);
+QUntypedBindable* q_untypedbindable_new4(const void* param1);
 
 /// q_untypedbindable_copy_assign shallow copies `other` into `self`.
 ///
@@ -366,27 +366,27 @@ void q_untypedbindable_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#isValid)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 ///
-bool q_untypedbindable_is_valid(void* self);
+bool q_untypedbindable_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#isBindable)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 ///
-bool q_untypedbindable_is_bindable(void* self);
+bool q_untypedbindable_is_bindable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#isReadOnly)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 ///
-bool q_untypedbindable_is_read_only(void* self);
+bool q_untypedbindable_is_read_only(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#makeBinding)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 ///
-QUntypedPropertyBinding* q_untypedbindable_make_binding(void* self);
+QUntypedPropertyBinding* q_untypedbindable_make_binding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#takeBinding)
 ///
@@ -396,42 +396,42 @@ QUntypedPropertyBinding* q_untypedbindable_take_binding(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#observe)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 /// @param observer QPropertyObserver*
 ///
-void q_untypedbindable_observe(void* self, void* observer);
+void q_untypedbindable_observe(const void* self, void* observer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#binding)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 ///
-QUntypedPropertyBinding* q_untypedbindable_binding(void* self);
+QUntypedPropertyBinding* q_untypedbindable_binding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#setBinding)
 ///
 /// @param self QUntypedBindable*
 /// @param binding QUntypedPropertyBinding*
 ///
-bool q_untypedbindable_set_binding(void* self, void* binding);
+bool q_untypedbindable_set_binding(void* self, const void* binding);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#hasBinding)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 ///
-bool q_untypedbindable_has_binding(void* self);
+bool q_untypedbindable_has_binding(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#metaType)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 ///
-QMetaType* q_untypedbindable_meta_type(void* self);
+QMetaType* q_untypedbindable_meta_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#makeBinding)
 ///
-/// @param self QUntypedBindable*
+/// @param self const QUntypedBindable*
 /// @param location QPropertyBindingSourceLocation*
 ///
-QUntypedPropertyBinding* q_untypedbindable_make_binding1(void* self, void* location);
+QUntypedPropertyBinding* q_untypedbindable_make_binding1(const void* self, const void* location);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quntypedbindable.html#dtor.QUntypedBindable)
 ///

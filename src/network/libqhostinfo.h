@@ -20,7 +20,7 @@ QHostInfo* q_hostinfo_new();
 ///
 /// @param d QHostInfo*
 ///
-QHostInfo* q_hostinfo_new2(void* d);
+QHostInfo* q_hostinfo_new2(const void* d);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html)
 
@@ -35,7 +35,7 @@ QHostInfo* q_hostinfo_new3(int lookupId);
 /// @param self QHostInfo*
 /// @param d QHostInfo*
 ///
-void q_hostinfo_operator_assign(void* self, void* d);
+void q_hostinfo_operator_assign(void* self, const void* d);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#swap)
 ///
@@ -48,9 +48,9 @@ void q_hostinfo_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QHostInfo*
+/// @param self const QHostInfo*
 ///
-const char* q_hostinfo_host_name(void* self);
+const char* q_hostinfo_host_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#setHostName)
 ///
@@ -61,11 +61,11 @@ void q_hostinfo_set_host_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#addresses)
 ///
-/// @param self QHostInfo*
+/// @param self const QHostInfo*
 ///
 /// @return libqt_list of QHostAddress*
 ///
-libqt_list q_hostinfo_addresses(void* self);
+libqt_list q_hostinfo_addresses(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#setAddresses)
 ///
@@ -76,11 +76,11 @@ void q_hostinfo_set_addresses(void* self, libqt_list addresses);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#error)
 ///
-/// @param self QHostInfo*
+/// @param self const QHostInfo*
 ///
 /// @return enum QHostInfo__HostInfoError
 ///
-int32_t q_hostinfo_error(void* self);
+int32_t q_hostinfo_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#setError)
 ///
@@ -93,9 +93,9 @@ void q_hostinfo_set_error(void* self, int32_t error);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QHostInfo*
+/// @param self const QHostInfo*
 ///
-const char* q_hostinfo_error_string(void* self);
+const char* q_hostinfo_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#setErrorString)
 ///
@@ -113,9 +113,9 @@ void q_hostinfo_set_lookup_id(void* self, int id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#lookupId)
 ///
-/// @param self QHostInfo*
+/// @param self const QHostInfo*
 ///
-int32_t q_hostinfo_lookup_id(void* self);
+int32_t q_hostinfo_lookup_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#lookupHost)
 ///
@@ -123,7 +123,7 @@ int32_t q_hostinfo_lookup_id(void* self);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-int32_t q_hostinfo_lookup_host(const char* name, void* receiver, const char* member);
+int32_t q_hostinfo_lookup_host(const char* name, const void* receiver, const char* member);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhostinfo.html#abortHostLookup)
 ///

@@ -33,26 +33,26 @@ QMainWindow* q_mainwindow_new3(void* parent, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const QMetaObject* q_mainwindow_meta_object(void* self);
+const QMetaObject* q_mainwindow_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QMainWindow*
-/// @param callback const QMetaObject* func()
+/// @param self const QMainWindow*
+/// @param callback const QMetaObject* func(const QMainWindow* self)
 ///
-void q_mainwindow_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_mainwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const QMetaObject* q_mainwindow_super_meta_object(void* self);
+const QMetaObject* q_mainwindow_super_meta_object(const void* self);
 
 /// @param self QMainWindow*
 /// @param param1 const char*
@@ -106,24 +106,24 @@ const char* q_mainwindow_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#iconSize)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_icon_size(void* self);
+QSize* q_mainwindow_icon_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setIconSize)
 ///
 /// @param self QMainWindow*
 /// @param iconSize QSize*
 ///
-void q_mainwindow_set_icon_size(void* self, void* iconSize);
+void q_mainwindow_set_icon_size(void* self, const void* iconSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolButtonStyle)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum Qt__ToolButtonStyle
 ///
-int32_t q_mainwindow_tool_button_style(void* self);
+int32_t q_mainwindow_tool_button_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setToolButtonStyle)
 ///
@@ -134,21 +134,21 @@ void q_mainwindow_set_tool_button_style(void* self, int32_t toolButtonStyle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#isAnimated)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_animated(void* self);
+bool q_mainwindow_is_animated(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#isDockNestingEnabled)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_dock_nesting_enabled(void* self);
+bool q_mainwindow_is_dock_nesting_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#documentMode)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_document_mode(void* self);
+bool q_mainwindow_document_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setDocumentMode)
 ///
@@ -159,11 +159,11 @@ void q_mainwindow_set_document_mode(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabShape)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum QTabWidget__TabShape
 ///
-int32_t q_mainwindow_tab_shape(void* self);
+int32_t q_mainwindow_tab_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setTabShape)
 ///
@@ -174,12 +174,12 @@ void q_mainwindow_set_tab_shape(void* self, int32_t tabShape);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabPosition)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param area enum Qt__DockWidgetArea
 ///
 /// @return enum QTabWidget__TabPosition
 ///
-int32_t q_mainwindow_tab_position(void* self, int32_t area);
+int32_t q_mainwindow_tab_position(const void* self, int32_t area);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setTabPosition)
 ///
@@ -198,24 +198,24 @@ void q_mainwindow_set_dock_options(void* self, int32_t options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#dockOptions)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return flag of enum QMainWindow__DockOption
 ///
-int32_t q_mainwindow_dock_options(void* self);
+int32_t q_mainwindow_dock_options(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#isSeparator)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param pos QPoint*
 ///
-bool q_mainwindow_is_separator(void* self, void* pos);
+bool q_mainwindow_is_separator(const void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#menuBar)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QMenuBar* q_mainwindow_menu_bar(void* self);
+QMenuBar* q_mainwindow_menu_bar(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setMenuBar)
 ///
@@ -226,9 +226,9 @@ void q_mainwindow_set_menu_bar(void* self, void* menubar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#menuWidget)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_menu_widget(void* self);
+QWidget* q_mainwindow_menu_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setMenuWidget)
 ///
@@ -239,9 +239,9 @@ void q_mainwindow_set_menu_widget(void* self, void* menubar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#statusBar)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QStatusBar* q_mainwindow_status_bar(void* self);
+QStatusBar* q_mainwindow_status_bar(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setStatusBar)
 ///
@@ -252,9 +252,9 @@ void q_mainwindow_set_status_bar(void* self, void* statusbar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#centralWidget)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_central_widget(void* self);
+QWidget* q_mainwindow_central_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#setCentralWidget)
 ///
@@ -279,12 +279,12 @@ void q_mainwindow_set_corner(void* self, int32_t corner, int32_t area);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#corner)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param corner enum Qt__Corner
 ///
 /// @return enum Qt__DockWidgetArea
 ///
-int32_t q_mainwindow_corner(void* self, int32_t corner);
+int32_t q_mainwindow_corner(const void* self, int32_t corner);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addToolBarBreak)
 ///
@@ -345,25 +345,25 @@ void q_mainwindow_remove_tool_bar_break(void* self, void* before);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#unifiedTitleAndToolBarOnMac)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_unified_title_and_tool_bar_on_mac(void* self);
+bool q_mainwindow_unified_title_and_tool_bar_on_mac(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolBarArea)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param toolbar QToolBar*
 ///
 /// @return enum Qt__ToolBarArea
 ///
-int32_t q_mainwindow_tool_bar_area(void* self, void* toolbar);
+int32_t q_mainwindow_tool_bar_area(const void* self, const void* toolbar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolBarBreak)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param toolbar QToolBar*
 ///
-bool q_mainwindow_tool_bar_break(void* self, void* toolbar);
+bool q_mainwindow_tool_bar_break(const void* self, void* toolbar);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#addDockWidget)
 ///
@@ -401,12 +401,12 @@ void q_mainwindow_tabify_dock_widget(void* self, void* first, void* second);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#tabifiedDockWidgets)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param dockwidget QDockWidget*
 ///
 /// @return libqt_list of QDockWidget*
 ///
-libqt_list q_mainwindow_tabified_dock_widgets(void* self, void* dockwidget);
+libqt_list q_mainwindow_tabified_dock_widgets(const void* self, void* dockwidget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#removeDockWidget)
 ///
@@ -424,12 +424,12 @@ bool q_mainwindow_restore_dock_widget(void* self, void* dockwidget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#dockWidgetArea)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param dockwidget QDockWidget*
 ///
 /// @return enum Qt__DockWidgetArea
 ///
-int32_t q_mainwindow_dock_widget_area(void* self, void* dockwidget);
+int32_t q_mainwindow_dock_widget_area(const void* self, void* dockwidget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#resizeDocks)
 ///
@@ -444,9 +444,9 @@ void q_mainwindow_resize_docks(void* self, libqt_list docks, libqt_list sizes, i
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-char* q_mainwindow_save_state(void* self);
+char* q_mainwindow_save_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#restoreState)
 ///
@@ -466,9 +466,9 @@ QMenu* q_mainwindow_create_popup_menu(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QMainWindow*
-/// @param callback QMenu* func()
+/// @param callback QMenu* func(QMainWindow* self)
 ///
-void q_mainwindow_on_create_popup_menu(void* self, QMenu* (*callback)());
+void q_mainwindow_on_create_popup_menu(void* self, QMenu* (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
 ///
@@ -504,14 +504,14 @@ void q_mainwindow_set_unified_title_and_tool_bar_on_mac(void* self, bool set);
 /// @param self QMainWindow*
 /// @param iconSize QSize*
 ///
-void q_mainwindow_icon_size_changed(void* self, void* iconSize);
+void q_mainwindow_icon_size_changed(void* self, const void* iconSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#iconSizeChanged)
 ///
 /// @param self QMainWindow*
 /// @param callback void func(QMainWindow* self, QSize* iconSize)
 ///
-void q_mainwindow_on_icon_size_changed(void* self, void (*callback)(void*, void*));
+void q_mainwindow_on_icon_size_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#toolButtonStyleChanged)
 ///
@@ -621,10 +621,10 @@ void q_mainwindow_add_tool_bar_break1(void* self, int32_t area);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param version int
 ///
-char* q_mainwindow_save_state1(void* self, int version);
+char* q_mainwindow_save_state1(const void* self, int version);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#restoreState)
 ///
@@ -654,9 +654,9 @@ QMainWindow* q_mainwindow_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-uintptr_t q_mainwindow_win_id(void* self);
+uintptr_t q_mainwindow_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -670,25 +670,25 @@ void q_mainwindow_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-uintptr_t q_mainwindow_internal_win_id(void* self);
+uintptr_t q_mainwindow_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-uintptr_t q_mainwindow_effective_win_id(void* self);
+uintptr_t q_mainwindow_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QStyle* q_mainwindow_style(void* self);
+QStyle* q_mainwindow_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -703,35 +703,35 @@ void q_mainwindow_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_top_level(void* self);
+bool q_mainwindow_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_window(void* self);
+bool q_mainwindow_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_modal(void* self);
+bool q_mainwindow_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_mainwindow_window_modality(void* self);
+int32_t q_mainwindow_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -746,18 +746,18 @@ void q_mainwindow_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_enabled(void* self);
+bool q_mainwindow_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QWidget*
 ///
-bool q_mainwindow_is_enabled_to(void* self, void* param1);
+bool q_mainwindow_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -790,153 +790,153 @@ void q_mainwindow_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QRect* q_mainwindow_frame_geometry(void* self);
+QRect* q_mainwindow_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const QRect* q_mainwindow_geometry(void* self);
+const QRect* q_mainwindow_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QRect* q_mainwindow_normal_geometry(void* self);
+QRect* q_mainwindow_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_x(void* self);
+int32_t q_mainwindow_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_y(void* self);
+int32_t q_mainwindow_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QPoint* q_mainwindow_pos(void* self);
+QPoint* q_mainwindow_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_frame_size(void* self);
+QSize* q_mainwindow_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_size(void* self);
+QSize* q_mainwindow_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_width(void* self);
+int32_t q_mainwindow_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_height(void* self);
+int32_t q_mainwindow_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QRect* q_mainwindow_rect(void* self);
+QRect* q_mainwindow_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QRect* q_mainwindow_children_rect(void* self);
+QRect* q_mainwindow_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QRegion* q_mainwindow_children_region(void* self);
+QRegion* q_mainwindow_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_minimum_size(void* self);
+QSize* q_mainwindow_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_maximum_size(void* self);
+QSize* q_mainwindow_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_minimum_width(void* self);
+int32_t q_mainwindow_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_minimum_height(void* self);
+int32_t q_mainwindow_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_maximum_width(void* self);
+int32_t q_mainwindow_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_maximum_height(void* self);
+int32_t q_mainwindow_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -945,7 +945,7 @@ int32_t q_mainwindow_maximum_height(void* self);
 /// @param self QMainWindow*
 /// @param minimumSize QSize*
 ///
-void q_mainwindow_set_minimum_size(void* self, void* minimumSize);
+void q_mainwindow_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -964,7 +964,7 @@ void q_mainwindow_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QMainWindow*
 /// @param maximumSize QSize*
 ///
-void q_mainwindow_set_maximum_size(void* self, void* maximumSize);
+void q_mainwindow_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1016,9 +1016,9 @@ void q_mainwindow_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_size_increment(void* self);
+QSize* q_mainwindow_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1027,7 +1027,7 @@ QSize* q_mainwindow_size_increment(void* self);
 /// @param self QMainWindow*
 /// @param sizeIncrement QSize*
 ///
-void q_mainwindow_set_size_increment(void* self, void* sizeIncrement);
+void q_mainwindow_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1043,9 +1043,9 @@ void q_mainwindow_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_base_size(void* self);
+QSize* q_mainwindow_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1054,7 +1054,7 @@ QSize* q_mainwindow_base_size(void* self);
 /// @param self QMainWindow*
 /// @param baseSize QSize*
 ///
-void q_mainwindow_set_base_size(void* self, void* baseSize);
+void q_mainwindow_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1073,7 +1073,7 @@ void q_mainwindow_set_base_size2(void* self, int basew, int baseh);
 /// @param self QMainWindow*
 /// @param fixedSize QSize*
 ///
-void q_mainwindow_set_fixed_size(void* self, void* fixedSize);
+void q_mainwindow_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1107,145 +1107,145 @@ void q_mainwindow_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QPointF*
 ///
-QPointF* q_mainwindow_map_to_global(void* self, void* param1);
+QPointF* q_mainwindow_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QPoint*
 ///
-QPoint* q_mainwindow_map_to_global2(void* self, void* param1);
+QPoint* q_mainwindow_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QPointF*
 ///
-QPointF* q_mainwindow_map_from_global(void* self, void* param1);
+QPointF* q_mainwindow_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QPoint*
 ///
-QPoint* q_mainwindow_map_from_global2(void* self, void* param1);
+QPoint* q_mainwindow_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QPointF*
 ///
-QPointF* q_mainwindow_map_to_parent(void* self, void* param1);
+QPointF* q_mainwindow_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QPoint*
 ///
-QPoint* q_mainwindow_map_to_parent2(void* self, void* param1);
+QPoint* q_mainwindow_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QPointF*
 ///
-QPointF* q_mainwindow_map_from_parent(void* self, void* param1);
+QPointF* q_mainwindow_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QPoint*
 ///
-QPoint* q_mainwindow_map_from_parent2(void* self, void* param1);
+QPoint* q_mainwindow_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_mainwindow_map_to(void* self, void* param1, void* param2);
+QPointF* q_mainwindow_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_mainwindow_map_to2(void* self, void* param1, void* param2);
+QPoint* q_mainwindow_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_mainwindow_map_from(void* self, void* param1, void* param2);
+QPointF* q_mainwindow_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_mainwindow_map_from2(void* self, void* param1, void* param2);
+QPoint* q_mainwindow_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_window(void* self);
+QWidget* q_mainwindow_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_native_parent_widget(void* self);
+QWidget* q_mainwindow_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_top_level_widget(void* self);
+QWidget* q_mainwindow_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const QPalette* q_mainwindow_palette(void* self);
+const QPalette* q_mainwindow_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1254,7 +1254,7 @@ const QPalette* q_mainwindow_palette(void* self);
 /// @param self QMainWindow*
 /// @param palette QPalette*
 ///
-void q_mainwindow_set_palette(void* self, void* palette);
+void q_mainwindow_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1269,11 +1269,11 @@ void q_mainwindow_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_mainwindow_background_role(void* self);
+int32_t q_mainwindow_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1288,19 +1288,19 @@ void q_mainwindow_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_mainwindow_foreground_role(void* self);
+int32_t q_mainwindow_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const QFont* q_mainwindow_font(void* self);
+const QFont* q_mainwindow_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1309,31 +1309,31 @@ const QFont* q_mainwindow_font(void* self);
 /// @param self QMainWindow*
 /// @param font QFont*
 ///
-void q_mainwindow_set_font(void* self, void* font);
+void q_mainwindow_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QFontMetrics* q_mainwindow_font_metrics(void* self);
+QFontMetrics* q_mainwindow_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QFontInfo* q_mainwindow_font_info(void* self);
+QFontInfo* q_mainwindow_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QCursor* q_mainwindow_cursor(void* self);
+QCursor* q_mainwindow_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1342,7 +1342,7 @@ QCursor* q_mainwindow_cursor(void* self);
 /// @param self QMainWindow*
 /// @param cursor QCursor*
 ///
-void q_mainwindow_set_cursor(void* self, void* cursor);
+void q_mainwindow_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1365,17 +1365,17 @@ void q_mainwindow_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_has_mouse_tracking(void* self);
+bool q_mainwindow_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_under_mouse(void* self);
+bool q_mainwindow_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1390,9 +1390,9 @@ void q_mainwindow_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_has_tablet_tracking(void* self);
+bool q_mainwindow_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1401,7 +1401,7 @@ bool q_mainwindow_has_tablet_tracking(void* self);
 /// @param self QMainWindow*
 /// @param mask QBitmap*
 ///
-void q_mainwindow_set_mask(void* self, void* mask);
+void q_mainwindow_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1410,15 +1410,15 @@ void q_mainwindow_set_mask(void* self, void* mask);
 /// @param self QMainWindow*
 /// @param mask QRegion*
 ///
-void q_mainwindow_set_mask2(void* self, void* mask);
+void q_mainwindow_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QRegion* q_mainwindow_mask(void* self);
+QRegion* q_mainwindow_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1458,9 +1458,9 @@ QPixmap* q_mainwindow_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QGraphicsEffect* q_mainwindow_graphics_effect(void* self);
+QGraphicsEffect* q_mainwindow_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1513,9 +1513,9 @@ void q_mainwindow_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_style_sheet(void* self);
+const char* q_mainwindow_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1523,9 +1523,9 @@ const char* q_mainwindow_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_window_title(void* self);
+const char* q_mainwindow_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1534,15 +1534,15 @@ const char* q_mainwindow_window_title(void* self);
 /// @param self QMainWindow*
 /// @param icon QIcon*
 ///
-void q_mainwindow_set_window_icon(void* self, void* icon);
+void q_mainwindow_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QIcon* q_mainwindow_window_icon(void* self);
+QIcon* q_mainwindow_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1559,9 +1559,9 @@ void q_mainwindow_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_window_icon_text(void* self);
+const char* q_mainwindow_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1578,9 +1578,9 @@ void q_mainwindow_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_window_role(void* self);
+const char* q_mainwindow_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1597,9 +1597,9 @@ void q_mainwindow_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_window_file_path(void* self);
+const char* q_mainwindow_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1614,17 +1614,17 @@ void q_mainwindow_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-double q_mainwindow_window_opacity(void* self);
+double q_mainwindow_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_window_modified(void* self);
+bool q_mainwindow_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1641,9 +1641,9 @@ void q_mainwindow_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_tool_tip(void* self);
+const char* q_mainwindow_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1658,9 +1658,9 @@ void q_mainwindow_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_tool_tip_duration(void* self);
+int32_t q_mainwindow_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1677,9 +1677,9 @@ void q_mainwindow_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_status_tip(void* self);
+const char* q_mainwindow_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1696,9 +1696,9 @@ void q_mainwindow_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_whats_this(void* self);
+const char* q_mainwindow_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1706,9 +1706,9 @@ const char* q_mainwindow_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_accessible_name(void* self);
+const char* q_mainwindow_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1725,9 +1725,9 @@ void q_mainwindow_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_accessible_description(void* self);
+const char* q_mainwindow_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1751,11 +1751,11 @@ void q_mainwindow_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_mainwindow_layout_direction(void* self);
+int32_t q_mainwindow_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1772,15 +1772,15 @@ void q_mainwindow_unset_layout_direction(void* self);
 /// @param self QMainWindow*
 /// @param locale QLocale*
 ///
-void q_mainwindow_set_locale(void* self, void* locale);
+void q_mainwindow_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QLocale* q_mainwindow_locale(void* self);
+QLocale* q_mainwindow_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1794,17 +1794,17 @@ void q_mainwindow_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_right_to_left(void* self);
+bool q_mainwindow_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_left_to_right(void* self);
+bool q_mainwindow_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1818,9 +1818,9 @@ void q_mainwindow_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_active_window(void* self);
+bool q_mainwindow_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1851,11 +1851,11 @@ void q_mainwindow_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_mainwindow_focus_policy(void* self);
+int32_t q_mainwindow_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1870,9 +1870,9 @@ void q_mainwindow_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_has_focus(void* self);
+bool q_mainwindow_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1896,19 +1896,19 @@ void q_mainwindow_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_focus_proxy(void* self);
+QWidget* q_mainwindow_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_mainwindow_context_menu_policy(void* self);
+int32_t q_mainwindow_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1934,7 +1934,7 @@ void q_mainwindow_grab_mouse(void* self);
 /// @param self QMainWindow*
 /// @param param1 QCursor*
 ///
-void q_mainwindow_grab_mouse2(void* self, void* param1);
+void q_mainwindow_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1967,7 +1967,7 @@ void q_mainwindow_release_keyboard(void* self);
 /// @param self QMainWindow*
 /// @param key QKeySequence*
 ///
-int32_t q_mainwindow_grab_shortcut(void* self, void* key);
+int32_t q_mainwindow_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2012,9 +2012,9 @@ QWidget* q_mainwindow_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_updates_enabled(void* self);
+bool q_mainwindow_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2029,9 +2029,9 @@ void q_mainwindow_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QGraphicsProxyWidget* q_mainwindow_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_mainwindow_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2068,7 +2068,7 @@ void q_mainwindow_update2(void* self, int x, int y, int w, int h);
 /// @param self QMainWindow*
 /// @param param1 QRect*
 ///
-void q_mainwindow_update3(void* self, void* param1);
+void q_mainwindow_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2077,7 +2077,7 @@ void q_mainwindow_update3(void* self, void* param1);
 /// @param self QMainWindow*
 /// @param param1 QRegion*
 ///
-void q_mainwindow_update4(void* self, void* param1);
+void q_mainwindow_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2098,7 +2098,7 @@ void q_mainwindow_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QMainWindow*
 /// @param param1 QRect*
 ///
-void q_mainwindow_repaint3(void* self, void* param1);
+void q_mainwindow_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2107,7 +2107,7 @@ void q_mainwindow_repaint3(void* self, void* param1);
 /// @param self QMainWindow*
 /// @param param1 QRegion*
 ///
-void q_mainwindow_repaint4(void* self, void* param1);
+void q_mainwindow_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2216,7 +2216,7 @@ void q_mainwindow_move(void* self, int x, int y);
 /// @param self QMainWindow*
 /// @param param1 QPoint*
 ///
-void q_mainwindow_move2(void* self, void* param1);
+void q_mainwindow_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2235,7 +2235,7 @@ void q_mainwindow_resize(void* self, int w, int h);
 /// @param self QMainWindow*
 /// @param param1 QSize*
 ///
-void q_mainwindow_resize2(void* self, void* param1);
+void q_mainwindow_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2256,7 +2256,7 @@ void q_mainwindow_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QMainWindow*
 /// @param geometry QRect*
 ///
-void q_mainwindow_set_geometry2(void* self, void* geometry);
+void q_mainwindow_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2264,9 +2264,9 @@ void q_mainwindow_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-char* q_mainwindow_save_geometry(void* self);
+char* q_mainwindow_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2289,60 +2289,60 @@ void q_mainwindow_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_visible(void* self);
+bool q_mainwindow_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 QWidget*
 ///
-bool q_mainwindow_is_visible_to(void* self, void* param1);
+bool q_mainwindow_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_hidden(void* self);
+bool q_mainwindow_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_minimized(void* self);
+bool q_mainwindow_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_maximized(void* self);
+bool q_mainwindow_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_full_screen(void* self);
+bool q_mainwindow_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_mainwindow_window_state(void* self);
+int32_t q_mainwindow_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2366,9 +2366,9 @@ void q_mainwindow_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSizePolicy* q_mainwindow_size_policy(void* self);
+QSizePolicy* q_mainwindow_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2393,9 +2393,9 @@ void q_mainwindow_set_size_policy2(void* self, int32_t horizontal, int32_t verti
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QRegion* q_mainwindow_visible_region(void* self);
+QRegion* q_mainwindow_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2416,31 +2416,31 @@ void q_mainwindow_set_contents_margins(void* self, int left, int top, int right,
 /// @param self QMainWindow*
 /// @param margins QMargins*
 ///
-void q_mainwindow_set_contents_margins2(void* self, void* margins);
+void q_mainwindow_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QMargins* q_mainwindow_contents_margins(void* self);
+QMargins* q_mainwindow_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QRect* q_mainwindow_contents_rect(void* self);
+QRect* q_mainwindow_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QLayout* q_mainwindow_layout(void* self);
+QLayout* q_mainwindow_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2497,39 +2497,39 @@ void q_mainwindow_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_mainwindow_scroll2(void* self, int dx, int dy, void* param3);
+void q_mainwindow_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_focus_widget(void* self);
+QWidget* q_mainwindow_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_next_in_focus_chain(void* self);
+QWidget* q_mainwindow_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_previous_in_focus_chain(void* self);
+QWidget* q_mainwindow_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_accept_drops(void* self);
+bool q_mainwindow_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2591,11 +2591,11 @@ void q_mainwindow_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_mainwindow_actions(void* self);
+libqt_list q_mainwindow_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2614,7 +2614,7 @@ QAction* q_mainwindow_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_mainwindow_add_action3(void* self, void* icon, const char* text);
+QAction* q_mainwindow_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2624,7 +2624,7 @@ QAction* q_mainwindow_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_mainwindow_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_mainwindow_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2635,15 +2635,15 @@ QAction* q_mainwindow_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_mainwindow_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_mainwindow_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWidget* q_mainwindow_parent_widget(void* self);
+QWidget* q_mainwindow_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2658,11 +2658,11 @@ void q_mainwindow_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_mainwindow_window_flags(void* self);
+int32_t q_mainwindow_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2686,11 +2686,11 @@ void q_mainwindow_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_mainwindow_window_type(void* self);
+int32_t q_mainwindow_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2704,29 +2704,29 @@ QWidget* q_mainwindow_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_mainwindow_child_at(void* self, int x, int y);
+QWidget* q_mainwindow_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param p QPoint*
 ///
-QWidget* q_mainwindow_child_at2(void* self, void* p);
+QWidget* q_mainwindow_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param p QPointF*
 ///
-QWidget* q_mainwindow_child_at3(void* self, void* p);
+QWidget* q_mainwindow_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2741,35 +2741,35 @@ void q_mainwindow_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_mainwindow_test_attribute(void* self, int32_t param1);
+bool q_mainwindow_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-void q_mainwindow_ensure_polished(void* self);
+void q_mainwindow_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param child QWidget*
 ///
-bool q_mainwindow_is_ancestor_of(void* self, void* child);
+bool q_mainwindow_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_auto_fill_background(void* self);
+bool q_mainwindow_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2784,25 +2784,25 @@ void q_mainwindow_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QBackingStore* q_mainwindow_backing_store(void* self);
+QBackingStore* q_mainwindow_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QWindow* q_mainwindow_window_handle(void* self);
+QWindow* q_mainwindow_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QScreen* q_mainwindow_screen(void* self);
+QScreen* q_mainwindow_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2846,7 +2846,7 @@ void q_mainwindow_on_window_title_changed(void* self, void (*callback)(void*, co
 /// @param self QMainWindow*
 /// @param icon QIcon*
 ///
-void q_mainwindow_window_icon_changed(void* self, void* icon);
+void q_mainwindow_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2855,7 +2855,7 @@ void q_mainwindow_window_icon_changed(void* self, void* icon);
 /// @param self QMainWindow*
 /// @param callback void func(QMainWindow* self, QIcon* icon)
 ///
-void q_mainwindow_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_mainwindow_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2882,7 +2882,7 @@ void q_mainwindow_on_window_icon_text_changed(void* self, void (*callback)(void*
 /// @param self QMainWindow*
 /// @param pos QPoint*
 ///
-void q_mainwindow_custom_context_menu_requested(void* self, void* pos);
+void q_mainwindow_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2891,17 +2891,17 @@ void q_mainwindow_custom_context_menu_requested(void* self, void* pos);
 /// @param self QMainWindow*
 /// @param callback void func(QMainWindow* self, QPoint* pos)
 ///
-void q_mainwindow_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_mainwindow_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_mainwindow_input_method_hints(void* self);
+int32_t q_mainwindow_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2920,7 +2920,7 @@ void q_mainwindow_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_mainwindow_render22(void* self, void* target, void* targetOffset);
+void q_mainwindow_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2931,7 +2931,7 @@ void q_mainwindow_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_mainwindow_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_mainwindow_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2943,7 +2943,7 @@ void q_mainwindow_render3(void* self, void* target, void* targetOffset, void* so
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_mainwindow_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_mainwindow_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2953,7 +2953,7 @@ void q_mainwindow_render4(void* self, void* target, void* targetOffset, void* so
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_mainwindow_render23(void* self, void* painter, void* targetOffset);
+void q_mainwindow_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2964,7 +2964,7 @@ void q_mainwindow_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_mainwindow_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_mainwindow_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2976,7 +2976,7 @@ void q_mainwindow_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_mainwindow_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_mainwindow_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2985,7 +2985,7 @@ void q_mainwindow_render42(void* self, void* painter, void* targetOffset, void* 
 /// @param self QMainWindow*
 /// @param rectangle QRect*
 ///
-QPixmap* q_mainwindow_grab1(void* self, void* rectangle);
+QPixmap* q_mainwindow_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3005,7 +3005,7 @@ void q_mainwindow_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_mainwindow_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_mainwindow_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3072,9 +3072,9 @@ QWidget* q_mainwindow_create_window_container3(void* window, void* parent, int32
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char* q_mainwindow_object_name(void* self);
+const char* q_mainwindow_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3089,33 +3089,33 @@ void q_mainwindow_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_widget_type(void* self);
+bool q_mainwindow_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_window_type(void* self);
+bool q_mainwindow_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_is_quick_item_type(void* self);
+bool q_mainwindow_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_signals_blocked(void* self);
+bool q_mainwindow_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3130,9 +3130,9 @@ bool q_mainwindow_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QThread* q_mainwindow_thread(void* self);
+QThread* q_mainwindow_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3183,11 +3183,11 @@ void q_mainwindow_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_mainwindow_children(void* self);
+libqt_list q_mainwindow_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3216,7 +3216,7 @@ void q_mainwindow_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_mainwindow_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_mainwindow_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3227,18 +3227,18 @@ QMetaObject__Connection* q_mainwindow_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_mainwindow_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_mainwindow_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_mainwindow_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_mainwindow_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3249,7 +3249,7 @@ QMetaObject__Connection* q_mainwindow_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_mainwindow_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_mainwindow_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3260,24 +3260,24 @@ bool q_mainwindow_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_mainwindow_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_mainwindow_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_disconnect3(void* self);
+bool q_mainwindow_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param receiver QObject*
 ///
-bool q_mainwindow_disconnect4(void* self, void* receiver);
+bool q_mainwindow_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3285,23 +3285,23 @@ bool q_mainwindow_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_mainwindow_disconnect5(void* param1);
+bool q_mainwindow_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-void q_mainwindow_dump_object_tree(void* self);
+void q_mainwindow_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-void q_mainwindow_dump_object_info(void* self);
+void q_mainwindow_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3311,16 +3311,16 @@ void q_mainwindow_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_mainwindow_set_property(void* self, const char* name, void* value);
+bool q_mainwindow_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param name const char*
 ///
-QVariant* q_mainwindow_property(void* self, const char* name);
+QVariant* q_mainwindow_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3328,9 +3328,9 @@ QVariant* q_mainwindow_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const char** q_mainwindow_dynamic_property_names(void* self);
+const char** q_mainwindow_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3344,9 +3344,9 @@ QBindingStorage* q_mainwindow_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-const QBindingStorage* q_mainwindow_binding_storage2(void* self);
+const QBindingStorage* q_mainwindow_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3369,18 +3369,18 @@ void q_mainwindow_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QObject* q_mainwindow_parent(void* self);
+QObject* q_mainwindow_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param classname const char*
 ///
-bool q_mainwindow_inherits(void* self, const char* classname);
+bool q_mainwindow_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3420,7 +3420,7 @@ int32_t q_mainwindow_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mainwindow_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_mainwindow_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3432,59 +3432,59 @@ QMetaObject__Connection* q_mainwindow_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mainwindow_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_mainwindow_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_mainwindow_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_mainwindow_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param signal const char*
 ///
-bool q_mainwindow_disconnect1(void* self, const char* signal);
+bool q_mainwindow_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMainWindow*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_mainwindow_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_mainwindow_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_mainwindow_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_mainwindow_disconnect23(void* self, void* receiver, const char* member);
+bool q_mainwindow_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QMainWindow*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_mainwindow_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3508,89 +3508,89 @@ void q_mainwindow_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_painting_active(void* self);
+bool q_mainwindow_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_width_m_m(void* self);
+int32_t q_mainwindow_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_height_m_m(void* self);
+int32_t q_mainwindow_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_logical_dpi_x(void* self);
+int32_t q_mainwindow_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_logical_dpi_y(void* self);
+int32_t q_mainwindow_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_physical_dpi_x(void* self);
+int32_t q_mainwindow_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_physical_dpi_y(void* self);
+int32_t q_mainwindow_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-double q_mainwindow_device_pixel_ratio(void* self);
+double q_mainwindow_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-double q_mainwindow_device_pixel_ratio_f(void* self);
+double q_mainwindow_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_color_count(void* self);
+int32_t q_mainwindow_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_depth(void* self);
+int32_t q_mainwindow_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3613,9 +3613,9 @@ int32_t q_mainwindow_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_dev_type(void* self);
+int32_t q_mainwindow_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3623,9 +3623,9 @@ int32_t q_mainwindow_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_super_dev_type(void* self);
+int32_t q_mainwindow_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3633,10 +3633,10 @@ int32_t q_mainwindow_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
-/// @param callback int32_t func()
+/// @param self const QMainWindow*
+/// @param callback int32_t func(QMainWindow* self)
 ///
-void q_mainwindow_on_dev_type(void* self, int32_t (*callback)());
+void q_mainwindow_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3677,9 +3677,9 @@ void q_mainwindow_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_size_hint(void* self);
+QSize* q_mainwindow_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3687,9 +3687,9 @@ QSize* q_mainwindow_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_super_size_hint(void* self);
+QSize* q_mainwindow_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3697,12 +3697,12 @@ QSize* q_mainwindow_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
-/// @param callback QSize* func()
+/// @param self const QMainWindow*
+/// @param callback QSize* func(QMainWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_mainwindow_on_size_hint(void* self, QSize* (*callback)());
+void q_mainwindow_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3710,9 +3710,9 @@ void q_mainwindow_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_minimum_size_hint(void* self);
+QSize* q_mainwindow_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3720,9 +3720,9 @@ QSize* q_mainwindow_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QSize* q_mainwindow_super_minimum_size_hint(void* self);
+QSize* q_mainwindow_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3730,12 +3730,12 @@ QSize* q_mainwindow_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
-/// @param callback QSize* func()
+/// @param self const QMainWindow*
+/// @param callback QSize* func(QMainWindow* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_mainwindow_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_mainwindow_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3743,10 +3743,10 @@ void q_mainwindow_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 int
 ///
-int32_t q_mainwindow_height_for_width(void* self, int param1);
+int32_t q_mainwindow_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3754,10 +3754,10 @@ int32_t q_mainwindow_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 int
 ///
-int32_t q_mainwindow_super_height_for_width(void* self, int param1);
+int32_t q_mainwindow_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3765,10 +3765,10 @@ int32_t q_mainwindow_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param callback int32_t func(QMainWindow* self, int param1)
 ///
-void q_mainwindow_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_mainwindow_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3776,9 +3776,9 @@ void q_mainwindow_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_has_height_for_width(void* self);
+bool q_mainwindow_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3786,9 +3786,9 @@ bool q_mainwindow_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-bool q_mainwindow_super_has_height_for_width(void* self);
+bool q_mainwindow_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3796,10 +3796,10 @@ bool q_mainwindow_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
-/// @param callback bool func()
+/// @param self const QMainWindow*
+/// @param callback bool func(QMainWindow* self)
 ///
-void q_mainwindow_on_has_height_for_width(void* self, bool (*callback)());
+void q_mainwindow_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3807,9 +3807,9 @@ void q_mainwindow_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QPaintEngine* q_mainwindow_paint_engine(void* self);
+QPaintEngine* q_mainwindow_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3817,9 +3817,9 @@ QPaintEngine* q_mainwindow_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QPaintEngine* q_mainwindow_super_paint_engine(void* self);
+QPaintEngine* q_mainwindow_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3827,10 +3827,10 @@ QPaintEngine* q_mainwindow_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
-/// @param callback QPaintEngine* func()
+/// @param self const QMainWindow*
+/// @param callback QPaintEngine* func(QMainWindow* self)
 ///
-void q_mainwindow_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_mainwindow_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4667,10 +4667,10 @@ void q_mainwindow_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_mainwindow_metric(void* self, int32_t param1);
+int32_t q_mainwindow_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4678,10 +4678,10 @@ int32_t q_mainwindow_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_mainwindow_super_metric(void* self, int32_t param1);
+int32_t q_mainwindow_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4689,10 +4689,10 @@ int32_t q_mainwindow_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param callback int32_t func(QMainWindow* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_mainwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_mainwindow_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4700,10 +4700,10 @@ void q_mainwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param painter QPainter*
 ///
-void q_mainwindow_init_painter(void* self, void* painter);
+void q_mainwindow_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4711,10 +4711,10 @@ void q_mainwindow_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param painter QPainter*
 ///
-void q_mainwindow_super_init_painter(void* self, void* painter);
+void q_mainwindow_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4722,10 +4722,10 @@ void q_mainwindow_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param callback void func(QMainWindow* self, QPainter* painter)
 ///
-void q_mainwindow_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_mainwindow_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4733,10 +4733,10 @@ void q_mainwindow_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_mainwindow_redirected(void* self, void* offset);
+QPaintDevice* q_mainwindow_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4744,10 +4744,10 @@ QPaintDevice* q_mainwindow_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_mainwindow_super_redirected(void* self, void* offset);
+QPaintDevice* q_mainwindow_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4755,10 +4755,10 @@ QPaintDevice* q_mainwindow_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param callback QPaintDevice* func(QMainWindow* self, QPoint* offset)
 ///
-void q_mainwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_mainwindow_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4766,9 +4766,9 @@ void q_mainwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QPainter* q_mainwindow_shared_painter(void* self);
+QPainter* q_mainwindow_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4776,9 +4776,9 @@ QPainter* q_mainwindow_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QPainter* q_mainwindow_super_shared_painter(void* self);
+QPainter* q_mainwindow_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4786,10 +4786,10 @@ QPainter* q_mainwindow_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
-/// @param callback QPainter* func()
+/// @param self const QMainWindow*
+/// @param callback QPainter* func(QMainWindow* self)
 ///
-void q_mainwindow_on_shared_painter(void* self, QPainter* (*callback)());
+void q_mainwindow_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4830,10 +4830,10 @@ void q_mainwindow_on_input_method_event(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_mainwindow_input_method_query(void* self, int32_t param1);
+QVariant* q_mainwindow_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4841,10 +4841,10 @@ QVariant* q_mainwindow_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_mainwindow_super_input_method_query(void* self, int32_t param1);
+QVariant* q_mainwindow_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4852,12 +4852,12 @@ QVariant* q_mainwindow_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param callback QVariant* func(QMainWindow* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_mainwindow_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_mainwindow_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5035,7 +5035,7 @@ void q_mainwindow_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QMainWindow*
 /// @param signal QMetaMethod*
 ///
-void q_mainwindow_connect_notify(void* self, void* signal);
+void q_mainwindow_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5046,7 +5046,7 @@ void q_mainwindow_connect_notify(void* self, void* signal);
 /// @param self QMainWindow*
 /// @param signal QMetaMethod*
 ///
-void q_mainwindow_super_connect_notify(void* self, void* signal);
+void q_mainwindow_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5057,7 +5057,7 @@ void q_mainwindow_super_connect_notify(void* self, void* signal);
 /// @param self QMainWindow*
 /// @param callback void func(QMainWindow* self, QMetaMethod* signal)
 ///
-void q_mainwindow_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_mainwindow_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5068,7 +5068,7 @@ void q_mainwindow_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QMainWindow*
 /// @param signal QMetaMethod*
 ///
-void q_mainwindow_disconnect_notify(void* self, void* signal);
+void q_mainwindow_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5079,7 +5079,7 @@ void q_mainwindow_disconnect_notify(void* self, void* signal);
 /// @param self QMainWindow*
 /// @param signal QMetaMethod*
 ///
-void q_mainwindow_super_disconnect_notify(void* self, void* signal);
+void q_mainwindow_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5090,7 +5090,7 @@ void q_mainwindow_super_disconnect_notify(void* self, void* signal);
 /// @param self QMainWindow*
 /// @param callback void func(QMainWindow* self, QMetaMethod* signal)
 ///
-void q_mainwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_mainwindow_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -5119,9 +5119,9 @@ void q_mainwindow_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMainWindow*
-/// @param callback void func()
+/// @param callback void func(QMainWindow* self)
 ///
-void q_mainwindow_on_update_micro_focus(void* self, void (*callback)());
+void q_mainwindow_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5150,9 +5150,9 @@ void q_mainwindow_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMainWindow*
-/// @param callback void func()
+/// @param callback void func(QMainWindow* self)
 ///
-void q_mainwindow_on_create(void* self, void (*callback)());
+void q_mainwindow_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5181,9 +5181,9 @@ void q_mainwindow_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMainWindow*
-/// @param callback void func()
+/// @param callback void func(QMainWindow* self)
 ///
-void q_mainwindow_on_destroy(void* self, void (*callback)());
+void q_mainwindow_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5212,9 +5212,9 @@ bool q_mainwindow_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMainWindow*
-/// @param callback bool func()
+/// @param callback bool func(QMainWindow* self)
 ///
-void q_mainwindow_on_focus_next_child(void* self, bool (*callback)());
+void q_mainwindow_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5243,9 +5243,9 @@ bool q_mainwindow_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QMainWindow*
-/// @param callback bool func()
+/// @param callback bool func(QMainWindow* self)
 ///
-void q_mainwindow_on_focus_previous_child(void* self, bool (*callback)());
+void q_mainwindow_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5253,9 +5253,9 @@ void q_mainwindow_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QObject* q_mainwindow_sender(void* self);
+QObject* q_mainwindow_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5263,9 +5263,9 @@ QObject* q_mainwindow_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-QObject* q_mainwindow_super_sender(void* self);
+QObject* q_mainwindow_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5273,10 +5273,10 @@ QObject* q_mainwindow_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
-/// @param callback QObject* func()
+/// @param self const QMainWindow*
+/// @param callback QObject* func(QMainWindow* self)
 ///
-void q_mainwindow_on_sender(void* self, QObject* (*callback)());
+void q_mainwindow_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5284,9 +5284,9 @@ void q_mainwindow_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_sender_signal_index(void* self);
+int32_t q_mainwindow_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5294,9 +5294,9 @@ int32_t q_mainwindow_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 ///
-int32_t q_mainwindow_super_sender_signal_index(void* self);
+int32_t q_mainwindow_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5304,10 +5304,10 @@ int32_t q_mainwindow_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
-/// @param callback int32_t func()
+/// @param self const QMainWindow*
+/// @param callback int32_t func(QMainWindow* self)
 ///
-void q_mainwindow_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_mainwindow_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5315,10 +5315,10 @@ void q_mainwindow_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param signal const char*
 ///
-int32_t q_mainwindow_receivers(void* self, const char* signal);
+int32_t q_mainwindow_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5326,10 +5326,10 @@ int32_t q_mainwindow_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param signal const char*
 ///
-int32_t q_mainwindow_super_receivers(void* self, const char* signal);
+int32_t q_mainwindow_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5337,10 +5337,10 @@ int32_t q_mainwindow_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param callback int32_t func(QMainWindow* self, const char* signal)
 ///
-void q_mainwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_mainwindow_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5348,10 +5348,10 @@ void q_mainwindow_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param signal QMetaMethod*
 ///
-bool q_mainwindow_is_signal_connected(void* self, void* signal);
+bool q_mainwindow_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5359,10 +5359,10 @@ bool q_mainwindow_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param signal QMetaMethod*
 ///
-bool q_mainwindow_super_is_signal_connected(void* self, void* signal);
+bool q_mainwindow_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5370,10 +5370,10 @@ bool q_mainwindow_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param callback bool func(QMainWindow* self, QMetaMethod* signal)
 ///
-void q_mainwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_mainwindow_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5381,11 +5381,11 @@ void q_mainwindow_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_mainwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_mainwindow_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5393,11 +5393,11 @@ double q_mainwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_mainwindow_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_mainwindow_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5405,10 +5405,10 @@ double q_mainwindow_super_get_decoded_metric_f(void* self, int32_t metricA, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QMainWindow*
+/// @param self const QMainWindow*
 /// @param callback double func(QMainWindow* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_mainwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_mainwindow_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

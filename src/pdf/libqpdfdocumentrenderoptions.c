@@ -3,7 +3,7 @@
 #include "libqpdfdocumentrenderoptions.hpp"
 #include "libqpdfdocumentrenderoptions.h"
 
-QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new(void* other) {
+QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new(const void* other) {
     return QPdfDocumentRenderOptions_New((QPdfDocumentRenderOptions*)other);
 }
 
@@ -15,7 +15,7 @@ QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new3() {
     return QPdfDocumentRenderOptions_New3();
 }
 
-QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new4(void* param1) {
+QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new4(const void* param1) {
     return QPdfDocumentRenderOptions_New4((QPdfDocumentRenderOptions*)param1);
 }
 
@@ -27,7 +27,7 @@ void q_pdfdocumentrenderoptions_move_assign(void* self, void* other) {
     QPdfDocumentRenderOptions_MoveAssign((QPdfDocumentRenderOptions*)self, (QPdfDocumentRenderOptions*)other);
 }
 
-int32_t q_pdfdocumentrenderoptions_rotation(void* self) {
+int32_t q_pdfdocumentrenderoptions_rotation(const void* self) {
     return QPdfDocumentRenderOptions_Rotation((QPdfDocumentRenderOptions*)self);
 }
 
@@ -35,7 +35,7 @@ void q_pdfdocumentrenderoptions_set_rotation(void* self, int32_t r) {
     QPdfDocumentRenderOptions_SetRotation((QPdfDocumentRenderOptions*)self, r);
 }
 
-int32_t q_pdfdocumentrenderoptions_render_flags(void* self) {
+int32_t q_pdfdocumentrenderoptions_render_flags(const void* self) {
     return QPdfDocumentRenderOptions_RenderFlags((QPdfDocumentRenderOptions*)self);
 }
 
@@ -43,19 +43,19 @@ void q_pdfdocumentrenderoptions_set_render_flags(void* self, int32_t r) {
     QPdfDocumentRenderOptions_SetRenderFlags((QPdfDocumentRenderOptions*)self, r);
 }
 
-QRect* q_pdfdocumentrenderoptions_scaled_clip_rect(void* self) {
+QRect* q_pdfdocumentrenderoptions_scaled_clip_rect(const void* self) {
     return QPdfDocumentRenderOptions_ScaledClipRect((QPdfDocumentRenderOptions*)self);
 }
 
-void q_pdfdocumentrenderoptions_set_scaled_clip_rect(void* self, void* r) {
+void q_pdfdocumentrenderoptions_set_scaled_clip_rect(void* self, const void* r) {
     QPdfDocumentRenderOptions_SetScaledClipRect((QPdfDocumentRenderOptions*)self, (QRect*)r);
 }
 
-QSize* q_pdfdocumentrenderoptions_scaled_size(void* self) {
+QSize* q_pdfdocumentrenderoptions_scaled_size(const void* self) {
     return QPdfDocumentRenderOptions_ScaledSize((QPdfDocumentRenderOptions*)self);
 }
 
-void q_pdfdocumentrenderoptions_set_scaled_size(void* self, void* s) {
+void q_pdfdocumentrenderoptions_set_scaled_size(void* self, const void* s) {
     QPdfDocumentRenderOptions_SetScaledSize((QPdfDocumentRenderOptions*)self, (QSize*)s);
 }
 

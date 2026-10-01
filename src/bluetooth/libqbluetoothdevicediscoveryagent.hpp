@@ -53,7 +53,7 @@ void QBluetoothDeviceDiscoveryAgent_ErrorOccurred(QBluetoothDeviceDiscoveryAgent
 void QBluetoothDeviceDiscoveryAgent_Connect_ErrorOccurred(QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
 void QBluetoothDeviceDiscoveryAgent_Canceled(QBluetoothDeviceDiscoveryAgent* self);
 void QBluetoothDeviceDiscoveryAgent_Connect_Canceled(QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
-void QBluetoothDeviceDiscoveryAgent_OnMetaObject(const QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
+void QBluetoothDeviceDiscoveryAgent_OnMetaObject(QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
 QMetaObject* QBluetoothDeviceDiscoveryAgent_SuperMetaObject(const QBluetoothDeviceDiscoveryAgent* self);
 void QBluetoothDeviceDiscoveryAgent_OnMetacast(QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
 void* QBluetoothDeviceDiscoveryAgent_SuperMetacast(QBluetoothDeviceDiscoveryAgent* self, const char* param1);
@@ -81,17 +81,9 @@ void QBluetoothDeviceDiscoveryAgent_DisconnectNotify(QBluetoothDeviceDiscoveryAg
 void QBluetoothDeviceDiscoveryAgent_OnDisconnectNotify(QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
 void QBluetoothDeviceDiscoveryAgent_SuperDisconnectNotify(QBluetoothDeviceDiscoveryAgent* self, const QMetaMethod* signal);
 QObject* QBluetoothDeviceDiscoveryAgent_Sender(const QBluetoothDeviceDiscoveryAgent* self);
-void QBluetoothDeviceDiscoveryAgent_OnSender(const QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
-QObject* QBluetoothDeviceDiscoveryAgent_SuperSender(const QBluetoothDeviceDiscoveryAgent* self);
 int QBluetoothDeviceDiscoveryAgent_SenderSignalIndex(const QBluetoothDeviceDiscoveryAgent* self);
-void QBluetoothDeviceDiscoveryAgent_OnSenderSignalIndex(const QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
-int QBluetoothDeviceDiscoveryAgent_SuperSenderSignalIndex(const QBluetoothDeviceDiscoveryAgent* self);
 int QBluetoothDeviceDiscoveryAgent_Receivers(const QBluetoothDeviceDiscoveryAgent* self, const char* signal);
-void QBluetoothDeviceDiscoveryAgent_OnReceivers(const QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
-int QBluetoothDeviceDiscoveryAgent_SuperReceivers(const QBluetoothDeviceDiscoveryAgent* self, const char* signal);
 bool QBluetoothDeviceDiscoveryAgent_IsSignalConnected(const QBluetoothDeviceDiscoveryAgent* self, const QMetaMethod* signal);
-void QBluetoothDeviceDiscoveryAgent_OnIsSignalConnected(const QBluetoothDeviceDiscoveryAgent* self, intptr_t slot);
-bool QBluetoothDeviceDiscoveryAgent_SuperIsSignalConnected(const QBluetoothDeviceDiscoveryAgent* self, const QMetaMethod* signal);
 void QBluetoothDeviceDiscoveryAgent_Delete(QBluetoothDeviceDiscoveryAgent* self);
 
 #ifdef __cplusplus

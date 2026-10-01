@@ -12,15 +12,15 @@
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#lastModifiedTime)
 ///
-/// @param self KLocalImageCacheImplementation*
+/// @param self const KLocalImageCacheImplementation*
 ///
-QDateTime* k_localimagecacheimplementation_last_modified_time(void* self);
+QDateTime* k_localimagecacheimplementation_last_modified_time(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#pixmapCaching)
 ///
-/// @param self KLocalImageCacheImplementation*
+/// @param self const KLocalImageCacheImplementation*
 ///
-bool k_localimagecacheimplementation_pixmap_caching(void* self);
+bool k_localimagecacheimplementation_pixmap_caching(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#setPixmapCaching)
 ///
@@ -31,9 +31,9 @@ void k_localimagecacheimplementation_set_pixmap_caching(void* self, bool enable)
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#pixmapCacheLimit)
 ///
-/// @param self KLocalImageCacheImplementation*
+/// @param self const KLocalImageCacheImplementation*
 ///
-int32_t k_localimagecacheimplementation_pixmap_cache_limit(void* self);
+int32_t k_localimagecacheimplementation_pixmap_cache_limit(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalimagecacheimplementation.html#setPixmapCacheLimit)
 ///

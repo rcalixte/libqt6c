@@ -28,7 +28,7 @@ QGeoPath* q_geopath_new2(libqt_list path);
 ///
 /// @param other QGeoPath*
 ///
-QGeoPath* q_geopath_new3(void* other);
+QGeoPath* q_geopath_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html)
 
@@ -36,7 +36,7 @@ QGeoPath* q_geopath_new3(void* other);
 ///
 /// @param other QGeoShape*
 ///
-QGeoPath* q_geopath_new4(void* other);
+QGeoPath* q_geopath_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html)
 
@@ -52,7 +52,7 @@ QGeoPath* q_geopath_new5(libqt_list path, double* width);
 /// @param self QGeoPath*
 /// @param other QGeoPath*
 ///
-void q_geopath_operator_assign(void* self, void* other);
+void q_geopath_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#setPath)
 ///
@@ -63,11 +63,11 @@ void q_geopath_set_path(void* self, libqt_list path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#path)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
 /// @return libqt_list of QGeoCoordinate*
 ///
-libqt_list q_geopath_path(void* self);
+libqt_list q_geopath_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#clearPath)
 ///
@@ -84,11 +84,11 @@ void q_geopath_set_variant_path(void* self, libqt_list path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#variantPath)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
 /// @return libqt_list of QVariant*
 ///
-libqt_list q_geopath_variant_path(void* self);
+libqt_list q_geopath_variant_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#setWidth)
 ///
@@ -99,9 +99,9 @@ void q_geopath_set_width(void* self, double* width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#width)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
-double q_geopath_width(void* self);
+double q_geopath_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#translate)
 ///
@@ -113,30 +113,30 @@ void q_geopath_translate(void* self, double degreesLatitude, double degreesLongi
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#translated)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 /// @param degreesLatitude double
 /// @param degreesLongitude double
 ///
-QGeoPath* q_geopath_translated(void* self, double degreesLatitude, double degreesLongitude);
+QGeoPath* q_geopath_translated(const void* self, double degreesLatitude, double degreesLongitude);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#length)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
-double q_geopath_length(void* self);
+double q_geopath_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#size)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
-intptr_t q_geopath_size(void* self);
+intptr_t q_geopath_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#addCoordinate)
 ///
 /// @param self QGeoPath*
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopath_add_coordinate(void* self, void* coordinate);
+void q_geopath_add_coordinate(void* self, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#insertCoordinate)
 ///
@@ -144,7 +144,7 @@ void q_geopath_add_coordinate(void* self, void* coordinate);
 /// @param index intptr_t
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopath_insert_coordinate(void* self, intptr_t index, void* coordinate);
+void q_geopath_insert_coordinate(void* self, intptr_t index, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#replaceCoordinate)
 ///
@@ -152,28 +152,28 @@ void q_geopath_insert_coordinate(void* self, intptr_t index, void* coordinate);
 /// @param index intptr_t
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopath_replace_coordinate(void* self, intptr_t index, void* coordinate);
+void q_geopath_replace_coordinate(void* self, intptr_t index, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#coordinateAt)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 /// @param index intptr_t
 ///
-QGeoCoordinate* q_geopath_coordinate_at(void* self, intptr_t index);
+QGeoCoordinate* q_geopath_coordinate_at(const void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#containsCoordinate)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 /// @param coordinate QGeoCoordinate*
 ///
-bool q_geopath_contains_coordinate(void* self, void* coordinate);
+bool q_geopath_contains_coordinate(const void* self, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#removeCoordinate)
 ///
 /// @param self QGeoPath*
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopath_remove_coordinate(void* self, void* coordinate);
+void q_geopath_remove_coordinate(void* self, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#removeCoordinate)
 ///
@@ -186,75 +186,75 @@ void q_geopath_remove_coordinate2(void* self, intptr_t index);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
-const char* q_geopath_to_string(void* self);
+const char* q_geopath_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#length)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 /// @param indexFrom intptr_t
 ///
-double q_geopath_length1(void* self, intptr_t indexFrom);
+double q_geopath_length1(const void* self, intptr_t indexFrom);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#length)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 /// @param indexFrom intptr_t
 /// @param indexTo intptr_t
 ///
-double q_geopath_length2(void* self, intptr_t indexFrom, intptr_t indexTo);
+double q_geopath_length2(const void* self, intptr_t indexFrom, intptr_t indexTo);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#type)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
 /// @return enum QGeoShape__ShapeType
 ///
-int32_t q_geopath_type(void* self);
+int32_t q_geopath_type(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#isValid)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
-bool q_geopath_is_valid(void* self);
+bool q_geopath_is_valid(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#isEmpty)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
-bool q_geopath_is_empty(void* self);
+bool q_geopath_is_empty(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#contains)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 /// @param coordinate QGeoCoordinate*
 ///
-bool q_geopath_contains(void* self, void* coordinate);
+bool q_geopath_contains(const void* self, const void* coordinate);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#boundingGeoRectangle)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
-QGeoRectangle* q_geopath_bounding_geo_rectangle(void* self);
+QGeoRectangle* q_geopath_bounding_geo_rectangle(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#center)
 ///
-/// @param self QGeoPath*
+/// @param self const QGeoPath*
 ///
-QGeoCoordinate* q_geopath_center(void* self);
+QGeoCoordinate* q_geopath_center(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#dtor.QGeoPath)
 ///

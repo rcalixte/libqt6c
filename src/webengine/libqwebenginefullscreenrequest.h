@@ -14,14 +14,14 @@
 ///
 /// @param other QWebEngineFullScreenRequest*
 ///
-QWebEngineFullScreenRequest* q_webenginefullscreenrequest_new(void* other);
+QWebEngineFullScreenRequest* q_webenginefullscreenrequest_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#operator-eq)
 ///
 /// @param self QWebEngineFullScreenRequest*
 /// @param other QWebEngineFullScreenRequest*
 ///
-void q_webenginefullscreenrequest_operator_assign(void* self, void* other);
+void q_webenginefullscreenrequest_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#reject)
 ///
@@ -37,15 +37,15 @@ void q_webenginefullscreenrequest_accept(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#toggleOn)
 ///
-/// @param self QWebEngineFullScreenRequest*
+/// @param self const QWebEngineFullScreenRequest*
 ///
-bool q_webenginefullscreenrequest_toggle_on(void* self);
+bool q_webenginefullscreenrequest_toggle_on(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#origin)
 ///
-/// @param self QWebEngineFullScreenRequest*
+/// @param self const QWebEngineFullScreenRequest*
 ///
-QUrl* q_webenginefullscreenrequest_origin(void* self);
+QUrl* q_webenginefullscreenrequest_origin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#dtor.QWebEngineFullScreenRequest)
 ///

@@ -2,42 +2,42 @@
 #include "libqwebengineloadinginfo.hpp"
 #include "libqwebengineloadinginfo.h"
 
-QWebEngineLoadingInfo* q_webengineloadinginfo_new(void* other) {
+QWebEngineLoadingInfo* q_webengineloadinginfo_new(const void* other) {
     return QWebEngineLoadingInfo_New((QWebEngineLoadingInfo*)other);
 }
 
-void q_webengineloadinginfo_operator_assign(void* self, void* other) {
+void q_webengineloadinginfo_operator_assign(void* self, const void* other) {
     QWebEngineLoadingInfo_OperatorAssign((QWebEngineLoadingInfo*)self, (QWebEngineLoadingInfo*)other);
 }
 
-QUrl* q_webengineloadinginfo_url(void* self) {
+QUrl* q_webengineloadinginfo_url(const void* self) {
     return QWebEngineLoadingInfo_Url((QWebEngineLoadingInfo*)self);
 }
 
-bool q_webengineloadinginfo_is_error_page(void* self) {
+bool q_webengineloadinginfo_is_error_page(const void* self) {
     return QWebEngineLoadingInfo_IsErrorPage((QWebEngineLoadingInfo*)self);
 }
 
-int32_t q_webengineloadinginfo_status(void* self) {
+int32_t q_webengineloadinginfo_status(const void* self) {
     return QWebEngineLoadingInfo_Status((QWebEngineLoadingInfo*)self);
 }
 
-const char* q_webengineloadinginfo_error_string(void* self) {
+const char* q_webengineloadinginfo_error_string(const void* self) {
     libqt_string _str = QWebEngineLoadingInfo_ErrorString((QWebEngineLoadingInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_webengineloadinginfo_error_domain(void* self) {
+int32_t q_webengineloadinginfo_error_domain(const void* self) {
     return QWebEngineLoadingInfo_ErrorDomain((QWebEngineLoadingInfo*)self);
 }
 
-int32_t q_webengineloadinginfo_error_code(void* self) {
+int32_t q_webengineloadinginfo_error_code(const void* self) {
     return QWebEngineLoadingInfo_ErrorCode((QWebEngineLoadingInfo*)self);
 }
 
-libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(void* self) {
+libqt_map /* of char* to char** */ q_webengineloadinginfo_response_headers(const void* self) {
     // Convert QMultiMap<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QWebEngineLoadingInfo_ResponseHeaders((QWebEngineLoadingInfo*)self);
     libqt_map _ret;

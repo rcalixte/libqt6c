@@ -20,7 +20,7 @@ Attica__Achievement* k_attica__achievement_new();
 ///
 /// @param other Attica__Achievement*
 ///
-Attica__Achievement* k_attica__achievement_new2(void* other);
+Attica__Achievement* k_attica__achievement_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#stringToAchievementType)
 ///
@@ -59,7 +59,7 @@ const char* k_attica__achievement_achievement_visibility_to_string(int32_t visib
 /// @param self Attica__Achievement*
 /// @param other Attica__Achievement*
 ///
-void k_attica__achievement_operator_assign(void* self, void* other);
+void k_attica__achievement_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setId)
 ///
@@ -72,9 +72,9 @@ void k_attica__achievement_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-const char* k_attica__achievement_id(void* self);
+const char* k_attica__achievement_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setContentId)
 ///
@@ -87,9 +87,9 @@ void k_attica__achievement_set_content_id(void* self, const char* contentId);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-const char* k_attica__achievement_content_id(void* self);
+const char* k_attica__achievement_content_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setName)
 ///
@@ -102,9 +102,9 @@ void k_attica__achievement_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-const char* k_attica__achievement_name(void* self);
+const char* k_attica__achievement_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setDescription)
 ///
@@ -117,9 +117,9 @@ void k_attica__achievement_set_description(void* self, const char* description);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-const char* k_attica__achievement_description(void* self);
+const char* k_attica__achievement_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setExplanation)
 ///
@@ -132,9 +132,9 @@ void k_attica__achievement_set_explanation(void* self, const char* explanation);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-const char* k_attica__achievement_explanation(void* self);
+const char* k_attica__achievement_explanation(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setPoints)
 ///
@@ -145,22 +145,22 @@ void k_attica__achievement_set_points(void* self, int points);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#points)
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-int32_t k_attica__achievement_points(void* self);
+int32_t k_attica__achievement_points(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setImage)
 ///
 /// @param self Attica__Achievement*
 /// @param image QUrl*
 ///
-void k_attica__achievement_set_image(void* self, void* image);
+void k_attica__achievement_set_image(void* self, const void* image);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#image)
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-QUrl* k_attica__achievement_image(void* self);
+QUrl* k_attica__achievement_image(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setDependencies)
 ///
@@ -187,9 +187,9 @@ void k_attica__achievement_remove_dependency(void* self, const char* dependency)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-const char** k_attica__achievement_dependencies(void* self);
+const char** k_attica__achievement_dependencies(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setVisibility)
 ///
@@ -200,11 +200,11 @@ void k_attica__achievement_set_visibility(void* self, int32_t visibility);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#visibility)
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
 /// @return enum Attica__Achievement__Visibility
 ///
-int32_t k_attica__achievement_visibility(void* self);
+int32_t k_attica__achievement_visibility(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setType)
 ///
@@ -215,11 +215,11 @@ void k_attica__achievement_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#type)
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
 /// @return enum Attica__Achievement__Type
 ///
-int32_t k_attica__achievement_type(void* self);
+int32_t k_attica__achievement_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setOptions)
 ///
@@ -246,9 +246,9 @@ void k_attica__achievement_remove_option(void* self, const char* option);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-const char** k_attica__achievement_options(void* self);
+const char** k_attica__achievement_options(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setSteps)
 ///
@@ -259,28 +259,28 @@ void k_attica__achievement_set_steps(void* self, int steps);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#steps)
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-int32_t k_attica__achievement_steps(void* self);
+int32_t k_attica__achievement_steps(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#setProgress)
 ///
 /// @param self Attica__Achievement*
 /// @param progress QVariant*
 ///
-void k_attica__achievement_set_progress(void* self, void* progress);
+void k_attica__achievement_set_progress(void* self, const void* progress);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#progress)
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-QVariant* k_attica__achievement_progress(void* self);
+QVariant* k_attica__achievement_progress(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-achievement.html#isValid)
 ///
-/// @param self Attica__Achievement*
+/// @param self const Attica__Achievement*
 ///
-bool k_attica__achievement_is_valid(void* self);
+bool k_attica__achievement_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

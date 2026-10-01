@@ -25,9 +25,9 @@ void q_restreply_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#networkReply)
 ///
-/// @param self QRestReply*
+/// @param self const QRestReply*
 ///
-QNetworkReply* q_restreply_network_reply(void* self);
+QNetworkReply* q_restreply_network_reply(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readJson)
 ///
@@ -55,43 +55,43 @@ const char* q_restreply_read_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#isSuccess)
 ///
-/// @param self QRestReply*
+/// @param self const QRestReply*
 ///
-bool q_restreply_is_success(void* self);
+bool q_restreply_is_success(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#httpStatus)
 ///
-/// @param self QRestReply*
+/// @param self const QRestReply*
 ///
-int32_t q_restreply_http_status(void* self);
+int32_t q_restreply_http_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#isHttpStatusSuccess)
 ///
-/// @param self QRestReply*
+/// @param self const QRestReply*
 ///
-bool q_restreply_is_http_status_success(void* self);
+bool q_restreply_is_http_status_success(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#hasError)
 ///
-/// @param self QRestReply*
+/// @param self const QRestReply*
 ///
-bool q_restreply_has_error(void* self);
+bool q_restreply_has_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#error)
 ///
-/// @param self QRestReply*
+/// @param self const QRestReply*
 ///
 /// @return enum QNetworkReply__NetworkError
 ///
-int32_t q_restreply_error(void* self);
+int32_t q_restreply_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QRestReply*
+/// @param self const QRestReply*
 ///
-const char* q_restreply_error_string(void* self);
+const char* q_restreply_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readJson)
 ///

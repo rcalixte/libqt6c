@@ -53,9 +53,9 @@ void k_macroexpanderbase_set_escape_char(void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#escapeChar)
 ///
-/// @param self KMacroExpanderBase*
+/// @param self const KMacroExpanderBase*
 ///
-QChar* k_macroexpanderbase_escape_char(void* self);
+QChar* k_macroexpanderbase_escape_char(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#expandPlainMacro)
 ///
@@ -197,6 +197,8 @@ int32_t k_wordmacroexpander_super_expand_escaped_macro(void* self, const char* s
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
 ///
+/// @warning This method must be implemented with `k_wordmacroexpander_on_expand_macro` before it can be called.
+///
 /// @param self KWordMacroExpander*
 /// @param str const char*
 /// @param ret const char**
@@ -211,16 +213,6 @@ bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* r
 /// @param callback bool func(KWordMacroExpander* self, const char* str, const char** ret)
 ///
 void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, const char*, const char**));
-
-/// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#expandMacro)
-///
-/// Base class method implementation
-///
-/// @param self KWordMacroExpander*
-/// @param str const char*
-/// @param ret const char**
-///
-bool k_wordmacroexpander_super_expand_macro(void* self, const char* str, const char* ret[static 1]);
 
 /// Inherited from KMacroExpanderBase
 ///
@@ -263,9 +255,9 @@ void k_wordmacroexpander_set_escape_char(void* self, void* c);
 ///
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#escapeChar)
 ///
-/// @param self KWordMacroExpander*
+/// @param self const KWordMacroExpander*
 ///
-QChar* k_wordmacroexpander_escape_char(void* self);
+QChar* k_wordmacroexpander_escape_char(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwordmacroexpander.html#dtor.KWordMacroExpander)
 ///
@@ -349,6 +341,8 @@ int32_t k_charmacroexpander_super_expand_escaped_macro(void* self, const char* s
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
 ///
+/// @warning This method must be implemented with `k_charmacroexpander_on_expand_macro` before it can be called.
+///
 /// @param self KCharMacroExpander*
 /// @param chr QChar*
 /// @param ret const char**
@@ -363,16 +357,6 @@ bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* ret[sta
 /// @param callback bool func(KCharMacroExpander* self, QChar* chr, const char** ret)
 ///
 void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, void*, const char**));
-
-/// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#expandMacro)
-///
-/// Base class method implementation
-///
-/// @param self KCharMacroExpander*
-/// @param chr QChar*
-/// @param ret const char**
-///
-bool k_charmacroexpander_super_expand_macro(void* self, void* chr, const char* ret[static 1]);
 
 /// Inherited from KMacroExpanderBase
 ///
@@ -415,9 +399,9 @@ void k_charmacroexpander_set_escape_char(void* self, void* c);
 ///
 /// [Upstream resources](https://api.kde.org/kmacroexpanderbase.html#escapeChar)
 ///
-/// @param self KCharMacroExpander*
+/// @param self const KCharMacroExpander*
 ///
-QChar* k_charmacroexpander_escape_char(void* self);
+QChar* k_charmacroexpander_escape_char(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcharmacroexpander.html#dtor.KCharMacroExpander)
 ///

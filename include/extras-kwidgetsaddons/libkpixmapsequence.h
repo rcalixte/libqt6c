@@ -20,7 +20,7 @@ KPixmapSequence* k_pixmapsequence_new();
 ///
 /// @param other KPixmapSequence*
 ///
-KPixmapSequence* k_pixmapsequence_new2(void* other);
+KPixmapSequence* k_pixmapsequence_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html)
 
@@ -28,7 +28,7 @@ KPixmapSequence* k_pixmapsequence_new2(void* other);
 ///
 /// @param pixmap QPixmap*
 ///
-KPixmapSequence* k_pixmapsequence_new3(void* pixmap);
+KPixmapSequence* k_pixmapsequence_new3(const void* pixmap);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html)
 
@@ -46,45 +46,45 @@ KPixmapSequence* k_pixmapsequence_new4(const char* fullPath, int size);
 /// @param pixmap QPixmap*
 /// @param frameSize QSize*
 ///
-KPixmapSequence* k_pixmapsequence_new5(void* pixmap, void* frameSize);
+KPixmapSequence* k_pixmapsequence_new5(const void* pixmap, const void* frameSize);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html#operator-eq)
 ///
 /// @param self KPixmapSequence*
 /// @param other KPixmapSequence*
 ///
-void k_pixmapsequence_operator_assign(void* self, void* other);
+void k_pixmapsequence_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html#isValid)
 ///
-/// @param self KPixmapSequence*
+/// @param self const KPixmapSequence*
 ///
-bool k_pixmapsequence_is_valid(void* self);
+bool k_pixmapsequence_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html#isEmpty)
 ///
-/// @param self KPixmapSequence*
+/// @param self const KPixmapSequence*
 ///
-bool k_pixmapsequence_is_empty(void* self);
+bool k_pixmapsequence_is_empty(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html#frameSize)
 ///
-/// @param self KPixmapSequence*
+/// @param self const KPixmapSequence*
 ///
-QSize* k_pixmapsequence_frame_size(void* self);
+QSize* k_pixmapsequence_frame_size(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html#frameCount)
 ///
-/// @param self KPixmapSequence*
+/// @param self const KPixmapSequence*
 ///
-int32_t k_pixmapsequence_frame_count(void* self);
+int32_t k_pixmapsequence_frame_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html#frameAt)
 ///
-/// @param self KPixmapSequence*
+/// @param self const KPixmapSequence*
 /// @param index int
 ///
-QPixmap* k_pixmapsequence_frame_at(void* self, int index);
+QPixmap* k_pixmapsequence_frame_at(const void* self, int index);
 
 /// [Upstream resources](https://api.kde.org/kpixmapsequence.html#dtor.KPixmapSequence)
 ///

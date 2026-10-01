@@ -22,7 +22,7 @@
 /// @param lineWidth int
 /// @param midLineWidth int
 ///
-void q_qdrawutil_h_q_draw_shade_line(void* p, int x1, int y1, int x2, int y2, void* pal, bool sunken, int lineWidth, int midLineWidth);
+void q_qdrawutil_h_q_draw_shade_line(void* p, int x1, int y1, int x2, int y2, const void* pal, bool sunken, int lineWidth, int midLineWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadeLine)
 ///
@@ -34,7 +34,7 @@ void q_qdrawutil_h_q_draw_shade_line(void* p, int x1, int y1, int x2, int y2, vo
 /// @param lineWidth int
 /// @param midLineWidth int
 ///
-void q_qdrawutil_h_q_draw_shade_line2(void* p, void* p1, void* p2, void* pal, bool sunken, int lineWidth, int midLineWidth);
+void q_qdrawutil_h_q_draw_shade_line2(void* p, const void* p1, const void* p2, const void* pal, bool sunken, int lineWidth, int midLineWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadeRect)
 ///
@@ -49,7 +49,7 @@ void q_qdrawutil_h_q_draw_shade_line2(void* p, void* p1, void* p2, void* pal, bo
 /// @param midLineWidth int
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_shade_rect(void* p, int x, int y, int w, int h, void* pal, bool sunken, int lineWidth, int midLineWidth, void* fill);
+void q_qdrawutil_h_q_draw_shade_rect(void* p, int x, int y, int w, int h, const void* pal, bool sunken, int lineWidth, int midLineWidth, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadeRect)
 ///
@@ -61,7 +61,7 @@ void q_qdrawutil_h_q_draw_shade_rect(void* p, int x, int y, int w, int h, void* 
 /// @param midLineWidth int
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_shade_rect2(void* p, void* r, void* pal, bool sunken, int lineWidth, int midLineWidth, void* fill);
+void q_qdrawutil_h_q_draw_shade_rect2(void* p, const void* r, const void* pal, bool sunken, int lineWidth, int midLineWidth, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadePanel)
 ///
@@ -75,7 +75,7 @@ void q_qdrawutil_h_q_draw_shade_rect2(void* p, void* r, void* pal, bool sunken, 
 /// @param lineWidth int
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_shade_panel(void* p, int x, int y, int w, int h, void* pal, bool sunken, int lineWidth, void* fill);
+void q_qdrawutil_h_q_draw_shade_panel(void* p, int x, int y, int w, int h, const void* pal, bool sunken, int lineWidth, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawShadePanel)
 ///
@@ -86,7 +86,7 @@ void q_qdrawutil_h_q_draw_shade_panel(void* p, int x, int y, int w, int h, void*
 /// @param lineWidth int
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_shade_panel2(void* p, void* r, void* pal, bool sunken, int lineWidth, void* fill);
+void q_qdrawutil_h_q_draw_shade_panel2(void* p, const void* r, const void* pal, bool sunken, int lineWidth, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawWinButton)
 ///
@@ -99,7 +99,7 @@ void q_qdrawutil_h_q_draw_shade_panel2(void* p, void* r, void* pal, bool sunken,
 /// @param sunken bool
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_win_button(void* p, int x, int y, int w, int h, void* pal, bool sunken, void* fill);
+void q_qdrawutil_h_q_draw_win_button(void* p, int x, int y, int w, int h, const void* pal, bool sunken, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawWinButton)
 ///
@@ -109,7 +109,7 @@ void q_qdrawutil_h_q_draw_win_button(void* p, int x, int y, int w, int h, void* 
 /// @param sunken bool
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_win_button2(void* p, void* r, void* pal, bool sunken, void* fill);
+void q_qdrawutil_h_q_draw_win_button2(void* p, const void* r, const void* pal, bool sunken, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawWinPanel)
 ///
@@ -122,7 +122,7 @@ void q_qdrawutil_h_q_draw_win_button2(void* p, void* r, void* pal, bool sunken, 
 /// @param sunken bool
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_win_panel(void* p, int x, int y, int w, int h, void* pal, bool sunken, void* fill);
+void q_qdrawutil_h_q_draw_win_panel(void* p, int x, int y, int w, int h, const void* pal, bool sunken, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawWinPanel)
 ///
@@ -132,7 +132,7 @@ void q_qdrawutil_h_q_draw_win_panel(void* p, int x, int y, int w, int h, void* p
 /// @param sunken bool
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_win_panel2(void* p, void* r, void* pal, bool sunken, void* fill);
+void q_qdrawutil_h_q_draw_win_panel2(void* p, const void* r, const void* pal, bool sunken, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawPlainRect)
 ///
@@ -145,7 +145,7 @@ void q_qdrawutil_h_q_draw_win_panel2(void* p, void* r, void* pal, bool sunken, v
 /// @param lineWidth int
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_plain_rect(void* p, int x, int y, int w, int h, void* param6, int lineWidth, void* fill);
+void q_qdrawutil_h_q_draw_plain_rect(void* p, int x, int y, int w, int h, const void* param6, int lineWidth, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawPlainRect)
 ///
@@ -155,7 +155,7 @@ void q_qdrawutil_h_q_draw_plain_rect(void* p, int x, int y, int w, int h, void* 
 /// @param lineWidth int
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_plain_rect2(void* p, void* r, void* param3, int lineWidth, void* fill);
+void q_qdrawutil_h_q_draw_plain_rect2(void* p, const void* r, const void* param3, int lineWidth, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawPlainRoundedRect)
 ///
@@ -170,7 +170,7 @@ void q_qdrawutil_h_q_draw_plain_rect2(void* p, void* r, void* param3, int lineWi
 /// @param lineWidth int
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_plain_rounded_rect(void* p, int x, int y, int w, int h, double rx, double ry, void* param8, int lineWidth, void* fill);
+void q_qdrawutil_h_q_draw_plain_rounded_rect(void* p, int x, int y, int w, int h, double rx, double ry, const void* param8, int lineWidth, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawPlainRoundedRect)
 ///
@@ -182,7 +182,7 @@ void q_qdrawutil_h_q_draw_plain_rounded_rect(void* p, int x, int y, int w, int h
 /// @param lineWidth int
 /// @param fill QBrush*
 ///
-void q_qdrawutil_h_q_draw_plain_rounded_rect2(void* painter, void* rect, double rx, double ry, void* lineColor, int lineWidth, void* fill);
+void q_qdrawutil_h_q_draw_plain_rounded_rect2(void* painter, const void* rect, double rx, double ry, const void* lineColor, int lineWidth, const void* fill);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawBorderPixmap)
 ///
@@ -195,7 +195,7 @@ void q_qdrawutil_h_q_draw_plain_rounded_rect2(void* painter, void* rect, double 
 /// @param rules QTileRules*
 /// @param hints flag of enum QDrawBorderPixmap__DrawingHint
 ///
-void q_qdrawutil_h_q_draw_border_pixmap(void* painter, void* targetRect, void* targetMargins, void* pixmap, void* sourceRect, void* sourceMargins, void* rules, int32_t hints);
+void q_qdrawutil_h_q_draw_border_pixmap(void* painter, const void* targetRect, const void* targetMargins, const void* pixmap, const void* sourceRect, const void* sourceMargins, const void* rules, int32_t hints);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdrawutil-h.html#qDrawBorderPixmap)
 ///
@@ -204,7 +204,7 @@ void q_qdrawutil_h_q_draw_border_pixmap(void* painter, void* targetRect, void* t
 /// @param margins QMargins*
 /// @param pixmap QPixmap*
 ///
-void q_qdrawutil_h_q_draw_border_pixmap2(void* painter, void* target, void* margins, void* pixmap);
+void q_qdrawutil_h_q_draw_border_pixmap2(void* painter, const void* target, const void* margins, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtilerules.html)
 
@@ -212,7 +212,7 @@ void q_qdrawutil_h_q_draw_border_pixmap2(void* painter, void* target, void* marg
 ///
 /// @param other QTileRules*
 ///
-QTileRules* q_tilerules_new(void* other);
+QTileRules* q_tilerules_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtilerules.html)
 
@@ -243,7 +243,7 @@ QTileRules* q_tilerules_new4();
 ///
 /// @param param1 QTileRules*
 ///
-QTileRules* q_tilerules_new5(void* param1);
+QTileRules* q_tilerules_new5(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtilerules.html)
 
@@ -269,11 +269,11 @@ void q_tilerules_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtilerules.html#horizontal-var)
 ///
-/// @param self QTileRules*
+/// @param self const QTileRules*
 ///
 /// @return enum Qt__TileRule
 ///
-int32_t q_tilerules_horizontal(void* self);
+int32_t q_tilerules_horizontal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtilerules.html#horizontal-var)
 ///
@@ -284,11 +284,11 @@ void q_tilerules_set_horizontal(void* self, int32_t horizontal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtilerules.html#vertical-var)
 ///
-/// @param self QTileRules*
+/// @param self const QTileRules*
 ///
 /// @return enum Qt__TileRule
 ///
-int32_t q_tilerules_vertical(void* self);
+int32_t q_tilerules_vertical(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtilerules.html#vertical-var)
 ///

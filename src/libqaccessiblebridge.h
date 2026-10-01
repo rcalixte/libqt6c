@@ -12,12 +12,16 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblebridge.html#setRootObject)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QAccessibleBridge*
 /// @param rootObject QAccessibleInterface*
 ///
 void q_accessiblebridge_set_root_object(void* self, void* rootObject);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblebridge.html#notifyAccessibilityUpdate)
+///
+/// @warning Use caution when calling this method as it might not be defined.
 ///
 /// @param self QAccessibleBridge*
 /// @param event QAccessibleEvent*
@@ -29,7 +33,7 @@ void q_accessiblebridge_notify_accessibility_update(void* self, void* event);
 /// @param self QAccessibleBridge*
 /// @param param1 QAccessibleBridge*
 ///
-void q_accessiblebridge_operator_assign(void* self, void* param1);
+void q_accessiblebridge_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblebridge.html#dtor.QAccessibleBridge)
 ///
@@ -55,26 +59,26 @@ QAccessibleBridgePlugin* q_accessiblebridgeplugin_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-const QMetaObject* q_accessiblebridgeplugin_meta_object(void* self);
+const QMetaObject* q_accessiblebridgeplugin_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAccessibleBridgePlugin*
-/// @param callback const QMetaObject* func()
+/// @param self const QAccessibleBridgePlugin*
+/// @param callback const QMetaObject* func(const QAccessibleBridgePlugin* self)
 ///
-void q_accessiblebridgeplugin_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_accessiblebridgeplugin_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-const QMetaObject* q_accessiblebridgeplugin_super_meta_object(void* self);
+const QMetaObject* q_accessiblebridgeplugin_super_meta_object(const void* self);
 
 /// @param self QAccessibleBridgePlugin*
 /// @param param1 const char*
@@ -128,6 +132,8 @@ const char* q_accessiblebridgeplugin_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblebridgeplugin.html#create)
 ///
+/// @warning This method must be implemented with `q_accessiblebridgeplugin_on_create` before it can be called.
+///
 /// @param self QAccessibleBridgePlugin*
 /// @param key const char*
 ///
@@ -141,15 +147,6 @@ QAccessibleBridge* q_accessiblebridgeplugin_create(void* self, const char* key);
 /// @param callback QAccessibleBridge* func(QAccessibleBridgePlugin* self, const char* key)
 ///
 void q_accessiblebridgeplugin_on_create(void* self, QAccessibleBridge* (*callback)(void*, const char*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qaccessiblebridgeplugin.html#create)
-///
-/// Base class method implementation
-///
-/// @param self QAccessibleBridgePlugin*
-/// @param key const char*
-///
-QAccessibleBridge* q_accessiblebridgeplugin_super_create(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -176,9 +173,9 @@ const char* q_accessiblebridgeplugin_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-const char* q_accessiblebridgeplugin_object_name(void* self);
+const char* q_accessiblebridgeplugin_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -193,33 +190,33 @@ void q_accessiblebridgeplugin_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-bool q_accessiblebridgeplugin_is_widget_type(void* self);
+bool q_accessiblebridgeplugin_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-bool q_accessiblebridgeplugin_is_window_type(void* self);
+bool q_accessiblebridgeplugin_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-bool q_accessiblebridgeplugin_is_quick_item_type(void* self);
+bool q_accessiblebridgeplugin_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-bool q_accessiblebridgeplugin_signals_blocked(void* self);
+bool q_accessiblebridgeplugin_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -234,9 +231,9 @@ bool q_accessiblebridgeplugin_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-QThread* q_accessiblebridgeplugin_thread(void* self);
+QThread* q_accessiblebridgeplugin_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -287,11 +284,11 @@ void q_accessiblebridgeplugin_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_accessiblebridgeplugin_children(void* self);
+libqt_list q_accessiblebridgeplugin_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -329,7 +326,7 @@ void q_accessiblebridgeplugin_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_accessiblebridgeplugin_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_accessiblebridgeplugin_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -340,18 +337,18 @@ QMetaObject__Connection* q_accessiblebridgeplugin_connect(void* sender, const ch
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_accessiblebridgeplugin_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_accessiblebridgeplugin_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_accessiblebridgeplugin_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_accessiblebridgeplugin_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -362,7 +359,7 @@ QMetaObject__Connection* q_accessiblebridgeplugin_connect3(void* self, void* sen
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_accessiblebridgeplugin_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_accessiblebridgeplugin_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -373,24 +370,24 @@ bool q_accessiblebridgeplugin_disconnect(void* sender, const char* signal, void*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_accessiblebridgeplugin_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_accessiblebridgeplugin_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-bool q_accessiblebridgeplugin_disconnect3(void* self);
+bool q_accessiblebridgeplugin_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param receiver QObject*
 ///
-bool q_accessiblebridgeplugin_disconnect4(void* self, void* receiver);
+bool q_accessiblebridgeplugin_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -398,23 +395,23 @@ bool q_accessiblebridgeplugin_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_accessiblebridgeplugin_disconnect5(void* param1);
+bool q_accessiblebridgeplugin_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-void q_accessiblebridgeplugin_dump_object_tree(void* self);
+void q_accessiblebridgeplugin_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-void q_accessiblebridgeplugin_dump_object_info(void* self);
+void q_accessiblebridgeplugin_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -424,16 +421,16 @@ void q_accessiblebridgeplugin_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_accessiblebridgeplugin_set_property(void* self, const char* name, void* value);
+bool q_accessiblebridgeplugin_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param name const char*
 ///
-QVariant* q_accessiblebridgeplugin_property(void* self, const char* name);
+QVariant* q_accessiblebridgeplugin_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -441,9 +438,9 @@ QVariant* q_accessiblebridgeplugin_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-const char** q_accessiblebridgeplugin_dynamic_property_names(void* self);
+const char** q_accessiblebridgeplugin_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -457,9 +454,9 @@ QBindingStorage* q_accessiblebridgeplugin_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-const QBindingStorage* q_accessiblebridgeplugin_binding_storage2(void* self);
+const QBindingStorage* q_accessiblebridgeplugin_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -482,18 +479,18 @@ void q_accessiblebridgeplugin_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-QObject* q_accessiblebridgeplugin_parent(void* self);
+QObject* q_accessiblebridgeplugin_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param classname const char*
 ///
-bool q_accessiblebridgeplugin_inherits(void* self, const char* classname);
+bool q_accessiblebridgeplugin_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -533,7 +530,7 @@ int32_t q_accessiblebridgeplugin_start_timer23(void* self, int64_t time, int32_t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accessiblebridgeplugin_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_accessiblebridgeplugin_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -545,59 +542,59 @@ QMetaObject__Connection* q_accessiblebridgeplugin_connect5(void* sender, const c
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accessiblebridgeplugin_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_accessiblebridgeplugin_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_accessiblebridgeplugin_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_accessiblebridgeplugin_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param signal const char*
 ///
-bool q_accessiblebridgeplugin_disconnect1(void* self, const char* signal);
+bool q_accessiblebridgeplugin_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAccessibleBridgePlugin*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_accessiblebridgeplugin_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_accessiblebridgeplugin_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_accessiblebridgeplugin_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_accessiblebridgeplugin_disconnect23(void* self, void* receiver, const char* member);
+bool q_accessiblebridgeplugin_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QAccessibleBridgePlugin*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_accessiblebridgeplugin_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -793,7 +790,7 @@ void q_accessiblebridgeplugin_on_custom_event(void* self, void (*callback)(void*
 /// @param self QAccessibleBridgePlugin*
 /// @param signal QMetaMethod*
 ///
-void q_accessiblebridgeplugin_connect_notify(void* self, void* signal);
+void q_accessiblebridgeplugin_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -804,7 +801,7 @@ void q_accessiblebridgeplugin_connect_notify(void* self, void* signal);
 /// @param self QAccessibleBridgePlugin*
 /// @param signal QMetaMethod*
 ///
-void q_accessiblebridgeplugin_super_connect_notify(void* self, void* signal);
+void q_accessiblebridgeplugin_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -815,7 +812,7 @@ void q_accessiblebridgeplugin_super_connect_notify(void* self, void* signal);
 /// @param self QAccessibleBridgePlugin*
 /// @param callback void func(QAccessibleBridgePlugin* self, QMetaMethod* signal)
 ///
-void q_accessiblebridgeplugin_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_accessiblebridgeplugin_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -826,7 +823,7 @@ void q_accessiblebridgeplugin_on_connect_notify(void* self, void (*callback)(voi
 /// @param self QAccessibleBridgePlugin*
 /// @param signal QMetaMethod*
 ///
-void q_accessiblebridgeplugin_disconnect_notify(void* self, void* signal);
+void q_accessiblebridgeplugin_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -837,7 +834,7 @@ void q_accessiblebridgeplugin_disconnect_notify(void* self, void* signal);
 /// @param self QAccessibleBridgePlugin*
 /// @param signal QMetaMethod*
 ///
-void q_accessiblebridgeplugin_super_disconnect_notify(void* self, void* signal);
+void q_accessiblebridgeplugin_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -848,7 +845,7 @@ void q_accessiblebridgeplugin_super_disconnect_notify(void* self, void* signal);
 /// @param self QAccessibleBridgePlugin*
 /// @param callback void func(QAccessibleBridgePlugin* self, QMetaMethod* signal)
 ///
-void q_accessiblebridgeplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_accessiblebridgeplugin_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -856,9 +853,9 @@ void q_accessiblebridgeplugin_on_disconnect_notify(void* self, void (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-QObject* q_accessiblebridgeplugin_sender(void* self);
+QObject* q_accessiblebridgeplugin_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -866,9 +863,9 @@ QObject* q_accessiblebridgeplugin_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-QObject* q_accessiblebridgeplugin_super_sender(void* self);
+QObject* q_accessiblebridgeplugin_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -876,10 +873,10 @@ QObject* q_accessiblebridgeplugin_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
-/// @param callback QObject* func()
+/// @param self const QAccessibleBridgePlugin*
+/// @param callback QObject* func(QAccessibleBridgePlugin* self)
 ///
-void q_accessiblebridgeplugin_on_sender(void* self, QObject* (*callback)());
+void q_accessiblebridgeplugin_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -887,9 +884,9 @@ void q_accessiblebridgeplugin_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-int32_t q_accessiblebridgeplugin_sender_signal_index(void* self);
+int32_t q_accessiblebridgeplugin_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -897,9 +894,9 @@ int32_t q_accessiblebridgeplugin_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 ///
-int32_t q_accessiblebridgeplugin_super_sender_signal_index(void* self);
+int32_t q_accessiblebridgeplugin_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -907,10 +904,10 @@ int32_t q_accessiblebridgeplugin_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
-/// @param callback int32_t func()
+/// @param self const QAccessibleBridgePlugin*
+/// @param callback int32_t func(QAccessibleBridgePlugin* self)
 ///
-void q_accessiblebridgeplugin_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_accessiblebridgeplugin_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -918,10 +915,10 @@ void q_accessiblebridgeplugin_on_sender_signal_index(void* self, int32_t (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param signal const char*
 ///
-int32_t q_accessiblebridgeplugin_receivers(void* self, const char* signal);
+int32_t q_accessiblebridgeplugin_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -929,10 +926,10 @@ int32_t q_accessiblebridgeplugin_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param signal const char*
 ///
-int32_t q_accessiblebridgeplugin_super_receivers(void* self, const char* signal);
+int32_t q_accessiblebridgeplugin_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -940,10 +937,10 @@ int32_t q_accessiblebridgeplugin_super_receivers(void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param callback int32_t func(QAccessibleBridgePlugin* self, const char* signal)
 ///
-void q_accessiblebridgeplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_accessiblebridgeplugin_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -951,10 +948,10 @@ void q_accessiblebridgeplugin_on_receivers(void* self, int32_t (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param signal QMetaMethod*
 ///
-bool q_accessiblebridgeplugin_is_signal_connected(void* self, void* signal);
+bool q_accessiblebridgeplugin_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -962,10 +959,10 @@ bool q_accessiblebridgeplugin_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param signal QMetaMethod*
 ///
-bool q_accessiblebridgeplugin_super_is_signal_connected(void* self, void* signal);
+bool q_accessiblebridgeplugin_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -973,10 +970,10 @@ bool q_accessiblebridgeplugin_super_is_signal_connected(void* self, void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAccessibleBridgePlugin*
+/// @param self const QAccessibleBridgePlugin*
 /// @param callback bool func(QAccessibleBridgePlugin* self, QMetaMethod* signal)
 ///
-void q_accessiblebridgeplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_accessiblebridgeplugin_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

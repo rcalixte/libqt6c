@@ -13,15 +13,15 @@ QBluetoothAddress* q_bluetoothaddress_new3(const char* address) {
     return QBluetoothAddress_New3(qstring(address));
 }
 
-QBluetoothAddress* q_bluetoothaddress_new4(void* other) {
+QBluetoothAddress* q_bluetoothaddress_new4(const void* other) {
     return QBluetoothAddress_New4((QBluetoothAddress*)other);
 }
 
-void q_bluetoothaddress_operator_assign(void* self, void* other) {
+void q_bluetoothaddress_operator_assign(void* self, const void* other) {
     QBluetoothAddress_OperatorAssign((QBluetoothAddress*)self, (QBluetoothAddress*)other);
 }
 
-bool q_bluetoothaddress_is_null(void* self) {
+bool q_bluetoothaddress_is_null(const void* self) {
     return QBluetoothAddress_IsNull((QBluetoothAddress*)self);
 }
 
@@ -29,11 +29,11 @@ void q_bluetoothaddress_clear(void* self) {
     QBluetoothAddress_Clear((QBluetoothAddress*)self);
 }
 
-uint64_t q_bluetoothaddress_to_u_int64(void* self) {
+uint64_t q_bluetoothaddress_to_u_int64(const void* self) {
     return QBluetoothAddress_ToUInt64((QBluetoothAddress*)self);
 }
 
-const char* q_bluetoothaddress_to_string(void* self) {
+const char* q_bluetoothaddress_to_string(const void* self) {
     libqt_string _str = QBluetoothAddress_ToString((QBluetoothAddress*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

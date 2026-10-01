@@ -13,37 +13,37 @@ KProcessList__KProcessInfo* k_processlist__kprocessinfo_new3(int64_t pid, const 
     return KProcessList__KProcessInfo_New3(pid, qstring(command), qstring(name), qstring(user));
 }
 
-KProcessList__KProcessInfo* k_processlist__kprocessinfo_new4(void* other) {
+KProcessList__KProcessInfo* k_processlist__kprocessinfo_new4(const void* other) {
     return KProcessList__KProcessInfo_New4((KProcessList__KProcessInfo*)other);
 }
 
-void k_processlist__kprocessinfo_operator_assign(void* self, void* other) {
+void k_processlist__kprocessinfo_operator_assign(void* self, const void* other) {
     KProcessList__KProcessInfo_OperatorAssign((KProcessList__KProcessInfo*)self, (KProcessList__KProcessInfo*)other);
 }
 
-bool k_processlist__kprocessinfo_is_valid(void* self) {
+bool k_processlist__kprocessinfo_is_valid(const void* self) {
     return KProcessList__KProcessInfo_IsValid((KProcessList__KProcessInfo*)self);
 }
 
-int64_t k_processlist__kprocessinfo_pid(void* self) {
+int64_t k_processlist__kprocessinfo_pid(const void* self) {
     return KProcessList__KProcessInfo_Pid((KProcessList__KProcessInfo*)self);
 }
 
-const char* k_processlist__kprocessinfo_name(void* self) {
+const char* k_processlist__kprocessinfo_name(const void* self) {
     libqt_string _str = KProcessList__KProcessInfo_Name((KProcessList__KProcessInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_processlist__kprocessinfo_user(void* self) {
+const char* k_processlist__kprocessinfo_user(const void* self) {
     libqt_string _str = KProcessList__KProcessInfo_User((KProcessList__KProcessInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_processlist__kprocessinfo_command(void* self) {
+const char* k_processlist__kprocessinfo_command(const void* self) {
     libqt_string _str = KProcessList__KProcessInfo_Command((KProcessList__KProcessInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

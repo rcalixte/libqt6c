@@ -9,38 +9,38 @@
 #include "libqwebenginehistory.hpp"
 #include "libqwebenginehistory.h"
 
-QWebEngineHistoryItem* q_webenginehistoryitem_new(void* other) {
+QWebEngineHistoryItem* q_webenginehistoryitem_new(const void* other) {
     return QWebEngineHistoryItem_New((QWebEngineHistoryItem*)other);
 }
 
-void q_webenginehistoryitem_operator_assign(void* self, void* other) {
+void q_webenginehistoryitem_operator_assign(void* self, const void* other) {
     QWebEngineHistoryItem_OperatorAssign((QWebEngineHistoryItem*)self, (QWebEngineHistoryItem*)other);
 }
 
-QUrl* q_webenginehistoryitem_original_url(void* self) {
+QUrl* q_webenginehistoryitem_original_url(const void* self) {
     return QWebEngineHistoryItem_OriginalUrl((QWebEngineHistoryItem*)self);
 }
 
-QUrl* q_webenginehistoryitem_url(void* self) {
+QUrl* q_webenginehistoryitem_url(const void* self) {
     return QWebEngineHistoryItem_Url((QWebEngineHistoryItem*)self);
 }
 
-const char* q_webenginehistoryitem_title(void* self) {
+const char* q_webenginehistoryitem_title(const void* self) {
     libqt_string _str = QWebEngineHistoryItem_Title((QWebEngineHistoryItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDateTime* q_webenginehistoryitem_last_visited(void* self) {
+QDateTime* q_webenginehistoryitem_last_visited(const void* self) {
     return QWebEngineHistoryItem_LastVisited((QWebEngineHistoryItem*)self);
 }
 
-QUrl* q_webenginehistoryitem_icon_url(void* self) {
+QUrl* q_webenginehistoryitem_icon_url(const void* self) {
     return QWebEngineHistoryItem_IconUrl((QWebEngineHistoryItem*)self);
 }
 
-bool q_webenginehistoryitem_is_valid(void* self) {
+bool q_webenginehistoryitem_is_valid(const void* self) {
     return QWebEngineHistoryItem_IsValid((QWebEngineHistoryItem*)self);
 }
 
@@ -52,7 +52,7 @@ void q_webenginehistoryitem_delete(void* self) {
     QWebEngineHistoryItem_Delete((QWebEngineHistoryItem*)(self));
 }
 
-const QMetaObject* q_webenginehistorymodel_meta_object(void* self) {
+const QMetaObject* q_webenginehistorymodel_meta_object(const void* self) {
     return QWebEngineHistoryModel_MetaObject((QWebEngineHistoryModel*)self);
 }
 
@@ -71,15 +71,15 @@ const char* q_webenginehistorymodel_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_webenginehistorymodel_row_count(void* self, void* parent) {
+int32_t q_webenginehistorymodel_row_count(const void* self, const void* parent) {
     return QWebEngineHistoryModel_RowCount((QWebEngineHistoryModel*)self, (QModelIndex*)parent);
 }
 
-QVariant* q_webenginehistorymodel_data(void* self, void* index, int role) {
+QVariant* q_webenginehistorymodel_data(const void* self, const void* index, int role) {
     return QWebEngineHistoryModel_Data((QWebEngineHistoryModel*)self, (QModelIndex*)index, role);
 }
 
-libqt_map /* of int to char* */ q_webenginehistorymodel_role_names(void* self) {
+libqt_map /* of int to char* */ q_webenginehistorymodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QWebEngineHistoryModel_RoleNames((QWebEngineHistoryModel*)self);
     libqt_map _ret;
@@ -130,51 +130,51 @@ const char* q_webenginehistorymodel_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QModelIndex* q_webenginehistorymodel_index(void* self, int row, int column, void* parent) {
+QModelIndex* q_webenginehistorymodel_index(const void* self, int row, int column, const void* parent) {
     return QAbstractListModel_Index((QAbstractListModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* q_webenginehistorymodel_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* q_webenginehistorymodel_sibling(const void* self, int row, int column, const void* idx) {
     return QAbstractListModel_Sibling((QAbstractListModel*)self, row, column, (QModelIndex*)idx);
 }
 
-bool q_webenginehistorymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool q_webenginehistorymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return QAbstractListModel_DropMimeData((QAbstractListModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-int32_t q_webenginehistorymodel_flags(void* self, void* index) {
+int32_t q_webenginehistorymodel_flags(const void* self, const void* index) {
     return QAbstractListModel_Flags((QAbstractListModel*)self, (QModelIndex*)index);
 }
 
-bool q_webenginehistorymodel_has_index(void* self, int row, int column) {
+bool q_webenginehistorymodel_has_index(const void* self, int row, int column) {
     return QAbstractItemModel_HasIndex((QAbstractItemModel*)self, row, column);
 }
 
-QModelIndex* q_webenginehistorymodel_parent(void* self, void* child) {
+QModelIndex* q_webenginehistorymodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-int32_t q_webenginehistorymodel_column_count(void* self, void* parent) {
+int32_t q_webenginehistorymodel_column_count(const void* self, const void* parent) {
     return QAbstractItemModel_ColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_has_children(void* self, void* parent) {
+bool q_webenginehistorymodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_set_data(void* self, void* index, void* value, int role) {
+bool q_webenginehistorymodel_set_data(void* self, const void* index, const void* value, int role) {
     return QAbstractItemModel_SetData((QAbstractItemModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-QVariant* q_webenginehistorymodel_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* q_webenginehistorymodel_header_data(const void* self, int section, int32_t orientation, int role) {
     return QAbstractItemModel_HeaderData((QAbstractItemModel*)self, section, orientation, role);
 }
 
-bool q_webenginehistorymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool q_webenginehistorymodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return QAbstractItemModel_SetHeaderData((QAbstractItemModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-libqt_map /* of int to QVariant* */ q_webenginehistorymodel_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ q_webenginehistorymodel_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = QAbstractItemModel_ItemData((QAbstractItemModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -184,7 +184,7 @@ libqt_map /* of int to QVariant* */ q_webenginehistorymodel_item_data(void* self
     return _ret;
 }
 
-bool q_webenginehistorymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool q_webenginehistorymodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -213,11 +213,11 @@ bool q_webenginehistorymodel_set_item_data(void* self, void* index, libqt_map /*
     return _out;
 }
 
-bool q_webenginehistorymodel_clear_item_data(void* self, void* index) {
+bool q_webenginehistorymodel_clear_item_data(void* self, const void* index) {
     return QAbstractItemModel_ClearItemData((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-const char** q_webenginehistorymodel_mime_types(void* self) {
+const char** q_webenginehistorymodel_mime_types(const void* self) {
     libqt_list _arr = QAbstractItemModel_MimeTypes((QAbstractItemModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -234,43 +234,43 @@ const char** q_webenginehistorymodel_mime_types(void* self) {
     return _ret;
 }
 
-QMimeData* q_webenginehistorymodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* q_webenginehistorymodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QAbstractItemModel_MimeData((QAbstractItemModel*)self, indexes);
 }
 
-bool q_webenginehistorymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool q_webenginehistorymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return QAbstractItemModel_CanDropMimeData((QAbstractItemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-int32_t q_webenginehistorymodel_supported_drop_actions(void* self) {
+int32_t q_webenginehistorymodel_supported_drop_actions(const void* self) {
     return QAbstractItemModel_SupportedDropActions((QAbstractItemModel*)self);
 }
 
-int32_t q_webenginehistorymodel_supported_drag_actions(void* self) {
+int32_t q_webenginehistorymodel_supported_drag_actions(const void* self) {
     return QAbstractItemModel_SupportedDragActions((QAbstractItemModel*)self);
 }
 
-bool q_webenginehistorymodel_insert_rows(void* self, int row, int count, void* parent) {
+bool q_webenginehistorymodel_insert_rows(void* self, int row, int count, const void* parent) {
     return QAbstractItemModel_InsertRows((QAbstractItemModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_insert_columns(void* self, int column, int count, void* parent) {
+bool q_webenginehistorymodel_insert_columns(void* self, int column, int count, const void* parent) {
     return QAbstractItemModel_InsertColumns((QAbstractItemModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_remove_rows(void* self, int row, int count, void* parent) {
+bool q_webenginehistorymodel_remove_rows(void* self, int row, int count, const void* parent) {
     return QAbstractItemModel_RemoveRows((QAbstractItemModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_remove_columns(void* self, int column, int count, void* parent) {
+bool q_webenginehistorymodel_remove_columns(void* self, int column, int count, const void* parent) {
     return QAbstractItemModel_RemoveColumns((QAbstractItemModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool q_webenginehistorymodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveRows((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_webenginehistorymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool q_webenginehistorymodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveColumns((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
@@ -290,19 +290,19 @@ bool q_webenginehistorymodel_remove_column(void* self, int column) {
     return QAbstractItemModel_RemoveColumn((QAbstractItemModel*)self, column);
 }
 
-bool q_webenginehistorymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild) {
+bool q_webenginehistorymodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveRow((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceRow, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_webenginehistorymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild) {
+bool q_webenginehistorymodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveColumn((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceColumn, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void q_webenginehistorymodel_fetch_more(void* self, void* parent) {
+void q_webenginehistorymodel_fetch_more(void* self, const void* parent) {
     QAbstractItemModel_FetchMore((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_can_fetch_more(void* self, void* parent) {
+bool q_webenginehistorymodel_can_fetch_more(const void* self, const void* parent) {
     return QAbstractItemModel_CanFetchMore((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
@@ -310,32 +310,32 @@ void q_webenginehistorymodel_sort(void* self, int column, int32_t order) {
     QAbstractItemModel_Sort((QAbstractItemModel*)self, column, order);
 }
 
-QModelIndex* q_webenginehistorymodel_buddy(void* self, void* index) {
+QModelIndex* q_webenginehistorymodel_buddy(const void* self, const void* index) {
     return QAbstractItemModel_Buddy((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-libqt_list /* of QModelIndex* */ q_webenginehistorymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ q_webenginehistorymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = QAbstractItemModel_Match((QAbstractItemModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-QSize* q_webenginehistorymodel_span(void* self, void* index) {
+QSize* q_webenginehistorymodel_span(const void* self, const void* index) {
     return QAbstractItemModel_Span((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-bool q_webenginehistorymodel_check_index(void* self, void* index) {
+bool q_webenginehistorymodel_check_index(const void* self, const void* index) {
     return QAbstractItemModel_CheckIndex((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void q_webenginehistorymodel_multi_data(void* self, void* index, void* roleDataSpan) {
+void q_webenginehistorymodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
     QAbstractItemModel_MultiData((QAbstractItemModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_webenginehistorymodel_data_changed(void* self, void* topLeft, void* bottomRight) {
+void q_webenginehistorymodel_data_changed(void* self, const void* topLeft, const void* bottomRight) {
     QAbstractItemModel_DataChanged((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
-void q_webenginehistorymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*)) {
+void q_webenginehistorymodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -371,35 +371,35 @@ void q_webenginehistorymodel_revert(void* self) {
     QAbstractItemModel_Revert((QAbstractItemModel*)self);
 }
 
-bool q_webenginehistorymodel_has_index3(void* self, int row, int column, void* parent) {
+bool q_webenginehistorymodel_has_index3(const void* self, int row, int column, const void* parent) {
     return QAbstractItemModel_HasIndex3((QAbstractItemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_insert_row2(void* self, int row, void* parent) {
+bool q_webenginehistorymodel_insert_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_InsertRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_insert_column2(void* self, int column, void* parent) {
+bool q_webenginehistorymodel_insert_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_InsertColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_remove_row2(void* self, int row, void* parent) {
+bool q_webenginehistorymodel_remove_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_RemoveRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_remove_column2(void* self, int column, void* parent) {
+bool q_webenginehistorymodel_remove_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_webenginehistorymodel_check_index2(void* self, void* index, int32_t options) {
+bool q_webenginehistorymodel_check_index2(const void* self, const void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void q_webenginehistorymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+void q_webenginehistorymodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_webenginehistorymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
+void q_webenginehistorymodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -443,7 +443,7 @@ bool q_webenginehistorymodel_event_filter(void* self, void* watched, void* event
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* q_webenginehistorymodel_object_name(void* self) {
+const char* q_webenginehistorymodel_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -454,19 +454,19 @@ void q_webenginehistorymodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_webenginehistorymodel_is_widget_type(void* self) {
+bool q_webenginehistorymodel_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_webenginehistorymodel_is_window_type(void* self) {
+bool q_webenginehistorymodel_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_webenginehistorymodel_is_quick_item_type(void* self) {
+bool q_webenginehistorymodel_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_webenginehistorymodel_signals_blocked(void* self) {
+bool q_webenginehistorymodel_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -474,7 +474,7 @@ bool q_webenginehistorymodel_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_webenginehistorymodel_thread(void* self) {
+QThread* q_webenginehistorymodel_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -498,7 +498,7 @@ void q_webenginehistorymodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_webenginehistorymodel_children(void* self) {
+libqt_list /* of QObject* */ q_webenginehistorymodel_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -515,55 +515,55 @@ void q_webenginehistorymodel_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_webenginehistorymodel_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_webenginehistorymodel_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_webenginehistorymodel_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_webenginehistorymodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_webenginehistorymodel_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_webenginehistorymodel_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_webenginehistorymodel_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_webenginehistorymodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_webenginehistorymodel_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_webenginehistorymodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_webenginehistorymodel_disconnect3(void* self) {
+bool q_webenginehistorymodel_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_webenginehistorymodel_disconnect4(void* self, void* receiver) {
+bool q_webenginehistorymodel_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_webenginehistorymodel_disconnect5(void* param1) {
+bool q_webenginehistorymodel_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_webenginehistorymodel_dump_object_tree(void* self) {
+void q_webenginehistorymodel_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_webenginehistorymodel_dump_object_info(void* self) {
+void q_webenginehistorymodel_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_webenginehistorymodel_set_property(void* self, const char* name, void* value) {
+bool q_webenginehistorymodel_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_webenginehistorymodel_property(void* self, const char* name) {
+QVariant* q_webenginehistorymodel_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_webenginehistorymodel_dynamic_property_names(void* self) {
+const char** q_webenginehistorymodel_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -584,7 +584,7 @@ QBindingStorage* q_webenginehistorymodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_webenginehistorymodel_binding_storage2(void* self) {
+const QBindingStorage* q_webenginehistorymodel_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -596,7 +596,7 @@ void q_webenginehistorymodel_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-bool q_webenginehistorymodel_inherits(void* self, const char* classname) {
+bool q_webenginehistorymodel_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -612,31 +612,31 @@ int32_t q_webenginehistorymodel_start_timer23(void* self, int64_t time, int32_t 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_webenginehistorymodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_webenginehistorymodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_webenginehistorymodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_webenginehistorymodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_webenginehistorymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_webenginehistorymodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_webenginehistorymodel_disconnect1(void* self, const char* signal) {
+bool q_webenginehistorymodel_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_webenginehistorymodel_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_webenginehistorymodel_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_webenginehistorymodel_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_webenginehistorymodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_webenginehistorymodel_disconnect23(void* self, void* receiver, const char* member) {
+bool q_webenginehistorymodel_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -648,35 +648,35 @@ void q_webenginehistorymodel_on_destroyed1(void* self, void (*callback)(void*, v
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void q_webenginehistorymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void q_webenginehistorymodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void q_webenginehistorymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void q_webenginehistorymodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void q_webenginehistorymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void q_webenginehistorymodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void q_webenginehistorymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void q_webenginehistorymodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -688,19 +688,19 @@ void q_webenginehistorymodel_on_model_reset(void* self, void (*callback)(void*))
     QAbstractItemModel_Connect_ModelReset((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void q_webenginehistorymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void q_webenginehistorymodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void q_webenginehistorymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void q_webenginehistorymodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -708,7 +708,7 @@ void q_webenginehistorymodel_on_object_name_changed(void* self, void (*callback)
     QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_webenginehistory_meta_object(void* self) {
+const QMetaObject* q_webenginehistory_meta_object(const void* self) {
     return QWebEngineHistory_MetaObject((QWebEngineHistory*)self);
 }
 
@@ -731,26 +731,26 @@ void q_webenginehistory_clear(void* self) {
     QWebEngineHistory_Clear((QWebEngineHistory*)self);
 }
 
-libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_items(void* self) {
+libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_items(const void* self) {
     libqt_list _arr = QWebEngineHistory_Items((QWebEngineHistory*)self);
     return _arr;
 }
 
-libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_back_items(void* self, int maxItems) {
+libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_back_items(const void* self, int maxItems) {
     libqt_list _arr = QWebEngineHistory_BackItems((QWebEngineHistory*)self, maxItems);
     return _arr;
 }
 
-libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_forward_items(void* self, int maxItems) {
+libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_forward_items(const void* self, int maxItems) {
     libqt_list _arr = QWebEngineHistory_ForwardItems((QWebEngineHistory*)self, maxItems);
     return _arr;
 }
 
-bool q_webenginehistory_can_go_back(void* self) {
+bool q_webenginehistory_can_go_back(const void* self) {
     return QWebEngineHistory_CanGoBack((QWebEngineHistory*)self);
 }
 
-bool q_webenginehistory_can_go_forward(void* self) {
+bool q_webenginehistory_can_go_forward(const void* self) {
     return QWebEngineHistory_CanGoForward((QWebEngineHistory*)self);
 }
 
@@ -762,43 +762,43 @@ void q_webenginehistory_forward(void* self) {
     QWebEngineHistory_Forward((QWebEngineHistory*)self);
 }
 
-void q_webenginehistory_go_to_item(void* self, void* item) {
+void q_webenginehistory_go_to_item(void* self, const void* item) {
     QWebEngineHistory_GoToItem((QWebEngineHistory*)self, (QWebEngineHistoryItem*)item);
 }
 
-QWebEngineHistoryItem* q_webenginehistory_back_item(void* self) {
+QWebEngineHistoryItem* q_webenginehistory_back_item(const void* self) {
     return QWebEngineHistory_BackItem((QWebEngineHistory*)self);
 }
 
-QWebEngineHistoryItem* q_webenginehistory_current_item(void* self) {
+QWebEngineHistoryItem* q_webenginehistory_current_item(const void* self) {
     return QWebEngineHistory_CurrentItem((QWebEngineHistory*)self);
 }
 
-QWebEngineHistoryItem* q_webenginehistory_forward_item(void* self) {
+QWebEngineHistoryItem* q_webenginehistory_forward_item(const void* self) {
     return QWebEngineHistory_ForwardItem((QWebEngineHistory*)self);
 }
 
-QWebEngineHistoryItem* q_webenginehistory_item_at(void* self, int i) {
+QWebEngineHistoryItem* q_webenginehistory_item_at(const void* self, int i) {
     return QWebEngineHistory_ItemAt((QWebEngineHistory*)self, i);
 }
 
-int32_t q_webenginehistory_current_item_index(void* self) {
+int32_t q_webenginehistory_current_item_index(const void* self) {
     return QWebEngineHistory_CurrentItemIndex((QWebEngineHistory*)self);
 }
 
-int32_t q_webenginehistory_count(void* self) {
+int32_t q_webenginehistory_count(const void* self) {
     return QWebEngineHistory_Count((QWebEngineHistory*)self);
 }
 
-QWebEngineHistoryModel* q_webenginehistory_items_model(void* self) {
+QWebEngineHistoryModel* q_webenginehistory_items_model(const void* self) {
     return QWebEngineHistory_ItemsModel((QWebEngineHistory*)self);
 }
 
-QWebEngineHistoryModel* q_webenginehistory_back_items_model(void* self) {
+QWebEngineHistoryModel* q_webenginehistory_back_items_model(const void* self) {
     return QWebEngineHistory_BackItemsModel((QWebEngineHistory*)self);
 }
 
-QWebEngineHistoryModel* q_webenginehistory_forward_items_model(void* self) {
+QWebEngineHistoryModel* q_webenginehistory_forward_items_model(const void* self) {
     return QWebEngineHistory_ForwardItemsModel((QWebEngineHistory*)self);
 }
 
@@ -824,7 +824,7 @@ bool q_webenginehistory_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* q_webenginehistory_object_name(void* self) {
+const char* q_webenginehistory_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -835,19 +835,19 @@ void q_webenginehistory_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_webenginehistory_is_widget_type(void* self) {
+bool q_webenginehistory_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_webenginehistory_is_window_type(void* self) {
+bool q_webenginehistory_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_webenginehistory_is_quick_item_type(void* self) {
+bool q_webenginehistory_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_webenginehistory_signals_blocked(void* self) {
+bool q_webenginehistory_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -855,7 +855,7 @@ bool q_webenginehistory_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_webenginehistory_thread(void* self) {
+QThread* q_webenginehistory_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -879,7 +879,7 @@ void q_webenginehistory_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_webenginehistory_children(void* self) {
+libqt_list /* of QObject* */ q_webenginehistory_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -896,55 +896,55 @@ void q_webenginehistory_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_webenginehistory_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_webenginehistory_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_webenginehistory_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_webenginehistory_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_webenginehistory_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_webenginehistory_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_webenginehistory_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_webenginehistory_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_webenginehistory_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_webenginehistory_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_webenginehistory_disconnect3(void* self) {
+bool q_webenginehistory_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_webenginehistory_disconnect4(void* self, void* receiver) {
+bool q_webenginehistory_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_webenginehistory_disconnect5(void* param1) {
+bool q_webenginehistory_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_webenginehistory_dump_object_tree(void* self) {
+void q_webenginehistory_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_webenginehistory_dump_object_info(void* self) {
+void q_webenginehistory_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_webenginehistory_set_property(void* self, const char* name, void* value) {
+bool q_webenginehistory_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_webenginehistory_property(void* self, const char* name) {
+QVariant* q_webenginehistory_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_webenginehistory_dynamic_property_names(void* self) {
+const char** q_webenginehistory_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -965,7 +965,7 @@ QBindingStorage* q_webenginehistory_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_webenginehistory_binding_storage2(void* self) {
+const QBindingStorage* q_webenginehistory_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -977,11 +977,11 @@ void q_webenginehistory_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_webenginehistory_parent(void* self) {
+QObject* q_webenginehistory_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_webenginehistory_inherits(void* self, const char* classname) {
+bool q_webenginehistory_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -997,31 +997,31 @@ int32_t q_webenginehistory_start_timer23(void* self, int64_t time, int32_t timer
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_webenginehistory_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_webenginehistory_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_webenginehistory_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_webenginehistory_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_webenginehistory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_webenginehistory_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_webenginehistory_disconnect1(void* self, const char* signal) {
+bool q_webenginehistory_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_webenginehistory_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_webenginehistory_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_webenginehistory_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_webenginehistory_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_webenginehistory_disconnect23(void* self, void* receiver, const char* member) {
+bool q_webenginehistory_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 

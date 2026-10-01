@@ -20,7 +20,7 @@ QNetworkRequestFactory* q_networkrequestfactory_new();
 ///
 /// @param baseUrl QUrl*
 ///
-QNetworkRequestFactory* q_networkrequestfactory_new2(void* baseUrl);
+QNetworkRequestFactory* q_networkrequestfactory_new2(const void* baseUrl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html)
 
@@ -28,14 +28,14 @@ QNetworkRequestFactory* q_networkrequestfactory_new2(void* baseUrl);
 ///
 /// @param other QNetworkRequestFactory*
 ///
-QNetworkRequestFactory* q_networkrequestfactory_new3(void* other);
+QNetworkRequestFactory* q_networkrequestfactory_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#operator-eq)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param other QNetworkRequestFactory*
 ///
-void q_networkrequestfactory_operator_assign(void* self, void* other);
+void q_networkrequestfactory_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#swap)
 ///
@@ -46,70 +46,70 @@ void q_networkrequestfactory_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#baseUrl)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
-QUrl* q_networkrequestfactory_base_url(void* self);
+QUrl* q_networkrequestfactory_base_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setBaseUrl)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param url QUrl*
 ///
-void q_networkrequestfactory_set_base_url(void* self, void* url);
+void q_networkrequestfactory_set_base_url(void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#sslConfiguration)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
-QSslConfiguration* q_networkrequestfactory_ssl_configuration(void* self);
+QSslConfiguration* q_networkrequestfactory_ssl_configuration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setSslConfiguration)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param configuration QSslConfiguration*
 ///
-void q_networkrequestfactory_set_ssl_configuration(void* self, void* configuration);
+void q_networkrequestfactory_set_ssl_configuration(void* self, const void* configuration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#createRequest)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
-QNetworkRequest* q_networkrequestfactory_create_request(void* self);
+QNetworkRequest* q_networkrequestfactory_create_request(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#createRequest)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 /// @param query QUrlQuery*
 ///
-QNetworkRequest* q_networkrequestfactory_create_request2(void* self, void* query);
+QNetworkRequest* q_networkrequestfactory_create_request2(const void* self, const void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#createRequest)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 /// @param path const char*
 ///
-QNetworkRequest* q_networkrequestfactory_create_request3(void* self, const char* path);
+QNetworkRequest* q_networkrequestfactory_create_request3(const void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#createRequest)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 /// @param path const char*
 /// @param query QUrlQuery*
 ///
-QNetworkRequest* q_networkrequestfactory_create_request4(void* self, const char* path, void* query);
+QNetworkRequest* q_networkrequestfactory_create_request4(const void* self, const char* path, const void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setCommonHeaders)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param headers QHttpHeaders*
 ///
-void q_networkrequestfactory_set_common_headers(void* self, void* headers);
+void q_networkrequestfactory_set_common_headers(void* self, const void* headers);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#commonHeaders)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
-QHttpHeaders* q_networkrequestfactory_common_headers(void* self);
+QHttpHeaders* q_networkrequestfactory_common_headers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#clearCommonHeaders)
 ///
@@ -121,9 +121,9 @@ void q_networkrequestfactory_clear_common_headers(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
-char* q_networkrequestfactory_bearer_token(void* self);
+char* q_networkrequestfactory_bearer_token(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setBearerToken)
 ///
@@ -142,9 +142,9 @@ void q_networkrequestfactory_clear_bearer_token(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
-const char* q_networkrequestfactory_user_name(void* self);
+const char* q_networkrequestfactory_user_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setUserName)
 ///
@@ -163,9 +163,9 @@ void q_networkrequestfactory_clear_user_name(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
-const char* q_networkrequestfactory_password(void* self);
+const char* q_networkrequestfactory_password(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setPassword)
 ///
@@ -189,24 +189,24 @@ void q_networkrequestfactory_set_transfer_timeout(void* self, int64_t timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#transferTimeout)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
 /// @return int64_t of milliseconds
 ///
-int64_t q_networkrequestfactory_transfer_timeout(void* self);
+int64_t q_networkrequestfactory_transfer_timeout(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#queryParameters)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
-QUrlQuery* q_networkrequestfactory_query_parameters(void* self);
+QUrlQuery* q_networkrequestfactory_query_parameters(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setQueryParameters)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param query QUrlQuery*
 ///
-void q_networkrequestfactory_set_query_parameters(void* self, void* query);
+void q_networkrequestfactory_set_query_parameters(void* self, const void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#clearQueryParameters)
 ///
@@ -223,26 +223,26 @@ void q_networkrequestfactory_set_priority(void* self, int32_t priority);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#priority)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 ///
 /// @return enum QNetworkRequest__Priority
 ///
-int32_t q_networkrequestfactory_priority(void* self);
+int32_t q_networkrequestfactory_priority(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#attribute)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 /// @param attribute enum QNetworkRequest__Attribute
 ///
-QVariant* q_networkrequestfactory_attribute(void* self, int32_t attribute);
+QVariant* q_networkrequestfactory_attribute(const void* self, int32_t attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#attribute)
 ///
-/// @param self QNetworkRequestFactory*
+/// @param self const QNetworkRequestFactory*
 /// @param attribute enum QNetworkRequest__Attribute
 /// @param defaultValue QVariant*
 ///
-QVariant* q_networkrequestfactory_attribute2(void* self, int32_t attribute, void* defaultValue);
+QVariant* q_networkrequestfactory_attribute2(const void* self, int32_t attribute, const void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setAttribute)
 ///
@@ -250,7 +250,7 @@ QVariant* q_networkrequestfactory_attribute2(void* self, int32_t attribute, void
 /// @param attribute enum QNetworkRequest__Attribute
 /// @param value QVariant*
 ///
-void q_networkrequestfactory_set_attribute(void* self, int32_t attribute, void* value);
+void q_networkrequestfactory_set_attribute(void* self, int32_t attribute, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#clearAttribute)
 ///

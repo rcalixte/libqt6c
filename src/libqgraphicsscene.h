@@ -20,7 +20,7 @@ QGraphicsScene* q_graphicsscene_new();
 ///
 /// @param sceneRect QRectF*
 ///
-QGraphicsScene* q_graphicsscene_new2(void* sceneRect);
+QGraphicsScene* q_graphicsscene_new2(const void* sceneRect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html)
 
@@ -48,7 +48,7 @@ QGraphicsScene* q_graphicsscene_new4(void* parent);
 /// @param sceneRect QRectF*
 /// @param parent QObject*
 ///
-QGraphicsScene* q_graphicsscene_new5(void* sceneRect, void* parent);
+QGraphicsScene* q_graphicsscene_new5(const void* sceneRect, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html)
 
@@ -64,26 +64,26 @@ QGraphicsScene* q_graphicsscene_new6(double x, double y, double width, double he
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-const QMetaObject* q_graphicsscene_meta_object(void* self);
+const QMetaObject* q_graphicsscene_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsScene*
-/// @param callback const QMetaObject* func()
+/// @param self const QGraphicsScene*
+/// @param callback const QMetaObject* func(const QGraphicsScene* self)
 ///
-void q_graphicsscene_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_graphicsscene_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-const QMetaObject* q_graphicsscene_super_meta_object(void* self);
+const QMetaObject* q_graphicsscene_super_meta_object(const void* self);
 
 /// @param self QGraphicsScene*
 /// @param param1 const char*
@@ -137,28 +137,28 @@ const char* q_graphicsscene_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#sceneRect)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QRectF* q_graphicsscene_scene_rect(void* self);
+QRectF* q_graphicsscene_scene_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#width)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-double q_graphicsscene_width(void* self);
+double q_graphicsscene_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#height)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-double q_graphicsscene_height(void* self);
+double q_graphicsscene_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setSceneRect)
 ///
 /// @param self QGraphicsScene*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_set_scene_rect(void* self, void* rect);
+void q_graphicsscene_set_scene_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setSceneRect)
 ///
@@ -179,11 +179,11 @@ void q_graphicsscene_render(void* self, void* painter);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#itemIndexMethod)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
 /// @return enum QGraphicsScene__ItemIndexMethod
 ///
-int32_t q_graphicsscene_item_index_method(void* self);
+int32_t q_graphicsscene_item_index_method(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setItemIndexMethod)
 ///
@@ -194,9 +194,9 @@ void q_graphicsscene_set_item_index_method(void* self, int32_t method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#bspTreeDepth)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-int32_t q_graphicsscene_bsp_tree_depth(void* self);
+int32_t q_graphicsscene_bsp_tree_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setBspTreeDepth)
 ///
@@ -207,57 +207,57 @@ void q_graphicsscene_set_bsp_tree_depth(void* self, int depth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#itemsBoundingRect)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QRectF* q_graphicsscene_items_bounding_rect(void* self);
+QRectF* q_graphicsscene_items_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items(void* self);
+libqt_list q_graphicsscene_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param pos QPointF*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items2(void* self, void* pos);
+libqt_list q_graphicsscene_items2(const void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param rect QRectF*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items3(void* self, void* rect);
+libqt_list q_graphicsscene_items3(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param polygon QPolygonF*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items4(void* self, void* polygon);
+libqt_list q_graphicsscene_items4(const void* self, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param path QPainterPath*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items5(void* self, void* path);
+libqt_list q_graphicsscene_items5(const void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param x double
 /// @param y double
 /// @param w double
@@ -267,47 +267,47 @@ libqt_list q_graphicsscene_items5(void* self, void* path);
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items6(void* self, double x, double y, double w, double h, int32_t mode, int32_t order);
+libqt_list q_graphicsscene_items6(const void* self, double x, double y, double w, double h, int32_t mode, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#collidingItems)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param item QGraphicsItem*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_colliding_items(void* self, void* item);
+libqt_list q_graphicsscene_colliding_items(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#itemAt)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param pos QPointF*
 /// @param deviceTransform QTransform*
 ///
-QGraphicsItem* q_graphicsscene_item_at(void* self, void* pos, void* deviceTransform);
+QGraphicsItem* q_graphicsscene_item_at(const void* self, const void* pos, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#itemAt)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param x double
 /// @param y double
 /// @param deviceTransform QTransform*
 ///
-QGraphicsItem* q_graphicsscene_item_at2(void* self, double x, double y, void* deviceTransform);
+QGraphicsItem* q_graphicsscene_item_at2(const void* self, double x, double y, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#selectedItems)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_selected_items(void* self);
+libqt_list q_graphicsscene_selected_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#selectionArea)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QPainterPath* q_graphicsscene_selection_area(void* self);
+QPainterPath* q_graphicsscene_selection_area(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
@@ -315,14 +315,14 @@ QPainterPath* q_graphicsscene_selection_area(void* self);
 /// @param path QPainterPath*
 /// @param deviceTransform QTransform*
 ///
-void q_graphicsscene_set_selection_area(void* self, void* path, void* deviceTransform);
+void q_graphicsscene_set_selection_area(void* self, const void* path, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
 /// @param self QGraphicsScene*
 /// @param path QPainterPath*
 ///
-void q_graphicsscene_set_selection_area2(void* self, void* path);
+void q_graphicsscene_set_selection_area2(void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#createItemGroup)
 ///
@@ -350,42 +350,42 @@ void q_graphicsscene_add_item(void* self, void* item);
 /// @param self QGraphicsScene*
 /// @param rect QRectF*
 ///
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse(void* self, void* rect);
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addLine)
 ///
 /// @param self QGraphicsScene*
 /// @param line QLineF*
 ///
-QGraphicsLineItem* q_graphicsscene_add_line(void* self, void* line);
+QGraphicsLineItem* q_graphicsscene_add_line(void* self, const void* line);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPath)
 ///
 /// @param self QGraphicsScene*
 /// @param path QPainterPath*
 ///
-QGraphicsPathItem* q_graphicsscene_add_path(void* self, void* path);
+QGraphicsPathItem* q_graphicsscene_add_path(void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPixmap)
 ///
 /// @param self QGraphicsScene*
 /// @param pixmap QPixmap*
 ///
-QGraphicsPixmapItem* q_graphicsscene_add_pixmap(void* self, void* pixmap);
+QGraphicsPixmapItem* q_graphicsscene_add_pixmap(void* self, const void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPolygon)
 ///
 /// @param self QGraphicsScene*
 /// @param polygon QPolygonF*
 ///
-QGraphicsPolygonItem* q_graphicsscene_add_polygon(void* self, void* polygon);
+QGraphicsPolygonItem* q_graphicsscene_add_polygon(void* self, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addRect)
 ///
 /// @param self QGraphicsScene*
 /// @param rect QRectF*
 ///
-QGraphicsRectItem* q_graphicsscene_add_rect(void* self, void* rect);
+QGraphicsRectItem* q_graphicsscene_add_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addText)
 ///
@@ -447,9 +447,9 @@ void q_graphicsscene_remove_item(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusItem)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QGraphicsItem* q_graphicsscene_focus_item(void* self);
+QGraphicsItem* q_graphicsscene_focus_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setFocusItem)
 ///
@@ -460,9 +460,9 @@ void q_graphicsscene_set_focus_item(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#hasFocus)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_has_focus(void* self);
+bool q_graphicsscene_has_focus(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setFocus)
 ///
@@ -485,76 +485,76 @@ void q_graphicsscene_set_sticky_focus(void* self, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#stickyFocus)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_sticky_focus(void* self);
+bool q_graphicsscene_sticky_focus(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#mouseGrabberItem)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QGraphicsItem* q_graphicsscene_mouse_grabber_item(void* self);
+QGraphicsItem* q_graphicsscene_mouse_grabber_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#backgroundBrush)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QBrush* q_graphicsscene_background_brush(void* self);
+QBrush* q_graphicsscene_background_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setBackgroundBrush)
 ///
 /// @param self QGraphicsScene*
 /// @param brush QBrush*
 ///
-void q_graphicsscene_set_background_brush(void* self, void* brush);
+void q_graphicsscene_set_background_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#foregroundBrush)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QBrush* q_graphicsscene_foreground_brush(void* self);
+QBrush* q_graphicsscene_foreground_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setForegroundBrush)
 ///
 /// @param self QGraphicsScene*
 /// @param brush QBrush*
 ///
-void q_graphicsscene_set_foreground_brush(void* self, void* brush);
+void q_graphicsscene_set_foreground_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodQuery)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsscene_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsscene_input_method_query(const void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodQuery)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGraphicsScene*
-/// @param callback QVariant* func(QGraphicsScene* self, enum Qt__InputMethodQuery query)
+/// @param self const QGraphicsScene*
+/// @param callback QVariant* func(const QGraphicsScene* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_graphicsscene_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#inputMethodQuery)
 ///
 /// Base class method implementation
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_graphicsscene_super_input_method_query(void* self, int32_t query);
+QVariant* q_graphicsscene_super_input_method_query(const void* self, int32_t query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#views)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
 /// @return libqt_list of QGraphicsView*
 ///
-libqt_list q_graphicsscene_views(void* self);
+libqt_list q_graphicsscene_views(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#update)
 ///
@@ -578,9 +578,9 @@ void q_graphicsscene_invalidate(void* self, double x, double y, double w, double
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#style)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QStyle* q_graphicsscene_style(void* self);
+QStyle* q_graphicsscene_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setStyle)
 ///
@@ -591,41 +591,41 @@ void q_graphicsscene_set_style(void* self, void* style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#font)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QFont* q_graphicsscene_font(void* self);
+QFont* q_graphicsscene_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setFont)
 ///
 /// @param self QGraphicsScene*
 /// @param font QFont*
 ///
-void q_graphicsscene_set_font(void* self, void* font);
+void q_graphicsscene_set_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#palette)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QPalette* q_graphicsscene_palette(void* self);
+QPalette* q_graphicsscene_palette(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setPalette)
 ///
 /// @param self QGraphicsScene*
 /// @param palette QPalette*
 ///
-void q_graphicsscene_set_palette(void* self, void* palette);
+void q_graphicsscene_set_palette(void* self, const void* palette);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#isActive)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_is_active(void* self);
+bool q_graphicsscene_is_active(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#activePanel)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QGraphicsItem* q_graphicsscene_active_panel(void* self);
+QGraphicsItem* q_graphicsscene_active_panel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setActivePanel)
 ///
@@ -636,9 +636,9 @@ void q_graphicsscene_set_active_panel(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#activeWindow)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QGraphicsWidget* q_graphicsscene_active_window(void* self);
+QGraphicsWidget* q_graphicsscene_active_window(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setActiveWindow)
 ///
@@ -657,9 +657,9 @@ bool q_graphicsscene_send_event(void* self, void* item, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#minimumRenderSize)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-double q_graphicsscene_minimum_render_size(void* self);
+double q_graphicsscene_minimum_render_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setMinimumRenderSize)
 ///
@@ -670,9 +670,9 @@ void q_graphicsscene_set_minimum_render_size(void* self, double minSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusOnTouch)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_focus_on_touch(void* self);
+bool q_graphicsscene_focus_on_touch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setFocusOnTouch)
 ///
@@ -1169,7 +1169,7 @@ void q_graphicsscene_super_input_method_event(void* self, void* event);
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_draw_background(void* self, void* painter, void* rect);
+void q_graphicsscene_draw_background(void* self, void* painter, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawBackground)
 ///
@@ -1178,7 +1178,7 @@ void q_graphicsscene_draw_background(void* self, void* painter, void* rect);
 /// @param self QGraphicsScene*
 /// @param callback void func(QGraphicsScene* self, QPainter* painter, QRectF* rect)
 ///
-void q_graphicsscene_on_draw_background(void* self, void (*callback)(void*, void*, void*));
+void q_graphicsscene_on_draw_background(void* self, void (*callback)(void*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawBackground)
 ///
@@ -1188,7 +1188,7 @@ void q_graphicsscene_on_draw_background(void* self, void (*callback)(void*, void
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_super_draw_background(void* self, void* painter, void* rect);
+void q_graphicsscene_super_draw_background(void* self, void* painter, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawForeground)
 ///
@@ -1196,7 +1196,7 @@ void q_graphicsscene_super_draw_background(void* self, void* painter, void* rect
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_draw_foreground(void* self, void* painter, void* rect);
+void q_graphicsscene_draw_foreground(void* self, void* painter, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawForeground)
 ///
@@ -1205,7 +1205,7 @@ void q_graphicsscene_draw_foreground(void* self, void* painter, void* rect);
 /// @param self QGraphicsScene*
 /// @param callback void func(QGraphicsScene* self, QPainter* painter, QRectF* rect)
 ///
-void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void*, void*));
+void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawForeground)
 ///
@@ -1215,7 +1215,7 @@ void q_graphicsscene_on_draw_foreground(void* self, void (*callback)(void*, void
 /// @param painter QPainter*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_super_draw_foreground(void* self, void* painter, void* rect);
+void q_graphicsscene_super_draw_foreground(void* self, void* painter, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawItems)
 ///
@@ -1226,7 +1226,7 @@ void q_graphicsscene_super_draw_foreground(void* self, void* painter, void* rect
 /// @param options QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsscene_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget);
+void q_graphicsscene_draw_items(void* self, void* painter, int numItems, void** items, const void* options, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawItems)
 ///
@@ -1235,7 +1235,7 @@ void q_graphicsscene_draw_items(void* self, void* painter, int numItems, void** 
 /// @param self QGraphicsScene*
 /// @param callback void func(QGraphicsScene* self, QPainter* painter, int numItems, QGraphicsItem** items, QStyleOptionGraphicsItem* options, QWidget* widget)
 ///
-void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, void*, void*));
+void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, int, void**, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#drawItems)
 ///
@@ -1248,7 +1248,7 @@ void q_graphicsscene_on_draw_items(void* self, void (*callback)(void*, void*, in
 /// @param options QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_graphicsscene_super_draw_items(void* self, void* painter, int numItems, void** items, void* options, void* widget);
+void q_graphicsscene_super_draw_items(void* self, void* painter, int numItems, void** items, const void* options, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#focusNextPrevChild)
 ///
@@ -1294,14 +1294,14 @@ void q_graphicsscene_on_changed(void* self, void (*callback)(void*, libqt_list))
 /// @param self QGraphicsScene*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_scene_rect_changed(void* self, void* rect);
+void q_graphicsscene_scene_rect_changed(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#sceneRectChanged)
 ///
 /// @param self QGraphicsScene*
 /// @param callback void func(QGraphicsScene* self, QRectF* rect)
 ///
-void q_graphicsscene_on_scene_rect_changed(void* self, void (*callback)(void*, void*));
+void q_graphicsscene_on_scene_rect_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#selectionChanged)
 ///
@@ -1357,7 +1357,7 @@ const char* q_graphicsscene_tr3(const char* s, const char* c, int n);
 /// @param painter QPainter*
 /// @param target QRectF*
 ///
-void q_graphicsscene_render2(void* self, void* painter, void* target);
+void q_graphicsscene_render2(void* self, void* painter, const void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#render)
 ///
@@ -1366,7 +1366,7 @@ void q_graphicsscene_render2(void* self, void* painter, void* target);
 /// @param target QRectF*
 /// @param source QRectF*
 ///
-void q_graphicsscene_render3(void* self, void* painter, void* target, void* source);
+void q_graphicsscene_render3(void* self, void* painter, const void* target, const void* source);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#render)
 ///
@@ -1376,41 +1376,41 @@ void q_graphicsscene_render3(void* self, void* painter, void* target, void* sour
 /// @param source QRectF*
 /// @param aspectRatioMode enum Qt__AspectRatioMode
 ///
-void q_graphicsscene_render4(void* self, void* painter, void* target, void* source, int32_t aspectRatioMode);
+void q_graphicsscene_render4(void* self, void* painter, const void* target, const void* source, int32_t aspectRatioMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param order enum Qt__SortOrder
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items1(void* self, int32_t order);
+libqt_list q_graphicsscene_items1(const void* self, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param pos QPointF*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items22(void* self, void* pos, int32_t mode);
+libqt_list q_graphicsscene_items22(const void* self, const void* pos, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param pos QPointF*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items32(void* self, void* pos, int32_t mode, int32_t order);
+libqt_list q_graphicsscene_items32(const void* self, const void* pos, int32_t mode, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param pos QPointF*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
@@ -1418,32 +1418,32 @@ libqt_list q_graphicsscene_items32(void* self, void* pos, int32_t mode, int32_t 
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items42(void* self, void* pos, int32_t mode, int32_t order, void* deviceTransform);
+libqt_list q_graphicsscene_items42(const void* self, const void* pos, int32_t mode, int32_t order, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param rect QRectF*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items23(void* self, void* rect, int32_t mode);
+libqt_list q_graphicsscene_items23(const void* self, const void* rect, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param rect QRectF*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items33(void* self, void* rect, int32_t mode, int32_t order);
+libqt_list q_graphicsscene_items33(const void* self, const void* rect, int32_t mode, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param rect QRectF*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
@@ -1451,32 +1451,32 @@ libqt_list q_graphicsscene_items33(void* self, void* rect, int32_t mode, int32_t
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items43(void* self, void* rect, int32_t mode, int32_t order, void* deviceTransform);
+libqt_list q_graphicsscene_items43(const void* self, const void* rect, int32_t mode, int32_t order, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param polygon QPolygonF*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items24(void* self, void* polygon, int32_t mode);
+libqt_list q_graphicsscene_items24(const void* self, const void* polygon, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param polygon QPolygonF*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items34(void* self, void* polygon, int32_t mode, int32_t order);
+libqt_list q_graphicsscene_items34(const void* self, const void* polygon, int32_t mode, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param polygon QPolygonF*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
@@ -1484,32 +1484,32 @@ libqt_list q_graphicsscene_items34(void* self, void* polygon, int32_t mode, int3
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items44(void* self, void* polygon, int32_t mode, int32_t order, void* deviceTransform);
+libqt_list q_graphicsscene_items44(const void* self, const void* polygon, int32_t mode, int32_t order, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items25(void* self, void* path, int32_t mode);
+libqt_list q_graphicsscene_items25(const void* self, const void* path, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items35(void* self, void* path, int32_t mode, int32_t order);
+libqt_list q_graphicsscene_items35(const void* self, const void* path, int32_t mode, int32_t order);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
@@ -1517,11 +1517,11 @@ libqt_list q_graphicsscene_items35(void* self, void* path, int32_t mode, int32_t
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items45(void* self, void* path, int32_t mode, int32_t order, void* deviceTransform);
+libqt_list q_graphicsscene_items45(const void* self, const void* path, int32_t mode, int32_t order, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param x double
 /// @param y double
 /// @param w double
@@ -1532,17 +1532,17 @@ libqt_list q_graphicsscene_items45(void* self, void* path, int32_t mode, int32_t
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_items7(void* self, double x, double y, double w, double h, int32_t mode, int32_t order, void* deviceTransform);
+libqt_list q_graphicsscene_items7(const void* self, double x, double y, double w, double h, int32_t mode, int32_t order, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#collidingItems)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param item QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_graphicsscene_colliding_items2(void* self, void* item, int32_t mode);
+libqt_list q_graphicsscene_colliding_items2(const void* self, const void* item, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
@@ -1550,7 +1550,7 @@ libqt_list q_graphicsscene_colliding_items2(void* self, void* item, int32_t mode
 /// @param path QPainterPath*
 /// @param selectionOperation enum Qt__ItemSelectionOperation
 ///
-void q_graphicsscene_set_selection_area22(void* self, void* path, int32_t selectionOperation);
+void q_graphicsscene_set_selection_area22(void* self, const void* path, int32_t selectionOperation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
@@ -1559,7 +1559,7 @@ void q_graphicsscene_set_selection_area22(void* self, void* path, int32_t select
 /// @param selectionOperation enum Qt__ItemSelectionOperation
 /// @param mode enum Qt__ItemSelectionMode
 ///
-void q_graphicsscene_set_selection_area3(void* self, void* path, int32_t selectionOperation, int32_t mode);
+void q_graphicsscene_set_selection_area3(void* self, const void* path, int32_t selectionOperation, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
@@ -1569,7 +1569,7 @@ void q_graphicsscene_set_selection_area3(void* self, void* path, int32_t selecti
 /// @param mode enum Qt__ItemSelectionMode
 /// @param deviceTransform QTransform*
 ///
-void q_graphicsscene_set_selection_area4(void* self, void* path, int32_t selectionOperation, int32_t mode, void* deviceTransform);
+void q_graphicsscene_set_selection_area4(void* self, const void* path, int32_t selectionOperation, int32_t mode, const void* deviceTransform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addEllipse)
 ///
@@ -1577,7 +1577,7 @@ void q_graphicsscene_set_selection_area4(void* self, void* path, int32_t selecti
 /// @param rect QRectF*
 /// @param pen QPen*
 ///
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse22(void* self, void* rect, void* pen);
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse22(void* self, const void* rect, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addEllipse)
 ///
@@ -1586,7 +1586,7 @@ QGraphicsEllipseItem* q_graphicsscene_add_ellipse22(void* self, void* rect, void
 /// @param pen QPen*
 /// @param brush QBrush*
 ///
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse3(void* self, void* rect, void* pen, void* brush);
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse3(void* self, const void* rect, const void* pen, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addLine)
 ///
@@ -1594,7 +1594,7 @@ QGraphicsEllipseItem* q_graphicsscene_add_ellipse3(void* self, void* rect, void*
 /// @param line QLineF*
 /// @param pen QPen*
 ///
-QGraphicsLineItem* q_graphicsscene_add_line22(void* self, void* line, void* pen);
+QGraphicsLineItem* q_graphicsscene_add_line22(void* self, const void* line, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPath)
 ///
@@ -1602,7 +1602,7 @@ QGraphicsLineItem* q_graphicsscene_add_line22(void* self, void* line, void* pen)
 /// @param path QPainterPath*
 /// @param pen QPen*
 ///
-QGraphicsPathItem* q_graphicsscene_add_path2(void* self, void* path, void* pen);
+QGraphicsPathItem* q_graphicsscene_add_path2(void* self, const void* path, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPath)
 ///
@@ -1611,7 +1611,7 @@ QGraphicsPathItem* q_graphicsscene_add_path2(void* self, void* path, void* pen);
 /// @param pen QPen*
 /// @param brush QBrush*
 ///
-QGraphicsPathItem* q_graphicsscene_add_path3(void* self, void* path, void* pen, void* brush);
+QGraphicsPathItem* q_graphicsscene_add_path3(void* self, const void* path, const void* pen, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPolygon)
 ///
@@ -1619,7 +1619,7 @@ QGraphicsPathItem* q_graphicsscene_add_path3(void* self, void* path, void* pen, 
 /// @param polygon QPolygonF*
 /// @param pen QPen*
 ///
-QGraphicsPolygonItem* q_graphicsscene_add_polygon2(void* self, void* polygon, void* pen);
+QGraphicsPolygonItem* q_graphicsscene_add_polygon2(void* self, const void* polygon, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addPolygon)
 ///
@@ -1628,7 +1628,7 @@ QGraphicsPolygonItem* q_graphicsscene_add_polygon2(void* self, void* polygon, vo
 /// @param pen QPen*
 /// @param brush QBrush*
 ///
-QGraphicsPolygonItem* q_graphicsscene_add_polygon3(void* self, void* polygon, void* pen, void* brush);
+QGraphicsPolygonItem* q_graphicsscene_add_polygon3(void* self, const void* polygon, const void* pen, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addRect)
 ///
@@ -1636,7 +1636,7 @@ QGraphicsPolygonItem* q_graphicsscene_add_polygon3(void* self, void* polygon, vo
 /// @param rect QRectF*
 /// @param pen QPen*
 ///
-QGraphicsRectItem* q_graphicsscene_add_rect22(void* self, void* rect, void* pen);
+QGraphicsRectItem* q_graphicsscene_add_rect22(void* self, const void* rect, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addRect)
 ///
@@ -1645,7 +1645,7 @@ QGraphicsRectItem* q_graphicsscene_add_rect22(void* self, void* rect, void* pen)
 /// @param pen QPen*
 /// @param brush QBrush*
 ///
-QGraphicsRectItem* q_graphicsscene_add_rect3(void* self, void* rect, void* pen, void* brush);
+QGraphicsRectItem* q_graphicsscene_add_rect3(void* self, const void* rect, const void* pen, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addText)
 ///
@@ -1653,7 +1653,7 @@ QGraphicsRectItem* q_graphicsscene_add_rect3(void* self, void* rect, void* pen, 
 /// @param text const char*
 /// @param font QFont*
 ///
-QGraphicsTextItem* q_graphicsscene_add_text2(void* self, const char* text, void* font);
+QGraphicsTextItem* q_graphicsscene_add_text2(void* self, const char* text, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addSimpleText)
 ///
@@ -1661,7 +1661,7 @@ QGraphicsTextItem* q_graphicsscene_add_text2(void* self, const char* text, void*
 /// @param text const char*
 /// @param font QFont*
 ///
-QGraphicsSimpleTextItem* q_graphicsscene_add_simple_text2(void* self, const char* text, void* font);
+QGraphicsSimpleTextItem* q_graphicsscene_add_simple_text2(void* self, const char* text, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addWidget)
 ///
@@ -1680,7 +1680,7 @@ QGraphicsProxyWidget* q_graphicsscene_add_widget2(void* self, void* widget, int3
 /// @param h double
 /// @param pen QPen*
 ///
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse5(void* self, double x, double y, double w, double h, void* pen);
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse5(void* self, double x, double y, double w, double h, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addEllipse)
 ///
@@ -1692,7 +1692,7 @@ QGraphicsEllipseItem* q_graphicsscene_add_ellipse5(void* self, double x, double 
 /// @param pen QPen*
 /// @param brush QBrush*
 ///
-QGraphicsEllipseItem* q_graphicsscene_add_ellipse6(void* self, double x, double y, double w, double h, void* pen, void* brush);
+QGraphicsEllipseItem* q_graphicsscene_add_ellipse6(void* self, double x, double y, double w, double h, const void* pen, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addLine)
 ///
@@ -1703,7 +1703,7 @@ QGraphicsEllipseItem* q_graphicsscene_add_ellipse6(void* self, double x, double 
 /// @param y2 double
 /// @param pen QPen*
 ///
-QGraphicsLineItem* q_graphicsscene_add_line5(void* self, double x1, double y1, double x2, double y2, void* pen);
+QGraphicsLineItem* q_graphicsscene_add_line5(void* self, double x1, double y1, double x2, double y2, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addRect)
 ///
@@ -1714,7 +1714,7 @@ QGraphicsLineItem* q_graphicsscene_add_line5(void* self, double x1, double y1, d
 /// @param h double
 /// @param pen QPen*
 ///
-QGraphicsRectItem* q_graphicsscene_add_rect5(void* self, double x, double y, double w, double h, void* pen);
+QGraphicsRectItem* q_graphicsscene_add_rect5(void* self, double x, double y, double w, double h, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#addRect)
 ///
@@ -1726,7 +1726,7 @@ QGraphicsRectItem* q_graphicsscene_add_rect5(void* self, double x, double y, dou
 /// @param pen QPen*
 /// @param brush QBrush*
 ///
-QGraphicsRectItem* q_graphicsscene_add_rect6(void* self, double x, double y, double w, double h, void* pen, void* brush);
+QGraphicsRectItem* q_graphicsscene_add_rect6(void* self, double x, double y, double w, double h, const void* pen, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#setFocusItem)
 ///
@@ -1759,14 +1759,14 @@ void q_graphicsscene_invalidate5(void* self, double x, double y, double w, doubl
 /// @param self QGraphicsScene*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_update1(void* self, void* rect);
+void q_graphicsscene_update1(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#invalidate)
 ///
 /// @param self QGraphicsScene*
 /// @param rect QRectF*
 ///
-void q_graphicsscene_invalidate1(void* self, void* rect);
+void q_graphicsscene_invalidate1(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsscene.html#invalidate)
 ///
@@ -1774,7 +1774,7 @@ void q_graphicsscene_invalidate1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param layers flag of enum QGraphicsScene__SceneLayer
 ///
-void q_graphicsscene_invalidate22(void* self, void* rect, int32_t layers);
+void q_graphicsscene_invalidate22(void* self, const void* rect, int32_t layers);
 
 /// Inherited from QObject
 ///
@@ -1782,9 +1782,9 @@ void q_graphicsscene_invalidate22(void* self, void* rect, int32_t layers);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-const char* q_graphicsscene_object_name(void* self);
+const char* q_graphicsscene_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1799,33 +1799,33 @@ void q_graphicsscene_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_is_widget_type(void* self);
+bool q_graphicsscene_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_is_window_type(void* self);
+bool q_graphicsscene_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_is_quick_item_type(void* self);
+bool q_graphicsscene_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_signals_blocked(void* self);
+bool q_graphicsscene_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1840,9 +1840,9 @@ bool q_graphicsscene_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QThread* q_graphicsscene_thread(void* self);
+QThread* q_graphicsscene_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1893,11 +1893,11 @@ void q_graphicsscene_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_graphicsscene_children(void* self);
+libqt_list q_graphicsscene_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1935,7 +1935,7 @@ void q_graphicsscene_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsscene_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_graphicsscene_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1946,18 +1946,18 @@ QMetaObject__Connection* q_graphicsscene_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_graphicsscene_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_graphicsscene_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_graphicsscene_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_graphicsscene_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1968,7 +1968,7 @@ QMetaObject__Connection* q_graphicsscene_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsscene_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_graphicsscene_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1979,24 +1979,24 @@ bool q_graphicsscene_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_graphicsscene_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_graphicsscene_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-bool q_graphicsscene_disconnect3(void* self);
+bool q_graphicsscene_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param receiver QObject*
 ///
-bool q_graphicsscene_disconnect4(void* self, void* receiver);
+bool q_graphicsscene_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2004,23 +2004,23 @@ bool q_graphicsscene_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_graphicsscene_disconnect5(void* param1);
+bool q_graphicsscene_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-void q_graphicsscene_dump_object_tree(void* self);
+void q_graphicsscene_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-void q_graphicsscene_dump_object_info(void* self);
+void q_graphicsscene_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2030,16 +2030,16 @@ void q_graphicsscene_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_graphicsscene_set_property(void* self, const char* name, void* value);
+bool q_graphicsscene_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param name const char*
 ///
-QVariant* q_graphicsscene_property(void* self, const char* name);
+QVariant* q_graphicsscene_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2047,9 +2047,9 @@ QVariant* q_graphicsscene_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-const char** q_graphicsscene_dynamic_property_names(void* self);
+const char** q_graphicsscene_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2063,9 +2063,9 @@ QBindingStorage* q_graphicsscene_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-const QBindingStorage* q_graphicsscene_binding_storage2(void* self);
+const QBindingStorage* q_graphicsscene_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2088,18 +2088,18 @@ void q_graphicsscene_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QObject* q_graphicsscene_parent(void* self);
+QObject* q_graphicsscene_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param classname const char*
 ///
-bool q_graphicsscene_inherits(void* self, const char* classname);
+bool q_graphicsscene_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2139,7 +2139,7 @@ int32_t q_graphicsscene_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsscene_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_graphicsscene_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2151,59 +2151,59 @@ QMetaObject__Connection* q_graphicsscene_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsscene_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_graphicsscene_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_graphicsscene_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_graphicsscene_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param signal const char*
 ///
-bool q_graphicsscene_disconnect1(void* self, const char* signal);
+bool q_graphicsscene_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsScene*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_graphicsscene_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_graphicsscene_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_graphicsscene_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_graphicsscene_disconnect23(void* self, void* receiver, const char* member);
+bool q_graphicsscene_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGraphicsScene*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_graphicsscene_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2331,7 +2331,7 @@ void q_graphicsscene_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsscene_connect_notify(void* self, void* signal);
+void q_graphicsscene_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2342,7 +2342,7 @@ void q_graphicsscene_connect_notify(void* self, void* signal);
 /// @param self QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsscene_super_connect_notify(void* self, void* signal);
+void q_graphicsscene_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2353,7 +2353,7 @@ void q_graphicsscene_super_connect_notify(void* self, void* signal);
 /// @param self QGraphicsScene*
 /// @param callback void func(QGraphicsScene* self, QMetaMethod* signal)
 ///
-void q_graphicsscene_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsscene_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2364,7 +2364,7 @@ void q_graphicsscene_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsscene_disconnect_notify(void* self, void* signal);
+void q_graphicsscene_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2375,7 +2375,7 @@ void q_graphicsscene_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-void q_graphicsscene_super_disconnect_notify(void* self, void* signal);
+void q_graphicsscene_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2386,7 +2386,7 @@ void q_graphicsscene_super_disconnect_notify(void* self, void* signal);
 /// @param self QGraphicsScene*
 /// @param callback void func(QGraphicsScene* self, QMetaMethod* signal)
 ///
-void q_graphicsscene_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_graphicsscene_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2394,9 +2394,9 @@ void q_graphicsscene_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QObject* q_graphicsscene_sender(void* self);
+QObject* q_graphicsscene_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2404,9 +2404,9 @@ QObject* q_graphicsscene_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-QObject* q_graphicsscene_super_sender(void* self);
+QObject* q_graphicsscene_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2414,10 +2414,10 @@ QObject* q_graphicsscene_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsScene*
-/// @param callback QObject* func()
+/// @param self const QGraphicsScene*
+/// @param callback QObject* func(QGraphicsScene* self)
 ///
-void q_graphicsscene_on_sender(void* self, QObject* (*callback)());
+void q_graphicsscene_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2425,9 +2425,9 @@ void q_graphicsscene_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-int32_t q_graphicsscene_sender_signal_index(void* self);
+int32_t q_graphicsscene_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2435,9 +2435,9 @@ int32_t q_graphicsscene_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 ///
-int32_t q_graphicsscene_super_sender_signal_index(void* self);
+int32_t q_graphicsscene_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2445,10 +2445,10 @@ int32_t q_graphicsscene_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsScene*
-/// @param callback int32_t func()
+/// @param self const QGraphicsScene*
+/// @param callback int32_t func(QGraphicsScene* self)
 ///
-void q_graphicsscene_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_graphicsscene_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2456,10 +2456,10 @@ void q_graphicsscene_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param signal const char*
 ///
-int32_t q_graphicsscene_receivers(void* self, const char* signal);
+int32_t q_graphicsscene_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2467,10 +2467,10 @@ int32_t q_graphicsscene_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param signal const char*
 ///
-int32_t q_graphicsscene_super_receivers(void* self, const char* signal);
+int32_t q_graphicsscene_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2478,10 +2478,10 @@ int32_t q_graphicsscene_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param callback int32_t func(QGraphicsScene* self, const char* signal)
 ///
-void q_graphicsscene_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_graphicsscene_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2489,10 +2489,10 @@ void q_graphicsscene_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsscene_is_signal_connected(void* self, void* signal);
+bool q_graphicsscene_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2500,10 +2500,10 @@ bool q_graphicsscene_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param signal QMetaMethod*
 ///
-bool q_graphicsscene_super_is_signal_connected(void* self, void* signal);
+bool q_graphicsscene_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2511,10 +2511,10 @@ bool q_graphicsscene_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGraphicsScene*
+/// @param self const QGraphicsScene*
 /// @param callback bool func(QGraphicsScene* self, QMetaMethod* signal)
 ///
-void q_graphicsscene_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_graphicsscene_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

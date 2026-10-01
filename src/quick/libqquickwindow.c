@@ -38,15 +38,15 @@ QQuickWindow* q_quickwindow_new3(void* parent) {
     return QQuickWindow_New3((QWindow*)parent);
 }
 
-const QMetaObject* q_quickwindow_meta_object(void* self) {
+const QMetaObject* q_quickwindow_meta_object(const void* self) {
     return QQuickWindow_MetaObject((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_quickwindow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QQuickWindow_OnMetaObject((QQuickWindow*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_quickwindow_super_meta_object(void* self) {
+const QMetaObject* q_quickwindow_super_meta_object(const void* self) {
     return QQuickWindow_SuperMetaObject((QQuickWindow*)self);
 }
 
@@ -81,27 +81,27 @@ const char* q_quickwindow_tr(const char* s) {
     return _ret;
 }
 
-QQuickItem* q_quickwindow_content_item(void* self) {
+QQuickItem* q_quickwindow_content_item(const void* self) {
     return QQuickWindow_ContentItem((QQuickWindow*)self);
 }
 
-QQuickItem* q_quickwindow_active_focus_item(void* self) {
+QQuickItem* q_quickwindow_active_focus_item(const void* self) {
     return QQuickWindow_ActiveFocusItem((QQuickWindow*)self);
 }
 
-QObject* q_quickwindow_focus_object(void* self) {
+QObject* q_quickwindow_focus_object(const void* self) {
     return QQuickWindow_FocusObject((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_focus_object(void* self, QObject* (*callback)()) {
+void q_quickwindow_on_focus_object(const void* self, QObject* (*callback)(const void*)) {
     QQuickWindow_OnFocusObject((QQuickWindow*)self, (intptr_t)callback);
 }
 
-QObject* q_quickwindow_super_focus_object(void* self) {
+QObject* q_quickwindow_super_focus_object(const void* self) {
     return QQuickWindow_SuperFocusObject((QQuickWindow*)self);
 }
 
-QQuickItem* q_quickwindow_mouse_grabber_item(void* self) {
+QQuickItem* q_quickwindow_mouse_grabber_item(const void* self) {
     return QQuickWindow_MouseGrabberItem((QQuickWindow*)self);
 }
 
@@ -109,11 +109,11 @@ QImage* q_quickwindow_grab_window(void* self) {
     return QQuickWindow_GrabWindow((QQuickWindow*)self);
 }
 
-void q_quickwindow_set_render_target(void* self, void* target) {
+void q_quickwindow_set_render_target(void* self, const void* target) {
     QQuickWindow_SetRenderTarget((QQuickWindow*)self, (QQuickRenderTarget*)target);
 }
 
-QQuickRenderTarget* q_quickwindow_render_target(void* self) {
+QQuickRenderTarget* q_quickwindow_render_target(const void* self) {
     return QQuickWindow_RenderTarget((QQuickWindow*)self);
 }
 
@@ -129,35 +129,35 @@ void q_quickwindow_end_external_commands(void* self) {
     QQuickWindow_EndExternalCommands((QQuickWindow*)self);
 }
 
-QQmlIncubationController* q_quickwindow_incubation_controller(void* self) {
+QQmlIncubationController* q_quickwindow_incubation_controller(const void* self) {
     return QQuickWindow_IncubationController((QQuickWindow*)self);
 }
 
-QAccessibleInterface* q_quickwindow_accessible_root(void* self) {
+QAccessibleInterface* q_quickwindow_accessible_root(const void* self) {
     return QQuickWindow_AccessibleRoot((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)()) {
+void q_quickwindow_on_accessible_root(const void* self, QAccessibleInterface* (*callback)(const void*)) {
     QQuickWindow_OnAccessibleRoot((QQuickWindow*)self, (intptr_t)callback);
 }
 
-QAccessibleInterface* q_quickwindow_super_accessible_root(void* self) {
+QAccessibleInterface* q_quickwindow_super_accessible_root(const void* self) {
     return QQuickWindow_SuperAccessibleRoot((QQuickWindow*)self);
 }
 
-QSGTexture* q_quickwindow_create_texture_from_image(void* self, void* image) {
+QSGTexture* q_quickwindow_create_texture_from_image(const void* self, const void* image) {
     return QQuickWindow_CreateTextureFromImage((QQuickWindow*)self, (QImage*)image);
 }
 
-QSGTexture* q_quickwindow_create_texture_from_image2(void* self, void* image, int32_t options) {
+QSGTexture* q_quickwindow_create_texture_from_image2(const void* self, const void* image, int32_t options) {
     return QQuickWindow_CreateTextureFromImage2((QQuickWindow*)self, (QImage*)image, options);
 }
 
-void q_quickwindow_set_color(void* self, void* color) {
+void q_quickwindow_set_color(void* self, const void* color) {
     QQuickWindow_SetColor((QQuickWindow*)self, (QColor*)color);
 }
 
-QColor* q_quickwindow_color(void* self) {
+QColor* q_quickwindow_color(const void* self) {
     return QQuickWindow_Color((QQuickWindow*)self);
 }
 
@@ -173,7 +173,7 @@ void q_quickwindow_set_persistent_graphics(void* self, bool persistent) {
     QQuickWindow_SetPersistentGraphics((QQuickWindow*)self, persistent);
 }
 
-bool q_quickwindow_is_persistent_graphics(void* self) {
+bool q_quickwindow_is_persistent_graphics(const void* self) {
     return QQuickWindow_IsPersistentGraphics((QQuickWindow*)self);
 }
 
@@ -181,11 +181,11 @@ void q_quickwindow_set_persistent_scene_graph(void* self, bool persistent) {
     QQuickWindow_SetPersistentSceneGraph((QQuickWindow*)self, persistent);
 }
 
-bool q_quickwindow_is_persistent_scene_graph(void* self) {
+bool q_quickwindow_is_persistent_scene_graph(const void* self) {
     return QQuickWindow_IsPersistentSceneGraph((QQuickWindow*)self);
 }
 
-bool q_quickwindow_is_scene_graph_initialized(void* self) {
+bool q_quickwindow_is_scene_graph_initialized(const void* self) {
     return QQuickWindow_IsSceneGraphInitialized((QQuickWindow*)self);
 }
 
@@ -193,11 +193,11 @@ void q_quickwindow_schedule_render_job(void* self, void* job, int32_t schedule) 
     QQuickWindow_ScheduleRenderJob((QQuickWindow*)self, (QRunnable*)job, schedule);
 }
 
-double q_quickwindow_effective_device_pixel_ratio(void* self) {
+double q_quickwindow_effective_device_pixel_ratio(const void* self) {
     return QQuickWindow_EffectiveDevicePixelRatio((QQuickWindow*)self);
 }
 
-QSGRendererInterface* q_quickwindow_renderer_interface(void* self) {
+QSGRendererInterface* q_quickwindow_renderer_interface(const void* self) {
     return QQuickWindow_RendererInterface((QQuickWindow*)self);
 }
 
@@ -220,35 +220,35 @@ const char* q_quickwindow_scene_graph_backend() {
     return _ret;
 }
 
-void q_quickwindow_set_graphics_device(void* self, void* device) {
+void q_quickwindow_set_graphics_device(void* self, const void* device) {
     QQuickWindow_SetGraphicsDevice((QQuickWindow*)self, (QQuickGraphicsDevice*)device);
 }
 
-QQuickGraphicsDevice* q_quickwindow_graphics_device(void* self) {
+QQuickGraphicsDevice* q_quickwindow_graphics_device(const void* self) {
     return QQuickWindow_GraphicsDevice((QQuickWindow*)self);
 }
 
-void q_quickwindow_set_graphics_configuration(void* self, void* config) {
+void q_quickwindow_set_graphics_configuration(void* self, const void* config) {
     QQuickWindow_SetGraphicsConfiguration((QQuickWindow*)self, (QQuickGraphicsConfiguration*)config);
 }
 
-QQuickGraphicsConfiguration* q_quickwindow_graphics_configuration(void* self) {
+QQuickGraphicsConfiguration* q_quickwindow_graphics_configuration(const void* self) {
     return QQuickWindow_GraphicsConfiguration((QQuickWindow*)self);
 }
 
-QSGRectangleNode* q_quickwindow_create_rectangle_node(void* self) {
+QSGRectangleNode* q_quickwindow_create_rectangle_node(const void* self) {
     return QQuickWindow_CreateRectangleNode((QQuickWindow*)self);
 }
 
-QSGImageNode* q_quickwindow_create_image_node(void* self) {
+QSGImageNode* q_quickwindow_create_image_node(const void* self) {
     return QQuickWindow_CreateImageNode((QQuickWindow*)self);
 }
 
-QSGNinePatchNode* q_quickwindow_create_nine_patch_node(void* self) {
+QSGNinePatchNode* q_quickwindow_create_nine_patch_node(const void* self) {
     return QQuickWindow_CreateNinePatchNode((QQuickWindow*)self);
 }
 
-QSGTextNode* q_quickwindow_create_text_node(void* self) {
+QSGTextNode* q_quickwindow_create_text_node(const void* self) {
     return QQuickWindow_CreateTextNode((QQuickWindow*)self);
 }
 
@@ -332,11 +332,11 @@ void q_quickwindow_on_scene_graph_about_to_stop(void* self, void (*callback)(voi
     QQuickWindow_Connect_SceneGraphAboutToStop((QQuickWindow*)self, (intptr_t)callback);
 }
 
-void q_quickwindow_color_changed(void* self, void* param1) {
+void q_quickwindow_color_changed(void* self, const void* param1) {
     QQuickWindow_ColorChanged((QQuickWindow*)self, (QColor*)param1);
 }
 
-void q_quickwindow_on_color_changed(void* self, void (*callback)(void*, void*)) {
+void q_quickwindow_on_color_changed(void* self, void (*callback)(void*, const void*)) {
     QQuickWindow_Connect_ColorChanged((QQuickWindow*)self, (intptr_t)callback);
 }
 
@@ -630,11 +630,11 @@ void q_quickwindow_set_surface_type(void* self, int32_t surfaceType) {
     QWindow_SetSurfaceType((QWindow*)self, surfaceType);
 }
 
-bool q_quickwindow_is_visible(void* self) {
+bool q_quickwindow_is_visible(const void* self) {
     return QWindow_IsVisible((QWindow*)self);
 }
 
-int32_t q_quickwindow_visibility(void* self) {
+int32_t q_quickwindow_visibility(const void* self) {
     return QWindow_Visibility((QWindow*)self);
 }
 
@@ -646,11 +646,11 @@ void q_quickwindow_create(void* self) {
     QWindow_Create((QWindow*)self);
 }
 
-uintptr_t q_quickwindow_win_id(void* self) {
+uintptr_t q_quickwindow_win_id(const void* self) {
     return QWindow_WinId((QWindow*)self);
 }
 
-QWindow* q_quickwindow_parent(void* self) {
+QWindow* q_quickwindow_parent(const void* self) {
     return QWindow_Parent((QWindow*)self);
 }
 
@@ -658,15 +658,15 @@ void q_quickwindow_set_parent(void* self, void* parent) {
     QWindow_SetParent((QWindow*)self, (QWindow*)parent);
 }
 
-bool q_quickwindow_is_top_level(void* self) {
+bool q_quickwindow_is_top_level(const void* self) {
     return QWindow_IsTopLevel((QWindow*)self);
 }
 
-bool q_quickwindow_is_modal(void* self) {
+bool q_quickwindow_is_modal(const void* self) {
     return QWindow_IsModal((QWindow*)self);
 }
 
-int32_t q_quickwindow_modality(void* self) {
+int32_t q_quickwindow_modality(const void* self) {
     return QWindow_Modality((QWindow*)self);
 }
 
@@ -674,11 +674,11 @@ void q_quickwindow_set_modality(void* self, int32_t modality) {
     QWindow_SetModality((QWindow*)self, modality);
 }
 
-void q_quickwindow_set_format(void* self, void* format) {
+void q_quickwindow_set_format(void* self, const void* format) {
     QWindow_SetFormat((QWindow*)self, (QSurfaceFormat*)format);
 }
 
-QSurfaceFormat* q_quickwindow_requested_format(void* self) {
+QSurfaceFormat* q_quickwindow_requested_format(const void* self) {
     return QWindow_RequestedFormat((QWindow*)self);
 }
 
@@ -686,7 +686,7 @@ void q_quickwindow_set_flags(void* self, int32_t flags) {
     QWindow_SetFlags((QWindow*)self, flags);
 }
 
-int32_t q_quickwindow_flags(void* self) {
+int32_t q_quickwindow_flags(const void* self) {
     return QWindow_Flags((QWindow*)self);
 }
 
@@ -694,11 +694,11 @@ void q_quickwindow_set_flag(void* self, int32_t param1) {
     QWindow_SetFlag((QWindow*)self, param1);
 }
 
-int32_t q_quickwindow_type(void* self) {
+int32_t q_quickwindow_type(const void* self) {
     return QWindow_Type((QWindow*)self);
 }
 
-const char* q_quickwindow_title(void* self) {
+const char* q_quickwindow_title(const void* self) {
     libqt_string _str = QWindow_Title((QWindow*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -709,19 +709,19 @@ void q_quickwindow_set_opacity(void* self, double level) {
     QWindow_SetOpacity((QWindow*)self, level);
 }
 
-double q_quickwindow_opacity(void* self) {
+double q_quickwindow_opacity(const void* self) {
     return QWindow_Opacity((QWindow*)self);
 }
 
-void q_quickwindow_set_mask(void* self, void* region) {
+void q_quickwindow_set_mask(void* self, const void* region) {
     QWindow_SetMask((QWindow*)self, (QRegion*)region);
 }
 
-QRegion* q_quickwindow_mask(void* self) {
+QRegion* q_quickwindow_mask(const void* self) {
     return QWindow_Mask((QWindow*)self);
 }
 
-bool q_quickwindow_is_active(void* self) {
+bool q_quickwindow_is_active(const void* self) {
     return QWindow_IsActive((QWindow*)self);
 }
 
@@ -729,19 +729,19 @@ void q_quickwindow_report_content_orientation_change(void* self, int32_t orienta
     QWindow_ReportContentOrientationChange((QWindow*)self, orientation);
 }
 
-int32_t q_quickwindow_content_orientation(void* self) {
+int32_t q_quickwindow_content_orientation(const void* self) {
     return QWindow_ContentOrientation((QWindow*)self);
 }
 
-double q_quickwindow_device_pixel_ratio(void* self) {
+double q_quickwindow_device_pixel_ratio(const void* self) {
     return QWindow_DevicePixelRatio((QWindow*)self);
 }
 
-int32_t q_quickwindow_window_state(void* self) {
+int32_t q_quickwindow_window_state(const void* self) {
     return QWindow_WindowState((QWindow*)self);
 }
 
-int32_t q_quickwindow_window_states(void* self) {
+int32_t q_quickwindow_window_states(const void* self) {
     return QWindow_WindowStates((QWindow*)self);
 }
 
@@ -757,107 +757,107 @@ void q_quickwindow_set_transient_parent(void* self, void* parent) {
     QWindow_SetTransientParent((QWindow*)self, (QWindow*)parent);
 }
 
-QWindow* q_quickwindow_transient_parent(void* self) {
+QWindow* q_quickwindow_transient_parent(const void* self) {
     return QWindow_TransientParent((QWindow*)self);
 }
 
-bool q_quickwindow_is_ancestor_of(void* self, void* child) {
+bool q_quickwindow_is_ancestor_of(const void* self, const void* child) {
     return QWindow_IsAncestorOf((QWindow*)self, (QWindow*)child);
 }
 
-bool q_quickwindow_is_exposed(void* self) {
+bool q_quickwindow_is_exposed(const void* self) {
     return QWindow_IsExposed((QWindow*)self);
 }
 
-int32_t q_quickwindow_minimum_width(void* self) {
+int32_t q_quickwindow_minimum_width(const void* self) {
     return QWindow_MinimumWidth((QWindow*)self);
 }
 
-int32_t q_quickwindow_minimum_height(void* self) {
+int32_t q_quickwindow_minimum_height(const void* self) {
     return QWindow_MinimumHeight((QWindow*)self);
 }
 
-int32_t q_quickwindow_maximum_width(void* self) {
+int32_t q_quickwindow_maximum_width(const void* self) {
     return QWindow_MaximumWidth((QWindow*)self);
 }
 
-int32_t q_quickwindow_maximum_height(void* self) {
+int32_t q_quickwindow_maximum_height(const void* self) {
     return QWindow_MaximumHeight((QWindow*)self);
 }
 
-QSize* q_quickwindow_minimum_size(void* self) {
+QSize* q_quickwindow_minimum_size(const void* self) {
     return QWindow_MinimumSize((QWindow*)self);
 }
 
-QSize* q_quickwindow_maximum_size(void* self) {
+QSize* q_quickwindow_maximum_size(const void* self) {
     return QWindow_MaximumSize((QWindow*)self);
 }
 
-QSize* q_quickwindow_base_size(void* self) {
+QSize* q_quickwindow_base_size(const void* self) {
     return QWindow_BaseSize((QWindow*)self);
 }
 
-QSize* q_quickwindow_size_increment(void* self) {
+QSize* q_quickwindow_size_increment(const void* self) {
     return QWindow_SizeIncrement((QWindow*)self);
 }
 
-void q_quickwindow_set_minimum_size(void* self, void* size) {
+void q_quickwindow_set_minimum_size(void* self, const void* size) {
     QWindow_SetMinimumSize((QWindow*)self, (QSize*)size);
 }
 
-void q_quickwindow_set_maximum_size(void* self, void* size) {
+void q_quickwindow_set_maximum_size(void* self, const void* size) {
     QWindow_SetMaximumSize((QWindow*)self, (QSize*)size);
 }
 
-void q_quickwindow_set_base_size(void* self, void* size) {
+void q_quickwindow_set_base_size(void* self, const void* size) {
     QWindow_SetBaseSize((QWindow*)self, (QSize*)size);
 }
 
-void q_quickwindow_set_size_increment(void* self, void* size) {
+void q_quickwindow_set_size_increment(void* self, const void* size) {
     QWindow_SetSizeIncrement((QWindow*)self, (QSize*)size);
 }
 
-QRect* q_quickwindow_geometry(void* self) {
+QRect* q_quickwindow_geometry(const void* self) {
     return QWindow_Geometry((QWindow*)self);
 }
 
-QMargins* q_quickwindow_frame_margins(void* self) {
+QMargins* q_quickwindow_frame_margins(const void* self) {
     return QWindow_FrameMargins((QWindow*)self);
 }
 
-QRect* q_quickwindow_frame_geometry(void* self) {
+QRect* q_quickwindow_frame_geometry(const void* self) {
     return QWindow_FrameGeometry((QWindow*)self);
 }
 
-QPoint* q_quickwindow_frame_position(void* self) {
+QPoint* q_quickwindow_frame_position(const void* self) {
     return QWindow_FramePosition((QWindow*)self);
 }
 
-void q_quickwindow_set_frame_position(void* self, void* point) {
+void q_quickwindow_set_frame_position(void* self, const void* point) {
     QWindow_SetFramePosition((QWindow*)self, (QPoint*)point);
 }
 
-int32_t q_quickwindow_width(void* self) {
+int32_t q_quickwindow_width(const void* self) {
     return QWindow_Width((QWindow*)self);
 }
 
-int32_t q_quickwindow_height(void* self) {
+int32_t q_quickwindow_height(const void* self) {
     return QWindow_Height((QWindow*)self);
 }
 
-int32_t q_quickwindow_x(void* self) {
+int32_t q_quickwindow_x(const void* self) {
     return QWindow_X((QWindow*)self);
 }
 
-int32_t q_quickwindow_y(void* self) {
+int32_t q_quickwindow_y(const void* self) {
     return QWindow_Y((QWindow*)self);
 }
 
-QPoint* q_quickwindow_position(void* self) {
+QPoint* q_quickwindow_position(const void* self) {
     return QWindow_Position((QWindow*)self);
 }
 
-void q_quickwindow_set_position(void* self, void* pt) {
+void q_quickwindow_set_position(void* self, const void* pt) {
     QWindow_SetPosition((QWindow*)self, (QPoint*)pt);
 }
 
@@ -865,7 +865,7 @@ void q_quickwindow_set_position2(void* self, int posx, int posy) {
     QWindow_SetPosition2((QWindow*)self, posx, posy);
 }
 
-void q_quickwindow_resize(void* self, void* newSize) {
+void q_quickwindow_resize(void* self, const void* newSize) {
     QWindow_Resize((QWindow*)self, (QSize*)newSize);
 }
 
@@ -877,18 +877,18 @@ void q_quickwindow_set_file_path(void* self, const char* filePath) {
     QWindow_SetFilePath((QWindow*)self, qstring(filePath));
 }
 
-const char* q_quickwindow_file_path(void* self) {
+const char* q_quickwindow_file_path(const void* self) {
     libqt_string _str = QWindow_FilePath((QWindow*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_quickwindow_set_icon(void* self, void* icon) {
+void q_quickwindow_set_icon(void* self, const void* icon) {
     QWindow_SetIcon((QWindow*)self, (QIcon*)icon);
 }
 
-QIcon* q_quickwindow_icon(void* self) {
+QIcon* q_quickwindow_icon(const void* self) {
     return QWindow_Icon((QWindow*)self);
 }
 
@@ -904,7 +904,7 @@ bool q_quickwindow_set_mouse_grab_enabled(void* self, bool grab) {
     return QWindow_SetMouseGrabEnabled((QWindow*)self, grab);
 }
 
-QScreen* q_quickwindow_screen(void* self) {
+QScreen* q_quickwindow_screen(const void* self) {
     return QWindow_Screen((QWindow*)self);
 }
 
@@ -912,27 +912,27 @@ void q_quickwindow_set_screen(void* self, void* screen) {
     QWindow_SetScreen((QWindow*)self, (QScreen*)screen);
 }
 
-QPointF* q_quickwindow_map_to_global(void* self, void* pos) {
+QPointF* q_quickwindow_map_to_global(const void* self, const void* pos) {
     return QWindow_MapToGlobal((QWindow*)self, (QPointF*)pos);
 }
 
-QPointF* q_quickwindow_map_from_global(void* self, void* pos) {
+QPointF* q_quickwindow_map_from_global(const void* self, const void* pos) {
     return QWindow_MapFromGlobal((QWindow*)self, (QPointF*)pos);
 }
 
-QPoint* q_quickwindow_map_to_global2(void* self, void* pos) {
+QPoint* q_quickwindow_map_to_global2(const void* self, const void* pos) {
     return QWindow_MapToGlobal2((QWindow*)self, (QPoint*)pos);
 }
 
-QPoint* q_quickwindow_map_from_global2(void* self, void* pos) {
+QPoint* q_quickwindow_map_from_global2(const void* self, const void* pos) {
     return QWindow_MapFromGlobal2((QWindow*)self, (QPoint*)pos);
 }
 
-QCursor* q_quickwindow_cursor(void* self) {
+QCursor* q_quickwindow_cursor(const void* self) {
     return QWindow_Cursor((QWindow*)self);
 }
 
-void q_quickwindow_set_cursor(void* self, void* cursor) {
+void q_quickwindow_set_cursor(void* self, const void* cursor) {
     QWindow_SetCursor((QWindow*)self, (QCursor*)cursor);
 }
 
@@ -1020,7 +1020,7 @@ void q_quickwindow_set_geometry(void* self, int posx, int posy, int w, int h) {
     QWindow_SetGeometry((QWindow*)self, posx, posy, w, h);
 }
 
-void q_quickwindow_set_geometry2(void* self, void* rect) {
+void q_quickwindow_set_geometry2(void* self, const void* rect) {
     QWindow_SetGeometry2((QWindow*)self, (QRect*)rect);
 }
 
@@ -1200,7 +1200,7 @@ void q_quickwindow_on_transient_parent_changed(void* self, void (*callback)(void
     QWindow_Connect_TransientParentChanged((QWindow*)self, (intptr_t)callback);
 }
 
-QWindow* q_quickwindow_parent1(void* self, int32_t mode) {
+QWindow* q_quickwindow_parent1(const void* self, int32_t mode) {
     return QWindow_Parent1((QWindow*)self, mode);
 }
 
@@ -1208,11 +1208,11 @@ void q_quickwindow_set_flag2(void* self, int32_t param1, bool on) {
     QWindow_SetFlag2((QWindow*)self, param1, on);
 }
 
-bool q_quickwindow_is_ancestor_of2(void* self, void* child, int32_t mode) {
+bool q_quickwindow_is_ancestor_of2(const void* self, const void* child, int32_t mode) {
     return QWindow_IsAncestorOf2((QWindow*)self, (QWindow*)child, mode);
 }
 
-const char* q_quickwindow_object_name(void* self) {
+const char* q_quickwindow_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1223,19 +1223,19 @@ void q_quickwindow_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_quickwindow_is_widget_type(void* self) {
+bool q_quickwindow_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_quickwindow_is_window_type(void* self) {
+bool q_quickwindow_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_quickwindow_is_quick_item_type(void* self) {
+bool q_quickwindow_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_quickwindow_signals_blocked(void* self) {
+bool q_quickwindow_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1243,7 +1243,7 @@ bool q_quickwindow_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_quickwindow_thread(void* self) {
+QThread* q_quickwindow_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1267,7 +1267,7 @@ void q_quickwindow_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_quickwindow_children(void* self) {
+libqt_list /* of QObject* */ q_quickwindow_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1280,55 +1280,55 @@ void q_quickwindow_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_quickwindow_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_quickwindow_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_quickwindow_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_quickwindow_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_quickwindow_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_quickwindow_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_quickwindow_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_quickwindow_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_quickwindow_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_quickwindow_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_quickwindow_disconnect3(void* self) {
+bool q_quickwindow_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_quickwindow_disconnect4(void* self, void* receiver) {
+bool q_quickwindow_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_quickwindow_disconnect5(void* param1) {
+bool q_quickwindow_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_quickwindow_dump_object_tree(void* self) {
+void q_quickwindow_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_quickwindow_dump_object_info(void* self) {
+void q_quickwindow_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_quickwindow_set_property(void* self, const char* name, void* value) {
+bool q_quickwindow_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_quickwindow_property(void* self, const char* name) {
+QVariant* q_quickwindow_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_quickwindow_dynamic_property_names(void* self) {
+const char** q_quickwindow_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1349,7 +1349,7 @@ QBindingStorage* q_quickwindow_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_quickwindow_binding_storage2(void* self) {
+const QBindingStorage* q_quickwindow_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1361,7 +1361,7 @@ void q_quickwindow_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-bool q_quickwindow_inherits(void* self, const char* classname) {
+bool q_quickwindow_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1377,31 +1377,31 @@ int32_t q_quickwindow_start_timer23(void* self, int64_t time, int32_t timerType)
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_quickwindow_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_quickwindow_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_quickwindow_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_quickwindow_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_quickwindow_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_quickwindow_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_quickwindow_disconnect1(void* self, const char* signal) {
+bool q_quickwindow_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_quickwindow_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_quickwindow_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_quickwindow_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_quickwindow_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_quickwindow_disconnect23(void* self, void* receiver, const char* member) {
+bool q_quickwindow_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1413,52 +1413,52 @@ void q_quickwindow_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int32_t q_quickwindow_surface_class(void* self) {
+int32_t q_quickwindow_surface_class(const void* self) {
     return QSurface_SurfaceClass(q_quickwindow_as_q_surface(self));
 }
 
-bool q_quickwindow_supports_open_g_l(void* self) {
+bool q_quickwindow_supports_open_g_l(const void* self) {
     return QSurface_SupportsOpenGL(q_quickwindow_as_q_surface(self));
 }
 
-void q_quickwindow_operator_assign(void* self, void* param1) {
+void q_quickwindow_operator_assign(void* self, const void* param1) {
     QSurface_OperatorAssign(q_quickwindow_as_q_surface(self), (QSurface*)param1);
 }
 
-int32_t q_quickwindow_surface_type(void* self) {
+int32_t q_quickwindow_surface_type(const void* self) {
     return QQuickWindow_SurfaceType((QQuickWindow*)self);
 }
 
-int32_t q_quickwindow_super_surface_type(void* self) {
+int32_t q_quickwindow_super_surface_type(const void* self) {
     return QQuickWindow_SuperSurfaceType((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_surface_type(void* self, int32_t (*callback)()) {
-    QQuickWindow_OnSurfaceType((QQuickWindow*)self, (intptr_t)callback);
+void q_quickwindow_on_surface_type(const void* self, int32_t (*callback)(const void*)) {
+    QQuickWindow_OnSurfaceType((const QQuickWindow*)self, (intptr_t)callback);
 }
 
-QSurfaceFormat* q_quickwindow_format(void* self) {
+QSurfaceFormat* q_quickwindow_format(const void* self) {
     return QQuickWindow_Format((QQuickWindow*)self);
 }
 
-QSurfaceFormat* q_quickwindow_super_format(void* self) {
+QSurfaceFormat* q_quickwindow_super_format(const void* self) {
     return QQuickWindow_SuperFormat((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_format(void* self, QSurfaceFormat* (*callback)()) {
-    QQuickWindow_OnFormat((QQuickWindow*)self, (intptr_t)callback);
+void q_quickwindow_on_format(const void* self, QSurfaceFormat* (*callback)(const void*)) {
+    QQuickWindow_OnFormat((const QQuickWindow*)self, (intptr_t)callback);
 }
 
-QSize* q_quickwindow_size(void* self) {
+QSize* q_quickwindow_size(const void* self) {
     return QQuickWindow_Size((QQuickWindow*)self);
 }
 
-QSize* q_quickwindow_super_size(void* self) {
+QSize* q_quickwindow_super_size(const void* self) {
     return QQuickWindow_SuperSize((QQuickWindow*)self);
 }
 
-void q_quickwindow_on_size(void* self, QSize* (*callback)()) {
-    QQuickWindow_OnSize((QQuickWindow*)self, (intptr_t)callback);
+void q_quickwindow_on_size(const void* self, QSize* (*callback)(const void*)) {
+    QQuickWindow_OnSize((const QQuickWindow*)self, (intptr_t)callback);
 }
 
 void q_quickwindow_paint_event(void* self, void* param1) {
@@ -1557,88 +1557,48 @@ void q_quickwindow_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QQuickWindow_OnCustomEvent((QQuickWindow*)self, (intptr_t)callback);
 }
 
-void q_quickwindow_connect_notify(void* self, void* signal) {
+void q_quickwindow_connect_notify(void* self, const void* signal) {
     QQuickWindow_ConnectNotify((QQuickWindow*)self, (QMetaMethod*)signal);
 }
 
-void q_quickwindow_super_connect_notify(void* self, void* signal) {
+void q_quickwindow_super_connect_notify(void* self, const void* signal) {
     QQuickWindow_SuperConnectNotify((QQuickWindow*)self, (QMetaMethod*)signal);
 }
 
-void q_quickwindow_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quickwindow_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuickWindow_OnConnectNotify((QQuickWindow*)self, (intptr_t)callback);
 }
 
-void q_quickwindow_disconnect_notify(void* self, void* signal) {
+void q_quickwindow_disconnect_notify(void* self, const void* signal) {
     QQuickWindow_DisconnectNotify((QQuickWindow*)self, (QMetaMethod*)signal);
 }
 
-void q_quickwindow_super_disconnect_notify(void* self, void* signal) {
+void q_quickwindow_super_disconnect_notify(void* self, const void* signal) {
     QQuickWindow_SuperDisconnectNotify((QQuickWindow*)self, (QMetaMethod*)signal);
 }
 
-void q_quickwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_quickwindow_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QQuickWindow_OnDisconnectNotify((QQuickWindow*)self, (intptr_t)callback);
 }
 
-void* q_quickwindow_resolve_interface(void* self, const char* name, int revision) {
+void* q_quickwindow_resolve_interface(const void* self, const char* name, int revision) {
     return QQuickWindow_ResolveInterface((QQuickWindow*)self, name, revision);
 }
 
-void* q_quickwindow_super_resolve_interface(void* self, const char* name, int revision) {
-    return QQuickWindow_SuperResolveInterface((QQuickWindow*)self, name, revision);
-}
-
-void q_quickwindow_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int)) {
-    QQuickWindow_OnResolveInterface((QQuickWindow*)self, (intptr_t)callback);
-}
-
-QObject* q_quickwindow_sender(void* self) {
+QObject* q_quickwindow_sender(const void* self) {
     return QQuickWindow_Sender((QQuickWindow*)self);
 }
 
-QObject* q_quickwindow_super_sender(void* self) {
-    return QQuickWindow_SuperSender((QQuickWindow*)self);
-}
-
-void q_quickwindow_on_sender(void* self, QObject* (*callback)()) {
-    QQuickWindow_OnSender((QQuickWindow*)self, (intptr_t)callback);
-}
-
-int32_t q_quickwindow_sender_signal_index(void* self) {
+int32_t q_quickwindow_sender_signal_index(const void* self) {
     return QQuickWindow_SenderSignalIndex((QQuickWindow*)self);
 }
 
-int32_t q_quickwindow_super_sender_signal_index(void* self) {
-    return QQuickWindow_SuperSenderSignalIndex((QQuickWindow*)self);
-}
-
-void q_quickwindow_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QQuickWindow_OnSenderSignalIndex((QQuickWindow*)self, (intptr_t)callback);
-}
-
-int32_t q_quickwindow_receivers(void* self, const char* signal) {
+int32_t q_quickwindow_receivers(const void* self, const char* signal) {
     return QQuickWindow_Receivers((QQuickWindow*)self, signal);
 }
 
-int32_t q_quickwindow_super_receivers(void* self, const char* signal) {
-    return QQuickWindow_SuperReceivers((QQuickWindow*)self, signal);
-}
-
-void q_quickwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QQuickWindow_OnReceivers((QQuickWindow*)self, (intptr_t)callback);
-}
-
-bool q_quickwindow_is_signal_connected(void* self, void* signal) {
+bool q_quickwindow_is_signal_connected(const void* self, const void* signal) {
     return QQuickWindow_IsSignalConnected((QQuickWindow*)self, (QMetaMethod*)signal);
-}
-
-bool q_quickwindow_super_is_signal_connected(void* self, void* signal) {
-    return QQuickWindow_SuperIsSignalConnected((QQuickWindow*)self, (QMetaMethod*)signal);
-}
-
-void q_quickwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QQuickWindow_OnIsSignalConnected((QQuickWindow*)self, (intptr_t)callback);
 }
 
 void q_quickwindow_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -1649,7 +1609,7 @@ void q_quickwindow_delete(void* self) {
     QQuickWindow_Delete((QQuickWindow*)(self));
 }
 
-int32_t q_quickwindow__graphicsstateinfo_current_frame_slot(void* self) {
+int32_t q_quickwindow__graphicsstateinfo_current_frame_slot(const void* self) {
     return QQuickWindow__GraphicsStateInfo_CurrentFrameSlot((QQuickWindow__GraphicsStateInfo*)self);
 }
 
@@ -1657,7 +1617,7 @@ void q_quickwindow__graphicsstateinfo_set_current_frame_slot(void* self, int cur
     QQuickWindow__GraphicsStateInfo_SetCurrentFrameSlot((QQuickWindow__GraphicsStateInfo*)self, currentFrameSlot);
 }
 
-int32_t q_quickwindow__graphicsstateinfo_frames_in_flight(void* self) {
+int32_t q_quickwindow__graphicsstateinfo_frames_in_flight(const void* self) {
     return QQuickWindow__GraphicsStateInfo_FramesInFlight((QQuickWindow__GraphicsStateInfo*)self);
 }
 

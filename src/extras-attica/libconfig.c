@@ -5,40 +5,40 @@ Attica__Config* k_attica__config_new() {
     return Attica__Config_New();
 }
 
-Attica__Config* k_attica__config_new2(void* other) {
+Attica__Config* k_attica__config_new2(const void* other) {
     return Attica__Config_New2((Attica__Config*)other);
 }
 
-void k_attica__config_operator_assign(void* self, void* other) {
+void k_attica__config_operator_assign(void* self, const void* other) {
     Attica__Config_OperatorAssign((Attica__Config*)self, (Attica__Config*)other);
 }
 
-const char* k_attica__config_contact(void* self) {
+const char* k_attica__config_contact(const void* self) {
     libqt_string _str = Attica__Config_Contact((Attica__Config*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__config_host(void* self) {
+const char* k_attica__config_host(const void* self) {
     libqt_string _str = Attica__Config_Host((Attica__Config*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_attica__config_version(void* self) {
+const char* k_attica__config_version(const void* self) {
     libqt_string _str = Attica__Config_Version((Attica__Config*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__config_ssl(void* self) {
+bool k_attica__config_ssl(const void* self) {
     return Attica__Config_Ssl((Attica__Config*)self);
 }
 
-const char* k_attica__config_website(void* self) {
+const char* k_attica__config_website(const void* self) {
     libqt_string _str = Attica__Config_Website((Attica__Config*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -65,7 +65,7 @@ void k_attica__config_set_website(void* self, const char* website) {
     Attica__Config_SetWebsite((Attica__Config*)self, qstring(website));
 }
 
-bool k_attica__config_is_valid(void* self) {
+bool k_attica__config_is_valid(const void* self) {
     return Attica__Config_IsValid((Attica__Config*)self);
 }
 

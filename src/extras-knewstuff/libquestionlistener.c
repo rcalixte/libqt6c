@@ -14,15 +14,15 @@ KNSCore__QuestionListener* k_nscore__questionlistener_new2(void* parent) {
     return KNSCore__QuestionListener_New2((QObject*)parent);
 }
 
-const QMetaObject* k_nscore__questionlistener_meta_object(void* self) {
+const QMetaObject* k_nscore__questionlistener_meta_object(const void* self) {
     return KNSCore__QuestionListener_MetaObject((KNSCore__QuestionListener*)self);
 }
 
-void k_nscore__questionlistener_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_nscore__questionlistener_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KNSCore__QuestionListener_OnMetaObject((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nscore__questionlistener_super_meta_object(void* self) {
+const QMetaObject* k_nscore__questionlistener_super_meta_object(const void* self) {
     return KNSCore__QuestionListener_SuperMetaObject((KNSCore__QuestionListener*)self);
 }
 
@@ -65,10 +65,6 @@ void k_nscore__questionlistener_on_ask_question(void* self, void (*callback)(voi
     KNSCore__QuestionListener_OnAskQuestion((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-void k_nscore__questionlistener_super_ask_question(void* self, void* question) {
-    KNSCore__QuestionListener_SuperAskQuestion((KNSCore__QuestionListener*)self, (KNSCore__Question*)question);
-}
-
 const char* k_nscore__questionlistener_tr2(const char* s, const char* c) {
     libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -83,7 +79,7 @@ const char* k_nscore__questionlistener_tr3(const char* s, const char* c, int n) 
     return _ret;
 }
 
-const char* k_nscore__questionlistener_object_name(void* self) {
+const char* k_nscore__questionlistener_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -94,19 +90,19 @@ void k_nscore__questionlistener_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_nscore__questionlistener_is_widget_type(void* self) {
+bool k_nscore__questionlistener_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_nscore__questionlistener_is_window_type(void* self) {
+bool k_nscore__questionlistener_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_nscore__questionlistener_is_quick_item_type(void* self) {
+bool k_nscore__questionlistener_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_nscore__questionlistener_signals_blocked(void* self) {
+bool k_nscore__questionlistener_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -114,7 +110,7 @@ bool k_nscore__questionlistener_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_nscore__questionlistener_thread(void* self) {
+QThread* k_nscore__questionlistener_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -138,7 +134,7 @@ void k_nscore__questionlistener_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_nscore__questionlistener_children(void* self) {
+libqt_list /* of QObject* */ k_nscore__questionlistener_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -155,55 +151,55 @@ void k_nscore__questionlistener_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_nscore__questionlistener_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_nscore__questionlistener_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_nscore__questionlistener_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_nscore__questionlistener_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_nscore__questionlistener_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_nscore__questionlistener_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_nscore__questionlistener_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_nscore__questionlistener_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_nscore__questionlistener_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_nscore__questionlistener_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_nscore__questionlistener_disconnect3(void* self) {
+bool k_nscore__questionlistener_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_nscore__questionlistener_disconnect4(void* self, void* receiver) {
+bool k_nscore__questionlistener_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_nscore__questionlistener_disconnect5(void* param1) {
+bool k_nscore__questionlistener_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_nscore__questionlistener_dump_object_tree(void* self) {
+void k_nscore__questionlistener_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_nscore__questionlistener_dump_object_info(void* self) {
+void k_nscore__questionlistener_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_nscore__questionlistener_set_property(void* self, const char* name, void* value) {
+bool k_nscore__questionlistener_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_nscore__questionlistener_property(void* self, const char* name) {
+QVariant* k_nscore__questionlistener_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_nscore__questionlistener_dynamic_property_names(void* self) {
+const char** k_nscore__questionlistener_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -224,7 +220,7 @@ QBindingStorage* k_nscore__questionlistener_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_nscore__questionlistener_binding_storage2(void* self) {
+const QBindingStorage* k_nscore__questionlistener_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -236,11 +232,11 @@ void k_nscore__questionlistener_on_destroyed(void* self, void (*callback)(void*)
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_nscore__questionlistener_parent(void* self) {
+QObject* k_nscore__questionlistener_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_nscore__questionlistener_inherits(void* self, const char* classname) {
+bool k_nscore__questionlistener_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -256,31 +252,31 @@ int32_t k_nscore__questionlistener_start_timer23(void* self, int64_t time, int32
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_nscore__questionlistener_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_nscore__questionlistener_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_nscore__questionlistener_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_nscore__questionlistener_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_nscore__questionlistener_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_nscore__questionlistener_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_nscore__questionlistener_disconnect1(void* self, const char* signal) {
+bool k_nscore__questionlistener_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_nscore__questionlistener_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_nscore__questionlistener_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_nscore__questionlistener_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_nscore__questionlistener_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_nscore__questionlistener_disconnect23(void* self, void* receiver, const char* member) {
+bool k_nscore__questionlistener_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -352,76 +348,44 @@ void k_nscore__questionlistener_on_custom_event(void* self, void (*callback)(voi
     KNSCore__QuestionListener_OnCustomEvent((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-void k_nscore__questionlistener_connect_notify(void* self, void* signal) {
+void k_nscore__questionlistener_connect_notify(void* self, const void* signal) {
     KNSCore__QuestionListener_ConnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__questionlistener_super_connect_notify(void* self, void* signal) {
+void k_nscore__questionlistener_super_connect_notify(void* self, const void* signal) {
     KNSCore__QuestionListener_SuperConnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__questionlistener_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_nscore__questionlistener_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KNSCore__QuestionListener_OnConnectNotify((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-void k_nscore__questionlistener_disconnect_notify(void* self, void* signal) {
+void k_nscore__questionlistener_disconnect_notify(void* self, const void* signal) {
     KNSCore__QuestionListener_DisconnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__questionlistener_super_disconnect_notify(void* self, void* signal) {
+void k_nscore__questionlistener_super_disconnect_notify(void* self, const void* signal) {
     KNSCore__QuestionListener_SuperDisconnectNotify((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
 }
 
-void k_nscore__questionlistener_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_nscore__questionlistener_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KNSCore__QuestionListener_OnDisconnectNotify((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
-QObject* k_nscore__questionlistener_sender(void* self) {
+QObject* k_nscore__questionlistener_sender(const void* self) {
     return KNSCore__QuestionListener_Sender((KNSCore__QuestionListener*)self);
 }
 
-QObject* k_nscore__questionlistener_super_sender(void* self) {
-    return KNSCore__QuestionListener_SuperSender((KNSCore__QuestionListener*)self);
-}
-
-void k_nscore__questionlistener_on_sender(void* self, QObject* (*callback)()) {
-    KNSCore__QuestionListener_OnSender((KNSCore__QuestionListener*)self, (intptr_t)callback);
-}
-
-int32_t k_nscore__questionlistener_sender_signal_index(void* self) {
+int32_t k_nscore__questionlistener_sender_signal_index(const void* self) {
     return KNSCore__QuestionListener_SenderSignalIndex((KNSCore__QuestionListener*)self);
 }
 
-int32_t k_nscore__questionlistener_super_sender_signal_index(void* self) {
-    return KNSCore__QuestionListener_SuperSenderSignalIndex((KNSCore__QuestionListener*)self);
-}
-
-void k_nscore__questionlistener_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KNSCore__QuestionListener_OnSenderSignalIndex((KNSCore__QuestionListener*)self, (intptr_t)callback);
-}
-
-int32_t k_nscore__questionlistener_receivers(void* self, const char* signal) {
+int32_t k_nscore__questionlistener_receivers(const void* self, const char* signal) {
     return KNSCore__QuestionListener_Receivers((KNSCore__QuestionListener*)self, signal);
 }
 
-int32_t k_nscore__questionlistener_super_receivers(void* self, const char* signal) {
-    return KNSCore__QuestionListener_SuperReceivers((KNSCore__QuestionListener*)self, signal);
-}
-
-void k_nscore__questionlistener_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KNSCore__QuestionListener_OnReceivers((KNSCore__QuestionListener*)self, (intptr_t)callback);
-}
-
-bool k_nscore__questionlistener_is_signal_connected(void* self, void* signal) {
+bool k_nscore__questionlistener_is_signal_connected(const void* self, const void* signal) {
     return KNSCore__QuestionListener_IsSignalConnected((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
-}
-
-bool k_nscore__questionlistener_super_is_signal_connected(void* self, void* signal) {
-    return KNSCore__QuestionListener_SuperIsSignalConnected((KNSCore__QuestionListener*)self, (QMetaMethod*)signal);
-}
-
-void k_nscore__questionlistener_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KNSCore__QuestionListener_OnIsSignalConnected((KNSCore__QuestionListener*)self, (intptr_t)callback);
 }
 
 void k_nscore__questionlistener_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

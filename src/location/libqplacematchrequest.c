@@ -8,11 +8,11 @@ QPlaceMatchRequest* q_placematchrequest_new() {
     return QPlaceMatchRequest_New();
 }
 
-QPlaceMatchRequest* q_placematchrequest_new2(void* other) {
+QPlaceMatchRequest* q_placematchrequest_new2(const void* other) {
     return QPlaceMatchRequest_New2((QPlaceMatchRequest*)other);
 }
 
-void q_placematchrequest_operator_assign(void* self, void* other) {
+void q_placematchrequest_operator_assign(void* self, const void* other) {
     QPlaceMatchRequest_OperatorAssign((QPlaceMatchRequest*)self, (QPlaceMatchRequest*)other);
 }
 
@@ -20,7 +20,7 @@ void q_placematchrequest_swap(void* self, void* other) {
     QPlaceMatchRequest_Swap((QPlaceMatchRequest*)self, (QPlaceMatchRequest*)other);
 }
 
-libqt_list /* of QPlace* */ q_placematchrequest_places(void* self) {
+libqt_list /* of QPlace* */ q_placematchrequest_places(const void* self) {
     libqt_list _arr = QPlaceMatchRequest_Places((QPlaceMatchRequest*)self);
     return _arr;
 }
@@ -33,7 +33,7 @@ void q_placematchrequest_set_results(void* self, libqt_list /* of QPlaceSearchRe
     QPlaceMatchRequest_SetResults((QPlaceMatchRequest*)self, results);
 }
 
-libqt_map /* of const char* to QVariant* */ q_placematchrequest_parameters(void* self) {
+libqt_map /* of const char* to QVariant* */ q_placematchrequest_parameters(const void* self) {
     // Convert QMap<QString,QVariant> to libqt_map
     libqt_map _out = QPlaceMatchRequest_Parameters((QPlaceMatchRequest*)self);
     libqt_map _ret;

@@ -24,26 +24,26 @@ QScatterSeries* q_scatterseries_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const QMetaObject* q_scatterseries_meta_object(void* self);
+const QMetaObject* q_scatterseries_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QScatterSeries*
-/// @param callback const QMetaObject* func()
+/// @param self const QScatterSeries*
+/// @param callback const QMetaObject* func(const QScatterSeries* self)
 ///
-void q_scatterseries_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_scatterseries_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const QMetaObject* q_scatterseries_super_meta_object(void* self);
+const QMetaObject* q_scatterseries_super_meta_object(const void* self);
 
 /// @param self QScatterSeries*
 /// @param param1 const char*
@@ -97,37 +97,37 @@ const char* q_scatterseries_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#type)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 ///
-int32_t q_scatterseries_type(void* self);
+int32_t q_scatterseries_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QScatterSeries*
-/// @param callback int32_t func()
+/// @param self const QScatterSeries*
+/// @param callback int32_t func(const QScatterSeries* self)
 ///
-void q_scatterseries_on_type(void* self, int32_t (*callback)());
+void q_scatterseries_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
 ///
-int32_t q_scatterseries_super_type(void* self);
+int32_t q_scatterseries_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setPen)
 ///
 /// @param self QScatterSeries*
 /// @param pen QPen*
 ///
-void q_scatterseries_set_pen(void* self, void* pen);
+void q_scatterseries_set_pen(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setPen)
 ///
@@ -136,7 +136,7 @@ void q_scatterseries_set_pen(void* self, void* pen);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QPen* pen)
 ///
-void q_scatterseries_on_set_pen(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_set_pen(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setPen)
 ///
@@ -145,14 +145,14 @@ void q_scatterseries_on_set_pen(void* self, void (*callback)(void*, void*));
 /// @param self QScatterSeries*
 /// @param pen QPen*
 ///
-void q_scatterseries_super_set_pen(void* self, void* pen);
+void q_scatterseries_super_set_pen(void* self, const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setBrush)
 ///
 /// @param self QScatterSeries*
 /// @param brush QBrush*
 ///
-void q_scatterseries_set_brush(void* self, void* brush);
+void q_scatterseries_set_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setBrush)
 ///
@@ -161,7 +161,7 @@ void q_scatterseries_set_brush(void* self, void* brush);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QBrush* brush)
 ///
-void q_scatterseries_on_set_brush(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_set_brush(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setBrush)
 ///
@@ -170,20 +170,20 @@ void q_scatterseries_on_set_brush(void* self, void (*callback)(void*, void*));
 /// @param self QScatterSeries*
 /// @param brush QBrush*
 ///
-void q_scatterseries_super_set_brush(void* self, void* brush);
+void q_scatterseries_super_set_brush(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#brush)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QBrush* q_scatterseries_brush(void* self);
+QBrush* q_scatterseries_brush(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setColor)
 ///
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_set_color(void* self, void* color);
+void q_scatterseries_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setColor)
 ///
@@ -192,7 +192,7 @@ void q_scatterseries_set_color(void* self, void* color);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QColor* color)
 ///
-void q_scatterseries_on_set_color(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_set_color(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setColor)
 ///
@@ -201,53 +201,53 @@ void q_scatterseries_on_set_color(void* self, void (*callback)(void*, void*));
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_super_set_color(void* self, void* color);
+void q_scatterseries_super_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#color)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QColor* q_scatterseries_color(void* self);
+QColor* q_scatterseries_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#color)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QScatterSeries*
-/// @param callback QColor* func()
+/// @param self const QScatterSeries*
+/// @param callback QColor* func(const QScatterSeries* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_scatterseries_on_color(void* self, QColor* (*callback)());
+void q_scatterseries_on_color(const void* self, QColor* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#color)
 ///
 /// Base class method implementation
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QColor* q_scatterseries_super_color(void* self);
+QColor* q_scatterseries_super_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setBorderColor)
 ///
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_set_border_color(void* self, void* color);
+void q_scatterseries_set_border_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#borderColor)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QColor* q_scatterseries_border_color(void* self);
+QColor* q_scatterseries_border_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#markerShape)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
 /// @return enum QScatterSeries__MarkerShape
 ///
-int32_t q_scatterseries_marker_shape(void* self);
+int32_t q_scatterseries_marker_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setMarkerShape)
 ///
@@ -258,9 +258,9 @@ void q_scatterseries_set_marker_shape(void* self, int32_t shape);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#markerSize)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-double q_scatterseries_marker_size(void* self);
+double q_scatterseries_marker_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setMarkerSize)
 ///
@@ -361,7 +361,7 @@ void q_scatterseries_append(void* self, double x, double y);
 /// @param self QScatterSeries*
 /// @param point QPointF*
 ///
-void q_scatterseries_append2(void* self, void* point);
+void q_scatterseries_append2(void* self, const void* point);
 
 /// Inherited from QXYSeries
 ///
@@ -392,7 +392,7 @@ void q_scatterseries_replace(void* self, double oldX, double oldY, double newX, 
 /// @param oldPoint QPointF*
 /// @param newPoint QPointF*
 ///
-void q_scatterseries_replace2(void* self, void* oldPoint, void* newPoint);
+void q_scatterseries_replace2(void* self, const void* oldPoint, const void* newPoint);
 
 /// Inherited from QXYSeries
 ///
@@ -413,7 +413,7 @@ void q_scatterseries_replace3(void* self, int index, double newX, double newY);
 /// @param index int
 /// @param newPoint QPointF*
 ///
-void q_scatterseries_replace4(void* self, int index, void* newPoint);
+void q_scatterseries_replace4(void* self, int index, const void* newPoint);
 
 /// Inherited from QXYSeries
 ///
@@ -432,7 +432,7 @@ void q_scatterseries_remove(void* self, double x, double y);
 /// @param self QScatterSeries*
 /// @param point QPointF*
 ///
-void q_scatterseries_remove2(void* self, void* point);
+void q_scatterseries_remove2(void* self, const void* point);
 
 /// Inherited from QXYSeries
 ///
@@ -461,7 +461,7 @@ void q_scatterseries_remove_points(void* self, int index, int count);
 /// @param index int
 /// @param point QPointF*
 ///
-void q_scatterseries_insert(void* self, int index, void* point);
+void q_scatterseries_insert(void* self, int index, const void* point);
 
 /// Inherited from QXYSeries
 ///
@@ -475,38 +475,38 @@ void q_scatterseries_clear(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#count)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-int32_t q_scatterseries_count(void* self);
+int32_t q_scatterseries_count(const void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#points)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_scatterseries_points(void* self);
+libqt_list q_scatterseries_points(const void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsVector)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
 /// @return libqt_list of QPointF*
 ///
-libqt_list q_scatterseries_points_vector(void* self);
+libqt_list q_scatterseries_points_vector(const void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#at)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param index int
 ///
-const QPointF* q_scatterseries_at(void* self, int index);
+const QPointF* q_scatterseries_at(const void* self, int index);
 
 /// Inherited from QXYSeries
 ///
@@ -515,7 +515,7 @@ const QPointF* q_scatterseries_at(void* self, int index);
 /// @param self QScatterSeries*
 /// @param point QPointF*
 ///
-QXYSeries* q_scatterseries_operator_shift_left(void* self, void* point);
+QXYSeries* q_scatterseries_operator_shift_left(void* self, const void* point);
 
 /// Inherited from QXYSeries
 ///
@@ -530,9 +530,9 @@ QXYSeries* q_scatterseries_operator_shift_left2(void* self, libqt_list points);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pen)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QPen* q_scatterseries_pen(void* self);
+QPen* q_scatterseries_pen(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -541,15 +541,15 @@ QPen* q_scatterseries_pen(void* self);
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_set_selected_color(void* self, void* color);
+void q_scatterseries_set_selected_color(void* self, const void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#selectedColor)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QColor* q_scatterseries_selected_color(void* self);
+QColor* q_scatterseries_selected_color(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -563,9 +563,9 @@ void q_scatterseries_set_points_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointsVisible)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_points_visible(void* self);
+bool q_scatterseries_points_visible(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -582,9 +582,9 @@ void q_scatterseries_set_point_labels_format(void* self, const char* format);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const char* q_scatterseries_point_labels_format(void* self);
+const char* q_scatterseries_point_labels_format(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -598,9 +598,9 @@ void q_scatterseries_set_point_labels_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsVisible)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_point_labels_visible(void* self);
+bool q_scatterseries_point_labels_visible(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -609,15 +609,15 @@ bool q_scatterseries_point_labels_visible(void* self);
 /// @param self QScatterSeries*
 /// @param font QFont*
 ///
-void q_scatterseries_set_point_labels_font(void* self, void* font);
+void q_scatterseries_set_point_labels_font(void* self, const void* font);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFont)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QFont* q_scatterseries_point_labels_font(void* self);
+QFont* q_scatterseries_point_labels_font(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -626,15 +626,15 @@ QFont* q_scatterseries_point_labels_font(void* self);
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_set_point_labels_color(void* self, void* color);
+void q_scatterseries_set_point_labels_color(void* self, const void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsColor)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QColor* q_scatterseries_point_labels_color(void* self);
+QColor* q_scatterseries_point_labels_color(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -648,9 +648,9 @@ void q_scatterseries_set_point_labels_clipping(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsClipping)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_point_labels_clipping(void* self);
+bool q_scatterseries_point_labels_clipping(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -745,11 +745,11 @@ void q_scatterseries_toggle_selection(void* self, libqt_list indexes);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#selectedPoints)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_scatterseries_selected_points(void* self);
+libqt_list q_scatterseries_selected_points(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -758,15 +758,15 @@ libqt_list q_scatterseries_selected_points(void* self);
 /// @param self QScatterSeries*
 /// @param lightMarker QImage*
 ///
-void q_scatterseries_set_light_marker(void* self, void* lightMarker);
+void q_scatterseries_set_light_marker(void* self, const void* lightMarker);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#lightMarker)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const QImage* q_scatterseries_light_marker(void* self);
+const QImage* q_scatterseries_light_marker(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -775,15 +775,15 @@ const QImage* q_scatterseries_light_marker(void* self);
 /// @param self QScatterSeries*
 /// @param selectedLightMarker QImage*
 ///
-void q_scatterseries_set_selected_light_marker(void* self, void* selectedLightMarker);
+void q_scatterseries_set_selected_light_marker(void* self, const void* selectedLightMarker);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#selectedLightMarker)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const QImage* q_scatterseries_selected_light_marker(void* self);
+const QImage* q_scatterseries_selected_light_marker(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -797,20 +797,20 @@ void q_scatterseries_set_best_fit_line_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineVisible)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_best_fit_line_visible(void* self);
+bool q_scatterseries_best_fit_line_visible(const void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineEquation)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param ok bool*
 ///
 /// @return pair_double_double tuple of double and double
 ///
-pair_double_double q_scatterseries_best_fit_line_equation(void* self, bool* ok);
+pair_double_double q_scatterseries_best_fit_line_equation(const void* self, bool* ok);
 
 /// Inherited from QXYSeries
 ///
@@ -819,15 +819,15 @@ pair_double_double q_scatterseries_best_fit_line_equation(void* self, bool* ok);
 /// @param self QScatterSeries*
 /// @param pen QPen*
 ///
-void q_scatterseries_set_best_fit_line_pen(void* self, void* pen);
+void q_scatterseries_set_best_fit_line_pen(void* self, const void* pen);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#bestFitLinePen)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QPen* q_scatterseries_best_fit_line_pen(void* self);
+QPen* q_scatterseries_best_fit_line_pen(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -836,15 +836,15 @@ QPen* q_scatterseries_best_fit_line_pen(void* self);
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_set_best_fit_line_color(void* self, void* color);
+void q_scatterseries_set_best_fit_line_color(void* self, const void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineColor)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QColor* q_scatterseries_best_fit_line_color(void* self);
+QColor* q_scatterseries_best_fit_line_color(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -901,7 +901,7 @@ void q_scatterseries_set_point_configuration(void* self, int index, libqt_map co
 /// @param key enum QXYSeries__PointConfiguration
 /// @param value QVariant*
 ///
-void q_scatterseries_set_point_configuration2(void* self, int index, int32_t key, void* value);
+void q_scatterseries_set_point_configuration2(void* self, int index, int32_t key, const void* value);
 
 /// Inherited from QXYSeries
 ///
@@ -927,12 +927,12 @@ void q_scatterseries_set_points_configuration(void* self, libqt_map pointsConfig
 /// free(map.values);
 /// ```
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param index int
 ///
 /// @return libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 ///
-libqt_map q_scatterseries_point_configuration(void* self, int index);
+libqt_map q_scatterseries_point_configuration(const void* self, int index);
 
 /// Inherited from QXYSeries
 ///
@@ -950,11 +950,11 @@ libqt_map q_scatterseries_point_configuration(void* self, int index);
 /// free(map.values);
 /// ```
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
 /// @return libqt_map of int to libqt_map of enum QXYSeries__PointConfiguration to QVariant*
 ///
-libqt_map q_scatterseries_points_configuration(void* self);
+libqt_map q_scatterseries_points_configuration(const void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -983,7 +983,7 @@ void q_scatterseries_color_by(void* self, libqt_list sourceData);
 /// @param self QScatterSeries*
 /// @param point QPointF*
 ///
-void q_scatterseries_clicked(void* self, void* point);
+void q_scatterseries_clicked(void* self, const void* point);
 
 /// Inherited from QXYSeries
 ///
@@ -992,7 +992,7 @@ void q_scatterseries_clicked(void* self, void* point);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QPointF* point)
 ///
-void q_scatterseries_on_clicked(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1002,7 +1002,7 @@ void q_scatterseries_on_clicked(void* self, void (*callback)(void*, void*));
 /// @param point QPointF*
 /// @param state bool
 ///
-void q_scatterseries_hovered(void* self, void* point, bool state);
+void q_scatterseries_hovered(void* self, const void* point, bool state);
 
 /// Inherited from QXYSeries
 ///
@@ -1011,7 +1011,7 @@ void q_scatterseries_hovered(void* self, void* point, bool state);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QPointF* point, bool state)
 ///
-void q_scatterseries_on_hovered(void* self, void (*callback)(void*, void*, bool));
+void q_scatterseries_on_hovered(void* self, void (*callback)(void*, const void*, bool));
 
 /// Inherited from QXYSeries
 ///
@@ -1020,7 +1020,7 @@ void q_scatterseries_on_hovered(void* self, void (*callback)(void*, void*, bool)
 /// @param self QScatterSeries*
 /// @param point QPointF*
 ///
-void q_scatterseries_pressed(void* self, void* point);
+void q_scatterseries_pressed(void* self, const void* point);
 
 /// Inherited from QXYSeries
 ///
@@ -1029,7 +1029,7 @@ void q_scatterseries_pressed(void* self, void* point);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QPointF* point)
 ///
-void q_scatterseries_on_pressed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_pressed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1038,7 +1038,7 @@ void q_scatterseries_on_pressed(void* self, void (*callback)(void*, void*));
 /// @param self QScatterSeries*
 /// @param point QPointF*
 ///
-void q_scatterseries_released(void* self, void* point);
+void q_scatterseries_released(void* self, const void* point);
 
 /// Inherited from QXYSeries
 ///
@@ -1047,7 +1047,7 @@ void q_scatterseries_released(void* self, void* point);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QPointF* point)
 ///
-void q_scatterseries_on_released(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_released(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1056,7 +1056,7 @@ void q_scatterseries_on_released(void* self, void (*callback)(void*, void*));
 /// @param self QScatterSeries*
 /// @param point QPointF*
 ///
-void q_scatterseries_double_clicked(void* self, void* point);
+void q_scatterseries_double_clicked(void* self, const void* point);
 
 /// Inherited from QXYSeries
 ///
@@ -1065,7 +1065,7 @@ void q_scatterseries_double_clicked(void* self, void* point);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QPointF* point)
 ///
-void q_scatterseries_on_double_clicked(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_double_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1128,7 +1128,7 @@ void q_scatterseries_on_point_added(void* self, void (*callback)(void*, int));
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_selected_color_changed(void* self, void* color);
+void q_scatterseries_selected_color_changed(void* self, const void* color);
 
 /// Inherited from QXYSeries
 ///
@@ -1137,7 +1137,7 @@ void q_scatterseries_selected_color_changed(void* self, void* color);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QColor* color)
 ///
-void q_scatterseries_on_selected_color_changed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_selected_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1199,7 +1199,7 @@ void q_scatterseries_on_point_labels_visibility_changed(void* self, void (*callb
 /// @param self QScatterSeries*
 /// @param font QFont*
 ///
-void q_scatterseries_point_labels_font_changed(void* self, void* font);
+void q_scatterseries_point_labels_font_changed(void* self, const void* font);
 
 /// Inherited from QXYSeries
 ///
@@ -1208,7 +1208,7 @@ void q_scatterseries_point_labels_font_changed(void* self, void* font);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QFont* font)
 ///
-void q_scatterseries_on_point_labels_font_changed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_point_labels_font_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1217,7 +1217,7 @@ void q_scatterseries_on_point_labels_font_changed(void* self, void (*callback)(v
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_point_labels_color_changed(void* self, void* color);
+void q_scatterseries_point_labels_color_changed(void* self, const void* color);
 
 /// Inherited from QXYSeries
 ///
@@ -1226,7 +1226,7 @@ void q_scatterseries_point_labels_color_changed(void* self, void* color);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QColor* color)
 ///
-void q_scatterseries_on_point_labels_color_changed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_point_labels_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1272,7 +1272,7 @@ void q_scatterseries_on_points_removed(void* self, void (*callback)(void*, int, 
 /// @param self QScatterSeries*
 /// @param pen QPen*
 ///
-void q_scatterseries_pen_changed(void* self, void* pen);
+void q_scatterseries_pen_changed(void* self, const void* pen);
 
 /// Inherited from QXYSeries
 ///
@@ -1281,7 +1281,7 @@ void q_scatterseries_pen_changed(void* self, void* pen);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QPen* pen)
 ///
-void q_scatterseries_on_pen_changed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1307,7 +1307,7 @@ void q_scatterseries_on_selected_points_changed(void* self, void (*callback)(voi
 /// @param self QScatterSeries*
 /// @param lightMarker QImage*
 ///
-void q_scatterseries_light_marker_changed(void* self, void* lightMarker);
+void q_scatterseries_light_marker_changed(void* self, const void* lightMarker);
 
 /// Inherited from QXYSeries
 ///
@@ -1316,7 +1316,7 @@ void q_scatterseries_light_marker_changed(void* self, void* lightMarker);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QImage* lightMarker)
 ///
-void q_scatterseries_on_light_marker_changed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_light_marker_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1325,7 +1325,7 @@ void q_scatterseries_on_light_marker_changed(void* self, void (*callback)(void*,
 /// @param self QScatterSeries*
 /// @param selectedLightMarker QImage*
 ///
-void q_scatterseries_selected_light_marker_changed(void* self, void* selectedLightMarker);
+void q_scatterseries_selected_light_marker_changed(void* self, const void* selectedLightMarker);
 
 /// Inherited from QXYSeries
 ///
@@ -1334,7 +1334,7 @@ void q_scatterseries_selected_light_marker_changed(void* self, void* selectedLig
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QImage* selectedLightMarker)
 ///
-void q_scatterseries_on_selected_light_marker_changed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_selected_light_marker_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1361,7 +1361,7 @@ void q_scatterseries_on_best_fit_line_visibility_changed(void* self, void (*call
 /// @param self QScatterSeries*
 /// @param pen QPen*
 ///
-void q_scatterseries_best_fit_line_pen_changed(void* self, void* pen);
+void q_scatterseries_best_fit_line_pen_changed(void* self, const void* pen);
 
 /// Inherited from QXYSeries
 ///
@@ -1370,7 +1370,7 @@ void q_scatterseries_best_fit_line_pen_changed(void* self, void* pen);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QPen* pen)
 ///
-void q_scatterseries_on_best_fit_line_pen_changed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_best_fit_line_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1379,7 +1379,7 @@ void q_scatterseries_on_best_fit_line_pen_changed(void* self, void (*callback)(v
 /// @param self QScatterSeries*
 /// @param color QColor*
 ///
-void q_scatterseries_best_fit_line_color_changed(void* self, void* color);
+void q_scatterseries_best_fit_line_color_changed(void* self, const void* color);
 
 /// Inherited from QXYSeries
 ///
@@ -1388,7 +1388,7 @@ void q_scatterseries_best_fit_line_color_changed(void* self, void* color);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QColor* color)
 ///
-void q_scatterseries_on_best_fit_line_color_changed(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_best_fit_line_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QXYSeries
 ///
@@ -1452,7 +1452,7 @@ void q_scatterseries_set_best_fit_line_visible1(void* self, bool visible);
 /// @param sourceData libqt_list of double
 /// @param gradient QLinearGradient*
 ///
-void q_scatterseries_color_by2(void* self, libqt_list sourceData, void* gradient);
+void q_scatterseries_color_by2(void* self, libqt_list sourceData, const void* gradient);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1469,9 +1469,9 @@ void q_scatterseries_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const char* q_scatterseries_name(void* self);
+const char* q_scatterseries_name(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1485,17 +1485,17 @@ void q_scatterseries_set_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_is_visible(void* self);
+bool q_scatterseries_is_visible(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-double q_scatterseries_opacity(void* self);
+double q_scatterseries_opacity(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1518,17 +1518,17 @@ void q_scatterseries_set_use_open_g_l(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_use_open_g_l(void* self);
+bool q_scatterseries_use_open_g_l(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractseries.html#chart)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QChart* q_scatterseries_chart(void* self);
+QChart* q_scatterseries_chart(const void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1666,9 +1666,9 @@ void q_scatterseries_set_use_open_g_l1(void* self, bool enable);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const char* q_scatterseries_object_name(void* self);
+const char* q_scatterseries_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1683,33 +1683,33 @@ void q_scatterseries_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_is_widget_type(void* self);
+bool q_scatterseries_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_is_window_type(void* self);
+bool q_scatterseries_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_is_quick_item_type(void* self);
+bool q_scatterseries_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_signals_blocked(void* self);
+bool q_scatterseries_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1724,9 +1724,9 @@ bool q_scatterseries_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QThread* q_scatterseries_thread(void* self);
+QThread* q_scatterseries_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1777,11 +1777,11 @@ void q_scatterseries_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_scatterseries_children(void* self);
+libqt_list q_scatterseries_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1819,7 +1819,7 @@ void q_scatterseries_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_scatterseries_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_scatterseries_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1830,18 +1830,18 @@ QMetaObject__Connection* q_scatterseries_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_scatterseries_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_scatterseries_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_scatterseries_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_scatterseries_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1852,7 +1852,7 @@ QMetaObject__Connection* q_scatterseries_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_scatterseries_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_scatterseries_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1863,24 +1863,24 @@ bool q_scatterseries_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_scatterseries_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_scatterseries_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-bool q_scatterseries_disconnect3(void* self);
+bool q_scatterseries_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param receiver QObject*
 ///
-bool q_scatterseries_disconnect4(void* self, void* receiver);
+bool q_scatterseries_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1888,23 +1888,23 @@ bool q_scatterseries_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_scatterseries_disconnect5(void* param1);
+bool q_scatterseries_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-void q_scatterseries_dump_object_tree(void* self);
+void q_scatterseries_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-void q_scatterseries_dump_object_info(void* self);
+void q_scatterseries_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1914,16 +1914,16 @@ void q_scatterseries_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_scatterseries_set_property(void* self, const char* name, void* value);
+bool q_scatterseries_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param name const char*
 ///
-QVariant* q_scatterseries_property(void* self, const char* name);
+QVariant* q_scatterseries_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1931,9 +1931,9 @@ QVariant* q_scatterseries_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const char** q_scatterseries_dynamic_property_names(void* self);
+const char** q_scatterseries_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1947,9 +1947,9 @@ QBindingStorage* q_scatterseries_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-const QBindingStorage* q_scatterseries_binding_storage2(void* self);
+const QBindingStorage* q_scatterseries_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1972,18 +1972,18 @@ void q_scatterseries_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QObject* q_scatterseries_parent(void* self);
+QObject* q_scatterseries_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param classname const char*
 ///
-bool q_scatterseries_inherits(void* self, const char* classname);
+bool q_scatterseries_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2023,7 +2023,7 @@ int32_t q_scatterseries_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scatterseries_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_scatterseries_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2035,59 +2035,59 @@ QMetaObject__Connection* q_scatterseries_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scatterseries_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_scatterseries_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_scatterseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_scatterseries_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param signal const char*
 ///
-bool q_scatterseries_disconnect1(void* self, const char* signal);
+bool q_scatterseries_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScatterSeries*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_scatterseries_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_scatterseries_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_scatterseries_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_scatterseries_disconnect23(void* self, void* receiver, const char* member);
+bool q_scatterseries_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QScatterSeries*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_scatterseries_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2283,7 +2283,7 @@ void q_scatterseries_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self QScatterSeries*
 /// @param signal QMetaMethod*
 ///
-void q_scatterseries_connect_notify(void* self, void* signal);
+void q_scatterseries_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2294,7 +2294,7 @@ void q_scatterseries_connect_notify(void* self, void* signal);
 /// @param self QScatterSeries*
 /// @param signal QMetaMethod*
 ///
-void q_scatterseries_super_connect_notify(void* self, void* signal);
+void q_scatterseries_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2305,7 +2305,7 @@ void q_scatterseries_super_connect_notify(void* self, void* signal);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QMetaMethod* signal)
 ///
-void q_scatterseries_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2316,7 +2316,7 @@ void q_scatterseries_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self QScatterSeries*
 /// @param signal QMetaMethod*
 ///
-void q_scatterseries_disconnect_notify(void* self, void* signal);
+void q_scatterseries_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2327,7 +2327,7 @@ void q_scatterseries_disconnect_notify(void* self, void* signal);
 /// @param self QScatterSeries*
 /// @param signal QMetaMethod*
 ///
-void q_scatterseries_super_disconnect_notify(void* self, void* signal);
+void q_scatterseries_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2338,7 +2338,7 @@ void q_scatterseries_super_disconnect_notify(void* self, void* signal);
 /// @param self QScatterSeries*
 /// @param callback void func(QScatterSeries* self, QMetaMethod* signal)
 ///
-void q_scatterseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_scatterseries_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2346,9 +2346,9 @@ void q_scatterseries_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QObject* q_scatterseries_sender(void* self);
+QObject* q_scatterseries_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2356,9 +2356,9 @@ QObject* q_scatterseries_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-QObject* q_scatterseries_super_sender(void* self);
+QObject* q_scatterseries_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2366,10 +2366,10 @@ QObject* q_scatterseries_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QScatterSeries*
-/// @param callback QObject* func()
+/// @param self const QScatterSeries*
+/// @param callback QObject* func(QScatterSeries* self)
 ///
-void q_scatterseries_on_sender(void* self, QObject* (*callback)());
+void q_scatterseries_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2377,9 +2377,9 @@ void q_scatterseries_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-int32_t q_scatterseries_sender_signal_index(void* self);
+int32_t q_scatterseries_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2387,9 +2387,9 @@ int32_t q_scatterseries_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 ///
-int32_t q_scatterseries_super_sender_signal_index(void* self);
+int32_t q_scatterseries_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2397,10 +2397,10 @@ int32_t q_scatterseries_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QScatterSeries*
-/// @param callback int32_t func()
+/// @param self const QScatterSeries*
+/// @param callback int32_t func(QScatterSeries* self)
 ///
-void q_scatterseries_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_scatterseries_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2408,10 +2408,10 @@ void q_scatterseries_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param signal const char*
 ///
-int32_t q_scatterseries_receivers(void* self, const char* signal);
+int32_t q_scatterseries_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2419,10 +2419,10 @@ int32_t q_scatterseries_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param signal const char*
 ///
-int32_t q_scatterseries_super_receivers(void* self, const char* signal);
+int32_t q_scatterseries_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2430,10 +2430,10 @@ int32_t q_scatterseries_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param callback int32_t func(QScatterSeries* self, const char* signal)
 ///
-void q_scatterseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_scatterseries_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2441,10 +2441,10 @@ void q_scatterseries_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param signal QMetaMethod*
 ///
-bool q_scatterseries_is_signal_connected(void* self, void* signal);
+bool q_scatterseries_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2452,10 +2452,10 @@ bool q_scatterseries_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param signal QMetaMethod*
 ///
-bool q_scatterseries_super_is_signal_connected(void* self, void* signal);
+bool q_scatterseries_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2463,10 +2463,10 @@ bool q_scatterseries_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QScatterSeries*
+/// @param self const QScatterSeries*
 /// @param callback bool func(QScatterSeries* self, QMetaMethod* signal)
 ///
-void q_scatterseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_scatterseries_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

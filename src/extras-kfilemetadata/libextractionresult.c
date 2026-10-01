@@ -6,7 +6,7 @@ KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new(const char
     return KFileMetaData__ExtractionResult_New(qstring(url));
 }
 
-KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new2(void* rhs) {
+KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new2(const void* rhs) {
     return KFileMetaData__ExtractionResult_New2((KFileMetaData__ExtractionResult*)rhs);
 }
 
@@ -18,21 +18,21 @@ KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new4(const cha
     return KFileMetaData__ExtractionResult_New4(qstring(url), qstring(mimetype), flags);
 }
 
-const char* k_filemetadata__extractionresult_input_url(void* self) {
+const char* k_filemetadata__extractionresult_input_url(const void* self) {
     libqt_string _str = KFileMetaData__ExtractionResult_InputUrl((KFileMetaData__ExtractionResult*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_filemetadata__extractionresult_input_mimetype(void* self) {
+const char* k_filemetadata__extractionresult_input_mimetype(const void* self) {
     libqt_string _str = KFileMetaData__ExtractionResult_InputMimetype((KFileMetaData__ExtractionResult*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_filemetadata__extractionresult_input_flags(void* self) {
+int32_t k_filemetadata__extractionresult_input_flags(const void* self) {
     return KFileMetaData__ExtractionResult_InputFlags((KFileMetaData__ExtractionResult*)self);
 }
 
@@ -44,20 +44,12 @@ void k_filemetadata__extractionresult_on_append(void* self, void (*callback)(voi
     KFileMetaData__ExtractionResult_OnAppend((KFileMetaData__ExtractionResult*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__extractionresult_super_append(void* self, const char* text) {
-    KFileMetaData__ExtractionResult_SuperAppend((KFileMetaData__ExtractionResult*)self, qstring(text));
-}
-
-void k_filemetadata__extractionresult_add(void* self, int32_t property, void* value) {
+void k_filemetadata__extractionresult_add(void* self, int32_t property, const void* value) {
     KFileMetaData__ExtractionResult_Add((KFileMetaData__ExtractionResult*)self, property, (QVariant*)value);
 }
 
-void k_filemetadata__extractionresult_on_add(void* self, void (*callback)(void*, int32_t, void*)) {
+void k_filemetadata__extractionresult_on_add(void* self, void (*callback)(void*, int32_t, const void*)) {
     KFileMetaData__ExtractionResult_OnAdd((KFileMetaData__ExtractionResult*)self, (intptr_t)callback);
-}
-
-void k_filemetadata__extractionresult_super_add(void* self, int32_t property, void* value) {
-    KFileMetaData__ExtractionResult_SuperAdd((KFileMetaData__ExtractionResult*)self, property, (QVariant*)value);
 }
 
 void k_filemetadata__extractionresult_add_type(void* self, int32_t type) {
@@ -68,11 +60,7 @@ void k_filemetadata__extractionresult_on_add_type(void* self, void (*callback)(v
     KFileMetaData__ExtractionResult_OnAddType((KFileMetaData__ExtractionResult*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__extractionresult_super_add_type(void* self, int32_t type) {
-    KFileMetaData__ExtractionResult_SuperAddType((KFileMetaData__ExtractionResult*)self, type);
-}
-
-libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ k_filemetadata__extractionresult_image_data(void* self) {
+libqt_map /* of enum KFileMetaData__EmbeddedImageData__ImageType to char* */ k_filemetadata__extractionresult_image_data(const void* self) {
     // Convert QMap<KFileMetaData::EmbeddedImageData::ImageType,QByteArray> to libqt_map
     libqt_map _out = KFileMetaData__ExtractionResult_ImageData((KFileMetaData__ExtractionResult*)self);
     libqt_map _ret;

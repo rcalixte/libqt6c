@@ -24,26 +24,26 @@ KNSCore__QuestionListener* k_nscore__questionlistener_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-const QMetaObject* k_nscore__questionlistener_meta_object(void* self);
+const QMetaObject* k_nscore__questionlistener_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KNSCore__QuestionListener*
-/// @param callback const QMetaObject* func()
+/// @param self const KNSCore__QuestionListener*
+/// @param callback const QMetaObject* func(const KNSCore__QuestionListener* self)
 ///
-void k_nscore__questionlistener_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_nscore__questionlistener_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-const QMetaObject* k_nscore__questionlistener_super_meta_object(void* self);
+const QMetaObject* k_nscore__questionlistener_super_meta_object(const void* self);
 
 /// @param self KNSCore__QuestionListener*
 /// @param param1 const char*
@@ -97,6 +97,8 @@ const char* k_nscore__questionlistener_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/knscore-questionlistener.html#askQuestion)
 ///
+/// @warning This method must be implemented with `k_nscore__questionlistener_on_ask_question` before it can be called.
+///
 /// @param self KNSCore__QuestionListener*
 /// @param question KNSCore__Question*
 ///
@@ -110,15 +112,6 @@ void k_nscore__questionlistener_ask_question(void* self, void* question);
 /// @param callback void func(KNSCore__QuestionListener* self, KNSCore__Question* question)
 ///
 void k_nscore__questionlistener_on_ask_question(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/knscore-questionlistener.html#askQuestion)
-///
-/// Base class method implementation
-///
-/// @param self KNSCore__QuestionListener*
-/// @param question KNSCore__Question*
-///
-void k_nscore__questionlistener_super_ask_question(void* self, void* question);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -145,9 +138,9 @@ const char* k_nscore__questionlistener_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-const char* k_nscore__questionlistener_object_name(void* self);
+const char* k_nscore__questionlistener_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -162,33 +155,33 @@ void k_nscore__questionlistener_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-bool k_nscore__questionlistener_is_widget_type(void* self);
+bool k_nscore__questionlistener_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-bool k_nscore__questionlistener_is_window_type(void* self);
+bool k_nscore__questionlistener_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-bool k_nscore__questionlistener_is_quick_item_type(void* self);
+bool k_nscore__questionlistener_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-bool k_nscore__questionlistener_signals_blocked(void* self);
+bool k_nscore__questionlistener_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -203,9 +196,9 @@ bool k_nscore__questionlistener_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-QThread* k_nscore__questionlistener_thread(void* self);
+QThread* k_nscore__questionlistener_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -256,11 +249,11 @@ void k_nscore__questionlistener_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_nscore__questionlistener_children(void* self);
+libqt_list k_nscore__questionlistener_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -298,7 +291,7 @@ void k_nscore__questionlistener_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_nscore__questionlistener_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_nscore__questionlistener_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -309,18 +302,18 @@ QMetaObject__Connection* k_nscore__questionlistener_connect(void* sender, const 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_nscore__questionlistener_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_nscore__questionlistener_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_nscore__questionlistener_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_nscore__questionlistener_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -331,7 +324,7 @@ QMetaObject__Connection* k_nscore__questionlistener_connect3(void* self, void* s
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_nscore__questionlistener_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_nscore__questionlistener_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -342,24 +335,24 @@ bool k_nscore__questionlistener_disconnect(void* sender, const char* signal, voi
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_nscore__questionlistener_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_nscore__questionlistener_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-bool k_nscore__questionlistener_disconnect3(void* self);
+bool k_nscore__questionlistener_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param receiver QObject*
 ///
-bool k_nscore__questionlistener_disconnect4(void* self, void* receiver);
+bool k_nscore__questionlistener_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -367,23 +360,23 @@ bool k_nscore__questionlistener_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_nscore__questionlistener_disconnect5(void* param1);
+bool k_nscore__questionlistener_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-void k_nscore__questionlistener_dump_object_tree(void* self);
+void k_nscore__questionlistener_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-void k_nscore__questionlistener_dump_object_info(void* self);
+void k_nscore__questionlistener_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -393,16 +386,16 @@ void k_nscore__questionlistener_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_nscore__questionlistener_set_property(void* self, const char* name, void* value);
+bool k_nscore__questionlistener_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param name const char*
 ///
-QVariant* k_nscore__questionlistener_property(void* self, const char* name);
+QVariant* k_nscore__questionlistener_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -410,9 +403,9 @@ QVariant* k_nscore__questionlistener_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-const char** k_nscore__questionlistener_dynamic_property_names(void* self);
+const char** k_nscore__questionlistener_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -426,9 +419,9 @@ QBindingStorage* k_nscore__questionlistener_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-const QBindingStorage* k_nscore__questionlistener_binding_storage2(void* self);
+const QBindingStorage* k_nscore__questionlistener_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -451,18 +444,18 @@ void k_nscore__questionlistener_on_destroyed(void* self, void (*callback)(void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-QObject* k_nscore__questionlistener_parent(void* self);
+QObject* k_nscore__questionlistener_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param classname const char*
 ///
-bool k_nscore__questionlistener_inherits(void* self, const char* classname);
+bool k_nscore__questionlistener_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -502,7 +495,7 @@ int32_t k_nscore__questionlistener_start_timer23(void* self, int64_t time, int32
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_nscore__questionlistener_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_nscore__questionlistener_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -514,59 +507,59 @@ QMetaObject__Connection* k_nscore__questionlistener_connect5(void* sender, const
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_nscore__questionlistener_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_nscore__questionlistener_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_nscore__questionlistener_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_nscore__questionlistener_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param signal const char*
 ///
-bool k_nscore__questionlistener_disconnect1(void* self, const char* signal);
+bool k_nscore__questionlistener_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__QuestionListener*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_nscore__questionlistener_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_nscore__questionlistener_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_nscore__questionlistener_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_nscore__questionlistener_disconnect23(void* self, void* receiver, const char* member);
+bool k_nscore__questionlistener_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KNSCore__QuestionListener*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_nscore__questionlistener_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -762,7 +755,7 @@ void k_nscore__questionlistener_on_custom_event(void* self, void (*callback)(voi
 /// @param self KNSCore__QuestionListener*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__questionlistener_connect_notify(void* self, void* signal);
+void k_nscore__questionlistener_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -773,7 +766,7 @@ void k_nscore__questionlistener_connect_notify(void* self, void* signal);
 /// @param self KNSCore__QuestionListener*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__questionlistener_super_connect_notify(void* self, void* signal);
+void k_nscore__questionlistener_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -784,7 +777,7 @@ void k_nscore__questionlistener_super_connect_notify(void* self, void* signal);
 /// @param self KNSCore__QuestionListener*
 /// @param callback void func(KNSCore__QuestionListener* self, QMetaMethod* signal)
 ///
-void k_nscore__questionlistener_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_nscore__questionlistener_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -795,7 +788,7 @@ void k_nscore__questionlistener_on_connect_notify(void* self, void (*callback)(v
 /// @param self KNSCore__QuestionListener*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__questionlistener_disconnect_notify(void* self, void* signal);
+void k_nscore__questionlistener_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -806,7 +799,7 @@ void k_nscore__questionlistener_disconnect_notify(void* self, void* signal);
 /// @param self KNSCore__QuestionListener*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__questionlistener_super_disconnect_notify(void* self, void* signal);
+void k_nscore__questionlistener_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -817,7 +810,7 @@ void k_nscore__questionlistener_super_disconnect_notify(void* self, void* signal
 /// @param self KNSCore__QuestionListener*
 /// @param callback void func(KNSCore__QuestionListener* self, QMetaMethod* signal)
 ///
-void k_nscore__questionlistener_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_nscore__questionlistener_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -825,9 +818,9 @@ void k_nscore__questionlistener_on_disconnect_notify(void* self, void (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-QObject* k_nscore__questionlistener_sender(void* self);
+QObject* k_nscore__questionlistener_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -835,9 +828,9 @@ QObject* k_nscore__questionlistener_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-QObject* k_nscore__questionlistener_super_sender(void* self);
+QObject* k_nscore__questionlistener_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -845,10 +838,10 @@ QObject* k_nscore__questionlistener_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
-/// @param callback QObject* func()
+/// @param self const KNSCore__QuestionListener*
+/// @param callback QObject* func(KNSCore__QuestionListener* self)
 ///
-void k_nscore__questionlistener_on_sender(void* self, QObject* (*callback)());
+void k_nscore__questionlistener_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -856,9 +849,9 @@ void k_nscore__questionlistener_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-int32_t k_nscore__questionlistener_sender_signal_index(void* self);
+int32_t k_nscore__questionlistener_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -866,9 +859,9 @@ int32_t k_nscore__questionlistener_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 ///
-int32_t k_nscore__questionlistener_super_sender_signal_index(void* self);
+int32_t k_nscore__questionlistener_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -876,10 +869,10 @@ int32_t k_nscore__questionlistener_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
-/// @param callback int32_t func()
+/// @param self const KNSCore__QuestionListener*
+/// @param callback int32_t func(KNSCore__QuestionListener* self)
 ///
-void k_nscore__questionlistener_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_nscore__questionlistener_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -887,10 +880,10 @@ void k_nscore__questionlistener_on_sender_signal_index(void* self, int32_t (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param signal const char*
 ///
-int32_t k_nscore__questionlistener_receivers(void* self, const char* signal);
+int32_t k_nscore__questionlistener_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -898,10 +891,10 @@ int32_t k_nscore__questionlistener_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param signal const char*
 ///
-int32_t k_nscore__questionlistener_super_receivers(void* self, const char* signal);
+int32_t k_nscore__questionlistener_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -909,10 +902,10 @@ int32_t k_nscore__questionlistener_super_receivers(void* self, const char* signa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param callback int32_t func(KNSCore__QuestionListener* self, const char* signal)
 ///
-void k_nscore__questionlistener_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_nscore__questionlistener_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -920,10 +913,10 @@ void k_nscore__questionlistener_on_receivers(void* self, int32_t (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param signal QMetaMethod*
 ///
-bool k_nscore__questionlistener_is_signal_connected(void* self, void* signal);
+bool k_nscore__questionlistener_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -931,10 +924,10 @@ bool k_nscore__questionlistener_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param signal QMetaMethod*
 ///
-bool k_nscore__questionlistener_super_is_signal_connected(void* self, void* signal);
+bool k_nscore__questionlistener_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -942,10 +935,10 @@ bool k_nscore__questionlistener_super_is_signal_connected(void* self, void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KNSCore__QuestionListener*
+/// @param self const KNSCore__QuestionListener*
 /// @param callback bool func(KNSCore__QuestionListener* self, QMetaMethod* signal)
 ///
-void k_nscore__questionlistener_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_nscore__questionlistener_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

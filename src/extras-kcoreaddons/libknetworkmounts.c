@@ -4,7 +4,7 @@
 #include "libknetworkmounts.hpp"
 #include "libknetworkmounts.h"
 
-const QMetaObject* k_networkmounts_meta_object(void* self) {
+const QMetaObject* k_networkmounts_meta_object(const void* self) {
     return KNetworkMounts_MetaObject((KNetworkMounts*)self);
 }
 
@@ -35,7 +35,7 @@ bool k_networkmounts_is_option_enabled_for_path(void* self, const char* path, in
     return KNetworkMounts_IsOptionEnabledForPath((KNetworkMounts*)self, qstring(path), option);
 }
 
-bool k_networkmounts_is_enabled(void* self) {
+bool k_networkmounts_is_enabled(const void* self) {
     return KNetworkMounts_IsEnabled((KNetworkMounts*)self);
 }
 
@@ -43,7 +43,7 @@ void k_networkmounts_set_enabled(void* self, bool value) {
     KNetworkMounts_SetEnabled((KNetworkMounts*)self, value);
 }
 
-bool k_networkmounts_is_option_enabled(void* self, int32_t option) {
+bool k_networkmounts_is_option_enabled(const void* self, int32_t option) {
     return KNetworkMounts_IsOptionEnabled((KNetworkMounts*)self, option);
 }
 
@@ -51,7 +51,7 @@ void k_networkmounts_set_option(void* self, int32_t option, bool value) {
     KNetworkMounts_SetOption((KNetworkMounts*)self, option, value);
 }
 
-const char** k_networkmounts_paths(void* self) {
+const char** k_networkmounts_paths(const void* self) {
     libqt_list _arr = KNetworkMounts_Paths((KNetworkMounts*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -119,11 +119,11 @@ bool k_networkmounts_is_slow_path2(void* self, const char* path, int32_t type) {
     return KNetworkMounts_IsSlowPath2((KNetworkMounts*)self, qstring(path), type);
 }
 
-bool k_networkmounts_is_option_enabled2(void* self, int32_t option, bool defaultValue) {
+bool k_networkmounts_is_option_enabled2(const void* self, int32_t option, bool defaultValue) {
     return KNetworkMounts_IsOptionEnabled2((KNetworkMounts*)self, option, defaultValue);
 }
 
-const char** k_networkmounts_paths1(void* self, int32_t type) {
+const char** k_networkmounts_paths1(const void* self, int32_t type) {
     libqt_list _arr = KNetworkMounts_Paths1((KNetworkMounts*)self, type);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -148,7 +148,7 @@ bool k_networkmounts_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* k_networkmounts_object_name(void* self) {
+const char* k_networkmounts_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -159,19 +159,19 @@ void k_networkmounts_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_networkmounts_is_widget_type(void* self) {
+bool k_networkmounts_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_networkmounts_is_window_type(void* self) {
+bool k_networkmounts_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_networkmounts_is_quick_item_type(void* self) {
+bool k_networkmounts_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_networkmounts_signals_blocked(void* self) {
+bool k_networkmounts_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -179,7 +179,7 @@ bool k_networkmounts_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_networkmounts_thread(void* self) {
+QThread* k_networkmounts_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -203,7 +203,7 @@ void k_networkmounts_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_networkmounts_children(void* self) {
+libqt_list /* of QObject* */ k_networkmounts_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -220,55 +220,55 @@ void k_networkmounts_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_networkmounts_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_networkmounts_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_networkmounts_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_networkmounts_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_networkmounts_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_networkmounts_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_networkmounts_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_networkmounts_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_networkmounts_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_networkmounts_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_networkmounts_disconnect3(void* self) {
+bool k_networkmounts_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_networkmounts_disconnect4(void* self, void* receiver) {
+bool k_networkmounts_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_networkmounts_disconnect5(void* param1) {
+bool k_networkmounts_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_networkmounts_dump_object_tree(void* self) {
+void k_networkmounts_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_networkmounts_dump_object_info(void* self) {
+void k_networkmounts_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_networkmounts_set_property(void* self, const char* name, void* value) {
+bool k_networkmounts_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_networkmounts_property(void* self, const char* name) {
+QVariant* k_networkmounts_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_networkmounts_dynamic_property_names(void* self) {
+const char** k_networkmounts_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -289,7 +289,7 @@ QBindingStorage* k_networkmounts_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_networkmounts_binding_storage2(void* self) {
+const QBindingStorage* k_networkmounts_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -301,11 +301,11 @@ void k_networkmounts_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_networkmounts_parent(void* self) {
+QObject* k_networkmounts_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_networkmounts_inherits(void* self, const char* classname) {
+bool k_networkmounts_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -321,31 +321,31 @@ int32_t k_networkmounts_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_networkmounts_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_networkmounts_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_networkmounts_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_networkmounts_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_networkmounts_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_networkmounts_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_networkmounts_disconnect1(void* self, const char* signal) {
+bool k_networkmounts_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_networkmounts_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_networkmounts_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_networkmounts_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_networkmounts_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_networkmounts_disconnect23(void* self, void* receiver, const char* member) {
+bool k_networkmounts_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 

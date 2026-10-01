@@ -14,7 +14,7 @@
 ///
 /// @param other KCursor*
 ///
-KCursor* k_cursor_new(void* other);
+KCursor* k_cursor_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kcursor.html)
 

@@ -41,14 +41,13 @@ QUrl* QQmlExtensionPlugin_BaseUrl(const QQmlExtensionPlugin* self);
 void QQmlExtensionPlugin_RegisterTypes(QQmlExtensionPlugin* self, const char* uri);
 void QQmlExtensionPlugin_UnregisterTypes(QQmlExtensionPlugin* self);
 void QQmlExtensionPlugin_InitializeEngine(QQmlExtensionPlugin* self, QQmlEngine* engine, const char* uri);
-void QQmlExtensionPlugin_OnMetaObject(const QQmlExtensionPlugin* self, intptr_t slot);
+void QQmlExtensionPlugin_OnMetaObject(QQmlExtensionPlugin* self, intptr_t slot);
 QMetaObject* QQmlExtensionPlugin_SuperMetaObject(const QQmlExtensionPlugin* self);
 void QQmlExtensionPlugin_OnMetacast(QQmlExtensionPlugin* self, intptr_t slot);
 void* QQmlExtensionPlugin_SuperMetacast(QQmlExtensionPlugin* self, const char* param1);
 void QQmlExtensionPlugin_OnMetacall(QQmlExtensionPlugin* self, intptr_t slot);
 int QQmlExtensionPlugin_SuperMetacall(QQmlExtensionPlugin* self, int param1, int param2, void** param3);
 void QQmlExtensionPlugin_OnRegisterTypes(QQmlExtensionPlugin* self, intptr_t slot);
-void QQmlExtensionPlugin_SuperRegisterTypes(QQmlExtensionPlugin* self, const char* uri);
 void QQmlExtensionPlugin_OnUnregisterTypes(QQmlExtensionPlugin* self, intptr_t slot);
 void QQmlExtensionPlugin_SuperUnregisterTypes(QQmlExtensionPlugin* self);
 void QQmlExtensionPlugin_OnInitializeEngine(QQmlExtensionPlugin* self, intptr_t slot);
@@ -75,17 +74,9 @@ void QQmlExtensionPlugin_DisconnectNotify(QQmlExtensionPlugin* self, const QMeta
 void QQmlExtensionPlugin_OnDisconnectNotify(QQmlExtensionPlugin* self, intptr_t slot);
 void QQmlExtensionPlugin_SuperDisconnectNotify(QQmlExtensionPlugin* self, const QMetaMethod* signal);
 QObject* QQmlExtensionPlugin_Sender(const QQmlExtensionPlugin* self);
-void QQmlExtensionPlugin_OnSender(const QQmlExtensionPlugin* self, intptr_t slot);
-QObject* QQmlExtensionPlugin_SuperSender(const QQmlExtensionPlugin* self);
 int QQmlExtensionPlugin_SenderSignalIndex(const QQmlExtensionPlugin* self);
-void QQmlExtensionPlugin_OnSenderSignalIndex(const QQmlExtensionPlugin* self, intptr_t slot);
-int QQmlExtensionPlugin_SuperSenderSignalIndex(const QQmlExtensionPlugin* self);
 int QQmlExtensionPlugin_Receivers(const QQmlExtensionPlugin* self, const char* signal);
-void QQmlExtensionPlugin_OnReceivers(const QQmlExtensionPlugin* self, intptr_t slot);
-int QQmlExtensionPlugin_SuperReceivers(const QQmlExtensionPlugin* self, const char* signal);
 bool QQmlExtensionPlugin_IsSignalConnected(const QQmlExtensionPlugin* self, const QMetaMethod* signal);
-void QQmlExtensionPlugin_OnIsSignalConnected(const QQmlExtensionPlugin* self, intptr_t slot);
-bool QQmlExtensionPlugin_SuperIsSignalConnected(const QQmlExtensionPlugin* self, const QMetaMethod* signal);
 void QQmlExtensionPlugin_Delete(QQmlExtensionPlugin* self);
 
 QQmlEngineExtensionPlugin* QQmlEngineExtensionPlugin_New();
@@ -96,7 +87,7 @@ QMetaObject* QQmlEngineExtensionPlugin_MetaObject(const QQmlEngineExtensionPlugi
 void* QQmlEngineExtensionPlugin_Metacast(QQmlEngineExtensionPlugin* self, const char* param1);
 int QQmlEngineExtensionPlugin_Metacall(QQmlEngineExtensionPlugin* self, int param1, int param2, void** param3);
 void QQmlEngineExtensionPlugin_InitializeEngine(QQmlEngineExtensionPlugin* self, QQmlEngine* engine, const char* uri);
-void QQmlEngineExtensionPlugin_OnMetaObject(const QQmlEngineExtensionPlugin* self, intptr_t slot);
+void QQmlEngineExtensionPlugin_OnMetaObject(QQmlEngineExtensionPlugin* self, intptr_t slot);
 QMetaObject* QQmlEngineExtensionPlugin_SuperMetaObject(const QQmlEngineExtensionPlugin* self);
 void QQmlEngineExtensionPlugin_OnMetacast(QQmlEngineExtensionPlugin* self, intptr_t slot);
 void* QQmlEngineExtensionPlugin_SuperMetacast(QQmlEngineExtensionPlugin* self, const char* param1);
@@ -126,17 +117,9 @@ void QQmlEngineExtensionPlugin_DisconnectNotify(QQmlEngineExtensionPlugin* self,
 void QQmlEngineExtensionPlugin_OnDisconnectNotify(QQmlEngineExtensionPlugin* self, intptr_t slot);
 void QQmlEngineExtensionPlugin_SuperDisconnectNotify(QQmlEngineExtensionPlugin* self, const QMetaMethod* signal);
 QObject* QQmlEngineExtensionPlugin_Sender(const QQmlEngineExtensionPlugin* self);
-void QQmlEngineExtensionPlugin_OnSender(const QQmlEngineExtensionPlugin* self, intptr_t slot);
-QObject* QQmlEngineExtensionPlugin_SuperSender(const QQmlEngineExtensionPlugin* self);
 int QQmlEngineExtensionPlugin_SenderSignalIndex(const QQmlEngineExtensionPlugin* self);
-void QQmlEngineExtensionPlugin_OnSenderSignalIndex(const QQmlEngineExtensionPlugin* self, intptr_t slot);
-int QQmlEngineExtensionPlugin_SuperSenderSignalIndex(const QQmlEngineExtensionPlugin* self);
 int QQmlEngineExtensionPlugin_Receivers(const QQmlEngineExtensionPlugin* self, const char* signal);
-void QQmlEngineExtensionPlugin_OnReceivers(const QQmlEngineExtensionPlugin* self, intptr_t slot);
-int QQmlEngineExtensionPlugin_SuperReceivers(const QQmlEngineExtensionPlugin* self, const char* signal);
 bool QQmlEngineExtensionPlugin_IsSignalConnected(const QQmlEngineExtensionPlugin* self, const QMetaMethod* signal);
-void QQmlEngineExtensionPlugin_OnIsSignalConnected(const QQmlEngineExtensionPlugin* self, intptr_t slot);
-bool QQmlEngineExtensionPlugin_SuperIsSignalConnected(const QQmlEngineExtensionPlugin* self, const QMetaMethod* signal);
 void QQmlEngineExtensionPlugin_Delete(QQmlEngineExtensionPlugin* self);
 
 #ifdef __cplusplus

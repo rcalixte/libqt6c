@@ -8,7 +8,7 @@
 #include "libdeletejob_1.hpp"
 #include "libdeletejob_1.h"
 
-const QMetaObject* k_io__deletejob_meta_object(void* self) {
+const QMetaObject* k_io__deletejob_meta_object(const void* self) {
     return KIO__DeleteJob_MetaObject((KIO__DeleteJob*)self);
 }
 
@@ -27,7 +27,7 @@ const char* k_io__deletejob_tr(const char* s) {
     return _ret;
 }
 
-libqt_list /* of QUrl* */ k_io__deletejob_urls(void* self) {
+libqt_list /* of QUrl* */ k_io__deletejob_urls(const void* self) {
     libqt_list _arr = KIO__DeleteJob_Urls((KIO__DeleteJob*)self);
     return _arr;
 }
@@ -64,11 +64,11 @@ void k_io__deletejob_on_processed_dirs(void* self, void (*callback)(void*, void*
     KIO__DeleteJob_Connect_ProcessedDirs((KIO__DeleteJob*)self, (intptr_t)callback);
 }
 
-void k_io__deletejob_deleting(void* self, void* job, void* file) {
+void k_io__deletejob_deleting(void* self, void* job, const void* file) {
     KIO__DeleteJob_Deleting((KIO__DeleteJob*)self, (KIO__Job*)job, (QUrl*)file);
 }
 
-void k_io__deletejob_on_deleting(void* self, void (*callback)(void*, void*, void*)) {
+void k_io__deletejob_on_deleting(void* self, void (*callback)(void*, void*, const void*)) {
     KIO__DeleteJob_Connect_Deleting((KIO__DeleteJob*)self, (intptr_t)callback);
 }
 
@@ -90,7 +90,7 @@ void k_io__deletejob_start(void* self) {
     KIO__Job_Start((KIO__Job*)self);
 }
 
-KIO__JobUiDelegateExtension* k_io__deletejob_ui_delegate_extension(void* self) {
+KIO__JobUiDelegateExtension* k_io__deletejob_ui_delegate_extension(const void* self) {
     return KIO__Job_UiDelegateExtension((KIO__Job*)self);
 }
 
@@ -98,14 +98,14 @@ void k_io__deletejob_set_ui_delegate_extension(void* self, void* extension) {
     KIO__Job_SetUiDelegateExtension((KIO__Job*)self, (KIO__JobUiDelegateExtension*)extension);
 }
 
-const char* k_io__deletejob_error_string(void* self) {
+const char* k_io__deletejob_error_string(const void* self) {
     libqt_string _str = KIO__Job_ErrorString((KIO__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_io__deletejob_detailed_error_strings(void* self) {
+const char** k_io__deletejob_detailed_error_strings(const void* self) {
     libqt_list _arr = KIO__Job_DetailedErrorStrings((KIO__Job*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -126,11 +126,11 @@ void k_io__deletejob_set_parent_job(void* self, void* parentJob) {
     KIO__Job_SetParentJob((KIO__Job*)self, (KIO__Job*)parentJob);
 }
 
-KIO__Job* k_io__deletejob_parent_job(void* self) {
+KIO__Job* k_io__deletejob_parent_job(const void* self) {
     return KIO__Job_ParentJob((KIO__Job*)self);
 }
 
-void k_io__deletejob_set_meta_data(void* self, void* metaData) {
+void k_io__deletejob_set_meta_data(void* self, const void* metaData) {
     KIO__Job_SetMetaData((KIO__Job*)self, (KIO__MetaData*)metaData);
 }
 
@@ -194,11 +194,11 @@ void k_io__deletejob_merge_meta_data(void* self, libqt_map /* of const char* to 
     free(values_ret.values);
 }
 
-KIO__MetaData* k_io__deletejob_outgoing_meta_data(void* self) {
+KIO__MetaData* k_io__deletejob_outgoing_meta_data(const void* self) {
     return KIO__Job_OutgoingMetaData((KIO__Job*)self);
 }
 
-KIO__MetaData* k_io__deletejob_meta_data(void* self) {
+KIO__MetaData* k_io__deletejob_meta_data(const void* self) {
     return KIO__Job_MetaData((KIO__Job*)self);
 }
 
@@ -217,7 +217,7 @@ void k_io__deletejob_on_connected(void* self, void (*callback)(void*, void*)) {
     KIO__Job_Connect_Connected((KIO__Job*)self, (intptr_t)callback);
 }
 
-const char** k_io__deletejob_detailed_error_strings1(void* self, void* reqUrl) {
+const char** k_io__deletejob_detailed_error_strings1(const void* self, const void* reqUrl) {
     libqt_list _arr = KIO__Job_DetailedErrorStrings1((KIO__Job*)self, (QUrl*)reqUrl);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -234,7 +234,7 @@ const char** k_io__deletejob_detailed_error_strings1(void* self, void* reqUrl) {
     return _ret;
 }
 
-const char** k_io__deletejob_detailed_error_strings2(void* self, void* reqUrl, int method) {
+const char** k_io__deletejob_detailed_error_strings2(const void* self, const void* reqUrl, int method) {
     libqt_list _arr = KIO__Job_DetailedErrorStrings2((KIO__Job*)self, (QUrl*)reqUrl, method);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -255,15 +255,15 @@ void k_io__deletejob_set_ui_delegate(void* self, void* delegate) {
     KJob_SetUiDelegate((KJob*)self, (KJobUiDelegate*)delegate);
 }
 
-KJobUiDelegate* k_io__deletejob_ui_delegate(void* self) {
+KJobUiDelegate* k_io__deletejob_ui_delegate(const void* self) {
     return KJob_UiDelegate((KJob*)self);
 }
 
-int32_t k_io__deletejob_capabilities(void* self) {
+int32_t k_io__deletejob_capabilities(const void* self) {
     return KJob_Capabilities((KJob*)self);
 }
 
-bool k_io__deletejob_is_suspended(void* self) {
+bool k_io__deletejob_is_suspended(const void* self) {
     return KJob_IsSuspended((KJob*)self);
 }
 
@@ -283,26 +283,26 @@ bool k_io__deletejob_exec(void* self) {
     return KJob_Exec((KJob*)self);
 }
 
-int32_t k_io__deletejob_error(void* self) {
+int32_t k_io__deletejob_error(const void* self) {
     return KJob_Error((KJob*)self);
 }
 
-const char* k_io__deletejob_error_text(void* self) {
+const char* k_io__deletejob_error_text(const void* self) {
     libqt_string _str = KJob_ErrorText((KJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uintptr_t k_io__deletejob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_io__deletejob_processed_amount(const void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uintptr_t k_io__deletejob_total_amount(void* self, int32_t unit) {
+uintptr_t k_io__deletejob_total_amount(const void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uintptr_t k_io__deletejob_percent(void* self) {
+uintptr_t k_io__deletejob_percent(const void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -310,7 +310,7 @@ void k_io__deletejob_set_auto_delete(void* self, bool autodelete) {
     KJob_SetAutoDelete((KJob*)self, autodelete);
 }
 
-bool k_io__deletejob_is_auto_delete(void* self) {
+bool k_io__deletejob_is_auto_delete(const void* self) {
     return KJob_IsAutoDelete((KJob*)self);
 }
 
@@ -318,15 +318,15 @@ void k_io__deletejob_set_finished_notification_hidden(void* self) {
     KJob_SetFinishedNotificationHidden((KJob*)self);
 }
 
-bool k_io__deletejob_is_finished_notification_hidden(void* self) {
+bool k_io__deletejob_is_finished_notification_hidden(const void* self) {
     return KJob_IsFinishedNotificationHidden((KJob*)self);
 }
 
-bool k_io__deletejob_is_started_with_exec(void* self) {
+bool k_io__deletejob_is_started_with_exec(const void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-int64_t k_io__deletejob_elapsed_time(void* self) {
+int64_t k_io__deletejob_elapsed_time(const void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -386,7 +386,7 @@ bool k_io__deletejob_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* k_io__deletejob_object_name(void* self) {
+const char* k_io__deletejob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -397,19 +397,19 @@ void k_io__deletejob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_io__deletejob_is_widget_type(void* self) {
+bool k_io__deletejob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_io__deletejob_is_window_type(void* self) {
+bool k_io__deletejob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_io__deletejob_is_quick_item_type(void* self) {
+bool k_io__deletejob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_io__deletejob_signals_blocked(void* self) {
+bool k_io__deletejob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -417,7 +417,7 @@ bool k_io__deletejob_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_io__deletejob_thread(void* self) {
+QThread* k_io__deletejob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -441,7 +441,7 @@ void k_io__deletejob_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_io__deletejob_children(void* self) {
+libqt_list /* of QObject* */ k_io__deletejob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -458,55 +458,55 @@ void k_io__deletejob_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_io__deletejob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_io__deletejob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_io__deletejob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_io__deletejob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_io__deletejob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_io__deletejob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_io__deletejob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_io__deletejob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_io__deletejob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_io__deletejob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_io__deletejob_disconnect3(void* self) {
+bool k_io__deletejob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_io__deletejob_disconnect4(void* self, void* receiver) {
+bool k_io__deletejob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_io__deletejob_disconnect5(void* param1) {
+bool k_io__deletejob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_io__deletejob_dump_object_tree(void* self) {
+void k_io__deletejob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_io__deletejob_dump_object_info(void* self) {
+void k_io__deletejob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_io__deletejob_set_property(void* self, const char* name, void* value) {
+bool k_io__deletejob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_io__deletejob_property(void* self, const char* name) {
+QVariant* k_io__deletejob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_io__deletejob_dynamic_property_names(void* self) {
+const char** k_io__deletejob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -527,7 +527,7 @@ QBindingStorage* k_io__deletejob_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_io__deletejob_binding_storage2(void* self) {
+const QBindingStorage* k_io__deletejob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -539,11 +539,11 @@ void k_io__deletejob_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_io__deletejob_parent(void* self) {
+QObject* k_io__deletejob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_io__deletejob_inherits(void* self, const char* classname) {
+bool k_io__deletejob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -559,31 +559,31 @@ int32_t k_io__deletejob_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_io__deletejob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_io__deletejob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_io__deletejob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_io__deletejob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_io__deletejob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_io__deletejob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_io__deletejob_disconnect1(void* self, const char* signal) {
+bool k_io__deletejob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_io__deletejob_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_io__deletejob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_io__deletejob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_io__deletejob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_io__deletejob_disconnect23(void* self, void* receiver, const char* member) {
+bool k_io__deletejob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -631,7 +631,7 @@ void k_io__deletejob_delete(void* self) {
     KIO__DeleteJob_Delete((KIO__DeleteJob*)(self));
 }
 
-KIO__DeleteJob* k_io_del(void* src, int32_t flags) {
+KIO__DeleteJob* k_io_del(const void* src, int32_t flags) {
     return KIO_Del((QUrl*)src, flags);
 }
 

@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-const QMetaObject* q_qmlimageproviderbase_meta_object(void* self);
+const QMetaObject* q_qmlimageproviderbase_meta_object(const void* self);
 
 /// @param self QQmlImageProviderBase*
 /// @param param1 const char*
@@ -38,19 +38,23 @@ const char* q_qmlimageproviderbase_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlimageproviderbase.html#imageType)
 ///
-/// @param self QQmlImageProviderBase*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QQmlImageProviderBase*
 ///
 /// @return enum QQmlImageProviderBase__ImageType
 ///
-int32_t q_qmlimageproviderbase_image_type(void* self);
+int32_t q_qmlimageproviderbase_image_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlimageproviderbase.html#flags)
 ///
-/// @param self QQmlImageProviderBase*
+/// @warning Use caution when calling this method as it might not be defined.
+///
+/// @param self const QQmlImageProviderBase*
 ///
 /// @return flag of enum QQmlImageProviderBase__Flag
 ///
-int32_t q_qmlimageproviderbase_flags(void* self);
+int32_t q_qmlimageproviderbase_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -96,9 +100,9 @@ bool q_qmlimageproviderbase_event_filter(void* self, void* watched, void* event)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-const char* q_qmlimageproviderbase_object_name(void* self);
+const char* q_qmlimageproviderbase_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -113,33 +117,33 @@ void q_qmlimageproviderbase_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-bool q_qmlimageproviderbase_is_widget_type(void* self);
+bool q_qmlimageproviderbase_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-bool q_qmlimageproviderbase_is_window_type(void* self);
+bool q_qmlimageproviderbase_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-bool q_qmlimageproviderbase_is_quick_item_type(void* self);
+bool q_qmlimageproviderbase_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-bool q_qmlimageproviderbase_signals_blocked(void* self);
+bool q_qmlimageproviderbase_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -154,9 +158,9 @@ bool q_qmlimageproviderbase_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-QThread* q_qmlimageproviderbase_thread(void* self);
+QThread* q_qmlimageproviderbase_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -207,11 +211,11 @@ void q_qmlimageproviderbase_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_qmlimageproviderbase_children(void* self);
+libqt_list q_qmlimageproviderbase_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -249,7 +253,7 @@ void q_qmlimageproviderbase_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlimageproviderbase_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_qmlimageproviderbase_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -260,18 +264,18 @@ QMetaObject__Connection* q_qmlimageproviderbase_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_qmlimageproviderbase_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_qmlimageproviderbase_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlimageproviderbase_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_qmlimageproviderbase_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -282,7 +286,7 @@ QMetaObject__Connection* q_qmlimageproviderbase_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlimageproviderbase_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_qmlimageproviderbase_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -293,24 +297,24 @@ bool q_qmlimageproviderbase_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_qmlimageproviderbase_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_qmlimageproviderbase_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-bool q_qmlimageproviderbase_disconnect3(void* self);
+bool q_qmlimageproviderbase_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 /// @param receiver QObject*
 ///
-bool q_qmlimageproviderbase_disconnect4(void* self, void* receiver);
+bool q_qmlimageproviderbase_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -318,23 +322,23 @@ bool q_qmlimageproviderbase_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_qmlimageproviderbase_disconnect5(void* param1);
+bool q_qmlimageproviderbase_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-void q_qmlimageproviderbase_dump_object_tree(void* self);
+void q_qmlimageproviderbase_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-void q_qmlimageproviderbase_dump_object_info(void* self);
+void q_qmlimageproviderbase_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -344,16 +348,16 @@ void q_qmlimageproviderbase_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_qmlimageproviderbase_set_property(void* self, const char* name, void* value);
+bool q_qmlimageproviderbase_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 /// @param name const char*
 ///
-QVariant* q_qmlimageproviderbase_property(void* self, const char* name);
+QVariant* q_qmlimageproviderbase_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -361,9 +365,9 @@ QVariant* q_qmlimageproviderbase_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-const char** q_qmlimageproviderbase_dynamic_property_names(void* self);
+const char** q_qmlimageproviderbase_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -377,9 +381,9 @@ QBindingStorage* q_qmlimageproviderbase_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-const QBindingStorage* q_qmlimageproviderbase_binding_storage2(void* self);
+const QBindingStorage* q_qmlimageproviderbase_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -402,18 +406,18 @@ void q_qmlimageproviderbase_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 ///
-QObject* q_qmlimageproviderbase_parent(void* self);
+QObject* q_qmlimageproviderbase_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 /// @param classname const char*
 ///
-bool q_qmlimageproviderbase_inherits(void* self, const char* classname);
+bool q_qmlimageproviderbase_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -453,7 +457,7 @@ int32_t q_qmlimageproviderbase_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlimageproviderbase_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_qmlimageproviderbase_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -465,59 +469,59 @@ QMetaObject__Connection* q_qmlimageproviderbase_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlimageproviderbase_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_qmlimageproviderbase_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlimageproviderbase_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_qmlimageproviderbase_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 /// @param signal const char*
 ///
-bool q_qmlimageproviderbase_disconnect1(void* self, const char* signal);
+bool q_qmlimageproviderbase_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlImageProviderBase*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_qmlimageproviderbase_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_qmlimageproviderbase_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_qmlimageproviderbase_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlImageProviderBase*
+/// @param self const QQmlImageProviderBase*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlimageproviderbase_disconnect23(void* self, void* receiver, const char* member);
+bool q_qmlimageproviderbase_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQmlImageProviderBase*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_qmlimageproviderbase_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -572,26 +576,26 @@ QQmlEngine* q_qmlengine_new2(void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const QMetaObject* q_qmlengine_meta_object(void* self);
+const QMetaObject* q_qmlengine_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQmlEngine*
-/// @param callback const QMetaObject* func()
+/// @param self const QQmlEngine*
+/// @param callback const QMetaObject* func(const QQmlEngine* self)
 ///
-void q_qmlengine_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_qmlengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const QMetaObject* q_qmlengine_super_meta_object(void* self);
+const QMetaObject* q_qmlengine_super_meta_object(const void* self);
 
 /// @param self QQmlEngine*
 /// @param param1 const char*
@@ -645,9 +649,9 @@ const char* q_qmlengine_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#rootContext)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QQmlContext* q_qmlengine_root_context(void* self);
+QQmlContext* q_qmlengine_root_context(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#clearComponentCache)
 ///
@@ -671,9 +675,9 @@ void q_qmlengine_clear_singletons(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const char** q_qmlengine_import_path_list(void* self);
+const char** q_qmlengine_import_path_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#setImportPathList)
 ///
@@ -693,9 +697,9 @@ void q_qmlengine_add_import_path(void* self, const char* dir);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const char** q_qmlengine_plugin_path_list(void* self);
+const char** q_qmlengine_plugin_path_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#setPluginPathList)
 ///
@@ -737,15 +741,15 @@ void q_qmlengine_set_network_access_manager_factory(void* self, void* networkAcc
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#networkAccessManagerFactory)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QQmlNetworkAccessManagerFactory* q_qmlengine_network_access_manager_factory(void* self);
+QQmlNetworkAccessManagerFactory* q_qmlengine_network_access_manager_factory(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#networkAccessManager)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QNetworkAccessManager* q_qmlengine_network_access_manager(void* self);
+QNetworkAccessManager* q_qmlengine_network_access_manager(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#setUrlInterceptor)
 ///
@@ -756,9 +760,9 @@ void q_qmlengine_set_url_interceptor(void* self, void* urlInterceptor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#urlInterceptor)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QQmlAbstractUrlInterceptor* q_qmlengine_url_interceptor(void* self);
+QQmlAbstractUrlInterceptor* q_qmlengine_url_interceptor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#addUrlInterceptor)
 ///
@@ -776,19 +780,19 @@ void q_qmlengine_remove_url_interceptor(void* self, void* urlInterceptor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#urlInterceptors)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
 /// @return libqt_list of QQmlAbstractUrlInterceptor*
 ///
-libqt_list q_qmlengine_url_interceptors(void* self);
+libqt_list q_qmlengine_url_interceptors(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#interceptUrl)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param url QUrl*
 /// @param type enum QQmlAbstractUrlInterceptor__DataType
 ///
-QUrl* q_qmlengine_intercept_url(void* self, void* url, int32_t type);
+QUrl* q_qmlengine_intercept_url(const void* self, const void* url, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#addImageProvider)
 ///
@@ -800,10 +804,10 @@ void q_qmlengine_add_image_provider(void* self, const char* id, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#imageProvider)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param id const char*
 ///
-QQmlImageProviderBase* q_qmlengine_image_provider(void* self, const char* id);
+QQmlImageProviderBase* q_qmlengine_image_provider(const void* self, const char* id);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#removeImageProvider)
 ///
@@ -821,9 +825,9 @@ void q_qmlengine_set_incubation_controller(void* self, void* incubationControlle
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#incubationController)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QQmlIncubationController* q_qmlengine_incubation_controller(void* self);
+QQmlIncubationController* q_qmlengine_incubation_controller(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#setOfflineStoragePath)
 ///
@@ -836,37 +840,37 @@ void q_qmlengine_set_offline_storage_path(void* self, const char* dir);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const char* q_qmlengine_offline_storage_path(void* self);
+const char* q_qmlengine_offline_storage_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#offlineStorageDatabaseFilePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param databaseName const char*
 ///
-const char* q_qmlengine_offline_storage_database_file_path(void* self, const char* databaseName);
+const char* q_qmlengine_offline_storage_database_file_path(const void* self, const char* databaseName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#baseUrl)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QUrl* q_qmlengine_base_url(void* self);
+QUrl* q_qmlengine_base_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#setBaseUrl)
 ///
 /// @param self QQmlEngine*
 /// @param baseUrl QUrl*
 ///
-void q_qmlengine_set_base_url(void* self, void* baseUrl);
+void q_qmlengine_set_base_url(void* self, const void* baseUrl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#outputWarningsToStandardError)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-bool q_qmlengine_output_warnings_to_standard_error(void* self);
+bool q_qmlengine_output_warnings_to_standard_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#setOutputWarningsToStandardError)
 ///
@@ -883,11 +887,11 @@ void q_qmlengine_mark_current_function_as_translation_binding(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#captureProperty)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param object QObject*
 /// @param property QMetaProperty*
 ///
-void q_qmlengine_capture_property(void* self, void* object, void* property);
+void q_qmlengine_capture_property(const void* self, void* object, const void* property);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#retranslate)
 ///
@@ -912,7 +916,7 @@ void q_qmlengine_on_offline_storage_path_changed(void* self, void (*callback)(vo
 ///
 /// @param param1 QObject*
 ///
-QQmlContext* q_qmlengine_context_for_object(void* param1);
+QQmlContext* q_qmlengine_context_for_object(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlengine.html#setContextForObject)
 ///
@@ -1010,9 +1014,9 @@ const char* q_qmlengine_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsengine.html#globalObject)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QJSValue* q_qmlengine_global_object(void* self);
+QJSValue* q_qmlengine_global_object(const void* self);
 
 /// Inherited from QJSEngine
 ///
@@ -1040,7 +1044,7 @@ QJSValue* q_qmlengine_import_module(void* self, const char* fileName);
 /// @param moduleName const char*
 /// @param value QJSValue*
 ///
-bool q_qmlengine_register_module(void* self, const char* moduleName, void* value);
+bool q_qmlengine_register_module(void* self, const char* moduleName, const void* value);
 
 /// Inherited from QJSEngine
 ///
@@ -1083,7 +1087,7 @@ QJSValue* q_qmlengine_new_q_object(void* self, void* object);
 /// @param self QQmlEngine*
 /// @param metaObject QMetaObject*
 ///
-QJSValue* q_qmlengine_new_q_meta_object(void* self, void* metaObject);
+QJSValue* q_qmlengine_new_q_meta_object(void* self, const void* metaObject);
 
 /// Inherited from QJSEngine
 ///
@@ -1143,9 +1147,9 @@ void q_qmlengine_set_interrupted(void* self, bool interrupted);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsengine.html#isInterrupted)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-bool q_qmlengine_is_interrupted(void* self);
+bool q_qmlengine_is_interrupted(const void* self);
 
 /// Inherited from QJSEngine
 ///
@@ -1172,15 +1176,15 @@ void q_qmlengine_throw_error2(void* self, int32_t errorType);
 /// @param self QQmlEngine*
 /// @param error QJSValue*
 ///
-void q_qmlengine_throw_error3(void* self, void* error);
+void q_qmlengine_throw_error3(void* self, const void* error);
 
 /// Inherited from QJSEngine
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsengine.html#hasError)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-bool q_qmlengine_has_error(void* self);
+bool q_qmlengine_has_error(const void* self);
 
 /// Inherited from QJSEngine
 ///
@@ -1196,9 +1200,9 @@ QJSValue* q_qmlengine_catch_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const char* q_qmlengine_ui_language(void* self);
+const char* q_qmlengine_ui_language(const void* self);
 
 /// Inherited from QJSEngine
 ///
@@ -1286,7 +1290,7 @@ QJSValue* q_qmlengine_new_error_object2(void* self, int32_t errorType, const cha
 /// @param extensions flag of enum QJSEngine__Extension
 /// @param object QJSValue*
 ///
-void q_qmlengine_install_extensions2(void* self, int32_t extensions, void* object);
+void q_qmlengine_install_extensions2(void* self, int32_t extensions, const void* object);
 
 /// Inherited from QJSEngine
 ///
@@ -1304,9 +1308,9 @@ void q_qmlengine_throw_error22(void* self, int32_t errorType, const char* messag
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const char* q_qmlengine_object_name(void* self);
+const char* q_qmlengine_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1321,33 +1325,33 @@ void q_qmlengine_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-bool q_qmlengine_is_widget_type(void* self);
+bool q_qmlengine_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-bool q_qmlengine_is_window_type(void* self);
+bool q_qmlengine_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-bool q_qmlengine_is_quick_item_type(void* self);
+bool q_qmlengine_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-bool q_qmlengine_signals_blocked(void* self);
+bool q_qmlengine_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1362,9 +1366,9 @@ bool q_qmlengine_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QThread* q_qmlengine_thread(void* self);
+QThread* q_qmlengine_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1415,11 +1419,11 @@ void q_qmlengine_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_qmlengine_children(void* self);
+libqt_list q_qmlengine_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1457,7 +1461,7 @@ void q_qmlengine_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlengine_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_qmlengine_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1468,18 +1472,18 @@ QMetaObject__Connection* q_qmlengine_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_qmlengine_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_qmlengine_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_qmlengine_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_qmlengine_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1490,7 +1494,7 @@ QMetaObject__Connection* q_qmlengine_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlengine_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_qmlengine_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1501,24 +1505,24 @@ bool q_qmlengine_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_qmlengine_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_qmlengine_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-bool q_qmlengine_disconnect3(void* self);
+bool q_qmlengine_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param receiver QObject*
 ///
-bool q_qmlengine_disconnect4(void* self, void* receiver);
+bool q_qmlengine_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1526,23 +1530,23 @@ bool q_qmlengine_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_qmlengine_disconnect5(void* param1);
+bool q_qmlengine_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-void q_qmlengine_dump_object_tree(void* self);
+void q_qmlengine_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-void q_qmlengine_dump_object_info(void* self);
+void q_qmlengine_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1552,16 +1556,16 @@ void q_qmlengine_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_qmlengine_set_property(void* self, const char* name, void* value);
+bool q_qmlengine_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param name const char*
 ///
-QVariant* q_qmlengine_property(void* self, const char* name);
+QVariant* q_qmlengine_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1569,9 +1573,9 @@ QVariant* q_qmlengine_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const char** q_qmlengine_dynamic_property_names(void* self);
+const char** q_qmlengine_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1585,9 +1589,9 @@ QBindingStorage* q_qmlengine_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-const QBindingStorage* q_qmlengine_binding_storage2(void* self);
+const QBindingStorage* q_qmlengine_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1610,18 +1614,18 @@ void q_qmlengine_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QObject* q_qmlengine_parent(void* self);
+QObject* q_qmlengine_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param classname const char*
 ///
-bool q_qmlengine_inherits(void* self, const char* classname);
+bool q_qmlengine_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1661,7 +1665,7 @@ int32_t q_qmlengine_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlengine_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_qmlengine_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1673,59 +1677,59 @@ QMetaObject__Connection* q_qmlengine_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlengine_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_qmlengine_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_qmlengine_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_qmlengine_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param signal const char*
 ///
-bool q_qmlengine_disconnect1(void* self, const char* signal);
+bool q_qmlengine_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlEngine*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_qmlengine_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_qmlengine_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_qmlengine_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_qmlengine_disconnect23(void* self, void* receiver, const char* member);
+bool q_qmlengine_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQmlEngine*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_qmlengine_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1888,7 +1892,7 @@ void q_qmlengine_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QQmlEngine*
 /// @param signal QMetaMethod*
 ///
-void q_qmlengine_connect_notify(void* self, void* signal);
+void q_qmlengine_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1899,7 +1903,7 @@ void q_qmlengine_connect_notify(void* self, void* signal);
 /// @param self QQmlEngine*
 /// @param signal QMetaMethod*
 ///
-void q_qmlengine_super_connect_notify(void* self, void* signal);
+void q_qmlengine_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1910,7 +1914,7 @@ void q_qmlengine_super_connect_notify(void* self, void* signal);
 /// @param self QQmlEngine*
 /// @param callback void func(QQmlEngine* self, QMetaMethod* signal)
 ///
-void q_qmlengine_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_qmlengine_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1921,7 +1925,7 @@ void q_qmlengine_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QQmlEngine*
 /// @param signal QMetaMethod*
 ///
-void q_qmlengine_disconnect_notify(void* self, void* signal);
+void q_qmlengine_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1932,7 +1936,7 @@ void q_qmlengine_disconnect_notify(void* self, void* signal);
 /// @param self QQmlEngine*
 /// @param signal QMetaMethod*
 ///
-void q_qmlengine_super_disconnect_notify(void* self, void* signal);
+void q_qmlengine_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1943,7 +1947,7 @@ void q_qmlengine_super_disconnect_notify(void* self, void* signal);
 /// @param self QQmlEngine*
 /// @param callback void func(QQmlEngine* self, QMetaMethod* signal)
 ///
-void q_qmlengine_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_qmlengine_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1951,9 +1955,9 @@ void q_qmlengine_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QObject* q_qmlengine_sender(void* self);
+QObject* q_qmlengine_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1961,9 +1965,9 @@ QObject* q_qmlengine_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-QObject* q_qmlengine_super_sender(void* self);
+QObject* q_qmlengine_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1971,10 +1975,10 @@ QObject* q_qmlengine_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlEngine*
-/// @param callback QObject* func()
+/// @param self const QQmlEngine*
+/// @param callback QObject* func(QQmlEngine* self)
 ///
-void q_qmlengine_on_sender(void* self, QObject* (*callback)());
+void q_qmlengine_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1982,9 +1986,9 @@ void q_qmlengine_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-int32_t q_qmlengine_sender_signal_index(void* self);
+int32_t q_qmlengine_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1992,9 +1996,9 @@ int32_t q_qmlengine_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 ///
-int32_t q_qmlengine_super_sender_signal_index(void* self);
+int32_t q_qmlengine_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2002,10 +2006,10 @@ int32_t q_qmlengine_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlEngine*
-/// @param callback int32_t func()
+/// @param self const QQmlEngine*
+/// @param callback int32_t func(QQmlEngine* self)
 ///
-void q_qmlengine_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_qmlengine_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2013,10 +2017,10 @@ void q_qmlengine_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param signal const char*
 ///
-int32_t q_qmlengine_receivers(void* self, const char* signal);
+int32_t q_qmlengine_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2024,10 +2028,10 @@ int32_t q_qmlengine_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param signal const char*
 ///
-int32_t q_qmlengine_super_receivers(void* self, const char* signal);
+int32_t q_qmlengine_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2035,10 +2039,10 @@ int32_t q_qmlengine_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param callback int32_t func(QQmlEngine* self, const char* signal)
 ///
-void q_qmlengine_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_qmlengine_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2046,10 +2050,10 @@ void q_qmlengine_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param signal QMetaMethod*
 ///
-bool q_qmlengine_is_signal_connected(void* self, void* signal);
+bool q_qmlengine_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2057,10 +2061,10 @@ bool q_qmlengine_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param signal QMetaMethod*
 ///
-bool q_qmlengine_super_is_signal_connected(void* self, void* signal);
+bool q_qmlengine_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2068,10 +2072,10 @@ bool q_qmlengine_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQmlEngine*
+/// @param self const QQmlEngine*
 /// @param callback bool func(QQmlEngine* self, QMetaMethod* signal)
 ///
-void q_qmlengine_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_qmlengine_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

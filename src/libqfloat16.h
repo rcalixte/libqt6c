@@ -46,39 +46,39 @@ void q_qfloat16_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfloat16.html#operator-float)
 ///
-/// @param self qfloat16*
+/// @param self const qfloat16*
 ///
-float q_qfloat16_to_float(void* self);
+float q_qfloat16_to_float(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfloat16.html#isInf)
 ///
-/// @param self qfloat16*
+/// @param self const qfloat16*
 ///
-bool q_qfloat16_is_inf(void* self);
+bool q_qfloat16_is_inf(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfloat16.html#isNaN)
 ///
-/// @param self qfloat16*
+/// @param self const qfloat16*
 ///
-bool q_qfloat16_is_na_n(void* self);
+bool q_qfloat16_is_na_n(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfloat16.html#isFinite)
 ///
-/// @param self qfloat16*
+/// @param self const qfloat16*
 ///
-bool q_qfloat16_is_finite(void* self);
+bool q_qfloat16_is_finite(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfloat16.html#fpClassify)
 ///
-/// @param self qfloat16*
+/// @param self const qfloat16*
 ///
-int32_t q_qfloat16_fp_classify(void* self);
+int32_t q_qfloat16_fp_classify(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfloat16.html#isNormal)
 ///
-/// @param self qfloat16*
+/// @param self const qfloat16*
 ///
-bool q_qfloat16_is_normal(void* self);
+bool q_qfloat16_is_normal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfloat16.html#dtor.qfloat16)
 ///

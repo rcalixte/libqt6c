@@ -6,15 +6,15 @@ QQuickGraphicsDevice* q_quickgraphicsdevice_new() {
     return QQuickGraphicsDevice_New();
 }
 
-QQuickGraphicsDevice* q_quickgraphicsdevice_new2(void* other) {
+QQuickGraphicsDevice* q_quickgraphicsdevice_new2(const void* other) {
     return QQuickGraphicsDevice_New2((QQuickGraphicsDevice*)other);
 }
 
-void q_quickgraphicsdevice_operator_assign(void* self, void* other) {
+void q_quickgraphicsdevice_operator_assign(void* self, const void* other) {
     QQuickGraphicsDevice_OperatorAssign((QQuickGraphicsDevice*)self, (QQuickGraphicsDevice*)other);
 }
 
-bool q_quickgraphicsdevice_is_null(void* self) {
+bool q_quickgraphicsdevice_is_null(const void* self) {
     return QQuickGraphicsDevice_IsNull((QQuickGraphicsDevice*)self);
 }
 

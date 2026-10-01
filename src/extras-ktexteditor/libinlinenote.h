@@ -14,7 +14,7 @@
 ///
 /// @param other KTextEditor__InlineNote*
 ///
-KTextEditor__InlineNote* k_texteditor__inlinenote_new(void* other);
+KTextEditor__InlineNote* k_texteditor__inlinenote_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html)
 
@@ -26,51 +26,51 @@ KTextEditor__InlineNote* k_texteditor__inlinenote_new2(void* other);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#width)
 ///
-/// @param self KTextEditor__InlineNote*
+/// @param self const KTextEditor__InlineNote*
 ///
-double k_texteditor__inlinenote_width(void* self);
+double k_texteditor__inlinenote_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#provider)
 ///
-/// @param self KTextEditor__InlineNote*
+/// @param self const KTextEditor__InlineNote*
 ///
-KTextEditor__InlineNoteProvider* k_texteditor__inlinenote_provider(void* self);
+KTextEditor__InlineNoteProvider* k_texteditor__inlinenote_provider(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#view)
 ///
-/// @param self KTextEditor__InlineNote*
+/// @param self const KTextEditor__InlineNote*
 ///
-const KTextEditor__View* k_texteditor__inlinenote_view(void* self);
+const KTextEditor__View* k_texteditor__inlinenote_view(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#position)
 ///
-/// @param self KTextEditor__InlineNote*
+/// @param self const KTextEditor__InlineNote*
 ///
-KTextEditor__Cursor* k_texteditor__inlinenote_position(void* self);
+KTextEditor__Cursor* k_texteditor__inlinenote_position(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#index)
 ///
-/// @param self KTextEditor__InlineNote*
+/// @param self const KTextEditor__InlineNote*
 ///
-int32_t k_texteditor__inlinenote_index(void* self);
+int32_t k_texteditor__inlinenote_index(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#underMouse)
 ///
-/// @param self KTextEditor__InlineNote*
+/// @param self const KTextEditor__InlineNote*
 ///
-bool k_texteditor__inlinenote_under_mouse(void* self);
+bool k_texteditor__inlinenote_under_mouse(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#font)
 ///
-/// @param self KTextEditor__InlineNote*
+/// @param self const KTextEditor__InlineNote*
 ///
-QFont* k_texteditor__inlinenote_font(void* self);
+QFont* k_texteditor__inlinenote_font(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-inlinenote.html#lineHeight)
 ///
-/// @param self KTextEditor__InlineNote*
+/// @param self const KTextEditor__InlineNote*
 ///
-int32_t k_texteditor__inlinenote_line_height(void* self);
+int32_t k_texteditor__inlinenote_line_height(const void* self);
 
 /// Delete this object from C++ memory.
 ///

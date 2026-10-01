@@ -8,23 +8,23 @@
 #include "libmimetypefinderjob.hpp"
 #include "libmimetypefinderjob.h"
 
-KIO__MimeTypeFinderJob* k_io__mimetypefinderjob_new(void* url) {
+KIO__MimeTypeFinderJob* k_io__mimetypefinderjob_new(const void* url) {
     return KIO__MimeTypeFinderJob_New((QUrl*)url);
 }
 
-KIO__MimeTypeFinderJob* k_io__mimetypefinderjob_new2(void* url, void* parent) {
+KIO__MimeTypeFinderJob* k_io__mimetypefinderjob_new2(const void* url, void* parent) {
     return KIO__MimeTypeFinderJob_New2((QUrl*)url, (QObject*)parent);
 }
 
-const QMetaObject* k_io__mimetypefinderjob_meta_object(void* self) {
+const QMetaObject* k_io__mimetypefinderjob_meta_object(const void* self) {
     return KIO__MimeTypeFinderJob_MetaObject((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void k_io__mimetypefinderjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     KIO__MimeTypeFinderJob_OnMetaObject((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__mimetypefinderjob_super_meta_object(void* self) {
+const QMetaObject* k_io__mimetypefinderjob_super_meta_object(const void* self) {
     return KIO__MimeTypeFinderJob_SuperMetaObject((KIO__MimeTypeFinderJob*)self);
 }
 
@@ -67,7 +67,7 @@ void k_io__mimetypefinderjob_set_suggested_file_name(void* self, const char* sug
     KIO__MimeTypeFinderJob_SetSuggestedFileName((KIO__MimeTypeFinderJob*)self, qstring(suggestedFileName));
 }
 
-const char* k_io__mimetypefinderjob_suggested_file_name(void* self) {
+const char* k_io__mimetypefinderjob_suggested_file_name(const void* self) {
     libqt_string _str = KIO__MimeTypeFinderJob_SuggestedFileName((KIO__MimeTypeFinderJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -78,7 +78,7 @@ void k_io__mimetypefinderjob_set_authentication_prompt_enabled(void* self, bool 
     KIO__MimeTypeFinderJob_SetAuthenticationPromptEnabled((KIO__MimeTypeFinderJob*)self, enable);
 }
 
-bool k_io__mimetypefinderjob_is_authentication_prompt_enabled(void* self) {
+bool k_io__mimetypefinderjob_is_authentication_prompt_enabled(const void* self) {
     return KIO__MimeTypeFinderJob_IsAuthenticationPromptEnabled((KIO__MimeTypeFinderJob*)self);
 }
 
@@ -86,7 +86,7 @@ void k_io__mimetypefinderjob_start(void* self) {
     KIO__MimeTypeFinderJob_Start((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_on_start(void* self, void (*callback)()) {
+void k_io__mimetypefinderjob_on_start(void* self, void (*callback)(void*)) {
     KIO__MimeTypeFinderJob_OnStart((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
@@ -94,7 +94,7 @@ void k_io__mimetypefinderjob_super_start(void* self) {
     KIO__MimeTypeFinderJob_SuperStart((KIO__MimeTypeFinderJob*)self);
 }
 
-const char* k_io__mimetypefinderjob_mime_type(void* self) {
+const char* k_io__mimetypefinderjob_mime_type(const void* self) {
     libqt_string _str = KIO__MimeTypeFinderJob_MimeType((KIO__MimeTypeFinderJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -105,7 +105,7 @@ bool k_io__mimetypefinderjob_do_kill(void* self) {
     return KIO__MimeTypeFinderJob_DoKill((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_on_do_kill(void* self, bool (*callback)()) {
+void k_io__mimetypefinderjob_on_do_kill(void* self, bool (*callback)(void*)) {
     KIO__MimeTypeFinderJob_OnDoKill((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
@@ -143,15 +143,15 @@ void k_io__mimetypefinderjob_set_ui_delegate(void* self, void* delegate) {
     KJob_SetUiDelegate((KJob*)self, (KJobUiDelegate*)delegate);
 }
 
-KJobUiDelegate* k_io__mimetypefinderjob_ui_delegate(void* self) {
+KJobUiDelegate* k_io__mimetypefinderjob_ui_delegate(const void* self) {
     return KJob_UiDelegate((KJob*)self);
 }
 
-int32_t k_io__mimetypefinderjob_capabilities(void* self) {
+int32_t k_io__mimetypefinderjob_capabilities(const void* self) {
     return KJob_Capabilities((KJob*)self);
 }
 
-bool k_io__mimetypefinderjob_is_suspended(void* self) {
+bool k_io__mimetypefinderjob_is_suspended(const void* self) {
     return KJob_IsSuspended((KJob*)self);
 }
 
@@ -171,26 +171,26 @@ bool k_io__mimetypefinderjob_exec(void* self) {
     return KJob_Exec((KJob*)self);
 }
 
-int32_t k_io__mimetypefinderjob_error(void* self) {
+int32_t k_io__mimetypefinderjob_error(const void* self) {
     return KJob_Error((KJob*)self);
 }
 
-const char* k_io__mimetypefinderjob_error_text(void* self) {
+const char* k_io__mimetypefinderjob_error_text(const void* self) {
     libqt_string _str = KJob_ErrorText((KJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uintptr_t k_io__mimetypefinderjob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_io__mimetypefinderjob_processed_amount(const void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uintptr_t k_io__mimetypefinderjob_total_amount(void* self, int32_t unit) {
+uintptr_t k_io__mimetypefinderjob_total_amount(const void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uintptr_t k_io__mimetypefinderjob_percent(void* self) {
+uintptr_t k_io__mimetypefinderjob_percent(const void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -198,7 +198,7 @@ void k_io__mimetypefinderjob_set_auto_delete(void* self, bool autodelete) {
     KJob_SetAutoDelete((KJob*)self, autodelete);
 }
 
-bool k_io__mimetypefinderjob_is_auto_delete(void* self) {
+bool k_io__mimetypefinderjob_is_auto_delete(const void* self) {
     return KJob_IsAutoDelete((KJob*)self);
 }
 
@@ -206,15 +206,15 @@ void k_io__mimetypefinderjob_set_finished_notification_hidden(void* self) {
     KJob_SetFinishedNotificationHidden((KJob*)self);
 }
 
-bool k_io__mimetypefinderjob_is_finished_notification_hidden(void* self) {
+bool k_io__mimetypefinderjob_is_finished_notification_hidden(const void* self) {
     return KJob_IsFinishedNotificationHidden((KJob*)self);
 }
 
-bool k_io__mimetypefinderjob_is_started_with_exec(void* self) {
+bool k_io__mimetypefinderjob_is_started_with_exec(const void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-int64_t k_io__mimetypefinderjob_elapsed_time(void* self) {
+int64_t k_io__mimetypefinderjob_elapsed_time(const void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -266,7 +266,7 @@ void k_io__mimetypefinderjob_set_finished_notification_hidden1(void* self, bool 
     KJob_SetFinishedNotificationHidden1((KJob*)self, hide);
 }
 
-const char* k_io__mimetypefinderjob_object_name(void* self) {
+const char* k_io__mimetypefinderjob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -277,19 +277,19 @@ void k_io__mimetypefinderjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_io__mimetypefinderjob_is_widget_type(void* self) {
+bool k_io__mimetypefinderjob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_io__mimetypefinderjob_is_window_type(void* self) {
+bool k_io__mimetypefinderjob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_io__mimetypefinderjob_is_quick_item_type(void* self) {
+bool k_io__mimetypefinderjob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_io__mimetypefinderjob_signals_blocked(void* self) {
+bool k_io__mimetypefinderjob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -297,7 +297,7 @@ bool k_io__mimetypefinderjob_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_io__mimetypefinderjob_thread(void* self) {
+QThread* k_io__mimetypefinderjob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -321,7 +321,7 @@ void k_io__mimetypefinderjob_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_io__mimetypefinderjob_children(void* self) {
+libqt_list /* of QObject* */ k_io__mimetypefinderjob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -338,55 +338,55 @@ void k_io__mimetypefinderjob_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_io__mimetypefinderjob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_io__mimetypefinderjob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_io__mimetypefinderjob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_io__mimetypefinderjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_io__mimetypefinderjob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_io__mimetypefinderjob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_io__mimetypefinderjob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_io__mimetypefinderjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_io__mimetypefinderjob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_io__mimetypefinderjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_io__mimetypefinderjob_disconnect3(void* self) {
+bool k_io__mimetypefinderjob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_io__mimetypefinderjob_disconnect4(void* self, void* receiver) {
+bool k_io__mimetypefinderjob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_io__mimetypefinderjob_disconnect5(void* param1) {
+bool k_io__mimetypefinderjob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_io__mimetypefinderjob_dump_object_tree(void* self) {
+void k_io__mimetypefinderjob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_io__mimetypefinderjob_dump_object_info(void* self) {
+void k_io__mimetypefinderjob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_io__mimetypefinderjob_set_property(void* self, const char* name, void* value) {
+bool k_io__mimetypefinderjob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_io__mimetypefinderjob_property(void* self, const char* name) {
+QVariant* k_io__mimetypefinderjob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_io__mimetypefinderjob_dynamic_property_names(void* self) {
+const char** k_io__mimetypefinderjob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -407,7 +407,7 @@ QBindingStorage* k_io__mimetypefinderjob_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_io__mimetypefinderjob_binding_storage2(void* self) {
+const QBindingStorage* k_io__mimetypefinderjob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -419,11 +419,11 @@ void k_io__mimetypefinderjob_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_io__mimetypefinderjob_parent(void* self) {
+QObject* k_io__mimetypefinderjob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_io__mimetypefinderjob_inherits(void* self, const char* classname) {
+bool k_io__mimetypefinderjob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -439,31 +439,31 @@ int32_t k_io__mimetypefinderjob_start_timer23(void* self, int64_t time, int32_t 
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_io__mimetypefinderjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_io__mimetypefinderjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_io__mimetypefinderjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_io__mimetypefinderjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_io__mimetypefinderjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_io__mimetypefinderjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_io__mimetypefinderjob_disconnect1(void* self, const char* signal) {
+bool k_io__mimetypefinderjob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_io__mimetypefinderjob_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_io__mimetypefinderjob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_io__mimetypefinderjob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_io__mimetypefinderjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_io__mimetypefinderjob_disconnect23(void* self, void* receiver, const char* member) {
+bool k_io__mimetypefinderjob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -519,7 +519,7 @@ bool k_io__mimetypefinderjob_super_do_suspend(void* self) {
     return KIO__MimeTypeFinderJob_SuperDoSuspend((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_on_do_suspend(void* self, bool (*callback)()) {
+void k_io__mimetypefinderjob_on_do_suspend(void* self, bool (*callback)(void*)) {
     KIO__MimeTypeFinderJob_OnDoSuspend((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
@@ -531,26 +531,26 @@ bool k_io__mimetypefinderjob_super_do_resume(void* self) {
     return KIO__MimeTypeFinderJob_SuperDoResume((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_on_do_resume(void* self, bool (*callback)()) {
+void k_io__mimetypefinderjob_on_do_resume(void* self, bool (*callback)(void*)) {
     KIO__MimeTypeFinderJob_OnDoResume((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-const char* k_io__mimetypefinderjob_error_string(void* self) {
+const char* k_io__mimetypefinderjob_error_string(const void* self) {
     libqt_string _str = KIO__MimeTypeFinderJob_ErrorString((KIO__MimeTypeFinderJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_io__mimetypefinderjob_super_error_string(void* self) {
+const char* k_io__mimetypefinderjob_super_error_string(const void* self) {
     libqt_string _str = KIO__MimeTypeFinderJob_SuperErrorString((KIO__MimeTypeFinderJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_io__mimetypefinderjob_on_error_string(void* self, const char* (*callback)()) {
-    KIO__MimeTypeFinderJob_OnErrorString((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
+void k_io__mimetypefinderjob_on_error_string(const void* self, const char* (*callback)(const void*)) {
+    KIO__MimeTypeFinderJob_OnErrorString((const KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 bool k_io__mimetypefinderjob_event(void* self, void* event) {
@@ -613,258 +613,105 @@ void k_io__mimetypefinderjob_on_custom_event(void* self, void (*callback)(void*,
     KIO__MimeTypeFinderJob_OnCustomEvent((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_connect_notify(void* self, void* signal) {
+void k_io__mimetypefinderjob_connect_notify(void* self, const void* signal) {
     KIO__MimeTypeFinderJob_ConnectNotify((KIO__MimeTypeFinderJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__mimetypefinderjob_super_connect_notify(void* self, void* signal) {
+void k_io__mimetypefinderjob_super_connect_notify(void* self, const void* signal) {
     KIO__MimeTypeFinderJob_SuperConnectNotify((KIO__MimeTypeFinderJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__mimetypefinderjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void k_io__mimetypefinderjob_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     KIO__MimeTypeFinderJob_OnConnectNotify((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_disconnect_notify(void* self, void* signal) {
+void k_io__mimetypefinderjob_disconnect_notify(void* self, const void* signal) {
     KIO__MimeTypeFinderJob_DisconnectNotify((KIO__MimeTypeFinderJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__mimetypefinderjob_super_disconnect_notify(void* self, void* signal) {
+void k_io__mimetypefinderjob_super_disconnect_notify(void* self, const void* signal) {
     KIO__MimeTypeFinderJob_SuperDisconnectNotify((KIO__MimeTypeFinderJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__mimetypefinderjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void k_io__mimetypefinderjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     KIO__MimeTypeFinderJob_OnDisconnectNotify((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-bool k_io__mimetypefinderjob_has_subjobs(void* self) {
+bool k_io__mimetypefinderjob_has_subjobs(const void* self) {
     return KIO__MimeTypeFinderJob_HasSubjobs((KIO__MimeTypeFinderJob*)self);
 }
 
-bool k_io__mimetypefinderjob_super_has_subjobs(void* self) {
-    return KIO__MimeTypeFinderJob_SuperHasSubjobs((KIO__MimeTypeFinderJob*)self);
-}
-
-void k_io__mimetypefinderjob_on_has_subjobs(void* self, bool (*callback)()) {
-    KIO__MimeTypeFinderJob_OnHasSubjobs((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
-libqt_list /* of KJob* */ k_io__mimetypefinderjob_subjobs(void* self) {
+libqt_list /* of KJob* */ k_io__mimetypefinderjob_subjobs(const void* self) {
     libqt_list _arr = KIO__MimeTypeFinderJob_Subjobs((KIO__MimeTypeFinderJob*)self);
     return _arr;
-}
-
-libqt_list /* of KJob* */ k_io__mimetypefinderjob_super_subjobs(void* self) {
-    libqt_list _arr = KIO__MimeTypeFinderJob_SuperSubjobs((KIO__MimeTypeFinderJob*)self);
-    return _arr;
-}
-
-void k_io__mimetypefinderjob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)()) {
-    KIO__MimeTypeFinderJob_OnSubjobs((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 void k_io__mimetypefinderjob_clear_subjobs(void* self) {
     KIO__MimeTypeFinderJob_ClearSubjobs((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_super_clear_subjobs(void* self) {
-    KIO__MimeTypeFinderJob_SuperClearSubjobs((KIO__MimeTypeFinderJob*)self);
-}
-
-void k_io__mimetypefinderjob_on_clear_subjobs(void* self, void (*callback)()) {
-    KIO__MimeTypeFinderJob_OnClearSubjobs((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
 void k_io__mimetypefinderjob_set_capabilities(void* self, int32_t capabilities) {
     KIO__MimeTypeFinderJob_SetCapabilities((KIO__MimeTypeFinderJob*)self, capabilities);
 }
 
-void k_io__mimetypefinderjob_super_set_capabilities(void* self, int32_t capabilities) {
-    KIO__MimeTypeFinderJob_SuperSetCapabilities((KIO__MimeTypeFinderJob*)self, capabilities);
-}
-
-void k_io__mimetypefinderjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
-    KIO__MimeTypeFinderJob_OnSetCapabilities((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
-bool k_io__mimetypefinderjob_is_finished(void* self) {
+bool k_io__mimetypefinderjob_is_finished(const void* self) {
     return KIO__MimeTypeFinderJob_IsFinished((KIO__MimeTypeFinderJob*)self);
-}
-
-bool k_io__mimetypefinderjob_super_is_finished(void* self) {
-    return KIO__MimeTypeFinderJob_SuperIsFinished((KIO__MimeTypeFinderJob*)self);
-}
-
-void k_io__mimetypefinderjob_on_is_finished(void* self, bool (*callback)()) {
-    KIO__MimeTypeFinderJob_OnIsFinished((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 void k_io__mimetypefinderjob_set_error(void* self, int errorCode) {
     KIO__MimeTypeFinderJob_SetError((KIO__MimeTypeFinderJob*)self, errorCode);
 }
 
-void k_io__mimetypefinderjob_super_set_error(void* self, int errorCode) {
-    KIO__MimeTypeFinderJob_SuperSetError((KIO__MimeTypeFinderJob*)self, errorCode);
-}
-
-void k_io__mimetypefinderjob_on_set_error(void* self, void (*callback)(void*, int)) {
-    KIO__MimeTypeFinderJob_OnSetError((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
 void k_io__mimetypefinderjob_set_error_text(void* self, const char* errorText) {
     KIO__MimeTypeFinderJob_SetErrorText((KIO__MimeTypeFinderJob*)self, qstring(errorText));
-}
-
-void k_io__mimetypefinderjob_super_set_error_text(void* self, const char* errorText) {
-    KIO__MimeTypeFinderJob_SuperSetErrorText((KIO__MimeTypeFinderJob*)self, qstring(errorText));
-}
-
-void k_io__mimetypefinderjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
-    KIO__MimeTypeFinderJob_OnSetErrorText((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 void k_io__mimetypefinderjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__MimeTypeFinderJob_SetProcessedAmount((KIO__MimeTypeFinderJob*)self, unit, amount);
 }
 
-void k_io__mimetypefinderjob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
-    KIO__MimeTypeFinderJob_SuperSetProcessedAmount((KIO__MimeTypeFinderJob*)self, unit, amount);
-}
-
-void k_io__mimetypefinderjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
-    KIO__MimeTypeFinderJob_OnSetProcessedAmount((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
 void k_io__mimetypefinderjob_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__MimeTypeFinderJob_SetTotalAmount((KIO__MimeTypeFinderJob*)self, unit, amount);
-}
-
-void k_io__mimetypefinderjob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
-    KIO__MimeTypeFinderJob_SuperSetTotalAmount((KIO__MimeTypeFinderJob*)self, unit, amount);
-}
-
-void k_io__mimetypefinderjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
-    KIO__MimeTypeFinderJob_OnSetTotalAmount((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 void k_io__mimetypefinderjob_set_progress_unit(void* self, int32_t unit) {
     KIO__MimeTypeFinderJob_SetProgressUnit((KIO__MimeTypeFinderJob*)self, unit);
 }
 
-void k_io__mimetypefinderjob_super_set_progress_unit(void* self, int32_t unit) {
-    KIO__MimeTypeFinderJob_SuperSetProgressUnit((KIO__MimeTypeFinderJob*)self, unit);
-}
-
-void k_io__mimetypefinderjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
-    KIO__MimeTypeFinderJob_OnSetProgressUnit((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
 void k_io__mimetypefinderjob_set_percent(void* self, uintptr_t percentage) {
     KIO__MimeTypeFinderJob_SetPercent((KIO__MimeTypeFinderJob*)self, percentage);
-}
-
-void k_io__mimetypefinderjob_super_set_percent(void* self, uintptr_t percentage) {
-    KIO__MimeTypeFinderJob_SuperSetPercent((KIO__MimeTypeFinderJob*)self, percentage);
-}
-
-void k_io__mimetypefinderjob_on_set_percent(void* self, void (*callback)(void*, uintptr_t)) {
-    KIO__MimeTypeFinderJob_OnSetPercent((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 void k_io__mimetypefinderjob_emit_result(void* self) {
     KIO__MimeTypeFinderJob_EmitResult((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_super_emit_result(void* self) {
-    KIO__MimeTypeFinderJob_SuperEmitResult((KIO__MimeTypeFinderJob*)self);
-}
-
-void k_io__mimetypefinderjob_on_emit_result(void* self, void (*callback)()) {
-    KIO__MimeTypeFinderJob_OnEmitResult((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
 void k_io__mimetypefinderjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__MimeTypeFinderJob_EmitPercent((KIO__MimeTypeFinderJob*)self, processedAmount, totalAmount);
-}
-
-void k_io__mimetypefinderjob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
-    KIO__MimeTypeFinderJob_SuperEmitPercent((KIO__MimeTypeFinderJob*)self, processedAmount, totalAmount);
-}
-
-void k_io__mimetypefinderjob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t)) {
-    KIO__MimeTypeFinderJob_OnEmitPercent((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 void k_io__mimetypefinderjob_emit_speed(void* self, uintptr_t speed) {
     KIO__MimeTypeFinderJob_EmitSpeed((KIO__MimeTypeFinderJob*)self, speed);
 }
 
-void k_io__mimetypefinderjob_super_emit_speed(void* self, uintptr_t speed) {
-    KIO__MimeTypeFinderJob_SuperEmitSpeed((KIO__MimeTypeFinderJob*)self, speed);
-}
-
-void k_io__mimetypefinderjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t)) {
-    KIO__MimeTypeFinderJob_OnEmitSpeed((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
 void k_io__mimetypefinderjob_start_elapsed_timer(void* self) {
     KIO__MimeTypeFinderJob_StartElapsedTimer((KIO__MimeTypeFinderJob*)self);
 }
 
-void k_io__mimetypefinderjob_super_start_elapsed_timer(void* self) {
-    KIO__MimeTypeFinderJob_SuperStartElapsedTimer((KIO__MimeTypeFinderJob*)self);
-}
-
-void k_io__mimetypefinderjob_on_start_elapsed_timer(void* self, void (*callback)()) {
-    KIO__MimeTypeFinderJob_OnStartElapsedTimer((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
-QObject* k_io__mimetypefinderjob_sender(void* self) {
+QObject* k_io__mimetypefinderjob_sender(const void* self) {
     return KIO__MimeTypeFinderJob_Sender((KIO__MimeTypeFinderJob*)self);
 }
 
-QObject* k_io__mimetypefinderjob_super_sender(void* self) {
-    return KIO__MimeTypeFinderJob_SuperSender((KIO__MimeTypeFinderJob*)self);
-}
-
-void k_io__mimetypefinderjob_on_sender(void* self, QObject* (*callback)()) {
-    KIO__MimeTypeFinderJob_OnSender((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
-int32_t k_io__mimetypefinderjob_sender_signal_index(void* self) {
+int32_t k_io__mimetypefinderjob_sender_signal_index(const void* self) {
     return KIO__MimeTypeFinderJob_SenderSignalIndex((KIO__MimeTypeFinderJob*)self);
 }
 
-int32_t k_io__mimetypefinderjob_super_sender_signal_index(void* self) {
-    return KIO__MimeTypeFinderJob_SuperSenderSignalIndex((KIO__MimeTypeFinderJob*)self);
-}
-
-void k_io__mimetypefinderjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    KIO__MimeTypeFinderJob_OnSenderSignalIndex((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
-int32_t k_io__mimetypefinderjob_receivers(void* self, const char* signal) {
+int32_t k_io__mimetypefinderjob_receivers(const void* self, const char* signal) {
     return KIO__MimeTypeFinderJob_Receivers((KIO__MimeTypeFinderJob*)self, signal);
 }
 
-int32_t k_io__mimetypefinderjob_super_receivers(void* self, const char* signal) {
-    return KIO__MimeTypeFinderJob_SuperReceivers((KIO__MimeTypeFinderJob*)self, signal);
-}
-
-void k_io__mimetypefinderjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    KIO__MimeTypeFinderJob_OnReceivers((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
-}
-
-bool k_io__mimetypefinderjob_is_signal_connected(void* self, void* signal) {
+bool k_io__mimetypefinderjob_is_signal_connected(const void* self, const void* signal) {
     return KIO__MimeTypeFinderJob_IsSignalConnected((KIO__MimeTypeFinderJob*)self, (QMetaMethod*)signal);
-}
-
-bool k_io__mimetypefinderjob_super_is_signal_connected(void* self, void* signal) {
-    return KIO__MimeTypeFinderJob_SuperIsSignalConnected((KIO__MimeTypeFinderJob*)self, (QMetaMethod*)signal);
-}
-
-void k_io__mimetypefinderjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    KIO__MimeTypeFinderJob_OnIsSignalConnected((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
 void k_io__mimetypefinderjob_on_finished(void* self, void (*callback)(void*, void*)) {

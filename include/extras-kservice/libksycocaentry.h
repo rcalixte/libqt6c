@@ -16,54 +16,54 @@ KSycocaEntry* k_sycocaentry_new();
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#isType)
 ///
-/// @param self KSycocaEntry*
+/// @param self const KSycocaEntry*
 /// @param t enum KSycocaEntry__KSycocaType
 ///
-bool k_sycocaentry_is_type(void* self, int32_t t);
+bool k_sycocaentry_is_type(const void* self, int32_t t);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#sycocaType)
 ///
-/// @param self KSycocaEntry*
+/// @param self const KSycocaEntry*
 ///
 /// @return enum KSycocaEntry__KSycocaType
 ///
-int32_t k_sycocaentry_sycoca_type(void* self);
+int32_t k_sycocaentry_sycoca_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSycocaEntry*
+/// @param self const KSycocaEntry*
 ///
-const char* k_sycocaentry_name(void* self);
+const char* k_sycocaentry_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#entryPath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSycocaEntry*
+/// @param self const KSycocaEntry*
 ///
-const char* k_sycocaentry_entry_path(void* self);
+const char* k_sycocaentry_entry_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#storageId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSycocaEntry*
+/// @param self const KSycocaEntry*
 ///
-const char* k_sycocaentry_storage_id(void* self);
+const char* k_sycocaentry_storage_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#isValid)
 ///
-/// @param self KSycocaEntry*
+/// @param self const KSycocaEntry*
 ///
-bool k_sycocaentry_is_valid(void* self);
+bool k_sycocaentry_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#isDeleted)
 ///
-/// @param self KSycocaEntry*
+/// @param self const KSycocaEntry*
 ///
-bool k_sycocaentry_is_deleted(void* self);
+bool k_sycocaentry_is_deleted(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#setDeleted)
 ///
@@ -74,9 +74,9 @@ void k_sycocaentry_set_deleted(void* self, bool deleted);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#isSeparator)
 ///
-/// @param self KSycocaEntry*
+/// @param self const KSycocaEntry*
 ///
-bool k_sycocaentry_is_separator(void* self);
+bool k_sycocaentry_is_separator(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#dtor.KSycocaEntry)
 ///

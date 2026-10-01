@@ -24,26 +24,26 @@ TextEmoticonsCore__EmojiProxyModel* k_textemoticonscore__emojiproxymodel_new2(vo
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const QMetaObject* k_textemoticonscore__emojiproxymodel_meta_object(void* self);
+const QMetaObject* k_textemoticonscore__emojiproxymodel_meta_object(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback const QMetaObject* func()
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback const QMetaObject* func(const TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
 /// Base class method implementation
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const QMetaObject* k_textemoticonscore__emojiproxymodel_super_meta_object(void* self);
+const QMetaObject* k_textemoticonscore__emojiproxymodel_super_meta_object(const void* self);
 
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param param1 const char*
@@ -99,9 +99,9 @@ const char* k_textemoticonscore__emojiproxymodel_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const char* k_textemoticonscore__emojiproxymodel_category(void* self);
+const char* k_textemoticonscore__emojiproxymodel_category(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
@@ -114,9 +114,9 @@ void k_textemoticonscore__emojiproxymodel_set_category(void* self, const char* n
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const char** k_textemoticonscore__emojiproxymodel_recent_emoticons(void* self);
+const char** k_textemoticonscore__emojiproxymodel_recent_emoticons(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
@@ -129,9 +129,9 @@ void k_textemoticonscore__emojiproxymodel_set_recent_emoticons(void* self, const
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const char* k_textemoticonscore__emojiproxymodel_search_identifier(void* self);
+const char* k_textemoticonscore__emojiproxymodel_search_identifier(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
@@ -142,57 +142,57 @@ void k_textemoticonscore__emojiproxymodel_set_search_identifier(void* self, cons
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param source_row int
 /// @param source_parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_filter_accepts_row(void* self, int source_row, void* source_parent);
+bool k_textemoticonscore__emojiproxymodel_filter_accepts_row(const void* self, int source_row, const void* source_parent);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, int source_row, QModelIndex* source_parent)
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback bool func(const TextEmoticonsCore__EmojiProxyModel* self, int source_row, QModelIndex* source_parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_filter_accepts_row(void* self, bool (*callback)(void*, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_filter_accepts_row(const void* self, bool (*callback)(const void*, int, const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
 /// Base class method implementation
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param source_row int
 /// @param source_parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_filter_accepts_row(void* self, int source_row, void* source_parent);
+bool k_textemoticonscore__emojiproxymodel_super_filter_accepts_row(const void* self, int source_row, const void* source_parent);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_less_than(void* self, void* left, void* right);
+bool k_textemoticonscore__emojiproxymodel_less_than(const void* self, const void* left, const void* right);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* left, QModelIndex* right)
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback bool func(const TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* left, QModelIndex* right)
 ///
-void k_textemoticonscore__emojiproxymodel_on_less_than(void* self, bool (*callback)(void*, void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_less_than(const void* self, bool (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
 /// Base class method implementation
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param left QModelIndex*
 /// @param right QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_less_than(void* self, void* left, void* right);
+bool k_textemoticonscore__emojiproxymodel_super_less_than(const void* self, const void* left, const void* right);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1EmojiProxyModel.html)
 ///
@@ -217,17 +217,17 @@ const char* k_textemoticonscore__emojiproxymodel_tr3(const char* s, const char* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRegularExpression)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-QRegularExpression* k_textemoticonscore__emojiproxymodel_filter_regular_expression(void* self);
+QRegularExpression* k_textemoticonscore__emojiproxymodel_filter_regular_expression(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterKeyColumn)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_filter_key_column(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_filter_key_column(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -242,11 +242,11 @@ void k_textemoticonscore__emojiproxymodel_set_filter_key_column(void* self, int 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivity)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return enum Qt__CaseSensitivity
 ///
-int32_t k_textemoticonscore__emojiproxymodel_filter_case_sensitivity(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_filter_case_sensitivity(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -261,11 +261,11 @@ void k_textemoticonscore__emojiproxymodel_set_filter_case_sensitivity(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivity)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return enum Qt__CaseSensitivity
 ///
-int32_t k_textemoticonscore__emojiproxymodel_sort_case_sensitivity(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_sort_case_sensitivity(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -280,9 +280,9 @@ void k_textemoticonscore__emojiproxymodel_set_sort_case_sensitivity(void* self, 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isSortLocaleAware)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_is_sort_locale_aware(void* self);
+bool k_textemoticonscore__emojiproxymodel_is_sort_locale_aware(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -297,27 +297,27 @@ void k_textemoticonscore__emojiproxymodel_set_sort_locale_aware(void* self, bool
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortColumn)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_sort_column(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_sort_column(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortOrder)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return enum Qt__SortOrder
 ///
-int32_t k_textemoticonscore__emojiproxymodel_sort_order(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_sort_order(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilter)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_dynamic_sort_filter(void* self);
+bool k_textemoticonscore__emojiproxymodel_dynamic_sort_filter(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -332,9 +332,9 @@ void k_textemoticonscore__emojiproxymodel_set_dynamic_sort_filter(void* self, bo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortRole)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_sort_role(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_sort_role(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -349,9 +349,9 @@ void k_textemoticonscore__emojiproxymodel_set_sort_role(void* self, int role);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterRole)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_filter_role(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_filter_role(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -366,9 +366,9 @@ void k_textemoticonscore__emojiproxymodel_set_filter_role(void* self, int role);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isRecursiveFilteringEnabled)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_is_recursive_filtering_enabled(void* self);
+bool k_textemoticonscore__emojiproxymodel_is_recursive_filtering_enabled(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -383,9 +383,9 @@ void k_textemoticonscore__emojiproxymodel_set_recursive_filtering_enabled(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#autoAcceptChildRows)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_auto_accept_child_rows(void* self);
+bool k_textemoticonscore__emojiproxymodel_auto_accept_child_rows(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -412,7 +412,7 @@ void k_textemoticonscore__emojiproxymodel_set_filter_regular_expression(void* se
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param regularExpression QRegularExpression*
 ///
-void k_textemoticonscore__emojiproxymodel_set_filter_regular_expression2(void* self, void* regularExpression);
+void k_textemoticonscore__emojiproxymodel_set_filter_regular_expression2(void* self, const void* regularExpression);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -588,19 +588,19 @@ void k_textemoticonscore__emojiproxymodel_on_auto_accept_child_rows_changed(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-QAbstractItemModel* k_textemoticonscore__emojiproxymodel_source_model(void* self);
+QAbstractItemModel* k_textemoticonscore__emojiproxymodel_source_model(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param column int
 ///
-bool k_textemoticonscore__emojiproxymodel_has_index(void* self, int row, int column);
+bool k_textemoticonscore__emojiproxymodel_has_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -648,7 +648,7 @@ bool k_textemoticonscore__emojiproxymodel_remove_column(void* self, int column);
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_textemoticonscore__emojiproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
+bool k_textemoticonscore__emojiproxymodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -660,16 +660,16 @@ bool k_textemoticonscore__emojiproxymodel_move_row(void* self, void* sourceParen
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_textemoticonscore__emojiproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
+bool k_textemoticonscore__emojiproxymodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_check_index(void* self, void* index);
+bool k_textemoticonscore__emojiproxymodel_check_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -679,7 +679,7 @@ bool k_textemoticonscore__emojiproxymodel_check_index(void* self, void* index);
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 ///
-void k_textemoticonscore__emojiproxymodel_data_changed(void* self, void* topLeft, void* bottomRight);
+void k_textemoticonscore__emojiproxymodel_data_changed(void* self, const void* topLeft, const void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -688,7 +688,7 @@ void k_textemoticonscore__emojiproxymodel_data_changed(void* self, void* topLeft
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 ///
-void k_textemoticonscore__emojiproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -748,12 +748,12 @@ void k_textemoticonscore__emojiproxymodel_on_layout_about_to_be_changed(void* se
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_has_index3(void* self, int row, int column, void* parent);
+bool k_textemoticonscore__emojiproxymodel_has_index3(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -763,7 +763,7 @@ bool k_textemoticonscore__emojiproxymodel_has_index3(void* self, int row, int co
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_insert_row2(void* self, int row, void* parent);
+bool k_textemoticonscore__emojiproxymodel_insert_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -773,7 +773,7 @@ bool k_textemoticonscore__emojiproxymodel_insert_row2(void* self, int row, void*
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_insert_column2(void* self, int column, void* parent);
+bool k_textemoticonscore__emojiproxymodel_insert_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -783,7 +783,7 @@ bool k_textemoticonscore__emojiproxymodel_insert_column2(void* self, int column,
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_remove_row2(void* self, int row, void* parent);
+bool k_textemoticonscore__emojiproxymodel_remove_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -793,17 +793,17 @@ bool k_textemoticonscore__emojiproxymodel_remove_row2(void* self, int row, void*
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_remove_column2(void* self, int column, void* parent);
+bool k_textemoticonscore__emojiproxymodel_remove_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
 ///
-bool k_textemoticonscore__emojiproxymodel_check_index2(void* self, void* index, int32_t options);
+bool k_textemoticonscore__emojiproxymodel_check_index2(const void* self, const void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -814,7 +814,7 @@ bool k_textemoticonscore__emojiproxymodel_check_index2(void* self, void* index, 
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_textemoticonscore__emojiproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_textemoticonscore__emojiproxymodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -823,7 +823,7 @@ void k_textemoticonscore__emojiproxymodel_data_changed3(void* self, void* topLef
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void k_textemoticonscore__emojiproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void k_textemoticonscore__emojiproxymodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -905,9 +905,9 @@ void k_textemoticonscore__emojiproxymodel_on_layout_about_to_be_changed2(void* s
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const char* k_textemoticonscore__emojiproxymodel_object_name(void* self);
+const char* k_textemoticonscore__emojiproxymodel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -922,33 +922,33 @@ void k_textemoticonscore__emojiproxymodel_set_object_name(void* self, const char
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_is_widget_type(void* self);
+bool k_textemoticonscore__emojiproxymodel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_is_window_type(void* self);
+bool k_textemoticonscore__emojiproxymodel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_is_quick_item_type(void* self);
+bool k_textemoticonscore__emojiproxymodel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_signals_blocked(void* self);
+bool k_textemoticonscore__emojiproxymodel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -963,9 +963,9 @@ bool k_textemoticonscore__emojiproxymodel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-QThread* k_textemoticonscore__emojiproxymodel_thread(void* self);
+QThread* k_textemoticonscore__emojiproxymodel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1016,11 +1016,11 @@ void k_textemoticonscore__emojiproxymodel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_textemoticonscore__emojiproxymodel_children(void* self);
+libqt_list k_textemoticonscore__emojiproxymodel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1058,7 +1058,7 @@ void k_textemoticonscore__emojiproxymodel_remove_event_filter(void* self, void* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1069,18 +1069,18 @@ QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect(void* send
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1091,7 +1091,7 @@ QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect3(void* sel
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textemoticonscore__emojiproxymodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_textemoticonscore__emojiproxymodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1102,24 +1102,24 @@ bool k_textemoticonscore__emojiproxymodel_disconnect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_textemoticonscore__emojiproxymodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_textemoticonscore__emojiproxymodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-bool k_textemoticonscore__emojiproxymodel_disconnect3(void* self);
+bool k_textemoticonscore__emojiproxymodel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param receiver QObject*
 ///
-bool k_textemoticonscore__emojiproxymodel_disconnect4(void* self, void* receiver);
+bool k_textemoticonscore__emojiproxymodel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1127,23 +1127,23 @@ bool k_textemoticonscore__emojiproxymodel_disconnect4(void* self, void* receiver
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_textemoticonscore__emojiproxymodel_disconnect5(void* param1);
+bool k_textemoticonscore__emojiproxymodel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-void k_textemoticonscore__emojiproxymodel_dump_object_tree(void* self);
+void k_textemoticonscore__emojiproxymodel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-void k_textemoticonscore__emojiproxymodel_dump_object_info(void* self);
+void k_textemoticonscore__emojiproxymodel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1153,16 +1153,16 @@ void k_textemoticonscore__emojiproxymodel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_textemoticonscore__emojiproxymodel_set_property(void* self, const char* name, void* value);
+bool k_textemoticonscore__emojiproxymodel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param name const char*
 ///
-QVariant* k_textemoticonscore__emojiproxymodel_property(void* self, const char* name);
+QVariant* k_textemoticonscore__emojiproxymodel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1170,9 +1170,9 @@ QVariant* k_textemoticonscore__emojiproxymodel_property(void* self, const char* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const char** k_textemoticonscore__emojiproxymodel_dynamic_property_names(void* self);
+const char** k_textemoticonscore__emojiproxymodel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1186,9 +1186,9 @@ QBindingStorage* k_textemoticonscore__emojiproxymodel_binding_storage(void* self
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const QBindingStorage* k_textemoticonscore__emojiproxymodel_binding_storage2(void* self);
+const QBindingStorage* k_textemoticonscore__emojiproxymodel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1211,10 +1211,10 @@ void k_textemoticonscore__emojiproxymodel_on_destroyed(void* self, void (*callba
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param classname const char*
 ///
-bool k_textemoticonscore__emojiproxymodel_inherits(void* self, const char* classname);
+bool k_textemoticonscore__emojiproxymodel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1254,7 +1254,7 @@ int32_t k_textemoticonscore__emojiproxymodel_start_timer23(void* self, int64_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1266,59 +1266,59 @@ QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect5(void* sen
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_textemoticonscore__emojiproxymodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param signal const char*
 ///
-bool k_textemoticonscore__emojiproxymodel_disconnect1(void* self, const char* signal);
+bool k_textemoticonscore__emojiproxymodel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_textemoticonscore__emojiproxymodel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_textemoticonscore__emojiproxymodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_textemoticonscore__emojiproxymodel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textemoticonscore__emojiproxymodel_disconnect23(void* self, void* receiver, const char* member);
+bool k_textemoticonscore__emojiproxymodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_textemoticonscore__emojiproxymodel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1377,10 +1377,10 @@ void k_textemoticonscore__emojiproxymodel_on_set_source_model(void* self, void (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param proxyIndex QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_map_to_source(void* self, void* proxyIndex);
+QModelIndex* k_textemoticonscore__emojiproxymodel_map_to_source(const void* self, const void* proxyIndex);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1388,10 +1388,10 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_map_to_source(void* self, void
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param proxyIndex QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_to_source(void* self, void* proxyIndex);
+QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_to_source(const void* self, const void* proxyIndex);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1399,12 +1399,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_to_source(void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* proxyIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_map_to_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1412,10 +1412,10 @@ void k_textemoticonscore__emojiproxymodel_on_map_to_source(void* self, QModelInd
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param sourceIndex QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_map_from_source(void* self, void* sourceIndex);
+QModelIndex* k_textemoticonscore__emojiproxymodel_map_from_source(const void* self, const void* sourceIndex);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1423,10 +1423,10 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_map_from_source(void* self, vo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param sourceIndex QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_from_source(void* self, void* sourceIndex);
+QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_from_source(const void* self, const void* sourceIndex);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1434,12 +1434,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_from_source(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceIndex)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_map_from_source(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1447,10 +1447,10 @@ void k_textemoticonscore__emojiproxymodel_on_map_from_source(void* self, QModelI
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param proxySelection QItemSelection*
 ///
-QItemSelection* k_textemoticonscore__emojiproxymodel_map_selection_to_source(void* self, void* proxySelection);
+QItemSelection* k_textemoticonscore__emojiproxymodel_map_selection_to_source(const void* self, const void* proxySelection);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1458,10 +1458,10 @@ QItemSelection* k_textemoticonscore__emojiproxymodel_map_selection_to_source(voi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param proxySelection QItemSelection*
 ///
-QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_to_source(void* self, void* proxySelection);
+QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_to_source(const void* self, const void* proxySelection);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1469,12 +1469,12 @@ QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_to_sour
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QItemSelection* func(TextEmoticonsCore__EmojiProxyModel* self, QItemSelection* proxySelection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_map_selection_to_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1482,10 +1482,10 @@ void k_textemoticonscore__emojiproxymodel_on_map_selection_to_source(void* self,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param sourceSelection QItemSelection*
 ///
-QItemSelection* k_textemoticonscore__emojiproxymodel_map_selection_from_source(void* self, void* sourceSelection);
+QItemSelection* k_textemoticonscore__emojiproxymodel_map_selection_from_source(const void* self, const void* sourceSelection);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1493,10 +1493,10 @@ QItemSelection* k_textemoticonscore__emojiproxymodel_map_selection_from_source(v
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param sourceSelection QItemSelection*
 ///
-QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_from_source(void* self, void* sourceSelection);
+QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_from_source(const void* self, const void* sourceSelection);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1504,12 +1504,12 @@ QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_from_so
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QItemSelection* func(TextEmoticonsCore__EmojiProxyModel* self, QItemSelection* sourceSelection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_map_selection_from_source(const void* self, QItemSelection* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1517,11 +1517,11 @@ void k_textemoticonscore__emojiproxymodel_on_map_selection_from_source(void* sel
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param source_column int
 /// @param source_parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_filter_accepts_column(void* self, int source_column, void* source_parent);
+bool k_textemoticonscore__emojiproxymodel_filter_accepts_column(const void* self, int source_column, const void* source_parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1529,11 +1529,11 @@ bool k_textemoticonscore__emojiproxymodel_filter_accepts_column(void* self, int 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param source_column int
 /// @param source_parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_filter_accepts_column(void* self, int source_column, void* source_parent);
+bool k_textemoticonscore__emojiproxymodel_super_filter_accepts_column(const void* self, int source_column, const void* source_parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1541,10 +1541,10 @@ bool k_textemoticonscore__emojiproxymodel_super_filter_accepts_column(void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, int source_column, QModelIndex* source_parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_filter_accepts_column(void* self, bool (*callback)(void*, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_filter_accepts_column(const void* self, bool (*callback)(const void*, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1552,12 +1552,12 @@ void k_textemoticonscore__emojiproxymodel_on_filter_accepts_column(void* self, b
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_index(void* self, int row, int column, void* parent);
+QModelIndex* k_textemoticonscore__emojiproxymodel_index(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1565,12 +1565,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_index(void* self, int row, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_super_index(void* self, int row, int column, void* parent);
+QModelIndex* k_textemoticonscore__emojiproxymodel_super_index(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1578,12 +1578,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_index(void* self, int ro
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, int row, int column, QModelIndex* parent)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1591,10 +1591,10 @@ void k_textemoticonscore__emojiproxymodel_on_index(void* self, QModelIndex* (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_parent(void* self, void* child);
+QModelIndex* k_textemoticonscore__emojiproxymodel_parent(const void* self, const void* child);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1602,10 +1602,10 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_parent(void* self, void* child
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_super_parent(void* self, void* child);
+QModelIndex* k_textemoticonscore__emojiproxymodel_super_parent(const void* self, const void* child);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1613,12 +1613,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_parent(void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* child)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1626,12 +1626,12 @@ void k_textemoticonscore__emojiproxymodel_on_parent(void* self, QModelIndex* (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_sibling(void* self, int row, int column, void* idx);
+QModelIndex* k_textemoticonscore__emojiproxymodel_sibling(const void* self, int row, int column, const void* idx);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1639,12 +1639,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_sibling(void* self, int row, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_super_sibling(void* self, int row, int column, void* idx);
+QModelIndex* k_textemoticonscore__emojiproxymodel_super_sibling(const void* self, int row, int column, const void* idx);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1652,12 +1652,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_sibling(void* self, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, int row, int column, QModelIndex* idx)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1665,10 +1665,10 @@ void k_textemoticonscore__emojiproxymodel_on_sibling(void* self, QModelIndex* (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_row_count(void* self, void* parent);
+int32_t k_textemoticonscore__emojiproxymodel_row_count(const void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1676,10 +1676,10 @@ int32_t k_textemoticonscore__emojiproxymodel_row_count(void* self, void* parent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_super_row_count(void* self, void* parent);
+int32_t k_textemoticonscore__emojiproxymodel_super_row_count(const void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1687,10 +1687,10 @@ int32_t k_textemoticonscore__emojiproxymodel_super_row_count(void* self, void* p
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1698,10 +1698,10 @@ void k_textemoticonscore__emojiproxymodel_on_row_count(void* self, int32_t (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_column_count(void* self, void* parent);
+int32_t k_textemoticonscore__emojiproxymodel_column_count(const void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1709,10 +1709,10 @@ int32_t k_textemoticonscore__emojiproxymodel_column_count(void* self, void* pare
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_super_column_count(void* self, void* parent);
+int32_t k_textemoticonscore__emojiproxymodel_super_column_count(const void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1720,10 +1720,10 @@ int32_t k_textemoticonscore__emojiproxymodel_super_column_count(void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1731,10 +1731,10 @@ void k_textemoticonscore__emojiproxymodel_on_column_count(void* self, int32_t (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_has_children(void* self, void* parent);
+bool k_textemoticonscore__emojiproxymodel_has_children(const void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1742,10 +1742,10 @@ bool k_textemoticonscore__emojiproxymodel_has_children(void* self, void* parent)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_has_children(void* self, void* parent);
+bool k_textemoticonscore__emojiproxymodel_super_has_children(const void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1753,10 +1753,10 @@ bool k_textemoticonscore__emojiproxymodel_super_has_children(void* self, void* p
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_has_children(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1764,11 +1764,11 @@ void k_textemoticonscore__emojiproxymodel_on_has_children(void* self, bool (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* k_textemoticonscore__emojiproxymodel_data(void* self, void* index, int role);
+QVariant* k_textemoticonscore__emojiproxymodel_data(const void* self, const void* index, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1776,11 +1776,11 @@ QVariant* k_textemoticonscore__emojiproxymodel_data(void* self, void* index, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* k_textemoticonscore__emojiproxymodel_super_data(void* self, void* index, int role);
+QVariant* k_textemoticonscore__emojiproxymodel_super_data(const void* self, const void* index, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1788,12 +1788,12 @@ QVariant* k_textemoticonscore__emojiproxymodel_super_data(void* self, void* inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QVariant* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1806,7 +1806,7 @@ void k_textemoticonscore__emojiproxymodel_on_data(void* self, QVariant* (*callba
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_textemoticonscore__emojiproxymodel_set_data(void* self, void* index, void* value, int role);
+bool k_textemoticonscore__emojiproxymodel_set_data(void* self, const void* index, const void* value, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1819,7 +1819,7 @@ bool k_textemoticonscore__emojiproxymodel_set_data(void* self, void* index, void
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_textemoticonscore__emojiproxymodel_super_set_data(void* self, void* index, void* value, int role);
+bool k_textemoticonscore__emojiproxymodel_super_set_data(void* self, const void* index, const void* value, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1830,7 +1830,7 @@ bool k_textemoticonscore__emojiproxymodel_super_set_data(void* self, void* index
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index, QVariant* value, int role)
 ///
-void k_textemoticonscore__emojiproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_set_data(void* self, bool (*callback)(void*, const void*, const void*, int));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1838,12 +1838,12 @@ void k_textemoticonscore__emojiproxymodel_on_set_data(void* self, bool (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* k_textemoticonscore__emojiproxymodel_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* k_textemoticonscore__emojiproxymodel_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1851,12 +1851,12 @@ QVariant* k_textemoticonscore__emojiproxymodel_header_data(void* self, int secti
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* k_textemoticonscore__emojiproxymodel_super_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* k_textemoticonscore__emojiproxymodel_super_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1864,12 +1864,12 @@ QVariant* k_textemoticonscore__emojiproxymodel_super_header_data(void* self, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QVariant* func(TextEmoticonsCore__EmojiProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
+void k_textemoticonscore__emojiproxymodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1883,7 +1883,7 @@ void k_textemoticonscore__emojiproxymodel_on_header_data(void* self, QVariant* (
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_textemoticonscore__emojiproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool k_textemoticonscore__emojiproxymodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1897,7 +1897,7 @@ bool k_textemoticonscore__emojiproxymodel_set_header_data(void* self, int sectio
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_textemoticonscore__emojiproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool k_textemoticonscore__emojiproxymodel_super_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1908,7 +1908,7 @@ bool k_textemoticonscore__emojiproxymodel_super_set_header_data(void* self, int 
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role)
 ///
-void k_textemoticonscore__emojiproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, const void*, int));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1916,10 +1916,10 @@ void k_textemoticonscore__emojiproxymodel_on_set_header_data(void* self, bool (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_textemoticonscore__emojiproxymodel_mime_data(void* self, libqt_list indexes);
+QMimeData* k_textemoticonscore__emojiproxymodel_mime_data(const void* self, libqt_list indexes);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1927,10 +1927,10 @@ QMimeData* k_textemoticonscore__emojiproxymodel_mime_data(void* self, libqt_list
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_textemoticonscore__emojiproxymodel_super_mime_data(void* self, libqt_list indexes);
+QMimeData* k_textemoticonscore__emojiproxymodel_super_mime_data(const void* self, libqt_list indexes);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1938,10 +1938,10 @@ QMimeData* k_textemoticonscore__emojiproxymodel_super_mime_data(void* self, libq
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QMimeData* func(TextEmoticonsCore__EmojiProxyModel* self, libqt_list of QModelIndex* indexes)
 ///
-void k_textemoticonscore__emojiproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+void k_textemoticonscore__emojiproxymodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1956,7 +1956,7 @@ void k_textemoticonscore__emojiproxymodel_on_mime_data(void* self, QMimeData* (*
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_textemoticonscore__emojiproxymodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1971,7 +1971,7 @@ bool k_textemoticonscore__emojiproxymodel_drop_mime_data(void* self, void* data,
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_textemoticonscore__emojiproxymodel_super_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1982,7 +1982,7 @@ bool k_textemoticonscore__emojiproxymodel_super_drop_mime_data(void* self, void*
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -1995,7 +1995,7 @@ void k_textemoticonscore__emojiproxymodel_on_drop_mime_data(void* self, bool (*c
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_insert_rows(void* self, int row, int count, void* parent);
+bool k_textemoticonscore__emojiproxymodel_insert_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2008,7 +2008,7 @@ bool k_textemoticonscore__emojiproxymodel_insert_rows(void* self, int row, int c
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_insert_rows(void* self, int row, int count, void* parent);
+bool k_textemoticonscore__emojiproxymodel_super_insert_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2019,7 +2019,7 @@ bool k_textemoticonscore__emojiproxymodel_super_insert_rows(void* self, int row,
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, int row, int count, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2032,7 +2032,7 @@ void k_textemoticonscore__emojiproxymodel_on_insert_rows(void* self, bool (*call
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_insert_columns(void* self, int column, int count, void* parent);
+bool k_textemoticonscore__emojiproxymodel_insert_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2045,7 +2045,7 @@ bool k_textemoticonscore__emojiproxymodel_insert_columns(void* self, int column,
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_insert_columns(void* self, int column, int count, void* parent);
+bool k_textemoticonscore__emojiproxymodel_super_insert_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2056,7 +2056,7 @@ bool k_textemoticonscore__emojiproxymodel_super_insert_columns(void* self, int c
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, int column, int count, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2069,7 +2069,7 @@ void k_textemoticonscore__emojiproxymodel_on_insert_columns(void* self, bool (*c
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_remove_rows(void* self, int row, int count, void* parent);
+bool k_textemoticonscore__emojiproxymodel_remove_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2082,7 +2082,7 @@ bool k_textemoticonscore__emojiproxymodel_remove_rows(void* self, int row, int c
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_remove_rows(void* self, int row, int count, void* parent);
+bool k_textemoticonscore__emojiproxymodel_super_remove_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2093,7 +2093,7 @@ bool k_textemoticonscore__emojiproxymodel_super_remove_rows(void* self, int row,
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, int row, int count, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2106,7 +2106,7 @@ void k_textemoticonscore__emojiproxymodel_on_remove_rows(void* self, bool (*call
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_remove_columns(void* self, int column, int count, void* parent);
+bool k_textemoticonscore__emojiproxymodel_remove_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2119,7 +2119,7 @@ bool k_textemoticonscore__emojiproxymodel_remove_columns(void* self, int column,
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_remove_columns(void* self, int column, int count, void* parent);
+bool k_textemoticonscore__emojiproxymodel_super_remove_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2130,7 +2130,7 @@ bool k_textemoticonscore__emojiproxymodel_super_remove_columns(void* self, int c
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, int column, int count, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2141,7 +2141,7 @@ void k_textemoticonscore__emojiproxymodel_on_remove_columns(void* self, bool (*c
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-void k_textemoticonscore__emojiproxymodel_fetch_more(void* self, void* parent);
+void k_textemoticonscore__emojiproxymodel_fetch_more(void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2152,7 +2152,7 @@ void k_textemoticonscore__emojiproxymodel_fetch_more(void* self, void* parent);
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-void k_textemoticonscore__emojiproxymodel_super_fetch_more(void* self, void* parent);
+void k_textemoticonscore__emojiproxymodel_super_fetch_more(void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2163,7 +2163,7 @@ void k_textemoticonscore__emojiproxymodel_super_fetch_more(void* self, void* par
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_fetch_more(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2171,10 +2171,10 @@ void k_textemoticonscore__emojiproxymodel_on_fetch_more(void* self, void (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_can_fetch_more(void* self, void* parent);
+bool k_textemoticonscore__emojiproxymodel_can_fetch_more(const void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2182,10 +2182,10 @@ bool k_textemoticonscore__emojiproxymodel_can_fetch_more(void* self, void* paren
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_can_fetch_more(void* self, void* parent);
+bool k_textemoticonscore__emojiproxymodel_super_can_fetch_more(const void* self, const void* parent);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2193,10 +2193,10 @@ bool k_textemoticonscore__emojiproxymodel_super_can_fetch_more(void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2204,12 +2204,12 @@ void k_textemoticonscore__emojiproxymodel_on_can_fetch_more(void* self, bool (*c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t k_textemoticonscore__emojiproxymodel_flags(void* self, void* index);
+int32_t k_textemoticonscore__emojiproxymodel_flags(const void* self, const void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2217,12 +2217,12 @@ int32_t k_textemoticonscore__emojiproxymodel_flags(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t k_textemoticonscore__emojiproxymodel_super_flags(void* self, void* index);
+int32_t k_textemoticonscore__emojiproxymodel_super_flags(const void* self, const void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2230,10 +2230,10 @@ int32_t k_textemoticonscore__emojiproxymodel_super_flags(void* self, void* index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index)
 ///
-void k_textemoticonscore__emojiproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2241,10 +2241,10 @@ void k_textemoticonscore__emojiproxymodel_on_flags(void* self, int32_t (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_buddy(void* self, void* index);
+QModelIndex* k_textemoticonscore__emojiproxymodel_buddy(const void* self, const void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2252,10 +2252,10 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_buddy(void* self, void* index)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_super_buddy(void* self, void* index);
+QModelIndex* k_textemoticonscore__emojiproxymodel_super_buddy(const void* self, const void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2263,12 +2263,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_buddy(void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2276,7 +2276,7 @@ void k_textemoticonscore__emojiproxymodel_on_buddy(void* self, QModelIndex* (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -2285,7 +2285,7 @@ void k_textemoticonscore__emojiproxymodel_on_buddy(void* self, QModelIndex* (*ca
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_textemoticonscore__emojiproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list k_textemoticonscore__emojiproxymodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2293,7 +2293,7 @@ libqt_list k_textemoticonscore__emojiproxymodel_match(void* self, void* start, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -2302,7 +2302,7 @@ libqt_list k_textemoticonscore__emojiproxymodel_match(void* self, void* start, i
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_textemoticonscore__emojiproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list k_textemoticonscore__emojiproxymodel_super_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2310,10 +2310,10 @@ libqt_list k_textemoticonscore__emojiproxymodel_super_match(void* self, void* st
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback libqt_list of QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, flag of enum Qt__MatchFlag flags)
 ///
-void k_textemoticonscore__emojiproxymodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, void*, int, int32_t));
+void k_textemoticonscore__emojiproxymodel_on_match(const void* self, libqt_list (*callback)(const void*, const void*, int, const void*, int, int32_t));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2321,10 +2321,10 @@ void k_textemoticonscore__emojiproxymodel_on_match(void* self, libqt_list (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
-QSize* k_textemoticonscore__emojiproxymodel_span(void* self, void* index);
+QSize* k_textemoticonscore__emojiproxymodel_span(const void* self, const void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2332,10 +2332,10 @@ QSize* k_textemoticonscore__emojiproxymodel_span(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
-QSize* k_textemoticonscore__emojiproxymodel_super_span(void* self, void* index);
+QSize* k_textemoticonscore__emojiproxymodel_super_span(const void* self, const void* index);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2343,12 +2343,12 @@ QSize* k_textemoticonscore__emojiproxymodel_super_span(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QSize* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_span(const void* self, QSize* (*callback)(const void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2393,9 +2393,9 @@ void k_textemoticonscore__emojiproxymodel_on_sort(void* self, void (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const char** k_textemoticonscore__emojiproxymodel_mime_types(void* self);
+const char** k_textemoticonscore__emojiproxymodel_mime_types(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2405,9 +2405,9 @@ const char** k_textemoticonscore__emojiproxymodel_mime_types(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-const char** k_textemoticonscore__emojiproxymodel_super_mime_types(void* self);
+const char** k_textemoticonscore__emojiproxymodel_super_mime_types(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2415,10 +2415,10 @@ const char** k_textemoticonscore__emojiproxymodel_super_mime_types(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback const char** func()
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback const char** func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_mime_types(void* self, const char** (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_mime_types(const void* self, const char** (*callback)(const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2426,11 +2426,11 @@ void k_textemoticonscore__emojiproxymodel_on_mime_types(void* self, const char**
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_textemoticonscore__emojiproxymodel_supported_drop_actions(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_supported_drop_actions(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2438,11 +2438,11 @@ int32_t k_textemoticonscore__emojiproxymodel_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_textemoticonscore__emojiproxymodel_super_supported_drop_actions(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_super_supported_drop_actions(const void* self);
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -2450,10 +2450,10 @@ int32_t k_textemoticonscore__emojiproxymodel_super_supported_drop_actions(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback int32_t func()
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback int32_t func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2482,9 +2482,9 @@ bool k_textemoticonscore__emojiproxymodel_super_submit(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback bool func()
+/// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_submit(void* self, bool (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_submit(void* self, bool (*callback)(void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2513,9 +2513,9 @@ void k_textemoticonscore__emojiproxymodel_super_revert(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_revert(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_revert(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2534,12 +2534,12 @@ void k_textemoticonscore__emojiproxymodel_on_revert(void* self, void (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map k_textemoticonscore__emojiproxymodel_item_data(void* self, void* index);
+libqt_map k_textemoticonscore__emojiproxymodel_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2558,12 +2558,12 @@ libqt_map k_textemoticonscore__emojiproxymodel_item_data(void* self, void* index
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map k_textemoticonscore__emojiproxymodel_super_item_data(void* self, void* index);
+libqt_map k_textemoticonscore__emojiproxymodel_super_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2571,10 +2571,10 @@ libqt_map k_textemoticonscore__emojiproxymodel_super_item_data(void* self, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback libqt_map of int to QVariant* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index)
 ///
-void k_textemoticonscore__emojiproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_item_data(const void* self, libqt_map (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2586,7 +2586,7 @@ void k_textemoticonscore__emojiproxymodel_on_item_data(void* self, libqt_map (*c
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool k_textemoticonscore__emojiproxymodel_set_item_data(void* self, void* index, libqt_map roles);
+bool k_textemoticonscore__emojiproxymodel_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2598,7 +2598,7 @@ bool k_textemoticonscore__emojiproxymodel_set_item_data(void* self, void* index,
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_set_item_data(void* self, void* index, libqt_map roles);
+bool k_textemoticonscore__emojiproxymodel_super_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2609,7 +2609,7 @@ bool k_textemoticonscore__emojiproxymodel_super_set_item_data(void* self, void* 
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index, libqt_map of int to QVariant* roles)
 ///
-void k_textemoticonscore__emojiproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
+void k_textemoticonscore__emojiproxymodel_on_set_item_data(void* self, bool (*callback)(void*, const void*, libqt_map));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2620,7 +2620,7 @@ void k_textemoticonscore__emojiproxymodel_on_set_item_data(void* self, bool (*ca
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_clear_item_data(void* self, void* index);
+bool k_textemoticonscore__emojiproxymodel_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2631,7 +2631,7 @@ bool k_textemoticonscore__emojiproxymodel_clear_item_data(void* self, void* inde
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_clear_item_data(void* self, void* index);
+bool k_textemoticonscore__emojiproxymodel_super_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2642,7 +2642,7 @@ bool k_textemoticonscore__emojiproxymodel_super_clear_item_data(void* self, void
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index)
 ///
-void k_textemoticonscore__emojiproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2650,14 +2650,14 @@ void k_textemoticonscore__emojiproxymodel_on_clear_item_data(void* self, bool (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_textemoticonscore__emojiproxymodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2665,14 +2665,14 @@ bool k_textemoticonscore__emojiproxymodel_can_drop_mime_data(void* self, void* d
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_textemoticonscore__emojiproxymodel_super_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2680,10 +2680,10 @@ bool k_textemoticonscore__emojiproxymodel_super_can_drop_mime_data(void* self, v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent)
 ///
-void k_textemoticonscore__emojiproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2691,11 +2691,11 @@ void k_textemoticonscore__emojiproxymodel_on_can_drop_mime_data(void* self, bool
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_textemoticonscore__emojiproxymodel_supported_drag_actions(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2703,11 +2703,11 @@ int32_t k_textemoticonscore__emojiproxymodel_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_textemoticonscore__emojiproxymodel_super_supported_drag_actions(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_super_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2715,10 +2715,10 @@ int32_t k_textemoticonscore__emojiproxymodel_super_supported_drag_actions(void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback int32_t func()
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback int32_t func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2737,11 +2737,11 @@ void k_textemoticonscore__emojiproxymodel_on_supported_drag_actions(void* self, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map k_textemoticonscore__emojiproxymodel_role_names(void* self);
+libqt_map k_textemoticonscore__emojiproxymodel_role_names(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2760,11 +2760,11 @@ libqt_map k_textemoticonscore__emojiproxymodel_role_names(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map k_textemoticonscore__emojiproxymodel_super_role_names(void* self);
+libqt_map k_textemoticonscore__emojiproxymodel_super_role_names(const void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2772,10 +2772,10 @@ libqt_map k_textemoticonscore__emojiproxymodel_super_role_names(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback libqt_map of int to char* func()
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback libqt_map of int to char* func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_role_names(void* self, libqt_map (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_role_names(const void* self, libqt_map (*callback)(const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2790,7 +2790,7 @@ void k_textemoticonscore__emojiproxymodel_on_role_names(void* self, libqt_map (*
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_textemoticonscore__emojiproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool k_textemoticonscore__emojiproxymodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2805,7 +2805,7 @@ bool k_textemoticonscore__emojiproxymodel_move_rows(void* self, void* sourcePare
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_textemoticonscore__emojiproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool k_textemoticonscore__emojiproxymodel_super_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2816,7 +2816,7 @@ bool k_textemoticonscore__emojiproxymodel_super_move_rows(void* self, void* sour
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild)
 ///
-void k_textemoticonscore__emojiproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2831,7 +2831,7 @@ void k_textemoticonscore__emojiproxymodel_on_move_rows(void* self, bool (*callba
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_textemoticonscore__emojiproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool k_textemoticonscore__emojiproxymodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2846,7 +2846,7 @@ bool k_textemoticonscore__emojiproxymodel_move_columns(void* self, void* sourceP
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_textemoticonscore__emojiproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool k_textemoticonscore__emojiproxymodel_super_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2857,7 +2857,7 @@ bool k_textemoticonscore__emojiproxymodel_super_move_columns(void* self, void* s
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild)
 ///
-void k_textemoticonscore__emojiproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2865,11 +2865,11 @@ void k_textemoticonscore__emojiproxymodel_on_move_columns(void* self, bool (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void k_textemoticonscore__emojiproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
+void k_textemoticonscore__emojiproxymodel_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2877,11 +2877,11 @@ void k_textemoticonscore__emojiproxymodel_multi_data(void* self, void* index, vo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void k_textemoticonscore__emojiproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan);
+void k_textemoticonscore__emojiproxymodel_super_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2889,10 +2889,10 @@ void k_textemoticonscore__emojiproxymodel_super_multi_data(void* self, void* ind
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan)
 ///
-void k_textemoticonscore__emojiproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2921,9 +2921,9 @@ void k_textemoticonscore__emojiproxymodel_super_reset_internal_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_reset_internal_data(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_reset_internal_data(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -3101,7 +3101,7 @@ void k_textemoticonscore__emojiproxymodel_on_custom_event(void* self, void (*cal
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param signal QMetaMethod*
 ///
-void k_textemoticonscore__emojiproxymodel_connect_notify(void* self, void* signal);
+void k_textemoticonscore__emojiproxymodel_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3112,7 +3112,7 @@ void k_textemoticonscore__emojiproxymodel_connect_notify(void* self, void* signa
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param signal QMetaMethod*
 ///
-void k_textemoticonscore__emojiproxymodel_super_connect_notify(void* self, void* signal);
+void k_textemoticonscore__emojiproxymodel_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3123,7 +3123,7 @@ void k_textemoticonscore__emojiproxymodel_super_connect_notify(void* self, void*
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QMetaMethod* signal)
 ///
-void k_textemoticonscore__emojiproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3134,7 +3134,7 @@ void k_textemoticonscore__emojiproxymodel_on_connect_notify(void* self, void (*c
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param signal QMetaMethod*
 ///
-void k_textemoticonscore__emojiproxymodel_disconnect_notify(void* self, void* signal);
+void k_textemoticonscore__emojiproxymodel_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3145,7 +3145,7 @@ void k_textemoticonscore__emojiproxymodel_disconnect_notify(void* self, void* si
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param signal QMetaMethod*
 ///
-void k_textemoticonscore__emojiproxymodel_super_disconnect_notify(void* self, void* signal);
+void k_textemoticonscore__emojiproxymodel_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3156,7 +3156,7 @@ void k_textemoticonscore__emojiproxymodel_super_disconnect_notify(void* self, vo
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QMetaMethod* signal)
 ///
-void k_textemoticonscore__emojiproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -3185,9 +3185,9 @@ void k_textemoticonscore__emojiproxymodel_super_invalidate_filter(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_invalidate_filter(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_invalidate_filter(void* self, void (*callback)(void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -3216,9 +3216,9 @@ void k_textemoticonscore__emojiproxymodel_super_invalidate_rows_filter(void* sel
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_invalidate_rows_filter(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_invalidate_rows_filter(void* self, void (*callback)(void*));
 
 /// Inherited from QSortFilterProxyModel
 ///
@@ -3247,9 +3247,9 @@ void k_textemoticonscore__emojiproxymodel_super_invalidate_columns_filter(void* 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_invalidate_columns_filter(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_invalidate_columns_filter(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -3257,12 +3257,12 @@ void k_textemoticonscore__emojiproxymodel_on_invalidate_columns_filter(void* sel
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param col int
 /// @param internalPtr void*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
+QModelIndex* k_textemoticonscore__emojiproxymodel_create_source_index(const void* self, int row, int col, void* internalPtr);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -3270,12 +3270,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_create_source_index(void* self
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param col int
 /// @param internalPtr void*
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr);
+QModelIndex* k_textemoticonscore__emojiproxymodel_super_create_source_index(const void* self, int row, int col, void* internalPtr);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -3283,12 +3283,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_create_source_index(void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, int row, int col, void* internalPtr)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
+void k_textemoticonscore__emojiproxymodel_on_create_source_index(const void* self, QModelIndex* (*callback)(const void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3296,11 +3296,11 @@ void k_textemoticonscore__emojiproxymodel_on_create_source_index(void* self, QMo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param column int
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_create_index(void* self, int row, int column);
+QModelIndex* k_textemoticonscore__emojiproxymodel_create_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3308,11 +3308,11 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_create_index(void* self, int r
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param row int
 /// @param column int
 ///
-QModelIndex* k_textemoticonscore__emojiproxymodel_super_create_index(void* self, int row, int column);
+QModelIndex* k_textemoticonscore__emojiproxymodel_super_create_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3320,12 +3320,12 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_create_index(void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, int row, int column)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_textemoticonscore__emojiproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_create_index(const void* self, QModelIndex* (*callback)(const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3333,11 +3333,11 @@ void k_textemoticonscore__emojiproxymodel_on_create_index(void* self, QModelInde
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_textemoticonscore__emojiproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
+void k_textemoticonscore__emojiproxymodel_encode_data(const void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3345,11 +3345,11 @@ void k_textemoticonscore__emojiproxymodel_encode_data(void* self, libqt_list ind
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_textemoticonscore__emojiproxymodel_super_encode_data(void* self, libqt_list indexes, void* stream);
+void k_textemoticonscore__emojiproxymodel_super_encode_data(const void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3357,10 +3357,10 @@ void k_textemoticonscore__emojiproxymodel_super_encode_data(void* self, libqt_li
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, libqt_list of QModelIndex* indexes, QDataStream* stream)
 ///
-void k_textemoticonscore__emojiproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
+void k_textemoticonscore__emojiproxymodel_on_encode_data(const void* self, void (*callback)(const void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3374,7 +3374,7 @@ void k_textemoticonscore__emojiproxymodel_on_encode_data(void* self, void (*call
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool k_textemoticonscore__emojiproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool k_textemoticonscore__emojiproxymodel_decode_data(void* self, int row, int column, const void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3388,7 +3388,7 @@ bool k_textemoticonscore__emojiproxymodel_decode_data(void* self, int row, int c
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool k_textemoticonscore__emojiproxymodel_super_decode_data(void* self, int row, int column, const void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3399,7 +3399,7 @@ bool k_textemoticonscore__emojiproxymodel_super_decode_data(void* self, int row,
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream)
 ///
-void k_textemoticonscore__emojiproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, const void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3412,7 +3412,7 @@ void k_textemoticonscore__emojiproxymodel_on_decode_data(void* self, bool (*call
 /// @param first int
 /// @param last int
 ///
-void k_textemoticonscore__emojiproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
+void k_textemoticonscore__emojiproxymodel_begin_insert_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3425,7 +3425,7 @@ void k_textemoticonscore__emojiproxymodel_begin_insert_rows(void* self, void* pa
 /// @param first int
 /// @param last int
 ///
-void k_textemoticonscore__emojiproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last);
+void k_textemoticonscore__emojiproxymodel_super_begin_insert_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3436,7 +3436,7 @@ void k_textemoticonscore__emojiproxymodel_super_begin_insert_rows(void* self, vo
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3465,9 +3465,9 @@ void k_textemoticonscore__emojiproxymodel_super_end_insert_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_end_insert_rows(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_end_insert_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3480,7 +3480,7 @@ void k_textemoticonscore__emojiproxymodel_on_end_insert_rows(void* self, void (*
 /// @param first int
 /// @param last int
 ///
-void k_textemoticonscore__emojiproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
+void k_textemoticonscore__emojiproxymodel_begin_remove_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3493,7 +3493,7 @@ void k_textemoticonscore__emojiproxymodel_begin_remove_rows(void* self, void* pa
 /// @param first int
 /// @param last int
 ///
-void k_textemoticonscore__emojiproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last);
+void k_textemoticonscore__emojiproxymodel_super_begin_remove_rows(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3504,7 +3504,7 @@ void k_textemoticonscore__emojiproxymodel_super_begin_remove_rows(void* self, vo
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3533,9 +3533,9 @@ void k_textemoticonscore__emojiproxymodel_super_end_remove_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_end_remove_rows(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_end_remove_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3550,7 +3550,7 @@ void k_textemoticonscore__emojiproxymodel_on_end_remove_rows(void* self, void (*
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool k_textemoticonscore__emojiproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool k_textemoticonscore__emojiproxymodel_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3565,7 +3565,7 @@ bool k_textemoticonscore__emojiproxymodel_begin_move_rows(void* self, void* sour
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool k_textemoticonscore__emojiproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool k_textemoticonscore__emojiproxymodel_super_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3576,7 +3576,7 @@ bool k_textemoticonscore__emojiproxymodel_super_begin_move_rows(void* self, void
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_textemoticonscore__emojiproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3605,9 +3605,9 @@ void k_textemoticonscore__emojiproxymodel_super_end_move_rows(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_end_move_rows(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_end_move_rows(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3620,7 +3620,7 @@ void k_textemoticonscore__emojiproxymodel_on_end_move_rows(void* self, void (*ca
 /// @param first int
 /// @param last int
 ///
-void k_textemoticonscore__emojiproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
+void k_textemoticonscore__emojiproxymodel_begin_insert_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3633,7 +3633,7 @@ void k_textemoticonscore__emojiproxymodel_begin_insert_columns(void* self, void*
 /// @param first int
 /// @param last int
 ///
-void k_textemoticonscore__emojiproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last);
+void k_textemoticonscore__emojiproxymodel_super_begin_insert_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3644,7 +3644,7 @@ void k_textemoticonscore__emojiproxymodel_super_begin_insert_columns(void* self,
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3673,9 +3673,9 @@ void k_textemoticonscore__emojiproxymodel_super_end_insert_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_end_insert_columns(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_end_insert_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3688,7 +3688,7 @@ void k_textemoticonscore__emojiproxymodel_on_end_insert_columns(void* self, void
 /// @param first int
 /// @param last int
 ///
-void k_textemoticonscore__emojiproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
+void k_textemoticonscore__emojiproxymodel_begin_remove_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3701,7 +3701,7 @@ void k_textemoticonscore__emojiproxymodel_begin_remove_columns(void* self, void*
 /// @param first int
 /// @param last int
 ///
-void k_textemoticonscore__emojiproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last);
+void k_textemoticonscore__emojiproxymodel_super_begin_remove_columns(void* self, const void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3712,7 +3712,7 @@ void k_textemoticonscore__emojiproxymodel_super_begin_remove_columns(void* self,
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3741,9 +3741,9 @@ void k_textemoticonscore__emojiproxymodel_super_end_remove_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_end_remove_columns(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_end_remove_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3758,7 +3758,7 @@ void k_textemoticonscore__emojiproxymodel_on_end_remove_columns(void* self, void
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool k_textemoticonscore__emojiproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool k_textemoticonscore__emojiproxymodel_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3773,7 +3773,7 @@ bool k_textemoticonscore__emojiproxymodel_begin_move_columns(void* self, void* s
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool k_textemoticonscore__emojiproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool k_textemoticonscore__emojiproxymodel_super_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3784,7 +3784,7 @@ bool k_textemoticonscore__emojiproxymodel_super_begin_move_columns(void* self, v
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_textemoticonscore__emojiproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3813,9 +3813,9 @@ void k_textemoticonscore__emojiproxymodel_super_end_move_columns(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_end_move_columns(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_end_move_columns(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3844,9 +3844,9 @@ void k_textemoticonscore__emojiproxymodel_super_begin_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_begin_reset_model(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_begin_reset_model(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3875,9 +3875,9 @@ void k_textemoticonscore__emojiproxymodel_super_end_reset_model(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback void func()
+/// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_end_reset_model(void* self, void (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_end_reset_model(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3889,7 +3889,7 @@ void k_textemoticonscore__emojiproxymodel_on_end_reset_model(void* self, void (*
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void k_textemoticonscore__emojiproxymodel_change_persistent_index(void* self, void* from, void* to);
+void k_textemoticonscore__emojiproxymodel_change_persistent_index(void* self, const void* from, const void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3901,7 +3901,7 @@ void k_textemoticonscore__emojiproxymodel_change_persistent_index(void* self, vo
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void k_textemoticonscore__emojiproxymodel_super_change_persistent_index(void* self, void* from, void* to);
+void k_textemoticonscore__emojiproxymodel_super_change_persistent_index(void* self, const void* from, const void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3912,7 +3912,7 @@ void k_textemoticonscore__emojiproxymodel_super_change_persistent_index(void* se
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* from, QModelIndex* to)
 ///
-void k_textemoticonscore__emojiproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3955,11 +3955,11 @@ void k_textemoticonscore__emojiproxymodel_on_change_persistent_index_list(void* 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_textemoticonscore__emojiproxymodel_persistent_index_list(void* self);
+libqt_list k_textemoticonscore__emojiproxymodel_persistent_index_list(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3967,11 +3967,11 @@ libqt_list k_textemoticonscore__emojiproxymodel_persistent_index_list(void* self
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_textemoticonscore__emojiproxymodel_super_persistent_index_list(void* self);
+libqt_list k_textemoticonscore__emojiproxymodel_super_persistent_index_list(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3979,10 +3979,10 @@ libqt_list k_textemoticonscore__emojiproxymodel_super_persistent_index_list(void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback libqt_list of QModelIndex* func()
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback libqt_list of QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_persistent_index_list(void* self, libqt_list (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_persistent_index_list(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3990,9 +3990,9 @@ void k_textemoticonscore__emojiproxymodel_on_persistent_index_list(void* self, l
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-QObject* k_textemoticonscore__emojiproxymodel_sender(void* self);
+QObject* k_textemoticonscore__emojiproxymodel_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4000,9 +4000,9 @@ QObject* k_textemoticonscore__emojiproxymodel_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-QObject* k_textemoticonscore__emojiproxymodel_super_sender(void* self);
+QObject* k_textemoticonscore__emojiproxymodel_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4010,10 +4010,10 @@ QObject* k_textemoticonscore__emojiproxymodel_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback QObject* func()
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback QObject* func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_sender(void* self, QObject* (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4021,9 +4021,9 @@ void k_textemoticonscore__emojiproxymodel_on_sender(void* self, QObject* (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_sender_signal_index(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4031,9 +4031,9 @@ int32_t k_textemoticonscore__emojiproxymodel_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_super_sender_signal_index(void* self);
+int32_t k_textemoticonscore__emojiproxymodel_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4041,10 +4041,10 @@ int32_t k_textemoticonscore__emojiproxymodel_super_sender_signal_index(void* sel
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
-/// @param callback int32_t func()
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
+/// @param callback int32_t func(TextEmoticonsCore__EmojiProxyModel* self)
 ///
-void k_textemoticonscore__emojiproxymodel_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_textemoticonscore__emojiproxymodel_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4052,10 +4052,10 @@ void k_textemoticonscore__emojiproxymodel_on_sender_signal_index(void* self, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param signal const char*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_receivers(void* self, const char* signal);
+int32_t k_textemoticonscore__emojiproxymodel_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4063,10 +4063,10 @@ int32_t k_textemoticonscore__emojiproxymodel_receivers(void* self, const char* s
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param signal const char*
 ///
-int32_t k_textemoticonscore__emojiproxymodel_super_receivers(void* self, const char* signal);
+int32_t k_textemoticonscore__emojiproxymodel_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4074,10 +4074,10 @@ int32_t k_textemoticonscore__emojiproxymodel_super_receivers(void* self, const c
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback int32_t func(TextEmoticonsCore__EmojiProxyModel* self, const char* signal)
 ///
-void k_textemoticonscore__emojiproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_textemoticonscore__emojiproxymodel_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4085,10 +4085,10 @@ void k_textemoticonscore__emojiproxymodel_on_receivers(void* self, int32_t (*cal
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param signal QMetaMethod*
 ///
-bool k_textemoticonscore__emojiproxymodel_is_signal_connected(void* self, void* signal);
+bool k_textemoticonscore__emojiproxymodel_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4096,10 +4096,10 @@ bool k_textemoticonscore__emojiproxymodel_is_signal_connected(void* self, void* 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param signal QMetaMethod*
 ///
-bool k_textemoticonscore__emojiproxymodel_super_is_signal_connected(void* self, void* signal);
+bool k_textemoticonscore__emojiproxymodel_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4107,10 +4107,10 @@ bool k_textemoticonscore__emojiproxymodel_super_is_signal_connected(void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self TextEmoticonsCore__EmojiProxyModel*
+/// @param self const TextEmoticonsCore__EmojiProxyModel*
 /// @param callback bool func(TextEmoticonsCore__EmojiProxyModel* self, QMetaMethod* signal)
 ///
-void k_textemoticonscore__emojiproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_textemoticonscore__emojiproxymodel_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -4132,7 +4132,7 @@ void k_textemoticonscore__emojiproxymodel_on_source_model_changed(void* self, vo
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4143,7 +4143,7 @@ void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_inserted(void* sel
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4154,7 +4154,7 @@ void k_textemoticonscore__emojiproxymodel_on_rows_inserted(void* self, void (*ca
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4165,7 +4165,7 @@ void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_removed(void* self
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4176,7 +4176,7 @@ void k_textemoticonscore__emojiproxymodel_on_rows_removed(void* self, void (*cal
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4187,7 +4187,7 @@ void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_inserted(void* 
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4198,7 +4198,7 @@ void k_textemoticonscore__emojiproxymodel_on_columns_inserted(void* self, void (
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4209,7 +4209,7 @@ void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_removed(void* s
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* parent, int first, int last)
 ///
-void k_textemoticonscore__emojiproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
+void k_textemoticonscore__emojiproxymodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4242,7 +4242,7 @@ void k_textemoticonscore__emojiproxymodel_on_model_reset(void* self, void (*call
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4253,7 +4253,7 @@ void k_textemoticonscore__emojiproxymodel_on_rows_about_to_be_moved(void* self, 
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void k_textemoticonscore__emojiproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4264,7 +4264,7 @@ void k_textemoticonscore__emojiproxymodel_on_rows_moved(void* self, void (*callb
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -4275,7 +4275,7 @@ void k_textemoticonscore__emojiproxymodel_on_columns_about_to_be_moved(void* sel
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback void func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void k_textemoticonscore__emojiproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void k_textemoticonscore__emojiproxymodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QObject
 ///

@@ -22,7 +22,7 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new() {
     return KNSCore__SearchRequest_New();
 }
 
-KNSCore__SearchRequest* k_nscore__searchrequest_new2(void* param1) {
+KNSCore__SearchRequest* k_nscore__searchrequest_new2(const void* param1) {
     return KNSCore__SearchRequest_New2((KNSCore__SearchRequest*)param1);
 }
 
@@ -86,22 +86,22 @@ KNSCore__SearchRequest* k_nscore__searchrequest_new8(int32_t sortMode_, int32_t 
     return _out;
 }
 
-int32_t k_nscore__searchrequest_sort_mode(void* self) {
+int32_t k_nscore__searchrequest_sort_mode(const void* self) {
     return KNSCore__SearchRequest_SortMode((KNSCore__SearchRequest*)self);
 }
 
-int32_t k_nscore__searchrequest_filter(void* self) {
+int32_t k_nscore__searchrequest_filter(const void* self) {
     return KNSCore__SearchRequest_Filter((KNSCore__SearchRequest*)self);
 }
 
-const char* k_nscore__searchrequest_search_term(void* self) {
+const char* k_nscore__searchrequest_search_term(const void* self) {
     libqt_string _str = KNSCore__SearchRequest_SearchTerm((KNSCore__SearchRequest*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_nscore__searchrequest_categories(void* self) {
+const char** k_nscore__searchrequest_categories(const void* self) {
     libqt_list _arr = KNSCore__SearchRequest_Categories((KNSCore__SearchRequest*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -118,19 +118,19 @@ const char** k_nscore__searchrequest_categories(void* self) {
     return _ret;
 }
 
-int32_t k_nscore__searchrequest_page(void* self) {
+int32_t k_nscore__searchrequest_page(const void* self) {
     return KNSCore__SearchRequest_Page((KNSCore__SearchRequest*)self);
 }
 
-int32_t k_nscore__searchrequest_page_size(void* self) {
+int32_t k_nscore__searchrequest_page_size(const void* self) {
     return KNSCore__SearchRequest_PageSize((KNSCore__SearchRequest*)self);
 }
 
-KNSCore__SearchRequest* k_nscore__searchrequest_next_page(void* self) {
+KNSCore__SearchRequest* k_nscore__searchrequest_next_page(const void* self) {
     return KNSCore__SearchRequest_NextPage((KNSCore__SearchRequest*)self);
 }
 
-void k_nscore__searchrequest_operator_assign(void* self, void* param1) {
+void k_nscore__searchrequest_operator_assign(void* self, const void* param1) {
     KNSCore__SearchRequest_OperatorAssign((KNSCore__SearchRequest*)self, (KNSCore__SearchRequest*)param1);
 }
 

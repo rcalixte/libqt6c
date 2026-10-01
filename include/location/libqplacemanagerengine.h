@@ -27,26 +27,26 @@ QPlaceManagerEngine* q_placemanagerengine_new2(libqt_map parameters, void* paren
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-const QMetaObject* q_placemanagerengine_meta_object(void* self);
+const QMetaObject* q_placemanagerengine_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback const QMetaObject* func()
+/// @param self const QPlaceManagerEngine*
+/// @param callback const QMetaObject* func(const QPlaceManagerEngine* self)
 ///
-void q_placemanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_placemanagerengine_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-const QMetaObject* q_placemanagerengine_super_meta_object(void* self);
+const QMetaObject* q_placemanagerengine_super_meta_object(const void* self);
 
 /// @param self QPlaceManagerEngine*
 /// @param param1 const char*
@@ -102,15 +102,15 @@ const char* q_placemanagerengine_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-const char* q_placemanagerengine_manager_name(void* self);
+const char* q_placemanagerengine_manager_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#managerVersion)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-int32_t q_placemanagerengine_manager_version(void* self);
+int32_t q_placemanagerengine_manager_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#getPlaceDetails)
 ///
@@ -142,7 +142,7 @@ QPlaceDetailsReply* q_placemanagerengine_super_get_place_details(void* self, con
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceContentRequest*
 ///
-QPlaceContentReply* q_placemanagerengine_get_place_content(void* self, void* request);
+QPlaceContentReply* q_placemanagerengine_get_place_content(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#getPlaceContent)
 ///
@@ -151,7 +151,7 @@ QPlaceContentReply* q_placemanagerengine_get_place_content(void* self, void* req
 /// @param self QPlaceManagerEngine*
 /// @param callback QPlaceContentReply* func(QPlaceManagerEngine* self, QPlaceContentRequest* request)
 ///
-void q_placemanagerengine_on_get_place_content(void* self, QPlaceContentReply* (*callback)(void*, void*));
+void q_placemanagerengine_on_get_place_content(void* self, QPlaceContentReply* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#getPlaceContent)
 ///
@@ -160,14 +160,14 @@ void q_placemanagerengine_on_get_place_content(void* self, QPlaceContentReply* (
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceContentRequest*
 ///
-QPlaceContentReply* q_placemanagerengine_super_get_place_content(void* self, void* request);
+QPlaceContentReply* q_placemanagerengine_super_get_place_content(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#search)
 ///
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceSearchRequest*
 ///
-QPlaceSearchReply* q_placemanagerengine_search(void* self, void* request);
+QPlaceSearchReply* q_placemanagerengine_search(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#search)
 ///
@@ -176,7 +176,7 @@ QPlaceSearchReply* q_placemanagerengine_search(void* self, void* request);
 /// @param self QPlaceManagerEngine*
 /// @param callback QPlaceSearchReply* func(QPlaceManagerEngine* self, QPlaceSearchRequest* request)
 ///
-void q_placemanagerengine_on_search(void* self, QPlaceSearchReply* (*callback)(void*, void*));
+void q_placemanagerengine_on_search(void* self, QPlaceSearchReply* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#search)
 ///
@@ -185,14 +185,14 @@ void q_placemanagerengine_on_search(void* self, QPlaceSearchReply* (*callback)(v
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceSearchRequest*
 ///
-QPlaceSearchReply* q_placemanagerengine_super_search(void* self, void* request);
+QPlaceSearchReply* q_placemanagerengine_super_search(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#searchSuggestions)
 ///
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceSearchRequest*
 ///
-QPlaceSearchSuggestionReply* q_placemanagerengine_search_suggestions(void* self, void* request);
+QPlaceSearchSuggestionReply* q_placemanagerengine_search_suggestions(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#searchSuggestions)
 ///
@@ -201,7 +201,7 @@ QPlaceSearchSuggestionReply* q_placemanagerengine_search_suggestions(void* self,
 /// @param self QPlaceManagerEngine*
 /// @param callback QPlaceSearchSuggestionReply* func(QPlaceManagerEngine* self, QPlaceSearchRequest* request)
 ///
-void q_placemanagerengine_on_search_suggestions(void* self, QPlaceSearchSuggestionReply* (*callback)(void*, void*));
+void q_placemanagerengine_on_search_suggestions(void* self, QPlaceSearchSuggestionReply* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#searchSuggestions)
 ///
@@ -210,14 +210,14 @@ void q_placemanagerengine_on_search_suggestions(void* self, QPlaceSearchSuggesti
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceSearchRequest*
 ///
-QPlaceSearchSuggestionReply* q_placemanagerengine_super_search_suggestions(void* self, void* request);
+QPlaceSearchSuggestionReply* q_placemanagerengine_super_search_suggestions(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#savePlace)
 ///
 /// @param self QPlaceManagerEngine*
 /// @param place QPlace*
 ///
-QPlaceIdReply* q_placemanagerengine_save_place(void* self, void* place);
+QPlaceIdReply* q_placemanagerengine_save_place(void* self, const void* place);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#savePlace)
 ///
@@ -226,7 +226,7 @@ QPlaceIdReply* q_placemanagerengine_save_place(void* self, void* place);
 /// @param self QPlaceManagerEngine*
 /// @param callback QPlaceIdReply* func(QPlaceManagerEngine* self, QPlace* place)
 ///
-void q_placemanagerengine_on_save_place(void* self, QPlaceIdReply* (*callback)(void*, void*));
+void q_placemanagerengine_on_save_place(void* self, QPlaceIdReply* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#savePlace)
 ///
@@ -235,7 +235,7 @@ void q_placemanagerengine_on_save_place(void* self, QPlaceIdReply* (*callback)(v
 /// @param self QPlaceManagerEngine*
 /// @param place QPlace*
 ///
-QPlaceIdReply* q_placemanagerengine_super_save_place(void* self, void* place);
+QPlaceIdReply* q_placemanagerengine_super_save_place(void* self, const void* place);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#removePlace)
 ///
@@ -268,7 +268,7 @@ QPlaceIdReply* q_placemanagerengine_super_remove_place(void* self, const char* p
 /// @param category QPlaceCategory*
 /// @param parentId const char*
 ///
-QPlaceIdReply* q_placemanagerengine_save_category(void* self, void* category, const char* parentId);
+QPlaceIdReply* q_placemanagerengine_save_category(void* self, const void* category, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#saveCategory)
 ///
@@ -277,7 +277,7 @@ QPlaceIdReply* q_placemanagerengine_save_category(void* self, void* category, co
 /// @param self QPlaceManagerEngine*
 /// @param callback QPlaceIdReply* func(QPlaceManagerEngine* self, QPlaceCategory* category, const char* parentId)
 ///
-void q_placemanagerengine_on_save_category(void* self, QPlaceIdReply* (*callback)(void*, void*, const char*));
+void q_placemanagerengine_on_save_category(void* self, QPlaceIdReply* (*callback)(void*, const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#saveCategory)
 ///
@@ -287,7 +287,7 @@ void q_placemanagerengine_on_save_category(void* self, QPlaceIdReply* (*callback
 /// @param category QPlaceCategory*
 /// @param parentId const char*
 ///
-QPlaceIdReply* q_placemanagerengine_super_save_category(void* self, void* category, const char* parentId);
+QPlaceIdReply* q_placemanagerengine_super_save_category(void* self, const void* category, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#removeCategory)
 ///
@@ -325,9 +325,9 @@ QPlaceReply* q_placemanagerengine_initialize_categories(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QPlaceManagerEngine*
-/// @param callback QPlaceReply* func()
+/// @param callback QPlaceReply* func(QPlaceManagerEngine* self)
 ///
-void q_placemanagerengine_on_initialize_categories(void* self, QPlaceReply* (*callback)());
+void q_placemanagerengine_on_initialize_categories(void* self, QPlaceReply* (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#initializeCategories)
 ///
@@ -341,138 +341,138 @@ QPlaceReply* q_placemanagerengine_super_initialize_categories(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-const char* q_placemanagerengine_parent_category_id(void* self, const char* categoryId);
+const char* q_placemanagerengine_parent_category_id(const void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#parentCategoryId)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback const char* func(QPlaceManagerEngine* self, const char* categoryId)
+/// @param self const QPlaceManagerEngine*
+/// @param callback const char* func(const QPlaceManagerEngine* self, const char* categoryId)
 ///
-void q_placemanagerengine_on_parent_category_id(void* self, const char* (*callback)(void*, const char*));
+void q_placemanagerengine_on_parent_category_id(const void* self, const char* (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#parentCategoryId)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-const char* q_placemanagerengine_super_parent_category_id(void* self, const char* categoryId);
+const char* q_placemanagerengine_super_parent_category_id(const void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategoryIds)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-const char** q_placemanagerengine_child_category_ids(void* self, const char* categoryId);
+const char** q_placemanagerengine_child_category_ids(const void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategoryIds)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback const char** func(QPlaceManagerEngine* self, const char* categoryId)
+/// @param self const QPlaceManagerEngine*
+/// @param callback const char** func(const QPlaceManagerEngine* self, const char* categoryId)
 ///
-void q_placemanagerengine_on_child_category_ids(void* self, const char** (*callback)(void*, const char*));
+void q_placemanagerengine_on_child_category_ids(const void* self, const char** (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategoryIds)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-const char** q_placemanagerengine_super_child_category_ids(void* self, const char* categoryId);
+const char** q_placemanagerengine_super_child_category_ids(const void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#category)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-QPlaceCategory* q_placemanagerengine_category(void* self, const char* categoryId);
+QPlaceCategory* q_placemanagerengine_category(const void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#category)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback QPlaceCategory* func(QPlaceManagerEngine* self, const char* categoryId)
+/// @param self const QPlaceManagerEngine*
+/// @param callback QPlaceCategory* func(const QPlaceManagerEngine* self, const char* categoryId)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_placemanagerengine_on_category(void* self, QPlaceCategory* (*callback)(void*, const char*));
+void q_placemanagerengine_on_category(const void* self, QPlaceCategory* (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#category)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-QPlaceCategory* q_placemanagerengine_super_category(void* self, const char* categoryId);
+QPlaceCategory* q_placemanagerengine_super_category(const void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategories)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param parentId const char*
 ///
 /// @return libqt_list of QPlaceCategory*
 ///
-libqt_list q_placemanagerengine_child_categories(void* self, const char* parentId);
+libqt_list q_placemanagerengine_child_categories(const void* self, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategories)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback libqt_list of QPlaceCategory* func(QPlaceManagerEngine* self, const char* parentId)
+/// @param self const QPlaceManagerEngine*
+/// @param callback libqt_list of QPlaceCategory* func(const QPlaceManagerEngine* self, const char* parentId)
 ///
-void q_placemanagerengine_on_child_categories(void* self, libqt_list (*callback)(void*, const char*));
+void q_placemanagerengine_on_child_categories(const void* self, libqt_list (*callback)(const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategories)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param parentId const char*
 ///
 /// @return libqt_list of QPlaceCategory*
 ///
-libqt_list q_placemanagerengine_super_child_categories(void* self, const char* parentId);
+libqt_list q_placemanagerengine_super_child_categories(const void* self, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#locales)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
 /// @return libqt_list of QLocale*
 ///
-libqt_list q_placemanagerengine_locales(void* self);
+libqt_list q_placemanagerengine_locales(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#locales)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback libqt_list of QLocale* func()
+/// @param self const QPlaceManagerEngine*
+/// @param callback libqt_list of QLocale* func(const QPlaceManagerEngine* self)
 ///
-void q_placemanagerengine_on_locales(void* self, libqt_list (*callback)());
+void q_placemanagerengine_on_locales(const void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#locales)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
 /// @return libqt_list of QLocale*
 ///
-libqt_list q_placemanagerengine_super_locales(void* self);
+libqt_list q_placemanagerengine_super_locales(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#setLocales)
 ///
@@ -501,66 +501,66 @@ void q_placemanagerengine_super_set_locales(void* self, libqt_list locales);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#constructIconUrl)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param icon QPlaceIcon*
 /// @param size QSize*
 ///
-QUrl* q_placemanagerengine_construct_icon_url(void* self, void* icon, void* size);
+QUrl* q_placemanagerengine_construct_icon_url(const void* self, const void* icon, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#constructIconUrl)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback QUrl* func(QPlaceManagerEngine* self, QPlaceIcon* icon, QSize* size)
+/// @param self const QPlaceManagerEngine*
+/// @param callback QUrl* func(const QPlaceManagerEngine* self, QPlaceIcon* icon, QSize* size)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_placemanagerengine_on_construct_icon_url(void* self, QUrl* (*callback)(void*, void*, void*));
+void q_placemanagerengine_on_construct_icon_url(const void* self, QUrl* (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#constructIconUrl)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param icon QPlaceIcon*
 /// @param size QSize*
 ///
-QUrl* q_placemanagerengine_super_construct_icon_url(void* self, void* icon, void* size);
+QUrl* q_placemanagerengine_super_construct_icon_url(const void* self, const void* icon, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#compatiblePlace)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param original QPlace*
 ///
-QPlace* q_placemanagerengine_compatible_place(void* self, void* original);
+QPlace* q_placemanagerengine_compatible_place(const void* self, const void* original);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#compatiblePlace)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback QPlace* func(QPlaceManagerEngine* self, QPlace* original)
+/// @param self const QPlaceManagerEngine*
+/// @param callback QPlace* func(const QPlaceManagerEngine* self, QPlace* original)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_placemanagerengine_on_compatible_place(void* self, QPlace* (*callback)(void*, void*));
+void q_placemanagerengine_on_compatible_place(const void* self, QPlace* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#compatiblePlace)
 ///
 /// Base class method implementation
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param original QPlace*
 ///
-QPlace* q_placemanagerengine_super_compatible_place(void* self, void* original);
+QPlace* q_placemanagerengine_super_compatible_place(const void* self, const void* original);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#matchingPlaces)
 ///
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceMatchRequest*
 ///
-QPlaceMatchReply* q_placemanagerengine_matching_places(void* self, void* request);
+QPlaceMatchReply* q_placemanagerengine_matching_places(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#matchingPlaces)
 ///
@@ -569,7 +569,7 @@ QPlaceMatchReply* q_placemanagerengine_matching_places(void* self, void* request
 /// @param self QPlaceManagerEngine*
 /// @param callback QPlaceMatchReply* func(QPlaceManagerEngine* self, QPlaceMatchRequest* request)
 ///
-void q_placemanagerengine_on_matching_places(void* self, QPlaceMatchReply* (*callback)(void*, void*));
+void q_placemanagerengine_on_matching_places(void* self, QPlaceMatchReply* (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#matchingPlaces)
 ///
@@ -578,7 +578,7 @@ void q_placemanagerengine_on_matching_places(void* self, QPlaceMatchReply* (*cal
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceMatchRequest*
 ///
-QPlaceMatchReply* q_placemanagerengine_super_matching_places(void* self, void* request);
+QPlaceMatchReply* q_placemanagerengine_super_matching_places(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#finished)
 ///
@@ -657,14 +657,14 @@ void q_placemanagerengine_on_place_removed(void* self, void (*callback)(void*, c
 /// @param category QPlaceCategory*
 /// @param parentCategoryId const char*
 ///
-void q_placemanagerengine_category_added(void* self, void* category, const char* parentCategoryId);
+void q_placemanagerengine_category_added(void* self, const void* category, const char* parentCategoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#categoryAdded)
 ///
 /// @param self QPlaceManagerEngine*
 /// @param callback void func(QPlaceManagerEngine* self, QPlaceCategory* category, const char* parentCategoryId)
 ///
-void q_placemanagerengine_on_category_added(void* self, void (*callback)(void*, void*, const char*));
+void q_placemanagerengine_on_category_added(void* self, void (*callback)(void*, const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#categoryUpdated)
 ///
@@ -672,14 +672,14 @@ void q_placemanagerengine_on_category_added(void* self, void (*callback)(void*, 
 /// @param category QPlaceCategory*
 /// @param parentCategoryId const char*
 ///
-void q_placemanagerengine_category_updated(void* self, void* category, const char* parentCategoryId);
+void q_placemanagerengine_category_updated(void* self, const void* category, const char* parentCategoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#categoryUpdated)
 ///
 /// @param self QPlaceManagerEngine*
 /// @param callback void func(QPlaceManagerEngine* self, QPlaceCategory* category, const char* parentCategoryId)
 ///
-void q_placemanagerengine_on_category_updated(void* self, void (*callback)(void*, void*, const char*));
+void q_placemanagerengine_on_category_updated(void* self, void (*callback)(void*, const void*, const char*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#categoryRemoved)
 ///
@@ -711,26 +711,9 @@ void q_placemanagerengine_on_data_changed(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#manager)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-QPlaceManager* q_placemanagerengine_manager(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#manager)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QPlaceManagerEngine*
-/// @param callback QPlaceManager* func()
-///
-void q_placemanagerengine_on_manager(void* self, QPlaceManager* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#manager)
-///
-/// Base class method implementation
-///
-/// @param self QPlaceManagerEngine*
-///
-QPlaceManager* q_placemanagerengine_super_manager(void* self);
+QPlaceManager* q_placemanagerengine_manager(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -773,9 +756,9 @@ void q_placemanagerengine_on_error_occurred3(void* self, void (*callback)(void*,
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-const char* q_placemanagerengine_object_name(void* self);
+const char* q_placemanagerengine_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -790,33 +773,33 @@ void q_placemanagerengine_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-bool q_placemanagerengine_is_widget_type(void* self);
+bool q_placemanagerengine_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-bool q_placemanagerengine_is_window_type(void* self);
+bool q_placemanagerengine_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-bool q_placemanagerengine_is_quick_item_type(void* self);
+bool q_placemanagerengine_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-bool q_placemanagerengine_signals_blocked(void* self);
+bool q_placemanagerengine_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -831,9 +814,9 @@ bool q_placemanagerengine_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-QThread* q_placemanagerengine_thread(void* self);
+QThread* q_placemanagerengine_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -884,11 +867,11 @@ void q_placemanagerengine_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_placemanagerengine_children(void* self);
+libqt_list q_placemanagerengine_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -926,7 +909,7 @@ void q_placemanagerengine_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_placemanagerengine_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_placemanagerengine_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -937,18 +920,18 @@ QMetaObject__Connection* q_placemanagerengine_connect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_placemanagerengine_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_placemanagerengine_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_placemanagerengine_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_placemanagerengine_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -959,7 +942,7 @@ QMetaObject__Connection* q_placemanagerengine_connect3(void* self, void* sender,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_placemanagerengine_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_placemanagerengine_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -970,24 +953,24 @@ bool q_placemanagerengine_disconnect(void* sender, const char* signal, void* rec
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_placemanagerengine_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_placemanagerengine_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-bool q_placemanagerengine_disconnect3(void* self);
+bool q_placemanagerengine_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param receiver QObject*
 ///
-bool q_placemanagerengine_disconnect4(void* self, void* receiver);
+bool q_placemanagerengine_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -995,23 +978,23 @@ bool q_placemanagerengine_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_placemanagerengine_disconnect5(void* param1);
+bool q_placemanagerengine_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-void q_placemanagerengine_dump_object_tree(void* self);
+void q_placemanagerengine_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-void q_placemanagerengine_dump_object_info(void* self);
+void q_placemanagerengine_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1021,16 +1004,16 @@ void q_placemanagerengine_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_placemanagerengine_set_property(void* self, const char* name, void* value);
+bool q_placemanagerengine_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param name const char*
 ///
-QVariant* q_placemanagerengine_property(void* self, const char* name);
+QVariant* q_placemanagerengine_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1038,9 +1021,9 @@ QVariant* q_placemanagerengine_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-const char** q_placemanagerengine_dynamic_property_names(void* self);
+const char** q_placemanagerengine_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1054,9 +1037,9 @@ QBindingStorage* q_placemanagerengine_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-const QBindingStorage* q_placemanagerengine_binding_storage2(void* self);
+const QBindingStorage* q_placemanagerengine_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1079,18 +1062,18 @@ void q_placemanagerengine_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-QObject* q_placemanagerengine_parent(void* self);
+QObject* q_placemanagerengine_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param classname const char*
 ///
-bool q_placemanagerengine_inherits(void* self, const char* classname);
+bool q_placemanagerengine_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1130,7 +1113,7 @@ int32_t q_placemanagerengine_start_timer23(void* self, int64_t time, int32_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placemanagerengine_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_placemanagerengine_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1142,59 +1125,59 @@ QMetaObject__Connection* q_placemanagerengine_connect5(void* sender, const char*
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placemanagerengine_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_placemanagerengine_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_placemanagerengine_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_placemanagerengine_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param signal const char*
 ///
-bool q_placemanagerengine_disconnect1(void* self, const char* signal);
+bool q_placemanagerengine_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManagerEngine*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_placemanagerengine_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_placemanagerengine_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_placemanagerengine_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_placemanagerengine_disconnect23(void* self, void* receiver, const char* member);
+bool q_placemanagerengine_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPlaceManagerEngine*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_placemanagerengine_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1390,7 +1373,7 @@ void q_placemanagerengine_on_custom_event(void* self, void (*callback)(void*, vo
 /// @param self QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-void q_placemanagerengine_connect_notify(void* self, void* signal);
+void q_placemanagerengine_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1401,7 +1384,7 @@ void q_placemanagerengine_connect_notify(void* self, void* signal);
 /// @param self QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-void q_placemanagerengine_super_connect_notify(void* self, void* signal);
+void q_placemanagerengine_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1412,7 +1395,7 @@ void q_placemanagerengine_super_connect_notify(void* self, void* signal);
 /// @param self QPlaceManagerEngine*
 /// @param callback void func(QPlaceManagerEngine* self, QMetaMethod* signal)
 ///
-void q_placemanagerengine_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_placemanagerengine_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1423,7 +1406,7 @@ void q_placemanagerengine_on_connect_notify(void* self, void (*callback)(void*, 
 /// @param self QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-void q_placemanagerengine_disconnect_notify(void* self, void* signal);
+void q_placemanagerengine_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1434,7 +1417,7 @@ void q_placemanagerengine_disconnect_notify(void* self, void* signal);
 /// @param self QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-void q_placemanagerengine_super_disconnect_notify(void* self, void* signal);
+void q_placemanagerengine_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1445,7 +1428,7 @@ void q_placemanagerengine_super_disconnect_notify(void* self, void* signal);
 /// @param self QPlaceManagerEngine*
 /// @param callback void func(QPlaceManagerEngine* self, QMetaMethod* signal)
 ///
-void q_placemanagerengine_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_placemanagerengine_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1453,9 +1436,9 @@ void q_placemanagerengine_on_disconnect_notify(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-QObject* q_placemanagerengine_sender(void* self);
+QObject* q_placemanagerengine_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1463,9 +1446,9 @@ QObject* q_placemanagerengine_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-QObject* q_placemanagerengine_super_sender(void* self);
+QObject* q_placemanagerengine_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1473,10 +1456,10 @@ QObject* q_placemanagerengine_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback QObject* func()
+/// @param self const QPlaceManagerEngine*
+/// @param callback QObject* func(QPlaceManagerEngine* self)
 ///
-void q_placemanagerengine_on_sender(void* self, QObject* (*callback)());
+void q_placemanagerengine_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1484,9 +1467,9 @@ void q_placemanagerengine_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-int32_t q_placemanagerengine_sender_signal_index(void* self);
+int32_t q_placemanagerengine_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1494,9 +1477,9 @@ int32_t q_placemanagerengine_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 ///
-int32_t q_placemanagerengine_super_sender_signal_index(void* self);
+int32_t q_placemanagerengine_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1504,10 +1487,10 @@ int32_t q_placemanagerengine_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
-/// @param callback int32_t func()
+/// @param self const QPlaceManagerEngine*
+/// @param callback int32_t func(QPlaceManagerEngine* self)
 ///
-void q_placemanagerengine_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_placemanagerengine_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1515,10 +1498,10 @@ void q_placemanagerengine_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param signal const char*
 ///
-int32_t q_placemanagerengine_receivers(void* self, const char* signal);
+int32_t q_placemanagerengine_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1526,10 +1509,10 @@ int32_t q_placemanagerengine_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param signal const char*
 ///
-int32_t q_placemanagerengine_super_receivers(void* self, const char* signal);
+int32_t q_placemanagerengine_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1537,10 +1520,10 @@ int32_t q_placemanagerengine_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param callback int32_t func(QPlaceManagerEngine* self, const char* signal)
 ///
-void q_placemanagerengine_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_placemanagerengine_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1548,10 +1531,10 @@ void q_placemanagerengine_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-bool q_placemanagerengine_is_signal_connected(void* self, void* signal);
+bool q_placemanagerengine_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1559,10 +1542,10 @@ bool q_placemanagerengine_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-bool q_placemanagerengine_super_is_signal_connected(void* self, void* signal);
+bool q_placemanagerengine_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1570,10 +1553,10 @@ bool q_placemanagerengine_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPlaceManagerEngine*
+/// @param self const QPlaceManagerEngine*
 /// @param callback bool func(QPlaceManagerEngine* self, QMetaMethod* signal)
 ///
-void q_placemanagerengine_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_placemanagerengine_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

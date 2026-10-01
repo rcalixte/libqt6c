@@ -1,7 +1,7 @@
 #include "libqchar.hpp"
 #include "libqchar.h"
 
-QLatin1Char* q_latin1char_new(void* other) {
+QLatin1Char* q_latin1char_new(const void* other) {
     return QLatin1Char_New((QLatin1Char*)other);
 }
 
@@ -13,7 +13,7 @@ QLatin1Char* q_latin1char_new3(char c) {
     return QLatin1Char_New3(c);
 }
 
-QLatin1Char* q_latin1char_new4(void* param1) {
+QLatin1Char* q_latin1char_new4(const void* param1) {
     return QLatin1Char_New4((QLatin1Char*)param1);
 }
 
@@ -25,7 +25,7 @@ void q_latin1char_move_assign(void* self, void* other) {
     QLatin1Char_MoveAssign((QLatin1Char*)self, (QLatin1Char*)other);
 }
 
-char q_latin1char_to_latin1(void* self) {
+char q_latin1char_to_latin1(const void* self) {
     return QLatin1Char_ToLatin1((QLatin1Char*)self);
 }
 
@@ -33,7 +33,7 @@ void q_latin1char_delete(void* self) {
     QLatin1Char_Delete((QLatin1Char*)(self));
 }
 
-QChar* q_char_new(void* other) {
+QChar* q_char_new(const void* other) {
     return QChar_New((QChar*)other);
 }
 
@@ -81,7 +81,7 @@ QChar* q_char_new12(unsigned char c) {
     return QChar_New12(c);
 }
 
-QChar* q_char_new13(void* param1) {
+QChar* q_char_new13(const void* param1) {
     return QChar_New13((QChar*)param1);
 }
 
@@ -93,70 +93,70 @@ void q_char_move_assign(void* self, void* other) {
     QChar_MoveAssign((QChar*)self, (QChar*)other);
 }
 
-int32_t q_char_category(void* self) {
+int32_t q_char_category(const void* self) {
     return QChar_Category((QChar*)self);
 }
 
-int32_t q_char_direction(void* self) {
+int32_t q_char_direction(const void* self) {
     return QChar_Direction((QChar*)self);
 }
 
-int32_t q_char_joining_type(void* self) {
+int32_t q_char_joining_type(const void* self) {
     return QChar_JoiningType((QChar*)self);
 }
 
-unsigned char q_char_combining_class(void* self) {
+unsigned char q_char_combining_class(const void* self) {
     return QChar_CombiningClass((QChar*)self);
 }
 
-QChar* q_char_mirrored_char(void* self) {
+QChar* q_char_mirrored_char(const void* self) {
     return QChar_MirroredChar((QChar*)self);
 }
 
-bool q_char_has_mirrored(void* self) {
+bool q_char_has_mirrored(const void* self) {
     return QChar_HasMirrored((QChar*)self);
 }
 
-const char* q_char_decomposition(void* self) {
+const char* q_char_decomposition(const void* self) {
     libqt_string _str = QChar_Decomposition((QChar*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_char_decomposition_tag(void* self) {
+int32_t q_char_decomposition_tag(const void* self) {
     return QChar_DecompositionTag((QChar*)self);
 }
 
-int32_t q_char_digit_value(void* self) {
+int32_t q_char_digit_value(const void* self) {
     return QChar_DigitValue((QChar*)self);
 }
 
-QChar* q_char_to_lower(void* self) {
+QChar* q_char_to_lower(const void* self) {
     return QChar_ToLower((QChar*)self);
 }
 
-QChar* q_char_to_upper(void* self) {
+QChar* q_char_to_upper(const void* self) {
     return QChar_ToUpper((QChar*)self);
 }
 
-QChar* q_char_to_title_case(void* self) {
+QChar* q_char_to_title_case(const void* self) {
     return QChar_ToTitleCase((QChar*)self);
 }
 
-QChar* q_char_to_case_folded(void* self) {
+QChar* q_char_to_case_folded(const void* self) {
     return QChar_ToCaseFolded((QChar*)self);
 }
 
-int32_t q_char_script(void* self) {
+int32_t q_char_script(const void* self) {
     return QChar_Script((QChar*)self);
 }
 
-int32_t q_char_unicode_version(void* self) {
+int32_t q_char_unicode_version(const void* self) {
     return QChar_UnicodeVersion((QChar*)self);
 }
 
-char q_char_to_latin1(void* self) {
+char q_char_to_latin1(const void* self) {
     return QChar_ToLatin1((QChar*)self);
 }
 
@@ -164,79 +164,79 @@ QChar* q_char_from_latin1(char c) {
     return QChar_FromLatin1(c);
 }
 
-bool q_char_is_null(void* self) {
+bool q_char_is_null(const void* self) {
     return QChar_IsNull((QChar*)self);
 }
 
-bool q_char_is_print(void* self) {
+bool q_char_is_print(const void* self) {
     return QChar_IsPrint((QChar*)self);
 }
 
-bool q_char_is_space(void* self) {
+bool q_char_is_space(const void* self) {
     return QChar_IsSpace((QChar*)self);
 }
 
-bool q_char_is_mark(void* self) {
+bool q_char_is_mark(const void* self) {
     return QChar_IsMark((QChar*)self);
 }
 
-bool q_char_is_punct(void* self) {
+bool q_char_is_punct(const void* self) {
     return QChar_IsPunct((QChar*)self);
 }
 
-bool q_char_is_symbol(void* self) {
+bool q_char_is_symbol(const void* self) {
     return QChar_IsSymbol((QChar*)self);
 }
 
-bool q_char_is_letter(void* self) {
+bool q_char_is_letter(const void* self) {
     return QChar_IsLetter((QChar*)self);
 }
 
-bool q_char_is_number(void* self) {
+bool q_char_is_number(const void* self) {
     return QChar_IsNumber((QChar*)self);
 }
 
-bool q_char_is_letter_or_number(void* self) {
+bool q_char_is_letter_or_number(const void* self) {
     return QChar_IsLetterOrNumber((QChar*)self);
 }
 
-bool q_char_is_digit(void* self) {
+bool q_char_is_digit(const void* self) {
     return QChar_IsDigit((QChar*)self);
 }
 
-bool q_char_is_lower(void* self) {
+bool q_char_is_lower(const void* self) {
     return QChar_IsLower((QChar*)self);
 }
 
-bool q_char_is_upper(void* self) {
+bool q_char_is_upper(const void* self) {
     return QChar_IsUpper((QChar*)self);
 }
 
-bool q_char_is_title_case(void* self) {
+bool q_char_is_title_case(const void* self) {
     return QChar_IsTitleCase((QChar*)self);
 }
 
-bool q_char_is_non_character(void* self) {
+bool q_char_is_non_character(const void* self) {
     return QChar_IsNonCharacter((QChar*)self);
 }
 
-bool q_char_is_high_surrogate(void* self) {
+bool q_char_is_high_surrogate(const void* self) {
     return QChar_IsHighSurrogate((QChar*)self);
 }
 
-bool q_char_is_low_surrogate(void* self) {
+bool q_char_is_low_surrogate(const void* self) {
     return QChar_IsLowSurrogate((QChar*)self);
 }
 
-bool q_char_is_surrogate(void* self) {
+bool q_char_is_surrogate(const void* self) {
     return QChar_IsSurrogate((QChar*)self);
 }
 
-unsigned char q_char_cell(void* self) {
+unsigned char q_char_cell(const void* self) {
     return QChar_Cell((QChar*)self);
 }
 
-unsigned char q_char_row(void* self) {
+unsigned char q_char_row(const void* self) {
     return QChar_Row((QChar*)self);
 }
 

@@ -11,7 +11,7 @@ void q_sgtextnode_set_color(void* self, void* color) {
     QSGTextNode_SetColor((QSGTextNode*)self, (QColor*)color);
 }
 
-QColor* q_sgtextnode_color(void* self) {
+QColor* q_sgtextnode_color(const void* self) {
     return QSGTextNode_Color((QSGTextNode*)self);
 }
 
@@ -27,7 +27,7 @@ void q_sgtextnode_set_style_color(void* self, void* styleColor) {
     QSGTextNode_SetStyleColor((QSGTextNode*)self, (QColor*)styleColor);
 }
 
-QColor* q_sgtextnode_style_color(void* self) {
+QColor* q_sgtextnode_style_color(const void* self) {
     return QSGTextNode_StyleColor((QSGTextNode*)self);
 }
 
@@ -35,7 +35,7 @@ void q_sgtextnode_set_link_color(void* self, void* linkColor) {
     QSGTextNode_SetLinkColor((QSGTextNode*)self, (QColor*)linkColor);
 }
 
-QColor* q_sgtextnode_link_color(void* self) {
+QColor* q_sgtextnode_link_color(const void* self) {
     return QSGTextNode_LinkColor((QSGTextNode*)self);
 }
 
@@ -43,7 +43,7 @@ void q_sgtextnode_set_selection_color(void* self, void* selectionColor) {
     QSGTextNode_SetSelectionColor((QSGTextNode*)self, (QColor*)selectionColor);
 }
 
-QColor* q_sgtextnode_selection_color(void* self) {
+QColor* q_sgtextnode_selection_color(const void* self) {
     return QSGTextNode_SelectionColor((QSGTextNode*)self);
 }
 
@@ -51,7 +51,7 @@ void q_sgtextnode_set_selection_text_color(void* self, void* selectionTextColor)
     QSGTextNode_SetSelectionTextColor((QSGTextNode*)self, (QColor*)selectionTextColor);
 }
 
-QColor* q_sgtextnode_selection_text_color(void* self) {
+QColor* q_sgtextnode_selection_text_color(const void* self) {
     return QSGTextNode_SelectionTextColor((QSGTextNode*)self);
 }
 
@@ -59,7 +59,7 @@ void q_sgtextnode_set_render_type(void* self, uint8_t renderType) {
     QSGTextNode_SetRenderType((QSGTextNode*)self, renderType);
 }
 
-uint8_t q_sgtextnode_render_type(void* self) {
+uint8_t q_sgtextnode_render_type(const void* self) {
     return QSGTextNode_RenderType((QSGTextNode*)self);
 }
 
@@ -67,7 +67,7 @@ void q_sgtextnode_set_render_type_quality(void* self, int renderTypeQuality) {
     QSGTextNode_SetRenderTypeQuality((QSGTextNode*)self, renderTypeQuality);
 }
 
-int32_t q_sgtextnode_render_type_quality(void* self) {
+int32_t q_sgtextnode_render_type_quality(const void* self) {
     return QSGTextNode_RenderTypeQuality((QSGTextNode*)self);
 }
 
@@ -75,7 +75,7 @@ void q_sgtextnode_set_filtering(void* self, int32_t filtering) {
     QSGTextNode_SetFiltering((QSGTextNode*)self, filtering);
 }
 
-int32_t q_sgtextnode_filtering(void* self) {
+int32_t q_sgtextnode_filtering(const void* self) {
     return QSGTextNode_Filtering((QSGTextNode*)self);
 }
 
@@ -83,11 +83,11 @@ void q_sgtextnode_clear(void* self) {
     QSGTextNode_Clear((QSGTextNode*)self);
 }
 
-void q_sgtextnode_set_viewport(void* self, void* viewport) {
+void q_sgtextnode_set_viewport(void* self, const void* viewport) {
     QSGTextNode_SetViewport((QSGTextNode*)self, (QRectF*)viewport);
 }
 
-QRectF* q_sgtextnode_viewport(void* self) {
+QRectF* q_sgtextnode_viewport(const void* self) {
     return QSGTextNode_Viewport((QSGTextNode*)self);
 }
 
@@ -123,23 +123,23 @@ void q_sgtextnode_add_text_document4(void* self, void* position, void* document,
     QSGTextNode_AddTextDocument4((QSGTextNode*)self, (QPointF*)position, (QTextDocument*)document, selectionStart, selectionCount);
 }
 
-void q_sgtextnode_set_matrix(void* self, void* matrix) {
+void q_sgtextnode_set_matrix(void* self, const void* matrix) {
     QSGTransformNode_SetMatrix((QSGTransformNode*)self, (QMatrix4x4*)matrix);
 }
 
-const QMatrix4x4* q_sgtextnode_matrix(void* self) {
+const QMatrix4x4* q_sgtextnode_matrix(const void* self) {
     return QSGTransformNode_Matrix((QSGTransformNode*)self);
 }
 
-void q_sgtextnode_set_combined_matrix(void* self, void* matrix) {
+void q_sgtextnode_set_combined_matrix(void* self, const void* matrix) {
     QSGTransformNode_SetCombinedMatrix((QSGTransformNode*)self, (QMatrix4x4*)matrix);
 }
 
-const QMatrix4x4* q_sgtextnode_combined_matrix(void* self) {
+const QMatrix4x4* q_sgtextnode_combined_matrix(const void* self) {
     return QSGTransformNode_CombinedMatrix((QSGTransformNode*)self);
 }
 
-QSGNode* q_sgtextnode_parent(void* self) {
+QSGNode* q_sgtextnode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -171,31 +171,31 @@ void q_sgtextnode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgtextnode_child_count(void* self) {
+int32_t q_sgtextnode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgtextnode_child_at_index(void* self, int i) {
+QSGNode* q_sgtextnode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgtextnode_first_child(void* self) {
+QSGNode* q_sgtextnode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgtextnode_last_child(void* self) {
+QSGNode* q_sgtextnode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgtextnode_next_sibling(void* self) {
+QSGNode* q_sgtextnode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgtextnode_previous_sibling(void* self) {
+QSGNode* q_sgtextnode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgtextnode_type(void* self) {
+int32_t q_sgtextnode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -207,15 +207,15 @@ void q_sgtextnode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgtextnode_dirty_state(void* self) {
+int32_t q_sgtextnode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-bool q_sgtextnode_is_subtree_blocked(void* self) {
+bool q_sgtextnode_is_subtree_blocked(const void* self) {
     return QSGNode_IsSubtreeBlocked((QSGNode*)self);
 }
 
-int32_t q_sgtextnode_flags(void* self) {
+int32_t q_sgtextnode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 

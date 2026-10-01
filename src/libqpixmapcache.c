@@ -2,7 +2,7 @@
 #include "libqpixmapcache.hpp"
 #include "libqpixmapcache.h"
 
-QPixmapCache* q_pixmapcache_new(void* other) {
+QPixmapCache* q_pixmapcache_new(const void* other) {
     return QPixmapCache_New((QPixmapCache*)other);
 }
 
@@ -30,19 +30,19 @@ bool q_pixmapcache_find(const char* key, void* pixmap) {
     return QPixmapCache_Find(qstring(key), (QPixmap*)pixmap);
 }
 
-bool q_pixmapcache_find2(void* key, void* pixmap) {
+bool q_pixmapcache_find2(const void* key, void* pixmap) {
     return QPixmapCache_Find2((QPixmapCache__Key*)key, (QPixmap*)pixmap);
 }
 
-bool q_pixmapcache_insert(const char* key, void* pixmap) {
+bool q_pixmapcache_insert(const char* key, const void* pixmap) {
     return QPixmapCache_Insert(qstring(key), (QPixmap*)pixmap);
 }
 
-QPixmapCache__Key* q_pixmapcache_insert2(void* pixmap) {
+QPixmapCache__Key* q_pixmapcache_insert2(const void* pixmap) {
     return QPixmapCache_Insert2((QPixmap*)pixmap);
 }
 
-bool q_pixmapcache_replace(void* key, void* pixmap) {
+bool q_pixmapcache_replace(const void* key, const void* pixmap) {
     return QPixmapCache_Replace((QPixmapCache__Key*)key, (QPixmap*)pixmap);
 }
 
@@ -50,7 +50,7 @@ void q_pixmapcache_remove(const char* key) {
     QPixmapCache_Remove(qstring(key));
 }
 
-void q_pixmapcache_remove2(void* key) {
+void q_pixmapcache_remove2(const void* key) {
     QPixmapCache_Remove2((QPixmapCache__Key*)key);
 }
 
@@ -66,19 +66,19 @@ QPixmapCache__Key* q_pixmapcache__key_new() {
     return QPixmapCache__Key_New();
 }
 
-QPixmapCache__Key* q_pixmapcache__key_new2(void* other) {
+QPixmapCache__Key* q_pixmapcache__key_new2(const void* other) {
     return QPixmapCache__Key_New2((QPixmapCache__Key*)other);
 }
 
-bool q_pixmapcache__key_operator_equal(void* self, void* key) {
+bool q_pixmapcache__key_operator_equal(const void* self, const void* key) {
     return QPixmapCache__Key_OperatorEqual((QPixmapCache__Key*)self, (QPixmapCache__Key*)key);
 }
 
-bool q_pixmapcache__key_operator_not_equal(void* self, void* key) {
+bool q_pixmapcache__key_operator_not_equal(const void* self, const void* key) {
     return QPixmapCache__Key_OperatorNotEqual((QPixmapCache__Key*)self, (QPixmapCache__Key*)key);
 }
 
-void q_pixmapcache__key_operator_assign(void* self, void* other) {
+void q_pixmapcache__key_operator_assign(void* self, const void* other) {
     QPixmapCache__Key_OperatorAssign((QPixmapCache__Key*)self, (QPixmapCache__Key*)other);
 }
 
@@ -86,7 +86,7 @@ void q_pixmapcache__key_swap(void* self, void* other) {
     QPixmapCache__Key_Swap((QPixmapCache__Key*)self, (QPixmapCache__Key*)other);
 }
 
-bool q_pixmapcache__key_is_valid(void* self) {
+bool q_pixmapcache__key_is_valid(const void* self) {
     return QPixmapCache__Key_IsValid((QPixmapCache__Key*)self);
 }
 

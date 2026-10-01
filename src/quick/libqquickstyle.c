@@ -1,7 +1,7 @@
 #include "libqquickstyle.hpp"
 #include "libqquickstyle.h"
 
-QQuickStyle* q_quickstyle_new(void* other) {
+QQuickStyle* q_quickstyle_new(const void* other) {
     return QQuickStyle_New((QQuickStyle*)other);
 }
 

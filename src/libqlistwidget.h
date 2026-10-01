@@ -29,7 +29,7 @@ QListWidgetItem* q_listwidgetitem_new2(const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QListWidgetItem* q_listwidgetitem_new3(void* icon, const char* text);
+QListWidgetItem* q_listwidgetitem_new3(const void* icon, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html)
 
@@ -37,7 +37,7 @@ QListWidgetItem* q_listwidgetitem_new3(void* icon, const char* text);
 ///
 /// @param other QListWidgetItem*
 ///
-QListWidgetItem* q_listwidgetitem_new4(void* other);
+QListWidgetItem* q_listwidgetitem_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html)
 
@@ -83,7 +83,7 @@ QListWidgetItem* q_listwidgetitem_new8(const char* text, void* listview, int typ
 /// @param text const char*
 /// @param listview QListWidget*
 ///
-QListWidgetItem* q_listwidgetitem_new9(void* icon, const char* text, void* listview);
+QListWidgetItem* q_listwidgetitem_new9(const void* icon, const char* text, void* listview);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html)
 
@@ -94,36 +94,36 @@ QListWidgetItem* q_listwidgetitem_new9(void* icon, const char* text, void* listv
 /// @param listview QListWidget*
 /// @param type int
 ///
-QListWidgetItem* q_listwidgetitem_new10(void* icon, const char* text, void* listview, int type);
+QListWidgetItem* q_listwidgetitem_new10(const void* icon, const char* text, void* listview, int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#clone)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-QListWidgetItem* q_listwidgetitem_clone(void* self);
+QListWidgetItem* q_listwidgetitem_clone(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QListWidgetItem*
-/// @param callback QListWidgetItem* func()
+/// @param self const QListWidgetItem*
+/// @param callback QListWidgetItem* func(const QListWidgetItem* self)
 ///
-void q_listwidgetitem_on_clone(void* self, QListWidgetItem* (*callback)());
+void q_listwidgetitem_on_clone(const void* self, QListWidgetItem* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#clone)
 ///
 /// Base class method implementation
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-QListWidgetItem* q_listwidgetitem_super_clone(void* self);
+QListWidgetItem* q_listwidgetitem_super_clone(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#listWidget)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-QListWidget* q_listwidgetitem_list_widget(void* self);
+QListWidget* q_listwidgetitem_list_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setSelected)
 ///
@@ -134,9 +134,9 @@ void q_listwidgetitem_set_selected(void* self, bool selectVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#isSelected)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-bool q_listwidgetitem_is_selected(void* self);
+bool q_listwidgetitem_is_selected(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setHidden)
 ///
@@ -147,17 +147,17 @@ void q_listwidgetitem_set_hidden(void* self, bool hide);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#isHidden)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-bool q_listwidgetitem_is_hidden(void* self);
+bool q_listwidgetitem_is_hidden(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#flags)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t q_listwidgetitem_flags(void* self);
+int32_t q_listwidgetitem_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setFlags)
 ///
@@ -170,9 +170,9 @@ void q_listwidgetitem_set_flags(void* self, int32_t flags);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-const char* q_listwidgetitem_text(void* self);
+const char* q_listwidgetitem_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setText)
 ///
@@ -183,24 +183,24 @@ void q_listwidgetitem_set_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#icon)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-QIcon* q_listwidgetitem_icon(void* self);
+QIcon* q_listwidgetitem_icon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setIcon)
 ///
 /// @param self QListWidgetItem*
 /// @param icon QIcon*
 ///
-void q_listwidgetitem_set_icon(void* self, void* icon);
+void q_listwidgetitem_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#statusTip)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-const char* q_listwidgetitem_status_tip(void* self);
+const char* q_listwidgetitem_status_tip(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setStatusTip)
 ///
@@ -213,9 +213,9 @@ void q_listwidgetitem_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-const char* q_listwidgetitem_tool_tip(void* self);
+const char* q_listwidgetitem_tool_tip(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setToolTip)
 ///
@@ -228,9 +228,9 @@ void q_listwidgetitem_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-const char* q_listwidgetitem_whats_this(void* self);
+const char* q_listwidgetitem_whats_this(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setWhatsThis)
 ///
@@ -241,22 +241,22 @@ void q_listwidgetitem_set_whats_this(void* self, const char* whatsThis);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#font)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-QFont* q_listwidgetitem_font(void* self);
+QFont* q_listwidgetitem_font(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setFont)
 ///
 /// @param self QListWidgetItem*
 /// @param font QFont*
 ///
-void q_listwidgetitem_set_font(void* self, void* font);
+void q_listwidgetitem_set_font(void* self, const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#textAlignment)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-int32_t q_listwidgetitem_text_alignment(void* self);
+int32_t q_listwidgetitem_text_alignment(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setTextAlignment)
 ///
@@ -281,37 +281,37 @@ void q_listwidgetitem_set_text_alignment3(void* self, int32_t alignment);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#background)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-QBrush* q_listwidgetitem_background(void* self);
+QBrush* q_listwidgetitem_background(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setBackground)
 ///
 /// @param self QListWidgetItem*
 /// @param brush QBrush*
 ///
-void q_listwidgetitem_set_background(void* self, void* brush);
+void q_listwidgetitem_set_background(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#foreground)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-QBrush* q_listwidgetitem_foreground(void* self);
+QBrush* q_listwidgetitem_foreground(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setForeground)
 ///
 /// @param self QListWidgetItem*
 /// @param brush QBrush*
 ///
-void q_listwidgetitem_set_foreground(void* self, void* brush);
+void q_listwidgetitem_set_foreground(void* self, const void* brush);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#checkState)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
 /// @return enum Qt__CheckState
 ///
-int32_t q_listwidgetitem_check_state(void* self);
+int32_t q_listwidgetitem_check_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setCheckState)
 ///
@@ -322,43 +322,43 @@ void q_listwidgetitem_set_check_state(void* self, int32_t state);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#sizeHint)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-QSize* q_listwidgetitem_size_hint(void* self);
+QSize* q_listwidgetitem_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setSizeHint)
 ///
 /// @param self QListWidgetItem*
 /// @param size QSize*
 ///
-void q_listwidgetitem_set_size_hint(void* self, void* size);
+void q_listwidgetitem_set_size_hint(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#data)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 /// @param role int
 ///
-QVariant* q_listwidgetitem_data(void* self, int role);
+QVariant* q_listwidgetitem_data(const void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#data)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QListWidgetItem*
-/// @param callback QVariant* func(QListWidgetItem* self, int role)
+/// @param self const QListWidgetItem*
+/// @param callback QVariant* func(const QListWidgetItem* self, int role)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidgetitem_on_data(void* self, QVariant* (*callback)(void*, int));
+void q_listwidgetitem_on_data(const void* self, QVariant* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#data)
 ///
 /// Base class method implementation
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 /// @param role int
 ///
-QVariant* q_listwidgetitem_super_data(void* self, int role);
+QVariant* q_listwidgetitem_super_data(const void* self, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setData)
 ///
@@ -366,7 +366,7 @@ QVariant* q_listwidgetitem_super_data(void* self, int role);
 /// @param role int
 /// @param value QVariant*
 ///
-void q_listwidgetitem_set_data(void* self, int role, void* value);
+void q_listwidgetitem_set_data(void* self, int role, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setData)
 ///
@@ -375,7 +375,7 @@ void q_listwidgetitem_set_data(void* self, int role, void* value);
 /// @param self QListWidgetItem*
 /// @param callback void func(QListWidgetItem* self, int role, QVariant* value)
 ///
-void q_listwidgetitem_on_set_data(void* self, void (*callback)(void*, int, void*));
+void q_listwidgetitem_on_set_data(void* self, void (*callback)(void*, int, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#setData)
 ///
@@ -385,32 +385,32 @@ void q_listwidgetitem_on_set_data(void* self, void (*callback)(void*, int, void*
 /// @param role int
 /// @param value QVariant*
 ///
-void q_listwidgetitem_super_set_data(void* self, int role, void* value);
+void q_listwidgetitem_super_set_data(void* self, int role, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-lt)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 /// @param other QListWidgetItem*
 ///
-bool q_listwidgetitem_operator_lesser(void* self, void* other);
+bool q_listwidgetitem_operator_lesser(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-lt)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QListWidgetItem*
-/// @param callback bool func(QListWidgetItem* self, QListWidgetItem* other)
+/// @param self const QListWidgetItem*
+/// @param callback bool func(const QListWidgetItem* self, QListWidgetItem* other)
 ///
-void q_listwidgetitem_on_operator_lesser(void* self, bool (*callback)(void*, void*));
+void q_listwidgetitem_on_operator_lesser(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-lt)
 ///
 /// Base class method implementation
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 /// @param other QListWidgetItem*
 ///
-bool q_listwidgetitem_super_operator_lesser(void* self, void* other);
+bool q_listwidgetitem_super_operator_lesser(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#read)
 ///
@@ -439,41 +439,41 @@ void q_listwidgetitem_super_read(void* self, void* in);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#write)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 /// @param out QDataStream*
 ///
-void q_listwidgetitem_write(void* self, void* out);
+void q_listwidgetitem_write(const void* self, void* out);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#write)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QListWidgetItem*
-/// @param callback void func(QListWidgetItem* self, QDataStream* out)
+/// @param self const QListWidgetItem*
+/// @param callback void func(const QListWidgetItem* self, QDataStream* out)
 ///
-void q_listwidgetitem_on_write(void* self, void (*callback)(void*, void*));
+void q_listwidgetitem_on_write(const void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#write)
 ///
 /// Base class method implementation
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 /// @param out QDataStream*
 ///
-void q_listwidgetitem_super_write(void* self, void* out);
+void q_listwidgetitem_super_write(const void* self, void* out);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-eq)
 ///
 /// @param self QListWidgetItem*
 /// @param other QListWidgetItem*
 ///
-void q_listwidgetitem_operator_assign(void* self, void* other);
+void q_listwidgetitem_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#type)
 ///
-/// @param self QListWidgetItem*
+/// @param self const QListWidgetItem*
 ///
-int32_t q_listwidgetitem_type(void* self);
+int32_t q_listwidgetitem_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidgetitem.html#dtor.QListWidgetItem)
 ///
@@ -499,26 +499,26 @@ QListWidget* q_listwidget_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const QMetaObject* q_listwidget_meta_object(void* self);
+const QMetaObject* q_listwidget_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QListWidget*
-/// @param callback const QMetaObject* func()
+/// @param self const QListWidget*
+/// @param callback const QMetaObject* func(const QListWidget* self)
 ///
-void q_listwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_listwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const QMetaObject* q_listwidget_super_meta_object(void* self);
+const QMetaObject* q_listwidget_super_meta_object(const void* self);
 
 /// @param self QListWidget*
 /// @param param1 const char*
@@ -597,17 +597,17 @@ void q_listwidget_super_set_selection_model(void* self, void* selectionModel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#item)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param row int
 ///
-QListWidgetItem* q_listwidget_item(void* self, int row);
+QListWidgetItem* q_listwidget_item(const void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#row)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param item QListWidgetItem*
 ///
-int32_t q_listwidget_row(void* self, void* item);
+int32_t q_listwidget_row(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#insertItem)
 ///
@@ -663,15 +663,15 @@ QListWidgetItem* q_listwidget_take_item(void* self, int row);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#count)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_count(void* self);
+int32_t q_listwidget_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#currentItem)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QListWidgetItem* q_listwidget_current_item(void* self);
+QListWidgetItem* q_listwidget_current_item(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#setCurrentItem)
 ///
@@ -690,9 +690,9 @@ void q_listwidget_set_current_item2(void* self, void* item, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#currentRow)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_current_row(void* self);
+int32_t q_listwidget_current_row(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#setCurrentRow)
 ///
@@ -711,25 +711,25 @@ void q_listwidget_set_current_row2(void* self, int row, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#itemAt)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param p QPoint*
 ///
-QListWidgetItem* q_listwidget_item_at(void* self, void* p);
+QListWidgetItem* q_listwidget_item_at(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#itemAt)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param x int
 /// @param y int
 ///
-QListWidgetItem* q_listwidget_item_at2(void* self, int x, int y);
+QListWidgetItem* q_listwidget_item_at2(const void* self, int x, int y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#visualItemRect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param item QListWidgetItem*
 ///
-QRect* q_listwidget_visual_item_rect(void* self, void* item);
+QRect* q_listwidget_visual_item_rect(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#sortItems)
 ///
@@ -746,9 +746,9 @@ void q_listwidget_set_sorting_enabled(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#isSortingEnabled)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_sorting_enabled(void* self);
+bool q_listwidget_is_sorting_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#editItem)
 ///
@@ -773,17 +773,17 @@ void q_listwidget_close_persistent_editor(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#isPersistentEditorOpen)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param item QListWidgetItem*
 ///
-bool q_listwidget_is_persistent_editor_open(void* self, void* item);
+bool q_listwidget_is_persistent_editor_open(const void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#itemWidget)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param item QListWidgetItem*
 ///
-QWidget* q_listwidget_item_widget(void* self, void* item);
+QWidget* q_listwidget_item_widget(const void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#setItemWidget)
 ///
@@ -802,44 +802,44 @@ void q_listwidget_remove_item_widget(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#selectedItems)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return libqt_list of QListWidgetItem*
 ///
-libqt_list q_listwidget_selected_items(void* self);
+libqt_list q_listwidget_selected_items(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#findItems)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param text const char*
 /// @param flags flag of enum Qt__MatchFlag
 ///
 /// @return libqt_list of QListWidgetItem*
 ///
-libqt_list q_listwidget_find_items(void* self, const char* text, int32_t flags);
+libqt_list q_listwidget_find_items(const void* self, const char* text, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#items)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param data QMimeData*
 ///
 /// @return libqt_list of QListWidgetItem*
 ///
-libqt_list q_listwidget_items(void* self, void* data);
+libqt_list q_listwidget_items(const void* self, const void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#indexFromItem)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param item QListWidgetItem*
 ///
-QModelIndex* q_listwidget_index_from_item(void* self, void* item);
+QModelIndex* q_listwidget_index_from_item(const void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#itemFromIndex)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QListWidgetItem* q_listwidget_item_from_index(void* self, void* index);
+QListWidgetItem* q_listwidget_item_from_index(const void* self, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropEvent)
 ///
@@ -871,7 +871,7 @@ void q_listwidget_super_drop_event(void* self, void* event);
 /// @param self QListWidget*
 /// @param item QListWidgetItem*
 ///
-void q_listwidget_scroll_to_item(void* self, void* item);
+void q_listwidget_scroll_to_item(void* self, const void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#clear)
 ///
@@ -1048,51 +1048,51 @@ bool q_listwidget_super_event(void* self, void* e);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char** q_listwidget_mime_types(void* self);
+const char** q_listwidget_mime_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeTypes)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QListWidget*
-/// @param callback const char** func()
+/// @param self const QListWidget*
+/// @param callback const char** func(const QListWidget* self)
 ///
-void q_listwidget_on_mime_types(void* self, const char** (*callback)());
+void q_listwidget_on_mime_types(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeTypes)
 ///
 /// Base class method implementation
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char** q_listwidget_super_mime_types(void* self);
+const char** q_listwidget_super_mime_types(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* q_listwidget_mime_data(void* self, libqt_list items);
+QMimeData* q_listwidget_mime_data(const void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QListWidget*
-/// @param callback QMimeData* func(QListWidget* self, libqt_list of QListWidgetItem* items)
+/// @param self const QListWidget*
+/// @param callback QMimeData* func(const QListWidget* self, libqt_list of QListWidgetItem* items)
 ///
-void q_listwidget_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
+void q_listwidget_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
 ///
 /// Base class method implementation
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* q_listwidget_super_mime_data(void* self, libqt_list items);
+QMimeData* q_listwidget_super_mime_data(const void* self, libqt_list items);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropMimeData)
 ///
@@ -1101,7 +1101,7 @@ QMimeData* q_listwidget_super_mime_data(void* self, libqt_list items);
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 ///
-bool q_listwidget_drop_mime_data(void* self, int index, void* data, int32_t action);
+bool q_listwidget_drop_mime_data(void* self, int index, const void* data, int32_t action);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropMimeData)
 ///
@@ -1110,7 +1110,7 @@ bool q_listwidget_drop_mime_data(void* self, int index, void* data, int32_t acti
 /// @param self QListWidget*
 /// @param callback bool func(QListWidget* self, int index, QMimeData* data, enum Qt__DropAction action)
 ///
-void q_listwidget_on_drop_mime_data(void* self, bool (*callback)(void*, int, void*, int32_t));
+void q_listwidget_on_drop_mime_data(void* self, bool (*callback)(void*, int, const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropMimeData)
 ///
@@ -1121,34 +1121,34 @@ void q_listwidget_on_drop_mime_data(void* self, bool (*callback)(void*, int, voi
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 ///
-bool q_listwidget_super_drop_mime_data(void* self, int index, void* data, int32_t action);
+bool q_listwidget_super_drop_mime_data(void* self, int index, const void* data, int32_t action);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#supportedDropActions)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_listwidget_supported_drop_actions(void* self);
+int32_t q_listwidget_supported_drop_actions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#supportedDropActions)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QListWidget*
-/// @param callback int32_t func()
+/// @param self const QListWidget*
+/// @param callback int32_t func(const QListWidget* self)
 ///
-void q_listwidget_on_supported_drop_actions(void* self, int32_t (*callback)());
+void q_listwidget_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#supportedDropActions)
 ///
 /// Base class method implementation
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_listwidget_super_supported_drop_actions(void* self);
+int32_t q_listwidget_super_supported_drop_actions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1182,7 +1182,7 @@ void q_listwidget_sort_items1(void* self, int32_t order);
 /// @param item QListWidgetItem*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void q_listwidget_scroll_to_item2(void* self, void* item, int32_t hint);
+void q_listwidget_scroll_to_item2(void* self, const void* item, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -1197,11 +1197,11 @@ void q_listwidget_set_movement(void* self, int32_t movement);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#movement)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QListView__Movement
 ///
-int32_t q_listwidget_movement(void* self);
+int32_t q_listwidget_movement(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1216,11 +1216,11 @@ void q_listwidget_set_flow(void* self, int32_t flow);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#flow)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QListView__Flow
 ///
-int32_t q_listwidget_flow(void* self);
+int32_t q_listwidget_flow(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1235,9 +1235,9 @@ void q_listwidget_set_wrapping(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isWrapping)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_wrapping(void* self);
+bool q_listwidget_is_wrapping(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1252,11 +1252,11 @@ void q_listwidget_set_resize_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#resizeMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QListView__ResizeMode
 ///
-int32_t q_listwidget_resize_mode(void* self);
+int32_t q_listwidget_resize_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1271,11 +1271,11 @@ void q_listwidget_set_layout_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#layoutMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QListView__LayoutMode
 ///
-int32_t q_listwidget_layout_mode(void* self);
+int32_t q_listwidget_layout_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1290,9 +1290,9 @@ void q_listwidget_set_spacing(void* self, int space);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#spacing)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_spacing(void* self);
+int32_t q_listwidget_spacing(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1307,9 +1307,9 @@ void q_listwidget_set_batch_size(void* self, int batchSize);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#batchSize)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_batch_size(void* self);
+int32_t q_listwidget_batch_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1318,15 +1318,15 @@ int32_t q_listwidget_batch_size(void* self);
 /// @param self QListWidget*
 /// @param size QSize*
 ///
-void q_listwidget_set_grid_size(void* self, void* size);
+void q_listwidget_set_grid_size(void* self, const void* size);
 
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#gridSize)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_grid_size(void* self);
+QSize* q_listwidget_grid_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1341,11 +1341,11 @@ void q_listwidget_set_view_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#viewMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QListView__ViewMode
 ///
-int32_t q_listwidget_view_mode(void* self);
+int32_t q_listwidget_view_mode(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1359,10 +1359,10 @@ void q_listwidget_clear_property_flags(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isRowHidden)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param row int
 ///
-bool q_listwidget_is_row_hidden(void* self, int row);
+bool q_listwidget_is_row_hidden(const void* self, int row);
 
 /// Inherited from QListView
 ///
@@ -1387,9 +1387,9 @@ void q_listwidget_set_model_column(void* self, int column);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#modelColumn)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_model_column(void* self);
+int32_t q_listwidget_model_column(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1404,9 +1404,9 @@ void q_listwidget_set_uniform_item_sizes(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#uniformItemSizes)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_uniform_item_sizes(void* self);
+bool q_listwidget_uniform_item_sizes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1421,9 +1421,9 @@ void q_listwidget_set_word_wrap(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#wordWrap)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_word_wrap(void* self);
+bool q_listwidget_word_wrap(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1438,9 +1438,9 @@ void q_listwidget_set_selection_rect_visible(void* self, bool show);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isSelectionRectVisible)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_selection_rect_visible(void* self);
+bool q_listwidget_is_selection_rect_visible(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1455,11 +1455,11 @@ void q_listwidget_set_item_alignment(void* self, int32_t alignment);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#itemAlignment)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_listwidget_item_alignment(void* self);
+int32_t q_listwidget_item_alignment(const void* self);
 
 /// Inherited from QListView
 ///
@@ -1514,17 +1514,17 @@ void q_listwidget_super_set_model(void* self, void* model);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#model)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QAbstractItemModel* q_listwidget_model(void* self);
+QAbstractItemModel* q_listwidget_model(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionModel)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QItemSelectionModel* q_listwidget_selection_model(void* self);
+QItemSelectionModel* q_listwidget_selection_model(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1539,9 +1539,9 @@ void q_listwidget_set_item_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QAbstractItemDelegate* q_listwidget_item_delegate(void* self);
+QAbstractItemDelegate* q_listwidget_item_delegate(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1556,11 +1556,11 @@ void q_listwidget_set_selection_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__SelectionMode
 ///
-int32_t q_listwidget_selection_mode(void* self);
+int32_t q_listwidget_selection_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1575,27 +1575,27 @@ void q_listwidget_set_selection_behavior(void* self, int32_t behavior);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionBehavior)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
 ///
-int32_t q_listwidget_selection_behavior(void* self);
+int32_t q_listwidget_selection_behavior(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#currentIndex)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QModelIndex* q_listwidget_current_index(void* self);
+QModelIndex* q_listwidget_current_index(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#rootIndex)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QModelIndex* q_listwidget_root_index(void* self);
+QModelIndex* q_listwidget_root_index(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1610,11 +1610,11 @@ void q_listwidget_set_edit_triggers(void* self, int32_t triggers);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#editTriggers)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return flag of enum QAbstractItemView__EditTrigger
 ///
-int32_t q_listwidget_edit_triggers(void* self);
+int32_t q_listwidget_edit_triggers(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1629,11 +1629,11 @@ void q_listwidget_set_vertical_scroll_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__ScrollMode
 ///
-int32_t q_listwidget_vertical_scroll_mode(void* self);
+int32_t q_listwidget_vertical_scroll_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1656,11 +1656,11 @@ void q_listwidget_set_horizontal_scroll_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__ScrollMode
 ///
-int32_t q_listwidget_horizontal_scroll_mode(void* self);
+int32_t q_listwidget_horizontal_scroll_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1683,9 +1683,9 @@ void q_listwidget_set_auto_scroll(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#hasAutoScroll)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_has_auto_scroll(void* self);
+bool q_listwidget_has_auto_scroll(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1700,9 +1700,9 @@ void q_listwidget_set_auto_scroll_margin(void* self, int margin);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#autoScrollMargin)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_auto_scroll_margin(void* self);
+int32_t q_listwidget_auto_scroll_margin(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1717,9 +1717,9 @@ void q_listwidget_set_tab_key_navigation(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#tabKeyNavigation)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_tab_key_navigation(void* self);
+bool q_listwidget_tab_key_navigation(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1734,9 +1734,9 @@ void q_listwidget_set_drop_indicator_shown(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#showDropIndicator)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_show_drop_indicator(void* self);
+bool q_listwidget_show_drop_indicator(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1751,9 +1751,9 @@ void q_listwidget_set_drag_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnabled)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_drag_enabled(void* self);
+bool q_listwidget_drag_enabled(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1768,9 +1768,9 @@ void q_listwidget_set_drag_drop_overwrite_mode(void* self, bool overwrite);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropOverwriteMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_drag_drop_overwrite_mode(void* self);
+bool q_listwidget_drag_drop_overwrite_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1785,11 +1785,11 @@ void q_listwidget_set_drag_drop_mode(void* self, int32_t behavior);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__DragDropMode
 ///
-int32_t q_listwidget_drag_drop_mode(void* self);
+int32_t q_listwidget_drag_drop_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1804,11 +1804,11 @@ void q_listwidget_set_default_drop_action(void* self, int32_t dropAction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#defaultDropAction)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__DropAction
 ///
-int32_t q_listwidget_default_drop_action(void* self);
+int32_t q_listwidget_default_drop_action(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1823,9 +1823,9 @@ void q_listwidget_set_alternating_row_colors(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#alternatingRowColors)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_alternating_row_colors(void* self);
+bool q_listwidget_alternating_row_colors(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1834,15 +1834,15 @@ bool q_listwidget_alternating_row_colors(void* self);
 /// @param self QListWidget*
 /// @param size QSize*
 ///
-void q_listwidget_set_icon_size(void* self, void* size);
+void q_listwidget_set_icon_size(void* self, const void* size);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#iconSize)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_icon_size(void* self);
+QSize* q_listwidget_icon_size(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1857,20 +1857,20 @@ void q_listwidget_set_text_elide_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#textElideMode)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__TextElideMode
 ///
-int32_t q_listwidget_text_elide_mode(void* self);
+int32_t q_listwidget_text_elide_mode(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForIndex)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QSize* q_listwidget_size_hint_for_index(void* self, void* index);
+QSize* q_listwidget_size_hint_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1880,16 +1880,16 @@ QSize* q_listwidget_size_hint_for_index(void* self, void* index);
 /// @param index QModelIndex*
 /// @param widget QWidget*
 ///
-void q_listwidget_set_index_widget(void* self, void* index, void* widget);
+void q_listwidget_set_index_widget(void* self, const void* index, void* widget);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#indexWidget)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QWidget* q_listwidget_index_widget(void* self, void* index);
+QWidget* q_listwidget_index_widget(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1905,10 +1905,10 @@ void q_listwidget_set_item_delegate_for_row(void* self, int row, void* delegate)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForRow)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param row int
 ///
-QAbstractItemDelegate* q_listwidget_item_delegate_for_row(void* self, int row);
+QAbstractItemDelegate* q_listwidget_item_delegate_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1924,19 +1924,19 @@ void q_listwidget_set_item_delegate_for_column(void* self, int column, void* del
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForColumn)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param column int
 ///
-QAbstractItemDelegate* q_listwidget_item_delegate_for_column(void* self, int column);
+QAbstractItemDelegate* q_listwidget_item_delegate_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* q_listwidget_item_delegate2(void* self, void* index);
+QAbstractItemDelegate* q_listwidget_item_delegate2(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1945,7 +1945,7 @@ QAbstractItemDelegate* q_listwidget_item_delegate2(void* self, void* index);
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_edit(void* self, void* index);
+void q_listwidget_edit(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1962,7 +1962,7 @@ void q_listwidget_clear_selection(void* self);
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_set_current_index(void* self, void* index);
+void q_listwidget_set_current_index(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1987,7 +1987,7 @@ void q_listwidget_scroll_to_bottom(void* self);
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_update(void* self, void* index);
+void q_listwidget_update(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1996,7 +1996,7 @@ void q_listwidget_update(void* self, void* index);
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_pressed(void* self, void* index);
+void q_listwidget_pressed(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -2005,7 +2005,7 @@ void q_listwidget_pressed(void* self, void* index);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* index)
 ///
-void q_listwidget_on_pressed(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_pressed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -2014,7 +2014,7 @@ void q_listwidget_on_pressed(void* self, void (*callback)(void*, void*));
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_clicked(void* self, void* index);
+void q_listwidget_clicked(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -2023,7 +2023,7 @@ void q_listwidget_clicked(void* self, void* index);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* index)
 ///
-void q_listwidget_on_clicked(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -2032,7 +2032,7 @@ void q_listwidget_on_clicked(void* self, void (*callback)(void*, void*));
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_double_clicked(void* self, void* index);
+void q_listwidget_double_clicked(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -2041,7 +2041,7 @@ void q_listwidget_double_clicked(void* self, void* index);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* index)
 ///
-void q_listwidget_on_double_clicked(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_double_clicked(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -2050,7 +2050,7 @@ void q_listwidget_on_double_clicked(void* self, void (*callback)(void*, void*));
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_activated(void* self, void* index);
+void q_listwidget_activated(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -2059,7 +2059,7 @@ void q_listwidget_activated(void* self, void* index);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* index)
 ///
-void q_listwidget_on_activated(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_activated(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -2068,7 +2068,7 @@ void q_listwidget_on_activated(void* self, void (*callback)(void*, void*));
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_entered(void* self, void* index);
+void q_listwidget_entered(void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -2077,7 +2077,7 @@ void q_listwidget_entered(void* self, void* index);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* index)
 ///
-void q_listwidget_on_entered(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_entered(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -2103,7 +2103,7 @@ void q_listwidget_on_viewport_entered(void* self, void (*callback)(void*));
 /// @param self QListWidget*
 /// @param size QSize*
 ///
-void q_listwidget_icon_size_changed(void* self, void* size);
+void q_listwidget_icon_size_changed(void* self, const void* size);
 
 /// Inherited from QAbstractItemView
 ///
@@ -2112,17 +2112,17 @@ void q_listwidget_icon_size_changed(void* self, void* size);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QSize* size)
 ///
-void q_listwidget_on_icon_size_changed(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_icon_size_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBarPolicy)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t q_listwidget_vertical_scroll_bar_policy(void* self);
+int32_t q_listwidget_vertical_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2137,9 +2137,9 @@ void q_listwidget_set_vertical_scroll_bar_policy(void* self, int32_t verticalScr
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QScrollBar* q_listwidget_vertical_scroll_bar(void* self);
+QScrollBar* q_listwidget_vertical_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2154,11 +2154,11 @@ void q_listwidget_set_vertical_scroll_bar(void* self, void* scrollbar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBarPolicy)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__ScrollBarPolicy
 ///
-int32_t q_listwidget_horizontal_scroll_bar_policy(void* self);
+int32_t q_listwidget_horizontal_scroll_bar_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2173,9 +2173,9 @@ void q_listwidget_set_horizontal_scroll_bar_policy(void* self, int32_t horizonta
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QScrollBar* q_listwidget_horizontal_scroll_bar(void* self);
+QScrollBar* q_listwidget_horizontal_scroll_bar(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2190,9 +2190,9 @@ void q_listwidget_set_horizontal_scroll_bar(void* self, void* scrollbar);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_corner_widget(void* self);
+QWidget* q_listwidget_corner_widget(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2228,9 +2228,9 @@ libqt_list q_listwidget_scroll_bar_widgets(void* self, int32_t alignment);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_viewport(void* self);
+QWidget* q_listwidget_viewport(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2245,19 +2245,19 @@ void q_listwidget_set_viewport(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_maximum_viewport_size(void* self);
+QSize* q_listwidget_maximum_viewport_size(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeAdjustPolicy)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
 ///
-int32_t q_listwidget_size_adjust_policy(void* self);
+int32_t q_listwidget_size_adjust_policy(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2272,9 +2272,9 @@ void q_listwidget_set_size_adjust_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_frame_style(void* self);
+int32_t q_listwidget_frame_style(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2289,19 +2289,19 @@ void q_listwidget_set_frame_style(void* self, int frameStyle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_frame_width(void* self);
+int32_t q_listwidget_frame_width(const void* self);
 
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QFrame__Shape
 ///
-int32_t q_listwidget_frame_shape(void* self);
+int32_t q_listwidget_frame_shape(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2316,11 +2316,11 @@ void q_listwidget_set_frame_shape(void* self, int32_t frameShape);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QFrame__Shadow
 ///
-int32_t q_listwidget_frame_shadow(void* self);
+int32_t q_listwidget_frame_shadow(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2335,9 +2335,9 @@ void q_listwidget_set_frame_shadow(void* self, int32_t frameShadow);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_line_width(void* self);
+int32_t q_listwidget_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2352,9 +2352,9 @@ void q_listwidget_set_line_width(void* self, int lineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_mid_line_width(void* self);
+int32_t q_listwidget_mid_line_width(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2369,9 +2369,9 @@ void q_listwidget_set_mid_line_width(void* self, int midLineWidth);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRect* q_listwidget_frame_rect(void* self);
+QRect* q_listwidget_frame_rect(const void* self);
 
 /// Inherited from QFrame
 ///
@@ -2380,7 +2380,7 @@ QRect* q_listwidget_frame_rect(void* self);
 /// @param self QListWidget*
 /// @param frameRect QRect*
 ///
-void q_listwidget_set_frame_rect(void* self, void* frameRect);
+void q_listwidget_set_frame_rect(void* self, const void* frameRect);
 
 /// Inherited from QWidget
 ///
@@ -2402,9 +2402,9 @@ QListWidget* q_listwidget_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-uintptr_t q_listwidget_win_id(void* self);
+uintptr_t q_listwidget_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2418,25 +2418,25 @@ void q_listwidget_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-uintptr_t q_listwidget_internal_win_id(void* self);
+uintptr_t q_listwidget_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-uintptr_t q_listwidget_effective_win_id(void* self);
+uintptr_t q_listwidget_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QStyle* q_listwidget_style(void* self);
+QStyle* q_listwidget_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2451,35 +2451,35 @@ void q_listwidget_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_top_level(void* self);
+bool q_listwidget_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_window(void* self);
+bool q_listwidget_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_modal(void* self);
+bool q_listwidget_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_listwidget_window_modality(void* self);
+int32_t q_listwidget_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2494,18 +2494,18 @@ void q_listwidget_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_enabled(void* self);
+bool q_listwidget_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QWidget*
 ///
-bool q_listwidget_is_enabled_to(void* self, void* param1);
+bool q_listwidget_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2538,153 +2538,153 @@ void q_listwidget_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRect* q_listwidget_frame_geometry(void* self);
+QRect* q_listwidget_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const QRect* q_listwidget_geometry(void* self);
+const QRect* q_listwidget_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRect* q_listwidget_normal_geometry(void* self);
+QRect* q_listwidget_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_x(void* self);
+int32_t q_listwidget_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_y(void* self);
+int32_t q_listwidget_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QPoint* q_listwidget_pos(void* self);
+QPoint* q_listwidget_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_frame_size(void* self);
+QSize* q_listwidget_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_size(void* self);
+QSize* q_listwidget_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_width(void* self);
+int32_t q_listwidget_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_height(void* self);
+int32_t q_listwidget_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRect* q_listwidget_rect(void* self);
+QRect* q_listwidget_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRect* q_listwidget_children_rect(void* self);
+QRect* q_listwidget_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRegion* q_listwidget_children_region(void* self);
+QRegion* q_listwidget_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_minimum_size(void* self);
+QSize* q_listwidget_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_maximum_size(void* self);
+QSize* q_listwidget_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_minimum_width(void* self);
+int32_t q_listwidget_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_minimum_height(void* self);
+int32_t q_listwidget_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_maximum_width(void* self);
+int32_t q_listwidget_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_maximum_height(void* self);
+int32_t q_listwidget_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2693,7 +2693,7 @@ int32_t q_listwidget_maximum_height(void* self);
 /// @param self QListWidget*
 /// @param minimumSize QSize*
 ///
-void q_listwidget_set_minimum_size(void* self, void* minimumSize);
+void q_listwidget_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -2712,7 +2712,7 @@ void q_listwidget_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QListWidget*
 /// @param maximumSize QSize*
 ///
-void q_listwidget_set_maximum_size(void* self, void* maximumSize);
+void q_listwidget_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -2764,9 +2764,9 @@ void q_listwidget_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_size_increment(void* self);
+QSize* q_listwidget_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2775,7 +2775,7 @@ QSize* q_listwidget_size_increment(void* self);
 /// @param self QListWidget*
 /// @param sizeIncrement QSize*
 ///
-void q_listwidget_set_size_increment(void* self, void* sizeIncrement);
+void q_listwidget_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -2791,9 +2791,9 @@ void q_listwidget_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_base_size(void* self);
+QSize* q_listwidget_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2802,7 +2802,7 @@ QSize* q_listwidget_base_size(void* self);
 /// @param self QListWidget*
 /// @param baseSize QSize*
 ///
-void q_listwidget_set_base_size(void* self, void* baseSize);
+void q_listwidget_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -2821,7 +2821,7 @@ void q_listwidget_set_base_size2(void* self, int basew, int baseh);
 /// @param self QListWidget*
 /// @param fixedSize QSize*
 ///
-void q_listwidget_set_fixed_size(void* self, void* fixedSize);
+void q_listwidget_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -2855,145 +2855,145 @@ void q_listwidget_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_listwidget_map_to_global(void* self, void* param1);
+QPointF* q_listwidget_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_listwidget_map_to_global2(void* self, void* param1);
+QPoint* q_listwidget_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_listwidget_map_from_global(void* self, void* param1);
+QPointF* q_listwidget_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_listwidget_map_from_global2(void* self, void* param1);
+QPoint* q_listwidget_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_listwidget_map_to_parent(void* self, void* param1);
+QPointF* q_listwidget_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_listwidget_map_to_parent2(void* self, void* param1);
+QPoint* q_listwidget_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_listwidget_map_from_parent(void* self, void* param1);
+QPointF* q_listwidget_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_listwidget_map_from_parent2(void* self, void* param1);
+QPoint* q_listwidget_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_listwidget_map_to(void* self, void* param1, void* param2);
+QPointF* q_listwidget_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_listwidget_map_to2(void* self, void* param1, void* param2);
+QPoint* q_listwidget_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_listwidget_map_from(void* self, void* param1, void* param2);
+QPointF* q_listwidget_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_listwidget_map_from2(void* self, void* param1, void* param2);
+QPoint* q_listwidget_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_window(void* self);
+QWidget* q_listwidget_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_native_parent_widget(void* self);
+QWidget* q_listwidget_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_top_level_widget(void* self);
+QWidget* q_listwidget_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const QPalette* q_listwidget_palette(void* self);
+const QPalette* q_listwidget_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3002,7 +3002,7 @@ const QPalette* q_listwidget_palette(void* self);
 /// @param self QListWidget*
 /// @param palette QPalette*
 ///
-void q_listwidget_set_palette(void* self, void* palette);
+void q_listwidget_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -3017,11 +3017,11 @@ void q_listwidget_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_listwidget_background_role(void* self);
+int32_t q_listwidget_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3036,19 +3036,19 @@ void q_listwidget_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_listwidget_foreground_role(void* self);
+int32_t q_listwidget_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const QFont* q_listwidget_font(void* self);
+const QFont* q_listwidget_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3057,31 +3057,31 @@ const QFont* q_listwidget_font(void* self);
 /// @param self QListWidget*
 /// @param font QFont*
 ///
-void q_listwidget_set_font(void* self, void* font);
+void q_listwidget_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QFontMetrics* q_listwidget_font_metrics(void* self);
+QFontMetrics* q_listwidget_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QFontInfo* q_listwidget_font_info(void* self);
+QFontInfo* q_listwidget_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QCursor* q_listwidget_cursor(void* self);
+QCursor* q_listwidget_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3090,7 +3090,7 @@ QCursor* q_listwidget_cursor(void* self);
 /// @param self QListWidget*
 /// @param cursor QCursor*
 ///
-void q_listwidget_set_cursor(void* self, void* cursor);
+void q_listwidget_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -3113,17 +3113,17 @@ void q_listwidget_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_has_mouse_tracking(void* self);
+bool q_listwidget_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_under_mouse(void* self);
+bool q_listwidget_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3138,9 +3138,9 @@ void q_listwidget_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_has_tablet_tracking(void* self);
+bool q_listwidget_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3149,7 +3149,7 @@ bool q_listwidget_has_tablet_tracking(void* self);
 /// @param self QListWidget*
 /// @param mask QBitmap*
 ///
-void q_listwidget_set_mask(void* self, void* mask);
+void q_listwidget_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -3158,15 +3158,15 @@ void q_listwidget_set_mask(void* self, void* mask);
 /// @param self QListWidget*
 /// @param mask QRegion*
 ///
-void q_listwidget_set_mask2(void* self, void* mask);
+void q_listwidget_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRegion* q_listwidget_mask(void* self);
+QRegion* q_listwidget_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3206,9 +3206,9 @@ QPixmap* q_listwidget_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QGraphicsEffect* q_listwidget_graphics_effect(void* self);
+QGraphicsEffect* q_listwidget_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3261,9 +3261,9 @@ void q_listwidget_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_style_sheet(void* self);
+const char* q_listwidget_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3271,9 +3271,9 @@ const char* q_listwidget_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_window_title(void* self);
+const char* q_listwidget_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3282,15 +3282,15 @@ const char* q_listwidget_window_title(void* self);
 /// @param self QListWidget*
 /// @param icon QIcon*
 ///
-void q_listwidget_set_window_icon(void* self, void* icon);
+void q_listwidget_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QIcon* q_listwidget_window_icon(void* self);
+QIcon* q_listwidget_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3307,9 +3307,9 @@ void q_listwidget_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_window_icon_text(void* self);
+const char* q_listwidget_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3326,9 +3326,9 @@ void q_listwidget_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_window_role(void* self);
+const char* q_listwidget_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3345,9 +3345,9 @@ void q_listwidget_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_window_file_path(void* self);
+const char* q_listwidget_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3362,17 +3362,17 @@ void q_listwidget_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-double q_listwidget_window_opacity(void* self);
+double q_listwidget_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_window_modified(void* self);
+bool q_listwidget_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3389,9 +3389,9 @@ void q_listwidget_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_tool_tip(void* self);
+const char* q_listwidget_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3406,9 +3406,9 @@ void q_listwidget_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_tool_tip_duration(void* self);
+int32_t q_listwidget_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3425,9 +3425,9 @@ void q_listwidget_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_status_tip(void* self);
+const char* q_listwidget_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3444,9 +3444,9 @@ void q_listwidget_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_whats_this(void* self);
+const char* q_listwidget_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3454,9 +3454,9 @@ const char* q_listwidget_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_accessible_name(void* self);
+const char* q_listwidget_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3473,9 +3473,9 @@ void q_listwidget_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_accessible_description(void* self);
+const char* q_listwidget_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3499,11 +3499,11 @@ void q_listwidget_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_listwidget_layout_direction(void* self);
+int32_t q_listwidget_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3520,15 +3520,15 @@ void q_listwidget_unset_layout_direction(void* self);
 /// @param self QListWidget*
 /// @param locale QLocale*
 ///
-void q_listwidget_set_locale(void* self, void* locale);
+void q_listwidget_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QLocale* q_listwidget_locale(void* self);
+QLocale* q_listwidget_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3542,17 +3542,17 @@ void q_listwidget_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_right_to_left(void* self);
+bool q_listwidget_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_left_to_right(void* self);
+bool q_listwidget_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3566,9 +3566,9 @@ void q_listwidget_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_active_window(void* self);
+bool q_listwidget_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3599,11 +3599,11 @@ void q_listwidget_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_listwidget_focus_policy(void* self);
+int32_t q_listwidget_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3618,9 +3618,9 @@ void q_listwidget_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_has_focus(void* self);
+bool q_listwidget_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3644,19 +3644,19 @@ void q_listwidget_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_focus_proxy(void* self);
+QWidget* q_listwidget_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_listwidget_context_menu_policy(void* self);
+int32_t q_listwidget_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3682,7 +3682,7 @@ void q_listwidget_grab_mouse(void* self);
 /// @param self QListWidget*
 /// @param param1 QCursor*
 ///
-void q_listwidget_grab_mouse2(void* self, void* param1);
+void q_listwidget_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3715,7 +3715,7 @@ void q_listwidget_release_keyboard(void* self);
 /// @param self QListWidget*
 /// @param key QKeySequence*
 ///
-int32_t q_listwidget_grab_shortcut(void* self, void* key);
+int32_t q_listwidget_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -3760,9 +3760,9 @@ QWidget* q_listwidget_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_updates_enabled(void* self);
+bool q_listwidget_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3777,9 +3777,9 @@ void q_listwidget_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QGraphicsProxyWidget* q_listwidget_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_listwidget_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3808,7 +3808,7 @@ void q_listwidget_update2(void* self, int x, int y, int w, int h);
 /// @param self QListWidget*
 /// @param param1 QRect*
 ///
-void q_listwidget_update3(void* self, void* param1);
+void q_listwidget_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3817,7 +3817,7 @@ void q_listwidget_update3(void* self, void* param1);
 /// @param self QListWidget*
 /// @param param1 QRegion*
 ///
-void q_listwidget_update4(void* self, void* param1);
+void q_listwidget_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3838,7 +3838,7 @@ void q_listwidget_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QListWidget*
 /// @param param1 QRect*
 ///
-void q_listwidget_repaint3(void* self, void* param1);
+void q_listwidget_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3847,7 +3847,7 @@ void q_listwidget_repaint3(void* self, void* param1);
 /// @param self QListWidget*
 /// @param param1 QRegion*
 ///
-void q_listwidget_repaint4(void* self, void* param1);
+void q_listwidget_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3956,7 +3956,7 @@ void q_listwidget_move(void* self, int x, int y);
 /// @param self QListWidget*
 /// @param param1 QPoint*
 ///
-void q_listwidget_move2(void* self, void* param1);
+void q_listwidget_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3975,7 +3975,7 @@ void q_listwidget_resize(void* self, int w, int h);
 /// @param self QListWidget*
 /// @param param1 QSize*
 ///
-void q_listwidget_resize2(void* self, void* param1);
+void q_listwidget_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -3996,7 +3996,7 @@ void q_listwidget_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QListWidget*
 /// @param geometry QRect*
 ///
-void q_listwidget_set_geometry2(void* self, void* geometry);
+void q_listwidget_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -4004,9 +4004,9 @@ void q_listwidget_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-char* q_listwidget_save_geometry(void* self);
+char* q_listwidget_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4029,60 +4029,60 @@ void q_listwidget_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_visible(void* self);
+bool q_listwidget_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 QWidget*
 ///
-bool q_listwidget_is_visible_to(void* self, void* param1);
+bool q_listwidget_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_hidden(void* self);
+bool q_listwidget_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_minimized(void* self);
+bool q_listwidget_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_maximized(void* self);
+bool q_listwidget_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_full_screen(void* self);
+bool q_listwidget_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_listwidget_window_state(void* self);
+int32_t q_listwidget_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4106,9 +4106,9 @@ void q_listwidget_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSizePolicy* q_listwidget_size_policy(void* self);
+QSizePolicy* q_listwidget_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4133,9 +4133,9 @@ void q_listwidget_set_size_policy2(void* self, int32_t horizontal, int32_t verti
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRegion* q_listwidget_visible_region(void* self);
+QRegion* q_listwidget_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4156,31 +4156,31 @@ void q_listwidget_set_contents_margins(void* self, int left, int top, int right,
 /// @param self QListWidget*
 /// @param margins QMargins*
 ///
-void q_listwidget_set_contents_margins2(void* self, void* margins);
+void q_listwidget_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QMargins* q_listwidget_contents_margins(void* self);
+QMargins* q_listwidget_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QRect* q_listwidget_contents_rect(void* self);
+QRect* q_listwidget_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QLayout* q_listwidget_layout(void* self);
+QLayout* q_listwidget_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4237,39 +4237,39 @@ void q_listwidget_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_listwidget_scroll2(void* self, int dx, int dy, void* param3);
+void q_listwidget_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_focus_widget(void* self);
+QWidget* q_listwidget_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_next_in_focus_chain(void* self);
+QWidget* q_listwidget_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_previous_in_focus_chain(void* self);
+QWidget* q_listwidget_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_accept_drops(void* self);
+bool q_listwidget_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4331,11 +4331,11 @@ void q_listwidget_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_listwidget_actions(void* self);
+libqt_list q_listwidget_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4354,7 +4354,7 @@ QAction* q_listwidget_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_listwidget_add_action3(void* self, void* icon, const char* text);
+QAction* q_listwidget_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -4364,7 +4364,7 @@ QAction* q_listwidget_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_listwidget_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_listwidget_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -4375,15 +4375,15 @@ QAction* q_listwidget_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_listwidget_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_listwidget_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWidget* q_listwidget_parent_widget(void* self);
+QWidget* q_listwidget_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4398,11 +4398,11 @@ void q_listwidget_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_listwidget_window_flags(void* self);
+int32_t q_listwidget_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4426,11 +4426,11 @@ void q_listwidget_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_listwidget_window_type(void* self);
+int32_t q_listwidget_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4444,29 +4444,29 @@ QWidget* q_listwidget_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_listwidget_child_at(void* self, int x, int y);
+QWidget* q_listwidget_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param p QPoint*
 ///
-QWidget* q_listwidget_child_at2(void* self, void* p);
+QWidget* q_listwidget_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param p QPointF*
 ///
-QWidget* q_listwidget_child_at3(void* self, void* p);
+QWidget* q_listwidget_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -4481,35 +4481,35 @@ void q_listwidget_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_listwidget_test_attribute(void* self, int32_t param1);
+bool q_listwidget_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-void q_listwidget_ensure_polished(void* self);
+void q_listwidget_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param child QWidget*
 ///
-bool q_listwidget_is_ancestor_of(void* self, void* child);
+bool q_listwidget_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_auto_fill_background(void* self);
+bool q_listwidget_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4524,25 +4524,25 @@ void q_listwidget_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QBackingStore* q_listwidget_backing_store(void* self);
+QBackingStore* q_listwidget_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QWindow* q_listwidget_window_handle(void* self);
+QWindow* q_listwidget_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QScreen* q_listwidget_screen(void* self);
+QScreen* q_listwidget_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4586,7 +4586,7 @@ void q_listwidget_on_window_title_changed(void* self, void (*callback)(void*, co
 /// @param self QListWidget*
 /// @param icon QIcon*
 ///
-void q_listwidget_window_icon_changed(void* self, void* icon);
+void q_listwidget_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -4595,7 +4595,7 @@ void q_listwidget_window_icon_changed(void* self, void* icon);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QIcon* icon)
 ///
-void q_listwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4622,7 +4622,7 @@ void q_listwidget_on_window_icon_text_changed(void* self, void (*callback)(void*
 /// @param self QListWidget*
 /// @param pos QPoint*
 ///
-void q_listwidget_custom_context_menu_requested(void* self, void* pos);
+void q_listwidget_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -4631,17 +4631,17 @@ void q_listwidget_custom_context_menu_requested(void* self, void* pos);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QPoint* pos)
 ///
-void q_listwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_listwidget_input_method_hints(void* self);
+int32_t q_listwidget_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4660,7 +4660,7 @@ void q_listwidget_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_listwidget_render22(void* self, void* target, void* targetOffset);
+void q_listwidget_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4671,7 +4671,7 @@ void q_listwidget_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_listwidget_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_listwidget_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4683,7 +4683,7 @@ void q_listwidget_render3(void* self, void* target, void* targetOffset, void* so
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_listwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_listwidget_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4693,7 +4693,7 @@ void q_listwidget_render4(void* self, void* target, void* targetOffset, void* so
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_listwidget_render23(void* self, void* painter, void* targetOffset);
+void q_listwidget_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -4704,7 +4704,7 @@ void q_listwidget_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_listwidget_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_listwidget_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -4716,7 +4716,7 @@ void q_listwidget_render32(void* self, void* painter, void* targetOffset, void* 
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_listwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_listwidget_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -4725,7 +4725,7 @@ void q_listwidget_render42(void* self, void* painter, void* targetOffset, void* 
 /// @param self QListWidget*
 /// @param rectangle QRect*
 ///
-QPixmap* q_listwidget_grab1(void* self, void* rectangle);
+QPixmap* q_listwidget_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -4745,7 +4745,7 @@ void q_listwidget_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_listwidget_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_listwidget_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4812,9 +4812,9 @@ QWidget* q_listwidget_create_window_container3(void* window, void* parent, int32
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char* q_listwidget_object_name(void* self);
+const char* q_listwidget_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4829,33 +4829,33 @@ void q_listwidget_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_widget_type(void* self);
+bool q_listwidget_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_window_type(void* self);
+bool q_listwidget_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_is_quick_item_type(void* self);
+bool q_listwidget_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_signals_blocked(void* self);
+bool q_listwidget_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4870,9 +4870,9 @@ bool q_listwidget_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QThread* q_listwidget_thread(void* self);
+QThread* q_listwidget_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4923,11 +4923,11 @@ void q_listwidget_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_listwidget_children(void* self);
+libqt_list q_listwidget_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4956,7 +4956,7 @@ void q_listwidget_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_listwidget_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_listwidget_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4967,18 +4967,18 @@ QMetaObject__Connection* q_listwidget_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_listwidget_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_listwidget_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_listwidget_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_listwidget_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4989,7 +4989,7 @@ QMetaObject__Connection* q_listwidget_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_listwidget_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_listwidget_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5000,24 +5000,24 @@ bool q_listwidget_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_listwidget_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_listwidget_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_disconnect3(void* self);
+bool q_listwidget_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param receiver QObject*
 ///
-bool q_listwidget_disconnect4(void* self, void* receiver);
+bool q_listwidget_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -5025,23 +5025,23 @@ bool q_listwidget_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_listwidget_disconnect5(void* param1);
+bool q_listwidget_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-void q_listwidget_dump_object_tree(void* self);
+void q_listwidget_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-void q_listwidget_dump_object_info(void* self);
+void q_listwidget_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5051,16 +5051,16 @@ void q_listwidget_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_listwidget_set_property(void* self, const char* name, void* value);
+bool q_listwidget_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param name const char*
 ///
-QVariant* q_listwidget_property(void* self, const char* name);
+QVariant* q_listwidget_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -5068,9 +5068,9 @@ QVariant* q_listwidget_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const char** q_listwidget_dynamic_property_names(void* self);
+const char** q_listwidget_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5084,9 +5084,9 @@ QBindingStorage* q_listwidget_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-const QBindingStorage* q_listwidget_binding_storage2(void* self);
+const QBindingStorage* q_listwidget_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5109,18 +5109,18 @@ void q_listwidget_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QObject* q_listwidget_parent(void* self);
+QObject* q_listwidget_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param classname const char*
 ///
-bool q_listwidget_inherits(void* self, const char* classname);
+bool q_listwidget_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -5160,7 +5160,7 @@ int32_t q_listwidget_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_listwidget_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_listwidget_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -5172,59 +5172,59 @@ QMetaObject__Connection* q_listwidget_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_listwidget_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_listwidget_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_listwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_listwidget_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param signal const char*
 ///
-bool q_listwidget_disconnect1(void* self, const char* signal);
+bool q_listwidget_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QListWidget*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_listwidget_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_listwidget_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_listwidget_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_listwidget_disconnect23(void* self, void* receiver, const char* member);
+bool q_listwidget_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QListWidget*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_listwidget_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5248,89 +5248,89 @@ void q_listwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_painting_active(void* self);
+bool q_listwidget_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_width_m_m(void* self);
+int32_t q_listwidget_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_height_m_m(void* self);
+int32_t q_listwidget_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_logical_dpi_x(void* self);
+int32_t q_listwidget_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_logical_dpi_y(void* self);
+int32_t q_listwidget_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_physical_dpi_x(void* self);
+int32_t q_listwidget_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_physical_dpi_y(void* self);
+int32_t q_listwidget_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-double q_listwidget_device_pixel_ratio(void* self);
+double q_listwidget_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-double q_listwidget_device_pixel_ratio_f(void* self);
+double q_listwidget_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_color_count(void* self);
+int32_t q_listwidget_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_depth(void* self);
+int32_t q_listwidget_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -5353,10 +5353,10 @@ int32_t q_listwidget_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QRect* q_listwidget_visual_rect(void* self, void* index);
+QRect* q_listwidget_visual_rect(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5364,10 +5364,10 @@ QRect* q_listwidget_visual_rect(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QRect* q_listwidget_super_visual_rect(void* self, void* index);
+QRect* q_listwidget_super_visual_rect(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5375,12 +5375,12 @@ QRect* q_listwidget_super_visual_rect(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback QRect* func(QListWidget* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
+void q_listwidget_on_visual_rect(const void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5392,7 +5392,7 @@ void q_listwidget_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void q_listwidget_scroll_to(void* self, void* index, int32_t hint);
+void q_listwidget_scroll_to(void* self, const void* index, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -5404,7 +5404,7 @@ void q_listwidget_scroll_to(void* self, void* index, int32_t hint);
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void q_listwidget_super_scroll_to(void* self, void* index, int32_t hint);
+void q_listwidget_super_scroll_to(void* self, const void* index, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -5415,7 +5415,7 @@ void q_listwidget_super_scroll_to(void* self, void* index, int32_t hint);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint)
 ///
-void q_listwidget_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
+void q_listwidget_on_scroll_to(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// Inherited from QListView
 ///
@@ -5423,10 +5423,10 @@ void q_listwidget_on_scroll_to(void* self, void (*callback)(void*, void*, int32_
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param p QPoint*
 ///
-QModelIndex* q_listwidget_index_at(void* self, void* p);
+QModelIndex* q_listwidget_index_at(const void* self, const void* p);
 
 /// Inherited from QListView
 ///
@@ -5434,10 +5434,10 @@ QModelIndex* q_listwidget_index_at(void* self, void* p);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param p QPoint*
 ///
-QModelIndex* q_listwidget_super_index_at(void* self, void* p);
+QModelIndex* q_listwidget_super_index_at(const void* self, const void* p);
 
 /// Inherited from QListView
 ///
@@ -5445,12 +5445,12 @@ QModelIndex* q_listwidget_super_index_at(void* self, void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback QModelIndex* func(QListWidget* self, QPoint* p)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
+void q_listwidget_on_index_at(const void* self, QModelIndex* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5479,9 +5479,9 @@ void q_listwidget_super_do_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_do_items_layout(void* self, void (*callback)());
+void q_listwidget_on_do_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QListView
 ///
@@ -5510,9 +5510,9 @@ void q_listwidget_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_reset(void* self, void (*callback)());
+void q_listwidget_on_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QListView
 ///
@@ -5523,7 +5523,7 @@ void q_listwidget_on_reset(void* self, void (*callback)());
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_set_root_index(void* self, void* index);
+void q_listwidget_set_root_index(void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5534,7 +5534,7 @@ void q_listwidget_set_root_index(void* self, void* index);
 /// @param self QListWidget*
 /// @param index QModelIndex*
 ///
-void q_listwidget_super_set_root_index(void* self, void* index);
+void q_listwidget_super_set_root_index(void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -5545,7 +5545,7 @@ void q_listwidget_super_set_root_index(void* self, void* index);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* index)
 ///
-void q_listwidget_on_set_root_index(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_set_root_index(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -5593,7 +5593,7 @@ void q_listwidget_on_scroll_contents_by(void* self, void (*callback)(void*, int,
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_listwidget_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_listwidget_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5606,7 +5606,7 @@ void q_listwidget_data_changed(void* self, void* topLeft, void* bottomRight, lib
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_listwidget_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_listwidget_super_data_changed(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5617,7 +5617,7 @@ void q_listwidget_super_data_changed(void* self, void* topLeft, void* bottomRigh
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void q_listwidget_on_data_changed(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QListView
 ///
@@ -5630,7 +5630,7 @@ void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, voi
 /// @param start int
 /// @param end int
 ///
-void q_listwidget_rows_inserted(void* self, void* parent, int start, int end);
+void q_listwidget_rows_inserted(void* self, const void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5643,7 +5643,7 @@ void q_listwidget_rows_inserted(void* self, void* parent, int start, int end);
 /// @param start int
 /// @param end int
 ///
-void q_listwidget_super_rows_inserted(void* self, void* parent, int start, int end);
+void q_listwidget_super_rows_inserted(void* self, const void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5654,7 +5654,7 @@ void q_listwidget_super_rows_inserted(void* self, void* parent, int start, int e
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* parent, int start, int end)
 ///
-void q_listwidget_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_listwidget_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QListView
 ///
@@ -5667,7 +5667,7 @@ void q_listwidget_on_rows_inserted(void* self, void (*callback)(void*, void*, in
 /// @param start int
 /// @param end int
 ///
-void q_listwidget_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void q_listwidget_rows_about_to_be_removed(void* self, const void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5680,7 +5680,7 @@ void q_listwidget_rows_about_to_be_removed(void* self, void* parent, int start, 
 /// @param start int
 /// @param end int
 ///
-void q_listwidget_super_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void q_listwidget_super_rows_about_to_be_removed(void* self, const void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5691,7 +5691,7 @@ void q_listwidget_super_rows_about_to_be_removed(void* self, void* parent, int s
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* parent, int start, int end)
 ///
-void q_listwidget_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_listwidget_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QListView
 ///
@@ -5963,10 +5963,10 @@ void q_listwidget_on_start_drag(void* self, void (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param option QStyleOptionViewItem*
 ///
-void q_listwidget_init_view_item_option(void* self, void* option);
+void q_listwidget_init_view_item_option(const void* self, void* option);
 
 /// Inherited from QListView
 ///
@@ -5974,10 +5974,10 @@ void q_listwidget_init_view_item_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param option QStyleOptionViewItem*
 ///
-void q_listwidget_super_init_view_item_option(void* self, void* option);
+void q_listwidget_super_init_view_item_option(const void* self, void* option);
 
 /// Inherited from QListView
 ///
@@ -5985,10 +5985,10 @@ void q_listwidget_super_init_view_item_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback void func(QListWidget* self, QStyleOptionViewItem* option)
 ///
-void q_listwidget_on_init_view_item_option(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_init_view_item_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QListView
 ///
@@ -6029,9 +6029,9 @@ void q_listwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_horizontal_offset(void* self);
+int32_t q_listwidget_horizontal_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6039,9 +6039,9 @@ int32_t q_listwidget_horizontal_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_super_horizontal_offset(void* self);
+int32_t q_listwidget_super_horizontal_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6049,10 +6049,10 @@ int32_t q_listwidget_super_horizontal_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback int32_t func()
+/// @param self const QListWidget*
+/// @param callback int32_t func(QListWidget* self)
 ///
-void q_listwidget_on_horizontal_offset(void* self, int32_t (*callback)());
+void q_listwidget_on_horizontal_offset(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -6060,9 +6060,9 @@ void q_listwidget_on_horizontal_offset(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_vertical_offset(void* self);
+int32_t q_listwidget_vertical_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6070,9 +6070,9 @@ int32_t q_listwidget_vertical_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_super_vertical_offset(void* self);
+int32_t q_listwidget_super_vertical_offset(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6080,10 +6080,10 @@ int32_t q_listwidget_super_vertical_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback int32_t func()
+/// @param self const QListWidget*
+/// @param callback int32_t func(QListWidget* self)
 ///
-void q_listwidget_on_vertical_offset(void* self, int32_t (*callback)());
+void q_listwidget_on_vertical_offset(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -6132,7 +6132,7 @@ void q_listwidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void q_listwidget_set_selection(void* self, void* rect, int32_t command);
+void q_listwidget_set_selection(void* self, const void* rect, int32_t command);
 
 /// Inherited from QListView
 ///
@@ -6144,7 +6144,7 @@ void q_listwidget_set_selection(void* self, void* rect, int32_t command);
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void q_listwidget_super_set_selection(void* self, void* rect, int32_t command);
+void q_listwidget_super_set_selection(void* self, const void* rect, int32_t command);
 
 /// Inherited from QListView
 ///
@@ -6155,7 +6155,7 @@ void q_listwidget_super_set_selection(void* self, void* rect, int32_t command);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QRect* rect, flag of enum QItemSelectionModel__SelectionFlag command)
 ///
-void q_listwidget_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
+void q_listwidget_on_set_selection(void* self, void (*callback)(void*, const void*, int32_t));
 
 /// Inherited from QListView
 ///
@@ -6163,10 +6163,10 @@ void q_listwidget_on_set_selection(void* self, void (*callback)(void*, void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param selection QItemSelection*
 ///
-QRegion* q_listwidget_visual_region_for_selection(void* self, void* selection);
+QRegion* q_listwidget_visual_region_for_selection(const void* self, const void* selection);
 
 /// Inherited from QListView
 ///
@@ -6174,10 +6174,10 @@ QRegion* q_listwidget_visual_region_for_selection(void* self, void* selection);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param selection QItemSelection*
 ///
-QRegion* q_listwidget_super_visual_region_for_selection(void* self, void* selection);
+QRegion* q_listwidget_super_visual_region_for_selection(const void* self, const void* selection);
 
 /// Inherited from QListView
 ///
@@ -6185,12 +6185,12 @@ QRegion* q_listwidget_super_visual_region_for_selection(void* self, void* select
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback QRegion* func(QListWidget* self, QItemSelection* selection)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
+void q_listwidget_on_visual_region_for_selection(const void* self, QRegion* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -6198,11 +6198,11 @@ void q_listwidget_on_visual_region_for_selection(void* self, QRegion* (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_listwidget_selected_indexes(void* self);
+libqt_list q_listwidget_selected_indexes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6210,11 +6210,11 @@ libqt_list q_listwidget_selected_indexes(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_listwidget_super_selected_indexes(void* self);
+libqt_list q_listwidget_super_selected_indexes(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6222,10 +6222,10 @@ libqt_list q_listwidget_super_selected_indexes(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback libqt_list of QModelIndex* func()
+/// @param self const QListWidget*
+/// @param callback libqt_list of QModelIndex* func(QListWidget* self)
 ///
-void q_listwidget_on_selected_indexes(void* self, libqt_list (*callback)());
+void q_listwidget_on_selected_indexes(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -6254,9 +6254,9 @@ void q_listwidget_super_update_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_update_geometries(void* self, void (*callback)());
+void q_listwidget_on_update_geometries(void* self, void (*callback)(void*));
 
 /// Inherited from QListView
 ///
@@ -6264,10 +6264,10 @@ void q_listwidget_on_update_geometries(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-bool q_listwidget_is_index_hidden(void* self, void* index);
+bool q_listwidget_is_index_hidden(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -6275,10 +6275,10 @@ bool q_listwidget_is_index_hidden(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-bool q_listwidget_super_is_index_hidden(void* self, void* index);
+bool q_listwidget_super_is_index_hidden(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -6286,10 +6286,10 @@ bool q_listwidget_super_is_index_hidden(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback bool func(QListWidget* self, QModelIndex* index)
 ///
-void q_listwidget_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
+void q_listwidget_on_is_index_hidden(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -6301,7 +6301,7 @@ void q_listwidget_on_is_index_hidden(void* self, bool (*callback)(void*, void*))
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void q_listwidget_selection_changed(void* self, void* selected, void* deselected);
+void q_listwidget_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// Inherited from QListView
 ///
@@ -6313,7 +6313,7 @@ void q_listwidget_selection_changed(void* self, void* selected, void* deselected
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void q_listwidget_super_selection_changed(void* self, void* selected, void* deselected);
+void q_listwidget_super_selection_changed(void* self, const void* selected, const void* deselected);
 
 /// Inherited from QListView
 ///
@@ -6324,7 +6324,7 @@ void q_listwidget_super_selection_changed(void* self, void* selected, void* dese
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QItemSelection* selected, QItemSelection* deselected)
 ///
-void q_listwidget_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
+void q_listwidget_on_selection_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -6336,7 +6336,7 @@ void q_listwidget_on_selection_changed(void* self, void (*callback)(void*, void*
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void q_listwidget_current_changed(void* self, void* current, void* previous);
+void q_listwidget_current_changed(void* self, const void* current, const void* previous);
 
 /// Inherited from QListView
 ///
@@ -6348,7 +6348,7 @@ void q_listwidget_current_changed(void* self, void* current, void* previous);
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void q_listwidget_super_current_changed(void* self, void* current, void* previous);
+void q_listwidget_super_current_changed(void* self, const void* current, const void* previous);
 
 /// Inherited from QListView
 ///
@@ -6359,7 +6359,7 @@ void q_listwidget_super_current_changed(void* self, void* current, void* previou
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QModelIndex* current, QModelIndex* previous)
 ///
-void q_listwidget_on_current_changed(void* self, void (*callback)(void*, void*, void*));
+void q_listwidget_on_current_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -6367,9 +6367,9 @@ void q_listwidget_on_current_changed(void* self, void (*callback)(void*, void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_viewport_size_hint(void* self);
+QSize* q_listwidget_viewport_size_hint(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6377,9 +6377,9 @@ QSize* q_listwidget_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_super_viewport_size_hint(void* self);
+QSize* q_listwidget_super_viewport_size_hint(const void* self);
 
 /// Inherited from QListView
 ///
@@ -6387,12 +6387,12 @@ QSize* q_listwidget_super_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QSize* func()
+/// @param self const QListWidget*
+/// @param callback QSize* func(QListWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_viewport_size_hint(void* self, QSize* (*callback)());
+void q_listwidget_on_viewport_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6433,10 +6433,10 @@ void q_listwidget_on_keyboard_search(void* self, void (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param row int
 ///
-int32_t q_listwidget_size_hint_for_row(void* self, int row);
+int32_t q_listwidget_size_hint_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6444,10 +6444,10 @@ int32_t q_listwidget_size_hint_for_row(void* self, int row);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param row int
 ///
-int32_t q_listwidget_super_size_hint_for_row(void* self, int row);
+int32_t q_listwidget_super_size_hint_for_row(const void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6455,10 +6455,10 @@ int32_t q_listwidget_super_size_hint_for_row(void* self, int row);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback int32_t func(QListWidget* self, int row)
 ///
-void q_listwidget_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
+void q_listwidget_on_size_hint_for_row(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6466,10 +6466,10 @@ void q_listwidget_on_size_hint_for_row(void* self, int32_t (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param column int
 ///
-int32_t q_listwidget_size_hint_for_column(void* self, int column);
+int32_t q_listwidget_size_hint_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6477,10 +6477,10 @@ int32_t q_listwidget_size_hint_for_column(void* self, int column);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param column int
 ///
-int32_t q_listwidget_super_size_hint_for_column(void* self, int column);
+int32_t q_listwidget_super_size_hint_for_column(const void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6488,10 +6488,10 @@ int32_t q_listwidget_super_size_hint_for_column(void* self, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback int32_t func(QListWidget* self, int column)
 ///
-void q_listwidget_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
+void q_listwidget_on_size_hint_for_column(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6499,10 +6499,10 @@ void q_listwidget_on_size_hint_for_column(void* self, int32_t (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* q_listwidget_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* q_listwidget_item_delegate_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6510,10 +6510,10 @@ QAbstractItemDelegate* q_listwidget_item_delegate_for_index(void* self, void* in
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* q_listwidget_super_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* q_listwidget_super_item_delegate_for_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6521,10 +6521,10 @@ QAbstractItemDelegate* q_listwidget_super_item_delegate_for_index(void* self, vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback QAbstractItemDelegate* func(QListWidget* self, QModelIndex* index)
 ///
-void q_listwidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
+void q_listwidget_on_item_delegate_for_index(const void* self, QAbstractItemDelegate* (*callback)(const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6532,10 +6532,10 @@ void q_listwidget_on_item_delegate_for_index(void* self, QAbstractItemDelegate* 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_listwidget_input_method_query(void* self, int32_t query);
+QVariant* q_listwidget_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6543,10 +6543,10 @@ QVariant* q_listwidget_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_listwidget_super_input_method_query(void* self, int32_t query);
+QVariant* q_listwidget_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6554,12 +6554,12 @@ QVariant* q_listwidget_super_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback QVariant* func(QListWidget* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_listwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6588,9 +6588,9 @@ void q_listwidget_super_select_all(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_select_all(void* self, void (*callback)());
+void q_listwidget_on_select_all(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6619,9 +6619,9 @@ void q_listwidget_super_update_editor_data(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_update_editor_data(void* self, void (*callback)());
+void q_listwidget_on_update_editor_data(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6650,9 +6650,9 @@ void q_listwidget_super_update_editor_geometries(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_update_editor_geometries(void* self, void (*callback)());
+void q_listwidget_on_update_editor_geometries(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6898,7 +6898,7 @@ void q_listwidget_on_editor_destroyed(void* self, void (*callback)(void*, void*)
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool q_listwidget_edit2(void* self, void* index, int32_t trigger, void* event);
+bool q_listwidget_edit2(void* self, const void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6911,7 +6911,7 @@ bool q_listwidget_edit2(void* self, void* index, int32_t trigger, void* event);
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool q_listwidget_super_edit2(void* self, void* index, int32_t trigger, void* event);
+bool q_listwidget_super_edit2(void* self, const void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6922,7 +6922,7 @@ bool q_listwidget_super_edit2(void* self, void* index, int32_t trigger, void* ev
 /// @param self QListWidget*
 /// @param callback bool func(QListWidget* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event)
 ///
-void q_listwidget_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
+void q_listwidget_on_edit2(void* self, bool (*callback)(void*, const void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6930,13 +6930,13 @@ void q_listwidget_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t q_listwidget_selection_command(void* self, void* index, void* event);
+int32_t q_listwidget_selection_command(const void* self, const void* index, const void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6944,13 +6944,13 @@ int32_t q_listwidget_selection_command(void* self, void* index, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 /// @param event QEvent*
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t q_listwidget_super_selection_command(void* self, void* index, void* event);
+int32_t q_listwidget_super_selection_command(const void* self, const void* index, const void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6958,10 +6958,10 @@ int32_t q_listwidget_super_selection_command(void* self, void* index, void* even
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback int32_t func(QListWidget* self, QModelIndex* index, QEvent* event)
 ///
-void q_listwidget_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*));
+void q_listwidget_on_selection_command(const void* self, int32_t (*callback)(const void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -7301,9 +7301,9 @@ void q_listwidget_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_minimum_size_hint(void* self);
+QSize* q_listwidget_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7311,9 +7311,9 @@ QSize* q_listwidget_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_super_minimum_size_hint(void* self);
+QSize* q_listwidget_super_minimum_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7321,12 +7321,12 @@ QSize* q_listwidget_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QSize* func()
+/// @param self const QListWidget*
+/// @param callback QSize* func(QListWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_listwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7334,9 +7334,9 @@ void q_listwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_size_hint(void* self);
+QSize* q_listwidget_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7344,9 +7344,9 @@ QSize* q_listwidget_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_super_size_hint(void* self);
+QSize* q_listwidget_super_size_hint(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7354,12 +7354,12 @@ QSize* q_listwidget_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QSize* func()
+/// @param self const QListWidget*
+/// @param callback QSize* func(QListWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_size_hint(void* self, QSize* (*callback)());
+void q_listwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7466,10 +7466,10 @@ void q_listwidget_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param option QStyleOptionFrame*
 ///
-void q_listwidget_init_style_option(void* self, void* option);
+void q_listwidget_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -7477,10 +7477,10 @@ void q_listwidget_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param option QStyleOptionFrame*
 ///
-void q_listwidget_super_init_style_option(void* self, void* option);
+void q_listwidget_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -7488,10 +7488,10 @@ void q_listwidget_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback void func(QListWidget* self, QStyleOptionFrame* option)
 ///
-void q_listwidget_on_init_style_option(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -7499,9 +7499,9 @@ void q_listwidget_on_init_style_option(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_dev_type(void* self);
+int32_t q_listwidget_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7509,9 +7509,9 @@ int32_t q_listwidget_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_super_dev_type(void* self);
+int32_t q_listwidget_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7519,10 +7519,10 @@ int32_t q_listwidget_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback int32_t func()
+/// @param self const QListWidget*
+/// @param callback int32_t func(QListWidget* self)
 ///
-void q_listwidget_on_dev_type(void* self, int32_t (*callback)());
+void q_listwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -7563,10 +7563,10 @@ void q_listwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 int
 ///
-int32_t q_listwidget_height_for_width(void* self, int param1);
+int32_t q_listwidget_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -7574,10 +7574,10 @@ int32_t q_listwidget_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 int
 ///
-int32_t q_listwidget_super_height_for_width(void* self, int param1);
+int32_t q_listwidget_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -7585,10 +7585,10 @@ int32_t q_listwidget_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback int32_t func(QListWidget* self, int param1)
 ///
-void q_listwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_listwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -7596,9 +7596,9 @@ void q_listwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_has_height_for_width(void* self);
+bool q_listwidget_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7606,9 +7606,9 @@ bool q_listwidget_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-bool q_listwidget_super_has_height_for_width(void* self);
+bool q_listwidget_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7616,10 +7616,10 @@ bool q_listwidget_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback bool func()
+/// @param self const QListWidget*
+/// @param callback bool func(QListWidget* self)
 ///
-void q_listwidget_on_has_height_for_width(void* self, bool (*callback)());
+void q_listwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -7627,9 +7627,9 @@ void q_listwidget_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QPaintEngine* q_listwidget_paint_engine(void* self);
+QPaintEngine* q_listwidget_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7637,9 +7637,9 @@ QPaintEngine* q_listwidget_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QPaintEngine* q_listwidget_super_paint_engine(void* self);
+QPaintEngine* q_listwidget_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7647,10 +7647,10 @@ QPaintEngine* q_listwidget_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QPaintEngine* func()
+/// @param self const QListWidget*
+/// @param callback QPaintEngine* func(QListWidget* self)
 ///
-void q_listwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_listwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -7992,10 +7992,10 @@ void q_listwidget_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_listwidget_metric(void* self, int32_t param1);
+int32_t q_listwidget_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -8003,10 +8003,10 @@ int32_t q_listwidget_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_listwidget_super_metric(void* self, int32_t param1);
+int32_t q_listwidget_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -8014,10 +8014,10 @@ int32_t q_listwidget_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback int32_t func(QListWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_listwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_listwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -8025,10 +8025,10 @@ void q_listwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param painter QPainter*
 ///
-void q_listwidget_init_painter(void* self, void* painter);
+void q_listwidget_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -8036,10 +8036,10 @@ void q_listwidget_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param painter QPainter*
 ///
-void q_listwidget_super_init_painter(void* self, void* painter);
+void q_listwidget_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -8047,10 +8047,10 @@ void q_listwidget_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback void func(QListWidget* self, QPainter* painter)
 ///
-void q_listwidget_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -8058,10 +8058,10 @@ void q_listwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_listwidget_redirected(void* self, void* offset);
+QPaintDevice* q_listwidget_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -8069,10 +8069,10 @@ QPaintDevice* q_listwidget_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_listwidget_super_redirected(void* self, void* offset);
+QPaintDevice* q_listwidget_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -8080,10 +8080,10 @@ QPaintDevice* q_listwidget_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback QPaintDevice* func(QListWidget* self, QPoint* offset)
 ///
-void q_listwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_listwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -8091,9 +8091,9 @@ void q_listwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QPainter* q_listwidget_shared_painter(void* self);
+QPainter* q_listwidget_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8101,9 +8101,9 @@ QPainter* q_listwidget_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QPainter* q_listwidget_super_shared_painter(void* self);
+QPainter* q_listwidget_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -8111,10 +8111,10 @@ QPainter* q_listwidget_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QPainter* func()
+/// @param self const QListWidget*
+/// @param callback QPainter* func(QListWidget* self)
 ///
-void q_listwidget_on_shared_painter(void* self, QPainter* (*callback)());
+void q_listwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -8191,7 +8191,7 @@ void q_listwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QListWidget*
 /// @param signal QMetaMethod*
 ///
-void q_listwidget_connect_notify(void* self, void* signal);
+void q_listwidget_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8202,7 +8202,7 @@ void q_listwidget_connect_notify(void* self, void* signal);
 /// @param self QListWidget*
 /// @param signal QMetaMethod*
 ///
-void q_listwidget_super_connect_notify(void* self, void* signal);
+void q_listwidget_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8213,7 +8213,7 @@ void q_listwidget_super_connect_notify(void* self, void* signal);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QMetaMethod* signal)
 ///
-void q_listwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -8224,7 +8224,7 @@ void q_listwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QListWidget*
 /// @param signal QMetaMethod*
 ///
-void q_listwidget_disconnect_notify(void* self, void* signal);
+void q_listwidget_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8235,7 +8235,7 @@ void q_listwidget_disconnect_notify(void* self, void* signal);
 /// @param self QListWidget*
 /// @param signal QMetaMethod*
 ///
-void q_listwidget_super_disconnect_notify(void* self, void* signal);
+void q_listwidget_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -8246,7 +8246,7 @@ void q_listwidget_super_disconnect_notify(void* self, void* signal);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QMetaMethod* signal)
 ///
-void q_listwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -8289,9 +8289,9 @@ void q_listwidget_on_resize_contents(void* self, void (*callback)(void*, int, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_contents_size(void* self);
+QSize* q_listwidget_contents_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -8299,9 +8299,9 @@ QSize* q_listwidget_contents_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QSize* q_listwidget_super_contents_size(void* self);
+QSize* q_listwidget_super_contents_size(const void* self);
 
 /// Inherited from QListView
 ///
@@ -8309,12 +8309,12 @@ QSize* q_listwidget_super_contents_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QSize* func()
+/// @param self const QListWidget*
+/// @param callback QSize* func(QListWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_contents_size(void* self, QSize* (*callback)());
+void q_listwidget_on_contents_size(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QListView
 ///
@@ -8322,10 +8322,10 @@ void q_listwidget_on_contents_size(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QRect* q_listwidget_rect_for_index(void* self, void* index);
+QRect* q_listwidget_rect_for_index(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -8333,10 +8333,10 @@ QRect* q_listwidget_rect_for_index(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param index QModelIndex*
 ///
-QRect* q_listwidget_super_rect_for_index(void* self, void* index);
+QRect* q_listwidget_super_rect_for_index(const void* self, const void* index);
 
 /// Inherited from QListView
 ///
@@ -8344,12 +8344,12 @@ QRect* q_listwidget_super_rect_for_index(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback QRect* func(QListWidget* self, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
+void q_listwidget_on_rect_for_index(const void* self, QRect* (*callback)(const void*, const void*));
 
 /// Inherited from QListView
 ///
@@ -8361,7 +8361,7 @@ void q_listwidget_on_rect_for_index(void* self, QRect* (*callback)(void*, void*)
 /// @param position QPoint*
 /// @param index QModelIndex*
 ///
-void q_listwidget_set_position_for_index(void* self, void* position, void* index);
+void q_listwidget_set_position_for_index(void* self, const void* position, const void* index);
 
 /// Inherited from QListView
 ///
@@ -8373,7 +8373,7 @@ void q_listwidget_set_position_for_index(void* self, void* position, void* index
 /// @param position QPoint*
 /// @param index QModelIndex*
 ///
-void q_listwidget_super_set_position_for_index(void* self, void* position, void* index);
+void q_listwidget_super_set_position_for_index(void* self, const void* position, const void* index);
 
 /// Inherited from QListView
 ///
@@ -8384,7 +8384,7 @@ void q_listwidget_super_set_position_for_index(void* self, void* position, void*
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QPoint* position, QModelIndex* index)
 ///
-void q_listwidget_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*));
+void q_listwidget_on_set_position_for_index(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8392,11 +8392,11 @@ void q_listwidget_on_set_position_for_index(void* self, void (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t q_listwidget_state(void* self);
+int32_t q_listwidget_state(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8404,11 +8404,11 @@ int32_t q_listwidget_state(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t q_listwidget_super_state(void* self);
+int32_t q_listwidget_super_state(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8416,10 +8416,10 @@ int32_t q_listwidget_super_state(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback int32_t func()
+/// @param self const QListWidget*
+/// @param callback int32_t func(QListWidget* self)
 ///
-void q_listwidget_on_state(void* self, int32_t (*callback)());
+void q_listwidget_on_state(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8481,9 +8481,9 @@ void q_listwidget_super_schedule_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_schedule_delayed_items_layout(void* self, void (*callback)());
+void q_listwidget_on_schedule_delayed_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8512,9 +8512,9 @@ void q_listwidget_super_execute_delayed_items_layout(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_execute_delayed_items_layout(void* self, void (*callback)());
+void q_listwidget_on_execute_delayed_items_layout(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8525,7 +8525,7 @@ void q_listwidget_on_execute_delayed_items_layout(void* self, void (*callback)()
 /// @param self QListWidget*
 /// @param region QRegion*
 ///
-void q_listwidget_set_dirty_region(void* self, void* region);
+void q_listwidget_set_dirty_region(void* self, const void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8536,7 +8536,7 @@ void q_listwidget_set_dirty_region(void* self, void* region);
 /// @param self QListWidget*
 /// @param region QRegion*
 ///
-void q_listwidget_super_set_dirty_region(void* self, void* region);
+void q_listwidget_super_set_dirty_region(void* self, const void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8547,7 +8547,7 @@ void q_listwidget_super_set_dirty_region(void* self, void* region);
 /// @param self QListWidget*
 /// @param callback void func(QListWidget* self, QRegion* region)
 ///
-void q_listwidget_on_set_dirty_region(void* self, void (*callback)(void*, void*));
+void q_listwidget_on_set_dirty_region(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8590,9 +8590,9 @@ void q_listwidget_on_scroll_dirty_region(void* self, void (*callback)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QPoint* q_listwidget_dirty_region_offset(void* self);
+QPoint* q_listwidget_dirty_region_offset(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8600,9 +8600,9 @@ QPoint* q_listwidget_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QPoint* q_listwidget_super_dirty_region_offset(void* self);
+QPoint* q_listwidget_super_dirty_region_offset(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8610,12 +8610,12 @@ QPoint* q_listwidget_super_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QPoint* func()
+/// @param self const QListWidget*
+/// @param callback QPoint* func(QListWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_dirty_region_offset(void* self, QPoint* (*callback)());
+void q_listwidget_on_dirty_region_offset(const void* self, QPoint* (*callback)(const void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8644,9 +8644,9 @@ void q_listwidget_super_start_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_start_auto_scroll(void* self, void (*callback)());
+void q_listwidget_on_start_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8675,9 +8675,9 @@ void q_listwidget_super_stop_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_stop_auto_scroll(void* self, void (*callback)());
+void q_listwidget_on_stop_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8706,9 +8706,9 @@ void q_listwidget_super_do_auto_scroll(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_do_auto_scroll(void* self, void (*callback)());
+void q_listwidget_on_do_auto_scroll(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -8716,11 +8716,11 @@ void q_listwidget_on_do_auto_scroll(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t q_listwidget_drop_indicator_position(void* self);
+int32_t q_listwidget_drop_indicator_position(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8728,11 +8728,11 @@ int32_t q_listwidget_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t q_listwidget_super_drop_indicator_position(void* self);
+int32_t q_listwidget_super_drop_indicator_position(const void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8740,10 +8740,10 @@ int32_t q_listwidget_super_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback int32_t func()
+/// @param self const QListWidget*
+/// @param callback int32_t func(QListWidget* self)
 ///
-void q_listwidget_on_drop_indicator_position(void* self, int32_t (*callback)());
+void q_listwidget_on_drop_indicator_position(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8790,9 +8790,9 @@ void q_listwidget_on_set_viewport_margins(void* self, void (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QMargins* q_listwidget_viewport_margins(void* self);
+QMargins* q_listwidget_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8800,9 +8800,9 @@ QMargins* q_listwidget_viewport_margins(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QMargins* q_listwidget_super_viewport_margins(void* self);
+QMargins* q_listwidget_super_viewport_margins(const void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8810,12 +8810,12 @@ QMargins* q_listwidget_super_viewport_margins(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QMargins* func()
+/// @param self const QListWidget*
+/// @param callback QMargins* func(QListWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_listwidget_on_viewport_margins(void* self, QMargins* (*callback)());
+void q_listwidget_on_viewport_margins(const void* self, QMargins* (*callback)(const void*));
 
 /// Inherited from QFrame
 ///
@@ -8877,9 +8877,9 @@ void q_listwidget_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_update_micro_focus(void* self, void (*callback)());
+void q_listwidget_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -8908,9 +8908,9 @@ void q_listwidget_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_create(void* self, void (*callback)());
+void q_listwidget_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -8939,9 +8939,9 @@ void q_listwidget_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void func()
+/// @param callback void func(QListWidget* self)
 ///
-void q_listwidget_on_destroy(void* self, void (*callback)());
+void q_listwidget_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -8970,9 +8970,9 @@ bool q_listwidget_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool func()
+/// @param callback bool func(QListWidget* self)
 ///
-void q_listwidget_on_focus_next_child(void* self, bool (*callback)());
+void q_listwidget_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -9001,9 +9001,9 @@ bool q_listwidget_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback bool func()
+/// @param callback bool func(QListWidget* self)
 ///
-void q_listwidget_on_focus_previous_child(void* self, bool (*callback)());
+void q_listwidget_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -9011,9 +9011,9 @@ void q_listwidget_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QObject* q_listwidget_sender(void* self);
+QObject* q_listwidget_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9021,9 +9021,9 @@ QObject* q_listwidget_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-QObject* q_listwidget_super_sender(void* self);
+QObject* q_listwidget_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9031,10 +9031,10 @@ QObject* q_listwidget_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback QObject* func()
+/// @param self const QListWidget*
+/// @param callback QObject* func(QListWidget* self)
 ///
-void q_listwidget_on_sender(void* self, QObject* (*callback)());
+void q_listwidget_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9042,9 +9042,9 @@ void q_listwidget_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_sender_signal_index(void* self);
+int32_t q_listwidget_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9052,9 +9052,9 @@ int32_t q_listwidget_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 ///
-int32_t q_listwidget_super_sender_signal_index(void* self);
+int32_t q_listwidget_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -9062,10 +9062,10 @@ int32_t q_listwidget_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
-/// @param callback int32_t func()
+/// @param self const QListWidget*
+/// @param callback int32_t func(QListWidget* self)
 ///
-void q_listwidget_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_listwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -9073,10 +9073,10 @@ void q_listwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param signal const char*
 ///
-int32_t q_listwidget_receivers(void* self, const char* signal);
+int32_t q_listwidget_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -9084,10 +9084,10 @@ int32_t q_listwidget_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param signal const char*
 ///
-int32_t q_listwidget_super_receivers(void* self, const char* signal);
+int32_t q_listwidget_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -9095,10 +9095,10 @@ int32_t q_listwidget_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback int32_t func(QListWidget* self, const char* signal)
 ///
-void q_listwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_listwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -9106,10 +9106,10 @@ void q_listwidget_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param signal QMetaMethod*
 ///
-bool q_listwidget_is_signal_connected(void* self, void* signal);
+bool q_listwidget_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -9117,10 +9117,10 @@ bool q_listwidget_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param signal QMetaMethod*
 ///
-bool q_listwidget_super_is_signal_connected(void* self, void* signal);
+bool q_listwidget_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -9128,10 +9128,10 @@ bool q_listwidget_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback bool func(QListWidget* self, QMetaMethod* signal)
 ///
-void q_listwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_listwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -9139,11 +9139,11 @@ void q_listwidget_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_listwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_listwidget_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -9151,11 +9151,11 @@ double q_listwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_listwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_listwidget_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -9163,10 +9163,10 @@ double q_listwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int3
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QListWidget*
+/// @param self const QListWidget*
 /// @param callback double func(QListWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_listwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_listwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

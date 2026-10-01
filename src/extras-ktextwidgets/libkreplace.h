@@ -43,26 +43,26 @@ KReplace* k_replace_new3(const char* pattern, const char* replacement, long opti
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-const QMetaObject* k_replace_meta_object(void* self);
+const QMetaObject* k_replace_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KReplace*
-/// @param callback const QMetaObject* func()
+/// @param self const KReplace*
+/// @param callback const QMetaObject* func(const KReplace* self)
 ///
-void k_replace_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_replace_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-const QMetaObject* k_replace_super_meta_object(void* self);
+const QMetaObject* k_replace_super_meta_object(const void* self);
 
 /// @param self KReplace*
 /// @param param1 const char*
@@ -116,9 +116,9 @@ const char* k_replace_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#numReplacements)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-int32_t k_replace_num_replacements(void* self);
+int32_t k_replace_num_replacements(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#resetCounts)
 ///
@@ -131,9 +131,9 @@ void k_replace_reset_counts(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KReplace*
-/// @param callback void func()
+/// @param callback void func(KReplace* self)
 ///
-void k_replace_on_reset_counts(void* self, void (*callback)());
+void k_replace_on_reset_counts(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#resetCounts)
 ///
@@ -176,53 +176,53 @@ int32_t k_replace_replace2(const char* text, const char* pattern, const char* re
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#shouldRestart)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param forceAsking bool
 /// @param showNumMatches bool
 ///
-bool k_replace_should_restart(void* self, bool forceAsking, bool showNumMatches);
+bool k_replace_should_restart(const void* self, bool forceAsking, bool showNumMatches);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#shouldRestart)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KReplace*
-/// @param callback bool func(KReplace* self, bool forceAsking, bool showNumMatches)
+/// @param self const KReplace*
+/// @param callback bool func(const KReplace* self, bool forceAsking, bool showNumMatches)
 ///
-void k_replace_on_should_restart(void* self, bool (*callback)(void*, bool, bool));
+void k_replace_on_should_restart(const void* self, bool (*callback)(const void*, bool, bool));
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#shouldRestart)
 ///
 /// Base class method implementation
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param forceAsking bool
 /// @param showNumMatches bool
 ///
-bool k_replace_super_should_restart(void* self, bool forceAsking, bool showNumMatches);
+bool k_replace_super_should_restart(const void* self, bool forceAsking, bool showNumMatches);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#displayFinalDialog)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-void k_replace_display_final_dialog(void* self);
+void k_replace_display_final_dialog(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#displayFinalDialog)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KReplace*
-/// @param callback void func()
+/// @param self const KReplace*
+/// @param callback void func(const KReplace* self)
 ///
-void k_replace_on_display_final_dialog(void* self, void (*callback)());
+void k_replace_on_display_final_dialog(const void* self, void (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#displayFinalDialog)
 ///
 /// Base class method implementation
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-void k_replace_super_display_final_dialog(void* self);
+void k_replace_super_display_final_dialog(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#textReplaced)
 ///
@@ -271,9 +271,9 @@ QDialog* k_replace_replace_next_dialog1(void* self, bool create);
 ///
 /// [Upstream resources](https://api.kde.org/kfind.html#needData)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-bool k_replace_need_data(void* self);
+bool k_replace_need_data(const void* self);
 
 /// Inherited from KFind
 ///
@@ -308,9 +308,9 @@ int32_t k_replace_find(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kfind.html#options)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-long k_replace_options(void* self);
+long k_replace_options(const void* self);
 
 /// Inherited from KFind
 ///
@@ -318,9 +318,9 @@ long k_replace_options(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-const char* k_replace_pattern(void* self);
+const char* k_replace_pattern(const void* self);
 
 /// Inherited from KFind
 ///
@@ -335,9 +335,9 @@ void k_replace_set_pattern(void* self, const char* pattern);
 ///
 /// [Upstream resources](https://api.kde.org/kfind.html#numMatches)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-int32_t k_replace_num_matches(void* self);
+int32_t k_replace_num_matches(const void* self);
 
 /// Inherited from KFind
 ///
@@ -372,9 +372,9 @@ void k_replace_close_find_next_dialog(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kfind.html#index)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-int32_t k_replace_index(void* self);
+int32_t k_replace_index(const void* self);
 
 /// Inherited from KFind
 ///
@@ -503,9 +503,9 @@ QDialog* k_replace_find_next_dialog1(void* self, bool create);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-const char* k_replace_object_name(void* self);
+const char* k_replace_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -520,33 +520,33 @@ void k_replace_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-bool k_replace_is_widget_type(void* self);
+bool k_replace_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-bool k_replace_is_window_type(void* self);
+bool k_replace_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-bool k_replace_is_quick_item_type(void* self);
+bool k_replace_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-bool k_replace_signals_blocked(void* self);
+bool k_replace_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -561,9 +561,9 @@ bool k_replace_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-QThread* k_replace_thread(void* self);
+QThread* k_replace_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -614,11 +614,11 @@ void k_replace_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_replace_children(void* self);
+libqt_list k_replace_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -656,7 +656,7 @@ void k_replace_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_replace_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_replace_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -667,18 +667,18 @@ QMetaObject__Connection* k_replace_connect(void* sender, const char* signal, voi
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_replace_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_replace_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_replace_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_replace_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -689,7 +689,7 @@ QMetaObject__Connection* k_replace_connect3(void* self, void* sender, const char
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_replace_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_replace_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -700,24 +700,24 @@ bool k_replace_disconnect(void* sender, const char* signal, void* receiver, cons
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_replace_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_replace_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-bool k_replace_disconnect3(void* self);
+bool k_replace_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param receiver QObject*
 ///
-bool k_replace_disconnect4(void* self, void* receiver);
+bool k_replace_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -725,23 +725,23 @@ bool k_replace_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_replace_disconnect5(void* param1);
+bool k_replace_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-void k_replace_dump_object_tree(void* self);
+void k_replace_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-void k_replace_dump_object_info(void* self);
+void k_replace_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -751,16 +751,16 @@ void k_replace_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_replace_set_property(void* self, const char* name, void* value);
+bool k_replace_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param name const char*
 ///
-QVariant* k_replace_property(void* self, const char* name);
+QVariant* k_replace_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -768,9 +768,9 @@ QVariant* k_replace_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-const char** k_replace_dynamic_property_names(void* self);
+const char** k_replace_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -784,9 +784,9 @@ QBindingStorage* k_replace_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-const QBindingStorage* k_replace_binding_storage2(void* self);
+const QBindingStorage* k_replace_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -809,18 +809,18 @@ void k_replace_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-QObject* k_replace_parent(void* self);
+QObject* k_replace_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param classname const char*
 ///
-bool k_replace_inherits(void* self, const char* classname);
+bool k_replace_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -860,7 +860,7 @@ int32_t k_replace_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_replace_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_replace_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -872,59 +872,59 @@ QMetaObject__Connection* k_replace_connect5(void* sender, const char* signal, vo
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_replace_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_replace_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_replace_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_replace_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param signal const char*
 ///
-bool k_replace_disconnect1(void* self, const char* signal);
+bool k_replace_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KReplace*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_replace_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_replace_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_replace_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_replace_disconnect23(void* self, void* receiver, const char* member);
+bool k_replace_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KReplace*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_replace_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1190,7 +1190,7 @@ void k_replace_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KReplace*
 /// @param signal QMetaMethod*
 ///
-void k_replace_connect_notify(void* self, void* signal);
+void k_replace_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1201,7 +1201,7 @@ void k_replace_connect_notify(void* self, void* signal);
 /// @param self KReplace*
 /// @param signal QMetaMethod*
 ///
-void k_replace_super_connect_notify(void* self, void* signal);
+void k_replace_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1212,7 +1212,7 @@ void k_replace_super_connect_notify(void* self, void* signal);
 /// @param self KReplace*
 /// @param callback void func(KReplace* self, QMetaMethod* signal)
 ///
-void k_replace_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_replace_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1223,7 +1223,7 @@ void k_replace_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self KReplace*
 /// @param signal QMetaMethod*
 ///
-void k_replace_disconnect_notify(void* self, void* signal);
+void k_replace_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1234,7 +1234,7 @@ void k_replace_disconnect_notify(void* self, void* signal);
 /// @param self KReplace*
 /// @param signal QMetaMethod*
 ///
-void k_replace_super_disconnect_notify(void* self, void* signal);
+void k_replace_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1245,7 +1245,7 @@ void k_replace_super_disconnect_notify(void* self, void* signal);
 /// @param self KReplace*
 /// @param callback void func(KReplace* self, QMetaMethod* signal)
 ///
-void k_replace_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_replace_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from KFind
 ///
@@ -1253,9 +1253,9 @@ void k_replace_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-QWidget* k_replace_parent_widget(void* self);
+QWidget* k_replace_parent_widget(const void* self);
 
 /// Inherited from KFind
 ///
@@ -1263,9 +1263,9 @@ QWidget* k_replace_parent_widget(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-QWidget* k_replace_super_parent_widget(void* self);
+QWidget* k_replace_super_parent_widget(const void* self);
 
 /// Inherited from KFind
 ///
@@ -1273,10 +1273,10 @@ QWidget* k_replace_super_parent_widget(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KReplace*
-/// @param callback QWidget* func()
+/// @param self const KReplace*
+/// @param callback QWidget* func(KReplace* self)
 ///
-void k_replace_on_parent_widget(void* self, QWidget* (*callback)());
+void k_replace_on_parent_widget(const void* self, QWidget* (*callback)(const void*));
 
 /// Inherited from KFind
 ///
@@ -1284,9 +1284,9 @@ void k_replace_on_parent_widget(void* self, QWidget* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-QWidget* k_replace_dialogs_parent(void* self);
+QWidget* k_replace_dialogs_parent(const void* self);
 
 /// Inherited from KFind
 ///
@@ -1294,9 +1294,9 @@ QWidget* k_replace_dialogs_parent(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-QWidget* k_replace_super_dialogs_parent(void* self);
+QWidget* k_replace_super_dialogs_parent(const void* self);
 
 /// Inherited from KFind
 ///
@@ -1304,10 +1304,10 @@ QWidget* k_replace_super_dialogs_parent(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KReplace*
-/// @param callback QWidget* func()
+/// @param self const KReplace*
+/// @param callback QWidget* func(KReplace* self)
 ///
-void k_replace_on_dialogs_parent(void* self, QWidget* (*callback)());
+void k_replace_on_dialogs_parent(const void* self, QWidget* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1315,9 +1315,9 @@ void k_replace_on_dialogs_parent(void* self, QWidget* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-QObject* k_replace_sender(void* self);
+QObject* k_replace_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1325,9 +1325,9 @@ QObject* k_replace_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-QObject* k_replace_super_sender(void* self);
+QObject* k_replace_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1335,10 +1335,10 @@ QObject* k_replace_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KReplace*
-/// @param callback QObject* func()
+/// @param self const KReplace*
+/// @param callback QObject* func(KReplace* self)
 ///
-void k_replace_on_sender(void* self, QObject* (*callback)());
+void k_replace_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1346,9 +1346,9 @@ void k_replace_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-int32_t k_replace_sender_signal_index(void* self);
+int32_t k_replace_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1356,9 +1356,9 @@ int32_t k_replace_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 ///
-int32_t k_replace_super_sender_signal_index(void* self);
+int32_t k_replace_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1366,10 +1366,10 @@ int32_t k_replace_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KReplace*
-/// @param callback int32_t func()
+/// @param self const KReplace*
+/// @param callback int32_t func(KReplace* self)
 ///
-void k_replace_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_replace_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1377,10 +1377,10 @@ void k_replace_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param signal const char*
 ///
-int32_t k_replace_receivers(void* self, const char* signal);
+int32_t k_replace_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1388,10 +1388,10 @@ int32_t k_replace_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param signal const char*
 ///
-int32_t k_replace_super_receivers(void* self, const char* signal);
+int32_t k_replace_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1399,10 +1399,10 @@ int32_t k_replace_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param callback int32_t func(KReplace* self, const char* signal)
 ///
-void k_replace_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_replace_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1410,10 +1410,10 @@ void k_replace_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param signal QMetaMethod*
 ///
-bool k_replace_is_signal_connected(void* self, void* signal);
+bool k_replace_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1421,10 +1421,10 @@ bool k_replace_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param signal QMetaMethod*
 ///
-bool k_replace_super_is_signal_connected(void* self, void* signal);
+bool k_replace_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1432,10 +1432,10 @@ bool k_replace_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KReplace*
+/// @param self const KReplace*
 /// @param callback bool func(KReplace* self, QMetaMethod* signal)
 ///
-void k_replace_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_replace_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

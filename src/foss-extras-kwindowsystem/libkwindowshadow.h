@@ -16,22 +16,22 @@ KWindowShadowTile* k_windowshadowtile_new();
 
 /// [Upstream resources](https://api.kde.org/kwindowshadowtile.html#image)
 ///
-/// @param self KWindowShadowTile*
+/// @param self const KWindowShadowTile*
 ///
-QImage* k_windowshadowtile_image(void* self);
+QImage* k_windowshadowtile_image(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadowtile.html#setImage)
 ///
 /// @param self KWindowShadowTile*
 /// @param image QImage*
 ///
-void k_windowshadowtile_set_image(void* self, void* image);
+void k_windowshadowtile_set_image(void* self, const void* image);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadowtile.html#isCreated)
 ///
-/// @param self KWindowShadowTile*
+/// @param self const KWindowShadowTile*
 ///
-bool k_windowshadowtile_is_created(void* self);
+bool k_windowshadowtile_is_created(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadowtile.html#create)
 ///
@@ -63,26 +63,26 @@ KWindowShadow* k_windowshadow_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-const QMetaObject* k_windowshadow_meta_object(void* self);
+const QMetaObject* k_windowshadow_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KWindowShadow*
-/// @param callback const QMetaObject* func()
+/// @param self const KWindowShadow*
+/// @param callback const QMetaObject* func(const KWindowShadow* self)
 ///
-void k_windowshadow_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_windowshadow_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-const QMetaObject* k_windowshadow_super_meta_object(void* self);
+const QMetaObject* k_windowshadow_super_meta_object(const void* self);
 
 /// @param self KWindowShadow*
 /// @param param1 const char*
@@ -136,22 +136,22 @@ const char* k_windowshadow_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadow.html#padding)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-QMargins* k_windowshadow_padding(void* self);
+QMargins* k_windowshadow_padding(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadow.html#setPadding)
 ///
 /// @param self KWindowShadow*
 /// @param padding QMargins*
 ///
-void k_windowshadow_set_padding(void* self, void* padding);
+void k_windowshadow_set_padding(void* self, const void* padding);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadow.html#window)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-QWindow* k_windowshadow_window(void* self);
+QWindow* k_windowshadow_window(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadow.html#setWindow)
 ///
@@ -162,9 +162,9 @@ void k_windowshadow_set_window(void* self, void* window);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadow.html#isCreated)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-bool k_windowshadow_is_created(void* self);
+bool k_windowshadow_is_created(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kwindowshadow.html#create)
 ///
@@ -203,9 +203,9 @@ const char* k_windowshadow_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-const char* k_windowshadow_object_name(void* self);
+const char* k_windowshadow_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -220,33 +220,33 @@ void k_windowshadow_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-bool k_windowshadow_is_widget_type(void* self);
+bool k_windowshadow_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-bool k_windowshadow_is_window_type(void* self);
+bool k_windowshadow_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-bool k_windowshadow_is_quick_item_type(void* self);
+bool k_windowshadow_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-bool k_windowshadow_signals_blocked(void* self);
+bool k_windowshadow_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -261,9 +261,9 @@ bool k_windowshadow_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-QThread* k_windowshadow_thread(void* self);
+QThread* k_windowshadow_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -314,11 +314,11 @@ void k_windowshadow_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_windowshadow_children(void* self);
+libqt_list k_windowshadow_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -356,7 +356,7 @@ void k_windowshadow_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_windowshadow_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_windowshadow_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -367,18 +367,18 @@ QMetaObject__Connection* k_windowshadow_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_windowshadow_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_windowshadow_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_windowshadow_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_windowshadow_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -389,7 +389,7 @@ QMetaObject__Connection* k_windowshadow_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_windowshadow_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_windowshadow_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -400,24 +400,24 @@ bool k_windowshadow_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_windowshadow_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_windowshadow_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-bool k_windowshadow_disconnect3(void* self);
+bool k_windowshadow_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param receiver QObject*
 ///
-bool k_windowshadow_disconnect4(void* self, void* receiver);
+bool k_windowshadow_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -425,23 +425,23 @@ bool k_windowshadow_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_windowshadow_disconnect5(void* param1);
+bool k_windowshadow_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-void k_windowshadow_dump_object_tree(void* self);
+void k_windowshadow_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-void k_windowshadow_dump_object_info(void* self);
+void k_windowshadow_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -451,16 +451,16 @@ void k_windowshadow_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_windowshadow_set_property(void* self, const char* name, void* value);
+bool k_windowshadow_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param name const char*
 ///
-QVariant* k_windowshadow_property(void* self, const char* name);
+QVariant* k_windowshadow_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -468,9 +468,9 @@ QVariant* k_windowshadow_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-const char** k_windowshadow_dynamic_property_names(void* self);
+const char** k_windowshadow_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -484,9 +484,9 @@ QBindingStorage* k_windowshadow_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-const QBindingStorage* k_windowshadow_binding_storage2(void* self);
+const QBindingStorage* k_windowshadow_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -509,18 +509,18 @@ void k_windowshadow_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-QObject* k_windowshadow_parent(void* self);
+QObject* k_windowshadow_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param classname const char*
 ///
-bool k_windowshadow_inherits(void* self, const char* classname);
+bool k_windowshadow_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -560,7 +560,7 @@ int32_t k_windowshadow_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_windowshadow_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_windowshadow_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -572,59 +572,59 @@ QMetaObject__Connection* k_windowshadow_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_windowshadow_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_windowshadow_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_windowshadow_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_windowshadow_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param signal const char*
 ///
-bool k_windowshadow_disconnect1(void* self, const char* signal);
+bool k_windowshadow_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KWindowShadow*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_windowshadow_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_windowshadow_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_windowshadow_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_windowshadow_disconnect23(void* self, void* receiver, const char* member);
+bool k_windowshadow_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KWindowShadow*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_windowshadow_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -820,7 +820,7 @@ void k_windowshadow_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KWindowShadow*
 /// @param signal QMetaMethod*
 ///
-void k_windowshadow_connect_notify(void* self, void* signal);
+void k_windowshadow_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -831,7 +831,7 @@ void k_windowshadow_connect_notify(void* self, void* signal);
 /// @param self KWindowShadow*
 /// @param signal QMetaMethod*
 ///
-void k_windowshadow_super_connect_notify(void* self, void* signal);
+void k_windowshadow_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -842,7 +842,7 @@ void k_windowshadow_super_connect_notify(void* self, void* signal);
 /// @param self KWindowShadow*
 /// @param callback void func(KWindowShadow* self, QMetaMethod* signal)
 ///
-void k_windowshadow_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_windowshadow_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -853,7 +853,7 @@ void k_windowshadow_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self KWindowShadow*
 /// @param signal QMetaMethod*
 ///
-void k_windowshadow_disconnect_notify(void* self, void* signal);
+void k_windowshadow_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -864,7 +864,7 @@ void k_windowshadow_disconnect_notify(void* self, void* signal);
 /// @param self KWindowShadow*
 /// @param signal QMetaMethod*
 ///
-void k_windowshadow_super_disconnect_notify(void* self, void* signal);
+void k_windowshadow_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -875,7 +875,7 @@ void k_windowshadow_super_disconnect_notify(void* self, void* signal);
 /// @param self KWindowShadow*
 /// @param callback void func(KWindowShadow* self, QMetaMethod* signal)
 ///
-void k_windowshadow_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_windowshadow_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -883,9 +883,9 @@ void k_windowshadow_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-QObject* k_windowshadow_sender(void* self);
+QObject* k_windowshadow_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -893,9 +893,9 @@ QObject* k_windowshadow_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-QObject* k_windowshadow_super_sender(void* self);
+QObject* k_windowshadow_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -903,10 +903,10 @@ QObject* k_windowshadow_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KWindowShadow*
-/// @param callback QObject* func()
+/// @param self const KWindowShadow*
+/// @param callback QObject* func(KWindowShadow* self)
 ///
-void k_windowshadow_on_sender(void* self, QObject* (*callback)());
+void k_windowshadow_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -914,9 +914,9 @@ void k_windowshadow_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-int32_t k_windowshadow_sender_signal_index(void* self);
+int32_t k_windowshadow_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -924,9 +924,9 @@ int32_t k_windowshadow_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 ///
-int32_t k_windowshadow_super_sender_signal_index(void* self);
+int32_t k_windowshadow_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -934,10 +934,10 @@ int32_t k_windowshadow_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KWindowShadow*
-/// @param callback int32_t func()
+/// @param self const KWindowShadow*
+/// @param callback int32_t func(KWindowShadow* self)
 ///
-void k_windowshadow_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_windowshadow_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -945,10 +945,10 @@ void k_windowshadow_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param signal const char*
 ///
-int32_t k_windowshadow_receivers(void* self, const char* signal);
+int32_t k_windowshadow_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -956,10 +956,10 @@ int32_t k_windowshadow_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param signal const char*
 ///
-int32_t k_windowshadow_super_receivers(void* self, const char* signal);
+int32_t k_windowshadow_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -967,10 +967,10 @@ int32_t k_windowshadow_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param callback int32_t func(KWindowShadow* self, const char* signal)
 ///
-void k_windowshadow_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_windowshadow_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -978,10 +978,10 @@ void k_windowshadow_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param signal QMetaMethod*
 ///
-bool k_windowshadow_is_signal_connected(void* self, void* signal);
+bool k_windowshadow_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -989,10 +989,10 @@ bool k_windowshadow_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param signal QMetaMethod*
 ///
-bool k_windowshadow_super_is_signal_connected(void* self, void* signal);
+bool k_windowshadow_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1000,10 +1000,10 @@ bool k_windowshadow_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KWindowShadow*
+/// @param self const KWindowShadow*
 /// @param callback bool func(KWindowShadow* self, QMetaMethod* signal)
 ///
-void k_windowshadow_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_windowshadow_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

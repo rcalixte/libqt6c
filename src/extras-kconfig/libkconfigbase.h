@@ -10,20 +10,12 @@
 
 /// [Upstream resources](https://api.kde.org/kconfigbase.html)
 
-/// [Upstream resources](https://api.kde.org/kconfigbase.html#groupList)
-///
-/// @warning Caller is responsible for freeing the returned memory using `free()`
-///
-/// @param self KConfigBase*
-///
-const char** k_configbase_group_list(void* self);
-
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#hasGroup)
 ///
-/// @param self KConfigBase*
+/// @param self const KConfigBase*
 /// @param group const char*
 ///
-bool k_configbase_has_group(void* self, const char* group);
+bool k_configbase_has_group(const void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#group)
 ///
@@ -34,10 +26,10 @@ KConfigGroup* k_configbase_group(void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#group)
 ///
-/// @param self KConfigBase*
+/// @param self const KConfigBase*
 /// @param group const char*
 ///
-const KConfigGroup* k_configbase_group2(void* self, const char* group);
+const KConfigGroup* k_configbase_group2(const void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///
@@ -46,45 +38,19 @@ const KConfigGroup* k_configbase_group2(void* self, const char* group);
 ///
 void k_configbase_delete_group(void* self, const char* group);
 
-/// [Upstream resources](https://api.kde.org/kconfigbase.html#sync)
-///
-/// @param self KConfigBase*
-///
-bool k_configbase_sync(void* self);
-
-/// [Upstream resources](https://api.kde.org/kconfigbase.html#markAsClean)
-///
-/// @param self KConfigBase*
-///
-void k_configbase_mark_as_clean(void* self);
-
-/// [Upstream resources](https://api.kde.org/kconfigbase.html#accessMode)
-///
-/// @param self KConfigBase*
-///
-/// @return enum KConfigBase__AccessMode
-///
-int32_t k_configbase_access_mode(void* self);
-
-/// [Upstream resources](https://api.kde.org/kconfigbase.html#isImmutable)
-///
-/// @param self KConfigBase*
-///
-bool k_configbase_is_immutable(void* self);
-
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#isGroupImmutable)
 ///
-/// @param self KConfigBase*
+/// @param self const KConfigBase*
 /// @param group const char*
 ///
-bool k_configbase_is_group_immutable(void* self, const char* group);
+bool k_configbase_is_group_immutable(const void* self, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#operator-eq)
 ///
 /// @param self KConfigBase*
 /// @param param1 KConfigBase*
 ///
-void k_configbase_operator_assign(void* self, void* param1);
+void k_configbase_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kconfigbase.html#deleteGroup)
 ///

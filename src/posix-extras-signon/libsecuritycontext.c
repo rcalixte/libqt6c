@@ -9,7 +9,7 @@ SignOn__SecurityContext* q_signon__securitycontext_new2(const char* systemContex
     return SignOn__SecurityContext_New2(qstring(systemContext), qstring(applicationContext));
 }
 
-SignOn__SecurityContext* q_signon__securitycontext_new3(void* param1) {
+SignOn__SecurityContext* q_signon__securitycontext_new3(const void* param1) {
     return SignOn__SecurityContext_New3((SignOn__SecurityContext*)param1);
 }
 
@@ -17,7 +17,7 @@ void q_signon__securitycontext_set_system_context(void* self, const char* system
     SignOn__SecurityContext_SetSystemContext((SignOn__SecurityContext*)self, qstring(systemContext));
 }
 
-const char* q_signon__securitycontext_system_context(void* self) {
+const char* q_signon__securitycontext_system_context(const void* self) {
     libqt_string _str = SignOn__SecurityContext_SystemContext((SignOn__SecurityContext*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -28,14 +28,14 @@ void q_signon__securitycontext_set_application_context(void* self, const char* a
     SignOn__SecurityContext_SetApplicationContext((SignOn__SecurityContext*)self, qstring(applicationContext));
 }
 
-const char* q_signon__securitycontext_application_context(void* self) {
+const char* q_signon__securitycontext_application_context(const void* self) {
     libqt_string _str = SignOn__SecurityContext_ApplicationContext((SignOn__SecurityContext*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_signon__securitycontext_operator_assign(void* self, void* param1) {
+void q_signon__securitycontext_operator_assign(void* self, const void* param1) {
     SignOn__SecurityContext_OperatorAssign((SignOn__SecurityContext*)self, (SignOn__SecurityContext*)param1);
 }
 

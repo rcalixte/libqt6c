@@ -9,30 +9,30 @@ KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new2(int32_t type) {
     return KFileMetaData__TypeInfo_New2(type);
 }
 
-KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new3(void* ti) {
+KFileMetaData__TypeInfo* k_filemetadata__typeinfo_new3(const void* ti) {
     return KFileMetaData__TypeInfo_New3((KFileMetaData__TypeInfo*)ti);
 }
 
-void k_filemetadata__typeinfo_operator_assign(void* self, void* rhs) {
+void k_filemetadata__typeinfo_operator_assign(void* self, const void* rhs) {
     KFileMetaData__TypeInfo_OperatorAssign((KFileMetaData__TypeInfo*)self, (KFileMetaData__TypeInfo*)rhs);
 }
 
-bool k_filemetadata__typeinfo_operator_equal(void* self, void* rhs) {
+bool k_filemetadata__typeinfo_operator_equal(const void* self, const void* rhs) {
     return KFileMetaData__TypeInfo_OperatorEqual((KFileMetaData__TypeInfo*)self, (KFileMetaData__TypeInfo*)rhs);
 }
 
-int32_t k_filemetadata__typeinfo_type(void* self) {
+int32_t k_filemetadata__typeinfo_type(const void* self) {
     return KFileMetaData__TypeInfo_Type((KFileMetaData__TypeInfo*)self);
 }
 
-const char* k_filemetadata__typeinfo_name(void* self) {
+const char* k_filemetadata__typeinfo_name(const void* self) {
     libqt_string _str = KFileMetaData__TypeInfo_Name((KFileMetaData__TypeInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_filemetadata__typeinfo_display_name(void* self) {
+const char* k_filemetadata__typeinfo_display_name(const void* self) {
     libqt_string _str = KFileMetaData__TypeInfo_DisplayName((KFileMetaData__TypeInfo*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

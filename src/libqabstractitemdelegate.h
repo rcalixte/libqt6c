@@ -24,26 +24,26 @@ QAbstractItemDelegate* q_abstractitemdelegate_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-const QMetaObject* q_abstractitemdelegate_meta_object(void* self);
+const QMetaObject* q_abstractitemdelegate_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback const QMetaObject* func()
+/// @param self const QAbstractItemDelegate*
+/// @param callback const QMetaObject* func(const QAbstractItemDelegate* self)
 ///
-void q_abstractitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_abstractitemdelegate_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-const QMetaObject* q_abstractitemdelegate_super_meta_object(void* self);
+const QMetaObject* q_abstractitemdelegate_super_meta_object(const void* self);
 
 /// @param self QAbstractItemDelegate*
 /// @param param1 const char*
@@ -97,202 +97,185 @@ const char* q_abstractitemdelegate_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
 ///
-/// @param self QAbstractItemDelegate*
+/// @warning This method must be implemented with `q_abstractitemdelegate_on_paint` before it can be called.
+///
+/// @param self const QAbstractItemDelegate*
 /// @param painter QPainter*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_paint(void* self, void* painter, void* option, void* index);
+void q_abstractitemdelegate_paint(const void* self, void* painter, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback void func(QAbstractItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
+/// @param self const QAbstractItemDelegate*
+/// @param callback void func(const QAbstractItemDelegate* self, QPainter* painter, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_abstractitemdelegate_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
-///
-/// Base class method implementation
-///
-/// @param self QAbstractItemDelegate*
-/// @param painter QPainter*
-/// @param option QStyleOptionViewItem*
-/// @param index QModelIndex*
-///
-void q_abstractitemdelegate_super_paint(void* self, void* painter, void* option, void* index);
+void q_abstractitemdelegate_on_paint(const void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
 ///
-/// @param self QAbstractItemDelegate*
+/// @warning This method must be implemented with `q_abstractitemdelegate_on_size_hint` before it can be called.
+///
+/// @param self const QAbstractItemDelegate*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QSize* q_abstractitemdelegate_size_hint(void* self, void* option, void* index);
+QSize* q_abstractitemdelegate_size_hint(const void* self, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback QSize* func(QAbstractItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
+/// @param self const QAbstractItemDelegate*
+/// @param callback QSize* func(const QAbstractItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
-///
-/// Base class method implementation
-///
-/// @param self QAbstractItemDelegate*
-/// @param option QStyleOptionViewItem*
-/// @param index QModelIndex*
-///
-QSize* q_abstractitemdelegate_super_size_hint(void* self, void* option, void* index);
+void q_abstractitemdelegate_on_size_hint(const void* self, QSize* (*callback)(const void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param parent QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QWidget* q_abstractitemdelegate_create_editor(void* self, void* parent, void* option, void* index);
+QWidget* q_abstractitemdelegate_create_editor(const void* self, void* parent, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback QWidget* func(QAbstractItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
+/// @param self const QAbstractItemDelegate*
+/// @param callback QWidget* func(const QAbstractItemDelegate* self, QWidget* parent, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_abstractitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void*, void*, void*, void*));
+void q_abstractitemdelegate_on_create_editor(const void* self, QWidget* (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param parent QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QWidget* q_abstractitemdelegate_super_create_editor(void* self, void* parent, void* option, void* index);
+QWidget* q_abstractitemdelegate_super_create_editor(const void* self, void* parent, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_destroy_editor(void* self, void* editor, void* index);
+void q_abstractitemdelegate_destroy_editor(const void* self, void* editor, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index)
+/// @param self const QAbstractItemDelegate*
+/// @param callback void func(const QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void q_abstractitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, void*, void*));
+void q_abstractitemdelegate_on_destroy_editor(const void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_super_destroy_editor(void* self, void* editor, void* index);
+void q_abstractitemdelegate_super_destroy_editor(const void* self, void* editor, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_set_editor_data(void* self, void* editor, void* index);
+void q_abstractitemdelegate_set_editor_data(const void* self, void* editor, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index)
+/// @param self const QAbstractItemDelegate*
+/// @param callback void func(const QAbstractItemDelegate* self, QWidget* editor, QModelIndex* index)
 ///
-void q_abstractitemdelegate_on_set_editor_data(void* self, void (*callback)(void*, void*, void*));
+void q_abstractitemdelegate_on_set_editor_data(const void* self, void (*callback)(const void*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_super_set_editor_data(void* self, void* editor, void* index);
+void q_abstractitemdelegate_super_set_editor_data(const void* self, void* editor, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param editor QWidget*
 /// @param model QAbstractItemModel*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_set_model_data(void* self, void* editor, void* model, void* index);
+void q_abstractitemdelegate_set_model_data(const void* self, void* editor, void* model, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
+/// @param self const QAbstractItemDelegate*
+/// @param callback void func(const QAbstractItemDelegate* self, QWidget* editor, QAbstractItemModel* model, QModelIndex* index)
 ///
-void q_abstractitemdelegate_on_set_model_data(void* self, void (*callback)(void*, void*, void*, void*));
+void q_abstractitemdelegate_on_set_model_data(const void* self, void (*callback)(const void*, void*, void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param editor QWidget*
 /// @param model QAbstractItemModel*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_super_set_model_data(void* self, void* editor, void* model, void* index);
+void q_abstractitemdelegate_super_set_model_data(const void* self, void* editor, void* model, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param editor QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_update_editor_geometry(void* self, void* editor, void* option, void* index);
+void q_abstractitemdelegate_update_editor_geometry(const void* self, void* editor, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback void func(QAbstractItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
+/// @param self const QAbstractItemDelegate*
+/// @param callback void func(const QAbstractItemDelegate* self, QWidget* editor, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_abstractitemdelegate_on_update_editor_geometry(void* self, void (*callback)(void*, void*, void*, void*));
+void q_abstractitemdelegate_on_update_editor_geometry(const void* self, void (*callback)(const void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param editor QWidget*
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_super_update_editor_geometry(void* self, void* editor, void* option, void* index);
+void q_abstractitemdelegate_super_update_editor_geometry(const void* self, void* editor, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
 ///
@@ -302,7 +285,7 @@ void q_abstractitemdelegate_super_update_editor_geometry(void* self, void* edito
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool q_abstractitemdelegate_editor_event(void* self, void* event, void* model, void* option, void* index);
+bool q_abstractitemdelegate_editor_event(void* self, void* event, void* model, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
 ///
@@ -311,7 +294,7 @@ bool q_abstractitemdelegate_editor_event(void* self, void* event, void* model, v
 /// @param self QAbstractItemDelegate*
 /// @param callback bool func(QAbstractItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_abstractitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
+void q_abstractitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
 ///
@@ -323,7 +306,7 @@ void q_abstractitemdelegate_on_editor_event(void* self, bool (*callback)(void*, 
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool q_abstractitemdelegate_super_editor_event(void* self, void* event, void* model, void* option, void* index);
+bool q_abstractitemdelegate_super_editor_event(void* self, void* event, void* model, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
@@ -333,7 +316,7 @@ bool q_abstractitemdelegate_super_editor_event(void* self, void* event, void* mo
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool q_abstractitemdelegate_help_event(void* self, void* event, void* view, void* option, void* index);
+bool q_abstractitemdelegate_help_event(void* self, void* event, void* view, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
@@ -342,7 +325,7 @@ bool q_abstractitemdelegate_help_event(void* self, void* event, void* view, void
 /// @param self QAbstractItemDelegate*
 /// @param callback bool func(QAbstractItemDelegate* self, QHelpEvent* event, QAbstractItemView* view, QStyleOptionViewItem* option, QModelIndex* index)
 ///
-void q_abstractitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
+void q_abstractitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
@@ -354,34 +337,34 @@ void q_abstractitemdelegate_on_help_event(void* self, bool (*callback)(void*, vo
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool q_abstractitemdelegate_super_help_event(void* self, void* event, void* view, void* option, void* index);
+bool q_abstractitemdelegate_super_help_event(void* self, void* event, void* view, const void* option, const void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_abstractitemdelegate_painting_roles(void* self);
+libqt_list q_abstractitemdelegate_painting_roles(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback libqt_list of int func()
+/// @param self const QAbstractItemDelegate*
+/// @param callback libqt_list of int func(const QAbstractItemDelegate* self)
 ///
-void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list (*callback)());
+void q_abstractitemdelegate_on_painting_roles(const void* self, libqt_list (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
 /// Base class method implementation
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_abstractitemdelegate_super_painting_roles(void* self);
+libqt_list q_abstractitemdelegate_super_painting_roles(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
 ///
@@ -416,14 +399,14 @@ void q_abstractitemdelegate_on_close_editor(void* self, void (*callback)(void*, 
 /// @param self QAbstractItemDelegate*
 /// @param param1 QModelIndex*
 ///
-void q_abstractitemdelegate_size_hint_changed(void* self, void* param1);
+void q_abstractitemdelegate_size_hint_changed(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
 ///
 /// @param self QAbstractItemDelegate*
 /// @param callback void func(QAbstractItemDelegate* self, QModelIndex* param1)
 ///
-void q_abstractitemdelegate_on_size_hint_changed(void* self, void (*callback)(void*, void*));
+void q_abstractitemdelegate_on_size_hint_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -465,9 +448,9 @@ void q_abstractitemdelegate_on_close_editor2(void* self, void (*callback)(void*,
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-const char* q_abstractitemdelegate_object_name(void* self);
+const char* q_abstractitemdelegate_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -482,33 +465,33 @@ void q_abstractitemdelegate_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-bool q_abstractitemdelegate_is_widget_type(void* self);
+bool q_abstractitemdelegate_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-bool q_abstractitemdelegate_is_window_type(void* self);
+bool q_abstractitemdelegate_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-bool q_abstractitemdelegate_is_quick_item_type(void* self);
+bool q_abstractitemdelegate_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-bool q_abstractitemdelegate_signals_blocked(void* self);
+bool q_abstractitemdelegate_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -523,9 +506,9 @@ bool q_abstractitemdelegate_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-QThread* q_abstractitemdelegate_thread(void* self);
+QThread* q_abstractitemdelegate_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -576,11 +559,11 @@ void q_abstractitemdelegate_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_abstractitemdelegate_children(void* self);
+libqt_list q_abstractitemdelegate_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -618,7 +601,7 @@ void q_abstractitemdelegate_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_abstractitemdelegate_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_abstractitemdelegate_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -629,18 +612,18 @@ QMetaObject__Connection* q_abstractitemdelegate_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_abstractitemdelegate_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_abstractitemdelegate_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_abstractitemdelegate_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_abstractitemdelegate_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -651,7 +634,7 @@ QMetaObject__Connection* q_abstractitemdelegate_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_abstractitemdelegate_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_abstractitemdelegate_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -662,24 +645,24 @@ bool q_abstractitemdelegate_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_abstractitemdelegate_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_abstractitemdelegate_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-bool q_abstractitemdelegate_disconnect3(void* self);
+bool q_abstractitemdelegate_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param receiver QObject*
 ///
-bool q_abstractitemdelegate_disconnect4(void* self, void* receiver);
+bool q_abstractitemdelegate_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -687,23 +670,23 @@ bool q_abstractitemdelegate_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_abstractitemdelegate_disconnect5(void* param1);
+bool q_abstractitemdelegate_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-void q_abstractitemdelegate_dump_object_tree(void* self);
+void q_abstractitemdelegate_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-void q_abstractitemdelegate_dump_object_info(void* self);
+void q_abstractitemdelegate_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -713,16 +696,16 @@ void q_abstractitemdelegate_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_abstractitemdelegate_set_property(void* self, const char* name, void* value);
+bool q_abstractitemdelegate_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param name const char*
 ///
-QVariant* q_abstractitemdelegate_property(void* self, const char* name);
+QVariant* q_abstractitemdelegate_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -730,9 +713,9 @@ QVariant* q_abstractitemdelegate_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-const char** q_abstractitemdelegate_dynamic_property_names(void* self);
+const char** q_abstractitemdelegate_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -746,9 +729,9 @@ QBindingStorage* q_abstractitemdelegate_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-const QBindingStorage* q_abstractitemdelegate_binding_storage2(void* self);
+const QBindingStorage* q_abstractitemdelegate_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -771,18 +754,18 @@ void q_abstractitemdelegate_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-QObject* q_abstractitemdelegate_parent(void* self);
+QObject* q_abstractitemdelegate_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param classname const char*
 ///
-bool q_abstractitemdelegate_inherits(void* self, const char* classname);
+bool q_abstractitemdelegate_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -822,7 +805,7 @@ int32_t q_abstractitemdelegate_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstractitemdelegate_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_abstractitemdelegate_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -834,59 +817,59 @@ QMetaObject__Connection* q_abstractitemdelegate_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstractitemdelegate_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_abstractitemdelegate_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_abstractitemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_abstractitemdelegate_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param signal const char*
 ///
-bool q_abstractitemdelegate_disconnect1(void* self, const char* signal);
+bool q_abstractitemdelegate_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractItemDelegate*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_abstractitemdelegate_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_abstractitemdelegate_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_abstractitemdelegate_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_abstractitemdelegate_disconnect23(void* self, void* receiver, const char* member);
+bool q_abstractitemdelegate_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QAbstractItemDelegate*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_abstractitemdelegate_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1082,7 +1065,7 @@ void q_abstractitemdelegate_on_custom_event(void* self, void (*callback)(void*, 
 /// @param self QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void q_abstractitemdelegate_connect_notify(void* self, void* signal);
+void q_abstractitemdelegate_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1093,7 +1076,7 @@ void q_abstractitemdelegate_connect_notify(void* self, void* signal);
 /// @param self QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void q_abstractitemdelegate_super_connect_notify(void* self, void* signal);
+void q_abstractitemdelegate_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1104,7 +1087,7 @@ void q_abstractitemdelegate_super_connect_notify(void* self, void* signal);
 /// @param self QAbstractItemDelegate*
 /// @param callback void func(QAbstractItemDelegate* self, QMetaMethod* signal)
 ///
-void q_abstractitemdelegate_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_abstractitemdelegate_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1115,7 +1098,7 @@ void q_abstractitemdelegate_on_connect_notify(void* self, void (*callback)(void*
 /// @param self QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void q_abstractitemdelegate_disconnect_notify(void* self, void* signal);
+void q_abstractitemdelegate_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1126,7 +1109,7 @@ void q_abstractitemdelegate_disconnect_notify(void* self, void* signal);
 /// @param self QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void q_abstractitemdelegate_super_disconnect_notify(void* self, void* signal);
+void q_abstractitemdelegate_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1137,7 +1120,7 @@ void q_abstractitemdelegate_super_disconnect_notify(void* self, void* signal);
 /// @param self QAbstractItemDelegate*
 /// @param callback void func(QAbstractItemDelegate* self, QMetaMethod* signal)
 ///
-void q_abstractitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_abstractitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1145,9 +1128,9 @@ void q_abstractitemdelegate_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-QObject* q_abstractitemdelegate_sender(void* self);
+QObject* q_abstractitemdelegate_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1155,9 +1138,9 @@ QObject* q_abstractitemdelegate_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-QObject* q_abstractitemdelegate_super_sender(void* self);
+QObject* q_abstractitemdelegate_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1165,10 +1148,10 @@ QObject* q_abstractitemdelegate_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback QObject* func()
+/// @param self const QAbstractItemDelegate*
+/// @param callback QObject* func(QAbstractItemDelegate* self)
 ///
-void q_abstractitemdelegate_on_sender(void* self, QObject* (*callback)());
+void q_abstractitemdelegate_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1176,9 +1159,9 @@ void q_abstractitemdelegate_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-int32_t q_abstractitemdelegate_sender_signal_index(void* self);
+int32_t q_abstractitemdelegate_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1186,9 +1169,9 @@ int32_t q_abstractitemdelegate_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 ///
-int32_t q_abstractitemdelegate_super_sender_signal_index(void* self);
+int32_t q_abstractitemdelegate_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1196,10 +1179,10 @@ int32_t q_abstractitemdelegate_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
-/// @param callback int32_t func()
+/// @param self const QAbstractItemDelegate*
+/// @param callback int32_t func(QAbstractItemDelegate* self)
 ///
-void q_abstractitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_abstractitemdelegate_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1207,10 +1190,10 @@ void q_abstractitemdelegate_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param signal const char*
 ///
-int32_t q_abstractitemdelegate_receivers(void* self, const char* signal);
+int32_t q_abstractitemdelegate_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1218,10 +1201,10 @@ int32_t q_abstractitemdelegate_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param signal const char*
 ///
-int32_t q_abstractitemdelegate_super_receivers(void* self, const char* signal);
+int32_t q_abstractitemdelegate_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1229,10 +1212,10 @@ int32_t q_abstractitemdelegate_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param callback int32_t func(QAbstractItemDelegate* self, const char* signal)
 ///
-void q_abstractitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_abstractitemdelegate_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1240,10 +1223,10 @@ void q_abstractitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-bool q_abstractitemdelegate_is_signal_connected(void* self, void* signal);
+bool q_abstractitemdelegate_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1251,10 +1234,10 @@ bool q_abstractitemdelegate_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-bool q_abstractitemdelegate_super_is_signal_connected(void* self, void* signal);
+bool q_abstractitemdelegate_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1262,10 +1245,10 @@ bool q_abstractitemdelegate_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAbstractItemDelegate*
+/// @param self const QAbstractItemDelegate*
 /// @param callback bool func(QAbstractItemDelegate* self, QMetaMethod* signal)
 ///
-void q_abstractitemdelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_abstractitemdelegate_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

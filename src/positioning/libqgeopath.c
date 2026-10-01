@@ -12,11 +12,11 @@ QGeoPath* q_geopath_new2(libqt_list /* of QGeoCoordinate* */ path) {
     return QGeoPath_New2(path);
 }
 
-QGeoPath* q_geopath_new3(void* other) {
+QGeoPath* q_geopath_new3(const void* other) {
     return QGeoPath_New3((QGeoPath*)other);
 }
 
-QGeoPath* q_geopath_new4(void* other) {
+QGeoPath* q_geopath_new4(const void* other) {
     return QGeoPath_New4((QGeoShape*)other);
 }
 
@@ -24,7 +24,7 @@ QGeoPath* q_geopath_new5(libqt_list /* of QGeoCoordinate* */ path, double* width
     return QGeoPath_New5(path, width);
 }
 
-void q_geopath_operator_assign(void* self, void* other) {
+void q_geopath_operator_assign(void* self, const void* other) {
     QGeoPath_OperatorAssign((QGeoPath*)self, (QGeoPath*)other);
 }
 
@@ -32,7 +32,7 @@ void q_geopath_set_path(void* self, libqt_list /* of QGeoCoordinate* */ path) {
     QGeoPath_SetPath((QGeoPath*)self, path);
 }
 
-libqt_list /* of QGeoCoordinate* */ q_geopath_path(void* self) {
+libqt_list /* of QGeoCoordinate* */ q_geopath_path(const void* self) {
     libqt_list _arr = QGeoPath_Path((QGeoPath*)self);
     return _arr;
 }
@@ -45,7 +45,7 @@ void q_geopath_set_variant_path(void* self, libqt_list /* of QVariant* */ path) 
     QGeoPath_SetVariantPath((QGeoPath*)self, path);
 }
 
-libqt_list /* of QVariant* */ q_geopath_variant_path(void* self) {
+libqt_list /* of QVariant* */ q_geopath_variant_path(const void* self) {
     libqt_list _arr = QGeoPath_VariantPath((QGeoPath*)self);
     return _arr;
 }
@@ -54,7 +54,7 @@ void q_geopath_set_width(void* self, double* width) {
     QGeoPath_SetWidth((QGeoPath*)self, width);
 }
 
-double q_geopath_width(void* self) {
+double q_geopath_width(const void* self) {
     return QGeoPath_Width((QGeoPath*)self);
 }
 
@@ -62,39 +62,39 @@ void q_geopath_translate(void* self, double degreesLatitude, double degreesLongi
     QGeoPath_Translate((QGeoPath*)self, degreesLatitude, degreesLongitude);
 }
 
-QGeoPath* q_geopath_translated(void* self, double degreesLatitude, double degreesLongitude) {
+QGeoPath* q_geopath_translated(const void* self, double degreesLatitude, double degreesLongitude) {
     return QGeoPath_Translated((QGeoPath*)self, degreesLatitude, degreesLongitude);
 }
 
-double q_geopath_length(void* self) {
+double q_geopath_length(const void* self) {
     return QGeoPath_Length((QGeoPath*)self);
 }
 
-intptr_t q_geopath_size(void* self) {
+intptr_t q_geopath_size(const void* self) {
     return QGeoPath_Size((QGeoPath*)self);
 }
 
-void q_geopath_add_coordinate(void* self, void* coordinate) {
+void q_geopath_add_coordinate(void* self, const void* coordinate) {
     QGeoPath_AddCoordinate((QGeoPath*)self, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopath_insert_coordinate(void* self, intptr_t index, void* coordinate) {
+void q_geopath_insert_coordinate(void* self, intptr_t index, const void* coordinate) {
     QGeoPath_InsertCoordinate((QGeoPath*)self, index, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopath_replace_coordinate(void* self, intptr_t index, void* coordinate) {
+void q_geopath_replace_coordinate(void* self, intptr_t index, const void* coordinate) {
     QGeoPath_ReplaceCoordinate((QGeoPath*)self, index, (QGeoCoordinate*)coordinate);
 }
 
-QGeoCoordinate* q_geopath_coordinate_at(void* self, intptr_t index) {
+QGeoCoordinate* q_geopath_coordinate_at(const void* self, intptr_t index) {
     return QGeoPath_CoordinateAt((QGeoPath*)self, index);
 }
 
-bool q_geopath_contains_coordinate(void* self, void* coordinate) {
+bool q_geopath_contains_coordinate(const void* self, const void* coordinate) {
     return QGeoPath_ContainsCoordinate((QGeoPath*)self, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopath_remove_coordinate(void* self, void* coordinate) {
+void q_geopath_remove_coordinate(void* self, const void* coordinate) {
     QGeoPath_RemoveCoordinate((QGeoPath*)self, (QGeoCoordinate*)coordinate);
 }
 
@@ -102,42 +102,42 @@ void q_geopath_remove_coordinate2(void* self, intptr_t index) {
     QGeoPath_RemoveCoordinate2((QGeoPath*)self, index);
 }
 
-const char* q_geopath_to_string(void* self) {
+const char* q_geopath_to_string(const void* self) {
     libqt_string _str = QGeoPath_ToString((QGeoPath*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-double q_geopath_length1(void* self, intptr_t indexFrom) {
+double q_geopath_length1(const void* self, intptr_t indexFrom) {
     return QGeoPath_Length1((QGeoPath*)self, indexFrom);
 }
 
-double q_geopath_length2(void* self, intptr_t indexFrom, intptr_t indexTo) {
+double q_geopath_length2(const void* self, intptr_t indexFrom, intptr_t indexTo) {
     return QGeoPath_Length2((QGeoPath*)self, indexFrom, indexTo);
 }
 
-int32_t q_geopath_type(void* self) {
+int32_t q_geopath_type(const void* self) {
     return QGeoShape_Type((QGeoShape*)self);
 }
 
-bool q_geopath_is_valid(void* self) {
+bool q_geopath_is_valid(const void* self) {
     return QGeoShape_IsValid((QGeoShape*)self);
 }
 
-bool q_geopath_is_empty(void* self) {
+bool q_geopath_is_empty(const void* self) {
     return QGeoShape_IsEmpty((QGeoShape*)self);
 }
 
-bool q_geopath_contains(void* self, void* coordinate) {
+bool q_geopath_contains(const void* self, const void* coordinate) {
     return QGeoShape_Contains((QGeoShape*)self, (QGeoCoordinate*)coordinate);
 }
 
-QGeoRectangle* q_geopath_bounding_geo_rectangle(void* self) {
+QGeoRectangle* q_geopath_bounding_geo_rectangle(const void* self) {
     return QGeoShape_BoundingGeoRectangle((QGeoShape*)self);
 }
 
-QGeoCoordinate* q_geopath_center(void* self) {
+QGeoCoordinate* q_geopath_center(const void* self) {
     return QGeoShape_Center((QGeoShape*)self);
 }
 

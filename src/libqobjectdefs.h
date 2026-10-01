@@ -24,7 +24,7 @@ const char* q_qobjectdefs_q_flag_location(const char* method);
 ///
 /// @param other QGenericArgument*
 ///
-QGenericArgument* q_genericargument_new(void* other);
+QGenericArgument* q_genericargument_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html)
 
@@ -46,7 +46,7 @@ QGenericArgument* q_genericargument_new3();
 ///
 /// @param param1 QGenericArgument*
 ///
-QGenericArgument* q_genericargument_new4(void* param1);
+QGenericArgument* q_genericargument_new4(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html)
 
@@ -81,17 +81,17 @@ void q_genericargument_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html#data)
 ///
-/// @param self QGenericArgument*
+/// @param self const QGenericArgument*
 ///
-void* q_genericargument_data(void* self);
+void* q_genericargument_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGenericArgument*
+/// @param self const QGenericArgument*
 ///
-const char* q_genericargument_name(void* self);
+const char* q_genericargument_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html#dtor.QGenericArgument)
 ///
@@ -107,7 +107,7 @@ void q_genericargument_delete(void* self);
 ///
 /// @param other QGenericReturnArgument*
 ///
-QGenericReturnArgument* q_genericreturnargument_new(void* other);
+QGenericReturnArgument* q_genericreturnargument_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericreturnargument.html)
 
@@ -129,7 +129,7 @@ QGenericReturnArgument* q_genericreturnargument_new3();
 ///
 /// @param param1 QGenericReturnArgument*
 ///
-QGenericReturnArgument* q_genericreturnargument_new4(void* param1);
+QGenericReturnArgument* q_genericreturnargument_new4(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericreturnargument.html)
 
@@ -166,9 +166,9 @@ void q_genericreturnargument_move_assign(void* self, void* other);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericargument.html#data)
 ///
-/// @param self QGenericReturnArgument*
+/// @param self const QGenericReturnArgument*
 ///
-void* q_genericreturnargument_data(void* self);
+void* q_genericreturnargument_data(const void* self);
 
 /// Inherited from QGenericArgument
 ///
@@ -176,9 +176,9 @@ void* q_genericreturnargument_data(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGenericReturnArgument*
+/// @param self const QGenericReturnArgument*
 ///
-const char* q_genericreturnargument_name(void* self);
+const char* q_genericreturnargument_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgenericreturnargument.html#dtor.QGenericReturnArgument)
 ///
@@ -194,9 +194,9 @@ void q_genericreturnargument_delete(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMetaMethodArgument*
+/// @param self const QMetaMethodArgument*
 ///
-const char* q_metamethodargument_name(void* self);
+const char* q_metamethodargument_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethodargument.html#name-var)
 ///
@@ -219,9 +219,9 @@ void q_metamethodargument_delete(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMetaMethodReturnArgument*
+/// @param self const QMetaMethodReturnArgument*
 ///
-const char* q_metamethodreturnargument_name(void* self);
+const char* q_metamethodreturnargument_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetamethodreturnargument.html#name-var)
 ///
@@ -250,202 +250,202 @@ QMetaObject* q_metaobject_new();
 ///
 /// @param param1 QMetaObject*
 ///
-QMetaObject* q_metaobject_new2(void* param1);
+QMetaObject* q_metaobject_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#className)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-const char* q_metaobject_class_name(void* self);
+const char* q_metaobject_class_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#superClass)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-const QMetaObject* q_metaobject_super_class(void* self);
+const QMetaObject* q_metaobject_super_class(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#inherits)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param metaObject QMetaObject*
 ///
-bool q_metaobject_inherits(void* self, void* metaObject);
+bool q_metaobject_inherits(const void* self, const void* metaObject);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#cast)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param obj QObject*
 ///
-QObject* q_metaobject_cast(void* self, void* obj);
+QObject* q_metaobject_cast(const void* self, void* obj);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#cast)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param obj QObject*
 ///
-const QObject* q_metaobject_cast2(void* self, void* obj);
+const QObject* q_metaobject_cast2(const void* self, const void* obj);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param s const char*
 /// @param c const char*
 ///
-const char* q_metaobject_tr(void* self, const char* s, const char* c);
+const char* q_metaobject_tr(const void* self, const char* s, const char* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#metaType)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-QMetaType* q_metaobject_meta_type(void* self);
+QMetaType* q_metaobject_meta_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#methodOffset)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_method_offset(void* self);
+int32_t q_metaobject_method_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#enumeratorOffset)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_enumerator_offset(void* self);
+int32_t q_metaobject_enumerator_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#propertyOffset)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_property_offset(void* self);
+int32_t q_metaobject_property_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#classInfoOffset)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_class_info_offset(void* self);
+int32_t q_metaobject_class_info_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#constructorCount)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_constructor_count(void* self);
+int32_t q_metaobject_constructor_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#methodCount)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_method_count(void* self);
+int32_t q_metaobject_method_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#enumeratorCount)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_enumerator_count(void* self);
+int32_t q_metaobject_enumerator_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#propertyCount)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_property_count(void* self);
+int32_t q_metaobject_property_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#classInfoCount)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-int32_t q_metaobject_class_info_count(void* self);
+int32_t q_metaobject_class_info_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#indexOfConstructor)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param constructor const char*
 ///
-int32_t q_metaobject_index_of_constructor(void* self, const char* constructor);
+int32_t q_metaobject_index_of_constructor(const void* self, const char* constructor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#indexOfMethod)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param method const char*
 ///
-int32_t q_metaobject_index_of_method(void* self, const char* method);
+int32_t q_metaobject_index_of_method(const void* self, const char* method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#indexOfSignal)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param signal const char*
 ///
-int32_t q_metaobject_index_of_signal(void* self, const char* signal);
+int32_t q_metaobject_index_of_signal(const void* self, const char* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#indexOfSlot)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param slot const char*
 ///
-int32_t q_metaobject_index_of_slot(void* self, const char* slot);
+int32_t q_metaobject_index_of_slot(const void* self, const char* slot);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#indexOfEnumerator)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param name const char*
 ///
-int32_t q_metaobject_index_of_enumerator(void* self, const char* name);
+int32_t q_metaobject_index_of_enumerator(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#indexOfProperty)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param name const char*
 ///
-int32_t q_metaobject_index_of_property(void* self, const char* name);
+int32_t q_metaobject_index_of_property(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#indexOfClassInfo)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param name const char*
 ///
-int32_t q_metaobject_index_of_class_info(void* self, const char* name);
+int32_t q_metaobject_index_of_class_info(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#constructor)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param index int
 ///
-QMetaMethod* q_metaobject_constructor(void* self, int index);
+QMetaMethod* q_metaobject_constructor(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#method)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param index int
 ///
-QMetaMethod* q_metaobject_method(void* self, int index);
+QMetaMethod* q_metaobject_method(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#enumerator)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param index int
 ///
-QMetaEnum* q_metaobject_enumerator(void* self, int index);
+QMetaEnum* q_metaobject_enumerator(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#property)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param index int
 ///
-QMetaProperty* q_metaobject_property(void* self, int index);
+QMetaProperty* q_metaobject_property(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#classInfo)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param index int
 ///
-QMetaClassInfo* q_metaobject_class_info(void* self, int index);
+QMetaClassInfo* q_metaobject_class_info(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#userProperty)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-QMetaProperty* q_metaobject_user_property(void* self);
+QMetaProperty* q_metaobject_user_property(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#checkConnectArgs)
 ///
@@ -459,7 +459,7 @@ bool q_metaobject_check_connect_args(const char* signal, const char* method);
 /// @param signal QMetaMethod*
 /// @param method QMetaMethod*
 ///
-bool q_metaobject_check_connect_args2(void* signal, void* method);
+bool q_metaobject_check_connect_args2(const void* signal, const void* method);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#normalizedSignature)
 ///
@@ -484,7 +484,7 @@ char* q_metaobject_normalized_type(const char* type);
 /// @param receiver QObject*
 /// @param method_index int
 ///
-QMetaObject__Connection* q_metaobject_connect(void* sender, int signal_index, void* receiver, int method_index);
+QMetaObject__Connection* q_metaobject_connect(const void* sender, int signal_index, const void* receiver, int method_index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#disconnect)
 ///
@@ -493,7 +493,7 @@ QMetaObject__Connection* q_metaobject_connect(void* sender, int signal_index, vo
 /// @param receiver QObject*
 /// @param method_index int
 ///
-bool q_metaobject_disconnect(void* sender, int signal_index, void* receiver, int method_index);
+bool q_metaobject_disconnect(const void* sender, int signal_index, const void* receiver, int method_index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#disconnectOne)
 ///
@@ -502,7 +502,7 @@ bool q_metaobject_disconnect(void* sender, int signal_index, void* receiver, int
 /// @param receiver QObject*
 /// @param method_index int
 ///
-bool q_metaobject_disconnect_one(void* sender, int signal_index, void* receiver, int method_index);
+bool q_metaobject_disconnect_one(const void* sender, int signal_index, const void* receiver, int method_index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#connectSlotsByName)
 ///
@@ -525,7 +525,7 @@ void q_metaobject_activate(void* sender, int signal_index, void* argv);
 /// @param local_signal_index int
 /// @param argv void*
 ///
-void q_metaobject_activate2(void* sender, void* param2, int local_signal_index, void* argv);
+void q_metaobject_activate2(void* sender, const void* param2, int local_signal_index, void* argv);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#activate)
 ///
@@ -572,19 +572,19 @@ bool q_metaobject_invoke_method4(void* obj, const char* member, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance(void* self, void* val0);
+QObject* q_metaobject_new_instance(const void* self, void* val0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#static_metacall)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_metaobject_static_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_metaobject_static_metacall(const void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#metacall)
 ///
@@ -597,9 +597,9 @@ int32_t q_metaobject_metacall(void* param1, int32_t param2, int param3, void* pa
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#d-var)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 ///
-QMetaObject__Data* q_metaobject_d(void* self);
+QMetaObject__Data* q_metaobject_d(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#d-var)
 ///
@@ -613,18 +613,18 @@ void q_metaobject_set_d(void* self, void* d);
 /// @param self QMetaObject*
 /// @param param1 QMetaObject*
 ///
-void q_metaobject_operator_assign(void* self, void* param1);
+void q_metaobject_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param s const char*
 /// @param c const char*
 /// @param n int
 ///
-const char* q_metaobject_tr3(void* self, const char* s, const char* c, int n);
+const char* q_metaobject_tr3(const void* self, const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#connect)
 ///
@@ -634,7 +634,7 @@ const char* q_metaobject_tr3(void* self, const char* s, const char* c, int n);
 /// @param method_index int
 /// @param type int
 ///
-QMetaObject__Connection* q_metaobject_connect5(void* sender, int signal_index, void* receiver, int method_index, int type);
+QMetaObject__Connection* q_metaobject_connect5(const void* sender, int signal_index, const void* receiver, int method_index, int type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#connect)
 ///
@@ -645,7 +645,7 @@ QMetaObject__Connection* q_metaobject_connect5(void* sender, int signal_index, v
 /// @param type int
 /// @param types int*
 ///
-QMetaObject__Connection* q_metaobject_connect6(void* sender, int signal_index, void* receiver, int method_index, int type, int* types);
+QMetaObject__Connection* q_metaobject_connect6(const void* sender, int signal_index, const void* receiver, int method_index, int type, int* types);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#invokeMethod)
 ///
@@ -1172,45 +1172,45 @@ bool q_metaobject_invoke_method124(void* obj, const char* member, void* val0, vo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance2(void* self, void* val0, void* val1);
+QObject* q_metaobject_new_instance2(const void* self, void* val0, void* val1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance3(void* self, void* val0, void* val1, void* val2);
+QObject* q_metaobject_new_instance3(const void* self, void* val0, void* val1, void* val2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance4(void* self, void* val0, void* val1, void* val2, void* val3);
+QObject* q_metaobject_new_instance4(const void* self, void* val0, void* val1, void* val2, void* val3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance5(void* self, void* val0, void* val1, void* val2, void* val3, void* val4);
+QObject* q_metaobject_new_instance5(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -1218,11 +1218,11 @@ QObject* q_metaobject_new_instance5(void* self, void* val0, void* val1, void* va
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance6(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
+QObject* q_metaobject_new_instance6(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -1231,11 +1231,11 @@ QObject* q_metaobject_new_instance6(void* self, void* val0, void* val1, void* va
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance7(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
+QObject* q_metaobject_new_instance7(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -1245,11 +1245,11 @@ QObject* q_metaobject_new_instance7(void* self, void* val0, void* val1, void* va
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance8(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
+QObject* q_metaobject_new_instance8(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -1260,11 +1260,11 @@ QObject* q_metaobject_new_instance8(void* self, void* val0, void* val1, void* va
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance9(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
+QObject* q_metaobject_new_instance9(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#newInstance)
 ///
-/// @param self QMetaObject*
+/// @param self const QMetaObject*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
@@ -1276,7 +1276,7 @@ QObject* q_metaobject_new_instance9(void* self, void* val0, void* val1, void* va
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
 ///
-QObject* q_metaobject_new_instance10(void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
+QObject* q_metaobject_new_instance10(const void* self, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject.html#dtor.QMetaObject)
 ///
@@ -1298,14 +1298,14 @@ QMetaObject__Connection* q_metaobject__connection_new();
 ///
 /// @param other QMetaObject__Connection*
 ///
-QMetaObject__Connection* q_metaobject__connection_new2(void* other);
+QMetaObject__Connection* q_metaobject__connection_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-connection.html#operator-eq)
 ///
 /// @param self QMetaObject__Connection*
 /// @param other QMetaObject__Connection*
 ///
-void q_metaobject__connection_operator_assign(void* self, void* other);
+void q_metaobject__connection_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-connection.html#swap)
 ///
@@ -1332,7 +1332,7 @@ QMetaObject__SuperData* q_metaobject__superdata_new();
 ///
 /// @param mo QMetaObject*
 ///
-QMetaObject__SuperData* q_metaobject__superdata_new2(void* mo);
+QMetaObject__SuperData* q_metaobject__superdata_new2(const void* mo);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html)
 
@@ -1348,39 +1348,39 @@ QMetaObject__SuperData* q_metaobject__superdata_new3(QMetaObject* (*g)());
 ///
 /// @param param1 QMetaObject__SuperData*
 ///
-QMetaObject__SuperData* q_metaobject__superdata_new4(void* param1);
+QMetaObject__SuperData* q_metaobject__superdata_new4(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html#direct-var)
 ///
-/// @param self QMetaObject__SuperData*
+/// @param self const QMetaObject__SuperData*
 ///
-const QMetaObject* q_metaobject__superdata_direct(void* self);
+const QMetaObject* q_metaobject__superdata_direct(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html#direct-var)
 ///
 /// @param self QMetaObject__SuperData*
 /// @param direct QMetaObject*
 ///
-void q_metaobject__superdata_set_direct(void* self, void* direct);
+void q_metaobject__superdata_set_direct(void* self, const void* direct);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html#operator--gt)
 ///
-/// @param self QMetaObject__SuperData*
+/// @param self const QMetaObject__SuperData*
 ///
-const QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self);
+const QMetaObject* q_metaobject__superdata_operator_minus_greater(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html#operator-const-QMetaObject--2a)
 ///
-/// @param self QMetaObject__SuperData*
+/// @param self const QMetaObject__SuperData*
 ///
-const QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(void* self);
+const QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html#operator-eq)
 ///
 /// @param self QMetaObject__SuperData*
 /// @param param1 QMetaObject__SuperData*
 ///
-void q_metaobject__superdata_operator_assign(void* self, void* param1);
+void q_metaobject__superdata_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///
@@ -1400,13 +1400,13 @@ QMetaObject__Data* q_metaobject__data_new();
 ///
 /// @param param1 QMetaObject__Data*
 ///
-QMetaObject__Data* q_metaobject__data_new2(void* param1);
+QMetaObject__Data* q_metaobject__data_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#superdata-var)
 ///
-/// @param self QMetaObject__Data*
+/// @param self const QMetaObject__Data*
 ///
-QMetaObject__SuperData* q_metaobject__data_superdata(void* self);
+QMetaObject__SuperData* q_metaobject__data_superdata(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#superdata-var)
 ///
@@ -1417,9 +1417,9 @@ void q_metaobject__data_set_superdata(void* self, void* superdata);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#stringdata-var)
 ///
-/// @param self QMetaObject__Data*
+/// @param self const QMetaObject__Data*
 ///
-const uint32_t* q_metaobject__data_stringdata(void* self);
+const uint32_t* q_metaobject__data_stringdata(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#stringdata-var)
 ///
@@ -1430,9 +1430,9 @@ void q_metaobject__data_set_stringdata(void* self, uint32_t* stringdata);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#data-var)
 ///
-/// @param self QMetaObject__Data*
+/// @param self const QMetaObject__Data*
 ///
-const uint32_t* q_metaobject__data_data(void* self);
+const uint32_t* q_metaobject__data_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#data-var)
 ///
@@ -1443,23 +1443,23 @@ void q_metaobject__data_set_data(void* self, uint32_t* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#relatedMetaObjects-var)
 ///
-/// @param self QMetaObject__Data*
+/// @param self const QMetaObject__Data*
 ///
-const QMetaObject__SuperData* q_metaobject__data_related_meta_objects(void* self);
+const QMetaObject__SuperData* q_metaobject__data_related_meta_objects(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#relatedMetaObjects-var)
 ///
 /// @param self QMetaObject__Data*
 /// @param relatedMetaObjects QMetaObject__SuperData*
 ///
-void q_metaobject__data_set_related_meta_objects(void* self, void* relatedMetaObjects);
+void q_metaobject__data_set_related_meta_objects(void* self, const void* relatedMetaObjects);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-data.html#operator-eq)
 ///
 /// @param self QMetaObject__Data*
 /// @param param1 QMetaObject__Data*
 ///
-void q_metaobject__data_operator_assign(void* self, void* param1);
+void q_metaobject__data_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

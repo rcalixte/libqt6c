@@ -37,7 +37,7 @@ KBookmarkActionMenu* KBookmarkActionMenu_FromKBookmarkActionInterface(KBookmarkA
 QMetaObject* KBookmarkActionMenu_MetaObject(const KBookmarkActionMenu* self);
 void* KBookmarkActionMenu_Metacast(KBookmarkActionMenu* self, const char* param1);
 int KBookmarkActionMenu_Metacall(KBookmarkActionMenu* self, int param1, int param2, void** param3);
-void KBookmarkActionMenu_OnMetaObject(const KBookmarkActionMenu* self, intptr_t slot);
+void KBookmarkActionMenu_OnMetaObject(KBookmarkActionMenu* self, intptr_t slot);
 QMetaObject* KBookmarkActionMenu_SuperMetaObject(const KBookmarkActionMenu* self);
 void KBookmarkActionMenu_OnMetacast(KBookmarkActionMenu* self, intptr_t slot);
 void* KBookmarkActionMenu_SuperMetacast(KBookmarkActionMenu* self, const char* param1);
@@ -71,20 +71,10 @@ void KBookmarkActionMenu_DisconnectNotify(KBookmarkActionMenu* self, const QMeta
 void KBookmarkActionMenu_OnDisconnectNotify(KBookmarkActionMenu* self, intptr_t slot);
 void KBookmarkActionMenu_SuperDisconnectNotify(KBookmarkActionMenu* self, const QMetaMethod* signal);
 libqt_list /* of QWidget* */ KBookmarkActionMenu_CreatedWidgets(const KBookmarkActionMenu* self);
-void KBookmarkActionMenu_OnCreatedWidgets(const KBookmarkActionMenu* self, intptr_t slot);
-libqt_list /* of QWidget* */ KBookmarkActionMenu_SuperCreatedWidgets(const KBookmarkActionMenu* self);
 QObject* KBookmarkActionMenu_Sender(const KBookmarkActionMenu* self);
-void KBookmarkActionMenu_OnSender(const KBookmarkActionMenu* self, intptr_t slot);
-QObject* KBookmarkActionMenu_SuperSender(const KBookmarkActionMenu* self);
 int KBookmarkActionMenu_SenderSignalIndex(const KBookmarkActionMenu* self);
-void KBookmarkActionMenu_OnSenderSignalIndex(const KBookmarkActionMenu* self, intptr_t slot);
-int KBookmarkActionMenu_SuperSenderSignalIndex(const KBookmarkActionMenu* self);
 int KBookmarkActionMenu_Receivers(const KBookmarkActionMenu* self, const char* signal);
-void KBookmarkActionMenu_OnReceivers(const KBookmarkActionMenu* self, intptr_t slot);
-int KBookmarkActionMenu_SuperReceivers(const KBookmarkActionMenu* self, const char* signal);
 bool KBookmarkActionMenu_IsSignalConnected(const KBookmarkActionMenu* self, const QMetaMethod* signal);
-void KBookmarkActionMenu_OnIsSignalConnected(const KBookmarkActionMenu* self, intptr_t slot);
-bool KBookmarkActionMenu_SuperIsSignalConnected(const KBookmarkActionMenu* self, const QMetaMethod* signal);
 void KBookmarkActionMenu_Delete(KBookmarkActionMenu* self);
 
 #ifdef __cplusplus

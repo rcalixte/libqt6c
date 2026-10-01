@@ -15,7 +15,7 @@
 #include "libqpaintengine.hpp"
 #include "libqpaintengine.h"
 
-QTextItem* q_textitem_new(void* other) {
+QTextItem* q_textitem_new(const void* other) {
     return QTextItem_New((QTextItem*)other);
 }
 
@@ -27,7 +27,7 @@ QTextItem* q_textitem_new3() {
     return QTextItem_New3();
 }
 
-QTextItem* q_textitem_new4(void* param1) {
+QTextItem* q_textitem_new4(const void* param1) {
     return QTextItem_New4((QTextItem*)param1);
 }
 
@@ -39,30 +39,30 @@ void q_textitem_move_assign(void* self, void* other) {
     QTextItem_MoveAssign((QTextItem*)self, (QTextItem*)other);
 }
 
-double q_textitem_descent(void* self) {
+double q_textitem_descent(const void* self) {
     return QTextItem_Descent((QTextItem*)self);
 }
 
-double q_textitem_ascent(void* self) {
+double q_textitem_ascent(const void* self) {
     return QTextItem_Ascent((QTextItem*)self);
 }
 
-double q_textitem_width(void* self) {
+double q_textitem_width(const void* self) {
     return QTextItem_Width((QTextItem*)self);
 }
 
-int32_t q_textitem_render_flags(void* self) {
+int32_t q_textitem_render_flags(const void* self) {
     return QTextItem_RenderFlags((QTextItem*)self);
 }
 
-const char* q_textitem_text(void* self) {
+const char* q_textitem_text(const void* self) {
     libqt_string _str = QTextItem_Text((QTextItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QFont* q_textitem_font(void* self) {
+QFont* q_textitem_font(const void* self) {
     return QTextItem_Font((QTextItem*)self);
 }
 
@@ -78,7 +78,7 @@ QPaintEngine* q_paintengine_new2(int32_t features) {
     return QPaintEngine_New2(features);
 }
 
-bool q_paintengine_is_active(void* self) {
+bool q_paintengine_is_active(const void* self) {
     return QPaintEngine_IsActive((QPaintEngine*)self);
 }
 
@@ -94,211 +94,195 @@ void q_paintengine_on_begin(void* self, bool (*callback)(void*, void*)) {
     QPaintEngine_OnBegin((QPaintEngine*)self, (intptr_t)callback);
 }
 
-bool q_paintengine_super_begin(void* self, void* pdev) {
-    return QPaintEngine_SuperBegin((QPaintEngine*)self, (QPaintDevice*)pdev);
-}
-
 bool q_paintengine_end(void* self) {
     return QPaintEngine_End((QPaintEngine*)self);
 }
 
-void q_paintengine_on_end(void* self, bool (*callback)()) {
+void q_paintengine_on_end(void* self, bool (*callback)(void*)) {
     QPaintEngine_OnEnd((QPaintEngine*)self, (intptr_t)callback);
 }
 
-bool q_paintengine_super_end(void* self) {
-    return QPaintEngine_SuperEnd((QPaintEngine*)self);
-}
-
-void q_paintengine_update_state(void* self, void* state) {
+void q_paintengine_update_state(void* self, const void* state) {
     QPaintEngine_UpdateState((QPaintEngine*)self, (QPaintEngineState*)state);
 }
 
-void q_paintengine_on_update_state(void* self, void (*callback)(void*, void*)) {
+void q_paintengine_on_update_state(void* self, void (*callback)(void*, const void*)) {
     QPaintEngine_OnUpdateState((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_update_state(void* self, void* state) {
-    QPaintEngine_SuperUpdateState((QPaintEngine*)self, (QPaintEngineState*)state);
-}
-
-void q_paintengine_draw_rects(void* self, void* rects, int rectCount) {
+void q_paintengine_draw_rects(void* self, const void* rects, int rectCount) {
     QPaintEngine_DrawRects((QPaintEngine*)self, (QRect*)rects, rectCount);
 }
 
-void q_paintengine_on_draw_rects(void* self, void (*callback)(void*, void*, int)) {
+void q_paintengine_on_draw_rects(void* self, void (*callback)(void*, const void*, int)) {
     QPaintEngine_OnDrawRects((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_rects(void* self, void* rects, int rectCount) {
+void q_paintengine_super_draw_rects(void* self, const void* rects, int rectCount) {
     QPaintEngine_SuperDrawRects((QPaintEngine*)self, (QRect*)rects, rectCount);
 }
 
-void q_paintengine_draw_rects2(void* self, void* rects, int rectCount) {
+void q_paintengine_draw_rects2(void* self, const void* rects, int rectCount) {
     QPaintEngine_DrawRects2((QPaintEngine*)self, (QRectF*)rects, rectCount);
 }
 
-void q_paintengine_on_draw_rects2(void* self, void (*callback)(void*, void*, int)) {
+void q_paintengine_on_draw_rects2(void* self, void (*callback)(void*, const void*, int)) {
     QPaintEngine_OnDrawRects2((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_rects2(void* self, void* rects, int rectCount) {
+void q_paintengine_super_draw_rects2(void* self, const void* rects, int rectCount) {
     QPaintEngine_SuperDrawRects2((QPaintEngine*)self, (QRectF*)rects, rectCount);
 }
 
-void q_paintengine_draw_lines(void* self, void* lines, int lineCount) {
+void q_paintengine_draw_lines(void* self, const void* lines, int lineCount) {
     QPaintEngine_DrawLines((QPaintEngine*)self, (QLine*)lines, lineCount);
 }
 
-void q_paintengine_on_draw_lines(void* self, void (*callback)(void*, void*, int)) {
+void q_paintengine_on_draw_lines(void* self, void (*callback)(void*, const void*, int)) {
     QPaintEngine_OnDrawLines((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_lines(void* self, void* lines, int lineCount) {
+void q_paintengine_super_draw_lines(void* self, const void* lines, int lineCount) {
     QPaintEngine_SuperDrawLines((QPaintEngine*)self, (QLine*)lines, lineCount);
 }
 
-void q_paintengine_draw_lines2(void* self, void* lines, int lineCount) {
+void q_paintengine_draw_lines2(void* self, const void* lines, int lineCount) {
     QPaintEngine_DrawLines2((QPaintEngine*)self, (QLineF*)lines, lineCount);
 }
 
-void q_paintengine_on_draw_lines2(void* self, void (*callback)(void*, void*, int)) {
+void q_paintengine_on_draw_lines2(void* self, void (*callback)(void*, const void*, int)) {
     QPaintEngine_OnDrawLines2((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_lines2(void* self, void* lines, int lineCount) {
+void q_paintengine_super_draw_lines2(void* self, const void* lines, int lineCount) {
     QPaintEngine_SuperDrawLines2((QPaintEngine*)self, (QLineF*)lines, lineCount);
 }
 
-void q_paintengine_draw_ellipse(void* self, void* r) {
+void q_paintengine_draw_ellipse(void* self, const void* r) {
     QPaintEngine_DrawEllipse((QPaintEngine*)self, (QRectF*)r);
 }
 
-void q_paintengine_on_draw_ellipse(void* self, void (*callback)(void*, void*)) {
+void q_paintengine_on_draw_ellipse(void* self, void (*callback)(void*, const void*)) {
     QPaintEngine_OnDrawEllipse((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_ellipse(void* self, void* r) {
+void q_paintengine_super_draw_ellipse(void* self, const void* r) {
     QPaintEngine_SuperDrawEllipse((QPaintEngine*)self, (QRectF*)r);
 }
 
-void q_paintengine_draw_ellipse2(void* self, void* r) {
+void q_paintengine_draw_ellipse2(void* self, const void* r) {
     QPaintEngine_DrawEllipse2((QPaintEngine*)self, (QRect*)r);
 }
 
-void q_paintengine_on_draw_ellipse2(void* self, void (*callback)(void*, void*)) {
+void q_paintengine_on_draw_ellipse2(void* self, void (*callback)(void*, const void*)) {
     QPaintEngine_OnDrawEllipse2((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_ellipse2(void* self, void* r) {
+void q_paintengine_super_draw_ellipse2(void* self, const void* r) {
     QPaintEngine_SuperDrawEllipse2((QPaintEngine*)self, (QRect*)r);
 }
 
-void q_paintengine_draw_path(void* self, void* path) {
+void q_paintengine_draw_path(void* self, const void* path) {
     QPaintEngine_DrawPath((QPaintEngine*)self, (QPainterPath*)path);
 }
 
-void q_paintengine_on_draw_path(void* self, void (*callback)(void*, void*)) {
+void q_paintengine_on_draw_path(void* self, void (*callback)(void*, const void*)) {
     QPaintEngine_OnDrawPath((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_path(void* self, void* path) {
+void q_paintengine_super_draw_path(void* self, const void* path) {
     QPaintEngine_SuperDrawPath((QPaintEngine*)self, (QPainterPath*)path);
 }
 
-void q_paintengine_draw_points(void* self, void* points, int pointCount) {
+void q_paintengine_draw_points(void* self, const void* points, int pointCount) {
     QPaintEngine_DrawPoints((QPaintEngine*)self, (QPointF*)points, pointCount);
 }
 
-void q_paintengine_on_draw_points(void* self, void (*callback)(void*, void*, int)) {
+void q_paintengine_on_draw_points(void* self, void (*callback)(void*, const void*, int)) {
     QPaintEngine_OnDrawPoints((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_points(void* self, void* points, int pointCount) {
+void q_paintengine_super_draw_points(void* self, const void* points, int pointCount) {
     QPaintEngine_SuperDrawPoints((QPaintEngine*)self, (QPointF*)points, pointCount);
 }
 
-void q_paintengine_draw_points2(void* self, void* points, int pointCount) {
+void q_paintengine_draw_points2(void* self, const void* points, int pointCount) {
     QPaintEngine_DrawPoints2((QPaintEngine*)self, (QPoint*)points, pointCount);
 }
 
-void q_paintengine_on_draw_points2(void* self, void (*callback)(void*, void*, int)) {
+void q_paintengine_on_draw_points2(void* self, void (*callback)(void*, const void*, int)) {
     QPaintEngine_OnDrawPoints2((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_points2(void* self, void* points, int pointCount) {
+void q_paintengine_super_draw_points2(void* self, const void* points, int pointCount) {
     QPaintEngine_SuperDrawPoints2((QPaintEngine*)self, (QPoint*)points, pointCount);
 }
 
-void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int32_t mode) {
+void q_paintengine_draw_polygon(void* self, const void* points, int pointCount, int32_t mode) {
     QPaintEngine_DrawPolygon((QPaintEngine*)self, (QPointF*)points, pointCount, mode);
 }
 
-void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int32_t)) {
+void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, const void*, int, int32_t)) {
     QPaintEngine_OnDrawPolygon((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_polygon(void* self, void* points, int pointCount, int32_t mode) {
+void q_paintengine_super_draw_polygon(void* self, const void* points, int pointCount, int32_t mode) {
     QPaintEngine_SuperDrawPolygon((QPaintEngine*)self, (QPointF*)points, pointCount, mode);
 }
 
-void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int32_t mode) {
+void q_paintengine_draw_polygon2(void* self, const void* points, int pointCount, int32_t mode) {
     QPaintEngine_DrawPolygon2((QPaintEngine*)self, (QPoint*)points, pointCount, mode);
 }
 
-void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int32_t)) {
+void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, const void*, int, int32_t)) {
     QPaintEngine_OnDrawPolygon2((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_polygon2(void* self, void* points, int pointCount, int32_t mode) {
+void q_paintengine_super_draw_polygon2(void* self, const void* points, int pointCount, int32_t mode) {
     QPaintEngine_SuperDrawPolygon2((QPaintEngine*)self, (QPoint*)points, pointCount, mode);
 }
 
-void q_paintengine_draw_pixmap(void* self, void* r, void* pm, void* sr) {
+void q_paintengine_draw_pixmap(void* self, const void* r, const void* pm, const void* sr) {
     QPaintEngine_DrawPixmap((QPaintEngine*)self, (QRectF*)r, (QPixmap*)pm, (QRectF*)sr);
 }
 
-void q_paintengine_on_draw_pixmap(void* self, void (*callback)(void*, void*, void*, void*)) {
+void q_paintengine_on_draw_pixmap(void* self, void (*callback)(void*, const void*, const void*, const void*)) {
     QPaintEngine_OnDrawPixmap((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_pixmap(void* self, void* r, void* pm, void* sr) {
-    QPaintEngine_SuperDrawPixmap((QPaintEngine*)self, (QRectF*)r, (QPixmap*)pm, (QRectF*)sr);
-}
-
-void q_paintengine_draw_text_item(void* self, void* p, void* textItem) {
+void q_paintengine_draw_text_item(void* self, const void* p, const void* textItem) {
     QPaintEngine_DrawTextItem((QPaintEngine*)self, (QPointF*)p, (QTextItem*)textItem);
 }
 
-void q_paintengine_on_draw_text_item(void* self, void (*callback)(void*, void*, void*)) {
+void q_paintengine_on_draw_text_item(void* self, void (*callback)(void*, const void*, const void*)) {
     QPaintEngine_OnDrawTextItem((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_text_item(void* self, void* p, void* textItem) {
+void q_paintengine_super_draw_text_item(void* self, const void* p, const void* textItem) {
     QPaintEngine_SuperDrawTextItem((QPaintEngine*)self, (QPointF*)p, (QTextItem*)textItem);
 }
 
-void q_paintengine_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s) {
+void q_paintengine_draw_tiled_pixmap(void* self, const void* r, const void* pixmap, const void* s) {
     QPaintEngine_DrawTiledPixmap((QPaintEngine*)self, (QRectF*)r, (QPixmap*)pixmap, (QPointF*)s);
 }
 
-void q_paintengine_on_draw_tiled_pixmap(void* self, void (*callback)(void*, void*, void*, void*)) {
+void q_paintengine_on_draw_tiled_pixmap(void* self, void (*callback)(void*, const void*, const void*, const void*)) {
     QPaintEngine_OnDrawTiledPixmap((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s) {
+void q_paintengine_super_draw_tiled_pixmap(void* self, const void* r, const void* pixmap, const void* s) {
     QPaintEngine_SuperDrawTiledPixmap((QPaintEngine*)self, (QRectF*)r, (QPixmap*)pixmap, (QPointF*)s);
 }
 
-void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int32_t flags) {
+void q_paintengine_draw_image(void* self, const void* r, const void* pm, const void* sr, int32_t flags) {
     QPaintEngine_DrawImage((QPaintEngine*)self, (QRectF*)r, (QImage*)pm, (QRectF*)sr, flags);
 }
 
-void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int32_t)) {
+void q_paintengine_on_draw_image(void* self, void (*callback)(void*, const void*, const void*, const void*, int32_t)) {
     QPaintEngine_OnDrawImage((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_super_draw_image(void* self, void* r, void* pm, void* sr, int32_t flags) {
+void q_paintengine_super_draw_image(void* self, const void* r, const void* pm, const void* sr, int32_t flags) {
     QPaintEngine_SuperDrawImage((QPaintEngine*)self, (QRectF*)r, (QImage*)pm, (QRectF*)sr, flags);
 }
 
@@ -306,48 +290,44 @@ void q_paintengine_set_paint_device(void* self, void* device) {
     QPaintEngine_SetPaintDevice((QPaintEngine*)self, (QPaintDevice*)device);
 }
 
-QPaintDevice* q_paintengine_paint_device(void* self) {
+QPaintDevice* q_paintengine_paint_device(const void* self) {
     return QPaintEngine_PaintDevice((QPaintEngine*)self);
 }
 
-void q_paintengine_set_system_clip(void* self, void* baseClip) {
+void q_paintengine_set_system_clip(void* self, const void* baseClip) {
     QPaintEngine_SetSystemClip((QPaintEngine*)self, (QRegion*)baseClip);
 }
 
-QRegion* q_paintengine_system_clip(void* self) {
+QRegion* q_paintengine_system_clip(const void* self) {
     return QPaintEngine_SystemClip((QPaintEngine*)self);
 }
 
-void q_paintengine_set_system_rect(void* self, void* rect) {
+void q_paintengine_set_system_rect(void* self, const void* rect) {
     QPaintEngine_SetSystemRect((QPaintEngine*)self, (QRect*)rect);
 }
 
-QRect* q_paintengine_system_rect(void* self) {
+QRect* q_paintengine_system_rect(const void* self) {
     return QPaintEngine_SystemRect((QPaintEngine*)self);
 }
 
-QPoint* q_paintengine_coordinate_offset(void* self) {
+QPoint* q_paintengine_coordinate_offset(const void* self) {
     return QPaintEngine_CoordinateOffset((QPaintEngine*)self);
 }
 
-void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)()) {
+void q_paintengine_on_coordinate_offset(const void* self, QPoint* (*callback)(const void*)) {
     QPaintEngine_OnCoordinateOffset((QPaintEngine*)self, (intptr_t)callback);
 }
 
-QPoint* q_paintengine_super_coordinate_offset(void* self) {
+QPoint* q_paintengine_super_coordinate_offset(const void* self) {
     return QPaintEngine_SuperCoordinateOffset((QPaintEngine*)self);
 }
 
-int32_t q_paintengine_type(void* self) {
+int32_t q_paintengine_type(const void* self) {
     return QPaintEngine_Type((QPaintEngine*)self);
 }
 
-void q_paintengine_on_type(void* self, int32_t (*callback)()) {
+void q_paintengine_on_type(const void* self, int32_t (*callback)(const void*)) {
     QPaintEngine_OnType((QPaintEngine*)self, (intptr_t)callback);
-}
-
-int32_t q_paintengine_super_type(void* self) {
-    return QPaintEngine_SuperType((QPaintEngine*)self);
 }
 
 void q_paintengine_fix_neg_rect(void* self, int* x, int* y, int* w, int* h) {
@@ -366,11 +346,11 @@ void q_paintengine_clear_dirty(void* self, int32_t df) {
     QPaintEngine_ClearDirty((QPaintEngine*)self, df);
 }
 
-bool q_paintengine_has_feature(void* self, int32_t feature) {
+bool q_paintengine_has_feature(const void* self, int32_t feature) {
     return QPaintEngine_HasFeature((QPaintEngine*)self, feature);
 }
 
-QPainter* q_paintengine_painter(void* self) {
+QPainter* q_paintengine_painter(const void* self) {
     return QPaintEngine_Painter((QPaintEngine*)self);
 }
 
@@ -378,7 +358,7 @@ void q_paintengine_sync_state(void* self) {
     QPaintEngine_SyncState((QPaintEngine*)self);
 }
 
-bool q_paintengine_is_extended(void* self) {
+bool q_paintengine_is_extended(const void* self) {
     return QPaintEngine_IsExtended((QPaintEngine*)self);
 }
 
@@ -414,7 +394,7 @@ QPaintEngineState* q_paintenginestate_new() {
     return QPaintEngineState_New();
 }
 
-QPaintEngineState* q_paintenginestate_new2(void* other) {
+QPaintEngineState* q_paintenginestate_new2(const void* other) {
     return QPaintEngineState_New2((QPaintEngineState*)other);
 }
 
@@ -430,75 +410,75 @@ void q_paintenginestate_move_assign(void* self, void* other) {
     QPaintEngineState_MoveAssign((QPaintEngineState*)self, (QPaintEngineState*)other);
 }
 
-int32_t q_paintenginestate_state(void* self) {
+int32_t q_paintenginestate_state(const void* self) {
     return QPaintEngineState_State((QPaintEngineState*)self);
 }
 
-QPen* q_paintenginestate_pen(void* self) {
+QPen* q_paintenginestate_pen(const void* self) {
     return QPaintEngineState_Pen((QPaintEngineState*)self);
 }
 
-QBrush* q_paintenginestate_brush(void* self) {
+QBrush* q_paintenginestate_brush(const void* self) {
     return QPaintEngineState_Brush((QPaintEngineState*)self);
 }
 
-QPointF* q_paintenginestate_brush_origin(void* self) {
+QPointF* q_paintenginestate_brush_origin(const void* self) {
     return QPaintEngineState_BrushOrigin((QPaintEngineState*)self);
 }
 
-QBrush* q_paintenginestate_background_brush(void* self) {
+QBrush* q_paintenginestate_background_brush(const void* self) {
     return QPaintEngineState_BackgroundBrush((QPaintEngineState*)self);
 }
 
-int32_t q_paintenginestate_background_mode(void* self) {
+int32_t q_paintenginestate_background_mode(const void* self) {
     return QPaintEngineState_BackgroundMode((QPaintEngineState*)self);
 }
 
-QFont* q_paintenginestate_font(void* self) {
+QFont* q_paintenginestate_font(const void* self) {
     return QPaintEngineState_Font((QPaintEngineState*)self);
 }
 
-QTransform* q_paintenginestate_transform(void* self) {
+QTransform* q_paintenginestate_transform(const void* self) {
     return QPaintEngineState_Transform((QPaintEngineState*)self);
 }
 
-int32_t q_paintenginestate_clip_operation(void* self) {
+int32_t q_paintenginestate_clip_operation(const void* self) {
     return QPaintEngineState_ClipOperation((QPaintEngineState*)self);
 }
 
-QRegion* q_paintenginestate_clip_region(void* self) {
+QRegion* q_paintenginestate_clip_region(const void* self) {
     return QPaintEngineState_ClipRegion((QPaintEngineState*)self);
 }
 
-QPainterPath* q_paintenginestate_clip_path(void* self) {
+QPainterPath* q_paintenginestate_clip_path(const void* self) {
     return QPaintEngineState_ClipPath((QPaintEngineState*)self);
 }
 
-bool q_paintenginestate_is_clip_enabled(void* self) {
+bool q_paintenginestate_is_clip_enabled(const void* self) {
     return QPaintEngineState_IsClipEnabled((QPaintEngineState*)self);
 }
 
-int32_t q_paintenginestate_render_hints(void* self) {
+int32_t q_paintenginestate_render_hints(const void* self) {
     return QPaintEngineState_RenderHints((QPaintEngineState*)self);
 }
 
-int32_t q_paintenginestate_composition_mode(void* self) {
+int32_t q_paintenginestate_composition_mode(const void* self) {
     return QPaintEngineState_CompositionMode((QPaintEngineState*)self);
 }
 
-double q_paintenginestate_opacity(void* self) {
+double q_paintenginestate_opacity(const void* self) {
     return QPaintEngineState_Opacity((QPaintEngineState*)self);
 }
 
-QPainter* q_paintenginestate_painter(void* self) {
+QPainter* q_paintenginestate_painter(const void* self) {
     return QPaintEngineState_Painter((QPaintEngineState*)self);
 }
 
-bool q_paintenginestate_brush_needs_resolving(void* self) {
+bool q_paintenginestate_brush_needs_resolving(const void* self) {
     return QPaintEngineState_BrushNeedsResolving((QPaintEngineState*)self);
 }
 
-bool q_paintenginestate_pen_needs_resolving(void* self) {
+bool q_paintenginestate_pen_needs_resolving(const void* self) {
     return QPaintEngineState_PenNeedsResolving((QPaintEngineState*)self);
 }
 

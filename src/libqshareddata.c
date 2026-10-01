@@ -5,7 +5,7 @@ QSharedData* q_shareddata_new() {
     return QSharedData_New();
 }
 
-QSharedData* q_shareddata_new2(void* param1) {
+QSharedData* q_shareddata_new2(const void* param1) {
     return QSharedData_New2((QSharedData*)param1);
 }
 
@@ -13,7 +13,7 @@ void q_shareddata_delete(void* self) {
     QSharedData_Delete((QSharedData*)(self));
 }
 
-QAdoptSharedDataTag* q_adoptshareddatatag_new(void* other) {
+QAdoptSharedDataTag* q_adoptshareddatatag_new(const void* other) {
     return QAdoptSharedDataTag_New((QAdoptSharedDataTag*)other);
 }
 

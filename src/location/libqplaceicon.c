@@ -9,11 +9,11 @@ QPlaceIcon* q_placeicon_new() {
     return QPlaceIcon_New();
 }
 
-QPlaceIcon* q_placeicon_new2(void* other) {
+QPlaceIcon* q_placeicon_new2(const void* other) {
     return QPlaceIcon_New2((QPlaceIcon*)other);
 }
 
-void q_placeicon_operator_assign(void* self, void* other) {
+void q_placeicon_operator_assign(void* self, const void* other) {
     QPlaceIcon_OperatorAssign((QPlaceIcon*)self, (QPlaceIcon*)other);
 }
 
@@ -21,11 +21,11 @@ void q_placeicon_swap(void* self, void* other) {
     QPlaceIcon_Swap((QPlaceIcon*)self, (QPlaceIcon*)other);
 }
 
-QUrl* q_placeicon_url(void* self) {
+QUrl* q_placeicon_url(const void* self) {
     return QPlaceIcon_Url((QPlaceIcon*)self);
 }
 
-QPlaceManager* q_placeicon_manager(void* self) {
+QPlaceManager* q_placeicon_manager(const void* self) {
     return QPlaceIcon_Manager((QPlaceIcon*)self);
 }
 
@@ -33,7 +33,7 @@ void q_placeicon_set_manager(void* self, void* manager) {
     QPlaceIcon_SetManager((QPlaceIcon*)self, (QPlaceManager*)manager);
 }
 
-libqt_map /* of const char* to QVariant* */ q_placeicon_parameters(void* self) {
+libqt_map /* of const char* to QVariant* */ q_placeicon_parameters(const void* self) {
     // Convert QMap<QString,QVariant> to libqt_map
     libqt_map _out = QPlaceIcon_Parameters((QPlaceIcon*)self);
     libqt_map _ret;
@@ -94,11 +94,11 @@ void q_placeicon_set_parameters(void* self, libqt_map /* of const char* to QVari
     free(parameters_ret.values);
 }
 
-bool q_placeicon_is_empty(void* self) {
+bool q_placeicon_is_empty(const void* self) {
     return QPlaceIcon_IsEmpty((QPlaceIcon*)self);
 }
 
-QUrl* q_placeicon_url1(void* self, void* size) {
+QUrl* q_placeicon_url1(const void* self, const void* size) {
     return QPlaceIcon_Url1((QPlaceIcon*)self, (QSize*)size);
 }
 

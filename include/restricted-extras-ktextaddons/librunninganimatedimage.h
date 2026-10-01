@@ -14,13 +14,13 @@
 ///
 /// @param idx QModelIndex*
 ///
-TextEmoticonsCore__RunningAnimatedImage* k_textemoticonscore__runninganimatedimage_new(void* idx);
+TextEmoticonsCore__RunningAnimatedImage* k_textemoticonscore__runninganimatedimage_new(const void* idx);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1RunningAnimatedImage.html)
 ///
-/// @param self TextEmoticonsCore__RunningAnimatedImage*
+/// @param self const TextEmoticonsCore__RunningAnimatedImage*
 ///
-QPersistentModelIndex* k_textemoticonscore__runninganimatedimage_index(void* self);
+QPersistentModelIndex* k_textemoticonscore__runninganimatedimage_index(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1RunningAnimatedImage.html)
 ///
@@ -31,9 +31,9 @@ void k_textemoticonscore__runninganimatedimage_set_index(void* self, void* index
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1RunningAnimatedImage.html)
 ///
-/// @param self TextEmoticonsCore__RunningAnimatedImage*
+/// @param self const TextEmoticonsCore__RunningAnimatedImage*
 ///
-QMovie* k_textemoticonscore__runninganimatedimage_movie(void* self);
+QMovie* k_textemoticonscore__runninganimatedimage_movie(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextEmoticonsCore_1_1RunningAnimatedImage.html)
 ///

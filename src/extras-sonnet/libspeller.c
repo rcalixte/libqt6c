@@ -5,7 +5,7 @@ Sonnet__Speller* k_sonnet__speller_new() {
     return Sonnet__Speller_New();
 }
 
-Sonnet__Speller* k_sonnet__speller_new2(void* speller) {
+Sonnet__Speller* k_sonnet__speller_new2(const void* speller) {
     return Sonnet__Speller_New2((Sonnet__Speller*)speller);
 }
 
@@ -13,11 +13,11 @@ Sonnet__Speller* k_sonnet__speller_new3(const char* lang) {
     return Sonnet__Speller_New3(qstring(lang));
 }
 
-void k_sonnet__speller_operator_assign(void* self, void* speller) {
+void k_sonnet__speller_operator_assign(void* self, const void* speller) {
     Sonnet__Speller_OperatorAssign((Sonnet__Speller*)self, (Sonnet__Speller*)speller);
 }
 
-bool k_sonnet__speller_is_valid(void* self) {
+bool k_sonnet__speller_is_valid(const void* self) {
     return Sonnet__Speller_IsValid((Sonnet__Speller*)self);
 }
 
@@ -25,22 +25,22 @@ void k_sonnet__speller_set_language(void* self, const char* lang) {
     Sonnet__Speller_SetLanguage((Sonnet__Speller*)self, qstring(lang));
 }
 
-const char* k_sonnet__speller_language(void* self) {
+const char* k_sonnet__speller_language(const void* self) {
     libqt_string _str = Sonnet__Speller_Language((Sonnet__Speller*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_sonnet__speller_is_correct(void* self, const char* word) {
+bool k_sonnet__speller_is_correct(const void* self, const char* word) {
     return Sonnet__Speller_IsCorrect((Sonnet__Speller*)self, qstring(word));
 }
 
-bool k_sonnet__speller_is_misspelled(void* self, const char* word) {
+bool k_sonnet__speller_is_misspelled(const void* self, const char* word) {
     return Sonnet__Speller_IsMisspelled((Sonnet__Speller*)self, qstring(word));
 }
 
-const char** k_sonnet__speller_suggest(void* self, const char* word) {
+const char** k_sonnet__speller_suggest(const void* self, const char* word) {
     libqt_list _arr = Sonnet__Speller_Suggest((Sonnet__Speller*)self, qstring(word));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -57,7 +57,7 @@ const char** k_sonnet__speller_suggest(void* self, const char* word) {
     return _ret;
 }
 
-bool k_sonnet__speller_check_and_suggest(void* self, const char* word, const char* suggestions[static 1]) {
+bool k_sonnet__speller_check_and_suggest(const void* self, const char* word, const char* suggestions[static 1]) {
     size_t suggestions_len = libqt_strv_length(suggestions);
     libqt_string* suggestions_qstr = (libqt_string*)malloc(suggestions_len * sizeof(libqt_string));
     if (suggestions_qstr == NULL) {
@@ -92,7 +92,7 @@ void k_sonnet__speller_restore(void* self) {
     Sonnet__Speller_Restore((Sonnet__Speller*)self);
 }
 
-const char** k_sonnet__speller_available_backends(void* self) {
+const char** k_sonnet__speller_available_backends(const void* self) {
     libqt_list _arr = Sonnet__Speller_AvailableBackends((Sonnet__Speller*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -109,7 +109,7 @@ const char** k_sonnet__speller_available_backends(void* self) {
     return _ret;
 }
 
-const char** k_sonnet__speller_available_languages(void* self) {
+const char** k_sonnet__speller_available_languages(const void* self) {
     libqt_list _arr = Sonnet__Speller_AvailableLanguages((Sonnet__Speller*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -126,7 +126,7 @@ const char** k_sonnet__speller_available_languages(void* self) {
     return _ret;
 }
 
-const char** k_sonnet__speller_available_language_names(void* self) {
+const char** k_sonnet__speller_available_language_names(const void* self) {
     libqt_list _arr = Sonnet__Speller_AvailableLanguageNames((Sonnet__Speller*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -143,7 +143,7 @@ const char** k_sonnet__speller_available_language_names(void* self) {
     return _ret;
 }
 
-libqt_map /* of const char* to const char* */ k_sonnet__speller_available_dictionaries(void* self) {
+libqt_map /* of const char* to const char* */ k_sonnet__speller_available_dictionaries(const void* self) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = Sonnet__Speller_AvailableDictionaries((Sonnet__Speller*)self);
     libqt_map _ret;
@@ -198,7 +198,7 @@ libqt_map /* of const char* to const char* */ k_sonnet__speller_available_dictio
     return _ret;
 }
 
-libqt_map /* of const char* to const char* */ k_sonnet__speller_preferred_dictionaries(void* self) {
+libqt_map /* of const char* to const char* */ k_sonnet__speller_preferred_dictionaries(const void* self) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = Sonnet__Speller_PreferredDictionaries((Sonnet__Speller*)self);
     libqt_map _ret;
@@ -257,7 +257,7 @@ void k_sonnet__speller_set_default_language(void* self, const char* lang) {
     Sonnet__Speller_SetDefaultLanguage((Sonnet__Speller*)self, qstring(lang));
 }
 
-const char* k_sonnet__speller_default_language(void* self) {
+const char* k_sonnet__speller_default_language(const void* self) {
     libqt_string _str = Sonnet__Speller_DefaultLanguage((Sonnet__Speller*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -268,7 +268,7 @@ void k_sonnet__speller_set_default_client(void* self, const char* client) {
     Sonnet__Speller_SetDefaultClient((Sonnet__Speller*)self, qstring(client));
 }
 
-const char* k_sonnet__speller_default_client(void* self) {
+const char* k_sonnet__speller_default_client(const void* self) {
     libqt_string _str = Sonnet__Speller_DefaultClient((Sonnet__Speller*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -279,7 +279,7 @@ void k_sonnet__speller_set_attribute(void* self, int32_t attr) {
     Sonnet__Speller_SetAttribute((Sonnet__Speller*)self, attr);
 }
 
-bool k_sonnet__speller_test_attribute(void* self, int32_t attr) {
+bool k_sonnet__speller_test_attribute(const void* self, int32_t attr) {
     return Sonnet__Speller_TestAttribute((Sonnet__Speller*)self, attr);
 }
 

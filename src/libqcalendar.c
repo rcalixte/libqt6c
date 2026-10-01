@@ -3,7 +3,7 @@
 #include "libqcalendar.hpp"
 #include "libqcalendar.h"
 
-QCalendar* q_calendar_new(void* other) {
+QCalendar* q_calendar_new(const void* other) {
     return QCalendar_New((QCalendar*)other);
 }
 
@@ -35,122 +35,122 @@ void q_calendar_move_assign(void* self, void* other) {
     QCalendar_MoveAssign((QCalendar*)self, (QCalendar*)other);
 }
 
-bool q_calendar_is_valid(void* self) {
+bool q_calendar_is_valid(const void* self) {
     return QCalendar_IsValid((QCalendar*)self);
 }
 
-int32_t q_calendar_days_in_month(void* self, int month) {
+int32_t q_calendar_days_in_month(const void* self, int month) {
     return QCalendar_DaysInMonth((QCalendar*)self, month);
 }
 
-int32_t q_calendar_days_in_year(void* self, int year) {
+int32_t q_calendar_days_in_year(const void* self, int year) {
     return QCalendar_DaysInYear((QCalendar*)self, year);
 }
 
-int32_t q_calendar_months_in_year(void* self, int year) {
+int32_t q_calendar_months_in_year(const void* self, int year) {
     return QCalendar_MonthsInYear((QCalendar*)self, year);
 }
 
-bool q_calendar_is_date_valid(void* self, int year, int month, int day) {
+bool q_calendar_is_date_valid(const void* self, int year, int month, int day) {
     return QCalendar_IsDateValid((QCalendar*)self, year, month, day);
 }
 
-bool q_calendar_is_leap_year(void* self, int year) {
+bool q_calendar_is_leap_year(const void* self, int year) {
     return QCalendar_IsLeapYear((QCalendar*)self, year);
 }
 
-bool q_calendar_is_gregorian(void* self) {
+bool q_calendar_is_gregorian(const void* self) {
     return QCalendar_IsGregorian((QCalendar*)self);
 }
 
-bool q_calendar_is_lunar(void* self) {
+bool q_calendar_is_lunar(const void* self) {
     return QCalendar_IsLunar((QCalendar*)self);
 }
 
-bool q_calendar_is_luni_solar(void* self) {
+bool q_calendar_is_luni_solar(const void* self) {
     return QCalendar_IsLuniSolar((QCalendar*)self);
 }
 
-bool q_calendar_is_solar(void* self) {
+bool q_calendar_is_solar(const void* self) {
     return QCalendar_IsSolar((QCalendar*)self);
 }
 
-bool q_calendar_is_proleptic(void* self) {
+bool q_calendar_is_proleptic(const void* self) {
     return QCalendar_IsProleptic((QCalendar*)self);
 }
 
-bool q_calendar_has_year_zero(void* self) {
+bool q_calendar_has_year_zero(const void* self) {
     return QCalendar_HasYearZero((QCalendar*)self);
 }
 
-int32_t q_calendar_maximum_days_in_month(void* self) {
+int32_t q_calendar_maximum_days_in_month(const void* self) {
     return QCalendar_MaximumDaysInMonth((QCalendar*)self);
 }
 
-int32_t q_calendar_minimum_days_in_month(void* self) {
+int32_t q_calendar_minimum_days_in_month(const void* self) {
     return QCalendar_MinimumDaysInMonth((QCalendar*)self);
 }
 
-int32_t q_calendar_maximum_months_in_year(void* self) {
+int32_t q_calendar_maximum_months_in_year(const void* self) {
     return QCalendar_MaximumMonthsInYear((QCalendar*)self);
 }
 
-const char* q_calendar_name(void* self) {
+const char* q_calendar_name(const void* self) {
     libqt_string _str = QCalendar_Name((QCalendar*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDate* q_calendar_date_from_parts(void* self, int year, int month, int day) {
+QDate* q_calendar_date_from_parts(const void* self, int year, int month, int day) {
     return QCalendar_DateFromParts((QCalendar*)self, year, month, day);
 }
 
-QDate* q_calendar_date_from_parts2(void* self, void* parts) {
+QDate* q_calendar_date_from_parts2(const void* self, const void* parts) {
     return QCalendar_DateFromParts2((QCalendar*)self, (QCalendar__YearMonthDay*)parts);
 }
 
-QDate* q_calendar_match_century_to_weekday(void* self, void* parts, int dow) {
+QDate* q_calendar_match_century_to_weekday(const void* self, const void* parts, int dow) {
     return QCalendar_MatchCenturyToWeekday((QCalendar*)self, (QCalendar__YearMonthDay*)parts, dow);
 }
 
-QCalendar__YearMonthDay* q_calendar_parts_from_date(void* self, void* date) {
+QCalendar__YearMonthDay* q_calendar_parts_from_date(const void* self, void* date) {
     return QCalendar_PartsFromDate((QCalendar*)self, (QDate*)date);
 }
 
-int32_t q_calendar_day_of_week(void* self, void* date) {
+int32_t q_calendar_day_of_week(const void* self, void* date) {
     return QCalendar_DayOfWeek((QCalendar*)self, (QDate*)date);
 }
 
-const char* q_calendar_month_name(void* self, void* locale, int month) {
+const char* q_calendar_month_name(const void* self, const void* locale, int month) {
     libqt_string _str = QCalendar_MonthName((QCalendar*)self, (QLocale*)locale, month);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_standalone_month_name(void* self, void* locale, int month) {
+const char* q_calendar_standalone_month_name(const void* self, const void* locale, int month) {
     libqt_string _str = QCalendar_StandaloneMonthName((QCalendar*)self, (QLocale*)locale, month);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_week_day_name(void* self, void* locale, int day) {
+const char* q_calendar_week_day_name(const void* self, const void* locale, int day) {
     libqt_string _str = QCalendar_WeekDayName((QCalendar*)self, (QLocale*)locale, day);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_standalone_week_day_name(void* self, void* locale, int day) {
+const char* q_calendar_standalone_week_day_name(const void* self, const void* locale, int day) {
     libqt_string _str = QCalendar_StandaloneWeekDayName((QCalendar*)self, (QLocale*)locale, day);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_date_time_to_string(void* self, const char* format, void* datetime, void* dateOnly, void* timeOnly, void* locale) {
+const char* q_calendar_date_time_to_string(const void* self, const char* format, const void* datetime, void* dateOnly, void* timeOnly, const void* locale) {
     libqt_string _str = QCalendar_DateTimeToString((QCalendar*)self, qstring(format), (QDateTime*)datetime, (QDate*)dateOnly, (QTime*)timeOnly, (QLocale*)locale);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -174,46 +174,46 @@ const char** q_calendar_available_calendars() {
     return _ret;
 }
 
-int32_t q_calendar_days_in_month2(void* self, int month, int year) {
+int32_t q_calendar_days_in_month2(const void* self, int month, int year) {
     return QCalendar_DaysInMonth2((QCalendar*)self, month, year);
 }
 
-const char* q_calendar_month_name3(void* self, void* locale, int month, int year) {
+const char* q_calendar_month_name3(const void* self, const void* locale, int month, int year) {
     libqt_string _str = QCalendar_MonthName3((QCalendar*)self, (QLocale*)locale, month, year);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_month_name4(void* self, void* locale, int month, int year, int32_t format) {
+const char* q_calendar_month_name4(const void* self, const void* locale, int month, int year, int32_t format) {
     libqt_string _str = QCalendar_MonthName4((QCalendar*)self, (QLocale*)locale, month, year, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_standalone_month_name3(void* self, void* locale, int month, int year) {
+const char* q_calendar_standalone_month_name3(const void* self, const void* locale, int month, int year) {
     libqt_string _str = QCalendar_StandaloneMonthName3((QCalendar*)self, (QLocale*)locale, month, year);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_standalone_month_name4(void* self, void* locale, int month, int year, int32_t format) {
+const char* q_calendar_standalone_month_name4(const void* self, const void* locale, int month, int year, int32_t format) {
     libqt_string _str = QCalendar_StandaloneMonthName4((QCalendar*)self, (QLocale*)locale, month, year, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_week_day_name3(void* self, void* locale, int day, int32_t format) {
+const char* q_calendar_week_day_name3(const void* self, const void* locale, int day, int32_t format) {
     libqt_string _str = QCalendar_WeekDayName3((QCalendar*)self, (QLocale*)locale, day, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_calendar_standalone_week_day_name3(void* self, void* locale, int day, int32_t format) {
+const char* q_calendar_standalone_week_day_name3(const void* self, const void* locale, int day, int32_t format) {
     libqt_string _str = QCalendar_StandaloneWeekDayName3((QCalendar*)self, (QLocale*)locale, day, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -228,7 +228,7 @@ QCalendar__YearMonthDay* q_calendar__yearmonthday_new() {
     return QCalendar__YearMonthDay_New();
 }
 
-QCalendar__YearMonthDay* q_calendar__yearmonthday_new2(void* other) {
+QCalendar__YearMonthDay* q_calendar__yearmonthday_new2(const void* other) {
     return QCalendar__YearMonthDay_New2((QCalendar__YearMonthDay*)other);
 }
 
@@ -256,11 +256,11 @@ void q_calendar__yearmonthday_move_assign(void* self, void* other) {
     QCalendar__YearMonthDay_MoveAssign((QCalendar__YearMonthDay*)self, (QCalendar__YearMonthDay*)other);
 }
 
-bool q_calendar__yearmonthday_is_valid(void* self) {
+bool q_calendar__yearmonthday_is_valid(const void* self) {
     return QCalendar__YearMonthDay_IsValid((QCalendar__YearMonthDay*)self);
 }
 
-int32_t q_calendar__yearmonthday_year(void* self) {
+int32_t q_calendar__yearmonthday_year(const void* self) {
     return QCalendar__YearMonthDay_Year((QCalendar__YearMonthDay*)self);
 }
 
@@ -268,7 +268,7 @@ void q_calendar__yearmonthday_set_year(void* self, int year) {
     QCalendar__YearMonthDay_SetYear((QCalendar__YearMonthDay*)self, year);
 }
 
-int32_t q_calendar__yearmonthday_month(void* self) {
+int32_t q_calendar__yearmonthday_month(const void* self) {
     return QCalendar__YearMonthDay_Month((QCalendar__YearMonthDay*)self);
 }
 
@@ -276,7 +276,7 @@ void q_calendar__yearmonthday_set_month(void* self, int month) {
     QCalendar__YearMonthDay_SetMonth((QCalendar__YearMonthDay*)self, month);
 }
 
-int32_t q_calendar__yearmonthday_day(void* self) {
+int32_t q_calendar__yearmonthday_day(const void* self) {
     return QCalendar__YearMonthDay_Day((QCalendar__YearMonthDay*)self);
 }
 
@@ -288,7 +288,7 @@ void q_calendar__yearmonthday_delete(void* self) {
     QCalendar__YearMonthDay_Delete((QCalendar__YearMonthDay*)(self));
 }
 
-QCalendar__SystemId* q_calendar__systemid_new(void* other) {
+QCalendar__SystemId* q_calendar__systemid_new(const void* other) {
     return QCalendar__SystemId_New((QCalendar__SystemId*)other);
 }
 
@@ -308,11 +308,11 @@ void q_calendar__systemid_move_assign(void* self, void* other) {
     QCalendar__SystemId_MoveAssign((QCalendar__SystemId*)self, (QCalendar__SystemId*)other);
 }
 
-size_t q_calendar__systemid_index(void* self) {
+size_t q_calendar__systemid_index(const void* self) {
     return QCalendar__SystemId_Index((QCalendar__SystemId*)self);
 }
 
-bool q_calendar__systemid_is_valid(void* self) {
+bool q_calendar__systemid_is_valid(const void* self) {
     return QCalendar__SystemId_IsValid((QCalendar__SystemId*)self);
 }
 

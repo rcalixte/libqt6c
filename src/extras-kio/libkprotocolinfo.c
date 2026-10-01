@@ -19,7 +19,7 @@ const char** k_protocolinfo_protocols() {
     return _ret;
 }
 
-bool k_protocolinfo_is_known_protocol(void* url) {
+bool k_protocolinfo_is_known_protocol(const void* url) {
     return KProtocolInfo_IsKnownProtocol((QUrl*)url);
 }
 
@@ -34,12 +34,12 @@ const char* k_protocolinfo_exec(const char* protocol) {
     return _ret;
 }
 
-libqt_list /* of KProtocolInfo__ExtraField* */ k_protocolinfo_extra_fields(void* url) {
+libqt_list /* of KProtocolInfo__ExtraField* */ k_protocolinfo_extra_fields(const void* url) {
     libqt_list _arr = KProtocolInfo_ExtraFields((QUrl*)url);
     return _arr;
 }
 
-bool k_protocolinfo_is_helper_protocol(void* url) {
+bool k_protocolinfo_is_helper_protocol(const void* url) {
     return KProtocolInfo_IsHelperProtocol((QUrl*)url);
 }
 
@@ -47,7 +47,7 @@ bool k_protocolinfo_is_helper_protocol2(const char* protocol) {
     return KProtocolInfo_IsHelperProtocol2(qstring(protocol));
 }
 
-bool k_protocolinfo_is_filter_protocol(void* url) {
+bool k_protocolinfo_is_filter_protocol(const void* url) {
     return KProtocolInfo_IsFilterProtocol((QUrl*)url);
 }
 
@@ -163,11 +163,11 @@ KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new2(const char* _name, in
     return KProtocolInfo__ExtraField_New2(qstring(_name), _type);
 }
 
-KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new3(void* param1) {
+KProtocolInfo__ExtraField* k_protocolinfo__extrafield_new3(const void* param1) {
     return KProtocolInfo__ExtraField_New3((KProtocolInfo__ExtraField*)param1);
 }
 
-const char* k_protocolinfo__extrafield_name(void* self) {
+const char* k_protocolinfo__extrafield_name(const void* self) {
     libqt_string name_str = KProtocolInfo__ExtraField_Name((KProtocolInfo__ExtraField*)self);
     char* name_ret = qstring_to_char(name_str);
     libqt_string_free(&name_str);
@@ -178,7 +178,7 @@ void k_protocolinfo__extrafield_set_name(void* self, const char* name) {
     KProtocolInfo__ExtraField_SetName((KProtocolInfo__ExtraField*)self, qstring(name));
 }
 
-int32_t k_protocolinfo__extrafield_type(void* self) {
+int32_t k_protocolinfo__extrafield_type(const void* self) {
     return KProtocolInfo__ExtraField_Type((KProtocolInfo__ExtraField*)self);
 }
 
@@ -186,7 +186,7 @@ void k_protocolinfo__extrafield_set_type(void* self, int32_t type) {
     KProtocolInfo__ExtraField_SetType((KProtocolInfo__ExtraField*)self, type);
 }
 
-void k_protocolinfo__extrafield_operator_assign(void* self, void* param1) {
+void k_protocolinfo__extrafield_operator_assign(void* self, const void* param1) {
     KProtocolInfo__ExtraField_OperatorAssign((KProtocolInfo__ExtraField*)self, (KProtocolInfo__ExtraField*)param1);
 }
 

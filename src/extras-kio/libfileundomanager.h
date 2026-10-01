@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-const QMetaObject* k_io__fileundomanager_meta_object(void* self);
+const QMetaObject* k_io__fileundomanager_meta_object(const void* self);
 
 /// @param self KIO__FileUndoManager*
 /// @param param1 const char*
@@ -49,9 +49,9 @@ void k_io__fileundomanager_set_ui_interface(void* self, void* ui);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#uiInterface)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-KIO__FileUndoManager__UiInterface* k_io__fileundomanager_ui_interface(void* self);
+KIO__FileUndoManager__UiInterface* k_io__fileundomanager_ui_interface(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#recordJob)
 ///
@@ -61,7 +61,7 @@ KIO__FileUndoManager__UiInterface* k_io__fileundomanager_ui_interface(void* self
 /// @param dst QUrl*
 /// @param job KIO__Job*
 ///
-void k_io__fileundomanager_record_job(void* self, int32_t op, libqt_list src, void* dst, void* job);
+void k_io__fileundomanager_record_job(void* self, int32_t op, libqt_list src, const void* dst, void* job);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#recordCopyJob)
 ///
@@ -72,17 +72,17 @@ void k_io__fileundomanager_record_copy_job(void* self, void* copyJob);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#isUndoAvailable)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-bool k_io__fileundomanager_is_undo_available(void* self);
+bool k_io__fileundomanager_is_undo_available(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#undoText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-const char* k_io__fileundomanager_undo_text(void* self);
+const char* k_io__fileundomanager_undo_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#newCommandSerialNumber)
 ///
@@ -92,9 +92,9 @@ uint64_t k_io__fileundomanager_new_command_serial_number(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#currentCommandSerialNumber)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-uint64_t k_io__fileundomanager_current_command_serial_number(void* self);
+uint64_t k_io__fileundomanager_current_command_serial_number(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager.html#undo)
 ///
@@ -215,9 +215,9 @@ bool k_io__fileundomanager_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-const char* k_io__fileundomanager_object_name(void* self);
+const char* k_io__fileundomanager_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -232,33 +232,33 @@ void k_io__fileundomanager_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-bool k_io__fileundomanager_is_widget_type(void* self);
+bool k_io__fileundomanager_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-bool k_io__fileundomanager_is_window_type(void* self);
+bool k_io__fileundomanager_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-bool k_io__fileundomanager_is_quick_item_type(void* self);
+bool k_io__fileundomanager_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-bool k_io__fileundomanager_signals_blocked(void* self);
+bool k_io__fileundomanager_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -273,9 +273,9 @@ bool k_io__fileundomanager_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-QThread* k_io__fileundomanager_thread(void* self);
+QThread* k_io__fileundomanager_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -326,11 +326,11 @@ void k_io__fileundomanager_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_io__fileundomanager_children(void* self);
+libqt_list k_io__fileundomanager_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -368,7 +368,7 @@ void k_io__fileundomanager_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__fileundomanager_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_io__fileundomanager_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -379,18 +379,18 @@ QMetaObject__Connection* k_io__fileundomanager_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_io__fileundomanager_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_io__fileundomanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__fileundomanager_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_io__fileundomanager_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -401,7 +401,7 @@ QMetaObject__Connection* k_io__fileundomanager_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__fileundomanager_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_io__fileundomanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -412,24 +412,24 @@ bool k_io__fileundomanager_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_io__fileundomanager_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_io__fileundomanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-bool k_io__fileundomanager_disconnect3(void* self);
+bool k_io__fileundomanager_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 /// @param receiver QObject*
 ///
-bool k_io__fileundomanager_disconnect4(void* self, void* receiver);
+bool k_io__fileundomanager_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -437,23 +437,23 @@ bool k_io__fileundomanager_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_io__fileundomanager_disconnect5(void* param1);
+bool k_io__fileundomanager_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-void k_io__fileundomanager_dump_object_tree(void* self);
+void k_io__fileundomanager_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-void k_io__fileundomanager_dump_object_info(void* self);
+void k_io__fileundomanager_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -463,16 +463,16 @@ void k_io__fileundomanager_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_io__fileundomanager_set_property(void* self, const char* name, void* value);
+bool k_io__fileundomanager_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 /// @param name const char*
 ///
-QVariant* k_io__fileundomanager_property(void* self, const char* name);
+QVariant* k_io__fileundomanager_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -480,9 +480,9 @@ QVariant* k_io__fileundomanager_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-const char** k_io__fileundomanager_dynamic_property_names(void* self);
+const char** k_io__fileundomanager_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -496,9 +496,9 @@ QBindingStorage* k_io__fileundomanager_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-const QBindingStorage* k_io__fileundomanager_binding_storage2(void* self);
+const QBindingStorage* k_io__fileundomanager_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -521,18 +521,18 @@ void k_io__fileundomanager_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 ///
-QObject* k_io__fileundomanager_parent(void* self);
+QObject* k_io__fileundomanager_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 /// @param classname const char*
 ///
-bool k_io__fileundomanager_inherits(void* self, const char* classname);
+bool k_io__fileundomanager_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -572,7 +572,7 @@ int32_t k_io__fileundomanager_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__fileundomanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_io__fileundomanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -584,59 +584,59 @@ QMetaObject__Connection* k_io__fileundomanager_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__fileundomanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_io__fileundomanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__fileundomanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_io__fileundomanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 /// @param signal const char*
 ///
-bool k_io__fileundomanager_disconnect1(void* self, const char* signal);
+bool k_io__fileundomanager_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__FileUndoManager*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_io__fileundomanager_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_io__fileundomanager_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_io__fileundomanager_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__FileUndoManager*
+/// @param self const KIO__FileUndoManager*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__fileundomanager_disconnect23(void* self, void* receiver, const char* member);
+bool k_io__fileundomanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KIO__FileUndoManager*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_io__fileundomanager_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -682,9 +682,9 @@ void k_io__fileundomanager__uiinterface_set_show_progress_info(void* self, bool 
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#showProgressInfo)
 ///
-/// @param self KIO__FileUndoManager__UiInterface*
+/// @param self const KIO__FileUndoManager__UiInterface*
 ///
-bool k_io__fileundomanager__uiinterface_show_progress_info(void* self);
+bool k_io__fileundomanager__uiinterface_show_progress_info(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#setParentWidget)
 ///
@@ -695,9 +695,9 @@ void k_io__fileundomanager__uiinterface_set_parent_widget(void* self, void* pare
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#parentWidget)
 ///
-/// @param self KIO__FileUndoManager__UiInterface*
+/// @param self const KIO__FileUndoManager__UiInterface*
 ///
-QWidget* k_io__fileundomanager__uiinterface_parent_widget(void* self);
+QWidget* k_io__fileundomanager__uiinterface_parent_widget(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#jobError)
 ///
@@ -732,7 +732,7 @@ void k_io__fileundomanager__uiinterface_super_job_error(void* self, void* job);
 /// @param srcTime QDateTime*
 /// @param destTime QDateTime*
 ///
-bool k_io__fileundomanager__uiinterface_copied_file_was_modified(void* self, void* src, void* dest, void* srcTime, void* destTime);
+bool k_io__fileundomanager__uiinterface_copied_file_was_modified(void* self, const void* src, const void* dest, const void* srcTime, const void* destTime);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#copiedFileWasModified)
 ///
@@ -741,7 +741,7 @@ bool k_io__fileundomanager__uiinterface_copied_file_was_modified(void* self, voi
 /// @param self KIO__FileUndoManager__UiInterface*
 /// @param callback bool func(KIO__FileUndoManager__UiInterface* self, QUrl* src, QUrl* dest, QDateTime* srcTime, QDateTime* destTime)
 ///
-void k_io__fileundomanager__uiinterface_on_copied_file_was_modified(void* self, bool (*callback)(void*, void*, void*, void*, void*));
+void k_io__fileundomanager__uiinterface_on_copied_file_was_modified(void* self, bool (*callback)(void*, const void*, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#copiedFileWasModified)
 ///
@@ -753,7 +753,7 @@ void k_io__fileundomanager__uiinterface_on_copied_file_was_modified(void* self, 
 /// @param srcTime QDateTime*
 /// @param destTime QDateTime*
 ///
-bool k_io__fileundomanager__uiinterface_super_copied_file_was_modified(void* self, void* src, void* dest, void* srcTime, void* destTime);
+bool k_io__fileundomanager__uiinterface_super_copied_file_was_modified(void* self, const void* src, const void* dest, const void* srcTime, const void* destTime);
 
 /// [Upstream resources](https://api.kde.org/kio-fileundomanager-uiinterface.html#virtual_hook)
 ///
@@ -787,7 +787,7 @@ void k_io__fileundomanager__uiinterface_super_virtual_hook(void* self, int id, v
 /// @param self KIO__FileUndoManager__UiInterface*
 /// @param param1 KIO__FileUndoManager__UiInterface*
 ///
-void k_io__fileundomanager__uiinterface_operator_assign(void* self, void* param1);
+void k_io__fileundomanager__uiinterface_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

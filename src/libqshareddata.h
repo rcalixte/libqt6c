@@ -20,7 +20,7 @@ QSharedData* q_shareddata_new();
 ///
 /// @param param1 QSharedData*
 ///
-QSharedData* q_shareddata_new2(void* param1);
+QSharedData* q_shareddata_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qshareddata.html#dtor.QSharedData)
 ///
@@ -36,7 +36,7 @@ void q_shareddata_delete(void* self);
 ///
 /// @param other QAdoptSharedDataTag*
 ///
-QAdoptSharedDataTag* q_adoptshareddatatag_new(void* other);
+QAdoptSharedDataTag* q_adoptshareddatatag_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qadoptshareddatatag.html)
 

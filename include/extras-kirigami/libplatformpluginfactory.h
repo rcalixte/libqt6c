@@ -24,26 +24,26 @@ Kirigami__Platform__PlatformPluginFactory* k_kirigami__platform__platformpluginf
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-const QMetaObject* k_kirigami__platform__platformpluginfactory_meta_object(void* self);
+const QMetaObject* k_kirigami__platform__platformpluginfactory_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
-/// @param callback const QMetaObject* func()
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
+/// @param callback const QMetaObject* func(const Kirigami__Platform__PlatformPluginFactory* self)
 ///
-void k_kirigami__platform__platformpluginfactory_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_kirigami__platform__platformpluginfactory_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-const QMetaObject* k_kirigami__platform__platformpluginfactory_super_meta_object(void* self);
+const QMetaObject* k_kirigami__platform__platformpluginfactory_super_meta_object(const void* self);
 
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param param1 const char*
@@ -97,6 +97,8 @@ const char* k_kirigami__platform__platformpluginfactory_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-platformpluginfactory.html#createPlatformTheme)
 ///
+/// @warning This method must be implemented with `k_kirigami__platform__platformpluginfactory_on_create_platform_theme` before it can be called.
+///
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param parent QObject*
 ///
@@ -111,16 +113,9 @@ Kirigami__Platform__PlatformTheme* k_kirigami__platform__platformpluginfactory_c
 ///
 void k_kirigami__platform__platformpluginfactory_on_create_platform_theme(void* self, Kirigami__Platform__PlatformTheme* (*callback)(void*, void*));
 
-/// [Upstream resources](https://api.kde.org/kirigami-platform-platformpluginfactory.html#createPlatformTheme)
-///
-/// Base class method implementation
-///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
-/// @param parent QObject*
-///
-Kirigami__Platform__PlatformTheme* k_kirigami__platform__platformpluginfactory_super_create_platform_theme(void* self, void* parent);
-
 /// [Upstream resources](https://api.kde.org/kirigami-platform-platformpluginfactory.html#createUnits)
+///
+/// @warning This method must be implemented with `k_kirigami__platform__platformpluginfactory_on_create_units` before it can be called.
 ///
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param parent QObject*
@@ -135,15 +130,6 @@ Kirigami__Platform__Units* k_kirigami__platform__platformpluginfactory_create_un
 /// @param callback Kirigami__Platform__Units* func(Kirigami__Platform__PlatformPluginFactory* self, QObject* parent)
 ///
 void k_kirigami__platform__platformpluginfactory_on_create_units(void* self, Kirigami__Platform__Units* (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kirigami-platform-platformpluginfactory.html#createUnits)
-///
-/// Base class method implementation
-///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
-/// @param parent QObject*
-///
-Kirigami__Platform__Units* k_kirigami__platform__platformpluginfactory_super_create_units(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kirigami-platform-platformpluginfactory.html#findPlugin)
 ///
@@ -180,9 +166,9 @@ Kirigami__Platform__PlatformPluginFactory* k_kirigami__platform__platformpluginf
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-const char* k_kirigami__platform__platformpluginfactory_object_name(void* self);
+const char* k_kirigami__platform__platformpluginfactory_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -197,33 +183,33 @@ void k_kirigami__platform__platformpluginfactory_set_object_name(void* self, con
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-bool k_kirigami__platform__platformpluginfactory_is_widget_type(void* self);
+bool k_kirigami__platform__platformpluginfactory_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-bool k_kirigami__platform__platformpluginfactory_is_window_type(void* self);
+bool k_kirigami__platform__platformpluginfactory_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-bool k_kirigami__platform__platformpluginfactory_is_quick_item_type(void* self);
+bool k_kirigami__platform__platformpluginfactory_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-bool k_kirigami__platform__platformpluginfactory_signals_blocked(void* self);
+bool k_kirigami__platform__platformpluginfactory_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -238,9 +224,9 @@ bool k_kirigami__platform__platformpluginfactory_block_signals(void* self, bool 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-QThread* k_kirigami__platform__platformpluginfactory_thread(void* self);
+QThread* k_kirigami__platform__platformpluginfactory_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -291,11 +277,11 @@ void k_kirigami__platform__platformpluginfactory_kill_timer2(void* self, int32_t
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_kirigami__platform__platformpluginfactory_children(void* self);
+libqt_list k_kirigami__platform__platformpluginfactory_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -333,7 +319,7 @@ void k_kirigami__platform__platformpluginfactory_remove_event_filter(void* self,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -344,18 +330,18 @@ QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect(voi
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -366,7 +352,7 @@ QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect3(vo
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__platformpluginfactory_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__platformpluginfactory_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -377,24 +363,24 @@ bool k_kirigami__platform__platformpluginfactory_disconnect(void* sender, const 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_kirigami__platform__platformpluginfactory_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_kirigami__platform__platformpluginfactory_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-bool k_kirigami__platform__platformpluginfactory_disconnect3(void* self);
+bool k_kirigami__platform__platformpluginfactory_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param receiver QObject*
 ///
-bool k_kirigami__platform__platformpluginfactory_disconnect4(void* self, void* receiver);
+bool k_kirigami__platform__platformpluginfactory_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -402,23 +388,23 @@ bool k_kirigami__platform__platformpluginfactory_disconnect4(void* self, void* r
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_kirigami__platform__platformpluginfactory_disconnect5(void* param1);
+bool k_kirigami__platform__platformpluginfactory_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-void k_kirigami__platform__platformpluginfactory_dump_object_tree(void* self);
+void k_kirigami__platform__platformpluginfactory_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-void k_kirigami__platform__platformpluginfactory_dump_object_info(void* self);
+void k_kirigami__platform__platformpluginfactory_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -428,16 +414,16 @@ void k_kirigami__platform__platformpluginfactory_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_kirigami__platform__platformpluginfactory_set_property(void* self, const char* name, void* value);
+bool k_kirigami__platform__platformpluginfactory_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param name const char*
 ///
-QVariant* k_kirigami__platform__platformpluginfactory_property(void* self, const char* name);
+QVariant* k_kirigami__platform__platformpluginfactory_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -445,9 +431,9 @@ QVariant* k_kirigami__platform__platformpluginfactory_property(void* self, const
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-const char** k_kirigami__platform__platformpluginfactory_dynamic_property_names(void* self);
+const char** k_kirigami__platform__platformpluginfactory_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -461,9 +447,9 @@ QBindingStorage* k_kirigami__platform__platformpluginfactory_binding_storage(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-const QBindingStorage* k_kirigami__platform__platformpluginfactory_binding_storage2(void* self);
+const QBindingStorage* k_kirigami__platform__platformpluginfactory_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -486,18 +472,18 @@ void k_kirigami__platform__platformpluginfactory_on_destroyed(void* self, void (
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-QObject* k_kirigami__platform__platformpluginfactory_parent(void* self);
+QObject* k_kirigami__platform__platformpluginfactory_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param classname const char*
 ///
-bool k_kirigami__platform__platformpluginfactory_inherits(void* self, const char* classname);
+bool k_kirigami__platform__platformpluginfactory_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -537,7 +523,7 @@ int32_t k_kirigami__platform__platformpluginfactory_start_timer23(void* self, in
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -549,59 +535,59 @@ QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect5(vo
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_kirigami__platform__platformpluginfactory_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param signal const char*
 ///
-bool k_kirigami__platform__platformpluginfactory_disconnect1(void* self, const char* signal);
+bool k_kirigami__platform__platformpluginfactory_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_kirigami__platform__platformpluginfactory_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_kirigami__platform__platformpluginfactory_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_kirigami__platform__platformpluginfactory_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_kirigami__platform__platformpluginfactory_disconnect23(void* self, void* receiver, const char* member);
+bool k_kirigami__platform__platformpluginfactory_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_kirigami__platform__platformpluginfactory_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -797,7 +783,7 @@ void k_kirigami__platform__platformpluginfactory_on_custom_event(void* self, voi
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__platformpluginfactory_connect_notify(void* self, void* signal);
+void k_kirigami__platform__platformpluginfactory_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -808,7 +794,7 @@ void k_kirigami__platform__platformpluginfactory_connect_notify(void* self, void
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__platformpluginfactory_super_connect_notify(void* self, void* signal);
+void k_kirigami__platform__platformpluginfactory_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -819,7 +805,7 @@ void k_kirigami__platform__platformpluginfactory_super_connect_notify(void* self
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param callback void func(Kirigami__Platform__PlatformPluginFactory* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__platformpluginfactory_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_kirigami__platform__platformpluginfactory_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -830,7 +816,7 @@ void k_kirigami__platform__platformpluginfactory_on_connect_notify(void* self, v
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__platformpluginfactory_disconnect_notify(void* self, void* signal);
+void k_kirigami__platform__platformpluginfactory_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -841,7 +827,7 @@ void k_kirigami__platform__platformpluginfactory_disconnect_notify(void* self, v
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param signal QMetaMethod*
 ///
-void k_kirigami__platform__platformpluginfactory_super_disconnect_notify(void* self, void* signal);
+void k_kirigami__platform__platformpluginfactory_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -852,7 +838,7 @@ void k_kirigami__platform__platformpluginfactory_super_disconnect_notify(void* s
 /// @param self Kirigami__Platform__PlatformPluginFactory*
 /// @param callback void func(Kirigami__Platform__PlatformPluginFactory* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__platformpluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_kirigami__platform__platformpluginfactory_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -860,9 +846,9 @@ void k_kirigami__platform__platformpluginfactory_on_disconnect_notify(void* self
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-QObject* k_kirigami__platform__platformpluginfactory_sender(void* self);
+QObject* k_kirigami__platform__platformpluginfactory_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -870,9 +856,9 @@ QObject* k_kirigami__platform__platformpluginfactory_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-QObject* k_kirigami__platform__platformpluginfactory_super_sender(void* self);
+QObject* k_kirigami__platform__platformpluginfactory_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -880,10 +866,10 @@ QObject* k_kirigami__platform__platformpluginfactory_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
-/// @param callback QObject* func()
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
+/// @param callback QObject* func(Kirigami__Platform__PlatformPluginFactory* self)
 ///
-void k_kirigami__platform__platformpluginfactory_on_sender(void* self, QObject* (*callback)());
+void k_kirigami__platform__platformpluginfactory_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -891,9 +877,9 @@ void k_kirigami__platform__platformpluginfactory_on_sender(void* self, QObject* 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-int32_t k_kirigami__platform__platformpluginfactory_sender_signal_index(void* self);
+int32_t k_kirigami__platform__platformpluginfactory_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -901,9 +887,9 @@ int32_t k_kirigami__platform__platformpluginfactory_sender_signal_index(void* se
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 ///
-int32_t k_kirigami__platform__platformpluginfactory_super_sender_signal_index(void* self);
+int32_t k_kirigami__platform__platformpluginfactory_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -911,10 +897,10 @@ int32_t k_kirigami__platform__platformpluginfactory_super_sender_signal_index(vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
-/// @param callback int32_t func()
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
+/// @param callback int32_t func(Kirigami__Platform__PlatformPluginFactory* self)
 ///
-void k_kirigami__platform__platformpluginfactory_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_kirigami__platform__platformpluginfactory_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -922,10 +908,10 @@ void k_kirigami__platform__platformpluginfactory_on_sender_signal_index(void* se
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param signal const char*
 ///
-int32_t k_kirigami__platform__platformpluginfactory_receivers(void* self, const char* signal);
+int32_t k_kirigami__platform__platformpluginfactory_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -933,10 +919,10 @@ int32_t k_kirigami__platform__platformpluginfactory_receivers(void* self, const 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param signal const char*
 ///
-int32_t k_kirigami__platform__platformpluginfactory_super_receivers(void* self, const char* signal);
+int32_t k_kirigami__platform__platformpluginfactory_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -944,10 +930,10 @@ int32_t k_kirigami__platform__platformpluginfactory_super_receivers(void* self, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param callback int32_t func(Kirigami__Platform__PlatformPluginFactory* self, const char* signal)
 ///
-void k_kirigami__platform__platformpluginfactory_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_kirigami__platform__platformpluginfactory_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -955,10 +941,10 @@ void k_kirigami__platform__platformpluginfactory_on_receivers(void* self, int32_
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param signal QMetaMethod*
 ///
-bool k_kirigami__platform__platformpluginfactory_is_signal_connected(void* self, void* signal);
+bool k_kirigami__platform__platformpluginfactory_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -966,10 +952,10 @@ bool k_kirigami__platform__platformpluginfactory_is_signal_connected(void* self,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param signal QMetaMethod*
 ///
-bool k_kirigami__platform__platformpluginfactory_super_is_signal_connected(void* self, void* signal);
+bool k_kirigami__platform__platformpluginfactory_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -977,10 +963,10 @@ bool k_kirigami__platform__platformpluginfactory_super_is_signal_connected(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self Kirigami__Platform__PlatformPluginFactory*
+/// @param self const Kirigami__Platform__PlatformPluginFactory*
 /// @param callback bool func(Kirigami__Platform__PlatformPluginFactory* self, QMetaMethod* signal)
 ///
-void k_kirigami__platform__platformpluginfactory_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_kirigami__platform__platformpluginfactory_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -36,7 +36,7 @@ KIO__MetaData* k_io__metadata_new3(libqt_map param1);
 ///
 /// @param param1 KIO__MetaData*
 ///
-KIO__MetaData* k_io__metadata_new4(void* param1);
+KIO__MetaData* k_io__metadata_new4(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-2b-eq)
 ///
@@ -61,16 +61,16 @@ void k_io__metadata_operator_assign(void* self, libqt_map metaData);
 
 /// [Upstream resources](https://api.kde.org/kio-metadata.html#toVariant)
 ///
-/// @param self KIO__MetaData*
+/// @param self const KIO__MetaData*
 ///
-QVariant* k_io__metadata_to_variant(void* self);
+QVariant* k_io__metadata_to_variant(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-metadata.html#operator-eq)
 ///
 /// @param self KIO__MetaData*
 /// @param param1 KIO__MetaData*
 ///
-void k_io__metadata_operator_assign2(void* self, void* param1);
+void k_io__metadata_operator_assign2(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

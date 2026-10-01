@@ -20,47 +20,47 @@ KSambaShareData* k_sambasharedata_new();
 ///
 /// @param other KSambaShareData*
 ///
-KSambaShareData* k_sambasharedata_new2(void* other);
+KSambaShareData* k_sambasharedata_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSambaShareData*
+/// @param self const KSambaShareData*
 ///
-const char* k_sambasharedata_name(void* self);
+const char* k_sambasharedata_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#path)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSambaShareData*
+/// @param self const KSambaShareData*
 ///
-const char* k_sambasharedata_path(void* self);
+const char* k_sambasharedata_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#comment)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSambaShareData*
+/// @param self const KSambaShareData*
 ///
-const char* k_sambasharedata_comment(void* self);
+const char* k_sambasharedata_comment(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#acl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KSambaShareData*
+/// @param self const KSambaShareData*
 ///
-const char* k_sambasharedata_acl(void* self);
+const char* k_sambasharedata_acl(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#guestPermission)
 ///
-/// @param self KSambaShareData*
+/// @param self const KSambaShareData*
 ///
 /// @return enum KSambaShareData__GuestPermission
 ///
-int32_t k_sambasharedata_guest_permission(void* self);
+int32_t k_sambasharedata_guest_permission(const void* self);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#setName)
 ///
@@ -127,21 +127,21 @@ int32_t k_sambasharedata_remove(void* self);
 /// @param self KSambaShareData*
 /// @param other KSambaShareData*
 ///
-void k_sambasharedata_operator_assign(void* self, void* other);
+void k_sambasharedata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#operator-eq-eq)
 ///
-/// @param self KSambaShareData*
+/// @param self const KSambaShareData*
 /// @param other KSambaShareData*
 ///
-bool k_sambasharedata_operator_equal(void* self, void* other);
+bool k_sambasharedata_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#operator-not-eq)
 ///
-/// @param self KSambaShareData*
+/// @param self const KSambaShareData*
 /// @param other KSambaShareData*
 ///
-bool k_sambasharedata_operator_not_equal(void* self, void* other);
+bool k_sambasharedata_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/ksambasharedata.html#setGuestPermission)
 ///

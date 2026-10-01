@@ -14,7 +14,7 @@
 ///
 /// @param other QDesktopServices*
 ///
-QDesktopServices* q_desktopservices_new(void* other);
+QDesktopServices* q_desktopservices_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesktopservices.html)
 
@@ -42,7 +42,7 @@ void q_desktopservices_move_assign(void* self, void* other);
 ///
 /// @param url QUrl*
 ///
-bool q_desktopservices_open_url(void* url);
+bool q_desktopservices_open_url(const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesktopservices.html#setUrlHandler)
 ///

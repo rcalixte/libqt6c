@@ -50,7 +50,7 @@ bool KCoreUrlNavigator_GoForward(KCoreUrlNavigator* self);
 bool KCoreUrlNavigator_GoUp(KCoreUrlNavigator* self);
 QUrl* KCoreUrlNavigator_LocationUrl1(const KCoreUrlNavigator* self, int historyIndex);
 QVariant* KCoreUrlNavigator_LocationState1(const KCoreUrlNavigator* self, int historyIndex);
-void KCoreUrlNavigator_OnMetaObject(const KCoreUrlNavigator* self, intptr_t slot);
+void KCoreUrlNavigator_OnMetaObject(KCoreUrlNavigator* self, intptr_t slot);
 QMetaObject* KCoreUrlNavigator_SuperMetaObject(const KCoreUrlNavigator* self);
 void KCoreUrlNavigator_OnMetacast(KCoreUrlNavigator* self, intptr_t slot);
 void* KCoreUrlNavigator_SuperMetacast(KCoreUrlNavigator* self, const char* param1);
@@ -78,17 +78,9 @@ void KCoreUrlNavigator_DisconnectNotify(KCoreUrlNavigator* self, const QMetaMeth
 void KCoreUrlNavigator_OnDisconnectNotify(KCoreUrlNavigator* self, intptr_t slot);
 void KCoreUrlNavigator_SuperDisconnectNotify(KCoreUrlNavigator* self, const QMetaMethod* signal);
 QObject* KCoreUrlNavigator_Sender(const KCoreUrlNavigator* self);
-void KCoreUrlNavigator_OnSender(const KCoreUrlNavigator* self, intptr_t slot);
-QObject* KCoreUrlNavigator_SuperSender(const KCoreUrlNavigator* self);
 int KCoreUrlNavigator_SenderSignalIndex(const KCoreUrlNavigator* self);
-void KCoreUrlNavigator_OnSenderSignalIndex(const KCoreUrlNavigator* self, intptr_t slot);
-int KCoreUrlNavigator_SuperSenderSignalIndex(const KCoreUrlNavigator* self);
 int KCoreUrlNavigator_Receivers(const KCoreUrlNavigator* self, const char* signal);
-void KCoreUrlNavigator_OnReceivers(const KCoreUrlNavigator* self, intptr_t slot);
-int KCoreUrlNavigator_SuperReceivers(const KCoreUrlNavigator* self, const char* signal);
 bool KCoreUrlNavigator_IsSignalConnected(const KCoreUrlNavigator* self, const QMetaMethod* signal);
-void KCoreUrlNavigator_OnIsSignalConnected(const KCoreUrlNavigator* self, intptr_t slot);
-bool KCoreUrlNavigator_SuperIsSignalConnected(const KCoreUrlNavigator* self, const QMetaMethod* signal);
 void KCoreUrlNavigator_Delete(KCoreUrlNavigator* self);
 
 #ifdef __cplusplus

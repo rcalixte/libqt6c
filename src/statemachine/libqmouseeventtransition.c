@@ -25,15 +25,15 @@ QMouseEventTransition* q_mouseeventtransition_new4(void* object, int32_t type, i
     return QMouseEventTransition_New4((QObject*)object, type, button, (QState*)sourceState);
 }
 
-const QMetaObject* q_mouseeventtransition_meta_object(void* self) {
+const QMetaObject* q_mouseeventtransition_meta_object(const void* self) {
     return QMouseEventTransition_MetaObject((QMouseEventTransition*)self);
 }
 
-void q_mouseeventtransition_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_mouseeventtransition_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QMouseEventTransition_OnMetaObject((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_mouseeventtransition_super_meta_object(void* self) {
+const QMetaObject* q_mouseeventtransition_super_meta_object(const void* self) {
     return QMouseEventTransition_SuperMetaObject((QMouseEventTransition*)self);
 }
 
@@ -68,7 +68,7 @@ const char* q_mouseeventtransition_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_mouseeventtransition_button(void* self) {
+int32_t q_mouseeventtransition_button(const void* self) {
     return QMouseEventTransition_Button((QMouseEventTransition*)self);
 }
 
@@ -76,7 +76,7 @@ void q_mouseeventtransition_set_button(void* self, int32_t button) {
     QMouseEventTransition_SetButton((QMouseEventTransition*)self, button);
 }
 
-int32_t q_mouseeventtransition_modifier_mask(void* self) {
+int32_t q_mouseeventtransition_modifier_mask(const void* self) {
     return QMouseEventTransition_ModifierMask((QMouseEventTransition*)self);
 }
 
@@ -84,11 +84,11 @@ void q_mouseeventtransition_set_modifier_mask(void* self, int32_t modifiers) {
     QMouseEventTransition_SetModifierMask((QMouseEventTransition*)self, modifiers);
 }
 
-QPainterPath* q_mouseeventtransition_hit_test_path(void* self) {
+QPainterPath* q_mouseeventtransition_hit_test_path(const void* self) {
     return QMouseEventTransition_HitTestPath((QMouseEventTransition*)self);
 }
 
-void q_mouseeventtransition_set_hit_test_path(void* self, void* path) {
+void q_mouseeventtransition_set_hit_test_path(void* self, const void* path) {
     QMouseEventTransition_SetHitTestPath((QMouseEventTransition*)self, (QPainterPath*)path);
 }
 
@@ -130,7 +130,7 @@ const char* q_mouseeventtransition_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QObject* q_mouseeventtransition_event_source(void* self) {
+QObject* q_mouseeventtransition_event_source(const void* self) {
     return QEventTransition_EventSource((QEventTransition*)self);
 }
 
@@ -138,7 +138,7 @@ void q_mouseeventtransition_set_event_source(void* self, void* object) {
     QEventTransition_SetEventSource((QEventTransition*)self, (QObject*)object);
 }
 
-int32_t q_mouseeventtransition_event_type(void* self) {
+int32_t q_mouseeventtransition_event_type(const void* self) {
     return QEventTransition_EventType((QEventTransition*)self);
 }
 
@@ -146,11 +146,11 @@ void q_mouseeventtransition_set_event_type(void* self, int32_t type) {
     QEventTransition_SetEventType((QEventTransition*)self, type);
 }
 
-QState* q_mouseeventtransition_source_state(void* self) {
+QState* q_mouseeventtransition_source_state(const void* self) {
     return QAbstractTransition_SourceState((QAbstractTransition*)self);
 }
 
-QAbstractState* q_mouseeventtransition_target_state(void* self) {
+QAbstractState* q_mouseeventtransition_target_state(const void* self) {
     return QAbstractTransition_TargetState((QAbstractTransition*)self);
 }
 
@@ -158,7 +158,7 @@ void q_mouseeventtransition_set_target_state(void* self, void* target) {
     QAbstractTransition_SetTargetState((QAbstractTransition*)self, (QAbstractState*)target);
 }
 
-libqt_list /* of QAbstractState* */ q_mouseeventtransition_target_states(void* self) {
+libqt_list /* of QAbstractState* */ q_mouseeventtransition_target_states(const void* self) {
     libqt_list _arr = QAbstractTransition_TargetStates((QAbstractTransition*)self);
     return _arr;
 }
@@ -167,7 +167,7 @@ void q_mouseeventtransition_set_target_states(void* self, libqt_list /* of QAbst
     QAbstractTransition_SetTargetStates((QAbstractTransition*)self, targets);
 }
 
-int32_t q_mouseeventtransition_transition_type(void* self) {
+int32_t q_mouseeventtransition_transition_type(const void* self) {
     return QAbstractTransition_TransitionType((QAbstractTransition*)self);
 }
 
@@ -175,7 +175,7 @@ void q_mouseeventtransition_set_transition_type(void* self, int32_t type) {
     QAbstractTransition_SetTransitionType((QAbstractTransition*)self, type);
 }
 
-QStateMachine* q_mouseeventtransition_machine(void* self) {
+QStateMachine* q_mouseeventtransition_machine(const void* self) {
     return QAbstractTransition_Machine((QAbstractTransition*)self);
 }
 
@@ -187,12 +187,12 @@ void q_mouseeventtransition_remove_animation(void* self, void* animation) {
     QAbstractTransition_RemoveAnimation((QAbstractTransition*)self, (QAbstractAnimation*)animation);
 }
 
-libqt_list /* of QAbstractAnimation* */ q_mouseeventtransition_animations(void* self) {
+libqt_list /* of QAbstractAnimation* */ q_mouseeventtransition_animations(const void* self) {
     libqt_list _arr = QAbstractTransition_Animations((QAbstractTransition*)self);
     return _arr;
 }
 
-const char* q_mouseeventtransition_object_name(void* self) {
+const char* q_mouseeventtransition_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -203,19 +203,19 @@ void q_mouseeventtransition_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_mouseeventtransition_is_widget_type(void* self) {
+bool q_mouseeventtransition_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_mouseeventtransition_is_window_type(void* self) {
+bool q_mouseeventtransition_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_mouseeventtransition_is_quick_item_type(void* self) {
+bool q_mouseeventtransition_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_mouseeventtransition_signals_blocked(void* self) {
+bool q_mouseeventtransition_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -223,7 +223,7 @@ bool q_mouseeventtransition_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_mouseeventtransition_thread(void* self) {
+QThread* q_mouseeventtransition_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -247,7 +247,7 @@ void q_mouseeventtransition_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_mouseeventtransition_children(void* self) {
+libqt_list /* of QObject* */ q_mouseeventtransition_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -264,55 +264,55 @@ void q_mouseeventtransition_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_mouseeventtransition_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_mouseeventtransition_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_mouseeventtransition_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_mouseeventtransition_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_mouseeventtransition_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_mouseeventtransition_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_mouseeventtransition_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_mouseeventtransition_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_mouseeventtransition_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_mouseeventtransition_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_mouseeventtransition_disconnect3(void* self) {
+bool q_mouseeventtransition_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_mouseeventtransition_disconnect4(void* self, void* receiver) {
+bool q_mouseeventtransition_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_mouseeventtransition_disconnect5(void* param1) {
+bool q_mouseeventtransition_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_mouseeventtransition_dump_object_tree(void* self) {
+void q_mouseeventtransition_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_mouseeventtransition_dump_object_info(void* self) {
+void q_mouseeventtransition_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_mouseeventtransition_set_property(void* self, const char* name, void* value) {
+bool q_mouseeventtransition_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_mouseeventtransition_property(void* self, const char* name) {
+QVariant* q_mouseeventtransition_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_mouseeventtransition_dynamic_property_names(void* self) {
+const char** q_mouseeventtransition_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -333,7 +333,7 @@ QBindingStorage* q_mouseeventtransition_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_mouseeventtransition_binding_storage2(void* self) {
+const QBindingStorage* q_mouseeventtransition_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -345,11 +345,11 @@ void q_mouseeventtransition_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_mouseeventtransition_parent(void* self) {
+QObject* q_mouseeventtransition_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_mouseeventtransition_inherits(void* self, const char* classname) {
+bool q_mouseeventtransition_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -365,31 +365,31 @@ int32_t q_mouseeventtransition_start_timer23(void* self, int64_t time, int32_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_mouseeventtransition_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_mouseeventtransition_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_mouseeventtransition_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_mouseeventtransition_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_mouseeventtransition_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_mouseeventtransition_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_mouseeventtransition_disconnect1(void* self, const char* signal) {
+bool q_mouseeventtransition_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_mouseeventtransition_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_mouseeventtransition_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_mouseeventtransition_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_mouseeventtransition_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_mouseeventtransition_disconnect23(void* self, void* receiver, const char* member) {
+bool q_mouseeventtransition_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -461,76 +461,44 @@ void q_mouseeventtransition_on_custom_event(void* self, void (*callback)(void*, 
     QMouseEventTransition_OnCustomEvent((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-void q_mouseeventtransition_connect_notify(void* self, void* signal) {
+void q_mouseeventtransition_connect_notify(void* self, const void* signal) {
     QMouseEventTransition_ConnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_mouseeventtransition_super_connect_notify(void* self, void* signal) {
+void q_mouseeventtransition_super_connect_notify(void* self, const void* signal) {
     QMouseEventTransition_SuperConnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_mouseeventtransition_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_mouseeventtransition_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QMouseEventTransition_OnConnectNotify((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-void q_mouseeventtransition_disconnect_notify(void* self, void* signal) {
+void q_mouseeventtransition_disconnect_notify(void* self, const void* signal) {
     QMouseEventTransition_DisconnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_mouseeventtransition_super_disconnect_notify(void* self, void* signal) {
+void q_mouseeventtransition_super_disconnect_notify(void* self, const void* signal) {
     QMouseEventTransition_SuperDisconnectNotify((QMouseEventTransition*)self, (QMetaMethod*)signal);
 }
 
-void q_mouseeventtransition_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_mouseeventtransition_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QMouseEventTransition_OnDisconnectNotify((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
-QObject* q_mouseeventtransition_sender(void* self) {
+QObject* q_mouseeventtransition_sender(const void* self) {
     return QMouseEventTransition_Sender((QMouseEventTransition*)self);
 }
 
-QObject* q_mouseeventtransition_super_sender(void* self) {
-    return QMouseEventTransition_SuperSender((QMouseEventTransition*)self);
-}
-
-void q_mouseeventtransition_on_sender(void* self, QObject* (*callback)()) {
-    QMouseEventTransition_OnSender((QMouseEventTransition*)self, (intptr_t)callback);
-}
-
-int32_t q_mouseeventtransition_sender_signal_index(void* self) {
+int32_t q_mouseeventtransition_sender_signal_index(const void* self) {
     return QMouseEventTransition_SenderSignalIndex((QMouseEventTransition*)self);
 }
 
-int32_t q_mouseeventtransition_super_sender_signal_index(void* self) {
-    return QMouseEventTransition_SuperSenderSignalIndex((QMouseEventTransition*)self);
-}
-
-void q_mouseeventtransition_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QMouseEventTransition_OnSenderSignalIndex((QMouseEventTransition*)self, (intptr_t)callback);
-}
-
-int32_t q_mouseeventtransition_receivers(void* self, const char* signal) {
+int32_t q_mouseeventtransition_receivers(const void* self, const char* signal) {
     return QMouseEventTransition_Receivers((QMouseEventTransition*)self, signal);
 }
 
-int32_t q_mouseeventtransition_super_receivers(void* self, const char* signal) {
-    return QMouseEventTransition_SuperReceivers((QMouseEventTransition*)self, signal);
-}
-
-void q_mouseeventtransition_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QMouseEventTransition_OnReceivers((QMouseEventTransition*)self, (intptr_t)callback);
-}
-
-bool q_mouseeventtransition_is_signal_connected(void* self, void* signal) {
+bool q_mouseeventtransition_is_signal_connected(const void* self, const void* signal) {
     return QMouseEventTransition_IsSignalConnected((QMouseEventTransition*)self, (QMetaMethod*)signal);
-}
-
-bool q_mouseeventtransition_super_is_signal_connected(void* self, void* signal) {
-    return QMouseEventTransition_SuperIsSignalConnected((QMouseEventTransition*)self, (QMetaMethod*)signal);
-}
-
-void q_mouseeventtransition_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QMouseEventTransition_OnIsSignalConnected((QMouseEventTransition*)self, (intptr_t)callback);
 }
 
 void q_mouseeventtransition_on_triggered(void* self, void (*callback)(void*)) {

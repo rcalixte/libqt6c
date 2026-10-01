@@ -12,42 +12,42 @@ void k_iconeffect_init(void* self) {
     KIconEffect_Init((KIconEffect*)self);
 }
 
-bool k_iconeffect_has_effect(void* self, int group, int state) {
+bool k_iconeffect_has_effect(const void* self, int group, int state) {
     return KIconEffect_HasEffect((KIconEffect*)self, group, state);
 }
 
-const char* k_iconeffect_fingerprint(void* self, int group, int state) {
+const char* k_iconeffect_fingerprint(const void* self, int group, int state) {
     libqt_string _str = KIconEffect_Fingerprint((KIconEffect*)self, group, state);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QImage* k_iconeffect_apply(void* self, void* src, int group, int state) {
+QImage* k_iconeffect_apply(const void* self, const void* src, int group, int state) {
     return KIconEffect_Apply((KIconEffect*)self, (QImage*)src, group, state);
 }
 
-QImage* k_iconeffect_apply2(void* self, void* src, int effect, float value, void* rgb, bool trans) {
+QImage* k_iconeffect_apply2(const void* self, const void* src, int effect, float value, const void* rgb, bool trans) {
     return KIconEffect_Apply2((KIconEffect*)self, (QImage*)src, effect, value, (QColor*)rgb, trans);
 }
 
-QImage* k_iconeffect_apply3(void* self, void* src, int effect, float value, void* rgb, void* rgb2, bool trans) {
+QImage* k_iconeffect_apply3(const void* self, const void* src, int effect, float value, const void* rgb, const void* rgb2, bool trans) {
     return KIconEffect_Apply3((KIconEffect*)self, (QImage*)src, effect, value, (QColor*)rgb, (QColor*)rgb2, trans);
 }
 
-QPixmap* k_iconeffect_apply4(void* self, void* src, int group, int state) {
+QPixmap* k_iconeffect_apply4(const void* self, const void* src, int group, int state) {
     return KIconEffect_Apply4((KIconEffect*)self, (QPixmap*)src, group, state);
 }
 
-QPixmap* k_iconeffect_apply5(void* self, void* src, int effect, float value, void* rgb, bool trans) {
+QPixmap* k_iconeffect_apply5(const void* self, const void* src, int effect, float value, const void* rgb, bool trans) {
     return KIconEffect_Apply5((KIconEffect*)self, (QPixmap*)src, effect, value, (QColor*)rgb, trans);
 }
 
-QPixmap* k_iconeffect_apply6(void* self, void* src, int effect, float value, void* rgb, void* rgb2, bool trans) {
+QPixmap* k_iconeffect_apply6(const void* self, const void* src, int effect, float value, const void* rgb, const void* rgb2, bool trans) {
     return KIconEffect_Apply6((KIconEffect*)self, (QPixmap*)src, effect, value, (QColor*)rgb, (QColor*)rgb2, trans);
 }
 
-QImage* k_iconeffect_double_pixels(void* self, void* src) {
+QImage* k_iconeffect_double_pixels(const void* self, const void* src) {
     return KIconEffect_DoublePixels((KIconEffect*)self, (QImage*)src);
 }
 
@@ -55,11 +55,11 @@ void k_iconeffect_to_gray(void* image, float value) {
     KIconEffect_ToGray((QImage*)image, value);
 }
 
-void k_iconeffect_colorize(void* image, void* col, float value) {
+void k_iconeffect_colorize(void* image, const void* col, float value) {
     KIconEffect_Colorize((QImage*)image, (QColor*)col, value);
 }
 
-void k_iconeffect_to_monochrome(void* image, void* black, void* white, float value) {
+void k_iconeffect_to_monochrome(void* image, const void* black, const void* white, float value) {
     KIconEffect_ToMonochrome((QImage*)image, (QColor*)black, (QColor*)white, value);
 }
 

@@ -38,7 +38,7 @@ QRandomGenerator* q_randomgenerator_new3(uint32_t* begin, uint32_t* end);
 ///
 /// @param other QRandomGenerator*
 ///
-QRandomGenerator* q_randomgenerator_new4(void* other);
+QRandomGenerator* q_randomgenerator_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html)
 
@@ -53,7 +53,7 @@ QRandomGenerator* q_randomgenerator_new5(uint32_t seedValue);
 /// @param self QRandomGenerator*
 /// @param other QRandomGenerator*
 ///
-void q_randomgenerator_operator_assign(void* self, void* other);
+void q_randomgenerator_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#generate)
 ///
@@ -264,7 +264,7 @@ QRandomGenerator64* q_randomgenerator64_new3(uint32_t* begin, uint32_t* end);
 ///
 /// @param other QRandomGenerator*
 ///
-QRandomGenerator64* q_randomgenerator64_new4(void* other);
+QRandomGenerator64* q_randomgenerator64_new4(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator64.html)
 
@@ -272,7 +272,7 @@ QRandomGenerator64* q_randomgenerator64_new4(void* other);
 ///
 /// @param param1 QRandomGenerator64*
 ///
-QRandomGenerator64* q_randomgenerator64_new5(void* param1);
+QRandomGenerator64* q_randomgenerator64_new5(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator64.html)
 
@@ -326,7 +326,7 @@ QRandomGenerator64* q_randomgenerator64_securely_seeded();
 /// @param self QRandomGenerator64*
 /// @param param1 QRandomGenerator64*
 ///
-void q_randomgenerator64_operator_assign(void* self, void* param1);
+void q_randomgenerator64_operator_assign(void* self, const void* param1);
 
 /// Inherited from QRandomGenerator
 ///

@@ -20,14 +20,14 @@ QPlaceUser* q_placeuser_new();
 ///
 /// @param other QPlaceUser*
 ///
-QPlaceUser* q_placeuser_new2(void* other);
+QPlaceUser* q_placeuser_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceuser.html#operator-eq)
 ///
 /// @param self QPlaceUser*
 /// @param other QPlaceUser*
 ///
-void q_placeuser_operator_assign(void* self, void* other);
+void q_placeuser_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceuser.html#swap)
 ///
@@ -40,9 +40,9 @@ void q_placeuser_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceUser*
+/// @param self const QPlaceUser*
 ///
-const char* q_placeuser_user_id(void* self);
+const char* q_placeuser_user_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceuser.html#setUserId)
 ///
@@ -55,9 +55,9 @@ void q_placeuser_set_user_id(void* self, const char* identifier);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPlaceUser*
+/// @param self const QPlaceUser*
 ///
-const char* q_placeuser_name(void* self);
+const char* q_placeuser_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplaceuser.html#setName)
 ///

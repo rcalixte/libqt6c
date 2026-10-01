@@ -9,15 +9,11 @@ void q_runnable_run(void* self) {
     QRunnable_Run((QRunnable*)self);
 }
 
-void q_runnable_on_run(void* self, void (*callback)()) {
+void q_runnable_on_run(void* self, void (*callback)(void*)) {
     QRunnable_OnRun((QRunnable*)self, (intptr_t)callback);
 }
 
-void q_runnable_super_run(void* self) {
-    QRunnable_SuperRun((QRunnable*)self);
-}
-
-bool q_runnable_auto_delete(void* self) {
+bool q_runnable_auto_delete(const void* self) {
     return QRunnable_AutoDelete((QRunnable*)self);
 }
 

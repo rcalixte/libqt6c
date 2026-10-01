@@ -20,7 +20,7 @@ KColorCollection* k_colorcollection_new();
 ///
 /// @param param1 KColorCollection*
 ///
-KColorCollection* k_colorcollection_new2(void* param1);
+KColorCollection* k_colorcollection_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html)
 
@@ -41,7 +41,7 @@ const char** k_colorcollection_installed_collections();
 /// @param self KColorCollection*
 /// @param param1 KColorCollection*
 ///
-void k_colorcollection_operator_assign(void* self, void* param1);
+void k_colorcollection_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#save)
 ///
@@ -53,9 +53,9 @@ bool k_colorcollection_save(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KColorCollection*
+/// @param self const KColorCollection*
 ///
-const char* k_colorcollection_description(void* self);
+const char* k_colorcollection_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#setDescription)
 ///
@@ -68,9 +68,9 @@ void k_colorcollection_set_description(void* self, const char* desc);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KColorCollection*
+/// @param self const KColorCollection*
 ///
-const char* k_colorcollection_name(void* self);
+const char* k_colorcollection_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#setName)
 ///
@@ -81,11 +81,11 @@ void k_colorcollection_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#editable)
 ///
-/// @param self KColorCollection*
+/// @param self const KColorCollection*
 ///
 /// @return enum KColorCollection__Editable
 ///
-int32_t k_colorcollection_editable(void* self);
+int32_t k_colorcollection_editable(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#setEditable)
 ///
@@ -96,48 +96,48 @@ void k_colorcollection_set_editable(void* self, int32_t editable);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#count)
 ///
-/// @param self KColorCollection*
+/// @param self const KColorCollection*
 ///
-int32_t k_colorcollection_count(void* self);
+int32_t k_colorcollection_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#color)
 ///
-/// @param self KColorCollection*
+/// @param self const KColorCollection*
 /// @param index int
 ///
-QColor* k_colorcollection_color(void* self, int index);
+QColor* k_colorcollection_color(const void* self, int index);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#findColor)
 ///
-/// @param self KColorCollection*
+/// @param self const KColorCollection*
 /// @param color QColor*
 ///
-int32_t k_colorcollection_find_color(void* self, void* color);
+int32_t k_colorcollection_find_color(const void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KColorCollection*
+/// @param self const KColorCollection*
 /// @param index int
 ///
-const char* k_colorcollection_name2(void* self, int index);
+const char* k_colorcollection_name2(const void* self, int index);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KColorCollection*
+/// @param self const KColorCollection*
 /// @param color QColor*
 ///
-const char* k_colorcollection_name3(void* self, void* color);
+const char* k_colorcollection_name3(const void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#addColor)
 ///
 /// @param self KColorCollection*
 /// @param newColor QColor*
 ///
-int32_t k_colorcollection_add_color(void* self, void* newColor);
+int32_t k_colorcollection_add_color(void* self, const void* newColor);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#changeColor)
 ///
@@ -145,7 +145,7 @@ int32_t k_colorcollection_add_color(void* self, void* newColor);
 /// @param index int
 /// @param newColor QColor*
 ///
-int32_t k_colorcollection_change_color(void* self, int index, void* newColor);
+int32_t k_colorcollection_change_color(void* self, int index, const void* newColor);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#changeColor)
 ///
@@ -153,7 +153,7 @@ int32_t k_colorcollection_change_color(void* self, int index, void* newColor);
 /// @param oldColor QColor*
 /// @param newColor QColor*
 ///
-int32_t k_colorcollection_change_color2(void* self, void* oldColor, void* newColor);
+int32_t k_colorcollection_change_color2(void* self, const void* oldColor, const void* newColor);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#addColor)
 ///
@@ -161,7 +161,7 @@ int32_t k_colorcollection_change_color2(void* self, void* oldColor, void* newCol
 /// @param newColor QColor*
 /// @param newColorName const char*
 ///
-int32_t k_colorcollection_add_color2(void* self, void* newColor, const char* newColorName);
+int32_t k_colorcollection_add_color2(void* self, const void* newColor, const char* newColorName);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#changeColor)
 ///
@@ -170,7 +170,7 @@ int32_t k_colorcollection_add_color2(void* self, void* newColor, const char* new
 /// @param newColor QColor*
 /// @param newColorName const char*
 ///
-int32_t k_colorcollection_change_color3(void* self, int index, void* newColor, const char* newColorName);
+int32_t k_colorcollection_change_color3(void* self, int index, const void* newColor, const char* newColorName);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#changeColor)
 ///
@@ -179,7 +179,7 @@ int32_t k_colorcollection_change_color3(void* self, int index, void* newColor, c
 /// @param newColor QColor*
 /// @param newColorName const char*
 ///
-int32_t k_colorcollection_change_color32(void* self, void* oldColor, void* newColor, const char* newColorName);
+int32_t k_colorcollection_change_color32(void* self, const void* oldColor, const void* newColor, const char* newColorName);
 
 /// [Upstream resources](https://api.kde.org/kcolorcollection.html#dtor.KColorCollection)
 ///

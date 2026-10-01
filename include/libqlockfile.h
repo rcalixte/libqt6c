@@ -20,9 +20,9 @@ QLockFile* q_lockfile_new(const char* fileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLockFile*
+/// @param self const QLockFile*
 ///
-const char* q_lockfile_file_name(void* self);
+const char* q_lockfile_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#lock)
 ///
@@ -52,9 +52,9 @@ void q_lockfile_set_stale_lock_time(void* self, int staleLockTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#staleLockTime)
 ///
-/// @param self QLockFile*
+/// @param self const QLockFile*
 ///
-int32_t q_lockfile_stale_lock_time(void* self);
+int32_t q_lockfile_stale_lock_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#tryLock)
 ///
@@ -71,17 +71,17 @@ void q_lockfile_set_stale_lock_time2(void* self, int64_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#staleLockTimeAsDuration)
 ///
-/// @param self QLockFile*
+/// @param self const QLockFile*
 ///
 /// @return int64_t of milliseconds
 ///
-int64_t q_lockfile_stale_lock_time_as_duration(void* self);
+int64_t q_lockfile_stale_lock_time_as_duration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#isLocked)
 ///
-/// @param self QLockFile*
+/// @param self const QLockFile*
 ///
-bool q_lockfile_is_locked(void* self);
+bool q_lockfile_is_locked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#removeStaleLockFile)
 ///
@@ -91,11 +91,11 @@ bool q_lockfile_remove_stale_lock_file(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#error)
 ///
-/// @param self QLockFile*
+/// @param self const QLockFile*
 ///
 /// @return enum QLockFile__LockError
 ///
-int32_t q_lockfile_error(void* self);
+int32_t q_lockfile_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlockfile.html#tryLock)
 ///

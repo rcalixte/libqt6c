@@ -5,7 +5,7 @@ QAudioFormat* q_audioformat_new() {
     return QAudioFormat_New();
 }
 
-QAudioFormat* q_audioformat_new2(void* other) {
+QAudioFormat* q_audioformat_new2(const void* other) {
     return QAudioFormat_New2((QAudioFormat*)other);
 }
 
@@ -13,7 +13,7 @@ QAudioFormat* q_audioformat_new3(void* other) {
     return QAudioFormat_New3((QAudioFormat*)other);
 }
 
-QAudioFormat* q_audioformat_new4(void* param1) {
+QAudioFormat* q_audioformat_new4(const void* param1) {
     return QAudioFormat_New4((QAudioFormat*)param1);
 }
 
@@ -25,7 +25,7 @@ void q_audioformat_move_assign(void* self, void* other) {
     QAudioFormat_MoveAssign((QAudioFormat*)self, (QAudioFormat*)other);
 }
 
-bool q_audioformat_is_valid(void* self) {
+bool q_audioformat_is_valid(const void* self) {
     return QAudioFormat_IsValid((QAudioFormat*)self);
 }
 
@@ -33,7 +33,7 @@ void q_audioformat_set_sample_rate(void* self, int sampleRate) {
     QAudioFormat_SetSampleRate((QAudioFormat*)self, sampleRate);
 }
 
-int32_t q_audioformat_sample_rate(void* self) {
+int32_t q_audioformat_sample_rate(const void* self) {
     return QAudioFormat_SampleRate((QAudioFormat*)self);
 }
 
@@ -41,7 +41,7 @@ void q_audioformat_set_channel_config(void* self, uint32_t config) {
     QAudioFormat_SetChannelConfig((QAudioFormat*)self, config);
 }
 
-uint32_t q_audioformat_channel_config(void* self) {
+uint32_t q_audioformat_channel_config(const void* self) {
     return QAudioFormat_ChannelConfig((QAudioFormat*)self);
 }
 
@@ -49,11 +49,11 @@ void q_audioformat_set_channel_count(void* self, int channelCount) {
     QAudioFormat_SetChannelCount((QAudioFormat*)self, channelCount);
 }
 
-int32_t q_audioformat_channel_count(void* self) {
+int32_t q_audioformat_channel_count(const void* self) {
     return QAudioFormat_ChannelCount((QAudioFormat*)self);
 }
 
-int32_t q_audioformat_channel_offset(void* self, int32_t channel) {
+int32_t q_audioformat_channel_offset(const void* self, int32_t channel) {
     return QAudioFormat_ChannelOffset((QAudioFormat*)self, channel);
 }
 
@@ -61,43 +61,43 @@ void q_audioformat_set_sample_format(void* self, uint16_t f) {
     QAudioFormat_SetSampleFormat((QAudioFormat*)self, f);
 }
 
-uint16_t q_audioformat_sample_format(void* self) {
+uint16_t q_audioformat_sample_format(const void* self) {
     return QAudioFormat_SampleFormat((QAudioFormat*)self);
 }
 
-int32_t q_audioformat_bytes_for_duration(void* self, int64_t microseconds) {
+int32_t q_audioformat_bytes_for_duration(const void* self, int64_t microseconds) {
     return QAudioFormat_BytesForDuration((QAudioFormat*)self, microseconds);
 }
 
-int64_t q_audioformat_duration_for_bytes(void* self, int32_t byteCount) {
+int64_t q_audioformat_duration_for_bytes(const void* self, int32_t byteCount) {
     return QAudioFormat_DurationForBytes((QAudioFormat*)self, byteCount);
 }
 
-int32_t q_audioformat_bytes_for_frames(void* self, int32_t frameCount) {
+int32_t q_audioformat_bytes_for_frames(const void* self, int32_t frameCount) {
     return QAudioFormat_BytesForFrames((QAudioFormat*)self, frameCount);
 }
 
-int32_t q_audioformat_frames_for_bytes(void* self, int32_t byteCount) {
+int32_t q_audioformat_frames_for_bytes(const void* self, int32_t byteCount) {
     return QAudioFormat_FramesForBytes((QAudioFormat*)self, byteCount);
 }
 
-int32_t q_audioformat_frames_for_duration(void* self, int64_t microseconds) {
+int32_t q_audioformat_frames_for_duration(const void* self, int64_t microseconds) {
     return QAudioFormat_FramesForDuration((QAudioFormat*)self, microseconds);
 }
 
-int64_t q_audioformat_duration_for_frames(void* self, int32_t frameCount) {
+int64_t q_audioformat_duration_for_frames(const void* self, int32_t frameCount) {
     return QAudioFormat_DurationForFrames((QAudioFormat*)self, frameCount);
 }
 
-int32_t q_audioformat_bytes_per_frame(void* self) {
+int32_t q_audioformat_bytes_per_frame(const void* self) {
     return QAudioFormat_BytesPerFrame((QAudioFormat*)self);
 }
 
-int32_t q_audioformat_bytes_per_sample(void* self) {
+int32_t q_audioformat_bytes_per_sample(const void* self) {
     return QAudioFormat_BytesPerSample((QAudioFormat*)self);
 }
 
-float q_audioformat_normalized_sample_value(void* self, void* sample) {
+float q_audioformat_normalized_sample_value(const void* self, void* sample) {
     return QAudioFormat_NormalizedSampleValue((QAudioFormat*)self, sample);
 }
 

@@ -66,7 +66,7 @@ const char* k_io_get_cache_control_string(int32_t cacheControl) {
     return _ret;
 }
 
-const char* k_io_fav_icon_for_url(void* url) {
+const char* k_io_fav_icon_for_url(const void* url) {
     libqt_string _str = KIO_FavIconForUrl((QUrl*)url);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -77,13 +77,13 @@ int32_t k_io_convert_permissions(int permissions) {
     return KIO_ConvertPermissions(permissions);
 }
 
-const char* k_io_icon_name_for_url(void* url) {
+const char* k_io_icon_name_for_url(const void* url) {
     libqt_string _str = KIO_IconNameForUrl((QUrl*)url);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* k_io_up_url(void* url) {
+QUrl* k_io_up_url(const void* url) {
     return KIO_UpUrl((QUrl*)url);
 }

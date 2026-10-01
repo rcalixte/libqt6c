@@ -18,15 +18,15 @@ Accounts__Watch* q_accounts__watch_new2(void* parent) {
     return Accounts__Watch_New2((QObject*)parent);
 }
 
-const QMetaObject* q_accounts__watch_meta_object(void* self) {
+const QMetaObject* q_accounts__watch_meta_object(const void* self) {
     return Accounts__Watch_MetaObject((Accounts__Watch*)self);
 }
 
-void q_accounts__watch_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_accounts__watch_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     Accounts__Watch_OnMetaObject((Accounts__Watch*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_accounts__watch_super_meta_object(void* self) {
+const QMetaObject* q_accounts__watch_super_meta_object(const void* self) {
     return Accounts__Watch_SuperMetaObject((Accounts__Watch*)self);
 }
 
@@ -83,7 +83,7 @@ const char* q_accounts__watch_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-const char* q_accounts__watch_object_name(void* self) {
+const char* q_accounts__watch_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -94,19 +94,19 @@ void q_accounts__watch_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_accounts__watch_is_widget_type(void* self) {
+bool q_accounts__watch_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_accounts__watch_is_window_type(void* self) {
+bool q_accounts__watch_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_accounts__watch_is_quick_item_type(void* self) {
+bool q_accounts__watch_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_accounts__watch_signals_blocked(void* self) {
+bool q_accounts__watch_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -114,7 +114,7 @@ bool q_accounts__watch_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_accounts__watch_thread(void* self) {
+QThread* q_accounts__watch_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -138,7 +138,7 @@ void q_accounts__watch_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_accounts__watch_children(void* self) {
+libqt_list /* of QObject* */ q_accounts__watch_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -155,55 +155,55 @@ void q_accounts__watch_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_accounts__watch_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_accounts__watch_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_accounts__watch_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_accounts__watch_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_accounts__watch_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_accounts__watch_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_accounts__watch_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_accounts__watch_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_accounts__watch_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_accounts__watch_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_accounts__watch_disconnect3(void* self) {
+bool q_accounts__watch_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_accounts__watch_disconnect4(void* self, void* receiver) {
+bool q_accounts__watch_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_accounts__watch_disconnect5(void* param1) {
+bool q_accounts__watch_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_accounts__watch_dump_object_tree(void* self) {
+void q_accounts__watch_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_accounts__watch_dump_object_info(void* self) {
+void q_accounts__watch_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_accounts__watch_set_property(void* self, const char* name, void* value) {
+bool q_accounts__watch_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_accounts__watch_property(void* self, const char* name) {
+QVariant* q_accounts__watch_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_accounts__watch_dynamic_property_names(void* self) {
+const char** q_accounts__watch_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -224,7 +224,7 @@ QBindingStorage* q_accounts__watch_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_accounts__watch_binding_storage2(void* self) {
+const QBindingStorage* q_accounts__watch_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -236,11 +236,11 @@ void q_accounts__watch_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_accounts__watch_parent(void* self) {
+QObject* q_accounts__watch_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_accounts__watch_inherits(void* self, const char* classname) {
+bool q_accounts__watch_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -256,31 +256,31 @@ int32_t q_accounts__watch_start_timer23(void* self, int64_t time, int32_t timerT
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_accounts__watch_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_accounts__watch_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_accounts__watch_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_accounts__watch_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_accounts__watch_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_accounts__watch_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_accounts__watch_disconnect1(void* self, const char* signal) {
+bool q_accounts__watch_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_accounts__watch_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_accounts__watch_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_accounts__watch_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_accounts__watch_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_accounts__watch_disconnect23(void* self, void* receiver, const char* member) {
+bool q_accounts__watch_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -352,76 +352,44 @@ void q_accounts__watch_on_custom_event(void* self, void (*callback)(void*, void*
     Accounts__Watch_OnCustomEvent((Accounts__Watch*)self, (intptr_t)callback);
 }
 
-void q_accounts__watch_connect_notify(void* self, void* signal) {
+void q_accounts__watch_connect_notify(void* self, const void* signal) {
     Accounts__Watch_ConnectNotify((Accounts__Watch*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__watch_super_connect_notify(void* self, void* signal) {
+void q_accounts__watch_super_connect_notify(void* self, const void* signal) {
     Accounts__Watch_SuperConnectNotify((Accounts__Watch*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__watch_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_accounts__watch_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     Accounts__Watch_OnConnectNotify((Accounts__Watch*)self, (intptr_t)callback);
 }
 
-void q_accounts__watch_disconnect_notify(void* self, void* signal) {
+void q_accounts__watch_disconnect_notify(void* self, const void* signal) {
     Accounts__Watch_DisconnectNotify((Accounts__Watch*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__watch_super_disconnect_notify(void* self, void* signal) {
+void q_accounts__watch_super_disconnect_notify(void* self, const void* signal) {
     Accounts__Watch_SuperDisconnectNotify((Accounts__Watch*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__watch_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_accounts__watch_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     Accounts__Watch_OnDisconnectNotify((Accounts__Watch*)self, (intptr_t)callback);
 }
 
-QObject* q_accounts__watch_sender(void* self) {
+QObject* q_accounts__watch_sender(const void* self) {
     return Accounts__Watch_Sender((Accounts__Watch*)self);
 }
 
-QObject* q_accounts__watch_super_sender(void* self) {
-    return Accounts__Watch_SuperSender((Accounts__Watch*)self);
-}
-
-void q_accounts__watch_on_sender(void* self, QObject* (*callback)()) {
-    Accounts__Watch_OnSender((Accounts__Watch*)self, (intptr_t)callback);
-}
-
-int32_t q_accounts__watch_sender_signal_index(void* self) {
+int32_t q_accounts__watch_sender_signal_index(const void* self) {
     return Accounts__Watch_SenderSignalIndex((Accounts__Watch*)self);
 }
 
-int32_t q_accounts__watch_super_sender_signal_index(void* self) {
-    return Accounts__Watch_SuperSenderSignalIndex((Accounts__Watch*)self);
-}
-
-void q_accounts__watch_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    Accounts__Watch_OnSenderSignalIndex((Accounts__Watch*)self, (intptr_t)callback);
-}
-
-int32_t q_accounts__watch_receivers(void* self, const char* signal) {
+int32_t q_accounts__watch_receivers(const void* self, const char* signal) {
     return Accounts__Watch_Receivers((Accounts__Watch*)self, signal);
 }
 
-int32_t q_accounts__watch_super_receivers(void* self, const char* signal) {
-    return Accounts__Watch_SuperReceivers((Accounts__Watch*)self, signal);
-}
-
-void q_accounts__watch_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    Accounts__Watch_OnReceivers((Accounts__Watch*)self, (intptr_t)callback);
-}
-
-bool q_accounts__watch_is_signal_connected(void* self, void* signal) {
+bool q_accounts__watch_is_signal_connected(const void* self, const void* signal) {
     return Accounts__Watch_IsSignalConnected((Accounts__Watch*)self, (QMetaMethod*)signal);
-}
-
-bool q_accounts__watch_super_is_signal_connected(void* self, void* signal) {
-    return Accounts__Watch_SuperIsSignalConnected((Accounts__Watch*)self, (QMetaMethod*)signal);
-}
-
-void q_accounts__watch_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    Accounts__Watch_OnIsSignalConnected((Accounts__Watch*)self, (intptr_t)callback);
 }
 
 void q_accounts__watch_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -440,15 +408,15 @@ Accounts__Account* q_accounts__account_new2(void* manager, const char* provider,
     return Accounts__Account_New2((Accounts__Manager*)manager, qstring(provider), (QObject*)parent);
 }
 
-const QMetaObject* q_accounts__account_meta_object(void* self) {
+const QMetaObject* q_accounts__account_meta_object(const void* self) {
     return Accounts__Account_MetaObject((Accounts__Account*)self);
 }
 
-void q_accounts__account_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_accounts__account_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     Accounts__Account_OnMetaObject((Accounts__Account*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_accounts__account_super_meta_object(void* self) {
+const QMetaObject* q_accounts__account_super_meta_object(const void* self) {
     return Accounts__Account_SuperMetaObject((Accounts__Account*)self);
 }
 
@@ -487,33 +455,33 @@ Accounts__Account* q_accounts__account_from_id(void* manager, uint32_t id) {
     return Accounts__Account_FromId((Accounts__Manager*)manager, id);
 }
 
-uint32_t q_accounts__account_id(void* self) {
+uint32_t q_accounts__account_id(const void* self) {
     return Accounts__Account_Id((Accounts__Account*)self);
 }
 
-Accounts__Manager* q_accounts__account_manager(void* self) {
+Accounts__Manager* q_accounts__account_manager(const void* self) {
     return Accounts__Account_Manager((Accounts__Account*)self);
 }
 
-bool q_accounts__account_supports_service(void* self, const char* serviceType) {
+bool q_accounts__account_supports_service(const void* self, const char* serviceType) {
     return Accounts__Account_SupportsService((Accounts__Account*)self, qstring(serviceType));
 }
 
-libqt_list /* of Accounts__Service* */ q_accounts__account_services(void* self) {
+libqt_list /* of Accounts__Service* */ q_accounts__account_services(const void* self) {
     libqt_list _arr = Accounts__Account_Services((Accounts__Account*)self);
     return _arr;
 }
 
-libqt_list /* of Accounts__Service* */ q_accounts__account_enabled_services(void* self) {
+libqt_list /* of Accounts__Service* */ q_accounts__account_enabled_services(const void* self) {
     libqt_list _arr = Accounts__Account_EnabledServices((Accounts__Account*)self);
     return _arr;
 }
 
-bool q_accounts__account_enabled(void* self) {
+bool q_accounts__account_enabled(const void* self) {
     return Accounts__Account_Enabled((Accounts__Account*)self);
 }
 
-bool q_accounts__account_is_enabled(void* self) {
+bool q_accounts__account_is_enabled(const void* self) {
     return Accounts__Account_IsEnabled((Accounts__Account*)self);
 }
 
@@ -529,7 +497,7 @@ void q_accounts__account_set_credentials_id(void* self, uint32_t id) {
     Accounts__Account_SetCredentialsId((Accounts__Account*)self, id);
 }
 
-const char* q_accounts__account_display_name(void* self) {
+const char* q_accounts__account_display_name(const void* self) {
     libqt_string _str = Accounts__Account_DisplayName((Accounts__Account*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -540,14 +508,14 @@ void q_accounts__account_set_display_name(void* self, const char* displayName) {
     Accounts__Account_SetDisplayName((Accounts__Account*)self, qstring(displayName));
 }
 
-const char* q_accounts__account_provider_name(void* self) {
+const char* q_accounts__account_provider_name(const void* self) {
     libqt_string _str = Accounts__Account_ProviderName((Accounts__Account*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-Accounts__Provider* q_accounts__account_provider(void* self) {
+Accounts__Provider* q_accounts__account_provider(const void* self) {
     return Accounts__Account_Provider((Accounts__Account*)self);
 }
 
@@ -555,11 +523,11 @@ void q_accounts__account_select_service(void* self) {
     Accounts__Account_SelectService((Accounts__Account*)self);
 }
 
-Accounts__Service* q_accounts__account_selected_service(void* self) {
+Accounts__Service* q_accounts__account_selected_service(const void* self) {
     return Accounts__Account_SelectedService((Accounts__Account*)self);
 }
 
-const char** q_accounts__account_all_keys(void* self) {
+const char** q_accounts__account_all_keys(const void* self) {
     libqt_list _arr = Accounts__Account_AllKeys((Accounts__Account*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -580,7 +548,7 @@ void q_accounts__account_begin_group(void* self, const char* prefix) {
     Accounts__Account_BeginGroup((Accounts__Account*)self, qstring(prefix));
 }
 
-const char** q_accounts__account_child_groups(void* self) {
+const char** q_accounts__account_child_groups(const void* self) {
     libqt_list _arr = Accounts__Account_ChildGroups((Accounts__Account*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -597,7 +565,7 @@ const char** q_accounts__account_child_groups(void* self) {
     return _ret;
 }
 
-const char** q_accounts__account_child_keys(void* self) {
+const char** q_accounts__account_child_keys(const void* self) {
     libqt_list _arr = Accounts__Account_ChildKeys((Accounts__Account*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -618,7 +586,7 @@ void q_accounts__account_clear(void* self) {
     Accounts__Account_Clear((Accounts__Account*)self);
 }
 
-bool q_accounts__account_contains(void* self, const char* key) {
+bool q_accounts__account_contains(const void* self, const char* key) {
     return Accounts__Account_Contains((Accounts__Account*)self, qstring(key));
 }
 
@@ -626,14 +594,14 @@ void q_accounts__account_end_group(void* self) {
     Accounts__Account_EndGroup((Accounts__Account*)self);
 }
 
-const char* q_accounts__account_group(void* self) {
+const char* q_accounts__account_group(const void* self) {
     libqt_string _str = Accounts__Account_Group((Accounts__Account*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_accounts__account_is_writable(void* self) {
+bool q_accounts__account_is_writable(const void* self) {
     return Accounts__Account_IsWritable((Accounts__Account*)self);
 }
 
@@ -641,34 +609,34 @@ void q_accounts__account_remove(void* self, const char* key) {
     Accounts__Account_Remove((Accounts__Account*)self, qstring(key));
 }
 
-void q_accounts__account_set_value(void* self, const char* key, void* value) {
+void q_accounts__account_set_value(void* self, const char* key, const void* value) {
     Accounts__Account_SetValue((Accounts__Account*)self, qstring(key), (QVariant*)value);
 }
 
-QVariant* q_accounts__account_value(void* self, const char* key) {
+QVariant* q_accounts__account_value(const void* self, const char* key) {
     return Accounts__Account_Value((Accounts__Account*)self, qstring(key));
 }
 
-int32_t q_accounts__account_value2(void* self, const char* key, void* value) {
+int32_t q_accounts__account_value2(const void* self, const char* key, void* value) {
     return Accounts__Account_Value2((Accounts__Account*)self, qstring(key), (QVariant*)value);
 }
 
-const char* q_accounts__account_value_as_string(void* self, const char* key) {
+const char* q_accounts__account_value_as_string(const void* self, const char* key) {
     libqt_string _str = Accounts__Account_ValueAsString((Accounts__Account*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_accounts__account_value_as_int(void* self, const char* key) {
+int32_t q_accounts__account_value_as_int(const void* self, const char* key) {
     return Accounts__Account_ValueAsInt((Accounts__Account*)self, qstring(key));
 }
 
-uint64_t q_accounts__account_value_as_u_int64(void* self, const char* key) {
+uint64_t q_accounts__account_value_as_u_int64(const void* self, const char* key) {
     return Accounts__Account_ValueAsUInt64((Accounts__Account*)self, qstring(key));
 }
 
-bool q_accounts__account_value_as_bool(void* self, const char* key) {
+bool q_accounts__account_value_as_bool(const void* self, const char* key) {
     return Accounts__Account_ValueAsBool((Accounts__Account*)self, qstring(key));
 }
 
@@ -758,58 +726,58 @@ Accounts__Account* q_accounts__account_from_id3(void* manager, uint32_t id, void
     return Accounts__Account_FromId3((Accounts__Manager*)manager, id, (QObject*)parent);
 }
 
-libqt_list /* of Accounts__Service* */ q_accounts__account_services1(void* self, const char* serviceType) {
+libqt_list /* of Accounts__Service* */ q_accounts__account_services1(const void* self, const char* serviceType) {
     libqt_list _arr = Accounts__Account_Services1((Accounts__Account*)self, qstring(serviceType));
     return _arr;
 }
 
-void q_accounts__account_select_service1(void* self, void* service) {
+void q_accounts__account_select_service1(void* self, const void* service) {
     Accounts__Account_SelectService1((Accounts__Account*)self, (Accounts__Service*)service);
 }
 
-QVariant* q_accounts__account_value22(void* self, const char* key, void* defaultValue) {
+QVariant* q_accounts__account_value22(const void* self, const char* key, const void* defaultValue) {
     return Accounts__Account_Value22((Accounts__Account*)self, qstring(key), (QVariant*)defaultValue);
 }
 
-QVariant* q_accounts__account_value3(void* self, const char* key, void* defaultValue, int32_t* source) {
+QVariant* q_accounts__account_value3(const void* self, const char* key, const void* defaultValue, int32_t* source) {
     return Accounts__Account_Value3((Accounts__Account*)self, qstring(key), (QVariant*)defaultValue, source);
 }
 
-const char* q_accounts__account_value_as_string2(void* self, const char* key, const char* default_value) {
+const char* q_accounts__account_value_as_string2(const void* self, const char* key, const char* default_value) {
     libqt_string _str = Accounts__Account_ValueAsString2((Accounts__Account*)self, qstring(key), qstring(default_value));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_accounts__account_value_as_string3(void* self, const char* key, const char* default_value, int32_t* source) {
+const char* q_accounts__account_value_as_string3(const void* self, const char* key, const char* default_value, int32_t* source) {
     libqt_string _str = Accounts__Account_ValueAsString3((Accounts__Account*)self, qstring(key), qstring(default_value), source);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_accounts__account_value_as_int2(void* self, const char* key, int default_value) {
+int32_t q_accounts__account_value_as_int2(const void* self, const char* key, int default_value) {
     return Accounts__Account_ValueAsInt2((Accounts__Account*)self, qstring(key), default_value);
 }
 
-int32_t q_accounts__account_value_as_int3(void* self, const char* key, int default_value, int32_t* source) {
+int32_t q_accounts__account_value_as_int3(const void* self, const char* key, int default_value, int32_t* source) {
     return Accounts__Account_ValueAsInt3((Accounts__Account*)self, qstring(key), default_value, source);
 }
 
-uint64_t q_accounts__account_value_as_u_int642(void* self, const char* key, uint64_t default_value) {
+uint64_t q_accounts__account_value_as_u_int642(const void* self, const char* key, uint64_t default_value) {
     return Accounts__Account_ValueAsUInt642((Accounts__Account*)self, qstring(key), default_value);
 }
 
-uint64_t q_accounts__account_value_as_u_int643(void* self, const char* key, uint64_t default_value, int32_t* source) {
+uint64_t q_accounts__account_value_as_u_int643(const void* self, const char* key, uint64_t default_value, int32_t* source) {
     return Accounts__Account_ValueAsUInt643((Accounts__Account*)self, qstring(key), default_value, source);
 }
 
-bool q_accounts__account_value_as_bool2(void* self, const char* key, bool default_value) {
+bool q_accounts__account_value_as_bool2(const void* self, const char* key, bool default_value) {
     return Accounts__Account_ValueAsBool2((Accounts__Account*)self, qstring(key), default_value);
 }
 
-bool q_accounts__account_value_as_bool3(void* self, const char* key, bool default_value, int32_t* source) {
+bool q_accounts__account_value_as_bool3(const void* self, const char* key, bool default_value, int32_t* source) {
     return Accounts__Account_ValueAsBool3((Accounts__Account*)self, qstring(key), default_value, source);
 }
 
@@ -817,7 +785,7 @@ Accounts__Watch* q_accounts__account_watch_key1(void* self, const char* key) {
     return Accounts__Account_WatchKey1((Accounts__Account*)self, qstring(key));
 }
 
-const char* q_accounts__account_object_name(void* self) {
+const char* q_accounts__account_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -828,19 +796,19 @@ void q_accounts__account_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_accounts__account_is_widget_type(void* self) {
+bool q_accounts__account_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_accounts__account_is_window_type(void* self) {
+bool q_accounts__account_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_accounts__account_is_quick_item_type(void* self) {
+bool q_accounts__account_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_accounts__account_signals_blocked(void* self) {
+bool q_accounts__account_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -848,7 +816,7 @@ bool q_accounts__account_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_accounts__account_thread(void* self) {
+QThread* q_accounts__account_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -872,7 +840,7 @@ void q_accounts__account_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_accounts__account_children(void* self) {
+libqt_list /* of QObject* */ q_accounts__account_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -889,55 +857,55 @@ void q_accounts__account_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_accounts__account_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_accounts__account_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_accounts__account_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_accounts__account_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_accounts__account_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_accounts__account_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_accounts__account_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_accounts__account_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_accounts__account_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_accounts__account_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_accounts__account_disconnect3(void* self) {
+bool q_accounts__account_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_accounts__account_disconnect4(void* self, void* receiver) {
+bool q_accounts__account_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_accounts__account_disconnect5(void* param1) {
+bool q_accounts__account_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_accounts__account_dump_object_tree(void* self) {
+void q_accounts__account_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_accounts__account_dump_object_info(void* self) {
+void q_accounts__account_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_accounts__account_set_property(void* self, const char* name, void* value) {
+bool q_accounts__account_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_accounts__account_property(void* self, const char* name) {
+QVariant* q_accounts__account_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_accounts__account_dynamic_property_names(void* self) {
+const char** q_accounts__account_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -958,7 +926,7 @@ QBindingStorage* q_accounts__account_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_accounts__account_binding_storage2(void* self) {
+const QBindingStorage* q_accounts__account_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -970,11 +938,11 @@ void q_accounts__account_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_accounts__account_parent(void* self) {
+QObject* q_accounts__account_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_accounts__account_inherits(void* self, const char* classname) {
+bool q_accounts__account_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -990,31 +958,31 @@ int32_t q_accounts__account_start_timer23(void* self, int64_t time, int32_t time
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_accounts__account_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_accounts__account_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_accounts__account_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_accounts__account_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_accounts__account_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_accounts__account_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_accounts__account_disconnect1(void* self, const char* signal) {
+bool q_accounts__account_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_accounts__account_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_accounts__account_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_accounts__account_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_accounts__account_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_accounts__account_disconnect23(void* self, void* receiver, const char* member) {
+bool q_accounts__account_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1086,76 +1054,44 @@ void q_accounts__account_on_custom_event(void* self, void (*callback)(void*, voi
     Accounts__Account_OnCustomEvent((Accounts__Account*)self, (intptr_t)callback);
 }
 
-void q_accounts__account_connect_notify(void* self, void* signal) {
+void q_accounts__account_connect_notify(void* self, const void* signal) {
     Accounts__Account_ConnectNotify((Accounts__Account*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__account_super_connect_notify(void* self, void* signal) {
+void q_accounts__account_super_connect_notify(void* self, const void* signal) {
     Accounts__Account_SuperConnectNotify((Accounts__Account*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__account_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_accounts__account_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     Accounts__Account_OnConnectNotify((Accounts__Account*)self, (intptr_t)callback);
 }
 
-void q_accounts__account_disconnect_notify(void* self, void* signal) {
+void q_accounts__account_disconnect_notify(void* self, const void* signal) {
     Accounts__Account_DisconnectNotify((Accounts__Account*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__account_super_disconnect_notify(void* self, void* signal) {
+void q_accounts__account_super_disconnect_notify(void* self, const void* signal) {
     Accounts__Account_SuperDisconnectNotify((Accounts__Account*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__account_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_accounts__account_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     Accounts__Account_OnDisconnectNotify((Accounts__Account*)self, (intptr_t)callback);
 }
 
-QObject* q_accounts__account_sender(void* self) {
+QObject* q_accounts__account_sender(const void* self) {
     return Accounts__Account_Sender((Accounts__Account*)self);
 }
 
-QObject* q_accounts__account_super_sender(void* self) {
-    return Accounts__Account_SuperSender((Accounts__Account*)self);
-}
-
-void q_accounts__account_on_sender(void* self, QObject* (*callback)()) {
-    Accounts__Account_OnSender((Accounts__Account*)self, (intptr_t)callback);
-}
-
-int32_t q_accounts__account_sender_signal_index(void* self) {
+int32_t q_accounts__account_sender_signal_index(const void* self) {
     return Accounts__Account_SenderSignalIndex((Accounts__Account*)self);
 }
 
-int32_t q_accounts__account_super_sender_signal_index(void* self) {
-    return Accounts__Account_SuperSenderSignalIndex((Accounts__Account*)self);
-}
-
-void q_accounts__account_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    Accounts__Account_OnSenderSignalIndex((Accounts__Account*)self, (intptr_t)callback);
-}
-
-int32_t q_accounts__account_receivers(void* self, const char* signal) {
+int32_t q_accounts__account_receivers(const void* self, const char* signal) {
     return Accounts__Account_Receivers((Accounts__Account*)self, signal);
 }
 
-int32_t q_accounts__account_super_receivers(void* self, const char* signal) {
-    return Accounts__Account_SuperReceivers((Accounts__Account*)self, signal);
-}
-
-void q_accounts__account_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    Accounts__Account_OnReceivers((Accounts__Account*)self, (intptr_t)callback);
-}
-
-bool q_accounts__account_is_signal_connected(void* self, void* signal) {
+bool q_accounts__account_is_signal_connected(const void* self, const void* signal) {
     return Accounts__Account_IsSignalConnected((Accounts__Account*)self, (QMetaMethod*)signal);
-}
-
-bool q_accounts__account_super_is_signal_connected(void* self, void* signal) {
-    return Accounts__Account_SuperIsSignalConnected((Accounts__Account*)self, (QMetaMethod*)signal);
-}
-
-void q_accounts__account_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    Accounts__Account_OnIsSignalConnected((Accounts__Account*)self, (intptr_t)callback);
 }
 
 void q_accounts__account_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -24,26 +24,26 @@ QQuick3DRenderExtension* q_quick3drenderextension_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-const QMetaObject* q_quick3drenderextension_meta_object(void* self);
+const QMetaObject* q_quick3drenderextension_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuick3DRenderExtension*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuick3DRenderExtension*
+/// @param callback const QMetaObject* func(const QQuick3DRenderExtension* self)
 ///
-void q_quick3drenderextension_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quick3drenderextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-const QMetaObject* q_quick3drenderextension_super_meta_object(void* self);
+const QMetaObject* q_quick3drenderextension_super_meta_object(const void* self);
 
 /// @param self QQuick3DRenderExtension*
 /// @param param1 const char*
@@ -136,9 +136,9 @@ QQuick3DRenderExtension* q_quick3drenderextension_from_q_qml_parser_status(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-const char* q_quick3drenderextension_state(void* self);
+const char* q_quick3drenderextension_state(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -153,19 +153,19 @@ void q_quick3drenderextension_set_state(void* self, const char* state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dobject.html#childItems)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
 /// @return libqt_list of QQuick3DObject*
 ///
-libqt_list q_quick3drenderextension_child_items(void* self);
+libqt_list q_quick3drenderextension_child_items(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dobject.html#parentItem)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-QQuick3DObject* q_quick3drenderextension_parent_item(void* self);
+QQuick3DObject* q_quick3drenderextension_parent_item(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -241,9 +241,9 @@ void q_quick3drenderextension_on_state_changed(void* self, void (*callback)(void
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-const char* q_quick3drenderextension_object_name(void* self);
+const char* q_quick3drenderextension_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -258,33 +258,33 @@ void q_quick3drenderextension_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-bool q_quick3drenderextension_is_widget_type(void* self);
+bool q_quick3drenderextension_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-bool q_quick3drenderextension_is_window_type(void* self);
+bool q_quick3drenderextension_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-bool q_quick3drenderextension_is_quick_item_type(void* self);
+bool q_quick3drenderextension_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-bool q_quick3drenderextension_signals_blocked(void* self);
+bool q_quick3drenderextension_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -299,9 +299,9 @@ bool q_quick3drenderextension_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-QThread* q_quick3drenderextension_thread(void* self);
+QThread* q_quick3drenderextension_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -352,11 +352,11 @@ void q_quick3drenderextension_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quick3drenderextension_children(void* self);
+libqt_list q_quick3drenderextension_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -394,7 +394,7 @@ void q_quick3drenderextension_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quick3drenderextension_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quick3drenderextension_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -405,18 +405,18 @@ QMetaObject__Connection* q_quick3drenderextension_connect(void* sender, const ch
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quick3drenderextension_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quick3drenderextension_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quick3drenderextension_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quick3drenderextension_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -427,7 +427,7 @@ QMetaObject__Connection* q_quick3drenderextension_connect3(void* self, void* sen
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quick3drenderextension_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quick3drenderextension_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -438,24 +438,24 @@ bool q_quick3drenderextension_disconnect(void* sender, const char* signal, void*
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quick3drenderextension_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quick3drenderextension_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-bool q_quick3drenderextension_disconnect3(void* self);
+bool q_quick3drenderextension_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param receiver QObject*
 ///
-bool q_quick3drenderextension_disconnect4(void* self, void* receiver);
+bool q_quick3drenderextension_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -463,23 +463,23 @@ bool q_quick3drenderextension_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quick3drenderextension_disconnect5(void* param1);
+bool q_quick3drenderextension_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-void q_quick3drenderextension_dump_object_tree(void* self);
+void q_quick3drenderextension_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-void q_quick3drenderextension_dump_object_info(void* self);
+void q_quick3drenderextension_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -489,16 +489,16 @@ void q_quick3drenderextension_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quick3drenderextension_set_property(void* self, const char* name, void* value);
+bool q_quick3drenderextension_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param name const char*
 ///
-QVariant* q_quick3drenderextension_property(void* self, const char* name);
+QVariant* q_quick3drenderextension_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -506,9 +506,9 @@ QVariant* q_quick3drenderextension_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-const char** q_quick3drenderextension_dynamic_property_names(void* self);
+const char** q_quick3drenderextension_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -522,9 +522,9 @@ QBindingStorage* q_quick3drenderextension_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-const QBindingStorage* q_quick3drenderextension_binding_storage2(void* self);
+const QBindingStorage* q_quick3drenderextension_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -547,18 +547,18 @@ void q_quick3drenderextension_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-QObject* q_quick3drenderextension_parent(void* self);
+QObject* q_quick3drenderextension_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param classname const char*
 ///
-bool q_quick3drenderextension_inherits(void* self, const char* classname);
+bool q_quick3drenderextension_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -598,7 +598,7 @@ int32_t q_quick3drenderextension_start_timer23(void* self, int64_t time, int32_t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3drenderextension_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quick3drenderextension_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -610,59 +610,59 @@ QMetaObject__Connection* q_quick3drenderextension_connect5(void* sender, const c
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3drenderextension_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quick3drenderextension_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3drenderextension_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quick3drenderextension_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param signal const char*
 ///
-bool q_quick3drenderextension_disconnect1(void* self, const char* signal);
+bool q_quick3drenderextension_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DRenderExtension*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quick3drenderextension_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quick3drenderextension_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quick3drenderextension_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quick3drenderextension_disconnect23(void* self, void* receiver, const char* member);
+bool q_quick3drenderextension_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuick3DRenderExtension*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quick3drenderextension_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -689,7 +689,7 @@ void q_quick3drenderextension_on_destroyed1(void* self, void (*callback)(void*, 
 /// @param self QQuick3DRenderExtension*
 /// @param param1 QQmlParserStatus*
 ///
-void q_quick3drenderextension_operator_assign(void* self, void* param1);
+void q_quick3drenderextension_operator_assign(void* self, const void* param1);
 
 /// Inherited from QQuick3DObject
 ///
@@ -718,9 +718,9 @@ void q_quick3drenderextension_super_mark_all_dirty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DRenderExtension*
-/// @param callback void func()
+/// @param callback void func(QQuick3DRenderExtension* self)
 ///
-void q_quick3drenderextension_on_mark_all_dirty(void* self, void (*callback)());
+void q_quick3drenderextension_on_mark_all_dirty(void* self, void (*callback)(void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -732,7 +732,7 @@ void q_quick3drenderextension_on_mark_all_dirty(void* self, void (*callback)());
 /// @param param1 enum QQuick3DObject__ItemChange
 /// @param param2 QQuick3DObject__ItemChangeData*
 ///
-void q_quick3drenderextension_item_change(void* self, int32_t param1, void* param2);
+void q_quick3drenderextension_item_change(void* self, int32_t param1, const void* param2);
 
 /// Inherited from QQuick3DObject
 ///
@@ -744,7 +744,7 @@ void q_quick3drenderextension_item_change(void* self, int32_t param1, void* para
 /// @param param1 enum QQuick3DObject__ItemChange
 /// @param param2 QQuick3DObject__ItemChangeData*
 ///
-void q_quick3drenderextension_super_item_change(void* self, int32_t param1, void* param2);
+void q_quick3drenderextension_super_item_change(void* self, int32_t param1, const void* param2);
 
 /// Inherited from QQuick3DObject
 ///
@@ -755,7 +755,7 @@ void q_quick3drenderextension_super_item_change(void* self, int32_t param1, void
 /// @param self QQuick3DRenderExtension*
 /// @param callback void func(QQuick3DRenderExtension* self, enum QQuick3DObject__ItemChange param1, QQuick3DObject__ItemChangeData* param2)
 ///
-void q_quick3drenderextension_on_item_change(void* self, void (*callback)(void*, int32_t, void*));
+void q_quick3drenderextension_on_item_change(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -784,9 +784,9 @@ void q_quick3drenderextension_super_class_begin(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DRenderExtension*
-/// @param callback void func()
+/// @param callback void func(QQuick3DRenderExtension* self)
 ///
-void q_quick3drenderextension_on_class_begin(void* self, void (*callback)());
+void q_quick3drenderextension_on_class_begin(void* self, void (*callback)(void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -815,9 +815,9 @@ void q_quick3drenderextension_super_component_complete(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DRenderExtension*
-/// @param callback void func()
+/// @param callback void func(QQuick3DRenderExtension* self)
 ///
-void q_quick3drenderextension_on_component_complete(void* self, void (*callback)());
+void q_quick3drenderextension_on_component_complete(void* self, void (*callback)(void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -846,9 +846,9 @@ void q_quick3drenderextension_super_pre_sync(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DRenderExtension*
-/// @param callback void func()
+/// @param callback void func(QQuick3DRenderExtension* self)
 ///
-void q_quick3drenderextension_on_pre_sync(void* self, void (*callback)());
+void q_quick3drenderextension_on_pre_sync(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -1026,7 +1026,7 @@ void q_quick3drenderextension_on_custom_event(void* self, void (*callback)(void*
 /// @param self QQuick3DRenderExtension*
 /// @param signal QMetaMethod*
 ///
-void q_quick3drenderextension_connect_notify(void* self, void* signal);
+void q_quick3drenderextension_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1037,7 +1037,7 @@ void q_quick3drenderextension_connect_notify(void* self, void* signal);
 /// @param self QQuick3DRenderExtension*
 /// @param signal QMetaMethod*
 ///
-void q_quick3drenderextension_super_connect_notify(void* self, void* signal);
+void q_quick3drenderextension_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1048,7 +1048,7 @@ void q_quick3drenderextension_super_connect_notify(void* self, void* signal);
 /// @param self QQuick3DRenderExtension*
 /// @param callback void func(QQuick3DRenderExtension* self, QMetaMethod* signal)
 ///
-void q_quick3drenderextension_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quick3drenderextension_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1059,7 +1059,7 @@ void q_quick3drenderextension_on_connect_notify(void* self, void (*callback)(voi
 /// @param self QQuick3DRenderExtension*
 /// @param signal QMetaMethod*
 ///
-void q_quick3drenderextension_disconnect_notify(void* self, void* signal);
+void q_quick3drenderextension_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1070,7 +1070,7 @@ void q_quick3drenderextension_disconnect_notify(void* self, void* signal);
 /// @param self QQuick3DRenderExtension*
 /// @param signal QMetaMethod*
 ///
-void q_quick3drenderextension_super_disconnect_notify(void* self, void* signal);
+void q_quick3drenderextension_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1081,7 +1081,7 @@ void q_quick3drenderextension_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuick3DRenderExtension*
 /// @param callback void func(QQuick3DRenderExtension* self, QMetaMethod* signal)
 ///
-void q_quick3drenderextension_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quick3drenderextension_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -1089,9 +1089,9 @@ void q_quick3drenderextension_on_disconnect_notify(void* self, void (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-bool q_quick3drenderextension_is_component_complete(void* self);
+bool q_quick3drenderextension_is_component_complete(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1099,9 +1099,9 @@ bool q_quick3drenderextension_is_component_complete(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-bool q_quick3drenderextension_super_is_component_complete(void* self);
+bool q_quick3drenderextension_super_is_component_complete(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1109,10 +1109,10 @@ bool q_quick3drenderextension_super_is_component_complete(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
-/// @param callback bool func()
+/// @param self const QQuick3DRenderExtension*
+/// @param callback bool func(QQuick3DRenderExtension* self)
 ///
-void q_quick3drenderextension_on_is_component_complete(void* self, bool (*callback)());
+void q_quick3drenderextension_on_is_component_complete(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1120,9 +1120,9 @@ void q_quick3drenderextension_on_is_component_complete(void* self, bool (*callba
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-QObject* q_quick3drenderextension_sender(void* self);
+QObject* q_quick3drenderextension_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1130,9 +1130,9 @@ QObject* q_quick3drenderextension_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-QObject* q_quick3drenderextension_super_sender(void* self);
+QObject* q_quick3drenderextension_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1140,10 +1140,10 @@ QObject* q_quick3drenderextension_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
-/// @param callback QObject* func()
+/// @param self const QQuick3DRenderExtension*
+/// @param callback QObject* func(QQuick3DRenderExtension* self)
 ///
-void q_quick3drenderextension_on_sender(void* self, QObject* (*callback)());
+void q_quick3drenderextension_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1151,9 +1151,9 @@ void q_quick3drenderextension_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-int32_t q_quick3drenderextension_sender_signal_index(void* self);
+int32_t q_quick3drenderextension_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1161,9 +1161,9 @@ int32_t q_quick3drenderextension_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 ///
-int32_t q_quick3drenderextension_super_sender_signal_index(void* self);
+int32_t q_quick3drenderextension_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1171,10 +1171,10 @@ int32_t q_quick3drenderextension_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
-/// @param callback int32_t func()
+/// @param self const QQuick3DRenderExtension*
+/// @param callback int32_t func(QQuick3DRenderExtension* self)
 ///
-void q_quick3drenderextension_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quick3drenderextension_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1182,10 +1182,10 @@ void q_quick3drenderextension_on_sender_signal_index(void* self, int32_t (*callb
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param signal const char*
 ///
-int32_t q_quick3drenderextension_receivers(void* self, const char* signal);
+int32_t q_quick3drenderextension_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1193,10 +1193,10 @@ int32_t q_quick3drenderextension_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param signal const char*
 ///
-int32_t q_quick3drenderextension_super_receivers(void* self, const char* signal);
+int32_t q_quick3drenderextension_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1204,10 +1204,10 @@ int32_t q_quick3drenderextension_super_receivers(void* self, const char* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param callback int32_t func(QQuick3DRenderExtension* self, const char* signal)
 ///
-void q_quick3drenderextension_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quick3drenderextension_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1215,10 +1215,10 @@ void q_quick3drenderextension_on_receivers(void* self, int32_t (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param signal QMetaMethod*
 ///
-bool q_quick3drenderextension_is_signal_connected(void* self, void* signal);
+bool q_quick3drenderextension_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1226,10 +1226,10 @@ bool q_quick3drenderextension_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param signal QMetaMethod*
 ///
-bool q_quick3drenderextension_super_is_signal_connected(void* self, void* signal);
+bool q_quick3drenderextension_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1237,10 +1237,10 @@ bool q_quick3drenderextension_super_is_signal_connected(void* self, void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DRenderExtension*
+/// @param self const QQuick3DRenderExtension*
 /// @param callback bool func(QQuick3DRenderExtension* self, QMetaMethod* signal)
 ///
-void q_quick3drenderextension_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quick3drenderextension_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

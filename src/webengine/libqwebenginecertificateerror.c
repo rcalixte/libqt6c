@@ -3,34 +3,34 @@
 #include "libqwebenginecertificateerror.hpp"
 #include "libqwebenginecertificateerror.h"
 
-QWebEngineCertificateError* q_webenginecertificateerror_new(void* other) {
+QWebEngineCertificateError* q_webenginecertificateerror_new(const void* other) {
     return QWebEngineCertificateError_New((QWebEngineCertificateError*)other);
 }
 
-void q_webenginecertificateerror_operator_assign(void* self, void* other) {
+void q_webenginecertificateerror_operator_assign(void* self, const void* other) {
     QWebEngineCertificateError_OperatorAssign((QWebEngineCertificateError*)self, (QWebEngineCertificateError*)other);
 }
 
-int32_t q_webenginecertificateerror_type(void* self) {
+int32_t q_webenginecertificateerror_type(const void* self) {
     return QWebEngineCertificateError_Type((QWebEngineCertificateError*)self);
 }
 
-QUrl* q_webenginecertificateerror_url(void* self) {
+QUrl* q_webenginecertificateerror_url(const void* self) {
     return QWebEngineCertificateError_Url((QWebEngineCertificateError*)self);
 }
 
-bool q_webenginecertificateerror_is_overridable(void* self) {
+bool q_webenginecertificateerror_is_overridable(const void* self) {
     return QWebEngineCertificateError_IsOverridable((QWebEngineCertificateError*)self);
 }
 
-const char* q_webenginecertificateerror_description(void* self) {
+const char* q_webenginecertificateerror_description(const void* self) {
     libqt_string _str = QWebEngineCertificateError_Description((QWebEngineCertificateError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_webenginecertificateerror_is_main_frame(void* self) {
+bool q_webenginecertificateerror_is_main_frame(const void* self) {
     return QWebEngineCertificateError_IsMainFrame((QWebEngineCertificateError*)self);
 }
 
@@ -46,7 +46,7 @@ void q_webenginecertificateerror_accept_certificate(void* self) {
     QWebEngineCertificateError_AcceptCertificate((QWebEngineCertificateError*)self);
 }
 
-libqt_list /* of QSslCertificate* */ q_webenginecertificateerror_certificate_chain(void* self) {
+libqt_list /* of QSslCertificate* */ q_webenginecertificateerror_certificate_chain(const void* self) {
     libqt_list _arr = QWebEngineCertificateError_CertificateChain((QWebEngineCertificateError*)self);
     return _arr;
 }

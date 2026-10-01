@@ -16,11 +16,13 @@ QQmlAbstractUrlInterceptor* q_qmlabstracturlinterceptor_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlabstracturlinterceptor.html#intercept)
 ///
+/// @warning This method must be implemented with `q_qmlabstracturlinterceptor_on_intercept` before it can be called.
+///
 /// @param self QQmlAbstractUrlInterceptor*
 /// @param path QUrl*
 /// @param type enum QQmlAbstractUrlInterceptor__DataType
 ///
-QUrl* q_qmlabstracturlinterceptor_intercept(void* self, void* path, int32_t type);
+QUrl* q_qmlabstracturlinterceptor_intercept(void* self, const void* path, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlabstracturlinterceptor.html#intercept)
 ///
@@ -31,24 +33,14 @@ QUrl* q_qmlabstracturlinterceptor_intercept(void* self, void* path, int32_t type
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_qmlabstracturlinterceptor_on_intercept(void* self, QUrl* (*callback)(void*, void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qqmlabstracturlinterceptor.html#intercept)
-///
-/// Base class method implementation
-///
-/// @param self QQmlAbstractUrlInterceptor*
-/// @param path QUrl*
-/// @param type enum QQmlAbstractUrlInterceptor__DataType
-///
-QUrl* q_qmlabstracturlinterceptor_super_intercept(void* self, void* path, int32_t type);
+void q_qmlabstracturlinterceptor_on_intercept(void* self, QUrl* (*callback)(void*, const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlabstracturlinterceptor.html#operator-eq)
 ///
 /// @param self QQmlAbstractUrlInterceptor*
 /// @param param1 QQmlAbstractUrlInterceptor*
 ///
-void q_qmlabstracturlinterceptor_operator_assign(void* self, void* param1);
+void q_qmlabstracturlinterceptor_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlabstracturlinterceptor.html#dtor.QQmlAbstractUrlInterceptor)
 ///

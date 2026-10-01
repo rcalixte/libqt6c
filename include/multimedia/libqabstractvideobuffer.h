@@ -10,31 +10,18 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#map)
-///
-/// @param self QAbstractVideoBuffer*
-/// @param mode enum QVideoFrame__MapMode
-///
-QAbstractVideoBuffer__MapData* q_abstractvideobuffer_map(void* self, int32_t mode);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#unmap)
 ///
 /// @param self QAbstractVideoBuffer*
 ///
 void q_abstractvideobuffer_unmap(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#format)
-///
-/// @param self QAbstractVideoBuffer*
-///
-QVideoFrameFormat* q_abstractvideobuffer_format(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#operator-eq)
 ///
 /// @param self QAbstractVideoBuffer*
 /// @param param1 QAbstractVideoBuffer*
 ///
-void q_abstractvideobuffer_operator_assign(void* self, void* param1);
+void q_abstractvideobuffer_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#dtor.QAbstractVideoBuffer)
 ///
@@ -56,7 +43,7 @@ QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new();
 ///
 /// @param other QAbstractVideoBuffer__MapData*
 ///
-QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new2(void* other);
+QAbstractVideoBuffer__MapData* q_abstractvideobuffer__mapdata_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html)
 
@@ -82,9 +69,9 @@ void q_abstractvideobuffer__mapdata_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html#planeCount-var)
 ///
-/// @param self QAbstractVideoBuffer__MapData*
+/// @param self const QAbstractVideoBuffer__MapData*
 ///
-int32_t q_abstractvideobuffer__mapdata_plane_count(void* self);
+int32_t q_abstractvideobuffer__mapdata_plane_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html#planeCount-var)
 ///

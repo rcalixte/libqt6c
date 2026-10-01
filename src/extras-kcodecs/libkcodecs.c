@@ -81,60 +81,60 @@ KCodecs__Codec* k_codecs__codec_codec_for_name(char* name) {
     return KCodecs__Codec_CodecForName(qstring(name));
 }
 
-intptr_t k_codecs__codec_max_encoded_size_for(void* self, intptr_t insize, int32_t newline) {
+intptr_t k_codecs__codec_max_encoded_size_for(const void* self, intptr_t insize, int32_t newline) {
     return KCodecs__Codec_MaxEncodedSizeFor((KCodecs__Codec*)self, insize, newline);
 }
 
-intptr_t k_codecs__codec_max_decoded_size_for(void* self, intptr_t insize, int32_t newline) {
+intptr_t k_codecs__codec_max_decoded_size_for(const void* self, intptr_t insize, int32_t newline) {
     return KCodecs__Codec_MaxDecodedSizeFor((KCodecs__Codec*)self, insize, newline);
 }
 
-KCodecs__Encoder* k_codecs__codec_make_encoder(void* self, int32_t newline) {
+KCodecs__Encoder* k_codecs__codec_make_encoder(const void* self, int32_t newline) {
     return KCodecs__Codec_MakeEncoder((KCodecs__Codec*)self, newline);
 }
 
-KCodecs__Decoder* k_codecs__codec_make_decoder(void* self, int32_t newline) {
+KCodecs__Decoder* k_codecs__codec_make_decoder(const void* self, int32_t newline) {
     return KCodecs__Codec_MakeDecoder((KCodecs__Codec*)self, newline);
 }
 
-bool k_codecs__codec_encode(void* self, const char* scursor, const char* send, char* dcursor, const char* dend, int32_t newline) {
+bool k_codecs__codec_encode(const void* self, const char* scursor, const char* send, char* dcursor, const char* dend, int32_t newline) {
     return KCodecs__Codec_Encode((KCodecs__Codec*)self, scursor, send, dcursor, dend, newline);
 }
 
-bool k_codecs__codec_decode(void* self, const char* scursor, const char* send, char* dcursor, const char* dend, int32_t newline) {
+bool k_codecs__codec_decode(const void* self, const char* scursor, const char* send, char* dcursor, const char* dend, int32_t newline) {
     return KCodecs__Codec_Decode((KCodecs__Codec*)self, scursor, send, dcursor, dend, newline);
 }
 
-char* k_codecs__codec_encode2(void* self, char* src) {
+char* k_codecs__codec_encode2(const void* self, char* src) {
     libqt_string _str = KCodecs__Codec_Encode2((KCodecs__Codec*)self, qstring(src));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_codecs__codec_decode2(void* self, char* src) {
+char* k_codecs__codec_decode2(const void* self, char* src) {
     libqt_string _str = KCodecs__Codec_Decode2((KCodecs__Codec*)self, qstring(src));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_codecs__codec_name(void* self) {
+const char* k_codecs__codec_name(const void* self) {
     return KCodecs__Codec_Name((KCodecs__Codec*)self);
 }
 
-void k_codecs__codec_operator_assign(void* self, void* param1) {
+void k_codecs__codec_operator_assign(void* self, const void* param1) {
     KCodecs__Codec_OperatorAssign((KCodecs__Codec*)self, (KCodecs__Codec*)param1);
 }
 
-char* k_codecs__codec_encode22(void* self, char* src, int32_t newline) {
+char* k_codecs__codec_encode22(const void* self, char* src, int32_t newline) {
     libqt_string _str = KCodecs__Codec_Encode22((KCodecs__Codec*)self, qstring(src), newline);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_codecs__codec_decode22(void* self, char* src, int32_t newline) {
+char* k_codecs__codec_decode22(const void* self, char* src, int32_t newline) {
     libqt_string _str = KCodecs__Codec_Decode22((KCodecs__Codec*)self, qstring(src), newline);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

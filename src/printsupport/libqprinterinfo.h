@@ -20,7 +20,7 @@ QPrinterInfo* q_printerinfo_new();
 ///
 /// @param other QPrinterInfo*
 ///
-QPrinterInfo* q_printerinfo_new2(void* other);
+QPrinterInfo* q_printerinfo_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html)
 
@@ -28,144 +28,144 @@ QPrinterInfo* q_printerinfo_new2(void* other);
 ///
 /// @param printer QPrinter*
 ///
-QPrinterInfo* q_printerinfo_new3(void* printer);
+QPrinterInfo* q_printerinfo_new3(const void* printer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#operator-eq)
 ///
 /// @param self QPrinterInfo*
 /// @param other QPrinterInfo*
 ///
-void q_printerinfo_operator_assign(void* self, void* other);
+void q_printerinfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#printerName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-const char* q_printerinfo_printer_name(void* self);
+const char* q_printerinfo_printer_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-const char* q_printerinfo_description(void* self);
+const char* q_printerinfo_description(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#location)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-const char* q_printerinfo_location(void* self);
+const char* q_printerinfo_location(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#makeAndModel)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-const char* q_printerinfo_make_and_model(void* self);
+const char* q_printerinfo_make_and_model(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#isNull)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-bool q_printerinfo_is_null(void* self);
+bool q_printerinfo_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#isDefault)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-bool q_printerinfo_is_default(void* self);
+bool q_printerinfo_is_default(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#isRemote)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-bool q_printerinfo_is_remote(void* self);
+bool q_printerinfo_is_remote(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#state)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
 /// @return enum QPrinter__PrinterState
 ///
-int32_t q_printerinfo_state(void* self);
+int32_t q_printerinfo_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#supportedPageSizes)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
 /// @return libqt_list of QPageSize*
 ///
-libqt_list q_printerinfo_supported_page_sizes(void* self);
+libqt_list q_printerinfo_supported_page_sizes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultPageSize)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-QPageSize* q_printerinfo_default_page_size(void* self);
+QPageSize* q_printerinfo_default_page_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#supportsCustomPageSizes)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-bool q_printerinfo_supports_custom_page_sizes(void* self);
+bool q_printerinfo_supports_custom_page_sizes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#minimumPhysicalPageSize)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-QPageSize* q_printerinfo_minimum_physical_page_size(void* self);
+QPageSize* q_printerinfo_minimum_physical_page_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#maximumPhysicalPageSize)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
-QPageSize* q_printerinfo_maximum_physical_page_size(void* self);
+QPageSize* q_printerinfo_maximum_physical_page_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#supportedResolutions)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_printerinfo_supported_resolutions(void* self);
+libqt_list q_printerinfo_supported_resolutions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultDuplexMode)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
 /// @return enum QPrinter__DuplexMode
 ///
-int32_t q_printerinfo_default_duplex_mode(void* self);
+int32_t q_printerinfo_default_duplex_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#supportedDuplexModes)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
 /// @return libqt_list of enum QPrinter__DuplexMode
 ///
-libqt_list q_printerinfo_supported_duplex_modes(void* self);
+libqt_list q_printerinfo_supported_duplex_modes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#defaultColorMode)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
 /// @return enum QPrinter__ColorMode
 ///
-int32_t q_printerinfo_default_color_mode(void* self);
+int32_t q_printerinfo_default_color_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#supportedColorModes)
 ///
-/// @param self QPrinterInfo*
+/// @param self const QPrinterInfo*
 ///
 /// @return libqt_list of enum QPrinter__ColorMode
 ///
-libqt_list q_printerinfo_supported_color_modes(void* self);
+libqt_list q_printerinfo_supported_color_modes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprinterinfo.html#availablePrinterNames)
 ///

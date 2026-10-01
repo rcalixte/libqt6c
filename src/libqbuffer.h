@@ -24,26 +24,26 @@ QBuffer* q_buffer_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-const QMetaObject* q_buffer_meta_object(void* self);
+const QMetaObject* q_buffer_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QBuffer*
-/// @param callback const QMetaObject* func()
+/// @param self const QBuffer*
+/// @param callback const QMetaObject* func(const QBuffer* self)
 ///
-void q_buffer_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_buffer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-const QMetaObject* q_buffer_super_meta_object(void* self);
+const QMetaObject* q_buffer_super_meta_object(const void* self);
 
 /// @param self QBuffer*
 /// @param param1 const char*
@@ -107,9 +107,9 @@ char* q_buffer_buffer(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-const char* q_buffer_buffer2(void* self);
+const char* q_buffer_buffer2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#setData)
 ///
@@ -130,9 +130,9 @@ void q_buffer_set_data2(void* self, const char* data, intptr_t lenVal);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-const char* q_buffer_data(void* self);
+const char* q_buffer_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#open)
 ///
@@ -170,9 +170,9 @@ void q_buffer_close(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QBuffer*
-/// @param callback void func()
+/// @param callback void func(QBuffer* self)
 ///
-void q_buffer_on_close(void* self, void (*callback)());
+void q_buffer_on_close(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#close)
 ///
@@ -184,49 +184,49 @@ void q_buffer_super_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#size)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int64_t q_buffer_size(void* self);
+int64_t q_buffer_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#size)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QBuffer*
-/// @param callback int64_t func()
+/// @param self const QBuffer*
+/// @param callback int64_t func(const QBuffer* self)
 ///
-void q_buffer_on_size(void* self, int64_t (*callback)());
+void q_buffer_on_size(const void* self, int64_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#size)
 ///
 /// Base class method implementation
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int64_t q_buffer_super_size(void* self);
+int64_t q_buffer_super_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#pos)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int64_t q_buffer_pos(void* self);
+int64_t q_buffer_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#pos)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QBuffer*
-/// @param callback int64_t func()
+/// @param self const QBuffer*
+/// @param callback int64_t func(const QBuffer* self)
 ///
-void q_buffer_on_pos(void* self, int64_t (*callback)());
+void q_buffer_on_pos(const void* self, int64_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#pos)
 ///
 /// Base class method implementation
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int64_t q_buffer_super_pos(void* self);
+int64_t q_buffer_super_pos(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#seek)
 ///
@@ -255,56 +255,56 @@ bool q_buffer_super_seek(void* self, int64_t off);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#atEnd)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_at_end(void* self);
+bool q_buffer_at_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#atEnd)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QBuffer*
-/// @param callback bool func()
+/// @param self const QBuffer*
+/// @param callback bool func(const QBuffer* self)
 ///
-void q_buffer_on_at_end(void* self, bool (*callback)());
+void q_buffer_on_at_end(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#atEnd)
 ///
 /// Base class method implementation
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_super_at_end(void* self);
+bool q_buffer_super_at_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#canReadLine)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_can_read_line(void* self);
+bool q_buffer_can_read_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#canReadLine)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QBuffer*
-/// @param callback bool func()
+/// @param self const QBuffer*
+/// @param callback bool func(const QBuffer* self)
 ///
-void q_buffer_on_can_read_line(void* self, bool (*callback)());
+void q_buffer_on_can_read_line(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#canReadLine)
 ///
 /// Base class method implementation
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_super_can_read_line(void* self);
+bool q_buffer_super_can_read_line(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#connectNotify)
 ///
 /// @param self QBuffer*
 /// @param param1 QMetaMethod*
 ///
-void q_buffer_connect_notify(void* self, void* param1);
+void q_buffer_connect_notify(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#connectNotify)
 ///
@@ -313,7 +313,7 @@ void q_buffer_connect_notify(void* self, void* param1);
 /// @param self QBuffer*
 /// @param callback void func(QBuffer* self, QMetaMethod* param1)
 ///
-void q_buffer_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_buffer_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#connectNotify)
 ///
@@ -322,14 +322,14 @@ void q_buffer_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QBuffer*
 /// @param param1 QMetaMethod*
 ///
-void q_buffer_super_connect_notify(void* self, void* param1);
+void q_buffer_super_connect_notify(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#disconnectNotify)
 ///
 /// @param self QBuffer*
 /// @param param1 QMetaMethod*
 ///
-void q_buffer_disconnect_notify(void* self, void* param1);
+void q_buffer_disconnect_notify(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#disconnectNotify)
 ///
@@ -338,7 +338,7 @@ void q_buffer_disconnect_notify(void* self, void* param1);
 /// @param self QBuffer*
 /// @param callback void func(QBuffer* self, QMetaMethod* param1)
 ///
-void q_buffer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_buffer_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#disconnectNotify)
 ///
@@ -347,7 +347,7 @@ void q_buffer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QBuffer*
 /// @param param1 QMetaMethod*
 ///
-void q_buffer_super_disconnect_notify(void* self, void* param1);
+void q_buffer_super_disconnect_notify(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#readData)
 ///
@@ -434,11 +434,11 @@ QIODeviceBase* q_buffer_as_q_i_o_device_base(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
 ///
-int32_t q_buffer_open_mode(void* self);
+int32_t q_buffer_open_mode(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -453,57 +453,57 @@ void q_buffer_set_text_mode_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_text_mode_enabled(void* self);
+bool q_buffer_is_text_mode_enabled(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_open(void* self);
+bool q_buffer_is_open(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_readable(void* self);
+bool q_buffer_is_readable(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_writable(void* self);
+bool q_buffer_is_writable(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int32_t q_buffer_read_channel_count(void* self);
+int32_t q_buffer_read_channel_count(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int32_t q_buffer_write_channel_count(void* self);
+int32_t q_buffer_write_channel_count(const void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int32_t q_buffer_current_read_channel(void* self);
+int32_t q_buffer_current_read_channel(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -518,9 +518,9 @@ void q_buffer_set_current_read_channel(void* self, int channel);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int32_t q_buffer_current_write_channel(void* self);
+int32_t q_buffer_current_write_channel(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -610,9 +610,9 @@ void q_buffer_rollback_transaction(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_transaction_started(void* self);
+bool q_buffer_is_transaction_started(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -705,9 +705,9 @@ bool q_buffer_get_char(void* self, char* c);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-const char* q_buffer_error_string(void* self);
+const char* q_buffer_error_string(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -832,9 +832,9 @@ char* q_buffer_read_line1(void* self, int64_t maxlen);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-const char* q_buffer_object_name(void* self);
+const char* q_buffer_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -849,33 +849,33 @@ void q_buffer_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_widget_type(void* self);
+bool q_buffer_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_window_type(void* self);
+bool q_buffer_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_quick_item_type(void* self);
+bool q_buffer_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_signals_blocked(void* self);
+bool q_buffer_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -890,9 +890,9 @@ bool q_buffer_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-QThread* q_buffer_thread(void* self);
+QThread* q_buffer_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -943,11 +943,11 @@ void q_buffer_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_buffer_children(void* self);
+libqt_list q_buffer_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -985,7 +985,7 @@ void q_buffer_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_buffer_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_buffer_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -996,18 +996,18 @@ QMetaObject__Connection* q_buffer_connect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_buffer_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_buffer_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_buffer_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_buffer_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1018,7 +1018,7 @@ QMetaObject__Connection* q_buffer_connect3(void* self, void* sender, const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_buffer_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_buffer_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1029,24 +1029,24 @@ bool q_buffer_disconnect(void* sender, const char* signal, void* receiver, const
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_buffer_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_buffer_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_disconnect3(void* self);
+bool q_buffer_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param receiver QObject*
 ///
-bool q_buffer_disconnect4(void* self, void* receiver);
+bool q_buffer_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1054,23 +1054,23 @@ bool q_buffer_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_buffer_disconnect5(void* param1);
+bool q_buffer_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-void q_buffer_dump_object_tree(void* self);
+void q_buffer_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-void q_buffer_dump_object_info(void* self);
+void q_buffer_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1080,16 +1080,16 @@ void q_buffer_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_buffer_set_property(void* self, const char* name, void* value);
+bool q_buffer_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param name const char*
 ///
-QVariant* q_buffer_property(void* self, const char* name);
+QVariant* q_buffer_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1097,9 +1097,9 @@ QVariant* q_buffer_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-const char** q_buffer_dynamic_property_names(void* self);
+const char** q_buffer_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1113,9 +1113,9 @@ QBindingStorage* q_buffer_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-const QBindingStorage* q_buffer_binding_storage2(void* self);
+const QBindingStorage* q_buffer_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1138,18 +1138,18 @@ void q_buffer_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-QObject* q_buffer_parent(void* self);
+QObject* q_buffer_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param classname const char*
 ///
-bool q_buffer_inherits(void* self, const char* classname);
+bool q_buffer_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1189,7 +1189,7 @@ int32_t q_buffer_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_buffer_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_buffer_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1201,59 +1201,59 @@ QMetaObject__Connection* q_buffer_connect5(void* sender, const char* signal, voi
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_buffer_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_buffer_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_buffer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_buffer_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param signal const char*
 ///
-bool q_buffer_disconnect1(void* self, const char* signal);
+bool q_buffer_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QBuffer*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_buffer_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_buffer_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_buffer_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_buffer_disconnect23(void* self, void* receiver, const char* member);
+bool q_buffer_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QBuffer*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_buffer_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1279,9 +1279,9 @@ void q_buffer_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_is_sequential(void* self);
+bool q_buffer_is_sequential(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1289,9 +1289,9 @@ bool q_buffer_is_sequential(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-bool q_buffer_super_is_sequential(void* self);
+bool q_buffer_super_is_sequential(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1299,10 +1299,10 @@ bool q_buffer_super_is_sequential(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QBuffer*
-/// @param callback bool func()
+/// @param self const QBuffer*
+/// @param callback bool func(QBuffer* self)
 ///
-void q_buffer_on_is_sequential(void* self, bool (*callback)());
+void q_buffer_on_is_sequential(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1331,9 +1331,9 @@ bool q_buffer_super_reset(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBuffer*
-/// @param callback bool func()
+/// @param callback bool func(QBuffer* self)
 ///
-void q_buffer_on_reset(void* self, bool (*callback)());
+void q_buffer_on_reset(void* self, bool (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
@@ -1341,9 +1341,9 @@ void q_buffer_on_reset(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int64_t q_buffer_bytes_available(void* self);
+int64_t q_buffer_bytes_available(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1351,9 +1351,9 @@ int64_t q_buffer_bytes_available(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int64_t q_buffer_super_bytes_available(void* self);
+int64_t q_buffer_super_bytes_available(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1361,10 +1361,10 @@ int64_t q_buffer_super_bytes_available(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QBuffer*
-/// @param callback int64_t func()
+/// @param self const QBuffer*
+/// @param callback int64_t func(QBuffer* self)
 ///
-void q_buffer_on_bytes_available(void* self, int64_t (*callback)());
+void q_buffer_on_bytes_available(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1372,9 +1372,9 @@ void q_buffer_on_bytes_available(void* self, int64_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int64_t q_buffer_bytes_to_write(void* self);
+int64_t q_buffer_bytes_to_write(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1382,9 +1382,9 @@ int64_t q_buffer_bytes_to_write(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int64_t q_buffer_super_bytes_to_write(void* self);
+int64_t q_buffer_super_bytes_to_write(const void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1392,10 +1392,10 @@ int64_t q_buffer_super_bytes_to_write(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QBuffer*
-/// @param callback int64_t func()
+/// @param self const QBuffer*
+/// @param callback int64_t func(QBuffer* self)
 ///
-void q_buffer_on_bytes_to_write(void* self, int64_t (*callback)());
+void q_buffer_on_bytes_to_write(const void* self, int64_t (*callback)(const void*));
 
 /// Inherited from QIODevice
 ///
@@ -1770,9 +1770,9 @@ void q_buffer_on_set_error_string(void* self, void (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-QObject* q_buffer_sender(void* self);
+QObject* q_buffer_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1780,9 +1780,9 @@ QObject* q_buffer_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-QObject* q_buffer_super_sender(void* self);
+QObject* q_buffer_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1790,10 +1790,10 @@ QObject* q_buffer_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QBuffer*
-/// @param callback QObject* func()
+/// @param self const QBuffer*
+/// @param callback QObject* func(QBuffer* self)
 ///
-void q_buffer_on_sender(void* self, QObject* (*callback)());
+void q_buffer_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1801,9 +1801,9 @@ void q_buffer_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int32_t q_buffer_sender_signal_index(void* self);
+int32_t q_buffer_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1811,9 +1811,9 @@ int32_t q_buffer_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 ///
-int32_t q_buffer_super_sender_signal_index(void* self);
+int32_t q_buffer_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1821,10 +1821,10 @@ int32_t q_buffer_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QBuffer*
-/// @param callback int32_t func()
+/// @param self const QBuffer*
+/// @param callback int32_t func(QBuffer* self)
 ///
-void q_buffer_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_buffer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1832,10 +1832,10 @@ void q_buffer_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param signal const char*
 ///
-int32_t q_buffer_receivers(void* self, const char* signal);
+int32_t q_buffer_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1843,10 +1843,10 @@ int32_t q_buffer_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param signal const char*
 ///
-int32_t q_buffer_super_receivers(void* self, const char* signal);
+int32_t q_buffer_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1854,10 +1854,10 @@ int32_t q_buffer_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param callback int32_t func(QBuffer* self, const char* signal)
 ///
-void q_buffer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_buffer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1865,10 +1865,10 @@ void q_buffer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param signal QMetaMethod*
 ///
-bool q_buffer_is_signal_connected(void* self, void* signal);
+bool q_buffer_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1876,10 +1876,10 @@ bool q_buffer_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param signal QMetaMethod*
 ///
-bool q_buffer_super_is_signal_connected(void* self, void* signal);
+bool q_buffer_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1887,10 +1887,10 @@ bool q_buffer_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QBuffer*
+/// @param self const QBuffer*
 /// @param callback bool func(QBuffer* self, QMetaMethod* signal)
 ///
-void q_buffer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_buffer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

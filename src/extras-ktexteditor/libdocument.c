@@ -24,7 +24,7 @@
 #include "libdocument.hpp"
 #include "libdocument.h"
 
-int32_t k_texteditor__mark_line(void* self) {
+int32_t k_texteditor__mark_line(const void* self) {
     return KTextEditor__Mark_Line((KTextEditor__Mark*)self);
 }
 
@@ -32,7 +32,7 @@ void k_texteditor__mark_set_line(void* self, int line) {
     KTextEditor__Mark_SetLine((KTextEditor__Mark*)self, line);
 }
 
-uint32_t k_texteditor__mark_type(void* self) {
+uint32_t k_texteditor__mark_type(const void* self) {
     return KTextEditor__Mark_Type((KTextEditor__Mark*)self);
 }
 
@@ -44,7 +44,7 @@ void k_texteditor__mark_delete(void* self) {
     KTextEditor__Mark_Delete((KTextEditor__Mark*)(self));
 }
 
-const QMetaObject* k_texteditor__document_meta_object(void* self) {
+const QMetaObject* k_texteditor__document_meta_object(const void* self) {
     return KTextEditor__Document_MetaObject((KTextEditor__Document*)self);
 }
 
@@ -67,7 +67,7 @@ KTextEditor__View* k_texteditor__document_create_view(void* self, void* parent, 
     return KTextEditor__Document_CreateView((KTextEditor__Document*)self, (QWidget*)parent, (KTextEditor__MainWindow*)mainWindow);
 }
 
-libqt_list /* of KTextEditor__View* */ k_texteditor__document_views(void* self) {
+libqt_list /* of KTextEditor__View* */ k_texteditor__document_views(const void* self) {
     libqt_list _arr = KTextEditor__Document_Views((KTextEditor__Document*)self);
     return _arr;
 }
@@ -80,7 +80,7 @@ void k_texteditor__document_on_view_created(void* self, void (*callback)(void*, 
     KTextEditor__Document_Connect_ViewCreated((KTextEditor__Document*)self, (intptr_t)callback);
 }
 
-const char* k_texteditor__document_document_name(void* self) {
+const char* k_texteditor__document_document_name(const void* self) {
     libqt_string _str = KTextEditor__Document_DocumentName((KTextEditor__Document*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -94,7 +94,7 @@ const char* k_texteditor__document_mime_type(void* self) {
     return _ret;
 }
 
-char* k_texteditor__document_checksum(void* self) {
+char* k_texteditor__document_checksum(const void* self) {
     libqt_string _str = KTextEditor__Document_Checksum((KTextEditor__Document*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -137,7 +137,7 @@ bool k_texteditor__document_set_encoding(void* self, const char* encoding) {
     return KTextEditor__Document_SetEncoding((KTextEditor__Document*)self, qstring(encoding));
 }
 
-const char* k_texteditor__document_encoding(void* self) {
+const char* k_texteditor__document_encoding(const void* self) {
     libqt_string _str = KTextEditor__Document_Encoding((KTextEditor__Document*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -156,7 +156,7 @@ bool k_texteditor__document_document_save_as(void* self) {
     return KTextEditor__Document_DocumentSaveAs((KTextEditor__Document*)self);
 }
 
-bool k_texteditor__document_opening_error(void* self) {
+bool k_texteditor__document_opening_error(const void* self) {
     return KTextEditor__Document_OpeningError((KTextEditor__Document*)self);
 }
 
@@ -200,44 +200,44 @@ void k_texteditor__document_on_about_to_save(void* self, void (*callback)(void*,
     KTextEditor__Document_Connect_AboutToSave((KTextEditor__Document*)self, (intptr_t)callback);
 }
 
-bool k_texteditor__document_is_editing_transaction_running(void* self) {
+bool k_texteditor__document_is_editing_transaction_running(const void* self) {
     return KTextEditor__Document_IsEditingTransactionRunning((KTextEditor__Document*)self);
 }
 
-const char* k_texteditor__document_text(void* self) {
+const char* k_texteditor__document_text(const void* self) {
     libqt_string _str = KTextEditor__Document_Text((KTextEditor__Document*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_texteditor__document_text2(void* self, void* range, bool block) {
+const char* k_texteditor__document_text2(const void* self, void* range, bool block) {
     libqt_string _str = KTextEditor__Document_Text2((KTextEditor__Document*)self, (KTextEditor__Range*)range, block);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QChar* k_texteditor__document_character_at(void* self, void* position) {
+QChar* k_texteditor__document_character_at(const void* self, void* position) {
     return KTextEditor__Document_CharacterAt((KTextEditor__Document*)self, (KTextEditor__Cursor*)position);
 }
 
-const char* k_texteditor__document_word_at(void* self, void* cursor) {
+const char* k_texteditor__document_word_at(const void* self, void* cursor) {
     libqt_string _str = KTextEditor__Document_WordAt((KTextEditor__Document*)self, (KTextEditor__Cursor*)cursor);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-KTextEditor__Range* k_texteditor__document_word_range_at(void* self, void* cursor) {
+KTextEditor__Range* k_texteditor__document_word_range_at(const void* self, void* cursor) {
     return KTextEditor__Document_WordRangeAt((KTextEditor__Document*)self, (KTextEditor__Cursor*)cursor);
 }
 
-bool k_texteditor__document_is_valid_text_position(void* self, void* cursor) {
+bool k_texteditor__document_is_valid_text_position(const void* self, void* cursor) {
     return KTextEditor__Document_IsValidTextPosition((KTextEditor__Document*)self, (KTextEditor__Cursor*)cursor);
 }
 
-const char** k_texteditor__document_text_lines(void* self, void* range, bool block) {
+const char** k_texteditor__document_text_lines(const void* self, void* range, bool block) {
     libqt_list _arr = KTextEditor__Document_TextLines((KTextEditor__Document*)self, (KTextEditor__Range*)range, block);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -254,50 +254,50 @@ const char** k_texteditor__document_text_lines(void* self, void* range, bool blo
     return _ret;
 }
 
-const char* k_texteditor__document_line(void* self, int line) {
+const char* k_texteditor__document_line(const void* self, int line) {
     libqt_string _str = KTextEditor__Document_Line((KTextEditor__Document*)self, line);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_texteditor__document_lines(void* self) {
+int32_t k_texteditor__document_lines(const void* self) {
     return KTextEditor__Document_Lines((KTextEditor__Document*)self);
 }
 
-bool k_texteditor__document_is_line_modified(void* self, int line) {
+bool k_texteditor__document_is_line_modified(const void* self, int line) {
     return KTextEditor__Document_IsLineModified((KTextEditor__Document*)self, line);
 }
 
-bool k_texteditor__document_is_line_saved(void* self, int line) {
+bool k_texteditor__document_is_line_saved(const void* self, int line) {
     return KTextEditor__Document_IsLineSaved((KTextEditor__Document*)self, line);
 }
 
-bool k_texteditor__document_is_line_touched(void* self, int line) {
+bool k_texteditor__document_is_line_touched(const void* self, int line) {
     return KTextEditor__Document_IsLineTouched((KTextEditor__Document*)self, line);
 }
 
-KTextEditor__Cursor* k_texteditor__document_document_end(void* self) {
+KTextEditor__Cursor* k_texteditor__document_document_end(const void* self) {
     return KTextEditor__Document_DocumentEnd((KTextEditor__Document*)self);
 }
 
-KTextEditor__Range* k_texteditor__document_document_range(void* self) {
+KTextEditor__Range* k_texteditor__document_document_range(const void* self) {
     return KTextEditor__Document_DocumentRange((KTextEditor__Document*)self);
 }
 
-intptr_t k_texteditor__document_total_characters(void* self) {
+intptr_t k_texteditor__document_total_characters(const void* self) {
     return KTextEditor__Document_TotalCharacters((KTextEditor__Document*)self);
 }
 
-bool k_texteditor__document_is_empty(void* self) {
+bool k_texteditor__document_is_empty(const void* self) {
     return KTextEditor__Document_IsEmpty((KTextEditor__Document*)self);
 }
 
-int32_t k_texteditor__document_line_length(void* self, int line) {
+int32_t k_texteditor__document_line_length(const void* self, int line) {
     return KTextEditor__Document_LineLength((KTextEditor__Document*)self, line);
 }
 
-KTextEditor__Cursor* k_texteditor__document_end_of_line(void* self, int line) {
+KTextEditor__Cursor* k_texteditor__document_end_of_line(const void* self, int line) {
     return KTextEditor__Document_EndOfLine((KTextEditor__Document*)self, line);
 }
 
@@ -389,16 +389,16 @@ bool k_texteditor__document_remove_line(void* self, int line) {
     return KTextEditor__Document_RemoveLine((KTextEditor__Document*)self, line);
 }
 
-libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text(void* self, void* range, const char* pattern) {
+libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text(const void* self, void* range, const char* pattern) {
     libqt_list _arr = KTextEditor__Document_SearchText((KTextEditor__Document*)self, (KTextEditor__Range*)range, qstring(pattern));
     return _arr;
 }
 
-intptr_t k_texteditor__document_cursor_to_offset(void* self, void* c) {
+intptr_t k_texteditor__document_cursor_to_offset(const void* self, void* c) {
     return KTextEditor__Document_CursorToOffset((KTextEditor__Document*)self, (KTextEditor__Cursor*)c);
 }
 
-KTextEditor__Cursor* k_texteditor__document_offset_to_cursor(void* self, intptr_t offset) {
+KTextEditor__Cursor* k_texteditor__document_offset_to_cursor(const void* self, intptr_t offset) {
     return KTextEditor__Document_OffsetToCursor((KTextEditor__Document*)self, offset);
 }
 
@@ -458,25 +458,25 @@ void k_texteditor__document_on_text_changed(void* self, void (*callback)(void*, 
     KTextEditor__Document_Connect_TextChanged((KTextEditor__Document*)self, (intptr_t)callback);
 }
 
-int32_t k_texteditor__document_default_style_at(void* self, void* position) {
+int32_t k_texteditor__document_default_style_at(const void* self, void* position) {
     return KTextEditor__Document_DefaultStyleAt((KTextEditor__Document*)self, (KTextEditor__Cursor*)position);
 }
 
-const char* k_texteditor__document_mode(void* self) {
+const char* k_texteditor__document_mode(const void* self) {
     libqt_string _str = KTextEditor__Document_Mode((KTextEditor__Document*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_texteditor__document_highlighting_mode(void* self) {
+const char* k_texteditor__document_highlighting_mode(const void* self) {
     libqt_string _str = KTextEditor__Document_HighlightingMode((KTextEditor__Document*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_texteditor__document_embedded_highlighting_modes(void* self) {
+const char** k_texteditor__document_embedded_highlighting_modes(const void* self) {
     libqt_list _arr = KTextEditor__Document_EmbeddedHighlightingModes((KTextEditor__Document*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -500,7 +500,7 @@ const char* k_texteditor__document_highlighting_mode_at(void* self, void* positi
     return _ret;
 }
 
-const char** k_texteditor__document_modes(void* self) {
+const char** k_texteditor__document_modes(const void* self) {
     libqt_list _arr = KTextEditor__Document_Modes((KTextEditor__Document*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -517,7 +517,7 @@ const char** k_texteditor__document_modes(void* self) {
     return _ret;
 }
 
-const char** k_texteditor__document_highlighting_modes(void* self) {
+const char** k_texteditor__document_highlighting_modes(const void* self) {
     libqt_list _arr = KTextEditor__Document_HighlightingModes((KTextEditor__Document*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -542,14 +542,14 @@ bool k_texteditor__document_set_highlighting_mode(void* self, const char* name) 
     return KTextEditor__Document_SetHighlightingMode((KTextEditor__Document*)self, qstring(name));
 }
 
-const char* k_texteditor__document_highlighting_mode_section(void* self, int index) {
+const char* k_texteditor__document_highlighting_mode_section(const void* self, int index) {
     libqt_string _str = KTextEditor__Document_HighlightingModeSection((KTextEditor__Document*)self, index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_texteditor__document_mode_section(void* self, int index) {
+const char* k_texteditor__document_mode_section(const void* self, int index) {
     libqt_string _str = KTextEditor__Document_ModeSection((KTextEditor__Document*)self, index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -584,7 +584,7 @@ bool k_texteditor__document_post_message(void* self, void* message) {
     return KTextEditor__Document_PostMessage((KTextEditor__Document*)self, (KTextEditor__Message*)message);
 }
 
-void k_texteditor__document_read_session_config(void* self, void* config, libqt_list /* set of const char* */ flags) {
+void k_texteditor__document_read_session_config(void* self, const void* config, libqt_list /* set of const char* */ flags) {
     KTextEditor__Document_ReadSessionConfig((KTextEditor__Document*)self, (KConfigGroup*)config, flags);
 }
 
@@ -592,7 +592,7 @@ void k_texteditor__document_write_session_config(void* self, void* config, libqt
     KTextEditor__Document_WriteSessionConfig((KTextEditor__Document*)self, (KConfigGroup*)config, flags);
 }
 
-bool k_texteditor__document_is_data_recovery_available(void* self) {
+bool k_texteditor__document_is_data_recovery_available(const void* self) {
     return KTextEditor__Document_IsDataRecoveryAvailable((KTextEditor__Document*)self);
 }
 
@@ -620,11 +620,11 @@ KTextEditor__MovingRange* k_texteditor__document_new_moving_range(void* self, vo
     return KTextEditor__Document_NewMovingRange((KTextEditor__Document*)self, (KTextEditor__Range*)range, insertBehaviors, emptyBehavior);
 }
 
-int64_t k_texteditor__document_revision(void* self) {
+int64_t k_texteditor__document_revision(const void* self) {
     return KTextEditor__Document_Revision((KTextEditor__Document*)self);
 }
 
-int64_t k_texteditor__document_last_saved_revision(void* self) {
+int64_t k_texteditor__document_last_saved_revision(const void* self) {
     return KTextEditor__Document_LastSavedRevision((KTextEditor__Document*)self);
 }
 
@@ -664,7 +664,7 @@ void k_texteditor__document_on_about_to_invalidate_moving_interface_content(void
     KTextEditor__Document_Connect_AboutToInvalidateMovingInterfaceContent((KTextEditor__Document*)self, (intptr_t)callback);
 }
 
-const char** k_texteditor__document_config_keys(void* self) {
+const char** k_texteditor__document_config_keys(const void* self) {
     libqt_list _arr = KTextEditor__Document_ConfigKeys((KTextEditor__Document*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -685,7 +685,7 @@ QVariant* k_texteditor__document_config_value(void* self, const char* key) {
     return KTextEditor__Document_ConfigValue((KTextEditor__Document*)self, qstring(key));
 }
 
-void k_texteditor__document_set_config_value(void* self, const char* key, void* value) {
+void k_texteditor__document_set_config_value(void* self, const char* key, const void* value) {
     KTextEditor__Document_SetConfigValue((KTextEditor__Document*)self, qstring(key), (QVariant*)value);
 }
 
@@ -747,7 +747,7 @@ void k_texteditor__document_set_mark_description(void* self, int32_t mark, const
     KTextEditor__Document_SetMarkDescription((KTextEditor__Document*)self, mark, qstring(text));
 }
 
-const char* k_texteditor__document_mark_description(void* self, int32_t mark) {
+const char* k_texteditor__document_mark_description(const void* self, int32_t mark) {
     libqt_string _str = KTextEditor__Document_MarkDescription((KTextEditor__Document*)self, mark);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -758,15 +758,15 @@ void k_texteditor__document_set_editable_marks(void* self, uint32_t markMask) {
     KTextEditor__Document_SetEditableMarks((KTextEditor__Document*)self, markMask);
 }
 
-uint32_t k_texteditor__document_editable_marks(void* self) {
+uint32_t k_texteditor__document_editable_marks(const void* self) {
     return KTextEditor__Document_EditableMarks((KTextEditor__Document*)self);
 }
 
-void k_texteditor__document_set_mark_icon(void* self, int32_t markType, void* icon) {
+void k_texteditor__document_set_mark_icon(void* self, int32_t markType, const void* icon) {
     KTextEditor__Document_SetMarkIcon((KTextEditor__Document*)self, markType, (QIcon*)icon);
 }
 
-QIcon* k_texteditor__document_mark_icon(void* self, int32_t markType) {
+QIcon* k_texteditor__document_mark_icon(const void* self, int32_t markType) {
     return KTextEditor__Document_MarkIcon((KTextEditor__Document*)self, markType);
 }
 
@@ -814,7 +814,7 @@ void k_texteditor__document_set_annotation_model(void* self, void* model) {
     KTextEditor__Document_SetAnnotationModel((KTextEditor__Document*)self, (KTextEditor__AnnotationModel*)model);
 }
 
-KTextEditor__AnnotationModel* k_texteditor__document_annotation_model(void* self) {
+KTextEditor__AnnotationModel* k_texteditor__document_annotation_model(const void* self) {
     return KTextEditor__Document_AnnotationModel((KTextEditor__Document*)self);
 }
 
@@ -832,12 +832,12 @@ const char* k_texteditor__document_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text3(void* self, void* range, const char* pattern, const int32_t options) {
+libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text3(const void* self, void* range, const char* pattern, const int32_t options) {
     libqt_list _arr = KTextEditor__Document_SearchText3((KTextEditor__Document*)self, (KTextEditor__Range*)range, qstring(pattern), options);
     return _arr;
 }
 
-bool k_texteditor__document_is_read_write(void* self) {
+bool k_texteditor__document_is_read_write(const void* self) {
     return KParts__ReadWritePart_IsReadWrite((KParts__ReadWritePart*)self);
 }
 
@@ -845,7 +845,7 @@ void k_texteditor__document_set_read_write(void* self, bool readwrite) {
     KParts__ReadWritePart_SetReadWrite((KParts__ReadWritePart*)self, readwrite);
 }
 
-bool k_texteditor__document_is_modified(void* self) {
+bool k_texteditor__document_is_modified(const void* self) {
     return KParts__ReadWritePart_IsModified((KParts__ReadWritePart*)self);
 }
 
@@ -861,7 +861,7 @@ bool k_texteditor__document_close_url2(void* self, bool promptToSave) {
     return KParts__ReadWritePart_CloseUrl2((KParts__ReadWritePart*)self, promptToSave);
 }
 
-bool k_texteditor__document_save_as(void* self, void* url) {
+bool k_texteditor__document_save_as(void* self, const void* url) {
     return KParts__ReadWritePart_SaveAs((KParts__ReadWritePart*)self, (QUrl*)url);
 }
 
@@ -893,31 +893,31 @@ void k_texteditor__document_set_progress_info_enabled(void* self, bool show) {
     KParts__ReadOnlyPart_SetProgressInfoEnabled((KParts__ReadOnlyPart*)self, show);
 }
 
-bool k_texteditor__document_is_progress_info_enabled(void* self) {
+bool k_texteditor__document_is_progress_info_enabled(const void* self) {
     return KParts__ReadOnlyPart_IsProgressInfoEnabled((KParts__ReadOnlyPart*)self);
 }
 
-bool k_texteditor__document_open_url(void* self, void* url) {
+bool k_texteditor__document_open_url(void* self, const void* url) {
     return KParts__ReadOnlyPart_OpenUrl((KParts__ReadOnlyPart*)self, (QUrl*)url);
 }
 
-QUrl* k_texteditor__document_url(void* self) {
+QUrl* k_texteditor__document_url(const void* self) {
     return KParts__ReadOnlyPart_Url((KParts__ReadOnlyPart*)self);
 }
 
-KParts__NavigationExtension* k_texteditor__document_navigation_extension(void* self) {
+KParts__NavigationExtension* k_texteditor__document_navigation_extension(const void* self) {
     return KParts__ReadOnlyPart_NavigationExtension((KParts__ReadOnlyPart*)self);
 }
 
-void k_texteditor__document_set_arguments(void* self, void* arguments) {
+void k_texteditor__document_set_arguments(void* self, const void* arguments) {
     KParts__ReadOnlyPart_SetArguments((KParts__ReadOnlyPart*)self, (KParts__OpenUrlArguments*)arguments);
 }
 
-KParts__OpenUrlArguments* k_texteditor__document_arguments(void* self) {
+KParts__OpenUrlArguments* k_texteditor__document_arguments(const void* self) {
     return KParts__ReadOnlyPart_Arguments((KParts__ReadOnlyPart*)self);
 }
 
-bool k_texteditor__document_open_stream(void* self, const char* mimeType, void* url) {
+bool k_texteditor__document_open_stream(void* self, const char* mimeType, const void* url) {
     return KParts__ReadOnlyPart_OpenStream((KParts__ReadOnlyPart*)self, qstring(mimeType), (QUrl*)url);
 }
 
@@ -961,11 +961,11 @@ void k_texteditor__document_on_canceled(void* self, void (*callback)(void*, cons
     KParts__ReadOnlyPart_Connect_Canceled((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-void k_texteditor__document_url_changed(void* self, void* url) {
+void k_texteditor__document_url_changed(void* self, const void* url) {
     KParts__ReadOnlyPart_UrlChanged((KParts__ReadOnlyPart*)self, (QUrl*)url);
 }
 
-void k_texteditor__document_on_url_changed(void* self, void (*callback)(void*, void*)) {
+void k_texteditor__document_on_url_changed(void* self, void (*callback)(void*, const void*)) {
     KParts__ReadOnlyPart_Connect_UrlChanged((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
@@ -985,7 +985,7 @@ void k_texteditor__document_set_manager(void* self, void* manager) {
     KParts__Part_SetManager((KParts__Part*)self, (KParts__PartManager*)manager);
 }
 
-KParts__PartManager* k_texteditor__document_manager(void* self) {
+KParts__PartManager* k_texteditor__document_manager(const void* self) {
     return KParts__Part_Manager((KParts__Part*)self);
 }
 
@@ -997,11 +997,11 @@ void k_texteditor__document_set_auto_delete_part(void* self, bool autoDeletePart
     KParts__Part_SetAutoDeletePart((KParts__Part*)self, autoDeletePart);
 }
 
-KParts__Part* k_texteditor__document_hit_test(void* self, void* widget, void* globalPos) {
+KParts__Part* k_texteditor__document_hit_test(void* self, void* widget, const void* globalPos) {
     return KParts__Part_HitTest((KParts__Part*)self, (QWidget*)widget, (QPoint*)globalPos);
 }
 
-KPluginMetaData* k_texteditor__document_meta_data(void* self) {
+KPluginMetaData* k_texteditor__document_meta_data(const void* self) {
     return KParts__Part_MetaData((KParts__Part*)self);
 }
 
@@ -1029,7 +1029,7 @@ bool k_texteditor__document_event_filter(void* self, void* watched, void* event)
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* k_texteditor__document_object_name(void* self) {
+const char* k_texteditor__document_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1040,19 +1040,19 @@ void k_texteditor__document_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_texteditor__document_is_widget_type(void* self) {
+bool k_texteditor__document_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_texteditor__document_is_window_type(void* self) {
+bool k_texteditor__document_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_texteditor__document_is_quick_item_type(void* self) {
+bool k_texteditor__document_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_texteditor__document_signals_blocked(void* self) {
+bool k_texteditor__document_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1060,7 +1060,7 @@ bool k_texteditor__document_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_texteditor__document_thread(void* self) {
+QThread* k_texteditor__document_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1084,7 +1084,7 @@ void k_texteditor__document_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_texteditor__document_children(void* self) {
+libqt_list /* of QObject* */ k_texteditor__document_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1101,55 +1101,55 @@ void k_texteditor__document_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_texteditor__document_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_texteditor__document_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_texteditor__document_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_texteditor__document_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_texteditor__document_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_texteditor__document_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_texteditor__document_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_texteditor__document_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_texteditor__document_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_texteditor__document_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_texteditor__document_disconnect3(void* self) {
+bool k_texteditor__document_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_texteditor__document_disconnect4(void* self, void* receiver) {
+bool k_texteditor__document_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_texteditor__document_disconnect5(void* param1) {
+bool k_texteditor__document_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_texteditor__document_dump_object_tree(void* self) {
+void k_texteditor__document_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_texteditor__document_dump_object_info(void* self) {
+void k_texteditor__document_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_texteditor__document_set_property(void* self, const char* name, void* value) {
+bool k_texteditor__document_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_texteditor__document_property(void* self, const char* name) {
+QVariant* k_texteditor__document_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_texteditor__document_dynamic_property_names(void* self) {
+const char** k_texteditor__document_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1170,7 +1170,7 @@ QBindingStorage* k_texteditor__document_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_texteditor__document_binding_storage2(void* self) {
+const QBindingStorage* k_texteditor__document_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1182,11 +1182,11 @@ void k_texteditor__document_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_texteditor__document_parent(void* self) {
+QObject* k_texteditor__document_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_texteditor__document_inherits(void* self, const char* classname) {
+bool k_texteditor__document_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1202,31 +1202,31 @@ int32_t k_texteditor__document_start_timer23(void* self, int64_t time, int32_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_texteditor__document_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_texteditor__document_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_texteditor__document_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_texteditor__document_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_texteditor__document_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_texteditor__document_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_texteditor__document_disconnect1(void* self, const char* signal) {
+bool k_texteditor__document_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_texteditor__document_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_texteditor__document_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_texteditor__document_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_texteditor__document_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_texteditor__document_disconnect23(void* self, void* receiver, const char* member) {
+bool k_texteditor__document_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1242,52 +1242,52 @@ void k_texteditor__document_set_part_object(void* self, void* object) {
     KParts__PartBase_SetPartObject((KParts__PartBase*)self, (QObject*)object);
 }
 
-QObject* k_texteditor__document_part_object(void* self) {
+QObject* k_texteditor__document_part_object(const void* self) {
     return KParts__PartBase_PartObject((KParts__PartBase*)self);
 }
 
-QAction* k_texteditor__document_action(void* self, const char* name) {
+QAction* k_texteditor__document_action(const void* self, const char* name) {
     return KXMLGUIClient_Action((KXMLGUIClient*)self, qstring(name));
 }
 
-QAction* k_texteditor__document_action2(void* self, void* element) {
+QAction* k_texteditor__document_action2(const void* self, const void* element) {
     return KXMLGUIClient_Action2((KXMLGUIClient*)self, (QDomElement*)element);
 }
 
-KActionCollection* k_texteditor__document_action_collection(void* self) {
+KActionCollection* k_texteditor__document_action_collection(const void* self) {
     return KXMLGUIClient_ActionCollection((KXMLGUIClient*)self);
 }
 
-const char* k_texteditor__document_component_name(void* self) {
+const char* k_texteditor__document_component_name(const void* self) {
     libqt_string _str = KXMLGUIClient_ComponentName((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDomDocument* k_texteditor__document_dom_document(void* self) {
+QDomDocument* k_texteditor__document_dom_document(const void* self) {
     return KXMLGUIClient_DomDocument((KXMLGUIClient*)self);
 }
 
-const char* k_texteditor__document_xml_file(void* self) {
+const char* k_texteditor__document_xml_file(const void* self) {
     libqt_string _str = KXMLGUIClient_XmlFile((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_texteditor__document_local_x_m_l_file(void* self) {
+const char* k_texteditor__document_local_x_m_l_file(const void* self) {
     libqt_string _str = KXMLGUIClient_LocalXMLFile((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_texteditor__document_set_x_m_l_g_u_i_build_document(void* self, void* doc) {
+void k_texteditor__document_set_x_m_l_g_u_i_build_document(void* self, const void* doc) {
     KXMLGUIClient_SetXMLGUIBuildDocument((KXMLGUIClient*)self, (QDomDocument*)doc);
 }
 
-QDomDocument* k_texteditor__document_xmlgui_build_document(void* self) {
+QDomDocument* k_texteditor__document_xmlgui_build_document(const void* self) {
     return KXMLGUIClient_XmlguiBuildDocument((KXMLGUIClient*)self);
 }
 
@@ -1295,11 +1295,11 @@ void k_texteditor__document_set_factory(void* self, void* factory) {
     KXMLGUIClient_SetFactory((KXMLGUIClient*)self, (KXMLGUIFactory*)factory);
 }
 
-KXMLGUIFactory* k_texteditor__document_factory(void* self) {
+KXMLGUIFactory* k_texteditor__document_factory(const void* self) {
     return KXMLGUIClient_Factory((KXMLGUIClient*)self);
 }
 
-KXMLGUIClient* k_texteditor__document_parent_client(void* self) {
+KXMLGUIClient* k_texteditor__document_parent_client(const void* self) {
     return KXMLGUIClient_ParentClient((KXMLGUIClient*)self);
 }
 
@@ -1320,7 +1320,7 @@ void k_texteditor__document_set_client_builder(void* self, void* builder) {
     KXMLGUIClient_SetClientBuilder((KXMLGUIClient*)self, (KXMLGUIBuilder*)builder);
 }
 
-KXMLGUIBuilder* k_texteditor__document_client_builder(void* self) {
+KXMLGUIBuilder* k_texteditor__document_client_builder(const void* self) {
     return KXMLGUIClient_ClientBuilder((KXMLGUIClient*)self);
 }
 

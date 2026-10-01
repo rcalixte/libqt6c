@@ -27,11 +27,11 @@ QQmlComponent* q_qmlcomponent_new4(void* param1, const char* fileName, int32_t m
     return QQmlComponent_New4((QQmlEngine*)param1, qstring(fileName), mode);
 }
 
-QQmlComponent* q_qmlcomponent_new5(void* param1, void* url) {
+QQmlComponent* q_qmlcomponent_new5(void* param1, const void* url) {
     return QQmlComponent_New5((QQmlEngine*)param1, (QUrl*)url);
 }
 
-QQmlComponent* q_qmlcomponent_new6(void* param1, void* url, int32_t mode) {
+QQmlComponent* q_qmlcomponent_new6(void* param1, const void* url, int32_t mode) {
     return QQmlComponent_New6((QQmlEngine*)param1, (QUrl*)url, mode);
 }
 
@@ -59,11 +59,11 @@ QQmlComponent* q_qmlcomponent_new12(void* param1, const char* fileName, int32_t 
     return QQmlComponent_New12((QQmlEngine*)param1, qstring(fileName), mode, (QObject*)parent);
 }
 
-QQmlComponent* q_qmlcomponent_new13(void* param1, void* url, void* parent) {
+QQmlComponent* q_qmlcomponent_new13(void* param1, const void* url, void* parent) {
     return QQmlComponent_New13((QQmlEngine*)param1, (QUrl*)url, (QObject*)parent);
 }
 
-QQmlComponent* q_qmlcomponent_new14(void* param1, void* url, int32_t mode, void* parent) {
+QQmlComponent* q_qmlcomponent_new14(void* param1, const void* url, int32_t mode, void* parent) {
     return QQmlComponent_New14((QQmlEngine*)param1, (QUrl*)url, mode, (QObject*)parent);
 }
 
@@ -75,15 +75,15 @@ QQmlComponent* q_qmlcomponent_new16(void* engine, const char* uri, const char* t
     return QQmlComponent_New16((QQmlEngine*)engine, uri, typeName, mode, (QObject*)parent);
 }
 
-const QMetaObject* q_qmlcomponent_meta_object(void* self) {
+const QMetaObject* q_qmlcomponent_meta_object(const void* self) {
     return QQmlComponent_MetaObject((QQmlComponent*)self);
 }
 
-void q_qmlcomponent_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_qmlcomponent_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QQmlComponent_OnMetaObject((QQmlComponent*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_qmlcomponent_super_meta_object(void* self) {
+const QMetaObject* q_qmlcomponent_super_meta_object(const void* self) {
     return QQmlComponent_SuperMetaObject((QQmlComponent*)self);
 }
 
@@ -118,47 +118,47 @@ const char* q_qmlcomponent_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_qmlcomponent_status(void* self) {
+int32_t q_qmlcomponent_status(const void* self) {
     return QQmlComponent_Status((QQmlComponent*)self);
 }
 
-bool q_qmlcomponent_is_null(void* self) {
+bool q_qmlcomponent_is_null(const void* self) {
     return QQmlComponent_IsNull((QQmlComponent*)self);
 }
 
-bool q_qmlcomponent_is_ready(void* self) {
+bool q_qmlcomponent_is_ready(const void* self) {
     return QQmlComponent_IsReady((QQmlComponent*)self);
 }
 
-bool q_qmlcomponent_is_error(void* self) {
+bool q_qmlcomponent_is_error(const void* self) {
     return QQmlComponent_IsError((QQmlComponent*)self);
 }
 
-bool q_qmlcomponent_is_loading(void* self) {
+bool q_qmlcomponent_is_loading(const void* self) {
     return QQmlComponent_IsLoading((QQmlComponent*)self);
 }
 
-bool q_qmlcomponent_is_bound(void* self) {
+bool q_qmlcomponent_is_bound(const void* self) {
     return QQmlComponent_IsBound((QQmlComponent*)self);
 }
 
-libqt_list /* of QQmlError* */ q_qmlcomponent_errors(void* self) {
+libqt_list /* of QQmlError* */ q_qmlcomponent_errors(const void* self) {
     libqt_list _arr = QQmlComponent_Errors((QQmlComponent*)self);
     return _arr;
 }
 
-const char* q_qmlcomponent_error_string(void* self) {
+const char* q_qmlcomponent_error_string(const void* self) {
     libqt_string _str = QQmlComponent_ErrorString((QQmlComponent*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-double q_qmlcomponent_progress(void* self) {
+double q_qmlcomponent_progress(const void* self) {
     return QQmlComponent_Progress((QQmlComponent*)self);
 }
 
-QUrl* q_qmlcomponent_url(void* self) {
+QUrl* q_qmlcomponent_url(const void* self) {
     return QQmlComponent_Url((QQmlComponent*)self);
 }
 
@@ -247,7 +247,7 @@ void q_qmlcomponent_complete_create(void* self) {
     QQmlComponent_CompleteCreate((QQmlComponent*)self);
 }
 
-void q_qmlcomponent_on_complete_create(void* self, void (*callback)()) {
+void q_qmlcomponent_on_complete_create(void* self, void (*callback)(void*)) {
     QQmlComponent_OnCompleteCreate((QQmlComponent*)self, (intptr_t)callback);
 }
 
@@ -259,19 +259,19 @@ void q_qmlcomponent_create2(void* self, void* param1) {
     QQmlComponent_Create2((QQmlComponent*)self, (QQmlIncubator*)param1);
 }
 
-QQmlContext* q_qmlcomponent_creation_context(void* self) {
+QQmlContext* q_qmlcomponent_creation_context(const void* self) {
     return QQmlComponent_CreationContext((QQmlComponent*)self);
 }
 
-QQmlEngine* q_qmlcomponent_engine(void* self) {
+QQmlEngine* q_qmlcomponent_engine(const void* self) {
     return QQmlComponent_Engine((QQmlComponent*)self);
 }
 
-void q_qmlcomponent_load_url(void* self, void* url) {
+void q_qmlcomponent_load_url(void* self, const void* url) {
     QQmlComponent_LoadUrl((QQmlComponent*)self, (QUrl*)url);
 }
 
-void q_qmlcomponent_load_url2(void* self, void* url, int32_t mode) {
+void q_qmlcomponent_load_url2(void* self, const void* url, int32_t mode) {
     QQmlComponent_LoadUrl2((QQmlComponent*)self, (QUrl*)url, mode);
 }
 
@@ -279,7 +279,7 @@ void q_qmlcomponent_load_from_module(void* self, const char* uri, const char* ty
     QQmlComponent_LoadFromModule((QQmlComponent*)self, uri, typeName);
 }
 
-void q_qmlcomponent_set_data(void* self, char* param1, void* baseUrl) {
+void q_qmlcomponent_set_data(void* self, char* param1, const void* baseUrl) {
     QQmlComponent_SetData((QQmlComponent*)self, qstring(param1), (QUrl*)baseUrl);
 }
 
@@ -301,14 +301,6 @@ void q_qmlcomponent_on_progress_changed(void* self, void (*callback)(void*, doub
 
 QObject* q_qmlcomponent_create_object2(void* self) {
     return QQmlComponent_CreateObject2((QQmlComponent*)self);
-}
-
-void q_qmlcomponent_on_create_object2(void* self, QObject* (*callback)()) {
-    QQmlComponent_OnCreateObject2((QQmlComponent*)self, (intptr_t)callback);
-}
-
-QObject* q_qmlcomponent_super_create_object2(void* self) {
-    return QQmlComponent_SuperCreateObject2((QQmlComponent*)self);
 }
 
 const char* q_qmlcomponent_tr2(const char* s, const char* c) {
@@ -370,14 +362,6 @@ QObject* q_qmlcomponent_create_object1(void* self, void* parent) {
     return QQmlComponent_CreateObject1((QQmlComponent*)self, (QObject*)parent);
 }
 
-void q_qmlcomponent_on_create_object1(void* self, QObject* (*callback)(void*, void*)) {
-    QQmlComponent_OnCreateObject1((QQmlComponent*)self, (intptr_t)callback);
-}
-
-QObject* q_qmlcomponent_super_create_object1(void* self, void* parent) {
-    return QQmlComponent_SuperCreateObject1((QQmlComponent*)self, (QObject*)parent);
-}
-
 QObject* q_qmlcomponent_create_object22(void* self, void* parent, libqt_map /* of const char* to QVariant* */ properties) {
     // Convert libqt_map to QMap<QString,QVariant>
     libqt_map properties_ret;
@@ -407,37 +391,7 @@ QObject* q_qmlcomponent_create_object22(void* self, void* parent, libqt_map /* o
     return _out;
 }
 
-void q_qmlcomponent_on_create_object22(void* self, QObject* (*callback)(void*, void*, libqt_map /* of const char* to QVariant* */)) {
-    QQmlComponent_OnCreateObject22((QQmlComponent*)self, (intptr_t)callback);
-}
-
-QObject* q_qmlcomponent_super_create_object22(void* self, void* parent, libqt_map /* of const char* to QVariant* */ properties) {
-    // Convert libqt_map to QMap<QString,QVariant>
-    libqt_map properties_ret;
-    properties_ret.len = properties.len;
-    properties_ret.keys = (libqt_string*)malloc(properties_ret.len * sizeof(libqt_string));
-    if (properties_ret.keys == NULL) {
-        fprintf(stderr, "Failed to allocate memory for map keys in q_qmlcomponent_create_object22\n");
-        abort();
-    }
-    properties_ret.values = (QVariant**)malloc(properties_ret.len * sizeof(QVariant*));
-    if (properties_ret.values == NULL) {
-        free(properties_ret.keys);
-        fprintf(stderr, "Failed to allocate memory for map values in q_qmlcomponent_create_object22\n");
-        abort();
-    }
-    const char** properties_karr = (const char**)properties.keys;
-    libqt_string* properties_kdest = (libqt_string*)properties_ret.keys;
-    QVariant** properties_varr = (QVariant**)properties.values;
-    QVariant** properties_vdest = (QVariant**)properties_ret.values;
-    for (size_t i = 0; i < properties_ret.len; ++i) {
-        properties_kdest[i] = qstring(properties_karr[i]);
-        properties_vdest[i] = properties_varr[i];
-    }
-    return QQmlComponent_SuperCreateObject22((QQmlComponent*)self, (QObject*)parent, properties_ret);
-}
-
-const char* q_qmlcomponent_object_name(void* self) {
+const char* q_qmlcomponent_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -448,19 +402,19 @@ void q_qmlcomponent_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_qmlcomponent_is_widget_type(void* self) {
+bool q_qmlcomponent_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_qmlcomponent_is_window_type(void* self) {
+bool q_qmlcomponent_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_qmlcomponent_is_quick_item_type(void* self) {
+bool q_qmlcomponent_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_qmlcomponent_signals_blocked(void* self) {
+bool q_qmlcomponent_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -468,7 +422,7 @@ bool q_qmlcomponent_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_qmlcomponent_thread(void* self) {
+QThread* q_qmlcomponent_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -492,7 +446,7 @@ void q_qmlcomponent_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_qmlcomponent_children(void* self) {
+libqt_list /* of QObject* */ q_qmlcomponent_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -509,55 +463,55 @@ void q_qmlcomponent_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_qmlcomponent_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_qmlcomponent_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_qmlcomponent_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_qmlcomponent_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_qmlcomponent_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_qmlcomponent_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_qmlcomponent_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_qmlcomponent_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_qmlcomponent_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_qmlcomponent_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_qmlcomponent_disconnect3(void* self) {
+bool q_qmlcomponent_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_qmlcomponent_disconnect4(void* self, void* receiver) {
+bool q_qmlcomponent_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_qmlcomponent_disconnect5(void* param1) {
+bool q_qmlcomponent_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_qmlcomponent_dump_object_tree(void* self) {
+void q_qmlcomponent_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_qmlcomponent_dump_object_info(void* self) {
+void q_qmlcomponent_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_qmlcomponent_set_property(void* self, const char* name, void* value) {
+bool q_qmlcomponent_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_qmlcomponent_property(void* self, const char* name) {
+QVariant* q_qmlcomponent_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_qmlcomponent_dynamic_property_names(void* self) {
+const char** q_qmlcomponent_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -578,7 +532,7 @@ QBindingStorage* q_qmlcomponent_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_qmlcomponent_binding_storage2(void* self) {
+const QBindingStorage* q_qmlcomponent_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -590,11 +544,11 @@ void q_qmlcomponent_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_qmlcomponent_parent(void* self) {
+QObject* q_qmlcomponent_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_qmlcomponent_inherits(void* self, const char* classname) {
+bool q_qmlcomponent_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -610,31 +564,31 @@ int32_t q_qmlcomponent_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_qmlcomponent_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_qmlcomponent_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_qmlcomponent_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_qmlcomponent_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_qmlcomponent_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_qmlcomponent_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_qmlcomponent_disconnect1(void* self, const char* signal) {
+bool q_qmlcomponent_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_qmlcomponent_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_qmlcomponent_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_qmlcomponent_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_qmlcomponent_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_qmlcomponent_disconnect23(void* self, void* receiver, const char* member) {
+bool q_qmlcomponent_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -706,76 +660,44 @@ void q_qmlcomponent_on_custom_event(void* self, void (*callback)(void*, void*)) 
     QQmlComponent_OnCustomEvent((QQmlComponent*)self, (intptr_t)callback);
 }
 
-void q_qmlcomponent_connect_notify(void* self, void* signal) {
+void q_qmlcomponent_connect_notify(void* self, const void* signal) {
     QQmlComponent_ConnectNotify((QQmlComponent*)self, (QMetaMethod*)signal);
 }
 
-void q_qmlcomponent_super_connect_notify(void* self, void* signal) {
+void q_qmlcomponent_super_connect_notify(void* self, const void* signal) {
     QQmlComponent_SuperConnectNotify((QQmlComponent*)self, (QMetaMethod*)signal);
 }
 
-void q_qmlcomponent_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_qmlcomponent_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QQmlComponent_OnConnectNotify((QQmlComponent*)self, (intptr_t)callback);
 }
 
-void q_qmlcomponent_disconnect_notify(void* self, void* signal) {
+void q_qmlcomponent_disconnect_notify(void* self, const void* signal) {
     QQmlComponent_DisconnectNotify((QQmlComponent*)self, (QMetaMethod*)signal);
 }
 
-void q_qmlcomponent_super_disconnect_notify(void* self, void* signal) {
+void q_qmlcomponent_super_disconnect_notify(void* self, const void* signal) {
     QQmlComponent_SuperDisconnectNotify((QQmlComponent*)self, (QMetaMethod*)signal);
 }
 
-void q_qmlcomponent_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_qmlcomponent_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QQmlComponent_OnDisconnectNotify((QQmlComponent*)self, (intptr_t)callback);
 }
 
-QObject* q_qmlcomponent_sender(void* self) {
+QObject* q_qmlcomponent_sender(const void* self) {
     return QQmlComponent_Sender((QQmlComponent*)self);
 }
 
-QObject* q_qmlcomponent_super_sender(void* self) {
-    return QQmlComponent_SuperSender((QQmlComponent*)self);
-}
-
-void q_qmlcomponent_on_sender(void* self, QObject* (*callback)()) {
-    QQmlComponent_OnSender((QQmlComponent*)self, (intptr_t)callback);
-}
-
-int32_t q_qmlcomponent_sender_signal_index(void* self) {
+int32_t q_qmlcomponent_sender_signal_index(const void* self) {
     return QQmlComponent_SenderSignalIndex((QQmlComponent*)self);
 }
 
-int32_t q_qmlcomponent_super_sender_signal_index(void* self) {
-    return QQmlComponent_SuperSenderSignalIndex((QQmlComponent*)self);
-}
-
-void q_qmlcomponent_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QQmlComponent_OnSenderSignalIndex((QQmlComponent*)self, (intptr_t)callback);
-}
-
-int32_t q_qmlcomponent_receivers(void* self, const char* signal) {
+int32_t q_qmlcomponent_receivers(const void* self, const char* signal) {
     return QQmlComponent_Receivers((QQmlComponent*)self, signal);
 }
 
-int32_t q_qmlcomponent_super_receivers(void* self, const char* signal) {
-    return QQmlComponent_SuperReceivers((QQmlComponent*)self, signal);
-}
-
-void q_qmlcomponent_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QQmlComponent_OnReceivers((QQmlComponent*)self, (intptr_t)callback);
-}
-
-bool q_qmlcomponent_is_signal_connected(void* self, void* signal) {
+bool q_qmlcomponent_is_signal_connected(const void* self, const void* signal) {
     return QQmlComponent_IsSignalConnected((QQmlComponent*)self, (QMetaMethod*)signal);
-}
-
-bool q_qmlcomponent_super_is_signal_connected(void* self, void* signal) {
-    return QQmlComponent_SuperIsSignalConnected((QQmlComponent*)self, (QMetaMethod*)signal);
-}
-
-void q_qmlcomponent_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QQmlComponent_OnIsSignalConnected((QQmlComponent*)self, (intptr_t)callback);
 }
 
 void q_qmlcomponent_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

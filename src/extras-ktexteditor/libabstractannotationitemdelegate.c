@@ -15,11 +15,11 @@ KTextEditor__StyleOptionAnnotationItem* k_texteditor__styleoptionannotationitem_
     return KTextEditor__StyleOptionAnnotationItem_New();
 }
 
-KTextEditor__StyleOptionAnnotationItem* k_texteditor__styleoptionannotationitem_new2(void* other) {
+KTextEditor__StyleOptionAnnotationItem* k_texteditor__styleoptionannotationitem_new2(const void* other) {
     return KTextEditor__StyleOptionAnnotationItem_New2((KTextEditor__StyleOptionAnnotationItem*)other);
 }
 
-int32_t k_texteditor__styleoptionannotationitem_wrapped_line(void* self) {
+int32_t k_texteditor__styleoptionannotationitem_wrapped_line(const void* self) {
     return KTextEditor__StyleOptionAnnotationItem_WrappedLine((KTextEditor__StyleOptionAnnotationItem*)self);
 }
 
@@ -27,7 +27,7 @@ void k_texteditor__styleoptionannotationitem_set_wrapped_line(void* self, int wr
     KTextEditor__StyleOptionAnnotationItem_SetWrappedLine((KTextEditor__StyleOptionAnnotationItem*)self, wrappedLine);
 }
 
-int32_t k_texteditor__styleoptionannotationitem_wrapped_line_count(void* self) {
+int32_t k_texteditor__styleoptionannotationitem_wrapped_line_count(const void* self) {
     return KTextEditor__StyleOptionAnnotationItem_WrappedLineCount((KTextEditor__StyleOptionAnnotationItem*)self);
 }
 
@@ -35,7 +35,7 @@ void k_texteditor__styleoptionannotationitem_set_wrapped_line_count(void* self, 
     KTextEditor__StyleOptionAnnotationItem_SetWrappedLineCount((KTextEditor__StyleOptionAnnotationItem*)self, wrappedLineCount);
 }
 
-int32_t k_texteditor__styleoptionannotationitem_visible_wrapped_line_in_group(void* self) {
+int32_t k_texteditor__styleoptionannotationitem_visible_wrapped_line_in_group(const void* self) {
     return KTextEditor__StyleOptionAnnotationItem_VisibleWrappedLineInGroup((KTextEditor__StyleOptionAnnotationItem*)self);
 }
 
@@ -43,7 +43,7 @@ void k_texteditor__styleoptionannotationitem_set_visible_wrapped_line_in_group(v
     KTextEditor__StyleOptionAnnotationItem_SetVisibleWrappedLineInGroup((KTextEditor__StyleOptionAnnotationItem*)self, visibleWrappedLineInGroup);
 }
 
-KTextEditor__View* k_texteditor__styleoptionannotationitem_view(void* self) {
+KTextEditor__View* k_texteditor__styleoptionannotationitem_view(const void* self) {
     return KTextEditor__StyleOptionAnnotationItem_View((KTextEditor__StyleOptionAnnotationItem*)self);
 }
 
@@ -51,7 +51,7 @@ void k_texteditor__styleoptionannotationitem_set_view(void* self, void* view) {
     KTextEditor__StyleOptionAnnotationItem_SetView((KTextEditor__StyleOptionAnnotationItem*)self, (KTextEditor__View*)view);
 }
 
-QSize* k_texteditor__styleoptionannotationitem_decoration_size(void* self) {
+QSize* k_texteditor__styleoptionannotationitem_decoration_size(const void* self) {
     return KTextEditor__StyleOptionAnnotationItem_DecorationSize((KTextEditor__StyleOptionAnnotationItem*)self);
 }
 
@@ -59,7 +59,7 @@ void k_texteditor__styleoptionannotationitem_set_decoration_size(void* self, voi
     KTextEditor__StyleOptionAnnotationItem_SetDecorationSize((KTextEditor__StyleOptionAnnotationItem*)self, (QSize*)decorationSize);
 }
 
-QFontMetricsF* k_texteditor__styleoptionannotationitem_content_font_metrics(void* self) {
+QFontMetricsF* k_texteditor__styleoptionannotationitem_content_font_metrics(const void* self) {
     return KTextEditor__StyleOptionAnnotationItem_ContentFontMetrics((KTextEditor__StyleOptionAnnotationItem*)self);
 }
 
@@ -67,7 +67,7 @@ void k_texteditor__styleoptionannotationitem_set_content_font_metrics(void* self
     KTextEditor__StyleOptionAnnotationItem_SetContentFontMetrics((KTextEditor__StyleOptionAnnotationItem*)self, (QFontMetricsF*)contentFontMetrics);
 }
 
-int32_t k_texteditor__styleoptionannotationitem_annotation_item_grouping_position(void* self) {
+int32_t k_texteditor__styleoptionannotationitem_annotation_item_grouping_position(const void* self) {
     return KTextEditor__StyleOptionAnnotationItem_AnnotationItemGroupingPosition((KTextEditor__StyleOptionAnnotationItem*)self);
 }
 
@@ -75,11 +75,11 @@ void k_texteditor__styleoptionannotationitem_set_annotation_item_grouping_positi
     KTextEditor__StyleOptionAnnotationItem_SetAnnotationItemGroupingPosition((KTextEditor__StyleOptionAnnotationItem*)self, annotationItemGroupingPosition);
 }
 
-void k_texteditor__styleoptionannotationitem_operator_assign(void* self, void* param1) {
+void k_texteditor__styleoptionannotationitem_operator_assign(void* self, const void* param1) {
     KTextEditor__StyleOptionAnnotationItem_OperatorAssign((KTextEditor__StyleOptionAnnotationItem*)self, (KTextEditor__StyleOptionAnnotationItem*)param1);
 }
 
-int32_t k_texteditor__styleoptionannotationitem_version(void* self) {
+int32_t k_texteditor__styleoptionannotationitem_version(const void* self) {
     return QStyleOption_Version((QStyleOption*)self);
 }
 
@@ -87,7 +87,7 @@ void k_texteditor__styleoptionannotationitem_set_version(void* self, int version
     QStyleOption_SetVersion((QStyleOption*)self, version);
 }
 
-int32_t k_texteditor__styleoptionannotationitem_type(void* self) {
+int32_t k_texteditor__styleoptionannotationitem_type(const void* self) {
     return QStyleOption_Type((QStyleOption*)self);
 }
 
@@ -95,7 +95,7 @@ void k_texteditor__styleoptionannotationitem_set_type(void* self, int type) {
     QStyleOption_SetType((QStyleOption*)self, type);
 }
 
-int32_t k_texteditor__styleoptionannotationitem_state(void* self) {
+int32_t k_texteditor__styleoptionannotationitem_state(const void* self) {
     return QStyleOption_State((QStyleOption*)self);
 }
 
@@ -103,7 +103,7 @@ void k_texteditor__styleoptionannotationitem_set_state(void* self, int32_t state
     QStyleOption_SetState((QStyleOption*)self, state);
 }
 
-int32_t k_texteditor__styleoptionannotationitem_direction(void* self) {
+int32_t k_texteditor__styleoptionannotationitem_direction(const void* self) {
     return QStyleOption_Direction((QStyleOption*)self);
 }
 
@@ -111,7 +111,7 @@ void k_texteditor__styleoptionannotationitem_set_direction(void* self, int32_t d
     QStyleOption_SetDirection((QStyleOption*)self, direction);
 }
 
-QRect* k_texteditor__styleoptionannotationitem_rect(void* self) {
+QRect* k_texteditor__styleoptionannotationitem_rect(const void* self) {
     return QStyleOption_Rect((QStyleOption*)self);
 }
 
@@ -119,7 +119,7 @@ void k_texteditor__styleoptionannotationitem_set_rect(void* self, void* rect) {
     QStyleOption_SetRect((QStyleOption*)self, (QRect*)rect);
 }
 
-QFontMetrics* k_texteditor__styleoptionannotationitem_font_metrics(void* self) {
+QFontMetrics* k_texteditor__styleoptionannotationitem_font_metrics(const void* self) {
     return QStyleOption_FontMetrics((QStyleOption*)self);
 }
 
@@ -127,7 +127,7 @@ void k_texteditor__styleoptionannotationitem_set_font_metrics(void* self, void* 
     QStyleOption_SetFontMetrics((QStyleOption*)self, (QFontMetrics*)fontMetrics);
 }
 
-QPalette* k_texteditor__styleoptionannotationitem_palette(void* self) {
+QPalette* k_texteditor__styleoptionannotationitem_palette(const void* self) {
     return QStyleOption_Palette((QStyleOption*)self);
 }
 
@@ -135,7 +135,7 @@ void k_texteditor__styleoptionannotationitem_set_palette(void* self, void* palet
     QStyleOption_SetPalette((QStyleOption*)self, (QPalette*)palette);
 }
 
-QObject* k_texteditor__styleoptionannotationitem_style_object(void* self) {
+QObject* k_texteditor__styleoptionannotationitem_style_object(const void* self) {
     return QStyleOption_StyleObject((QStyleOption*)self);
 }
 
@@ -143,7 +143,7 @@ void k_texteditor__styleoptionannotationitem_set_style_object(void* self, void* 
     QStyleOption_SetStyleObject((QStyleOption*)self, (QObject*)styleObject);
 }
 
-void k_texteditor__styleoptionannotationitem_init_from(void* self, void* w) {
+void k_texteditor__styleoptionannotationitem_init_from(void* self, const void* w) {
     QStyleOption_InitFrom((QStyleOption*)self, (QWidget*)w);
 }
 
@@ -151,7 +151,7 @@ void k_texteditor__styleoptionannotationitem_delete(void* self) {
     KTextEditor__StyleOptionAnnotationItem_Delete((KTextEditor__StyleOptionAnnotationItem*)(self));
 }
 
-const QMetaObject* k_texteditor__abstractannotationitemdelegate_meta_object(void* self) {
+const QMetaObject* k_texteditor__abstractannotationitemdelegate_meta_object(const void* self) {
     return KTextEditor__AbstractAnnotationItemDelegate_MetaObject((KTextEditor__AbstractAnnotationItemDelegate*)self);
 }
 
@@ -168,22 +168,6 @@ const char* k_texteditor__abstractannotationitemdelegate_tr(const char* s) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
-}
-
-void k_texteditor__abstractannotationitemdelegate_paint(void* self, void* painter, void* option, void* model, int line) {
-    KTextEditor__AbstractAnnotationItemDelegate_Paint((KTextEditor__AbstractAnnotationItemDelegate*)self, (QPainter*)painter, (KTextEditor__StyleOptionAnnotationItem*)option, (KTextEditor__AnnotationModel*)model, line);
-}
-
-QSize* k_texteditor__abstractannotationitemdelegate_size_hint(void* self, void* option, void* model, int line) {
-    return KTextEditor__AbstractAnnotationItemDelegate_SizeHint((KTextEditor__AbstractAnnotationItemDelegate*)self, (KTextEditor__StyleOptionAnnotationItem*)option, (KTextEditor__AnnotationModel*)model, line);
-}
-
-bool k_texteditor__abstractannotationitemdelegate_help_event(void* self, void* event, void* view, void* option, void* model, int line) {
-    return KTextEditor__AbstractAnnotationItemDelegate_HelpEvent((KTextEditor__AbstractAnnotationItemDelegate*)self, (QHelpEvent*)event, (KTextEditor__View*)view, (KTextEditor__StyleOptionAnnotationItem*)option, (KTextEditor__AnnotationModel*)model, line);
-}
-
-void k_texteditor__abstractannotationitemdelegate_hide_tooltip(void* self, void* view) {
-    KTextEditor__AbstractAnnotationItemDelegate_HideTooltip((KTextEditor__AbstractAnnotationItemDelegate*)self, (KTextEditor__View*)view);
 }
 
 void k_texteditor__abstractannotationitemdelegate_size_hint_changed(void* self, void* model, int line) {
@@ -216,7 +200,7 @@ bool k_texteditor__abstractannotationitemdelegate_event_filter(void* self, void*
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* k_texteditor__abstractannotationitemdelegate_object_name(void* self) {
+const char* k_texteditor__abstractannotationitemdelegate_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -227,19 +211,19 @@ void k_texteditor__abstractannotationitemdelegate_set_object_name(void* self, co
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_is_widget_type(void* self) {
+bool k_texteditor__abstractannotationitemdelegate_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_is_window_type(void* self) {
+bool k_texteditor__abstractannotationitemdelegate_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_is_quick_item_type(void* self) {
+bool k_texteditor__abstractannotationitemdelegate_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_signals_blocked(void* self) {
+bool k_texteditor__abstractannotationitemdelegate_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -247,7 +231,7 @@ bool k_texteditor__abstractannotationitemdelegate_block_signals(void* self, bool
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* k_texteditor__abstractannotationitemdelegate_thread(void* self) {
+QThread* k_texteditor__abstractannotationitemdelegate_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -271,7 +255,7 @@ void k_texteditor__abstractannotationitemdelegate_kill_timer2(void* self, int32_
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ k_texteditor__abstractannotationitemdelegate_children(void* self) {
+libqt_list /* of QObject* */ k_texteditor__abstractannotationitemdelegate_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -288,55 +272,55 @@ void k_texteditor__abstractannotationitemdelegate_remove_event_filter(void* self
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect3(void* self) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect4(void* self, void* receiver) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect5(void* param1) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void k_texteditor__abstractannotationitemdelegate_dump_object_tree(void* self) {
+void k_texteditor__abstractannotationitemdelegate_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void k_texteditor__abstractannotationitemdelegate_dump_object_info(void* self) {
+void k_texteditor__abstractannotationitemdelegate_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_set_property(void* self, const char* name, void* value) {
+bool k_texteditor__abstractannotationitemdelegate_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* k_texteditor__abstractannotationitemdelegate_property(void* self, const char* name) {
+QVariant* k_texteditor__abstractannotationitemdelegate_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** k_texteditor__abstractannotationitemdelegate_dynamic_property_names(void* self) {
+const char** k_texteditor__abstractannotationitemdelegate_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -357,7 +341,7 @@ QBindingStorage* k_texteditor__abstractannotationitemdelegate_binding_storage(vo
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* k_texteditor__abstractannotationitemdelegate_binding_storage2(void* self) {
+const QBindingStorage* k_texteditor__abstractannotationitemdelegate_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -369,11 +353,11 @@ void k_texteditor__abstractannotationitemdelegate_on_destroyed(void* self, void 
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* k_texteditor__abstractannotationitemdelegate_parent(void* self) {
+QObject* k_texteditor__abstractannotationitemdelegate_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_inherits(void* self, const char* classname) {
+bool k_texteditor__abstractannotationitemdelegate_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -389,31 +373,31 @@ int32_t k_texteditor__abstractannotationitemdelegate_start_timer23(void* self, i
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* k_texteditor__abstractannotationitemdelegate_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect1(void* self, const char* signal) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect22(void* self, const char* signal, void* receiver) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool k_texteditor__abstractannotationitemdelegate_disconnect23(void* self, void* receiver, const char* member) {
+bool k_texteditor__abstractannotationitemdelegate_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 

@@ -8,11 +8,11 @@ QCborArray* q_cborarray_new() {
     return QCborArray_New();
 }
 
-QCborArray* q_cborarray_new2(void* other) {
+QCborArray* q_cborarray_new2(const void* other) {
     return QCborArray_New2((QCborArray*)other);
 }
 
-void q_cborarray_operator_assign(void* self, void* other) {
+void q_cborarray_operator_assign(void* self, const void* other) {
     QCborArray_OperatorAssign((QCborArray*)self, (QCborArray*)other);
 }
 
@@ -20,15 +20,15 @@ void q_cborarray_swap(void* self, void* other) {
     QCborArray_Swap((QCborArray*)self, (QCborArray*)other);
 }
 
-QCborValue* q_cborarray_to_cbor_value(void* self) {
+QCborValue* q_cborarray_to_cbor_value(const void* self) {
     return QCborArray_ToCborValue((QCborArray*)self);
 }
 
-intptr_t q_cborarray_size(void* self) {
+intptr_t q_cborarray_size(const void* self) {
     return QCborArray_Size((QCborArray*)self);
 }
 
-bool q_cborarray_is_empty(void* self) {
+bool q_cborarray_is_empty(const void* self) {
     return QCborArray_IsEmpty((QCborArray*)self);
 }
 
@@ -36,19 +36,19 @@ void q_cborarray_clear(void* self) {
     QCborArray_Clear((QCborArray*)self);
 }
 
-QCborValue* q_cborarray_at(void* self, intptr_t i) {
+QCborValue* q_cborarray_at(const void* self, intptr_t i) {
     return QCborArray_At((QCborArray*)self, i);
 }
 
-QCborValue* q_cborarray_first(void* self) {
+QCborValue* q_cborarray_first(const void* self) {
     return QCborArray_First((QCborArray*)self);
 }
 
-QCborValue* q_cborarray_last(void* self) {
+QCborValue* q_cborarray_last(const void* self) {
     return QCborArray_Last((QCborArray*)self);
 }
 
-const QCborValue* q_cborarray_operator_subscript(void* self, intptr_t i) {
+const QCborValue* q_cborarray_operator_subscript(const void* self, intptr_t i) {
     return QCborArray_OperatorSubscript((QCborArray*)self, i);
 }
 
@@ -64,15 +64,15 @@ QCborValueRef* q_cborarray_operator_subscript2(void* self, intptr_t i) {
     return QCborArray_OperatorSubscript2((QCborArray*)self, i);
 }
 
-void q_cborarray_insert(void* self, intptr_t i, void* value) {
+void q_cborarray_insert(void* self, intptr_t i, const void* value) {
     QCborArray_Insert((QCborArray*)self, i, (QCborValue*)value);
 }
 
-void q_cborarray_prepend(void* self, void* value) {
+void q_cborarray_prepend(void* self, const void* value) {
     QCborArray_Prepend((QCborArray*)self, (QCborValue*)value);
 }
 
-void q_cborarray_append(void* self, void* value) {
+void q_cborarray_append(void* self, const void* value) {
     QCborArray_Append((QCborArray*)self, (QCborValue*)value);
 }
 
@@ -108,11 +108,11 @@ QCborValue* q_cborarray_take_last(void* self) {
     return QCborArray_TakeLast((QCborArray*)self);
 }
 
-bool q_cborarray_contains(void* self, void* value) {
+bool q_cborarray_contains(const void* self, const void* value) {
     return QCborArray_Contains((QCborArray*)self, (QCborValue*)value);
 }
 
-int32_t q_cborarray_compare(void* self, void* other) {
+int32_t q_cborarray_compare(const void* self, const void* other) {
     return QCborArray_Compare((QCborArray*)self, (QCborArray*)other);
 }
 
@@ -120,15 +120,15 @@ QCborArray__Iterator* q_cborarray_begin(void* self) {
     return QCborArray_Begin((QCborArray*)self);
 }
 
-QCborArray__ConstIterator* q_cborarray_const_begin(void* self) {
+QCborArray__ConstIterator* q_cborarray_const_begin(const void* self) {
     return QCborArray_ConstBegin((QCborArray*)self);
 }
 
-QCborArray__ConstIterator* q_cborarray_begin2(void* self) {
+QCborArray__ConstIterator* q_cborarray_begin2(const void* self) {
     return QCborArray_Begin2((QCborArray*)self);
 }
 
-QCborArray__ConstIterator* q_cborarray_cbegin(void* self) {
+QCborArray__ConstIterator* q_cborarray_cbegin(const void* self) {
     return QCborArray_Cbegin((QCborArray*)self);
 }
 
@@ -136,23 +136,23 @@ QCborArray__Iterator* q_cborarray_end(void* self) {
     return QCborArray_End((QCborArray*)self);
 }
 
-QCborArray__ConstIterator* q_cborarray_const_end(void* self) {
+QCborArray__ConstIterator* q_cborarray_const_end(const void* self) {
     return QCborArray_ConstEnd((QCborArray*)self);
 }
 
-QCborArray__ConstIterator* q_cborarray_end2(void* self) {
+QCborArray__ConstIterator* q_cborarray_end2(const void* self) {
     return QCborArray_End2((QCborArray*)self);
 }
 
-QCborArray__ConstIterator* q_cborarray_cend(void* self) {
+QCborArray__ConstIterator* q_cborarray_cend(const void* self) {
     return QCborArray_Cend((QCborArray*)self);
 }
 
-QCborArray__Iterator* q_cborarray_insert2(void* self, void* before, void* value) {
+QCborArray__Iterator* q_cborarray_insert2(void* self, void* before, const void* value) {
     return QCborArray_Insert2((QCborArray*)self, (QCborArray__Iterator*)before, (QCborValue*)value);
 }
 
-QCborArray__Iterator* q_cborarray_insert3(void* self, void* before, void* value) {
+QCborArray__Iterator* q_cborarray_insert3(void* self, void* before, const void* value) {
     return QCborArray_Insert3((QCborArray*)self, (QCborArray__ConstIterator*)before, (QCborValue*)value);
 }
 
@@ -164,11 +164,11 @@ QCborArray__Iterator* q_cborarray_erase2(void* self, void* it) {
     return QCborArray_Erase2((QCborArray*)self, (QCborArray__ConstIterator*)it);
 }
 
-void q_cborarray_push_back(void* self, void* t) {
+void q_cborarray_push_back(void* self, const void* t) {
     QCborArray_PushBack((QCborArray*)self, (QCborValue*)t);
 }
 
-void q_cborarray_push_front(void* self, void* t) {
+void q_cborarray_push_front(void* self, const void* t) {
     QCborArray_PushFront((QCborArray*)self, (QCborValue*)t);
 }
 
@@ -180,19 +180,19 @@ void q_cborarray_pop_back(void* self) {
     QCborArray_PopBack((QCborArray*)self);
 }
 
-bool q_cborarray_empty(void* self) {
+bool q_cborarray_empty(const void* self) {
     return QCborArray_Empty((QCborArray*)self);
 }
 
-QCborArray* q_cborarray_operator_plus(void* self, void* v) {
+QCborArray* q_cborarray_operator_plus(const void* self, const void* v) {
     return QCborArray_OperatorPlus((QCborArray*)self, (QCborValue*)v);
 }
 
-QCborArray* q_cborarray_operator_plus_assign(void* self, void* v) {
+QCborArray* q_cborarray_operator_plus_assign(void* self, const void* v) {
     return QCborArray_OperatorPlusAssign((QCborArray*)self, (QCborValue*)v);
 }
 
-QCborArray* q_cborarray_operator_shift_left(void* self, void* v) {
+QCborArray* q_cborarray_operator_shift_left(void* self, const void* v) {
     return QCborArray_OperatorShiftLeft((QCborArray*)self, (QCborValue*)v);
 }
 
@@ -215,16 +215,16 @@ QCborArray* q_cborarray_from_variant_list(libqt_list /* of QVariant* */ list) {
     return QCborArray_FromVariantList(list);
 }
 
-QCborArray* q_cborarray_from_json_array(void* array) {
+QCborArray* q_cborarray_from_json_array(const void* array) {
     return QCborArray_FromJsonArray((QJsonArray*)array);
 }
 
-libqt_list /* of QVariant* */ q_cborarray_to_variant_list(void* self) {
+libqt_list /* of QVariant* */ q_cborarray_to_variant_list(const void* self) {
     libqt_list _arr = QCborArray_ToVariantList((QCborArray*)self);
     return _arr;
 }
 
-QJsonArray* q_cborarray_to_json_array(void* self) {
+QJsonArray* q_cborarray_to_json_array(const void* self) {
     return QCborArray_ToJsonArray((QCborArray*)self);
 }
 
@@ -232,7 +232,7 @@ void q_cborarray_delete(void* self) {
     QCborArray_Delete((QCborArray*)(self));
 }
 
-size_t q_qcborarray_q_hash(void* array, size_t seed) {
+size_t q_qcborarray_q_hash(const void* array, size_t seed) {
     return qcborarray_QHash((QCborArray*)array, seed);
 }
 
@@ -240,19 +240,19 @@ QCborArray__Iterator* q_cborarray__iterator_new() {
     return QCborArray__Iterator_New();
 }
 
-QCborArray__Iterator* q_cborarray__iterator_new2(void* other) {
+QCborArray__Iterator* q_cborarray__iterator_new2(const void* other) {
     return QCborArray__Iterator_New2((QCborArray__Iterator*)other);
 }
 
-QCborArray__Iterator* q_cborarray__iterator_new3(void* param1) {
+QCborArray__Iterator* q_cborarray__iterator_new3(const void* param1) {
     return QCborArray__Iterator_New3((QCborArray__Iterator*)param1);
 }
 
-void q_cborarray__iterator_operator_assign(void* self, void* other) {
+void q_cborarray__iterator_operator_assign(void* self, const void* other) {
     QCborArray__Iterator_OperatorAssign((QCborArray__Iterator*)self, (QCborArray__Iterator*)other);
 }
 
-QCborValueRef* q_cborarray__iterator_operator_multiply(void* self) {
+QCborValueRef* q_cborarray__iterator_operator_multiply(const void* self) {
     return QCborArray__Iterator_OperatorMultiply((QCborArray__Iterator*)self);
 }
 
@@ -260,11 +260,11 @@ QCborValueRef* q_cborarray__iterator_operator_minus_greater(void* self) {
     return QCborArray__Iterator_OperatorMinusGreater((QCborArray__Iterator*)self);
 }
 
-const QCborValueConstRef* q_cborarray__iterator_operator_minus_greater2(void* self) {
+const QCborValueConstRef* q_cborarray__iterator_operator_minus_greater2(const void* self) {
     return QCborArray__Iterator_OperatorMinusGreater2((QCborArray__Iterator*)self);
 }
 
-QCborValueRef* q_cborarray__iterator_operator_subscript(void* self, intptr_t j) {
+QCborValueRef* q_cborarray__iterator_operator_subscript(const void* self, intptr_t j) {
     return QCborArray__Iterator_OperatorSubscript((QCborArray__Iterator*)self, j);
 }
 
@@ -292,15 +292,15 @@ QCborArray__Iterator* q_cborarray__iterator_operator_minus_assign(void* self, in
     return QCborArray__Iterator_OperatorMinusAssign((QCborArray__Iterator*)self, j);
 }
 
-QCborArray__Iterator* q_cborarray__iterator_operator_plus(void* self, intptr_t j) {
+QCborArray__Iterator* q_cborarray__iterator_operator_plus(const void* self, intptr_t j) {
     return QCborArray__Iterator_OperatorPlus((QCborArray__Iterator*)self, j);
 }
 
-QCborArray__Iterator* q_cborarray__iterator_operator_minus(void* self, intptr_t j) {
+QCborArray__Iterator* q_cborarray__iterator_operator_minus(const void* self, intptr_t j) {
     return QCborArray__Iterator_OperatorMinus((QCborArray__Iterator*)self, j);
 }
 
-intptr_t q_cborarray__iterator_operator_minus2(void* self, void* j) {
+intptr_t q_cborarray__iterator_operator_minus2(const void* self, void* j) {
     return QCborArray__Iterator_OperatorMinus2((QCborArray__Iterator*)self, (QCborArray__Iterator*)j);
 }
 
@@ -312,27 +312,27 @@ QCborArray__ConstIterator* q_cborarray__constiterator_new() {
     return QCborArray__ConstIterator_New();
 }
 
-QCborArray__ConstIterator* q_cborarray__constiterator_new2(void* other) {
+QCborArray__ConstIterator* q_cborarray__constiterator_new2(const void* other) {
     return QCborArray__ConstIterator_New2((QCborArray__ConstIterator*)other);
 }
 
-QCborArray__ConstIterator* q_cborarray__constiterator_new3(void* param1) {
+QCborArray__ConstIterator* q_cborarray__constiterator_new3(const void* param1) {
     return QCborArray__ConstIterator_New3((QCborArray__ConstIterator*)param1);
 }
 
-void q_cborarray__constiterator_operator_assign(void* self, void* other) {
+void q_cborarray__constiterator_operator_assign(void* self, const void* other) {
     QCborArray__ConstIterator_OperatorAssign((QCborArray__ConstIterator*)self, (QCborArray__ConstIterator*)other);
 }
 
-QCborValueConstRef* q_cborarray__constiterator_operator_multiply(void* self) {
+QCborValueConstRef* q_cborarray__constiterator_operator_multiply(const void* self) {
     return QCborArray__ConstIterator_OperatorMultiply((QCborArray__ConstIterator*)self);
 }
 
-const QCborValueConstRef* q_cborarray__constiterator_operator_minus_greater(void* self) {
+const QCborValueConstRef* q_cborarray__constiterator_operator_minus_greater(const void* self) {
     return QCborArray__ConstIterator_OperatorMinusGreater((QCborArray__ConstIterator*)self);
 }
 
-QCborValueConstRef* q_cborarray__constiterator_operator_subscript(void* self, intptr_t j) {
+QCborValueConstRef* q_cborarray__constiterator_operator_subscript(const void* self, intptr_t j) {
     return QCborArray__ConstIterator_OperatorSubscript((QCborArray__ConstIterator*)self, j);
 }
 
@@ -360,15 +360,15 @@ QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus_assign(void
     return QCborArray__ConstIterator_OperatorMinusAssign((QCborArray__ConstIterator*)self, j);
 }
 
-QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus(void* self, intptr_t j) {
+QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus(const void* self, intptr_t j) {
     return QCborArray__ConstIterator_OperatorPlus((QCborArray__ConstIterator*)self, j);
 }
 
-QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus(void* self, intptr_t j) {
+QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus(const void* self, intptr_t j) {
     return QCborArray__ConstIterator_OperatorMinus((QCborArray__ConstIterator*)self, j);
 }
 
-intptr_t q_cborarray__constiterator_operator_minus2(void* self, void* j) {
+intptr_t q_cborarray__constiterator_operator_minus2(const void* self, void* j) {
     return QCborArray__ConstIterator_OperatorMinus2((QCborArray__ConstIterator*)self, (QCborArray__ConstIterator*)j);
 }
 

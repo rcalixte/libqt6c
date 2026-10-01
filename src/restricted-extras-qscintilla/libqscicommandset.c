@@ -24,11 +24,11 @@ void q_scicommandset_clear_alternate_keys(void* self) {
     QsciCommandSet_ClearAlternateKeys((QsciCommandSet*)self);
 }
 
-QsciCommand* q_scicommandset_bound_to(void* self, int key) {
+QsciCommand* q_scicommandset_bound_to(const void* self, int key) {
     return QsciCommandSet_BoundTo((QsciCommandSet*)self, key);
 }
 
-QsciCommand* q_scicommandset_find(void* self, int32_t command) {
+QsciCommand* q_scicommandset_find(const void* self, int32_t command) {
     return QsciCommandSet_Find((QsciCommandSet*)self, command);
 }
 

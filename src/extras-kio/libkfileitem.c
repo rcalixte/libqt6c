@@ -11,39 +11,39 @@ KFileItem* k_fileitem_new() {
     return KFileItem_New();
 }
 
-KFileItem* k_fileitem_new2(void* entry, void* itemOrDirUrl) {
+KFileItem* k_fileitem_new2(const void* entry, const void* itemOrDirUrl) {
     return KFileItem_New2((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl);
 }
 
-KFileItem* k_fileitem_new3(void* url) {
+KFileItem* k_fileitem_new3(const void* url) {
     return KFileItem_New3((QUrl*)url);
 }
 
-KFileItem* k_fileitem_new4(void* url, int32_t mimeTypeDetermination) {
+KFileItem* k_fileitem_new4(const void* url, int32_t mimeTypeDetermination) {
     return KFileItem_New4((QUrl*)url, mimeTypeDetermination);
 }
 
-KFileItem* k_fileitem_new5(void* param1) {
+KFileItem* k_fileitem_new5(const void* param1) {
     return KFileItem_New5((KFileItem*)param1);
 }
 
-KFileItem* k_fileitem_new6(void* entry, void* itemOrDirUrl, bool delayedMimeTypes) {
+KFileItem* k_fileitem_new6(const void* entry, const void* itemOrDirUrl, bool delayedMimeTypes) {
     return KFileItem_New6((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl, delayedMimeTypes);
 }
 
-KFileItem* k_fileitem_new7(void* entry, void* itemOrDirUrl, bool delayedMimeTypes, bool urlIsDirectory) {
+KFileItem* k_fileitem_new7(const void* entry, const void* itemOrDirUrl, bool delayedMimeTypes, bool urlIsDirectory) {
     return KFileItem_New7((KIO__UDSEntry*)entry, (QUrl*)itemOrDirUrl, delayedMimeTypes, urlIsDirectory);
 }
 
-KFileItem* k_fileitem_new8(void* url, const char* mimeType) {
+KFileItem* k_fileitem_new8(const void* url, const char* mimeType) {
     return KFileItem_New8((QUrl*)url, qstring(mimeType));
 }
 
-KFileItem* k_fileitem_new9(void* url, const char* mimeType, mode_t mode) {
+KFileItem* k_fileitem_new9(const void* url, const char* mimeType, mode_t mode) {
     return KFileItem_New9((QUrl*)url, qstring(mimeType), mode);
 }
 
-void k_fileitem_operator_assign(void* self, void* param1) {
+void k_fileitem_operator_assign(void* self, const void* param1) {
     KFileItem_OperatorAssign((KFileItem*)self, (KFileItem*)param1);
 }
 
@@ -59,11 +59,11 @@ void k_fileitem_set_delayed_mime_types(void* self, bool b) {
     KFileItem_SetDelayedMimeTypes((KFileItem*)self, b);
 }
 
-QUrl* k_fileitem_url(void* self) {
+QUrl* k_fileitem_url(const void* self) {
     return KFileItem_Url((KFileItem*)self);
 }
 
-void k_fileitem_set_url(void* self, void* url) {
+void k_fileitem_set_url(void* self, const void* url) {
     KFileItem_SetUrl((KFileItem*)self, (QUrl*)url);
 }
 
@@ -75,180 +75,180 @@ void k_fileitem_set_name(void* self, const char* name) {
     KFileItem_SetName((KFileItem*)self, qstring(name));
 }
 
-mode_t k_fileitem_permissions(void* self) {
+mode_t k_fileitem_permissions(const void* self) {
     return (int)KFileItem_Permissions((KFileItem*)self);
 }
 
-const char* k_fileitem_permissions_string(void* self) {
+const char* k_fileitem_permissions_string(const void* self) {
     libqt_string _str = KFileItem_PermissionsString((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_fileitem_has_extended_a_c_l(void* self) {
+bool k_fileitem_has_extended_a_c_l(const void* self) {
     return KFileItem_HasExtendedACL((KFileItem*)self);
 }
 
-KACL* k_fileitem_a_c_l(void* self) {
+KACL* k_fileitem_a_c_l(const void* self) {
     return KFileItem_ACL((KFileItem*)self);
 }
 
-KACL* k_fileitem_default_a_c_l(void* self) {
+KACL* k_fileitem_default_a_c_l(const void* self) {
     return KFileItem_DefaultACL((KFileItem*)self);
 }
 
-mode_t k_fileitem_mode(void* self) {
+mode_t k_fileitem_mode(const void* self) {
     return (int)KFileItem_Mode((KFileItem*)self);
 }
 
-int32_t k_fileitem_user_id(void* self) {
+int32_t k_fileitem_user_id(const void* self) {
     return KFileItem_UserId((KFileItem*)self);
 }
 
-int32_t k_fileitem_group_id(void* self) {
+int32_t k_fileitem_group_id(const void* self) {
     return KFileItem_GroupId((KFileItem*)self);
 }
 
-const char* k_fileitem_user(void* self) {
+const char* k_fileitem_user(const void* self) {
     libqt_string _str = KFileItem_User((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileitem_group(void* self) {
+const char* k_fileitem_group(const void* self) {
     libqt_string _str = KFileItem_Group((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_fileitem_is_link(void* self) {
+bool k_fileitem_is_link(const void* self) {
     return KFileItem_IsLink((KFileItem*)self);
 }
 
-bool k_fileitem_is_dir(void* self) {
+bool k_fileitem_is_dir(const void* self) {
     return KFileItem_IsDir((KFileItem*)self);
 }
 
-bool k_fileitem_is_file(void* self) {
+bool k_fileitem_is_file(const void* self) {
     return KFileItem_IsFile((KFileItem*)self);
 }
 
-bool k_fileitem_is_readable(void* self) {
+bool k_fileitem_is_readable(const void* self) {
     return KFileItem_IsReadable((KFileItem*)self);
 }
 
-bool k_fileitem_is_writable(void* self) {
+bool k_fileitem_is_writable(const void* self) {
     return KFileItem_IsWritable((KFileItem*)self);
 }
 
-bool k_fileitem_is_hidden(void* self) {
+bool k_fileitem_is_hidden(const void* self) {
     return KFileItem_IsHidden((KFileItem*)self);
 }
 
-bool k_fileitem_is_slow(void* self) {
+bool k_fileitem_is_slow(const void* self) {
     return KFileItem_IsSlow((KFileItem*)self);
 }
 
-bool k_fileitem_is_desktop_file(void* self) {
+bool k_fileitem_is_desktop_file(const void* self) {
     return KFileItem_IsDesktopFile((KFileItem*)self);
 }
 
-const char* k_fileitem_link_dest(void* self) {
+const char* k_fileitem_link_dest(const void* self) {
     libqt_string _str = KFileItem_LinkDest((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* k_fileitem_target_url(void* self) {
+QUrl* k_fileitem_target_url(const void* self) {
     return KFileItem_TargetUrl((KFileItem*)self);
 }
 
-const char* k_fileitem_local_path(void* self) {
+const char* k_fileitem_local_path(const void* self) {
     libqt_string _str = KFileItem_LocalPath((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uintptr_t k_fileitem_size(void* self) {
+uintptr_t k_fileitem_size(const void* self) {
     return KFileItem_Size((KFileItem*)self);
 }
 
-uintptr_t k_fileitem_recursive_size(void* self) {
+uintptr_t k_fileitem_recursive_size(const void* self) {
     return KFileItem_RecursiveSize((KFileItem*)self);
 }
 
-QDateTime* k_fileitem_time(void* self, int32_t which) {
+QDateTime* k_fileitem_time(const void* self, int32_t which) {
     return KFileItem_Time((KFileItem*)self, which);
 }
 
-const char* k_fileitem_time_string(void* self) {
+const char* k_fileitem_time_string(const void* self) {
     libqt_string _str = KFileItem_TimeString((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_fileitem_is_local_file(void* self) {
+bool k_fileitem_is_local_file(const void* self) {
     return KFileItem_IsLocalFile((KFileItem*)self);
 }
 
-const char* k_fileitem_text(void* self) {
+const char* k_fileitem_text(const void* self) {
     libqt_string _str = KFileItem_Text((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileitem_name(void* self) {
+const char* k_fileitem_name(const void* self) {
     libqt_string _str = KFileItem_Name((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileitem_mimetype(void* self) {
+const char* k_fileitem_mimetype(const void* self) {
     libqt_string _str = KFileItem_Mimetype((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QMimeType* k_fileitem_determine_mime_type(void* self) {
+QMimeType* k_fileitem_determine_mime_type(const void* self) {
     return KFileItem_DetermineMimeType((KFileItem*)self);
 }
 
-QMimeType* k_fileitem_current_mime_type(void* self) {
+QMimeType* k_fileitem_current_mime_type(const void* self) {
     return KFileItem_CurrentMimeType((KFileItem*)self);
 }
 
-bool k_fileitem_is_final_icon_known(void* self) {
+bool k_fileitem_is_final_icon_known(const void* self) {
     return KFileItem_IsFinalIconKnown((KFileItem*)self);
 }
 
-bool k_fileitem_is_mime_type_known(void* self) {
+bool k_fileitem_is_mime_type_known(const void* self) {
     return KFileItem_IsMimeTypeKnown((KFileItem*)self);
 }
 
-const char* k_fileitem_mime_comment(void* self) {
+const char* k_fileitem_mime_comment(const void* self) {
     libqt_string _str = KFileItem_MimeComment((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileitem_icon_name(void* self) {
+const char* k_fileitem_icon_name(const void* self) {
     libqt_string _str = KFileItem_IconName((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_fileitem_overlays(void* self) {
+const char** k_fileitem_overlays(const void* self) {
     libqt_list _arr = KFileItem_Overlays((KFileItem*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -265,94 +265,94 @@ const char** k_fileitem_overlays(void* self) {
     return _ret;
 }
 
-const char* k_fileitem_comment(void* self) {
+const char* k_fileitem_comment(const void* self) {
     libqt_string _str = KFileItem_Comment((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileitem_get_status_bar_info(void* self) {
+const char* k_fileitem_get_status_bar_info(const void* self) {
     libqt_string _str = KFileItem_GetStatusBarInfo((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-KIO__UDSEntry* k_fileitem_entry(void* self) {
+KIO__UDSEntry* k_fileitem_entry(const void* self) {
     return KFileItem_Entry((KFileItem*)self);
 }
 
-bool k_fileitem_is_regular_file(void* self) {
+bool k_fileitem_is_regular_file(const void* self) {
     return KFileItem_IsRegularFile((KFileItem*)self);
 }
 
-const char* k_fileitem_suffix(void* self) {
+const char* k_fileitem_suffix(const void* self) {
     libqt_string _str = KFileItem_Suffix((KFileItem*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_fileitem_cmp(void* self, void* item) {
+bool k_fileitem_cmp(const void* self, const void* item) {
     return KFileItem_Cmp((KFileItem*)self, (KFileItem*)item);
 }
 
-bool k_fileitem_operator_equal(void* self, void* other) {
+bool k_fileitem_operator_equal(const void* self, const void* other) {
     return KFileItem_OperatorEqual((KFileItem*)self, (KFileItem*)other);
 }
 
-bool k_fileitem_operator_not_equal(void* self, void* other) {
+bool k_fileitem_operator_not_equal(const void* self, const void* other) {
     return KFileItem_OperatorNotEqual((KFileItem*)self, (KFileItem*)other);
 }
 
-bool k_fileitem_operator_lesser(void* self, void* other) {
+bool k_fileitem_operator_lesser(const void* self, const void* other) {
     return KFileItem_OperatorLesser((KFileItem*)self, (KFileItem*)other);
 }
 
-bool k_fileitem_operator_lesser2(void* self, void* other) {
+bool k_fileitem_operator_lesser2(const void* self, const void* other) {
     return KFileItem_OperatorLesser2((KFileItem*)self, (QUrl*)other);
 }
 
-QVariant* k_fileitem_to_q_variant(void* self) {
+QVariant* k_fileitem_to_q_variant(const void* self) {
     return KFileItem_ToQVariant((KFileItem*)self);
 }
 
-QUrl* k_fileitem_most_local_url(void* self) {
+QUrl* k_fileitem_most_local_url(const void* self) {
     return KFileItem_MostLocalUrl((KFileItem*)self);
 }
 
-KFileItem__MostLocalUrlResult* k_fileitem_is_most_local_url(void* self) {
+KFileItem__MostLocalUrlResult* k_fileitem_is_most_local_url(const void* self) {
     return KFileItem_IsMostLocalUrl((KFileItem*)self);
 }
 
-bool k_fileitem_is_null(void* self) {
+bool k_fileitem_is_null(const void* self) {
     return KFileItem_IsNull((KFileItem*)self);
 }
 
-bool k_fileitem_exists(void* self) {
+bool k_fileitem_exists(const void* self) {
     return KFileItem_Exists((KFileItem*)self);
 }
 
-bool k_fileitem_is_executable(void* self) {
+bool k_fileitem_is_executable(const void* self) {
     return KFileItem_IsExecutable((KFileItem*)self);
 }
 
-const char* k_fileitem_time_string1(void* self, int32_t which) {
+const char* k_fileitem_time_string1(const void* self, int32_t which) {
     libqt_string _str = KFileItem_TimeString1((KFileItem*)self, which);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileitem_name1(void* self, bool lowerCase) {
+const char* k_fileitem_name1(const void* self, bool lowerCase) {
     libqt_string _str = KFileItem_Name1((KFileItem*)self, lowerCase);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* k_fileitem_most_local_url1(void* self, bool* local) {
+QUrl* k_fileitem_most_local_url1(const void* self, bool* local) {
     return KFileItem_MostLocalUrl1((KFileItem*)self, (bool*)local);
 }
 
@@ -360,7 +360,7 @@ void k_fileitem_delete(void* self) {
     KFileItem_Delete((KFileItem*)(self));
 }
 
-size_t k_fileitem_h_q_hash(void* item, size_t seed) {
+size_t k_fileitem_h_q_hash(const void* item, size_t seed) {
     return kfileitem_h_QHash((KFileItem*)item, seed);
 }
 
@@ -374,20 +374,20 @@ KFileItemList* k_fileitemlist_new2(libqt_list /* of KFileItem* */ items) {
     return KFileItemList_New2(items);
 }
 
-KFileItem* k_fileitemlist_find_by_name(void* self, const char* fileName) {
+KFileItem* k_fileitemlist_find_by_name(const void* self, const char* fileName) {
     return KFileItemList_FindByName((KFileItemList*)self, qstring(fileName));
 }
 
-KFileItem* k_fileitemlist_find_by_url(void* self, void* url) {
+KFileItem* k_fileitemlist_find_by_url(const void* self, const void* url) {
     return KFileItemList_FindByUrl((KFileItemList*)self, (QUrl*)url);
 }
 
-libqt_list /* of QUrl* */ k_fileitemlist_url_list(void* self) {
+libqt_list /* of QUrl* */ k_fileitemlist_url_list(const void* self) {
     libqt_list _arr = KFileItemList_UrlList((KFileItemList*)self);
     return _arr;
 }
 
-libqt_list /* of QUrl* */ k_fileitemlist_target_url_list(void* self) {
+libqt_list /* of QUrl* */ k_fileitemlist_target_url_list(const void* self) {
     libqt_list _arr = KFileItemList_TargetUrlList((KFileItemList*)self);
     return _arr;
 }
@@ -400,11 +400,11 @@ KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new() {
     return KFileItem__MostLocalUrlResult_New();
 }
 
-KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new2(void* param1) {
+KFileItem__MostLocalUrlResult* k_fileitem__mostlocalurlresult_new2(const void* param1) {
     return KFileItem__MostLocalUrlResult_New2((KFileItem__MostLocalUrlResult*)param1);
 }
 
-QUrl* k_fileitem__mostlocalurlresult_url(void* self) {
+QUrl* k_fileitem__mostlocalurlresult_url(const void* self) {
     return KFileItem__MostLocalUrlResult_Url((KFileItem__MostLocalUrlResult*)self);
 }
 
@@ -412,7 +412,7 @@ void k_fileitem__mostlocalurlresult_set_url(void* self, void* url) {
     KFileItem__MostLocalUrlResult_SetUrl((KFileItem__MostLocalUrlResult*)self, (QUrl*)url);
 }
 
-bool k_fileitem__mostlocalurlresult_local(void* self) {
+bool k_fileitem__mostlocalurlresult_local(const void* self) {
     return KFileItem__MostLocalUrlResult_Local((KFileItem__MostLocalUrlResult*)self);
 }
 
@@ -420,7 +420,7 @@ void k_fileitem__mostlocalurlresult_set_local(void* self, bool local) {
     KFileItem__MostLocalUrlResult_SetLocal((KFileItem__MostLocalUrlResult*)self, local);
 }
 
-void k_fileitem__mostlocalurlresult_operator_assign(void* self, void* param1) {
+void k_fileitem__mostlocalurlresult_operator_assign(void* self, const void* param1) {
     KFileItem__MostLocalUrlResult_OperatorAssign((KFileItem__MostLocalUrlResult*)self, (KFileItem__MostLocalUrlResult*)param1);
 }
 

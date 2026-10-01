@@ -829,7 +829,7 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 		}
 		if IsKnownClass(p.ParameterType) && strings.HasSuffix(pType, "*") &&
 			!strings.Contains(pType, "char*") {
-			pType = "void*" + ifv((p.ByRef && p.Pointer) || p.PointerCount > 1, "*", "")
+			pType = ifv(p.Const, "const ", "") + "void*" + ifv((p.ByRef && p.Pointer) || p.PointerCount > 1, "*", "")
 		}
 		if p.IsFunctionPointer {
 			pType = p.FunctionPointer.ReturnType.renderReturnTypeC(cfs, isSlot, false) + " (*" + pName + ")(" + cfs.emitParametersC(p.FunctionPointer.Parameters, false) + ")"
@@ -2108,9 +2108,14 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				continue
 			}
 
+			if m.IsPureVirtual && !IsKnownReturnClass(c.ClassName) && len(c.Ctors) == 0 {
+				continue
+			}
+
 			cmdStructName := cStructName
 			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
+			maybeConst := ifv(m.IsConst, "const ", "")
 			var inheritedFrom, inheritedParentClass string
 			if m.InheritedFrom != "" {
 				inheritedFrom = "\n/// Inherited from " + m.InheritedFrom + "\n///"
@@ -2176,6 +2181,16 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				ret.WriteString(docCommentUrl)
 			}
 
+			if m.IsPureVirtual {
+				maybeVirtualWarning := ""
+				if virtualEligible {
+					maybeVirtualWarning = "\n/// @warning This method must be implemented with `" + cmdMethodName + "_on" + safeMethodName + "` before it can be called.\n///"
+				} else if IsKnownReturnClass(c.ClassName) {
+					maybeVirtualWarning = "\n/// @warning Use caution when calling this method as it might not be defined.\n///"
+				}
+				ret.WriteString(maybeVirtualWarning)
+			}
+
 			previousMethods[m.MethodName] = struct{}{}
 			previousMethods[mSafeMethodName] = struct{}{}
 
@@ -2193,9 +2208,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				commaParams = ", "
 			}
 
-			selfParam := "\n/// @param self " + cStructName + "* "
+			selfParam := "\n/// @param self " + maybeConst + cStructName + "* "
 
-			method := safeMethodName + "(void* self" + commaParams
+			method := safeMethodName + "(" + maybeConst + "void* self" + commaParams
 			if m.IsStatic && !m.IsProtected {
 				selfParam = ""
 				method = safeMethodName + "("
@@ -2228,14 +2243,14 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 						maybeEndMacro = "#endif\n"
 					}
 
-					ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + "\n/// @param self " + cStructName + "*\n/// @param callback void func(" +
-						cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
-						"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
+					ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + "\n/// @param self " + maybeConst + cStructName + "*\n/// @param callback void func(" +
+						maybeConst + cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
+						"void " + cmdMethodName + "_on" + safeMethodName + "(" + maybeConst + "void* self, void (*callback)(" + maybeConst + "void*" +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
 				}
 			}
 
-			if m.IsFinal {
+			if m.IsFinal || (m.IsProtected && !(m.IsVirtual || m.IsPureVirtual)) {
 				continue
 			}
 
@@ -2253,20 +2268,12 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 					continue
 				}
 
-				var maybeCommentStruct, maybeVoid, maybeComma, maybeMacro, maybeEndMacro, maybeReturnString string
+				var maybeComma, maybeMacro, maybeEndMacro, maybeReturnString string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
 				}
 				if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
 					maybeComma = ", "
-				}
-				if len(m.Parameters) != 0 {
-					maybeCommentStruct = cStructName + "* self" + maybeComma
-					maybeVoid = "void*"
-				}
-				if showHiddenParams && len(m.HiddenParams) != 0 {
-					maybeCommentStruct = cStructName + "* self" + maybeComma
-					maybeVoid = "void*"
 				}
 				if m.LinuxOnly {
 					maybeMacro = "\n#ifdef __linux__"
@@ -2303,11 +2310,15 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 					}
 				}
 
-				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
-					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true, true) + " func(" + maybeCommentStruct +
+				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + maybeConst + cStructName +
+					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true, true) + " func(" + maybeConst + cStructName + "* self" + maybeComma +
 					cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" + maybeReturnString +
-					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
-					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
+					"void " + cmdMethodName + "_on" + safeMethodName + "(" + maybeConst + "void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
+					"(*callback)(" + maybeConst + "void*" + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
+
+				if m.IsPureVirtual || m.IsFinal || (m.IsProtected && !(m.IsVirtual || m.IsPureVirtual)) {
+					continue
+				}
 
 				superDocComment := "\n/// Base class method implementation\n///"
 				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_super"
@@ -2355,6 +2366,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			cmdStructName := cStructName
 			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
+			maybeConst := ifv(m.IsConst, "const ", "")
 
 			var inheritedFrom, commaParams string
 			if len(m.Parameters) > 0 {
@@ -2395,37 +2407,35 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
 			returnComment := cfs.emitReturnComment(m.ReturnType)
 
-			allocComment := m.ReturnType.returnAllocComment(&cfs, returnTypeDecl)
 			headerComment := "\n/// Wrapper to allow calling virtual or protected method\n ///\n"
+
+			if m.IsPureVirtual {
+				headerComment += "\n/// @warning This method must be implemented with `" + cmdMethodName + "_on" + safeMethodName + "` before it can be called.\n///"
+			}
+
+			allocComment := m.ReturnType.returnAllocComment(&cfs, returnTypeDecl)
 			maybeNewLine := ifv(len(m.Parameters) == 0 && returnComment != "", "\n///", "")
 			maybeFinalNewLine := ifv(len(m.Parameters) == 0 && returnComment == "", "///\n", "")
 
-			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + cStructName + "* " + maybeNewLine +
+			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + maybeConst + cStructName + "* " + maybeNewLine +
 				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment + maybeFinalNewLine +
-				returnTypeDecl + " " + cmdMethodName + safeMethodName + "(void* self" + commaParams + cfsParams + ");\n")
+				returnTypeDecl + " " + cmdMethodName + safeMethodName + "(" + maybeConst + "void* self" + commaParams + cfsParams + ");\n")
 
 			if !AllowVirtual(m) {
 				continue
 			}
 
-			headerComment = "\n/// Wrapper to allow calling base class virtual or protected method\n ///\n"
+			if !m.IsPureVirtual {
+				headerComment = "\n/// Wrapper to allow calling base class virtual or protected method\n ///\n"
 
-			ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + cStructName + "* " + maybeNewLine +
-				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment + maybeFinalNewLine +
-				returnTypeDecl + " " + cmdMethodName + "_super" + safeMethodName + "(void* self" + commaParams + cfsParams + ");\n")
+				ret.WriteString(inheritedFrom + documentationURL + allocComment + headerComment + "/// @param self " + maybeConst + cStructName + "* " + maybeNewLine +
+					cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment + maybeFinalNewLine +
+					returnTypeDecl + " " + cmdMethodName + "_super" + safeMethodName + "(" + maybeConst + "void* self" + commaParams + cfsParams + ");\n")
+			}
 
-			var maybeCommentStruct, maybeVoid, maybeReturnString string
+			var maybeReturnString string
 			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
 				commaParams = ", "
-			}
-
-			if len(m.Parameters) != 0 {
-				maybeCommentStruct = cStructName + "* self" + commaParams
-				maybeVoid = "void*"
-			}
-			if showHiddenParams && len(m.HiddenParams) != 0 {
-				maybeCommentStruct = cStructName + "* self" + commaParams
-				maybeVoid = "void*"
 			}
 
 			headerComment = "\n/// Wrapper to allow overriding base class virtual or protected method\n ///\n"
@@ -2433,17 +2443,18 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				maybeReturnString = "/// @warning Memory for the returned type of the callback is freed by the library.\n///\n"
 			}
 
-			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// @param self " + cStructName +
-				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true, true) + " func(" + maybeCommentStruct +
+			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// @param self " + maybeConst + cStructName +
+				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true, true) + " func(" + cStructName + "* self" + commaParams +
 				cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" + maybeReturnString +
-				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
-				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + "));\n")
+				"void " + cmdMethodName + "_on" + safeMethodName + "(" + maybeConst + "void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
+				"(*callback)(" + maybeConst + "void*" + commaParams + cfs.emitParametersC(m.Parameters, true) + "));\n")
 		}
 
 		for _, m := range privateSignals {
 			cmdStructName := cStructName
 			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(m.SafeMethodName())
+			maybeConst := ifv(m.IsConst, "const ", "")
 			var inheritedFrom, docCommentUrl string
 			if m.InheritedFrom != "" {
 				inheritedFrom = "\n/// Inherited from " + m.InheritedFrom + "\n///"
@@ -2480,9 +2491,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			slotComma := ifv(len(m.Parameters) != 0, ", ", "")
 			headerComment := "/// Wrapper to allow calling private signal\n///"
 
-			ret.WriteString(inheritedFrom + docCommentUrl + headerComment + "\n/// @param self " + cStructName + "*\n/// @param callback void func(" +
-				cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
-				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
+			ret.WriteString(inheritedFrom + docCommentUrl + headerComment + "\n/// @param self " + maybeConst + cStructName + "*\n/// @param callback void func(" +
+				maybeConst + cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
+				"void " + cmdMethodName + "_on" + safeMethodName + "(" + maybeConst + "void* self, void (*callback)(" + maybeConst + "void*" +
 				slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
 		}
 
@@ -2916,10 +2927,15 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
+			if m.IsPureVirtual && !IsKnownReturnClass(c.ClassName) && len(c.Ctors) == 0 {
+				continue
+			}
+
 			overrideTr := (m.MethodName == "tr" || m.OverrideMethodName == "tr") && cStructName != "QMetaObject"
 			cmdStructName := ifv(overrideTr, "QObject", cStructName)
 			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
+			maybeConst := ifv(m.IsConst, "const ", "")
 			if m.InheritedFrom != "" && !overrideTr {
 				cmdStructName = cabiClassName(m.InheritedFrom)
 			}
@@ -2951,7 +2967,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				commaParams = ", "
 			}
 
-			method := safeMethodName + "(void* self" + commaParams
+			method := safeMethodName + "(" + maybeConst + "void* self" + commaParams
 			if m.IsStatic && !m.IsProtected {
 				method = safeMethodName + "("
 			}
@@ -3003,13 +3019,13 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 						maybeMacro = "#ifdef __linux__\n"
 						maybeEndMacro = "#endif\n"
 					}
-					ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
+					ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(" + maybeConst + "void* self, void (*callback)(" + maybeConst + "void*" +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
-						cmdStructName + "_Connect_" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
+						cmdStructName + "_Connect_" + mSafeMethodName + "((" + maybeConst + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
 				}
 			}
 
-			if m.IsFinal {
+			if m.IsFinal || (m.IsProtected && !(m.IsVirtual || m.IsPureVirtual)) {
 				continue
 			}
 
@@ -3027,18 +3043,12 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					continue
 				}
 
-				var maybeVoid, maybeComma, maybeMacro, maybeEndMacro string
+				var maybeComma, maybeMacro, maybeEndMacro string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
 				}
 				if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
 					maybeComma = ", "
-				}
-				if len(m.Parameters) != 0 {
-					maybeVoid = "void*"
-				}
-				if showHiddenParams && len(m.HiddenParams) != 0 {
-					maybeVoid = "void*"
 				}
 				if m.LinuxOnly {
 					maybeMacro = "#ifdef __linux__\n"
@@ -3048,9 +3058,13 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeEndMacro = "#endif\n"
 				}
 
-				ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, true) +
-					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
+				ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(" + maybeConst + "void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, true) +
+					"(*callback)(" + maybeConst + "void*" + maybeComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
 					cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
+
+				if m.IsPureVirtual || m.IsFinal || (m.IsProtected && !(m.IsVirtual || m.IsPureVirtual)) {
+					continue
+				}
 
 				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_super"
 				baseCallTarget := cmdStructName + "_Super" + mSafeMethodName + "(" + forwarding + ")"
@@ -3067,6 +3081,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		for _, m := range virtualMethods {
 			manualUpcast = false
 			if !virtualEligible || m.HasStdFunctionPointerParam {
+				continue
+			}
+
+			if m.IsPureVirtual && !IsKnownReturnClass(c.ClassName) && len(c.Ctors) == 0 {
 				continue
 			}
 
@@ -3100,6 +3118,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cmdStructName := cStructName
 			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
+			maybeConst := ifv(m.IsConst, "const ", "")
 
 			var commaParams string
 			if len(m.Parameters) > 0 {
@@ -3124,10 +3143,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_"+mSafeMethodName+"("+forwarding+")")
 			cfs.checkAndClearAllocCleanups(true)
 
-			ret.WriteString(returnTypeDecl + " " + cmdMethodName + safeMethodName + "(void* self" + commaParams + cfsParams + ") {\n    " +
+			ret.WriteString(returnTypeDecl + " " + cmdMethodName + safeMethodName + "(" + maybeConst + "void* self" + commaParams + cfsParams + ") {\n    " +
 				preamble + returnFunc + "\n}\n\n")
 
-			if !AllowVirtual(m) || m.IsFinal {
+			if !AllowVirtual(m) || m.IsFinal || (m.IsProtected && !(m.IsVirtual || m.IsPureVirtual)) {
 				continue
 			}
 
@@ -3137,28 +3156,23 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				maybeEndMacro = "#endif\n"
 			}
 
-			preamble, forwarding = cfs.emitParametersC2CABIForwarding(m, manualUpcast)
-			forwarding = strings.TrimPrefix(forwarding, "self")
-			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_Super"+mSafeMethodName+"("+forwarding+")")
-			cfs.checkAndClearAllocCleanups(true)
+			if !m.IsPureVirtual {
+				preamble, forwarding = cfs.emitParametersC2CABIForwarding(m, manualUpcast)
+				forwarding = strings.TrimPrefix(forwarding, "self")
+				returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_Super"+mSafeMethodName+"("+forwarding+")")
+				cfs.checkAndClearAllocCleanups(true)
 
-			ret.WriteString(maybeMacro + returnTypeDecl + " " + cmdMethodName + "_super" + safeMethodName + "(void* self" + commaParams + cfsParams + ") {\n    " +
-				preamble + returnFunc + "\n}\n" + maybeEndMacro + "\n\n")
+				ret.WriteString(maybeMacro + returnTypeDecl + " " + cmdMethodName + "_super" + safeMethodName + "(" + maybeConst + "void* self" + commaParams + cfsParams + ") {\n    " +
+					preamble + returnFunc + "\n}\n" + maybeEndMacro + "\n\n")
+			}
 
-			var maybeVoid string
 			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
 				commaParams = ", "
 			}
-			if len(m.Parameters) != 0 {
-				maybeVoid = "void*"
-			}
-			if showHiddenParams && len(m.HiddenParams) != 0 {
-				maybeVoid = "void*"
-			}
 
-			ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, true) +
-				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
-				cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
+			ret.WriteString(maybeMacro + "void " + cmdMethodName + "_on" + safeMethodName + "(" + maybeConst + "void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, true) +
+				"(*callback)(" + maybeConst + "void*" + commaParams + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
+				cmdStructName + "_On" + mSafeMethodName + "((" + maybeConst + cmdStructName + "*)self, (intptr_t)callback);\n}\n" + maybeEndMacro + "\n\n")
 		}
 
 		for _, m := range privateSignals {
@@ -3166,6 +3180,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			mSafeMethodName := m.SafeMethodName()
 			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
+			maybeConst := ifv(m.IsConst, "const ", "")
 			if m.InheritedFrom != "" {
 				cmdStructName = cabiClassName(m.InheritedFrom)
 			}
@@ -3174,9 +3189,9 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				slotComma = ", "
 			}
 
-			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
+			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(" + maybeConst + "void* self, void (*callback)(void*" +
 				slotComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
-				cmdStructName + "_Connect_" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
+				cmdStructName + "_Connect_" + mSafeMethodName + "((" + maybeConst + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
 		}
 
 		if c.CanDelete && !isBindingRemoved(c.ClassName) && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {

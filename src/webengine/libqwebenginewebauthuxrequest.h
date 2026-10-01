@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-const QMetaObject* q_webenginewebauthuxrequest_meta_object(void* self);
+const QMetaObject* q_webenginewebauthuxrequest_meta_object(const void* self);
 
 /// @param self QWebEngineWebAuthUxRequest*
 /// @param param1 const char*
@@ -40,39 +40,39 @@ const char* q_webenginewebauthuxrequest_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-const char** q_webenginewebauthuxrequest_user_names(void* self);
+const char** q_webenginewebauthuxrequest_user_names(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#relyingPartyId)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-const char* q_webenginewebauthuxrequest_relying_party_id(void* self);
+const char* q_webenginewebauthuxrequest_relying_party_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#pinRequest)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-QWebEngineWebAuthPinRequest* q_webenginewebauthuxrequest_pin_request(void* self);
+QWebEngineWebAuthPinRequest* q_webenginewebauthuxrequest_pin_request(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#state)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
 /// @return enum QWebEngineWebAuthUxRequest__WebAuthUxState
 ///
-int32_t q_webenginewebauthuxrequest_state(void* self);
+int32_t q_webenginewebauthuxrequest_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#requestFailureReason)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
 /// @return enum QWebEngineWebAuthUxRequest__RequestFailureReason
 ///
-int32_t q_webenginewebauthuxrequest_request_failure_reason(void* self);
+int32_t q_webenginewebauthuxrequest_request_failure_reason(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#stateChanged)
 ///
@@ -158,9 +158,9 @@ bool q_webenginewebauthuxrequest_event_filter(void* self, void* watched, void* e
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-const char* q_webenginewebauthuxrequest_object_name(void* self);
+const char* q_webenginewebauthuxrequest_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -175,33 +175,33 @@ void q_webenginewebauthuxrequest_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-bool q_webenginewebauthuxrequest_is_widget_type(void* self);
+bool q_webenginewebauthuxrequest_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-bool q_webenginewebauthuxrequest_is_window_type(void* self);
+bool q_webenginewebauthuxrequest_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-bool q_webenginewebauthuxrequest_is_quick_item_type(void* self);
+bool q_webenginewebauthuxrequest_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-bool q_webenginewebauthuxrequest_signals_blocked(void* self);
+bool q_webenginewebauthuxrequest_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -216,9 +216,9 @@ bool q_webenginewebauthuxrequest_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-QThread* q_webenginewebauthuxrequest_thread(void* self);
+QThread* q_webenginewebauthuxrequest_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -269,11 +269,11 @@ void q_webenginewebauthuxrequest_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_webenginewebauthuxrequest_children(void* self);
+libqt_list q_webenginewebauthuxrequest_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -311,7 +311,7 @@ void q_webenginewebauthuxrequest_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webenginewebauthuxrequest_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_webenginewebauthuxrequest_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -322,18 +322,18 @@ QMetaObject__Connection* q_webenginewebauthuxrequest_connect(void* sender, const
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_webenginewebauthuxrequest_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_webenginewebauthuxrequest_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webenginewebauthuxrequest_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_webenginewebauthuxrequest_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -344,7 +344,7 @@ QMetaObject__Connection* q_webenginewebauthuxrequest_connect3(void* self, void* 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webenginewebauthuxrequest_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_webenginewebauthuxrequest_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -355,24 +355,24 @@ bool q_webenginewebauthuxrequest_disconnect(void* sender, const char* signal, vo
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_webenginewebauthuxrequest_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_webenginewebauthuxrequest_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-bool q_webenginewebauthuxrequest_disconnect3(void* self);
+bool q_webenginewebauthuxrequest_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 /// @param receiver QObject*
 ///
-bool q_webenginewebauthuxrequest_disconnect4(void* self, void* receiver);
+bool q_webenginewebauthuxrequest_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -380,23 +380,23 @@ bool q_webenginewebauthuxrequest_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_webenginewebauthuxrequest_disconnect5(void* param1);
+bool q_webenginewebauthuxrequest_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-void q_webenginewebauthuxrequest_dump_object_tree(void* self);
+void q_webenginewebauthuxrequest_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-void q_webenginewebauthuxrequest_dump_object_info(void* self);
+void q_webenginewebauthuxrequest_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -406,16 +406,16 @@ void q_webenginewebauthuxrequest_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_webenginewebauthuxrequest_set_property(void* self, const char* name, void* value);
+bool q_webenginewebauthuxrequest_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 /// @param name const char*
 ///
-QVariant* q_webenginewebauthuxrequest_property(void* self, const char* name);
+QVariant* q_webenginewebauthuxrequest_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -423,9 +423,9 @@ QVariant* q_webenginewebauthuxrequest_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-const char** q_webenginewebauthuxrequest_dynamic_property_names(void* self);
+const char** q_webenginewebauthuxrequest_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -439,9 +439,9 @@ QBindingStorage* q_webenginewebauthuxrequest_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-const QBindingStorage* q_webenginewebauthuxrequest_binding_storage2(void* self);
+const QBindingStorage* q_webenginewebauthuxrequest_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -464,18 +464,18 @@ void q_webenginewebauthuxrequest_on_destroyed(void* self, void (*callback)(void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 ///
-QObject* q_webenginewebauthuxrequest_parent(void* self);
+QObject* q_webenginewebauthuxrequest_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 /// @param classname const char*
 ///
-bool q_webenginewebauthuxrequest_inherits(void* self, const char* classname);
+bool q_webenginewebauthuxrequest_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -515,7 +515,7 @@ int32_t q_webenginewebauthuxrequest_start_timer23(void* self, int64_t time, int3
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginewebauthuxrequest_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_webenginewebauthuxrequest_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -527,59 +527,59 @@ QMetaObject__Connection* q_webenginewebauthuxrequest_connect5(void* sender, cons
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginewebauthuxrequest_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_webenginewebauthuxrequest_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginewebauthuxrequest_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_webenginewebauthuxrequest_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 /// @param signal const char*
 ///
-bool q_webenginewebauthuxrequest_disconnect1(void* self, const char* signal);
+bool q_webenginewebauthuxrequest_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_webenginewebauthuxrequest_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_webenginewebauthuxrequest_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_webenginewebauthuxrequest_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineWebAuthUxRequest*
+/// @param self const QWebEngineWebAuthUxRequest*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webenginewebauthuxrequest_disconnect23(void* self, void* receiver, const char* member);
+bool q_webenginewebauthuxrequest_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QWebEngineWebAuthUxRequest*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_webenginewebauthuxrequest_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -622,11 +622,11 @@ void q_webenginewebauthuxrequest_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#reason-var)
 ///
-/// @param self QWebEngineWebAuthPinRequest*
+/// @param self const QWebEngineWebAuthPinRequest*
 ///
 /// @return enum QWebEngineWebAuthUxRequest__PinEntryReason
 ///
-int32_t q_webenginewebauthpinrequest_reason(void* self);
+int32_t q_webenginewebauthpinrequest_reason(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#reason-var)
 ///
@@ -637,11 +637,11 @@ void q_webenginewebauthpinrequest_set_reason(void* self, int32_t reason);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#error-var)
 ///
-/// @param self QWebEngineWebAuthPinRequest*
+/// @param self const QWebEngineWebAuthPinRequest*
 ///
 /// @return enum QWebEngineWebAuthUxRequest__PinEntryError
 ///
-int32_t q_webenginewebauthpinrequest_error(void* self);
+int32_t q_webenginewebauthpinrequest_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#error-var)
 ///
@@ -652,9 +652,9 @@ void q_webenginewebauthpinrequest_set_error(void* self, int32_t error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#minPinLength-var)
 ///
-/// @param self QWebEngineWebAuthPinRequest*
+/// @param self const QWebEngineWebAuthPinRequest*
 ///
-int32_t q_webenginewebauthpinrequest_min_pin_length(void* self);
+int32_t q_webenginewebauthpinrequest_min_pin_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#minPinLength-var)
 ///
@@ -665,9 +665,9 @@ void q_webenginewebauthpinrequest_set_min_pin_length(void* self, int32_t minPinL
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#remainingAttempts-var)
 ///
-/// @param self QWebEngineWebAuthPinRequest*
+/// @param self const QWebEngineWebAuthPinRequest*
 ///
-int32_t q_webenginewebauthpinrequest_remaining_attempts(void* self);
+int32_t q_webenginewebauthpinrequest_remaining_attempts(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#remainingAttempts-var)
 ///

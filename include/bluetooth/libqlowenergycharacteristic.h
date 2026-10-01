@@ -20,71 +20,71 @@ QLowEnergyCharacteristic* q_lowenergycharacteristic_new();
 ///
 /// @param other QLowEnergyCharacteristic*
 ///
-QLowEnergyCharacteristic* q_lowenergycharacteristic_new2(void* other);
+QLowEnergyCharacteristic* q_lowenergycharacteristic_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#operator-eq)
 ///
 /// @param self QLowEnergyCharacteristic*
 /// @param other QLowEnergyCharacteristic*
 ///
-void q_lowenergycharacteristic_operator_assign(void* self, void* other);
+void q_lowenergycharacteristic_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLowEnergyCharacteristic*
+/// @param self const QLowEnergyCharacteristic*
 ///
-const char* q_lowenergycharacteristic_name(void* self);
+const char* q_lowenergycharacteristic_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#uuid)
 ///
-/// @param self QLowEnergyCharacteristic*
+/// @param self const QLowEnergyCharacteristic*
 ///
-QBluetoothUuid* q_lowenergycharacteristic_uuid(void* self);
+QBluetoothUuid* q_lowenergycharacteristic_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#value)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLowEnergyCharacteristic*
+/// @param self const QLowEnergyCharacteristic*
 ///
-char* q_lowenergycharacteristic_value(void* self);
+char* q_lowenergycharacteristic_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#properties)
 ///
-/// @param self QLowEnergyCharacteristic*
+/// @param self const QLowEnergyCharacteristic*
 ///
 /// @return flag of enum QLowEnergyCharacteristic__PropertyType
 ///
-int32_t q_lowenergycharacteristic_properties(void* self);
+int32_t q_lowenergycharacteristic_properties(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#descriptor)
 ///
-/// @param self QLowEnergyCharacteristic*
+/// @param self const QLowEnergyCharacteristic*
 /// @param uuid QBluetoothUuid*
 ///
-QLowEnergyDescriptor* q_lowenergycharacteristic_descriptor(void* self, void* uuid);
+QLowEnergyDescriptor* q_lowenergycharacteristic_descriptor(const void* self, const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#descriptors)
 ///
-/// @param self QLowEnergyCharacteristic*
+/// @param self const QLowEnergyCharacteristic*
 ///
 /// @return libqt_list of QLowEnergyDescriptor*
 ///
-libqt_list q_lowenergycharacteristic_descriptors(void* self);
+libqt_list q_lowenergycharacteristic_descriptors(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#clientCharacteristicConfiguration)
 ///
-/// @param self QLowEnergyCharacteristic*
+/// @param self const QLowEnergyCharacteristic*
 ///
-QLowEnergyDescriptor* q_lowenergycharacteristic_client_characteristic_configuration(void* self);
+QLowEnergyDescriptor* q_lowenergycharacteristic_client_characteristic_configuration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#isValid)
 ///
-/// @param self QLowEnergyCharacteristic*
+/// @param self const QLowEnergyCharacteristic*
 ///
-bool q_lowenergycharacteristic_is_valid(void* self);
+bool q_lowenergycharacteristic_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycharacteristic.html#dtor.QLowEnergyCharacteristic)
 ///

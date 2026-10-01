@@ -6,7 +6,7 @@ bool k_io__jobuidelegateextension_ask_delete_confirmation(void* self, libqt_list
     return KIO__JobUiDelegateExtension_AskDeleteConfirmation((KIO__JobUiDelegateExtension*)self, urls, deletionType, confirmationType);
 }
 
-void k_io__jobuidelegateextension_update_url_in_clipboard(void* self, void* src, void* dest) {
+void k_io__jobuidelegateextension_update_url_in_clipboard(void* self, const void* src, const void* dest) {
     KIO__JobUiDelegateExtension_UpdateUrlInClipboard((KIO__JobUiDelegateExtension*)self, (QUrl*)src, (QUrl*)dest);
 }
 

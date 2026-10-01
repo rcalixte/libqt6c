@@ -5,11 +5,11 @@ TextEmoticonsCore__EmoticonCategory* k_textemoticonscore__emoticoncategory_new()
     return TextEmoticonsCore__EmoticonCategory_New();
 }
 
-TextEmoticonsCore__EmoticonCategory* k_textemoticonscore__emoticoncategory_new2(void* param1) {
+TextEmoticonsCore__EmoticonCategory* k_textemoticonscore__emoticoncategory_new2(const void* param1) {
     return TextEmoticonsCore__EmoticonCategory_New2((TextEmoticonsCore__EmoticonCategory*)param1);
 }
 
-const char* k_textemoticonscore__emoticoncategory_name(void* self) {
+const char* k_textemoticonscore__emoticoncategory_name(const void* self) {
     libqt_string _str = TextEmoticonsCore__EmoticonCategory_Name((TextEmoticonsCore__EmoticonCategory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -20,7 +20,7 @@ void k_textemoticonscore__emoticoncategory_set_name(void* self, const char* name
     TextEmoticonsCore__EmoticonCategory_SetName((TextEmoticonsCore__EmoticonCategory*)self, qstring(name));
 }
 
-const char* k_textemoticonscore__emoticoncategory_category(void* self) {
+const char* k_textemoticonscore__emoticoncategory_category(const void* self) {
     libqt_string _str = TextEmoticonsCore__EmoticonCategory_Category((TextEmoticonsCore__EmoticonCategory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -31,7 +31,7 @@ void k_textemoticonscore__emoticoncategory_set_category(void* self, const char* 
     TextEmoticonsCore__EmoticonCategory_SetCategory((TextEmoticonsCore__EmoticonCategory*)self, qstring(category));
 }
 
-const char* k_textemoticonscore__emoticoncategory_i18n_name(void* self) {
+const char* k_textemoticonscore__emoticoncategory_i18n_name(const void* self) {
     libqt_string _str = TextEmoticonsCore__EmoticonCategory_I18nName((TextEmoticonsCore__EmoticonCategory*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -42,11 +42,11 @@ void k_textemoticonscore__emoticoncategory_set_i18n_name(void* self, const char*
     TextEmoticonsCore__EmoticonCategory_SetI18nName((TextEmoticonsCore__EmoticonCategory*)self, qstring(newI18nName));
 }
 
-bool k_textemoticonscore__emoticoncategory_operator_lesser(void* self, void* other) {
+bool k_textemoticonscore__emoticoncategory_operator_lesser(const void* self, const void* other) {
     return TextEmoticonsCore__EmoticonCategory_OperatorLesser((TextEmoticonsCore__EmoticonCategory*)self, (TextEmoticonsCore__EmoticonCategory*)other);
 }
 
-int32_t k_textemoticonscore__emoticoncategory_order(void* self) {
+int32_t k_textemoticonscore__emoticoncategory_order(const void* self) {
     return TextEmoticonsCore__EmoticonCategory_Order((TextEmoticonsCore__EmoticonCategory*)self);
 }
 
@@ -54,7 +54,7 @@ void k_textemoticonscore__emoticoncategory_set_order(void* self, int newOrder) {
     TextEmoticonsCore__EmoticonCategory_SetOrder((TextEmoticonsCore__EmoticonCategory*)self, newOrder);
 }
 
-void k_textemoticonscore__emoticoncategory_operator_assign(void* self, void* param1) {
+void k_textemoticonscore__emoticoncategory_operator_assign(void* self, const void* param1) {
     TextEmoticonsCore__EmoticonCategory_OperatorAssign((TextEmoticonsCore__EmoticonCategory*)self, (TextEmoticonsCore__EmoticonCategory*)param1);
 }
 

@@ -55,61 +55,61 @@ void q_dirlisting_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
-const char* q_dirlisting_iterator_path(void* self);
+const char* q_dirlisting_iterator_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#iteratorFlags)
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
 /// @return flag of enum QDirListing__IteratorFlag
 ///
-int32_t q_dirlisting_iterator_flags(void* self);
+int32_t q_dirlisting_iterator_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#nameFilters)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
-const char** q_dirlisting_name_filters(void* self);
+const char** q_dirlisting_name_filters(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#begin)
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
-QDirListing__const_iterator* q_dirlisting_begin(void* self);
+QDirListing__const_iterator* q_dirlisting_begin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#cbegin)
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
-QDirListing__const_iterator* q_dirlisting_cbegin(void* self);
+QDirListing__const_iterator* q_dirlisting_cbegin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#end)
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
-QDirListing__sentinel* q_dirlisting_end(void* self);
+QDirListing__sentinel* q_dirlisting_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#cend)
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
-QDirListing__sentinel* q_dirlisting_cend(void* self);
+QDirListing__sentinel* q_dirlisting_cend(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#constBegin)
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
-QDirListing__const_iterator* q_dirlisting_const_begin(void* self);
+QDirListing__const_iterator* q_dirlisting_const_begin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#constEnd)
 ///
-/// @param self QDirListing*
+/// @param self const QDirListing*
 ///
-QDirListing__sentinel* q_dirlisting_const_end(void* self);
+QDirListing__sentinel* q_dirlisting_const_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting.html#dtor.QDirListing)
 ///
@@ -131,7 +131,7 @@ QDirListing__DirEntry* q_dirlisting__direntry_new();
 ///
 /// @param other QDirListing__DirEntry*
 ///
-QDirListing__DirEntry* q_dirlisting__direntry_new2(void* other);
+QDirListing__DirEntry* q_dirlisting__direntry_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html)
 
@@ -147,7 +147,7 @@ QDirListing__DirEntry* q_dirlisting__direntry_new3(void* other);
 ///
 /// @param param1 QDirListing__DirEntry*
 ///
-QDirListing__DirEntry* q_dirlisting__direntry_new4(void* param1);
+QDirListing__DirEntry* q_dirlisting__direntry_new4(const void* param1);
 
 /// q_dirlisting__direntry_copy_assign shallow copies `other` into `self`.
 ///
@@ -167,184 +167,184 @@ void q_dirlisting__direntry_move_assign(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_file_name(void* self);
+const char* q_dirlisting__direntry_file_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#baseName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_base_name(void* self);
+const char* q_dirlisting__direntry_base_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#completeBaseName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_complete_base_name(void* self);
+const char* q_dirlisting__direntry_complete_base_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#suffix)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_suffix(void* self);
+const char* q_dirlisting__direntry_suffix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#bundleName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_bundle_name(void* self);
+const char* q_dirlisting__direntry_bundle_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#completeSuffix)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_complete_suffix(void* self);
+const char* q_dirlisting__direntry_complete_suffix(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#filePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_file_path(void* self);
+const char* q_dirlisting__direntry_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isDir)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-bool q_dirlisting__direntry_is_dir(void* self);
+bool q_dirlisting__direntry_is_dir(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isFile)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-bool q_dirlisting__direntry_is_file(void* self);
+bool q_dirlisting__direntry_is_file(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isSymLink)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-bool q_dirlisting__direntry_is_sym_link(void* self);
+bool q_dirlisting__direntry_is_sym_link(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#exists)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-bool q_dirlisting__direntry_exists(void* self);
+bool q_dirlisting__direntry_exists(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isHidden)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-bool q_dirlisting__direntry_is_hidden(void* self);
+bool q_dirlisting__direntry_is_hidden(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isReadable)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-bool q_dirlisting__direntry_is_readable(void* self);
+bool q_dirlisting__direntry_is_readable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isWritable)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-bool q_dirlisting__direntry_is_writable(void* self);
+bool q_dirlisting__direntry_is_writable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isExecutable)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-bool q_dirlisting__direntry_is_executable(void* self);
+bool q_dirlisting__direntry_is_executable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#fileInfo)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-QFileInfo* q_dirlisting__direntry_file_info(void* self);
+QFileInfo* q_dirlisting__direntry_file_info(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#canonicalFilePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_canonical_file_path(void* self);
+const char* q_dirlisting__direntry_canonical_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#absoluteFilePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_absolute_file_path(void* self);
+const char* q_dirlisting__direntry_absolute_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#absolutePath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-const char* q_dirlisting__direntry_absolute_path(void* self);
+const char* q_dirlisting__direntry_absolute_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#size)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 ///
-int64_t q_dirlisting__direntry_size(void* self);
+int64_t q_dirlisting__direntry_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#birthTime)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 /// @param tz QTimeZone*
 ///
-QDateTime* q_dirlisting__direntry_birth_time(void* self, void* tz);
+QDateTime* q_dirlisting__direntry_birth_time(const void* self, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#metadataChangeTime)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 /// @param tz QTimeZone*
 ///
-QDateTime* q_dirlisting__direntry_metadata_change_time(void* self, void* tz);
+QDateTime* q_dirlisting__direntry_metadata_change_time(const void* self, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#lastModified)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 /// @param tz QTimeZone*
 ///
-QDateTime* q_dirlisting__direntry_last_modified(void* self, void* tz);
+QDateTime* q_dirlisting__direntry_last_modified(const void* self, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#lastRead)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 /// @param tz QTimeZone*
 ///
-QDateTime* q_dirlisting__direntry_last_read(void* self, void* tz);
+QDateTime* q_dirlisting__direntry_last_read(const void* self, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#fileTime)
 ///
-/// @param self QDirListing__DirEntry*
+/// @param self const QDirListing__DirEntry*
 /// @param type enum QFileDevice__FileTime
 /// @param tz QTimeZone*
 ///
-QDateTime* q_dirlisting__direntry_file_time(void* self, int32_t type, void* tz);
+QDateTime* q_dirlisting__direntry_file_time(const void* self, int32_t type, const void* tz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#operator-eq)
 ///
 /// @param self QDirListing__DirEntry*
 /// @param param1 QDirListing__DirEntry*
 ///
-void q_dirlisting__direntry_operator_assign(void* self, void* param1);
+void q_dirlisting__direntry_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///
@@ -358,7 +358,7 @@ void q_dirlisting__direntry_delete(void* self);
 ///
 /// @param other QDirListing__sentinel*
 ///
-QDirListing__sentinel* q_dirlisting__sentinel_new(void* other);
+QDirListing__sentinel* q_dirlisting__sentinel_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-sentinel.html)
 
@@ -380,7 +380,7 @@ QDirListing__sentinel* q_dirlisting__sentinel_new3();
 ///
 /// @param param1 QDirListing__sentinel*
 ///
-QDirListing__sentinel* q_dirlisting__sentinel_new4(void* param1);
+QDirListing__sentinel* q_dirlisting__sentinel_new4(const void* param1);
 
 /// q_dirlisting__sentinel_copy_assign shallow copies `other` into `self`.
 ///
@@ -421,9 +421,9 @@ void q_dirlisting__const_iterator_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-const-iterator.html#operator-2a)
 ///
-/// @param self QDirListing__const_iterator*
+/// @param self const QDirListing__const_iterator*
 ///
-const QDirListing__DirEntry* q_dirlisting__const_iterator_operator_multiply(void* self);
+const QDirListing__DirEntry* q_dirlisting__const_iterator_operator_multiply(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-const-iterator.html#operator-2b-2b)
 ///

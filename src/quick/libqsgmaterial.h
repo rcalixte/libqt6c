@@ -16,84 +16,71 @@ QSGMaterial* q_sgmaterial_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#type)
 ///
-/// @param self QSGMaterial*
+/// @warning This method must be implemented with `q_sgmaterial_on_type` before it can be called.
 ///
-QSGMaterialType* q_sgmaterial_type(void* self);
+/// @param self const QSGMaterial*
+///
+QSGMaterialType* q_sgmaterial_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGMaterial*
-/// @param callback QSGMaterialType* func()
+/// @param self const QSGMaterial*
+/// @param callback QSGMaterialType* func(const QSGMaterial* self)
 ///
-void q_sgmaterial_on_type(void* self, QSGMaterialType* (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#type)
-///
-/// Base class method implementation
-///
-/// @param self QSGMaterial*
-///
-QSGMaterialType* q_sgmaterial_super_type(void* self);
+void q_sgmaterial_on_type(const void* self, QSGMaterialType* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#createShader)
 ///
-/// @param self QSGMaterial*
+/// @warning This method must be implemented with `q_sgmaterial_on_create_shader` before it can be called.
+///
+/// @param self const QSGMaterial*
 /// @param renderMode enum QSGRendererInterface__RenderMode
 ///
-QSGMaterialShader* q_sgmaterial_create_shader(void* self, int32_t renderMode);
+QSGMaterialShader* q_sgmaterial_create_shader(const void* self, int32_t renderMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#createShader)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGMaterial*
-/// @param callback QSGMaterialShader* func(QSGMaterial* self, enum QSGRendererInterface__RenderMode renderMode)
+/// @param self const QSGMaterial*
+/// @param callback QSGMaterialShader* func(const QSGMaterial* self, enum QSGRendererInterface__RenderMode renderMode)
 ///
-void q_sgmaterial_on_create_shader(void* self, QSGMaterialShader* (*callback)(void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#createShader)
-///
-/// Base class method implementation
-///
-/// @param self QSGMaterial*
-/// @param renderMode enum QSGRendererInterface__RenderMode
-///
-QSGMaterialShader* q_sgmaterial_super_create_shader(void* self, int32_t renderMode);
+void q_sgmaterial_on_create_shader(const void* self, QSGMaterialShader* (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#compare)
 ///
-/// @param self QSGMaterial*
+/// @param self const QSGMaterial*
 /// @param other QSGMaterial*
 ///
-int32_t q_sgmaterial_compare(void* self, void* other);
+int32_t q_sgmaterial_compare(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#compare)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSGMaterial*
-/// @param callback int32_t func(QSGMaterial* self, QSGMaterial* other)
+/// @param self const QSGMaterial*
+/// @param callback int32_t func(const QSGMaterial* self, QSGMaterial* other)
 ///
-void q_sgmaterial_on_compare(void* self, int32_t (*callback)(void*, void*));
+void q_sgmaterial_on_compare(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#compare)
 ///
 /// Base class method implementation
 ///
-/// @param self QSGMaterial*
+/// @param self const QSGMaterial*
 /// @param other QSGMaterial*
 ///
-int32_t q_sgmaterial_super_compare(void* self, void* other);
+int32_t q_sgmaterial_super_compare(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#flags)
 ///
-/// @param self QSGMaterial*
+/// @param self const QSGMaterial*
 ///
 /// @return flag of enum QSGMaterial__Flag
 ///
-int32_t q_sgmaterial_flags(void* self);
+int32_t q_sgmaterial_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#setFlag)
 ///
@@ -104,9 +91,9 @@ void q_sgmaterial_set_flag(void* self, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#viewCount)
 ///
-/// @param self QSGMaterial*
+/// @param self const QSGMaterial*
 ///
-int32_t q_sgmaterial_view_count(void* self);
+int32_t q_sgmaterial_view_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgmaterial.html#setFlag)
 ///

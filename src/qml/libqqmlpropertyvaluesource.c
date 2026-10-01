@@ -6,19 +6,15 @@ QQmlPropertyValueSource* q_qmlpropertyvaluesource_new() {
     return QQmlPropertyValueSource_New();
 }
 
-void q_qmlpropertyvaluesource_set_target(void* self, void* target) {
+void q_qmlpropertyvaluesource_set_target(void* self, const void* target) {
     QQmlPropertyValueSource_SetTarget((QQmlPropertyValueSource*)self, (QQmlProperty*)target);
 }
 
-void q_qmlpropertyvaluesource_on_set_target(void* self, void (*callback)(void*, void*)) {
+void q_qmlpropertyvaluesource_on_set_target(void* self, void (*callback)(void*, const void*)) {
     QQmlPropertyValueSource_OnSetTarget((QQmlPropertyValueSource*)self, (intptr_t)callback);
 }
 
-void q_qmlpropertyvaluesource_super_set_target(void* self, void* target) {
-    QQmlPropertyValueSource_SuperSetTarget((QQmlPropertyValueSource*)self, (QQmlProperty*)target);
-}
-
-void q_qmlpropertyvaluesource_operator_assign(void* self, void* param1) {
+void q_qmlpropertyvaluesource_operator_assign(void* self, const void* param1) {
     QQmlPropertyValueSource_OperatorAssign((QQmlPropertyValueSource*)self, (QQmlPropertyValueSource*)param1);
 }
 

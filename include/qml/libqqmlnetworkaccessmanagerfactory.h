@@ -12,6 +12,8 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlnetworkaccessmanagerfactory.html#create)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self QQmlNetworkAccessManagerFactory*
 /// @param parent QObject*
 ///
@@ -22,7 +24,7 @@ QNetworkAccessManager* q_qmlnetworkaccessmanagerfactory_create(void* self, void*
 /// @param self QQmlNetworkAccessManagerFactory*
 /// @param param1 QQmlNetworkAccessManagerFactory*
 ///
-void q_qmlnetworkaccessmanagerfactory_operator_assign(void* self, void* param1);
+void q_qmlnetworkaccessmanagerfactory_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qqmlnetworkaccessmanagerfactory.html#dtor.QQmlNetworkAccessManagerFactory)
 ///

@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-const QMetaObject* k_io__copyjob_meta_object(void* self);
+const QMetaObject* k_io__copyjob_meta_object(const void* self);
 
 /// @param self KIO__CopyJob*
 /// @param param1 const char*
@@ -38,25 +38,25 @@ const char* k_io__copyjob_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#operationMode)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
 /// @return enum KIO__CopyJob__CopyMode
 ///
-int32_t k_io__copyjob_operation_mode(void* self);
+int32_t k_io__copyjob_operation_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#srcUrls)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
 /// @return libqt_list of QUrl*
 ///
-libqt_list k_io__copyjob_src_urls(void* self);
+libqt_list k_io__copyjob_src_urls(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#destUrl)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-QUrl* k_io__copyjob_dest_url(void* self);
+QUrl* k_io__copyjob_dest_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#setDefaultPermissions)
 ///
@@ -135,14 +135,14 @@ void k_io__copyjob_on_processed_dirs(void* self, void (*callback)(void*, void*, 
 /// @param src QUrl*
 /// @param dest QUrl*
 ///
-void k_io__copyjob_copying(void* self, void* job, void* src, void* dest);
+void k_io__copyjob_copying(void* self, void* job, const void* src, const void* dest);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#copying)
 ///
 /// @param self KIO__CopyJob*
 /// @param callback void func(KIO__CopyJob* self, KIO__Job* job, QUrl* src, QUrl* dest)
 ///
-void k_io__copyjob_on_copying(void* self, void (*callback)(void*, void*, void*, void*));
+void k_io__copyjob_on_copying(void* self, void (*callback)(void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#linking)
 ///
@@ -151,14 +151,14 @@ void k_io__copyjob_on_copying(void* self, void (*callback)(void*, void*, void*, 
 /// @param target const char*
 /// @param to QUrl*
 ///
-void k_io__copyjob_linking(void* self, void* job, const char* target, void* to);
+void k_io__copyjob_linking(void* self, void* job, const char* target, const void* to);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#linking)
 ///
 /// @param self KIO__CopyJob*
 /// @param callback void func(KIO__CopyJob* self, KIO__Job* job, const char* target, QUrl* to)
 ///
-void k_io__copyjob_on_linking(void* self, void (*callback)(void*, void*, const char*, void*));
+void k_io__copyjob_on_linking(void* self, void (*callback)(void*, void*, const char*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#moving)
 ///
@@ -167,14 +167,14 @@ void k_io__copyjob_on_linking(void* self, void (*callback)(void*, void*, const c
 /// @param from QUrl*
 /// @param to QUrl*
 ///
-void k_io__copyjob_moving(void* self, void* job, void* from, void* to);
+void k_io__copyjob_moving(void* self, void* job, const void* from, const void* to);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#moving)
 ///
 /// @param self KIO__CopyJob*
 /// @param callback void func(KIO__CopyJob* self, KIO__Job* job, QUrl* from, QUrl* to)
 ///
-void k_io__copyjob_on_moving(void* self, void (*callback)(void*, void*, void*, void*));
+void k_io__copyjob_on_moving(void* self, void (*callback)(void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#creatingDir)
 ///
@@ -182,14 +182,14 @@ void k_io__copyjob_on_moving(void* self, void (*callback)(void*, void*, void*, v
 /// @param job KIO__Job*
 /// @param dir QUrl*
 ///
-void k_io__copyjob_creating_dir(void* self, void* job, void* dir);
+void k_io__copyjob_creating_dir(void* self, void* job, const void* dir);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#creatingDir)
 ///
 /// @param self KIO__CopyJob*
 /// @param callback void func(KIO__CopyJob* self, KIO__Job* job, QUrl* dir)
 ///
-void k_io__copyjob_on_creating_dir(void* self, void (*callback)(void*, void*, void*));
+void k_io__copyjob_on_creating_dir(void* self, void (*callback)(void*, void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#renamed)
 ///
@@ -198,14 +198,14 @@ void k_io__copyjob_on_creating_dir(void* self, void (*callback)(void*, void*, vo
 /// @param from QUrl*
 /// @param to QUrl*
 ///
-void k_io__copyjob_renamed(void* self, void* job, void* from, void* to);
+void k_io__copyjob_renamed(void* self, void* job, const void* from, const void* to);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#renamed)
 ///
 /// @param self KIO__CopyJob*
 /// @param callback void func(KIO__CopyJob* self, KIO__Job* job, QUrl* from, QUrl* to)
 ///
-void k_io__copyjob_on_renamed(void* self, void (*callback)(void*, void*, void*, void*));
+void k_io__copyjob_on_renamed(void* self, void (*callback)(void*, void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#copyingDone)
 ///
@@ -217,14 +217,14 @@ void k_io__copyjob_on_renamed(void* self, void (*callback)(void*, void*, void*, 
 /// @param directory bool
 /// @param renamed bool
 ///
-void k_io__copyjob_copying_done(void* self, void* job, void* from, void* to, void* mtime, bool directory, bool renamed);
+void k_io__copyjob_copying_done(void* self, void* job, const void* from, const void* to, const void* mtime, bool directory, bool renamed);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#copyingDone)
 ///
 /// @param self KIO__CopyJob*
 /// @param callback void func(KIO__CopyJob* self, KIO__Job* job, QUrl* from, QUrl* to, QDateTime* mtime, bool directory, bool renamed)
 ///
-void k_io__copyjob_on_copying_done(void* self, void (*callback)(void*, void*, void*, void*, void*, bool, bool));
+void k_io__copyjob_on_copying_done(void* self, void (*callback)(void*, void*, const void*, const void*, const void*, bool, bool));
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#copyingLinkDone)
 ///
@@ -234,14 +234,14 @@ void k_io__copyjob_on_copying_done(void* self, void (*callback)(void*, void*, vo
 /// @param target const char*
 /// @param to QUrl*
 ///
-void k_io__copyjob_copying_link_done(void* self, void* job, void* from, const char* target, void* to);
+void k_io__copyjob_copying_link_done(void* self, void* job, const void* from, const char* target, const void* to);
 
 /// [Upstream resources](https://api.kde.org/kio-copyjob.html#copyingLinkDone)
 ///
 /// @param self KIO__CopyJob*
 /// @param callback void func(KIO__CopyJob* self, KIO__Job* job, QUrl* from, const char* target, QUrl* to)
 ///
-void k_io__copyjob_on_copying_link_done(void* self, void (*callback)(void*, void*, void*, const char*, void*));
+void k_io__copyjob_on_copying_link_done(void* self, void (*callback)(void*, void*, const void*, const char*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -274,9 +274,9 @@ void k_io__copyjob_start(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#uiDelegateExtension)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-KIO__JobUiDelegateExtension* k_io__copyjob_ui_delegate_extension(void* self);
+KIO__JobUiDelegateExtension* k_io__copyjob_ui_delegate_extension(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -293,9 +293,9 @@ void k_io__copyjob_set_ui_delegate_extension(void* self, void* extension);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-const char* k_io__copyjob_error_string(void* self);
+const char* k_io__copyjob_error_string(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -303,9 +303,9 @@ const char* k_io__copyjob_error_string(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-const char** k_io__copyjob_detailed_error_strings(void* self);
+const char** k_io__copyjob_detailed_error_strings(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -320,9 +320,9 @@ void k_io__copyjob_set_parent_job(void* self, void* parentJob);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#parentJob)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-KIO__Job* k_io__copyjob_parent_job(void* self);
+KIO__Job* k_io__copyjob_parent_job(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -331,7 +331,7 @@ KIO__Job* k_io__copyjob_parent_job(void* self);
 /// @param self KIO__CopyJob*
 /// @param metaData KIO__MetaData*
 ///
-void k_io__copyjob_set_meta_data(void* self, void* metaData);
+void k_io__copyjob_set_meta_data(void* self, const void* metaData);
 
 /// Inherited from KIO::Job
 ///
@@ -365,17 +365,17 @@ void k_io__copyjob_merge_meta_data(void* self, libqt_map values);
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#outgoingMetaData)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-KIO__MetaData* k_io__copyjob_outgoing_meta_data(void* self);
+KIO__MetaData* k_io__copyjob_outgoing_meta_data(const void* self);
 
 /// Inherited from KIO::Job
 ///
 /// [Upstream resources](https://api.kde.org/kio-job.html#metaData)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-KIO__MetaData* k_io__copyjob_meta_data(void* self);
+KIO__MetaData* k_io__copyjob_meta_data(const void* self);
 
 /// Inherited from KIO::Job
 ///
@@ -412,10 +412,10 @@ void k_io__copyjob_on_connected(void* self, void (*callback)(void*, void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param reqUrl QUrl*
 ///
-const char** k_io__copyjob_detailed_error_strings1(void* self, void* reqUrl);
+const char** k_io__copyjob_detailed_error_strings1(const void* self, const void* reqUrl);
 
 /// Inherited from KIO::Job
 ///
@@ -423,11 +423,11 @@ const char** k_io__copyjob_detailed_error_strings1(void* self, void* reqUrl);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param reqUrl QUrl*
 /// @param method int
 ///
-const char** k_io__copyjob_detailed_error_strings2(void* self, void* reqUrl, int method);
+const char** k_io__copyjob_detailed_error_strings2(const void* self, const void* reqUrl, int method);
 
 /// Inherited from KJob
 ///
@@ -442,27 +442,27 @@ void k_io__copyjob_set_ui_delegate(void* self, void* delegate);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#uiDelegate)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-KJobUiDelegate* k_io__copyjob_ui_delegate(void* self);
+KJobUiDelegate* k_io__copyjob_ui_delegate(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#capabilities)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
 /// @return flag of enum KJob__Capability
 ///
-int32_t k_io__copyjob_capabilities(void* self);
+int32_t k_io__copyjob_capabilities(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isSuspended)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_is_suspended(void* self);
+bool k_io__copyjob_is_suspended(const void* self);
 
 /// Inherited from KJob
 ///
@@ -500,9 +500,9 @@ bool k_io__copyjob_exec(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#error)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-int32_t k_io__copyjob_error(void* self);
+int32_t k_io__copyjob_error(const void* self);
 
 /// Inherited from KJob
 ///
@@ -510,35 +510,35 @@ int32_t k_io__copyjob_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-const char* k_io__copyjob_error_text(void* self);
+const char* k_io__copyjob_error_text(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedAmount)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_io__copyjob_processed_amount(void* self, int32_t unit);
+uintptr_t k_io__copyjob_processed_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param unit enum KJob__Unit
 ///
-uintptr_t k_io__copyjob_total_amount(void* self, int32_t unit);
+uintptr_t k_io__copyjob_total_amount(const void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-uintptr_t k_io__copyjob_percent(void* self);
+uintptr_t k_io__copyjob_percent(const void* self);
 
 /// Inherited from KJob
 ///
@@ -553,9 +553,9 @@ void k_io__copyjob_set_auto_delete(void* self, bool autodelete);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isAutoDelete)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_is_auto_delete(void* self);
+bool k_io__copyjob_is_auto_delete(const void* self);
 
 /// Inherited from KJob
 ///
@@ -569,25 +569,25 @@ void k_io__copyjob_set_finished_notification_hidden(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinishedNotificationHidden)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_is_finished_notification_hidden(void* self);
+bool k_io__copyjob_is_finished_notification_hidden(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#isStartedWithExec)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_is_started_with_exec(void* self);
+bool k_io__copyjob_is_started_with_exec(const void* self);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#elapsedTime)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-int64_t k_io__copyjob_elapsed_time(void* self);
+int64_t k_io__copyjob_elapsed_time(const void* self);
 
 /// Inherited from KJob
 ///
@@ -727,9 +727,9 @@ bool k_io__copyjob_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-const char* k_io__copyjob_object_name(void* self);
+const char* k_io__copyjob_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -744,33 +744,33 @@ void k_io__copyjob_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_is_widget_type(void* self);
+bool k_io__copyjob_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_is_window_type(void* self);
+bool k_io__copyjob_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_is_quick_item_type(void* self);
+bool k_io__copyjob_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_signals_blocked(void* self);
+bool k_io__copyjob_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -785,9 +785,9 @@ bool k_io__copyjob_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-QThread* k_io__copyjob_thread(void* self);
+QThread* k_io__copyjob_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -838,11 +838,11 @@ void k_io__copyjob_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_io__copyjob_children(void* self);
+libqt_list k_io__copyjob_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -880,7 +880,7 @@ void k_io__copyjob_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__copyjob_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_io__copyjob_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -891,18 +891,18 @@ QMetaObject__Connection* k_io__copyjob_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_io__copyjob_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_io__copyjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_io__copyjob_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_io__copyjob_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -913,7 +913,7 @@ QMetaObject__Connection* k_io__copyjob_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__copyjob_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_io__copyjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -924,24 +924,24 @@ bool k_io__copyjob_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_io__copyjob_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_io__copyjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-bool k_io__copyjob_disconnect3(void* self);
+bool k_io__copyjob_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param receiver QObject*
 ///
-bool k_io__copyjob_disconnect4(void* self, void* receiver);
+bool k_io__copyjob_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -949,23 +949,23 @@ bool k_io__copyjob_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_io__copyjob_disconnect5(void* param1);
+bool k_io__copyjob_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-void k_io__copyjob_dump_object_tree(void* self);
+void k_io__copyjob_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-void k_io__copyjob_dump_object_info(void* self);
+void k_io__copyjob_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -975,16 +975,16 @@ void k_io__copyjob_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_io__copyjob_set_property(void* self, const char* name, void* value);
+bool k_io__copyjob_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param name const char*
 ///
-QVariant* k_io__copyjob_property(void* self, const char* name);
+QVariant* k_io__copyjob_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -992,9 +992,9 @@ QVariant* k_io__copyjob_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-const char** k_io__copyjob_dynamic_property_names(void* self);
+const char** k_io__copyjob_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1008,9 +1008,9 @@ QBindingStorage* k_io__copyjob_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-const QBindingStorage* k_io__copyjob_binding_storage2(void* self);
+const QBindingStorage* k_io__copyjob_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1033,18 +1033,18 @@ void k_io__copyjob_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 ///
-QObject* k_io__copyjob_parent(void* self);
+QObject* k_io__copyjob_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param classname const char*
 ///
-bool k_io__copyjob_inherits(void* self, const char* classname);
+bool k_io__copyjob_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1084,7 +1084,7 @@ int32_t k_io__copyjob_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__copyjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_io__copyjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1096,59 +1096,59 @@ QMetaObject__Connection* k_io__copyjob_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__copyjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_io__copyjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_io__copyjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_io__copyjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param signal const char*
 ///
-bool k_io__copyjob_disconnect1(void* self, const char* signal);
+bool k_io__copyjob_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__CopyJob*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_io__copyjob_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_io__copyjob_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_io__copyjob_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KIO__CopyJob*
+/// @param self const KIO__CopyJob*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_io__copyjob_disconnect23(void* self, void* receiver, const char* member);
+bool k_io__copyjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KIO__CopyJob*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_io__copyjob_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1270,7 +1270,7 @@ void k_io__copyjob_delete(void* self);
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_copy(void* src, void* dest, int32_t flags);
+KIO__CopyJob* k_io_copy(const void* src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#copyAs)
 ///
@@ -1278,7 +1278,7 @@ KIO__CopyJob* k_io_copy(void* src, void* dest, int32_t flags);
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_copy_as(void* src, void* dest, int32_t flags);
+KIO__CopyJob* k_io_copy_as(const void* src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#copy)
 ///
@@ -1286,7 +1286,7 @@ KIO__CopyJob* k_io_copy_as(void* src, void* dest, int32_t flags);
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_copy2(libqt_list src, void* dest, int32_t flags);
+KIO__CopyJob* k_io_copy2(libqt_list src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#move)
 ///
@@ -1294,7 +1294,7 @@ KIO__CopyJob* k_io_copy2(libqt_list src, void* dest, int32_t flags);
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_move(void* src, void* dest, int32_t flags);
+KIO__CopyJob* k_io_move(const void* src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#moveAs)
 ///
@@ -1302,7 +1302,7 @@ KIO__CopyJob* k_io_move(void* src, void* dest, int32_t flags);
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_move_as(void* src, void* dest, int32_t flags);
+KIO__CopyJob* k_io_move_as(const void* src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#move)
 ///
@@ -1310,7 +1310,7 @@ KIO__CopyJob* k_io_move_as(void* src, void* dest, int32_t flags);
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_move2(libqt_list src, void* dest, int32_t flags);
+KIO__CopyJob* k_io_move2(libqt_list src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#link)
 ///
@@ -1318,7 +1318,7 @@ KIO__CopyJob* k_io_move2(libqt_list src, void* dest, int32_t flags);
 /// @param destDir QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_link(void* src, void* destDir, int32_t flags);
+KIO__CopyJob* k_io_link(const void* src, const void* destDir, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#link)
 ///
@@ -1326,7 +1326,7 @@ KIO__CopyJob* k_io_link(void* src, void* destDir, int32_t flags);
 /// @param destDir QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_link2(libqt_list src, void* destDir, int32_t flags);
+KIO__CopyJob* k_io_link2(libqt_list src, const void* destDir, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#linkAs)
 ///
@@ -1334,14 +1334,14 @@ KIO__CopyJob* k_io_link2(libqt_list src, void* destDir, int32_t flags);
 /// @param dest QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_link_as(void* src, void* dest, int32_t flags);
+KIO__CopyJob* k_io_link_as(const void* src, const void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#trash)
 ///
 /// @param src QUrl*
 /// @param flags flag of enum KIO__JobFlag
 ///
-KIO__CopyJob* k_io_trash(void* src, int32_t flags);
+KIO__CopyJob* k_io_trash(const void* src, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#trash)
 ///

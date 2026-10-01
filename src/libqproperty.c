@@ -14,7 +14,7 @@ QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new() {
     return QPropertyBindingSourceLocation_New();
 }
 
-QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new2(void* other) {
+QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new2(const void* other) {
     return QPropertyBindingSourceLocation_New2((QPropertyBindingSourceLocation*)other);
 }
 
@@ -22,7 +22,7 @@ QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new3(void* other
     return QPropertyBindingSourceLocation_New3((QPropertyBindingSourceLocation*)other);
 }
 
-QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new4(void* param1) {
+QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new4(const void* param1) {
     return QPropertyBindingSourceLocation_New4((QPropertyBindingSourceLocation*)param1);
 }
 
@@ -34,7 +34,7 @@ void q_propertybindingsourcelocation_move_assign(void* self, void* other) {
     QPropertyBindingSourceLocation_MoveAssign((QPropertyBindingSourceLocation*)self, (QPropertyBindingSourceLocation*)other);
 }
 
-const char* q_propertybindingsourcelocation_file_name(void* self) {
+const char* q_propertybindingsourcelocation_file_name(const void* self) {
     return QPropertyBindingSourceLocation_FileName((QPropertyBindingSourceLocation*)self);
 }
 
@@ -42,7 +42,7 @@ void q_propertybindingsourcelocation_set_file_name(void* self, const char* fileN
     QPropertyBindingSourceLocation_SetFileName((QPropertyBindingSourceLocation*)self, fileName);
 }
 
-const char* q_propertybindingsourcelocation_function_name(void* self) {
+const char* q_propertybindingsourcelocation_function_name(const void* self) {
     return QPropertyBindingSourceLocation_FunctionName((QPropertyBindingSourceLocation*)self);
 }
 
@@ -50,7 +50,7 @@ void q_propertybindingsourcelocation_set_function_name(void* self, const char* f
     QPropertyBindingSourceLocation_SetFunctionName((QPropertyBindingSourceLocation*)self, functionName);
 }
 
-uint32_t q_propertybindingsourcelocation_line(void* self) {
+uint32_t q_propertybindingsourcelocation_line(const void* self) {
     return QPropertyBindingSourceLocation_Line((QPropertyBindingSourceLocation*)self);
 }
 
@@ -58,7 +58,7 @@ void q_propertybindingsourcelocation_set_line(void* self, uint32_t line) {
     QPropertyBindingSourceLocation_SetLine((QPropertyBindingSourceLocation*)self, line);
 }
 
-uint32_t q_propertybindingsourcelocation_column(void* self) {
+uint32_t q_propertybindingsourcelocation_column(const void* self) {
     return QPropertyBindingSourceLocation_Column((QPropertyBindingSourceLocation*)self);
 }
 
@@ -78,7 +78,7 @@ QPropertyBindingError* q_propertybindingerror_new2(int32_t type) {
     return QPropertyBindingError_New2(type);
 }
 
-QPropertyBindingError* q_propertybindingerror_new3(void* other) {
+QPropertyBindingError* q_propertybindingerror_new3(const void* other) {
     return QPropertyBindingError_New3((QPropertyBindingError*)other);
 }
 
@@ -86,19 +86,19 @@ QPropertyBindingError* q_propertybindingerror_new4(int32_t type, const char* des
     return QPropertyBindingError_New4(type, qstring(description));
 }
 
-void q_propertybindingerror_operator_assign(void* self, void* other) {
+void q_propertybindingerror_operator_assign(void* self, const void* other) {
     QPropertyBindingError_OperatorAssign((QPropertyBindingError*)self, (QPropertyBindingError*)other);
 }
 
-bool q_propertybindingerror_has_error(void* self) {
+bool q_propertybindingerror_has_error(const void* self) {
     return QPropertyBindingError_HasError((QPropertyBindingError*)self);
 }
 
-int32_t q_propertybindingerror_type(void* self) {
+int32_t q_propertybindingerror_type(const void* self) {
     return QPropertyBindingError_Type((QPropertyBindingError*)self);
 }
 
-const char* q_propertybindingerror_description(void* self) {
+const char* q_propertybindingerror_description(const void* self) {
     libqt_string _str = QPropertyBindingError_Description((QPropertyBindingError*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -113,23 +113,23 @@ QUntypedPropertyBinding* q_untypedpropertybinding_new() {
     return QUntypedPropertyBinding_New();
 }
 
-QUntypedPropertyBinding* q_untypedpropertybinding_new2(void* other) {
+QUntypedPropertyBinding* q_untypedpropertybinding_new2(const void* other) {
     return QUntypedPropertyBinding_New2((QUntypedPropertyBinding*)other);
 }
 
-void q_untypedpropertybinding_operator_assign(void* self, void* other) {
+void q_untypedpropertybinding_operator_assign(void* self, const void* other) {
     QUntypedPropertyBinding_OperatorAssign((QUntypedPropertyBinding*)self, (QUntypedPropertyBinding*)other);
 }
 
-bool q_untypedpropertybinding_is_null(void* self) {
+bool q_untypedpropertybinding_is_null(const void* self) {
     return QUntypedPropertyBinding_IsNull((QUntypedPropertyBinding*)self);
 }
 
-QPropertyBindingError* q_untypedpropertybinding_error(void* self) {
+QPropertyBindingError* q_untypedpropertybinding_error(const void* self) {
     return QUntypedPropertyBinding_Error((QUntypedPropertyBinding*)self);
 }
 
-QMetaType* q_untypedpropertybinding_value_meta_type(void* self) {
+QMetaType* q_untypedpropertybinding_value_meta_type(const void* self) {
     return QUntypedPropertyBinding_ValueMetaType((QUntypedPropertyBinding*)self);
 }
 
@@ -141,11 +141,11 @@ QPropertyObserverBase* q_propertyobserverbase_new() {
     return QPropertyObserverBase_New();
 }
 
-QPropertyObserverBase* q_propertyobserverbase_new2(void* param1) {
+QPropertyObserverBase* q_propertyobserverbase_new2(const void* param1) {
     return QPropertyObserverBase_New2((QPropertyObserverBase*)param1);
 }
 
-void q_propertyobserverbase_operator_assign(void* self, void* param1) {
+void q_propertyobserverbase_operator_assign(void* self, const void* param1) {
     QPropertyObserverBase_OperatorAssign((QPropertyObserverBase*)self, (QPropertyObserverBase*)param1);
 }
 
@@ -157,7 +157,7 @@ QPropertyObserver* q_propertyobserver_new() {
     return QPropertyObserver_New();
 }
 
-void q_propertyobserver_operator_assign(void* self, void* param1) {
+void q_propertyobserver_operator_assign(void* self, const void* param1) {
     QPropertyObserverBase_OperatorAssign((QPropertyObserverBase*)self, (QPropertyObserverBase*)param1);
 }
 
@@ -169,7 +169,7 @@ QPropertyNotifier* q_propertynotifier_new() {
     return QPropertyNotifier_New();
 }
 
-void q_propertynotifier_operator_assign(void* self, void* param1) {
+void q_propertynotifier_operator_assign(void* self, const void* param1) {
     QPropertyObserverBase_OperatorAssign((QPropertyObserverBase*)self, (QPropertyObserverBase*)param1);
 }
 
@@ -181,7 +181,7 @@ QUntypedBindable* q_untypedbindable_new() {
     return QUntypedBindable_New();
 }
 
-QUntypedBindable* q_untypedbindable_new2(void* other) {
+QUntypedBindable* q_untypedbindable_new2(const void* other) {
     return QUntypedBindable_New2((QUntypedBindable*)other);
 }
 
@@ -189,7 +189,7 @@ QUntypedBindable* q_untypedbindable_new3(void* other) {
     return QUntypedBindable_New3((QUntypedBindable*)other);
 }
 
-QUntypedBindable* q_untypedbindable_new4(void* param1) {
+QUntypedBindable* q_untypedbindable_new4(const void* param1) {
     return QUntypedBindable_New4((QUntypedBindable*)param1);
 }
 
@@ -201,19 +201,19 @@ void q_untypedbindable_move_assign(void* self, void* other) {
     QUntypedBindable_MoveAssign((QUntypedBindable*)self, (QUntypedBindable*)other);
 }
 
-bool q_untypedbindable_is_valid(void* self) {
+bool q_untypedbindable_is_valid(const void* self) {
     return QUntypedBindable_IsValid((QUntypedBindable*)self);
 }
 
-bool q_untypedbindable_is_bindable(void* self) {
+bool q_untypedbindable_is_bindable(const void* self) {
     return QUntypedBindable_IsBindable((QUntypedBindable*)self);
 }
 
-bool q_untypedbindable_is_read_only(void* self) {
+bool q_untypedbindable_is_read_only(const void* self) {
     return QUntypedBindable_IsReadOnly((QUntypedBindable*)self);
 }
 
-QUntypedPropertyBinding* q_untypedbindable_make_binding(void* self) {
+QUntypedPropertyBinding* q_untypedbindable_make_binding(const void* self) {
     return QUntypedBindable_MakeBinding((QUntypedBindable*)self);
 }
 
@@ -221,27 +221,27 @@ QUntypedPropertyBinding* q_untypedbindable_take_binding(void* self) {
     return QUntypedBindable_TakeBinding((QUntypedBindable*)self);
 }
 
-void q_untypedbindable_observe(void* self, void* observer) {
+void q_untypedbindable_observe(const void* self, void* observer) {
     QUntypedBindable_Observe((QUntypedBindable*)self, (QPropertyObserver*)observer);
 }
 
-QUntypedPropertyBinding* q_untypedbindable_binding(void* self) {
+QUntypedPropertyBinding* q_untypedbindable_binding(const void* self) {
     return QUntypedBindable_Binding((QUntypedBindable*)self);
 }
 
-bool q_untypedbindable_set_binding(void* self, void* binding) {
+bool q_untypedbindable_set_binding(void* self, const void* binding) {
     return QUntypedBindable_SetBinding((QUntypedBindable*)self, (QUntypedPropertyBinding*)binding);
 }
 
-bool q_untypedbindable_has_binding(void* self) {
+bool q_untypedbindable_has_binding(const void* self) {
     return QUntypedBindable_HasBinding((QUntypedBindable*)self);
 }
 
-QMetaType* q_untypedbindable_meta_type(void* self) {
+QMetaType* q_untypedbindable_meta_type(const void* self) {
     return QUntypedBindable_MetaType((QUntypedBindable*)self);
 }
 
-QUntypedPropertyBinding* q_untypedbindable_make_binding1(void* self, void* location) {
+QUntypedPropertyBinding* q_untypedbindable_make_binding1(const void* self, const void* location) {
     return QUntypedBindable_MakeBinding1((QUntypedBindable*)self, (QPropertyBindingSourceLocation*)location);
 }
 

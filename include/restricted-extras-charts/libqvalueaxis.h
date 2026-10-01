@@ -24,26 +24,26 @@ QValueAxis* q_valueaxis_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-const QMetaObject* q_valueaxis_meta_object(void* self);
+const QMetaObject* q_valueaxis_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QValueAxis*
-/// @param callback const QMetaObject* func()
+/// @param self const QValueAxis*
+/// @param callback const QMetaObject* func(const QValueAxis* self)
 ///
-void q_valueaxis_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_valueaxis_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-const QMetaObject* q_valueaxis_super_meta_object(void* self);
+const QMetaObject* q_valueaxis_super_meta_object(const void* self);
 
 /// @param self QValueAxis*
 /// @param param1 const char*
@@ -97,30 +97,30 @@ const char* q_valueaxis_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#type)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
 ///
-int32_t q_valueaxis_type(void* self);
+int32_t q_valueaxis_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QValueAxis*
-/// @param callback int32_t func()
+/// @param self const QValueAxis*
+/// @param callback int32_t func(const QValueAxis* self)
 ///
-void q_valueaxis_on_type(void* self, int32_t (*callback)());
+void q_valueaxis_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
 ///
-int32_t q_valueaxis_super_type(void* self);
+int32_t q_valueaxis_super_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setMin)
 ///
@@ -131,9 +131,9 @@ void q_valueaxis_set_min(void* self, double min);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#min)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-double q_valueaxis_min(void* self);
+double q_valueaxis_min(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setMax)
 ///
@@ -144,9 +144,9 @@ void q_valueaxis_set_max(void* self, double max);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#max)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-double q_valueaxis_max(void* self);
+double q_valueaxis_max(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setRange)
 ///
@@ -165,9 +165,9 @@ void q_valueaxis_set_tick_count(void* self, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickCount)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-int32_t q_valueaxis_tick_count(void* self);
+int32_t q_valueaxis_tick_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setMinorTickCount)
 ///
@@ -178,9 +178,9 @@ void q_valueaxis_set_minor_tick_count(void* self, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#minorTickCount)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-int32_t q_valueaxis_minor_tick_count(void* self);
+int32_t q_valueaxis_minor_tick_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setTickAnchor)
 ///
@@ -191,9 +191,9 @@ void q_valueaxis_set_tick_anchor(void* self, double anchor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickAnchor)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-double q_valueaxis_tick_anchor(void* self);
+double q_valueaxis_tick_anchor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setTickInterval)
 ///
@@ -204,9 +204,9 @@ void q_valueaxis_set_tick_interval(void* self, double insterval);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickInterval)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-double q_valueaxis_tick_interval(void* self);
+double q_valueaxis_tick_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setTickType)
 ///
@@ -217,11 +217,11 @@ void q_valueaxis_set_tick_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickType)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
 /// @return enum QValueAxis__TickType
 ///
-int32_t q_valueaxis_tick_type(void* self);
+int32_t q_valueaxis_tick_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setLabelFormat)
 ///
@@ -234,9 +234,9 @@ void q_valueaxis_set_label_format(void* self, const char* format);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-const char* q_valueaxis_label_format(void* self);
+const char* q_valueaxis_label_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#applyNiceNumbers)
 ///
@@ -394,9 +394,9 @@ const char* q_valueaxis_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isVisible)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_visible(void* self);
+bool q_valueaxis_is_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -426,9 +426,9 @@ void q_valueaxis_hide(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isLineVisible)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_line_visible(void* self);
+bool q_valueaxis_is_line_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -445,15 +445,15 @@ void q_valueaxis_set_line_visible(void* self);
 /// @param self QValueAxis*
 /// @param pen QPen*
 ///
-void q_valueaxis_set_line_pen(void* self, void* pen);
+void q_valueaxis_set_line_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#linePen)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QPen* q_valueaxis_line_pen(void* self);
+QPen* q_valueaxis_line_pen(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -468,17 +468,17 @@ void q_valueaxis_set_line_pen_color(void* self, void* color);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#linePenColor)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QColor* q_valueaxis_line_pen_color(void* self);
+QColor* q_valueaxis_line_pen_color(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isGridLineVisible)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_grid_line_visible(void* self);
+bool q_valueaxis_is_grid_line_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -495,23 +495,23 @@ void q_valueaxis_set_grid_line_visible(void* self);
 /// @param self QValueAxis*
 /// @param pen QPen*
 ///
-void q_valueaxis_set_grid_line_pen(void* self, void* pen);
+void q_valueaxis_set_grid_line_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePen)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QPen* q_valueaxis_grid_line_pen(void* self);
+QPen* q_valueaxis_grid_line_pen(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isMinorGridLineVisible)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_minor_grid_line_visible(void* self);
+bool q_valueaxis_is_minor_grid_line_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -528,15 +528,15 @@ void q_valueaxis_set_minor_grid_line_visible(void* self);
 /// @param self QValueAxis*
 /// @param pen QPen*
 ///
-void q_valueaxis_set_minor_grid_line_pen(void* self, void* pen);
+void q_valueaxis_set_minor_grid_line_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePen)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QPen* q_valueaxis_minor_grid_line_pen(void* self);
+QPen* q_valueaxis_minor_grid_line_pen(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -545,7 +545,7 @@ QPen* q_valueaxis_minor_grid_line_pen(void* self);
 /// @param self QValueAxis*
 /// @param color QColor*
 ///
-void q_valueaxis_set_grid_line_color(void* self, void* color);
+void q_valueaxis_set_grid_line_color(void* self, const void* color);
 
 /// Inherited from QAbstractAxis
 ///
@@ -562,7 +562,7 @@ QColor* q_valueaxis_grid_line_color(void* self);
 /// @param self QValueAxis*
 /// @param color QColor*
 ///
-void q_valueaxis_set_minor_grid_line_color(void* self, void* color);
+void q_valueaxis_set_minor_grid_line_color(void* self, const void* color);
 
 /// Inherited from QAbstractAxis
 ///
@@ -576,9 +576,9 @@ QColor* q_valueaxis_minor_grid_line_color(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisible)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_labels_visible(void* self);
+bool q_valueaxis_labels_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -595,15 +595,15 @@ void q_valueaxis_set_labels_visible(void* self);
 /// @param self QValueAxis*
 /// @param brush QBrush*
 ///
-void q_valueaxis_set_labels_brush(void* self, void* brush);
+void q_valueaxis_set_labels_brush(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrush)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QBrush* q_valueaxis_labels_brush(void* self);
+QBrush* q_valueaxis_labels_brush(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -612,15 +612,15 @@ QBrush* q_valueaxis_labels_brush(void* self);
 /// @param self QValueAxis*
 /// @param font QFont*
 ///
-void q_valueaxis_set_labels_font(void* self, void* font);
+void q_valueaxis_set_labels_font(void* self, const void* font);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFont)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QFont* q_valueaxis_labels_font(void* self);
+QFont* q_valueaxis_labels_font(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -635,9 +635,9 @@ void q_valueaxis_set_labels_angle(void* self, int angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngle)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-int32_t q_valueaxis_labels_angle(void* self);
+int32_t q_valueaxis_labels_angle(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -652,17 +652,17 @@ void q_valueaxis_set_labels_color(void* self, void* color);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColor)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QColor* q_valueaxis_labels_color(void* self);
+QColor* q_valueaxis_labels_color(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isTitleVisible)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_title_visible(void* self);
+bool q_valueaxis_is_title_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -679,15 +679,15 @@ void q_valueaxis_set_title_visible(void* self);
 /// @param self QValueAxis*
 /// @param brush QBrush*
 ///
-void q_valueaxis_set_title_brush(void* self, void* brush);
+void q_valueaxis_set_title_brush(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrush)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QBrush* q_valueaxis_title_brush(void* self);
+QBrush* q_valueaxis_title_brush(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -696,15 +696,15 @@ QBrush* q_valueaxis_title_brush(void* self);
 /// @param self QValueAxis*
 /// @param font QFont*
 ///
-void q_valueaxis_set_title_font(void* self, void* font);
+void q_valueaxis_set_title_font(void* self, const void* font);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#titleFont)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QFont* q_valueaxis_title_font(void* self);
+QFont* q_valueaxis_title_font(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -721,17 +721,17 @@ void q_valueaxis_set_title_text(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-const char* q_valueaxis_title_text(void* self);
+const char* q_valueaxis_title_text(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisible)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_shades_visible(void* self);
+bool q_valueaxis_shades_visible(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -748,15 +748,15 @@ void q_valueaxis_set_shades_visible(void* self);
 /// @param self QValueAxis*
 /// @param pen QPen*
 ///
-void q_valueaxis_set_shades_pen(void* self, void* pen);
+void q_valueaxis_set_shades_pen(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPen)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QPen* q_valueaxis_shades_pen(void* self);
+QPen* q_valueaxis_shades_pen(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -765,15 +765,15 @@ QPen* q_valueaxis_shades_pen(void* self);
 /// @param self QValueAxis*
 /// @param brush QBrush*
 ///
-void q_valueaxis_set_shades_brush(void* self, void* brush);
+void q_valueaxis_set_shades_brush(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrush)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QBrush* q_valueaxis_shades_brush(void* self);
+QBrush* q_valueaxis_shades_brush(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -788,9 +788,9 @@ void q_valueaxis_set_shades_color(void* self, void* color);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColor)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QColor* q_valueaxis_shades_color(void* self);
+QColor* q_valueaxis_shades_color(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -805,29 +805,29 @@ void q_valueaxis_set_shades_border_color(void* self, void* color);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColor)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QColor* q_valueaxis_shades_border_color(void* self);
+QColor* q_valueaxis_shades_border_color(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#orientation)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
 /// @return enum Qt__Orientation
 ///
-int32_t q_valueaxis_orientation(void* self);
+int32_t q_valueaxis_orientation(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#alignment)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
 /// @return flag of enum Qt__AlignmentFlag
 ///
-int32_t q_valueaxis_alignment(void* self);
+int32_t q_valueaxis_alignment(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -841,9 +841,9 @@ void q_valueaxis_set_reverse(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#isReverse)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_reverse(void* self);
+bool q_valueaxis_is_reverse(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -857,17 +857,17 @@ void q_valueaxis_set_labels_editable(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditable)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_labels_editable(void* self);
+bool q_valueaxis_labels_editable(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncated)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_labels_truncated(void* self);
+bool q_valueaxis_labels_truncated(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -881,9 +881,9 @@ void q_valueaxis_set_truncate_labels(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabels)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_truncate_labels(void* self);
+bool q_valueaxis_truncate_labels(const void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -910,7 +910,7 @@ void q_valueaxis_on_visible_changed(void* self, void (*callback)(void*, bool));
 /// @param self QValueAxis*
 /// @param pen QPen*
 ///
-void q_valueaxis_line_pen_changed(void* self, void* pen);
+void q_valueaxis_line_pen_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -919,7 +919,7 @@ void q_valueaxis_line_pen_changed(void* self, void* pen);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QPen* pen)
 ///
-void q_valueaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_line_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -964,7 +964,7 @@ void q_valueaxis_on_labels_visible_changed(void* self, void (*callback)(void*, b
 /// @param self QValueAxis*
 /// @param brush QBrush*
 ///
-void q_valueaxis_labels_brush_changed(void* self, void* brush);
+void q_valueaxis_labels_brush_changed(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
@@ -973,7 +973,7 @@ void q_valueaxis_labels_brush_changed(void* self, void* brush);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QBrush* brush)
 ///
-void q_valueaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_labels_brush_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -982,7 +982,7 @@ void q_valueaxis_on_labels_brush_changed(void* self, void (*callback)(void*, voi
 /// @param self QValueAxis*
 /// @param pen QFont*
 ///
-void q_valueaxis_labels_font_changed(void* self, void* pen);
+void q_valueaxis_labels_font_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -991,7 +991,7 @@ void q_valueaxis_labels_font_changed(void* self, void* pen);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QFont* pen)
 ///
-void q_valueaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_labels_font_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1018,7 +1018,7 @@ void q_valueaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int
 /// @param self QValueAxis*
 /// @param pen QPen*
 ///
-void q_valueaxis_grid_line_pen_changed(void* self, void* pen);
+void q_valueaxis_grid_line_pen_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1027,7 +1027,7 @@ void q_valueaxis_grid_line_pen_changed(void* self, void* pen);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QPen* pen)
 ///
-void q_valueaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1072,7 +1072,7 @@ void q_valueaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void
 /// @param self QValueAxis*
 /// @param pen QPen*
 ///
-void q_valueaxis_minor_grid_line_pen_changed(void* self, void* pen);
+void q_valueaxis_minor_grid_line_pen_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1081,7 +1081,7 @@ void q_valueaxis_minor_grid_line_pen_changed(void* self, void* pen);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QPen* pen)
 ///
-void q_valueaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1090,7 +1090,7 @@ void q_valueaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(voi
 /// @param self QValueAxis*
 /// @param color QColor*
 ///
-void q_valueaxis_grid_line_color_changed(void* self, void* color);
+void q_valueaxis_grid_line_color_changed(void* self, const void* color);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1099,7 +1099,7 @@ void q_valueaxis_grid_line_color_changed(void* self, void* color);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QColor* color)
 ///
-void q_valueaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1108,7 +1108,7 @@ void q_valueaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, 
 /// @param self QValueAxis*
 /// @param color QColor*
 ///
-void q_valueaxis_minor_grid_line_color_changed(void* self, void* color);
+void q_valueaxis_minor_grid_line_color_changed(void* self, const void* color);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1117,7 +1117,7 @@ void q_valueaxis_minor_grid_line_color_changed(void* self, void* color);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QColor* color)
 ///
-void q_valueaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1180,7 +1180,7 @@ void q_valueaxis_on_title_text_changed(void* self, void (*callback)(void*, const
 /// @param self QValueAxis*
 /// @param brush QBrush*
 ///
-void q_valueaxis_title_brush_changed(void* self, void* brush);
+void q_valueaxis_title_brush_changed(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1189,7 +1189,7 @@ void q_valueaxis_title_brush_changed(void* self, void* brush);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QBrush* brush)
 ///
-void q_valueaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_title_brush_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1216,7 +1216,7 @@ void q_valueaxis_on_title_visible_changed(void* self, void (*callback)(void*, bo
 /// @param self QValueAxis*
 /// @param font QFont*
 ///
-void q_valueaxis_title_font_changed(void* self, void* font);
+void q_valueaxis_title_font_changed(void* self, const void* font);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1225,7 +1225,7 @@ void q_valueaxis_title_font_changed(void* self, void* font);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QFont* font)
 ///
-void q_valueaxis_on_title_font_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_title_font_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1288,7 +1288,7 @@ void q_valueaxis_on_shades_border_color_changed(void* self, void (*callback)(voi
 /// @param self QValueAxis*
 /// @param pen QPen*
 ///
-void q_valueaxis_shades_pen_changed(void* self, void* pen);
+void q_valueaxis_shades_pen_changed(void* self, const void* pen);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1297,7 +1297,7 @@ void q_valueaxis_shades_pen_changed(void* self, void* pen);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QPen* pen)
 ///
-void q_valueaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_shades_pen_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1306,7 +1306,7 @@ void q_valueaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*
 /// @param self QValueAxis*
 /// @param brush QBrush*
 ///
-void q_valueaxis_shades_brush_changed(void* self, void* brush);
+void q_valueaxis_shades_brush_changed(void* self, const void* brush);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1315,7 +1315,7 @@ void q_valueaxis_shades_brush_changed(void* self, void* brush);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QBrush* brush)
 ///
-void q_valueaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_shades_brush_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractAxis
 ///
@@ -1485,9 +1485,9 @@ void q_valueaxis_set_truncate_labels1(void* self, bool truncateLabels);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-const char* q_valueaxis_object_name(void* self);
+const char* q_valueaxis_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1502,33 +1502,33 @@ void q_valueaxis_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_widget_type(void* self);
+bool q_valueaxis_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_window_type(void* self);
+bool q_valueaxis_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_is_quick_item_type(void* self);
+bool q_valueaxis_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_signals_blocked(void* self);
+bool q_valueaxis_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1543,9 +1543,9 @@ bool q_valueaxis_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QThread* q_valueaxis_thread(void* self);
+QThread* q_valueaxis_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1596,11 +1596,11 @@ void q_valueaxis_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_valueaxis_children(void* self);
+libqt_list q_valueaxis_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1638,7 +1638,7 @@ void q_valueaxis_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_valueaxis_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_valueaxis_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1649,18 +1649,18 @@ QMetaObject__Connection* q_valueaxis_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_valueaxis_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_valueaxis_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_valueaxis_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_valueaxis_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1671,7 +1671,7 @@ QMetaObject__Connection* q_valueaxis_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_valueaxis_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_valueaxis_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1682,24 +1682,24 @@ bool q_valueaxis_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_valueaxis_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_valueaxis_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-bool q_valueaxis_disconnect3(void* self);
+bool q_valueaxis_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param receiver QObject*
 ///
-bool q_valueaxis_disconnect4(void* self, void* receiver);
+bool q_valueaxis_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1707,23 +1707,23 @@ bool q_valueaxis_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_valueaxis_disconnect5(void* param1);
+bool q_valueaxis_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-void q_valueaxis_dump_object_tree(void* self);
+void q_valueaxis_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-void q_valueaxis_dump_object_info(void* self);
+void q_valueaxis_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1733,16 +1733,16 @@ void q_valueaxis_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_valueaxis_set_property(void* self, const char* name, void* value);
+bool q_valueaxis_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param name const char*
 ///
-QVariant* q_valueaxis_property(void* self, const char* name);
+QVariant* q_valueaxis_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1750,9 +1750,9 @@ QVariant* q_valueaxis_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-const char** q_valueaxis_dynamic_property_names(void* self);
+const char** q_valueaxis_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1766,9 +1766,9 @@ QBindingStorage* q_valueaxis_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-const QBindingStorage* q_valueaxis_binding_storage2(void* self);
+const QBindingStorage* q_valueaxis_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1791,18 +1791,18 @@ void q_valueaxis_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QObject* q_valueaxis_parent(void* self);
+QObject* q_valueaxis_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param classname const char*
 ///
-bool q_valueaxis_inherits(void* self, const char* classname);
+bool q_valueaxis_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1842,7 +1842,7 @@ int32_t q_valueaxis_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_valueaxis_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_valueaxis_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1854,59 +1854,59 @@ QMetaObject__Connection* q_valueaxis_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_valueaxis_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_valueaxis_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_valueaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_valueaxis_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param signal const char*
 ///
-bool q_valueaxis_disconnect1(void* self, const char* signal);
+bool q_valueaxis_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QValueAxis*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_valueaxis_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_valueaxis_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_valueaxis_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_valueaxis_disconnect23(void* self, void* receiver, const char* member);
+bool q_valueaxis_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QValueAxis*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_valueaxis_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2102,7 +2102,7 @@ void q_valueaxis_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QValueAxis*
 /// @param signal QMetaMethod*
 ///
-void q_valueaxis_connect_notify(void* self, void* signal);
+void q_valueaxis_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2113,7 +2113,7 @@ void q_valueaxis_connect_notify(void* self, void* signal);
 /// @param self QValueAxis*
 /// @param signal QMetaMethod*
 ///
-void q_valueaxis_super_connect_notify(void* self, void* signal);
+void q_valueaxis_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2124,7 +2124,7 @@ void q_valueaxis_super_connect_notify(void* self, void* signal);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QMetaMethod* signal)
 ///
-void q_valueaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2135,7 +2135,7 @@ void q_valueaxis_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QValueAxis*
 /// @param signal QMetaMethod*
 ///
-void q_valueaxis_disconnect_notify(void* self, void* signal);
+void q_valueaxis_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2146,7 +2146,7 @@ void q_valueaxis_disconnect_notify(void* self, void* signal);
 /// @param self QValueAxis*
 /// @param signal QMetaMethod*
 ///
-void q_valueaxis_super_disconnect_notify(void* self, void* signal);
+void q_valueaxis_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2157,7 +2157,7 @@ void q_valueaxis_super_disconnect_notify(void* self, void* signal);
 /// @param self QValueAxis*
 /// @param callback void func(QValueAxis* self, QMetaMethod* signal)
 ///
-void q_valueaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_valueaxis_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2165,9 +2165,9 @@ void q_valueaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QObject* q_valueaxis_sender(void* self);
+QObject* q_valueaxis_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2175,9 +2175,9 @@ QObject* q_valueaxis_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-QObject* q_valueaxis_super_sender(void* self);
+QObject* q_valueaxis_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2185,10 +2185,10 @@ QObject* q_valueaxis_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QValueAxis*
-/// @param callback QObject* func()
+/// @param self const QValueAxis*
+/// @param callback QObject* func(QValueAxis* self)
 ///
-void q_valueaxis_on_sender(void* self, QObject* (*callback)());
+void q_valueaxis_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2196,9 +2196,9 @@ void q_valueaxis_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-int32_t q_valueaxis_sender_signal_index(void* self);
+int32_t q_valueaxis_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2206,9 +2206,9 @@ int32_t q_valueaxis_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 ///
-int32_t q_valueaxis_super_sender_signal_index(void* self);
+int32_t q_valueaxis_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2216,10 +2216,10 @@ int32_t q_valueaxis_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QValueAxis*
-/// @param callback int32_t func()
+/// @param self const QValueAxis*
+/// @param callback int32_t func(QValueAxis* self)
 ///
-void q_valueaxis_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_valueaxis_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2227,10 +2227,10 @@ void q_valueaxis_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param signal const char*
 ///
-int32_t q_valueaxis_receivers(void* self, const char* signal);
+int32_t q_valueaxis_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2238,10 +2238,10 @@ int32_t q_valueaxis_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param signal const char*
 ///
-int32_t q_valueaxis_super_receivers(void* self, const char* signal);
+int32_t q_valueaxis_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2249,10 +2249,10 @@ int32_t q_valueaxis_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param callback int32_t func(QValueAxis* self, const char* signal)
 ///
-void q_valueaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_valueaxis_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2260,10 +2260,10 @@ void q_valueaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param signal QMetaMethod*
 ///
-bool q_valueaxis_is_signal_connected(void* self, void* signal);
+bool q_valueaxis_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2271,10 +2271,10 @@ bool q_valueaxis_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param signal QMetaMethod*
 ///
-bool q_valueaxis_super_is_signal_connected(void* self, void* signal);
+bool q_valueaxis_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2282,10 +2282,10 @@ bool q_valueaxis_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QValueAxis*
+/// @param self const QValueAxis*
 /// @param callback bool func(QValueAxis* self, QMetaMethod* signal)
 ///
-void q_valueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_valueaxis_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

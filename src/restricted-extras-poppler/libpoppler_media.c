@@ -2,48 +2,48 @@
 #include "libpoppler_media.hpp"
 #include "libpoppler_media.h"
 
-bool q_poppler__mediarendition_is_valid(void* self) {
+bool q_poppler__mediarendition_is_valid(const void* self) {
     return Poppler__MediaRendition_IsValid((Poppler__MediaRendition*)self);
 }
 
-const char* q_poppler__mediarendition_content_type(void* self) {
+const char* q_poppler__mediarendition_content_type(const void* self) {
     libqt_string _str = Poppler__MediaRendition_ContentType((Poppler__MediaRendition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_poppler__mediarendition_file_name(void* self) {
+const char* q_poppler__mediarendition_file_name(const void* self) {
     libqt_string _str = Poppler__MediaRendition_FileName((Poppler__MediaRendition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_poppler__mediarendition_is_embedded(void* self) {
+bool q_poppler__mediarendition_is_embedded(const void* self) {
     return Poppler__MediaRendition_IsEmbedded((Poppler__MediaRendition*)self);
 }
 
-char* q_poppler__mediarendition_data(void* self) {
+char* q_poppler__mediarendition_data(const void* self) {
     libqt_string _str = Poppler__MediaRendition_Data((Poppler__MediaRendition*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_poppler__mediarendition_auto_play(void* self) {
+bool q_poppler__mediarendition_auto_play(const void* self) {
     return Poppler__MediaRendition_AutoPlay((Poppler__MediaRendition*)self);
 }
 
-bool q_poppler__mediarendition_show_controls(void* self) {
+bool q_poppler__mediarendition_show_controls(const void* self) {
     return Poppler__MediaRendition_ShowControls((Poppler__MediaRendition*)self);
 }
 
-float q_poppler__mediarendition_repeat_count(void* self) {
+float q_poppler__mediarendition_repeat_count(const void* self) {
     return Poppler__MediaRendition_RepeatCount((Poppler__MediaRendition*)self);
 }
 
-QSize* q_poppler__mediarendition_size(void* self) {
+QSize* q_poppler__mediarendition_size(const void* self) {
     return Poppler__MediaRendition_Size((Poppler__MediaRendition*)self);
 }
 

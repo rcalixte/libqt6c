@@ -9,11 +9,11 @@ QDBusArgument* q_dbusargument_new() {
     return QDBusArgument_New();
 }
 
-QDBusArgument* q_dbusargument_new2(void* other) {
+QDBusArgument* q_dbusargument_new2(const void* other) {
     return QDBusArgument_New2((QDBusArgument*)other);
 }
 
-void q_dbusargument_operator_assign(void* self, void* other) {
+void q_dbusargument_operator_assign(void* self, const void* other) {
     QDBusArgument_OperatorAssign((QDBusArgument*)self, (QDBusArgument*)other);
 }
 
@@ -61,19 +61,19 @@ QDBusArgument* q_dbusargument_operator_shift_left10(void* self, const char* arg)
     return QDBusArgument_OperatorShiftLeft10((QDBusArgument*)self, qstring(arg));
 }
 
-QDBusArgument* q_dbusargument_operator_shift_left11(void* self, void* arg) {
+QDBusArgument* q_dbusargument_operator_shift_left11(void* self, const void* arg) {
     return QDBusArgument_OperatorShiftLeft11((QDBusArgument*)self, (QDBusVariant*)arg);
 }
 
-QDBusArgument* q_dbusargument_operator_shift_left12(void* self, void* arg) {
+QDBusArgument* q_dbusargument_operator_shift_left12(void* self, const void* arg) {
     return QDBusArgument_OperatorShiftLeft12((QDBusArgument*)self, (QDBusObjectPath*)arg);
 }
 
-QDBusArgument* q_dbusargument_operator_shift_left13(void* self, void* arg) {
+QDBusArgument* q_dbusargument_operator_shift_left13(void* self, const void* arg) {
     return QDBusArgument_OperatorShiftLeft13((QDBusArgument*)self, (QDBusSignature*)arg);
 }
 
-QDBusArgument* q_dbusargument_operator_shift_left14(void* self, void* arg) {
+QDBusArgument* q_dbusargument_operator_shift_left14(void* self, const void* arg) {
     return QDBusArgument_OperatorShiftLeft14((QDBusArgument*)self, (QDBusUnixFileDescriptor*)arg);
 }
 
@@ -136,78 +136,78 @@ void q_dbusargument_end_map_entry(void* self) {
     QDBusArgument_EndMapEntry((QDBusArgument*)self);
 }
 
-void q_dbusargument_append_variant(void* self, void* v) {
+void q_dbusargument_append_variant(void* self, const void* v) {
     QDBusArgument_AppendVariant((QDBusArgument*)self, (QVariant*)v);
 }
 
-const char* q_dbusargument_current_signature(void* self) {
+const char* q_dbusargument_current_signature(const void* self) {
     libqt_string _str = QDBusArgument_CurrentSignature((QDBusArgument*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_dbusargument_current_type(void* self) {
+int32_t q_dbusargument_current_type(const void* self) {
     return QDBusArgument_CurrentType((QDBusArgument*)self);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right(void* self, unsigned char* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right(const void* self, unsigned char* arg) {
     return QDBusArgument_OperatorShiftRight((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right2(void* self, bool* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right2(const void* self, bool* arg) {
     return QDBusArgument_OperatorShiftRight2((QDBusArgument*)self, (bool*)arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right3(void* self, short* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right3(const void* self, short* arg) {
     return QDBusArgument_OperatorShiftRight3((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right4(void* self, uint16_t* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right4(const void* self, uint16_t* arg) {
     return QDBusArgument_OperatorShiftRight4((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right5(void* self, int* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right5(const void* self, int* arg) {
     return QDBusArgument_OperatorShiftRight5((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right6(void* self, uint32_t* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right6(const void* self, uint32_t* arg) {
     return QDBusArgument_OperatorShiftRight6((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right7(void* self, long long* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right7(const void* self, long long* arg) {
     return QDBusArgument_OperatorShiftRight7((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right8(void* self, uintptr_t* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right8(const void* self, uintptr_t* arg) {
     return QDBusArgument_OperatorShiftRight8((QDBusArgument*)self, (unsigned long long*)arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right9(void* self, double* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right9(const void* self, double* arg) {
     return QDBusArgument_OperatorShiftRight9((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right10(void* self, const char* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right10(const void* self, const char* arg) {
     return QDBusArgument_OperatorShiftRight10((QDBusArgument*)self, qstring(arg));
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right11(void* self, void* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right11(const void* self, void* arg) {
     return QDBusArgument_OperatorShiftRight11((QDBusArgument*)self, (QDBusVariant*)arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right12(void* self, void* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right12(const void* self, void* arg) {
     return QDBusArgument_OperatorShiftRight12((QDBusArgument*)self, (QDBusObjectPath*)arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right13(void* self, void* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right13(const void* self, void* arg) {
     return QDBusArgument_OperatorShiftRight13((QDBusArgument*)self, (QDBusSignature*)arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right14(void* self, void* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right14(const void* self, void* arg) {
     return QDBusArgument_OperatorShiftRight14((QDBusArgument*)self, (QDBusUnixFileDescriptor*)arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right15(void* self, const char* arg[static 1]) {
+const QDBusArgument* q_dbusargument_operator_shift_right15(const void* self, const char* arg[static 1]) {
     size_t arg_len = libqt_strv_length(arg);
     libqt_string* arg_qstr = (libqt_string*)malloc(arg_len * sizeof(libqt_string));
     if (arg_qstr == NULL) {
@@ -222,47 +222,47 @@ const QDBusArgument* q_dbusargument_operator_shift_right15(void* self, const cha
     return _out;
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right16(void* self, char* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right16(const void* self, char* arg) {
     return QDBusArgument_OperatorShiftRight16((QDBusArgument*)self, qstring(arg));
 }
 
-void q_dbusargument_begin_structure2(void* self) {
+void q_dbusargument_begin_structure2(const void* self) {
     QDBusArgument_BeginStructure2((QDBusArgument*)self);
 }
 
-void q_dbusargument_end_structure2(void* self) {
+void q_dbusargument_end_structure2(const void* self) {
     QDBusArgument_EndStructure2((QDBusArgument*)self);
 }
 
-void q_dbusargument_begin_array3(void* self) {
+void q_dbusargument_begin_array3(const void* self) {
     QDBusArgument_BeginArray3((QDBusArgument*)self);
 }
 
-void q_dbusargument_end_array2(void* self) {
+void q_dbusargument_end_array2(const void* self) {
     QDBusArgument_EndArray2((QDBusArgument*)self);
 }
 
-void q_dbusargument_begin_map3(void* self) {
+void q_dbusargument_begin_map3(const void* self) {
     QDBusArgument_BeginMap3((QDBusArgument*)self);
 }
 
-void q_dbusargument_end_map2(void* self) {
+void q_dbusargument_end_map2(const void* self) {
     QDBusArgument_EndMap2((QDBusArgument*)self);
 }
 
-void q_dbusargument_begin_map_entry2(void* self) {
+void q_dbusargument_begin_map_entry2(const void* self) {
     QDBusArgument_BeginMapEntry2((QDBusArgument*)self);
 }
 
-void q_dbusargument_end_map_entry2(void* self) {
+void q_dbusargument_end_map_entry2(const void* self) {
     QDBusArgument_EndMapEntry2((QDBusArgument*)self);
 }
 
-bool q_dbusargument_at_end(void* self) {
+bool q_dbusargument_at_end(const void* self) {
     return QDBusArgument_AtEnd((QDBusArgument*)self);
 }
 
-QVariant* q_dbusargument_as_variant(void* self) {
+QVariant* q_dbusargument_as_variant(const void* self) {
     return QDBusArgument_AsVariant((QDBusArgument*)self);
 }
 

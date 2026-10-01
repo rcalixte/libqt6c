@@ -29,7 +29,7 @@ QVariant* q_variant_new2(void* type) {
     return QVariant_New2((QMetaType*)type);
 }
 
-QVariant* q_variant_new3(void* other) {
+QVariant* q_variant_new3(const void* other) {
     return QVariant_New3((QVariant*)other);
 }
 
@@ -73,7 +73,7 @@ QVariant* q_variant_new13(void* time) {
     return QVariant_New13((QTime*)time);
 }
 
-QVariant* q_variant_new14(void* bitarray) {
+QVariant* q_variant_new14(const void* bitarray) {
     return QVariant_New14((QBitArray*)bitarray);
 }
 
@@ -81,7 +81,7 @@ QVariant* q_variant_new15(char* bytearray) {
     return QVariant_New15(qstring(bytearray));
 }
 
-QVariant* q_variant_new16(void* datetime) {
+QVariant* q_variant_new16(const void* datetime) {
     return QVariant_New16((QDateTime*)datetime);
 }
 
@@ -115,11 +115,11 @@ QVariant* q_variant_new17(libqt_map /* of const char* to QVariant* */ hash) {
     return _out;
 }
 
-QVariant* q_variant_new18(void* jsonArray) {
+QVariant* q_variant_new18(const void* jsonArray) {
     return QVariant_New18((QJsonArray*)jsonArray);
 }
 
-QVariant* q_variant_new19(void* jsonObject) {
+QVariant* q_variant_new19(const void* jsonObject) {
     return QVariant_New19((QJsonObject*)jsonObject);
 }
 
@@ -127,7 +127,7 @@ QVariant* q_variant_new20(libqt_list /* of QVariant* */ list) {
     return QVariant_New20(list);
 }
 
-QVariant* q_variant_new21(void* locale) {
+QVariant* q_variant_new21(const void* locale) {
     return QVariant_New21((QLocale*)locale);
 }
 
@@ -161,7 +161,7 @@ QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ map) {
     return _out;
 }
 
-QVariant* q_variant_new23(void* re) {
+QVariant* q_variant_new23(const void* re) {
     return QVariant_New23((QRegularExpression*)re);
 }
 
@@ -185,15 +185,15 @@ QVariant* q_variant_new25(const char* stringlist[static 1]) {
     return _out;
 }
 
-QVariant* q_variant_new26(void* url) {
+QVariant* q_variant_new26(const void* url) {
     return QVariant_New26((QUrl*)url);
 }
 
-QVariant* q_variant_new27(void* jsonValue) {
+QVariant* q_variant_new27(const void* jsonValue) {
     return QVariant_New27((QJsonValue*)jsonValue);
 }
 
-QVariant* q_variant_new28(void* modelIndex) {
+QVariant* q_variant_new28(const void* modelIndex) {
     return QVariant_New28((QModelIndex*)modelIndex);
 }
 
@@ -233,15 +233,15 @@ QVariant* q_variant_new37(void* rect) {
     return QVariant_New37((QRectF*)rect);
 }
 
-QVariant* q_variant_new38(void* easing) {
+QVariant* q_variant_new38(const void* easing) {
     return QVariant_New38((QEasingCurve*)easing);
 }
 
-QVariant* q_variant_new39(void* jsonDocument) {
+QVariant* q_variant_new39(const void* jsonDocument) {
     return QVariant_New39((QJsonDocument*)jsonDocument);
 }
 
-QVariant* q_variant_new40(void* modelIndex) {
+QVariant* q_variant_new40(const void* modelIndex) {
     return QVariant_New40((QPersistentModelIndex*)modelIndex);
 }
 
@@ -261,7 +261,7 @@ QVariant* q_variant_new44(void* type, void* copy) {
     return QVariant_New44((QMetaType*)type, copy);
 }
 
-void q_variant_operator_assign(void* self, void* other) {
+void q_variant_operator_assign(void* self, const void* other) {
     QVariant_OperatorAssign((QVariant*)self, (QVariant*)other);
 }
 
@@ -269,23 +269,23 @@ void q_variant_swap(void* self, void* other) {
     QVariant_Swap((QVariant*)self, (QVariant*)other);
 }
 
-int32_t q_variant_user_type(void* self) {
+int32_t q_variant_user_type(const void* self) {
     return QVariant_UserType((QVariant*)self);
 }
 
-int32_t q_variant_type_id(void* self) {
+int32_t q_variant_type_id(const void* self) {
     return QVariant_TypeId((QVariant*)self);
 }
 
-const char* q_variant_type_name(void* self) {
+const char* q_variant_type_name(const void* self) {
     return QVariant_TypeName((QVariant*)self);
 }
 
-QMetaType* q_variant_meta_type(void* self) {
+QMetaType* q_variant_meta_type(const void* self) {
     return QVariant_MetaType((QVariant*)self);
 }
 
-bool q_variant_can_convert(void* self, void* targetType) {
+bool q_variant_can_convert(const void* self, void* targetType) {
     return QVariant_CanConvert((QVariant*)self, (QMetaType*)targetType);
 }
 
@@ -293,11 +293,11 @@ bool q_variant_convert(void* self, void* type) {
     return QVariant_Convert((QVariant*)self, (QMetaType*)type);
 }
 
-bool q_variant_can_view(void* self, void* targetType) {
+bool q_variant_can_view(const void* self, void* targetType) {
     return QVariant_CanView((QVariant*)self, (QMetaType*)targetType);
 }
 
-bool q_variant_can_convert2(void* self, int targetTypeId) {
+bool q_variant_can_convert2(const void* self, int targetTypeId) {
     return QVariant_CanConvert2((QVariant*)self, targetTypeId);
 }
 
@@ -305,11 +305,11 @@ bool q_variant_convert2(void* self, int targetTypeId) {
     return QVariant_Convert2((QVariant*)self, targetTypeId);
 }
 
-bool q_variant_is_valid(void* self) {
+bool q_variant_is_valid(const void* self) {
     return QVariant_IsValid((QVariant*)self);
 }
 
-bool q_variant_is_null(void* self) {
+bool q_variant_is_null(const void* self) {
     return QVariant_IsNull((QVariant*)self);
 }
 
@@ -321,61 +321,61 @@ void q_variant_detach(void* self) {
     QVariant_Detach((QVariant*)self);
 }
 
-bool q_variant_is_detached(void* self) {
+bool q_variant_is_detached(const void* self) {
     return QVariant_IsDetached((QVariant*)self);
 }
 
-int32_t q_variant_to_int(void* self) {
+int32_t q_variant_to_int(const void* self) {
     return QVariant_ToInt((QVariant*)self);
 }
 
-uint32_t q_variant_to_u_int(void* self) {
+uint32_t q_variant_to_u_int(const void* self) {
     return QVariant_ToUInt((QVariant*)self);
 }
 
-long long q_variant_to_long_long(void* self) {
+long long q_variant_to_long_long(const void* self) {
     return QVariant_ToLongLong((QVariant*)self);
 }
 
-uintptr_t q_variant_to_u_long_long(void* self) {
+uintptr_t q_variant_to_u_long_long(const void* self) {
     return QVariant_ToULongLong((QVariant*)self);
 }
 
-bool q_variant_to_bool(void* self) {
+bool q_variant_to_bool(const void* self) {
     return QVariant_ToBool((QVariant*)self);
 }
 
-double q_variant_to_double(void* self) {
+double q_variant_to_double(const void* self) {
     return QVariant_ToDouble((QVariant*)self);
 }
 
-float q_variant_to_float(void* self) {
+float q_variant_to_float(const void* self) {
     return QVariant_ToFloat((QVariant*)self);
 }
 
-double q_variant_to_real(void* self) {
+double q_variant_to_real(const void* self) {
     return QVariant_ToReal((QVariant*)self);
 }
 
-char* q_variant_to_byte_array(void* self) {
+char* q_variant_to_byte_array(const void* self) {
     libqt_string _str = QVariant_ToByteArray((QVariant*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QBitArray* q_variant_to_bit_array(void* self) {
+QBitArray* q_variant_to_bit_array(const void* self) {
     return QVariant_ToBitArray((QVariant*)self);
 }
 
-const char* q_variant_to_string(void* self) {
+const char* q_variant_to_string(const void* self) {
     libqt_string _str = QVariant_ToString((QVariant*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_variant_to_string_list(void* self) {
+const char** q_variant_to_string_list(const void* self) {
     libqt_list _arr = QVariant_ToStringList((QVariant*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -392,28 +392,28 @@ const char** q_variant_to_string_list(void* self) {
     return _ret;
 }
 
-QChar* q_variant_to_char(void* self) {
+QChar* q_variant_to_char(const void* self) {
     return QVariant_ToChar((QVariant*)self);
 }
 
-QDate* q_variant_to_date(void* self) {
+QDate* q_variant_to_date(const void* self) {
     return QVariant_ToDate((QVariant*)self);
 }
 
-QTime* q_variant_to_time(void* self) {
+QTime* q_variant_to_time(const void* self) {
     return QVariant_ToTime((QVariant*)self);
 }
 
-QDateTime* q_variant_to_date_time(void* self) {
+QDateTime* q_variant_to_date_time(const void* self) {
     return QVariant_ToDateTime((QVariant*)self);
 }
 
-libqt_list /* of QVariant* */ q_variant_to_list(void* self) {
+libqt_list /* of QVariant* */ q_variant_to_list(const void* self) {
     libqt_list _arr = QVariant_ToList((QVariant*)self);
     return _arr;
 }
 
-libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self) {
+libqt_map /* of const char* to QVariant* */ q_variant_to_map(const void* self) {
     // Convert QMap<QString,QVariant> to libqt_map
     libqt_map _out = QVariant_ToMap((QVariant*)self);
     libqt_map _ret;
@@ -446,7 +446,7 @@ libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self) {
     return _ret;
 }
 
-libqt_map /* of const char* to QVariant* */ q_variant_to_hash(void* self) {
+libqt_map /* of const char* to QVariant* */ q_variant_to_hash(const void* self) {
     // Convert QHash<QString,QVariant> to libqt_map
     libqt_map _out = QVariant_ToHash((QVariant*)self);
     libqt_map _ret;
@@ -479,79 +479,79 @@ libqt_map /* of const char* to QVariant* */ q_variant_to_hash(void* self) {
     return _ret;
 }
 
-QPoint* q_variant_to_point(void* self) {
+QPoint* q_variant_to_point(const void* self) {
     return QVariant_ToPoint((QVariant*)self);
 }
 
-QPointF* q_variant_to_point_f(void* self) {
+QPointF* q_variant_to_point_f(const void* self) {
     return QVariant_ToPointF((QVariant*)self);
 }
 
-QRect* q_variant_to_rect(void* self) {
+QRect* q_variant_to_rect(const void* self) {
     return QVariant_ToRect((QVariant*)self);
 }
 
-QSize* q_variant_to_size(void* self) {
+QSize* q_variant_to_size(const void* self) {
     return QVariant_ToSize((QVariant*)self);
 }
 
-QSizeF* q_variant_to_size_f(void* self) {
+QSizeF* q_variant_to_size_f(const void* self) {
     return QVariant_ToSizeF((QVariant*)self);
 }
 
-QLine* q_variant_to_line(void* self) {
+QLine* q_variant_to_line(const void* self) {
     return QVariant_ToLine((QVariant*)self);
 }
 
-QLineF* q_variant_to_line_f(void* self) {
+QLineF* q_variant_to_line_f(const void* self) {
     return QVariant_ToLineF((QVariant*)self);
 }
 
-QRectF* q_variant_to_rect_f(void* self) {
+QRectF* q_variant_to_rect_f(const void* self) {
     return QVariant_ToRectF((QVariant*)self);
 }
 
-QLocale* q_variant_to_locale(void* self) {
+QLocale* q_variant_to_locale(const void* self) {
     return QVariant_ToLocale((QVariant*)self);
 }
 
-QRegularExpression* q_variant_to_regular_expression(void* self) {
+QRegularExpression* q_variant_to_regular_expression(const void* self) {
     return QVariant_ToRegularExpression((QVariant*)self);
 }
 
-QEasingCurve* q_variant_to_easing_curve(void* self) {
+QEasingCurve* q_variant_to_easing_curve(const void* self) {
     return QVariant_ToEasingCurve((QVariant*)self);
 }
 
-QUuid* q_variant_to_uuid(void* self) {
+QUuid* q_variant_to_uuid(const void* self) {
     return QVariant_ToUuid((QVariant*)self);
 }
 
-QUrl* q_variant_to_url(void* self) {
+QUrl* q_variant_to_url(const void* self) {
     return QVariant_ToUrl((QVariant*)self);
 }
 
-QJsonValue* q_variant_to_json_value(void* self) {
+QJsonValue* q_variant_to_json_value(const void* self) {
     return QVariant_ToJsonValue((QVariant*)self);
 }
 
-QJsonObject* q_variant_to_json_object(void* self) {
+QJsonObject* q_variant_to_json_object(const void* self) {
     return QVariant_ToJsonObject((QVariant*)self);
 }
 
-QJsonArray* q_variant_to_json_array(void* self) {
+QJsonArray* q_variant_to_json_array(const void* self) {
     return QVariant_ToJsonArray((QVariant*)self);
 }
 
-QJsonDocument* q_variant_to_json_document(void* self) {
+QJsonDocument* q_variant_to_json_document(const void* self) {
     return QVariant_ToJsonDocument((QVariant*)self);
 }
 
-QModelIndex* q_variant_to_model_index(void* self) {
+QModelIndex* q_variant_to_model_index(const void* self) {
     return QVariant_ToModelIndex((QVariant*)self);
 }
 
-QPersistentModelIndex* q_variant_to_persistent_model_index(void* self) {
+QPersistentModelIndex* q_variant_to_persistent_model_index(const void* self) {
     return QVariant_ToPersistentModelIndex((QVariant*)self);
 }
 
@@ -559,11 +559,11 @@ void q_variant_load(void* self, void* ds) {
     QVariant_Load((QVariant*)self, (QDataStream*)ds);
 }
 
-void q_variant_save(void* self, void* ds) {
+void q_variant_save(const void* self, void* ds) {
     QVariant_Save((QVariant*)self, (QDataStream*)ds);
 }
 
-int32_t q_variant_type(void* self) {
+int32_t q_variant_type(const void* self) {
     return QVariant_Type((QVariant*)self);
 }
 
@@ -579,15 +579,15 @@ void* q_variant_data(void* self) {
     return QVariant_Data((QVariant*)self);
 }
 
-const void* q_variant_const_data(void* self) {
+const void* q_variant_const_data(const void* self) {
     return QVariant_ConstData((QVariant*)self);
 }
 
-const void* q_variant_data2(void* self) {
+const void* q_variant_data2(const void* self) {
     return QVariant_Data2((QVariant*)self);
 }
 
-void q_variant_set_value(void* self, void* avalue) {
+void q_variant_set_value(void* self, const void* avalue) {
     QVariant_SetValue((QVariant*)self, (QVariant*)avalue);
 }
 
@@ -595,35 +595,35 @@ QVariant* q_variant_from_meta_type(void* type) {
     return QVariant_FromMetaType((QMetaType*)type);
 }
 
-QPartialOrdering* q_variant_compare(void* lhs, void* rhs) {
+QPartialOrdering* q_variant_compare(const void* lhs, const void* rhs) {
     return QVariant_Compare((QVariant*)lhs, (QVariant*)rhs);
 }
 
-int32_t q_variant_to_int1(void* self, bool* ok) {
+int32_t q_variant_to_int1(const void* self, bool* ok) {
     return QVariant_ToInt1((QVariant*)self, (bool*)ok);
 }
 
-uint32_t q_variant_to_u_int1(void* self, bool* ok) {
+uint32_t q_variant_to_u_int1(const void* self, bool* ok) {
     return QVariant_ToUInt1((QVariant*)self, (bool*)ok);
 }
 
-long long q_variant_to_long_long1(void* self, bool* ok) {
+long long q_variant_to_long_long1(const void* self, bool* ok) {
     return QVariant_ToLongLong1((QVariant*)self, (bool*)ok);
 }
 
-uintptr_t q_variant_to_u_long_long1(void* self, bool* ok) {
+uintptr_t q_variant_to_u_long_long1(const void* self, bool* ok) {
     return QVariant_ToULongLong1((QVariant*)self, (bool*)ok);
 }
 
-double q_variant_to_double1(void* self, bool* ok) {
+double q_variant_to_double1(const void* self, bool* ok) {
     return QVariant_ToDouble1((QVariant*)self, (bool*)ok);
 }
 
-float q_variant_to_float1(void* self, bool* ok) {
+float q_variant_to_float1(const void* self, bool* ok) {
     return QVariant_ToFloat1((QVariant*)self, (bool*)ok);
 }
 
-double q_variant_to_real1(void* self, bool* ok) {
+double q_variant_to_real1(const void* self, bool* ok) {
     return QVariant_ToReal1((QVariant*)self, (bool*)ok);
 }
 

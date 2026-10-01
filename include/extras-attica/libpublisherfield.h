@@ -20,14 +20,14 @@ Attica__PublisherField* k_attica__publisherfield_new();
 ///
 /// @param other Attica__PublisherField*
 ///
-Attica__PublisherField* k_attica__publisherfield_new2(void* other);
+Attica__PublisherField* k_attica__publisherfield_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-publisherfield.html#operator-eq)
 ///
 /// @param self Attica__PublisherField*
 /// @param other Attica__PublisherField*
 ///
-void k_attica__publisherfield_operator_assign(void* self, void* other);
+void k_attica__publisherfield_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-publisherfield.html#setName)
 ///
@@ -40,9 +40,9 @@ void k_attica__publisherfield_set_name(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__PublisherField*
+/// @param self const Attica__PublisherField*
 ///
-const char* k_attica__publisherfield_name(void* self);
+const char* k_attica__publisherfield_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisherfield.html#setType)
 ///
@@ -55,9 +55,9 @@ void k_attica__publisherfield_set_type(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__PublisherField*
+/// @param self const Attica__PublisherField*
 ///
-const char* k_attica__publisherfield_type(void* self);
+const char* k_attica__publisherfield_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisherfield.html#setData)
 ///
@@ -70,15 +70,15 @@ void k_attica__publisherfield_set_data(void* self, const char* value);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__PublisherField*
+/// @param self const Attica__PublisherField*
 ///
-const char* k_attica__publisherfield_data(void* self);
+const char* k_attica__publisherfield_data(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-publisherfield.html#isValid)
 ///
-/// @param self Attica__PublisherField*
+/// @param self const Attica__PublisherField*
 ///
-bool k_attica__publisherfield_is_valid(void* self);
+bool k_attica__publisherfield_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

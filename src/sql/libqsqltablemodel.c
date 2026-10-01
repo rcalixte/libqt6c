@@ -23,19 +23,19 @@ QSqlTableModel* q_sqltablemodel_new2(void* parent) {
     return QSqlTableModel_New2((QObject*)parent);
 }
 
-QSqlTableModel* q_sqltablemodel_new3(void* parent, void* db) {
+QSqlTableModel* q_sqltablemodel_new3(void* parent, const void* db) {
     return QSqlTableModel_New3((QObject*)parent, (QSqlDatabase*)db);
 }
 
-const QMetaObject* q_sqltablemodel_meta_object(void* self) {
+const QMetaObject* q_sqltablemodel_meta_object(const void* self) {
     return QSqlTableModel_MetaObject((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_sqltablemodel_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QSqlTableModel_OnMetaObject((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_sqltablemodel_super_meta_object(void* self) {
+const QMetaObject* q_sqltablemodel_super_meta_object(const void* self) {
     return QSqlTableModel_SuperMetaObject((QSqlTableModel*)self);
 }
 
@@ -82,86 +82,86 @@ void q_sqltablemodel_super_set_table(void* self, const char* tableName) {
     QSqlTableModel_SuperSetTable((QSqlTableModel*)self, qstring(tableName));
 }
 
-const char* q_sqltablemodel_table_name(void* self) {
+const char* q_sqltablemodel_table_name(const void* self) {
     libqt_string _str = QSqlTableModel_TableName((QSqlTableModel*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_sqltablemodel_flags(void* self, void* index) {
+int32_t q_sqltablemodel_flags(const void* self, const void* index) {
     return QSqlTableModel_Flags((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-void q_sqltablemodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
+void q_sqltablemodel_on_flags(const void* self, int32_t (*callback)(const void*, const void*)) {
     QSqlTableModel_OnFlags((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sqltablemodel_super_flags(void* self, void* index) {
+int32_t q_sqltablemodel_super_flags(const void* self, const void* index) {
     return QSqlTableModel_SuperFlags((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-QSqlRecord* q_sqltablemodel_record(void* self) {
+QSqlRecord* q_sqltablemodel_record(const void* self) {
     return QSqlTableModel_Record((QSqlTableModel*)self);
 }
 
-QSqlRecord* q_sqltablemodel_record2(void* self, int row) {
+QSqlRecord* q_sqltablemodel_record2(const void* self, int row) {
     return QSqlTableModel_Record2((QSqlTableModel*)self, row);
 }
 
-QVariant* q_sqltablemodel_data(void* self, void* idx, int role) {
+QVariant* q_sqltablemodel_data(const void* self, const void* idx, int role) {
     return QSqlTableModel_Data((QSqlTableModel*)self, (QModelIndex*)idx, role);
 }
 
-void q_sqltablemodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)) {
+void q_sqltablemodel_on_data(const void* self, QVariant* (*callback)(const void*, const void*, int)) {
     QSqlTableModel_OnData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_sqltablemodel_super_data(void* self, void* idx, int role) {
+QVariant* q_sqltablemodel_super_data(const void* self, const void* idx, int role) {
     return QSqlTableModel_SuperData((QSqlTableModel*)self, (QModelIndex*)idx, role);
 }
 
-bool q_sqltablemodel_set_data(void* self, void* index, void* value, int role) {
+bool q_sqltablemodel_set_data(void* self, const void* index, const void* value, int role) {
     return QSqlTableModel_SetData((QSqlTableModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-void q_sqltablemodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
+void q_sqltablemodel_on_set_data(void* self, bool (*callback)(void*, const void*, const void*, int)) {
     QSqlTableModel_OnSetData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_super_set_data(void* self, void* index, void* value, int role) {
+bool q_sqltablemodel_super_set_data(void* self, const void* index, const void* value, int role) {
     return QSqlTableModel_SuperSetData((QSqlTableModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool q_sqltablemodel_clear_item_data(void* self, void* index) {
+bool q_sqltablemodel_clear_item_data(void* self, const void* index) {
     return QSqlTableModel_ClearItemData((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-void q_sqltablemodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
+void q_sqltablemodel_on_clear_item_data(void* self, bool (*callback)(void*, const void*)) {
     QSqlTableModel_OnClearItemData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_super_clear_item_data(void* self, void* index) {
+bool q_sqltablemodel_super_clear_item_data(void* self, const void* index) {
     return QSqlTableModel_SuperClearItemData((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-QVariant* q_sqltablemodel_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* q_sqltablemodel_header_data(const void* self, int section, int32_t orientation, int role) {
     return QSqlTableModel_HeaderData((QSqlTableModel*)self, section, orientation, role);
 }
 
-void q_sqltablemodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
+void q_sqltablemodel_on_header_data(const void* self, QVariant* (*callback)(const void*, int, int32_t, int)) {
     QSqlTableModel_OnHeaderData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_sqltablemodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+QVariant* q_sqltablemodel_super_header_data(const void* self, int section, int32_t orientation, int role) {
     return QSqlTableModel_SuperHeaderData((QSqlTableModel*)self, section, orientation, role);
 }
 
-bool q_sqltablemodel_is_dirty(void* self) {
+bool q_sqltablemodel_is_dirty(const void* self) {
     return QSqlTableModel_IsDirty((QSqlTableModel*)self);
 }
 
-bool q_sqltablemodel_is_dirty2(void* self, void* index) {
+bool q_sqltablemodel_is_dirty2(const void* self, const void* index) {
     return QSqlTableModel_IsDirty2((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
@@ -169,7 +169,7 @@ void q_sqltablemodel_clear(void* self) {
     QSqlTableModel_Clear((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_clear(void* self, void (*callback)()) {
+void q_sqltablemodel_on_clear(void* self, void (*callback)(void*)) {
     QSqlTableModel_OnClear((QSqlTableModel*)self, (intptr_t)callback);
 }
 
@@ -189,19 +189,19 @@ void q_sqltablemodel_super_set_edit_strategy(void* self, int32_t strategy) {
     QSqlTableModel_SuperSetEditStrategy((QSqlTableModel*)self, strategy);
 }
 
-int32_t q_sqltablemodel_edit_strategy(void* self) {
+int32_t q_sqltablemodel_edit_strategy(const void* self) {
     return QSqlTableModel_EditStrategy((QSqlTableModel*)self);
 }
 
-QSqlIndex* q_sqltablemodel_primary_key(void* self) {
+QSqlIndex* q_sqltablemodel_primary_key(const void* self) {
     return QSqlTableModel_PrimaryKey((QSqlTableModel*)self);
 }
 
-QSqlDatabase* q_sqltablemodel_database(void* self) {
+QSqlDatabase* q_sqltablemodel_database(const void* self) {
     return QSqlTableModel_Database((QSqlTableModel*)self);
 }
 
-int32_t q_sqltablemodel_field_index(void* self, const char* fieldName) {
+int32_t q_sqltablemodel_field_index(const void* self, const char* fieldName) {
     return QSqlTableModel_FieldIndex((QSqlTableModel*)self, qstring(fieldName));
 }
 
@@ -229,7 +229,7 @@ void q_sqltablemodel_super_set_sort(void* self, int column, int32_t order) {
     QSqlTableModel_SuperSetSort((QSqlTableModel*)self, column, order);
 }
 
-const char* q_sqltablemodel_filter(void* self) {
+const char* q_sqltablemodel_filter(const void* self) {
     libqt_string _str = QSqlTableModel_Filter((QSqlTableModel*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -248,59 +248,59 @@ void q_sqltablemodel_super_set_filter(void* self, const char* filter) {
     QSqlTableModel_SuperSetFilter((QSqlTableModel*)self, qstring(filter));
 }
 
-int32_t q_sqltablemodel_row_count(void* self, void* parent) {
+int32_t q_sqltablemodel_row_count(const void* self, const void* parent) {
     return QSqlTableModel_RowCount((QSqlTableModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_row_count(void* self, int32_t (*callback)(void*, void*)) {
+void q_sqltablemodel_on_row_count(const void* self, int32_t (*callback)(const void*, const void*)) {
     QSqlTableModel_OnRowCount((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sqltablemodel_super_row_count(void* self, void* parent) {
+int32_t q_sqltablemodel_super_row_count(const void* self, const void* parent) {
     return QSqlTableModel_SuperRowCount((QSqlTableModel*)self, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_remove_columns(void* self, int column, int count, void* parent) {
+bool q_sqltablemodel_remove_columns(void* self, int column, int count, const void* parent) {
     return QSqlTableModel_RemoveColumns((QSqlTableModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+void q_sqltablemodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, const void*)) {
     QSqlTableModel_OnRemoveColumns((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_super_remove_columns(void* self, int column, int count, void* parent) {
+bool q_sqltablemodel_super_remove_columns(void* self, int column, int count, const void* parent) {
     return QSqlTableModel_SuperRemoveColumns((QSqlTableModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_remove_rows(void* self, int row, int count, void* parent) {
+bool q_sqltablemodel_remove_rows(void* self, int row, int count, const void* parent) {
     return QSqlTableModel_RemoveRows((QSqlTableModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+void q_sqltablemodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, const void*)) {
     QSqlTableModel_OnRemoveRows((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_super_remove_rows(void* self, int row, int count, void* parent) {
+bool q_sqltablemodel_super_remove_rows(void* self, int row, int count, const void* parent) {
     return QSqlTableModel_SuperRemoveRows((QSqlTableModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_insert_rows(void* self, int row, int count, void* parent) {
+bool q_sqltablemodel_insert_rows(void* self, int row, int count, const void* parent) {
     return QSqlTableModel_InsertRows((QSqlTableModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+void q_sqltablemodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, const void*)) {
     QSqlTableModel_OnInsertRows((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_super_insert_rows(void* self, int row, int count, void* parent) {
+bool q_sqltablemodel_super_insert_rows(void* self, int row, int count, const void* parent) {
     return QSqlTableModel_SuperInsertRows((QSqlTableModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_insert_record(void* self, int row, void* record) {
+bool q_sqltablemodel_insert_record(void* self, int row, const void* record) {
     return QSqlTableModel_InsertRecord((QSqlTableModel*)self, row, (QSqlRecord*)record);
 }
 
-bool q_sqltablemodel_set_record(void* self, int row, void* record) {
+bool q_sqltablemodel_set_record(void* self, int row, const void* record) {
     return QSqlTableModel_SetRecord((QSqlTableModel*)self, row, (QSqlRecord*)record);
 }
 
@@ -320,7 +320,7 @@ bool q_sqltablemodel_select(void* self) {
     return QSqlTableModel_Select((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_select(void* self, bool (*callback)()) {
+void q_sqltablemodel_on_select(void* self, bool (*callback)(void*)) {
     QSqlTableModel_OnSelect((QSqlTableModel*)self, (intptr_t)callback);
 }
 
@@ -344,7 +344,7 @@ bool q_sqltablemodel_submit(void* self) {
     return QSqlTableModel_Submit((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_submit(void* self, bool (*callback)()) {
+void q_sqltablemodel_on_submit(void* self, bool (*callback)(void*)) {
     QSqlTableModel_OnSubmit((QSqlTableModel*)self, (intptr_t)callback);
 }
 
@@ -356,7 +356,7 @@ void q_sqltablemodel_revert(void* self) {
     QSqlTableModel_Revert((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_revert(void* self, void (*callback)()) {
+void q_sqltablemodel_on_revert(void* self, void (*callback)(void*)) {
     QSqlTableModel_OnRevert((QSqlTableModel*)self, (intptr_t)callback);
 }
 
@@ -404,27 +404,27 @@ void q_sqltablemodel_on_before_delete(void* self, void (*callback)(void*, int)) 
     QSqlTableModel_Connect_BeforeDelete((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_update_row_in_table(void* self, int row, void* values) {
+bool q_sqltablemodel_update_row_in_table(void* self, int row, const void* values) {
     return QSqlTableModel_UpdateRowInTable((QSqlTableModel*)self, row, (QSqlRecord*)values);
 }
 
-void q_sqltablemodel_on_update_row_in_table(void* self, bool (*callback)(void*, int, void*)) {
+void q_sqltablemodel_on_update_row_in_table(void* self, bool (*callback)(void*, int, const void*)) {
     QSqlTableModel_OnUpdateRowInTable((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_super_update_row_in_table(void* self, int row, void* values) {
+bool q_sqltablemodel_super_update_row_in_table(void* self, int row, const void* values) {
     return QSqlTableModel_SuperUpdateRowInTable((QSqlTableModel*)self, row, (QSqlRecord*)values);
 }
 
-bool q_sqltablemodel_insert_row_into_table(void* self, void* values) {
+bool q_sqltablemodel_insert_row_into_table(void* self, const void* values) {
     return QSqlTableModel_InsertRowIntoTable((QSqlTableModel*)self, (QSqlRecord*)values);
 }
 
-void q_sqltablemodel_on_insert_row_into_table(void* self, bool (*callback)(void*, void*)) {
+void q_sqltablemodel_on_insert_row_into_table(void* self, bool (*callback)(void*, const void*)) {
     QSqlTableModel_OnInsertRowIntoTable((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_super_insert_row_into_table(void* self, void* values) {
+bool q_sqltablemodel_super_insert_row_into_table(void* self, const void* values) {
     return QSqlTableModel_SuperInsertRowIntoTable((QSqlTableModel*)self, (QSqlRecord*)values);
 }
 
@@ -440,76 +440,60 @@ bool q_sqltablemodel_super_delete_row_from_table(void* self, int row) {
     return QSqlTableModel_SuperDeleteRowFromTable((QSqlTableModel*)self, row);
 }
 
-const char* q_sqltablemodel_order_by_clause(void* self) {
+const char* q_sqltablemodel_order_by_clause(const void* self) {
     libqt_string _str = QSqlTableModel_OrderByClause((QSqlTableModel*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_sqltablemodel_on_order_by_clause(void* self, const char* (*callback)()) {
+void q_sqltablemodel_on_order_by_clause(const void* self, const char* (*callback)(const void*)) {
     QSqlTableModel_OnOrderByClause((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-const char* q_sqltablemodel_super_order_by_clause(void* self) {
+const char* q_sqltablemodel_super_order_by_clause(const void* self) {
     libqt_string _str = QSqlTableModel_SuperOrderByClause((QSqlTableModel*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_sqltablemodel_select_statement(void* self) {
+const char* q_sqltablemodel_select_statement(const void* self) {
     libqt_string _str = QSqlTableModel_SelectStatement((QSqlTableModel*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_sqltablemodel_on_select_statement(void* self, const char* (*callback)()) {
+void q_sqltablemodel_on_select_statement(const void* self, const char* (*callback)(const void*)) {
     QSqlTableModel_OnSelectStatement((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-const char* q_sqltablemodel_super_select_statement(void* self) {
+const char* q_sqltablemodel_super_select_statement(const void* self) {
     libqt_string _str = QSqlTableModel_SuperSelectStatement((QSqlTableModel*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_sqltablemodel_set_primary_key(void* self, void* key) {
+void q_sqltablemodel_set_primary_key(void* self, const void* key) {
     QSqlTableModel_SetPrimaryKey((QSqlTableModel*)self, (QSqlIndex*)key);
 }
 
-void q_sqltablemodel_on_set_primary_key(void* self, void (*callback)(void*, void*)) {
-    QSqlTableModel_OnSetPrimaryKey((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-void q_sqltablemodel_super_set_primary_key(void* self, void* key) {
-    QSqlTableModel_SuperSetPrimaryKey((QSqlTableModel*)self, (QSqlIndex*)key);
-}
-
-QModelIndex* q_sqltablemodel_index_in_query(void* self, void* item) {
+QModelIndex* q_sqltablemodel_index_in_query(const void* self, const void* item) {
     return QSqlTableModel_IndexInQuery((QSqlTableModel*)self, (QModelIndex*)item);
 }
 
-void q_sqltablemodel_on_index_in_query(void* self, QModelIndex* (*callback)(void*, void*)) {
+void q_sqltablemodel_on_index_in_query(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QSqlTableModel_OnIndexInQuery((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sqltablemodel_super_index_in_query(void* self, void* item) {
+QModelIndex* q_sqltablemodel_super_index_in_query(const void* self, const void* item) {
     return QSqlTableModel_SuperIndexInQuery((QSqlTableModel*)self, (QModelIndex*)item);
 }
 
-QSqlRecord* q_sqltablemodel_primary_values(void* self, int row) {
+QSqlRecord* q_sqltablemodel_primary_values(const void* self, int row) {
     return QSqlTableModel_PrimaryValues((QSqlTableModel*)self, row);
-}
-
-void q_sqltablemodel_on_primary_values(void* self, QSqlRecord* (*callback)(void*, int)) {
-    QSqlTableModel_OnPrimaryValues((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-QSqlRecord* q_sqltablemodel_super_primary_values(void* self, int row) {
-    return QSqlTableModel_SuperPrimaryValues((QSqlTableModel*)self, row);
 }
 
 const char* q_sqltablemodel_tr2(const char* s, const char* c) {
@@ -526,7 +510,7 @@ const char* q_sqltablemodel_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_sqltablemodel_set_query(void* self, void* query) {
+void q_sqltablemodel_set_query(void* self, const void* query) {
     QSqlQueryModel_SetQuery((QSqlQueryModel*)self, (QSqlQuery*)query);
 }
 
@@ -534,43 +518,39 @@ void q_sqltablemodel_set_query2(void* self, const char* query) {
     QSqlQueryModel_SetQuery2((QSqlQueryModel*)self, qstring(query));
 }
 
-const QSqlQuery* q_sqltablemodel_query(void* self) {
+const QSqlQuery* q_sqltablemodel_query(const void* self) {
     return QSqlQueryModel_Query((QSqlQueryModel*)self);
 }
 
-QSqlError* q_sqltablemodel_last_error(void* self) {
+QSqlError* q_sqltablemodel_last_error(const void* self) {
     return QSqlQueryModel_LastError((QSqlQueryModel*)self);
 }
 
-void q_sqltablemodel_set_query22(void* self, const char* query, void* db) {
+void q_sqltablemodel_set_query22(void* self, const char* query, const void* db) {
     QSqlQueryModel_SetQuery22((QSqlQueryModel*)self, qstring(query), (QSqlDatabase*)db);
 }
 
-bool q_sqltablemodel_has_index(void* self, int row, int column) {
+bool q_sqltablemodel_has_index(const void* self, int row, int column) {
     return QAbstractItemModel_HasIndex((QAbstractItemModel*)self, row, column);
 }
 
-QModelIndex* q_sqltablemodel_parent(void* self, void* child) {
+QModelIndex* q_sqltablemodel_parent(const void* self, const void* child) {
     return QAbstractItemModel_Parent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
-void q_sqltablemodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)) {
+void q_sqltablemodel_on_parent(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sqltablemodel_super_parent(void* self, void* child) {
-    return QAbstractItemModel_SuperParent((QAbstractItemModel*)self, (QModelIndex*)child);
-}
-
-bool q_sqltablemodel_has_children(void* self, void* parent) {
+bool q_sqltablemodel_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_HasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
+void q_sqltablemodel_on_has_children(const void* self, bool (*callback)(const void*, const void*)) {
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_super_has_children(void* self, void* parent) {
+bool q_sqltablemodel_super_has_children(const void* self, const void* parent) {
     return QAbstractItemModel_SuperHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
@@ -590,23 +570,23 @@ bool q_sqltablemodel_remove_column(void* self, int column) {
     return QAbstractItemModel_RemoveColumn((QAbstractItemModel*)self, column);
 }
 
-bool q_sqltablemodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild) {
+bool q_sqltablemodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveRow((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceRow, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_sqltablemodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild) {
+bool q_sqltablemodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild) {
     return QAbstractItemModel_MoveColumn((QAbstractItemModel*)self, (QModelIndex*)sourceParent, sourceColumn, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_sqltablemodel_check_index(void* self, void* index) {
+bool q_sqltablemodel_check_index(const void* self, const void* index) {
     return QAbstractItemModel_CheckIndex((QAbstractItemModel*)self, (QModelIndex*)index);
 }
 
-void q_sqltablemodel_data_changed(void* self, void* topLeft, void* bottomRight) {
+void q_sqltablemodel_data_changed(void* self, const void* topLeft, const void* bottomRight) {
     QAbstractItemModel_DataChanged((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
-void q_sqltablemodel_on_data_changed(void* self, void (*callback)(void*, void*, void*)) {
+void q_sqltablemodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*)) {
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -634,35 +614,35 @@ void q_sqltablemodel_on_layout_about_to_be_changed(void* self, void (*callback)(
     QAbstractItemModel_Connect_LayoutAboutToBeChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_has_index3(void* self, int row, int column, void* parent) {
+bool q_sqltablemodel_has_index3(const void* self, int row, int column, const void* parent) {
     return QAbstractItemModel_HasIndex3((QAbstractItemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_insert_row2(void* self, int row, void* parent) {
+bool q_sqltablemodel_insert_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_InsertRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_insert_column2(void* self, int column, void* parent) {
+bool q_sqltablemodel_insert_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_InsertColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_remove_row2(void* self, int row, void* parent) {
+bool q_sqltablemodel_remove_row2(void* self, int row, const void* parent) {
     return QAbstractItemModel_RemoveRow2((QAbstractItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_remove_column2(void* self, int column, void* parent) {
+bool q_sqltablemodel_remove_column2(void* self, int column, const void* parent) {
     return QAbstractItemModel_RemoveColumn2((QAbstractItemModel*)self, column, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_check_index2(void* self, void* index, int32_t options) {
+bool q_sqltablemodel_check_index2(const void* self, const void* index, int32_t options) {
     return QAbstractItemModel_CheckIndex2((QAbstractItemModel*)self, (QModelIndex*)index, options);
 }
 
-void q_sqltablemodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+void q_sqltablemodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list /* of int */ roles) {
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_sqltablemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
+void q_sqltablemodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list /* of int */)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -698,7 +678,7 @@ void q_sqltablemodel_on_layout_about_to_be_changed2(void* self, void (*callback)
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-const char* q_sqltablemodel_object_name(void* self) {
+const char* q_sqltablemodel_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -709,19 +689,19 @@ void q_sqltablemodel_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_sqltablemodel_is_widget_type(void* self) {
+bool q_sqltablemodel_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_sqltablemodel_is_window_type(void* self) {
+bool q_sqltablemodel_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_sqltablemodel_is_quick_item_type(void* self) {
+bool q_sqltablemodel_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_sqltablemodel_signals_blocked(void* self) {
+bool q_sqltablemodel_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -729,7 +709,7 @@ bool q_sqltablemodel_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_sqltablemodel_thread(void* self) {
+QThread* q_sqltablemodel_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -753,7 +733,7 @@ void q_sqltablemodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_sqltablemodel_children(void* self) {
+libqt_list /* of QObject* */ q_sqltablemodel_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -770,55 +750,55 @@ void q_sqltablemodel_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_sqltablemodel_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_sqltablemodel_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_sqltablemodel_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_sqltablemodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_sqltablemodel_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_sqltablemodel_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_sqltablemodel_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_sqltablemodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_sqltablemodel_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_sqltablemodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_sqltablemodel_disconnect3(void* self) {
+bool q_sqltablemodel_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_sqltablemodel_disconnect4(void* self, void* receiver) {
+bool q_sqltablemodel_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_sqltablemodel_disconnect5(void* param1) {
+bool q_sqltablemodel_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_sqltablemodel_dump_object_tree(void* self) {
+void q_sqltablemodel_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_sqltablemodel_dump_object_info(void* self) {
+void q_sqltablemodel_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_sqltablemodel_set_property(void* self, const char* name, void* value) {
+bool q_sqltablemodel_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_sqltablemodel_property(void* self, const char* name) {
+QVariant* q_sqltablemodel_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_sqltablemodel_dynamic_property_names(void* self) {
+const char** q_sqltablemodel_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -839,7 +819,7 @@ QBindingStorage* q_sqltablemodel_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_sqltablemodel_binding_storage2(void* self) {
+const QBindingStorage* q_sqltablemodel_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -851,7 +831,7 @@ void q_sqltablemodel_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_inherits(void* self, const char* classname) {
+bool q_sqltablemodel_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -867,31 +847,31 @@ int32_t q_sqltablemodel_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_sqltablemodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_sqltablemodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_sqltablemodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_sqltablemodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_sqltablemodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_sqltablemodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_sqltablemodel_disconnect1(void* self, const char* signal) {
+bool q_sqltablemodel_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_sqltablemodel_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_sqltablemodel_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_sqltablemodel_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_sqltablemodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_sqltablemodel_disconnect23(void* self, void* receiver, const char* member) {
+bool q_sqltablemodel_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -903,67 +883,67 @@ void q_sqltablemodel_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int32_t q_sqltablemodel_column_count(void* self, void* parent) {
+int32_t q_sqltablemodel_column_count(const void* self, const void* parent) {
     return QSqlTableModel_ColumnCount((QSqlTableModel*)self, (QModelIndex*)parent);
 }
 
-int32_t q_sqltablemodel_super_column_count(void* self, void* parent) {
+int32_t q_sqltablemodel_super_column_count(const void* self, const void* parent) {
     return QSqlTableModel_SuperColumnCount((QSqlTableModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_column_count(void* self, int32_t (*callback)(void*, void*)) {
-    QSqlTableModel_OnColumnCount((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_column_count(const void* self, int32_t (*callback)(const void*, const void*)) {
+    QSqlTableModel_OnColumnCount((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool q_sqltablemodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return QSqlTableModel_SetHeaderData((QSqlTableModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool q_sqltablemodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+bool q_sqltablemodel_super_set_header_data(void* self, int section, int32_t orientation, const void* value, int role) {
     return QSqlTableModel_SuperSetHeaderData((QSqlTableModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void q_sqltablemodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
+void q_sqltablemodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, const void*, int)) {
     QSqlTableModel_OnSetHeaderData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_insert_columns(void* self, int column, int count, void* parent) {
+bool q_sqltablemodel_insert_columns(void* self, int column, int count, const void* parent) {
     return QSqlTableModel_InsertColumns((QSqlTableModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_super_insert_columns(void* self, int column, int count, void* parent) {
+bool q_sqltablemodel_super_insert_columns(void* self, int column, int count, const void* parent) {
     return QSqlTableModel_SuperInsertColumns((QSqlTableModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+void q_sqltablemodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, const void*)) {
     QSqlTableModel_OnInsertColumns((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_fetch_more(void* self, void* parent) {
+void q_sqltablemodel_fetch_more(void* self, const void* parent) {
     QSqlTableModel_FetchMore((QSqlTableModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_super_fetch_more(void* self, void* parent) {
+void q_sqltablemodel_super_fetch_more(void* self, const void* parent) {
     QSqlTableModel_SuperFetchMore((QSqlTableModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
+void q_sqltablemodel_on_fetch_more(void* self, void (*callback)(void*, const void*)) {
     QSqlTableModel_OnFetchMore((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_can_fetch_more(void* self, void* parent) {
+bool q_sqltablemodel_can_fetch_more(const void* self, const void* parent) {
     return QSqlTableModel_CanFetchMore((QSqlTableModel*)self, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_super_can_fetch_more(void* self, void* parent) {
+bool q_sqltablemodel_super_can_fetch_more(const void* self, const void* parent) {
     return QSqlTableModel_SuperCanFetchMore((QSqlTableModel*)self, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
-    QSqlTableModel_OnCanFetchMore((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_can_fetch_more(const void* self, bool (*callback)(const void*, const void*)) {
+    QSqlTableModel_OnCanFetchMore((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_sqltablemodel_role_names(void* self) {
+libqt_map /* of int to char* */ q_sqltablemodel_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QSqlTableModel_RoleNames((QSqlTableModel*)self);
     libqt_map _ret;
@@ -996,7 +976,7 @@ libqt_map /* of int to char* */ q_sqltablemodel_role_names(void* self) {
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_sqltablemodel_super_role_names(void* self) {
+libqt_map /* of int to char* */ q_sqltablemodel_super_role_names(const void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
     libqt_map _out = QSqlTableModel_SuperRoleNames((QSqlTableModel*)self);
     libqt_map _ret;
@@ -1029,8 +1009,8 @@ libqt_map /* of int to char* */ q_sqltablemodel_super_role_names(void* self) {
     return _ret;
 }
 
-void q_sqltablemodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {
-    QSqlTableModel_OnRoleNames((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_role_names(const void* self, libqt_map /* of int to char* */ (*callback)(const void*)) {
+    QSqlTableModel_OnRoleNames((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_query_change(void* self) {
@@ -1041,47 +1021,47 @@ void q_sqltablemodel_super_query_change(void* self) {
     QSqlTableModel_SuperQueryChange((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_query_change(void* self, void (*callback)()) {
+void q_sqltablemodel_on_query_change(void* self, void (*callback)(void*)) {
     QSqlTableModel_OnQueryChange((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sqltablemodel_index(void* self, int row, int column, void* parent) {
+QModelIndex* q_sqltablemodel_index(const void* self, int row, int column, const void* parent) {
     return QSqlTableModel_Index((QSqlTableModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* q_sqltablemodel_super_index(void* self, int row, int column, void* parent) {
+QModelIndex* q_sqltablemodel_super_index(const void* self, int row, int column, const void* parent) {
     return QSqlTableModel_SuperIndex((QSqlTableModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
-    QSqlTableModel_OnIndex((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_index(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QSqlTableModel_OnIndex((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sqltablemodel_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* q_sqltablemodel_sibling(const void* self, int row, int column, const void* idx) {
     return QSqlTableModel_Sibling((QSqlTableModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* q_sqltablemodel_super_sibling(void* self, int row, int column, void* idx) {
+QModelIndex* q_sqltablemodel_super_sibling(const void* self, int row, int column, const void* idx) {
     return QSqlTableModel_SuperSibling((QSqlTableModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_sqltablemodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
-    QSqlTableModel_OnSibling((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_sibling(const void* self, QModelIndex* (*callback)(const void*, int, int, const void*)) {
+    QSqlTableModel_OnSibling((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool q_sqltablemodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return QSqlTableModel_DropMimeData((QSqlTableModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool q_sqltablemodel_super_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return QSqlTableModel_SuperDropMimeData((QSqlTableModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
+void q_sqltablemodel_on_drop_mime_data(void* self, bool (*callback)(void*, const void*, int32_t, int, int, const void*)) {
     QSqlTableModel_OnDropMimeData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to QVariant* */ q_sqltablemodel_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ q_sqltablemodel_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = QSqlTableModel_ItemData((QSqlTableModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -1091,7 +1071,7 @@ libqt_map /* of int to QVariant* */ q_sqltablemodel_item_data(void* self, void* 
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ q_sqltablemodel_super_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ q_sqltablemodel_super_item_data(const void* self, const void* index) {
     // Convert QMap<int,QVariant> to libqt_map
     libqt_map _out = QSqlTableModel_SuperItemData((QSqlTableModel*)self, (QModelIndex*)index);
     libqt_map _ret;
@@ -1101,11 +1081,11 @@ libqt_map /* of int to QVariant* */ q_sqltablemodel_super_item_data(void* self, 
     return _ret;
 }
 
-void q_sqltablemodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
-    QSqlTableModel_OnItemData((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_item_data(const void* self, libqt_map /* of int to QVariant* */ (*callback)(const void*, const void*)) {
+    QSqlTableModel_OnItemData((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool q_sqltablemodel_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -1134,7 +1114,7 @@ bool q_sqltablemodel_set_item_data(void* self, void* index, libqt_map /* of int 
     return _out;
 }
 
-bool q_sqltablemodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool q_sqltablemodel_super_set_item_data(void* self, const void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -1163,11 +1143,11 @@ bool q_sqltablemodel_super_set_item_data(void* self, void* index, libqt_map /* o
     return _out;
 }
 
-void q_sqltablemodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
+void q_sqltablemodel_on_set_item_data(void* self, bool (*callback)(void*, const void*, libqt_map /* of int to QVariant* */)) {
     QSqlTableModel_OnSetItemData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-const char** q_sqltablemodel_mime_types(void* self) {
+const char** q_sqltablemodel_mime_types(const void* self) {
     libqt_list _arr = QSqlTableModel_MimeTypes((QSqlTableModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1184,7 +1164,7 @@ const char** q_sqltablemodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** q_sqltablemodel_super_mime_types(void* self) {
+const char** q_sqltablemodel_super_mime_types(const void* self) {
     libqt_list _arr = QSqlTableModel_SuperMimeTypes((QSqlTableModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1201,130 +1181,130 @@ const char** q_sqltablemodel_super_mime_types(void* self) {
     return _ret;
 }
 
-void q_sqltablemodel_on_mime_types(void* self, const char** (*callback)()) {
-    QSqlTableModel_OnMimeTypes((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_mime_types(const void* self, const char** (*callback)(const void*)) {
+    QSqlTableModel_OnMimeTypes((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-QMimeData* q_sqltablemodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* q_sqltablemodel_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QSqlTableModel_MimeData((QSqlTableModel*)self, indexes);
 }
 
-QMimeData* q_sqltablemodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+QMimeData* q_sqltablemodel_super_mime_data(const void* self, libqt_list /* of QModelIndex* */ indexes) {
     return QSqlTableModel_SuperMimeData((QSqlTableModel*)self, indexes);
 }
 
-void q_sqltablemodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
-    QSqlTableModel_OnMimeData((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_mime_data(const void* self, QMimeData* (*callback)(const void*, libqt_list /* of QModelIndex* */)) {
+    QSqlTableModel_OnMimeData((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool q_sqltablemodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return QSqlTableModel_CanDropMimeData((QSqlTableModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_sqltablemodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+bool q_sqltablemodel_super_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent) {
     return QSqlTableModel_SuperCanDropMimeData((QSqlTableModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_sqltablemodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
-    QSqlTableModel_OnCanDropMimeData((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_can_drop_mime_data(const void* self, bool (*callback)(const void*, const void*, int32_t, int, int, const void*)) {
+    QSqlTableModel_OnCanDropMimeData((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sqltablemodel_supported_drop_actions(void* self) {
+int32_t q_sqltablemodel_supported_drop_actions(const void* self) {
     return QSqlTableModel_SupportedDropActions((QSqlTableModel*)self);
 }
 
-int32_t q_sqltablemodel_super_supported_drop_actions(void* self) {
+int32_t q_sqltablemodel_super_supported_drop_actions(const void* self) {
     return QSqlTableModel_SuperSupportedDropActions((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
-    QSqlTableModel_OnSupportedDropActions((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_supported_drop_actions(const void* self, int32_t (*callback)(const void*)) {
+    QSqlTableModel_OnSupportedDropActions((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-int32_t q_sqltablemodel_supported_drag_actions(void* self) {
+int32_t q_sqltablemodel_supported_drag_actions(const void* self) {
     return QSqlTableModel_SupportedDragActions((QSqlTableModel*)self);
 }
 
-int32_t q_sqltablemodel_super_supported_drag_actions(void* self) {
+int32_t q_sqltablemodel_super_supported_drag_actions(const void* self) {
     return QSqlTableModel_SuperSupportedDragActions((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
-    QSqlTableModel_OnSupportedDragActions((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_supported_drag_actions(const void* self, int32_t (*callback)(const void*)) {
+    QSqlTableModel_OnSupportedDragActions((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool q_sqltablemodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return QSqlTableModel_MoveRows((QSqlTableModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_sqltablemodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+bool q_sqltablemodel_super_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild) {
     return QSqlTableModel_SuperMoveRows((QSqlTableModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void q_sqltablemodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void q_sqltablemodel_on_move_rows(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     QSqlTableModel_OnMoveRows((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-bool q_sqltablemodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool q_sqltablemodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return QSqlTableModel_MoveColumns((QSqlTableModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_sqltablemodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+bool q_sqltablemodel_super_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild) {
     return QSqlTableModel_SuperMoveColumns((QSqlTableModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void q_sqltablemodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+void q_sqltablemodel_on_move_columns(void* self, bool (*callback)(void*, const void*, int, int, const void*, int)) {
     QSqlTableModel_OnMoveColumns((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_sqltablemodel_buddy(void* self, void* index) {
+QModelIndex* q_sqltablemodel_buddy(const void* self, const void* index) {
     return QSqlTableModel_Buddy((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* q_sqltablemodel_super_buddy(void* self, void* index) {
+QModelIndex* q_sqltablemodel_super_buddy(const void* self, const void* index) {
     return QSqlTableModel_SuperBuddy((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-void q_sqltablemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
-    QSqlTableModel_OnBuddy((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_buddy(const void* self, QModelIndex* (*callback)(const void*, const void*)) {
+    QSqlTableModel_OnBuddy((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_sqltablemodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ q_sqltablemodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = QSqlTableModel_Match((QSqlTableModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_sqltablemodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+libqt_list /* of QModelIndex* */ q_sqltablemodel_super_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags) {
     libqt_list _arr = QSqlTableModel_SuperMatch((QSqlTableModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
-void q_sqltablemodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int32_t)) {
-    QSqlTableModel_OnMatch((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_match(const void* self, libqt_list /* of QModelIndex* */ (*callback)(const void*, const void*, int, const void*, int, int32_t)) {
+    QSqlTableModel_OnMatch((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-QSize* q_sqltablemodel_span(void* self, void* index) {
+QSize* q_sqltablemodel_span(const void* self, const void* index) {
     return QSqlTableModel_Span((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-QSize* q_sqltablemodel_super_span(void* self, void* index) {
+QSize* q_sqltablemodel_super_span(const void* self, const void* index) {
     return QSqlTableModel_SuperSpan((QSqlTableModel*)self, (QModelIndex*)index);
 }
 
-void q_sqltablemodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
-    QSqlTableModel_OnSpan((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_span(const void* self, QSize* (*callback)(const void*, const void*)) {
+    QSqlTableModel_OnSpan((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_multi_data(void* self, void* index, void* roleDataSpan) {
+void q_sqltablemodel_multi_data(const void* self, const void* index, void* roleDataSpan) {
     QSqlTableModel_MultiData((QSqlTableModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_sqltablemodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+void q_sqltablemodel_super_multi_data(const void* self, const void* index, void* roleDataSpan) {
     QSqlTableModel_SuperMultiData((QSqlTableModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_sqltablemodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
-    QSqlTableModel_OnMultiData((QSqlTableModel*)self, (intptr_t)callback);
+void q_sqltablemodel_on_multi_data(const void* self, void (*callback)(const void*, const void*, void*)) {
+    QSqlTableModel_OnMultiData((const QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_reset_internal_data(void* self) {
@@ -1335,7 +1315,7 @@ void q_sqltablemodel_super_reset_internal_data(void* self) {
     QSqlTableModel_SuperResetInternalData((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_on_reset_internal_data(void* self, void (*callback)()) {
+void q_sqltablemodel_on_reset_internal_data(void* self, void (*callback)(void*)) {
     QSqlTableModel_OnResetInternalData((QSqlTableModel*)self, (intptr_t)callback);
 }
 
@@ -1399,361 +1379,160 @@ void q_sqltablemodel_on_custom_event(void* self, void (*callback)(void*, void*))
     QSqlTableModel_OnCustomEvent((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_connect_notify(void* self, void* signal) {
+void q_sqltablemodel_connect_notify(void* self, const void* signal) {
     QSqlTableModel_ConnectNotify((QSqlTableModel*)self, (QMetaMethod*)signal);
 }
 
-void q_sqltablemodel_super_connect_notify(void* self, void* signal) {
+void q_sqltablemodel_super_connect_notify(void* self, const void* signal) {
     QSqlTableModel_SuperConnectNotify((QSqlTableModel*)self, (QMetaMethod*)signal);
 }
 
-void q_sqltablemodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_sqltablemodel_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QSqlTableModel_OnConnectNotify((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_disconnect_notify(void* self, void* signal) {
+void q_sqltablemodel_disconnect_notify(void* self, const void* signal) {
     QSqlTableModel_DisconnectNotify((QSqlTableModel*)self, (QMetaMethod*)signal);
 }
 
-void q_sqltablemodel_super_disconnect_notify(void* self, void* signal) {
+void q_sqltablemodel_super_disconnect_notify(void* self, const void* signal) {
     QSqlTableModel_SuperDisconnectNotify((QSqlTableModel*)self, (QMetaMethod*)signal);
 }
 
-void q_sqltablemodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_sqltablemodel_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QSqlTableModel_OnDisconnectNotify((QSqlTableModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_begin_insert_rows(void* self, void* parent, int first, int last) {
+void q_sqltablemodel_begin_insert_rows(void* self, const void* parent, int first, int last) {
     QSqlTableModel_BeginInsertRows((QSqlTableModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void q_sqltablemodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
-    QSqlTableModel_SuperBeginInsertRows((QSqlTableModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void q_sqltablemodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
-    QSqlTableModel_OnBeginInsertRows((QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_end_insert_rows(void* self) {
     QSqlTableModel_EndInsertRows((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_super_end_insert_rows(void* self) {
-    QSqlTableModel_SuperEndInsertRows((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_end_insert_rows(void* self, void (*callback)()) {
-    QSqlTableModel_OnEndInsertRows((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-void q_sqltablemodel_begin_remove_rows(void* self, void* parent, int first, int last) {
+void q_sqltablemodel_begin_remove_rows(void* self, const void* parent, int first, int last) {
     QSqlTableModel_BeginRemoveRows((QSqlTableModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void q_sqltablemodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
-    QSqlTableModel_SuperBeginRemoveRows((QSqlTableModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void q_sqltablemodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
-    QSqlTableModel_OnBeginRemoveRows((QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_end_remove_rows(void* self) {
     QSqlTableModel_EndRemoveRows((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_super_end_remove_rows(void* self) {
-    QSqlTableModel_SuperEndRemoveRows((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_end_remove_rows(void* self, void (*callback)()) {
-    QSqlTableModel_OnEndRemoveRows((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-void q_sqltablemodel_begin_insert_columns(void* self, void* parent, int first, int last) {
+void q_sqltablemodel_begin_insert_columns(void* self, const void* parent, int first, int last) {
     QSqlTableModel_BeginInsertColumns((QSqlTableModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void q_sqltablemodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
-    QSqlTableModel_SuperBeginInsertColumns((QSqlTableModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void q_sqltablemodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
-    QSqlTableModel_OnBeginInsertColumns((QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_end_insert_columns(void* self) {
     QSqlTableModel_EndInsertColumns((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_super_end_insert_columns(void* self) {
-    QSqlTableModel_SuperEndInsertColumns((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_end_insert_columns(void* self, void (*callback)()) {
-    QSqlTableModel_OnEndInsertColumns((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-void q_sqltablemodel_begin_remove_columns(void* self, void* parent, int first, int last) {
+void q_sqltablemodel_begin_remove_columns(void* self, const void* parent, int first, int last) {
     QSqlTableModel_BeginRemoveColumns((QSqlTableModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void q_sqltablemodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
-    QSqlTableModel_SuperBeginRemoveColumns((QSqlTableModel*)self, (QModelIndex*)parent, first, last);
-}
-
-void q_sqltablemodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
-    QSqlTableModel_OnBeginRemoveColumns((QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_end_remove_columns(void* self) {
     QSqlTableModel_EndRemoveColumns((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_super_end_remove_columns(void* self) {
-    QSqlTableModel_SuperEndRemoveColumns((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_end_remove_columns(void* self, void (*callback)()) {
-    QSqlTableModel_OnEndRemoveColumns((QSqlTableModel*)self, (intptr_t)callback);
-}
-
 void q_sqltablemodel_begin_reset_model(void* self) {
     QSqlTableModel_BeginResetModel((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_super_begin_reset_model(void* self) {
-    QSqlTableModel_SuperBeginResetModel((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_begin_reset_model(void* self, void (*callback)()) {
-    QSqlTableModel_OnBeginResetModel((QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_end_reset_model(void* self) {
     QSqlTableModel_EndResetModel((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_super_end_reset_model(void* self) {
-    QSqlTableModel_SuperEndResetModel((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_end_reset_model(void* self, void (*callback)()) {
-    QSqlTableModel_OnEndResetModel((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-void q_sqltablemodel_set_last_error(void* self, void* error) {
+void q_sqltablemodel_set_last_error(void* self, const void* error) {
     QSqlTableModel_SetLastError((QSqlTableModel*)self, (QSqlError*)error);
 }
 
-void q_sqltablemodel_super_set_last_error(void* self, void* error) {
-    QSqlTableModel_SuperSetLastError((QSqlTableModel*)self, (QSqlError*)error);
-}
-
-void q_sqltablemodel_on_set_last_error(void* self, void (*callback)(void*, void*)) {
-    QSqlTableModel_OnSetLastError((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-QModelIndex* q_sqltablemodel_create_index(void* self, int row, int column) {
+QModelIndex* q_sqltablemodel_create_index(const void* self, int row, int column) {
     return QSqlTableModel_CreateIndex((QSqlTableModel*)self, row, column);
 }
 
-QModelIndex* q_sqltablemodel_super_create_index(void* self, int row, int column) {
-    return QSqlTableModel_SuperCreateIndex((QSqlTableModel*)self, row, column);
-}
-
-void q_sqltablemodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
-    QSqlTableModel_OnCreateIndex((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-void q_sqltablemodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+void q_sqltablemodel_encode_data(const void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
     QSqlTableModel_EncodeData((QSqlTableModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_sqltablemodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    QSqlTableModel_SuperEncodeData((QSqlTableModel*)self, indexes, (QDataStream*)stream);
-}
-
-void q_sqltablemodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
-    QSqlTableModel_OnEncodeData((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-bool q_sqltablemodel_decode_data(void* self, int row, int column, void* parent, void* stream) {
+bool q_sqltablemodel_decode_data(void* self, int row, int column, const void* parent, void* stream) {
     return QSqlTableModel_DecodeData((QSqlTableModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool q_sqltablemodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return QSqlTableModel_SuperDecodeData((QSqlTableModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
-}
-
-void q_sqltablemodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
-    QSqlTableModel_OnDecodeData((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-bool q_sqltablemodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+bool q_sqltablemodel_begin_move_rows(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationRow) {
     return QSqlTableModel_BeginMoveRows((QSqlTableModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
-}
-
-bool q_sqltablemodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return QSqlTableModel_SuperBeginMoveRows((QSqlTableModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
-}
-
-void q_sqltablemodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
-    QSqlTableModel_OnBeginMoveRows((QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_end_move_rows(void* self) {
     QSqlTableModel_EndMoveRows((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_super_end_move_rows(void* self) {
-    QSqlTableModel_SuperEndMoveRows((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_end_move_rows(void* self, void (*callback)()) {
-    QSqlTableModel_OnEndMoveRows((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-bool q_sqltablemodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+bool q_sqltablemodel_begin_move_columns(void* self, const void* sourceParent, int sourceFirst, int sourceLast, const void* destinationParent, int destinationColumn) {
     return QSqlTableModel_BeginMoveColumns((QSqlTableModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
-}
-
-bool q_sqltablemodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return QSqlTableModel_SuperBeginMoveColumns((QSqlTableModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
-}
-
-void q_sqltablemodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
-    QSqlTableModel_OnBeginMoveColumns((QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_end_move_columns(void* self) {
     QSqlTableModel_EndMoveColumns((QSqlTableModel*)self);
 }
 
-void q_sqltablemodel_super_end_move_columns(void* self) {
-    QSqlTableModel_SuperEndMoveColumns((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_end_move_columns(void* self, void (*callback)()) {
-    QSqlTableModel_OnEndMoveColumns((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-void q_sqltablemodel_change_persistent_index(void* self, void* from, void* to) {
+void q_sqltablemodel_change_persistent_index(void* self, const void* from, const void* to) {
     QSqlTableModel_ChangePersistentIndex((QSqlTableModel*)self, (QModelIndex*)from, (QModelIndex*)to);
-}
-
-void q_sqltablemodel_super_change_persistent_index(void* self, void* from, void* to) {
-    QSqlTableModel_SuperChangePersistentIndex((QSqlTableModel*)self, (QModelIndex*)from, (QModelIndex*)to);
-}
-
-void q_sqltablemodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
-    QSqlTableModel_OnChangePersistentIndex((QSqlTableModel*)self, (intptr_t)callback);
 }
 
 void q_sqltablemodel_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
     QSqlTableModel_ChangePersistentIndexList((QSqlTableModel*)self, from, to);
 }
 
-void q_sqltablemodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    QSqlTableModel_SuperChangePersistentIndexList((QSqlTableModel*)self, from, to);
-}
-
-void q_sqltablemodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
-    QSqlTableModel_OnChangePersistentIndexList((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-libqt_list /* of QModelIndex* */ q_sqltablemodel_persistent_index_list(void* self) {
+libqt_list /* of QModelIndex* */ q_sqltablemodel_persistent_index_list(const void* self) {
     libqt_list _arr = QSqlTableModel_PersistentIndexList((QSqlTableModel*)self);
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_sqltablemodel_super_persistent_index_list(void* self) {
-    libqt_list _arr = QSqlTableModel_SuperPersistentIndexList((QSqlTableModel*)self);
-    return _arr;
-}
-
-void q_sqltablemodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
-    QSqlTableModel_OnPersistentIndexList((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-QObject* q_sqltablemodel_sender(void* self) {
+QObject* q_sqltablemodel_sender(const void* self) {
     return QSqlTableModel_Sender((QSqlTableModel*)self);
 }
 
-QObject* q_sqltablemodel_super_sender(void* self) {
-    return QSqlTableModel_SuperSender((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_sender(void* self, QObject* (*callback)()) {
-    QSqlTableModel_OnSender((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-int32_t q_sqltablemodel_sender_signal_index(void* self) {
+int32_t q_sqltablemodel_sender_signal_index(const void* self) {
     return QSqlTableModel_SenderSignalIndex((QSqlTableModel*)self);
 }
 
-int32_t q_sqltablemodel_super_sender_signal_index(void* self) {
-    return QSqlTableModel_SuperSenderSignalIndex((QSqlTableModel*)self);
-}
-
-void q_sqltablemodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QSqlTableModel_OnSenderSignalIndex((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-int32_t q_sqltablemodel_receivers(void* self, const char* signal) {
+int32_t q_sqltablemodel_receivers(const void* self, const char* signal) {
     return QSqlTableModel_Receivers((QSqlTableModel*)self, signal);
 }
 
-int32_t q_sqltablemodel_super_receivers(void* self, const char* signal) {
-    return QSqlTableModel_SuperReceivers((QSqlTableModel*)self, signal);
-}
-
-void q_sqltablemodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QSqlTableModel_OnReceivers((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-bool q_sqltablemodel_is_signal_connected(void* self, void* signal) {
+bool q_sqltablemodel_is_signal_connected(const void* self, const void* signal) {
     return QSqlTableModel_IsSignalConnected((QSqlTableModel*)self, (QMetaMethod*)signal);
 }
 
-bool q_sqltablemodel_super_is_signal_connected(void* self, void* signal) {
-    return QSqlTableModel_SuperIsSignalConnected((QSqlTableModel*)self, (QMetaMethod*)signal);
-}
-
-void q_sqltablemodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QSqlTableModel_OnIsSignalConnected((QSqlTableModel*)self, (intptr_t)callback);
-}
-
-void q_sqltablemodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void q_sqltablemodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void q_sqltablemodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void q_sqltablemodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void q_sqltablemodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_RowsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void q_sqltablemodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+void q_sqltablemodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void q_sqltablemodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int)) {
+void q_sqltablemodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int)) {
     QAbstractItemModel_Connect_ColumnsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -1765,19 +1544,19 @@ void q_sqltablemodel_on_model_reset(void* self, void (*callback)(void*)) {
     QAbstractItemModel_Connect_ModelReset((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void q_sqltablemodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void q_sqltablemodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_RowsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void q_sqltablemodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_sqltablemodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+void q_sqltablemodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int)) {
     QAbstractItemModel_Connect_ColumnsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 

@@ -20,14 +20,14 @@ Attica__Person* k_attica__person_new();
 ///
 /// @param other Attica__Person*
 ///
-Attica__Person* k_attica__person_new2(void* other);
+Attica__Person* k_attica__person_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#operator-eq)
 ///
 /// @param self Attica__Person*
 /// @param other Attica__Person*
 ///
-void k_attica__person_operator_assign(void* self, void* other);
+void k_attica__person_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setId)
 ///
@@ -40,9 +40,9 @@ void k_attica__person_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-const char* k_attica__person_id(void* self);
+const char* k_attica__person_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setFirstName)
 ///
@@ -55,9 +55,9 @@ void k_attica__person_set_first_name(void* self, const char* firstName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-const char* k_attica__person_first_name(void* self);
+const char* k_attica__person_first_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setLastName)
 ///
@@ -70,22 +70,22 @@ void k_attica__person_set_last_name(void* self, const char* lastName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-const char* k_attica__person_last_name(void* self);
+const char* k_attica__person_last_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setBirthday)
 ///
 /// @param self Attica__Person*
 /// @param birthday QDate*
 ///
-void k_attica__person_set_birthday(void* self, void* birthday);
+void k_attica__person_set_birthday(void* self, const void* birthday);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#birthday)
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-QDate* k_attica__person_birthday(void* self);
+QDate* k_attica__person_birthday(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setCountry)
 ///
@@ -98,9 +98,9 @@ void k_attica__person_set_country(void* self, const char* country);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-const char* k_attica__person_country(void* self);
+const char* k_attica__person_country(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setLatitude)
 ///
@@ -111,9 +111,9 @@ void k_attica__person_set_latitude(void* self, double latitude);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#latitude)
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-double k_attica__person_latitude(void* self);
+double k_attica__person_latitude(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setLongitude)
 ///
@@ -124,22 +124,22 @@ void k_attica__person_set_longitude(void* self, double longitude);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#longitude)
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-double k_attica__person_longitude(void* self);
+double k_attica__person_longitude(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setAvatarUrl)
 ///
 /// @param self Attica__Person*
 /// @param avatarUrl QUrl*
 ///
-void k_attica__person_set_avatar_url(void* self, void* avatarUrl);
+void k_attica__person_set_avatar_url(void* self, const void* avatarUrl);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#avatarUrl)
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-QUrl* k_attica__person_avatar_url(void* self);
+QUrl* k_attica__person_avatar_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setHomepage)
 ///
@@ -152,9 +152,9 @@ void k_attica__person_set_homepage(void* self, const char* homepage);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-const char* k_attica__person_homepage(void* self);
+const char* k_attica__person_homepage(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#setCity)
 ///
@@ -167,9 +167,9 @@ void k_attica__person_set_city(void* self, const char* city);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-const char* k_attica__person_city(void* self);
+const char* k_attica__person_city(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#addExtendedAttribute)
 ///
@@ -183,10 +183,10 @@ void k_attica__person_add_extended_attribute(void* self, const char* key, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 /// @param key const char*
 ///
-const char* k_attica__person_extended_attribute(void* self, const char* key);
+const char* k_attica__person_extended_attribute(const void* self, const char* key);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#extendedAttributes)
 ///
@@ -202,17 +202,17 @@ const char* k_attica__person_extended_attribute(void* self, const char* key);
 /// free(map.values);
 /// ```
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
 /// @return libqt_map of const char* to const char*
 ///
-libqt_map k_attica__person_extended_attributes(void* self);
+libqt_map k_attica__person_extended_attributes(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-person.html#isValid)
 ///
-/// @param self Attica__Person*
+/// @param self const Attica__Person*
 ///
-bool k_attica__person_is_valid(void* self);
+bool k_attica__person_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

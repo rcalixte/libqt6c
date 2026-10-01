@@ -10,25 +10,13 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerextrainfoextension.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerextrainfoextension.html#core)
-///
-/// @param self QDesignerExtraInfoExtension*
-///
-QDesignerFormEditorInterface* q_designerextrainfoextension_core(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerextrainfoextension.html#widget)
-///
-/// @param self QDesignerExtraInfoExtension*
-///
-QWidget* q_designerextrainfoextension_widget(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerextrainfoextension.html#workingDirectory)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDesignerExtraInfoExtension*
+/// @param self const QDesignerExtraInfoExtension*
 ///
-const char* q_designerextrainfoextension_working_directory(void* self);
+const char* q_designerextrainfoextension_working_directory(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerextrainfoextension.html#setWorkingDirectory)
 ///

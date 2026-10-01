@@ -21,7 +21,7 @@ QLowEnergyDescriptorData* q_lowenergydescriptordata_new();
 /// @param uuid QBluetoothUuid*
 /// @param value char*
 ///
-QLowEnergyDescriptorData* q_lowenergydescriptordata_new2(void* uuid, char* value);
+QLowEnergyDescriptorData* q_lowenergydescriptordata_new2(const void* uuid, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html)
 
@@ -29,22 +29,22 @@ QLowEnergyDescriptorData* q_lowenergydescriptordata_new2(void* uuid, char* value
 ///
 /// @param other QLowEnergyDescriptorData*
 ///
-QLowEnergyDescriptorData* q_lowenergydescriptordata_new3(void* other);
+QLowEnergyDescriptorData* q_lowenergydescriptordata_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#operator-eq)
 ///
 /// @param self QLowEnergyDescriptorData*
 /// @param other QLowEnergyDescriptorData*
 ///
-void q_lowenergydescriptordata_operator_assign(void* self, void* other);
+void q_lowenergydescriptordata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#value)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QLowEnergyDescriptorData*
+/// @param self const QLowEnergyDescriptorData*
 ///
-char* q_lowenergydescriptordata_value(void* self);
+char* q_lowenergydescriptordata_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#setValue)
 ///
@@ -55,22 +55,22 @@ void q_lowenergydescriptordata_set_value(void* self, char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#uuid)
 ///
-/// @param self QLowEnergyDescriptorData*
+/// @param self const QLowEnergyDescriptorData*
 ///
-QBluetoothUuid* q_lowenergydescriptordata_uuid(void* self);
+QBluetoothUuid* q_lowenergydescriptordata_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#setUuid)
 ///
 /// @param self QLowEnergyDescriptorData*
 /// @param uuid QBluetoothUuid*
 ///
-void q_lowenergydescriptordata_set_uuid(void* self, void* uuid);
+void q_lowenergydescriptordata_set_uuid(void* self, const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#isValid)
 ///
-/// @param self QLowEnergyDescriptorData*
+/// @param self const QLowEnergyDescriptorData*
 ///
-bool q_lowenergydescriptordata_is_valid(void* self);
+bool q_lowenergydescriptordata_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#setReadPermissions)
 ///
@@ -81,17 +81,17 @@ void q_lowenergydescriptordata_set_read_permissions(void* self, bool readable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#isReadable)
 ///
-/// @param self QLowEnergyDescriptorData*
+/// @param self const QLowEnergyDescriptorData*
 ///
-bool q_lowenergydescriptordata_is_readable(void* self);
+bool q_lowenergydescriptordata_is_readable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#readConstraints)
 ///
-/// @param self QLowEnergyDescriptorData*
+/// @param self const QLowEnergyDescriptorData*
 ///
 /// @return flag of enum QBluetooth__AttAccessConstraint
 ///
-int32_t q_lowenergydescriptordata_read_constraints(void* self);
+int32_t q_lowenergydescriptordata_read_constraints(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#setWritePermissions)
 ///
@@ -102,17 +102,17 @@ void q_lowenergydescriptordata_set_write_permissions(void* self, bool writable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#isWritable)
 ///
-/// @param self QLowEnergyDescriptorData*
+/// @param self const QLowEnergyDescriptorData*
 ///
-bool q_lowenergydescriptordata_is_writable(void* self);
+bool q_lowenergydescriptordata_is_writable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#writeConstraints)
 ///
-/// @param self QLowEnergyDescriptorData*
+/// @param self const QLowEnergyDescriptorData*
 ///
 /// @return flag of enum QBluetooth__AttAccessConstraint
 ///
-int32_t q_lowenergydescriptordata_write_constraints(void* self);
+int32_t q_lowenergydescriptordata_write_constraints(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergydescriptordata.html#swap)
 ///

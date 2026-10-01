@@ -15,7 +15,7 @@
 /// @param dhparam QSslDiffieHellmanParameters*
 /// @param seed size_t
 ///
-size_t q_qssldiffiehellmanparameters_h_q_hash(void* dhparam, size_t seed);
+size_t q_qssldiffiehellmanparameters_h_q_hash(const void* dhparam, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html)
 
@@ -29,7 +29,7 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new();
 ///
 /// @param other QSslDiffieHellmanParameters*
 ///
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new2(void* other);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#defaultParameters)
 ///
@@ -40,7 +40,7 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_default_parameters();
 /// @param self QSslDiffieHellmanParameters*
 /// @param other QSslDiffieHellmanParameters*
 ///
-void q_ssldiffiehellmanparameters_operator_assign(void* self, void* other);
+void q_ssldiffiehellmanparameters_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#swap)
 ///
@@ -63,31 +63,31 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(void* de
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isEmpty)
 ///
-/// @param self QSslDiffieHellmanParameters*
+/// @param self const QSslDiffieHellmanParameters*
 ///
-bool q_ssldiffiehellmanparameters_is_empty(void* self);
+bool q_ssldiffiehellmanparameters_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isValid)
 ///
-/// @param self QSslDiffieHellmanParameters*
+/// @param self const QSslDiffieHellmanParameters*
 ///
-bool q_ssldiffiehellmanparameters_is_valid(void* self);
+bool q_ssldiffiehellmanparameters_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#error)
 ///
-/// @param self QSslDiffieHellmanParameters*
+/// @param self const QSslDiffieHellmanParameters*
 ///
 /// @return enum QSslDiffieHellmanParameters__Error
 ///
-int32_t q_ssldiffiehellmanparameters_error(void* self);
+int32_t q_ssldiffiehellmanparameters_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSslDiffieHellmanParameters*
+/// @param self const QSslDiffieHellmanParameters*
 ///
-const char* q_ssldiffiehellmanparameters_error_string(void* self);
+const char* q_ssldiffiehellmanparameters_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///

@@ -20,33 +20,33 @@ bool k_archive_close(void* self) {
     return KArchive_Close((KArchive*)self);
 }
 
-const char* k_archive_error_string(void* self) {
+const char* k_archive_error_string(const void* self) {
     libqt_string _str = KArchive_ErrorString((KArchive*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_archive_is_open(void* self) {
+bool k_archive_is_open(const void* self) {
     return KArchive_IsOpen((KArchive*)self);
 }
 
-int32_t k_archive_mode(void* self) {
+int32_t k_archive_mode(const void* self) {
     return KArchive_Mode((KArchive*)self);
 }
 
-QIODevice* k_archive_device(void* self) {
+QIODevice* k_archive_device(const void* self) {
     return KArchive_Device((KArchive*)self);
 }
 
-const char* k_archive_file_name(void* self) {
+const char* k_archive_file_name(const void* self) {
     libqt_string _str = KArchive_FileName((KArchive*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const KArchiveDirectory* k_archive_directory(void* self) {
+const KArchiveDirectory* k_archive_directory(const void* self) {
     return KArchive_Directory((KArchive*)self);
 }
 
@@ -112,15 +112,15 @@ bool k_archive_write_dir4(void* self, const char* name, const char* user, const 
     return KArchive_WriteDir4((KArchive*)self, qstring(name), qstring(user), qstring(group), perm);
 }
 
-bool k_archive_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime) {
+bool k_archive_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime) {
     return KArchive_WriteDir5((KArchive*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime);
 }
 
-bool k_archive_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime) {
+bool k_archive_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime) {
     return KArchive_WriteDir6((KArchive*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_archive_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_archive_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KArchive_WriteDir7((KArchive*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
@@ -136,15 +136,15 @@ bool k_archive_write_sym_link5(void* self, const char* name, const char* target,
     return KArchive_WriteSymLink5((KArchive*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm);
 }
 
-bool k_archive_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime) {
+bool k_archive_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime) {
     return KArchive_WriteSymLink6((KArchive*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime);
 }
 
-bool k_archive_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime) {
+bool k_archive_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime) {
     return KArchive_WriteSymLink7((KArchive*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_archive_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_archive_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KArchive_WriteSymLink8((KArchive*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
@@ -160,15 +160,15 @@ bool k_archive_write_file5(void* self, const char* name, char* data, mode_t perm
     return KArchive_WriteFile5((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group));
 }
 
-bool k_archive_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime) {
+bool k_archive_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime) {
     return KArchive_WriteFile6((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group), (QDateTime*)atime);
 }
 
-bool k_archive_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime) {
+bool k_archive_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime) {
     return KArchive_WriteFile7((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group), (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_archive_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime) {
+bool k_archive_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime, const void* ctime) {
     return KArchive_WriteFile8((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group), (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
@@ -176,15 +176,15 @@ bool k_archive_prepare_writing5(void* self, const char* name, const char* user, 
     return KArchive_PrepareWriting5((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm);
 }
 
-bool k_archive_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime) {
+bool k_archive_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime) {
     return KArchive_PrepareWriting6((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime);
 }
 
-bool k_archive_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime) {
+bool k_archive_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime) {
     return KArchive_PrepareWriting7((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_archive_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_archive_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KArchive_PrepareWriting8((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 

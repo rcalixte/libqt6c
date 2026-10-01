@@ -20,61 +20,61 @@ QGeoShape* q_geoshape_new();
 ///
 /// @param other QGeoShape*
 ///
-QGeoShape* q_geoshape_new2(void* other);
+QGeoShape* q_geoshape_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#type)
 ///
-/// @param self QGeoShape*
+/// @param self const QGeoShape*
 ///
 /// @return enum QGeoShape__ShapeType
 ///
-int32_t q_geoshape_type(void* self);
+int32_t q_geoshape_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#isValid)
 ///
-/// @param self QGeoShape*
+/// @param self const QGeoShape*
 ///
-bool q_geoshape_is_valid(void* self);
+bool q_geoshape_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#isEmpty)
 ///
-/// @param self QGeoShape*
+/// @param self const QGeoShape*
 ///
-bool q_geoshape_is_empty(void* self);
+bool q_geoshape_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#contains)
 ///
-/// @param self QGeoShape*
+/// @param self const QGeoShape*
 /// @param coordinate QGeoCoordinate*
 ///
-bool q_geoshape_contains(void* self, void* coordinate);
+bool q_geoshape_contains(const void* self, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#boundingGeoRectangle)
 ///
-/// @param self QGeoShape*
+/// @param self const QGeoShape*
 ///
-QGeoRectangle* q_geoshape_bounding_geo_rectangle(void* self);
+QGeoRectangle* q_geoshape_bounding_geo_rectangle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#center)
 ///
-/// @param self QGeoShape*
+/// @param self const QGeoShape*
 ///
-QGeoCoordinate* q_geoshape_center(void* self);
+QGeoCoordinate* q_geoshape_center(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#operator-eq)
 ///
 /// @param self QGeoShape*
 /// @param other QGeoShape*
 ///
-void q_geoshape_operator_assign(void* self, void* other);
+void q_geoshape_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoShape*
+/// @param self const QGeoShape*
 ///
-const char* q_geoshape_to_string(void* self);
+const char* q_geoshape_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#dtor.QGeoShape)
 ///
@@ -91,7 +91,7 @@ void q_geoshape_delete(void* self);
 /// @param shape QGeoShape*
 /// @param seed size_t
 ///
-size_t q_qgeoshape_h_q_hash(void* shape, size_t seed);
+size_t q_qgeoshape_h_q_hash(const void* shape, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#public-types)
 

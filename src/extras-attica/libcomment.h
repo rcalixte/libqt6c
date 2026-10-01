@@ -20,7 +20,7 @@ Attica__Comment* k_attica__comment_new();
 ///
 /// @param other Attica__Comment*
 ///
-Attica__Comment* k_attica__comment_new2(void* other);
+Attica__Comment* k_attica__comment_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#commentTypeToString)
 ///
@@ -35,7 +35,7 @@ const char* k_attica__comment_comment_type_to_string(int32_t type);
 /// @param self Attica__Comment*
 /// @param other Attica__Comment*
 ///
-void k_attica__comment_operator_assign(void* self, void* other);
+void k_attica__comment_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setId)
 ///
@@ -48,9 +48,9 @@ void k_attica__comment_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
-const char* k_attica__comment_id(void* self);
+const char* k_attica__comment_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setSubject)
 ///
@@ -63,9 +63,9 @@ void k_attica__comment_set_subject(void* self, const char* subject);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
-const char* k_attica__comment_subject(void* self);
+const char* k_attica__comment_subject(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setText)
 ///
@@ -78,9 +78,9 @@ void k_attica__comment_set_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
-const char* k_attica__comment_text(void* self);
+const char* k_attica__comment_text(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setChildCount)
 ///
@@ -91,9 +91,9 @@ void k_attica__comment_set_child_count(void* self, int childCount);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#childCount)
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
-int32_t k_attica__comment_child_count(void* self);
+int32_t k_attica__comment_child_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setUser)
 ///
@@ -106,22 +106,22 @@ void k_attica__comment_set_user(void* self, const char* user);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
-const char* k_attica__comment_user(void* self);
+const char* k_attica__comment_user(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setDate)
 ///
 /// @param self Attica__Comment*
 /// @param date QDateTime*
 ///
-void k_attica__comment_set_date(void* self, void* date);
+void k_attica__comment_set_date(void* self, const void* date);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#date)
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
-QDateTime* k_attica__comment_date(void* self);
+QDateTime* k_attica__comment_date(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setScore)
 ///
@@ -132,9 +132,9 @@ void k_attica__comment_set_score(void* self, int score);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#score)
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
-int32_t k_attica__comment_score(void* self);
+int32_t k_attica__comment_score(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#setChildren)
 ///
@@ -145,17 +145,17 @@ void k_attica__comment_set_children(void* self, libqt_list comments);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#children)
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
 /// @return libqt_list of Attica__Comment*
 ///
-libqt_list k_attica__comment_children(void* self);
+libqt_list k_attica__comment_children(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-comment.html#isValid)
 ///
-/// @param self Attica__Comment*
+/// @param self const Attica__Comment*
 ///
-bool k_attica__comment_is_valid(void* self);
+bool k_attica__comment_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

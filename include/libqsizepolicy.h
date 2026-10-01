@@ -14,7 +14,7 @@
 ///
 /// @param other QSizePolicy*
 ///
-QSizePolicy* q_sizepolicy_new(void* other);
+QSizePolicy* q_sizepolicy_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html)
 
@@ -45,7 +45,7 @@ QSizePolicy* q_sizepolicy_new4(int32_t horizontal, int32_t vertical);
 ///
 /// @param param1 QSizePolicy*
 ///
-QSizePolicy* q_sizepolicy_new5(void* param1);
+QSizePolicy* q_sizepolicy_new5(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html)
 
@@ -73,27 +73,27 @@ void q_sizepolicy_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#horizontalPolicy)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
 /// @return enum QSizePolicy__Policy
 ///
-int32_t q_sizepolicy_horizontal_policy(void* self);
+int32_t q_sizepolicy_horizontal_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#verticalPolicy)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
 /// @return enum QSizePolicy__Policy
 ///
-int32_t q_sizepolicy_vertical_policy(void* self);
+int32_t q_sizepolicy_vertical_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#controlType)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
 /// @return enum QSizePolicy__ControlType
 ///
-int32_t q_sizepolicy_control_type(void* self);
+int32_t q_sizepolicy_control_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setHorizontalPolicy)
 ///
@@ -118,11 +118,11 @@ void q_sizepolicy_set_control_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#expandingDirections)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
 /// @return flag of enum Qt__Orientation
 ///
-int32_t q_sizepolicy_expanding_directions(void* self);
+int32_t q_sizepolicy_expanding_directions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setHeightForWidth)
 ///
@@ -133,9 +133,9 @@ void q_sizepolicy_set_height_for_width(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#hasHeightForWidth)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
-bool q_sizepolicy_has_height_for_width(void* self);
+bool q_sizepolicy_has_height_for_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setWidthForHeight)
 ///
@@ -146,41 +146,41 @@ void q_sizepolicy_set_width_for_height(void* self, bool b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#hasWidthForHeight)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
-bool q_sizepolicy_has_width_for_height(void* self);
+bool q_sizepolicy_has_width_for_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator-eq-eq)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 /// @param s QSizePolicy*
 ///
-bool q_sizepolicy_operator_equal(void* self, void* s);
+bool q_sizepolicy_operator_equal(const void* self, const void* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator-not-eq)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 /// @param s QSizePolicy*
 ///
-bool q_sizepolicy_operator_not_equal(void* self, void* s);
+bool q_sizepolicy_operator_not_equal(const void* self, const void* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator-QVariant)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
-QVariant* q_sizepolicy_to_q_variant(void* self);
+QVariant* q_sizepolicy_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#horizontalStretch)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
-int32_t q_sizepolicy_horizontal_stretch(void* self);
+int32_t q_sizepolicy_horizontal_stretch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#verticalStretch)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
-int32_t q_sizepolicy_vertical_stretch(void* self);
+int32_t q_sizepolicy_vertical_stretch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setHorizontalStretch)
 ///
@@ -198,9 +198,9 @@ void q_sizepolicy_set_vertical_stretch(void* self, int stretchFactor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#retainSizeWhenHidden)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
-bool q_sizepolicy_retain_size_when_hidden(void* self);
+bool q_sizepolicy_retain_size_when_hidden(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#setRetainSizeWhenHidden)
 ///
@@ -217,16 +217,16 @@ void q_sizepolicy_transpose(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#transposed)
 ///
-/// @param self QSizePolicy*
+/// @param self const QSizePolicy*
 ///
-QSizePolicy* q_sizepolicy_transposed(void* self);
+QSizePolicy* q_sizepolicy_transposed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#operator-eq)
 ///
 /// @param self QSizePolicy*
 /// @param param1 QSizePolicy*
 ///
-void q_sizepolicy_operator_assign(void* self, void* param1);
+void q_sizepolicy_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsizepolicy.html#dtor.QSizePolicy)
 ///

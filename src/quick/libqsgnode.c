@@ -9,7 +9,7 @@ QSGNode* q_sgnode_new() {
     return QSGNode_New();
 }
 
-QSGNode* q_sgnode_parent(void* self) {
+QSGNode* q_sgnode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -41,31 +41,31 @@ void q_sgnode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgnode_child_count(void* self) {
+int32_t q_sgnode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgnode_child_at_index(void* self, int i) {
+QSGNode* q_sgnode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgnode_first_child(void* self) {
+QSGNode* q_sgnode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgnode_last_child(void* self) {
+QSGNode* q_sgnode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgnode_next_sibling(void* self) {
+QSGNode* q_sgnode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgnode_previous_sibling(void* self) {
+QSGNode* q_sgnode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgnode_type(void* self) {
+int32_t q_sgnode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -77,23 +77,23 @@ void q_sgnode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgnode_dirty_state(void* self) {
+int32_t q_sgnode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-bool q_sgnode_is_subtree_blocked(void* self) {
+bool q_sgnode_is_subtree_blocked(const void* self) {
     return QSGNode_IsSubtreeBlocked((QSGNode*)self);
 }
 
-void q_sgnode_on_is_subtree_blocked(void* self, bool (*callback)()) {
+void q_sgnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
     QSGNode_OnIsSubtreeBlocked((QSGNode*)self, (intptr_t)callback);
 }
 
-bool q_sgnode_super_is_subtree_blocked(void* self) {
+bool q_sgnode_super_is_subtree_blocked(const void* self) {
     return QSGNode_SuperIsSubtreeBlocked((QSGNode*)self);
 }
 
-int32_t q_sgnode_flags(void* self) {
+int32_t q_sgnode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 
@@ -109,7 +109,7 @@ void q_sgnode_preprocess(void* self) {
     QSGNode_Preprocess((QSGNode*)self);
 }
 
-void q_sgnode_on_preprocess(void* self, void (*callback)()) {
+void q_sgnode_on_preprocess(void* self, void (*callback)(void*)) {
     QSGNode_OnPreprocess((QSGNode*)self, (intptr_t)callback);
 }
 
@@ -137,7 +137,7 @@ void q_sgbasicgeometrynode_set_geometry(void* self, void* geometry) {
     QSGBasicGeometryNode_SetGeometry((QSGBasicGeometryNode*)self, (QSGGeometry*)geometry);
 }
 
-const QSGGeometry* q_sgbasicgeometrynode_geometry(void* self) {
+const QSGGeometry* q_sgbasicgeometrynode_geometry(const void* self) {
     return QSGBasicGeometryNode_Geometry((QSGBasicGeometryNode*)self);
 }
 
@@ -145,23 +145,23 @@ QSGGeometry* q_sgbasicgeometrynode_geometry2(void* self) {
     return QSGBasicGeometryNode_Geometry2((QSGBasicGeometryNode*)self);
 }
 
-const QMatrix4x4* q_sgbasicgeometrynode_matrix(void* self) {
+const QMatrix4x4* q_sgbasicgeometrynode_matrix(const void* self) {
     return QSGBasicGeometryNode_Matrix((QSGBasicGeometryNode*)self);
 }
 
-const QSGClipNode* q_sgbasicgeometrynode_clip_list(void* self) {
+const QSGClipNode* q_sgbasicgeometrynode_clip_list(const void* self) {
     return QSGBasicGeometryNode_ClipList((QSGBasicGeometryNode*)self);
 }
 
-void q_sgbasicgeometrynode_set_renderer_matrix(void* self, void* m) {
+void q_sgbasicgeometrynode_set_renderer_matrix(void* self, const void* m) {
     QSGBasicGeometryNode_SetRendererMatrix((QSGBasicGeometryNode*)self, (QMatrix4x4*)m);
 }
 
-void q_sgbasicgeometrynode_set_renderer_clip_list(void* self, void* c) {
+void q_sgbasicgeometrynode_set_renderer_clip_list(void* self, const void* c) {
     QSGBasicGeometryNode_SetRendererClipList((QSGBasicGeometryNode*)self, (QSGClipNode*)c);
 }
 
-QSGNode* q_sgbasicgeometrynode_parent(void* self) {
+QSGNode* q_sgbasicgeometrynode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -193,31 +193,31 @@ void q_sgbasicgeometrynode_reparent_child_nodes_to(void* self, void* newParent) 
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgbasicgeometrynode_child_count(void* self) {
+int32_t q_sgbasicgeometrynode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgbasicgeometrynode_child_at_index(void* self, int i) {
+QSGNode* q_sgbasicgeometrynode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgbasicgeometrynode_first_child(void* self) {
+QSGNode* q_sgbasicgeometrynode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgbasicgeometrynode_last_child(void* self) {
+QSGNode* q_sgbasicgeometrynode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgbasicgeometrynode_next_sibling(void* self) {
+QSGNode* q_sgbasicgeometrynode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgbasicgeometrynode_previous_sibling(void* self) {
+QSGNode* q_sgbasicgeometrynode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgbasicgeometrynode_type(void* self) {
+int32_t q_sgbasicgeometrynode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -229,15 +229,15 @@ void q_sgbasicgeometrynode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgbasicgeometrynode_dirty_state(void* self) {
+int32_t q_sgbasicgeometrynode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-bool q_sgbasicgeometrynode_is_subtree_blocked(void* self) {
+bool q_sgbasicgeometrynode_is_subtree_blocked(const void* self) {
     return QSGNode_IsSubtreeBlocked((QSGNode*)self);
 }
 
-int32_t q_sgbasicgeometrynode_flags(void* self) {
+int32_t q_sgbasicgeometrynode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 
@@ -273,7 +273,7 @@ void q_sggeometrynode_set_material(void* self, void* material) {
     QSGGeometryNode_SetMaterial((QSGGeometryNode*)self, (QSGMaterial*)material);
 }
 
-QSGMaterial* q_sggeometrynode_material(void* self) {
+QSGMaterial* q_sggeometrynode_material(const void* self) {
     return QSGGeometryNode_Material((QSGGeometryNode*)self);
 }
 
@@ -281,11 +281,11 @@ void q_sggeometrynode_set_opaque_material(void* self, void* material) {
     QSGGeometryNode_SetOpaqueMaterial((QSGGeometryNode*)self, (QSGMaterial*)material);
 }
 
-QSGMaterial* q_sggeometrynode_opaque_material(void* self) {
+QSGMaterial* q_sggeometrynode_opaque_material(const void* self) {
     return QSGGeometryNode_OpaqueMaterial((QSGGeometryNode*)self);
 }
 
-QSGMaterial* q_sggeometrynode_active_material(void* self) {
+QSGMaterial* q_sggeometrynode_active_material(const void* self) {
     return QSGGeometryNode_ActiveMaterial((QSGGeometryNode*)self);
 }
 
@@ -293,7 +293,7 @@ void q_sggeometrynode_set_render_order(void* self, int order) {
     QSGGeometryNode_SetRenderOrder((QSGGeometryNode*)self, order);
 }
 
-int32_t q_sggeometrynode_render_order(void* self) {
+int32_t q_sggeometrynode_render_order(const void* self) {
     return QSGGeometryNode_RenderOrder((QSGGeometryNode*)self);
 }
 
@@ -301,7 +301,7 @@ void q_sggeometrynode_set_inherited_opacity(void* self, double opacity) {
     QSGGeometryNode_SetInheritedOpacity((QSGGeometryNode*)self, opacity);
 }
 
-double q_sggeometrynode_inherited_opacity(void* self) {
+double q_sggeometrynode_inherited_opacity(const void* self) {
     return QSGGeometryNode_InheritedOpacity((QSGGeometryNode*)self);
 }
 
@@ -309,7 +309,7 @@ void q_sggeometrynode_set_geometry(void* self, void* geometry) {
     QSGBasicGeometryNode_SetGeometry((QSGBasicGeometryNode*)self, (QSGGeometry*)geometry);
 }
 
-const QSGGeometry* q_sggeometrynode_geometry(void* self) {
+const QSGGeometry* q_sggeometrynode_geometry(const void* self) {
     return QSGBasicGeometryNode_Geometry((QSGBasicGeometryNode*)self);
 }
 
@@ -317,23 +317,23 @@ QSGGeometry* q_sggeometrynode_geometry2(void* self) {
     return QSGBasicGeometryNode_Geometry2((QSGBasicGeometryNode*)self);
 }
 
-const QMatrix4x4* q_sggeometrynode_matrix(void* self) {
+const QMatrix4x4* q_sggeometrynode_matrix(const void* self) {
     return QSGBasicGeometryNode_Matrix((QSGBasicGeometryNode*)self);
 }
 
-const QSGClipNode* q_sggeometrynode_clip_list(void* self) {
+const QSGClipNode* q_sggeometrynode_clip_list(const void* self) {
     return QSGBasicGeometryNode_ClipList((QSGBasicGeometryNode*)self);
 }
 
-void q_sggeometrynode_set_renderer_matrix(void* self, void* m) {
+void q_sggeometrynode_set_renderer_matrix(void* self, const void* m) {
     QSGBasicGeometryNode_SetRendererMatrix((QSGBasicGeometryNode*)self, (QMatrix4x4*)m);
 }
 
-void q_sggeometrynode_set_renderer_clip_list(void* self, void* c) {
+void q_sggeometrynode_set_renderer_clip_list(void* self, const void* c) {
     QSGBasicGeometryNode_SetRendererClipList((QSGBasicGeometryNode*)self, (QSGClipNode*)c);
 }
 
-QSGNode* q_sggeometrynode_parent(void* self) {
+QSGNode* q_sggeometrynode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -365,31 +365,31 @@ void q_sggeometrynode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sggeometrynode_child_count(void* self) {
+int32_t q_sggeometrynode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sggeometrynode_child_at_index(void* self, int i) {
+QSGNode* q_sggeometrynode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sggeometrynode_first_child(void* self) {
+QSGNode* q_sggeometrynode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sggeometrynode_last_child(void* self) {
+QSGNode* q_sggeometrynode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sggeometrynode_next_sibling(void* self) {
+QSGNode* q_sggeometrynode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sggeometrynode_previous_sibling(void* self) {
+QSGNode* q_sggeometrynode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sggeometrynode_type(void* self) {
+int32_t q_sggeometrynode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -401,11 +401,11 @@ void q_sggeometrynode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sggeometrynode_dirty_state(void* self) {
+int32_t q_sggeometrynode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-int32_t q_sggeometrynode_flags(void* self) {
+int32_t q_sggeometrynode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 
@@ -425,16 +425,16 @@ void q_sggeometrynode_set_flags2(void* self, int32_t param1, bool param2) {
     QSGNode_SetFlags2((QSGNode*)self, param1, param2);
 }
 
-bool q_sggeometrynode_is_subtree_blocked(void* self) {
+bool q_sggeometrynode_is_subtree_blocked(const void* self) {
     return QSGGeometryNode_IsSubtreeBlocked((QSGGeometryNode*)self);
 }
 
-bool q_sggeometrynode_super_is_subtree_blocked(void* self) {
+bool q_sggeometrynode_super_is_subtree_blocked(const void* self) {
     return QSGGeometryNode_SuperIsSubtreeBlocked((QSGGeometryNode*)self);
 }
 
-void q_sggeometrynode_on_is_subtree_blocked(void* self, bool (*callback)()) {
-    QSGGeometryNode_OnIsSubtreeBlocked((QSGGeometryNode*)self, (intptr_t)callback);
+void q_sggeometrynode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
+    QSGGeometryNode_OnIsSubtreeBlocked((const QSGGeometryNode*)self, (intptr_t)callback);
 }
 
 void q_sggeometrynode_preprocess(void* self) {
@@ -445,7 +445,7 @@ void q_sggeometrynode_super_preprocess(void* self) {
     QSGGeometryNode_SuperPreprocess((QSGGeometryNode*)self);
 }
 
-void q_sggeometrynode_on_preprocess(void* self, void (*callback)()) {
+void q_sggeometrynode_on_preprocess(void* self, void (*callback)(void*)) {
     QSGGeometryNode_OnPreprocess((QSGGeometryNode*)self, (intptr_t)callback);
 }
 
@@ -461,15 +461,15 @@ void q_sgclipnode_set_is_rectangular(void* self, bool rectHint) {
     QSGClipNode_SetIsRectangular((QSGClipNode*)self, rectHint);
 }
 
-bool q_sgclipnode_is_rectangular(void* self) {
+bool q_sgclipnode_is_rectangular(const void* self) {
     return QSGClipNode_IsRectangular((QSGClipNode*)self);
 }
 
-void q_sgclipnode_set_clip_rect(void* self, void* clipRect) {
+void q_sgclipnode_set_clip_rect(void* self, const void* clipRect) {
     QSGClipNode_SetClipRect((QSGClipNode*)self, (QRectF*)clipRect);
 }
 
-QRectF* q_sgclipnode_clip_rect(void* self) {
+QRectF* q_sgclipnode_clip_rect(const void* self) {
     return QSGClipNode_ClipRect((QSGClipNode*)self);
 }
 
@@ -477,7 +477,7 @@ void q_sgclipnode_set_geometry(void* self, void* geometry) {
     QSGBasicGeometryNode_SetGeometry((QSGBasicGeometryNode*)self, (QSGGeometry*)geometry);
 }
 
-const QSGGeometry* q_sgclipnode_geometry(void* self) {
+const QSGGeometry* q_sgclipnode_geometry(const void* self) {
     return QSGBasicGeometryNode_Geometry((QSGBasicGeometryNode*)self);
 }
 
@@ -485,23 +485,23 @@ QSGGeometry* q_sgclipnode_geometry2(void* self) {
     return QSGBasicGeometryNode_Geometry2((QSGBasicGeometryNode*)self);
 }
 
-const QMatrix4x4* q_sgclipnode_matrix(void* self) {
+const QMatrix4x4* q_sgclipnode_matrix(const void* self) {
     return QSGBasicGeometryNode_Matrix((QSGBasicGeometryNode*)self);
 }
 
-const QSGClipNode* q_sgclipnode_clip_list(void* self) {
+const QSGClipNode* q_sgclipnode_clip_list(const void* self) {
     return QSGBasicGeometryNode_ClipList((QSGBasicGeometryNode*)self);
 }
 
-void q_sgclipnode_set_renderer_matrix(void* self, void* m) {
+void q_sgclipnode_set_renderer_matrix(void* self, const void* m) {
     QSGBasicGeometryNode_SetRendererMatrix((QSGBasicGeometryNode*)self, (QMatrix4x4*)m);
 }
 
-void q_sgclipnode_set_renderer_clip_list(void* self, void* c) {
+void q_sgclipnode_set_renderer_clip_list(void* self, const void* c) {
     QSGBasicGeometryNode_SetRendererClipList((QSGBasicGeometryNode*)self, (QSGClipNode*)c);
 }
 
-QSGNode* q_sgclipnode_parent(void* self) {
+QSGNode* q_sgclipnode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -533,31 +533,31 @@ void q_sgclipnode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgclipnode_child_count(void* self) {
+int32_t q_sgclipnode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgclipnode_child_at_index(void* self, int i) {
+QSGNode* q_sgclipnode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgclipnode_first_child(void* self) {
+QSGNode* q_sgclipnode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgclipnode_last_child(void* self) {
+QSGNode* q_sgclipnode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgclipnode_next_sibling(void* self) {
+QSGNode* q_sgclipnode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgclipnode_previous_sibling(void* self) {
+QSGNode* q_sgclipnode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgclipnode_type(void* self) {
+int32_t q_sgclipnode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -569,11 +569,11 @@ void q_sgclipnode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgclipnode_dirty_state(void* self) {
+int32_t q_sgclipnode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-int32_t q_sgclipnode_flags(void* self) {
+int32_t q_sgclipnode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 
@@ -593,16 +593,16 @@ void q_sgclipnode_set_flags2(void* self, int32_t param1, bool param2) {
     QSGNode_SetFlags2((QSGNode*)self, param1, param2);
 }
 
-bool q_sgclipnode_is_subtree_blocked(void* self) {
+bool q_sgclipnode_is_subtree_blocked(const void* self) {
     return QSGClipNode_IsSubtreeBlocked((QSGClipNode*)self);
 }
 
-bool q_sgclipnode_super_is_subtree_blocked(void* self) {
+bool q_sgclipnode_super_is_subtree_blocked(const void* self) {
     return QSGClipNode_SuperIsSubtreeBlocked((QSGClipNode*)self);
 }
 
-void q_sgclipnode_on_is_subtree_blocked(void* self, bool (*callback)()) {
-    QSGClipNode_OnIsSubtreeBlocked((QSGClipNode*)self, (intptr_t)callback);
+void q_sgclipnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
+    QSGClipNode_OnIsSubtreeBlocked((const QSGClipNode*)self, (intptr_t)callback);
 }
 
 void q_sgclipnode_preprocess(void* self) {
@@ -613,7 +613,7 @@ void q_sgclipnode_super_preprocess(void* self) {
     QSGClipNode_SuperPreprocess((QSGClipNode*)self);
 }
 
-void q_sgclipnode_on_preprocess(void* self, void (*callback)()) {
+void q_sgclipnode_on_preprocess(void* self, void (*callback)(void*)) {
     QSGClipNode_OnPreprocess((QSGClipNode*)self, (intptr_t)callback);
 }
 
@@ -625,23 +625,23 @@ QSGTransformNode* q_sgtransformnode_new() {
     return QSGTransformNode_New();
 }
 
-void q_sgtransformnode_set_matrix(void* self, void* matrix) {
+void q_sgtransformnode_set_matrix(void* self, const void* matrix) {
     QSGTransformNode_SetMatrix((QSGTransformNode*)self, (QMatrix4x4*)matrix);
 }
 
-const QMatrix4x4* q_sgtransformnode_matrix(void* self) {
+const QMatrix4x4* q_sgtransformnode_matrix(const void* self) {
     return QSGTransformNode_Matrix((QSGTransformNode*)self);
 }
 
-void q_sgtransformnode_set_combined_matrix(void* self, void* matrix) {
+void q_sgtransformnode_set_combined_matrix(void* self, const void* matrix) {
     QSGTransformNode_SetCombinedMatrix((QSGTransformNode*)self, (QMatrix4x4*)matrix);
 }
 
-const QMatrix4x4* q_sgtransformnode_combined_matrix(void* self) {
+const QMatrix4x4* q_sgtransformnode_combined_matrix(const void* self) {
     return QSGTransformNode_CombinedMatrix((QSGTransformNode*)self);
 }
 
-QSGNode* q_sgtransformnode_parent(void* self) {
+QSGNode* q_sgtransformnode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -673,31 +673,31 @@ void q_sgtransformnode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgtransformnode_child_count(void* self) {
+int32_t q_sgtransformnode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgtransformnode_child_at_index(void* self, int i) {
+QSGNode* q_sgtransformnode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgtransformnode_first_child(void* self) {
+QSGNode* q_sgtransformnode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgtransformnode_last_child(void* self) {
+QSGNode* q_sgtransformnode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgtransformnode_next_sibling(void* self) {
+QSGNode* q_sgtransformnode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgtransformnode_previous_sibling(void* self) {
+QSGNode* q_sgtransformnode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgtransformnode_type(void* self) {
+int32_t q_sgtransformnode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -709,11 +709,11 @@ void q_sgtransformnode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgtransformnode_dirty_state(void* self) {
+int32_t q_sgtransformnode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-int32_t q_sgtransformnode_flags(void* self) {
+int32_t q_sgtransformnode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 
@@ -733,16 +733,16 @@ void q_sgtransformnode_set_flags2(void* self, int32_t param1, bool param2) {
     QSGNode_SetFlags2((QSGNode*)self, param1, param2);
 }
 
-bool q_sgtransformnode_is_subtree_blocked(void* self) {
+bool q_sgtransformnode_is_subtree_blocked(const void* self) {
     return QSGTransformNode_IsSubtreeBlocked((QSGTransformNode*)self);
 }
 
-bool q_sgtransformnode_super_is_subtree_blocked(void* self) {
+bool q_sgtransformnode_super_is_subtree_blocked(const void* self) {
     return QSGTransformNode_SuperIsSubtreeBlocked((QSGTransformNode*)self);
 }
 
-void q_sgtransformnode_on_is_subtree_blocked(void* self, bool (*callback)()) {
-    QSGTransformNode_OnIsSubtreeBlocked((QSGTransformNode*)self, (intptr_t)callback);
+void q_sgtransformnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
+    QSGTransformNode_OnIsSubtreeBlocked((const QSGTransformNode*)self, (intptr_t)callback);
 }
 
 void q_sgtransformnode_preprocess(void* self) {
@@ -753,7 +753,7 @@ void q_sgtransformnode_super_preprocess(void* self) {
     QSGTransformNode_SuperPreprocess((QSGTransformNode*)self);
 }
 
-void q_sgtransformnode_on_preprocess(void* self, void (*callback)()) {
+void q_sgtransformnode_on_preprocess(void* self, void (*callback)(void*)) {
     QSGTransformNode_OnPreprocess((QSGTransformNode*)self, (intptr_t)callback);
 }
 
@@ -765,7 +765,7 @@ QSGRootNode* q_sgrootnode_new() {
     return QSGRootNode_New();
 }
 
-QSGNode* q_sgrootnode_parent(void* self) {
+QSGNode* q_sgrootnode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -797,31 +797,31 @@ void q_sgrootnode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgrootnode_child_count(void* self) {
+int32_t q_sgrootnode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgrootnode_child_at_index(void* self, int i) {
+QSGNode* q_sgrootnode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgrootnode_first_child(void* self) {
+QSGNode* q_sgrootnode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgrootnode_last_child(void* self) {
+QSGNode* q_sgrootnode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgrootnode_next_sibling(void* self) {
+QSGNode* q_sgrootnode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgrootnode_previous_sibling(void* self) {
+QSGNode* q_sgrootnode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgrootnode_type(void* self) {
+int32_t q_sgrootnode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -833,11 +833,11 @@ void q_sgrootnode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgrootnode_dirty_state(void* self) {
+int32_t q_sgrootnode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-int32_t q_sgrootnode_flags(void* self) {
+int32_t q_sgrootnode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 
@@ -857,16 +857,16 @@ void q_sgrootnode_set_flags2(void* self, int32_t param1, bool param2) {
     QSGNode_SetFlags2((QSGNode*)self, param1, param2);
 }
 
-bool q_sgrootnode_is_subtree_blocked(void* self) {
+bool q_sgrootnode_is_subtree_blocked(const void* self) {
     return QSGRootNode_IsSubtreeBlocked((QSGRootNode*)self);
 }
 
-bool q_sgrootnode_super_is_subtree_blocked(void* self) {
+bool q_sgrootnode_super_is_subtree_blocked(const void* self) {
     return QSGRootNode_SuperIsSubtreeBlocked((QSGRootNode*)self);
 }
 
-void q_sgrootnode_on_is_subtree_blocked(void* self, bool (*callback)()) {
-    QSGRootNode_OnIsSubtreeBlocked((QSGRootNode*)self, (intptr_t)callback);
+void q_sgrootnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
+    QSGRootNode_OnIsSubtreeBlocked((const QSGRootNode*)self, (intptr_t)callback);
 }
 
 void q_sgrootnode_preprocess(void* self) {
@@ -877,7 +877,7 @@ void q_sgrootnode_super_preprocess(void* self) {
     QSGRootNode_SuperPreprocess((QSGRootNode*)self);
 }
 
-void q_sgrootnode_on_preprocess(void* self, void (*callback)()) {
+void q_sgrootnode_on_preprocess(void* self, void (*callback)(void*)) {
     QSGRootNode_OnPreprocess((QSGRootNode*)self, (intptr_t)callback);
 }
 
@@ -893,7 +893,7 @@ void q_sgopacitynode_set_opacity(void* self, double opacity) {
     QSGOpacityNode_SetOpacity((QSGOpacityNode*)self, opacity);
 }
 
-double q_sgopacitynode_opacity(void* self) {
+double q_sgopacitynode_opacity(const void* self) {
     return QSGOpacityNode_Opacity((QSGOpacityNode*)self);
 }
 
@@ -901,23 +901,23 @@ void q_sgopacitynode_set_combined_opacity(void* self, double opacity) {
     QSGOpacityNode_SetCombinedOpacity((QSGOpacityNode*)self, opacity);
 }
 
-double q_sgopacitynode_combined_opacity(void* self) {
+double q_sgopacitynode_combined_opacity(const void* self) {
     return QSGOpacityNode_CombinedOpacity((QSGOpacityNode*)self);
 }
 
-bool q_sgopacitynode_is_subtree_blocked(void* self) {
+bool q_sgopacitynode_is_subtree_blocked(const void* self) {
     return QSGOpacityNode_IsSubtreeBlocked((QSGOpacityNode*)self);
 }
 
-void q_sgopacitynode_on_is_subtree_blocked(void* self, bool (*callback)()) {
+void q_sgopacitynode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*)) {
     QSGOpacityNode_OnIsSubtreeBlocked((QSGOpacityNode*)self, (intptr_t)callback);
 }
 
-bool q_sgopacitynode_super_is_subtree_blocked(void* self) {
+bool q_sgopacitynode_super_is_subtree_blocked(const void* self) {
     return QSGOpacityNode_SuperIsSubtreeBlocked((QSGOpacityNode*)self);
 }
 
-QSGNode* q_sgopacitynode_parent(void* self) {
+QSGNode* q_sgopacitynode_parent(const void* self) {
     return QSGNode_Parent((QSGNode*)self);
 }
 
@@ -949,31 +949,31 @@ void q_sgopacitynode_reparent_child_nodes_to(void* self, void* newParent) {
     QSGNode_ReparentChildNodesTo((QSGNode*)self, (QSGNode*)newParent);
 }
 
-int32_t q_sgopacitynode_child_count(void* self) {
+int32_t q_sgopacitynode_child_count(const void* self) {
     return QSGNode_ChildCount((QSGNode*)self);
 }
 
-QSGNode* q_sgopacitynode_child_at_index(void* self, int i) {
+QSGNode* q_sgopacitynode_child_at_index(const void* self, int i) {
     return QSGNode_ChildAtIndex((QSGNode*)self, i);
 }
 
-QSGNode* q_sgopacitynode_first_child(void* self) {
+QSGNode* q_sgopacitynode_first_child(const void* self) {
     return QSGNode_FirstChild((QSGNode*)self);
 }
 
-QSGNode* q_sgopacitynode_last_child(void* self) {
+QSGNode* q_sgopacitynode_last_child(const void* self) {
     return QSGNode_LastChild((QSGNode*)self);
 }
 
-QSGNode* q_sgopacitynode_next_sibling(void* self) {
+QSGNode* q_sgopacitynode_next_sibling(const void* self) {
     return QSGNode_NextSibling((QSGNode*)self);
 }
 
-QSGNode* q_sgopacitynode_previous_sibling(void* self) {
+QSGNode* q_sgopacitynode_previous_sibling(const void* self) {
     return QSGNode_PreviousSibling((QSGNode*)self);
 }
 
-int32_t q_sgopacitynode_type(void* self) {
+int32_t q_sgopacitynode_type(const void* self) {
     return QSGNode_Type((QSGNode*)self);
 }
 
@@ -985,11 +985,11 @@ void q_sgopacitynode_mark_dirty(void* self, int32_t bits) {
     QSGNode_MarkDirty((QSGNode*)self, bits);
 }
 
-int32_t q_sgopacitynode_dirty_state(void* self) {
+int32_t q_sgopacitynode_dirty_state(const void* self) {
     return QSGNode_DirtyState((QSGNode*)self);
 }
 
-int32_t q_sgopacitynode_flags(void* self) {
+int32_t q_sgopacitynode_flags(const void* self) {
     return QSGNode_Flags((QSGNode*)self);
 }
 
@@ -1017,7 +1017,7 @@ void q_sgopacitynode_super_preprocess(void* self) {
     QSGOpacityNode_SuperPreprocess((QSGOpacityNode*)self);
 }
 
-void q_sgopacitynode_on_preprocess(void* self, void (*callback)()) {
+void q_sgopacitynode_on_preprocess(void* self, void (*callback)(void*)) {
     QSGOpacityNode_OnPreprocess((QSGOpacityNode*)self, (intptr_t)callback);
 }
 
@@ -1149,7 +1149,7 @@ void q_sgnodevisitor_super_visit_children(void* self, void* n) {
     QSGNodeVisitor_SuperVisitChildren((QSGNodeVisitor*)self, (QSGNode*)n);
 }
 
-void q_sgnodevisitor_operator_assign(void* self, void* param1) {
+void q_sgnodevisitor_operator_assign(void* self, const void* param1) {
     QSGNodeVisitor_OperatorAssign((QSGNodeVisitor*)self, (QSGNodeVisitor*)param1);
 }
 

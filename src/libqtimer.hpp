@@ -51,7 +51,7 @@ void QTimer_SingleShot3(int64_t value, const QObject* receiver, const char* memb
 void QTimer_SingleShot4(int64_t interval, int timerType, const QObject* receiver, const char* member);
 void QTimer_Start3(QTimer* self, int64_t value);
 void QTimer_TimerEvent(QTimer* self, QTimerEvent* param1);
-void QTimer_OnMetaObject(const QTimer* self, intptr_t slot);
+void QTimer_OnMetaObject(QTimer* self, intptr_t slot);
 QMetaObject* QTimer_SuperMetaObject(const QTimer* self);
 void QTimer_OnMetacast(QTimer* self, intptr_t slot);
 void* QTimer_SuperMetacast(QTimer* self, const char* param1);
@@ -78,17 +78,9 @@ void QTimer_DisconnectNotify(QTimer* self, const QMetaMethod* signal);
 void QTimer_OnDisconnectNotify(QTimer* self, intptr_t slot);
 void QTimer_SuperDisconnectNotify(QTimer* self, const QMetaMethod* signal);
 QObject* QTimer_Sender(const QTimer* self);
-void QTimer_OnSender(const QTimer* self, intptr_t slot);
-QObject* QTimer_SuperSender(const QTimer* self);
 int QTimer_SenderSignalIndex(const QTimer* self);
-void QTimer_OnSenderSignalIndex(const QTimer* self, intptr_t slot);
-int QTimer_SuperSenderSignalIndex(const QTimer* self);
 int QTimer_Receivers(const QTimer* self, const char* signal);
-void QTimer_OnReceivers(const QTimer* self, intptr_t slot);
-int QTimer_SuperReceivers(const QTimer* self, const char* signal);
 bool QTimer_IsSignalConnected(const QTimer* self, const QMetaMethod* signal);
-void QTimer_OnIsSignalConnected(const QTimer* self, intptr_t slot);
-bool QTimer_SuperIsSignalConnected(const QTimer* self, const QMetaMethod* signal);
 void QTimer_Connect_Timeout(QTimer* self, intptr_t slot);
 void QTimer_Delete(QTimer* self);
 

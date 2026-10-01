@@ -27,26 +27,26 @@ QOpenGLShader* q_openglshader_new2(int32_t type, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-const QMetaObject* q_openglshader_meta_object(void* self);
+const QMetaObject* q_openglshader_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLShader*
-/// @param callback const QMetaObject* func()
+/// @param self const QOpenGLShader*
+/// @param callback const QMetaObject* func(const QOpenGLShader* self)
 ///
-void q_openglshader_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_openglshader_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-const QMetaObject* q_openglshader_super_meta_object(void* self);
+const QMetaObject* q_openglshader_super_meta_object(const void* self);
 
 /// @param self QOpenGLShader*
 /// @param param1 const char*
@@ -100,11 +100,11 @@ const char* q_openglshader_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#shaderType)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
 /// @return flag of enum QOpenGLShader__ShaderTypeBit
 ///
-int32_t q_openglshader_shader_type(void* self);
+int32_t q_openglshader_shader_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#compileSourceCode)
 ///
@@ -138,29 +138,29 @@ bool q_openglshader_compile_source_file(void* self, const char* fileName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-char* q_openglshader_source_code(void* self);
+char* q_openglshader_source_code(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#isCompiled)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-bool q_openglshader_is_compiled(void* self);
+bool q_openglshader_is_compiled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#log)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-const char* q_openglshader_log(void* self);
+const char* q_openglshader_log(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#shaderId)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-uint32_t q_openglshader_shader_id(void* self);
+uint32_t q_openglshader_shader_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshader.html#hasOpenGLShaders)
 ///
@@ -200,9 +200,9 @@ bool q_openglshader_has_open_g_l_shaders2(int32_t type, void* context);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-const char* q_openglshader_object_name(void* self);
+const char* q_openglshader_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -217,33 +217,33 @@ void q_openglshader_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-bool q_openglshader_is_widget_type(void* self);
+bool q_openglshader_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-bool q_openglshader_is_window_type(void* self);
+bool q_openglshader_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-bool q_openglshader_is_quick_item_type(void* self);
+bool q_openglshader_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-bool q_openglshader_signals_blocked(void* self);
+bool q_openglshader_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -258,9 +258,9 @@ bool q_openglshader_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-QThread* q_openglshader_thread(void* self);
+QThread* q_openglshader_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -311,11 +311,11 @@ void q_openglshader_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_openglshader_children(void* self);
+libqt_list q_openglshader_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -353,7 +353,7 @@ void q_openglshader_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglshader_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_openglshader_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -364,18 +364,18 @@ QMetaObject__Connection* q_openglshader_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_openglshader_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_openglshader_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglshader_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_openglshader_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -386,7 +386,7 @@ QMetaObject__Connection* q_openglshader_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglshader_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_openglshader_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -397,24 +397,24 @@ bool q_openglshader_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_openglshader_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_openglshader_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-bool q_openglshader_disconnect3(void* self);
+bool q_openglshader_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param receiver QObject*
 ///
-bool q_openglshader_disconnect4(void* self, void* receiver);
+bool q_openglshader_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -422,23 +422,23 @@ bool q_openglshader_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_openglshader_disconnect5(void* param1);
+bool q_openglshader_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-void q_openglshader_dump_object_tree(void* self);
+void q_openglshader_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-void q_openglshader_dump_object_info(void* self);
+void q_openglshader_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -448,16 +448,16 @@ void q_openglshader_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_openglshader_set_property(void* self, const char* name, void* value);
+bool q_openglshader_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param name const char*
 ///
-QVariant* q_openglshader_property(void* self, const char* name);
+QVariant* q_openglshader_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -465,9 +465,9 @@ QVariant* q_openglshader_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-const char** q_openglshader_dynamic_property_names(void* self);
+const char** q_openglshader_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -481,9 +481,9 @@ QBindingStorage* q_openglshader_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-const QBindingStorage* q_openglshader_binding_storage2(void* self);
+const QBindingStorage* q_openglshader_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -506,18 +506,18 @@ void q_openglshader_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-QObject* q_openglshader_parent(void* self);
+QObject* q_openglshader_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param classname const char*
 ///
-bool q_openglshader_inherits(void* self, const char* classname);
+bool q_openglshader_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -557,7 +557,7 @@ int32_t q_openglshader_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglshader_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_openglshader_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -569,59 +569,59 @@ QMetaObject__Connection* q_openglshader_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglshader_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_openglshader_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglshader_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_openglshader_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param signal const char*
 ///
-bool q_openglshader_disconnect1(void* self, const char* signal);
+bool q_openglshader_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShader*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_openglshader_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_openglshader_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_openglshader_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglshader_disconnect23(void* self, void* receiver, const char* member);
+bool q_openglshader_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QOpenGLShader*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_openglshader_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -817,7 +817,7 @@ void q_openglshader_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QOpenGLShader*
 /// @param signal QMetaMethod*
 ///
-void q_openglshader_connect_notify(void* self, void* signal);
+void q_openglshader_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -828,7 +828,7 @@ void q_openglshader_connect_notify(void* self, void* signal);
 /// @param self QOpenGLShader*
 /// @param signal QMetaMethod*
 ///
-void q_openglshader_super_connect_notify(void* self, void* signal);
+void q_openglshader_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -839,7 +839,7 @@ void q_openglshader_super_connect_notify(void* self, void* signal);
 /// @param self QOpenGLShader*
 /// @param callback void func(QOpenGLShader* self, QMetaMethod* signal)
 ///
-void q_openglshader_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_openglshader_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -850,7 +850,7 @@ void q_openglshader_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QOpenGLShader*
 /// @param signal QMetaMethod*
 ///
-void q_openglshader_disconnect_notify(void* self, void* signal);
+void q_openglshader_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -861,7 +861,7 @@ void q_openglshader_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLShader*
 /// @param signal QMetaMethod*
 ///
-void q_openglshader_super_disconnect_notify(void* self, void* signal);
+void q_openglshader_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -872,7 +872,7 @@ void q_openglshader_super_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLShader*
 /// @param callback void func(QOpenGLShader* self, QMetaMethod* signal)
 ///
-void q_openglshader_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_openglshader_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -880,9 +880,9 @@ void q_openglshader_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-QObject* q_openglshader_sender(void* self);
+QObject* q_openglshader_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -890,9 +890,9 @@ QObject* q_openglshader_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-QObject* q_openglshader_super_sender(void* self);
+QObject* q_openglshader_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -900,10 +900,10 @@ QObject* q_openglshader_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLShader*
-/// @param callback QObject* func()
+/// @param self const QOpenGLShader*
+/// @param callback QObject* func(QOpenGLShader* self)
 ///
-void q_openglshader_on_sender(void* self, QObject* (*callback)());
+void q_openglshader_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -911,9 +911,9 @@ void q_openglshader_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-int32_t q_openglshader_sender_signal_index(void* self);
+int32_t q_openglshader_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -921,9 +921,9 @@ int32_t q_openglshader_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 ///
-int32_t q_openglshader_super_sender_signal_index(void* self);
+int32_t q_openglshader_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -931,10 +931,10 @@ int32_t q_openglshader_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLShader*
-/// @param callback int32_t func()
+/// @param self const QOpenGLShader*
+/// @param callback int32_t func(QOpenGLShader* self)
 ///
-void q_openglshader_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_openglshader_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -942,10 +942,10 @@ void q_openglshader_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param signal const char*
 ///
-int32_t q_openglshader_receivers(void* self, const char* signal);
+int32_t q_openglshader_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -953,10 +953,10 @@ int32_t q_openglshader_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param signal const char*
 ///
-int32_t q_openglshader_super_receivers(void* self, const char* signal);
+int32_t q_openglshader_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -964,10 +964,10 @@ int32_t q_openglshader_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param callback int32_t func(QOpenGLShader* self, const char* signal)
 ///
-void q_openglshader_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_openglshader_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -975,10 +975,10 @@ void q_openglshader_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param signal QMetaMethod*
 ///
-bool q_openglshader_is_signal_connected(void* self, void* signal);
+bool q_openglshader_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -986,10 +986,10 @@ bool q_openglshader_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param signal QMetaMethod*
 ///
-bool q_openglshader_super_is_signal_connected(void* self, void* signal);
+bool q_openglshader_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -997,10 +997,10 @@ bool q_openglshader_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLShader*
+/// @param self const QOpenGLShader*
 /// @param callback bool func(QOpenGLShader* self, QMetaMethod* signal)
 ///
-void q_openglshader_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_openglshader_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1037,26 +1037,26 @@ QOpenGLShaderProgram* q_openglshaderprogram_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-const QMetaObject* q_openglshaderprogram_meta_object(void* self);
+const QMetaObject* q_openglshaderprogram_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QOpenGLShaderProgram*
-/// @param callback const QMetaObject* func()
+/// @param self const QOpenGLShaderProgram*
+/// @param callback const QMetaObject* func(const QOpenGLShaderProgram* self)
 ///
-void q_openglshaderprogram_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_openglshaderprogram_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-const QMetaObject* q_openglshaderprogram_super_meta_object(void* self);
+const QMetaObject* q_openglshaderprogram_super_meta_object(const void* self);
 
 /// @param self QOpenGLShaderProgram*
 /// @param param1 const char*
@@ -1124,11 +1124,11 @@ void q_openglshaderprogram_remove_shader(void* self, void* shader);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#shaders)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
 /// @return libqt_list of QOpenGLShader*
 ///
-libqt_list q_openglshaderprogram_shaders(void* self);
+libqt_list q_openglshaderprogram_shaders(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#addShaderFromSourceCode)
 ///
@@ -1211,9 +1211,9 @@ bool q_openglshaderprogram_link(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QOpenGLShaderProgram*
-/// @param callback bool func()
+/// @param callback bool func(QOpenGLShaderProgram* self)
 ///
-void q_openglshaderprogram_on_link(void* self, bool (*callback)());
+void q_openglshaderprogram_on_link(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#link)
 ///
@@ -1225,17 +1225,17 @@ bool q_openglshaderprogram_super_link(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#isLinked)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-bool q_openglshaderprogram_is_linked(void* self);
+bool q_openglshaderprogram_is_linked(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#log)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-const char* q_openglshaderprogram_log(void* self);
+const char* q_openglshaderprogram_log(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#bind)
 ///
@@ -1257,15 +1257,15 @@ bool q_openglshaderprogram_create(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#programId)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-uint32_t q_openglshaderprogram_program_id(void* self);
+uint32_t q_openglshaderprogram_program_id(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#maxGeometryOutputVertices)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-int32_t q_openglshaderprogram_max_geometry_output_vertices(void* self);
+int32_t q_openglshaderprogram_max_geometry_output_vertices(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setPatchVertexCount)
 ///
@@ -1276,9 +1276,9 @@ void q_openglshaderprogram_set_patch_vertex_count(void* self, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#patchVertexCount)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-int32_t q_openglshaderprogram_patch_vertex_count(void* self);
+int32_t q_openglshaderprogram_patch_vertex_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setDefaultOuterTessellationLevels)
 ///
@@ -1289,11 +1289,11 @@ void q_openglshaderprogram_set_default_outer_tessellation_levels(void* self, lib
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#defaultOuterTessellationLevels)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
 /// @return libqt_list of float
 ///
-libqt_list q_openglshaderprogram_default_outer_tessellation_levels(void* self);
+libqt_list q_openglshaderprogram_default_outer_tessellation_levels(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setDefaultInnerTessellationLevels)
 ///
@@ -1304,11 +1304,11 @@ void q_openglshaderprogram_set_default_inner_tessellation_levels(void* self, lib
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#defaultInnerTessellationLevels)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
 /// @return libqt_list of float
 ///
-libqt_list q_openglshaderprogram_default_inner_tessellation_levels(void* self);
+libqt_list q_openglshaderprogram_default_inner_tessellation_levels(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#bindAttributeLocation)
 ///
@@ -1336,24 +1336,24 @@ void q_openglshaderprogram_bind_attribute_location3(void* self, const char* name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#attributeLocation)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param name const char*
 ///
-int32_t q_openglshaderprogram_attribute_location(void* self, const char* name);
+int32_t q_openglshaderprogram_attribute_location(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#attributeLocation)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param name char*
 ///
-int32_t q_openglshaderprogram_attribute_location2(void* self, char* name);
+int32_t q_openglshaderprogram_attribute_location2(const void* self, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#attributeLocation)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param name const char*
 ///
-int32_t q_openglshaderprogram_attribute_location3(void* self, const char* name);
+int32_t q_openglshaderprogram_attribute_location3(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1399,7 +1399,7 @@ void q_openglshaderprogram_set_attribute_value4(void* self, int location, float 
 /// @param location int
 /// @param value QVector2D*
 ///
-void q_openglshaderprogram_set_attribute_value5(void* self, int location, void* value);
+void q_openglshaderprogram_set_attribute_value5(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1407,7 +1407,7 @@ void q_openglshaderprogram_set_attribute_value5(void* self, int location, void* 
 /// @param location int
 /// @param value QVector3D*
 ///
-void q_openglshaderprogram_set_attribute_value6(void* self, int location, void* value);
+void q_openglshaderprogram_set_attribute_value6(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1415,7 +1415,7 @@ void q_openglshaderprogram_set_attribute_value6(void* self, int location, void* 
 /// @param location int
 /// @param value QVector4D*
 ///
-void q_openglshaderprogram_set_attribute_value7(void* self, int location, void* value);
+void q_openglshaderprogram_set_attribute_value7(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1423,7 +1423,7 @@ void q_openglshaderprogram_set_attribute_value7(void* self, int location, void* 
 /// @param location int
 /// @param value QColor*
 ///
-void q_openglshaderprogram_set_attribute_value8(void* self, int location, void* value);
+void q_openglshaderprogram_set_attribute_value8(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1479,7 +1479,7 @@ void q_openglshaderprogram_set_attribute_value13(void* self, const char* name, f
 /// @param name const char*
 /// @param value QVector2D*
 ///
-void q_openglshaderprogram_set_attribute_value14(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_attribute_value14(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1487,7 +1487,7 @@ void q_openglshaderprogram_set_attribute_value14(void* self, const char* name, v
 /// @param name const char*
 /// @param value QVector3D*
 ///
-void q_openglshaderprogram_set_attribute_value15(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_attribute_value15(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1495,7 +1495,7 @@ void q_openglshaderprogram_set_attribute_value15(void* self, const char* name, v
 /// @param name const char*
 /// @param value QVector4D*
 ///
-void q_openglshaderprogram_set_attribute_value16(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_attribute_value16(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1503,7 +1503,7 @@ void q_openglshaderprogram_set_attribute_value16(void* self, const char* name, v
 /// @param name const char*
 /// @param value QColor*
 ///
-void q_openglshaderprogram_set_attribute_value17(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_attribute_value17(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeValue)
 ///
@@ -1530,7 +1530,7 @@ void q_openglshaderprogram_set_attribute_array(void* self, int location, float* 
 /// @param location int
 /// @param values QVector2D*
 ///
-void q_openglshaderprogram_set_attribute_array2(void* self, int location, void* values);
+void q_openglshaderprogram_set_attribute_array2(void* self, int location, const void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -1538,7 +1538,7 @@ void q_openglshaderprogram_set_attribute_array2(void* self, int location, void* 
 /// @param location int
 /// @param values QVector3D*
 ///
-void q_openglshaderprogram_set_attribute_array3(void* self, int location, void* values);
+void q_openglshaderprogram_set_attribute_array3(void* self, int location, const void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -1546,7 +1546,7 @@ void q_openglshaderprogram_set_attribute_array3(void* self, int location, void* 
 /// @param location int
 /// @param values QVector4D*
 ///
-void q_openglshaderprogram_set_attribute_array4(void* self, int location, void* values);
+void q_openglshaderprogram_set_attribute_array4(void* self, int location, const void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -1573,7 +1573,7 @@ void q_openglshaderprogram_set_attribute_array6(void* self, const char* name, fl
 /// @param name const char*
 /// @param values QVector2D*
 ///
-void q_openglshaderprogram_set_attribute_array7(void* self, const char* name, void* values);
+void q_openglshaderprogram_set_attribute_array7(void* self, const char* name, const void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -1581,7 +1581,7 @@ void q_openglshaderprogram_set_attribute_array7(void* self, const char* name, vo
 /// @param name const char*
 /// @param values QVector3D*
 ///
-void q_openglshaderprogram_set_attribute_array8(void* self, const char* name, void* values);
+void q_openglshaderprogram_set_attribute_array8(void* self, const char* name, const void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -1589,7 +1589,7 @@ void q_openglshaderprogram_set_attribute_array8(void* self, const char* name, vo
 /// @param name const char*
 /// @param values QVector4D*
 ///
-void q_openglshaderprogram_set_attribute_array9(void* self, const char* name, void* values);
+void q_openglshaderprogram_set_attribute_array9(void* self, const char* name, const void* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -1651,24 +1651,24 @@ void q_openglshaderprogram_disable_attribute_array2(void* self, const char* name
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#uniformLocation)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param name const char*
 ///
-int32_t q_openglshaderprogram_uniform_location(void* self, const char* name);
+int32_t q_openglshaderprogram_uniform_location(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#uniformLocation)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param name char*
 ///
-int32_t q_openglshaderprogram_uniform_location2(void* self, char* name);
+int32_t q_openglshaderprogram_uniform_location2(const void* self, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#uniformLocation)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param name const char*
 ///
-int32_t q_openglshaderprogram_uniform_location3(void* self, const char* name);
+int32_t q_openglshaderprogram_uniform_location3(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1730,7 +1730,7 @@ void q_openglshaderprogram_set_uniform_value6(void* self, int location, float x,
 /// @param location int
 /// @param value QVector2D*
 ///
-void q_openglshaderprogram_set_uniform_value7(void* self, int location, void* value);
+void q_openglshaderprogram_set_uniform_value7(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1738,7 +1738,7 @@ void q_openglshaderprogram_set_uniform_value7(void* self, int location, void* va
 /// @param location int
 /// @param value QVector3D*
 ///
-void q_openglshaderprogram_set_uniform_value8(void* self, int location, void* value);
+void q_openglshaderprogram_set_uniform_value8(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1746,7 +1746,7 @@ void q_openglshaderprogram_set_uniform_value8(void* self, int location, void* va
 /// @param location int
 /// @param value QVector4D*
 ///
-void q_openglshaderprogram_set_uniform_value9(void* self, int location, void* value);
+void q_openglshaderprogram_set_uniform_value9(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1754,7 +1754,7 @@ void q_openglshaderprogram_set_uniform_value9(void* self, int location, void* va
 /// @param location int
 /// @param color QColor*
 ///
-void q_openglshaderprogram_set_uniform_value10(void* self, int location, void* color);
+void q_openglshaderprogram_set_uniform_value10(void* self, int location, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1762,7 +1762,7 @@ void q_openglshaderprogram_set_uniform_value10(void* self, int location, void* c
 /// @param location int
 /// @param point QPoint*
 ///
-void q_openglshaderprogram_set_uniform_value11(void* self, int location, void* point);
+void q_openglshaderprogram_set_uniform_value11(void* self, int location, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1770,7 +1770,7 @@ void q_openglshaderprogram_set_uniform_value11(void* self, int location, void* p
 /// @param location int
 /// @param point QPointF*
 ///
-void q_openglshaderprogram_set_uniform_value12(void* self, int location, void* point);
+void q_openglshaderprogram_set_uniform_value12(void* self, int location, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1778,7 +1778,7 @@ void q_openglshaderprogram_set_uniform_value12(void* self, int location, void* p
 /// @param location int
 /// @param size QSize*
 ///
-void q_openglshaderprogram_set_uniform_value13(void* self, int location, void* size);
+void q_openglshaderprogram_set_uniform_value13(void* self, int location, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1786,7 +1786,7 @@ void q_openglshaderprogram_set_uniform_value13(void* self, int location, void* s
 /// @param location int
 /// @param size QSizeF*
 ///
-void q_openglshaderprogram_set_uniform_value14(void* self, int location, void* size);
+void q_openglshaderprogram_set_uniform_value14(void* self, int location, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1794,7 +1794,7 @@ void q_openglshaderprogram_set_uniform_value14(void* self, int location, void* s
 /// @param location int
 /// @param value QMatrix4x4*
 ///
-void q_openglshaderprogram_set_uniform_value23(void* self, int location, void* value);
+void q_openglshaderprogram_set_uniform_value23(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1802,7 +1802,7 @@ void q_openglshaderprogram_set_uniform_value23(void* self, int location, void* v
 /// @param location int
 /// @param value QTransform*
 ///
-void q_openglshaderprogram_set_uniform_value27(void* self, int location, void* value);
+void q_openglshaderprogram_set_uniform_value27(void* self, int location, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1864,7 +1864,7 @@ void q_openglshaderprogram_set_uniform_value33(void* self, const char* name, flo
 /// @param name const char*
 /// @param value QVector2D*
 ///
-void q_openglshaderprogram_set_uniform_value34(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value34(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1872,7 +1872,7 @@ void q_openglshaderprogram_set_uniform_value34(void* self, const char* name, voi
 /// @param name const char*
 /// @param value QVector3D*
 ///
-void q_openglshaderprogram_set_uniform_value35(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value35(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1880,7 +1880,7 @@ void q_openglshaderprogram_set_uniform_value35(void* self, const char* name, voi
 /// @param name const char*
 /// @param value QVector4D*
 ///
-void q_openglshaderprogram_set_uniform_value36(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value36(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1888,7 +1888,7 @@ void q_openglshaderprogram_set_uniform_value36(void* self, const char* name, voi
 /// @param name const char*
 /// @param color QColor*
 ///
-void q_openglshaderprogram_set_uniform_value37(void* self, const char* name, void* color);
+void q_openglshaderprogram_set_uniform_value37(void* self, const char* name, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1896,7 +1896,7 @@ void q_openglshaderprogram_set_uniform_value37(void* self, const char* name, voi
 /// @param name const char*
 /// @param point QPoint*
 ///
-void q_openglshaderprogram_set_uniform_value38(void* self, const char* name, void* point);
+void q_openglshaderprogram_set_uniform_value38(void* self, const char* name, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1904,7 +1904,7 @@ void q_openglshaderprogram_set_uniform_value38(void* self, const char* name, voi
 /// @param name const char*
 /// @param point QPointF*
 ///
-void q_openglshaderprogram_set_uniform_value39(void* self, const char* name, void* point);
+void q_openglshaderprogram_set_uniform_value39(void* self, const char* name, const void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1912,7 +1912,7 @@ void q_openglshaderprogram_set_uniform_value39(void* self, const char* name, voi
 /// @param name const char*
 /// @param size QSize*
 ///
-void q_openglshaderprogram_set_uniform_value40(void* self, const char* name, void* size);
+void q_openglshaderprogram_set_uniform_value40(void* self, const char* name, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1920,7 +1920,7 @@ void q_openglshaderprogram_set_uniform_value40(void* self, const char* name, voi
 /// @param name const char*
 /// @param size QSizeF*
 ///
-void q_openglshaderprogram_set_uniform_value41(void* self, const char* name, void* size);
+void q_openglshaderprogram_set_uniform_value41(void* self, const char* name, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1928,7 +1928,7 @@ void q_openglshaderprogram_set_uniform_value41(void* self, const char* name, voi
 /// @param name const char*
 /// @param value QMatrix4x4*
 ///
-void q_openglshaderprogram_set_uniform_value50(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value50(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValue)
 ///
@@ -1936,7 +1936,7 @@ void q_openglshaderprogram_set_uniform_value50(void* self, const char* name, voi
 /// @param name const char*
 /// @param value QTransform*
 ///
-void q_openglshaderprogram_set_uniform_value54(void* self, const char* name, void* value);
+void q_openglshaderprogram_set_uniform_value54(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///
@@ -1973,7 +1973,7 @@ void q_openglshaderprogram_set_uniform_value_array3(void* self, int location, ui
 /// @param values QVector2D*
 /// @param count int
 ///
-void q_openglshaderprogram_set_uniform_value_array4(void* self, int location, void* values, int count);
+void q_openglshaderprogram_set_uniform_value_array4(void* self, int location, const void* values, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///
@@ -1982,7 +1982,7 @@ void q_openglshaderprogram_set_uniform_value_array4(void* self, int location, vo
 /// @param values QVector3D*
 /// @param count int
 ///
-void q_openglshaderprogram_set_uniform_value_array5(void* self, int location, void* values, int count);
+void q_openglshaderprogram_set_uniform_value_array5(void* self, int location, const void* values, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///
@@ -1991,7 +1991,7 @@ void q_openglshaderprogram_set_uniform_value_array5(void* self, int location, vo
 /// @param values QVector4D*
 /// @param count int
 ///
-void q_openglshaderprogram_set_uniform_value_array6(void* self, int location, void* values, int count);
+void q_openglshaderprogram_set_uniform_value_array6(void* self, int location, const void* values, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///
@@ -2000,7 +2000,7 @@ void q_openglshaderprogram_set_uniform_value_array6(void* self, int location, vo
 /// @param values QMatrix4x4*
 /// @param count int
 ///
-void q_openglshaderprogram_set_uniform_value_array15(void* self, int location, void* values, int count);
+void q_openglshaderprogram_set_uniform_value_array15(void* self, int location, const void* values, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///
@@ -2037,7 +2037,7 @@ void q_openglshaderprogram_set_uniform_value_array18(void* self, const char* nam
 /// @param values QVector2D*
 /// @param count int
 ///
-void q_openglshaderprogram_set_uniform_value_array19(void* self, const char* name, void* values, int count);
+void q_openglshaderprogram_set_uniform_value_array19(void* self, const char* name, const void* values, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///
@@ -2046,7 +2046,7 @@ void q_openglshaderprogram_set_uniform_value_array19(void* self, const char* nam
 /// @param values QVector3D*
 /// @param count int
 ///
-void q_openglshaderprogram_set_uniform_value_array20(void* self, const char* name, void* values, int count);
+void q_openglshaderprogram_set_uniform_value_array20(void* self, const char* name, const void* values, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///
@@ -2055,7 +2055,7 @@ void q_openglshaderprogram_set_uniform_value_array20(void* self, const char* nam
 /// @param values QVector4D*
 /// @param count int
 ///
-void q_openglshaderprogram_set_uniform_value_array21(void* self, const char* name, void* values, int count);
+void q_openglshaderprogram_set_uniform_value_array21(void* self, const char* name, const void* values, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setUniformValueArray)
 ///
@@ -2064,7 +2064,7 @@ void q_openglshaderprogram_set_uniform_value_array21(void* self, const char* nam
 /// @param values QMatrix4x4*
 /// @param count int
 ///
-void q_openglshaderprogram_set_uniform_value_array30(void* self, const char* name, void* values, int count);
+void q_openglshaderprogram_set_uniform_value_array30(void* self, const char* name, const void* values, int count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#hasOpenGLShaderPrograms)
 ///
@@ -2106,7 +2106,7 @@ void q_openglshaderprogram_set_attribute_array42(void* self, int location, float
 /// @param values QVector2D*
 /// @param stride int
 ///
-void q_openglshaderprogram_set_attribute_array32(void* self, int location, void* values, int stride);
+void q_openglshaderprogram_set_attribute_array32(void* self, int location, const void* values, int stride);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -2115,7 +2115,7 @@ void q_openglshaderprogram_set_attribute_array32(void* self, int location, void*
 /// @param values QVector3D*
 /// @param stride int
 ///
-void q_openglshaderprogram_set_attribute_array33(void* self, int location, void* values, int stride);
+void q_openglshaderprogram_set_attribute_array33(void* self, int location, const void* values, int stride);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -2124,7 +2124,7 @@ void q_openglshaderprogram_set_attribute_array33(void* self, int location, void*
 /// @param values QVector4D*
 /// @param stride int
 ///
-void q_openglshaderprogram_set_attribute_array34(void* self, int location, void* values, int stride);
+void q_openglshaderprogram_set_attribute_array34(void* self, int location, const void* values, int stride);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -2154,7 +2154,7 @@ void q_openglshaderprogram_set_attribute_array43(void* self, const char* name, f
 /// @param values QVector2D*
 /// @param stride int
 ///
-void q_openglshaderprogram_set_attribute_array35(void* self, const char* name, void* values, int stride);
+void q_openglshaderprogram_set_attribute_array35(void* self, const char* name, const void* values, int stride);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -2163,7 +2163,7 @@ void q_openglshaderprogram_set_attribute_array35(void* self, const char* name, v
 /// @param values QVector3D*
 /// @param stride int
 ///
-void q_openglshaderprogram_set_attribute_array36(void* self, const char* name, void* values, int stride);
+void q_openglshaderprogram_set_attribute_array36(void* self, const char* name, const void* values, int stride);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -2172,7 +2172,7 @@ void q_openglshaderprogram_set_attribute_array36(void* self, const char* name, v
 /// @param values QVector4D*
 /// @param stride int
 ///
-void q_openglshaderprogram_set_attribute_array37(void* self, const char* name, void* values, int stride);
+void q_openglshaderprogram_set_attribute_array37(void* self, const char* name, const void* values, int stride);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglshaderprogram.html#setAttributeArray)
 ///
@@ -2219,9 +2219,9 @@ bool q_openglshaderprogram_has_open_g_l_shader_programs1(void* context);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-const char* q_openglshaderprogram_object_name(void* self);
+const char* q_openglshaderprogram_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2236,33 +2236,33 @@ void q_openglshaderprogram_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-bool q_openglshaderprogram_is_widget_type(void* self);
+bool q_openglshaderprogram_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-bool q_openglshaderprogram_is_window_type(void* self);
+bool q_openglshaderprogram_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-bool q_openglshaderprogram_is_quick_item_type(void* self);
+bool q_openglshaderprogram_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-bool q_openglshaderprogram_signals_blocked(void* self);
+bool q_openglshaderprogram_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2277,9 +2277,9 @@ bool q_openglshaderprogram_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-QThread* q_openglshaderprogram_thread(void* self);
+QThread* q_openglshaderprogram_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2330,11 +2330,11 @@ void q_openglshaderprogram_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_openglshaderprogram_children(void* self);
+libqt_list q_openglshaderprogram_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2372,7 +2372,7 @@ void q_openglshaderprogram_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglshaderprogram_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_openglshaderprogram_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2383,18 +2383,18 @@ QMetaObject__Connection* q_openglshaderprogram_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_openglshaderprogram_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_openglshaderprogram_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_openglshaderprogram_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_openglshaderprogram_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2405,7 +2405,7 @@ QMetaObject__Connection* q_openglshaderprogram_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglshaderprogram_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_openglshaderprogram_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2416,24 +2416,24 @@ bool q_openglshaderprogram_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_openglshaderprogram_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_openglshaderprogram_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-bool q_openglshaderprogram_disconnect3(void* self);
+bool q_openglshaderprogram_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param receiver QObject*
 ///
-bool q_openglshaderprogram_disconnect4(void* self, void* receiver);
+bool q_openglshaderprogram_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2441,23 +2441,23 @@ bool q_openglshaderprogram_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_openglshaderprogram_disconnect5(void* param1);
+bool q_openglshaderprogram_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-void q_openglshaderprogram_dump_object_tree(void* self);
+void q_openglshaderprogram_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-void q_openglshaderprogram_dump_object_info(void* self);
+void q_openglshaderprogram_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2467,16 +2467,16 @@ void q_openglshaderprogram_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_openglshaderprogram_set_property(void* self, const char* name, void* value);
+bool q_openglshaderprogram_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param name const char*
 ///
-QVariant* q_openglshaderprogram_property(void* self, const char* name);
+QVariant* q_openglshaderprogram_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2484,9 +2484,9 @@ QVariant* q_openglshaderprogram_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-const char** q_openglshaderprogram_dynamic_property_names(void* self);
+const char** q_openglshaderprogram_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2500,9 +2500,9 @@ QBindingStorage* q_openglshaderprogram_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-const QBindingStorage* q_openglshaderprogram_binding_storage2(void* self);
+const QBindingStorage* q_openglshaderprogram_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2525,18 +2525,18 @@ void q_openglshaderprogram_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-QObject* q_openglshaderprogram_parent(void* self);
+QObject* q_openglshaderprogram_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param classname const char*
 ///
-bool q_openglshaderprogram_inherits(void* self, const char* classname);
+bool q_openglshaderprogram_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2576,7 +2576,7 @@ int32_t q_openglshaderprogram_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglshaderprogram_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_openglshaderprogram_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2588,59 +2588,59 @@ QMetaObject__Connection* q_openglshaderprogram_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglshaderprogram_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_openglshaderprogram_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_openglshaderprogram_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_openglshaderprogram_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param signal const char*
 ///
-bool q_openglshaderprogram_disconnect1(void* self, const char* signal);
+bool q_openglshaderprogram_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShaderProgram*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_openglshaderprogram_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_openglshaderprogram_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_openglshaderprogram_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_openglshaderprogram_disconnect23(void* self, void* receiver, const char* member);
+bool q_openglshaderprogram_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QOpenGLShaderProgram*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_openglshaderprogram_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2836,7 +2836,7 @@ void q_openglshaderprogram_on_custom_event(void* self, void (*callback)(void*, v
 /// @param self QOpenGLShaderProgram*
 /// @param signal QMetaMethod*
 ///
-void q_openglshaderprogram_connect_notify(void* self, void* signal);
+void q_openglshaderprogram_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2847,7 +2847,7 @@ void q_openglshaderprogram_connect_notify(void* self, void* signal);
 /// @param self QOpenGLShaderProgram*
 /// @param signal QMetaMethod*
 ///
-void q_openglshaderprogram_super_connect_notify(void* self, void* signal);
+void q_openglshaderprogram_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2858,7 +2858,7 @@ void q_openglshaderprogram_super_connect_notify(void* self, void* signal);
 /// @param self QOpenGLShaderProgram*
 /// @param callback void func(QOpenGLShaderProgram* self, QMetaMethod* signal)
 ///
-void q_openglshaderprogram_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_openglshaderprogram_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2869,7 +2869,7 @@ void q_openglshaderprogram_on_connect_notify(void* self, void (*callback)(void*,
 /// @param self QOpenGLShaderProgram*
 /// @param signal QMetaMethod*
 ///
-void q_openglshaderprogram_disconnect_notify(void* self, void* signal);
+void q_openglshaderprogram_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2880,7 +2880,7 @@ void q_openglshaderprogram_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLShaderProgram*
 /// @param signal QMetaMethod*
 ///
-void q_openglshaderprogram_super_disconnect_notify(void* self, void* signal);
+void q_openglshaderprogram_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2891,7 +2891,7 @@ void q_openglshaderprogram_super_disconnect_notify(void* self, void* signal);
 /// @param self QOpenGLShaderProgram*
 /// @param callback void func(QOpenGLShaderProgram* self, QMetaMethod* signal)
 ///
-void q_openglshaderprogram_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_openglshaderprogram_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2899,9 +2899,9 @@ void q_openglshaderprogram_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-QObject* q_openglshaderprogram_sender(void* self);
+QObject* q_openglshaderprogram_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2909,9 +2909,9 @@ QObject* q_openglshaderprogram_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-QObject* q_openglshaderprogram_super_sender(void* self);
+QObject* q_openglshaderprogram_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2919,10 +2919,10 @@ QObject* q_openglshaderprogram_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
-/// @param callback QObject* func()
+/// @param self const QOpenGLShaderProgram*
+/// @param callback QObject* func(QOpenGLShaderProgram* self)
 ///
-void q_openglshaderprogram_on_sender(void* self, QObject* (*callback)());
+void q_openglshaderprogram_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2930,9 +2930,9 @@ void q_openglshaderprogram_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-int32_t q_openglshaderprogram_sender_signal_index(void* self);
+int32_t q_openglshaderprogram_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2940,9 +2940,9 @@ int32_t q_openglshaderprogram_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 ///
-int32_t q_openglshaderprogram_super_sender_signal_index(void* self);
+int32_t q_openglshaderprogram_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2950,10 +2950,10 @@ int32_t q_openglshaderprogram_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
-/// @param callback int32_t func()
+/// @param self const QOpenGLShaderProgram*
+/// @param callback int32_t func(QOpenGLShaderProgram* self)
 ///
-void q_openglshaderprogram_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_openglshaderprogram_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -2961,10 +2961,10 @@ void q_openglshaderprogram_on_sender_signal_index(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param signal const char*
 ///
-int32_t q_openglshaderprogram_receivers(void* self, const char* signal);
+int32_t q_openglshaderprogram_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2972,10 +2972,10 @@ int32_t q_openglshaderprogram_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param signal const char*
 ///
-int32_t q_openglshaderprogram_super_receivers(void* self, const char* signal);
+int32_t q_openglshaderprogram_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2983,10 +2983,10 @@ int32_t q_openglshaderprogram_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param callback int32_t func(QOpenGLShaderProgram* self, const char* signal)
 ///
-void q_openglshaderprogram_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_openglshaderprogram_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2994,10 +2994,10 @@ void q_openglshaderprogram_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param signal QMetaMethod*
 ///
-bool q_openglshaderprogram_is_signal_connected(void* self, void* signal);
+bool q_openglshaderprogram_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3005,10 +3005,10 @@ bool q_openglshaderprogram_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param signal QMetaMethod*
 ///
-bool q_openglshaderprogram_super_is_signal_connected(void* self, void* signal);
+bool q_openglshaderprogram_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3016,10 +3016,10 @@ bool q_openglshaderprogram_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLShaderProgram*
+/// @param self const QOpenGLShaderProgram*
 /// @param callback bool func(QOpenGLShaderProgram* self, QMetaMethod* signal)
 ///
-void q_openglshaderprogram_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_openglshaderprogram_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

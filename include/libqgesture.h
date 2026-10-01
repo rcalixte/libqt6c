@@ -24,26 +24,26 @@ QGesture* q_gesture_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-const QMetaObject* q_gesture_meta_object(void* self);
+const QMetaObject* q_gesture_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QGesture*
-/// @param callback const QMetaObject* func()
+/// @param self const QGesture*
+/// @param callback const QMetaObject* func(const QGesture* self)
 ///
-void q_gesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_gesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-const QMetaObject* q_gesture_super_meta_object(void* self);
+const QMetaObject* q_gesture_super_meta_object(const void* self);
 
 /// @param self QGesture*
 /// @param param1 const char*
@@ -97,38 +97,38 @@ const char* q_gesture_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureType)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
 /// @return enum Qt__GestureType
 ///
-int32_t q_gesture_gesture_type(void* self);
+int32_t q_gesture_gesture_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
 /// @return enum Qt__GestureState
 ///
-int32_t q_gesture_state(void* self);
+int32_t q_gesture_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-QPointF* q_gesture_hot_spot(void* self);
+QPointF* q_gesture_hot_spot(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#setHotSpot)
 ///
 /// @param self QGesture*
 /// @param value QPointF*
 ///
-void q_gesture_set_hot_spot(void* self, void* value);
+void q_gesture_set_hot_spot(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hasHotSpot)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-bool q_gesture_has_hot_spot(void* self);
+bool q_gesture_has_hot_spot(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#unsetHotSpot)
 ///
@@ -145,11 +145,11 @@ void q_gesture_set_gesture_cancel_policy(void* self, int32_t policy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
 ///
-int32_t q_gesture_gesture_cancel_policy(void* self);
+int32_t q_gesture_gesture_cancel_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -176,9 +176,9 @@ const char* q_gesture_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-const char* q_gesture_object_name(void* self);
+const char* q_gesture_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -193,33 +193,33 @@ void q_gesture_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-bool q_gesture_is_widget_type(void* self);
+bool q_gesture_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-bool q_gesture_is_window_type(void* self);
+bool q_gesture_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-bool q_gesture_is_quick_item_type(void* self);
+bool q_gesture_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-bool q_gesture_signals_blocked(void* self);
+bool q_gesture_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -234,9 +234,9 @@ bool q_gesture_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-QThread* q_gesture_thread(void* self);
+QThread* q_gesture_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -287,11 +287,11 @@ void q_gesture_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_gesture_children(void* self);
+libqt_list q_gesture_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -329,7 +329,7 @@ void q_gesture_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_gesture_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_gesture_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -340,18 +340,18 @@ QMetaObject__Connection* q_gesture_connect(void* sender, const char* signal, voi
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_gesture_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_gesture_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_gesture_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_gesture_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -362,7 +362,7 @@ QMetaObject__Connection* q_gesture_connect3(void* self, void* sender, const char
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_gesture_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_gesture_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -373,24 +373,24 @@ bool q_gesture_disconnect(void* sender, const char* signal, void* receiver, cons
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_gesture_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_gesture_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-bool q_gesture_disconnect3(void* self);
+bool q_gesture_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param receiver QObject*
 ///
-bool q_gesture_disconnect4(void* self, void* receiver);
+bool q_gesture_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -398,23 +398,23 @@ bool q_gesture_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_gesture_disconnect5(void* param1);
+bool q_gesture_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-void q_gesture_dump_object_tree(void* self);
+void q_gesture_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-void q_gesture_dump_object_info(void* self);
+void q_gesture_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -424,16 +424,16 @@ void q_gesture_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_gesture_set_property(void* self, const char* name, void* value);
+bool q_gesture_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param name const char*
 ///
-QVariant* q_gesture_property(void* self, const char* name);
+QVariant* q_gesture_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -441,9 +441,9 @@ QVariant* q_gesture_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-const char** q_gesture_dynamic_property_names(void* self);
+const char** q_gesture_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -457,9 +457,9 @@ QBindingStorage* q_gesture_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-const QBindingStorage* q_gesture_binding_storage2(void* self);
+const QBindingStorage* q_gesture_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -482,18 +482,18 @@ void q_gesture_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-QObject* q_gesture_parent(void* self);
+QObject* q_gesture_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param classname const char*
 ///
-bool q_gesture_inherits(void* self, const char* classname);
+bool q_gesture_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -533,7 +533,7 @@ int32_t q_gesture_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_gesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_gesture_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -545,59 +545,59 @@ QMetaObject__Connection* q_gesture_connect5(void* sender, const char* signal, vo
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_gesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_gesture_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_gesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_gesture_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param signal const char*
 ///
-bool q_gesture_disconnect1(void* self, const char* signal);
+bool q_gesture_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGesture*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_gesture_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_gesture_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_gesture_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_gesture_disconnect23(void* self, void* receiver, const char* member);
+bool q_gesture_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QGesture*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_gesture_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -793,7 +793,7 @@ void q_gesture_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QGesture*
 /// @param signal QMetaMethod*
 ///
-void q_gesture_connect_notify(void* self, void* signal);
+void q_gesture_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -804,7 +804,7 @@ void q_gesture_connect_notify(void* self, void* signal);
 /// @param self QGesture*
 /// @param signal QMetaMethod*
 ///
-void q_gesture_super_connect_notify(void* self, void* signal);
+void q_gesture_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -815,7 +815,7 @@ void q_gesture_super_connect_notify(void* self, void* signal);
 /// @param self QGesture*
 /// @param callback void func(QGesture* self, QMetaMethod* signal)
 ///
-void q_gesture_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_gesture_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -826,7 +826,7 @@ void q_gesture_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QGesture*
 /// @param signal QMetaMethod*
 ///
-void q_gesture_disconnect_notify(void* self, void* signal);
+void q_gesture_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -837,7 +837,7 @@ void q_gesture_disconnect_notify(void* self, void* signal);
 /// @param self QGesture*
 /// @param signal QMetaMethod*
 ///
-void q_gesture_super_disconnect_notify(void* self, void* signal);
+void q_gesture_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -848,7 +848,7 @@ void q_gesture_super_disconnect_notify(void* self, void* signal);
 /// @param self QGesture*
 /// @param callback void func(QGesture* self, QMetaMethod* signal)
 ///
-void q_gesture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_gesture_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -856,9 +856,9 @@ void q_gesture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-QObject* q_gesture_sender(void* self);
+QObject* q_gesture_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -866,9 +866,9 @@ QObject* q_gesture_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-QObject* q_gesture_super_sender(void* self);
+QObject* q_gesture_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -876,10 +876,10 @@ QObject* q_gesture_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGesture*
-/// @param callback QObject* func()
+/// @param self const QGesture*
+/// @param callback QObject* func(QGesture* self)
 ///
-void q_gesture_on_sender(void* self, QObject* (*callback)());
+void q_gesture_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -887,9 +887,9 @@ void q_gesture_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-int32_t q_gesture_sender_signal_index(void* self);
+int32_t q_gesture_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -897,9 +897,9 @@ int32_t q_gesture_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 ///
-int32_t q_gesture_super_sender_signal_index(void* self);
+int32_t q_gesture_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -907,10 +907,10 @@ int32_t q_gesture_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGesture*
-/// @param callback int32_t func()
+/// @param self const QGesture*
+/// @param callback int32_t func(QGesture* self)
 ///
-void q_gesture_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_gesture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -918,10 +918,10 @@ void q_gesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param signal const char*
 ///
-int32_t q_gesture_receivers(void* self, const char* signal);
+int32_t q_gesture_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -929,10 +929,10 @@ int32_t q_gesture_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param signal const char*
 ///
-int32_t q_gesture_super_receivers(void* self, const char* signal);
+int32_t q_gesture_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -940,10 +940,10 @@ int32_t q_gesture_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param callback int32_t func(QGesture* self, const char* signal)
 ///
-void q_gesture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_gesture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -951,10 +951,10 @@ void q_gesture_on_receivers(void* self, int32_t (*callback)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_gesture_is_signal_connected(void* self, void* signal);
+bool q_gesture_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -962,10 +962,10 @@ bool q_gesture_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_gesture_super_is_signal_connected(void* self, void* signal);
+bool q_gesture_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -973,10 +973,10 @@ bool q_gesture_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGesture*
+/// @param self const QGesture*
 /// @param callback bool func(QGesture* self, QMetaMethod* signal)
 ///
-void q_gesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_gesture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1013,26 +1013,26 @@ QPanGesture* q_pangesture_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-const QMetaObject* q_pangesture_meta_object(void* self);
+const QMetaObject* q_pangesture_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPanGesture*
-/// @param callback const QMetaObject* func()
+/// @param self const QPanGesture*
+/// @param callback const QMetaObject* func(const QPanGesture* self)
 ///
-void q_pangesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_pangesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-const QMetaObject* q_pangesture_super_meta_object(void* self);
+const QMetaObject* q_pangesture_super_meta_object(const void* self);
 
 /// @param self QPanGesture*
 /// @param param1 const char*
@@ -1086,41 +1086,41 @@ const char* q_pangesture_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpangesture.html#lastOffset)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-QPointF* q_pangesture_last_offset(void* self);
+QPointF* q_pangesture_last_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpangesture.html#offset)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-QPointF* q_pangesture_offset(void* self);
+QPointF* q_pangesture_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpangesture.html#delta)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-QPointF* q_pangesture_delta(void* self);
+QPointF* q_pangesture_delta(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpangesture.html#acceleration)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-double q_pangesture_acceleration(void* self);
+double q_pangesture_acceleration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpangesture.html#setLastOffset)
 ///
 /// @param self QPanGesture*
 /// @param value QPointF*
 ///
-void q_pangesture_set_last_offset(void* self, void* value);
+void q_pangesture_set_last_offset(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpangesture.html#setOffset)
 ///
 /// @param self QPanGesture*
 /// @param value QPointF*
 ///
-void q_pangesture_set_offset(void* self, void* value);
+void q_pangesture_set_offset(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpangesture.html#setAcceleration)
 ///
@@ -1152,29 +1152,29 @@ const char* q_pangesture_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureType)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
 /// @return enum Qt__GestureType
 ///
-int32_t q_pangesture_gesture_type(void* self);
+int32_t q_pangesture_gesture_type(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
 /// @return enum Qt__GestureState
 ///
-int32_t q_pangesture_state(void* self);
+int32_t q_pangesture_state(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-QPointF* q_pangesture_hot_spot(void* self);
+QPointF* q_pangesture_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -1183,15 +1183,15 @@ QPointF* q_pangesture_hot_spot(void* self);
 /// @param self QPanGesture*
 /// @param value QPointF*
 ///
-void q_pangesture_set_hot_spot(void* self, void* value);
+void q_pangesture_set_hot_spot(void* self, const void* value);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hasHotSpot)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-bool q_pangesture_has_hot_spot(void* self);
+bool q_pangesture_has_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -1214,11 +1214,11 @@ void q_pangesture_set_gesture_cancel_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
 ///
-int32_t q_pangesture_gesture_cancel_policy(void* self);
+int32_t q_pangesture_gesture_cancel_policy(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1226,9 +1226,9 @@ int32_t q_pangesture_gesture_cancel_policy(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-const char* q_pangesture_object_name(void* self);
+const char* q_pangesture_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1243,33 +1243,33 @@ void q_pangesture_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-bool q_pangesture_is_widget_type(void* self);
+bool q_pangesture_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-bool q_pangesture_is_window_type(void* self);
+bool q_pangesture_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-bool q_pangesture_is_quick_item_type(void* self);
+bool q_pangesture_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-bool q_pangesture_signals_blocked(void* self);
+bool q_pangesture_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1284,9 +1284,9 @@ bool q_pangesture_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-QThread* q_pangesture_thread(void* self);
+QThread* q_pangesture_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1337,11 +1337,11 @@ void q_pangesture_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_pangesture_children(void* self);
+libqt_list q_pangesture_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1379,7 +1379,7 @@ void q_pangesture_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_pangesture_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_pangesture_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1390,18 +1390,18 @@ QMetaObject__Connection* q_pangesture_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_pangesture_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_pangesture_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_pangesture_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_pangesture_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1412,7 +1412,7 @@ QMetaObject__Connection* q_pangesture_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_pangesture_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_pangesture_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1423,24 +1423,24 @@ bool q_pangesture_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_pangesture_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_pangesture_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-bool q_pangesture_disconnect3(void* self);
+bool q_pangesture_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param receiver QObject*
 ///
-bool q_pangesture_disconnect4(void* self, void* receiver);
+bool q_pangesture_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1448,23 +1448,23 @@ bool q_pangesture_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_pangesture_disconnect5(void* param1);
+bool q_pangesture_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-void q_pangesture_dump_object_tree(void* self);
+void q_pangesture_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-void q_pangesture_dump_object_info(void* self);
+void q_pangesture_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1474,16 +1474,16 @@ void q_pangesture_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_pangesture_set_property(void* self, const char* name, void* value);
+bool q_pangesture_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param name const char*
 ///
-QVariant* q_pangesture_property(void* self, const char* name);
+QVariant* q_pangesture_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1491,9 +1491,9 @@ QVariant* q_pangesture_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-const char** q_pangesture_dynamic_property_names(void* self);
+const char** q_pangesture_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1507,9 +1507,9 @@ QBindingStorage* q_pangesture_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-const QBindingStorage* q_pangesture_binding_storage2(void* self);
+const QBindingStorage* q_pangesture_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1532,18 +1532,18 @@ void q_pangesture_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-QObject* q_pangesture_parent(void* self);
+QObject* q_pangesture_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param classname const char*
 ///
-bool q_pangesture_inherits(void* self, const char* classname);
+bool q_pangesture_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1583,7 +1583,7 @@ int32_t q_pangesture_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pangesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_pangesture_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1595,59 +1595,59 @@ QMetaObject__Connection* q_pangesture_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pangesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_pangesture_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pangesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_pangesture_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param signal const char*
 ///
-bool q_pangesture_disconnect1(void* self, const char* signal);
+bool q_pangesture_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPanGesture*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_pangesture_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_pangesture_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_pangesture_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_pangesture_disconnect23(void* self, void* receiver, const char* member);
+bool q_pangesture_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPanGesture*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_pangesture_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1843,7 +1843,7 @@ void q_pangesture_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QPanGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pangesture_connect_notify(void* self, void* signal);
+void q_pangesture_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1854,7 +1854,7 @@ void q_pangesture_connect_notify(void* self, void* signal);
 /// @param self QPanGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pangesture_super_connect_notify(void* self, void* signal);
+void q_pangesture_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1865,7 +1865,7 @@ void q_pangesture_super_connect_notify(void* self, void* signal);
 /// @param self QPanGesture*
 /// @param callback void func(QPanGesture* self, QMetaMethod* signal)
 ///
-void q_pangesture_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_pangesture_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1876,7 +1876,7 @@ void q_pangesture_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QPanGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pangesture_disconnect_notify(void* self, void* signal);
+void q_pangesture_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1887,7 +1887,7 @@ void q_pangesture_disconnect_notify(void* self, void* signal);
 /// @param self QPanGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pangesture_super_disconnect_notify(void* self, void* signal);
+void q_pangesture_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1898,7 +1898,7 @@ void q_pangesture_super_disconnect_notify(void* self, void* signal);
 /// @param self QPanGesture*
 /// @param callback void func(QPanGesture* self, QMetaMethod* signal)
 ///
-void q_pangesture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_pangesture_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1906,9 +1906,9 @@ void q_pangesture_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-QObject* q_pangesture_sender(void* self);
+QObject* q_pangesture_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1916,9 +1916,9 @@ QObject* q_pangesture_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-QObject* q_pangesture_super_sender(void* self);
+QObject* q_pangesture_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1926,10 +1926,10 @@ QObject* q_pangesture_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPanGesture*
-/// @param callback QObject* func()
+/// @param self const QPanGesture*
+/// @param callback QObject* func(QPanGesture* self)
 ///
-void q_pangesture_on_sender(void* self, QObject* (*callback)());
+void q_pangesture_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1937,9 +1937,9 @@ void q_pangesture_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-int32_t q_pangesture_sender_signal_index(void* self);
+int32_t q_pangesture_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1947,9 +1947,9 @@ int32_t q_pangesture_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 ///
-int32_t q_pangesture_super_sender_signal_index(void* self);
+int32_t q_pangesture_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1957,10 +1957,10 @@ int32_t q_pangesture_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPanGesture*
-/// @param callback int32_t func()
+/// @param self const QPanGesture*
+/// @param callback int32_t func(QPanGesture* self)
 ///
-void q_pangesture_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_pangesture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1968,10 +1968,10 @@ void q_pangesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param signal const char*
 ///
-int32_t q_pangesture_receivers(void* self, const char* signal);
+int32_t q_pangesture_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1979,10 +1979,10 @@ int32_t q_pangesture_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param signal const char*
 ///
-int32_t q_pangesture_super_receivers(void* self, const char* signal);
+int32_t q_pangesture_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1990,10 +1990,10 @@ int32_t q_pangesture_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param callback int32_t func(QPanGesture* self, const char* signal)
 ///
-void q_pangesture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_pangesture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2001,10 +2001,10 @@ void q_pangesture_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_pangesture_is_signal_connected(void* self, void* signal);
+bool q_pangesture_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2012,10 +2012,10 @@ bool q_pangesture_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_pangesture_super_is_signal_connected(void* self, void* signal);
+bool q_pangesture_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -2023,10 +2023,10 @@ bool q_pangesture_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPanGesture*
+/// @param self const QPanGesture*
 /// @param callback bool func(QPanGesture* self, QMetaMethod* signal)
 ///
-void q_pangesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_pangesture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -2063,26 +2063,26 @@ QPinchGesture* q_pinchgesture_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-const QMetaObject* q_pinchgesture_meta_object(void* self);
+const QMetaObject* q_pinchgesture_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPinchGesture*
-/// @param callback const QMetaObject* func()
+/// @param self const QPinchGesture*
+/// @param callback const QMetaObject* func(const QPinchGesture* self)
 ///
-void q_pinchgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_pinchgesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-const QMetaObject* q_pinchgesture_super_meta_object(void* self);
+const QMetaObject* q_pinchgesture_super_meta_object(const void* self);
 
 /// @param self QPinchGesture*
 /// @param param1 const char*
@@ -2136,11 +2136,11 @@ const char* q_pinchgesture_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#totalChangeFlags)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
 /// @return flag of enum QPinchGesture__ChangeFlag
 ///
-int32_t q_pinchgesture_total_change_flags(void* self);
+int32_t q_pinchgesture_total_change_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#setTotalChangeFlags)
 ///
@@ -2151,11 +2151,11 @@ void q_pinchgesture_set_total_change_flags(void* self, int32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#changeFlags)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
 /// @return flag of enum QPinchGesture__ChangeFlag
 ///
-int32_t q_pinchgesture_change_flags(void* self);
+int32_t q_pinchgesture_change_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#setChangeFlags)
 ///
@@ -2166,60 +2166,60 @@ void q_pinchgesture_set_change_flags(void* self, int32_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#startCenterPoint)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-QPointF* q_pinchgesture_start_center_point(void* self);
+QPointF* q_pinchgesture_start_center_point(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#lastCenterPoint)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-QPointF* q_pinchgesture_last_center_point(void* self);
+QPointF* q_pinchgesture_last_center_point(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#centerPoint)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-QPointF* q_pinchgesture_center_point(void* self);
+QPointF* q_pinchgesture_center_point(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#setStartCenterPoint)
 ///
 /// @param self QPinchGesture*
 /// @param value QPointF*
 ///
-void q_pinchgesture_set_start_center_point(void* self, void* value);
+void q_pinchgesture_set_start_center_point(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#setLastCenterPoint)
 ///
 /// @param self QPinchGesture*
 /// @param value QPointF*
 ///
-void q_pinchgesture_set_last_center_point(void* self, void* value);
+void q_pinchgesture_set_last_center_point(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#setCenterPoint)
 ///
 /// @param self QPinchGesture*
 /// @param value QPointF*
 ///
-void q_pinchgesture_set_center_point(void* self, void* value);
+void q_pinchgesture_set_center_point(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#totalScaleFactor)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-double q_pinchgesture_total_scale_factor(void* self);
+double q_pinchgesture_total_scale_factor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#lastScaleFactor)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-double q_pinchgesture_last_scale_factor(void* self);
+double q_pinchgesture_last_scale_factor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#scaleFactor)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-double q_pinchgesture_scale_factor(void* self);
+double q_pinchgesture_scale_factor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#setTotalScaleFactor)
 ///
@@ -2244,21 +2244,21 @@ void q_pinchgesture_set_scale_factor(void* self, double value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#totalRotationAngle)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-double q_pinchgesture_total_rotation_angle(void* self);
+double q_pinchgesture_total_rotation_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#lastRotationAngle)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-double q_pinchgesture_last_rotation_angle(void* self);
+double q_pinchgesture_last_rotation_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#rotationAngle)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-double q_pinchgesture_rotation_angle(void* self);
+double q_pinchgesture_rotation_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpinchgesture.html#setTotalRotationAngle)
 ///
@@ -2304,29 +2304,29 @@ const char* q_pinchgesture_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureType)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
 /// @return enum Qt__GestureType
 ///
-int32_t q_pinchgesture_gesture_type(void* self);
+int32_t q_pinchgesture_gesture_type(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
 /// @return enum Qt__GestureState
 ///
-int32_t q_pinchgesture_state(void* self);
+int32_t q_pinchgesture_state(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-QPointF* q_pinchgesture_hot_spot(void* self);
+QPointF* q_pinchgesture_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -2335,15 +2335,15 @@ QPointF* q_pinchgesture_hot_spot(void* self);
 /// @param self QPinchGesture*
 /// @param value QPointF*
 ///
-void q_pinchgesture_set_hot_spot(void* self, void* value);
+void q_pinchgesture_set_hot_spot(void* self, const void* value);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hasHotSpot)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-bool q_pinchgesture_has_hot_spot(void* self);
+bool q_pinchgesture_has_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -2366,11 +2366,11 @@ void q_pinchgesture_set_gesture_cancel_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
 ///
-int32_t q_pinchgesture_gesture_cancel_policy(void* self);
+int32_t q_pinchgesture_gesture_cancel_policy(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2378,9 +2378,9 @@ int32_t q_pinchgesture_gesture_cancel_policy(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-const char* q_pinchgesture_object_name(void* self);
+const char* q_pinchgesture_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2395,33 +2395,33 @@ void q_pinchgesture_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-bool q_pinchgesture_is_widget_type(void* self);
+bool q_pinchgesture_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-bool q_pinchgesture_is_window_type(void* self);
+bool q_pinchgesture_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-bool q_pinchgesture_is_quick_item_type(void* self);
+bool q_pinchgesture_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-bool q_pinchgesture_signals_blocked(void* self);
+bool q_pinchgesture_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2436,9 +2436,9 @@ bool q_pinchgesture_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-QThread* q_pinchgesture_thread(void* self);
+QThread* q_pinchgesture_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2489,11 +2489,11 @@ void q_pinchgesture_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_pinchgesture_children(void* self);
+libqt_list q_pinchgesture_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2531,7 +2531,7 @@ void q_pinchgesture_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_pinchgesture_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_pinchgesture_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2542,18 +2542,18 @@ QMetaObject__Connection* q_pinchgesture_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_pinchgesture_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_pinchgesture_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_pinchgesture_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_pinchgesture_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2564,7 +2564,7 @@ QMetaObject__Connection* q_pinchgesture_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_pinchgesture_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_pinchgesture_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2575,24 +2575,24 @@ bool q_pinchgesture_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_pinchgesture_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_pinchgesture_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-bool q_pinchgesture_disconnect3(void* self);
+bool q_pinchgesture_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param receiver QObject*
 ///
-bool q_pinchgesture_disconnect4(void* self, void* receiver);
+bool q_pinchgesture_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2600,23 +2600,23 @@ bool q_pinchgesture_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_pinchgesture_disconnect5(void* param1);
+bool q_pinchgesture_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-void q_pinchgesture_dump_object_tree(void* self);
+void q_pinchgesture_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-void q_pinchgesture_dump_object_info(void* self);
+void q_pinchgesture_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2626,16 +2626,16 @@ void q_pinchgesture_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_pinchgesture_set_property(void* self, const char* name, void* value);
+bool q_pinchgesture_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param name const char*
 ///
-QVariant* q_pinchgesture_property(void* self, const char* name);
+QVariant* q_pinchgesture_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -2643,9 +2643,9 @@ QVariant* q_pinchgesture_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-const char** q_pinchgesture_dynamic_property_names(void* self);
+const char** q_pinchgesture_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2659,9 +2659,9 @@ QBindingStorage* q_pinchgesture_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-const QBindingStorage* q_pinchgesture_binding_storage2(void* self);
+const QBindingStorage* q_pinchgesture_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2684,18 +2684,18 @@ void q_pinchgesture_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-QObject* q_pinchgesture_parent(void* self);
+QObject* q_pinchgesture_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param classname const char*
 ///
-bool q_pinchgesture_inherits(void* self, const char* classname);
+bool q_pinchgesture_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -2735,7 +2735,7 @@ int32_t q_pinchgesture_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pinchgesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_pinchgesture_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -2747,59 +2747,59 @@ QMetaObject__Connection* q_pinchgesture_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pinchgesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_pinchgesture_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_pinchgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_pinchgesture_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param signal const char*
 ///
-bool q_pinchgesture_disconnect1(void* self, const char* signal);
+bool q_pinchgesture_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPinchGesture*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_pinchgesture_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_pinchgesture_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_pinchgesture_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_pinchgesture_disconnect23(void* self, void* receiver, const char* member);
+bool q_pinchgesture_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPinchGesture*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_pinchgesture_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2995,7 +2995,7 @@ void q_pinchgesture_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pinchgesture_connect_notify(void* self, void* signal);
+void q_pinchgesture_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3006,7 +3006,7 @@ void q_pinchgesture_connect_notify(void* self, void* signal);
 /// @param self QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pinchgesture_super_connect_notify(void* self, void* signal);
+void q_pinchgesture_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3017,7 +3017,7 @@ void q_pinchgesture_super_connect_notify(void* self, void* signal);
 /// @param self QPinchGesture*
 /// @param callback void func(QPinchGesture* self, QMetaMethod* signal)
 ///
-void q_pinchgesture_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_pinchgesture_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3028,7 +3028,7 @@ void q_pinchgesture_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pinchgesture_disconnect_notify(void* self, void* signal);
+void q_pinchgesture_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3039,7 +3039,7 @@ void q_pinchgesture_disconnect_notify(void* self, void* signal);
 /// @param self QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-void q_pinchgesture_super_disconnect_notify(void* self, void* signal);
+void q_pinchgesture_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3050,7 +3050,7 @@ void q_pinchgesture_super_disconnect_notify(void* self, void* signal);
 /// @param self QPinchGesture*
 /// @param callback void func(QPinchGesture* self, QMetaMethod* signal)
 ///
-void q_pinchgesture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_pinchgesture_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3058,9 +3058,9 @@ void q_pinchgesture_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-QObject* q_pinchgesture_sender(void* self);
+QObject* q_pinchgesture_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3068,9 +3068,9 @@ QObject* q_pinchgesture_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-QObject* q_pinchgesture_super_sender(void* self);
+QObject* q_pinchgesture_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3078,10 +3078,10 @@ QObject* q_pinchgesture_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPinchGesture*
-/// @param callback QObject* func()
+/// @param self const QPinchGesture*
+/// @param callback QObject* func(QPinchGesture* self)
 ///
-void q_pinchgesture_on_sender(void* self, QObject* (*callback)());
+void q_pinchgesture_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3089,9 +3089,9 @@ void q_pinchgesture_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-int32_t q_pinchgesture_sender_signal_index(void* self);
+int32_t q_pinchgesture_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3099,9 +3099,9 @@ int32_t q_pinchgesture_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 ///
-int32_t q_pinchgesture_super_sender_signal_index(void* self);
+int32_t q_pinchgesture_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3109,10 +3109,10 @@ int32_t q_pinchgesture_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPinchGesture*
-/// @param callback int32_t func()
+/// @param self const QPinchGesture*
+/// @param callback int32_t func(QPinchGesture* self)
 ///
-void q_pinchgesture_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_pinchgesture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3120,10 +3120,10 @@ void q_pinchgesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param signal const char*
 ///
-int32_t q_pinchgesture_receivers(void* self, const char* signal);
+int32_t q_pinchgesture_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3131,10 +3131,10 @@ int32_t q_pinchgesture_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param signal const char*
 ///
-int32_t q_pinchgesture_super_receivers(void* self, const char* signal);
+int32_t q_pinchgesture_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3142,10 +3142,10 @@ int32_t q_pinchgesture_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param callback int32_t func(QPinchGesture* self, const char* signal)
 ///
-void q_pinchgesture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_pinchgesture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3153,10 +3153,10 @@ void q_pinchgesture_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_pinchgesture_is_signal_connected(void* self, void* signal);
+bool q_pinchgesture_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3164,10 +3164,10 @@ bool q_pinchgesture_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_pinchgesture_super_is_signal_connected(void* self, void* signal);
+bool q_pinchgesture_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3175,10 +3175,10 @@ bool q_pinchgesture_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPinchGesture*
+/// @param self const QPinchGesture*
 /// @param callback bool func(QPinchGesture* self, QMetaMethod* signal)
 ///
-void q_pinchgesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_pinchgesture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3215,26 +3215,26 @@ QSwipeGesture* q_swipegesture_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-const QMetaObject* q_swipegesture_meta_object(void* self);
+const QMetaObject* q_swipegesture_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSwipeGesture*
-/// @param callback const QMetaObject* func()
+/// @param self const QSwipeGesture*
+/// @param callback const QMetaObject* func(const QSwipeGesture* self)
 ///
-void q_swipegesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_swipegesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-const QMetaObject* q_swipegesture_super_meta_object(void* self);
+const QMetaObject* q_swipegesture_super_meta_object(const void* self);
 
 /// @param self QSwipeGesture*
 /// @param param1 const char*
@@ -3288,25 +3288,25 @@ const char* q_swipegesture_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qswipegesture.html#horizontalDirection)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
 /// @return enum QSwipeGesture__SwipeDirection
 ///
-int32_t q_swipegesture_horizontal_direction(void* self);
+int32_t q_swipegesture_horizontal_direction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qswipegesture.html#verticalDirection)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
 /// @return enum QSwipeGesture__SwipeDirection
 ///
-int32_t q_swipegesture_vertical_direction(void* self);
+int32_t q_swipegesture_vertical_direction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qswipegesture.html#swipeAngle)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-double q_swipegesture_swipe_angle(void* self);
+double q_swipegesture_swipe_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qswipegesture.html#setSwipeAngle)
 ///
@@ -3338,29 +3338,29 @@ const char* q_swipegesture_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureType)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
 /// @return enum Qt__GestureType
 ///
-int32_t q_swipegesture_gesture_type(void* self);
+int32_t q_swipegesture_gesture_type(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
 /// @return enum Qt__GestureState
 ///
-int32_t q_swipegesture_state(void* self);
+int32_t q_swipegesture_state(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-QPointF* q_swipegesture_hot_spot(void* self);
+QPointF* q_swipegesture_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -3369,15 +3369,15 @@ QPointF* q_swipegesture_hot_spot(void* self);
 /// @param self QSwipeGesture*
 /// @param value QPointF*
 ///
-void q_swipegesture_set_hot_spot(void* self, void* value);
+void q_swipegesture_set_hot_spot(void* self, const void* value);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hasHotSpot)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-bool q_swipegesture_has_hot_spot(void* self);
+bool q_swipegesture_has_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -3400,11 +3400,11 @@ void q_swipegesture_set_gesture_cancel_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
 ///
-int32_t q_swipegesture_gesture_cancel_policy(void* self);
+int32_t q_swipegesture_gesture_cancel_policy(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3412,9 +3412,9 @@ int32_t q_swipegesture_gesture_cancel_policy(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-const char* q_swipegesture_object_name(void* self);
+const char* q_swipegesture_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3429,33 +3429,33 @@ void q_swipegesture_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-bool q_swipegesture_is_widget_type(void* self);
+bool q_swipegesture_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-bool q_swipegesture_is_window_type(void* self);
+bool q_swipegesture_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-bool q_swipegesture_is_quick_item_type(void* self);
+bool q_swipegesture_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-bool q_swipegesture_signals_blocked(void* self);
+bool q_swipegesture_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3470,9 +3470,9 @@ bool q_swipegesture_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-QThread* q_swipegesture_thread(void* self);
+QThread* q_swipegesture_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3523,11 +3523,11 @@ void q_swipegesture_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_swipegesture_children(void* self);
+libqt_list q_swipegesture_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3565,7 +3565,7 @@ void q_swipegesture_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_swipegesture_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_swipegesture_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3576,18 +3576,18 @@ QMetaObject__Connection* q_swipegesture_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_swipegesture_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_swipegesture_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_swipegesture_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_swipegesture_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3598,7 +3598,7 @@ QMetaObject__Connection* q_swipegesture_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_swipegesture_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_swipegesture_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3609,24 +3609,24 @@ bool q_swipegesture_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_swipegesture_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_swipegesture_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-bool q_swipegesture_disconnect3(void* self);
+bool q_swipegesture_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param receiver QObject*
 ///
-bool q_swipegesture_disconnect4(void* self, void* receiver);
+bool q_swipegesture_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3634,23 +3634,23 @@ bool q_swipegesture_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_swipegesture_disconnect5(void* param1);
+bool q_swipegesture_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-void q_swipegesture_dump_object_tree(void* self);
+void q_swipegesture_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-void q_swipegesture_dump_object_info(void* self);
+void q_swipegesture_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3660,16 +3660,16 @@ void q_swipegesture_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_swipegesture_set_property(void* self, const char* name, void* value);
+bool q_swipegesture_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param name const char*
 ///
-QVariant* q_swipegesture_property(void* self, const char* name);
+QVariant* q_swipegesture_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3677,9 +3677,9 @@ QVariant* q_swipegesture_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-const char** q_swipegesture_dynamic_property_names(void* self);
+const char** q_swipegesture_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3693,9 +3693,9 @@ QBindingStorage* q_swipegesture_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-const QBindingStorage* q_swipegesture_binding_storage2(void* self);
+const QBindingStorage* q_swipegesture_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3718,18 +3718,18 @@ void q_swipegesture_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-QObject* q_swipegesture_parent(void* self);
+QObject* q_swipegesture_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param classname const char*
 ///
-bool q_swipegesture_inherits(void* self, const char* classname);
+bool q_swipegesture_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3769,7 +3769,7 @@ int32_t q_swipegesture_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_swipegesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_swipegesture_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3781,59 +3781,59 @@ QMetaObject__Connection* q_swipegesture_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_swipegesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_swipegesture_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_swipegesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_swipegesture_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param signal const char*
 ///
-bool q_swipegesture_disconnect1(void* self, const char* signal);
+bool q_swipegesture_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSwipeGesture*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_swipegesture_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_swipegesture_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_swipegesture_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_swipegesture_disconnect23(void* self, void* receiver, const char* member);
+bool q_swipegesture_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QSwipeGesture*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_swipegesture_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4029,7 +4029,7 @@ void q_swipegesture_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-void q_swipegesture_connect_notify(void* self, void* signal);
+void q_swipegesture_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4040,7 +4040,7 @@ void q_swipegesture_connect_notify(void* self, void* signal);
 /// @param self QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-void q_swipegesture_super_connect_notify(void* self, void* signal);
+void q_swipegesture_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4051,7 +4051,7 @@ void q_swipegesture_super_connect_notify(void* self, void* signal);
 /// @param self QSwipeGesture*
 /// @param callback void func(QSwipeGesture* self, QMetaMethod* signal)
 ///
-void q_swipegesture_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_swipegesture_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4062,7 +4062,7 @@ void q_swipegesture_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-void q_swipegesture_disconnect_notify(void* self, void* signal);
+void q_swipegesture_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4073,7 +4073,7 @@ void q_swipegesture_disconnect_notify(void* self, void* signal);
 /// @param self QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-void q_swipegesture_super_disconnect_notify(void* self, void* signal);
+void q_swipegesture_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4084,7 +4084,7 @@ void q_swipegesture_super_disconnect_notify(void* self, void* signal);
 /// @param self QSwipeGesture*
 /// @param callback void func(QSwipeGesture* self, QMetaMethod* signal)
 ///
-void q_swipegesture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_swipegesture_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4092,9 +4092,9 @@ void q_swipegesture_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-QObject* q_swipegesture_sender(void* self);
+QObject* q_swipegesture_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4102,9 +4102,9 @@ QObject* q_swipegesture_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-QObject* q_swipegesture_super_sender(void* self);
+QObject* q_swipegesture_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4112,10 +4112,10 @@ QObject* q_swipegesture_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSwipeGesture*
-/// @param callback QObject* func()
+/// @param self const QSwipeGesture*
+/// @param callback QObject* func(QSwipeGesture* self)
 ///
-void q_swipegesture_on_sender(void* self, QObject* (*callback)());
+void q_swipegesture_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4123,9 +4123,9 @@ void q_swipegesture_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-int32_t q_swipegesture_sender_signal_index(void* self);
+int32_t q_swipegesture_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4133,9 +4133,9 @@ int32_t q_swipegesture_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 ///
-int32_t q_swipegesture_super_sender_signal_index(void* self);
+int32_t q_swipegesture_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4143,10 +4143,10 @@ int32_t q_swipegesture_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSwipeGesture*
-/// @param callback int32_t func()
+/// @param self const QSwipeGesture*
+/// @param callback int32_t func(QSwipeGesture* self)
 ///
-void q_swipegesture_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_swipegesture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -4154,10 +4154,10 @@ void q_swipegesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param signal const char*
 ///
-int32_t q_swipegesture_receivers(void* self, const char* signal);
+int32_t q_swipegesture_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4165,10 +4165,10 @@ int32_t q_swipegesture_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param signal const char*
 ///
-int32_t q_swipegesture_super_receivers(void* self, const char* signal);
+int32_t q_swipegesture_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -4176,10 +4176,10 @@ int32_t q_swipegesture_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param callback int32_t func(QSwipeGesture* self, const char* signal)
 ///
-void q_swipegesture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_swipegesture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4187,10 +4187,10 @@ void q_swipegesture_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_swipegesture_is_signal_connected(void* self, void* signal);
+bool q_swipegesture_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4198,10 +4198,10 @@ bool q_swipegesture_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_swipegesture_super_is_signal_connected(void* self, void* signal);
+bool q_swipegesture_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4209,10 +4209,10 @@ bool q_swipegesture_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSwipeGesture*
+/// @param self const QSwipeGesture*
 /// @param callback bool func(QSwipeGesture* self, QMetaMethod* signal)
 ///
-void q_swipegesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_swipegesture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4249,26 +4249,26 @@ QTapGesture* q_tapgesture_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-const QMetaObject* q_tapgesture_meta_object(void* self);
+const QMetaObject* q_tapgesture_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTapGesture*
-/// @param callback const QMetaObject* func()
+/// @param self const QTapGesture*
+/// @param callback const QMetaObject* func(const QTapGesture* self)
 ///
-void q_tapgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_tapgesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-const QMetaObject* q_tapgesture_super_meta_object(void* self);
+const QMetaObject* q_tapgesture_super_meta_object(const void* self);
 
 /// @param self QTapGesture*
 /// @param param1 const char*
@@ -4322,16 +4322,16 @@ const char* q_tapgesture_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtapgesture.html#position)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-QPointF* q_tapgesture_position(void* self);
+QPointF* q_tapgesture_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtapgesture.html#setPosition)
 ///
 /// @param self QTapGesture*
 /// @param pos QPointF*
 ///
-void q_tapgesture_set_position(void* self, void* pos);
+void q_tapgesture_set_position(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4356,29 +4356,29 @@ const char* q_tapgesture_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureType)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
 /// @return enum Qt__GestureType
 ///
-int32_t q_tapgesture_gesture_type(void* self);
+int32_t q_tapgesture_gesture_type(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
 /// @return enum Qt__GestureState
 ///
-int32_t q_tapgesture_state(void* self);
+int32_t q_tapgesture_state(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-QPointF* q_tapgesture_hot_spot(void* self);
+QPointF* q_tapgesture_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -4387,15 +4387,15 @@ QPointF* q_tapgesture_hot_spot(void* self);
 /// @param self QTapGesture*
 /// @param value QPointF*
 ///
-void q_tapgesture_set_hot_spot(void* self, void* value);
+void q_tapgesture_set_hot_spot(void* self, const void* value);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hasHotSpot)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-bool q_tapgesture_has_hot_spot(void* self);
+bool q_tapgesture_has_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -4418,11 +4418,11 @@ void q_tapgesture_set_gesture_cancel_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
 ///
-int32_t q_tapgesture_gesture_cancel_policy(void* self);
+int32_t q_tapgesture_gesture_cancel_policy(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4430,9 +4430,9 @@ int32_t q_tapgesture_gesture_cancel_policy(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-const char* q_tapgesture_object_name(void* self);
+const char* q_tapgesture_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4447,33 +4447,33 @@ void q_tapgesture_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-bool q_tapgesture_is_widget_type(void* self);
+bool q_tapgesture_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-bool q_tapgesture_is_window_type(void* self);
+bool q_tapgesture_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-bool q_tapgesture_is_quick_item_type(void* self);
+bool q_tapgesture_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-bool q_tapgesture_signals_blocked(void* self);
+bool q_tapgesture_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4488,9 +4488,9 @@ bool q_tapgesture_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-QThread* q_tapgesture_thread(void* self);
+QThread* q_tapgesture_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4541,11 +4541,11 @@ void q_tapgesture_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_tapgesture_children(void* self);
+libqt_list q_tapgesture_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4583,7 +4583,7 @@ void q_tapgesture_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_tapgesture_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_tapgesture_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4594,18 +4594,18 @@ QMetaObject__Connection* q_tapgesture_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_tapgesture_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_tapgesture_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_tapgesture_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_tapgesture_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4616,7 +4616,7 @@ QMetaObject__Connection* q_tapgesture_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_tapgesture_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_tapgesture_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -4627,24 +4627,24 @@ bool q_tapgesture_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_tapgesture_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_tapgesture_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-bool q_tapgesture_disconnect3(void* self);
+bool q_tapgesture_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param receiver QObject*
 ///
-bool q_tapgesture_disconnect4(void* self, void* receiver);
+bool q_tapgesture_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -4652,23 +4652,23 @@ bool q_tapgesture_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_tapgesture_disconnect5(void* param1);
+bool q_tapgesture_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-void q_tapgesture_dump_object_tree(void* self);
+void q_tapgesture_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-void q_tapgesture_dump_object_info(void* self);
+void q_tapgesture_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4678,16 +4678,16 @@ void q_tapgesture_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_tapgesture_set_property(void* self, const char* name, void* value);
+bool q_tapgesture_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param name const char*
 ///
-QVariant* q_tapgesture_property(void* self, const char* name);
+QVariant* q_tapgesture_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -4695,9 +4695,9 @@ QVariant* q_tapgesture_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-const char** q_tapgesture_dynamic_property_names(void* self);
+const char** q_tapgesture_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4711,9 +4711,9 @@ QBindingStorage* q_tapgesture_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-const QBindingStorage* q_tapgesture_binding_storage2(void* self);
+const QBindingStorage* q_tapgesture_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4736,18 +4736,18 @@ void q_tapgesture_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-QObject* q_tapgesture_parent(void* self);
+QObject* q_tapgesture_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param classname const char*
 ///
-bool q_tapgesture_inherits(void* self, const char* classname);
+bool q_tapgesture_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -4787,7 +4787,7 @@ int32_t q_tapgesture_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tapgesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_tapgesture_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -4799,59 +4799,59 @@ QMetaObject__Connection* q_tapgesture_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tapgesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_tapgesture_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tapgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_tapgesture_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param signal const char*
 ///
-bool q_tapgesture_disconnect1(void* self, const char* signal);
+bool q_tapgesture_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapGesture*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_tapgesture_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_tapgesture_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_tapgesture_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_tapgesture_disconnect23(void* self, void* receiver, const char* member);
+bool q_tapgesture_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTapGesture*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_tapgesture_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5047,7 +5047,7 @@ void q_tapgesture_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QTapGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapgesture_connect_notify(void* self, void* signal);
+void q_tapgesture_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5058,7 +5058,7 @@ void q_tapgesture_connect_notify(void* self, void* signal);
 /// @param self QTapGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapgesture_super_connect_notify(void* self, void* signal);
+void q_tapgesture_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5069,7 +5069,7 @@ void q_tapgesture_super_connect_notify(void* self, void* signal);
 /// @param self QTapGesture*
 /// @param callback void func(QTapGesture* self, QMetaMethod* signal)
 ///
-void q_tapgesture_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_tapgesture_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5080,7 +5080,7 @@ void q_tapgesture_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QTapGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapgesture_disconnect_notify(void* self, void* signal);
+void q_tapgesture_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5091,7 +5091,7 @@ void q_tapgesture_disconnect_notify(void* self, void* signal);
 /// @param self QTapGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapgesture_super_disconnect_notify(void* self, void* signal);
+void q_tapgesture_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5102,7 +5102,7 @@ void q_tapgesture_super_disconnect_notify(void* self, void* signal);
 /// @param self QTapGesture*
 /// @param callback void func(QTapGesture* self, QMetaMethod* signal)
 ///
-void q_tapgesture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_tapgesture_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5110,9 +5110,9 @@ void q_tapgesture_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-QObject* q_tapgesture_sender(void* self);
+QObject* q_tapgesture_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5120,9 +5120,9 @@ QObject* q_tapgesture_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-QObject* q_tapgesture_super_sender(void* self);
+QObject* q_tapgesture_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5130,10 +5130,10 @@ QObject* q_tapgesture_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTapGesture*
-/// @param callback QObject* func()
+/// @param self const QTapGesture*
+/// @param callback QObject* func(QTapGesture* self)
 ///
-void q_tapgesture_on_sender(void* self, QObject* (*callback)());
+void q_tapgesture_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5141,9 +5141,9 @@ void q_tapgesture_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-int32_t q_tapgesture_sender_signal_index(void* self);
+int32_t q_tapgesture_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5151,9 +5151,9 @@ int32_t q_tapgesture_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 ///
-int32_t q_tapgesture_super_sender_signal_index(void* self);
+int32_t q_tapgesture_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5161,10 +5161,10 @@ int32_t q_tapgesture_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTapGesture*
-/// @param callback int32_t func()
+/// @param self const QTapGesture*
+/// @param callback int32_t func(QTapGesture* self)
 ///
-void q_tapgesture_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_tapgesture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5172,10 +5172,10 @@ void q_tapgesture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param signal const char*
 ///
-int32_t q_tapgesture_receivers(void* self, const char* signal);
+int32_t q_tapgesture_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5183,10 +5183,10 @@ int32_t q_tapgesture_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param signal const char*
 ///
-int32_t q_tapgesture_super_receivers(void* self, const char* signal);
+int32_t q_tapgesture_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5194,10 +5194,10 @@ int32_t q_tapgesture_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param callback int32_t func(QTapGesture* self, const char* signal)
 ///
-void q_tapgesture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_tapgesture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5205,10 +5205,10 @@ void q_tapgesture_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_tapgesture_is_signal_connected(void* self, void* signal);
+bool q_tapgesture_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5216,10 +5216,10 @@ bool q_tapgesture_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_tapgesture_super_is_signal_connected(void* self, void* signal);
+bool q_tapgesture_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5227,10 +5227,10 @@ bool q_tapgesture_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTapGesture*
+/// @param self const QTapGesture*
 /// @param callback bool func(QTapGesture* self, QMetaMethod* signal)
 ///
-void q_tapgesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_tapgesture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5267,26 +5267,26 @@ QTapAndHoldGesture* q_tapandholdgesture_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-const QMetaObject* q_tapandholdgesture_meta_object(void* self);
+const QMetaObject* q_tapandholdgesture_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTapAndHoldGesture*
-/// @param callback const QMetaObject* func()
+/// @param self const QTapAndHoldGesture*
+/// @param callback const QMetaObject* func(const QTapAndHoldGesture* self)
 ///
-void q_tapandholdgesture_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_tapandholdgesture_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-const QMetaObject* q_tapandholdgesture_super_meta_object(void* self);
+const QMetaObject* q_tapandholdgesture_super_meta_object(const void* self);
 
 /// @param self QTapAndHoldGesture*
 /// @param param1 const char*
@@ -5340,16 +5340,16 @@ const char* q_tapandholdgesture_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtapandholdgesture.html#position)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-QPointF* q_tapandholdgesture_position(void* self);
+QPointF* q_tapandholdgesture_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtapandholdgesture.html#setPosition)
 ///
 /// @param self QTapAndHoldGesture*
 /// @param pos QPointF*
 ///
-void q_tapandholdgesture_set_position(void* self, void* pos);
+void q_tapandholdgesture_set_position(void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtapandholdgesture.html#setTimeout)
 ///
@@ -5384,29 +5384,29 @@ const char* q_tapandholdgesture_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureType)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
 /// @return enum Qt__GestureType
 ///
-int32_t q_tapandholdgesture_gesture_type(void* self);
+int32_t q_tapandholdgesture_gesture_type(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#state)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
 /// @return enum Qt__GestureState
 ///
-int32_t q_tapandholdgesture_state(void* self);
+int32_t q_tapandholdgesture_state(const void* self);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-QPointF* q_tapandholdgesture_hot_spot(void* self);
+QPointF* q_tapandholdgesture_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -5415,15 +5415,15 @@ QPointF* q_tapandholdgesture_hot_spot(void* self);
 /// @param self QTapAndHoldGesture*
 /// @param value QPointF*
 ///
-void q_tapandholdgesture_set_hot_spot(void* self, void* value);
+void q_tapandholdgesture_set_hot_spot(void* self, const void* value);
 
 /// Inherited from QGesture
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#hasHotSpot)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-bool q_tapandholdgesture_has_hot_spot(void* self);
+bool q_tapandholdgesture_has_hot_spot(const void* self);
 
 /// Inherited from QGesture
 ///
@@ -5446,11 +5446,11 @@ void q_tapandholdgesture_set_gesture_cancel_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
 ///
-int32_t q_tapandholdgesture_gesture_cancel_policy(void* self);
+int32_t q_tapandholdgesture_gesture_cancel_policy(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5458,9 +5458,9 @@ int32_t q_tapandholdgesture_gesture_cancel_policy(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-const char* q_tapandholdgesture_object_name(void* self);
+const char* q_tapandholdgesture_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5475,33 +5475,33 @@ void q_tapandholdgesture_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-bool q_tapandholdgesture_is_widget_type(void* self);
+bool q_tapandholdgesture_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-bool q_tapandholdgesture_is_window_type(void* self);
+bool q_tapandholdgesture_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-bool q_tapandholdgesture_is_quick_item_type(void* self);
+bool q_tapandholdgesture_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-bool q_tapandholdgesture_signals_blocked(void* self);
+bool q_tapandholdgesture_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5516,9 +5516,9 @@ bool q_tapandholdgesture_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-QThread* q_tapandholdgesture_thread(void* self);
+QThread* q_tapandholdgesture_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5569,11 +5569,11 @@ void q_tapandholdgesture_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_tapandholdgesture_children(void* self);
+libqt_list q_tapandholdgesture_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5611,7 +5611,7 @@ void q_tapandholdgesture_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_tapandholdgesture_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_tapandholdgesture_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5622,18 +5622,18 @@ QMetaObject__Connection* q_tapandholdgesture_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_tapandholdgesture_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_tapandholdgesture_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_tapandholdgesture_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_tapandholdgesture_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5644,7 +5644,7 @@ QMetaObject__Connection* q_tapandholdgesture_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_tapandholdgesture_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_tapandholdgesture_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -5655,24 +5655,24 @@ bool q_tapandholdgesture_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_tapandholdgesture_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_tapandholdgesture_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-bool q_tapandholdgesture_disconnect3(void* self);
+bool q_tapandholdgesture_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param receiver QObject*
 ///
-bool q_tapandholdgesture_disconnect4(void* self, void* receiver);
+bool q_tapandholdgesture_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -5680,23 +5680,23 @@ bool q_tapandholdgesture_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_tapandholdgesture_disconnect5(void* param1);
+bool q_tapandholdgesture_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-void q_tapandholdgesture_dump_object_tree(void* self);
+void q_tapandholdgesture_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-void q_tapandholdgesture_dump_object_info(void* self);
+void q_tapandholdgesture_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5706,16 +5706,16 @@ void q_tapandholdgesture_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_tapandholdgesture_set_property(void* self, const char* name, void* value);
+bool q_tapandholdgesture_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param name const char*
 ///
-QVariant* q_tapandholdgesture_property(void* self, const char* name);
+QVariant* q_tapandholdgesture_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -5723,9 +5723,9 @@ QVariant* q_tapandholdgesture_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-const char** q_tapandholdgesture_dynamic_property_names(void* self);
+const char** q_tapandholdgesture_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5739,9 +5739,9 @@ QBindingStorage* q_tapandholdgesture_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-const QBindingStorage* q_tapandholdgesture_binding_storage2(void* self);
+const QBindingStorage* q_tapandholdgesture_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5764,18 +5764,18 @@ void q_tapandholdgesture_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-QObject* q_tapandholdgesture_parent(void* self);
+QObject* q_tapandholdgesture_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param classname const char*
 ///
-bool q_tapandholdgesture_inherits(void* self, const char* classname);
+bool q_tapandholdgesture_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -5815,7 +5815,7 @@ int32_t q_tapandholdgesture_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_tapandholdgesture_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -5827,59 +5827,59 @@ QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tapandholdgesture_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_tapandholdgesture_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tapandholdgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_tapandholdgesture_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param signal const char*
 ///
-bool q_tapandholdgesture_disconnect1(void* self, const char* signal);
+bool q_tapandholdgesture_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapAndHoldGesture*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_tapandholdgesture_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_tapandholdgesture_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_tapandholdgesture_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_tapandholdgesture_disconnect23(void* self, void* receiver, const char* member);
+bool q_tapandholdgesture_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTapAndHoldGesture*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_tapandholdgesture_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -6075,7 +6075,7 @@ void q_tapandholdgesture_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapandholdgesture_connect_notify(void* self, void* signal);
+void q_tapandholdgesture_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6086,7 +6086,7 @@ void q_tapandholdgesture_connect_notify(void* self, void* signal);
 /// @param self QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapandholdgesture_super_connect_notify(void* self, void* signal);
+void q_tapandholdgesture_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6097,7 +6097,7 @@ void q_tapandholdgesture_super_connect_notify(void* self, void* signal);
 /// @param self QTapAndHoldGesture*
 /// @param callback void func(QTapAndHoldGesture* self, QMetaMethod* signal)
 ///
-void q_tapandholdgesture_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_tapandholdgesture_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6108,7 +6108,7 @@ void q_tapandholdgesture_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapandholdgesture_disconnect_notify(void* self, void* signal);
+void q_tapandholdgesture_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6119,7 +6119,7 @@ void q_tapandholdgesture_disconnect_notify(void* self, void* signal);
 /// @param self QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-void q_tapandholdgesture_super_disconnect_notify(void* self, void* signal);
+void q_tapandholdgesture_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6130,7 +6130,7 @@ void q_tapandholdgesture_super_disconnect_notify(void* self, void* signal);
 /// @param self QTapAndHoldGesture*
 /// @param callback void func(QTapAndHoldGesture* self, QMetaMethod* signal)
 ///
-void q_tapandholdgesture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_tapandholdgesture_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6138,9 +6138,9 @@ void q_tapandholdgesture_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-QObject* q_tapandholdgesture_sender(void* self);
+QObject* q_tapandholdgesture_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6148,9 +6148,9 @@ QObject* q_tapandholdgesture_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-QObject* q_tapandholdgesture_super_sender(void* self);
+QObject* q_tapandholdgesture_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6158,10 +6158,10 @@ QObject* q_tapandholdgesture_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
-/// @param callback QObject* func()
+/// @param self const QTapAndHoldGesture*
+/// @param callback QObject* func(QTapAndHoldGesture* self)
 ///
-void q_tapandholdgesture_on_sender(void* self, QObject* (*callback)());
+void q_tapandholdgesture_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6169,9 +6169,9 @@ void q_tapandholdgesture_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-int32_t q_tapandholdgesture_sender_signal_index(void* self);
+int32_t q_tapandholdgesture_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6179,9 +6179,9 @@ int32_t q_tapandholdgesture_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 ///
-int32_t q_tapandholdgesture_super_sender_signal_index(void* self);
+int32_t q_tapandholdgesture_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6189,10 +6189,10 @@ int32_t q_tapandholdgesture_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
-/// @param callback int32_t func()
+/// @param self const QTapAndHoldGesture*
+/// @param callback int32_t func(QTapAndHoldGesture* self)
 ///
-void q_tapandholdgesture_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_tapandholdgesture_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6200,10 +6200,10 @@ void q_tapandholdgesture_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param signal const char*
 ///
-int32_t q_tapandholdgesture_receivers(void* self, const char* signal);
+int32_t q_tapandholdgesture_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6211,10 +6211,10 @@ int32_t q_tapandholdgesture_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param signal const char*
 ///
-int32_t q_tapandholdgesture_super_receivers(void* self, const char* signal);
+int32_t q_tapandholdgesture_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6222,10 +6222,10 @@ int32_t q_tapandholdgesture_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param callback int32_t func(QTapAndHoldGesture* self, const char* signal)
 ///
-void q_tapandholdgesture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_tapandholdgesture_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6233,10 +6233,10 @@ void q_tapandholdgesture_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_tapandholdgesture_is_signal_connected(void* self, void* signal);
+bool q_tapandholdgesture_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6244,10 +6244,10 @@ bool q_tapandholdgesture_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param signal QMetaMethod*
 ///
-bool q_tapandholdgesture_super_is_signal_connected(void* self, void* signal);
+bool q_tapandholdgesture_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6255,10 +6255,10 @@ bool q_tapandholdgesture_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTapAndHoldGesture*
+/// @param self const QTapAndHoldGesture*
 /// @param callback bool func(QTapAndHoldGesture* self, QMetaMethod* signal)
 ///
-void q_tapandholdgesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_tapandholdgesture_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -6293,38 +6293,38 @@ QGestureEvent* q_gestureevent_new(libqt_list gestures);
 ///
 /// @param param1 QGestureEvent*
 ///
-QGestureEvent* q_gestureevent_new2(void* param1);
+QGestureEvent* q_gestureevent_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#gestures)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
 /// @return libqt_list of QGesture*
 ///
-libqt_list q_gestureevent_gestures(void* self);
+libqt_list q_gestureevent_gestures(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#gesture)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 /// @param type enum Qt__GestureType
 ///
-QGesture* q_gestureevent_gesture(void* self, int32_t type);
+QGesture* q_gestureevent_gesture(const void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#activeGestures)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
 /// @return libqt_list of QGesture*
 ///
-libqt_list q_gestureevent_active_gestures(void* self);
+libqt_list q_gestureevent_active_gestures(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#canceledGestures)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
 /// @return libqt_list of QGesture*
 ///
-libqt_list q_gestureevent_canceled_gestures(void* self);
+libqt_list q_gestureevent_canceled_gestures(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#setAccepted)
 ///
@@ -6350,10 +6350,10 @@ void q_gestureevent_ignore(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#isAccepted)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 /// @param param1 QGesture*
 ///
-bool q_gestureevent_is_accepted(void* self, void* param1);
+bool q_gestureevent_is_accepted(const void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#setAccepted)
 ///
@@ -6379,10 +6379,10 @@ void q_gestureevent_ignore2(void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#isAccepted)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 /// @param param1 enum Qt__GestureType
 ///
-bool q_gestureevent_is_accepted2(void* self, int32_t param1);
+bool q_gestureevent_is_accepted2(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#setWidget)
 ///
@@ -6393,65 +6393,65 @@ void q_gestureevent_set_widget(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#widget)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
-QWidget* q_gestureevent_widget(void* self);
+QWidget* q_gestureevent_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#mapToGraphicsScene)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 /// @param gesturePoint QPointF*
 ///
-QPointF* q_gestureevent_map_to_graphics_scene(void* self, void* gesturePoint);
+QPointF* q_gestureevent_map_to_graphics_scene(const void* self, const void* gesturePoint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#operator-eq)
 ///
 /// @param self QGestureEvent*
 /// @param param1 QGestureEvent*
 ///
-void q_gestureevent_operator_assign(void* self, void* param1);
+void q_gestureevent_operator_assign(void* self, const void* param1);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t q_gestureevent_type(void* self);
+int32_t q_gestureevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
-bool q_gestureevent_spontaneous(void* self);
+bool q_gestureevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
-bool q_gestureevent_is_input_event(void* self);
+bool q_gestureevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
-bool q_gestureevent_is_pointer_event(void* self);
+bool q_gestureevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
-bool q_gestureevent_is_single_point_event(void* self);
+bool q_gestureevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -6473,9 +6473,9 @@ int32_t q_gestureevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
-QEvent* q_gestureevent_clone(void* self);
+QEvent* q_gestureevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -6483,9 +6483,9 @@ QEvent* q_gestureevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QGestureEvent*
+/// @param self const QGestureEvent*
 ///
-QEvent* q_gestureevent_super_clone(void* self);
+QEvent* q_gestureevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -6493,10 +6493,10 @@ QEvent* q_gestureevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QGestureEvent*
-/// @param callback QEvent* func()
+/// @param self const QGestureEvent*
+/// @param callback QEvent* func(QGestureEvent* self)
 ///
-void q_gestureevent_on_clone(void* self, QEvent* (*callback)());
+void q_gestureevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgestureevent.html#dtor.QGestureEvent)
 ///

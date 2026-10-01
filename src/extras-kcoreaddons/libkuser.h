@@ -44,7 +44,7 @@ KUser* k_user_new4(const char* name);
 ///
 /// @param user KUser*
 ///
-KUser* k_user_new5(void* user);
+KUser* k_user_new5(const void* user);
 
 /// [Upstream resources](https://api.kde.org/kuser.html)
 
@@ -59,88 +59,88 @@ KUser* k_user_new6(int32_t mode);
 /// @param self KUser*
 /// @param user KUser*
 ///
-void k_user_operator_assign(void* self, void* user);
+void k_user_operator_assign(void* self, const void* user);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#operator-eq-eq)
 ///
-/// @param self KUser*
+/// @param self const KUser*
 /// @param user KUser*
 ///
-bool k_user_operator_equal(void* self, void* user);
+bool k_user_operator_equal(const void* self, const void* user);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#operator-not-eq)
 ///
-/// @param self KUser*
+/// @param self const KUser*
 /// @param user KUser*
 ///
-bool k_user_operator_not_equal(void* self, void* user);
+bool k_user_operator_not_equal(const void* self, const void* user);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#isValid)
 ///
-/// @param self KUser*
+/// @param self const KUser*
 ///
-bool k_user_is_valid(void* self);
+bool k_user_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#isSuperUser)
 ///
-/// @param self KUser*
+/// @param self const KUser*
 ///
-bool k_user_is_super_user(void* self);
+bool k_user_is_super_user(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#loginName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUser*
+/// @param self const KUser*
 ///
-const char* k_user_login_name(void* self);
+const char* k_user_login_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#homeDir)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUser*
+/// @param self const KUser*
 ///
-const char* k_user_home_dir(void* self);
+const char* k_user_home_dir(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#faceIconPath)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUser*
+/// @param self const KUser*
 ///
-const char* k_user_face_icon_path(void* self);
+const char* k_user_face_icon_path(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#shell)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUser*
+/// @param self const KUser*
 ///
-const char* k_user_shell(void* self);
+const char* k_user_shell(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#groups)
 ///
-/// @param self KUser*
+/// @param self const KUser*
 ///
 /// @return libqt_list of KUserGroup*
 ///
-libqt_list k_user_groups(void* self);
+libqt_list k_user_groups(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#groupNames)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUser*
+/// @param self const KUser*
 ///
-const char** k_user_group_names(void* self);
+const char** k_user_group_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#property)
 ///
-/// @param self KUser*
+/// @param self const KUser*
 /// @param which enum KUser__UserProperty
 ///
-QVariant* k_user_property(void* self, int32_t which);
+QVariant* k_user_property(const void* self, int32_t which);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#allUsers)
 ///
@@ -156,21 +156,21 @@ const char** k_user_all_user_names();
 
 /// [Upstream resources](https://api.kde.org/kuser.html#groups)
 ///
-/// @param self KUser*
+/// @param self const KUser*
 /// @param maxCount uint32_t
 ///
 /// @return libqt_list of KUserGroup*
 ///
-libqt_list k_user_groups1(void* self, uint32_t maxCount);
+libqt_list k_user_groups1(const void* self, uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#groupNames)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUser*
+/// @param self const KUser*
 /// @param maxCount uint32_t
 ///
-const char** k_user_group_names1(void* self, uint32_t maxCount);
+const char** k_user_group_names1(const void* self, uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kuser.html#allUsers)
 ///
@@ -232,7 +232,7 @@ KUserGroup* k_usergroup_new4(gid_t gid);
 ///
 /// @param group KUserGroup*
 ///
-KUserGroup* k_usergroup_new5(void* group);
+KUserGroup* k_usergroup_new5(const void* group);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html)
 
@@ -247,51 +247,51 @@ KUserGroup* k_usergroup_new6(int32_t mode);
 /// @param self KUserGroup*
 /// @param group KUserGroup*
 ///
-void k_usergroup_operator_assign(void* self, void* group);
+void k_usergroup_operator_assign(void* self, const void* group);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#operator-eq-eq)
 ///
-/// @param self KUserGroup*
+/// @param self const KUserGroup*
 /// @param group KUserGroup*
 ///
-bool k_usergroup_operator_equal(void* self, void* group);
+bool k_usergroup_operator_equal(const void* self, const void* group);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#operator-not-eq)
 ///
-/// @param self KUserGroup*
+/// @param self const KUserGroup*
 /// @param group KUserGroup*
 ///
-bool k_usergroup_operator_not_equal(void* self, void* group);
+bool k_usergroup_operator_not_equal(const void* self, const void* group);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#isValid)
 ///
-/// @param self KUserGroup*
+/// @param self const KUserGroup*
 ///
-bool k_usergroup_is_valid(void* self);
+bool k_usergroup_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KUserGroup*
+/// @param self const KUserGroup*
 ///
-const char* k_usergroup_name(void* self);
+const char* k_usergroup_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#users)
 ///
-/// @param self KUserGroup*
+/// @param self const KUserGroup*
 ///
 /// @return libqt_list of KUser*
 ///
-libqt_list k_usergroup_users(void* self);
+libqt_list k_usergroup_users(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#userNames)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUserGroup*
+/// @param self const KUserGroup*
 ///
-const char** k_usergroup_user_names(void* self);
+const char** k_usergroup_user_names(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#allGroups)
 ///
@@ -307,21 +307,21 @@ const char** k_usergroup_all_group_names();
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#users)
 ///
-/// @param self KUserGroup*
+/// @param self const KUserGroup*
 /// @param maxCount uint32_t
 ///
 /// @return libqt_list of KUser*
 ///
-libqt_list k_usergroup_users1(void* self, uint32_t maxCount);
+libqt_list k_usergroup_users1(const void* self, uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#userNames)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KUserGroup*
+/// @param self const KUserGroup*
 /// @param maxCount uint32_t
 ///
-const char** k_usergroup_user_names1(void* self, uint32_t maxCount);
+const char** k_usergroup_user_names1(const void* self, uint32_t maxCount);
 
 /// [Upstream resources](https://api.kde.org/kusergroup.html#allGroups)
 ///

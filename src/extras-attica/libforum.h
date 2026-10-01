@@ -20,14 +20,14 @@ Attica__Forum* k_attica__forum_new();
 ///
 /// @param other Attica__Forum*
 ///
-Attica__Forum* k_attica__forum_new2(void* other);
+Attica__Forum* k_attica__forum_new2(const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#operator-eq)
 ///
 /// @param self Attica__Forum*
 /// @param other Attica__Forum*
 ///
-void k_attica__forum_operator_assign(void* self, void* other);
+void k_attica__forum_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setId)
 ///
@@ -40,9 +40,9 @@ void k_attica__forum_set_id(void* self, const char* id);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
-const char* k_attica__forum_id(void* self);
+const char* k_attica__forum_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setName)
 ///
@@ -55,9 +55,9 @@ void k_attica__forum_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
-const char* k_attica__forum_name(void* self);
+const char* k_attica__forum_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setDescription)
 ///
@@ -70,35 +70,35 @@ void k_attica__forum_set_description(void* self, const char* description);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
-const char* k_attica__forum_description(void* self);
+const char* k_attica__forum_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setDate)
 ///
 /// @param self Attica__Forum*
 /// @param date QDateTime*
 ///
-void k_attica__forum_set_date(void* self, void* date);
+void k_attica__forum_set_date(void* self, const void* date);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#date)
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
-QDateTime* k_attica__forum_date(void* self);
+QDateTime* k_attica__forum_date(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setIcon)
 ///
 /// @param self Attica__Forum*
 /// @param icon QUrl*
 ///
-void k_attica__forum_set_icon(void* self, void* icon);
+void k_attica__forum_set_icon(void* self, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#icon)
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
-QUrl* k_attica__forum_icon(void* self);
+QUrl* k_attica__forum_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setChildCount)
 ///
@@ -109,9 +109,9 @@ void k_attica__forum_set_child_count(void* self, int childCount);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#childCount)
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
-int32_t k_attica__forum_child_count(void* self);
+int32_t k_attica__forum_child_count(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setTopics)
 ///
@@ -122,9 +122,9 @@ void k_attica__forum_set_topics(void* self, int topics);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#topics)
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
-int32_t k_attica__forum_topics(void* self);
+int32_t k_attica__forum_topics(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#setChildren)
 ///
@@ -135,17 +135,17 @@ void k_attica__forum_set_children(void* self, libqt_list comments);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#children)
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
 /// @return libqt_list of Attica__Forum*
 ///
-libqt_list k_attica__forum_children(void* self);
+libqt_list k_attica__forum_children(const void* self);
 
 /// [Upstream resources](https://api.kde.org/attica-forum.html#isValid)
 ///
-/// @param self Attica__Forum*
+/// @param self const Attica__Forum*
 ///
-bool k_attica__forum_is_valid(void* self);
+bool k_attica__forum_is_valid(const void* self);
 
 /// Delete this object from C++ memory.
 ///

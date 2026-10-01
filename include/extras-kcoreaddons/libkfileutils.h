@@ -17,7 +17,7 @@
 /// @param baseURL QUrl*
 /// @param oldName const char*
 ///
-const char* k_fileutils_suggest_name(void* baseURL, const char* oldName);
+const char* k_fileutils_suggest_name(const void* baseURL, const char* oldName);
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#makeSuggestedName)
 ///

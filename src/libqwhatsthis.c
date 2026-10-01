@@ -5,7 +5,7 @@
 #include "libqwhatsthis.hpp"
 #include "libqwhatsthis.h"
 
-QWhatsThis* q_whatsthis_new(void* other) {
+QWhatsThis* q_whatsthis_new(const void* other) {
     return QWhatsThis_New((QWhatsThis*)other);
 }
 
@@ -33,7 +33,7 @@ void q_whatsthis_leave_whats_this_mode() {
     QWhatsThis_LeaveWhatsThisMode();
 }
 
-void q_whatsthis_show_text(void* pos, const char* text) {
+void q_whatsthis_show_text(const void* pos, const char* text) {
     QWhatsThis_ShowText((QPoint*)pos, qstring(text));
 }
 
@@ -45,7 +45,7 @@ QAction* q_whatsthis_create_action() {
     return QWhatsThis_CreateAction();
 }
 
-void q_whatsthis_show_text3(void* pos, const char* text, void* w) {
+void q_whatsthis_show_text3(const void* pos, const char* text, void* w) {
     QWhatsThis_ShowText3((QPoint*)pos, qstring(text), (QWidget*)w);
 }
 

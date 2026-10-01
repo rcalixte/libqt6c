@@ -10,43 +10,43 @@ KMountPoint__List* k_mountpoint_current_mount_points() {
     return KMountPoint_CurrentMountPoints();
 }
 
-const char* k_mountpoint_mounted_from(void* self) {
+const char* k_mountpoint_mounted_from(const void* self) {
     libqt_string _str = KMountPoint_MountedFrom((KMountPoint*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_mountpoint_is_on_network(void* self) {
+bool k_mountpoint_is_on_network(const void* self) {
     return KMountPoint_IsOnNetwork((KMountPoint*)self);
 }
 
-dev_t k_mountpoint_device_id(void* self) {
+dev_t k_mountpoint_device_id(const void* self) {
     return (int)KMountPoint_DeviceId((KMountPoint*)self);
 }
 
-const char* k_mountpoint_real_device_name(void* self) {
+const char* k_mountpoint_real_device_name(const void* self) {
     libqt_string _str = KMountPoint_RealDeviceName((KMountPoint*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_mountpoint_mount_point(void* self) {
+const char* k_mountpoint_mount_point(const void* self) {
     libqt_string _str = KMountPoint_MountPoint((KMountPoint*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_mountpoint_mount_type(void* self) {
+const char* k_mountpoint_mount_type(const void* self) {
     libqt_string _str = KMountPoint_MountType((KMountPoint*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_mountpoint_mount_options(void* self) {
+const char** k_mountpoint_mount_options(const void* self) {
     libqt_list _arr = KMountPoint_MountOptions((KMountPoint*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -63,11 +63,11 @@ const char** k_mountpoint_mount_options(void* self) {
     return _ret;
 }
 
-bool k_mountpoint_probably_slow(void* self) {
+bool k_mountpoint_probably_slow(const void* self) {
     return KMountPoint_ProbablySlow((KMountPoint*)self);
 }
 
-bool k_mountpoint_test_file_system_flag(void* self, int32_t flag) {
+bool k_mountpoint_test_file_system_flag(const void* self, int32_t flag) {
     return KMountPoint_TestFileSystemFlag((KMountPoint*)self, flag);
 }
 

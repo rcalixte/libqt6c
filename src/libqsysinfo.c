@@ -1,7 +1,7 @@
 #include "libqsysinfo.hpp"
 #include "libqsysinfo.h"
 
-QSysInfo* q_sysinfo_new(void* other) {
+QSysInfo* q_sysinfo_new(const void* other) {
     return QSysInfo_New((QSysInfo*)other);
 }
 

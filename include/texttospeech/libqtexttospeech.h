@@ -60,26 +60,26 @@ QTextToSpeech* q_texttospeech_new6(const char* engine, libqt_map params, void* p
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-const QMetaObject* q_texttospeech_meta_object(void* self);
+const QMetaObject* q_texttospeech_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTextToSpeech*
-/// @param callback const QMetaObject* func()
+/// @param self const QTextToSpeech*
+/// @param callback const QMetaObject* func(const QTextToSpeech* self)
 ///
-void q_texttospeech_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_texttospeech_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-const QMetaObject* q_texttospeech_super_meta_object(void* self);
+const QMetaObject* q_texttospeech_super_meta_object(const void* self);
 
 /// @param self QTextToSpeech*
 /// @param param1 const char*
@@ -142,87 +142,87 @@ bool q_texttospeech_set_engine(void* self, const char* engine);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-const char* q_texttospeech_engine(void* self);
+const char* q_texttospeech_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#engineCapabilities)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
 /// @return flag of enum QTextToSpeech__Capability
 ///
-int32_t q_texttospeech_engine_capabilities(void* self);
+int32_t q_texttospeech_engine_capabilities(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#state)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
 /// @return enum QTextToSpeech__State
 ///
-int32_t q_texttospeech_state(void* self);
+int32_t q_texttospeech_state(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#errorReason)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
 /// @return enum QTextToSpeech__ErrorReason
 ///
-int32_t q_texttospeech_error_reason(void* self);
+int32_t q_texttospeech_error_reason(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-const char* q_texttospeech_error_string(void* self);
+const char* q_texttospeech_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#availableLocales)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
 /// @return libqt_list of QLocale*
 ///
-libqt_list q_texttospeech_available_locales(void* self);
+libqt_list q_texttospeech_available_locales(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#locale)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-QLocale* q_texttospeech_locale(void* self);
+QLocale* q_texttospeech_locale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#voice)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-QVoice* q_texttospeech_voice(void* self);
+QVoice* q_texttospeech_voice(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#availableVoices)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
 /// @return libqt_list of QVoice*
 ///
-libqt_list q_texttospeech_available_voices(void* self);
+libqt_list q_texttospeech_available_voices(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#rate)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-double q_texttospeech_rate(void* self);
+double q_texttospeech_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#pitch)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-double q_texttospeech_pitch(void* self);
+double q_texttospeech_pitch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#volume)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-double q_texttospeech_volume(void* self);
+double q_texttospeech_volume(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#availableEngines)
 ///
@@ -267,7 +267,7 @@ void q_texttospeech_resume(void* self);
 /// @param self QTextToSpeech*
 /// @param locale QLocale*
 ///
-void q_texttospeech_set_locale(void* self, void* locale);
+void q_texttospeech_set_locale(void* self, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#setRate)
 ///
@@ -295,7 +295,7 @@ void q_texttospeech_set_volume(void* self, double volume);
 /// @param self QTextToSpeech*
 /// @param voice QVoice*
 ///
-void q_texttospeech_set_voice(void* self, void* voice);
+void q_texttospeech_set_voice(void* self, const void* voice);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#engineChanged)
 ///
@@ -345,14 +345,14 @@ void q_texttospeech_on_error_occurred(void* self, void (*callback)(void*, int32_
 /// @param self QTextToSpeech*
 /// @param locale QLocale*
 ///
-void q_texttospeech_locale_changed(void* self, void* locale);
+void q_texttospeech_locale_changed(void* self, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#localeChanged)
 ///
 /// @param self QTextToSpeech*
 /// @param callback void func(QTextToSpeech* self, QLocale* locale)
 ///
-void q_texttospeech_on_locale_changed(void* self, void (*callback)(void*, void*));
+void q_texttospeech_on_locale_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#rateChanged)
 ///
@@ -401,14 +401,14 @@ void q_texttospeech_on_volume_changed(void* self, void (*callback)(void*, double
 /// @param self QTextToSpeech*
 /// @param voice QVoice*
 ///
-void q_texttospeech_voice_changed(void* self, void* voice);
+void q_texttospeech_voice_changed(void* self, const void* voice);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#voiceChanged)
 ///
 /// @param self QTextToSpeech*
 /// @param callback void func(QTextToSpeech* self, QVoice* voice)
 ///
-void q_texttospeech_on_voice_changed(void* self, void (*callback)(void*, void*));
+void q_texttospeech_on_voice_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#sayingWord)
 ///
@@ -443,32 +443,12 @@ void q_texttospeech_on_about_to_synthesize(void* self, void (*callback)(void*, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#allVoices)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param locale QLocale*
 ///
 /// @return libqt_list of QVoice*
 ///
-libqt_list q_texttospeech_all_voices(void* self, void* locale);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#allVoices)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QTextToSpeech*
-/// @param callback libqt_list of QVoice* func(QTextToSpeech* self, QLocale* locale)
-///
-void q_texttospeech_on_all_voices(void* self, libqt_list (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtexttospeech.html#allVoices)
-///
-/// Base class method implementation
-///
-/// @param self QTextToSpeech*
-/// @param locale QLocale*
-///
-/// @return libqt_list of QVoice*
-///
-libqt_list q_texttospeech_super_all_voices(void* self, void* locale);
+libqt_list q_texttospeech_all_voices(const void* self, const void* locale);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -517,9 +497,9 @@ void q_texttospeech_pause1(void* self, int32_t boundaryHint);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-const char* q_texttospeech_object_name(void* self);
+const char* q_texttospeech_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -534,33 +514,33 @@ void q_texttospeech_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-bool q_texttospeech_is_widget_type(void* self);
+bool q_texttospeech_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-bool q_texttospeech_is_window_type(void* self);
+bool q_texttospeech_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-bool q_texttospeech_is_quick_item_type(void* self);
+bool q_texttospeech_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-bool q_texttospeech_signals_blocked(void* self);
+bool q_texttospeech_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -575,9 +555,9 @@ bool q_texttospeech_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-QThread* q_texttospeech_thread(void* self);
+QThread* q_texttospeech_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -628,11 +608,11 @@ void q_texttospeech_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_texttospeech_children(void* self);
+libqt_list q_texttospeech_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -670,7 +650,7 @@ void q_texttospeech_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_texttospeech_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_texttospeech_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -681,18 +661,18 @@ QMetaObject__Connection* q_texttospeech_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_texttospeech_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_texttospeech_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_texttospeech_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_texttospeech_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -703,7 +683,7 @@ QMetaObject__Connection* q_texttospeech_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_texttospeech_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_texttospeech_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -714,24 +694,24 @@ bool q_texttospeech_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_texttospeech_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_texttospeech_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-bool q_texttospeech_disconnect3(void* self);
+bool q_texttospeech_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param receiver QObject*
 ///
-bool q_texttospeech_disconnect4(void* self, void* receiver);
+bool q_texttospeech_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -739,23 +719,23 @@ bool q_texttospeech_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_texttospeech_disconnect5(void* param1);
+bool q_texttospeech_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-void q_texttospeech_dump_object_tree(void* self);
+void q_texttospeech_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-void q_texttospeech_dump_object_info(void* self);
+void q_texttospeech_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -765,16 +745,16 @@ void q_texttospeech_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_texttospeech_set_property(void* self, const char* name, void* value);
+bool q_texttospeech_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param name const char*
 ///
-QVariant* q_texttospeech_property(void* self, const char* name);
+QVariant* q_texttospeech_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -782,9 +762,9 @@ QVariant* q_texttospeech_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-const char** q_texttospeech_dynamic_property_names(void* self);
+const char** q_texttospeech_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -798,9 +778,9 @@ QBindingStorage* q_texttospeech_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-const QBindingStorage* q_texttospeech_binding_storage2(void* self);
+const QBindingStorage* q_texttospeech_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -823,18 +803,18 @@ void q_texttospeech_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-QObject* q_texttospeech_parent(void* self);
+QObject* q_texttospeech_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param classname const char*
 ///
-bool q_texttospeech_inherits(void* self, const char* classname);
+bool q_texttospeech_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -874,7 +854,7 @@ int32_t q_texttospeech_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_texttospeech_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_texttospeech_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -886,59 +866,59 @@ QMetaObject__Connection* q_texttospeech_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_texttospeech_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_texttospeech_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_texttospeech_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_texttospeech_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param signal const char*
 ///
-bool q_texttospeech_disconnect1(void* self, const char* signal);
+bool q_texttospeech_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextToSpeech*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_texttospeech_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_texttospeech_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_texttospeech_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_texttospeech_disconnect23(void* self, void* receiver, const char* member);
+bool q_texttospeech_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTextToSpeech*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_texttospeech_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1134,7 +1114,7 @@ void q_texttospeech_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QTextToSpeech*
 /// @param signal QMetaMethod*
 ///
-void q_texttospeech_connect_notify(void* self, void* signal);
+void q_texttospeech_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1145,7 +1125,7 @@ void q_texttospeech_connect_notify(void* self, void* signal);
 /// @param self QTextToSpeech*
 /// @param signal QMetaMethod*
 ///
-void q_texttospeech_super_connect_notify(void* self, void* signal);
+void q_texttospeech_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1156,7 +1136,7 @@ void q_texttospeech_super_connect_notify(void* self, void* signal);
 /// @param self QTextToSpeech*
 /// @param callback void func(QTextToSpeech* self, QMetaMethod* signal)
 ///
-void q_texttospeech_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_texttospeech_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1167,7 +1147,7 @@ void q_texttospeech_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QTextToSpeech*
 /// @param signal QMetaMethod*
 ///
-void q_texttospeech_disconnect_notify(void* self, void* signal);
+void q_texttospeech_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1178,7 +1158,7 @@ void q_texttospeech_disconnect_notify(void* self, void* signal);
 /// @param self QTextToSpeech*
 /// @param signal QMetaMethod*
 ///
-void q_texttospeech_super_disconnect_notify(void* self, void* signal);
+void q_texttospeech_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1189,7 +1169,7 @@ void q_texttospeech_super_disconnect_notify(void* self, void* signal);
 /// @param self QTextToSpeech*
 /// @param callback void func(QTextToSpeech* self, QMetaMethod* signal)
 ///
-void q_texttospeech_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_texttospeech_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1197,9 +1177,9 @@ void q_texttospeech_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-QObject* q_texttospeech_sender(void* self);
+QObject* q_texttospeech_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1207,9 +1187,9 @@ QObject* q_texttospeech_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-QObject* q_texttospeech_super_sender(void* self);
+QObject* q_texttospeech_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1217,10 +1197,10 @@ QObject* q_texttospeech_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextToSpeech*
-/// @param callback QObject* func()
+/// @param self const QTextToSpeech*
+/// @param callback QObject* func(QTextToSpeech* self)
 ///
-void q_texttospeech_on_sender(void* self, QObject* (*callback)());
+void q_texttospeech_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1228,9 +1208,9 @@ void q_texttospeech_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-int32_t q_texttospeech_sender_signal_index(void* self);
+int32_t q_texttospeech_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1238,9 +1218,9 @@ int32_t q_texttospeech_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 ///
-int32_t q_texttospeech_super_sender_signal_index(void* self);
+int32_t q_texttospeech_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1248,10 +1228,10 @@ int32_t q_texttospeech_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextToSpeech*
-/// @param callback int32_t func()
+/// @param self const QTextToSpeech*
+/// @param callback int32_t func(QTextToSpeech* self)
 ///
-void q_texttospeech_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_texttospeech_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1259,10 +1239,10 @@ void q_texttospeech_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param signal const char*
 ///
-int32_t q_texttospeech_receivers(void* self, const char* signal);
+int32_t q_texttospeech_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1270,10 +1250,10 @@ int32_t q_texttospeech_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param signal const char*
 ///
-int32_t q_texttospeech_super_receivers(void* self, const char* signal);
+int32_t q_texttospeech_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1281,10 +1261,10 @@ int32_t q_texttospeech_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param callback int32_t func(QTextToSpeech* self, const char* signal)
 ///
-void q_texttospeech_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_texttospeech_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1292,10 +1272,10 @@ void q_texttospeech_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param signal QMetaMethod*
 ///
-bool q_texttospeech_is_signal_connected(void* self, void* signal);
+bool q_texttospeech_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1303,10 +1283,10 @@ bool q_texttospeech_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param signal QMetaMethod*
 ///
-bool q_texttospeech_super_is_signal_connected(void* self, void* signal);
+bool q_texttospeech_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1314,10 +1294,10 @@ bool q_texttospeech_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTextToSpeech*
+/// @param self const QTextToSpeech*
 /// @param callback bool func(QTextToSpeech* self, QMetaMethod* signal)
 ///
-void q_texttospeech_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_texttospeech_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

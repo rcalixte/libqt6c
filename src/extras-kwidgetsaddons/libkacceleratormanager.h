@@ -14,7 +14,7 @@
 ///
 /// @param other KAcceleratorManager*
 ///
-KAcceleratorManager* k_acceleratormanager_new(void* other);
+KAcceleratorManager* k_acceleratormanager_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kacceleratormanager.html)
 

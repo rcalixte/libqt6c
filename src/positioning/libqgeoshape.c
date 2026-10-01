@@ -7,39 +7,39 @@ QGeoShape* q_geoshape_new() {
     return QGeoShape_New();
 }
 
-QGeoShape* q_geoshape_new2(void* other) {
+QGeoShape* q_geoshape_new2(const void* other) {
     return QGeoShape_New2((QGeoShape*)other);
 }
 
-int32_t q_geoshape_type(void* self) {
+int32_t q_geoshape_type(const void* self) {
     return QGeoShape_Type((QGeoShape*)self);
 }
 
-bool q_geoshape_is_valid(void* self) {
+bool q_geoshape_is_valid(const void* self) {
     return QGeoShape_IsValid((QGeoShape*)self);
 }
 
-bool q_geoshape_is_empty(void* self) {
+bool q_geoshape_is_empty(const void* self) {
     return QGeoShape_IsEmpty((QGeoShape*)self);
 }
 
-bool q_geoshape_contains(void* self, void* coordinate) {
+bool q_geoshape_contains(const void* self, const void* coordinate) {
     return QGeoShape_Contains((QGeoShape*)self, (QGeoCoordinate*)coordinate);
 }
 
-QGeoRectangle* q_geoshape_bounding_geo_rectangle(void* self) {
+QGeoRectangle* q_geoshape_bounding_geo_rectangle(const void* self) {
     return QGeoShape_BoundingGeoRectangle((QGeoShape*)self);
 }
 
-QGeoCoordinate* q_geoshape_center(void* self) {
+QGeoCoordinate* q_geoshape_center(const void* self) {
     return QGeoShape_Center((QGeoShape*)self);
 }
 
-void q_geoshape_operator_assign(void* self, void* other) {
+void q_geoshape_operator_assign(void* self, const void* other) {
     QGeoShape_OperatorAssign((QGeoShape*)self, (QGeoShape*)other);
 }
 
-const char* q_geoshape_to_string(void* self) {
+const char* q_geoshape_to_string(const void* self) {
     libqt_string _str = QGeoShape_ToString((QGeoShape*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -50,6 +50,6 @@ void q_geoshape_delete(void* self) {
     QGeoShape_Delete((QGeoShape*)(self));
 }
 
-size_t q_qgeoshape_h_q_hash(void* shape, size_t seed) {
+size_t q_qgeoshape_h_q_hash(const void* shape, size_t seed) {
     return qgeoshape_h_QHash((QGeoShape*)shape, seed);
 }

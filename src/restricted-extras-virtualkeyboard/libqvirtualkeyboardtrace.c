@@ -15,15 +15,15 @@ QVirtualKeyboardTrace* q_virtualkeyboardtrace_new2(void* parent) {
     return QVirtualKeyboardTrace_New2((QObject*)parent);
 }
 
-const QMetaObject* q_virtualkeyboardtrace_meta_object(void* self) {
+const QMetaObject* q_virtualkeyboardtrace_meta_object(const void* self) {
     return QVirtualKeyboardTrace_MetaObject((QVirtualKeyboardTrace*)self);
 }
 
-void q_virtualkeyboardtrace_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_virtualkeyboardtrace_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QVirtualKeyboardTrace_OnMetaObject((QVirtualKeyboardTrace*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_virtualkeyboardtrace_super_meta_object(void* self) {
+const QMetaObject* q_virtualkeyboardtrace_super_meta_object(const void* self) {
     return QVirtualKeyboardTrace_SuperMetaObject((QVirtualKeyboardTrace*)self);
 }
 
@@ -58,7 +58,7 @@ const char* q_virtualkeyboardtrace_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_virtualkeyboardtrace_trace_id(void* self) {
+int32_t q_virtualkeyboardtrace_trace_id(const void* self) {
     return QVirtualKeyboardTrace_TraceId((QVirtualKeyboardTrace*)self);
 }
 
@@ -66,7 +66,7 @@ void q_virtualkeyboardtrace_set_trace_id(void* self, int id) {
     QVirtualKeyboardTrace_SetTraceId((QVirtualKeyboardTrace*)self, id);
 }
 
-const char** q_virtualkeyboardtrace_channels(void* self) {
+const char** q_virtualkeyboardtrace_channels(const void* self) {
     libqt_list _arr = QVirtualKeyboardTrace_Channels((QVirtualKeyboardTrace*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -97,29 +97,29 @@ void q_virtualkeyboardtrace_set_channels(void* self, const char* channels[static
     free(channels_qstr);
 }
 
-int32_t q_virtualkeyboardtrace_length(void* self) {
+int32_t q_virtualkeyboardtrace_length(const void* self) {
     return QVirtualKeyboardTrace_Length((QVirtualKeyboardTrace*)self);
 }
 
-libqt_list /* of QVariant* */ q_virtualkeyboardtrace_points(void* self) {
+libqt_list /* of QVariant* */ q_virtualkeyboardtrace_points(const void* self) {
     libqt_list _arr = QVirtualKeyboardTrace_Points((QVirtualKeyboardTrace*)self);
     return _arr;
 }
 
-int32_t q_virtualkeyboardtrace_add_point(void* self, void* point) {
+int32_t q_virtualkeyboardtrace_add_point(void* self, const void* point) {
     return QVirtualKeyboardTrace_AddPoint((QVirtualKeyboardTrace*)self, (QPointF*)point);
 }
 
-void q_virtualkeyboardtrace_set_channel_data(void* self, const char* channel, int index, void* data) {
+void q_virtualkeyboardtrace_set_channel_data(void* self, const char* channel, int index, const void* data) {
     QVirtualKeyboardTrace_SetChannelData((QVirtualKeyboardTrace*)self, qstring(channel), index, (QVariant*)data);
 }
 
-libqt_list /* of QVariant* */ q_virtualkeyboardtrace_channel_data(void* self, const char* channel) {
+libqt_list /* of QVariant* */ q_virtualkeyboardtrace_channel_data(const void* self, const char* channel) {
     libqt_list _arr = QVirtualKeyboardTrace_ChannelData((QVirtualKeyboardTrace*)self, qstring(channel));
     return _arr;
 }
 
-bool q_virtualkeyboardtrace_is_final(void* self) {
+bool q_virtualkeyboardtrace_is_final(const void* self) {
     return QVirtualKeyboardTrace_IsFinal((QVirtualKeyboardTrace*)self);
 }
 
@@ -127,7 +127,7 @@ void q_virtualkeyboardtrace_set_final(void* self, bool final) {
     QVirtualKeyboardTrace_SetFinal((QVirtualKeyboardTrace*)self, final);
 }
 
-bool q_virtualkeyboardtrace_is_canceled(void* self) {
+bool q_virtualkeyboardtrace_is_canceled(const void* self) {
     return QVirtualKeyboardTrace_IsCanceled((QVirtualKeyboardTrace*)self);
 }
 
@@ -135,7 +135,7 @@ void q_virtualkeyboardtrace_set_canceled(void* self, bool canceled) {
     QVirtualKeyboardTrace_SetCanceled((QVirtualKeyboardTrace*)self, canceled);
 }
 
-double q_virtualkeyboardtrace_opacity(void* self) {
+double q_virtualkeyboardtrace_opacity(const void* self) {
     return QVirtualKeyboardTrace_Opacity((QVirtualKeyboardTrace*)self);
 }
 
@@ -221,27 +221,27 @@ const char* q_virtualkeyboardtrace_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-libqt_list /* of QVariant* */ q_virtualkeyboardtrace_points1(void* self, int pos) {
+libqt_list /* of QVariant* */ q_virtualkeyboardtrace_points1(const void* self, int pos) {
     libqt_list _arr = QVirtualKeyboardTrace_Points1((QVirtualKeyboardTrace*)self, pos);
     return _arr;
 }
 
-libqt_list /* of QVariant* */ q_virtualkeyboardtrace_points2(void* self, int pos, int count) {
+libqt_list /* of QVariant* */ q_virtualkeyboardtrace_points2(const void* self, int pos, int count) {
     libqt_list _arr = QVirtualKeyboardTrace_Points2((QVirtualKeyboardTrace*)self, pos, count);
     return _arr;
 }
 
-libqt_list /* of QVariant* */ q_virtualkeyboardtrace_channel_data2(void* self, const char* channel, int pos) {
+libqt_list /* of QVariant* */ q_virtualkeyboardtrace_channel_data2(const void* self, const char* channel, int pos) {
     libqt_list _arr = QVirtualKeyboardTrace_ChannelData2((QVirtualKeyboardTrace*)self, qstring(channel), pos);
     return _arr;
 }
 
-libqt_list /* of QVariant* */ q_virtualkeyboardtrace_channel_data3(void* self, const char* channel, int pos, int count) {
+libqt_list /* of QVariant* */ q_virtualkeyboardtrace_channel_data3(const void* self, const char* channel, int pos, int count) {
     libqt_list _arr = QVirtualKeyboardTrace_ChannelData3((QVirtualKeyboardTrace*)self, qstring(channel), pos, count);
     return _arr;
 }
 
-const char* q_virtualkeyboardtrace_object_name(void* self) {
+const char* q_virtualkeyboardtrace_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -252,19 +252,19 @@ void q_virtualkeyboardtrace_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_virtualkeyboardtrace_is_widget_type(void* self) {
+bool q_virtualkeyboardtrace_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_virtualkeyboardtrace_is_window_type(void* self) {
+bool q_virtualkeyboardtrace_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_virtualkeyboardtrace_is_quick_item_type(void* self) {
+bool q_virtualkeyboardtrace_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_virtualkeyboardtrace_signals_blocked(void* self) {
+bool q_virtualkeyboardtrace_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -272,7 +272,7 @@ bool q_virtualkeyboardtrace_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_virtualkeyboardtrace_thread(void* self) {
+QThread* q_virtualkeyboardtrace_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -296,7 +296,7 @@ void q_virtualkeyboardtrace_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_virtualkeyboardtrace_children(void* self) {
+libqt_list /* of QObject* */ q_virtualkeyboardtrace_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -313,55 +313,55 @@ void q_virtualkeyboardtrace_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_virtualkeyboardtrace_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_virtualkeyboardtrace_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_virtualkeyboardtrace_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_virtualkeyboardtrace_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_virtualkeyboardtrace_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_virtualkeyboardtrace_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_virtualkeyboardtrace_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_virtualkeyboardtrace_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_virtualkeyboardtrace_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_virtualkeyboardtrace_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_virtualkeyboardtrace_disconnect3(void* self) {
+bool q_virtualkeyboardtrace_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_virtualkeyboardtrace_disconnect4(void* self, void* receiver) {
+bool q_virtualkeyboardtrace_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_virtualkeyboardtrace_disconnect5(void* param1) {
+bool q_virtualkeyboardtrace_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_virtualkeyboardtrace_dump_object_tree(void* self) {
+void q_virtualkeyboardtrace_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_virtualkeyboardtrace_dump_object_info(void* self) {
+void q_virtualkeyboardtrace_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_virtualkeyboardtrace_set_property(void* self, const char* name, void* value) {
+bool q_virtualkeyboardtrace_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_virtualkeyboardtrace_property(void* self, const char* name) {
+QVariant* q_virtualkeyboardtrace_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_virtualkeyboardtrace_dynamic_property_names(void* self) {
+const char** q_virtualkeyboardtrace_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -382,7 +382,7 @@ QBindingStorage* q_virtualkeyboardtrace_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_virtualkeyboardtrace_binding_storage2(void* self) {
+const QBindingStorage* q_virtualkeyboardtrace_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -394,11 +394,11 @@ void q_virtualkeyboardtrace_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_virtualkeyboardtrace_parent(void* self) {
+QObject* q_virtualkeyboardtrace_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_virtualkeyboardtrace_inherits(void* self, const char* classname) {
+bool q_virtualkeyboardtrace_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -414,31 +414,31 @@ int32_t q_virtualkeyboardtrace_start_timer23(void* self, int64_t time, int32_t t
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_virtualkeyboardtrace_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_virtualkeyboardtrace_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_virtualkeyboardtrace_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_virtualkeyboardtrace_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_virtualkeyboardtrace_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_virtualkeyboardtrace_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_virtualkeyboardtrace_disconnect1(void* self, const char* signal) {
+bool q_virtualkeyboardtrace_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_virtualkeyboardtrace_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_virtualkeyboardtrace_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_virtualkeyboardtrace_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_virtualkeyboardtrace_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_virtualkeyboardtrace_disconnect23(void* self, void* receiver, const char* member) {
+bool q_virtualkeyboardtrace_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -498,76 +498,44 @@ void q_virtualkeyboardtrace_on_custom_event(void* self, void (*callback)(void*, 
     QVirtualKeyboardTrace_OnCustomEvent((QVirtualKeyboardTrace*)self, (intptr_t)callback);
 }
 
-void q_virtualkeyboardtrace_connect_notify(void* self, void* signal) {
+void q_virtualkeyboardtrace_connect_notify(void* self, const void* signal) {
     QVirtualKeyboardTrace_ConnectNotify((QVirtualKeyboardTrace*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardtrace_super_connect_notify(void* self, void* signal) {
+void q_virtualkeyboardtrace_super_connect_notify(void* self, const void* signal) {
     QVirtualKeyboardTrace_SuperConnectNotify((QVirtualKeyboardTrace*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardtrace_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_virtualkeyboardtrace_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QVirtualKeyboardTrace_OnConnectNotify((QVirtualKeyboardTrace*)self, (intptr_t)callback);
 }
 
-void q_virtualkeyboardtrace_disconnect_notify(void* self, void* signal) {
+void q_virtualkeyboardtrace_disconnect_notify(void* self, const void* signal) {
     QVirtualKeyboardTrace_DisconnectNotify((QVirtualKeyboardTrace*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardtrace_super_disconnect_notify(void* self, void* signal) {
+void q_virtualkeyboardtrace_super_disconnect_notify(void* self, const void* signal) {
     QVirtualKeyboardTrace_SuperDisconnectNotify((QVirtualKeyboardTrace*)self, (QMetaMethod*)signal);
 }
 
-void q_virtualkeyboardtrace_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_virtualkeyboardtrace_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QVirtualKeyboardTrace_OnDisconnectNotify((QVirtualKeyboardTrace*)self, (intptr_t)callback);
 }
 
-QObject* q_virtualkeyboardtrace_sender(void* self) {
+QObject* q_virtualkeyboardtrace_sender(const void* self) {
     return QVirtualKeyboardTrace_Sender((QVirtualKeyboardTrace*)self);
 }
 
-QObject* q_virtualkeyboardtrace_super_sender(void* self) {
-    return QVirtualKeyboardTrace_SuperSender((QVirtualKeyboardTrace*)self);
-}
-
-void q_virtualkeyboardtrace_on_sender(void* self, QObject* (*callback)()) {
-    QVirtualKeyboardTrace_OnSender((QVirtualKeyboardTrace*)self, (intptr_t)callback);
-}
-
-int32_t q_virtualkeyboardtrace_sender_signal_index(void* self) {
+int32_t q_virtualkeyboardtrace_sender_signal_index(const void* self) {
     return QVirtualKeyboardTrace_SenderSignalIndex((QVirtualKeyboardTrace*)self);
 }
 
-int32_t q_virtualkeyboardtrace_super_sender_signal_index(void* self) {
-    return QVirtualKeyboardTrace_SuperSenderSignalIndex((QVirtualKeyboardTrace*)self);
-}
-
-void q_virtualkeyboardtrace_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QVirtualKeyboardTrace_OnSenderSignalIndex((QVirtualKeyboardTrace*)self, (intptr_t)callback);
-}
-
-int32_t q_virtualkeyboardtrace_receivers(void* self, const char* signal) {
+int32_t q_virtualkeyboardtrace_receivers(const void* self, const char* signal) {
     return QVirtualKeyboardTrace_Receivers((QVirtualKeyboardTrace*)self, signal);
 }
 
-int32_t q_virtualkeyboardtrace_super_receivers(void* self, const char* signal) {
-    return QVirtualKeyboardTrace_SuperReceivers((QVirtualKeyboardTrace*)self, signal);
-}
-
-void q_virtualkeyboardtrace_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QVirtualKeyboardTrace_OnReceivers((QVirtualKeyboardTrace*)self, (intptr_t)callback);
-}
-
-bool q_virtualkeyboardtrace_is_signal_connected(void* self, void* signal) {
+bool q_virtualkeyboardtrace_is_signal_connected(const void* self, const void* signal) {
     return QVirtualKeyboardTrace_IsSignalConnected((QVirtualKeyboardTrace*)self, (QMetaMethod*)signal);
-}
-
-bool q_virtualkeyboardtrace_super_is_signal_connected(void* self, void* signal) {
-    return QVirtualKeyboardTrace_SuperIsSignalConnected((QVirtualKeyboardTrace*)self, (QMetaMethod*)signal);
-}
-
-void q_virtualkeyboardtrace_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QVirtualKeyboardTrace_OnIsSignalConnected((QVirtualKeyboardTrace*)self, (intptr_t)callback);
 }
 
 void q_virtualkeyboardtrace_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

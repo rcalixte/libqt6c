@@ -20,28 +20,28 @@ QPermission* q_permission_new();
 ///
 /// @param param1 QPermission*
 ///
-QPermission* q_permission_new2(void* param1);
+QPermission* q_permission_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpermission.html#status)
 ///
-/// @param self QPermission*
+/// @param self const QPermission*
 ///
 /// @return enum Qt__PermissionStatus
 ///
-int32_t q_permission_status(void* self);
+int32_t q_permission_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpermission.html#type)
 ///
-/// @param self QPermission*
+/// @param self const QPermission*
 ///
-QMetaType* q_permission_type(void* self);
+QMetaType* q_permission_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpermission.html#operator-eq)
 ///
 /// @param self QPermission*
 /// @param param1 QPermission*
 ///
-void q_permission_operator_assign(void* self, void* param1);
+void q_permission_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpermission.html#dtor.QPermission)
 ///
@@ -63,7 +63,7 @@ QLocationPermission* q_locationpermission_new();
 ///
 /// @param other QLocationPermission*
 ///
-QLocationPermission* q_locationpermission_new2(void* other);
+QLocationPermission* q_locationpermission_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocationpermission.html#setAccuracy)
 ///
@@ -74,11 +74,11 @@ void q_locationpermission_set_accuracy(void* self, uint8_t accuracy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocationpermission.html#accuracy)
 ///
-/// @param self QLocationPermission*
+/// @param self const QLocationPermission*
 ///
 /// @return enum QLocationPermission__Accuracy
 ///
-uint8_t q_locationpermission_accuracy(void* self);
+uint8_t q_locationpermission_accuracy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocationpermission.html#setAvailability)
 ///
@@ -89,18 +89,18 @@ void q_locationpermission_set_availability(void* self, uint8_t availability);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocationpermission.html#availability)
 ///
-/// @param self QLocationPermission*
+/// @param self const QLocationPermission*
 ///
 /// @return enum QLocationPermission__Availability
 ///
-uint8_t q_locationpermission_availability(void* self);
+uint8_t q_locationpermission_availability(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocationpermission.html#operator-eq)
 ///
 /// @param self QLocationPermission*
 /// @param other QLocationPermission*
 ///
-void q_locationpermission_operator_assign(void* self, void* other);
+void q_locationpermission_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocationpermission.html#swap)
 ///
@@ -129,7 +129,7 @@ QCalendarPermission* q_calendarpermission_new();
 ///
 /// @param other QCalendarPermission*
 ///
-QCalendarPermission* q_calendarpermission_new2(void* other);
+QCalendarPermission* q_calendarpermission_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendarpermission.html#setAccessMode)
 ///
@@ -140,18 +140,18 @@ void q_calendarpermission_set_access_mode(void* self, uint8_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendarpermission.html#accessMode)
 ///
-/// @param self QCalendarPermission*
+/// @param self const QCalendarPermission*
 ///
 /// @return enum QCalendarPermission__AccessMode
 ///
-uint8_t q_calendarpermission_access_mode(void* self);
+uint8_t q_calendarpermission_access_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendarpermission.html#operator-eq)
 ///
 /// @param self QCalendarPermission*
 /// @param other QCalendarPermission*
 ///
-void q_calendarpermission_operator_assign(void* self, void* other);
+void q_calendarpermission_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendarpermission.html#swap)
 ///
@@ -180,7 +180,7 @@ QContactsPermission* q_contactspermission_new();
 ///
 /// @param other QContactsPermission*
 ///
-QContactsPermission* q_contactspermission_new2(void* other);
+QContactsPermission* q_contactspermission_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcontactspermission.html#setAccessMode)
 ///
@@ -191,18 +191,18 @@ void q_contactspermission_set_access_mode(void* self, uint8_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcontactspermission.html#accessMode)
 ///
-/// @param self QContactsPermission*
+/// @param self const QContactsPermission*
 ///
 /// @return enum QContactsPermission__AccessMode
 ///
-uint8_t q_contactspermission_access_mode(void* self);
+uint8_t q_contactspermission_access_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcontactspermission.html#operator-eq)
 ///
 /// @param self QContactsPermission*
 /// @param other QContactsPermission*
 ///
-void q_contactspermission_operator_assign(void* self, void* other);
+void q_contactspermission_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcontactspermission.html#swap)
 ///
@@ -231,7 +231,7 @@ QBluetoothPermission* q_bluetoothpermission_new();
 ///
 /// @param other QBluetoothPermission*
 ///
-QBluetoothPermission* q_bluetoothpermission_new2(void* other);
+QBluetoothPermission* q_bluetoothpermission_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothpermission.html#setCommunicationModes)
 ///
@@ -242,18 +242,18 @@ void q_bluetoothpermission_set_communication_modes(void* self, uint8_t modes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothpermission.html#communicationModes)
 ///
-/// @param self QBluetoothPermission*
+/// @param self const QBluetoothPermission*
 ///
 /// @return flag of enum QBluetoothPermission__CommunicationMode
 ///
-uint8_t q_bluetoothpermission_communication_modes(void* self);
+uint8_t q_bluetoothpermission_communication_modes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothpermission.html#operator-eq)
 ///
 /// @param self QBluetoothPermission*
 /// @param other QBluetoothPermission*
 ///
-void q_bluetoothpermission_operator_assign(void* self, void* other);
+void q_bluetoothpermission_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothpermission.html#swap)
 ///
@@ -282,14 +282,14 @@ QCameraPermission* q_camerapermission_new();
 ///
 /// @param other QCameraPermission*
 ///
-QCameraPermission* q_camerapermission_new2(void* other);
+QCameraPermission* q_camerapermission_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamerapermission.html#operator-eq)
 ///
 /// @param self QCameraPermission*
 /// @param other QCameraPermission*
 ///
-void q_camerapermission_operator_assign(void* self, void* other);
+void q_camerapermission_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcamerapermission.html#swap)
 ///
@@ -318,14 +318,14 @@ QMicrophonePermission* q_microphonepermission_new();
 ///
 /// @param other QMicrophonePermission*
 ///
-QMicrophonePermission* q_microphonepermission_new2(void* other);
+QMicrophonePermission* q_microphonepermission_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmicrophonepermission.html#operator-eq)
 ///
 /// @param self QMicrophonePermission*
 /// @param other QMicrophonePermission*
 ///
-void q_microphonepermission_operator_assign(void* self, void* other);
+void q_microphonepermission_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmicrophonepermission.html#swap)
 ///

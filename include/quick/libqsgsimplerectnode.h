@@ -15,7 +15,7 @@
 /// @param rect QRectF*
 /// @param color QColor*
 ///
-QSGSimpleRectNode* q_sgsimplerectnode_new(void* rect, void* color);
+QSGSimpleRectNode* q_sgsimplerectnode_new(const void* rect, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimplerectnode.html)
 
@@ -28,7 +28,7 @@ QSGSimpleRectNode* q_sgsimplerectnode_new2();
 /// @param self QSGSimpleRectNode*
 /// @param rect QRectF*
 ///
-void q_sgsimplerectnode_set_rect(void* self, void* rect);
+void q_sgsimplerectnode_set_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimplerectnode.html#setRect)
 ///
@@ -42,22 +42,22 @@ void q_sgsimplerectnode_set_rect2(void* self, double x, double y, double w, doub
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimplerectnode.html#rect)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QRectF* q_sgsimplerectnode_rect(void* self);
+QRectF* q_sgsimplerectnode_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimplerectnode.html#setColor)
 ///
 /// @param self QSGSimpleRectNode*
 /// @param color QColor*
 ///
-void q_sgsimplerectnode_set_color(void* self, void* color);
+void q_sgsimplerectnode_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimplerectnode.html#color)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QColor* q_sgsimplerectnode_color(void* self);
+QColor* q_sgsimplerectnode_color(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -72,9 +72,9 @@ void q_sgsimplerectnode_set_material(void* self, void* material);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#material)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QSGMaterial* q_sgsimplerectnode_material(void* self);
+QSGMaterial* q_sgsimplerectnode_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -89,17 +89,17 @@ void q_sgsimplerectnode_set_opaque_material(void* self, void* material);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#opaqueMaterial)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QSGMaterial* q_sgsimplerectnode_opaque_material(void* self);
+QSGMaterial* q_sgsimplerectnode_opaque_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#activeMaterial)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QSGMaterial* q_sgsimplerectnode_active_material(void* self);
+QSGMaterial* q_sgsimplerectnode_active_material(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -114,9 +114,9 @@ void q_sgsimplerectnode_set_render_order(void* self, int order);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#renderOrder)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-int32_t q_sgsimplerectnode_render_order(void* self);
+int32_t q_sgsimplerectnode_render_order(const void* self);
 
 /// Inherited from QSGGeometryNode
 ///
@@ -131,9 +131,9 @@ void q_sgsimplerectnode_set_inherited_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsggeometrynode.html#inheritedOpacity)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-double q_sgsimplerectnode_inherited_opacity(void* self);
+double q_sgsimplerectnode_inherited_opacity(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -148,9 +148,9 @@ void q_sgsimplerectnode_set_geometry(void* self, void* geometry);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#geometry)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-const QSGGeometry* q_sgsimplerectnode_geometry(void* self);
+const QSGGeometry* q_sgsimplerectnode_geometry(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -164,17 +164,17 @@ QSGGeometry* q_sgsimplerectnode_geometry2(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#matrix)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-const QMatrix4x4* q_sgsimplerectnode_matrix(void* self);
+const QMatrix4x4* q_sgsimplerectnode_matrix(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgbasicgeometrynode.html#clipList)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-const QSGClipNode* q_sgsimplerectnode_clip_list(void* self);
+const QSGClipNode* q_sgsimplerectnode_clip_list(const void* self);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -183,7 +183,7 @@ const QSGClipNode* q_sgsimplerectnode_clip_list(void* self);
 /// @param self QSGSimpleRectNode*
 /// @param m QMatrix4x4*
 ///
-void q_sgsimplerectnode_set_renderer_matrix(void* self, void* m);
+void q_sgsimplerectnode_set_renderer_matrix(void* self, const void* m);
 
 /// Inherited from QSGBasicGeometryNode
 ///
@@ -192,15 +192,15 @@ void q_sgsimplerectnode_set_renderer_matrix(void* self, void* m);
 /// @param self QSGSimpleRectNode*
 /// @param c QSGClipNode*
 ///
-void q_sgsimplerectnode_set_renderer_clip_list(void* self, void* c);
+void q_sgsimplerectnode_set_renderer_clip_list(void* self, const void* c);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#parent)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QSGNode* q_sgsimplerectnode_parent(void* self);
+QSGNode* q_sgsimplerectnode_parent(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -270,60 +270,60 @@ void q_sgsimplerectnode_reparent_child_nodes_to(void* self, void* newParent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childCount)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-int32_t q_sgsimplerectnode_child_count(void* self);
+int32_t q_sgsimplerectnode_child_count(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#childAtIndex)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 /// @param i int
 ///
-QSGNode* q_sgsimplerectnode_child_at_index(void* self, int i);
+QSGNode* q_sgsimplerectnode_child_at_index(const void* self, int i);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#firstChild)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QSGNode* q_sgsimplerectnode_first_child(void* self);
+QSGNode* q_sgsimplerectnode_first_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#lastChild)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QSGNode* q_sgsimplerectnode_last_child(void* self);
+QSGNode* q_sgsimplerectnode_last_child(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#nextSibling)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QSGNode* q_sgsimplerectnode_next_sibling(void* self);
+QSGNode* q_sgsimplerectnode_next_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#previousSibling)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-QSGNode* q_sgsimplerectnode_previous_sibling(void* self);
+QSGNode* q_sgsimplerectnode_previous_sibling(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#type)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
 /// @return enum QSGNode__NodeType
 ///
-int32_t q_sgsimplerectnode_type(void* self);
+int32_t q_sgsimplerectnode_type(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -346,21 +346,21 @@ void q_sgsimplerectnode_mark_dirty(void* self, int32_t bits);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#dirtyState)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
 /// @return flag of enum QSGNode__DirtyStateBit
 ///
-int32_t q_sgsimplerectnode_dirty_state(void* self);
+int32_t q_sgsimplerectnode_dirty_state(const void* self);
 
 /// Inherited from QSGNode
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgnode.html#flags)
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
 /// @return flag of enum QSGNode__Flag
 ///
-int32_t q_sgsimplerectnode_flags(void* self);
+int32_t q_sgsimplerectnode_flags(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -406,9 +406,9 @@ void q_sgsimplerectnode_set_flags2(void* self, int32_t param1, bool param2);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-bool q_sgsimplerectnode_is_subtree_blocked(void* self);
+bool q_sgsimplerectnode_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -416,9 +416,9 @@ bool q_sgsimplerectnode_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSGSimpleRectNode*
+/// @param self const QSGSimpleRectNode*
 ///
-bool q_sgsimplerectnode_super_is_subtree_blocked(void* self);
+bool q_sgsimplerectnode_super_is_subtree_blocked(const void* self);
 
 /// Inherited from QSGNode
 ///
@@ -426,10 +426,10 @@ bool q_sgsimplerectnode_super_is_subtree_blocked(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSGSimpleRectNode*
-/// @param callback bool func()
+/// @param self const QSGSimpleRectNode*
+/// @param callback bool func(QSGSimpleRectNode* self)
 ///
-void q_sgsimplerectnode_on_is_subtree_blocked(void* self, bool (*callback)());
+void q_sgsimplerectnode_on_is_subtree_blocked(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QSGNode
 ///
@@ -458,9 +458,9 @@ void q_sgsimplerectnode_super_preprocess(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QSGSimpleRectNode*
-/// @param callback void func()
+/// @param callback void func(QSGSimpleRectNode* self)
 ///
-void q_sgsimplerectnode_on_preprocess(void* self, void (*callback)());
+void q_sgsimplerectnode_on_preprocess(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsgsimplerectnode.html#dtor.QSGSimpleRectNode)
 ///

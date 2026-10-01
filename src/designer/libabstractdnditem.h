@@ -10,38 +10,6 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdnditeminterface.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdnditeminterface.html#widget)
-///
-/// @param self QDesignerDnDItemInterface*
-///
-QWidget* q_designerdnditeminterface_widget(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdnditeminterface.html#decoration)
-///
-/// @param self QDesignerDnDItemInterface*
-///
-QWidget* q_designerdnditeminterface_decoration(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdnditeminterface.html#hotSpot)
-///
-/// @param self QDesignerDnDItemInterface*
-///
-QPoint* q_designerdnditeminterface_hot_spot(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdnditeminterface.html#type)
-///
-/// @param self QDesignerDnDItemInterface*
-///
-/// @return enum QDesignerDnDItemInterface__DropType
-///
-int32_t q_designerdnditeminterface_type(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdnditeminterface.html#source)
-///
-/// @param self QDesignerDnDItemInterface*
-///
-QWidget* q_designerdnditeminterface_source(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerdnditeminterface.html#dtor.QDesignerDnDItemInterface)
 ///
 /// Delete this object from C++ memory.

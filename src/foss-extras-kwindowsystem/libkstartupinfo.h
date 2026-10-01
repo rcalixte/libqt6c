@@ -27,26 +27,26 @@ KStartupInfo* k_startupinfo_new2(int flags, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-const QMetaObject* k_startupinfo_meta_object(void* self);
+const QMetaObject* k_startupinfo_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KStartupInfo*
-/// @param callback const QMetaObject* func()
+/// @param self const KStartupInfo*
+/// @param callback const QMetaObject* func(const KStartupInfo* self)
 ///
-void k_startupinfo_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_startupinfo_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-const QMetaObject* k_startupinfo_super_meta_object(void* self);
+const QMetaObject* k_startupinfo_super_meta_object(const void* self);
 
 /// @param self KStartupInfo*
 /// @param param1 const char*
@@ -140,7 +140,7 @@ char* k_startupinfo_create_new_startup_id_for_timestamp(uint32_t timestamp);
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-bool k_startupinfo_send_startup(void* id, void* data);
+bool k_startupinfo_send_startup(const void* id, const void* data);
 
 #ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#sendStartupXcb)
@@ -150,7 +150,7 @@ bool k_startupinfo_send_startup(void* id, void* data);
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-bool k_startupinfo_send_startup_xcb(xcb_connection_t* conn, int screen, void* id, void* data);
+bool k_startupinfo_send_startup_xcb(xcb_connection_t* conn, int screen, const void* id, const void* data);
 #endif
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#sendChange)
@@ -158,7 +158,7 @@ bool k_startupinfo_send_startup_xcb(xcb_connection_t* conn, int screen, void* id
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-bool k_startupinfo_send_change(void* id, void* data);
+bool k_startupinfo_send_change(const void* id, const void* data);
 
 #ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#sendChangeXcb)
@@ -168,14 +168,14 @@ bool k_startupinfo_send_change(void* id, void* data);
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-bool k_startupinfo_send_change_xcb(xcb_connection_t* conn, int screen, void* id, void* data);
+bool k_startupinfo_send_change_xcb(xcb_connection_t* conn, int screen, const void* id, const void* data);
 #endif
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#sendFinish)
 ///
 /// @param id KStartupInfoId*
 ///
-bool k_startupinfo_send_finish(void* id);
+bool k_startupinfo_send_finish(const void* id);
 
 #ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#sendFinishXcb)
@@ -184,7 +184,7 @@ bool k_startupinfo_send_finish(void* id);
 /// @param screen int
 /// @param id KStartupInfoId*
 ///
-bool k_startupinfo_send_finish_xcb(xcb_connection_t* conn, int screen, void* id);
+bool k_startupinfo_send_finish_xcb(xcb_connection_t* conn, int screen, const void* id);
 #endif
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#sendFinish)
@@ -192,7 +192,7 @@ bool k_startupinfo_send_finish_xcb(xcb_connection_t* conn, int screen, void* id)
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-bool k_startupinfo_send_finish2(void* id, void* data);
+bool k_startupinfo_send_finish2(const void* id, const void* data);
 
 #ifdef __linux__
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#sendFinishXcb)
@@ -202,7 +202,7 @@ bool k_startupinfo_send_finish2(void* id, void* data);
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-bool k_startupinfo_send_finish_xcb2(xcb_connection_t* conn, int screen, void* id, void* data);
+bool k_startupinfo_send_finish_xcb2(xcb_connection_t* conn, int screen, const void* id, const void* data);
 #endif
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#resetStartupEnv)
@@ -270,14 +270,14 @@ char* k_startupinfo_window_startup_id(uintptr_t w);
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-void k_startupinfo_got_new_startup(void* self, void* id, void* data);
+void k_startupinfo_got_new_startup(void* self, const void* id, const void* data);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#gotNewStartup)
 ///
 /// @param self KStartupInfo*
 /// @param callback void func(KStartupInfo* self, KStartupInfoId* id, KStartupInfoData* data)
 ///
-void k_startupinfo_on_got_new_startup(void* self, void (*callback)(void*, void*, void*));
+void k_startupinfo_on_got_new_startup(void* self, void (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#gotStartupChange)
 ///
@@ -285,14 +285,14 @@ void k_startupinfo_on_got_new_startup(void* self, void (*callback)(void*, void*,
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-void k_startupinfo_got_startup_change(void* self, void* id, void* data);
+void k_startupinfo_got_startup_change(void* self, const void* id, const void* data);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#gotStartupChange)
 ///
 /// @param self KStartupInfo*
 /// @param callback void func(KStartupInfo* self, KStartupInfoId* id, KStartupInfoData* data)
 ///
-void k_startupinfo_on_got_startup_change(void* self, void (*callback)(void*, void*, void*));
+void k_startupinfo_on_got_startup_change(void* self, void (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#gotRemoveStartup)
 ///
@@ -300,14 +300,14 @@ void k_startupinfo_on_got_startup_change(void* self, void (*callback)(void*, voi
 /// @param id KStartupInfoId*
 /// @param data KStartupInfoData*
 ///
-void k_startupinfo_got_remove_startup(void* self, void* id, void* data);
+void k_startupinfo_got_remove_startup(void* self, const void* id, const void* data);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#gotRemoveStartup)
 ///
 /// @param self KStartupInfo*
 /// @param callback void func(KStartupInfo* self, KStartupInfoId* id, KStartupInfoData* data)
 ///
-void k_startupinfo_on_got_remove_startup(void* self, void (*callback)(void*, void*, void*));
+void k_startupinfo_on_got_remove_startup(void* self, void (*callback)(void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kstartupinfo.html#customEvent)
 ///
@@ -359,9 +359,9 @@ const char* k_startupinfo_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-const char* k_startupinfo_object_name(void* self);
+const char* k_startupinfo_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -376,33 +376,33 @@ void k_startupinfo_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-bool k_startupinfo_is_widget_type(void* self);
+bool k_startupinfo_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-bool k_startupinfo_is_window_type(void* self);
+bool k_startupinfo_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-bool k_startupinfo_is_quick_item_type(void* self);
+bool k_startupinfo_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-bool k_startupinfo_signals_blocked(void* self);
+bool k_startupinfo_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -417,9 +417,9 @@ bool k_startupinfo_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-QThread* k_startupinfo_thread(void* self);
+QThread* k_startupinfo_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -470,11 +470,11 @@ void k_startupinfo_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_startupinfo_children(void* self);
+libqt_list k_startupinfo_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -512,7 +512,7 @@ void k_startupinfo_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_startupinfo_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_startupinfo_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -523,18 +523,18 @@ QMetaObject__Connection* k_startupinfo_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_startupinfo_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_startupinfo_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_startupinfo_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_startupinfo_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -545,7 +545,7 @@ QMetaObject__Connection* k_startupinfo_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_startupinfo_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_startupinfo_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -556,24 +556,24 @@ bool k_startupinfo_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_startupinfo_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_startupinfo_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-bool k_startupinfo_disconnect3(void* self);
+bool k_startupinfo_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param receiver QObject*
 ///
-bool k_startupinfo_disconnect4(void* self, void* receiver);
+bool k_startupinfo_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -581,23 +581,23 @@ bool k_startupinfo_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_startupinfo_disconnect5(void* param1);
+bool k_startupinfo_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-void k_startupinfo_dump_object_tree(void* self);
+void k_startupinfo_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-void k_startupinfo_dump_object_info(void* self);
+void k_startupinfo_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -607,16 +607,16 @@ void k_startupinfo_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_startupinfo_set_property(void* self, const char* name, void* value);
+bool k_startupinfo_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param name const char*
 ///
-QVariant* k_startupinfo_property(void* self, const char* name);
+QVariant* k_startupinfo_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -624,9 +624,9 @@ QVariant* k_startupinfo_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-const char** k_startupinfo_dynamic_property_names(void* self);
+const char** k_startupinfo_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -640,9 +640,9 @@ QBindingStorage* k_startupinfo_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-const QBindingStorage* k_startupinfo_binding_storage2(void* self);
+const QBindingStorage* k_startupinfo_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -665,18 +665,18 @@ void k_startupinfo_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-QObject* k_startupinfo_parent(void* self);
+QObject* k_startupinfo_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param classname const char*
 ///
-bool k_startupinfo_inherits(void* self, const char* classname);
+bool k_startupinfo_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -716,7 +716,7 @@ int32_t k_startupinfo_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_startupinfo_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_startupinfo_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -728,59 +728,59 @@ QMetaObject__Connection* k_startupinfo_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_startupinfo_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_startupinfo_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_startupinfo_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_startupinfo_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param signal const char*
 ///
-bool k_startupinfo_disconnect1(void* self, const char* signal);
+bool k_startupinfo_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStartupInfo*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_startupinfo_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_startupinfo_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_startupinfo_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_startupinfo_disconnect23(void* self, void* receiver, const char* member);
+bool k_startupinfo_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KStartupInfo*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_startupinfo_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -943,7 +943,7 @@ void k_startupinfo_on_child_event(void* self, void (*callback)(void*, void*));
 /// @param self KStartupInfo*
 /// @param signal QMetaMethod*
 ///
-void k_startupinfo_connect_notify(void* self, void* signal);
+void k_startupinfo_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -954,7 +954,7 @@ void k_startupinfo_connect_notify(void* self, void* signal);
 /// @param self KStartupInfo*
 /// @param signal QMetaMethod*
 ///
-void k_startupinfo_super_connect_notify(void* self, void* signal);
+void k_startupinfo_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -965,7 +965,7 @@ void k_startupinfo_super_connect_notify(void* self, void* signal);
 /// @param self KStartupInfo*
 /// @param callback void func(KStartupInfo* self, QMetaMethod* signal)
 ///
-void k_startupinfo_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_startupinfo_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -976,7 +976,7 @@ void k_startupinfo_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self KStartupInfo*
 /// @param signal QMetaMethod*
 ///
-void k_startupinfo_disconnect_notify(void* self, void* signal);
+void k_startupinfo_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -987,7 +987,7 @@ void k_startupinfo_disconnect_notify(void* self, void* signal);
 /// @param self KStartupInfo*
 /// @param signal QMetaMethod*
 ///
-void k_startupinfo_super_disconnect_notify(void* self, void* signal);
+void k_startupinfo_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -998,7 +998,7 @@ void k_startupinfo_super_disconnect_notify(void* self, void* signal);
 /// @param self KStartupInfo*
 /// @param callback void func(KStartupInfo* self, QMetaMethod* signal)
 ///
-void k_startupinfo_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_startupinfo_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1006,9 +1006,9 @@ void k_startupinfo_on_disconnect_notify(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-QObject* k_startupinfo_sender(void* self);
+QObject* k_startupinfo_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1016,9 +1016,9 @@ QObject* k_startupinfo_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-QObject* k_startupinfo_super_sender(void* self);
+QObject* k_startupinfo_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1026,10 +1026,10 @@ QObject* k_startupinfo_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KStartupInfo*
-/// @param callback QObject* func()
+/// @param self const KStartupInfo*
+/// @param callback QObject* func(KStartupInfo* self)
 ///
-void k_startupinfo_on_sender(void* self, QObject* (*callback)());
+void k_startupinfo_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1037,9 +1037,9 @@ void k_startupinfo_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-int32_t k_startupinfo_sender_signal_index(void* self);
+int32_t k_startupinfo_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1047,9 +1047,9 @@ int32_t k_startupinfo_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 ///
-int32_t k_startupinfo_super_sender_signal_index(void* self);
+int32_t k_startupinfo_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1057,10 +1057,10 @@ int32_t k_startupinfo_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KStartupInfo*
-/// @param callback int32_t func()
+/// @param self const KStartupInfo*
+/// @param callback int32_t func(KStartupInfo* self)
 ///
-void k_startupinfo_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_startupinfo_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1068,10 +1068,10 @@ void k_startupinfo_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param signal const char*
 ///
-int32_t k_startupinfo_receivers(void* self, const char* signal);
+int32_t k_startupinfo_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1079,10 +1079,10 @@ int32_t k_startupinfo_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param signal const char*
 ///
-int32_t k_startupinfo_super_receivers(void* self, const char* signal);
+int32_t k_startupinfo_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1090,10 +1090,10 @@ int32_t k_startupinfo_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param callback int32_t func(KStartupInfo* self, const char* signal)
 ///
-void k_startupinfo_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_startupinfo_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1101,10 +1101,10 @@ void k_startupinfo_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param signal QMetaMethod*
 ///
-bool k_startupinfo_is_signal_connected(void* self, void* signal);
+bool k_startupinfo_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1112,10 +1112,10 @@ bool k_startupinfo_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param signal QMetaMethod*
 ///
-bool k_startupinfo_super_is_signal_connected(void* self, void* signal);
+bool k_startupinfo_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1123,10 +1123,10 @@ bool k_startupinfo_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KStartupInfo*
+/// @param self const KStartupInfo*
 /// @param callback bool func(KStartupInfo* self, QMetaMethod* signal)
 ///
-void k_startupinfo_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_startupinfo_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1159,27 +1159,27 @@ KStartupInfoId* k_startupinfoid_new();
 ///
 /// @param data KStartupInfoId*
 ///
-KStartupInfoId* k_startupinfoid_new2(void* data);
+KStartupInfoId* k_startupinfoid_new2(const void* data);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#operator-eq-eq)
 ///
-/// @param self KStartupInfoId*
+/// @param self const KStartupInfoId*
 /// @param id KStartupInfoId*
 ///
-bool k_startupinfoid_operator_equal(void* self, void* id);
+bool k_startupinfoid_operator_equal(const void* self, const void* id);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#operator-not-eq)
 ///
-/// @param self KStartupInfoId*
+/// @param self const KStartupInfoId*
 /// @param id KStartupInfoId*
 ///
-bool k_startupinfoid_operator_not_equal(void* self, void* id);
+bool k_startupinfoid_operator_not_equal(const void* self, const void* id);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#isNull)
 ///
-/// @param self KStartupInfoId*
+/// @param self const KStartupInfoId*
 ///
-bool k_startupinfoid_is_null(void* self);
+bool k_startupinfoid_is_null(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#initId)
 ///
@@ -1191,35 +1191,35 @@ void k_startupinfoid_init_id(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoId*
+/// @param self const KStartupInfoId*
 ///
-const char* k_startupinfoid_id(void* self);
+const char* k_startupinfoid_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#timestamp)
 ///
-/// @param self KStartupInfoId*
+/// @param self const KStartupInfoId*
 ///
-uintptr_t k_startupinfoid_timestamp(void* self);
+uintptr_t k_startupinfoid_timestamp(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#setupStartupEnv)
 ///
-/// @param self KStartupInfoId*
+/// @param self const KStartupInfoId*
 ///
-bool k_startupinfoid_setup_startup_env(void* self);
+bool k_startupinfoid_setup_startup_env(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#operator-eq)
 ///
 /// @param self KStartupInfoId*
 /// @param data KStartupInfoId*
 ///
-void k_startupinfoid_operator_assign(void* self, void* data);
+void k_startupinfoid_operator_assign(void* self, const void* data);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#operator-lt)
 ///
-/// @param self KStartupInfoId*
+/// @param self const KStartupInfoId*
 /// @param id KStartupInfoId*
 ///
-bool k_startupinfoid_operator_lesser(void* self, void* id);
+bool k_startupinfoid_operator_lesser(const void* self, const void* id);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#initId)
 ///
@@ -1248,7 +1248,7 @@ KStartupInfoData* k_startupinfodata_new();
 ///
 /// @param data KStartupInfoData*
 ///
-KStartupInfoData* k_startupinfodata_new2(void* data);
+KStartupInfoData* k_startupinfodata_new2(const void* data);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setBin)
 ///
@@ -1261,9 +1261,9 @@ void k_startupinfodata_set_bin(void* self, const char* bin);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_bin(void* self);
+const char* k_startupinfodata_bin(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setName)
 ///
@@ -1276,17 +1276,17 @@ void k_startupinfodata_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_find_name(void* self);
+const char* k_startupinfodata_find_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_name(void* self);
+const char* k_startupinfodata_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setDescription)
 ///
@@ -1299,17 +1299,17 @@ void k_startupinfodata_set_description(void* self, const char* descr);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_find_description(void* self);
+const char* k_startupinfodata_find_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_description(void* self);
+const char* k_startupinfodata_description(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setIcon)
 ///
@@ -1322,17 +1322,17 @@ void k_startupinfodata_set_icon(void* self, const char* icon);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_find_icon(void* self);
+const char* k_startupinfodata_find_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#icon)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_icon(void* self);
+const char* k_startupinfodata_icon(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setDesktop)
 ///
@@ -1343,9 +1343,9 @@ void k_startupinfodata_set_desktop(void* self, int desktop);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#desktop)
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-int32_t k_startupinfodata_desktop(void* self);
+int32_t k_startupinfodata_desktop(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setWMClass)
 ///
@@ -1358,17 +1358,17 @@ void k_startupinfodata_set_w_m_class(void* self, char* wmclass);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_find_w_m_class(void* self);
+const char* k_startupinfodata_find_w_m_class(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#WMClass)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-char* k_startupinfodata_w_m_class(void* self);
+char* k_startupinfodata_w_m_class(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#addPid)
 ///
@@ -1379,18 +1379,18 @@ void k_startupinfodata_add_pid(void* self, pid_t pid);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#pids)
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
 /// @return libqt_list of pid_t
 ///
-libqt_list k_startupinfodata_pids(void* self);
+libqt_list k_startupinfodata_pids(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#is_pid)
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 /// @param pid pid_t
 ///
-bool k_startupinfodata_is_pid(void* self, pid_t pid);
+bool k_startupinfodata_is_pid(const void* self, pid_t pid);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setHostname)
 ///
@@ -1402,9 +1402,9 @@ void k_startupinfodata_set_hostname(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-char* k_startupinfodata_hostname(void* self);
+char* k_startupinfodata_hostname(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setSilent)
 ///
@@ -1415,17 +1415,17 @@ void k_startupinfodata_set_silent(void* self, int32_t state);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#silent)
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
 /// @return enum KStartupInfoData__TriState
 ///
-int32_t k_startupinfodata_silent(void* self);
+int32_t k_startupinfodata_silent(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#screen)
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-int32_t k_startupinfodata_screen(void* self);
+int32_t k_startupinfodata_screen(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setScreen)
 ///
@@ -1436,9 +1436,9 @@ void k_startupinfodata_set_screen(void* self, int screen);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#xinerama)
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-int32_t k_startupinfodata_xinerama(void* self);
+int32_t k_startupinfodata_xinerama(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setXinerama)
 ///
@@ -1451,9 +1451,9 @@ void k_startupinfodata_set_xinerama(void* self, int xinerama);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KStartupInfoData*
+/// @param self const KStartupInfoData*
 ///
-const char* k_startupinfodata_application_id(void* self);
+const char* k_startupinfodata_application_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setApplicationId)
 ///
@@ -1467,14 +1467,14 @@ void k_startupinfodata_set_application_id(void* self, const char* desktop);
 /// @param self KStartupInfoData*
 /// @param data KStartupInfoData*
 ///
-void k_startupinfodata_update(void* self, void* data);
+void k_startupinfodata_update(void* self, const void* data);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#operator-eq)
 ///
 /// @param self KStartupInfoData*
 /// @param data KStartupInfoData*
 ///
-void k_startupinfodata_operator_assign(void* self, void* data);
+void k_startupinfodata_operator_assign(void* self, const void* data);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfodata.html#setHostname)
 ///

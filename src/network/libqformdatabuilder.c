@@ -8,7 +8,7 @@ QFormDataPartBuilder* q_formdatapartbuilder_new() {
     return QFormDataPartBuilder_New();
 }
 
-QFormDataPartBuilder* q_formdatapartbuilder_new2(void* param1) {
+QFormDataPartBuilder* q_formdatapartbuilder_new2(const void* param1) {
     return QFormDataPartBuilder_New2((QFormDataPartBuilder*)param1);
 }
 
@@ -24,7 +24,7 @@ QFormDataPartBuilder* q_formdatapartbuilder_set_body_device(void* self, void* bo
     return QFormDataPartBuilder_SetBodyDevice((QFormDataPartBuilder*)self, (QIODevice*)body);
 }
 
-QFormDataPartBuilder* q_formdatapartbuilder_set_headers(void* self, void* headers) {
+QFormDataPartBuilder* q_formdatapartbuilder_set_headers(void* self, const void* headers) {
     return QFormDataPartBuilder_SetHeaders((QFormDataPartBuilder*)self, (QHttpHeaders*)headers);
 }
 

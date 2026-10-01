@@ -3,7 +3,7 @@
 #include "libqlocale.hpp"
 #include "libqlocale.h"
 
-size_t q_qlocale_q_hash(void* key, size_t seed) {
+size_t q_qlocale_q_hash(const void* key, size_t seed) {
     return qlocale_QHash((QLocale*)key, seed);
 }
 
@@ -27,7 +27,7 @@ QLocale* q_locale_new5(uint16_t language) {
     return QLocale_New5(language);
 }
 
-QLocale* q_locale_new6(void* other) {
+QLocale* q_locale_new6(const void* other) {
     return QLocale_New6((QLocale*)other);
 }
 
@@ -39,7 +39,7 @@ QLocale* q_locale_new8(uint16_t language, uint16_t script, uint16_t territory) {
     return QLocale_New8(language, script, territory);
 }
 
-void q_locale_operator_assign(void* self, void* other) {
+void q_locale_operator_assign(void* self, const void* other) {
     QLocale_OperatorAssign((QLocale*)self, (QLocale*)other);
 }
 
@@ -47,556 +47,556 @@ void q_locale_swap(void* self, void* other) {
     QLocale_Swap((QLocale*)self, (QLocale*)other);
 }
 
-uint16_t q_locale_language(void* self) {
+uint16_t q_locale_language(const void* self) {
     return QLocale_Language((QLocale*)self);
 }
 
-uint16_t q_locale_script(void* self) {
+uint16_t q_locale_script(const void* self) {
     return QLocale_Script((QLocale*)self);
 }
 
-uint16_t q_locale_territory(void* self) {
+uint16_t q_locale_territory(const void* self) {
     return QLocale_Territory((QLocale*)self);
 }
 
-uint16_t q_locale_country(void* self) {
+uint16_t q_locale_country(const void* self) {
     return QLocale_Country((QLocale*)self);
 }
 
-const char* q_locale_name(void* self) {
+const char* q_locale_name(const void* self) {
     libqt_string _str = QLocale_Name((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_bcp47_name(void* self) {
+const char* q_locale_bcp47_name(const void* self) {
     libqt_string _str = QLocale_Bcp47Name((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_native_language_name(void* self) {
+const char* q_locale_native_language_name(const void* self) {
     libqt_string _str = QLocale_NativeLanguageName((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_native_territory_name(void* self) {
+const char* q_locale_native_territory_name(const void* self) {
     libqt_string _str = QLocale_NativeTerritoryName((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_native_country_name(void* self) {
+const char* q_locale_native_country_name(const void* self) {
     libqt_string _str = QLocale_NativeCountryName((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-short q_locale_to_short(void* self, const char* s) {
+short q_locale_to_short(const void* self, const char* s) {
     return QLocale_ToShort((QLocale*)self, qstring(s));
 }
 
-uint16_t q_locale_to_u_short(void* self, const char* s) {
+uint16_t q_locale_to_u_short(const void* self, const char* s) {
     return QLocale_ToUShort((QLocale*)self, qstring(s));
 }
 
-int32_t q_locale_to_int(void* self, const char* s) {
+int32_t q_locale_to_int(const void* self, const char* s) {
     return QLocale_ToInt((QLocale*)self, qstring(s));
 }
 
-uint32_t q_locale_to_u_int(void* self, const char* s) {
+uint32_t q_locale_to_u_int(const void* self, const char* s) {
     return QLocale_ToUInt((QLocale*)self, qstring(s));
 }
 
-long q_locale_to_long(void* self, const char* s) {
+long q_locale_to_long(const void* self, const char* s) {
     return QLocale_ToLong((QLocale*)self, qstring(s));
 }
 
-uintptr_t q_locale_to_u_long(void* self, const char* s) {
+uintptr_t q_locale_to_u_long(const void* self, const char* s) {
     return QLocale_ToULong((QLocale*)self, qstring(s));
 }
 
-long long q_locale_to_long_long(void* self, const char* s) {
+long long q_locale_to_long_long(const void* self, const char* s) {
     return QLocale_ToLongLong((QLocale*)self, qstring(s));
 }
 
-uintptr_t q_locale_to_u_long_long(void* self, const char* s) {
+uintptr_t q_locale_to_u_long_long(const void* self, const char* s) {
     return QLocale_ToULongLong((QLocale*)self, qstring(s));
 }
 
-float q_locale_to_float(void* self, const char* s) {
+float q_locale_to_float(const void* self, const char* s) {
     return QLocale_ToFloat((QLocale*)self, qstring(s));
 }
 
-double q_locale_to_double(void* self, const char* s) {
+double q_locale_to_double(const void* self, const char* s) {
     return QLocale_ToDouble((QLocale*)self, qstring(s));
 }
 
-short q_locale_to_short2(void* self, const char* s) {
+short q_locale_to_short2(const void* self, const char* s) {
     return QLocale_ToShort2((QLocale*)self, qstring(s));
 }
 
-uint16_t q_locale_to_u_short2(void* self, const char* s) {
+uint16_t q_locale_to_u_short2(const void* self, const char* s) {
     return QLocale_ToUShort2((QLocale*)self, qstring(s));
 }
 
-int32_t q_locale_to_int2(void* self, const char* s) {
+int32_t q_locale_to_int2(const void* self, const char* s) {
     return QLocale_ToInt2((QLocale*)self, qstring(s));
 }
 
-uint32_t q_locale_to_u_int2(void* self, const char* s) {
+uint32_t q_locale_to_u_int2(const void* self, const char* s) {
     return QLocale_ToUInt2((QLocale*)self, qstring(s));
 }
 
-long q_locale_to_long2(void* self, const char* s) {
+long q_locale_to_long2(const void* self, const char* s) {
     return QLocale_ToLong2((QLocale*)self, qstring(s));
 }
 
-uintptr_t q_locale_to_u_long2(void* self, const char* s) {
+uintptr_t q_locale_to_u_long2(const void* self, const char* s) {
     return QLocale_ToULong2((QLocale*)self, qstring(s));
 }
 
-long long q_locale_to_long_long2(void* self, const char* s) {
+long long q_locale_to_long_long2(const void* self, const char* s) {
     return QLocale_ToLongLong2((QLocale*)self, qstring(s));
 }
 
-uintptr_t q_locale_to_u_long_long2(void* self, const char* s) {
+uintptr_t q_locale_to_u_long_long2(const void* self, const char* s) {
     return QLocale_ToULongLong2((QLocale*)self, qstring(s));
 }
 
-float q_locale_to_float2(void* self, const char* s) {
+float q_locale_to_float2(const void* self, const char* s) {
     return QLocale_ToFloat2((QLocale*)self, qstring(s));
 }
 
-double q_locale_to_double2(void* self, const char* s) {
+double q_locale_to_double2(const void* self, const char* s) {
     return QLocale_ToDouble2((QLocale*)self, qstring(s));
 }
 
-const char* q_locale_to_string(void* self, long long i) {
+const char* q_locale_to_string(const void* self, long long i) {
     libqt_string _str = QLocale_ToString((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string2(void* self, uintptr_t i) {
+const char* q_locale_to_string2(const void* self, uintptr_t i) {
     libqt_string _str = QLocale_ToString2((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string3(void* self, long i) {
+const char* q_locale_to_string3(const void* self, long i) {
     libqt_string _str = QLocale_ToString3((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string4(void* self, uintptr_t i) {
+const char* q_locale_to_string4(const void* self, uintptr_t i) {
     libqt_string _str = QLocale_ToString4((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string5(void* self, short i) {
+const char* q_locale_to_string5(const void* self, short i) {
     libqt_string _str = QLocale_ToString5((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string6(void* self, uint16_t i) {
+const char* q_locale_to_string6(const void* self, uint16_t i) {
     libqt_string _str = QLocale_ToString6((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string7(void* self, int i) {
+const char* q_locale_to_string7(const void* self, int i) {
     libqt_string _str = QLocale_ToString7((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string8(void* self, uint32_t i) {
+const char* q_locale_to_string8(const void* self, uint32_t i) {
     libqt_string _str = QLocale_ToString8((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string9(void* self, double f) {
+const char* q_locale_to_string9(const void* self, double f) {
     libqt_string _str = QLocale_ToString9((QLocale*)self, f);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string10(void* self, float f) {
+const char* q_locale_to_string10(const void* self, float f) {
     libqt_string _str = QLocale_ToString10((QLocale*)self, f);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string11(void* self, void* date, const char* format) {
+const char* q_locale_to_string11(const void* self, void* date, const char* format) {
     libqt_string _str = QLocale_ToString11((QLocale*)self, (QDate*)date, qstring(format));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string12(void* self, void* time, const char* format) {
+const char* q_locale_to_string12(const void* self, void* time, const char* format) {
     libqt_string _str = QLocale_ToString12((QLocale*)self, (QTime*)time, qstring(format));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string13(void* self, void* dateTime, const char* format) {
+const char* q_locale_to_string13(const void* self, const void* dateTime, const char* format) {
     libqt_string _str = QLocale_ToString13((QLocale*)self, (QDateTime*)dateTime, qstring(format));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string14(void* self, void* date, const char* format) {
+const char* q_locale_to_string14(const void* self, void* date, const char* format) {
     libqt_string _str = QLocale_ToString14((QLocale*)self, (QDate*)date, qstring(format));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string15(void* self, void* time, const char* format) {
+const char* q_locale_to_string15(const void* self, void* time, const char* format) {
     libqt_string _str = QLocale_ToString15((QLocale*)self, (QTime*)time, qstring(format));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string16(void* self, void* dateTime, const char* format) {
+const char* q_locale_to_string16(const void* self, const void* dateTime, const char* format) {
     libqt_string _str = QLocale_ToString16((QLocale*)self, (QDateTime*)dateTime, qstring(format));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string17(void* self, void* date) {
+const char* q_locale_to_string17(const void* self, void* date) {
     libqt_string _str = QLocale_ToString17((QLocale*)self, (QDate*)date);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string18(void* self, void* time) {
+const char* q_locale_to_string18(const void* self, void* time) {
     libqt_string _str = QLocale_ToString18((QLocale*)self, (QTime*)time);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string19(void* self, void* dateTime) {
+const char* q_locale_to_string19(const void* self, const void* dateTime) {
     libqt_string _str = QLocale_ToString19((QLocale*)self, (QDateTime*)dateTime);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string20(void* self, void* date, const char* format, void* cal) {
+const char* q_locale_to_string20(const void* self, void* date, const char* format, void* cal) {
     libqt_string _str = QLocale_ToString20((QLocale*)self, (QDate*)date, qstring(format), (QCalendar*)cal);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string21(void* self, void* date, int32_t format, void* cal) {
+const char* q_locale_to_string21(const void* self, void* date, int32_t format, void* cal) {
     libqt_string _str = QLocale_ToString21((QLocale*)self, (QDate*)date, format, (QCalendar*)cal);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string22(void* self, void* dateTime, int32_t format, void* cal) {
+const char* q_locale_to_string22(const void* self, const void* dateTime, int32_t format, void* cal) {
     libqt_string _str = QLocale_ToString22((QLocale*)self, (QDateTime*)dateTime, format, (QCalendar*)cal);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string23(void* self, void* dateTime, const char* format, void* cal) {
+const char* q_locale_to_string23(const void* self, const void* dateTime, const char* format, void* cal) {
     libqt_string _str = QLocale_ToString23((QLocale*)self, (QDateTime*)dateTime, qstring(format), (QCalendar*)cal);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_date_format(void* self) {
+const char* q_locale_date_format(const void* self) {
     libqt_string _str = QLocale_DateFormat((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_time_format(void* self) {
+const char* q_locale_time_format(const void* self) {
     libqt_string _str = QLocale_TimeFormat((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_date_time_format(void* self) {
+const char* q_locale_date_time_format(const void* self) {
     libqt_string _str = QLocale_DateTimeFormat((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QTime* q_locale_to_time(void* self, const char* string) {
+QTime* q_locale_to_time(const void* self, const char* string) {
     return QLocale_ToTime((QLocale*)self, qstring(string));
 }
 
-QTime* q_locale_to_time2(void* self, const char* string, const char* format) {
+QTime* q_locale_to_time2(const void* self, const char* string, const char* format) {
     return QLocale_ToTime2((QLocale*)self, qstring(string), qstring(format));
 }
 
-QDate* q_locale_to_date(void* self, const char* string) {
+QDate* q_locale_to_date(const void* self, const char* string) {
     return QLocale_ToDate((QLocale*)self, qstring(string));
 }
 
-QDate* q_locale_to_date2(void* self, const char* string, const char* format) {
+QDate* q_locale_to_date2(const void* self, const char* string, const char* format) {
     return QLocale_ToDate2((QLocale*)self, qstring(string), qstring(format));
 }
 
-QDateTime* q_locale_to_date_time(void* self, const char* string) {
+QDateTime* q_locale_to_date_time(const void* self, const char* string) {
     return QLocale_ToDateTime((QLocale*)self, qstring(string));
 }
 
-QDateTime* q_locale_to_date_time2(void* self, const char* string, const char* format) {
+QDateTime* q_locale_to_date_time2(const void* self, const char* string, const char* format) {
     return QLocale_ToDateTime2((QLocale*)self, qstring(string), qstring(format));
 }
 
-QDate* q_locale_to_date3(void* self, const char* string, int32_t format, void* cal) {
+QDate* q_locale_to_date3(const void* self, const char* string, int32_t format, void* cal) {
     return QLocale_ToDate3((QLocale*)self, qstring(string), format, (QCalendar*)cal);
 }
 
-QDate* q_locale_to_date4(void* self, const char* string, const char* format, void* cal) {
+QDate* q_locale_to_date4(const void* self, const char* string, const char* format, void* cal) {
     return QLocale_ToDate4((QLocale*)self, qstring(string), qstring(format), (QCalendar*)cal);
 }
 
-QDateTime* q_locale_to_date_time3(void* self, const char* string, int32_t format, void* cal) {
+QDateTime* q_locale_to_date_time3(const void* self, const char* string, int32_t format, void* cal) {
     return QLocale_ToDateTime3((QLocale*)self, qstring(string), format, (QCalendar*)cal);
 }
 
-QDateTime* q_locale_to_date_time4(void* self, const char* string, const char* format, void* cal) {
+QDateTime* q_locale_to_date_time4(const void* self, const char* string, const char* format, void* cal) {
     return QLocale_ToDateTime4((QLocale*)self, qstring(string), qstring(format), (QCalendar*)cal);
 }
 
-const char* q_locale_decimal_point(void* self) {
+const char* q_locale_decimal_point(const void* self) {
     libqt_string _str = QLocale_DecimalPoint((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_group_separator(void* self) {
+const char* q_locale_group_separator(const void* self) {
     libqt_string _str = QLocale_GroupSeparator((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_percent(void* self) {
+const char* q_locale_percent(const void* self) {
     libqt_string _str = QLocale_Percent((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_zero_digit(void* self) {
+const char* q_locale_zero_digit(const void* self) {
     libqt_string _str = QLocale_ZeroDigit((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_negative_sign(void* self) {
+const char* q_locale_negative_sign(const void* self) {
     libqt_string _str = QLocale_NegativeSign((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_positive_sign(void* self) {
+const char* q_locale_positive_sign(const void* self) {
     libqt_string _str = QLocale_PositiveSign((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_exponential(void* self) {
+const char* q_locale_exponential(const void* self) {
     libqt_string _str = QLocale_Exponential((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_month_name(void* self, int param1) {
+const char* q_locale_month_name(const void* self, int param1) {
     libqt_string _str = QLocale_MonthName((QLocale*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_standalone_month_name(void* self, int param1) {
+const char* q_locale_standalone_month_name(const void* self, int param1) {
     libqt_string _str = QLocale_StandaloneMonthName((QLocale*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_day_name(void* self, int param1) {
+const char* q_locale_day_name(const void* self, int param1) {
     libqt_string _str = QLocale_DayName((QLocale*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_standalone_day_name(void* self, int param1) {
+const char* q_locale_standalone_day_name(const void* self, int param1) {
     libqt_string _str = QLocale_StandaloneDayName((QLocale*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_locale_first_day_of_week(void* self) {
+int32_t q_locale_first_day_of_week(const void* self) {
     return QLocale_FirstDayOfWeek((QLocale*)self);
 }
 
-libqt_list /* of enum Qt__DayOfWeek */ q_locale_weekdays(void* self) {
+libqt_list /* of enum Qt__DayOfWeek */ q_locale_weekdays(const void* self) {
     libqt_list _arr = QLocale_Weekdays((QLocale*)self);
     return _arr;
 }
 
-const char* q_locale_am_text(void* self) {
+const char* q_locale_am_text(const void* self) {
     libqt_string _str = QLocale_AmText((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_pm_text(void* self) {
+const char* q_locale_pm_text(const void* self) {
     libqt_string _str = QLocale_PmText((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_locale_measurement_system(void* self) {
+int32_t q_locale_measurement_system(const void* self) {
     return QLocale_MeasurementSystem((QLocale*)self);
 }
 
-QLocale* q_locale_collation(void* self) {
+QLocale* q_locale_collation(const void* self) {
     return QLocale_Collation((QLocale*)self);
 }
 
-int32_t q_locale_text_direction(void* self) {
+int32_t q_locale_text_direction(const void* self) {
     return QLocale_TextDirection((QLocale*)self);
 }
 
-const char* q_locale_to_upper(void* self, const char* str) {
+const char* q_locale_to_upper(const void* self, const char* str) {
     libqt_string _str = QLocale_ToUpper((QLocale*)self, qstring(str));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_lower(void* self, const char* str) {
+const char* q_locale_to_lower(const void* self, const char* str) {
     libqt_string _str = QLocale_ToLower((QLocale*)self, qstring(str));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_currency_symbol(void* self) {
+const char* q_locale_currency_symbol(const void* self) {
     libqt_string _str = QLocale_CurrencySymbol((QLocale*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string(void* self, long long param1) {
+const char* q_locale_to_currency_string(const void* self, long long param1) {
     libqt_string _str = QLocale_ToCurrencyString((QLocale*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string2(void* self, uintptr_t param1) {
+const char* q_locale_to_currency_string2(const void* self, uintptr_t param1) {
     libqt_string _str = QLocale_ToCurrencyString2((QLocale*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string3(void* self, short i) {
+const char* q_locale_to_currency_string3(const void* self, short i) {
     libqt_string _str = QLocale_ToCurrencyString3((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string4(void* self, uint16_t i) {
+const char* q_locale_to_currency_string4(const void* self, uint16_t i) {
     libqt_string _str = QLocale_ToCurrencyString4((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string5(void* self, int i) {
+const char* q_locale_to_currency_string5(const void* self, int i) {
     libqt_string _str = QLocale_ToCurrencyString5((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string6(void* self, uint32_t i) {
+const char* q_locale_to_currency_string6(const void* self, uint32_t i) {
     libqt_string _str = QLocale_ToCurrencyString6((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string7(void* self, double param1) {
+const char* q_locale_to_currency_string7(const void* self, double param1) {
     libqt_string _str = QLocale_ToCurrencyString7((QLocale*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string8(void* self, float i) {
+const char* q_locale_to_currency_string8(const void* self, float i) {
     libqt_string _str = QLocale_ToCurrencyString8((QLocale*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_formatted_data_size(void* self, int64_t bytes) {
+const char* q_locale_formatted_data_size(const void* self, int64_t bytes) {
     libqt_string _str = QLocale_FormattedDataSize((QLocale*)self, bytes);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_locale_ui_languages(void* self) {
+const char** q_locale_ui_languages(const void* self) {
     libqt_list _arr = QLocale_UiLanguages((QLocale*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -685,7 +685,7 @@ const char* q_locale_script_to_string(uint16_t script) {
     return _ret;
 }
 
-void q_locale_set_default(void* locale) {
+void q_locale_set_default(const void* locale) {
     QLocale_SetDefault((QLocale*)locale);
 }
 
@@ -711,25 +711,25 @@ void q_locale_set_number_options(void* self, int32_t options) {
     QLocale_SetNumberOptions((QLocale*)self, options);
 }
 
-int32_t q_locale_number_options(void* self) {
+int32_t q_locale_number_options(const void* self) {
     return QLocale_NumberOptions((QLocale*)self);
 }
 
-const char* q_locale_quote_string(void* self, const char* str) {
+const char* q_locale_quote_string(const void* self, const char* str) {
     libqt_string _str = QLocale_QuoteString((QLocale*)self, qstring(str));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_quote_string2(void* self, const char* str) {
+const char* q_locale_quote_string2(const void* self, const char* str) {
     libqt_string _str = QLocale_QuoteString2((QLocale*)self, qstring(str));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_create_separated_list(void* self, const char* strl[static 1]) {
+const char* q_locale_create_separated_list(const void* self, const char* strl[static 1]) {
     size_t strl_len = libqt_strv_length(strl);
     libqt_string* strl_qstr = (libqt_string*)malloc(strl_len * sizeof(libqt_string));
     if (strl_qstr == NULL) {
@@ -746,334 +746,334 @@ const char* q_locale_create_separated_list(void* self, const char* strl[static 1
     return _ret;
 }
 
-const char* q_locale_name1(void* self, int8_t separator) {
+const char* q_locale_name1(const void* self, int8_t separator) {
     libqt_string _str = QLocale_Name1((QLocale*)self, separator);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_bcp47_name1(void* self, int8_t separator) {
+const char* q_locale_bcp47_name1(const void* self, int8_t separator) {
     libqt_string _str = QLocale_Bcp47Name1((QLocale*)self, separator);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-short q_locale_to_short22(void* self, const char* s, bool* ok) {
+short q_locale_to_short22(const void* self, const char* s, bool* ok) {
     return QLocale_ToShort22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-uint16_t q_locale_to_u_short22(void* self, const char* s, bool* ok) {
+uint16_t q_locale_to_u_short22(const void* self, const char* s, bool* ok) {
     return QLocale_ToUShort22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-int32_t q_locale_to_int22(void* self, const char* s, bool* ok) {
+int32_t q_locale_to_int22(const void* self, const char* s, bool* ok) {
     return QLocale_ToInt22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-uint32_t q_locale_to_u_int22(void* self, const char* s, bool* ok) {
+uint32_t q_locale_to_u_int22(const void* self, const char* s, bool* ok) {
     return QLocale_ToUInt22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-long q_locale_to_long22(void* self, const char* s, bool* ok) {
+long q_locale_to_long22(const void* self, const char* s, bool* ok) {
     return QLocale_ToLong22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-uintptr_t q_locale_to_u_long22(void* self, const char* s, bool* ok) {
+uintptr_t q_locale_to_u_long22(const void* self, const char* s, bool* ok) {
     return QLocale_ToULong22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-long long q_locale_to_long_long22(void* self, const char* s, bool* ok) {
+long long q_locale_to_long_long22(const void* self, const char* s, bool* ok) {
     return QLocale_ToLongLong22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-uintptr_t q_locale_to_u_long_long22(void* self, const char* s, bool* ok) {
+uintptr_t q_locale_to_u_long_long22(const void* self, const char* s, bool* ok) {
     return QLocale_ToULongLong22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-float q_locale_to_float22(void* self, const char* s, bool* ok) {
+float q_locale_to_float22(const void* self, const char* s, bool* ok) {
     return QLocale_ToFloat22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-double q_locale_to_double22(void* self, const char* s, bool* ok) {
+double q_locale_to_double22(const void* self, const char* s, bool* ok) {
     return QLocale_ToDouble22((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-short q_locale_to_short23(void* self, const char* s, bool* ok) {
+short q_locale_to_short23(const void* self, const char* s, bool* ok) {
     return QLocale_ToShort23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-uint16_t q_locale_to_u_short23(void* self, const char* s, bool* ok) {
+uint16_t q_locale_to_u_short23(const void* self, const char* s, bool* ok) {
     return QLocale_ToUShort23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-int32_t q_locale_to_int23(void* self, const char* s, bool* ok) {
+int32_t q_locale_to_int23(const void* self, const char* s, bool* ok) {
     return QLocale_ToInt23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-uint32_t q_locale_to_u_int23(void* self, const char* s, bool* ok) {
+uint32_t q_locale_to_u_int23(const void* self, const char* s, bool* ok) {
     return QLocale_ToUInt23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-long q_locale_to_long23(void* self, const char* s, bool* ok) {
+long q_locale_to_long23(const void* self, const char* s, bool* ok) {
     return QLocale_ToLong23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-uintptr_t q_locale_to_u_long23(void* self, const char* s, bool* ok) {
+uintptr_t q_locale_to_u_long23(const void* self, const char* s, bool* ok) {
     return QLocale_ToULong23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-long long q_locale_to_long_long23(void* self, const char* s, bool* ok) {
+long long q_locale_to_long_long23(const void* self, const char* s, bool* ok) {
     return QLocale_ToLongLong23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-uintptr_t q_locale_to_u_long_long23(void* self, const char* s, bool* ok) {
+uintptr_t q_locale_to_u_long_long23(const void* self, const char* s, bool* ok) {
     return QLocale_ToULongLong23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-float q_locale_to_float23(void* self, const char* s, bool* ok) {
+float q_locale_to_float23(const void* self, const char* s, bool* ok) {
     return QLocale_ToFloat23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-double q_locale_to_double23(void* self, const char* s, bool* ok) {
+double q_locale_to_double23(const void* self, const char* s, bool* ok) {
     return QLocale_ToDouble23((QLocale*)self, qstring(s), (bool*)ok);
 }
 
-const char* q_locale_to_string24(void* self, double f, char format) {
+const char* q_locale_to_string24(const void* self, double f, char format) {
     libqt_string _str = QLocale_ToString24((QLocale*)self, f, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string32(void* self, double f, char format, int precision) {
+const char* q_locale_to_string32(const void* self, double f, char format, int precision) {
     libqt_string _str = QLocale_ToString32((QLocale*)self, f, format, precision);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string25(void* self, float f, char format) {
+const char* q_locale_to_string25(const void* self, float f, char format) {
     libqt_string _str = QLocale_ToString25((QLocale*)self, f, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string33(void* self, float f, char format, int precision) {
+const char* q_locale_to_string33(const void* self, float f, char format, int precision) {
     libqt_string _str = QLocale_ToString33((QLocale*)self, f, format, precision);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string26(void* self, void* date, int32_t format) {
+const char* q_locale_to_string26(const void* self, void* date, int32_t format) {
     libqt_string _str = QLocale_ToString26((QLocale*)self, (QDate*)date, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string27(void* self, void* time, int32_t format) {
+const char* q_locale_to_string27(const void* self, void* time, int32_t format) {
     libqt_string _str = QLocale_ToString27((QLocale*)self, (QTime*)time, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_string28(void* self, void* dateTime, int32_t format) {
+const char* q_locale_to_string28(const void* self, const void* dateTime, int32_t format) {
     libqt_string _str = QLocale_ToString28((QLocale*)self, (QDateTime*)dateTime, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_date_format1(void* self, int32_t format) {
+const char* q_locale_date_format1(const void* self, int32_t format) {
     libqt_string _str = QLocale_DateFormat1((QLocale*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_time_format1(void* self, int32_t format) {
+const char* q_locale_time_format1(const void* self, int32_t format) {
     libqt_string _str = QLocale_TimeFormat1((QLocale*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_date_time_format1(void* self, int32_t format) {
+const char* q_locale_date_time_format1(const void* self, int32_t format) {
     libqt_string _str = QLocale_DateTimeFormat1((QLocale*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QTime* q_locale_to_time22(void* self, const char* string, int32_t param2) {
+QTime* q_locale_to_time22(const void* self, const char* string, int32_t param2) {
     return QLocale_ToTime22((QLocale*)self, qstring(string), param2);
 }
 
-QDate* q_locale_to_date22(void* self, const char* string, int32_t param2) {
+QDate* q_locale_to_date22(const void* self, const char* string, int32_t param2) {
     return QLocale_ToDate22((QLocale*)self, qstring(string), param2);
 }
 
-QDate* q_locale_to_date32(void* self, const char* string, int32_t param2, int baseYear) {
+QDate* q_locale_to_date32(const void* self, const char* string, int32_t param2, int baseYear) {
     return QLocale_ToDate32((QLocale*)self, qstring(string), param2, baseYear);
 }
 
-QDate* q_locale_to_date33(void* self, const char* string, const char* format, int baseYear) {
+QDate* q_locale_to_date33(const void* self, const char* string, const char* format, int baseYear) {
     return QLocale_ToDate33((QLocale*)self, qstring(string), qstring(format), baseYear);
 }
 
-QDateTime* q_locale_to_date_time22(void* self, const char* string, int32_t format) {
+QDateTime* q_locale_to_date_time22(const void* self, const char* string, int32_t format) {
     return QLocale_ToDateTime22((QLocale*)self, qstring(string), format);
 }
 
-QDateTime* q_locale_to_date_time32(void* self, const char* string, int32_t format, int baseYear) {
+QDateTime* q_locale_to_date_time32(const void* self, const char* string, int32_t format, int baseYear) {
     return QLocale_ToDateTime32((QLocale*)self, qstring(string), format, baseYear);
 }
 
-QDateTime* q_locale_to_date_time33(void* self, const char* string, const char* format, int baseYear) {
+QDateTime* q_locale_to_date_time33(const void* self, const char* string, const char* format, int baseYear) {
     return QLocale_ToDateTime33((QLocale*)self, qstring(string), qstring(format), baseYear);
 }
 
-QDate* q_locale_to_date42(void* self, const char* string, int32_t format, void* cal, int baseYear) {
+QDate* q_locale_to_date42(const void* self, const char* string, int32_t format, void* cal, int baseYear) {
     return QLocale_ToDate42((QLocale*)self, qstring(string), format, (QCalendar*)cal, baseYear);
 }
 
-QDate* q_locale_to_date43(void* self, const char* string, const char* format, void* cal, int baseYear) {
+QDate* q_locale_to_date43(const void* self, const char* string, const char* format, void* cal, int baseYear) {
     return QLocale_ToDate43((QLocale*)self, qstring(string), qstring(format), (QCalendar*)cal, baseYear);
 }
 
-QDateTime* q_locale_to_date_time42(void* self, const char* string, int32_t format, void* cal, int baseYear) {
+QDateTime* q_locale_to_date_time42(const void* self, const char* string, int32_t format, void* cal, int baseYear) {
     return QLocale_ToDateTime42((QLocale*)self, qstring(string), format, (QCalendar*)cal, baseYear);
 }
 
-QDateTime* q_locale_to_date_time43(void* self, const char* string, const char* format, void* cal, int baseYear) {
+QDateTime* q_locale_to_date_time43(const void* self, const char* string, const char* format, void* cal, int baseYear) {
     return QLocale_ToDateTime43((QLocale*)self, qstring(string), qstring(format), (QCalendar*)cal, baseYear);
 }
 
-const char* q_locale_month_name2(void* self, int param1, int32_t format) {
+const char* q_locale_month_name2(const void* self, int param1, int32_t format) {
     libqt_string _str = QLocale_MonthName2((QLocale*)self, param1, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_standalone_month_name2(void* self, int param1, int32_t format) {
+const char* q_locale_standalone_month_name2(const void* self, int param1, int32_t format) {
     libqt_string _str = QLocale_StandaloneMonthName2((QLocale*)self, param1, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_day_name2(void* self, int param1, int32_t format) {
+const char* q_locale_day_name2(const void* self, int param1, int32_t format) {
     libqt_string _str = QLocale_DayName2((QLocale*)self, param1, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_standalone_day_name2(void* self, int param1, int32_t format) {
+const char* q_locale_standalone_day_name2(const void* self, int param1, int32_t format) {
     libqt_string _str = QLocale_StandaloneDayName2((QLocale*)self, param1, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_currency_symbol1(void* self, int32_t param1) {
+const char* q_locale_currency_symbol1(const void* self, int32_t param1) {
     libqt_string _str = QLocale_CurrencySymbol1((QLocale*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string22(void* self, long long param1, const char* symbol) {
+const char* q_locale_to_currency_string22(const void* self, long long param1, const char* symbol) {
     libqt_string _str = QLocale_ToCurrencyString22((QLocale*)self, param1, qstring(symbol));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string23(void* self, uintptr_t param1, const char* symbol) {
+const char* q_locale_to_currency_string23(const void* self, uintptr_t param1, const char* symbol) {
     libqt_string _str = QLocale_ToCurrencyString23((QLocale*)self, param1, qstring(symbol));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string24(void* self, short i, const char* symbol) {
+const char* q_locale_to_currency_string24(const void* self, short i, const char* symbol) {
     libqt_string _str = QLocale_ToCurrencyString24((QLocale*)self, i, qstring(symbol));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string25(void* self, uint16_t i, const char* symbol) {
+const char* q_locale_to_currency_string25(const void* self, uint16_t i, const char* symbol) {
     libqt_string _str = QLocale_ToCurrencyString25((QLocale*)self, i, qstring(symbol));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string26(void* self, int i, const char* symbol) {
+const char* q_locale_to_currency_string26(const void* self, int i, const char* symbol) {
     libqt_string _str = QLocale_ToCurrencyString26((QLocale*)self, i, qstring(symbol));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string27(void* self, uint32_t i, const char* symbol) {
+const char* q_locale_to_currency_string27(const void* self, uint32_t i, const char* symbol) {
     libqt_string _str = QLocale_ToCurrencyString27((QLocale*)self, i, qstring(symbol));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string28(void* self, double param1, const char* symbol) {
+const char* q_locale_to_currency_string28(const void* self, double param1, const char* symbol) {
     libqt_string _str = QLocale_ToCurrencyString28((QLocale*)self, param1, qstring(symbol));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string32(void* self, double param1, const char* symbol, int precision) {
+const char* q_locale_to_currency_string32(const void* self, double param1, const char* symbol, int precision) {
     libqt_string _str = QLocale_ToCurrencyString32((QLocale*)self, param1, qstring(symbol), precision);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string29(void* self, float i, const char* symbol) {
+const char* q_locale_to_currency_string29(const void* self, float i, const char* symbol) {
     libqt_string _str = QLocale_ToCurrencyString29((QLocale*)self, i, qstring(symbol));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_to_currency_string33(void* self, float i, const char* symbol, int precision) {
+const char* q_locale_to_currency_string33(const void* self, float i, const char* symbol, int precision) {
     libqt_string _str = QLocale_ToCurrencyString33((QLocale*)self, i, qstring(symbol), precision);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_formatted_data_size2(void* self, int64_t bytes, int precision) {
+const char* q_locale_formatted_data_size2(const void* self, int64_t bytes, int precision) {
     libqt_string _str = QLocale_FormattedDataSize2((QLocale*)self, bytes, precision);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_formatted_data_size3(void* self, int64_t bytes, int precision, int32_t format) {
+const char* q_locale_formatted_data_size3(const void* self, int64_t bytes, int precision, int32_t format) {
     libqt_string _str = QLocale_FormattedDataSize3((QLocale*)self, bytes, precision, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_locale_ui_languages1(void* self, int8_t separator) {
+const char** q_locale_ui_languages1(const void* self, int8_t separator) {
     libqt_list _arr = QLocale_UiLanguages1((QLocale*)self, separator);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1101,14 +1101,14 @@ uint16_t q_locale_code_to_language2(const char* languageCode, int32_t codeTypes)
     return QLocale_CodeToLanguage2(qstring(languageCode), codeTypes);
 }
 
-const char* q_locale_quote_string22(void* self, const char* str, int32_t style) {
+const char* q_locale_quote_string22(const void* self, const char* str, int32_t style) {
     libqt_string _str = QLocale_QuoteString22((QLocale*)self, qstring(str), style);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_locale_quote_string23(void* self, const char* str, int32_t style) {
+const char* q_locale_quote_string23(const void* self, const char* str, int32_t style) {
     libqt_string _str = QLocale_QuoteString23((QLocale*)self, qstring(str), style);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

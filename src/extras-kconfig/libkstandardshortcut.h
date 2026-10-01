@@ -48,7 +48,7 @@ const char* k_standardshortcut_whats_this(int32_t id);
 ///
 /// @return enum KStandardShortcut__StandardShortcut
 ///
-int32_t k_standardshortcut_find(void* keySeq);
+int32_t k_standardshortcut_find(const void* keySeq);
 
 /// [Upstream resources](https://api.kde.org/kstandardshortcut.html#findByName)
 ///

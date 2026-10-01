@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-const QMetaObject* q_webenginecontextmenurequest_meta_object(void* self);
+const QMetaObject* q_webenginecontextmenurequest_meta_object(const void* self);
 
 /// @param self QWebEngineContextMenuRequest*
 /// @param param1 const char*
@@ -38,73 +38,73 @@ const char* q_webenginecontextmenurequest_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#position)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-QPoint* q_webenginecontextmenurequest_position(void* self);
+QPoint* q_webenginecontextmenurequest_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#selectedText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-const char* q_webenginecontextmenurequest_selected_text(void* self);
+const char* q_webenginecontextmenurequest_selected_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#linkText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-const char* q_webenginecontextmenurequest_link_text(void* self);
+const char* q_webenginecontextmenurequest_link_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#linkUrl)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-QUrl* q_webenginecontextmenurequest_link_url(void* self);
+QUrl* q_webenginecontextmenurequest_link_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaUrl)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-QUrl* q_webenginecontextmenurequest_media_url(void* self);
+QUrl* q_webenginecontextmenurequest_media_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaType)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
 /// @return enum QWebEngineContextMenuRequest__MediaType
 ///
-int32_t q_webenginecontextmenurequest_media_type(void* self);
+int32_t q_webenginecontextmenurequest_media_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#isContentEditable)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-bool q_webenginecontextmenurequest_is_content_editable(void* self);
+bool q_webenginecontextmenurequest_is_content_editable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#misspelledWord)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-const char* q_webenginecontextmenurequest_misspelled_word(void* self);
+const char* q_webenginecontextmenurequest_misspelled_word(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#spellCheckerSuggestions)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-const char** q_webenginecontextmenurequest_spell_checker_suggestions(void* self);
+const char** q_webenginecontextmenurequest_spell_checker_suggestions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#isAccepted)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-bool q_webenginecontextmenurequest_is_accepted(void* self);
+bool q_webenginecontextmenurequest_is_accepted(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#setAccepted)
 ///
@@ -115,19 +115,19 @@ void q_webenginecontextmenurequest_set_accepted(void* self, bool accepted);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#mediaFlags)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
 /// @return flag of enum QWebEngineContextMenuRequest__MediaFlag
 ///
-int32_t q_webenginecontextmenurequest_media_flags(void* self);
+int32_t q_webenginecontextmenurequest_media_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecontextmenurequest.html#editFlags)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
 /// @return flag of enum QWebEngineContextMenuRequest__EditFlag
 ///
-int32_t q_webenginecontextmenurequest_edit_flags(void* self);
+int32_t q_webenginecontextmenurequest_edit_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -173,9 +173,9 @@ bool q_webenginecontextmenurequest_event_filter(void* self, void* watched, void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-const char* q_webenginecontextmenurequest_object_name(void* self);
+const char* q_webenginecontextmenurequest_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -190,33 +190,33 @@ void q_webenginecontextmenurequest_set_object_name(void* self, const char* name)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-bool q_webenginecontextmenurequest_is_widget_type(void* self);
+bool q_webenginecontextmenurequest_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-bool q_webenginecontextmenurequest_is_window_type(void* self);
+bool q_webenginecontextmenurequest_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-bool q_webenginecontextmenurequest_is_quick_item_type(void* self);
+bool q_webenginecontextmenurequest_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-bool q_webenginecontextmenurequest_signals_blocked(void* self);
+bool q_webenginecontextmenurequest_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -231,9 +231,9 @@ bool q_webenginecontextmenurequest_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-QThread* q_webenginecontextmenurequest_thread(void* self);
+QThread* q_webenginecontextmenurequest_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -284,11 +284,11 @@ void q_webenginecontextmenurequest_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_webenginecontextmenurequest_children(void* self);
+libqt_list q_webenginecontextmenurequest_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -326,7 +326,7 @@ void q_webenginecontextmenurequest_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webenginecontextmenurequest_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_webenginecontextmenurequest_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -337,18 +337,18 @@ QMetaObject__Connection* q_webenginecontextmenurequest_connect(void* sender, con
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_webenginecontextmenurequest_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_webenginecontextmenurequest_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_webenginecontextmenurequest_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_webenginecontextmenurequest_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -359,7 +359,7 @@ QMetaObject__Connection* q_webenginecontextmenurequest_connect3(void* self, void
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webenginecontextmenurequest_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_webenginecontextmenurequest_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -370,24 +370,24 @@ bool q_webenginecontextmenurequest_disconnect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_webenginecontextmenurequest_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_webenginecontextmenurequest_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-bool q_webenginecontextmenurequest_disconnect3(void* self);
+bool q_webenginecontextmenurequest_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 /// @param receiver QObject*
 ///
-bool q_webenginecontextmenurequest_disconnect4(void* self, void* receiver);
+bool q_webenginecontextmenurequest_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -395,23 +395,23 @@ bool q_webenginecontextmenurequest_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_webenginecontextmenurequest_disconnect5(void* param1);
+bool q_webenginecontextmenurequest_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-void q_webenginecontextmenurequest_dump_object_tree(void* self);
+void q_webenginecontextmenurequest_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-void q_webenginecontextmenurequest_dump_object_info(void* self);
+void q_webenginecontextmenurequest_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -421,16 +421,16 @@ void q_webenginecontextmenurequest_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_webenginecontextmenurequest_set_property(void* self, const char* name, void* value);
+bool q_webenginecontextmenurequest_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 /// @param name const char*
 ///
-QVariant* q_webenginecontextmenurequest_property(void* self, const char* name);
+QVariant* q_webenginecontextmenurequest_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -438,9 +438,9 @@ QVariant* q_webenginecontextmenurequest_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-const char** q_webenginecontextmenurequest_dynamic_property_names(void* self);
+const char** q_webenginecontextmenurequest_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -454,9 +454,9 @@ QBindingStorage* q_webenginecontextmenurequest_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-const QBindingStorage* q_webenginecontextmenurequest_binding_storage2(void* self);
+const QBindingStorage* q_webenginecontextmenurequest_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -479,18 +479,18 @@ void q_webenginecontextmenurequest_on_destroyed(void* self, void (*callback)(voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 ///
-QObject* q_webenginecontextmenurequest_parent(void* self);
+QObject* q_webenginecontextmenurequest_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 /// @param classname const char*
 ///
-bool q_webenginecontextmenurequest_inherits(void* self, const char* classname);
+bool q_webenginecontextmenurequest_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -530,7 +530,7 @@ int32_t q_webenginecontextmenurequest_start_timer23(void* self, int64_t time, in
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginecontextmenurequest_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_webenginecontextmenurequest_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -542,59 +542,59 @@ QMetaObject__Connection* q_webenginecontextmenurequest_connect5(void* sender, co
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginecontextmenurequest_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_webenginecontextmenurequest_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_webenginecontextmenurequest_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_webenginecontextmenurequest_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 /// @param signal const char*
 ///
-bool q_webenginecontextmenurequest_disconnect1(void* self, const char* signal);
+bool q_webenginecontextmenurequest_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineContextMenuRequest*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_webenginecontextmenurequest_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_webenginecontextmenurequest_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_webenginecontextmenurequest_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QWebEngineContextMenuRequest*
+/// @param self const QWebEngineContextMenuRequest*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_webenginecontextmenurequest_disconnect23(void* self, void* receiver, const char* member);
+bool q_webenginecontextmenurequest_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QWebEngineContextMenuRequest*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_webenginecontextmenurequest_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

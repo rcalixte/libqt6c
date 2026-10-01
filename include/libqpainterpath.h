@@ -20,7 +20,7 @@ QPainterPath* q_painterpath_new();
 ///
 /// @param startPoint QPointF*
 ///
-QPainterPath* q_painterpath_new2(void* startPoint);
+QPainterPath* q_painterpath_new2(const void* startPoint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html)
 
@@ -28,14 +28,14 @@ QPainterPath* q_painterpath_new2(void* startPoint);
 ///
 /// @param other QPainterPath*
 ///
-QPainterPath* q_painterpath_new3(void* other);
+QPainterPath* q_painterpath_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-eq)
 ///
 /// @param self QPainterPath*
 /// @param other QPainterPath*
 ///
-void q_painterpath_operator_assign(void* self, void* other);
+void q_painterpath_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#swap)
 ///
@@ -59,9 +59,9 @@ void q_painterpath_reserve(void* self, int size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#capacity)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-int32_t q_painterpath_capacity(void* self);
+int32_t q_painterpath_capacity(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#closeSubpath)
 ///
@@ -74,7 +74,7 @@ void q_painterpath_close_subpath(void* self);
 /// @param self QPainterPath*
 /// @param p QPointF*
 ///
-void q_painterpath_move_to(void* self, void* p);
+void q_painterpath_move_to(void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#moveTo)
 ///
@@ -89,7 +89,7 @@ void q_painterpath_move_to2(void* self, double x, double y);
 /// @param self QPainterPath*
 /// @param p QPointF*
 ///
-void q_painterpath_line_to(void* self, void* p);
+void q_painterpath_line_to(void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#lineTo)
 ///
@@ -105,7 +105,7 @@ void q_painterpath_line_to2(void* self, double x, double y);
 /// @param rect QRectF*
 /// @param angle double
 ///
-void q_painterpath_arc_move_to(void* self, void* rect, double angle);
+void q_painterpath_arc_move_to(void* self, const void* rect, double angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#arcMoveTo)
 ///
@@ -125,7 +125,7 @@ void q_painterpath_arc_move_to2(void* self, double x, double y, double w, double
 /// @param startAngle double
 /// @param arcLength double
 ///
-void q_painterpath_arc_to(void* self, void* rect, double startAngle, double arcLength);
+void q_painterpath_arc_to(void* self, const void* rect, double startAngle, double arcLength);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#arcTo)
 ///
@@ -146,7 +146,7 @@ void q_painterpath_arc_to2(void* self, double x, double y, double w, double h, d
 /// @param ctrlPt2 QPointF*
 /// @param endPt QPointF*
 ///
-void q_painterpath_cubic_to(void* self, void* ctrlPt1, void* ctrlPt2, void* endPt);
+void q_painterpath_cubic_to(void* self, const void* ctrlPt1, const void* ctrlPt2, const void* endPt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#cubicTo)
 ///
@@ -166,7 +166,7 @@ void q_painterpath_cubic_to2(void* self, double ctrlPt1x, double ctrlPt1y, doubl
 /// @param ctrlPt QPointF*
 /// @param endPt QPointF*
 ///
-void q_painterpath_quad_to(void* self, void* ctrlPt, void* endPt);
+void q_painterpath_quad_to(void* self, const void* ctrlPt, const void* endPt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#quadTo)
 ///
@@ -180,16 +180,16 @@ void q_painterpath_quad_to2(void* self, double ctrlPtx, double ctrlPty, double e
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#currentPosition)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-QPointF* q_painterpath_current_position(void* self);
+QPointF* q_painterpath_current_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addRect)
 ///
 /// @param self QPainterPath*
 /// @param rect QRectF*
 ///
-void q_painterpath_add_rect(void* self, void* rect);
+void q_painterpath_add_rect(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addRect)
 ///
@@ -206,7 +206,7 @@ void q_painterpath_add_rect2(void* self, double x, double y, double w, double h)
 /// @param self QPainterPath*
 /// @param rect QRectF*
 ///
-void q_painterpath_add_ellipse(void* self, void* rect);
+void q_painterpath_add_ellipse(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addEllipse)
 ///
@@ -225,14 +225,14 @@ void q_painterpath_add_ellipse2(void* self, double x, double y, double w, double
 /// @param rx double
 /// @param ry double
 ///
-void q_painterpath_add_ellipse3(void* self, void* center, double rx, double ry);
+void q_painterpath_add_ellipse3(void* self, const void* center, double rx, double ry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addPolygon)
 ///
 /// @param self QPainterPath*
 /// @param polygon QPolygonF*
 ///
-void q_painterpath_add_polygon(void* self, void* polygon);
+void q_painterpath_add_polygon(void* self, const void* polygon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addText)
 ///
@@ -241,7 +241,7 @@ void q_painterpath_add_polygon(void* self, void* polygon);
 /// @param f QFont*
 /// @param text const char*
 ///
-void q_painterpath_add_text(void* self, void* point, void* f, const char* text);
+void q_painterpath_add_text(void* self, const void* point, const void* f, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addText)
 ///
@@ -251,21 +251,21 @@ void q_painterpath_add_text(void* self, void* point, void* f, const char* text);
 /// @param f QFont*
 /// @param text const char*
 ///
-void q_painterpath_add_text2(void* self, double x, double y, void* f, const char* text);
+void q_painterpath_add_text2(void* self, double x, double y, const void* f, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addPath)
 ///
 /// @param self QPainterPath*
 /// @param path QPainterPath*
 ///
-void q_painterpath_add_path(void* self, void* path);
+void q_painterpath_add_path(void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addRegion)
 ///
 /// @param self QPainterPath*
 /// @param region QRegion*
 ///
-void q_painterpath_add_region(void* self, void* region);
+void q_painterpath_add_region(void* self, const void* region);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addRoundedRect)
 ///
@@ -274,7 +274,7 @@ void q_painterpath_add_region(void* self, void* region);
 /// @param xRadius double
 /// @param yRadius double
 ///
-void q_painterpath_add_rounded_rect(void* self, void* rect, double xRadius, double yRadius);
+void q_painterpath_add_rounded_rect(void* self, const void* rect, double xRadius, double yRadius);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addRoundedRect)
 ///
@@ -293,28 +293,28 @@ void q_painterpath_add_rounded_rect2(void* self, double x, double y, double w, d
 /// @param self QPainterPath*
 /// @param path QPainterPath*
 ///
-void q_painterpath_connect_path(void* self, void* path);
+void q_painterpath_connect_path(void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#contains)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param pt QPointF*
 ///
-bool q_painterpath_contains(void* self, void* pt);
+bool q_painterpath_contains(const void* self, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#contains)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param rect QRectF*
 ///
-bool q_painterpath_contains2(void* self, void* rect);
+bool q_painterpath_contains2(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#intersects)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param rect QRectF*
 ///
-bool q_painterpath_intersects(void* self, void* rect);
+bool q_painterpath_intersects(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#translate)
 ///
@@ -329,42 +329,42 @@ void q_painterpath_translate(void* self, double dx, double dy);
 /// @param self QPainterPath*
 /// @param offset QPointF*
 ///
-void q_painterpath_translate2(void* self, void* offset);
+void q_painterpath_translate2(void* self, const void* offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#translated)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param dx double
 /// @param dy double
 ///
-QPainterPath* q_painterpath_translated(void* self, double dx, double dy);
+QPainterPath* q_painterpath_translated(const void* self, double dx, double dy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#translated)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param offset QPointF*
 ///
-QPainterPath* q_painterpath_translated2(void* self, void* offset);
+QPainterPath* q_painterpath_translated2(const void* self, const void* offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#boundingRect)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-QRectF* q_painterpath_bounding_rect(void* self);
+QRectF* q_painterpath_bounding_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#controlPointRect)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-QRectF* q_painterpath_control_point_rect(void* self);
+QRectF* q_painterpath_control_point_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#fillRule)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
 /// @return enum Qt__FillRule
 ///
-int32_t q_painterpath_fill_rule(void* self);
+int32_t q_painterpath_fill_rule(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#setFillRule)
 ///
@@ -375,50 +375,50 @@ void q_painterpath_set_fill_rule(void* self, int32_t fillRule);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#isEmpty)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-bool q_painterpath_is_empty(void* self);
+bool q_painterpath_is_empty(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toReversed)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-QPainterPath* q_painterpath_to_reversed(void* self);
+QPainterPath* q_painterpath_to_reversed(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toSubpathPolygons)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
 /// @return libqt_list of QPolygonF*
 ///
-libqt_list q_painterpath_to_subpath_polygons(void* self);
+libqt_list q_painterpath_to_subpath_polygons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toFillPolygons)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
 /// @return libqt_list of QPolygonF*
 ///
-libqt_list q_painterpath_to_fill_polygons(void* self);
+libqt_list q_painterpath_to_fill_polygons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toFillPolygon)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-QPolygonF* q_painterpath_to_fill_polygon(void* self);
+QPolygonF* q_painterpath_to_fill_polygon(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#elementCount)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-int32_t q_painterpath_element_count(void* self);
+int32_t q_painterpath_element_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#elementAt)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param i int
 ///
-QPainterPath__Element* q_painterpath_element_at(void* self, int i);
+QPainterPath__Element* q_painterpath_element_at(const void* self, int i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#setElementPositionAt)
 ///
@@ -431,148 +431,148 @@ void q_painterpath_set_element_position_at(void* self, int i, double x, double y
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#length)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-double q_painterpath_length(void* self);
+double q_painterpath_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#percentAtLength)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param t double
 ///
-double q_painterpath_percent_at_length(void* self, double t);
+double q_painterpath_percent_at_length(const void* self, double t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#pointAtPercent)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param t double
 ///
-QPointF* q_painterpath_point_at_percent(void* self, double t);
+QPointF* q_painterpath_point_at_percent(const void* self, double t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#angleAtPercent)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param t double
 ///
-double q_painterpath_angle_at_percent(void* self, double t);
+double q_painterpath_angle_at_percent(const void* self, double t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#slopeAtPercent)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param t double
 ///
-double q_painterpath_slope_at_percent(void* self, double t);
+double q_painterpath_slope_at_percent(const void* self, double t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#intersects)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param p QPainterPath*
 ///
-bool q_painterpath_intersects2(void* self, void* p);
+bool q_painterpath_intersects2(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#contains)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param p QPainterPath*
 ///
-bool q_painterpath_contains3(void* self, void* p);
+bool q_painterpath_contains3(const void* self, const void* p);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#united)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param r QPainterPath*
 ///
-QPainterPath* q_painterpath_united(void* self, void* r);
+QPainterPath* q_painterpath_united(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#intersected)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param r QPainterPath*
 ///
-QPainterPath* q_painterpath_intersected(void* self, void* r);
+QPainterPath* q_painterpath_intersected(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#subtracted)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param r QPainterPath*
 ///
-QPainterPath* q_painterpath_subtracted(void* self, void* r);
+QPainterPath* q_painterpath_subtracted(const void* self, const void* r);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#simplified)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 ///
-QPainterPath* q_painterpath_simplified(void* self);
+QPainterPath* q_painterpath_simplified(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-eq-eq)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param other QPainterPath*
 ///
-bool q_painterpath_operator_equal(void* self, void* other);
+bool q_painterpath_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-not-eq)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param other QPainterPath*
 ///
-bool q_painterpath_operator_not_equal(void* self, void* other);
+bool q_painterpath_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-and)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param other QPainterPath*
 ///
-QPainterPath* q_painterpath_operator_bitwise_and(void* self, void* other);
+QPainterPath* q_painterpath_operator_bitwise_and(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-7c)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param other QPainterPath*
 ///
-QPainterPath* q_painterpath_operator_bitwise_or(void* self, void* other);
+QPainterPath* q_painterpath_operator_bitwise_or(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-2b)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param other QPainterPath*
 ///
-QPainterPath* q_painterpath_operator_plus(void* self, void* other);
+QPainterPath* q_painterpath_operator_plus(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param other QPainterPath*
 ///
-QPainterPath* q_painterpath_operator_minus(void* self, void* other);
+QPainterPath* q_painterpath_operator_minus(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-and-eq)
 ///
 /// @param self QPainterPath*
 /// @param other QPainterPath*
 ///
-void q_painterpath_operator_bitwise_and_assign(void* self, void* other);
+void q_painterpath_operator_bitwise_and_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-7c-eq)
 ///
 /// @param self QPainterPath*
 /// @param other QPainterPath*
 ///
-void q_painterpath_operator_bitwise_or_assign(void* self, void* other);
+void q_painterpath_operator_bitwise_or_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator-2b-eq)
 ///
 /// @param self QPainterPath*
 /// @param other QPainterPath*
 ///
-QPainterPath* q_painterpath_operator_plus_assign(void* self, void* other);
+QPainterPath* q_painterpath_operator_plus_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#operator--eq)
 ///
 /// @param self QPainterPath*
 /// @param other QPainterPath*
 ///
-QPainterPath* q_painterpath_operator_minus_assign(void* self, void* other);
+QPainterPath* q_painterpath_operator_minus_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addRoundedRect)
 ///
@@ -582,7 +582,7 @@ QPainterPath* q_painterpath_operator_minus_assign(void* self, void* other);
 /// @param yRadius double
 /// @param mode enum Qt__SizeMode
 ///
-void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode);
+void q_painterpath_add_rounded_rect4(void* self, const void* rect, double xRadius, double yRadius, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#addRoundedRect)
 ///
@@ -599,28 +599,28 @@ void q_painterpath_add_rounded_rect7(void* self, double x, double y, double w, d
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toSubpathPolygons)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param matrix QTransform*
 ///
 /// @return libqt_list of QPolygonF*
 ///
-libqt_list q_painterpath_to_subpath_polygons1(void* self, void* matrix);
+libqt_list q_painterpath_to_subpath_polygons1(const void* self, const void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toFillPolygons)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param matrix QTransform*
 ///
 /// @return libqt_list of QPolygonF*
 ///
-libqt_list q_painterpath_to_fill_polygons1(void* self, void* matrix);
+libqt_list q_painterpath_to_fill_polygons1(const void* self, const void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#toFillPolygon)
 ///
-/// @param self QPainterPath*
+/// @param self const QPainterPath*
 /// @param matrix QTransform*
 ///
-QPolygonF* q_painterpath_to_fill_polygon1(void* self, void* matrix);
+QPolygonF* q_painterpath_to_fill_polygon1(const void* self, const void* matrix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath.html#dtor.QPainterPath)
 ///
@@ -642,7 +642,7 @@ QPainterPathStroker* q_painterpathstroker_new();
 ///
 /// @param pen QPen*
 ///
-QPainterPathStroker* q_painterpathstroker_new2(void* pen);
+QPainterPathStroker* q_painterpathstroker_new2(const void* pen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setWidth)
 ///
@@ -653,9 +653,9 @@ void q_painterpathstroker_set_width(void* self, double width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#width)
 ///
-/// @param self QPainterPathStroker*
+/// @param self const QPainterPathStroker*
 ///
-double q_painterpathstroker_width(void* self);
+double q_painterpathstroker_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setCapStyle)
 ///
@@ -666,11 +666,11 @@ void q_painterpathstroker_set_cap_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#capStyle)
 ///
-/// @param self QPainterPathStroker*
+/// @param self const QPainterPathStroker*
 ///
 /// @return enum Qt__PenCapStyle
 ///
-int32_t q_painterpathstroker_cap_style(void* self);
+int32_t q_painterpathstroker_cap_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setJoinStyle)
 ///
@@ -681,11 +681,11 @@ void q_painterpathstroker_set_join_style(void* self, int32_t style);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#joinStyle)
 ///
-/// @param self QPainterPathStroker*
+/// @param self const QPainterPathStroker*
 ///
 /// @return enum Qt__PenJoinStyle
 ///
-int32_t q_painterpathstroker_join_style(void* self);
+int32_t q_painterpathstroker_join_style(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setMiterLimit)
 ///
@@ -696,9 +696,9 @@ void q_painterpathstroker_set_miter_limit(void* self, double length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#miterLimit)
 ///
-/// @param self QPainterPathStroker*
+/// @param self const QPainterPathStroker*
 ///
-double q_painterpathstroker_miter_limit(void* self);
+double q_painterpathstroker_miter_limit(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setCurveThreshold)
 ///
@@ -709,9 +709,9 @@ void q_painterpathstroker_set_curve_threshold(void* self, double threshold);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#curveThreshold)
 ///
-/// @param self QPainterPathStroker*
+/// @param self const QPainterPathStroker*
 ///
-double q_painterpathstroker_curve_threshold(void* self);
+double q_painterpathstroker_curve_threshold(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setDashPattern)
 ///
@@ -729,11 +729,11 @@ void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list dashPattern);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#dashPattern)
 ///
-/// @param self QPainterPathStroker*
+/// @param self const QPainterPathStroker*
 ///
 /// @return libqt_list of double
 ///
-libqt_list q_painterpathstroker_dash_pattern(void* self);
+libqt_list q_painterpathstroker_dash_pattern(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#setDashOffset)
 ///
@@ -744,16 +744,16 @@ void q_painterpathstroker_set_dash_offset(void* self, double offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#dashOffset)
 ///
-/// @param self QPainterPathStroker*
+/// @param self const QPainterPathStroker*
 ///
-double q_painterpathstroker_dash_offset(void* self);
+double q_painterpathstroker_dash_offset(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#createStroke)
 ///
-/// @param self QPainterPathStroker*
+/// @param self const QPainterPathStroker*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_painterpathstroker_create_stroke(void* self, void* path);
+QPainterPath* q_painterpathstroker_create_stroke(const void* self, const void* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpathstroker.html#dtor.QPainterPathStroker)
 ///
@@ -775,13 +775,13 @@ QPainterPath__Element* q_painterpath__element_new();
 ///
 /// @param param1 QPainterPath__Element*
 ///
-QPainterPath__Element* q_painterpath__element_new2(void* param1);
+QPainterPath__Element* q_painterpath__element_new2(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#x-var)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 ///
-double q_painterpath__element_x(void* self);
+double q_painterpath__element_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#x-var)
 ///
@@ -792,9 +792,9 @@ void q_painterpath__element_set_x(void* self, double x);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#y-var)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 ///
-double q_painterpath__element_y(void* self);
+double q_painterpath__element_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#y-var)
 ///
@@ -805,11 +805,11 @@ void q_painterpath__element_set_y(void* self, double y);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#type-var)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 ///
 /// @return enum QPainterPath__ElementType
 ///
-int32_t q_painterpath__element_type(void* self);
+int32_t q_painterpath__element_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#type-var)
 ///
@@ -820,41 +820,41 @@ void q_painterpath__element_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#isMoveTo)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 ///
-bool q_painterpath__element_is_move_to(void* self);
+bool q_painterpath__element_is_move_to(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#isLineTo)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 ///
-bool q_painterpath__element_is_line_to(void* self);
+bool q_painterpath__element_is_line_to(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#isCurveTo)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 ///
-bool q_painterpath__element_is_curve_to(void* self);
+bool q_painterpath__element_is_curve_to(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#operator-QPointF)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 ///
-QPointF* q_painterpath__element_to_q_point_f(void* self);
+QPointF* q_painterpath__element_to_q_point_f(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#operator-eq-eq)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 /// @param e QPainterPath__Element*
 ///
-bool q_painterpath__element_operator_equal(void* self, void* e);
+bool q_painterpath__element_operator_equal(const void* self, const void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpainterpath-element.html#operator-not-eq)
 ///
-/// @param self QPainterPath__Element*
+/// @param self const QPainterPath__Element*
 /// @param e QPainterPath__Element*
 ///
-bool q_painterpath__element_operator_not_equal(void* self, void* e);
+bool q_painterpath__element_operator_not_equal(const void* self, const void* e);
 
 /// Delete this object from C++ memory.
 ///

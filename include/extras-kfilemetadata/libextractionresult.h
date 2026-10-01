@@ -22,7 +22,7 @@ KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new(const char
 ///
 /// @param rhs KFileMetaData__ExtractionResult*
 ///
-KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new2(void* rhs);
+KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new2(const void* rhs);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html)
 
@@ -47,27 +47,29 @@ KFileMetaData__ExtractionResult* k_filemetadata__extractionresult_new4(const cha
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__ExtractionResult*
+/// @param self const KFileMetaData__ExtractionResult*
 ///
-const char* k_filemetadata__extractionresult_input_url(void* self);
+const char* k_filemetadata__extractionresult_input_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#inputMimetype)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KFileMetaData__ExtractionResult*
+/// @param self const KFileMetaData__ExtractionResult*
 ///
-const char* k_filemetadata__extractionresult_input_mimetype(void* self);
+const char* k_filemetadata__extractionresult_input_mimetype(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#inputFlags)
 ///
-/// @param self KFileMetaData__ExtractionResult*
+/// @param self const KFileMetaData__ExtractionResult*
 ///
 /// @return flag of enum KFileMetaData__ExtractionResult__Flag
 ///
-int32_t k_filemetadata__extractionresult_input_flags(void* self);
+int32_t k_filemetadata__extractionresult_input_flags(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#append)
+///
+/// @warning This method must be implemented with `k_filemetadata__extractionresult_on_append` before it can be called.
 ///
 /// @param self KFileMetaData__ExtractionResult*
 /// @param text const char*
@@ -83,22 +85,15 @@ void k_filemetadata__extractionresult_append(void* self, const char* text);
 ///
 void k_filemetadata__extractionresult_on_append(void* self, void (*callback)(void*, const char*));
 
-/// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#append)
-///
-/// Base class method implementation
-///
-/// @param self KFileMetaData__ExtractionResult*
-/// @param text const char*
-///
-void k_filemetadata__extractionresult_super_append(void* self, const char* text);
-
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#add)
+///
+/// @warning This method must be implemented with `k_filemetadata__extractionresult_on_add` before it can be called.
 ///
 /// @param self KFileMetaData__ExtractionResult*
 /// @param property enum KFileMetaData__Property__Property
 /// @param value QVariant*
 ///
-void k_filemetadata__extractionresult_add(void* self, int32_t property, void* value);
+void k_filemetadata__extractionresult_add(void* self, int32_t property, const void* value);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#add)
 ///
@@ -107,19 +102,11 @@ void k_filemetadata__extractionresult_add(void* self, int32_t property, void* va
 /// @param self KFileMetaData__ExtractionResult*
 /// @param callback void func(KFileMetaData__ExtractionResult* self, enum KFileMetaData__Property__Property property, QVariant* value)
 ///
-void k_filemetadata__extractionresult_on_add(void* self, void (*callback)(void*, int32_t, void*));
-
-/// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#add)
-///
-/// Base class method implementation
-///
-/// @param self KFileMetaData__ExtractionResult*
-/// @param property enum KFileMetaData__Property__Property
-/// @param value QVariant*
-///
-void k_filemetadata__extractionresult_super_add(void* self, int32_t property, void* value);
+void k_filemetadata__extractionresult_on_add(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#addType)
+///
+/// @warning This method must be implemented with `k_filemetadata__extractionresult_on_add_type` before it can be called.
 ///
 /// @param self KFileMetaData__ExtractionResult*
 /// @param type enum KFileMetaData__Type__Type
@@ -135,15 +122,6 @@ void k_filemetadata__extractionresult_add_type(void* self, int32_t type);
 ///
 void k_filemetadata__extractionresult_on_add_type(void* self, void (*callback)(void*, int32_t));
 
-/// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#addType)
-///
-/// Base class method implementation
-///
-/// @param self KFileMetaData__ExtractionResult*
-/// @param type enum KFileMetaData__Type__Type
-///
-void k_filemetadata__extractionresult_super_add_type(void* self, int32_t type);
-
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractionresult.html#imageData)
 ///
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
@@ -157,11 +135,11 @@ void k_filemetadata__extractionresult_super_add_type(void* self, int32_t type);
 /// free(map.values);
 /// ```
 ///
-/// @param self KFileMetaData__ExtractionResult*
+/// @param self const KFileMetaData__ExtractionResult*
 ///
 /// @return libqt_map of enum KFileMetaData__EmbeddedImageData__ImageType to char*
 ///
-libqt_map k_filemetadata__extractionresult_image_data(void* self);
+libqt_map k_filemetadata__extractionresult_image_data(const void* self);
 
 /// Delete this object from C++ memory.
 ///

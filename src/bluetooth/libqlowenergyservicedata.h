@@ -20,22 +20,22 @@ QLowEnergyServiceData* q_lowenergyservicedata_new();
 ///
 /// @param other QLowEnergyServiceData*
 ///
-QLowEnergyServiceData* q_lowenergyservicedata_new2(void* other);
+QLowEnergyServiceData* q_lowenergyservicedata_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#operator-eq)
 ///
 /// @param self QLowEnergyServiceData*
 /// @param other QLowEnergyServiceData*
 ///
-void q_lowenergyservicedata_operator_assign(void* self, void* other);
+void q_lowenergyservicedata_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#type)
 ///
-/// @param self QLowEnergyServiceData*
+/// @param self const QLowEnergyServiceData*
 ///
 /// @return enum QLowEnergyServiceData__ServiceType
 ///
-int32_t q_lowenergyservicedata_type(void* self);
+int32_t q_lowenergyservicedata_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#setType)
 ///
@@ -46,24 +46,24 @@ void q_lowenergyservicedata_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#uuid)
 ///
-/// @param self QLowEnergyServiceData*
+/// @param self const QLowEnergyServiceData*
 ///
-QBluetoothUuid* q_lowenergyservicedata_uuid(void* self);
+QBluetoothUuid* q_lowenergyservicedata_uuid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#setUuid)
 ///
 /// @param self QLowEnergyServiceData*
 /// @param uuid QBluetoothUuid*
 ///
-void q_lowenergyservicedata_set_uuid(void* self, void* uuid);
+void q_lowenergyservicedata_set_uuid(void* self, const void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#includedServices)
 ///
-/// @param self QLowEnergyServiceData*
+/// @param self const QLowEnergyServiceData*
 ///
 /// @return libqt_list of QLowEnergyService*
 ///
-libqt_list q_lowenergyservicedata_included_services(void* self);
+libqt_list q_lowenergyservicedata_included_services(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#setIncludedServices)
 ///
@@ -81,11 +81,11 @@ void q_lowenergyservicedata_add_included_service(void* self, void* service);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#characteristics)
 ///
-/// @param self QLowEnergyServiceData*
+/// @param self const QLowEnergyServiceData*
 ///
 /// @return libqt_list of QLowEnergyCharacteristicData*
 ///
-libqt_list q_lowenergyservicedata_characteristics(void* self);
+libqt_list q_lowenergyservicedata_characteristics(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#setCharacteristics)
 ///
@@ -99,13 +99,13 @@ void q_lowenergyservicedata_set_characteristics(void* self, libqt_list character
 /// @param self QLowEnergyServiceData*
 /// @param characteristic QLowEnergyCharacteristicData*
 ///
-void q_lowenergyservicedata_add_characteristic(void* self, void* characteristic);
+void q_lowenergyservicedata_add_characteristic(void* self, const void* characteristic);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#isValid)
 ///
-/// @param self QLowEnergyServiceData*
+/// @param self const QLowEnergyServiceData*
 ///
-bool q_lowenergyservicedata_is_valid(void* self);
+bool q_lowenergyservicedata_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyservicedata.html#swap)
 ///

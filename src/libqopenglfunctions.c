@@ -10,11 +10,11 @@ QOpenGLFunctions* q_openglfunctions_new2(void* context) {
     return QOpenGLFunctions_New2((QOpenGLContext*)context);
 }
 
-int32_t q_openglfunctions_open_g_l_features(void* self) {
+int32_t q_openglfunctions_open_g_l_features(const void* self) {
     return QOpenGLFunctions_OpenGLFeatures((QOpenGLFunctions*)self);
 }
 
-bool q_openglfunctions_has_open_g_l_feature(void* self, int32_t feature) {
+bool q_openglfunctions_has_open_g_l_feature(const void* self, int32_t feature) {
     return QOpenGLFunctions_HasOpenGLFeature((QOpenGLFunctions*)self, feature);
 }
 

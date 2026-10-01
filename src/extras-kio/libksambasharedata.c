@@ -5,39 +5,39 @@ KSambaShareData* k_sambasharedata_new() {
     return KSambaShareData_New();
 }
 
-KSambaShareData* k_sambasharedata_new2(void* other) {
+KSambaShareData* k_sambasharedata_new2(const void* other) {
     return KSambaShareData_New2((KSambaShareData*)other);
 }
 
-const char* k_sambasharedata_name(void* self) {
+const char* k_sambasharedata_name(const void* self) {
     libqt_string _str = KSambaShareData_Name((KSambaShareData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_sambasharedata_path(void* self) {
+const char* k_sambasharedata_path(const void* self) {
     libqt_string _str = KSambaShareData_Path((KSambaShareData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_sambasharedata_comment(void* self) {
+const char* k_sambasharedata_comment(const void* self) {
     libqt_string _str = KSambaShareData_Comment((KSambaShareData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_sambasharedata_acl(void* self) {
+const char* k_sambasharedata_acl(const void* self) {
     libqt_string _str = KSambaShareData_Acl((KSambaShareData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_sambasharedata_guest_permission(void* self) {
+int32_t k_sambasharedata_guest_permission(const void* self) {
     return KSambaShareData_GuestPermission((KSambaShareData*)self);
 }
 
@@ -69,15 +69,15 @@ int32_t k_sambasharedata_remove(void* self) {
     return KSambaShareData_Remove((KSambaShareData*)self);
 }
 
-void k_sambasharedata_operator_assign(void* self, void* other) {
+void k_sambasharedata_operator_assign(void* self, const void* other) {
     KSambaShareData_OperatorAssign((KSambaShareData*)self, (KSambaShareData*)other);
 }
 
-bool k_sambasharedata_operator_equal(void* self, void* other) {
+bool k_sambasharedata_operator_equal(const void* self, const void* other) {
     return KSambaShareData_OperatorEqual((KSambaShareData*)self, (KSambaShareData*)other);
 }
 
-bool k_sambasharedata_operator_not_equal(void* self, void* other) {
+bool k_sambasharedata_operator_not_equal(const void* self, const void* other) {
     return KSambaShareData_OperatorNotEqual((KSambaShareData*)self, (KSambaShareData*)other);
 }
 

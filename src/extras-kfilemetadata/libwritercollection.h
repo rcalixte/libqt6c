@@ -16,12 +16,12 @@ KFileMetaData__WriterCollection* k_filemetadata__writercollection_new();
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-writercollection.html#fetchWriters)
 ///
-/// @param self KFileMetaData__WriterCollection*
+/// @param self const KFileMetaData__WriterCollection*
 /// @param mimetype const char*
 ///
 /// @return libqt_list of KFileMetaData__Writer*
 ///
-libqt_list k_filemetadata__writercollection_fetch_writers(void* self, const char* mimetype);
+libqt_list k_filemetadata__writercollection_fetch_writers(const void* self, const char* mimetype);
 
 /// Delete this object from C++ memory.
 ///

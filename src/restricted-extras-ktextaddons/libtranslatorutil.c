@@ -2,7 +2,7 @@
 #include "libtranslatorutil.hpp"
 #include "libtranslatorutil.h"
 
-TextTranslator__TranslatorUtil* k_texttranslator__translatorutil_new(void* other) {
+TextTranslator__TranslatorUtil* k_texttranslator__translatorutil_new(const void* other) {
     return TextTranslator__TranslatorUtil_New((TextTranslator__TranslatorUtil*)other);
 }
 
@@ -124,11 +124,11 @@ TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translator
     return TextTranslator__TranslatorUtil__TranslatorSettings_New();
 }
 
-TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new2(void* param1) {
+TextTranslator__TranslatorUtil__TranslatorSettings* k_texttranslator__translatorutil__translatorsettings_new2(const void* param1) {
     return TextTranslator__TranslatorUtil__TranslatorSettings_New2((TextTranslator__TranslatorUtil__TranslatorSettings*)param1);
 }
 
-const char* k_texttranslator__translatorutil__translatorsettings_engine(void* self) {
+const char* k_texttranslator__translatorutil__translatorsettings_engine(const void* self) {
     libqt_string engine_str = TextTranslator__TranslatorUtil__TranslatorSettings_Engine((TextTranslator__TranslatorUtil__TranslatorSettings*)self);
     char* engine_ret = qstring_to_char(engine_str);
     libqt_string_free(&engine_str);
@@ -139,7 +139,7 @@ void k_texttranslator__translatorutil__translatorsettings_set_engine(void* self,
     TextTranslator__TranslatorUtil__TranslatorSettings_SetEngine((TextTranslator__TranslatorUtil__TranslatorSettings*)self, qstring(engine));
 }
 
-const char* k_texttranslator__translatorutil__translatorsettings_from(void* self) {
+const char* k_texttranslator__translatorutil__translatorsettings_from(const void* self) {
     libqt_string from_str = TextTranslator__TranslatorUtil__TranslatorSettings_From((TextTranslator__TranslatorUtil__TranslatorSettings*)self);
     char* from_ret = qstring_to_char(from_str);
     libqt_string_free(&from_str);
@@ -150,7 +150,7 @@ void k_texttranslator__translatorutil__translatorsettings_set_from(void* self, c
     TextTranslator__TranslatorUtil__TranslatorSettings_SetFrom((TextTranslator__TranslatorUtil__TranslatorSettings*)self, qstring(from));
 }
 
-const char* k_texttranslator__translatorutil__translatorsettings_to(void* self) {
+const char* k_texttranslator__translatorutil__translatorsettings_to(const void* self) {
     libqt_string to_str = TextTranslator__TranslatorUtil__TranslatorSettings_To((TextTranslator__TranslatorUtil__TranslatorSettings*)self);
     char* to_ret = qstring_to_char(to_str);
     libqt_string_free(&to_str);
@@ -161,7 +161,7 @@ void k_texttranslator__translatorutil__translatorsettings_set_to(void* self, con
     TextTranslator__TranslatorUtil__TranslatorSettings_SetTo((TextTranslator__TranslatorUtil__TranslatorSettings*)self, qstring(to));
 }
 
-void k_texttranslator__translatorutil__translatorsettings_operator_assign(void* self, void* param1) {
+void k_texttranslator__translatorutil__translatorsettings_operator_assign(void* self, const void* param1) {
     TextTranslator__TranslatorUtil__TranslatorSettings_OperatorAssign((TextTranslator__TranslatorUtil__TranslatorSettings*)self, (TextTranslator__TranslatorUtil__TranslatorSettings*)param1);
 }
 

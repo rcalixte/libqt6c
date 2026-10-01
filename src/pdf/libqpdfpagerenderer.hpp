@@ -45,7 +45,7 @@ void QPdfPageRenderer_Connect_RenderModeChanged(QPdfPageRenderer* self, intptr_t
 void QPdfPageRenderer_PageRendered(QPdfPageRenderer* self, int pageNumber, QSize* imageSize, const QImage* image, QPdfDocumentRenderOptions* options, unsigned long long requestId);
 void QPdfPageRenderer_Connect_PageRendered(QPdfPageRenderer* self, intptr_t slot);
 unsigned long long QPdfPageRenderer_RequestPage3(QPdfPageRenderer* self, int pageNumber, QSize* imageSize, QPdfDocumentRenderOptions* options);
-void QPdfPageRenderer_OnMetaObject(const QPdfPageRenderer* self, intptr_t slot);
+void QPdfPageRenderer_OnMetaObject(QPdfPageRenderer* self, intptr_t slot);
 QMetaObject* QPdfPageRenderer_SuperMetaObject(const QPdfPageRenderer* self);
 void QPdfPageRenderer_OnMetacast(QPdfPageRenderer* self, intptr_t slot);
 void* QPdfPageRenderer_SuperMetacast(QPdfPageRenderer* self, const char* param1);
@@ -73,17 +73,9 @@ void QPdfPageRenderer_DisconnectNotify(QPdfPageRenderer* self, const QMetaMethod
 void QPdfPageRenderer_OnDisconnectNotify(QPdfPageRenderer* self, intptr_t slot);
 void QPdfPageRenderer_SuperDisconnectNotify(QPdfPageRenderer* self, const QMetaMethod* signal);
 QObject* QPdfPageRenderer_Sender(const QPdfPageRenderer* self);
-void QPdfPageRenderer_OnSender(const QPdfPageRenderer* self, intptr_t slot);
-QObject* QPdfPageRenderer_SuperSender(const QPdfPageRenderer* self);
 int QPdfPageRenderer_SenderSignalIndex(const QPdfPageRenderer* self);
-void QPdfPageRenderer_OnSenderSignalIndex(const QPdfPageRenderer* self, intptr_t slot);
-int QPdfPageRenderer_SuperSenderSignalIndex(const QPdfPageRenderer* self);
 int QPdfPageRenderer_Receivers(const QPdfPageRenderer* self, const char* signal);
-void QPdfPageRenderer_OnReceivers(const QPdfPageRenderer* self, intptr_t slot);
-int QPdfPageRenderer_SuperReceivers(const QPdfPageRenderer* self, const char* signal);
 bool QPdfPageRenderer_IsSignalConnected(const QPdfPageRenderer* self, const QMetaMethod* signal);
-void QPdfPageRenderer_OnIsSignalConnected(const QPdfPageRenderer* self, intptr_t slot);
-bool QPdfPageRenderer_SuperIsSignalConnected(const QPdfPageRenderer* self, const QMetaMethod* signal);
 void QPdfPageRenderer_Delete(QPdfPageRenderer* self);
 
 #ifdef __cplusplus

@@ -31,14 +31,13 @@ QMetaObject* QWebEngineUrlRequestInterceptor_MetaObject(const QWebEngineUrlReque
 void* QWebEngineUrlRequestInterceptor_Metacast(QWebEngineUrlRequestInterceptor* self, const char* param1);
 int QWebEngineUrlRequestInterceptor_Metacall(QWebEngineUrlRequestInterceptor* self, int param1, int param2, void** param3);
 void QWebEngineUrlRequestInterceptor_InterceptRequest(QWebEngineUrlRequestInterceptor* self, QWebEngineUrlRequestInfo* info);
-void QWebEngineUrlRequestInterceptor_OnMetaObject(const QWebEngineUrlRequestInterceptor* self, intptr_t slot);
+void QWebEngineUrlRequestInterceptor_OnMetaObject(QWebEngineUrlRequestInterceptor* self, intptr_t slot);
 QMetaObject* QWebEngineUrlRequestInterceptor_SuperMetaObject(const QWebEngineUrlRequestInterceptor* self);
 void QWebEngineUrlRequestInterceptor_OnMetacast(QWebEngineUrlRequestInterceptor* self, intptr_t slot);
 void* QWebEngineUrlRequestInterceptor_SuperMetacast(QWebEngineUrlRequestInterceptor* self, const char* param1);
 void QWebEngineUrlRequestInterceptor_OnMetacall(QWebEngineUrlRequestInterceptor* self, intptr_t slot);
 int QWebEngineUrlRequestInterceptor_SuperMetacall(QWebEngineUrlRequestInterceptor* self, int param1, int param2, void** param3);
 void QWebEngineUrlRequestInterceptor_OnInterceptRequest(QWebEngineUrlRequestInterceptor* self, intptr_t slot);
-void QWebEngineUrlRequestInterceptor_SuperInterceptRequest(QWebEngineUrlRequestInterceptor* self, QWebEngineUrlRequestInfo* info);
 bool QWebEngineUrlRequestInterceptor_Event(QWebEngineUrlRequestInterceptor* self, QEvent* event);
 void QWebEngineUrlRequestInterceptor_OnEvent(QWebEngineUrlRequestInterceptor* self, intptr_t slot);
 bool QWebEngineUrlRequestInterceptor_SuperEvent(QWebEngineUrlRequestInterceptor* self, QEvent* event);
@@ -61,17 +60,9 @@ void QWebEngineUrlRequestInterceptor_DisconnectNotify(QWebEngineUrlRequestInterc
 void QWebEngineUrlRequestInterceptor_OnDisconnectNotify(QWebEngineUrlRequestInterceptor* self, intptr_t slot);
 void QWebEngineUrlRequestInterceptor_SuperDisconnectNotify(QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
 QObject* QWebEngineUrlRequestInterceptor_Sender(const QWebEngineUrlRequestInterceptor* self);
-void QWebEngineUrlRequestInterceptor_OnSender(const QWebEngineUrlRequestInterceptor* self, intptr_t slot);
-QObject* QWebEngineUrlRequestInterceptor_SuperSender(const QWebEngineUrlRequestInterceptor* self);
 int QWebEngineUrlRequestInterceptor_SenderSignalIndex(const QWebEngineUrlRequestInterceptor* self);
-void QWebEngineUrlRequestInterceptor_OnSenderSignalIndex(const QWebEngineUrlRequestInterceptor* self, intptr_t slot);
-int QWebEngineUrlRequestInterceptor_SuperSenderSignalIndex(const QWebEngineUrlRequestInterceptor* self);
 int QWebEngineUrlRequestInterceptor_Receivers(const QWebEngineUrlRequestInterceptor* self, const char* signal);
-void QWebEngineUrlRequestInterceptor_OnReceivers(const QWebEngineUrlRequestInterceptor* self, intptr_t slot);
-int QWebEngineUrlRequestInterceptor_SuperReceivers(const QWebEngineUrlRequestInterceptor* self, const char* signal);
 bool QWebEngineUrlRequestInterceptor_IsSignalConnected(const QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
-void QWebEngineUrlRequestInterceptor_OnIsSignalConnected(const QWebEngineUrlRequestInterceptor* self, intptr_t slot);
-bool QWebEngineUrlRequestInterceptor_SuperIsSignalConnected(const QWebEngineUrlRequestInterceptor* self, const QMetaMethod* signal);
 void QWebEngineUrlRequestInterceptor_Delete(QWebEngineUrlRequestInterceptor* self);
 
 #ifdef __cplusplus

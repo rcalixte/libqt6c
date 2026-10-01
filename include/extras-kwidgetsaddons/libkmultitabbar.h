@@ -41,26 +41,26 @@ KMultiTabBar* k_multitabbar_new4(int32_t pos, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const QMetaObject* k_multitabbar_meta_object(void* self);
+const QMetaObject* k_multitabbar_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KMultiTabBar*
-/// @param callback const QMetaObject* func()
+/// @param self const KMultiTabBar*
+/// @param callback const QMetaObject* func(const KMultiTabBar* self)
 ///
-void k_multitabbar_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_multitabbar_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const QMetaObject* k_multitabbar_super_meta_object(void* self);
+const QMetaObject* k_multitabbar_super_meta_object(const void* self);
 
 /// @param self KMultiTabBar*
 /// @param param1 const char*
@@ -117,7 +117,7 @@ const char* k_multitabbar_tr(const char* s);
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
 ///
-int32_t k_multitabbar_append_button(void* self, void* icon);
+int32_t k_multitabbar_append_button(void* self, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#removeButton)
 ///
@@ -131,7 +131,7 @@ void k_multitabbar_remove_button(void* self, int id);
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
 ///
-int32_t k_multitabbar_append_tab(void* self, void* icon);
+int32_t k_multitabbar_append_tab(void* self, const void* icon);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#removeTab)
 ///
@@ -150,24 +150,24 @@ void k_multitabbar_set_tab(void* self, int id, bool state);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#isTabRaised)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param id int
 ///
-bool k_multitabbar_is_tab_raised(void* self, int id);
+bool k_multitabbar_is_tab_raised(const void* self, int id);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#button)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param id int
 ///
-KMultiTabBarButton* k_multitabbar_button(void* self, int id);
+KMultiTabBarButton* k_multitabbar_button(const void* self, int id);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#tab)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param id int
 ///
-KMultiTabBarTab* k_multitabbar_tab(void* self, int id);
+KMultiTabBarTab* k_multitabbar_tab(const void* self, int id);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#setPosition)
 ///
@@ -178,11 +178,11 @@ void k_multitabbar_set_position(void* self, int32_t pos);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#position)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum KMultiTabBar__KMultiTabBarPosition
 ///
-int32_t k_multitabbar_position(void* self);
+int32_t k_multitabbar_position(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#setStyle)
 ///
@@ -193,18 +193,18 @@ void k_multitabbar_set_style(void* self, int32_t style);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#tabStyle)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum KMultiTabBar__KMultiTabBarStyle
 ///
-int32_t k_multitabbar_tab_style(void* self);
+int32_t k_multitabbar_tab_style(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#fontChange)
 ///
 /// @param self KMultiTabBar*
 /// @param param1 QFont*
 ///
-void k_multitabbar_font_change(void* self, void* param1);
+void k_multitabbar_font_change(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#fontChange)
 ///
@@ -213,7 +213,7 @@ void k_multitabbar_font_change(void* self, void* param1);
 /// @param self KMultiTabBar*
 /// @param callback void func(KMultiTabBar* self, QFont* param1)
 ///
-void k_multitabbar_on_font_change(void* self, void (*callback)(void*, void*));
+void k_multitabbar_on_font_change(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#fontChange)
 ///
@@ -222,7 +222,7 @@ void k_multitabbar_on_font_change(void* self, void (*callback)(void*, void*));
 /// @param self KMultiTabBar*
 /// @param param1 QFont*
 ///
-void k_multitabbar_super_font_change(void* self, void* param1);
+void k_multitabbar_super_font_change(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#paintEvent)
 ///
@@ -255,23 +255,6 @@ void k_multitabbar_super_paint_event(void* self, void* param1);
 ///
 void k_multitabbar_update_separator(void* self);
 
-/// [Upstream resources](https://api.kde.org/kmultitabbar.html#updateSeparator)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KMultiTabBar*
-/// @param callback void func()
-///
-void k_multitabbar_on_update_separator(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kmultitabbar.html#updateSeparator)
-///
-/// Base class method implementation
-///
-/// @param self KMultiTabBar*
-///
-void k_multitabbar_super_update_separator(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -297,7 +280,7 @@ const char* k_multitabbar_tr3(const char* s, const char* c, int n);
 /// @param icon QIcon*
 /// @param id int
 ///
-int32_t k_multitabbar_append_button2(void* self, void* icon, int id);
+int32_t k_multitabbar_append_button2(void* self, const void* icon, int id);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#appendButton)
 ///
@@ -306,7 +289,7 @@ int32_t k_multitabbar_append_button2(void* self, void* icon, int id);
 /// @param id int
 /// @param popup QMenu*
 ///
-int32_t k_multitabbar_append_button3(void* self, void* icon, int id, void* popup);
+int32_t k_multitabbar_append_button3(void* self, const void* icon, int id, void* popup);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#appendButton)
 ///
@@ -316,7 +299,7 @@ int32_t k_multitabbar_append_button3(void* self, void* icon, int id, void* popup
 /// @param popup QMenu*
 /// @param not_used_yet const char*
 ///
-int32_t k_multitabbar_append_button4(void* self, void* icon, int id, void* popup, const char* not_used_yet);
+int32_t k_multitabbar_append_button4(void* self, const void* icon, int id, void* popup, const char* not_used_yet);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#appendTab)
 ///
@@ -324,7 +307,7 @@ int32_t k_multitabbar_append_button4(void* self, void* icon, int id, void* popup
 /// @param icon QIcon*
 /// @param id int
 ///
-int32_t k_multitabbar_append_tab2(void* self, void* icon, int id);
+int32_t k_multitabbar_append_tab2(void* self, const void* icon, int id);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbar.html#appendTab)
 ///
@@ -333,7 +316,7 @@ int32_t k_multitabbar_append_tab2(void* self, void* icon, int id);
 /// @param id int
 /// @param text const char*
 ///
-int32_t k_multitabbar_append_tab3(void* self, void* icon, int id, const char* text);
+int32_t k_multitabbar_append_tab3(void* self, const void* icon, int id, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -355,9 +338,9 @@ KMultiTabBar* k_multitabbar_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-uintptr_t k_multitabbar_win_id(void* self);
+uintptr_t k_multitabbar_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -371,59 +354,59 @@ void k_multitabbar_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-uintptr_t k_multitabbar_internal_win_id(void* self);
+uintptr_t k_multitabbar_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-uintptr_t k_multitabbar_effective_win_id(void* self);
+uintptr_t k_multitabbar_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QStyle* k_multitabbar_style(void* self);
+QStyle* k_multitabbar_style(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_top_level(void* self);
+bool k_multitabbar_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_window(void* self);
+bool k_multitabbar_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_modal(void* self);
+bool k_multitabbar_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_multitabbar_window_modality(void* self);
+int32_t k_multitabbar_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -438,18 +421,18 @@ void k_multitabbar_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_enabled(void* self);
+bool k_multitabbar_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QWidget*
 ///
-bool k_multitabbar_is_enabled_to(void* self, void* param1);
+bool k_multitabbar_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -482,153 +465,153 @@ void k_multitabbar_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QRect* k_multitabbar_frame_geometry(void* self);
+QRect* k_multitabbar_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const QRect* k_multitabbar_geometry(void* self);
+const QRect* k_multitabbar_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QRect* k_multitabbar_normal_geometry(void* self);
+QRect* k_multitabbar_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_x(void* self);
+int32_t k_multitabbar_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_y(void* self);
+int32_t k_multitabbar_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QPoint* k_multitabbar_pos(void* self);
+QPoint* k_multitabbar_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_frame_size(void* self);
+QSize* k_multitabbar_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_size(void* self);
+QSize* k_multitabbar_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_width(void* self);
+int32_t k_multitabbar_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_height(void* self);
+int32_t k_multitabbar_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QRect* k_multitabbar_rect(void* self);
+QRect* k_multitabbar_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QRect* k_multitabbar_children_rect(void* self);
+QRect* k_multitabbar_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QRegion* k_multitabbar_children_region(void* self);
+QRegion* k_multitabbar_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_minimum_size(void* self);
+QSize* k_multitabbar_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_maximum_size(void* self);
+QSize* k_multitabbar_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_minimum_width(void* self);
+int32_t k_multitabbar_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_minimum_height(void* self);
+int32_t k_multitabbar_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_maximum_width(void* self);
+int32_t k_multitabbar_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_maximum_height(void* self);
+int32_t k_multitabbar_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -637,7 +620,7 @@ int32_t k_multitabbar_maximum_height(void* self);
 /// @param self KMultiTabBar*
 /// @param minimumSize QSize*
 ///
-void k_multitabbar_set_minimum_size(void* self, void* minimumSize);
+void k_multitabbar_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -656,7 +639,7 @@ void k_multitabbar_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KMultiTabBar*
 /// @param maximumSize QSize*
 ///
-void k_multitabbar_set_maximum_size(void* self, void* maximumSize);
+void k_multitabbar_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -708,9 +691,9 @@ void k_multitabbar_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_size_increment(void* self);
+QSize* k_multitabbar_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -719,7 +702,7 @@ QSize* k_multitabbar_size_increment(void* self);
 /// @param self KMultiTabBar*
 /// @param sizeIncrement QSize*
 ///
-void k_multitabbar_set_size_increment(void* self, void* sizeIncrement);
+void k_multitabbar_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -735,9 +718,9 @@ void k_multitabbar_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_base_size(void* self);
+QSize* k_multitabbar_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -746,7 +729,7 @@ QSize* k_multitabbar_base_size(void* self);
 /// @param self KMultiTabBar*
 /// @param baseSize QSize*
 ///
-void k_multitabbar_set_base_size(void* self, void* baseSize);
+void k_multitabbar_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -765,7 +748,7 @@ void k_multitabbar_set_base_size2(void* self, int basew, int baseh);
 /// @param self KMultiTabBar*
 /// @param fixedSize QSize*
 ///
-void k_multitabbar_set_fixed_size(void* self, void* fixedSize);
+void k_multitabbar_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -799,145 +782,145 @@ void k_multitabbar_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbar_map_to_global(void* self, void* param1);
+QPointF* k_multitabbar_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbar_map_to_global2(void* self, void* param1);
+QPoint* k_multitabbar_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbar_map_from_global(void* self, void* param1);
+QPointF* k_multitabbar_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbar_map_from_global2(void* self, void* param1);
+QPoint* k_multitabbar_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbar_map_to_parent(void* self, void* param1);
+QPointF* k_multitabbar_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbar_map_to_parent2(void* self, void* param1);
+QPoint* k_multitabbar_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbar_map_from_parent(void* self, void* param1);
+QPointF* k_multitabbar_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbar_map_from_parent2(void* self, void* param1);
+QPoint* k_multitabbar_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_multitabbar_map_to(void* self, void* param1, void* param2);
+QPointF* k_multitabbar_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_multitabbar_map_to2(void* self, void* param1, void* param2);
+QPoint* k_multitabbar_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_multitabbar_map_from(void* self, void* param1, void* param2);
+QPointF* k_multitabbar_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_multitabbar_map_from2(void* self, void* param1, void* param2);
+QPoint* k_multitabbar_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWidget* k_multitabbar_window(void* self);
+QWidget* k_multitabbar_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWidget* k_multitabbar_native_parent_widget(void* self);
+QWidget* k_multitabbar_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWidget* k_multitabbar_top_level_widget(void* self);
+QWidget* k_multitabbar_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const QPalette* k_multitabbar_palette(void* self);
+const QPalette* k_multitabbar_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -946,7 +929,7 @@ const QPalette* k_multitabbar_palette(void* self);
 /// @param self KMultiTabBar*
 /// @param palette QPalette*
 ///
-void k_multitabbar_set_palette(void* self, void* palette);
+void k_multitabbar_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -961,11 +944,11 @@ void k_multitabbar_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_multitabbar_background_role(void* self);
+int32_t k_multitabbar_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -980,19 +963,19 @@ void k_multitabbar_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_multitabbar_foreground_role(void* self);
+int32_t k_multitabbar_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const QFont* k_multitabbar_font(void* self);
+const QFont* k_multitabbar_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1001,31 +984,31 @@ const QFont* k_multitabbar_font(void* self);
 /// @param self KMultiTabBar*
 /// @param font QFont*
 ///
-void k_multitabbar_set_font(void* self, void* font);
+void k_multitabbar_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QFontMetrics* k_multitabbar_font_metrics(void* self);
+QFontMetrics* k_multitabbar_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QFontInfo* k_multitabbar_font_info(void* self);
+QFontInfo* k_multitabbar_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QCursor* k_multitabbar_cursor(void* self);
+QCursor* k_multitabbar_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1034,7 +1017,7 @@ QCursor* k_multitabbar_cursor(void* self);
 /// @param self KMultiTabBar*
 /// @param cursor QCursor*
 ///
-void k_multitabbar_set_cursor(void* self, void* cursor);
+void k_multitabbar_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1057,17 +1040,17 @@ void k_multitabbar_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_has_mouse_tracking(void* self);
+bool k_multitabbar_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_under_mouse(void* self);
+bool k_multitabbar_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1082,9 +1065,9 @@ void k_multitabbar_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_has_tablet_tracking(void* self);
+bool k_multitabbar_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1093,7 +1076,7 @@ bool k_multitabbar_has_tablet_tracking(void* self);
 /// @param self KMultiTabBar*
 /// @param mask QBitmap*
 ///
-void k_multitabbar_set_mask(void* self, void* mask);
+void k_multitabbar_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1102,15 +1085,15 @@ void k_multitabbar_set_mask(void* self, void* mask);
 /// @param self KMultiTabBar*
 /// @param mask QRegion*
 ///
-void k_multitabbar_set_mask2(void* self, void* mask);
+void k_multitabbar_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QRegion* k_multitabbar_mask(void* self);
+QRegion* k_multitabbar_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1150,9 +1133,9 @@ QPixmap* k_multitabbar_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QGraphicsEffect* k_multitabbar_graphics_effect(void* self);
+QGraphicsEffect* k_multitabbar_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1205,9 +1188,9 @@ void k_multitabbar_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_style_sheet(void* self);
+const char* k_multitabbar_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1215,9 +1198,9 @@ const char* k_multitabbar_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_window_title(void* self);
+const char* k_multitabbar_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1226,15 +1209,15 @@ const char* k_multitabbar_window_title(void* self);
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
 ///
-void k_multitabbar_set_window_icon(void* self, void* icon);
+void k_multitabbar_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QIcon* k_multitabbar_window_icon(void* self);
+QIcon* k_multitabbar_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1251,9 +1234,9 @@ void k_multitabbar_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_window_icon_text(void* self);
+const char* k_multitabbar_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1270,9 +1253,9 @@ void k_multitabbar_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_window_role(void* self);
+const char* k_multitabbar_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1289,9 +1272,9 @@ void k_multitabbar_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_window_file_path(void* self);
+const char* k_multitabbar_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1306,17 +1289,17 @@ void k_multitabbar_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-double k_multitabbar_window_opacity(void* self);
+double k_multitabbar_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_window_modified(void* self);
+bool k_multitabbar_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1333,9 +1316,9 @@ void k_multitabbar_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_tool_tip(void* self);
+const char* k_multitabbar_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1350,9 +1333,9 @@ void k_multitabbar_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_tool_tip_duration(void* self);
+int32_t k_multitabbar_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1369,9 +1352,9 @@ void k_multitabbar_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_status_tip(void* self);
+const char* k_multitabbar_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1388,9 +1371,9 @@ void k_multitabbar_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_whats_this(void* self);
+const char* k_multitabbar_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1398,9 +1381,9 @@ const char* k_multitabbar_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_accessible_name(void* self);
+const char* k_multitabbar_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1417,9 +1400,9 @@ void k_multitabbar_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_accessible_description(void* self);
+const char* k_multitabbar_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1443,11 +1426,11 @@ void k_multitabbar_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_multitabbar_layout_direction(void* self);
+int32_t k_multitabbar_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1464,15 +1447,15 @@ void k_multitabbar_unset_layout_direction(void* self);
 /// @param self KMultiTabBar*
 /// @param locale QLocale*
 ///
-void k_multitabbar_set_locale(void* self, void* locale);
+void k_multitabbar_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QLocale* k_multitabbar_locale(void* self);
+QLocale* k_multitabbar_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1486,17 +1469,17 @@ void k_multitabbar_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_right_to_left(void* self);
+bool k_multitabbar_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_left_to_right(void* self);
+bool k_multitabbar_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1510,9 +1493,9 @@ void k_multitabbar_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_active_window(void* self);
+bool k_multitabbar_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1543,11 +1526,11 @@ void k_multitabbar_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_multitabbar_focus_policy(void* self);
+int32_t k_multitabbar_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1562,9 +1545,9 @@ void k_multitabbar_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_has_focus(void* self);
+bool k_multitabbar_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1588,19 +1571,19 @@ void k_multitabbar_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWidget* k_multitabbar_focus_proxy(void* self);
+QWidget* k_multitabbar_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_multitabbar_context_menu_policy(void* self);
+int32_t k_multitabbar_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1626,7 +1609,7 @@ void k_multitabbar_grab_mouse(void* self);
 /// @param self KMultiTabBar*
 /// @param param1 QCursor*
 ///
-void k_multitabbar_grab_mouse2(void* self, void* param1);
+void k_multitabbar_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1659,7 +1642,7 @@ void k_multitabbar_release_keyboard(void* self);
 /// @param self KMultiTabBar*
 /// @param key QKeySequence*
 ///
-int32_t k_multitabbar_grab_shortcut(void* self, void* key);
+int32_t k_multitabbar_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -1704,9 +1687,9 @@ QWidget* k_multitabbar_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_updates_enabled(void* self);
+bool k_multitabbar_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1721,9 +1704,9 @@ void k_multitabbar_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QGraphicsProxyWidget* k_multitabbar_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_multitabbar_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1760,7 +1743,7 @@ void k_multitabbar_update2(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBar*
 /// @param param1 QRect*
 ///
-void k_multitabbar_update3(void* self, void* param1);
+void k_multitabbar_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1769,7 +1752,7 @@ void k_multitabbar_update3(void* self, void* param1);
 /// @param self KMultiTabBar*
 /// @param param1 QRegion*
 ///
-void k_multitabbar_update4(void* self, void* param1);
+void k_multitabbar_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1790,7 +1773,7 @@ void k_multitabbar_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBar*
 /// @param param1 QRect*
 ///
-void k_multitabbar_repaint3(void* self, void* param1);
+void k_multitabbar_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1799,7 +1782,7 @@ void k_multitabbar_repaint3(void* self, void* param1);
 /// @param self KMultiTabBar*
 /// @param param1 QRegion*
 ///
-void k_multitabbar_repaint4(void* self, void* param1);
+void k_multitabbar_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1908,7 +1891,7 @@ void k_multitabbar_move(void* self, int x, int y);
 /// @param self KMultiTabBar*
 /// @param param1 QPoint*
 ///
-void k_multitabbar_move2(void* self, void* param1);
+void k_multitabbar_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1927,7 +1910,7 @@ void k_multitabbar_resize(void* self, int w, int h);
 /// @param self KMultiTabBar*
 /// @param param1 QSize*
 ///
-void k_multitabbar_resize2(void* self, void* param1);
+void k_multitabbar_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1948,7 +1931,7 @@ void k_multitabbar_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBar*
 /// @param geometry QRect*
 ///
-void k_multitabbar_set_geometry2(void* self, void* geometry);
+void k_multitabbar_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -1956,9 +1939,9 @@ void k_multitabbar_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-char* k_multitabbar_save_geometry(void* self);
+char* k_multitabbar_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1981,60 +1964,60 @@ void k_multitabbar_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_visible(void* self);
+bool k_multitabbar_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 QWidget*
 ///
-bool k_multitabbar_is_visible_to(void* self, void* param1);
+bool k_multitabbar_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_hidden(void* self);
+bool k_multitabbar_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_minimized(void* self);
+bool k_multitabbar_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_maximized(void* self);
+bool k_multitabbar_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_full_screen(void* self);
+bool k_multitabbar_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_multitabbar_window_state(void* self);
+int32_t k_multitabbar_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2058,9 +2041,9 @@ void k_multitabbar_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSizePolicy* k_multitabbar_size_policy(void* self);
+QSizePolicy* k_multitabbar_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2085,9 +2068,9 @@ void k_multitabbar_set_size_policy2(void* self, int32_t horizontal, int32_t vert
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QRegion* k_multitabbar_visible_region(void* self);
+QRegion* k_multitabbar_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2108,31 +2091,31 @@ void k_multitabbar_set_contents_margins(void* self, int left, int top, int right
 /// @param self KMultiTabBar*
 /// @param margins QMargins*
 ///
-void k_multitabbar_set_contents_margins2(void* self, void* margins);
+void k_multitabbar_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QMargins* k_multitabbar_contents_margins(void* self);
+QMargins* k_multitabbar_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QRect* k_multitabbar_contents_rect(void* self);
+QRect* k_multitabbar_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QLayout* k_multitabbar_layout(void* self);
+QLayout* k_multitabbar_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2189,39 +2172,39 @@ void k_multitabbar_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_multitabbar_scroll2(void* self, int dx, int dy, void* param3);
+void k_multitabbar_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWidget* k_multitabbar_focus_widget(void* self);
+QWidget* k_multitabbar_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWidget* k_multitabbar_next_in_focus_chain(void* self);
+QWidget* k_multitabbar_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWidget* k_multitabbar_previous_in_focus_chain(void* self);
+QWidget* k_multitabbar_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_accept_drops(void* self);
+bool k_multitabbar_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2283,11 +2266,11 @@ void k_multitabbar_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_multitabbar_actions(void* self);
+libqt_list k_multitabbar_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2306,7 +2289,7 @@ QAction* k_multitabbar_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_multitabbar_add_action3(void* self, void* icon, const char* text);
+QAction* k_multitabbar_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2316,7 +2299,7 @@ QAction* k_multitabbar_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_multitabbar_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_multitabbar_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2327,15 +2310,15 @@ QAction* k_multitabbar_add_action4(void* self, const char* text, void* shortcut)
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_multitabbar_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_multitabbar_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWidget* k_multitabbar_parent_widget(void* self);
+QWidget* k_multitabbar_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2350,11 +2333,11 @@ void k_multitabbar_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_multitabbar_window_flags(void* self);
+int32_t k_multitabbar_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2378,11 +2361,11 @@ void k_multitabbar_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_multitabbar_window_type(void* self);
+int32_t k_multitabbar_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2396,29 +2379,29 @@ QWidget* k_multitabbar_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_multitabbar_child_at(void* self, int x, int y);
+QWidget* k_multitabbar_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param p QPoint*
 ///
-QWidget* k_multitabbar_child_at2(void* self, void* p);
+QWidget* k_multitabbar_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param p QPointF*
 ///
-QWidget* k_multitabbar_child_at3(void* self, void* p);
+QWidget* k_multitabbar_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2433,35 +2416,35 @@ void k_multitabbar_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_multitabbar_test_attribute(void* self, int32_t param1);
+bool k_multitabbar_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-void k_multitabbar_ensure_polished(void* self);
+void k_multitabbar_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param child QWidget*
 ///
-bool k_multitabbar_is_ancestor_of(void* self, void* child);
+bool k_multitabbar_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_auto_fill_background(void* self);
+bool k_multitabbar_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2476,25 +2459,25 @@ void k_multitabbar_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QBackingStore* k_multitabbar_backing_store(void* self);
+QBackingStore* k_multitabbar_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QWindow* k_multitabbar_window_handle(void* self);
+QWindow* k_multitabbar_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QScreen* k_multitabbar_screen(void* self);
+QScreen* k_multitabbar_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2538,7 +2521,7 @@ void k_multitabbar_on_window_title_changed(void* self, void (*callback)(void*, c
 /// @param self KMultiTabBar*
 /// @param icon QIcon*
 ///
-void k_multitabbar_window_icon_changed(void* self, void* icon);
+void k_multitabbar_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -2547,7 +2530,7 @@ void k_multitabbar_window_icon_changed(void* self, void* icon);
 /// @param self KMultiTabBar*
 /// @param callback void func(KMultiTabBar* self, QIcon* icon)
 ///
-void k_multitabbar_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_multitabbar_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -2574,7 +2557,7 @@ void k_multitabbar_on_window_icon_text_changed(void* self, void (*callback)(void
 /// @param self KMultiTabBar*
 /// @param pos QPoint*
 ///
-void k_multitabbar_custom_context_menu_requested(void* self, void* pos);
+void k_multitabbar_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -2583,17 +2566,17 @@ void k_multitabbar_custom_context_menu_requested(void* self, void* pos);
 /// @param self KMultiTabBar*
 /// @param callback void func(KMultiTabBar* self, QPoint* pos)
 ///
-void k_multitabbar_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_multitabbar_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_multitabbar_input_method_hints(void* self);
+int32_t k_multitabbar_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2612,7 +2595,7 @@ void k_multitabbar_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_multitabbar_render22(void* self, void* target, void* targetOffset);
+void k_multitabbar_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2623,7 +2606,7 @@ void k_multitabbar_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_multitabbar_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_multitabbar_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2635,7 +2618,7 @@ void k_multitabbar_render3(void* self, void* target, void* targetOffset, void* s
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_multitabbar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_multitabbar_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2645,7 +2628,7 @@ void k_multitabbar_render4(void* self, void* target, void* targetOffset, void* s
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_multitabbar_render23(void* self, void* painter, void* targetOffset);
+void k_multitabbar_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2656,7 +2639,7 @@ void k_multitabbar_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_multitabbar_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_multitabbar_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -2668,7 +2651,7 @@ void k_multitabbar_render32(void* self, void* painter, void* targetOffset, void*
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_multitabbar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_multitabbar_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -2677,7 +2660,7 @@ void k_multitabbar_render42(void* self, void* painter, void* targetOffset, void*
 /// @param self KMultiTabBar*
 /// @param rectangle QRect*
 ///
-QPixmap* k_multitabbar_grab1(void* self, void* rectangle);
+QPixmap* k_multitabbar_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -2697,7 +2680,7 @@ void k_multitabbar_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_multitabbar_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_multitabbar_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2764,9 +2747,9 @@ QWidget* k_multitabbar_create_window_container3(void* window, void* parent, int3
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char* k_multitabbar_object_name(void* self);
+const char* k_multitabbar_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2781,33 +2764,33 @@ void k_multitabbar_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_widget_type(void* self);
+bool k_multitabbar_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_window_type(void* self);
+bool k_multitabbar_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_is_quick_item_type(void* self);
+bool k_multitabbar_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_signals_blocked(void* self);
+bool k_multitabbar_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2822,9 +2805,9 @@ bool k_multitabbar_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QThread* k_multitabbar_thread(void* self);
+QThread* k_multitabbar_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2875,11 +2858,11 @@ void k_multitabbar_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_multitabbar_children(void* self);
+libqt_list k_multitabbar_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2908,7 +2891,7 @@ void k_multitabbar_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_multitabbar_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_multitabbar_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2919,18 +2902,18 @@ QMetaObject__Connection* k_multitabbar_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_multitabbar_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_multitabbar_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_multitabbar_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_multitabbar_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2941,7 +2924,7 @@ QMetaObject__Connection* k_multitabbar_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_multitabbar_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_multitabbar_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2952,24 +2935,24 @@ bool k_multitabbar_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_multitabbar_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_multitabbar_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_disconnect3(void* self);
+bool k_multitabbar_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param receiver QObject*
 ///
-bool k_multitabbar_disconnect4(void* self, void* receiver);
+bool k_multitabbar_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -2977,23 +2960,23 @@ bool k_multitabbar_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_multitabbar_disconnect5(void* param1);
+bool k_multitabbar_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-void k_multitabbar_dump_object_tree(void* self);
+void k_multitabbar_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-void k_multitabbar_dump_object_info(void* self);
+void k_multitabbar_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3003,16 +2986,16 @@ void k_multitabbar_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_multitabbar_set_property(void* self, const char* name, void* value);
+bool k_multitabbar_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param name const char*
 ///
-QVariant* k_multitabbar_property(void* self, const char* name);
+QVariant* k_multitabbar_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3020,9 +3003,9 @@ QVariant* k_multitabbar_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const char** k_multitabbar_dynamic_property_names(void* self);
+const char** k_multitabbar_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3036,9 +3019,9 @@ QBindingStorage* k_multitabbar_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-const QBindingStorage* k_multitabbar_binding_storage2(void* self);
+const QBindingStorage* k_multitabbar_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3061,18 +3044,18 @@ void k_multitabbar_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QObject* k_multitabbar_parent(void* self);
+QObject* k_multitabbar_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param classname const char*
 ///
-bool k_multitabbar_inherits(void* self, const char* classname);
+bool k_multitabbar_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3112,7 +3095,7 @@ int32_t k_multitabbar_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbar_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_multitabbar_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3124,59 +3107,59 @@ QMetaObject__Connection* k_multitabbar_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbar_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_multitabbar_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbar_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_multitabbar_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param signal const char*
 ///
-bool k_multitabbar_disconnect1(void* self, const char* signal);
+bool k_multitabbar_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBar*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_multitabbar_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_multitabbar_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_multitabbar_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_multitabbar_disconnect23(void* self, void* receiver, const char* member);
+bool k_multitabbar_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KMultiTabBar*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_multitabbar_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3200,89 +3183,89 @@ void k_multitabbar_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_painting_active(void* self);
+bool k_multitabbar_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_width_m_m(void* self);
+int32_t k_multitabbar_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_height_m_m(void* self);
+int32_t k_multitabbar_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_logical_dpi_x(void* self);
+int32_t k_multitabbar_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_logical_dpi_y(void* self);
+int32_t k_multitabbar_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_physical_dpi_x(void* self);
+int32_t k_multitabbar_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_physical_dpi_y(void* self);
+int32_t k_multitabbar_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-double k_multitabbar_device_pixel_ratio(void* self);
+double k_multitabbar_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-double k_multitabbar_device_pixel_ratio_f(void* self);
+double k_multitabbar_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_color_count(void* self);
+int32_t k_multitabbar_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_depth(void* self);
+int32_t k_multitabbar_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3305,9 +3288,9 @@ int32_t k_multitabbar_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_dev_type(void* self);
+int32_t k_multitabbar_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3315,9 +3298,9 @@ int32_t k_multitabbar_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_super_dev_type(void* self);
+int32_t k_multitabbar_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3325,10 +3308,10 @@ int32_t k_multitabbar_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
-/// @param callback int32_t func()
+/// @param self const KMultiTabBar*
+/// @param callback int32_t func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_dev_type(void* self, int32_t (*callback)());
+void k_multitabbar_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3369,9 +3352,9 @@ void k_multitabbar_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_size_hint(void* self);
+QSize* k_multitabbar_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3379,9 +3362,9 @@ QSize* k_multitabbar_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_super_size_hint(void* self);
+QSize* k_multitabbar_super_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3389,12 +3372,12 @@ QSize* k_multitabbar_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
-/// @param callback QSize* func()
+/// @param self const KMultiTabBar*
+/// @param callback QSize* func(KMultiTabBar* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_multitabbar_on_size_hint(void* self, QSize* (*callback)());
+void k_multitabbar_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3402,9 +3385,9 @@ void k_multitabbar_on_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_minimum_size_hint(void* self);
+QSize* k_multitabbar_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3412,9 +3395,9 @@ QSize* k_multitabbar_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QSize* k_multitabbar_super_minimum_size_hint(void* self);
+QSize* k_multitabbar_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3422,12 +3405,12 @@ QSize* k_multitabbar_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
-/// @param callback QSize* func()
+/// @param self const KMultiTabBar*
+/// @param callback QSize* func(KMultiTabBar* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_multitabbar_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_multitabbar_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3435,10 +3418,10 @@ void k_multitabbar_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 int
 ///
-int32_t k_multitabbar_height_for_width(void* self, int param1);
+int32_t k_multitabbar_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3446,10 +3429,10 @@ int32_t k_multitabbar_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 int
 ///
-int32_t k_multitabbar_super_height_for_width(void* self, int param1);
+int32_t k_multitabbar_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3457,10 +3440,10 @@ int32_t k_multitabbar_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param callback int32_t func(KMultiTabBar* self, int param1)
 ///
-void k_multitabbar_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_multitabbar_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3468,9 +3451,9 @@ void k_multitabbar_on_height_for_width(void* self, int32_t (*callback)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_has_height_for_width(void* self);
+bool k_multitabbar_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3478,9 +3461,9 @@ bool k_multitabbar_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-bool k_multitabbar_super_has_height_for_width(void* self);
+bool k_multitabbar_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3488,10 +3471,10 @@ bool k_multitabbar_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
-/// @param callback bool func()
+/// @param self const KMultiTabBar*
+/// @param callback bool func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_has_height_for_width(void* self, bool (*callback)());
+void k_multitabbar_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3499,9 +3482,9 @@ void k_multitabbar_on_has_height_for_width(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QPaintEngine* k_multitabbar_paint_engine(void* self);
+QPaintEngine* k_multitabbar_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3509,9 +3492,9 @@ QPaintEngine* k_multitabbar_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QPaintEngine* k_multitabbar_super_paint_engine(void* self);
+QPaintEngine* k_multitabbar_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3519,10 +3502,10 @@ QPaintEngine* k_multitabbar_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
-/// @param callback QPaintEngine* func()
+/// @param self const KMultiTabBar*
+/// @param callback QPaintEngine* func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_multitabbar_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4392,10 +4375,10 @@ void k_multitabbar_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_multitabbar_metric(void* self, int32_t param1);
+int32_t k_multitabbar_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4403,10 +4386,10 @@ int32_t k_multitabbar_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_multitabbar_super_metric(void* self, int32_t param1);
+int32_t k_multitabbar_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4414,10 +4397,10 @@ int32_t k_multitabbar_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param callback int32_t func(KMultiTabBar* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_multitabbar_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_multitabbar_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4425,10 +4408,10 @@ void k_multitabbar_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param painter QPainter*
 ///
-void k_multitabbar_init_painter(void* self, void* painter);
+void k_multitabbar_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4436,10 +4419,10 @@ void k_multitabbar_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param painter QPainter*
 ///
-void k_multitabbar_super_init_painter(void* self, void* painter);
+void k_multitabbar_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4447,10 +4430,10 @@ void k_multitabbar_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param callback void func(KMultiTabBar* self, QPainter* painter)
 ///
-void k_multitabbar_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_multitabbar_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4458,10 +4441,10 @@ void k_multitabbar_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_multitabbar_redirected(void* self, void* offset);
+QPaintDevice* k_multitabbar_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4469,10 +4452,10 @@ QPaintDevice* k_multitabbar_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_multitabbar_super_redirected(void* self, void* offset);
+QPaintDevice* k_multitabbar_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4480,10 +4463,10 @@ QPaintDevice* k_multitabbar_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param callback QPaintDevice* func(KMultiTabBar* self, QPoint* offset)
 ///
-void k_multitabbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_multitabbar_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4491,9 +4474,9 @@ void k_multitabbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QPainter* k_multitabbar_shared_painter(void* self);
+QPainter* k_multitabbar_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4501,9 +4484,9 @@ QPainter* k_multitabbar_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QPainter* k_multitabbar_super_shared_painter(void* self);
+QPainter* k_multitabbar_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4511,10 +4494,10 @@ QPainter* k_multitabbar_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
-/// @param callback QPainter* func()
+/// @param self const KMultiTabBar*
+/// @param callback QPainter* func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_shared_painter(void* self, QPainter* (*callback)());
+void k_multitabbar_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4555,10 +4538,10 @@ void k_multitabbar_on_input_method_event(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_multitabbar_input_method_query(void* self, int32_t param1);
+QVariant* k_multitabbar_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4566,10 +4549,10 @@ QVariant* k_multitabbar_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_multitabbar_super_input_method_query(void* self, int32_t param1);
+QVariant* k_multitabbar_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4577,12 +4560,12 @@ QVariant* k_multitabbar_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param callback QVariant* func(KMultiTabBar* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_multitabbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_multitabbar_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4760,7 +4743,7 @@ void k_multitabbar_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self KMultiTabBar*
 /// @param signal QMetaMethod*
 ///
-void k_multitabbar_connect_notify(void* self, void* signal);
+void k_multitabbar_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4771,7 +4754,7 @@ void k_multitabbar_connect_notify(void* self, void* signal);
 /// @param self KMultiTabBar*
 /// @param signal QMetaMethod*
 ///
-void k_multitabbar_super_connect_notify(void* self, void* signal);
+void k_multitabbar_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4782,7 +4765,7 @@ void k_multitabbar_super_connect_notify(void* self, void* signal);
 /// @param self KMultiTabBar*
 /// @param callback void func(KMultiTabBar* self, QMetaMethod* signal)
 ///
-void k_multitabbar_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_multitabbar_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -4793,7 +4776,7 @@ void k_multitabbar_on_connect_notify(void* self, void (*callback)(void*, void*))
 /// @param self KMultiTabBar*
 /// @param signal QMetaMethod*
 ///
-void k_multitabbar_disconnect_notify(void* self, void* signal);
+void k_multitabbar_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4804,7 +4787,7 @@ void k_multitabbar_disconnect_notify(void* self, void* signal);
 /// @param self KMultiTabBar*
 /// @param signal QMetaMethod*
 ///
-void k_multitabbar_super_disconnect_notify(void* self, void* signal);
+void k_multitabbar_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -4815,7 +4798,7 @@ void k_multitabbar_super_disconnect_notify(void* self, void* signal);
 /// @param self KMultiTabBar*
 /// @param callback void func(KMultiTabBar* self, QMetaMethod* signal)
 ///
-void k_multitabbar_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_multitabbar_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4844,9 +4827,9 @@ void k_multitabbar_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void func()
+/// @param callback void func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_update_micro_focus(void* self, void (*callback)());
+void k_multitabbar_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4875,9 +4858,9 @@ void k_multitabbar_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void func()
+/// @param callback void func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_create(void* self, void (*callback)());
+void k_multitabbar_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4906,9 +4889,9 @@ void k_multitabbar_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback void func()
+/// @param callback void func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_destroy(void* self, void (*callback)());
+void k_multitabbar_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4937,9 +4920,9 @@ bool k_multitabbar_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool func()
+/// @param callback bool func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_focus_next_child(void* self, bool (*callback)());
+void k_multitabbar_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -4968,9 +4951,9 @@ bool k_multitabbar_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KMultiTabBar*
-/// @param callback bool func()
+/// @param callback bool func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_focus_previous_child(void* self, bool (*callback)());
+void k_multitabbar_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -4978,9 +4961,9 @@ void k_multitabbar_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QObject* k_multitabbar_sender(void* self);
+QObject* k_multitabbar_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4988,9 +4971,9 @@ QObject* k_multitabbar_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-QObject* k_multitabbar_super_sender(void* self);
+QObject* k_multitabbar_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -4998,10 +4981,10 @@ QObject* k_multitabbar_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
-/// @param callback QObject* func()
+/// @param self const KMultiTabBar*
+/// @param callback QObject* func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_sender(void* self, QObject* (*callback)());
+void k_multitabbar_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5009,9 +4992,9 @@ void k_multitabbar_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_sender_signal_index(void* self);
+int32_t k_multitabbar_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5019,9 +5002,9 @@ int32_t k_multitabbar_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 ///
-int32_t k_multitabbar_super_sender_signal_index(void* self);
+int32_t k_multitabbar_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5029,10 +5012,10 @@ int32_t k_multitabbar_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
-/// @param callback int32_t func()
+/// @param self const KMultiTabBar*
+/// @param callback int32_t func(KMultiTabBar* self)
 ///
-void k_multitabbar_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_multitabbar_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5040,10 +5023,10 @@ void k_multitabbar_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param signal const char*
 ///
-int32_t k_multitabbar_receivers(void* self, const char* signal);
+int32_t k_multitabbar_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5051,10 +5034,10 @@ int32_t k_multitabbar_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param signal const char*
 ///
-int32_t k_multitabbar_super_receivers(void* self, const char* signal);
+int32_t k_multitabbar_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5062,10 +5045,10 @@ int32_t k_multitabbar_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param callback int32_t func(KMultiTabBar* self, const char* signal)
 ///
-void k_multitabbar_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_multitabbar_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5073,10 +5056,10 @@ void k_multitabbar_on_receivers(void* self, int32_t (*callback)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param signal QMetaMethod*
 ///
-bool k_multitabbar_is_signal_connected(void* self, void* signal);
+bool k_multitabbar_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5084,10 +5067,10 @@ bool k_multitabbar_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param signal QMetaMethod*
 ///
-bool k_multitabbar_super_is_signal_connected(void* self, void* signal);
+bool k_multitabbar_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5095,10 +5078,10 @@ bool k_multitabbar_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param callback bool func(KMultiTabBar* self, QMetaMethod* signal)
 ///
-void k_multitabbar_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_multitabbar_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5106,11 +5089,11 @@ void k_multitabbar_on_is_signal_connected(void* self, bool (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_multitabbar_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_multitabbar_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5118,11 +5101,11 @@ double k_multitabbar_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_multitabbar_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_multitabbar_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5130,10 +5113,10 @@ double k_multitabbar_super_get_decoded_metric_f(void* self, int32_t metricA, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KMultiTabBar*
+/// @param self const KMultiTabBar*
 /// @param callback double func(KMultiTabBar* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_multitabbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_multitabbar_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5158,9 +5141,9 @@ void k_multitabbar_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const QMetaObject* k_multitabbarbutton_meta_object(void* self);
+const QMetaObject* k_multitabbarbutton_meta_object(const void* self);
 
 /// @param self KMultiTabBarButton*
 /// @param param1 const char*
@@ -5184,9 +5167,9 @@ const char* k_multitabbarbutton_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbarbutton.html#id)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_id(void* self);
+int32_t k_multitabbarbutton_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbarbutton.html#setText)
 ///
@@ -5232,25 +5215,25 @@ const char* k_multitabbarbutton_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#sizeHint)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_size_hint(void* self);
+QSize* k_multitabbarbutton_size_hint(const void* self);
 
 /// Inherited from QPushButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#minimumSizeHint)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_minimum_size_hint(void* self);
+QSize* k_multitabbarbutton_minimum_size_hint(const void* self);
 
 /// Inherited from QPushButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#autoDefault)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_auto_default(void* self);
+bool k_multitabbarbutton_auto_default(const void* self);
 
 /// Inherited from QPushButton
 ///
@@ -5265,9 +5248,9 @@ void k_multitabbarbutton_set_auto_default(void* self, bool autoDefault);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#isDefault)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_default(void* self);
+bool k_multitabbarbutton_is_default(const void* self);
 
 /// Inherited from QPushButton
 ///
@@ -5291,9 +5274,9 @@ void k_multitabbarbutton_set_menu(void* self, void* menu);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#menu)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QMenu* k_multitabbarbutton_menu(void* self);
+QMenu* k_multitabbarbutton_menu(const void* self);
 
 /// Inherited from QPushButton
 ///
@@ -5308,9 +5291,9 @@ void k_multitabbarbutton_set_flat(void* self, bool flat);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#isFlat)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_flat(void* self);
+bool k_multitabbarbutton_is_flat(const void* self);
 
 /// Inherited from QPushButton
 ///
@@ -5326,9 +5309,9 @@ void k_multitabbarbutton_show_menu(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_text(void* self);
+const char* k_multitabbarbutton_text(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5337,23 +5320,23 @@ const char* k_multitabbarbutton_text(void* self);
 /// @param self KMultiTabBarButton*
 /// @param icon QIcon*
 ///
-void k_multitabbarbutton_set_icon(void* self, void* icon);
+void k_multitabbarbutton_set_icon(void* self, const void* icon);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#icon)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QIcon* k_multitabbarbutton_icon(void* self);
+QIcon* k_multitabbarbutton_icon(const void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#iconSize)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_icon_size(void* self);
+QSize* k_multitabbarbutton_icon_size(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5362,15 +5345,15 @@ QSize* k_multitabbarbutton_icon_size(void* self);
 /// @param self KMultiTabBarButton*
 /// @param key QKeySequence*
 ///
-void k_multitabbarbutton_set_shortcut(void* self, void* key);
+void k_multitabbarbutton_set_shortcut(void* self, const void* key);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#shortcut)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QKeySequence* k_multitabbarbutton_shortcut(void* self);
+QKeySequence* k_multitabbarbutton_shortcut(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5385,17 +5368,17 @@ void k_multitabbarbutton_set_checkable(void* self, bool checkable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isCheckable)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_checkable(void* self);
+bool k_multitabbarbutton_is_checkable(const void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isChecked)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_checked(void* self);
+bool k_multitabbarbutton_is_checked(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5410,9 +5393,9 @@ void k_multitabbarbutton_set_down(void* self, bool down);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isDown)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_down(void* self);
+bool k_multitabbarbutton_is_down(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5427,9 +5410,9 @@ void k_multitabbarbutton_set_auto_repeat(void* self, bool autoRepeat);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeat)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_auto_repeat(void* self);
+bool k_multitabbarbutton_auto_repeat(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5444,9 +5427,9 @@ void k_multitabbarbutton_set_auto_repeat_delay(void* self, int autoRepeatDelay);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatDelay)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_auto_repeat_delay(void* self);
+int32_t k_multitabbarbutton_auto_repeat_delay(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5461,9 +5444,9 @@ void k_multitabbarbutton_set_auto_repeat_interval(void* self, int autoRepeatInte
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatInterval)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_auto_repeat_interval(void* self);
+int32_t k_multitabbarbutton_auto_repeat_interval(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5478,17 +5461,17 @@ void k_multitabbarbutton_set_auto_exclusive(void* self, bool autoExclusive);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoExclusive)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_auto_exclusive(void* self);
+bool k_multitabbarbutton_auto_exclusive(const void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#group)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QButtonGroup* k_multitabbarbutton_group(void* self);
+QButtonGroup* k_multitabbarbutton_group(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -5497,7 +5480,7 @@ QButtonGroup* k_multitabbarbutton_group(void* self);
 /// @param self KMultiTabBarButton*
 /// @param size QSize*
 ///
-void k_multitabbarbutton_set_icon_size(void* self, void* size);
+void k_multitabbarbutton_set_icon_size(void* self, const void* size);
 
 /// Inherited from QAbstractButton
 ///
@@ -5622,17 +5605,17 @@ KMultiTabBarButton* k_multitabbarbutton_from_q_paint_device(void* _qpaintdevice)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_dev_type(void* self);
+int32_t k_multitabbarbutton_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-uintptr_t k_multitabbarbutton_win_id(void* self);
+uintptr_t k_multitabbarbutton_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5646,25 +5629,25 @@ void k_multitabbarbutton_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-uintptr_t k_multitabbarbutton_internal_win_id(void* self);
+uintptr_t k_multitabbarbutton_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-uintptr_t k_multitabbarbutton_effective_win_id(void* self);
+uintptr_t k_multitabbarbutton_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QStyle* k_multitabbarbutton_style(void* self);
+QStyle* k_multitabbarbutton_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5679,35 +5662,35 @@ void k_multitabbarbutton_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_top_level(void* self);
+bool k_multitabbarbutton_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_window(void* self);
+bool k_multitabbarbutton_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_modal(void* self);
+bool k_multitabbarbutton_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_multitabbarbutton_window_modality(void* self);
+int32_t k_multitabbarbutton_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5722,18 +5705,18 @@ void k_multitabbarbutton_set_window_modality(void* self, int32_t windowModality)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_enabled(void* self);
+bool k_multitabbarbutton_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QWidget*
 ///
-bool k_multitabbarbutton_is_enabled_to(void* self, void* param1);
+bool k_multitabbarbutton_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -5766,153 +5749,153 @@ void k_multitabbarbutton_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QRect* k_multitabbarbutton_frame_geometry(void* self);
+QRect* k_multitabbarbutton_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const QRect* k_multitabbarbutton_geometry(void* self);
+const QRect* k_multitabbarbutton_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QRect* k_multitabbarbutton_normal_geometry(void* self);
+QRect* k_multitabbarbutton_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_x(void* self);
+int32_t k_multitabbarbutton_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_y(void* self);
+int32_t k_multitabbarbutton_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QPoint* k_multitabbarbutton_pos(void* self);
+QPoint* k_multitabbarbutton_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_frame_size(void* self);
+QSize* k_multitabbarbutton_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_size(void* self);
+QSize* k_multitabbarbutton_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_width(void* self);
+int32_t k_multitabbarbutton_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_height(void* self);
+int32_t k_multitabbarbutton_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QRect* k_multitabbarbutton_rect(void* self);
+QRect* k_multitabbarbutton_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QRect* k_multitabbarbutton_children_rect(void* self);
+QRect* k_multitabbarbutton_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QRegion* k_multitabbarbutton_children_region(void* self);
+QRegion* k_multitabbarbutton_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_minimum_size(void* self);
+QSize* k_multitabbarbutton_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_maximum_size(void* self);
+QSize* k_multitabbarbutton_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_minimum_width(void* self);
+int32_t k_multitabbarbutton_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_minimum_height(void* self);
+int32_t k_multitabbarbutton_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_maximum_width(void* self);
+int32_t k_multitabbarbutton_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_maximum_height(void* self);
+int32_t k_multitabbarbutton_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5921,7 +5904,7 @@ int32_t k_multitabbarbutton_maximum_height(void* self);
 /// @param self KMultiTabBarButton*
 /// @param minimumSize QSize*
 ///
-void k_multitabbarbutton_set_minimum_size(void* self, void* minimumSize);
+void k_multitabbarbutton_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -5940,7 +5923,7 @@ void k_multitabbarbutton_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KMultiTabBarButton*
 /// @param maximumSize QSize*
 ///
-void k_multitabbarbutton_set_maximum_size(void* self, void* maximumSize);
+void k_multitabbarbutton_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -5992,9 +5975,9 @@ void k_multitabbarbutton_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_size_increment(void* self);
+QSize* k_multitabbarbutton_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6003,7 +5986,7 @@ QSize* k_multitabbarbutton_size_increment(void* self);
 /// @param self KMultiTabBarButton*
 /// @param sizeIncrement QSize*
 ///
-void k_multitabbarbutton_set_size_increment(void* self, void* sizeIncrement);
+void k_multitabbarbutton_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -6019,9 +6002,9 @@ void k_multitabbarbutton_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSize* k_multitabbarbutton_base_size(void* self);
+QSize* k_multitabbarbutton_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6030,7 +6013,7 @@ QSize* k_multitabbarbutton_base_size(void* self);
 /// @param self KMultiTabBarButton*
 /// @param baseSize QSize*
 ///
-void k_multitabbarbutton_set_base_size(void* self, void* baseSize);
+void k_multitabbarbutton_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -6049,7 +6032,7 @@ void k_multitabbarbutton_set_base_size2(void* self, int basew, int baseh);
 /// @param self KMultiTabBarButton*
 /// @param fixedSize QSize*
 ///
-void k_multitabbarbutton_set_fixed_size(void* self, void* fixedSize);
+void k_multitabbarbutton_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -6083,145 +6066,145 @@ void k_multitabbarbutton_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbarbutton_map_to_global(void* self, void* param1);
+QPointF* k_multitabbarbutton_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbarbutton_map_to_global2(void* self, void* param1);
+QPoint* k_multitabbarbutton_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbarbutton_map_from_global(void* self, void* param1);
+QPointF* k_multitabbarbutton_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbarbutton_map_from_global2(void* self, void* param1);
+QPoint* k_multitabbarbutton_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbarbutton_map_to_parent(void* self, void* param1);
+QPointF* k_multitabbarbutton_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbarbutton_map_to_parent2(void* self, void* param1);
+QPoint* k_multitabbarbutton_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbarbutton_map_from_parent(void* self, void* param1);
+QPointF* k_multitabbarbutton_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbarbutton_map_from_parent2(void* self, void* param1);
+QPoint* k_multitabbarbutton_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_multitabbarbutton_map_to(void* self, void* param1, void* param2);
+QPointF* k_multitabbarbutton_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_multitabbarbutton_map_to2(void* self, void* param1, void* param2);
+QPoint* k_multitabbarbutton_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_multitabbarbutton_map_from(void* self, void* param1, void* param2);
+QPointF* k_multitabbarbutton_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_multitabbarbutton_map_from2(void* self, void* param1, void* param2);
+QPoint* k_multitabbarbutton_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWidget* k_multitabbarbutton_window(void* self);
+QWidget* k_multitabbarbutton_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWidget* k_multitabbarbutton_native_parent_widget(void* self);
+QWidget* k_multitabbarbutton_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWidget* k_multitabbarbutton_top_level_widget(void* self);
+QWidget* k_multitabbarbutton_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const QPalette* k_multitabbarbutton_palette(void* self);
+const QPalette* k_multitabbarbutton_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6230,7 +6213,7 @@ const QPalette* k_multitabbarbutton_palette(void* self);
 /// @param self KMultiTabBarButton*
 /// @param palette QPalette*
 ///
-void k_multitabbarbutton_set_palette(void* self, void* palette);
+void k_multitabbarbutton_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -6245,11 +6228,11 @@ void k_multitabbarbutton_set_background_role(void* self, int32_t backgroundRole)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_multitabbarbutton_background_role(void* self);
+int32_t k_multitabbarbutton_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6264,19 +6247,19 @@ void k_multitabbarbutton_set_foreground_role(void* self, int32_t foregroundRole)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_multitabbarbutton_foreground_role(void* self);
+int32_t k_multitabbarbutton_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const QFont* k_multitabbarbutton_font(void* self);
+const QFont* k_multitabbarbutton_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6285,31 +6268,31 @@ const QFont* k_multitabbarbutton_font(void* self);
 /// @param self KMultiTabBarButton*
 /// @param font QFont*
 ///
-void k_multitabbarbutton_set_font(void* self, void* font);
+void k_multitabbarbutton_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QFontMetrics* k_multitabbarbutton_font_metrics(void* self);
+QFontMetrics* k_multitabbarbutton_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QFontInfo* k_multitabbarbutton_font_info(void* self);
+QFontInfo* k_multitabbarbutton_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QCursor* k_multitabbarbutton_cursor(void* self);
+QCursor* k_multitabbarbutton_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6318,7 +6301,7 @@ QCursor* k_multitabbarbutton_cursor(void* self);
 /// @param self KMultiTabBarButton*
 /// @param cursor QCursor*
 ///
-void k_multitabbarbutton_set_cursor(void* self, void* cursor);
+void k_multitabbarbutton_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -6341,17 +6324,17 @@ void k_multitabbarbutton_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_has_mouse_tracking(void* self);
+bool k_multitabbarbutton_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_under_mouse(void* self);
+bool k_multitabbarbutton_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6366,9 +6349,9 @@ void k_multitabbarbutton_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_has_tablet_tracking(void* self);
+bool k_multitabbarbutton_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6377,7 +6360,7 @@ bool k_multitabbarbutton_has_tablet_tracking(void* self);
 /// @param self KMultiTabBarButton*
 /// @param mask QBitmap*
 ///
-void k_multitabbarbutton_set_mask(void* self, void* mask);
+void k_multitabbarbutton_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -6386,15 +6369,15 @@ void k_multitabbarbutton_set_mask(void* self, void* mask);
 /// @param self KMultiTabBarButton*
 /// @param mask QRegion*
 ///
-void k_multitabbarbutton_set_mask2(void* self, void* mask);
+void k_multitabbarbutton_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QRegion* k_multitabbarbutton_mask(void* self);
+QRegion* k_multitabbarbutton_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6434,9 +6417,9 @@ QPixmap* k_multitabbarbutton_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QGraphicsEffect* k_multitabbarbutton_graphics_effect(void* self);
+QGraphicsEffect* k_multitabbarbutton_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6489,9 +6472,9 @@ void k_multitabbarbutton_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_style_sheet(void* self);
+const char* k_multitabbarbutton_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6499,9 +6482,9 @@ const char* k_multitabbarbutton_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_window_title(void* self);
+const char* k_multitabbarbutton_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6510,15 +6493,15 @@ const char* k_multitabbarbutton_window_title(void* self);
 /// @param self KMultiTabBarButton*
 /// @param icon QIcon*
 ///
-void k_multitabbarbutton_set_window_icon(void* self, void* icon);
+void k_multitabbarbutton_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QIcon* k_multitabbarbutton_window_icon(void* self);
+QIcon* k_multitabbarbutton_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6535,9 +6518,9 @@ void k_multitabbarbutton_set_window_icon_text(void* self, const char* windowIcon
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_window_icon_text(void* self);
+const char* k_multitabbarbutton_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6554,9 +6537,9 @@ void k_multitabbarbutton_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_window_role(void* self);
+const char* k_multitabbarbutton_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6573,9 +6556,9 @@ void k_multitabbarbutton_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_window_file_path(void* self);
+const char* k_multitabbarbutton_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6590,17 +6573,17 @@ void k_multitabbarbutton_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-double k_multitabbarbutton_window_opacity(void* self);
+double k_multitabbarbutton_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_window_modified(void* self);
+bool k_multitabbarbutton_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6617,9 +6600,9 @@ void k_multitabbarbutton_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_tool_tip(void* self);
+const char* k_multitabbarbutton_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6634,9 +6617,9 @@ void k_multitabbarbutton_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_tool_tip_duration(void* self);
+int32_t k_multitabbarbutton_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6653,9 +6636,9 @@ void k_multitabbarbutton_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_status_tip(void* self);
+const char* k_multitabbarbutton_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6672,9 +6655,9 @@ void k_multitabbarbutton_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_whats_this(void* self);
+const char* k_multitabbarbutton_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6682,9 +6665,9 @@ const char* k_multitabbarbutton_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_accessible_name(void* self);
+const char* k_multitabbarbutton_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6701,9 +6684,9 @@ void k_multitabbarbutton_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_accessible_description(void* self);
+const char* k_multitabbarbutton_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6727,11 +6710,11 @@ void k_multitabbarbutton_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_multitabbarbutton_layout_direction(void* self);
+int32_t k_multitabbarbutton_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6748,15 +6731,15 @@ void k_multitabbarbutton_unset_layout_direction(void* self);
 /// @param self KMultiTabBarButton*
 /// @param locale QLocale*
 ///
-void k_multitabbarbutton_set_locale(void* self, void* locale);
+void k_multitabbarbutton_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QLocale* k_multitabbarbutton_locale(void* self);
+QLocale* k_multitabbarbutton_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6770,17 +6753,17 @@ void k_multitabbarbutton_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_right_to_left(void* self);
+bool k_multitabbarbutton_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_left_to_right(void* self);
+bool k_multitabbarbutton_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6794,9 +6777,9 @@ void k_multitabbarbutton_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_active_window(void* self);
+bool k_multitabbarbutton_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6827,11 +6810,11 @@ void k_multitabbarbutton_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_multitabbarbutton_focus_policy(void* self);
+int32_t k_multitabbarbutton_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6846,9 +6829,9 @@ void k_multitabbarbutton_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_has_focus(void* self);
+bool k_multitabbarbutton_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6872,19 +6855,19 @@ void k_multitabbarbutton_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWidget* k_multitabbarbutton_focus_proxy(void* self);
+QWidget* k_multitabbarbutton_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_multitabbarbutton_context_menu_policy(void* self);
+int32_t k_multitabbarbutton_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -6910,7 +6893,7 @@ void k_multitabbarbutton_grab_mouse(void* self);
 /// @param self KMultiTabBarButton*
 /// @param param1 QCursor*
 ///
-void k_multitabbarbutton_grab_mouse2(void* self, void* param1);
+void k_multitabbarbutton_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -6943,7 +6926,7 @@ void k_multitabbarbutton_release_keyboard(void* self);
 /// @param self KMultiTabBarButton*
 /// @param key QKeySequence*
 ///
-int32_t k_multitabbarbutton_grab_shortcut(void* self, void* key);
+int32_t k_multitabbarbutton_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -6988,9 +6971,9 @@ QWidget* k_multitabbarbutton_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_updates_enabled(void* self);
+bool k_multitabbarbutton_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7005,9 +6988,9 @@ void k_multitabbarbutton_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QGraphicsProxyWidget* k_multitabbarbutton_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_multitabbarbutton_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7044,7 +7027,7 @@ void k_multitabbarbutton_update2(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBarButton*
 /// @param param1 QRect*
 ///
-void k_multitabbarbutton_update3(void* self, void* param1);
+void k_multitabbarbutton_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7053,7 +7036,7 @@ void k_multitabbarbutton_update3(void* self, void* param1);
 /// @param self KMultiTabBarButton*
 /// @param param1 QRegion*
 ///
-void k_multitabbarbutton_update4(void* self, void* param1);
+void k_multitabbarbutton_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7074,7 +7057,7 @@ void k_multitabbarbutton_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBarButton*
 /// @param param1 QRect*
 ///
-void k_multitabbarbutton_repaint3(void* self, void* param1);
+void k_multitabbarbutton_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7083,7 +7066,7 @@ void k_multitabbarbutton_repaint3(void* self, void* param1);
 /// @param self KMultiTabBarButton*
 /// @param param1 QRegion*
 ///
-void k_multitabbarbutton_repaint4(void* self, void* param1);
+void k_multitabbarbutton_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7201,7 +7184,7 @@ void k_multitabbarbutton_move(void* self, int x, int y);
 /// @param self KMultiTabBarButton*
 /// @param param1 QPoint*
 ///
-void k_multitabbarbutton_move2(void* self, void* param1);
+void k_multitabbarbutton_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7220,7 +7203,7 @@ void k_multitabbarbutton_resize(void* self, int w, int h);
 /// @param self KMultiTabBarButton*
 /// @param param1 QSize*
 ///
-void k_multitabbarbutton_resize2(void* self, void* param1);
+void k_multitabbarbutton_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -7241,7 +7224,7 @@ void k_multitabbarbutton_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBarButton*
 /// @param geometry QRect*
 ///
-void k_multitabbarbutton_set_geometry2(void* self, void* geometry);
+void k_multitabbarbutton_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -7249,9 +7232,9 @@ void k_multitabbarbutton_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-char* k_multitabbarbutton_save_geometry(void* self);
+char* k_multitabbarbutton_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7274,60 +7257,60 @@ void k_multitabbarbutton_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_visible(void* self);
+bool k_multitabbarbutton_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 QWidget*
 ///
-bool k_multitabbarbutton_is_visible_to(void* self, void* param1);
+bool k_multitabbarbutton_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_hidden(void* self);
+bool k_multitabbarbutton_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_minimized(void* self);
+bool k_multitabbarbutton_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_maximized(void* self);
+bool k_multitabbarbutton_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_full_screen(void* self);
+bool k_multitabbarbutton_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_multitabbarbutton_window_state(void* self);
+int32_t k_multitabbarbutton_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7351,9 +7334,9 @@ void k_multitabbarbutton_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QSizePolicy* k_multitabbarbutton_size_policy(void* self);
+QSizePolicy* k_multitabbarbutton_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7378,26 +7361,26 @@ void k_multitabbarbutton_set_size_policy2(void* self, int32_t horizontal, int32_
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 int
 ///
-int32_t k_multitabbarbutton_height_for_width(void* self, int param1);
+int32_t k_multitabbarbutton_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_has_height_for_width(void* self);
+bool k_multitabbarbutton_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QRegion* k_multitabbarbutton_visible_region(void* self);
+QRegion* k_multitabbarbutton_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7418,31 +7401,31 @@ void k_multitabbarbutton_set_contents_margins(void* self, int left, int top, int
 /// @param self KMultiTabBarButton*
 /// @param margins QMargins*
 ///
-void k_multitabbarbutton_set_contents_margins2(void* self, void* margins);
+void k_multitabbarbutton_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QMargins* k_multitabbarbutton_contents_margins(void* self);
+QMargins* k_multitabbarbutton_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QRect* k_multitabbarbutton_contents_rect(void* self);
+QRect* k_multitabbarbutton_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QLayout* k_multitabbarbutton_layout(void* self);
+QLayout* k_multitabbarbutton_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7499,39 +7482,39 @@ void k_multitabbarbutton_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_multitabbarbutton_scroll2(void* self, int dx, int dy, void* param3);
+void k_multitabbarbutton_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWidget* k_multitabbarbutton_focus_widget(void* self);
+QWidget* k_multitabbarbutton_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWidget* k_multitabbarbutton_next_in_focus_chain(void* self);
+QWidget* k_multitabbarbutton_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWidget* k_multitabbarbutton_previous_in_focus_chain(void* self);
+QWidget* k_multitabbarbutton_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_accept_drops(void* self);
+bool k_multitabbarbutton_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7593,11 +7576,11 @@ void k_multitabbarbutton_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_multitabbarbutton_actions(void* self);
+libqt_list k_multitabbarbutton_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7616,7 +7599,7 @@ QAction* k_multitabbarbutton_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_multitabbarbutton_add_action3(void* self, void* icon, const char* text);
+QAction* k_multitabbarbutton_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -7626,7 +7609,7 @@ QAction* k_multitabbarbutton_add_action3(void* self, void* icon, const char* tex
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_multitabbarbutton_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_multitabbarbutton_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -7637,15 +7620,15 @@ QAction* k_multitabbarbutton_add_action4(void* self, const char* text, void* sho
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_multitabbarbutton_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_multitabbarbutton_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWidget* k_multitabbarbutton_parent_widget(void* self);
+QWidget* k_multitabbarbutton_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7660,11 +7643,11 @@ void k_multitabbarbutton_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_multitabbarbutton_window_flags(void* self);
+int32_t k_multitabbarbutton_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7688,11 +7671,11 @@ void k_multitabbarbutton_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_multitabbarbutton_window_type(void* self);
+int32_t k_multitabbarbutton_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7706,29 +7689,29 @@ QWidget* k_multitabbarbutton_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_multitabbarbutton_child_at(void* self, int x, int y);
+QWidget* k_multitabbarbutton_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param p QPoint*
 ///
-QWidget* k_multitabbarbutton_child_at2(void* self, void* p);
+QWidget* k_multitabbarbutton_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param p QPointF*
 ///
-QWidget* k_multitabbarbutton_child_at3(void* self, void* p);
+QWidget* k_multitabbarbutton_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -7743,43 +7726,43 @@ void k_multitabbarbutton_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_multitabbarbutton_test_attribute(void* self, int32_t param1);
+bool k_multitabbarbutton_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QPaintEngine* k_multitabbarbutton_paint_engine(void* self);
+QPaintEngine* k_multitabbarbutton_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-void k_multitabbarbutton_ensure_polished(void* self);
+void k_multitabbarbutton_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param child QWidget*
 ///
-bool k_multitabbarbutton_is_ancestor_of(void* self, void* child);
+bool k_multitabbarbutton_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_auto_fill_background(void* self);
+bool k_multitabbarbutton_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7794,25 +7777,25 @@ void k_multitabbarbutton_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QBackingStore* k_multitabbarbutton_backing_store(void* self);
+QBackingStore* k_multitabbarbutton_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QWindow* k_multitabbarbutton_window_handle(void* self);
+QWindow* k_multitabbarbutton_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QScreen* k_multitabbarbutton_screen(void* self);
+QScreen* k_multitabbarbutton_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7856,7 +7839,7 @@ void k_multitabbarbutton_on_window_title_changed(void* self, void (*callback)(vo
 /// @param self KMultiTabBarButton*
 /// @param icon QIcon*
 ///
-void k_multitabbarbutton_window_icon_changed(void* self, void* icon);
+void k_multitabbarbutton_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -7865,7 +7848,7 @@ void k_multitabbarbutton_window_icon_changed(void* self, void* icon);
 /// @param self KMultiTabBarButton*
 /// @param callback void func(KMultiTabBarButton* self, QIcon* icon)
 ///
-void k_multitabbarbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_multitabbarbutton_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -7892,7 +7875,7 @@ void k_multitabbarbutton_on_window_icon_text_changed(void* self, void (*callback
 /// @param self KMultiTabBarButton*
 /// @param pos QPoint*
 ///
-void k_multitabbarbutton_custom_context_menu_requested(void* self, void* pos);
+void k_multitabbarbutton_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -7901,26 +7884,26 @@ void k_multitabbarbutton_custom_context_menu_requested(void* self, void* pos);
 /// @param self KMultiTabBarButton*
 /// @param callback void func(KMultiTabBarButton* self, QPoint* pos)
 ///
-void k_multitabbarbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_multitabbarbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_multitabbarbutton_input_method_query(void* self, int32_t param1);
+QVariant* k_multitabbarbutton_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_multitabbarbutton_input_method_hints(void* self);
+int32_t k_multitabbarbutton_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -7939,7 +7922,7 @@ void k_multitabbarbutton_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_multitabbarbutton_render22(void* self, void* target, void* targetOffset);
+void k_multitabbarbutton_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -7950,7 +7933,7 @@ void k_multitabbarbutton_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_multitabbarbutton_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_multitabbarbutton_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -7962,7 +7945,7 @@ void k_multitabbarbutton_render3(void* self, void* target, void* targetOffset, v
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_multitabbarbutton_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_multitabbarbutton_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -7972,7 +7955,7 @@ void k_multitabbarbutton_render4(void* self, void* target, void* targetOffset, v
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_multitabbarbutton_render23(void* self, void* painter, void* targetOffset);
+void k_multitabbarbutton_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -7983,7 +7966,7 @@ void k_multitabbarbutton_render23(void* self, void* painter, void* targetOffset)
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_multitabbarbutton_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_multitabbarbutton_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -7995,7 +7978,7 @@ void k_multitabbarbutton_render32(void* self, void* painter, void* targetOffset,
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_multitabbarbutton_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_multitabbarbutton_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -8004,7 +7987,7 @@ void k_multitabbarbutton_render42(void* self, void* painter, void* targetOffset,
 /// @param self KMultiTabBarButton*
 /// @param rectangle QRect*
 ///
-QPixmap* k_multitabbarbutton_grab1(void* self, void* rectangle);
+QPixmap* k_multitabbarbutton_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -8024,7 +8007,7 @@ void k_multitabbarbutton_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_multitabbarbutton_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_multitabbarbutton_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -8101,9 +8084,9 @@ bool k_multitabbarbutton_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char* k_multitabbarbutton_object_name(void* self);
+const char* k_multitabbarbutton_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8118,33 +8101,33 @@ void k_multitabbarbutton_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_widget_type(void* self);
+bool k_multitabbarbutton_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_window_type(void* self);
+bool k_multitabbarbutton_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_is_quick_item_type(void* self);
+bool k_multitabbarbutton_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_signals_blocked(void* self);
+bool k_multitabbarbutton_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8159,9 +8142,9 @@ bool k_multitabbarbutton_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QThread* k_multitabbarbutton_thread(void* self);
+QThread* k_multitabbarbutton_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8212,11 +8195,11 @@ void k_multitabbarbutton_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_multitabbarbutton_children(void* self);
+libqt_list k_multitabbarbutton_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8245,7 +8228,7 @@ void k_multitabbarbutton_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_multitabbarbutton_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_multitabbarbutton_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8256,18 +8239,18 @@ QMetaObject__Connection* k_multitabbarbutton_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_multitabbarbutton_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_multitabbarbutton_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_multitabbarbutton_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_multitabbarbutton_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8278,7 +8261,7 @@ QMetaObject__Connection* k_multitabbarbutton_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_multitabbarbutton_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_multitabbarbutton_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8289,24 +8272,24 @@ bool k_multitabbarbutton_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_multitabbarbutton_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_multitabbarbutton_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_disconnect3(void* self);
+bool k_multitabbarbutton_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param receiver QObject*
 ///
-bool k_multitabbarbutton_disconnect4(void* self, void* receiver);
+bool k_multitabbarbutton_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -8314,23 +8297,23 @@ bool k_multitabbarbutton_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_multitabbarbutton_disconnect5(void* param1);
+bool k_multitabbarbutton_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-void k_multitabbarbutton_dump_object_tree(void* self);
+void k_multitabbarbutton_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-void k_multitabbarbutton_dump_object_info(void* self);
+void k_multitabbarbutton_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8340,16 +8323,16 @@ void k_multitabbarbutton_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_multitabbarbutton_set_property(void* self, const char* name, void* value);
+bool k_multitabbarbutton_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param name const char*
 ///
-QVariant* k_multitabbarbutton_property(void* self, const char* name);
+QVariant* k_multitabbarbutton_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -8357,9 +8340,9 @@ QVariant* k_multitabbarbutton_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const char** k_multitabbarbutton_dynamic_property_names(void* self);
+const char** k_multitabbarbutton_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8373,9 +8356,9 @@ QBindingStorage* k_multitabbarbutton_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-const QBindingStorage* k_multitabbarbutton_binding_storage2(void* self);
+const QBindingStorage* k_multitabbarbutton_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -8398,18 +8381,18 @@ void k_multitabbarbutton_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-QObject* k_multitabbarbutton_parent(void* self);
+QObject* k_multitabbarbutton_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param classname const char*
 ///
-bool k_multitabbarbutton_inherits(void* self, const char* classname);
+bool k_multitabbarbutton_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -8449,7 +8432,7 @@ int32_t k_multitabbarbutton_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbarbutton_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_multitabbarbutton_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -8461,59 +8444,59 @@ QMetaObject__Connection* k_multitabbarbutton_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbarbutton_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_multitabbarbutton_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbarbutton_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_multitabbarbutton_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param signal const char*
 ///
-bool k_multitabbarbutton_disconnect1(void* self, const char* signal);
+bool k_multitabbarbutton_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarButton*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_multitabbarbutton_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_multitabbarbutton_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_multitabbarbutton_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_multitabbarbutton_disconnect23(void* self, void* receiver, const char* member);
+bool k_multitabbarbutton_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KMultiTabBarButton*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_multitabbarbutton_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -8537,89 +8520,89 @@ void k_multitabbarbutton_on_destroyed1(void* self, void (*callback)(void*, void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-bool k_multitabbarbutton_painting_active(void* self);
+bool k_multitabbarbutton_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_width_m_m(void* self);
+int32_t k_multitabbarbutton_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_height_m_m(void* self);
+int32_t k_multitabbarbutton_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_logical_dpi_x(void* self);
+int32_t k_multitabbarbutton_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_logical_dpi_y(void* self);
+int32_t k_multitabbarbutton_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_physical_dpi_x(void* self);
+int32_t k_multitabbarbutton_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_physical_dpi_y(void* self);
+int32_t k_multitabbarbutton_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-double k_multitabbarbutton_device_pixel_ratio(void* self);
+double k_multitabbarbutton_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-double k_multitabbarbutton_device_pixel_ratio_f(void* self);
+double k_multitabbarbutton_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_color_count(void* self);
+int32_t k_multitabbarbutton_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KMultiTabBarButton*
+/// @param self const KMultiTabBarButton*
 ///
-int32_t k_multitabbarbutton_depth(void* self);
+int32_t k_multitabbarbutton_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -8659,9 +8642,9 @@ void k_multitabbarbutton_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const QMetaObject* k_multitabbartab_meta_object(void* self);
+const QMetaObject* k_multitabbartab_meta_object(const void* self);
 
 /// @param self KMultiTabBarTab*
 /// @param param1 const char*
@@ -8685,15 +8668,15 @@ const char* k_multitabbartab_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbartab.html#sizeHint)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_size_hint(void* self);
+QSize* k_multitabbartab_size_hint(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbartab.html#minimumSizeHint)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_minimum_size_hint(void* self);
+QSize* k_multitabbartab_minimum_size_hint(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmultitabbartab.html#setPosition)
 ///
@@ -8739,9 +8722,9 @@ const char* k_multitabbartab_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://api.kde.org/kmultitabbarbutton.html#id)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_id(void* self);
+int32_t k_multitabbartab_id(const void* self);
 
 /// Inherited from KMultiTabBarButton
 ///
@@ -8774,9 +8757,9 @@ void k_multitabbartab_on_clicked(void* self, void (*callback)(void*, int));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#autoDefault)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_auto_default(void* self);
+bool k_multitabbartab_auto_default(const void* self);
 
 /// Inherited from QPushButton
 ///
@@ -8791,9 +8774,9 @@ void k_multitabbartab_set_auto_default(void* self, bool autoDefault);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#isDefault)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_default(void* self);
+bool k_multitabbartab_is_default(const void* self);
 
 /// Inherited from QPushButton
 ///
@@ -8817,9 +8800,9 @@ void k_multitabbartab_set_menu(void* self, void* menu);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#menu)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QMenu* k_multitabbartab_menu(void* self);
+QMenu* k_multitabbartab_menu(const void* self);
 
 /// Inherited from QPushButton
 ///
@@ -8834,9 +8817,9 @@ void k_multitabbartab_set_flat(void* self, bool flat);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpushbutton.html#isFlat)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_flat(void* self);
+bool k_multitabbartab_is_flat(const void* self);
 
 /// Inherited from QPushButton
 ///
@@ -8852,9 +8835,9 @@ void k_multitabbartab_show_menu(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_text(void* self);
+const char* k_multitabbartab_text(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -8863,23 +8846,23 @@ const char* k_multitabbartab_text(void* self);
 /// @param self KMultiTabBarTab*
 /// @param icon QIcon*
 ///
-void k_multitabbartab_set_icon(void* self, void* icon);
+void k_multitabbartab_set_icon(void* self, const void* icon);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#icon)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QIcon* k_multitabbartab_icon(void* self);
+QIcon* k_multitabbartab_icon(const void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#iconSize)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_icon_size(void* self);
+QSize* k_multitabbartab_icon_size(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -8888,15 +8871,15 @@ QSize* k_multitabbartab_icon_size(void* self);
 /// @param self KMultiTabBarTab*
 /// @param key QKeySequence*
 ///
-void k_multitabbartab_set_shortcut(void* self, void* key);
+void k_multitabbartab_set_shortcut(void* self, const void* key);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#shortcut)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QKeySequence* k_multitabbartab_shortcut(void* self);
+QKeySequence* k_multitabbartab_shortcut(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -8911,17 +8894,17 @@ void k_multitabbartab_set_checkable(void* self, bool checkable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isCheckable)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_checkable(void* self);
+bool k_multitabbartab_is_checkable(const void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isChecked)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_checked(void* self);
+bool k_multitabbartab_is_checked(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -8936,9 +8919,9 @@ void k_multitabbartab_set_down(void* self, bool down);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#isDown)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_down(void* self);
+bool k_multitabbartab_is_down(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -8953,9 +8936,9 @@ void k_multitabbartab_set_auto_repeat(void* self, bool autoRepeat);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeat)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_auto_repeat(void* self);
+bool k_multitabbartab_auto_repeat(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -8970,9 +8953,9 @@ void k_multitabbartab_set_auto_repeat_delay(void* self, int autoRepeatDelay);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatDelay)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_auto_repeat_delay(void* self);
+int32_t k_multitabbartab_auto_repeat_delay(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -8987,9 +8970,9 @@ void k_multitabbartab_set_auto_repeat_interval(void* self, int autoRepeatInterva
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatInterval)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_auto_repeat_interval(void* self);
+int32_t k_multitabbartab_auto_repeat_interval(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -9004,17 +8987,17 @@ void k_multitabbartab_set_auto_exclusive(void* self, bool autoExclusive);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#autoExclusive)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_auto_exclusive(void* self);
+bool k_multitabbartab_auto_exclusive(const void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractbutton.html#group)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QButtonGroup* k_multitabbartab_group(void* self);
+QButtonGroup* k_multitabbartab_group(const void* self);
 
 /// Inherited from QAbstractButton
 ///
@@ -9023,7 +9006,7 @@ QButtonGroup* k_multitabbartab_group(void* self);
 /// @param self KMultiTabBarTab*
 /// @param size QSize*
 ///
-void k_multitabbartab_set_icon_size(void* self, void* size);
+void k_multitabbartab_set_icon_size(void* self, const void* size);
 
 /// Inherited from QAbstractButton
 ///
@@ -9148,17 +9131,17 @@ KMultiTabBarTab* k_multitabbartab_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_dev_type(void* self);
+int32_t k_multitabbartab_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-uintptr_t k_multitabbartab_win_id(void* self);
+uintptr_t k_multitabbartab_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9172,59 +9155,59 @@ void k_multitabbartab_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-uintptr_t k_multitabbartab_internal_win_id(void* self);
+uintptr_t k_multitabbartab_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-uintptr_t k_multitabbartab_effective_win_id(void* self);
+uintptr_t k_multitabbartab_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QStyle* k_multitabbartab_style(void* self);
+QStyle* k_multitabbartab_style(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_top_level(void* self);
+bool k_multitabbartab_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_window(void* self);
+bool k_multitabbartab_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_modal(void* self);
+bool k_multitabbartab_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_multitabbartab_window_modality(void* self);
+int32_t k_multitabbartab_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9239,18 +9222,18 @@ void k_multitabbartab_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_enabled(void* self);
+bool k_multitabbartab_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QWidget*
 ///
-bool k_multitabbartab_is_enabled_to(void* self, void* param1);
+bool k_multitabbartab_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -9283,153 +9266,153 @@ void k_multitabbartab_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QRect* k_multitabbartab_frame_geometry(void* self);
+QRect* k_multitabbartab_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const QRect* k_multitabbartab_geometry(void* self);
+const QRect* k_multitabbartab_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QRect* k_multitabbartab_normal_geometry(void* self);
+QRect* k_multitabbartab_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_x(void* self);
+int32_t k_multitabbartab_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_y(void* self);
+int32_t k_multitabbartab_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QPoint* k_multitabbartab_pos(void* self);
+QPoint* k_multitabbartab_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_frame_size(void* self);
+QSize* k_multitabbartab_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_size(void* self);
+QSize* k_multitabbartab_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_width(void* self);
+int32_t k_multitabbartab_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_height(void* self);
+int32_t k_multitabbartab_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QRect* k_multitabbartab_rect(void* self);
+QRect* k_multitabbartab_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QRect* k_multitabbartab_children_rect(void* self);
+QRect* k_multitabbartab_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QRegion* k_multitabbartab_children_region(void* self);
+QRegion* k_multitabbartab_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_minimum_size(void* self);
+QSize* k_multitabbartab_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_maximum_size(void* self);
+QSize* k_multitabbartab_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_minimum_width(void* self);
+int32_t k_multitabbartab_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_minimum_height(void* self);
+int32_t k_multitabbartab_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_maximum_width(void* self);
+int32_t k_multitabbartab_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_maximum_height(void* self);
+int32_t k_multitabbartab_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9438,7 +9421,7 @@ int32_t k_multitabbartab_maximum_height(void* self);
 /// @param self KMultiTabBarTab*
 /// @param minimumSize QSize*
 ///
-void k_multitabbartab_set_minimum_size(void* self, void* minimumSize);
+void k_multitabbartab_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -9457,7 +9440,7 @@ void k_multitabbartab_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KMultiTabBarTab*
 /// @param maximumSize QSize*
 ///
-void k_multitabbartab_set_maximum_size(void* self, void* maximumSize);
+void k_multitabbartab_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -9509,9 +9492,9 @@ void k_multitabbartab_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_size_increment(void* self);
+QSize* k_multitabbartab_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9520,7 +9503,7 @@ QSize* k_multitabbartab_size_increment(void* self);
 /// @param self KMultiTabBarTab*
 /// @param sizeIncrement QSize*
 ///
-void k_multitabbartab_set_size_increment(void* self, void* sizeIncrement);
+void k_multitabbartab_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -9536,9 +9519,9 @@ void k_multitabbartab_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSize* k_multitabbartab_base_size(void* self);
+QSize* k_multitabbartab_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9547,7 +9530,7 @@ QSize* k_multitabbartab_base_size(void* self);
 /// @param self KMultiTabBarTab*
 /// @param baseSize QSize*
 ///
-void k_multitabbartab_set_base_size(void* self, void* baseSize);
+void k_multitabbartab_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -9566,7 +9549,7 @@ void k_multitabbartab_set_base_size2(void* self, int basew, int baseh);
 /// @param self KMultiTabBarTab*
 /// @param fixedSize QSize*
 ///
-void k_multitabbartab_set_fixed_size(void* self, void* fixedSize);
+void k_multitabbartab_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -9600,145 +9583,145 @@ void k_multitabbartab_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbartab_map_to_global(void* self, void* param1);
+QPointF* k_multitabbartab_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbartab_map_to_global2(void* self, void* param1);
+QPoint* k_multitabbartab_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbartab_map_from_global(void* self, void* param1);
+QPointF* k_multitabbartab_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbartab_map_from_global2(void* self, void* param1);
+QPoint* k_multitabbartab_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbartab_map_to_parent(void* self, void* param1);
+QPointF* k_multitabbartab_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbartab_map_to_parent2(void* self, void* param1);
+QPoint* k_multitabbartab_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QPointF*
 ///
-QPointF* k_multitabbartab_map_from_parent(void* self, void* param1);
+QPointF* k_multitabbartab_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QPoint*
 ///
-QPoint* k_multitabbartab_map_from_parent2(void* self, void* param1);
+QPoint* k_multitabbartab_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_multitabbartab_map_to(void* self, void* param1, void* param2);
+QPointF* k_multitabbartab_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_multitabbartab_map_to2(void* self, void* param1, void* param2);
+QPoint* k_multitabbartab_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_multitabbartab_map_from(void* self, void* param1, void* param2);
+QPointF* k_multitabbartab_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_multitabbartab_map_from2(void* self, void* param1, void* param2);
+QPoint* k_multitabbartab_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWidget* k_multitabbartab_window(void* self);
+QWidget* k_multitabbartab_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWidget* k_multitabbartab_native_parent_widget(void* self);
+QWidget* k_multitabbartab_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWidget* k_multitabbartab_top_level_widget(void* self);
+QWidget* k_multitabbartab_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const QPalette* k_multitabbartab_palette(void* self);
+const QPalette* k_multitabbartab_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9747,7 +9730,7 @@ const QPalette* k_multitabbartab_palette(void* self);
 /// @param self KMultiTabBarTab*
 /// @param palette QPalette*
 ///
-void k_multitabbartab_set_palette(void* self, void* palette);
+void k_multitabbartab_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -9762,11 +9745,11 @@ void k_multitabbartab_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_multitabbartab_background_role(void* self);
+int32_t k_multitabbartab_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9781,19 +9764,19 @@ void k_multitabbartab_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_multitabbartab_foreground_role(void* self);
+int32_t k_multitabbartab_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const QFont* k_multitabbartab_font(void* self);
+const QFont* k_multitabbartab_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9802,31 +9785,31 @@ const QFont* k_multitabbartab_font(void* self);
 /// @param self KMultiTabBarTab*
 /// @param font QFont*
 ///
-void k_multitabbartab_set_font(void* self, void* font);
+void k_multitabbartab_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QFontMetrics* k_multitabbartab_font_metrics(void* self);
+QFontMetrics* k_multitabbartab_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QFontInfo* k_multitabbartab_font_info(void* self);
+QFontInfo* k_multitabbartab_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QCursor* k_multitabbartab_cursor(void* self);
+QCursor* k_multitabbartab_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9835,7 +9818,7 @@ QCursor* k_multitabbartab_cursor(void* self);
 /// @param self KMultiTabBarTab*
 /// @param cursor QCursor*
 ///
-void k_multitabbartab_set_cursor(void* self, void* cursor);
+void k_multitabbartab_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -9858,17 +9841,17 @@ void k_multitabbartab_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_has_mouse_tracking(void* self);
+bool k_multitabbartab_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_under_mouse(void* self);
+bool k_multitabbartab_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9883,9 +9866,9 @@ void k_multitabbartab_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_has_tablet_tracking(void* self);
+bool k_multitabbartab_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9894,7 +9877,7 @@ bool k_multitabbartab_has_tablet_tracking(void* self);
 /// @param self KMultiTabBarTab*
 /// @param mask QBitmap*
 ///
-void k_multitabbartab_set_mask(void* self, void* mask);
+void k_multitabbartab_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -9903,15 +9886,15 @@ void k_multitabbartab_set_mask(void* self, void* mask);
 /// @param self KMultiTabBarTab*
 /// @param mask QRegion*
 ///
-void k_multitabbartab_set_mask2(void* self, void* mask);
+void k_multitabbartab_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QRegion* k_multitabbartab_mask(void* self);
+QRegion* k_multitabbartab_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -9951,9 +9934,9 @@ QPixmap* k_multitabbartab_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QGraphicsEffect* k_multitabbartab_graphics_effect(void* self);
+QGraphicsEffect* k_multitabbartab_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10006,9 +9989,9 @@ void k_multitabbartab_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_style_sheet(void* self);
+const char* k_multitabbartab_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10016,9 +9999,9 @@ const char* k_multitabbartab_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_window_title(void* self);
+const char* k_multitabbartab_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10027,15 +10010,15 @@ const char* k_multitabbartab_window_title(void* self);
 /// @param self KMultiTabBarTab*
 /// @param icon QIcon*
 ///
-void k_multitabbartab_set_window_icon(void* self, void* icon);
+void k_multitabbartab_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QIcon* k_multitabbartab_window_icon(void* self);
+QIcon* k_multitabbartab_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10052,9 +10035,9 @@ void k_multitabbartab_set_window_icon_text(void* self, const char* windowIconTex
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_window_icon_text(void* self);
+const char* k_multitabbartab_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10071,9 +10054,9 @@ void k_multitabbartab_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_window_role(void* self);
+const char* k_multitabbartab_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10090,9 +10073,9 @@ void k_multitabbartab_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_window_file_path(void* self);
+const char* k_multitabbartab_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10107,17 +10090,17 @@ void k_multitabbartab_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-double k_multitabbartab_window_opacity(void* self);
+double k_multitabbartab_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_window_modified(void* self);
+bool k_multitabbartab_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10134,9 +10117,9 @@ void k_multitabbartab_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_tool_tip(void* self);
+const char* k_multitabbartab_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10151,9 +10134,9 @@ void k_multitabbartab_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_tool_tip_duration(void* self);
+int32_t k_multitabbartab_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10170,9 +10153,9 @@ void k_multitabbartab_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_status_tip(void* self);
+const char* k_multitabbartab_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10189,9 +10172,9 @@ void k_multitabbartab_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_whats_this(void* self);
+const char* k_multitabbartab_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10199,9 +10182,9 @@ const char* k_multitabbartab_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_accessible_name(void* self);
+const char* k_multitabbartab_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10218,9 +10201,9 @@ void k_multitabbartab_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_accessible_description(void* self);
+const char* k_multitabbartab_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10244,11 +10227,11 @@ void k_multitabbartab_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_multitabbartab_layout_direction(void* self);
+int32_t k_multitabbartab_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10265,15 +10248,15 @@ void k_multitabbartab_unset_layout_direction(void* self);
 /// @param self KMultiTabBarTab*
 /// @param locale QLocale*
 ///
-void k_multitabbartab_set_locale(void* self, void* locale);
+void k_multitabbartab_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QLocale* k_multitabbartab_locale(void* self);
+QLocale* k_multitabbartab_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10287,17 +10270,17 @@ void k_multitabbartab_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_right_to_left(void* self);
+bool k_multitabbartab_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_left_to_right(void* self);
+bool k_multitabbartab_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10311,9 +10294,9 @@ void k_multitabbartab_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_active_window(void* self);
+bool k_multitabbartab_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10344,11 +10327,11 @@ void k_multitabbartab_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_multitabbartab_focus_policy(void* self);
+int32_t k_multitabbartab_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10363,9 +10346,9 @@ void k_multitabbartab_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_has_focus(void* self);
+bool k_multitabbartab_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10389,19 +10372,19 @@ void k_multitabbartab_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWidget* k_multitabbartab_focus_proxy(void* self);
+QWidget* k_multitabbartab_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_multitabbartab_context_menu_policy(void* self);
+int32_t k_multitabbartab_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10427,7 +10410,7 @@ void k_multitabbartab_grab_mouse(void* self);
 /// @param self KMultiTabBarTab*
 /// @param param1 QCursor*
 ///
-void k_multitabbartab_grab_mouse2(void* self, void* param1);
+void k_multitabbartab_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -10460,7 +10443,7 @@ void k_multitabbartab_release_keyboard(void* self);
 /// @param self KMultiTabBarTab*
 /// @param key QKeySequence*
 ///
-int32_t k_multitabbartab_grab_shortcut(void* self, void* key);
+int32_t k_multitabbartab_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -10505,9 +10488,9 @@ QWidget* k_multitabbartab_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_updates_enabled(void* self);
+bool k_multitabbartab_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10522,9 +10505,9 @@ void k_multitabbartab_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QGraphicsProxyWidget* k_multitabbartab_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_multitabbartab_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10561,7 +10544,7 @@ void k_multitabbartab_update2(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBarTab*
 /// @param param1 QRect*
 ///
-void k_multitabbartab_update3(void* self, void* param1);
+void k_multitabbartab_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -10570,7 +10553,7 @@ void k_multitabbartab_update3(void* self, void* param1);
 /// @param self KMultiTabBarTab*
 /// @param param1 QRegion*
 ///
-void k_multitabbartab_update4(void* self, void* param1);
+void k_multitabbartab_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -10591,7 +10574,7 @@ void k_multitabbartab_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBarTab*
 /// @param param1 QRect*
 ///
-void k_multitabbartab_repaint3(void* self, void* param1);
+void k_multitabbartab_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -10600,7 +10583,7 @@ void k_multitabbartab_repaint3(void* self, void* param1);
 /// @param self KMultiTabBarTab*
 /// @param param1 QRegion*
 ///
-void k_multitabbartab_repaint4(void* self, void* param1);
+void k_multitabbartab_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -10718,7 +10701,7 @@ void k_multitabbartab_move(void* self, int x, int y);
 /// @param self KMultiTabBarTab*
 /// @param param1 QPoint*
 ///
-void k_multitabbartab_move2(void* self, void* param1);
+void k_multitabbartab_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -10737,7 +10720,7 @@ void k_multitabbartab_resize(void* self, int w, int h);
 /// @param self KMultiTabBarTab*
 /// @param param1 QSize*
 ///
-void k_multitabbartab_resize2(void* self, void* param1);
+void k_multitabbartab_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -10758,7 +10741,7 @@ void k_multitabbartab_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KMultiTabBarTab*
 /// @param geometry QRect*
 ///
-void k_multitabbartab_set_geometry2(void* self, void* geometry);
+void k_multitabbartab_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -10766,9 +10749,9 @@ void k_multitabbartab_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-char* k_multitabbartab_save_geometry(void* self);
+char* k_multitabbartab_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10791,60 +10774,60 @@ void k_multitabbartab_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_visible(void* self);
+bool k_multitabbartab_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 QWidget*
 ///
-bool k_multitabbartab_is_visible_to(void* self, void* param1);
+bool k_multitabbartab_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_hidden(void* self);
+bool k_multitabbartab_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_minimized(void* self);
+bool k_multitabbartab_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_maximized(void* self);
+bool k_multitabbartab_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_full_screen(void* self);
+bool k_multitabbartab_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_multitabbartab_window_state(void* self);
+int32_t k_multitabbartab_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10868,9 +10851,9 @@ void k_multitabbartab_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QSizePolicy* k_multitabbartab_size_policy(void* self);
+QSizePolicy* k_multitabbartab_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10895,26 +10878,26 @@ void k_multitabbartab_set_size_policy2(void* self, int32_t horizontal, int32_t v
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 int
 ///
-int32_t k_multitabbartab_height_for_width(void* self, int param1);
+int32_t k_multitabbartab_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_has_height_for_width(void* self);
+bool k_multitabbartab_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QRegion* k_multitabbartab_visible_region(void* self);
+QRegion* k_multitabbartab_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -10935,31 +10918,31 @@ void k_multitabbartab_set_contents_margins(void* self, int left, int top, int ri
 /// @param self KMultiTabBarTab*
 /// @param margins QMargins*
 ///
-void k_multitabbartab_set_contents_margins2(void* self, void* margins);
+void k_multitabbartab_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QMargins* k_multitabbartab_contents_margins(void* self);
+QMargins* k_multitabbartab_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QRect* k_multitabbartab_contents_rect(void* self);
+QRect* k_multitabbartab_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QLayout* k_multitabbartab_layout(void* self);
+QLayout* k_multitabbartab_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11016,39 +10999,39 @@ void k_multitabbartab_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_multitabbartab_scroll2(void* self, int dx, int dy, void* param3);
+void k_multitabbartab_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWidget* k_multitabbartab_focus_widget(void* self);
+QWidget* k_multitabbartab_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWidget* k_multitabbartab_next_in_focus_chain(void* self);
+QWidget* k_multitabbartab_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWidget* k_multitabbartab_previous_in_focus_chain(void* self);
+QWidget* k_multitabbartab_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_accept_drops(void* self);
+bool k_multitabbartab_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11110,11 +11093,11 @@ void k_multitabbartab_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_multitabbartab_actions(void* self);
+libqt_list k_multitabbartab_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11133,7 +11116,7 @@ QAction* k_multitabbartab_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_multitabbartab_add_action3(void* self, void* icon, const char* text);
+QAction* k_multitabbartab_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -11143,7 +11126,7 @@ QAction* k_multitabbartab_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_multitabbartab_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_multitabbartab_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -11154,15 +11137,15 @@ QAction* k_multitabbartab_add_action4(void* self, const char* text, void* shortc
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_multitabbartab_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_multitabbartab_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWidget* k_multitabbartab_parent_widget(void* self);
+QWidget* k_multitabbartab_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11177,11 +11160,11 @@ void k_multitabbartab_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_multitabbartab_window_flags(void* self);
+int32_t k_multitabbartab_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11205,11 +11188,11 @@ void k_multitabbartab_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_multitabbartab_window_type(void* self);
+int32_t k_multitabbartab_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11223,29 +11206,29 @@ QWidget* k_multitabbartab_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_multitabbartab_child_at(void* self, int x, int y);
+QWidget* k_multitabbartab_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param p QPoint*
 ///
-QWidget* k_multitabbartab_child_at2(void* self, void* p);
+QWidget* k_multitabbartab_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param p QPointF*
 ///
-QWidget* k_multitabbartab_child_at3(void* self, void* p);
+QWidget* k_multitabbartab_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -11260,43 +11243,43 @@ void k_multitabbartab_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_multitabbartab_test_attribute(void* self, int32_t param1);
+bool k_multitabbartab_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QPaintEngine* k_multitabbartab_paint_engine(void* self);
+QPaintEngine* k_multitabbartab_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-void k_multitabbartab_ensure_polished(void* self);
+void k_multitabbartab_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param child QWidget*
 ///
-bool k_multitabbartab_is_ancestor_of(void* self, void* child);
+bool k_multitabbartab_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_auto_fill_background(void* self);
+bool k_multitabbartab_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11311,25 +11294,25 @@ void k_multitabbartab_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QBackingStore* k_multitabbartab_backing_store(void* self);
+QBackingStore* k_multitabbartab_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QWindow* k_multitabbartab_window_handle(void* self);
+QWindow* k_multitabbartab_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QScreen* k_multitabbartab_screen(void* self);
+QScreen* k_multitabbartab_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11373,7 +11356,7 @@ void k_multitabbartab_on_window_title_changed(void* self, void (*callback)(void*
 /// @param self KMultiTabBarTab*
 /// @param icon QIcon*
 ///
-void k_multitabbartab_window_icon_changed(void* self, void* icon);
+void k_multitabbartab_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -11382,7 +11365,7 @@ void k_multitabbartab_window_icon_changed(void* self, void* icon);
 /// @param self KMultiTabBarTab*
 /// @param callback void func(KMultiTabBarTab* self, QIcon* icon)
 ///
-void k_multitabbartab_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_multitabbartab_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -11409,7 +11392,7 @@ void k_multitabbartab_on_window_icon_text_changed(void* self, void (*callback)(v
 /// @param self KMultiTabBarTab*
 /// @param pos QPoint*
 ///
-void k_multitabbartab_custom_context_menu_requested(void* self, void* pos);
+void k_multitabbartab_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -11418,26 +11401,26 @@ void k_multitabbartab_custom_context_menu_requested(void* self, void* pos);
 /// @param self KMultiTabBarTab*
 /// @param callback void func(KMultiTabBarTab* self, QPoint* pos)
 ///
-void k_multitabbartab_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_multitabbartab_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_multitabbartab_input_method_query(void* self, int32_t param1);
+QVariant* k_multitabbartab_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_multitabbartab_input_method_hints(void* self);
+int32_t k_multitabbartab_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -11456,7 +11439,7 @@ void k_multitabbartab_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_multitabbartab_render22(void* self, void* target, void* targetOffset);
+void k_multitabbartab_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -11467,7 +11450,7 @@ void k_multitabbartab_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_multitabbartab_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_multitabbartab_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -11479,7 +11462,7 @@ void k_multitabbartab_render3(void* self, void* target, void* targetOffset, void
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_multitabbartab_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_multitabbartab_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -11489,7 +11472,7 @@ void k_multitabbartab_render4(void* self, void* target, void* targetOffset, void
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_multitabbartab_render23(void* self, void* painter, void* targetOffset);
+void k_multitabbartab_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -11500,7 +11483,7 @@ void k_multitabbartab_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_multitabbartab_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_multitabbartab_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -11512,7 +11495,7 @@ void k_multitabbartab_render32(void* self, void* painter, void* targetOffset, vo
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_multitabbartab_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_multitabbartab_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -11521,7 +11504,7 @@ void k_multitabbartab_render42(void* self, void* painter, void* targetOffset, vo
 /// @param self KMultiTabBarTab*
 /// @param rectangle QRect*
 ///
-QPixmap* k_multitabbartab_grab1(void* self, void* rectangle);
+QPixmap* k_multitabbartab_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -11541,7 +11524,7 @@ void k_multitabbartab_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_multitabbartab_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_multitabbartab_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -11618,9 +11601,9 @@ bool k_multitabbartab_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char* k_multitabbartab_object_name(void* self);
+const char* k_multitabbartab_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11635,33 +11618,33 @@ void k_multitabbartab_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_widget_type(void* self);
+bool k_multitabbartab_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_window_type(void* self);
+bool k_multitabbartab_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_is_quick_item_type(void* self);
+bool k_multitabbartab_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_signals_blocked(void* self);
+bool k_multitabbartab_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11676,9 +11659,9 @@ bool k_multitabbartab_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QThread* k_multitabbartab_thread(void* self);
+QThread* k_multitabbartab_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11729,11 +11712,11 @@ void k_multitabbartab_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_multitabbartab_children(void* self);
+libqt_list k_multitabbartab_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11762,7 +11745,7 @@ void k_multitabbartab_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_multitabbartab_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_multitabbartab_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -11773,18 +11756,18 @@ QMetaObject__Connection* k_multitabbartab_connect(void* sender, const char* sign
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_multitabbartab_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_multitabbartab_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_multitabbartab_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_multitabbartab_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -11795,7 +11778,7 @@ QMetaObject__Connection* k_multitabbartab_connect3(void* self, void* sender, con
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_multitabbartab_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_multitabbartab_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -11806,24 +11789,24 @@ bool k_multitabbartab_disconnect(void* sender, const char* signal, void* receive
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_multitabbartab_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_multitabbartab_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_disconnect3(void* self);
+bool k_multitabbartab_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param receiver QObject*
 ///
-bool k_multitabbartab_disconnect4(void* self, void* receiver);
+bool k_multitabbartab_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -11831,23 +11814,23 @@ bool k_multitabbartab_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_multitabbartab_disconnect5(void* param1);
+bool k_multitabbartab_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-void k_multitabbartab_dump_object_tree(void* self);
+void k_multitabbartab_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-void k_multitabbartab_dump_object_info(void* self);
+void k_multitabbartab_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11857,16 +11840,16 @@ void k_multitabbartab_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_multitabbartab_set_property(void* self, const char* name, void* value);
+bool k_multitabbartab_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param name const char*
 ///
-QVariant* k_multitabbartab_property(void* self, const char* name);
+QVariant* k_multitabbartab_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -11874,9 +11857,9 @@ QVariant* k_multitabbartab_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const char** k_multitabbartab_dynamic_property_names(void* self);
+const char** k_multitabbartab_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11890,9 +11873,9 @@ QBindingStorage* k_multitabbartab_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-const QBindingStorage* k_multitabbartab_binding_storage2(void* self);
+const QBindingStorage* k_multitabbartab_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -11915,18 +11898,18 @@ void k_multitabbartab_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-QObject* k_multitabbartab_parent(void* self);
+QObject* k_multitabbartab_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param classname const char*
 ///
-bool k_multitabbartab_inherits(void* self, const char* classname);
+bool k_multitabbartab_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -11966,7 +11949,7 @@ int32_t k_multitabbartab_start_timer23(void* self, int64_t time, int32_t timerTy
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbartab_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_multitabbartab_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -11978,59 +11961,59 @@ QMetaObject__Connection* k_multitabbartab_connect5(void* sender, const char* sig
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbartab_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_multitabbartab_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_multitabbartab_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_multitabbartab_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param signal const char*
 ///
-bool k_multitabbartab_disconnect1(void* self, const char* signal);
+bool k_multitabbartab_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarTab*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_multitabbartab_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_multitabbartab_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_multitabbartab_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_multitabbartab_disconnect23(void* self, void* receiver, const char* member);
+bool k_multitabbartab_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KMultiTabBarTab*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_multitabbartab_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -12054,89 +12037,89 @@ void k_multitabbartab_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-bool k_multitabbartab_painting_active(void* self);
+bool k_multitabbartab_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_width_m_m(void* self);
+int32_t k_multitabbartab_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_height_m_m(void* self);
+int32_t k_multitabbartab_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_logical_dpi_x(void* self);
+int32_t k_multitabbartab_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_logical_dpi_y(void* self);
+int32_t k_multitabbartab_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_physical_dpi_x(void* self);
+int32_t k_multitabbartab_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_physical_dpi_y(void* self);
+int32_t k_multitabbartab_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-double k_multitabbartab_device_pixel_ratio(void* self);
+double k_multitabbartab_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-double k_multitabbartab_device_pixel_ratio_f(void* self);
+double k_multitabbartab_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_color_count(void* self);
+int32_t k_multitabbartab_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KMultiTabBarTab*
+/// @param self const KMultiTabBarTab*
 ///
-int32_t k_multitabbartab_depth(void* self);
+int32_t k_multitabbartab_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///

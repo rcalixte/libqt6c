@@ -21,27 +21,27 @@ void q_qfloat16_move_assign(void* self, void* other) {
     qfloat16_MoveAssign((qfloat16*)self, (qfloat16*)other);
 }
 
-float q_qfloat16_to_float(void* self) {
+float q_qfloat16_to_float(const void* self) {
     return qfloat16_ToFloat((qfloat16*)self);
 }
 
-bool q_qfloat16_is_inf(void* self) {
+bool q_qfloat16_is_inf(const void* self) {
     return qfloat16_IsInf((qfloat16*)self);
 }
 
-bool q_qfloat16_is_na_n(void* self) {
+bool q_qfloat16_is_na_n(const void* self) {
     return qfloat16_IsNaN((qfloat16*)self);
 }
 
-bool q_qfloat16_is_finite(void* self) {
+bool q_qfloat16_is_finite(const void* self) {
     return qfloat16_IsFinite((qfloat16*)self);
 }
 
-int32_t q_qfloat16_fp_classify(void* self) {
+int32_t q_qfloat16_fp_classify(const void* self) {
     return qfloat16_FpClassify((qfloat16*)self);
 }
 
-bool q_qfloat16_is_normal(void* self) {
+bool q_qfloat16_is_normal(const void* self) {
     return qfloat16_IsNormal((qfloat16*)self);
 }
 

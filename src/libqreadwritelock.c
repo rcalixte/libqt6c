@@ -62,7 +62,7 @@ void q_readlocker_relock(void* self) {
     QReadLocker_Relock((QReadLocker*)self);
 }
 
-QReadWriteLock* q_readlocker_read_write_lock(void* self) {
+QReadWriteLock* q_readlocker_read_write_lock(const void* self) {
     return QReadLocker_ReadWriteLock((QReadLocker*)self);
 }
 
@@ -82,7 +82,7 @@ void q_writelocker_relock(void* self) {
     QWriteLocker_Relock((QWriteLocker*)self);
 }
 
-QReadWriteLock* q_writelocker_read_write_lock(void* self) {
+QReadWriteLock* q_writelocker_read_write_lock(const void* self) {
     return QWriteLocker_ReadWriteLock((QWriteLocker*)self);
 }
 

@@ -1,7 +1,7 @@
 #include "libqnamespace.hpp"
 #include "libqnamespace.h"
 
-QKeyCombination* q_keycombination_new(void* other) {
+QKeyCombination* q_keycombination_new(const void* other) {
     return QKeyCombination_New((QKeyCombination*)other);
 }
 
@@ -21,7 +21,7 @@ QKeyCombination* q_keycombination_new5(int32_t modifiers) {
     return QKeyCombination_New5(modifiers);
 }
 
-QKeyCombination* q_keycombination_new6(void* param1) {
+QKeyCombination* q_keycombination_new6(const void* param1) {
     return QKeyCombination_New6((QKeyCombination*)param1);
 }
 
@@ -45,11 +45,11 @@ void q_keycombination_move_assign(void* self, void* other) {
     QKeyCombination_MoveAssign((QKeyCombination*)self, (QKeyCombination*)other);
 }
 
-int32_t q_keycombination_keyboard_modifiers(void* self) {
+int32_t q_keycombination_keyboard_modifiers(const void* self) {
     return QKeyCombination_KeyboardModifiers((QKeyCombination*)self);
 }
 
-int32_t q_keycombination_key(void* self) {
+int32_t q_keycombination_key(const void* self) {
     return QKeyCombination_Key((QKeyCombination*)self);
 }
 
@@ -57,11 +57,11 @@ QKeyCombination* q_keycombination_from_combined(int combined) {
     return QKeyCombination_FromCombined(combined);
 }
 
-int32_t q_keycombination_to_combined(void* self) {
+int32_t q_keycombination_to_combined(const void* self) {
     return QKeyCombination_ToCombined((QKeyCombination*)self);
 }
 
-int32_t q_keycombination_to_int(void* self) {
+int32_t q_keycombination_to_int(const void* self) {
     return QKeyCombination_ToInt((QKeyCombination*)self);
 }
 

@@ -25,9 +25,9 @@ bool q_openglfunctions_3_3_compatibility_initialize_open_g_l_functions(void* sel
 /// Allows for overriding the related default method
 ///
 /// @param self QOpenGLFunctions_3_3_Compatibility*
-/// @param callback bool func()
+/// @param callback bool func(QOpenGLFunctions_3_3_Compatibility* self)
 ///
-void q_openglfunctions_3_3_compatibility_on_initialize_open_g_l_functions(void* self, bool (*callback)());
+void q_openglfunctions_3_3_compatibility_on_initialize_open_g_l_functions(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-3-compatibility.html#initializeOpenGLFunctions)
 ///
@@ -6505,9 +6505,9 @@ void q_openglfunctions_3_3_compatibility_gl_vertex_attrib_i1i(void* self, uint32
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLFunctions_3_3_Compatibility*
+/// @param self const QOpenGLFunctions_3_3_Compatibility*
 ///
-bool q_openglfunctions_3_3_compatibility_is_initialized(void* self);
+bool q_openglfunctions_3_3_compatibility_is_initialized(const void* self);
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -6515,9 +6515,9 @@ bool q_openglfunctions_3_3_compatibility_is_initialized(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLFunctions_3_3_Compatibility*
+/// @param self const QOpenGLFunctions_3_3_Compatibility*
 ///
-bool q_openglfunctions_3_3_compatibility_super_is_initialized(void* self);
+bool q_openglfunctions_3_3_compatibility_super_is_initialized(const void* self);
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -6525,10 +6525,10 @@ bool q_openglfunctions_3_3_compatibility_super_is_initialized(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLFunctions_3_3_Compatibility*
-/// @param callback bool func()
+/// @param self const QOpenGLFunctions_3_3_Compatibility*
+/// @param callback bool func(QOpenGLFunctions_3_3_Compatibility* self)
 ///
-void q_openglfunctions_3_3_compatibility_on_is_initialized(void* self, bool (*callback)());
+void q_openglfunctions_3_3_compatibility_on_is_initialized(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -6539,7 +6539,7 @@ void q_openglfunctions_3_3_compatibility_on_is_initialized(void* self, bool (*ca
 /// @param self QOpenGLFunctions_3_3_Compatibility*
 /// @param context QOpenGLContext*
 ///
-void q_openglfunctions_3_3_compatibility_set_owning_context(void* self, void* context);
+void q_openglfunctions_3_3_compatibility_set_owning_context(void* self, const void* context);
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -6550,7 +6550,7 @@ void q_openglfunctions_3_3_compatibility_set_owning_context(void* self, void* co
 /// @param self QOpenGLFunctions_3_3_Compatibility*
 /// @param context QOpenGLContext*
 ///
-void q_openglfunctions_3_3_compatibility_super_set_owning_context(void* self, void* context);
+void q_openglfunctions_3_3_compatibility_super_set_owning_context(void* self, const void* context);
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -6561,7 +6561,7 @@ void q_openglfunctions_3_3_compatibility_super_set_owning_context(void* self, vo
 /// @param self QOpenGLFunctions_3_3_Compatibility*
 /// @param callback void func(QOpenGLFunctions_3_3_Compatibility* self, QOpenGLContext* context)
 ///
-void q_openglfunctions_3_3_compatibility_on_set_owning_context(void* self, void (*callback)(void*, void*));
+void q_openglfunctions_3_3_compatibility_on_set_owning_context(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -6569,9 +6569,9 @@ void q_openglfunctions_3_3_compatibility_on_set_owning_context(void* self, void 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QOpenGLFunctions_3_3_Compatibility*
+/// @param self const QOpenGLFunctions_3_3_Compatibility*
 ///
-QOpenGLContext* q_openglfunctions_3_3_compatibility_owning_context(void* self);
+QOpenGLContext* q_openglfunctions_3_3_compatibility_owning_context(const void* self);
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -6579,9 +6579,9 @@ QOpenGLContext* q_openglfunctions_3_3_compatibility_owning_context(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QOpenGLFunctions_3_3_Compatibility*
+/// @param self const QOpenGLFunctions_3_3_Compatibility*
 ///
-QOpenGLContext* q_openglfunctions_3_3_compatibility_super_owning_context(void* self);
+QOpenGLContext* q_openglfunctions_3_3_compatibility_super_owning_context(const void* self);
 
 /// Inherited from QAbstractOpenGLFunctions
 ///
@@ -6589,10 +6589,10 @@ QOpenGLContext* q_openglfunctions_3_3_compatibility_super_owning_context(void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QOpenGLFunctions_3_3_Compatibility*
-/// @param callback QOpenGLContext* func()
+/// @param self const QOpenGLFunctions_3_3_Compatibility*
+/// @param callback QOpenGLContext* func(QOpenGLFunctions_3_3_Compatibility* self)
 ///
-void q_openglfunctions_3_3_compatibility_on_owning_context(void* self, QOpenGLContext* (*callback)());
+void q_openglfunctions_3_3_compatibility_on_owning_context(const void* self, QOpenGLContext* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-3-compatibility.html#dtor.QOpenGLFunctions_3_3_Compatibility)
 ///

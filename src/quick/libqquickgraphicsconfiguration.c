@@ -5,11 +5,11 @@ QQuickGraphicsConfiguration* q_quickgraphicsconfiguration_new() {
     return QQuickGraphicsConfiguration_New();
 }
 
-QQuickGraphicsConfiguration* q_quickgraphicsconfiguration_new2(void* other) {
+QQuickGraphicsConfiguration* q_quickgraphicsconfiguration_new2(const void* other) {
     return QQuickGraphicsConfiguration_New2((QQuickGraphicsConfiguration*)other);
 }
 
-void q_quickgraphicsconfiguration_operator_assign(void* self, void* other) {
+void q_quickgraphicsconfiguration_operator_assign(void* self, const void* other) {
     QQuickGraphicsConfiguration_OperatorAssign((QQuickGraphicsConfiguration*)self, (QQuickGraphicsConfiguration*)other);
 }
 
@@ -44,7 +44,7 @@ void q_quickgraphicsconfiguration_set_device_extensions(void* self, const char* 
     free(extensions_qstr);
 }
 
-const char** q_quickgraphicsconfiguration_device_extensions(void* self) {
+const char** q_quickgraphicsconfiguration_device_extensions(const void* self) {
     libqt_list _arr = QQuickGraphicsConfiguration_DeviceExtensions((QQuickGraphicsConfiguration*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -65,7 +65,7 @@ void q_quickgraphicsconfiguration_set_depth_buffer_for2_d(void* self, bool enabl
     QQuickGraphicsConfiguration_SetDepthBufferFor2D((QQuickGraphicsConfiguration*)self, enable);
 }
 
-bool q_quickgraphicsconfiguration_is_depth_buffer_enabled_for2_d(void* self) {
+bool q_quickgraphicsconfiguration_is_depth_buffer_enabled_for2_d(const void* self) {
     return QQuickGraphicsConfiguration_IsDepthBufferEnabledFor2D((QQuickGraphicsConfiguration*)self);
 }
 
@@ -73,7 +73,7 @@ void q_quickgraphicsconfiguration_set_debug_layer(void* self, bool enable) {
     QQuickGraphicsConfiguration_SetDebugLayer((QQuickGraphicsConfiguration*)self, enable);
 }
 
-bool q_quickgraphicsconfiguration_is_debug_layer_enabled(void* self) {
+bool q_quickgraphicsconfiguration_is_debug_layer_enabled(const void* self) {
     return QQuickGraphicsConfiguration_IsDebugLayerEnabled((QQuickGraphicsConfiguration*)self);
 }
 
@@ -81,7 +81,7 @@ void q_quickgraphicsconfiguration_set_debug_markers(void* self, bool enable) {
     QQuickGraphicsConfiguration_SetDebugMarkers((QQuickGraphicsConfiguration*)self, enable);
 }
 
-bool q_quickgraphicsconfiguration_is_debug_markers_enabled(void* self) {
+bool q_quickgraphicsconfiguration_is_debug_markers_enabled(const void* self) {
     return QQuickGraphicsConfiguration_IsDebugMarkersEnabled((QQuickGraphicsConfiguration*)self);
 }
 
@@ -89,7 +89,7 @@ void q_quickgraphicsconfiguration_set_timestamps(void* self, bool enable) {
     QQuickGraphicsConfiguration_SetTimestamps((QQuickGraphicsConfiguration*)self, enable);
 }
 
-bool q_quickgraphicsconfiguration_timestamps_enabled(void* self) {
+bool q_quickgraphicsconfiguration_timestamps_enabled(const void* self) {
     return QQuickGraphicsConfiguration_TimestampsEnabled((QQuickGraphicsConfiguration*)self);
 }
 
@@ -97,7 +97,7 @@ void q_quickgraphicsconfiguration_set_prefer_software_device(void* self, bool en
     QQuickGraphicsConfiguration_SetPreferSoftwareDevice((QQuickGraphicsConfiguration*)self, enable);
 }
 
-bool q_quickgraphicsconfiguration_prefers_software_device(void* self) {
+bool q_quickgraphicsconfiguration_prefers_software_device(const void* self) {
     return QQuickGraphicsConfiguration_PrefersSoftwareDevice((QQuickGraphicsConfiguration*)self);
 }
 
@@ -105,7 +105,7 @@ void q_quickgraphicsconfiguration_set_automatic_pipeline_cache(void* self, bool 
     QQuickGraphicsConfiguration_SetAutomaticPipelineCache((QQuickGraphicsConfiguration*)self, enable);
 }
 
-bool q_quickgraphicsconfiguration_is_automatic_pipeline_cache_enabled(void* self) {
+bool q_quickgraphicsconfiguration_is_automatic_pipeline_cache_enabled(const void* self) {
     return QQuickGraphicsConfiguration_IsAutomaticPipelineCacheEnabled((QQuickGraphicsConfiguration*)self);
 }
 
@@ -113,7 +113,7 @@ void q_quickgraphicsconfiguration_set_pipeline_cache_save_file(void* self, const
     QQuickGraphicsConfiguration_SetPipelineCacheSaveFile((QQuickGraphicsConfiguration*)self, qstring(filename));
 }
 
-const char* q_quickgraphicsconfiguration_pipeline_cache_save_file(void* self) {
+const char* q_quickgraphicsconfiguration_pipeline_cache_save_file(const void* self) {
     libqt_string _str = QQuickGraphicsConfiguration_PipelineCacheSaveFile((QQuickGraphicsConfiguration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -124,7 +124,7 @@ void q_quickgraphicsconfiguration_set_pipeline_cache_load_file(void* self, const
     QQuickGraphicsConfiguration_SetPipelineCacheLoadFile((QQuickGraphicsConfiguration*)self, qstring(filename));
 }
 
-const char* q_quickgraphicsconfiguration_pipeline_cache_load_file(void* self) {
+const char* q_quickgraphicsconfiguration_pipeline_cache_load_file(const void* self) {
     libqt_string _str = QQuickGraphicsConfiguration_PipelineCacheLoadFile((QQuickGraphicsConfiguration*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

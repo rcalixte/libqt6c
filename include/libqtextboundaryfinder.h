@@ -20,7 +20,7 @@ QTextBoundaryFinder* q_textboundaryfinder_new();
 ///
 /// @param other QTextBoundaryFinder*
 ///
-QTextBoundaryFinder* q_textboundaryfinder_new2(void* other);
+QTextBoundaryFinder* q_textboundaryfinder_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
 
@@ -39,7 +39,7 @@ QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t type, const char* string)
 /// @param chars QChar*
 /// @param length intptr_t
 ///
-QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, void* chars, intptr_t length);
+QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, const void* chars, intptr_t length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
 
@@ -59,7 +59,7 @@ QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, const char* str);
 /// @param length intptr_t
 /// @param buffer unsigned char*
 ///
-QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, intptr_t length, unsigned char* buffer);
+QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, const void* chars, intptr_t length, unsigned char* buffer);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
 
@@ -71,7 +71,7 @@ QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, intptr
 /// @param buffer unsigned char*
 /// @param bufferSize intptr_t
 ///
-QTextBoundaryFinder* q_textboundaryfinder_new7(int32_t type, void* chars, intptr_t length, unsigned char* buffer, intptr_t bufferSize);
+QTextBoundaryFinder* q_textboundaryfinder_new7(int32_t type, const void* chars, intptr_t length, unsigned char* buffer, intptr_t bufferSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
 
@@ -99,29 +99,29 @@ QTextBoundaryFinder* q_textboundaryfinder_new9(int32_t type, const char* str, un
 /// @param self QTextBoundaryFinder*
 /// @param other QTextBoundaryFinder*
 ///
-void q_textboundaryfinder_operator_assign(void* self, void* other);
+void q_textboundaryfinder_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#isValid)
 ///
-/// @param self QTextBoundaryFinder*
+/// @param self const QTextBoundaryFinder*
 ///
-bool q_textboundaryfinder_is_valid(void* self);
+bool q_textboundaryfinder_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#type)
 ///
-/// @param self QTextBoundaryFinder*
+/// @param self const QTextBoundaryFinder*
 ///
 /// @return enum QTextBoundaryFinder__BoundaryType
 ///
-int32_t q_textboundaryfinder_type(void* self);
+int32_t q_textboundaryfinder_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#string)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTextBoundaryFinder*
+/// @param self const QTextBoundaryFinder*
 ///
-const char* q_textboundaryfinder_string(void* self);
+const char* q_textboundaryfinder_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#toStart)
 ///
@@ -137,9 +137,9 @@ void q_textboundaryfinder_to_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#position)
 ///
-/// @param self QTextBoundaryFinder*
+/// @param self const QTextBoundaryFinder*
 ///
-intptr_t q_textboundaryfinder_position(void* self);
+intptr_t q_textboundaryfinder_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#setPosition)
 ///
@@ -162,17 +162,17 @@ intptr_t q_textboundaryfinder_to_previous_boundary(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#isAtBoundary)
 ///
-/// @param self QTextBoundaryFinder*
+/// @param self const QTextBoundaryFinder*
 ///
-bool q_textboundaryfinder_is_at_boundary(void* self);
+bool q_textboundaryfinder_is_at_boundary(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#boundaryReasons)
 ///
-/// @param self QTextBoundaryFinder*
+/// @param self const QTextBoundaryFinder*
 ///
 /// @return flag of enum QTextBoundaryFinder__BoundaryReason
 ///
-int32_t q_textboundaryfinder_boundary_reasons(void* self);
+int32_t q_textboundaryfinder_boundary_reasons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#dtor.QTextBoundaryFinder)
 ///

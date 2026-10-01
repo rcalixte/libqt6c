@@ -24,26 +24,26 @@ QTabWidget* q_tabwidget_new2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const QMetaObject* q_tabwidget_meta_object(void* self);
+const QMetaObject* q_tabwidget_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTabWidget*
-/// @param callback const QMetaObject* func()
+/// @param self const QTabWidget*
+/// @param callback const QMetaObject* func(const QTabWidget* self)
 ///
-void q_tabwidget_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_tabwidget_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const QMetaObject* q_tabwidget_super_meta_object(void* self);
+const QMetaObject* q_tabwidget_super_meta_object(const void* self);
 
 /// @param self QTabWidget*
 /// @param param1 const char*
@@ -110,7 +110,7 @@ int32_t q_tabwidget_add_tab(void* self, void* widget, const char* param2);
 /// @param icon QIcon*
 /// @param label const char*
 ///
-int32_t q_tabwidget_add_tab2(void* self, void* widget, void* icon, const char* label);
+int32_t q_tabwidget_add_tab2(void* self, void* widget, const void* icon, const char* label);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#insertTab)
 ///
@@ -129,7 +129,7 @@ int32_t q_tabwidget_insert_tab(void* self, int index, void* widget, const char* 
 /// @param icon QIcon*
 /// @param label const char*
 ///
-int32_t q_tabwidget_insert_tab2(void* self, int index, void* widget, void* icon, const char* label);
+int32_t q_tabwidget_insert_tab2(void* self, int index, void* widget, const void* icon, const char* label);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#removeTab)
 ///
@@ -140,10 +140,10 @@ void q_tabwidget_remove_tab(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#isTabEnabled)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param index int
 ///
-bool q_tabwidget_is_tab_enabled(void* self, int index);
+bool q_tabwidget_is_tab_enabled(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabEnabled)
 ///
@@ -155,10 +155,10 @@ void q_tabwidget_set_tab_enabled(void* self, int index, bool enabled);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#isTabVisible)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param index int
 ///
-bool q_tabwidget_is_tab_visible(void* self, int index);
+bool q_tabwidget_is_tab_visible(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabVisible)
 ///
@@ -172,10 +172,10 @@ void q_tabwidget_set_tab_visible(void* self, int index, bool visible);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param index int
 ///
-const char* q_tabwidget_tab_text(void* self, int index);
+const char* q_tabwidget_tab_text(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabText)
 ///
@@ -187,10 +187,10 @@ void q_tabwidget_set_tab_text(void* self, int index, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#tabIcon)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param index int
 ///
-QIcon* q_tabwidget_tab_icon(void* self, int index);
+QIcon* q_tabwidget_tab_icon(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabIcon)
 ///
@@ -198,7 +198,7 @@ QIcon* q_tabwidget_tab_icon(void* self, int index);
 /// @param index int
 /// @param icon QIcon*
 ///
-void q_tabwidget_set_tab_icon(void* self, int index, void* icon);
+void q_tabwidget_set_tab_icon(void* self, int index, const void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabToolTip)
 ///
@@ -212,10 +212,10 @@ void q_tabwidget_set_tab_tool_tip(void* self, int index, const char* tip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param index int
 ///
-const char* q_tabwidget_tab_tool_tip(void* self, int index);
+const char* q_tabwidget_tab_tool_tip(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabWhatsThis)
 ///
@@ -229,50 +229,50 @@ void q_tabwidget_set_tab_whats_this(void* self, int index, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param index int
 ///
-const char* q_tabwidget_tab_whats_this(void* self, int index);
+const char* q_tabwidget_tab_whats_this(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#currentIndex)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_current_index(void* self);
+int32_t q_tabwidget_current_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#currentWidget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_current_widget(void* self);
+QWidget* q_tabwidget_current_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#widget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param index int
 ///
-QWidget* q_tabwidget_widget(void* self, int index);
+QWidget* q_tabwidget_widget(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#indexOf)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param widget QWidget*
 ///
-int32_t q_tabwidget_index_of(void* self, void* widget);
+int32_t q_tabwidget_index_of(const void* self, const void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#count)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_count(void* self);
+int32_t q_tabwidget_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#tabPosition)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum QTabWidget__TabPosition
 ///
-int32_t q_tabwidget_tab_position(void* self);
+int32_t q_tabwidget_tab_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabPosition)
 ///
@@ -283,9 +283,9 @@ void q_tabwidget_set_tab_position(void* self, int32_t position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#tabsClosable)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_tabs_closable(void* self);
+bool q_tabwidget_tabs_closable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabsClosable)
 ///
@@ -296,9 +296,9 @@ void q_tabwidget_set_tabs_closable(void* self, bool closeable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#isMovable)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_movable(void* self);
+bool q_tabwidget_is_movable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setMovable)
 ///
@@ -309,11 +309,11 @@ void q_tabwidget_set_movable(void* self, bool movable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#tabShape)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum QTabWidget__TabShape
 ///
-int32_t q_tabwidget_tab_shape(void* self);
+int32_t q_tabwidget_tab_shape(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabShape)
 ///
@@ -324,101 +324,101 @@ void q_tabwidget_set_tab_shape(void* self, int32_t s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#sizeHint)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_size_hint(void* self);
+QSize* q_tabwidget_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTabWidget*
-/// @param callback QSize* func()
+/// @param self const QTabWidget*
+/// @param callback QSize* func(const QTabWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tabwidget_on_size_hint(void* self, QSize* (*callback)());
+void q_tabwidget_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_super_size_hint(void* self);
+QSize* q_tabwidget_super_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#minimumSizeHint)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_minimum_size_hint(void* self);
+QSize* q_tabwidget_minimum_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTabWidget*
-/// @param callback QSize* func()
+/// @param self const QTabWidget*
+/// @param callback QSize* func(const QTabWidget* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tabwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
+void q_tabwidget_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_super_minimum_size_hint(void* self);
+QSize* q_tabwidget_super_minimum_size_hint(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#heightForWidth)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param width int
 ///
-int32_t q_tabwidget_height_for_width(void* self, int width);
+int32_t q_tabwidget_height_for_width(const void* self, int width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#heightForWidth)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTabWidget*
-/// @param callback int32_t func(QTabWidget* self, int width)
+/// @param self const QTabWidget*
+/// @param callback int32_t func(const QTabWidget* self, int width)
 ///
-void q_tabwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void q_tabwidget_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#heightForWidth)
 ///
 /// Base class method implementation
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param width int
 ///
-int32_t q_tabwidget_super_height_for_width(void* self, int width);
+int32_t q_tabwidget_super_height_for_width(const void* self, int width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#hasHeightForWidth)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_has_height_for_width(void* self);
+bool q_tabwidget_has_height_for_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#hasHeightForWidth)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTabWidget*
-/// @param callback bool func()
+/// @param self const QTabWidget*
+/// @param callback bool func(const QTabWidget* self)
 ///
-void q_tabwidget_on_has_height_for_width(void* self, bool (*callback)());
+void q_tabwidget_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#hasHeightForWidth)
 ///
 /// Base class method implementation
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_super_has_height_for_width(void* self);
+bool q_tabwidget_super_has_height_for_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setCornerWidget)
 ///
@@ -429,17 +429,17 @@ void q_tabwidget_set_corner_widget(void* self, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#cornerWidget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_corner_widget(void* self);
+QWidget* q_tabwidget_corner_widget(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#elideMode)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum Qt__TextElideMode
 ///
-int32_t q_tabwidget_elide_mode(void* self);
+int32_t q_tabwidget_elide_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setElideMode)
 ///
@@ -450,22 +450,22 @@ void q_tabwidget_set_elide_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#iconSize)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_icon_size(void* self);
+QSize* q_tabwidget_icon_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setIconSize)
 ///
 /// @param self QTabWidget*
 /// @param size QSize*
 ///
-void q_tabwidget_set_icon_size(void* self, void* size);
+void q_tabwidget_set_icon_size(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#usesScrollButtons)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_uses_scroll_buttons(void* self);
+bool q_tabwidget_uses_scroll_buttons(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setUsesScrollButtons)
 ///
@@ -476,9 +476,9 @@ void q_tabwidget_set_uses_scroll_buttons(void* self, bool useButtons);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#documentMode)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_document_mode(void* self);
+bool q_tabwidget_document_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setDocumentMode)
 ///
@@ -489,9 +489,9 @@ void q_tabwidget_set_document_mode(void* self, bool set);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#tabBarAutoHide)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_tab_bar_auto_hide(void* self);
+bool q_tabwidget_tab_bar_auto_hide(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabBarAutoHide)
 ///
@@ -508,9 +508,9 @@ void q_tabwidget_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#tabBar)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QTabBar* q_tabwidget_tab_bar(void* self);
+QTabBar* q_tabwidget_tab_bar(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setCurrentIndex)
 ///
@@ -739,24 +739,6 @@ void q_tabwidget_super_paint_event(void* self, void* param1);
 ///
 void q_tabwidget_set_tab_bar(void* self, void* tabBar);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabBar)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QTabWidget*
-/// @param callback void func(QTabWidget* self, QTabBar* tabBar)
-///
-void q_tabwidget_on_set_tab_bar(void* self, void (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#setTabBar)
-///
-/// Base class method implementation
-///
-/// @param self QTabWidget*
-/// @param tabBar QTabBar*
-///
-void q_tabwidget_super_set_tab_bar(void* self, void* tabBar);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#changeEvent)
 ///
 /// @param self QTabWidget*
@@ -809,28 +791,28 @@ bool q_tabwidget_super_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#initStyleOption)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param option QStyleOptionTabWidgetFrame*
 ///
-void q_tabwidget_init_style_option(void* self, void* option);
+void q_tabwidget_init_style_option(const void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#initStyleOption)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QTabWidget*
-/// @param callback void func(QTabWidget* self, QStyleOptionTabWidgetFrame* option)
+/// @param self const QTabWidget*
+/// @param callback void func(const QTabWidget* self, QStyleOptionTabWidgetFrame* option)
 ///
-void q_tabwidget_on_init_style_option(void* self, void (*callback)(void*, void*));
+void q_tabwidget_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#initStyleOption)
 ///
 /// Base class method implementation
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param option QStyleOptionTabWidgetFrame*
 ///
-void q_tabwidget_super_init_style_option(void* self, void* option);
+void q_tabwidget_super_init_style_option(const void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -861,10 +843,10 @@ void q_tabwidget_set_corner_widget2(void* self, void* w, int32_t corner);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabwidget.html#cornerWidget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param corner enum Qt__Corner
 ///
-QWidget* q_tabwidget_corner_widget1(void* self, int32_t corner);
+QWidget* q_tabwidget_corner_widget1(const void* self, int32_t corner);
 
 /// Inherited from QWidget
 ///
@@ -886,9 +868,9 @@ QTabWidget* q_tabwidget_from_q_paint_device(void* _qpaintdevice);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-uintptr_t q_tabwidget_win_id(void* self);
+uintptr_t q_tabwidget_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -902,25 +884,25 @@ void q_tabwidget_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-uintptr_t q_tabwidget_internal_win_id(void* self);
+uintptr_t q_tabwidget_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-uintptr_t q_tabwidget_effective_win_id(void* self);
+uintptr_t q_tabwidget_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QStyle* q_tabwidget_style(void* self);
+QStyle* q_tabwidget_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -935,35 +917,35 @@ void q_tabwidget_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_top_level(void* self);
+bool q_tabwidget_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_window(void* self);
+bool q_tabwidget_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_modal(void* self);
+bool q_tabwidget_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t q_tabwidget_window_modality(void* self);
+int32_t q_tabwidget_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -978,18 +960,18 @@ void q_tabwidget_set_window_modality(void* self, int32_t windowModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_enabled(void* self);
+bool q_tabwidget_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QWidget*
 ///
-bool q_tabwidget_is_enabled_to(void* self, void* param1);
+bool q_tabwidget_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1022,153 +1004,153 @@ void q_tabwidget_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QRect* q_tabwidget_frame_geometry(void* self);
+QRect* q_tabwidget_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const QRect* q_tabwidget_geometry(void* self);
+const QRect* q_tabwidget_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QRect* q_tabwidget_normal_geometry(void* self);
+QRect* q_tabwidget_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_x(void* self);
+int32_t q_tabwidget_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_y(void* self);
+int32_t q_tabwidget_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QPoint* q_tabwidget_pos(void* self);
+QPoint* q_tabwidget_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_frame_size(void* self);
+QSize* q_tabwidget_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_size(void* self);
+QSize* q_tabwidget_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_width(void* self);
+int32_t q_tabwidget_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_height(void* self);
+int32_t q_tabwidget_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QRect* q_tabwidget_rect(void* self);
+QRect* q_tabwidget_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QRect* q_tabwidget_children_rect(void* self);
+QRect* q_tabwidget_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QRegion* q_tabwidget_children_region(void* self);
+QRegion* q_tabwidget_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_minimum_size(void* self);
+QSize* q_tabwidget_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_maximum_size(void* self);
+QSize* q_tabwidget_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_minimum_width(void* self);
+int32_t q_tabwidget_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_minimum_height(void* self);
+int32_t q_tabwidget_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_maximum_width(void* self);
+int32_t q_tabwidget_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_maximum_height(void* self);
+int32_t q_tabwidget_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1177,7 +1159,7 @@ int32_t q_tabwidget_maximum_height(void* self);
 /// @param self QTabWidget*
 /// @param minimumSize QSize*
 ///
-void q_tabwidget_set_minimum_size(void* self, void* minimumSize);
+void q_tabwidget_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1196,7 +1178,7 @@ void q_tabwidget_set_minimum_size2(void* self, int minw, int minh);
 /// @param self QTabWidget*
 /// @param maximumSize QSize*
 ///
-void q_tabwidget_set_maximum_size(void* self, void* maximumSize);
+void q_tabwidget_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1248,9 +1230,9 @@ void q_tabwidget_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_size_increment(void* self);
+QSize* q_tabwidget_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1259,7 +1241,7 @@ QSize* q_tabwidget_size_increment(void* self);
 /// @param self QTabWidget*
 /// @param sizeIncrement QSize*
 ///
-void q_tabwidget_set_size_increment(void* self, void* sizeIncrement);
+void q_tabwidget_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1275,9 +1257,9 @@ void q_tabwidget_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSize* q_tabwidget_base_size(void* self);
+QSize* q_tabwidget_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1286,7 +1268,7 @@ QSize* q_tabwidget_base_size(void* self);
 /// @param self QTabWidget*
 /// @param baseSize QSize*
 ///
-void q_tabwidget_set_base_size(void* self, void* baseSize);
+void q_tabwidget_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1305,7 +1287,7 @@ void q_tabwidget_set_base_size2(void* self, int basew, int baseh);
 /// @param self QTabWidget*
 /// @param fixedSize QSize*
 ///
-void q_tabwidget_set_fixed_size(void* self, void* fixedSize);
+void q_tabwidget_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1339,145 +1321,145 @@ void q_tabwidget_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_tabwidget_map_to_global(void* self, void* param1);
+QPointF* q_tabwidget_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_tabwidget_map_to_global2(void* self, void* param1);
+QPoint* q_tabwidget_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_tabwidget_map_from_global(void* self, void* param1);
+QPointF* q_tabwidget_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_tabwidget_map_from_global2(void* self, void* param1);
+QPoint* q_tabwidget_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_tabwidget_map_to_parent(void* self, void* param1);
+QPointF* q_tabwidget_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_tabwidget_map_to_parent2(void* self, void* param1);
+QPoint* q_tabwidget_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QPointF*
 ///
-QPointF* q_tabwidget_map_from_parent(void* self, void* param1);
+QPointF* q_tabwidget_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QPoint*
 ///
-QPoint* q_tabwidget_map_from_parent2(void* self, void* param1);
+QPoint* q_tabwidget_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_tabwidget_map_to(void* self, void* param1, void* param2);
+QPointF* q_tabwidget_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_tabwidget_map_to2(void* self, void* param1, void* param2);
+QPoint* q_tabwidget_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* q_tabwidget_map_from(void* self, void* param1, void* param2);
+QPointF* q_tabwidget_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* q_tabwidget_map_from2(void* self, void* param1, void* param2);
+QPoint* q_tabwidget_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_window(void* self);
+QWidget* q_tabwidget_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_native_parent_widget(void* self);
+QWidget* q_tabwidget_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_top_level_widget(void* self);
+QWidget* q_tabwidget_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const QPalette* q_tabwidget_palette(void* self);
+const QPalette* q_tabwidget_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1486,7 +1468,7 @@ const QPalette* q_tabwidget_palette(void* self);
 /// @param self QTabWidget*
 /// @param palette QPalette*
 ///
-void q_tabwidget_set_palette(void* self, void* palette);
+void q_tabwidget_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1501,11 +1483,11 @@ void q_tabwidget_set_background_role(void* self, int32_t backgroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_tabwidget_background_role(void* self);
+int32_t q_tabwidget_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1520,19 +1502,19 @@ void q_tabwidget_set_foreground_role(void* self, int32_t foregroundRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t q_tabwidget_foreground_role(void* self);
+int32_t q_tabwidget_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const QFont* q_tabwidget_font(void* self);
+const QFont* q_tabwidget_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1541,31 +1523,31 @@ const QFont* q_tabwidget_font(void* self);
 /// @param self QTabWidget*
 /// @param font QFont*
 ///
-void q_tabwidget_set_font(void* self, void* font);
+void q_tabwidget_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QFontMetrics* q_tabwidget_font_metrics(void* self);
+QFontMetrics* q_tabwidget_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QFontInfo* q_tabwidget_font_info(void* self);
+QFontInfo* q_tabwidget_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QCursor* q_tabwidget_cursor(void* self);
+QCursor* q_tabwidget_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1574,7 +1556,7 @@ QCursor* q_tabwidget_cursor(void* self);
 /// @param self QTabWidget*
 /// @param cursor QCursor*
 ///
-void q_tabwidget_set_cursor(void* self, void* cursor);
+void q_tabwidget_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1597,17 +1579,17 @@ void q_tabwidget_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_has_mouse_tracking(void* self);
+bool q_tabwidget_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_under_mouse(void* self);
+bool q_tabwidget_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1622,9 +1604,9 @@ void q_tabwidget_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_has_tablet_tracking(void* self);
+bool q_tabwidget_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1633,7 +1615,7 @@ bool q_tabwidget_has_tablet_tracking(void* self);
 /// @param self QTabWidget*
 /// @param mask QBitmap*
 ///
-void q_tabwidget_set_mask(void* self, void* mask);
+void q_tabwidget_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1642,15 +1624,15 @@ void q_tabwidget_set_mask(void* self, void* mask);
 /// @param self QTabWidget*
 /// @param mask QRegion*
 ///
-void q_tabwidget_set_mask2(void* self, void* mask);
+void q_tabwidget_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QRegion* q_tabwidget_mask(void* self);
+QRegion* q_tabwidget_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1690,9 +1672,9 @@ QPixmap* q_tabwidget_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QGraphicsEffect* q_tabwidget_graphics_effect(void* self);
+QGraphicsEffect* q_tabwidget_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1745,9 +1727,9 @@ void q_tabwidget_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_style_sheet(void* self);
+const char* q_tabwidget_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1755,9 +1737,9 @@ const char* q_tabwidget_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_window_title(void* self);
+const char* q_tabwidget_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1766,15 +1748,15 @@ const char* q_tabwidget_window_title(void* self);
 /// @param self QTabWidget*
 /// @param icon QIcon*
 ///
-void q_tabwidget_set_window_icon(void* self, void* icon);
+void q_tabwidget_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QIcon* q_tabwidget_window_icon(void* self);
+QIcon* q_tabwidget_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1791,9 +1773,9 @@ void q_tabwidget_set_window_icon_text(void* self, const char* windowIconText);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_window_icon_text(void* self);
+const char* q_tabwidget_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1810,9 +1792,9 @@ void q_tabwidget_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_window_role(void* self);
+const char* q_tabwidget_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1829,9 +1811,9 @@ void q_tabwidget_set_window_file_path(void* self, const char* filePath);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_window_file_path(void* self);
+const char* q_tabwidget_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1846,17 +1828,17 @@ void q_tabwidget_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-double q_tabwidget_window_opacity(void* self);
+double q_tabwidget_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_window_modified(void* self);
+bool q_tabwidget_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1873,9 +1855,9 @@ void q_tabwidget_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_tool_tip(void* self);
+const char* q_tabwidget_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1890,9 +1872,9 @@ void q_tabwidget_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_tool_tip_duration(void* self);
+int32_t q_tabwidget_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1909,9 +1891,9 @@ void q_tabwidget_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_status_tip(void* self);
+const char* q_tabwidget_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1928,9 +1910,9 @@ void q_tabwidget_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_whats_this(void* self);
+const char* q_tabwidget_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1938,9 +1920,9 @@ const char* q_tabwidget_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_accessible_name(void* self);
+const char* q_tabwidget_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1957,9 +1939,9 @@ void q_tabwidget_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_accessible_description(void* self);
+const char* q_tabwidget_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1983,11 +1965,11 @@ void q_tabwidget_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_tabwidget_layout_direction(void* self);
+int32_t q_tabwidget_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2004,15 +1986,15 @@ void q_tabwidget_unset_layout_direction(void* self);
 /// @param self QTabWidget*
 /// @param locale QLocale*
 ///
-void q_tabwidget_set_locale(void* self, void* locale);
+void q_tabwidget_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QLocale* q_tabwidget_locale(void* self);
+QLocale* q_tabwidget_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2026,17 +2008,17 @@ void q_tabwidget_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_right_to_left(void* self);
+bool q_tabwidget_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_left_to_right(void* self);
+bool q_tabwidget_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2050,9 +2032,9 @@ void q_tabwidget_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_active_window(void* self);
+bool q_tabwidget_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2083,11 +2065,11 @@ void q_tabwidget_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_tabwidget_focus_policy(void* self);
+int32_t q_tabwidget_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2102,9 +2084,9 @@ void q_tabwidget_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_has_focus(void* self);
+bool q_tabwidget_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2128,19 +2110,19 @@ void q_tabwidget_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_focus_proxy(void* self);
+QWidget* q_tabwidget_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t q_tabwidget_context_menu_policy(void* self);
+int32_t q_tabwidget_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2166,7 +2148,7 @@ void q_tabwidget_grab_mouse(void* self);
 /// @param self QTabWidget*
 /// @param param1 QCursor*
 ///
-void q_tabwidget_grab_mouse2(void* self, void* param1);
+void q_tabwidget_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2199,7 +2181,7 @@ void q_tabwidget_release_keyboard(void* self);
 /// @param self QTabWidget*
 /// @param key QKeySequence*
 ///
-int32_t q_tabwidget_grab_shortcut(void* self, void* key);
+int32_t q_tabwidget_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2244,9 +2226,9 @@ QWidget* q_tabwidget_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_updates_enabled(void* self);
+bool q_tabwidget_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2261,9 +2243,9 @@ void q_tabwidget_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QGraphicsProxyWidget* q_tabwidget_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* q_tabwidget_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2300,7 +2282,7 @@ void q_tabwidget_update2(void* self, int x, int y, int w, int h);
 /// @param self QTabWidget*
 /// @param param1 QRect*
 ///
-void q_tabwidget_update3(void* self, void* param1);
+void q_tabwidget_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2309,7 +2291,7 @@ void q_tabwidget_update3(void* self, void* param1);
 /// @param self QTabWidget*
 /// @param param1 QRegion*
 ///
-void q_tabwidget_update4(void* self, void* param1);
+void q_tabwidget_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2330,7 +2312,7 @@ void q_tabwidget_repaint2(void* self, int x, int y, int w, int h);
 /// @param self QTabWidget*
 /// @param param1 QRect*
 ///
-void q_tabwidget_repaint3(void* self, void* param1);
+void q_tabwidget_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2339,7 +2321,7 @@ void q_tabwidget_repaint3(void* self, void* param1);
 /// @param self QTabWidget*
 /// @param param1 QRegion*
 ///
-void q_tabwidget_repaint4(void* self, void* param1);
+void q_tabwidget_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2448,7 +2430,7 @@ void q_tabwidget_move(void* self, int x, int y);
 /// @param self QTabWidget*
 /// @param param1 QPoint*
 ///
-void q_tabwidget_move2(void* self, void* param1);
+void q_tabwidget_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2467,7 +2449,7 @@ void q_tabwidget_resize(void* self, int w, int h);
 /// @param self QTabWidget*
 /// @param param1 QSize*
 ///
-void q_tabwidget_resize2(void* self, void* param1);
+void q_tabwidget_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2488,7 +2470,7 @@ void q_tabwidget_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self QTabWidget*
 /// @param geometry QRect*
 ///
-void q_tabwidget_set_geometry2(void* self, void* geometry);
+void q_tabwidget_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2496,9 +2478,9 @@ void q_tabwidget_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-char* q_tabwidget_save_geometry(void* self);
+char* q_tabwidget_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2521,60 +2503,60 @@ void q_tabwidget_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_visible(void* self);
+bool q_tabwidget_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 QWidget*
 ///
-bool q_tabwidget_is_visible_to(void* self, void* param1);
+bool q_tabwidget_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_hidden(void* self);
+bool q_tabwidget_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_minimized(void* self);
+bool q_tabwidget_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_maximized(void* self);
+bool q_tabwidget_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_full_screen(void* self);
+bool q_tabwidget_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t q_tabwidget_window_state(void* self);
+int32_t q_tabwidget_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2598,9 +2580,9 @@ void q_tabwidget_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QSizePolicy* q_tabwidget_size_policy(void* self);
+QSizePolicy* q_tabwidget_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2625,9 +2607,9 @@ void q_tabwidget_set_size_policy2(void* self, int32_t horizontal, int32_t vertic
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QRegion* q_tabwidget_visible_region(void* self);
+QRegion* q_tabwidget_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2648,31 +2630,31 @@ void q_tabwidget_set_contents_margins(void* self, int left, int top, int right, 
 /// @param self QTabWidget*
 /// @param margins QMargins*
 ///
-void q_tabwidget_set_contents_margins2(void* self, void* margins);
+void q_tabwidget_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QMargins* q_tabwidget_contents_margins(void* self);
+QMargins* q_tabwidget_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QRect* q_tabwidget_contents_rect(void* self);
+QRect* q_tabwidget_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QLayout* q_tabwidget_layout(void* self);
+QLayout* q_tabwidget_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2729,39 +2711,39 @@ void q_tabwidget_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void q_tabwidget_scroll2(void* self, int dx, int dy, void* param3);
+void q_tabwidget_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_focus_widget(void* self);
+QWidget* q_tabwidget_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_next_in_focus_chain(void* self);
+QWidget* q_tabwidget_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_previous_in_focus_chain(void* self);
+QWidget* q_tabwidget_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_accept_drops(void* self);
+bool q_tabwidget_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2823,11 +2805,11 @@ void q_tabwidget_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_tabwidget_actions(void* self);
+libqt_list q_tabwidget_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2846,7 +2828,7 @@ QAction* q_tabwidget_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* q_tabwidget_add_action3(void* self, void* icon, const char* text);
+QAction* q_tabwidget_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2856,7 +2838,7 @@ QAction* q_tabwidget_add_action3(void* self, void* icon, const char* text);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_tabwidget_add_action4(void* self, const char* text, void* shortcut);
+QAction* q_tabwidget_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2867,15 +2849,15 @@ QAction* q_tabwidget_add_action4(void* self, const char* text, void* shortcut);
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* q_tabwidget_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_tabwidget_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWidget* q_tabwidget_parent_widget(void* self);
+QWidget* q_tabwidget_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2890,11 +2872,11 @@ void q_tabwidget_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_tabwidget_window_flags(void* self);
+int32_t q_tabwidget_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2918,11 +2900,11 @@ void q_tabwidget_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_tabwidget_window_type(void* self);
+int32_t q_tabwidget_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2936,29 +2918,29 @@ QWidget* q_tabwidget_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param x int
 /// @param y int
 ///
-QWidget* q_tabwidget_child_at(void* self, int x, int y);
+QWidget* q_tabwidget_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param p QPoint*
 ///
-QWidget* q_tabwidget_child_at2(void* self, void* p);
+QWidget* q_tabwidget_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param p QPointF*
 ///
-QWidget* q_tabwidget_child_at3(void* self, void* p);
+QWidget* q_tabwidget_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2973,35 +2955,35 @@ void q_tabwidget_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool q_tabwidget_test_attribute(void* self, int32_t param1);
+bool q_tabwidget_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-void q_tabwidget_ensure_polished(void* self);
+void q_tabwidget_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param child QWidget*
 ///
-bool q_tabwidget_is_ancestor_of(void* self, void* child);
+bool q_tabwidget_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_auto_fill_background(void* self);
+bool q_tabwidget_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3016,25 +2998,25 @@ void q_tabwidget_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QBackingStore* q_tabwidget_backing_store(void* self);
+QBackingStore* q_tabwidget_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QWindow* q_tabwidget_window_handle(void* self);
+QWindow* q_tabwidget_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QScreen* q_tabwidget_screen(void* self);
+QScreen* q_tabwidget_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3078,7 +3060,7 @@ void q_tabwidget_on_window_title_changed(void* self, void (*callback)(void*, con
 /// @param self QTabWidget*
 /// @param icon QIcon*
 ///
-void q_tabwidget_window_icon_changed(void* self, void* icon);
+void q_tabwidget_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3087,7 +3069,7 @@ void q_tabwidget_window_icon_changed(void* self, void* icon);
 /// @param self QTabWidget*
 /// @param callback void func(QTabWidget* self, QIcon* icon)
 ///
-void q_tabwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void q_tabwidget_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3114,7 +3096,7 @@ void q_tabwidget_on_window_icon_text_changed(void* self, void (*callback)(void*,
 /// @param self QTabWidget*
 /// @param pos QPoint*
 ///
-void q_tabwidget_custom_context_menu_requested(void* self, void* pos);
+void q_tabwidget_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3123,17 +3105,17 @@ void q_tabwidget_custom_context_menu_requested(void* self, void* pos);
 /// @param self QTabWidget*
 /// @param callback void func(QTabWidget* self, QPoint* pos)
 ///
-void q_tabwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void q_tabwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_tabwidget_input_method_hints(void* self);
+int32_t q_tabwidget_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3152,7 +3134,7 @@ void q_tabwidget_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void q_tabwidget_render22(void* self, void* target, void* targetOffset);
+void q_tabwidget_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3163,7 +3145,7 @@ void q_tabwidget_render22(void* self, void* target, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_tabwidget_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void q_tabwidget_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3175,7 +3157,7 @@ void q_tabwidget_render3(void* self, void* target, void* targetOffset, void* sou
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_tabwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_tabwidget_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3185,7 +3167,7 @@ void q_tabwidget_render4(void* self, void* target, void* targetOffset, void* sou
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void q_tabwidget_render23(void* self, void* painter, void* targetOffset);
+void q_tabwidget_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3196,7 +3178,7 @@ void q_tabwidget_render23(void* self, void* painter, void* targetOffset);
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void q_tabwidget_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void q_tabwidget_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3208,7 +3190,7 @@ void q_tabwidget_render32(void* self, void* painter, void* targetOffset, void* s
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void q_tabwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void q_tabwidget_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3217,7 +3199,7 @@ void q_tabwidget_render42(void* self, void* painter, void* targetOffset, void* s
 /// @param self QTabWidget*
 /// @param rectangle QRect*
 ///
-QPixmap* q_tabwidget_grab1(void* self, void* rectangle);
+QPixmap* q_tabwidget_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3237,7 +3219,7 @@ void q_tabwidget_grab_gesture2(void* self, int32_t type, int32_t flags);
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_tabwidget_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t q_tabwidget_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3304,9 +3286,9 @@ QWidget* q_tabwidget_create_window_container3(void* window, void* parent, int32_
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char* q_tabwidget_object_name(void* self);
+const char* q_tabwidget_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3321,33 +3303,33 @@ void q_tabwidget_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_widget_type(void* self);
+bool q_tabwidget_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_window_type(void* self);
+bool q_tabwidget_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_is_quick_item_type(void* self);
+bool q_tabwidget_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_signals_blocked(void* self);
+bool q_tabwidget_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3362,9 +3344,9 @@ bool q_tabwidget_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QThread* q_tabwidget_thread(void* self);
+QThread* q_tabwidget_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3415,11 +3397,11 @@ void q_tabwidget_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_tabwidget_children(void* self);
+libqt_list q_tabwidget_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3448,7 +3430,7 @@ void q_tabwidget_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_tabwidget_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_tabwidget_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3459,18 +3441,18 @@ QMetaObject__Connection* q_tabwidget_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_tabwidget_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_tabwidget_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_tabwidget_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_tabwidget_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3481,7 +3463,7 @@ QMetaObject__Connection* q_tabwidget_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_tabwidget_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_tabwidget_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3492,24 +3474,24 @@ bool q_tabwidget_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_tabwidget_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_tabwidget_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_disconnect3(void* self);
+bool q_tabwidget_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param receiver QObject*
 ///
-bool q_tabwidget_disconnect4(void* self, void* receiver);
+bool q_tabwidget_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3517,23 +3499,23 @@ bool q_tabwidget_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_tabwidget_disconnect5(void* param1);
+bool q_tabwidget_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-void q_tabwidget_dump_object_tree(void* self);
+void q_tabwidget_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-void q_tabwidget_dump_object_info(void* self);
+void q_tabwidget_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3543,16 +3525,16 @@ void q_tabwidget_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_tabwidget_set_property(void* self, const char* name, void* value);
+bool q_tabwidget_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param name const char*
 ///
-QVariant* q_tabwidget_property(void* self, const char* name);
+QVariant* q_tabwidget_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3560,9 +3542,9 @@ QVariant* q_tabwidget_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const char** q_tabwidget_dynamic_property_names(void* self);
+const char** q_tabwidget_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3576,9 +3558,9 @@ QBindingStorage* q_tabwidget_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-const QBindingStorage* q_tabwidget_binding_storage2(void* self);
+const QBindingStorage* q_tabwidget_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3601,18 +3583,18 @@ void q_tabwidget_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QObject* q_tabwidget_parent(void* self);
+QObject* q_tabwidget_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param classname const char*
 ///
-bool q_tabwidget_inherits(void* self, const char* classname);
+bool q_tabwidget_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3652,7 +3634,7 @@ int32_t q_tabwidget_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tabwidget_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_tabwidget_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3664,59 +3646,59 @@ QMetaObject__Connection* q_tabwidget_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tabwidget_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_tabwidget_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_tabwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_tabwidget_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param signal const char*
 ///
-bool q_tabwidget_disconnect1(void* self, const char* signal);
+bool q_tabwidget_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTabWidget*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_tabwidget_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_tabwidget_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_tabwidget_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_tabwidget_disconnect23(void* self, void* receiver, const char* member);
+bool q_tabwidget_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QTabWidget*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_tabwidget_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3740,89 +3722,89 @@ void q_tabwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-bool q_tabwidget_painting_active(void* self);
+bool q_tabwidget_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_width_m_m(void* self);
+int32_t q_tabwidget_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_height_m_m(void* self);
+int32_t q_tabwidget_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_logical_dpi_x(void* self);
+int32_t q_tabwidget_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_logical_dpi_y(void* self);
+int32_t q_tabwidget_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_physical_dpi_x(void* self);
+int32_t q_tabwidget_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_physical_dpi_y(void* self);
+int32_t q_tabwidget_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-double q_tabwidget_device_pixel_ratio(void* self);
+double q_tabwidget_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-double q_tabwidget_device_pixel_ratio_f(void* self);
+double q_tabwidget_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_color_count(void* self);
+int32_t q_tabwidget_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_depth(void* self);
+int32_t q_tabwidget_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3845,9 +3827,9 @@ int32_t q_tabwidget_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_dev_type(void* self);
+int32_t q_tabwidget_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3855,9 +3837,9 @@ int32_t q_tabwidget_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_super_dev_type(void* self);
+int32_t q_tabwidget_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3865,10 +3847,10 @@ int32_t q_tabwidget_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
-/// @param callback int32_t func()
+/// @param self const QTabWidget*
+/// @param callback int32_t func(QTabWidget* self)
 ///
-void q_tabwidget_on_dev_type(void* self, int32_t (*callback)());
+void q_tabwidget_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -3909,9 +3891,9 @@ void q_tabwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QPaintEngine* q_tabwidget_paint_engine(void* self);
+QPaintEngine* q_tabwidget_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3919,9 +3901,9 @@ QPaintEngine* q_tabwidget_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QPaintEngine* q_tabwidget_super_paint_engine(void* self);
+QPaintEngine* q_tabwidget_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3929,10 +3911,10 @@ QPaintEngine* q_tabwidget_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
-/// @param callback QPaintEngine* func()
+/// @param self const QTabWidget*
+/// @param callback QPaintEngine* func(QTabWidget* self)
 ///
-void q_tabwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_tabwidget_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4637,10 +4619,10 @@ void q_tabwidget_on_native_event(void* self, bool (*callback)(void*, libqt_strin
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_tabwidget_metric(void* self, int32_t param1);
+int32_t q_tabwidget_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4648,10 +4630,10 @@ int32_t q_tabwidget_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_tabwidget_super_metric(void* self, int32_t param1);
+int32_t q_tabwidget_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4659,10 +4641,10 @@ int32_t q_tabwidget_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param callback int32_t func(QTabWidget* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_tabwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_tabwidget_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4670,10 +4652,10 @@ void q_tabwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param painter QPainter*
 ///
-void q_tabwidget_init_painter(void* self, void* painter);
+void q_tabwidget_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4681,10 +4663,10 @@ void q_tabwidget_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param painter QPainter*
 ///
-void q_tabwidget_super_init_painter(void* self, void* painter);
+void q_tabwidget_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4692,10 +4674,10 @@ void q_tabwidget_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param callback void func(QTabWidget* self, QPainter* painter)
 ///
-void q_tabwidget_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_tabwidget_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4703,10 +4685,10 @@ void q_tabwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_tabwidget_redirected(void* self, void* offset);
+QPaintDevice* q_tabwidget_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4714,10 +4696,10 @@ QPaintDevice* q_tabwidget_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_tabwidget_super_redirected(void* self, void* offset);
+QPaintDevice* q_tabwidget_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4725,10 +4707,10 @@ QPaintDevice* q_tabwidget_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param callback QPaintDevice* func(QTabWidget* self, QPoint* offset)
 ///
-void q_tabwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_tabwidget_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4736,9 +4718,9 @@ void q_tabwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QPainter* q_tabwidget_shared_painter(void* self);
+QPainter* q_tabwidget_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4746,9 +4728,9 @@ QPainter* q_tabwidget_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QPainter* q_tabwidget_super_shared_painter(void* self);
+QPainter* q_tabwidget_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4756,10 +4738,10 @@ QPainter* q_tabwidget_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
-/// @param callback QPainter* func()
+/// @param self const QTabWidget*
+/// @param callback QPainter* func(QTabWidget* self)
 ///
-void q_tabwidget_on_shared_painter(void* self, QPainter* (*callback)());
+void q_tabwidget_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4800,10 +4782,10 @@ void q_tabwidget_on_input_method_event(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_tabwidget_input_method_query(void* self, int32_t param1);
+QVariant* q_tabwidget_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4811,10 +4793,10 @@ QVariant* q_tabwidget_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_tabwidget_super_input_method_query(void* self, int32_t param1);
+QVariant* q_tabwidget_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4822,12 +4804,12 @@ QVariant* q_tabwidget_super_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param callback QVariant* func(QTabWidget* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_tabwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_tabwidget_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5005,7 +4987,7 @@ void q_tabwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QTabWidget*
 /// @param signal QMetaMethod*
 ///
-void q_tabwidget_connect_notify(void* self, void* signal);
+void q_tabwidget_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5016,7 +4998,7 @@ void q_tabwidget_connect_notify(void* self, void* signal);
 /// @param self QTabWidget*
 /// @param signal QMetaMethod*
 ///
-void q_tabwidget_super_connect_notify(void* self, void* signal);
+void q_tabwidget_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5027,7 +5009,7 @@ void q_tabwidget_super_connect_notify(void* self, void* signal);
 /// @param self QTabWidget*
 /// @param callback void func(QTabWidget* self, QMetaMethod* signal)
 ///
-void q_tabwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_tabwidget_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5038,7 +5020,7 @@ void q_tabwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QTabWidget*
 /// @param signal QMetaMethod*
 ///
-void q_tabwidget_disconnect_notify(void* self, void* signal);
+void q_tabwidget_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5049,7 +5031,7 @@ void q_tabwidget_disconnect_notify(void* self, void* signal);
 /// @param self QTabWidget*
 /// @param signal QMetaMethod*
 ///
-void q_tabwidget_super_disconnect_notify(void* self, void* signal);
+void q_tabwidget_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5060,7 +5042,7 @@ void q_tabwidget_super_disconnect_notify(void* self, void* signal);
 /// @param self QTabWidget*
 /// @param callback void func(QTabWidget* self, QMetaMethod* signal)
 ///
-void q_tabwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_tabwidget_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -5089,9 +5071,9 @@ void q_tabwidget_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void func()
+/// @param callback void func(QTabWidget* self)
 ///
-void q_tabwidget_on_update_micro_focus(void* self, void (*callback)());
+void q_tabwidget_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5120,9 +5102,9 @@ void q_tabwidget_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void func()
+/// @param callback void func(QTabWidget* self)
 ///
-void q_tabwidget_on_create(void* self, void (*callback)());
+void q_tabwidget_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5151,9 +5133,9 @@ void q_tabwidget_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback void func()
+/// @param callback void func(QTabWidget* self)
 ///
-void q_tabwidget_on_destroy(void* self, void (*callback)());
+void q_tabwidget_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5182,9 +5164,9 @@ bool q_tabwidget_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback bool func()
+/// @param callback bool func(QTabWidget* self)
 ///
-void q_tabwidget_on_focus_next_child(void* self, bool (*callback)());
+void q_tabwidget_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5213,9 +5195,9 @@ bool q_tabwidget_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTabWidget*
-/// @param callback bool func()
+/// @param callback bool func(QTabWidget* self)
 ///
-void q_tabwidget_on_focus_previous_child(void* self, bool (*callback)());
+void q_tabwidget_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5223,9 +5205,9 @@ void q_tabwidget_on_focus_previous_child(void* self, bool (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QObject* q_tabwidget_sender(void* self);
+QObject* q_tabwidget_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5233,9 +5215,9 @@ QObject* q_tabwidget_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-QObject* q_tabwidget_super_sender(void* self);
+QObject* q_tabwidget_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5243,10 +5225,10 @@ QObject* q_tabwidget_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
-/// @param callback QObject* func()
+/// @param self const QTabWidget*
+/// @param callback QObject* func(QTabWidget* self)
 ///
-void q_tabwidget_on_sender(void* self, QObject* (*callback)());
+void q_tabwidget_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5254,9 +5236,9 @@ void q_tabwidget_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_sender_signal_index(void* self);
+int32_t q_tabwidget_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5264,9 +5246,9 @@ int32_t q_tabwidget_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 ///
-int32_t q_tabwidget_super_sender_signal_index(void* self);
+int32_t q_tabwidget_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5274,10 +5256,10 @@ int32_t q_tabwidget_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
-/// @param callback int32_t func()
+/// @param self const QTabWidget*
+/// @param callback int32_t func(QTabWidget* self)
 ///
-void q_tabwidget_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_tabwidget_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5285,10 +5267,10 @@ void q_tabwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param signal const char*
 ///
-int32_t q_tabwidget_receivers(void* self, const char* signal);
+int32_t q_tabwidget_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5296,10 +5278,10 @@ int32_t q_tabwidget_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param signal const char*
 ///
-int32_t q_tabwidget_super_receivers(void* self, const char* signal);
+int32_t q_tabwidget_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5307,10 +5289,10 @@ int32_t q_tabwidget_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param callback int32_t func(QTabWidget* self, const char* signal)
 ///
-void q_tabwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_tabwidget_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5318,10 +5300,10 @@ void q_tabwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param signal QMetaMethod*
 ///
-bool q_tabwidget_is_signal_connected(void* self, void* signal);
+bool q_tabwidget_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5329,10 +5311,10 @@ bool q_tabwidget_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param signal QMetaMethod*
 ///
-bool q_tabwidget_super_is_signal_connected(void* self, void* signal);
+bool q_tabwidget_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5340,10 +5322,10 @@ bool q_tabwidget_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param callback bool func(QTabWidget* self, QMetaMethod* signal)
 ///
-void q_tabwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_tabwidget_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5351,11 +5333,11 @@ void q_tabwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_tabwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_tabwidget_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5363,11 +5345,11 @@ double q_tabwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_tabwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_tabwidget_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5375,10 +5357,10 @@ double q_tabwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QTabWidget*
+/// @param self const QTabWidget*
 /// @param callback double func(QTabWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_tabwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_tabwidget_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

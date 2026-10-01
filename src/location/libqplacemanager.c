@@ -17,7 +17,7 @@
 #include "libqplacemanager.hpp"
 #include "libqplacemanager.h"
 
-const QMetaObject* q_placemanager_meta_object(void* self) {
+const QMetaObject* q_placemanager_meta_object(const void* self) {
     return QPlaceManager_MetaObject((QPlaceManager*)self);
 }
 
@@ -36,34 +36,34 @@ const char* q_placemanager_tr(const char* s) {
     return _ret;
 }
 
-const char* q_placemanager_manager_name(void* self) {
+const char* q_placemanager_manager_name(const void* self) {
     libqt_string _str = QPlaceManager_ManagerName((QPlaceManager*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_placemanager_manager_version(void* self) {
+int32_t q_placemanager_manager_version(const void* self) {
     return QPlaceManager_ManagerVersion((QPlaceManager*)self);
 }
 
-QPlaceDetailsReply* q_placemanager_get_place_details(void* self, const char* placeId) {
+QPlaceDetailsReply* q_placemanager_get_place_details(const void* self, const char* placeId) {
     return QPlaceManager_GetPlaceDetails((QPlaceManager*)self, qstring(placeId));
 }
 
-QPlaceContentReply* q_placemanager_get_place_content(void* self, void* request) {
+QPlaceContentReply* q_placemanager_get_place_content(const void* self, const void* request) {
     return QPlaceManager_GetPlaceContent((QPlaceManager*)self, (QPlaceContentRequest*)request);
 }
 
-QPlaceSearchReply* q_placemanager_search(void* self, void* query) {
+QPlaceSearchReply* q_placemanager_search(const void* self, const void* query) {
     return QPlaceManager_Search((QPlaceManager*)self, (QPlaceSearchRequest*)query);
 }
 
-QPlaceSearchSuggestionReply* q_placemanager_search_suggestions(void* self, void* request) {
+QPlaceSearchSuggestionReply* q_placemanager_search_suggestions(const void* self, const void* request) {
     return QPlaceManager_SearchSuggestions((QPlaceManager*)self, (QPlaceSearchRequest*)request);
 }
 
-QPlaceIdReply* q_placemanager_save_place(void* self, void* place) {
+QPlaceIdReply* q_placemanager_save_place(void* self, const void* place) {
     return QPlaceManager_SavePlace((QPlaceManager*)self, (QPlace*)place);
 }
 
@@ -71,7 +71,7 @@ QPlaceIdReply* q_placemanager_remove_place(void* self, const char* placeId) {
     return QPlaceManager_RemovePlace((QPlaceManager*)self, qstring(placeId));
 }
 
-QPlaceIdReply* q_placemanager_save_category(void* self, void* category) {
+QPlaceIdReply* q_placemanager_save_category(void* self, const void* category) {
     return QPlaceManager_SaveCategory((QPlaceManager*)self, (QPlaceCategory*)category);
 }
 
@@ -83,14 +83,14 @@ QPlaceReply* q_placemanager_initialize_categories(void* self) {
     return QPlaceManager_InitializeCategories((QPlaceManager*)self);
 }
 
-const char* q_placemanager_parent_category_id(void* self, const char* categoryId) {
+const char* q_placemanager_parent_category_id(const void* self, const char* categoryId) {
     libqt_string _str = QPlaceManager_ParentCategoryId((QPlaceManager*)self, qstring(categoryId));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_placemanager_child_category_ids(void* self) {
+const char** q_placemanager_child_category_ids(const void* self) {
     libqt_list _arr = QPlaceManager_ChildCategoryIds((QPlaceManager*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -107,21 +107,21 @@ const char** q_placemanager_child_category_ids(void* self) {
     return _ret;
 }
 
-QPlaceCategory* q_placemanager_category(void* self, const char* categoryId) {
+QPlaceCategory* q_placemanager_category(const void* self, const char* categoryId) {
     return QPlaceManager_Category((QPlaceManager*)self, qstring(categoryId));
 }
 
-libqt_list /* of QPlaceCategory* */ q_placemanager_child_categories(void* self) {
+libqt_list /* of QPlaceCategory* */ q_placemanager_child_categories(const void* self) {
     libqt_list _arr = QPlaceManager_ChildCategories((QPlaceManager*)self);
     return _arr;
 }
 
-libqt_list /* of QLocale* */ q_placemanager_locales(void* self) {
+libqt_list /* of QLocale* */ q_placemanager_locales(const void* self) {
     libqt_list _arr = QPlaceManager_Locales((QPlaceManager*)self);
     return _arr;
 }
 
-void q_placemanager_set_locale(void* self, void* locale) {
+void q_placemanager_set_locale(void* self, const void* locale) {
     QPlaceManager_SetLocale((QPlaceManager*)self, (QLocale*)locale);
 }
 
@@ -129,11 +129,11 @@ void q_placemanager_set_locales(void* self, libqt_list /* of QLocale* */ locale)
     QPlaceManager_SetLocales((QPlaceManager*)self, locale);
 }
 
-QPlace* q_placemanager_compatible_place(void* self, void* place) {
+QPlace* q_placemanager_compatible_place(const void* self, const void* place) {
     return QPlaceManager_CompatiblePlace((QPlaceManager*)self, (QPlace*)place);
 }
 
-QPlaceMatchReply* q_placemanager_matching_places(void* self, void* request) {
+QPlaceMatchReply* q_placemanager_matching_places(const void* self, const void* request) {
     return QPlaceManager_MatchingPlaces((QPlaceManager*)self, (QPlaceMatchRequest*)request);
 }
 
@@ -177,19 +177,19 @@ void q_placemanager_on_place_removed(void* self, void (*callback)(void*, const c
     QPlaceManager_Connect_PlaceRemoved((QPlaceManager*)self, (intptr_t)callback);
 }
 
-void q_placemanager_category_added(void* self, void* category, const char* parentId) {
+void q_placemanager_category_added(void* self, const void* category, const char* parentId) {
     QPlaceManager_CategoryAdded((QPlaceManager*)self, (QPlaceCategory*)category, qstring(parentId));
 }
 
-void q_placemanager_on_category_added(void* self, void (*callback)(void*, void*, const char*)) {
+void q_placemanager_on_category_added(void* self, void (*callback)(void*, const void*, const char*)) {
     QPlaceManager_Connect_CategoryAdded((QPlaceManager*)self, (intptr_t)callback);
 }
 
-void q_placemanager_category_updated(void* self, void* category, const char* parentId) {
+void q_placemanager_category_updated(void* self, const void* category, const char* parentId) {
     QPlaceManager_CategoryUpdated((QPlaceManager*)self, (QPlaceCategory*)category, qstring(parentId));
 }
 
-void q_placemanager_on_category_updated(void* self, void (*callback)(void*, void*, const char*)) {
+void q_placemanager_on_category_updated(void* self, void (*callback)(void*, const void*, const char*)) {
     QPlaceManager_Connect_CategoryUpdated((QPlaceManager*)self, (intptr_t)callback);
 }
 
@@ -223,11 +223,11 @@ const char* q_placemanager_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QPlaceIdReply* q_placemanager_save_category2(void* self, void* category, const char* parentId) {
+QPlaceIdReply* q_placemanager_save_category2(void* self, const void* category, const char* parentId) {
     return QPlaceManager_SaveCategory2((QPlaceManager*)self, (QPlaceCategory*)category, qstring(parentId));
 }
 
-const char** q_placemanager_child_category_ids1(void* self, const char* parentId) {
+const char** q_placemanager_child_category_ids1(const void* self, const char* parentId) {
     libqt_list _arr = QPlaceManager_ChildCategoryIds1((QPlaceManager*)self, qstring(parentId));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -244,7 +244,7 @@ const char** q_placemanager_child_category_ids1(void* self, const char* parentId
     return _ret;
 }
 
-libqt_list /* of QPlaceCategory* */ q_placemanager_child_categories1(void* self, const char* parentId) {
+libqt_list /* of QPlaceCategory* */ q_placemanager_child_categories1(const void* self, const char* parentId) {
     libqt_list _arr = QPlaceManager_ChildCategories1((QPlaceManager*)self, qstring(parentId));
     return _arr;
 }
@@ -265,7 +265,7 @@ bool q_placemanager_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* q_placemanager_object_name(void* self) {
+const char* q_placemanager_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -276,19 +276,19 @@ void q_placemanager_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_placemanager_is_widget_type(void* self) {
+bool q_placemanager_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_placemanager_is_window_type(void* self) {
+bool q_placemanager_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_placemanager_is_quick_item_type(void* self) {
+bool q_placemanager_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_placemanager_signals_blocked(void* self) {
+bool q_placemanager_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -296,7 +296,7 @@ bool q_placemanager_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_placemanager_thread(void* self) {
+QThread* q_placemanager_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -320,7 +320,7 @@ void q_placemanager_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_placemanager_children(void* self) {
+libqt_list /* of QObject* */ q_placemanager_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -337,55 +337,55 @@ void q_placemanager_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_placemanager_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_placemanager_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_placemanager_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_placemanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_placemanager_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_placemanager_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_placemanager_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_placemanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_placemanager_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_placemanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_placemanager_disconnect3(void* self) {
+bool q_placemanager_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_placemanager_disconnect4(void* self, void* receiver) {
+bool q_placemanager_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_placemanager_disconnect5(void* param1) {
+bool q_placemanager_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_placemanager_dump_object_tree(void* self) {
+void q_placemanager_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_placemanager_dump_object_info(void* self) {
+void q_placemanager_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_placemanager_set_property(void* self, const char* name, void* value) {
+bool q_placemanager_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_placemanager_property(void* self, const char* name) {
+QVariant* q_placemanager_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_placemanager_dynamic_property_names(void* self) {
+const char** q_placemanager_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -406,7 +406,7 @@ QBindingStorage* q_placemanager_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_placemanager_binding_storage2(void* self) {
+const QBindingStorage* q_placemanager_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -418,11 +418,11 @@ void q_placemanager_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_placemanager_parent(void* self) {
+QObject* q_placemanager_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_placemanager_inherits(void* self, const char* classname) {
+bool q_placemanager_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -438,31 +438,31 @@ int32_t q_placemanager_start_timer23(void* self, int64_t time, int32_t timerType
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_placemanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_placemanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_placemanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_placemanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_placemanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_placemanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_placemanager_disconnect1(void* self, const char* signal) {
+bool q_placemanager_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_placemanager_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_placemanager_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_placemanager_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_placemanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_placemanager_disconnect23(void* self, void* receiver, const char* member) {
+bool q_placemanager_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 

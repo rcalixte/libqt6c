@@ -20,14 +20,14 @@ QLowEnergyAdvertisingParameters* q_lowenergyadvertisingparameters_new();
 ///
 /// @param other QLowEnergyAdvertisingParameters*
 ///
-QLowEnergyAdvertisingParameters* q_lowenergyadvertisingparameters_new2(void* other);
+QLowEnergyAdvertisingParameters* q_lowenergyadvertisingparameters_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#operator-eq)
 ///
 /// @param self QLowEnergyAdvertisingParameters*
 /// @param other QLowEnergyAdvertisingParameters*
 ///
-void q_lowenergyadvertisingparameters_operator_assign(void* self, void* other);
+void q_lowenergyadvertisingparameters_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#setMode)
 ///
@@ -38,11 +38,11 @@ void q_lowenergyadvertisingparameters_set_mode(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#mode)
 ///
-/// @param self QLowEnergyAdvertisingParameters*
+/// @param self const QLowEnergyAdvertisingParameters*
 ///
 /// @return enum QLowEnergyAdvertisingParameters__Mode
 ///
-int32_t q_lowenergyadvertisingparameters_mode(void* self);
+int32_t q_lowenergyadvertisingparameters_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#setWhiteList)
 ///
@@ -54,19 +54,19 @@ void q_lowenergyadvertisingparameters_set_white_list(void* self, libqt_list whit
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#whiteList)
 ///
-/// @param self QLowEnergyAdvertisingParameters*
+/// @param self const QLowEnergyAdvertisingParameters*
 ///
 /// @return libqt_list of QLowEnergyAdvertisingParameters__AddressInfo*
 ///
-libqt_list q_lowenergyadvertisingparameters_white_list(void* self);
+libqt_list q_lowenergyadvertisingparameters_white_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#filterPolicy)
 ///
-/// @param self QLowEnergyAdvertisingParameters*
+/// @param self const QLowEnergyAdvertisingParameters*
 ///
 /// @return enum QLowEnergyAdvertisingParameters__FilterPolicy
 ///
-int32_t q_lowenergyadvertisingparameters_filter_policy(void* self);
+int32_t q_lowenergyadvertisingparameters_filter_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#setInterval)
 ///
@@ -78,15 +78,15 @@ void q_lowenergyadvertisingparameters_set_interval(void* self, uint16_t minimum,
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#minimumInterval)
 ///
-/// @param self QLowEnergyAdvertisingParameters*
+/// @param self const QLowEnergyAdvertisingParameters*
 ///
-int32_t q_lowenergyadvertisingparameters_minimum_interval(void* self);
+int32_t q_lowenergyadvertisingparameters_minimum_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#maximumInterval)
 ///
-/// @param self QLowEnergyAdvertisingParameters*
+/// @param self const QLowEnergyAdvertisingParameters*
 ///
-int32_t q_lowenergyadvertisingparameters_maximum_interval(void* self);
+int32_t q_lowenergyadvertisingparameters_maximum_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#swap)
 ///
@@ -110,7 +110,7 @@ void q_lowenergyadvertisingparameters_delete(void* self);
 /// @param addr QBluetoothAddress*
 /// @param t enum QLowEnergyController__RemoteAddressType
 ///
-QLowEnergyAdvertisingParameters__AddressInfo* q_lowenergyadvertisingparameters__addressinfo_new(void* addr, int32_t t);
+QLowEnergyAdvertisingParameters__AddressInfo* q_lowenergyadvertisingparameters__addressinfo_new(const void* addr, int32_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters-addressinfo.html)
 
@@ -124,13 +124,13 @@ QLowEnergyAdvertisingParameters__AddressInfo* q_lowenergyadvertisingparameters__
 ///
 /// @param param1 QLowEnergyAdvertisingParameters__AddressInfo*
 ///
-QLowEnergyAdvertisingParameters__AddressInfo* q_lowenergyadvertisingparameters__addressinfo_new3(void* param1);
+QLowEnergyAdvertisingParameters__AddressInfo* q_lowenergyadvertisingparameters__addressinfo_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters-addressinfo.html#address-var)
 ///
-/// @param self QLowEnergyAdvertisingParameters__AddressInfo*
+/// @param self const QLowEnergyAdvertisingParameters__AddressInfo*
 ///
-QBluetoothAddress* q_lowenergyadvertisingparameters__addressinfo_address(void* self);
+QBluetoothAddress* q_lowenergyadvertisingparameters__addressinfo_address(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters-addressinfo.html#address-var)
 ///
@@ -141,11 +141,11 @@ void q_lowenergyadvertisingparameters__addressinfo_set_address(void* self, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters-addressinfo.html#type-var)
 ///
-/// @param self QLowEnergyAdvertisingParameters__AddressInfo*
+/// @param self const QLowEnergyAdvertisingParameters__AddressInfo*
 ///
 /// @return enum QLowEnergyController__RemoteAddressType
 ///
-int32_t q_lowenergyadvertisingparameters__addressinfo_type(void* self);
+int32_t q_lowenergyadvertisingparameters__addressinfo_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters-addressinfo.html#type-var)
 ///
@@ -159,7 +159,7 @@ void q_lowenergyadvertisingparameters__addressinfo_set_type(void* self, int32_t 
 /// @param self QLowEnergyAdvertisingParameters__AddressInfo*
 /// @param param1 QLowEnergyAdvertisingParameters__AddressInfo*
 ///
-void q_lowenergyadvertisingparameters__addressinfo_operator_assign(void* self, void* param1);
+void q_lowenergyadvertisingparameters__addressinfo_operator_assign(void* self, const void* param1);
 
 /// Delete this object from C++ memory.
 ///

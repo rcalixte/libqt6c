@@ -1,32 +1,32 @@
 #include "libcategorymetadata.hpp"
 #include "libcategorymetadata.h"
 
-KNSCore__CategoryMetadata* k_nscore__categorymetadata_new(void* param1) {
+KNSCore__CategoryMetadata* k_nscore__categorymetadata_new(const void* param1) {
     return KNSCore__CategoryMetadata_New((KNSCore__CategoryMetadata*)param1);
 }
 
-const char* k_nscore__categorymetadata_id(void* self) {
+const char* k_nscore__categorymetadata_id(const void* self) {
     libqt_string _str = KNSCore__CategoryMetadata_Id((KNSCore__CategoryMetadata*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_nscore__categorymetadata_name(void* self) {
+const char* k_nscore__categorymetadata_name(const void* self) {
     libqt_string _str = KNSCore__CategoryMetadata_Name((KNSCore__CategoryMetadata*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_nscore__categorymetadata_display_name(void* self) {
+const char* k_nscore__categorymetadata_display_name(const void* self) {
     libqt_string _str = KNSCore__CategoryMetadata_DisplayName((KNSCore__CategoryMetadata*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_nscore__categorymetadata_operator_assign(void* self, void* param1) {
+void k_nscore__categorymetadata_operator_assign(void* self, const void* param1) {
     KNSCore__CategoryMetadata_OperatorAssign((KNSCore__CategoryMetadata*)self, (KNSCore__CategoryMetadata*)param1);
 }
 

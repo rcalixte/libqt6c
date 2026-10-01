@@ -48,7 +48,7 @@ void QScreenCapture_ScreenChanged(QScreenCapture* self, QScreen* param1);
 void QScreenCapture_Connect_ScreenChanged(QScreenCapture* self, intptr_t slot);
 void QScreenCapture_ErrorOccurred(QScreenCapture* self, int error, const libqt_string errorString);
 void QScreenCapture_Connect_ErrorOccurred(QScreenCapture* self, intptr_t slot);
-void QScreenCapture_OnMetaObject(const QScreenCapture* self, intptr_t slot);
+void QScreenCapture_OnMetaObject(QScreenCapture* self, intptr_t slot);
 QMetaObject* QScreenCapture_SuperMetaObject(const QScreenCapture* self);
 void QScreenCapture_OnMetacast(QScreenCapture* self, intptr_t slot);
 void* QScreenCapture_SuperMetacast(QScreenCapture* self, const char* param1);
@@ -76,17 +76,9 @@ void QScreenCapture_DisconnectNotify(QScreenCapture* self, const QMetaMethod* si
 void QScreenCapture_OnDisconnectNotify(QScreenCapture* self, intptr_t slot);
 void QScreenCapture_SuperDisconnectNotify(QScreenCapture* self, const QMetaMethod* signal);
 QObject* QScreenCapture_Sender(const QScreenCapture* self);
-void QScreenCapture_OnSender(const QScreenCapture* self, intptr_t slot);
-QObject* QScreenCapture_SuperSender(const QScreenCapture* self);
 int QScreenCapture_SenderSignalIndex(const QScreenCapture* self);
-void QScreenCapture_OnSenderSignalIndex(const QScreenCapture* self, intptr_t slot);
-int QScreenCapture_SuperSenderSignalIndex(const QScreenCapture* self);
 int QScreenCapture_Receivers(const QScreenCapture* self, const char* signal);
-void QScreenCapture_OnReceivers(const QScreenCapture* self, intptr_t slot);
-int QScreenCapture_SuperReceivers(const QScreenCapture* self, const char* signal);
 bool QScreenCapture_IsSignalConnected(const QScreenCapture* self, const QMetaMethod* signal);
-void QScreenCapture_OnIsSignalConnected(const QScreenCapture* self, intptr_t slot);
-bool QScreenCapture_SuperIsSignalConnected(const QScreenCapture* self, const QMetaMethod* signal);
 void QScreenCapture_Delete(QScreenCapture* self);
 
 #ifdef __cplusplus

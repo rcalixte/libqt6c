@@ -5,11 +5,11 @@ TextEmoticonsCore__CustomEmoji* k_textemoticonscore__customemoji_new() {
     return TextEmoticonsCore__CustomEmoji_New();
 }
 
-TextEmoticonsCore__CustomEmoji* k_textemoticonscore__customemoji_new2(void* param1) {
+TextEmoticonsCore__CustomEmoji* k_textemoticonscore__customemoji_new2(const void* param1) {
     return TextEmoticonsCore__CustomEmoji_New2((TextEmoticonsCore__CustomEmoji*)param1);
 }
 
-const char* k_textemoticonscore__customemoji_identifier(void* self) {
+const char* k_textemoticonscore__customemoji_identifier(const void* self) {
     libqt_string _str = TextEmoticonsCore__CustomEmoji_Identifier((TextEmoticonsCore__CustomEmoji*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -20,14 +20,14 @@ void k_textemoticonscore__customemoji_set_identifier(void* self, const char* new
     TextEmoticonsCore__CustomEmoji_SetIdentifier((TextEmoticonsCore__CustomEmoji*)self, qstring(newIdentifier));
 }
 
-const char* k_textemoticonscore__customemoji_category(void* self) {
+const char* k_textemoticonscore__customemoji_category(const void* self) {
     libqt_string _str = TextEmoticonsCore__CustomEmoji_Category((TextEmoticonsCore__CustomEmoji*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_textemoticonscore__customemoji_is_animated_emoji(void* self) {
+bool k_textemoticonscore__customemoji_is_animated_emoji(const void* self) {
     return TextEmoticonsCore__CustomEmoji_IsAnimatedEmoji((TextEmoticonsCore__CustomEmoji*)self);
 }
 
@@ -35,7 +35,7 @@ void k_textemoticonscore__customemoji_set_is_animated_emoji(void* self, bool new
     TextEmoticonsCore__CustomEmoji_SetIsAnimatedEmoji((TextEmoticonsCore__CustomEmoji*)self, newIsAnimatedEmoji);
 }
 
-void k_textemoticonscore__customemoji_operator_assign(void* self, void* param1) {
+void k_textemoticonscore__customemoji_operator_assign(void* self, const void* param1) {
     TextEmoticonsCore__CustomEmoji_OperatorAssign((TextEmoticonsCore__CustomEmoji*)self, (TextEmoticonsCore__CustomEmoji*)param1);
 }
 

@@ -5,7 +5,7 @@ QWebEngineGlobalSettings__DnsMode* q_webengineglobalsettings__dnsmode_new() {
     return QWebEngineGlobalSettings__DnsMode_New();
 }
 
-uint8_t q_webengineglobalsettings__dnsmode_secure_mode(void* self) {
+uint8_t q_webengineglobalsettings__dnsmode_secure_mode(const void* self) {
     return QWebEngineGlobalSettings__DnsMode_SecureMode((QWebEngineGlobalSettings__DnsMode*)self);
 }
 
@@ -13,7 +13,7 @@ void q_webengineglobalsettings__dnsmode_set_secure_mode(void* self, uint8_t secu
     QWebEngineGlobalSettings__DnsMode_SetSecureMode((QWebEngineGlobalSettings__DnsMode*)self, secureMode);
 }
 
-const char** q_webengineglobalsettings__dnsmode_server_templates(void* self) {
+const char** q_webengineglobalsettings__dnsmode_server_templates(const void* self) {
     libqt_list serverTemplates_arr = QWebEngineGlobalSettings__DnsMode_ServerTemplates((QWebEngineGlobalSettings__DnsMode*)self);
     const libqt_string* serverTemplates_qstr = (libqt_string*)serverTemplates_arr.data.ptr;
     const char** serverTemplates_ret = (const char**)malloc((serverTemplates_arr.len + 1) * sizeof(const char*));

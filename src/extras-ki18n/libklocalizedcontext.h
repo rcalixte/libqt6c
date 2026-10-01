@@ -24,26 +24,26 @@ KLocalizedContext* k_localizedcontext_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-const QMetaObject* k_localizedcontext_meta_object(void* self);
+const QMetaObject* k_localizedcontext_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KLocalizedContext*
-/// @param callback const QMetaObject* func()
+/// @param self const KLocalizedContext*
+/// @param callback const QMetaObject* func(const KLocalizedContext* self)
 ///
-void k_localizedcontext_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_localizedcontext_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-const QMetaObject* k_localizedcontext_super_meta_object(void* self);
+const QMetaObject* k_localizedcontext_super_meta_object(const void* self);
 
 /// @param self KLocalizedContext*
 /// @param param1 const char*
@@ -99,9 +99,9 @@ const char* k_localizedcontext_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-const char* k_localizedcontext_translation_domain(void* self);
+const char* k_localizedcontext_translation_domain(const void* self);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#setTranslationDomain)
 ///
@@ -114,169 +114,169 @@ void k_localizedcontext_set_translation_domain(void* self, const char* domain);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 ///
-const char* k_localizedcontext_i18n(void* self, const char* message);
+const char* k_localizedcontext_i18n(const void* self, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 ///
-const char* k_localizedcontext_i18nc(void* self, const char* context, const char* message);
+const char* k_localizedcontext_i18nc(const void* self, const char* context, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 ///
-const char* k_localizedcontext_i18np(void* self, const char* singular, const char* plural);
+const char* k_localizedcontext_i18np(const void* self, const char* singular, const char* plural);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
 ///
-const char* k_localizedcontext_i18ncp(void* self, const char* context, const char* singular, const char* plural);
+const char* k_localizedcontext_i18ncp(const void* self, const char* context, const char* singular, const char* plural);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 ///
-const char* k_localizedcontext_i18nd(void* self, const char* domain, const char* message);
+const char* k_localizedcontext_i18nd(const void* self, const char* domain, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
 ///
-const char* k_localizedcontext_i18ndc(void* self, const char* domain, const char* context, const char* message);
+const char* k_localizedcontext_i18ndc(const void* self, const char* domain, const char* context, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
 ///
-const char* k_localizedcontext_i18ndp(void* self, const char* domain, const char* singular, const char* plural);
+const char* k_localizedcontext_i18ndp(const void* self, const char* domain, const char* singular, const char* plural);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
 ///
-const char* k_localizedcontext_i18ndcp(void* self, const char* domain, const char* context, const char* singular, const char* plural);
+const char* k_localizedcontext_i18ndcp(const void* self, const char* domain, const char* context, const char* singular, const char* plural);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 ///
-const char* k_localizedcontext_xi18n(void* self, const char* message);
+const char* k_localizedcontext_xi18n(const void* self, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 ///
-const char* k_localizedcontext_xi18nc(void* self, const char* context, const char* message);
+const char* k_localizedcontext_xi18nc(const void* self, const char* context, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 ///
-const char* k_localizedcontext_xi18np(void* self, const char* singular, const char* plural);
+const char* k_localizedcontext_xi18np(const void* self, const char* singular, const char* plural);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
 ///
-const char* k_localizedcontext_xi18ncp(void* self, const char* context, const char* singular, const char* plural);
+const char* k_localizedcontext_xi18ncp(const void* self, const char* context, const char* singular, const char* plural);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 ///
-const char* k_localizedcontext_xi18nd(void* self, const char* domain, const char* message);
+const char* k_localizedcontext_xi18nd(const void* self, const char* domain, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
 ///
-const char* k_localizedcontext_xi18ndc(void* self, const char* domain, const char* context, const char* message);
+const char* k_localizedcontext_xi18ndc(const void* self, const char* domain, const char* context, const char* message);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
 ///
-const char* k_localizedcontext_xi18ndp(void* self, const char* domain, const char* singular, const char* plural);
+const char* k_localizedcontext_xi18ndp(const void* self, const char* domain, const char* singular, const char* plural);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
 ///
-const char* k_localizedcontext_xi18ndcp(void* self, const char* domain, const char* context, const char* singular, const char* plural);
+const char* k_localizedcontext_xi18ndcp(const void* self, const char* domain, const char* context, const char* singular, const char* plural);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#translationDomainChanged)
 ///
@@ -315,53 +315,53 @@ const char* k_localizedcontext_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 ///
-const char* k_localizedcontext_i18n2(void* self, const char* message, void* param1);
+const char* k_localizedcontext_i18n2(const void* self, const char* message, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 ///
-const char* k_localizedcontext_i18n3(void* self, const char* message, void* param1, void* param2);
+const char* k_localizedcontext_i18n3(const void* self, const char* message, const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 ///
-const char* k_localizedcontext_i18n4(void* self, const char* message, void* param1, void* param2, void* param3);
+const char* k_localizedcontext_i18n4(const void* self, const char* message, const void* param1, const void* param2, const void* param3);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 /// @param param4 QVariant*
 ///
-const char* k_localizedcontext_i18n5(void* self, const char* message, void* param1, void* param2, void* param3, void* param4);
+const char* k_localizedcontext_i18n5(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
@@ -369,13 +369,13 @@ const char* k_localizedcontext_i18n5(void* self, const char* message, void* para
 /// @param param4 QVariant*
 /// @param param5 QVariant*
 ///
-const char* k_localizedcontext_i18n6(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
+const char* k_localizedcontext_i18n6(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
@@ -384,13 +384,13 @@ const char* k_localizedcontext_i18n6(void* self, const char* message, void* para
 /// @param param5 QVariant*
 /// @param param6 QVariant*
 ///
-const char* k_localizedcontext_i18n7(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
+const char* k_localizedcontext_i18n7(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
@@ -400,13 +400,13 @@ const char* k_localizedcontext_i18n7(void* self, const char* message, void* para
 /// @param param6 QVariant*
 /// @param param7 QVariant*
 ///
-const char* k_localizedcontext_i18n8(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
+const char* k_localizedcontext_i18n8(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
@@ -417,13 +417,13 @@ const char* k_localizedcontext_i18n8(void* self, const char* message, void* para
 /// @param param7 QVariant*
 /// @param param8 QVariant*
 ///
-const char* k_localizedcontext_i18n9(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
+const char* k_localizedcontext_i18n9(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
@@ -435,13 +435,13 @@ const char* k_localizedcontext_i18n9(void* self, const char* message, void* para
 /// @param param8 QVariant*
 /// @param param9 QVariant*
 ///
-const char* k_localizedcontext_i18n10(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
+const char* k_localizedcontext_i18n10(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
@@ -454,49 +454,49 @@ const char* k_localizedcontext_i18n10(void* self, const char* message, void* par
 /// @param param9 QVariant*
 /// @param param10 QVariant*
 ///
-const char* k_localizedcontext_i18n11(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
+const char* k_localizedcontext_i18n11(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
 ///
-const char* k_localizedcontext_i18nc3(void* self, const char* context, const char* message, void* param1);
+const char* k_localizedcontext_i18nc3(const void* self, const char* context, const char* message, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 ///
-const char* k_localizedcontext_i18nc4(void* self, const char* context, const char* message, void* param1, void* param2);
+const char* k_localizedcontext_i18nc4(const void* self, const char* context, const char* message, const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 ///
-const char* k_localizedcontext_i18nc5(void* self, const char* context, const char* message, void* param1, void* param2, void* param3);
+const char* k_localizedcontext_i18nc5(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -504,13 +504,13 @@ const char* k_localizedcontext_i18nc5(void* self, const char* context, const cha
 /// @param param3 QVariant*
 /// @param param4 QVariant*
 ///
-const char* k_localizedcontext_i18nc6(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4);
+const char* k_localizedcontext_i18nc6(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -519,13 +519,13 @@ const char* k_localizedcontext_i18nc6(void* self, const char* context, const cha
 /// @param param4 QVariant*
 /// @param param5 QVariant*
 ///
-const char* k_localizedcontext_i18nc7(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
+const char* k_localizedcontext_i18nc7(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -535,13 +535,13 @@ const char* k_localizedcontext_i18nc7(void* self, const char* context, const cha
 /// @param param5 QVariant*
 /// @param param6 QVariant*
 ///
-const char* k_localizedcontext_i18nc8(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
+const char* k_localizedcontext_i18nc8(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -552,13 +552,13 @@ const char* k_localizedcontext_i18nc8(void* self, const char* context, const cha
 /// @param param6 QVariant*
 /// @param param7 QVariant*
 ///
-const char* k_localizedcontext_i18nc9(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
+const char* k_localizedcontext_i18nc9(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -570,13 +570,13 @@ const char* k_localizedcontext_i18nc9(void* self, const char* context, const cha
 /// @param param7 QVariant*
 /// @param param8 QVariant*
 ///
-const char* k_localizedcontext_i18nc10(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
+const char* k_localizedcontext_i18nc10(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -589,13 +589,13 @@ const char* k_localizedcontext_i18nc10(void* self, const char* context, const ch
 /// @param param8 QVariant*
 /// @param param9 QVariant*
 ///
-const char* k_localizedcontext_i18nc11(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
+const char* k_localizedcontext_i18nc11(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -609,49 +609,49 @@ const char* k_localizedcontext_i18nc11(void* self, const char* context, const ch
 /// @param param9 QVariant*
 /// @param param10 QVariant*
 ///
-const char* k_localizedcontext_i18nc12(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
+const char* k_localizedcontext_i18nc12(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
 ///
-const char* k_localizedcontext_i18np3(void* self, const char* singular, const char* plural, void* param1);
+const char* k_localizedcontext_i18np3(const void* self, const char* singular, const char* plural, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 ///
-const char* k_localizedcontext_i18np4(void* self, const char* singular, const char* plural, void* param1, void* param2);
+const char* k_localizedcontext_i18np4(const void* self, const char* singular, const char* plural, const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 ///
-const char* k_localizedcontext_i18np5(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3);
+const char* k_localizedcontext_i18np5(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
@@ -659,13 +659,13 @@ const char* k_localizedcontext_i18np5(void* self, const char* singular, const ch
 /// @param param3 QVariant*
 /// @param param4 QVariant*
 ///
-const char* k_localizedcontext_i18np6(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
+const char* k_localizedcontext_i18np6(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
@@ -674,13 +674,13 @@ const char* k_localizedcontext_i18np6(void* self, const char* singular, const ch
 /// @param param4 QVariant*
 /// @param param5 QVariant*
 ///
-const char* k_localizedcontext_i18np7(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
+const char* k_localizedcontext_i18np7(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
@@ -690,13 +690,13 @@ const char* k_localizedcontext_i18np7(void* self, const char* singular, const ch
 /// @param param5 QVariant*
 /// @param param6 QVariant*
 ///
-const char* k_localizedcontext_i18np8(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
+const char* k_localizedcontext_i18np8(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
@@ -707,13 +707,13 @@ const char* k_localizedcontext_i18np8(void* self, const char* singular, const ch
 /// @param param6 QVariant*
 /// @param param7 QVariant*
 ///
-const char* k_localizedcontext_i18np9(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
+const char* k_localizedcontext_i18np9(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
@@ -725,13 +725,13 @@ const char* k_localizedcontext_i18np9(void* self, const char* singular, const ch
 /// @param param7 QVariant*
 /// @param param8 QVariant*
 ///
-const char* k_localizedcontext_i18np10(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
+const char* k_localizedcontext_i18np10(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
@@ -744,13 +744,13 @@ const char* k_localizedcontext_i18np10(void* self, const char* singular, const c
 /// @param param8 QVariant*
 /// @param param9 QVariant*
 ///
-const char* k_localizedcontext_i18np11(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
+const char* k_localizedcontext_i18np11(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18np)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
@@ -764,38 +764,38 @@ const char* k_localizedcontext_i18np11(void* self, const char* singular, const c
 /// @param param9 QVariant*
 /// @param param10 QVariant*
 ///
-const char* k_localizedcontext_i18np12(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
+const char* k_localizedcontext_i18np12(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
 ///
-const char* k_localizedcontext_i18ncp4(void* self, const char* context, const char* singular, const char* plural, void* param1);
+const char* k_localizedcontext_i18ncp4(const void* self, const char* context, const char* singular, const char* plural, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 ///
-const char* k_localizedcontext_i18ncp5(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2);
+const char* k_localizedcontext_i18ncp5(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -803,13 +803,13 @@ const char* k_localizedcontext_i18ncp5(void* self, const char* context, const ch
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 ///
-const char* k_localizedcontext_i18ncp6(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3);
+const char* k_localizedcontext_i18ncp6(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -818,13 +818,13 @@ const char* k_localizedcontext_i18ncp6(void* self, const char* context, const ch
 /// @param param3 QVariant*
 /// @param param4 QVariant*
 ///
-const char* k_localizedcontext_i18ncp7(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
+const char* k_localizedcontext_i18ncp7(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -834,13 +834,13 @@ const char* k_localizedcontext_i18ncp7(void* self, const char* context, const ch
 /// @param param4 QVariant*
 /// @param param5 QVariant*
 ///
-const char* k_localizedcontext_i18ncp8(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
+const char* k_localizedcontext_i18ncp8(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -851,13 +851,13 @@ const char* k_localizedcontext_i18ncp8(void* self, const char* context, const ch
 /// @param param5 QVariant*
 /// @param param6 QVariant*
 ///
-const char* k_localizedcontext_i18ncp9(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
+const char* k_localizedcontext_i18ncp9(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -869,13 +869,13 @@ const char* k_localizedcontext_i18ncp9(void* self, const char* context, const ch
 /// @param param6 QVariant*
 /// @param param7 QVariant*
 ///
-const char* k_localizedcontext_i18ncp10(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
+const char* k_localizedcontext_i18ncp10(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -888,13 +888,13 @@ const char* k_localizedcontext_i18ncp10(void* self, const char* context, const c
 /// @param param7 QVariant*
 /// @param param8 QVariant*
 ///
-const char* k_localizedcontext_i18ncp11(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
+const char* k_localizedcontext_i18ncp11(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -908,13 +908,13 @@ const char* k_localizedcontext_i18ncp11(void* self, const char* context, const c
 /// @param param8 QVariant*
 /// @param param9 QVariant*
 ///
-const char* k_localizedcontext_i18ncp12(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
+const char* k_localizedcontext_i18ncp12(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ncp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -929,49 +929,49 @@ const char* k_localizedcontext_i18ncp12(void* self, const char* context, const c
 /// @param param9 QVariant*
 /// @param param10 QVariant*
 ///
-const char* k_localizedcontext_i18ncp13(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
+const char* k_localizedcontext_i18ncp13(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
 ///
-const char* k_localizedcontext_i18nd3(void* self, const char* domain, const char* message, void* param1);
+const char* k_localizedcontext_i18nd3(const void* self, const char* domain, const char* message, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 ///
-const char* k_localizedcontext_i18nd4(void* self, const char* domain, const char* message, void* param1, void* param2);
+const char* k_localizedcontext_i18nd4(const void* self, const char* domain, const char* message, const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 ///
-const char* k_localizedcontext_i18nd5(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3);
+const char* k_localizedcontext_i18nd5(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -979,13 +979,13 @@ const char* k_localizedcontext_i18nd5(void* self, const char* domain, const char
 /// @param param3 QVariant*
 /// @param param4 QVariant*
 ///
-const char* k_localizedcontext_i18nd6(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4);
+const char* k_localizedcontext_i18nd6(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -994,13 +994,13 @@ const char* k_localizedcontext_i18nd6(void* self, const char* domain, const char
 /// @param param4 QVariant*
 /// @param param5 QVariant*
 ///
-const char* k_localizedcontext_i18nd7(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
+const char* k_localizedcontext_i18nd7(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -1010,13 +1010,13 @@ const char* k_localizedcontext_i18nd7(void* self, const char* domain, const char
 /// @param param5 QVariant*
 /// @param param6 QVariant*
 ///
-const char* k_localizedcontext_i18nd8(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
+const char* k_localizedcontext_i18nd8(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -1027,13 +1027,13 @@ const char* k_localizedcontext_i18nd8(void* self, const char* domain, const char
 /// @param param6 QVariant*
 /// @param param7 QVariant*
 ///
-const char* k_localizedcontext_i18nd9(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
+const char* k_localizedcontext_i18nd9(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -1045,13 +1045,13 @@ const char* k_localizedcontext_i18nd9(void* self, const char* domain, const char
 /// @param param7 QVariant*
 /// @param param8 QVariant*
 ///
-const char* k_localizedcontext_i18nd10(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
+const char* k_localizedcontext_i18nd10(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -1064,13 +1064,13 @@ const char* k_localizedcontext_i18nd10(void* self, const char* domain, const cha
 /// @param param8 QVariant*
 /// @param param9 QVariant*
 ///
-const char* k_localizedcontext_i18nd11(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
+const char* k_localizedcontext_i18nd11(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18nd)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param message const char*
 /// @param param1 QVariant*
@@ -1084,38 +1084,38 @@ const char* k_localizedcontext_i18nd11(void* self, const char* domain, const cha
 /// @param param9 QVariant*
 /// @param param10 QVariant*
 ///
-const char* k_localizedcontext_i18nd12(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
+const char* k_localizedcontext_i18nd12(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
 ///
-const char* k_localizedcontext_i18ndc4(void* self, const char* domain, const char* context, const char* message, void* param1);
+const char* k_localizedcontext_i18ndc4(const void* self, const char* domain, const char* context, const char* message, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 ///
-const char* k_localizedcontext_i18ndc5(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2);
+const char* k_localizedcontext_i18ndc5(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
@@ -1123,13 +1123,13 @@ const char* k_localizedcontext_i18ndc5(void* self, const char* domain, const cha
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 ///
-const char* k_localizedcontext_i18ndc6(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3);
+const char* k_localizedcontext_i18ndc6(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
@@ -1138,13 +1138,13 @@ const char* k_localizedcontext_i18ndc6(void* self, const char* domain, const cha
 /// @param param3 QVariant*
 /// @param param4 QVariant*
 ///
-const char* k_localizedcontext_i18ndc7(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4);
+const char* k_localizedcontext_i18ndc7(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
@@ -1154,13 +1154,13 @@ const char* k_localizedcontext_i18ndc7(void* self, const char* domain, const cha
 /// @param param4 QVariant*
 /// @param param5 QVariant*
 ///
-const char* k_localizedcontext_i18ndc8(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
+const char* k_localizedcontext_i18ndc8(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
@@ -1171,13 +1171,13 @@ const char* k_localizedcontext_i18ndc8(void* self, const char* domain, const cha
 /// @param param5 QVariant*
 /// @param param6 QVariant*
 ///
-const char* k_localizedcontext_i18ndc9(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
+const char* k_localizedcontext_i18ndc9(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
@@ -1189,13 +1189,13 @@ const char* k_localizedcontext_i18ndc9(void* self, const char* domain, const cha
 /// @param param6 QVariant*
 /// @param param7 QVariant*
 ///
-const char* k_localizedcontext_i18ndc10(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
+const char* k_localizedcontext_i18ndc10(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
@@ -1208,13 +1208,13 @@ const char* k_localizedcontext_i18ndc10(void* self, const char* domain, const ch
 /// @param param7 QVariant*
 /// @param param8 QVariant*
 ///
-const char* k_localizedcontext_i18ndc11(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
+const char* k_localizedcontext_i18ndc11(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
@@ -1228,13 +1228,13 @@ const char* k_localizedcontext_i18ndc11(void* self, const char* domain, const ch
 /// @param param8 QVariant*
 /// @param param9 QVariant*
 ///
-const char* k_localizedcontext_i18ndc12(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
+const char* k_localizedcontext_i18ndc12(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndc)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param message const char*
@@ -1249,38 +1249,38 @@ const char* k_localizedcontext_i18ndc12(void* self, const char* domain, const ch
 /// @param param9 QVariant*
 /// @param param10 QVariant*
 ///
-const char* k_localizedcontext_i18ndc13(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
+const char* k_localizedcontext_i18ndc13(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
 ///
-const char* k_localizedcontext_i18ndp4(void* self, const char* domain, const char* singular, const char* plural, void* param1);
+const char* k_localizedcontext_i18ndp4(const void* self, const char* domain, const char* singular, const char* plural, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 ///
-const char* k_localizedcontext_i18ndp5(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2);
+const char* k_localizedcontext_i18ndp5(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -1288,13 +1288,13 @@ const char* k_localizedcontext_i18ndp5(void* self, const char* domain, const cha
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 ///
-const char* k_localizedcontext_i18ndp6(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3);
+const char* k_localizedcontext_i18ndp6(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -1303,13 +1303,13 @@ const char* k_localizedcontext_i18ndp6(void* self, const char* domain, const cha
 /// @param param3 QVariant*
 /// @param param4 QVariant*
 ///
-const char* k_localizedcontext_i18ndp7(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
+const char* k_localizedcontext_i18ndp7(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -1319,13 +1319,13 @@ const char* k_localizedcontext_i18ndp7(void* self, const char* domain, const cha
 /// @param param4 QVariant*
 /// @param param5 QVariant*
 ///
-const char* k_localizedcontext_i18ndp8(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
+const char* k_localizedcontext_i18ndp8(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -1336,13 +1336,13 @@ const char* k_localizedcontext_i18ndp8(void* self, const char* domain, const cha
 /// @param param5 QVariant*
 /// @param param6 QVariant*
 ///
-const char* k_localizedcontext_i18ndp9(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
+const char* k_localizedcontext_i18ndp9(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -1354,13 +1354,13 @@ const char* k_localizedcontext_i18ndp9(void* self, const char* domain, const cha
 /// @param param6 QVariant*
 /// @param param7 QVariant*
 ///
-const char* k_localizedcontext_i18ndp10(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
+const char* k_localizedcontext_i18ndp10(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -1373,13 +1373,13 @@ const char* k_localizedcontext_i18ndp10(void* self, const char* domain, const ch
 /// @param param7 QVariant*
 /// @param param8 QVariant*
 ///
-const char* k_localizedcontext_i18ndp11(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
+const char* k_localizedcontext_i18ndp11(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -1393,13 +1393,13 @@ const char* k_localizedcontext_i18ndp11(void* self, const char* domain, const ch
 /// @param param8 QVariant*
 /// @param param9 QVariant*
 ///
-const char* k_localizedcontext_i18ndp12(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
+const char* k_localizedcontext_i18ndp12(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param singular const char*
 /// @param plural const char*
@@ -1414,26 +1414,26 @@ const char* k_localizedcontext_i18ndp12(void* self, const char* domain, const ch
 /// @param param9 QVariant*
 /// @param param10 QVariant*
 ///
-const char* k_localizedcontext_i18ndp13(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
+const char* k_localizedcontext_i18ndp13(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
 /// @param plural const char*
 /// @param param1 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp5(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1);
+const char* k_localizedcontext_i18ndcp5(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -1441,13 +1441,13 @@ const char* k_localizedcontext_i18ndcp5(void* self, const char* domain, const ch
 /// @param param1 QVariant*
 /// @param param2 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp6(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2);
+const char* k_localizedcontext_i18ndcp6(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -1456,13 +1456,13 @@ const char* k_localizedcontext_i18ndcp6(void* self, const char* domain, const ch
 /// @param param2 QVariant*
 /// @param param3 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp7(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3);
+const char* k_localizedcontext_i18ndcp7(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -1472,13 +1472,13 @@ const char* k_localizedcontext_i18ndcp7(void* self, const char* domain, const ch
 /// @param param3 QVariant*
 /// @param param4 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp8(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
+const char* k_localizedcontext_i18ndcp8(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -1489,13 +1489,13 @@ const char* k_localizedcontext_i18ndcp8(void* self, const char* domain, const ch
 /// @param param4 QVariant*
 /// @param param5 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp9(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
+const char* k_localizedcontext_i18ndcp9(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -1507,13 +1507,13 @@ const char* k_localizedcontext_i18ndcp9(void* self, const char* domain, const ch
 /// @param param5 QVariant*
 /// @param param6 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp10(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
+const char* k_localizedcontext_i18ndcp10(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -1526,13 +1526,13 @@ const char* k_localizedcontext_i18ndcp10(void* self, const char* domain, const c
 /// @param param6 QVariant*
 /// @param param7 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp11(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
+const char* k_localizedcontext_i18ndcp11(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -1546,13 +1546,13 @@ const char* k_localizedcontext_i18ndcp11(void* self, const char* domain, const c
 /// @param param7 QVariant*
 /// @param param8 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp12(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
+const char* k_localizedcontext_i18ndcp12(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -1567,1293 +1567,13 @@ const char* k_localizedcontext_i18ndcp12(void* self, const char* domain, const c
 /// @param param8 QVariant*
 /// @param param9 QVariant*
 ///
-const char* k_localizedcontext_i18ndcp13(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
+const char* k_localizedcontext_i18ndcp13(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
 
 /// [Upstream resources](https://api.kde.org/klocalizedcontext.html#i18ndcp)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-/// @param param10 QVariant*
-///
-const char* k_localizedcontext_i18ndcp14(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-///
-const char* k_localizedcontext_xi18n2(void* self, const char* message, void* param1);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-///
-const char* k_localizedcontext_xi18n3(void* self, const char* message, void* param1, void* param2);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-///
-const char* k_localizedcontext_xi18n4(void* self, const char* message, void* param1, void* param2, void* param3);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-///
-const char* k_localizedcontext_xi18n5(void* self, const char* message, void* param1, void* param2, void* param3, void* param4);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-///
-const char* k_localizedcontext_xi18n6(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-///
-const char* k_localizedcontext_xi18n7(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-///
-const char* k_localizedcontext_xi18n8(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-///
-const char* k_localizedcontext_xi18n9(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-///
-const char* k_localizedcontext_xi18n10(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-/// @param param10 QVariant*
-///
-const char* k_localizedcontext_xi18n11(void* self, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-///
-const char* k_localizedcontext_xi18nc3(void* self, const char* context, const char* message, void* param1);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-///
-const char* k_localizedcontext_xi18nc4(void* self, const char* context, const char* message, void* param1, void* param2);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-///
-const char* k_localizedcontext_xi18nc5(void* self, const char* context, const char* message, void* param1, void* param2, void* param3);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-///
-const char* k_localizedcontext_xi18nc6(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-///
-const char* k_localizedcontext_xi18nc7(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-///
-const char* k_localizedcontext_xi18nc8(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-///
-const char* k_localizedcontext_xi18nc9(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-///
-const char* k_localizedcontext_xi18nc10(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-///
-const char* k_localizedcontext_xi18nc11(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-/// @param param10 QVariant*
-///
-const char* k_localizedcontext_xi18nc12(void* self, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-///
-const char* k_localizedcontext_xi18np3(void* self, const char* singular, const char* plural, void* param1);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-///
-const char* k_localizedcontext_xi18np4(void* self, const char* singular, const char* plural, void* param1, void* param2);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-///
-const char* k_localizedcontext_xi18np5(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-///
-const char* k_localizedcontext_xi18np6(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-///
-const char* k_localizedcontext_xi18np7(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-///
-const char* k_localizedcontext_xi18np8(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-///
-const char* k_localizedcontext_xi18np9(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-///
-const char* k_localizedcontext_xi18np10(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-///
-const char* k_localizedcontext_xi18np11(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-/// @param param10 QVariant*
-///
-const char* k_localizedcontext_xi18np12(void* self, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-///
-const char* k_localizedcontext_xi18ncp4(void* self, const char* context, const char* singular, const char* plural, void* param1);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-///
-const char* k_localizedcontext_xi18ncp5(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-///
-const char* k_localizedcontext_xi18ncp6(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-///
-const char* k_localizedcontext_xi18ncp7(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-///
-const char* k_localizedcontext_xi18ncp8(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-///
-const char* k_localizedcontext_xi18ncp9(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-///
-const char* k_localizedcontext_xi18ncp10(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-///
-const char* k_localizedcontext_xi18ncp11(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-///
-const char* k_localizedcontext_xi18ncp12(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-/// @param param10 QVariant*
-///
-const char* k_localizedcontext_xi18ncp13(void* self, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-///
-const char* k_localizedcontext_xi18nd3(void* self, const char* domain, const char* message, void* param1);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-///
-const char* k_localizedcontext_xi18nd4(void* self, const char* domain, const char* message, void* param1, void* param2);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-///
-const char* k_localizedcontext_xi18nd5(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-///
-const char* k_localizedcontext_xi18nd6(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-///
-const char* k_localizedcontext_xi18nd7(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-///
-const char* k_localizedcontext_xi18nd8(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-///
-const char* k_localizedcontext_xi18nd9(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-///
-const char* k_localizedcontext_xi18nd10(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-///
-const char* k_localizedcontext_xi18nd11(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-/// @param param10 QVariant*
-///
-const char* k_localizedcontext_xi18nd12(void* self, const char* domain, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-///
-const char* k_localizedcontext_xi18ndc4(void* self, const char* domain, const char* context, const char* message, void* param1);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-///
-const char* k_localizedcontext_xi18ndc5(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-///
-const char* k_localizedcontext_xi18ndc6(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-///
-const char* k_localizedcontext_xi18ndc7(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-///
-const char* k_localizedcontext_xi18ndc8(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-///
-const char* k_localizedcontext_xi18ndc9(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-///
-const char* k_localizedcontext_xi18ndc10(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-///
-const char* k_localizedcontext_xi18ndc11(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-///
-const char* k_localizedcontext_xi18ndc12(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param message const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-/// @param param10 QVariant*
-///
-const char* k_localizedcontext_xi18ndc13(void* self, const char* domain, const char* context, const char* message, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-///
-const char* k_localizedcontext_xi18ndp4(void* self, const char* domain, const char* singular, const char* plural, void* param1);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-///
-const char* k_localizedcontext_xi18ndp5(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-///
-const char* k_localizedcontext_xi18ndp6(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-///
-const char* k_localizedcontext_xi18ndp7(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-///
-const char* k_localizedcontext_xi18ndp8(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-///
-const char* k_localizedcontext_xi18ndp9(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-///
-const char* k_localizedcontext_xi18ndp10(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-///
-const char* k_localizedcontext_xi18ndp11(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-///
-const char* k_localizedcontext_xi18ndp12(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-/// @param param10 QVariant*
-///
-const char* k_localizedcontext_xi18ndp13(void* self, const char* domain, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp5(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp6(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp7(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp8(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp9(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp10(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp11(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp12(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
-/// @param domain const char*
-/// @param context const char*
-/// @param singular const char*
-/// @param plural const char*
-/// @param param1 QVariant*
-/// @param param2 QVariant*
-/// @param param3 QVariant*
-/// @param param4 QVariant*
-/// @param param5 QVariant*
-/// @param param6 QVariant*
-/// @param param7 QVariant*
-/// @param param8 QVariant*
-/// @param param9 QVariant*
-///
-const char* k_localizedcontext_xi18ndcp13(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9);
-
-/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
-///
-/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
-///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param domain const char*
 /// @param context const char*
 /// @param singular const char*
@@ -2869,7 +1589,1287 @@ const char* k_localizedcontext_xi18ndcp13(void* self, const char* domain, const 
 /// @param param9 QVariant*
 /// @param param10 QVariant*
 ///
-const char* k_localizedcontext_xi18ndcp14(void* self, const char* domain, const char* context, const char* singular, const char* plural, void* param1, void* param2, void* param3, void* param4, void* param5, void* param6, void* param7, void* param8, void* param9, void* param10);
+const char* k_localizedcontext_i18ndcp14(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+///
+const char* k_localizedcontext_xi18n2(const void* self, const char* message, const void* param1);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+///
+const char* k_localizedcontext_xi18n3(const void* self, const char* message, const void* param1, const void* param2);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+///
+const char* k_localizedcontext_xi18n4(const void* self, const char* message, const void* param1, const void* param2, const void* param3);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+///
+const char* k_localizedcontext_xi18n5(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+///
+const char* k_localizedcontext_xi18n6(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+///
+const char* k_localizedcontext_xi18n7(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+///
+const char* k_localizedcontext_xi18n8(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+///
+const char* k_localizedcontext_xi18n9(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+///
+const char* k_localizedcontext_xi18n10(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18n)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+/// @param param10 QVariant*
+///
+const char* k_localizedcontext_xi18n11(const void* self, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+///
+const char* k_localizedcontext_xi18nc3(const void* self, const char* context, const char* message, const void* param1);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+///
+const char* k_localizedcontext_xi18nc4(const void* self, const char* context, const char* message, const void* param1, const void* param2);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+///
+const char* k_localizedcontext_xi18nc5(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+///
+const char* k_localizedcontext_xi18nc6(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+///
+const char* k_localizedcontext_xi18nc7(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+///
+const char* k_localizedcontext_xi18nc8(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+///
+const char* k_localizedcontext_xi18nc9(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+///
+const char* k_localizedcontext_xi18nc10(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+///
+const char* k_localizedcontext_xi18nc11(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+/// @param param10 QVariant*
+///
+const char* k_localizedcontext_xi18nc12(const void* self, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+///
+const char* k_localizedcontext_xi18np3(const void* self, const char* singular, const char* plural, const void* param1);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+///
+const char* k_localizedcontext_xi18np4(const void* self, const char* singular, const char* plural, const void* param1, const void* param2);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+///
+const char* k_localizedcontext_xi18np5(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+///
+const char* k_localizedcontext_xi18np6(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+///
+const char* k_localizedcontext_xi18np7(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+///
+const char* k_localizedcontext_xi18np8(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+///
+const char* k_localizedcontext_xi18np9(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+///
+const char* k_localizedcontext_xi18np10(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+///
+const char* k_localizedcontext_xi18np11(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18np)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+/// @param param10 QVariant*
+///
+const char* k_localizedcontext_xi18np12(const void* self, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+///
+const char* k_localizedcontext_xi18ncp4(const void* self, const char* context, const char* singular, const char* plural, const void* param1);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+///
+const char* k_localizedcontext_xi18ncp5(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+///
+const char* k_localizedcontext_xi18ncp6(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+///
+const char* k_localizedcontext_xi18ncp7(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+///
+const char* k_localizedcontext_xi18ncp8(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+///
+const char* k_localizedcontext_xi18ncp9(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+///
+const char* k_localizedcontext_xi18ncp10(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+///
+const char* k_localizedcontext_xi18ncp11(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+///
+const char* k_localizedcontext_xi18ncp12(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ncp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+/// @param param10 QVariant*
+///
+const char* k_localizedcontext_xi18ncp13(const void* self, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+///
+const char* k_localizedcontext_xi18nd3(const void* self, const char* domain, const char* message, const void* param1);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+///
+const char* k_localizedcontext_xi18nd4(const void* self, const char* domain, const char* message, const void* param1, const void* param2);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+///
+const char* k_localizedcontext_xi18nd5(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+///
+const char* k_localizedcontext_xi18nd6(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+///
+const char* k_localizedcontext_xi18nd7(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+///
+const char* k_localizedcontext_xi18nd8(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+///
+const char* k_localizedcontext_xi18nd9(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+///
+const char* k_localizedcontext_xi18nd10(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+///
+const char* k_localizedcontext_xi18nd11(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18nd)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+/// @param param10 QVariant*
+///
+const char* k_localizedcontext_xi18nd12(const void* self, const char* domain, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+///
+const char* k_localizedcontext_xi18ndc4(const void* self, const char* domain, const char* context, const char* message, const void* param1);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+///
+const char* k_localizedcontext_xi18ndc5(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+///
+const char* k_localizedcontext_xi18ndc6(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+///
+const char* k_localizedcontext_xi18ndc7(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+///
+const char* k_localizedcontext_xi18ndc8(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+///
+const char* k_localizedcontext_xi18ndc9(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+///
+const char* k_localizedcontext_xi18ndc10(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+///
+const char* k_localizedcontext_xi18ndc11(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+///
+const char* k_localizedcontext_xi18ndc12(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndc)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param message const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+/// @param param10 QVariant*
+///
+const char* k_localizedcontext_xi18ndc13(const void* self, const char* domain, const char* context, const char* message, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+///
+const char* k_localizedcontext_xi18ndp4(const void* self, const char* domain, const char* singular, const char* plural, const void* param1);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+///
+const char* k_localizedcontext_xi18ndp5(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+///
+const char* k_localizedcontext_xi18ndp6(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+///
+const char* k_localizedcontext_xi18ndp7(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+///
+const char* k_localizedcontext_xi18ndp8(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+///
+const char* k_localizedcontext_xi18ndp9(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+///
+const char* k_localizedcontext_xi18ndp10(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+///
+const char* k_localizedcontext_xi18ndp11(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+///
+const char* k_localizedcontext_xi18ndp12(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+/// @param param10 QVariant*
+///
+const char* k_localizedcontext_xi18ndp13(const void* self, const char* domain, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp5(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp6(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp7(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp8(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp9(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp10(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp11(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp12(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp13(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9);
+
+/// [Upstream resources](https://api.kde.org/klocalizedcontext.html#xi18ndcp)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self const KLocalizedContext*
+/// @param domain const char*
+/// @param context const char*
+/// @param singular const char*
+/// @param plural const char*
+/// @param param1 QVariant*
+/// @param param2 QVariant*
+/// @param param3 QVariant*
+/// @param param4 QVariant*
+/// @param param5 QVariant*
+/// @param param6 QVariant*
+/// @param param7 QVariant*
+/// @param param8 QVariant*
+/// @param param9 QVariant*
+/// @param param10 QVariant*
+///
+const char* k_localizedcontext_xi18ndcp14(const void* self, const char* domain, const char* context, const char* singular, const char* plural, const void* param1, const void* param2, const void* param3, const void* param4, const void* param5, const void* param6, const void* param7, const void* param8, const void* param9, const void* param10);
 
 /// Inherited from QObject
 ///
@@ -2877,9 +2877,9 @@ const char* k_localizedcontext_xi18ndcp14(void* self, const char* domain, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-const char* k_localizedcontext_object_name(void* self);
+const char* k_localizedcontext_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2894,33 +2894,33 @@ void k_localizedcontext_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-bool k_localizedcontext_is_widget_type(void* self);
+bool k_localizedcontext_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-bool k_localizedcontext_is_window_type(void* self);
+bool k_localizedcontext_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-bool k_localizedcontext_is_quick_item_type(void* self);
+bool k_localizedcontext_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-bool k_localizedcontext_signals_blocked(void* self);
+bool k_localizedcontext_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2935,9 +2935,9 @@ bool k_localizedcontext_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-QThread* k_localizedcontext_thread(void* self);
+QThread* k_localizedcontext_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -2988,11 +2988,11 @@ void k_localizedcontext_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_localizedcontext_children(void* self);
+libqt_list k_localizedcontext_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3030,7 +3030,7 @@ void k_localizedcontext_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_localizedcontext_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_localizedcontext_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3041,18 +3041,18 @@ QMetaObject__Connection* k_localizedcontext_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_localizedcontext_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_localizedcontext_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_localizedcontext_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_localizedcontext_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3063,7 +3063,7 @@ QMetaObject__Connection* k_localizedcontext_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_localizedcontext_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_localizedcontext_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3074,24 +3074,24 @@ bool k_localizedcontext_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_localizedcontext_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_localizedcontext_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-bool k_localizedcontext_disconnect3(void* self);
+bool k_localizedcontext_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param receiver QObject*
 ///
-bool k_localizedcontext_disconnect4(void* self, void* receiver);
+bool k_localizedcontext_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3099,23 +3099,23 @@ bool k_localizedcontext_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_localizedcontext_disconnect5(void* param1);
+bool k_localizedcontext_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-void k_localizedcontext_dump_object_tree(void* self);
+void k_localizedcontext_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-void k_localizedcontext_dump_object_info(void* self);
+void k_localizedcontext_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3125,16 +3125,16 @@ void k_localizedcontext_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_localizedcontext_set_property(void* self, const char* name, void* value);
+bool k_localizedcontext_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param name const char*
 ///
-QVariant* k_localizedcontext_property(void* self, const char* name);
+QVariant* k_localizedcontext_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3142,9 +3142,9 @@ QVariant* k_localizedcontext_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-const char** k_localizedcontext_dynamic_property_names(void* self);
+const char** k_localizedcontext_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3158,9 +3158,9 @@ QBindingStorage* k_localizedcontext_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-const QBindingStorage* k_localizedcontext_binding_storage2(void* self);
+const QBindingStorage* k_localizedcontext_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3183,18 +3183,18 @@ void k_localizedcontext_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-QObject* k_localizedcontext_parent(void* self);
+QObject* k_localizedcontext_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param classname const char*
 ///
-bool k_localizedcontext_inherits(void* self, const char* classname);
+bool k_localizedcontext_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3234,7 +3234,7 @@ int32_t k_localizedcontext_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_localizedcontext_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_localizedcontext_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3246,59 +3246,59 @@ QMetaObject__Connection* k_localizedcontext_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_localizedcontext_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_localizedcontext_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_localizedcontext_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_localizedcontext_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param signal const char*
 ///
-bool k_localizedcontext_disconnect1(void* self, const char* signal);
+bool k_localizedcontext_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLocalizedContext*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_localizedcontext_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_localizedcontext_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_localizedcontext_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_localizedcontext_disconnect23(void* self, void* receiver, const char* member);
+bool k_localizedcontext_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KLocalizedContext*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_localizedcontext_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3494,7 +3494,7 @@ void k_localizedcontext_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self KLocalizedContext*
 /// @param signal QMetaMethod*
 ///
-void k_localizedcontext_connect_notify(void* self, void* signal);
+void k_localizedcontext_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3505,7 +3505,7 @@ void k_localizedcontext_connect_notify(void* self, void* signal);
 /// @param self KLocalizedContext*
 /// @param signal QMetaMethod*
 ///
-void k_localizedcontext_super_connect_notify(void* self, void* signal);
+void k_localizedcontext_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3516,7 +3516,7 @@ void k_localizedcontext_super_connect_notify(void* self, void* signal);
 /// @param self KLocalizedContext*
 /// @param callback void func(KLocalizedContext* self, QMetaMethod* signal)
 ///
-void k_localizedcontext_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_localizedcontext_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3527,7 +3527,7 @@ void k_localizedcontext_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self KLocalizedContext*
 /// @param signal QMetaMethod*
 ///
-void k_localizedcontext_disconnect_notify(void* self, void* signal);
+void k_localizedcontext_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3538,7 +3538,7 @@ void k_localizedcontext_disconnect_notify(void* self, void* signal);
 /// @param self KLocalizedContext*
 /// @param signal QMetaMethod*
 ///
-void k_localizedcontext_super_disconnect_notify(void* self, void* signal);
+void k_localizedcontext_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3549,7 +3549,7 @@ void k_localizedcontext_super_disconnect_notify(void* self, void* signal);
 /// @param self KLocalizedContext*
 /// @param callback void func(KLocalizedContext* self, QMetaMethod* signal)
 ///
-void k_localizedcontext_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_localizedcontext_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -3557,9 +3557,9 @@ void k_localizedcontext_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-QObject* k_localizedcontext_sender(void* self);
+QObject* k_localizedcontext_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3567,9 +3567,9 @@ QObject* k_localizedcontext_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-QObject* k_localizedcontext_super_sender(void* self);
+QObject* k_localizedcontext_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3577,10 +3577,10 @@ QObject* k_localizedcontext_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLocalizedContext*
-/// @param callback QObject* func()
+/// @param self const KLocalizedContext*
+/// @param callback QObject* func(KLocalizedContext* self)
 ///
-void k_localizedcontext_on_sender(void* self, QObject* (*callback)());
+void k_localizedcontext_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3588,9 +3588,9 @@ void k_localizedcontext_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-int32_t k_localizedcontext_sender_signal_index(void* self);
+int32_t k_localizedcontext_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3598,9 +3598,9 @@ int32_t k_localizedcontext_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 ///
-int32_t k_localizedcontext_super_sender_signal_index(void* self);
+int32_t k_localizedcontext_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3608,10 +3608,10 @@ int32_t k_localizedcontext_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLocalizedContext*
-/// @param callback int32_t func()
+/// @param self const KLocalizedContext*
+/// @param callback int32_t func(KLocalizedContext* self)
 ///
-void k_localizedcontext_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_localizedcontext_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -3619,10 +3619,10 @@ void k_localizedcontext_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param signal const char*
 ///
-int32_t k_localizedcontext_receivers(void* self, const char* signal);
+int32_t k_localizedcontext_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3630,10 +3630,10 @@ int32_t k_localizedcontext_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param signal const char*
 ///
-int32_t k_localizedcontext_super_receivers(void* self, const char* signal);
+int32_t k_localizedcontext_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3641,10 +3641,10 @@ int32_t k_localizedcontext_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param callback int32_t func(KLocalizedContext* self, const char* signal)
 ///
-void k_localizedcontext_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_localizedcontext_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3652,10 +3652,10 @@ void k_localizedcontext_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param signal QMetaMethod*
 ///
-bool k_localizedcontext_is_signal_connected(void* self, void* signal);
+bool k_localizedcontext_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3663,10 +3663,10 @@ bool k_localizedcontext_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param signal QMetaMethod*
 ///
-bool k_localizedcontext_super_is_signal_connected(void* self, void* signal);
+bool k_localizedcontext_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -3674,10 +3674,10 @@ bool k_localizedcontext_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KLocalizedContext*
+/// @param self const KLocalizedContext*
 /// @param callback bool func(KLocalizedContext* self, QMetaMethod* signal)
 ///
-void k_localizedcontext_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_localizedcontext_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

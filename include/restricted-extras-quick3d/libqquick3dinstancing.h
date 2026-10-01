@@ -24,26 +24,26 @@ QQuick3DInstancing* q_quick3dinstancing_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-const QMetaObject* q_quick3dinstancing_meta_object(void* self);
+const QMetaObject* q_quick3dinstancing_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QQuick3DInstancing*
-/// @param callback const QMetaObject* func()
+/// @param self const QQuick3DInstancing*
+/// @param callback const QMetaObject* func(const QQuick3DInstancing* self)
 ///
-void q_quick3dinstancing_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_quick3dinstancing_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-const QMetaObject* q_quick3dinstancing_super_meta_object(void* self);
+const QMetaObject* q_quick3dinstancing_super_meta_object(const void* self);
 
 /// @param self QQuick3DInstancing*
 /// @param param1 const char*
@@ -106,21 +106,21 @@ char* q_quick3dinstancing_instance_buffer(void* self, int* instanceCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#instanceCountOverride)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-int32_t q_quick3dinstancing_instance_count_override(void* self);
+int32_t q_quick3dinstancing_instance_count_override(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#hasTransparency)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_has_transparency(void* self);
+bool q_quick3dinstancing_has_transparency(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#depthSortingEnabled)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_depth_sorting_enabled(void* self);
+bool q_quick3dinstancing_depth_sorting_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#instancePosition)
 ///
@@ -245,6 +245,8 @@ void q_quick3dinstancing_on_depth_sorting_enabled_changed(void* self, void (*cal
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#getInstanceBuffer)
 ///
+/// @warning This method must be implemented with `q_quick3dinstancing_on_get_instance_buffer` before it can be called.
+///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QQuick3DInstancing*
@@ -261,38 +263,12 @@ char* q_quick3dinstancing_get_instance_buffer(void* self, int* instanceCount);
 ///
 void q_quick3dinstancing_on_get_instance_buffer(void* self, libqt_string (*callback)(void*, int*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#getInstanceBuffer)
-///
-/// Base class method implementation
-///
-/// @param self QQuick3DInstancing*
-/// @param instanceCount int*
-///
-char* q_quick3dinstancing_super_get_instance_buffer(void* self, int* instanceCount);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#markDirty)
 ///
 /// @param self QQuick3DInstancing*
 ///
 void q_quick3dinstancing_mark_dirty(void* self);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#markDirty)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuick3DInstancing*
-/// @param callback void func()
-///
-void q_quick3dinstancing_on_mark_dirty(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#markDirty)
-///
-/// Base class method implementation
-///
-/// @param self QQuick3DInstancing*
-///
-void q_quick3dinstancing_super_mark_dirty(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntry)
 ///
 /// @param self QQuick3DInstancing*
@@ -301,30 +277,7 @@ void q_quick3dinstancing_super_mark_dirty(void* self);
 /// @param eulerRotation QVector3D*
 /// @param color QColor*
 ///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_calculate_table_entry(void* self, void* position, void* scale, void* eulerRotation, void* color);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntry)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuick3DInstancing*
-/// @param callback QQuick3DInstancing__InstanceTableEntry* func(QQuick3DInstancing* self, QVector3D* position, QVector3D* scale, QVector3D* eulerRotation, QColor* color)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_quick3dinstancing_on_calculate_table_entry(void* self, QQuick3DInstancing__InstanceTableEntry* (*callback)(void*, void*, void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntry)
-///
-/// Base class method implementation
-///
-/// @param self QQuick3DInstancing*
-/// @param position QVector3D*
-/// @param scale QVector3D*
-/// @param eulerRotation QVector3D*
-/// @param color QColor*
-///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_super_calculate_table_entry(void* self, void* position, void* scale, void* eulerRotation, void* color);
+QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_calculate_table_entry(void* self, const void* position, const void* scale, const void* eulerRotation, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntryFromQuaternion)
 ///
@@ -334,30 +287,7 @@ QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_super_calculate_tabl
 /// @param rotation QQuaternion*
 /// @param color QColor*
 ///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_calculate_table_entry_from_quaternion(void* self, void* position, void* scale, void* rotation, void* color);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntryFromQuaternion)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuick3DInstancing*
-/// @param callback QQuick3DInstancing__InstanceTableEntry* func(QQuick3DInstancing* self, QVector3D* position, QVector3D* scale, QQuaternion* rotation, QColor* color)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_quick3dinstancing_on_calculate_table_entry_from_quaternion(void* self, QQuick3DInstancing__InstanceTableEntry* (*callback)(void*, void*, void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntryFromQuaternion)
-///
-/// Base class method implementation
-///
-/// @param self QQuick3DInstancing*
-/// @param position QVector3D*
-/// @param scale QVector3D*
-/// @param rotation QQuaternion*
-/// @param color QColor*
-///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_super_calculate_table_entry_from_quaternion(void* self, void* position, void* scale, void* rotation, void* color);
+QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_calculate_table_entry_from_quaternion(void* self, const void* position, const void* scale, const void* rotation, const void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -387,31 +317,7 @@ const char* q_quick3dinstancing_tr3(const char* s, const char* c, int n);
 /// @param color QColor*
 /// @param customData QVector4D*
 ///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_calculate_table_entry5(void* self, void* position, void* scale, void* eulerRotation, void* color, void* customData);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntry)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuick3DInstancing*
-/// @param callback QQuick3DInstancing__InstanceTableEntry* func(QQuick3DInstancing* self, QVector3D* position, QVector3D* scale, QVector3D* eulerRotation, QColor* color, QVector4D* customData)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_quick3dinstancing_on_calculate_table_entry5(void* self, QQuick3DInstancing__InstanceTableEntry* (*callback)(void*, void*, void*, void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntry)
-///
-/// Base class method implementation
-///
-/// @param self QQuick3DInstancing*
-/// @param position QVector3D*
-/// @param scale QVector3D*
-/// @param eulerRotation QVector3D*
-/// @param color QColor*
-/// @param customData QVector4D*
-///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_super_calculate_table_entry5(void* self, void* position, void* scale, void* eulerRotation, void* color, void* customData);
+QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_calculate_table_entry5(void* self, const void* position, const void* scale, const void* eulerRotation, const void* color, const void* customData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntryFromQuaternion)
 ///
@@ -422,31 +328,7 @@ QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_super_calculate_tabl
 /// @param color QColor*
 /// @param customData QVector4D*
 ///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_calculate_table_entry_from_quaternion5(void* self, void* position, void* scale, void* rotation, void* color, void* customData);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntryFromQuaternion)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QQuick3DInstancing*
-/// @param callback QQuick3DInstancing__InstanceTableEntry* func(QQuick3DInstancing* self, QVector3D* position, QVector3D* scale, QQuaternion* rotation, QColor* color, QVector4D* customData)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_quick3dinstancing_on_calculate_table_entry_from_quaternion5(void* self, QQuick3DInstancing__InstanceTableEntry* (*callback)(void*, void*, void*, void*, void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing.html#calculateTableEntryFromQuaternion)
-///
-/// Base class method implementation
-///
-/// @param self QQuick3DInstancing*
-/// @param position QVector3D*
-/// @param scale QVector3D*
-/// @param rotation QQuaternion*
-/// @param color QColor*
-/// @param customData QVector4D*
-///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_super_calculate_table_entry_from_quaternion5(void* self, void* position, void* scale, void* rotation, void* color, void* customData);
+QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing_calculate_table_entry_from_quaternion5(void* self, const void* position, const void* scale, const void* rotation, const void* color, const void* customData);
 
 /// Inherited from QQuick3DObject
 ///
@@ -470,9 +352,9 @@ QQuick3DInstancing* q_quick3dinstancing_from_q_qml_parser_status(void* _qqmlpars
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-const char* q_quick3dinstancing_state(void* self);
+const char* q_quick3dinstancing_state(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -487,19 +369,19 @@ void q_quick3dinstancing_set_state(void* self, const char* state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dobject.html#childItems)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
 /// @return libqt_list of QQuick3DObject*
 ///
-libqt_list q_quick3dinstancing_child_items(void* self);
+libqt_list q_quick3dinstancing_child_items(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dobject.html#parentItem)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-QQuick3DObject* q_quick3dinstancing_parent_item(void* self);
+QQuick3DObject* q_quick3dinstancing_parent_item(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -575,9 +457,9 @@ void q_quick3dinstancing_on_state_changed(void* self, void (*callback)(void*));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-const char* q_quick3dinstancing_object_name(void* self);
+const char* q_quick3dinstancing_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -592,33 +474,33 @@ void q_quick3dinstancing_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_is_widget_type(void* self);
+bool q_quick3dinstancing_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_is_window_type(void* self);
+bool q_quick3dinstancing_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_is_quick_item_type(void* self);
+bool q_quick3dinstancing_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_signals_blocked(void* self);
+bool q_quick3dinstancing_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -633,9 +515,9 @@ bool q_quick3dinstancing_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-QThread* q_quick3dinstancing_thread(void* self);
+QThread* q_quick3dinstancing_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -686,11 +568,11 @@ void q_quick3dinstancing_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_quick3dinstancing_children(void* self);
+libqt_list q_quick3dinstancing_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -728,7 +610,7 @@ void q_quick3dinstancing_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quick3dinstancing_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_quick3dinstancing_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -739,18 +621,18 @@ QMetaObject__Connection* q_quick3dinstancing_connect(void* sender, const char* s
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_quick3dinstancing_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_quick3dinstancing_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_quick3dinstancing_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_quick3dinstancing_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -761,7 +643,7 @@ QMetaObject__Connection* q_quick3dinstancing_connect3(void* self, void* sender, 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quick3dinstancing_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_quick3dinstancing_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -772,24 +654,24 @@ bool q_quick3dinstancing_disconnect(void* sender, const char* signal, void* rece
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_quick3dinstancing_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_quick3dinstancing_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_disconnect3(void* self);
+bool q_quick3dinstancing_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param receiver QObject*
 ///
-bool q_quick3dinstancing_disconnect4(void* self, void* receiver);
+bool q_quick3dinstancing_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -797,23 +679,23 @@ bool q_quick3dinstancing_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_quick3dinstancing_disconnect5(void* param1);
+bool q_quick3dinstancing_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-void q_quick3dinstancing_dump_object_tree(void* self);
+void q_quick3dinstancing_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-void q_quick3dinstancing_dump_object_info(void* self);
+void q_quick3dinstancing_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -823,16 +705,16 @@ void q_quick3dinstancing_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_quick3dinstancing_set_property(void* self, const char* name, void* value);
+bool q_quick3dinstancing_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param name const char*
 ///
-QVariant* q_quick3dinstancing_property(void* self, const char* name);
+QVariant* q_quick3dinstancing_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -840,9 +722,9 @@ QVariant* q_quick3dinstancing_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-const char** q_quick3dinstancing_dynamic_property_names(void* self);
+const char** q_quick3dinstancing_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -856,9 +738,9 @@ QBindingStorage* q_quick3dinstancing_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-const QBindingStorage* q_quick3dinstancing_binding_storage2(void* self);
+const QBindingStorage* q_quick3dinstancing_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -881,18 +763,18 @@ void q_quick3dinstancing_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-QObject* q_quick3dinstancing_parent(void* self);
+QObject* q_quick3dinstancing_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param classname const char*
 ///
-bool q_quick3dinstancing_inherits(void* self, const char* classname);
+bool q_quick3dinstancing_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -932,7 +814,7 @@ int32_t q_quick3dinstancing_start_timer23(void* self, int64_t time, int32_t time
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3dinstancing_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_quick3dinstancing_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -944,59 +826,59 @@ QMetaObject__Connection* q_quick3dinstancing_connect5(void* sender, const char* 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3dinstancing_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_quick3dinstancing_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_quick3dinstancing_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_quick3dinstancing_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param signal const char*
 ///
-bool q_quick3dinstancing_disconnect1(void* self, const char* signal);
+bool q_quick3dinstancing_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DInstancing*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_quick3dinstancing_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_quick3dinstancing_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_quick3dinstancing_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_quick3dinstancing_disconnect23(void* self, void* receiver, const char* member);
+bool q_quick3dinstancing_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QQuick3DInstancing*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_quick3dinstancing_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1023,7 +905,7 @@ void q_quick3dinstancing_on_destroyed1(void* self, void (*callback)(void*, void*
 /// @param self QQuick3DInstancing*
 /// @param param1 QQmlParserStatus*
 ///
-void q_quick3dinstancing_operator_assign(void* self, void* param1);
+void q_quick3dinstancing_operator_assign(void* self, const void* param1);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1052,9 +934,9 @@ void q_quick3dinstancing_super_mark_all_dirty(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DInstancing*
-/// @param callback void func()
+/// @param callback void func(QQuick3DInstancing* self)
 ///
-void q_quick3dinstancing_on_mark_all_dirty(void* self, void (*callback)());
+void q_quick3dinstancing_on_mark_all_dirty(void* self, void (*callback)(void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -1066,7 +948,7 @@ void q_quick3dinstancing_on_mark_all_dirty(void* self, void (*callback)());
 /// @param param1 enum QQuick3DObject__ItemChange
 /// @param param2 QQuick3DObject__ItemChangeData*
 ///
-void q_quick3dinstancing_item_change(void* self, int32_t param1, void* param2);
+void q_quick3dinstancing_item_change(void* self, int32_t param1, const void* param2);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1078,7 +960,7 @@ void q_quick3dinstancing_item_change(void* self, int32_t param1, void* param2);
 /// @param param1 enum QQuick3DObject__ItemChange
 /// @param param2 QQuick3DObject__ItemChangeData*
 ///
-void q_quick3dinstancing_super_item_change(void* self, int32_t param1, void* param2);
+void q_quick3dinstancing_super_item_change(void* self, int32_t param1, const void* param2);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1089,7 +971,7 @@ void q_quick3dinstancing_super_item_change(void* self, int32_t param1, void* par
 /// @param self QQuick3DInstancing*
 /// @param callback void func(QQuick3DInstancing* self, enum QQuick3DObject__ItemChange param1, QQuick3DObject__ItemChangeData* param2)
 ///
-void q_quick3dinstancing_on_item_change(void* self, void (*callback)(void*, int32_t, void*));
+void q_quick3dinstancing_on_item_change(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -1118,9 +1000,9 @@ void q_quick3dinstancing_super_class_begin(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DInstancing*
-/// @param callback void func()
+/// @param callback void func(QQuick3DInstancing* self)
 ///
-void q_quick3dinstancing_on_class_begin(void* self, void (*callback)());
+void q_quick3dinstancing_on_class_begin(void* self, void (*callback)(void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -1149,9 +1031,9 @@ void q_quick3dinstancing_super_component_complete(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DInstancing*
-/// @param callback void func()
+/// @param callback void func(QQuick3DInstancing* self)
 ///
-void q_quick3dinstancing_on_component_complete(void* self, void (*callback)());
+void q_quick3dinstancing_on_component_complete(void* self, void (*callback)(void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -1180,9 +1062,9 @@ void q_quick3dinstancing_super_pre_sync(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QQuick3DInstancing*
-/// @param callback void func()
+/// @param callback void func(QQuick3DInstancing* self)
 ///
-void q_quick3dinstancing_on_pre_sync(void* self, void (*callback)());
+void q_quick3dinstancing_on_pre_sync(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -1360,7 +1242,7 @@ void q_quick3dinstancing_on_custom_event(void* self, void (*callback)(void*, voi
 /// @param self QQuick3DInstancing*
 /// @param signal QMetaMethod*
 ///
-void q_quick3dinstancing_connect_notify(void* self, void* signal);
+void q_quick3dinstancing_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1371,7 +1253,7 @@ void q_quick3dinstancing_connect_notify(void* self, void* signal);
 /// @param self QQuick3DInstancing*
 /// @param signal QMetaMethod*
 ///
-void q_quick3dinstancing_super_connect_notify(void* self, void* signal);
+void q_quick3dinstancing_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1382,7 +1264,7 @@ void q_quick3dinstancing_super_connect_notify(void* self, void* signal);
 /// @param self QQuick3DInstancing*
 /// @param callback void func(QQuick3DInstancing* self, QMetaMethod* signal)
 ///
-void q_quick3dinstancing_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_quick3dinstancing_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1393,7 +1275,7 @@ void q_quick3dinstancing_on_connect_notify(void* self, void (*callback)(void*, v
 /// @param self QQuick3DInstancing*
 /// @param signal QMetaMethod*
 ///
-void q_quick3dinstancing_disconnect_notify(void* self, void* signal);
+void q_quick3dinstancing_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1404,7 +1286,7 @@ void q_quick3dinstancing_disconnect_notify(void* self, void* signal);
 /// @param self QQuick3DInstancing*
 /// @param signal QMetaMethod*
 ///
-void q_quick3dinstancing_super_disconnect_notify(void* self, void* signal);
+void q_quick3dinstancing_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1415,7 +1297,7 @@ void q_quick3dinstancing_super_disconnect_notify(void* self, void* signal);
 /// @param self QQuick3DInstancing*
 /// @param callback void func(QQuick3DInstancing* self, QMetaMethod* signal)
 ///
-void q_quick3dinstancing_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_quick3dinstancing_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QQuick3DObject
 ///
@@ -1423,9 +1305,9 @@ void q_quick3dinstancing_on_disconnect_notify(void* self, void (*callback)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_is_component_complete(void* self);
+bool q_quick3dinstancing_is_component_complete(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1433,9 +1315,9 @@ bool q_quick3dinstancing_is_component_complete(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-bool q_quick3dinstancing_super_is_component_complete(void* self);
+bool q_quick3dinstancing_super_is_component_complete(const void* self);
 
 /// Inherited from QQuick3DObject
 ///
@@ -1443,10 +1325,10 @@ bool q_quick3dinstancing_super_is_component_complete(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
-/// @param callback bool func()
+/// @param self const QQuick3DInstancing*
+/// @param callback bool func(QQuick3DInstancing* self)
 ///
-void q_quick3dinstancing_on_is_component_complete(void* self, bool (*callback)());
+void q_quick3dinstancing_on_is_component_complete(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1454,9 +1336,9 @@ void q_quick3dinstancing_on_is_component_complete(void* self, bool (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-QObject* q_quick3dinstancing_sender(void* self);
+QObject* q_quick3dinstancing_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1464,9 +1346,9 @@ QObject* q_quick3dinstancing_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-QObject* q_quick3dinstancing_super_sender(void* self);
+QObject* q_quick3dinstancing_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1474,10 +1356,10 @@ QObject* q_quick3dinstancing_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
-/// @param callback QObject* func()
+/// @param self const QQuick3DInstancing*
+/// @param callback QObject* func(QQuick3DInstancing* self)
 ///
-void q_quick3dinstancing_on_sender(void* self, QObject* (*callback)());
+void q_quick3dinstancing_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1485,9 +1367,9 @@ void q_quick3dinstancing_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-int32_t q_quick3dinstancing_sender_signal_index(void* self);
+int32_t q_quick3dinstancing_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1495,9 +1377,9 @@ int32_t q_quick3dinstancing_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 ///
-int32_t q_quick3dinstancing_super_sender_signal_index(void* self);
+int32_t q_quick3dinstancing_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1505,10 +1387,10 @@ int32_t q_quick3dinstancing_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
-/// @param callback int32_t func()
+/// @param self const QQuick3DInstancing*
+/// @param callback int32_t func(QQuick3DInstancing* self)
 ///
-void q_quick3dinstancing_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_quick3dinstancing_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1516,10 +1398,10 @@ void q_quick3dinstancing_on_sender_signal_index(void* self, int32_t (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param signal const char*
 ///
-int32_t q_quick3dinstancing_receivers(void* self, const char* signal);
+int32_t q_quick3dinstancing_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1527,10 +1409,10 @@ int32_t q_quick3dinstancing_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param signal const char*
 ///
-int32_t q_quick3dinstancing_super_receivers(void* self, const char* signal);
+int32_t q_quick3dinstancing_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1538,10 +1420,10 @@ int32_t q_quick3dinstancing_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param callback int32_t func(QQuick3DInstancing* self, const char* signal)
 ///
-void q_quick3dinstancing_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_quick3dinstancing_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1549,10 +1431,10 @@ void q_quick3dinstancing_on_receivers(void* self, int32_t (*callback)(void*, con
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param signal QMetaMethod*
 ///
-bool q_quick3dinstancing_is_signal_connected(void* self, void* signal);
+bool q_quick3dinstancing_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1560,10 +1442,10 @@ bool q_quick3dinstancing_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param signal QMetaMethod*
 ///
-bool q_quick3dinstancing_super_is_signal_connected(void* self, void* signal);
+bool q_quick3dinstancing_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1571,10 +1453,10 @@ bool q_quick3dinstancing_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QQuick3DInstancing*
+/// @param self const QQuick3DInstancing*
 /// @param callback bool func(QQuick3DInstancing* self, QMetaMethod* signal)
 ///
-void q_quick3dinstancing_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_quick3dinstancing_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1607,7 +1489,7 @@ QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing__instancetableentry_
 ///
 /// @param other QQuick3DInstancing__InstanceTableEntry*
 ///
-QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing__instancetableentry_new2(void* other);
+QQuick3DInstancing__InstanceTableEntry* q_quick3dinstancing__instancetableentry_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html)
 
@@ -1633,9 +1515,9 @@ void q_quick3dinstancing__instancetableentry_move_assign(void* self, void* other
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#row0-var)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QVector4D* q_quick3dinstancing__instancetableentry_row0(void* self);
+QVector4D* q_quick3dinstancing__instancetableentry_row0(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#row0-var)
 ///
@@ -1646,9 +1528,9 @@ void q_quick3dinstancing__instancetableentry_set_row0(void* self, void* row0);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#row1-var)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QVector4D* q_quick3dinstancing__instancetableentry_row1(void* self);
+QVector4D* q_quick3dinstancing__instancetableentry_row1(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#row1-var)
 ///
@@ -1659,9 +1541,9 @@ void q_quick3dinstancing__instancetableentry_set_row1(void* self, void* row1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#row2-var)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QVector4D* q_quick3dinstancing__instancetableentry_row2(void* self);
+QVector4D* q_quick3dinstancing__instancetableentry_row2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#row2-var)
 ///
@@ -1672,9 +1554,9 @@ void q_quick3dinstancing__instancetableentry_set_row2(void* self, void* row2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#color-var)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QVector4D* q_quick3dinstancing__instancetableentry_color(void* self);
+QVector4D* q_quick3dinstancing__instancetableentry_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#color-var)
 ///
@@ -1685,9 +1567,9 @@ void q_quick3dinstancing__instancetableentry_set_color(void* self, void* color);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#instanceData-var)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QVector4D* q_quick3dinstancing__instancetableentry_instance_data(void* self);
+QVector4D* q_quick3dinstancing__instancetableentry_instance_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#instanceData-var)
 ///
@@ -1698,27 +1580,27 @@ void q_quick3dinstancing__instancetableentry_set_instance_data(void* self, void*
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#getPosition)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QVector3D* q_quick3dinstancing__instancetableentry_get_position(void* self);
+QVector3D* q_quick3dinstancing__instancetableentry_get_position(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#getScale)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QVector3D* q_quick3dinstancing__instancetableentry_get_scale(void* self);
+QVector3D* q_quick3dinstancing__instancetableentry_get_scale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#getRotation)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QQuaternion* q_quick3dinstancing__instancetableentry_get_rotation(void* self);
+QQuaternion* q_quick3dinstancing__instancetableentry_get_rotation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquick3dinstancing-instancetableentry.html#getColor)
 ///
-/// @param self QQuick3DInstancing__InstanceTableEntry*
+/// @param self const QQuick3DInstancing__InstanceTableEntry*
 ///
-QColor* q_quick3dinstancing__instancetableentry_get_color(void* self);
+QColor* q_quick3dinstancing__instancetableentry_get_color(const void* self);
 
 /// Delete this object from C++ memory.
 ///

@@ -20,28 +20,28 @@ TextGrammarCheck__GrammarError* k_textgrammarcheck__grammarerror_new();
 ///
 /// @param param1 TextGrammarCheck__GrammarError*
 ///
-TextGrammarCheck__GrammarError* k_textgrammarcheck__grammarerror_new2(void* param1);
+TextGrammarCheck__GrammarError* k_textgrammarcheck__grammarerror_new2(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-QColor* k_textgrammarcheck__grammarerror_color(void* self);
+QColor* k_textgrammarcheck__grammarerror_color(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
 /// @param self TextGrammarCheck__GrammarError*
 /// @param color QColor*
 ///
-void k_textgrammarcheck__grammarerror_set_color(void* self, void* color);
+void k_textgrammarcheck__grammarerror_set_color(void* self, const void* color);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-const char* k_textgrammarcheck__grammarerror_error(void* self);
+const char* k_textgrammarcheck__grammarerror_error(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -52,9 +52,9 @@ void k_textgrammarcheck__grammarerror_set_error(void* self, const char* error);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-int32_t k_textgrammarcheck__grammarerror_block_id(void* self);
+int32_t k_textgrammarcheck__grammarerror_block_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -65,9 +65,9 @@ void k_textgrammarcheck__grammarerror_set_block_id(void* self, int blockId);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-int32_t k_textgrammarcheck__grammarerror_start(void* self);
+int32_t k_textgrammarcheck__grammarerror_start(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -78,9 +78,9 @@ void k_textgrammarcheck__grammarerror_set_start(void* self, int start);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-int32_t k_textgrammarcheck__grammarerror_length(void* self);
+int32_t k_textgrammarcheck__grammarerror_length(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -93,9 +93,9 @@ void k_textgrammarcheck__grammarerror_set_length(void* self, int length);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-const char** k_textgrammarcheck__grammarerror_suggestions(void* self);
+const char** k_textgrammarcheck__grammarerror_suggestions(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -106,9 +106,9 @@ void k_textgrammarcheck__grammarerror_set_suggestions(void* self, const char* su
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-bool k_textgrammarcheck__grammarerror_is_valid(void* self);
+bool k_textgrammarcheck__grammarerror_is_valid(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -116,7 +116,7 @@ bool k_textgrammarcheck__grammarerror_is_valid(void* self);
 /// @param obj QJsonObject*
 /// @param blockindex int
 ///
-void k_textgrammarcheck__grammarerror_parse(void* self, void* obj, int blockindex);
+void k_textgrammarcheck__grammarerror_parse(void* self, const void* obj, int blockindex);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -125,7 +125,7 @@ void k_textgrammarcheck__grammarerror_parse(void* self, void* obj, int blockinde
 /// @param self TextGrammarCheck__GrammarError*
 /// @param callback void func(TextGrammarCheck__GrammarError* self, QJsonObject* obj, int blockindex)
 ///
-void k_textgrammarcheck__grammarerror_on_parse(void* self, void (*callback)(void*, void*, int));
+void k_textgrammarcheck__grammarerror_on_parse(void* self, void (*callback)(void*, const void*, int));
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -135,22 +135,22 @@ void k_textgrammarcheck__grammarerror_on_parse(void* self, void (*callback)(void
 /// @param obj QJsonObject*
 /// @param blockindex int
 ///
-void k_textgrammarcheck__grammarerror_super_parse(void* self, void* obj, int blockindex);
+void k_textgrammarcheck__grammarerror_super_parse(void* self, const void* obj, int blockindex);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 /// @param other TextGrammarCheck__GrammarError*
 ///
-bool k_textgrammarcheck__grammarerror_operator_equal(void* self, void* other);
+bool k_textgrammarcheck__grammarerror_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-const char* k_textgrammarcheck__grammarerror_option(void* self);
+const char* k_textgrammarcheck__grammarerror_option(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -163,9 +163,9 @@ void k_textgrammarcheck__grammarerror_set_option(void* self, const char* option)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-const char* k_textgrammarcheck__grammarerror_rule(void* self);
+const char* k_textgrammarcheck__grammarerror_rule(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -178,9 +178,9 @@ void k_textgrammarcheck__grammarerror_set_rule(void* self, const char* rule);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextGrammarCheck__GrammarError*
+/// @param self const TextGrammarCheck__GrammarError*
 ///
-const char* k_textgrammarcheck__grammarerror_url(void* self);
+const char* k_textgrammarcheck__grammarerror_url(const void* self);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///
@@ -194,7 +194,7 @@ void k_textgrammarcheck__grammarerror_set_url(void* self, const char* url);
 /// @param self TextGrammarCheck__GrammarError*
 /// @param param1 TextGrammarCheck__GrammarError*
 ///
-void k_textgrammarcheck__grammarerror_operator_assign(void* self, void* param1);
+void k_textgrammarcheck__grammarerror_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextGrammarCheck_1_1GrammarError.html)
 ///

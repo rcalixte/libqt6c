@@ -20,14 +20,14 @@ QQuickGraphicsConfiguration* q_quickgraphicsconfiguration_new();
 ///
 /// @param other QQuickGraphicsConfiguration*
 ///
-QQuickGraphicsConfiguration* q_quickgraphicsconfiguration_new2(void* other);
+QQuickGraphicsConfiguration* q_quickgraphicsconfiguration_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#operator-eq)
 ///
 /// @param self QQuickGraphicsConfiguration*
 /// @param other QQuickGraphicsConfiguration*
 ///
-void q_quickgraphicsconfiguration_operator_assign(void* self, void* other);
+void q_quickgraphicsconfiguration_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#preferredInstanceExtensions)
 ///
@@ -46,9 +46,9 @@ void q_quickgraphicsconfiguration_set_device_extensions(void* self, const char* 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-const char** q_quickgraphicsconfiguration_device_extensions(void* self);
+const char** q_quickgraphicsconfiguration_device_extensions(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#setDepthBufferFor2D)
 ///
@@ -59,9 +59,9 @@ void q_quickgraphicsconfiguration_set_depth_buffer_for2_d(void* self, bool enabl
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#isDepthBufferEnabledFor2D)
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-bool q_quickgraphicsconfiguration_is_depth_buffer_enabled_for2_d(void* self);
+bool q_quickgraphicsconfiguration_is_depth_buffer_enabled_for2_d(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#setDebugLayer)
 ///
@@ -72,9 +72,9 @@ void q_quickgraphicsconfiguration_set_debug_layer(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#isDebugLayerEnabled)
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-bool q_quickgraphicsconfiguration_is_debug_layer_enabled(void* self);
+bool q_quickgraphicsconfiguration_is_debug_layer_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#setDebugMarkers)
 ///
@@ -85,9 +85,9 @@ void q_quickgraphicsconfiguration_set_debug_markers(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#isDebugMarkersEnabled)
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-bool q_quickgraphicsconfiguration_is_debug_markers_enabled(void* self);
+bool q_quickgraphicsconfiguration_is_debug_markers_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#setTimestamps)
 ///
@@ -98,9 +98,9 @@ void q_quickgraphicsconfiguration_set_timestamps(void* self, bool enable);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#timestampsEnabled)
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-bool q_quickgraphicsconfiguration_timestamps_enabled(void* self);
+bool q_quickgraphicsconfiguration_timestamps_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#setPreferSoftwareDevice)
 ///
@@ -111,9 +111,9 @@ void q_quickgraphicsconfiguration_set_prefer_software_device(void* self, bool en
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#prefersSoftwareDevice)
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-bool q_quickgraphicsconfiguration_prefers_software_device(void* self);
+bool q_quickgraphicsconfiguration_prefers_software_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#setAutomaticPipelineCache)
 ///
@@ -124,9 +124,9 @@ void q_quickgraphicsconfiguration_set_automatic_pipeline_cache(void* self, bool 
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#isAutomaticPipelineCacheEnabled)
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-bool q_quickgraphicsconfiguration_is_automatic_pipeline_cache_enabled(void* self);
+bool q_quickgraphicsconfiguration_is_automatic_pipeline_cache_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#setPipelineCacheSaveFile)
 ///
@@ -139,9 +139,9 @@ void q_quickgraphicsconfiguration_set_pipeline_cache_save_file(void* self, const
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-const char* q_quickgraphicsconfiguration_pipeline_cache_save_file(void* self);
+const char* q_quickgraphicsconfiguration_pipeline_cache_save_file(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#setPipelineCacheLoadFile)
 ///
@@ -154,9 +154,9 @@ void q_quickgraphicsconfiguration_set_pipeline_cache_load_file(void* self, const
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QQuickGraphicsConfiguration*
+/// @param self const QQuickGraphicsConfiguration*
 ///
-const char* q_quickgraphicsconfiguration_pipeline_cache_load_file(void* self);
+const char* q_quickgraphicsconfiguration_pipeline_cache_load_file(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#dtor.QQuickGraphicsConfiguration)
 ///

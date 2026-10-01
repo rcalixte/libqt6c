@@ -10,18 +10,12 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldrivercreatorbase.html)
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qsqldrivercreatorbase.html#createObject)
-///
-/// @param self QSqlDriverCreatorBase*
-///
-QSqlDriver* q_sqldrivercreatorbase_create_object(void* self);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldrivercreatorbase.html#operator-eq)
 ///
 /// @param self QSqlDriverCreatorBase*
 /// @param param1 QSqlDriverCreatorBase*
 ///
-void q_sqldrivercreatorbase_operator_assign(void* self, void* param1);
+void q_sqldrivercreatorbase_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldrivercreatorbase.html#dtor.QSqlDriverCreatorBase)
 ///
@@ -43,14 +37,14 @@ QSqlDatabase* q_sqldatabase_new();
 ///
 /// @param other QSqlDatabase*
 ///
-QSqlDatabase* q_sqldatabase_new2(void* other);
+QSqlDatabase* q_sqldatabase_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#operator-eq)
 ///
 /// @param self QSqlDatabase*
 /// @param other QSqlDatabase*
 ///
-void q_sqldatabase_operator_assign(void* self, void* other);
+void q_sqldatabase_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#open)
 ///
@@ -74,55 +68,55 @@ void q_sqldatabase_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#isOpen)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-bool q_sqldatabase_is_open(void* self);
+bool q_sqldatabase_is_open(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#isOpenError)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-bool q_sqldatabase_is_open_error(void* self);
+bool q_sqldatabase_is_open_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#tables)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-const char** q_sqldatabase_tables(void* self);
+const char** q_sqldatabase_tables(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#primaryIndex)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 /// @param tablename const char*
 ///
-QSqlIndex* q_sqldatabase_primary_index(void* self, const char* tablename);
+QSqlIndex* q_sqldatabase_primary_index(const void* self, const char* tablename);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#record)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 /// @param tablename const char*
 ///
-QSqlRecord* q_sqldatabase_record(void* self, const char* tablename);
+QSqlRecord* q_sqldatabase_record(const void* self, const char* tablename);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#exec)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-QSqlQuery* q_sqldatabase_exec(void* self);
+QSqlQuery* q_sqldatabase_exec(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#lastError)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-QSqlError* q_sqldatabase_last_error(void* self);
+QSqlError* q_sqldatabase_last_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#isValid)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-bool q_sqldatabase_is_valid(void* self);
+bool q_sqldatabase_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#transaction)
 ///
@@ -187,63 +181,63 @@ void q_sqldatabase_set_connect_options(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-const char* q_sqldatabase_database_name(void* self);
+const char* q_sqldatabase_database_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#userName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-const char* q_sqldatabase_user_name(void* self);
+const char* q_sqldatabase_user_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#password)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-const char* q_sqldatabase_password(void* self);
+const char* q_sqldatabase_password(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#hostName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-const char* q_sqldatabase_host_name(void* self);
+const char* q_sqldatabase_host_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#driverName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-const char* q_sqldatabase_driver_name(void* self);
+const char* q_sqldatabase_driver_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#port)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-int32_t q_sqldatabase_port(void* self);
+int32_t q_sqldatabase_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#connectOptions)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-const char* q_sqldatabase_connect_options(void* self);
+const char* q_sqldatabase_connect_options(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#connectionName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-const char* q_sqldatabase_connection_name(void* self);
+const char* q_sqldatabase_connection_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#setNumericalPrecisionPolicy)
 ///
@@ -254,11 +248,11 @@ void q_sqldatabase_set_numerical_precision_policy(void* self, int32_t precisionP
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#numericalPrecisionPolicy)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
 /// @return enum QSql__NumericalPrecisionPolicy
 ///
-int32_t q_sqldatabase_numerical_precision_policy(void* self);
+int32_t q_sqldatabase_numerical_precision_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#moveToThread)
 ///
@@ -269,15 +263,15 @@ bool q_sqldatabase_move_to_thread(void* self, void* targetThread);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#thread)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-QThread* q_sqldatabase_thread(void* self);
+QThread* q_sqldatabase_thread(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#driver)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 ///
-QSqlDriver* q_sqldatabase_driver(void* self);
+QSqlDriver* q_sqldatabase_driver(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#addDatabase)
 ///
@@ -296,7 +290,7 @@ QSqlDatabase* q_sqldatabase_add_database2(void* driver);
 /// @param other QSqlDatabase*
 /// @param connectionName const char*
 ///
-QSqlDatabase* q_sqldatabase_clone_database(void* other, const char* connectionName);
+QSqlDatabase* q_sqldatabase_clone_database(const void* other, const char* connectionName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#cloneDatabase)
 ///
@@ -348,17 +342,17 @@ bool q_sqldatabase_is_driver_available(const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 /// @param type enum QSql__TableType
 ///
-const char** q_sqldatabase_tables1(void* self, int32_t type);
+const char** q_sqldatabase_tables1(const void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#exec)
 ///
-/// @param self QSqlDatabase*
+/// @param self const QSqlDatabase*
 /// @param query const char*
 ///
-QSqlQuery* q_sqldatabase_exec1(void* self, const char* query);
+QSqlQuery* q_sqldatabase_exec1(const void* self, const char* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqldatabase.html#setConnectOptions)
 ///

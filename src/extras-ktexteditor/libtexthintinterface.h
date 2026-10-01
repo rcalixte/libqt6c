@@ -16,13 +16,15 @@ KTextEditor__TextHintProvider* k_texteditor__texthintprovider_new();
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
 ///
+/// @warning This method must be implemented with `k_texteditor__texthintprovider_on_text_hint` before it can be called.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KTextEditor__TextHintProvider*
 /// @param view KTextEditor__View*
 /// @param position KTextEditor__Cursor*
 ///
-const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, void* position);
+const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, const void* position);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
 ///
@@ -31,17 +33,7 @@ const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, voi
 /// @param self KTextEditor__TextHintProvider*
 /// @param callback const char* func(KTextEditor__TextHintProvider* self, KTextEditor__View* view, KTextEditor__Cursor* position)
 ///
-void k_texteditor__texthintprovider_on_text_hint(void* self, const char* (*callback)(void*, void*, void*));
-
-/// [Upstream resources](https://api.kde.org/ktexteditor-texthintprovider.html#textHint)
-///
-/// Base class method implementation
-///
-/// @param self KTextEditor__TextHintProvider*
-/// @param view KTextEditor__View*
-/// @param position KTextEditor__Cursor*
-///
-const char* k_texteditor__texthintprovider_super_text_hint(void* self, void* view, void* position);
+void k_texteditor__texthintprovider_on_text_hint(void* self, const char* (*callback)(void*, void*, const void*));
 
 /// Delete this object from C++ memory.
 ///

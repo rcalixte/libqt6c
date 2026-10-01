@@ -36,7 +36,7 @@ void KToggleFullScreenAction_SetWindow(KToggleFullScreenAction* self, QWidget* w
 void KToggleFullScreenAction_SetFullScreen(QWidget* window, bool set);
 bool KToggleFullScreenAction_EventFilter(KToggleFullScreenAction* self, QObject* object, QEvent* event);
 void KToggleFullScreenAction_SlotToggled(KToggleFullScreenAction* self, bool checked);
-void KToggleFullScreenAction_OnMetaObject(const KToggleFullScreenAction* self, intptr_t slot);
+void KToggleFullScreenAction_OnMetaObject(KToggleFullScreenAction* self, intptr_t slot);
 QMetaObject* KToggleFullScreenAction_SuperMetaObject(const KToggleFullScreenAction* self);
 void KToggleFullScreenAction_OnMetacast(KToggleFullScreenAction* self, intptr_t slot);
 void* KToggleFullScreenAction_SuperMetacast(KToggleFullScreenAction* self, const char* param1);
@@ -65,17 +65,9 @@ void KToggleFullScreenAction_DisconnectNotify(KToggleFullScreenAction* self, con
 void KToggleFullScreenAction_OnDisconnectNotify(KToggleFullScreenAction* self, intptr_t slot);
 void KToggleFullScreenAction_SuperDisconnectNotify(KToggleFullScreenAction* self, const QMetaMethod* signal);
 QObject* KToggleFullScreenAction_Sender(const KToggleFullScreenAction* self);
-void KToggleFullScreenAction_OnSender(const KToggleFullScreenAction* self, intptr_t slot);
-QObject* KToggleFullScreenAction_SuperSender(const KToggleFullScreenAction* self);
 int KToggleFullScreenAction_SenderSignalIndex(const KToggleFullScreenAction* self);
-void KToggleFullScreenAction_OnSenderSignalIndex(const KToggleFullScreenAction* self, intptr_t slot);
-int KToggleFullScreenAction_SuperSenderSignalIndex(const KToggleFullScreenAction* self);
 int KToggleFullScreenAction_Receivers(const KToggleFullScreenAction* self, const char* signal);
-void KToggleFullScreenAction_OnReceivers(const KToggleFullScreenAction* self, intptr_t slot);
-int KToggleFullScreenAction_SuperReceivers(const KToggleFullScreenAction* self, const char* signal);
 bool KToggleFullScreenAction_IsSignalConnected(const KToggleFullScreenAction* self, const QMetaMethod* signal);
-void KToggleFullScreenAction_OnIsSignalConnected(const KToggleFullScreenAction* self, intptr_t slot);
-bool KToggleFullScreenAction_SuperIsSignalConnected(const KToggleFullScreenAction* self, const QMetaMethod* signal);
 void KToggleFullScreenAction_Delete(KToggleFullScreenAction* self);
 
 #ifdef __cplusplus

@@ -24,26 +24,26 @@ QNetworkAccessManager* q_networkaccessmanager_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-const QMetaObject* q_networkaccessmanager_meta_object(void* self);
+const QMetaObject* q_networkaccessmanager_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QNetworkAccessManager*
-/// @param callback const QMetaObject* func()
+/// @param self const QNetworkAccessManager*
+/// @param callback const QMetaObject* func(const QNetworkAccessManager* self)
 ///
-void q_networkaccessmanager_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_networkaccessmanager_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-const QMetaObject* q_networkaccessmanager_super_meta_object(void* self);
+const QMetaObject* q_networkaccessmanager_super_meta_object(const void* self);
 
 /// @param self QNetworkAccessManager*
 /// @param param1 const char*
@@ -99,26 +99,26 @@ const char* q_networkaccessmanager_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-const char** q_networkaccessmanager_supported_schemes(void* self);
+const char** q_networkaccessmanager_supported_schemes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemes)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QNetworkAccessManager*
-/// @param callback const char** func()
+/// @param self const QNetworkAccessManager*
+/// @param callback const char** func(const QNetworkAccessManager* self)
 ///
-void q_networkaccessmanager_on_supported_schemes(void* self, const char** (*callback)());
+void q_networkaccessmanager_on_supported_schemes(const void* self, const char** (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemes)
 ///
 /// Base class method implementation
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-const char** q_networkaccessmanager_super_supported_schemes(void* self);
+const char** q_networkaccessmanager_super_supported_schemes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#clearAccessCache)
 ///
@@ -134,22 +134,22 @@ void q_networkaccessmanager_clear_connection_cache(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#proxy)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-QNetworkProxy* q_networkaccessmanager_proxy(void* self);
+QNetworkProxy* q_networkaccessmanager_proxy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setProxy)
 ///
 /// @param self QNetworkAccessManager*
 /// @param proxy QNetworkProxy*
 ///
-void q_networkaccessmanager_set_proxy(void* self, void* proxy);
+void q_networkaccessmanager_set_proxy(void* self, const void* proxy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#proxyFactory)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-QNetworkProxyFactory* q_networkaccessmanager_proxy_factory(void* self);
+QNetworkProxyFactory* q_networkaccessmanager_proxy_factory(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setProxyFactory)
 ///
@@ -160,9 +160,9 @@ void q_networkaccessmanager_set_proxy_factory(void* self, void* factory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#cache)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-QAbstractNetworkCache* q_networkaccessmanager_cache(void* self);
+QAbstractNetworkCache* q_networkaccessmanager_cache(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setCache)
 ///
@@ -173,9 +173,9 @@ void q_networkaccessmanager_set_cache(void* self, void* cache);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#cookieJar)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-QNetworkCookieJar* q_networkaccessmanager_cookie_jar(void* self);
+QNetworkCookieJar* q_networkaccessmanager_cookie_jar(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setCookieJar)
 ///
@@ -193,9 +193,9 @@ void q_networkaccessmanager_set_strict_transport_security_enabled(void* self, bo
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#isStrictTransportSecurityEnabled)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-bool q_networkaccessmanager_is_strict_transport_security_enabled(void* self);
+bool q_networkaccessmanager_is_strict_transport_security_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#enableStrictTransportSecurityStore)
 ///
@@ -206,9 +206,9 @@ void q_networkaccessmanager_enable_strict_transport_security_store(void* self, b
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#isStrictTransportSecurityStoreEnabled)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-bool q_networkaccessmanager_is_strict_transport_security_store_enabled(void* self);
+bool q_networkaccessmanager_is_strict_transport_security_store_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#addStrictTransportSecurityHosts)
 ///
@@ -219,25 +219,25 @@ void q_networkaccessmanager_add_strict_transport_security_hosts(void* self, libq
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#strictTransportSecurityHosts)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
 /// @return libqt_list of QHstsPolicy*
 ///
-libqt_list q_networkaccessmanager_strict_transport_security_hosts(void* self);
+libqt_list q_networkaccessmanager_strict_transport_security_hosts(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#head)
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
 ///
-QNetworkReply* q_networkaccessmanager_head(void* self, void* request);
+QNetworkReply* q_networkaccessmanager_head(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#get)
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
 ///
-QNetworkReply* q_networkaccessmanager_get(void* self, void* request);
+QNetworkReply* q_networkaccessmanager_get(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#get)
 ///
@@ -245,7 +245,7 @@ QNetworkReply* q_networkaccessmanager_get(void* self, void* request);
 /// @param request QNetworkRequest*
 /// @param data QIODevice*
 ///
-QNetworkReply* q_networkaccessmanager_get2(void* self, void* request, void* data);
+QNetworkReply* q_networkaccessmanager_get2(void* self, const void* request, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#get)
 ///
@@ -253,7 +253,7 @@ QNetworkReply* q_networkaccessmanager_get2(void* self, void* request, void* data
 /// @param request QNetworkRequest*
 /// @param data char*
 ///
-QNetworkReply* q_networkaccessmanager_get3(void* self, void* request, char* data);
+QNetworkReply* q_networkaccessmanager_get3(void* self, const void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
@@ -261,7 +261,7 @@ QNetworkReply* q_networkaccessmanager_get3(void* self, void* request, char* data
 /// @param request QNetworkRequest*
 /// @param data QIODevice*
 ///
-QNetworkReply* q_networkaccessmanager_post(void* self, void* request, void* data);
+QNetworkReply* q_networkaccessmanager_post(void* self, const void* request, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
@@ -269,7 +269,7 @@ QNetworkReply* q_networkaccessmanager_post(void* self, void* request, void* data
 /// @param request QNetworkRequest*
 /// @param data char*
 ///
-QNetworkReply* q_networkaccessmanager_post2(void* self, void* request, char* data);
+QNetworkReply* q_networkaccessmanager_post2(void* self, const void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#put)
 ///
@@ -277,7 +277,7 @@ QNetworkReply* q_networkaccessmanager_post2(void* self, void* request, char* dat
 /// @param request QNetworkRequest*
 /// @param data QIODevice*
 ///
-QNetworkReply* q_networkaccessmanager_put(void* self, void* request, void* data);
+QNetworkReply* q_networkaccessmanager_put(void* self, const void* request, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#put)
 ///
@@ -285,14 +285,14 @@ QNetworkReply* q_networkaccessmanager_put(void* self, void* request, void* data)
 /// @param request QNetworkRequest*
 /// @param data char*
 ///
-QNetworkReply* q_networkaccessmanager_put2(void* self, void* request, char* data);
+QNetworkReply* q_networkaccessmanager_put2(void* self, const void* request, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#deleteResource)
 ///
 /// @param self QNetworkAccessManager*
 /// @param request QNetworkRequest*
 ///
-QNetworkReply* q_networkaccessmanager_delete_resource(void* self, void* request);
+QNetworkReply* q_networkaccessmanager_delete_resource(void* self, const void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sendCustomRequest)
 ///
@@ -300,7 +300,7 @@ QNetworkReply* q_networkaccessmanager_delete_resource(void* self, void* request)
 /// @param request QNetworkRequest*
 /// @param verb char*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request(void* self, void* request, char* verb);
+QNetworkReply* q_networkaccessmanager_send_custom_request(void* self, const void* request, char* verb);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sendCustomRequest)
 ///
@@ -309,7 +309,7 @@ QNetworkReply* q_networkaccessmanager_send_custom_request(void* self, void* requ
 /// @param verb char*
 /// @param data char*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, void* request, char* verb, char* data);
+QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, const void* request, char* verb, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#post)
 ///
@@ -317,7 +317,7 @@ QNetworkReply* q_networkaccessmanager_send_custom_request2(void* self, void* req
 /// @param request QNetworkRequest*
 /// @param multiPart QHttpMultiPart*
 ///
-QNetworkReply* q_networkaccessmanager_post4(void* self, void* request, void* multiPart);
+QNetworkReply* q_networkaccessmanager_post4(void* self, const void* request, void* multiPart);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#put)
 ///
@@ -325,7 +325,7 @@ QNetworkReply* q_networkaccessmanager_post4(void* self, void* request, void* mul
 /// @param request QNetworkRequest*
 /// @param multiPart QHttpMultiPart*
 ///
-QNetworkReply* q_networkaccessmanager_put4(void* self, void* request, void* multiPart);
+QNetworkReply* q_networkaccessmanager_put4(void* self, const void* request, void* multiPart);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#sendCustomRequest)
 ///
@@ -334,7 +334,7 @@ QNetworkReply* q_networkaccessmanager_put4(void* self, void* request, void* mult
 /// @param verb char*
 /// @param multiPart QHttpMultiPart*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request3(void* self, void* request, char* verb, void* multiPart);
+QNetworkReply* q_networkaccessmanager_send_custom_request3(void* self, const void* request, char* verb, void* multiPart);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHostEncrypted)
 ///
@@ -351,7 +351,7 @@ void q_networkaccessmanager_connect_to_host_encrypted(void* self, const char* ho
 /// @param sslConfiguration QSslConfiguration*
 /// @param peerName const char*
 ///
-void q_networkaccessmanager_connect_to_host_encrypted2(void* self, const char* hostName, uint16_t port, void* sslConfiguration, const char* peerName);
+void q_networkaccessmanager_connect_to_host_encrypted2(void* self, const char* hostName, uint16_t port, const void* sslConfiguration, const char* peerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHost)
 ///
@@ -369,17 +369,17 @@ void q_networkaccessmanager_set_redirect_policy(void* self, int32_t policy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#redirectPolicy)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
 /// @return enum QNetworkRequest__RedirectPolicy
 ///
-int32_t q_networkaccessmanager_redirect_policy(void* self);
+int32_t q_networkaccessmanager_redirect_policy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#autoDeleteReplies)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-bool q_networkaccessmanager_auto_delete_replies(void* self);
+bool q_networkaccessmanager_auto_delete_replies(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setAutoDeleteReplies)
 ///
@@ -390,9 +390,9 @@ void q_networkaccessmanager_set_auto_delete_replies(void* self, bool autoDelete)
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#transferTimeout)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-int32_t q_networkaccessmanager_transfer_timeout(void* self);
+int32_t q_networkaccessmanager_transfer_timeout(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setTransferTimeout)
 ///
@@ -403,11 +403,11 @@ void q_networkaccessmanager_set_transfer_timeout(void* self, int timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#transferTimeoutAsDuration)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
 /// @return int64_t of milliseconds
 ///
-int64_t q_networkaccessmanager_transfer_timeout_as_duration(void* self);
+int64_t q_networkaccessmanager_transfer_timeout_as_duration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setTransferTimeout)
 ///
@@ -421,14 +421,14 @@ void q_networkaccessmanager_set_transfer_timeout2(void* self);
 /// @param proxy QNetworkProxy*
 /// @param authenticator QAuthenticator*
 ///
-void q_networkaccessmanager_proxy_authentication_required(void* self, void* proxy, void* authenticator);
+void q_networkaccessmanager_proxy_authentication_required(void* self, const void* proxy, void* authenticator);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#proxyAuthenticationRequired)
 ///
 /// @param self QNetworkAccessManager*
 /// @param callback void func(QNetworkAccessManager* self, QNetworkProxy* proxy, QAuthenticator* authenticator)
 ///
-void q_networkaccessmanager_on_proxy_authentication_required(void* self, void (*callback)(void*, void*, void*));
+void q_networkaccessmanager_on_proxy_authentication_required(void* self, void (*callback)(void*, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#authenticationRequired)
 ///
@@ -510,7 +510,7 @@ void q_networkaccessmanager_on_pre_shared_key_authentication_required(void* self
 /// @param request QNetworkRequest*
 /// @param outgoingData QIODevice*
 ///
-QNetworkReply* q_networkaccessmanager_create_request(void* self, int32_t op, void* request, void* outgoingData);
+QNetworkReply* q_networkaccessmanager_create_request(void* self, int32_t op, const void* request, void* outgoingData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#createRequest)
 ///
@@ -519,7 +519,7 @@ QNetworkReply* q_networkaccessmanager_create_request(void* self, int32_t op, voi
 /// @param self QNetworkAccessManager*
 /// @param callback QNetworkReply* func(QNetworkAccessManager* self, enum QNetworkAccessManager__Operation op, QNetworkRequest* request, QIODevice* outgoingData)
 ///
-void q_networkaccessmanager_on_create_request(void* self, QNetworkReply* (*callback)(void*, int32_t, void*, void*));
+void q_networkaccessmanager_on_create_request(void* self, QNetworkReply* (*callback)(void*, int32_t, const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#createRequest)
 ///
@@ -530,32 +530,15 @@ void q_networkaccessmanager_on_create_request(void* self, QNetworkReply* (*callb
 /// @param request QNetworkRequest*
 /// @param outgoingData QIODevice*
 ///
-QNetworkReply* q_networkaccessmanager_super_create_request(void* self, int32_t op, void* request, void* outgoingData);
+QNetworkReply* q_networkaccessmanager_super_create_request(void* self, int32_t op, const void* request, void* outgoingData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemesImplementation)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-const char** q_networkaccessmanager_supported_schemes_implementation(void* self);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemesImplementation)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QNetworkAccessManager*
-/// @param callback const char** func()
-///
-void q_networkaccessmanager_on_supported_schemes_implementation(void* self, const char** (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#supportedSchemesImplementation)
-///
-/// Base class method implementation
-///
-/// @param self QNetworkAccessManager*
-///
-const char** q_networkaccessmanager_super_supported_schemes_implementation(void* self);
+const char** q_networkaccessmanager_supported_schemes_implementation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -591,7 +574,7 @@ void q_networkaccessmanager_enable_strict_transport_security_store2(void* self, 
 /// @param verb char*
 /// @param data QIODevice*
 ///
-QNetworkReply* q_networkaccessmanager_send_custom_request32(void* self, void* request, char* verb, void* data);
+QNetworkReply* q_networkaccessmanager_send_custom_request32(void* self, const void* request, char* verb, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHostEncrypted)
 ///
@@ -608,7 +591,7 @@ void q_networkaccessmanager_connect_to_host_encrypted22(void* self, const char* 
 /// @param port uint16_t
 /// @param sslConfiguration QSslConfiguration*
 ///
-void q_networkaccessmanager_connect_to_host_encrypted3(void* self, const char* hostName, uint16_t port, void* sslConfiguration);
+void q_networkaccessmanager_connect_to_host_encrypted3(void* self, const char* hostName, uint16_t port, const void* sslConfiguration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHost)
 ///
@@ -631,9 +614,9 @@ void q_networkaccessmanager_set_transfer_timeout1(void* self, int64_t duration);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-const char* q_networkaccessmanager_object_name(void* self);
+const char* q_networkaccessmanager_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -648,33 +631,33 @@ void q_networkaccessmanager_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-bool q_networkaccessmanager_is_widget_type(void* self);
+bool q_networkaccessmanager_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-bool q_networkaccessmanager_is_window_type(void* self);
+bool q_networkaccessmanager_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-bool q_networkaccessmanager_is_quick_item_type(void* self);
+bool q_networkaccessmanager_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-bool q_networkaccessmanager_signals_blocked(void* self);
+bool q_networkaccessmanager_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -689,9 +672,9 @@ bool q_networkaccessmanager_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-QThread* q_networkaccessmanager_thread(void* self);
+QThread* q_networkaccessmanager_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -742,11 +725,11 @@ void q_networkaccessmanager_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_networkaccessmanager_children(void* self);
+libqt_list q_networkaccessmanager_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -784,7 +767,7 @@ void q_networkaccessmanager_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_networkaccessmanager_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_networkaccessmanager_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -795,18 +778,18 @@ QMetaObject__Connection* q_networkaccessmanager_connect(void* sender, const char
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_networkaccessmanager_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_networkaccessmanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_networkaccessmanager_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_networkaccessmanager_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -817,7 +800,7 @@ QMetaObject__Connection* q_networkaccessmanager_connect3(void* self, void* sende
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_networkaccessmanager_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_networkaccessmanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -828,24 +811,24 @@ bool q_networkaccessmanager_disconnect(void* sender, const char* signal, void* r
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_networkaccessmanager_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_networkaccessmanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-bool q_networkaccessmanager_disconnect3(void* self);
+bool q_networkaccessmanager_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param receiver QObject*
 ///
-bool q_networkaccessmanager_disconnect4(void* self, void* receiver);
+bool q_networkaccessmanager_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -853,23 +836,23 @@ bool q_networkaccessmanager_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_networkaccessmanager_disconnect5(void* param1);
+bool q_networkaccessmanager_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-void q_networkaccessmanager_dump_object_tree(void* self);
+void q_networkaccessmanager_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-void q_networkaccessmanager_dump_object_info(void* self);
+void q_networkaccessmanager_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -879,16 +862,16 @@ void q_networkaccessmanager_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_networkaccessmanager_set_property(void* self, const char* name, void* value);
+bool q_networkaccessmanager_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param name const char*
 ///
-QVariant* q_networkaccessmanager_property(void* self, const char* name);
+QVariant* q_networkaccessmanager_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -896,9 +879,9 @@ QVariant* q_networkaccessmanager_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-const char** q_networkaccessmanager_dynamic_property_names(void* self);
+const char** q_networkaccessmanager_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -912,9 +895,9 @@ QBindingStorage* q_networkaccessmanager_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-const QBindingStorage* q_networkaccessmanager_binding_storage2(void* self);
+const QBindingStorage* q_networkaccessmanager_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -937,18 +920,18 @@ void q_networkaccessmanager_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-QObject* q_networkaccessmanager_parent(void* self);
+QObject* q_networkaccessmanager_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param classname const char*
 ///
-bool q_networkaccessmanager_inherits(void* self, const char* classname);
+bool q_networkaccessmanager_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -988,7 +971,7 @@ int32_t q_networkaccessmanager_start_timer23(void* self, int64_t time, int32_t t
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_networkaccessmanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_networkaccessmanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1000,59 +983,59 @@ QMetaObject__Connection* q_networkaccessmanager_connect5(void* sender, const cha
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_networkaccessmanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_networkaccessmanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_networkaccessmanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_networkaccessmanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param signal const char*
 ///
-bool q_networkaccessmanager_disconnect1(void* self, const char* signal);
+bool q_networkaccessmanager_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkAccessManager*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_networkaccessmanager_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_networkaccessmanager_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_networkaccessmanager_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_networkaccessmanager_disconnect23(void* self, void* receiver, const char* member);
+bool q_networkaccessmanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QNetworkAccessManager*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_networkaccessmanager_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1248,7 +1231,7 @@ void q_networkaccessmanager_on_custom_event(void* self, void (*callback)(void*, 
 /// @param self QNetworkAccessManager*
 /// @param signal QMetaMethod*
 ///
-void q_networkaccessmanager_connect_notify(void* self, void* signal);
+void q_networkaccessmanager_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1259,7 +1242,7 @@ void q_networkaccessmanager_connect_notify(void* self, void* signal);
 /// @param self QNetworkAccessManager*
 /// @param signal QMetaMethod*
 ///
-void q_networkaccessmanager_super_connect_notify(void* self, void* signal);
+void q_networkaccessmanager_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1270,7 +1253,7 @@ void q_networkaccessmanager_super_connect_notify(void* self, void* signal);
 /// @param self QNetworkAccessManager*
 /// @param callback void func(QNetworkAccessManager* self, QMetaMethod* signal)
 ///
-void q_networkaccessmanager_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_networkaccessmanager_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1281,7 +1264,7 @@ void q_networkaccessmanager_on_connect_notify(void* self, void (*callback)(void*
 /// @param self QNetworkAccessManager*
 /// @param signal QMetaMethod*
 ///
-void q_networkaccessmanager_disconnect_notify(void* self, void* signal);
+void q_networkaccessmanager_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1292,7 +1275,7 @@ void q_networkaccessmanager_disconnect_notify(void* self, void* signal);
 /// @param self QNetworkAccessManager*
 /// @param signal QMetaMethod*
 ///
-void q_networkaccessmanager_super_disconnect_notify(void* self, void* signal);
+void q_networkaccessmanager_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1303,7 +1286,7 @@ void q_networkaccessmanager_super_disconnect_notify(void* self, void* signal);
 /// @param self QNetworkAccessManager*
 /// @param callback void func(QNetworkAccessManager* self, QMetaMethod* signal)
 ///
-void q_networkaccessmanager_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_networkaccessmanager_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1311,9 +1294,9 @@ void q_networkaccessmanager_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-QObject* q_networkaccessmanager_sender(void* self);
+QObject* q_networkaccessmanager_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1321,9 +1304,9 @@ QObject* q_networkaccessmanager_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-QObject* q_networkaccessmanager_super_sender(void* self);
+QObject* q_networkaccessmanager_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1331,10 +1314,10 @@ QObject* q_networkaccessmanager_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
-/// @param callback QObject* func()
+/// @param self const QNetworkAccessManager*
+/// @param callback QObject* func(QNetworkAccessManager* self)
 ///
-void q_networkaccessmanager_on_sender(void* self, QObject* (*callback)());
+void q_networkaccessmanager_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1342,9 +1325,9 @@ void q_networkaccessmanager_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-int32_t q_networkaccessmanager_sender_signal_index(void* self);
+int32_t q_networkaccessmanager_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1352,9 +1335,9 @@ int32_t q_networkaccessmanager_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 ///
-int32_t q_networkaccessmanager_super_sender_signal_index(void* self);
+int32_t q_networkaccessmanager_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1362,10 +1345,10 @@ int32_t q_networkaccessmanager_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
-/// @param callback int32_t func()
+/// @param self const QNetworkAccessManager*
+/// @param callback int32_t func(QNetworkAccessManager* self)
 ///
-void q_networkaccessmanager_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_networkaccessmanager_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1373,10 +1356,10 @@ void q_networkaccessmanager_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param signal const char*
 ///
-int32_t q_networkaccessmanager_receivers(void* self, const char* signal);
+int32_t q_networkaccessmanager_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1384,10 +1367,10 @@ int32_t q_networkaccessmanager_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param signal const char*
 ///
-int32_t q_networkaccessmanager_super_receivers(void* self, const char* signal);
+int32_t q_networkaccessmanager_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1395,10 +1378,10 @@ int32_t q_networkaccessmanager_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param callback int32_t func(QNetworkAccessManager* self, const char* signal)
 ///
-void q_networkaccessmanager_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_networkaccessmanager_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1406,10 +1389,10 @@ void q_networkaccessmanager_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param signal QMetaMethod*
 ///
-bool q_networkaccessmanager_is_signal_connected(void* self, void* signal);
+bool q_networkaccessmanager_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1417,10 +1400,10 @@ bool q_networkaccessmanager_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param signal QMetaMethod*
 ///
-bool q_networkaccessmanager_super_is_signal_connected(void* self, void* signal);
+bool q_networkaccessmanager_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1428,10 +1411,10 @@ bool q_networkaccessmanager_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QNetworkAccessManager*
+/// @param self const QNetworkAccessManager*
 /// @param callback bool func(QNetworkAccessManager* self, QMetaMethod* signal)
 ///
-void q_networkaccessmanager_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_networkaccessmanager_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

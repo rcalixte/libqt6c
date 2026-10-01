@@ -8,7 +8,7 @@
 #include "libqdesigner_components.hpp"
 #include "libqdesigner_components.h"
 
-QDesignerComponents* q_designercomponents_new(void* other) {
+QDesignerComponents* q_designercomponents_new(const void* other) {
     return QDesignerComponents_New((QDesignerComponents*)other);
 }
 

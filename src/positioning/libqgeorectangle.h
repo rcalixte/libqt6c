@@ -22,7 +22,7 @@ QGeoRectangle* q_georectangle_new();
 /// @param degreesWidth double
 /// @param degreesHeight double
 ///
-QGeoRectangle* q_georectangle_new2(void* center, double degreesWidth, double degreesHeight);
+QGeoRectangle* q_georectangle_new2(const void* center, double degreesWidth, double degreesHeight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html)
 
@@ -31,7 +31,7 @@ QGeoRectangle* q_georectangle_new2(void* center, double degreesWidth, double deg
 /// @param topLeft QGeoCoordinate*
 /// @param bottomRight QGeoCoordinate*
 ///
-QGeoRectangle* q_georectangle_new3(void* topLeft, void* bottomRight);
+QGeoRectangle* q_georectangle_new3(const void* topLeft, const void* bottomRight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html)
 
@@ -47,7 +47,7 @@ QGeoRectangle* q_georectangle_new4(libqt_list coordinates);
 ///
 /// @param other QGeoRectangle*
 ///
-QGeoRectangle* q_georectangle_new5(void* other);
+QGeoRectangle* q_georectangle_new5(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html)
 
@@ -55,79 +55,79 @@ QGeoRectangle* q_georectangle_new5(void* other);
 ///
 /// @param other QGeoShape*
 ///
-QGeoRectangle* q_georectangle_new6(void* other);
+QGeoRectangle* q_georectangle_new6(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#operator-eq)
 ///
 /// @param self QGeoRectangle*
 /// @param other QGeoRectangle*
 ///
-void q_georectangle_operator_assign(void* self, void* other);
+void q_georectangle_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#setTopLeft)
 ///
 /// @param self QGeoRectangle*
 /// @param topLeft QGeoCoordinate*
 ///
-void q_georectangle_set_top_left(void* self, void* topLeft);
+void q_georectangle_set_top_left(void* self, const void* topLeft);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#topLeft)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-QGeoCoordinate* q_georectangle_top_left(void* self);
+QGeoCoordinate* q_georectangle_top_left(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#setTopRight)
 ///
 /// @param self QGeoRectangle*
 /// @param topRight QGeoCoordinate*
 ///
-void q_georectangle_set_top_right(void* self, void* topRight);
+void q_georectangle_set_top_right(void* self, const void* topRight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#topRight)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-QGeoCoordinate* q_georectangle_top_right(void* self);
+QGeoCoordinate* q_georectangle_top_right(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#setBottomLeft)
 ///
 /// @param self QGeoRectangle*
 /// @param bottomLeft QGeoCoordinate*
 ///
-void q_georectangle_set_bottom_left(void* self, void* bottomLeft);
+void q_georectangle_set_bottom_left(void* self, const void* bottomLeft);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#bottomLeft)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-QGeoCoordinate* q_georectangle_bottom_left(void* self);
+QGeoCoordinate* q_georectangle_bottom_left(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#setBottomRight)
 ///
 /// @param self QGeoRectangle*
 /// @param bottomRight QGeoCoordinate*
 ///
-void q_georectangle_set_bottom_right(void* self, void* bottomRight);
+void q_georectangle_set_bottom_right(void* self, const void* bottomRight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#bottomRight)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-QGeoCoordinate* q_georectangle_bottom_right(void* self);
+QGeoCoordinate* q_georectangle_bottom_right(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#setCenter)
 ///
 /// @param self QGeoRectangle*
 /// @param center QGeoCoordinate*
 ///
-void q_georectangle_set_center(void* self, void* center);
+void q_georectangle_set_center(void* self, const void* center);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#center)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-QGeoCoordinate* q_georectangle_center(void* self);
+QGeoCoordinate* q_georectangle_center(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#setWidth)
 ///
@@ -138,9 +138,9 @@ void q_georectangle_set_width(void* self, double degreesWidth);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#width)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-double q_georectangle_width(void* self);
+double q_georectangle_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#setHeight)
 ///
@@ -151,23 +151,23 @@ void q_georectangle_set_height(void* self, double degreesHeight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#height)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-double q_georectangle_height(void* self);
+double q_georectangle_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#contains)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 /// @param rectangle QGeoRectangle*
 ///
-bool q_georectangle_contains(void* self, void* rectangle);
+bool q_georectangle_contains(const void* self, const void* rectangle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#intersects)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 /// @param rectangle QGeoRectangle*
 ///
-bool q_georectangle_intersects(void* self, void* rectangle);
+bool q_georectangle_intersects(const void* self, const void* rectangle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#translate)
 ///
@@ -179,81 +179,81 @@ void q_georectangle_translate(void* self, double degreesLatitude, double degrees
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#translated)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 /// @param degreesLatitude double
 /// @param degreesLongitude double
 ///
-QGeoRectangle* q_georectangle_translated(void* self, double degreesLatitude, double degreesLongitude);
+QGeoRectangle* q_georectangle_translated(const void* self, double degreesLatitude, double degreesLongitude);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#extendRectangle)
 ///
 /// @param self QGeoRectangle*
 /// @param coordinate QGeoCoordinate*
 ///
-void q_georectangle_extend_rectangle(void* self, void* coordinate);
+void q_georectangle_extend_rectangle(void* self, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#united)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 /// @param rectangle QGeoRectangle*
 ///
-QGeoRectangle* q_georectangle_united(void* self, void* rectangle);
+QGeoRectangle* q_georectangle_united(const void* self, const void* rectangle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#operator-7c)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 /// @param rectangle QGeoRectangle*
 ///
-QGeoRectangle* q_georectangle_operator_bitwise_or(void* self, void* rectangle);
+QGeoRectangle* q_georectangle_operator_bitwise_or(const void* self, const void* rectangle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#operator-7c-eq)
 ///
 /// @param self QGeoRectangle*
 /// @param rectangle QGeoRectangle*
 ///
-void q_georectangle_operator_bitwise_or_assign(void* self, void* rectangle);
+void q_georectangle_operator_bitwise_or_assign(void* self, const void* rectangle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-const char* q_georectangle_to_string(void* self);
+const char* q_georectangle_to_string(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#type)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
 /// @return enum QGeoShape__ShapeType
 ///
-int32_t q_georectangle_type(void* self);
+int32_t q_georectangle_type(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#isValid)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-bool q_georectangle_is_valid(void* self);
+bool q_georectangle_is_valid(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#isEmpty)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-bool q_georectangle_is_empty(void* self);
+bool q_georectangle_is_empty(const void* self);
 
 /// Inherited from QGeoShape
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoshape.html#boundingGeoRectangle)
 ///
-/// @param self QGeoRectangle*
+/// @param self const QGeoRectangle*
 ///
-QGeoRectangle* q_georectangle_bounding_geo_rectangle(void* self);
+QGeoRectangle* q_georectangle_bounding_geo_rectangle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeorectangle.html#dtor.QGeoRectangle)
 ///

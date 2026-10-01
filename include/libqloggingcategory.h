@@ -18,35 +18,35 @@ QLoggingCategory* q_loggingcategory_new(const char* category);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#isDebugEnabled)
 ///
-/// @param self QLoggingCategory*
+/// @param self const QLoggingCategory*
 ///
-bool q_loggingcategory_is_debug_enabled(void* self);
+bool q_loggingcategory_is_debug_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#isInfoEnabled)
 ///
-/// @param self QLoggingCategory*
+/// @param self const QLoggingCategory*
 ///
-bool q_loggingcategory_is_info_enabled(void* self);
+bool q_loggingcategory_is_info_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#isWarningEnabled)
 ///
-/// @param self QLoggingCategory*
+/// @param self const QLoggingCategory*
 ///
-bool q_loggingcategory_is_warning_enabled(void* self);
+bool q_loggingcategory_is_warning_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#isCriticalEnabled)
 ///
-/// @param self QLoggingCategory*
+/// @param self const QLoggingCategory*
 ///
-bool q_loggingcategory_is_critical_enabled(void* self);
+bool q_loggingcategory_is_critical_enabled(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#categoryName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QLoggingCategory*
+/// @param self const QLoggingCategory*
 ///
-const char* q_loggingcategory_category_name(void* self);
+const char* q_loggingcategory_category_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#operator-28-29)
 ///
@@ -56,9 +56,9 @@ QLoggingCategory* q_loggingcategory_operator_call(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#operator-28-29)
 ///
-/// @param self QLoggingCategory*
+/// @param self const QLoggingCategory*
 ///
-const QLoggingCategory* q_loggingcategory_operator_call2(void* self);
+const QLoggingCategory* q_loggingcategory_operator_call2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#defaultCategory)
 ///

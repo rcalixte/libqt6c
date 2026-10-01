@@ -20,14 +20,14 @@ QLowEnergyConnectionParameters* q_lowenergyconnectionparameters_new();
 ///
 /// @param other QLowEnergyConnectionParameters*
 ///
-QLowEnergyConnectionParameters* q_lowenergyconnectionparameters_new2(void* other);
+QLowEnergyConnectionParameters* q_lowenergyconnectionparameters_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#operator-eq)
 ///
 /// @param self QLowEnergyConnectionParameters*
 /// @param other QLowEnergyConnectionParameters*
 ///
-void q_lowenergyconnectionparameters_operator_assign(void* self, void* other);
+void q_lowenergyconnectionparameters_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#setIntervalRange)
 ///
@@ -39,15 +39,15 @@ void q_lowenergyconnectionparameters_set_interval_range(void* self, double minim
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#minimumInterval)
 ///
-/// @param self QLowEnergyConnectionParameters*
+/// @param self const QLowEnergyConnectionParameters*
 ///
-double q_lowenergyconnectionparameters_minimum_interval(void* self);
+double q_lowenergyconnectionparameters_minimum_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#maximumInterval)
 ///
-/// @param self QLowEnergyConnectionParameters*
+/// @param self const QLowEnergyConnectionParameters*
 ///
-double q_lowenergyconnectionparameters_maximum_interval(void* self);
+double q_lowenergyconnectionparameters_maximum_interval(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#setLatency)
 ///
@@ -58,9 +58,9 @@ void q_lowenergyconnectionparameters_set_latency(void* self, int latency);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#latency)
 ///
-/// @param self QLowEnergyConnectionParameters*
+/// @param self const QLowEnergyConnectionParameters*
 ///
-int32_t q_lowenergyconnectionparameters_latency(void* self);
+int32_t q_lowenergyconnectionparameters_latency(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#setSupervisionTimeout)
 ///
@@ -71,9 +71,9 @@ void q_lowenergyconnectionparameters_set_supervision_timeout(void* self, int tim
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#supervisionTimeout)
 ///
-/// @param self QLowEnergyConnectionParameters*
+/// @param self const QLowEnergyConnectionParameters*
 ///
-int32_t q_lowenergyconnectionparameters_supervision_timeout(void* self);
+int32_t q_lowenergyconnectionparameters_supervision_timeout(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyconnectionparameters.html#swap)
 ///

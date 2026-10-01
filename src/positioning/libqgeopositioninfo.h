@@ -15,7 +15,7 @@
 /// @param key QGeoPositionInfo*
 /// @param seed size_t
 ///
-size_t q_qgeopositioninfo_h_q_hash(void* key, size_t seed);
+size_t q_qgeopositioninfo_h_q_hash(const void* key, size_t seed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html)
 
@@ -30,7 +30,7 @@ QGeoPositionInfo* q_geopositioninfo_new();
 /// @param coordinate QGeoCoordinate*
 /// @param updateTime QDateTime*
 ///
-QGeoPositionInfo* q_geopositioninfo_new2(void* coordinate, void* updateTime);
+QGeoPositionInfo* q_geopositioninfo_new2(const void* coordinate, const void* updateTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html)
 
@@ -38,14 +38,14 @@ QGeoPositionInfo* q_geopositioninfo_new2(void* coordinate, void* updateTime);
 ///
 /// @param other QGeoPositionInfo*
 ///
-QGeoPositionInfo* q_geopositioninfo_new3(void* other);
+QGeoPositionInfo* q_geopositioninfo_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#operator-eq)
 ///
 /// @param self QGeoPositionInfo*
 /// @param other QGeoPositionInfo*
 ///
-void q_geopositioninfo_operator_assign(void* self, void* other);
+void q_geopositioninfo_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#swap)
 ///
@@ -56,35 +56,35 @@ void q_geopositioninfo_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#isValid)
 ///
-/// @param self QGeoPositionInfo*
+/// @param self const QGeoPositionInfo*
 ///
-bool q_geopositioninfo_is_valid(void* self);
+bool q_geopositioninfo_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#setTimestamp)
 ///
 /// @param self QGeoPositionInfo*
 /// @param timestamp QDateTime*
 ///
-void q_geopositioninfo_set_timestamp(void* self, void* timestamp);
+void q_geopositioninfo_set_timestamp(void* self, const void* timestamp);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#timestamp)
 ///
-/// @param self QGeoPositionInfo*
+/// @param self const QGeoPositionInfo*
 ///
-QDateTime* q_geopositioninfo_timestamp(void* self);
+QDateTime* q_geopositioninfo_timestamp(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#setCoordinate)
 ///
 /// @param self QGeoPositionInfo*
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopositioninfo_set_coordinate(void* self, void* coordinate);
+void q_geopositioninfo_set_coordinate(void* self, const void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#coordinate)
 ///
-/// @param self QGeoPositionInfo*
+/// @param self const QGeoPositionInfo*
 ///
-QGeoCoordinate* q_geopositioninfo_coordinate(void* self);
+QGeoCoordinate* q_geopositioninfo_coordinate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#setAttribute)
 ///
@@ -96,10 +96,10 @@ void q_geopositioninfo_set_attribute(void* self, int32_t attribute, double value
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#attribute)
 ///
-/// @param self QGeoPositionInfo*
+/// @param self const QGeoPositionInfo*
 /// @param attribute enum QGeoPositionInfo__Attribute
 ///
-double q_geopositioninfo_attribute(void* self, int32_t attribute);
+double q_geopositioninfo_attribute(const void* self, int32_t attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#removeAttribute)
 ///
@@ -110,10 +110,10 @@ void q_geopositioninfo_remove_attribute(void* self, int32_t attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#hasAttribute)
 ///
-/// @param self QGeoPositionInfo*
+/// @param self const QGeoPositionInfo*
 /// @param attribute enum QGeoPositionInfo__Attribute
 ///
-bool q_geopositioninfo_has_attribute(void* self, int32_t attribute);
+bool q_geopositioninfo_has_attribute(const void* self, int32_t attribute);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopositioninfo.html#detach)
 ///

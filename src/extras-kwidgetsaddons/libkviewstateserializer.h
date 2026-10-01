@@ -36,26 +36,26 @@ KViewStateSerializer* k_viewstateserializer_new2(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-const QMetaObject* k_viewstateserializer_meta_object(void* self);
+const QMetaObject* k_viewstateserializer_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KViewStateSerializer*
-/// @param callback const QMetaObject* func()
+/// @param self const KViewStateSerializer*
+/// @param callback const QMetaObject* func(const KViewStateSerializer* self)
 ///
-void k_viewstateserializer_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_viewstateserializer_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-const QMetaObject* k_viewstateserializer_super_meta_object(void* self);
+const QMetaObject* k_viewstateserializer_super_meta_object(const void* self);
 
 /// @param self KViewStateSerializer*
 /// @param param1 const char*
@@ -109,9 +109,9 @@ const char* k_viewstateserializer_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#view)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-QAbstractItemView* k_viewstateserializer_view(void* self);
+QAbstractItemView* k_viewstateserializer_view(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#setView)
 ///
@@ -122,9 +122,9 @@ void k_viewstateserializer_set_view(void* self, void* view);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#selectionModel)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-QItemSelectionModel* k_viewstateserializer_selection_model(void* self);
+QItemSelectionModel* k_viewstateserializer_selection_model(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#setSelectionModel)
 ///
@@ -137,33 +137,33 @@ void k_viewstateserializer_set_selection_model(void* self, void* selectionModel)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-const char** k_viewstateserializer_selection_keys(void* self);
+const char** k_viewstateserializer_selection_keys(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#expansionKeys)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-const char** k_viewstateserializer_expansion_keys(void* self);
+const char** k_viewstateserializer_expansion_keys(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#currentIndexKey)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-const char* k_viewstateserializer_current_index_key(void* self);
+const char* k_viewstateserializer_current_index_key(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#scrollState)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
 /// @return pair_int_int tuple of int and int
 ///
-pair_int_int k_viewstateserializer_scroll_state(void* self);
+pair_int_int k_viewstateserializer_scroll_state(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#restoreSelection)
 ///
@@ -196,82 +196,50 @@ void k_viewstateserializer_restore_scroll_state(void* self, int verticalScoll, i
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
 ///
-/// @param self KViewStateSerializer*
+/// @warning This method must be implemented with `k_viewstateserializer_on_index_from_config_string` before it can be called.
+///
+/// @param self const KViewStateSerializer*
 /// @param model QAbstractItemModel*
 /// @param key const char*
 ///
-QModelIndex* k_viewstateserializer_index_from_config_string(void* self, void* model, const char* key);
+QModelIndex* k_viewstateserializer_index_from_config_string(const void* self, const void* model, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KViewStateSerializer*
-/// @param callback QModelIndex* func(KViewStateSerializer* self, QAbstractItemModel* model, const char* key)
+/// @param self const KViewStateSerializer*
+/// @param callback QModelIndex* func(const KViewStateSerializer* self, QAbstractItemModel* model, const char* key)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_viewstateserializer_on_index_from_config_string(void* self, QModelIndex* (*callback)(void*, void*, const char*));
-
-/// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexFromConfigString)
-///
-/// Base class method implementation
-///
-/// @param self KViewStateSerializer*
-/// @param model QAbstractItemModel*
-/// @param key const char*
-///
-QModelIndex* k_viewstateserializer_super_index_from_config_string(void* self, void* model, const char* key);
+void k_viewstateserializer_on_index_from_config_string(const void* self, QModelIndex* (*callback)(const void*, const void*, const char*));
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
+/// @warning This method must be implemented with `k_viewstateserializer_on_index_to_config_string` before it can be called.
+///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param index QModelIndex*
 ///
-const char* k_viewstateserializer_index_to_config_string(void* self, void* index);
+const char* k_viewstateserializer_index_to_config_string(const void* self, const void* index);
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KViewStateSerializer*
-/// @param callback const char* func(KViewStateSerializer* self, QModelIndex* index)
+/// @param self const KViewStateSerializer*
+/// @param callback const char* func(const KViewStateSerializer* self, QModelIndex* index)
 ///
-void k_viewstateserializer_on_index_to_config_string(void* self, const char* (*callback)(void*, void*));
-
-/// [Upstream resources](https://api.kde.org/kviewstateserializer.html#indexToConfigString)
-///
-/// Base class method implementation
-///
-/// @param self KViewStateSerializer*
-/// @param index QModelIndex*
-///
-const char* k_viewstateserializer_super_index_to_config_string(void* self, void* index);
+void k_viewstateserializer_on_index_to_config_string(const void* self, const char* (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/kviewstateserializer.html#restoreState)
 ///
 /// @param self KViewStateSerializer*
 ///
 void k_viewstateserializer_restore_state(void* self);
-
-/// [Upstream resources](https://api.kde.org/kviewstateserializer.html#restoreState)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KViewStateSerializer*
-/// @param callback void func()
-///
-void k_viewstateserializer_on_restore_state(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kviewstateserializer.html#restoreState)
-///
-/// Base class method implementation
-///
-/// @param self KViewStateSerializer*
-///
-void k_viewstateserializer_super_restore_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -298,9 +266,9 @@ const char* k_viewstateserializer_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-const char* k_viewstateserializer_object_name(void* self);
+const char* k_viewstateserializer_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -315,33 +283,33 @@ void k_viewstateserializer_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-bool k_viewstateserializer_is_widget_type(void* self);
+bool k_viewstateserializer_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-bool k_viewstateserializer_is_window_type(void* self);
+bool k_viewstateserializer_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-bool k_viewstateserializer_is_quick_item_type(void* self);
+bool k_viewstateserializer_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-bool k_viewstateserializer_signals_blocked(void* self);
+bool k_viewstateserializer_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -356,9 +324,9 @@ bool k_viewstateserializer_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-QThread* k_viewstateserializer_thread(void* self);
+QThread* k_viewstateserializer_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -409,11 +377,11 @@ void k_viewstateserializer_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_viewstateserializer_children(void* self);
+libqt_list k_viewstateserializer_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -451,7 +419,7 @@ void k_viewstateserializer_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_viewstateserializer_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_viewstateserializer_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -462,18 +430,18 @@ QMetaObject__Connection* k_viewstateserializer_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_viewstateserializer_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_viewstateserializer_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_viewstateserializer_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_viewstateserializer_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -484,7 +452,7 @@ QMetaObject__Connection* k_viewstateserializer_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_viewstateserializer_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_viewstateserializer_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -495,24 +463,24 @@ bool k_viewstateserializer_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_viewstateserializer_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_viewstateserializer_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-bool k_viewstateserializer_disconnect3(void* self);
+bool k_viewstateserializer_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param receiver QObject*
 ///
-bool k_viewstateserializer_disconnect4(void* self, void* receiver);
+bool k_viewstateserializer_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -520,23 +488,23 @@ bool k_viewstateserializer_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_viewstateserializer_disconnect5(void* param1);
+bool k_viewstateserializer_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-void k_viewstateserializer_dump_object_tree(void* self);
+void k_viewstateserializer_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-void k_viewstateserializer_dump_object_info(void* self);
+void k_viewstateserializer_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -546,16 +514,16 @@ void k_viewstateserializer_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_viewstateserializer_set_property(void* self, const char* name, void* value);
+bool k_viewstateserializer_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param name const char*
 ///
-QVariant* k_viewstateserializer_property(void* self, const char* name);
+QVariant* k_viewstateserializer_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -563,9 +531,9 @@ QVariant* k_viewstateserializer_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-const char** k_viewstateserializer_dynamic_property_names(void* self);
+const char** k_viewstateserializer_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -579,9 +547,9 @@ QBindingStorage* k_viewstateserializer_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-const QBindingStorage* k_viewstateserializer_binding_storage2(void* self);
+const QBindingStorage* k_viewstateserializer_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -604,18 +572,18 @@ void k_viewstateserializer_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-QObject* k_viewstateserializer_parent(void* self);
+QObject* k_viewstateserializer_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param classname const char*
 ///
-bool k_viewstateserializer_inherits(void* self, const char* classname);
+bool k_viewstateserializer_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -655,7 +623,7 @@ int32_t k_viewstateserializer_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_viewstateserializer_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_viewstateserializer_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -667,59 +635,59 @@ QMetaObject__Connection* k_viewstateserializer_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_viewstateserializer_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_viewstateserializer_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_viewstateserializer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_viewstateserializer_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param signal const char*
 ///
-bool k_viewstateserializer_disconnect1(void* self, const char* signal);
+bool k_viewstateserializer_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KViewStateSerializer*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_viewstateserializer_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_viewstateserializer_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_viewstateserializer_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_viewstateserializer_disconnect23(void* self, void* receiver, const char* member);
+bool k_viewstateserializer_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KViewStateSerializer*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_viewstateserializer_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -915,7 +883,7 @@ void k_viewstateserializer_on_custom_event(void* self, void (*callback)(void*, v
 /// @param self KViewStateSerializer*
 /// @param signal QMetaMethod*
 ///
-void k_viewstateserializer_connect_notify(void* self, void* signal);
+void k_viewstateserializer_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -926,7 +894,7 @@ void k_viewstateserializer_connect_notify(void* self, void* signal);
 /// @param self KViewStateSerializer*
 /// @param signal QMetaMethod*
 ///
-void k_viewstateserializer_super_connect_notify(void* self, void* signal);
+void k_viewstateserializer_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -937,7 +905,7 @@ void k_viewstateserializer_super_connect_notify(void* self, void* signal);
 /// @param self KViewStateSerializer*
 /// @param callback void func(KViewStateSerializer* self, QMetaMethod* signal)
 ///
-void k_viewstateserializer_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_viewstateserializer_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -948,7 +916,7 @@ void k_viewstateserializer_on_connect_notify(void* self, void (*callback)(void*,
 /// @param self KViewStateSerializer*
 /// @param signal QMetaMethod*
 ///
-void k_viewstateserializer_disconnect_notify(void* self, void* signal);
+void k_viewstateserializer_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -959,7 +927,7 @@ void k_viewstateserializer_disconnect_notify(void* self, void* signal);
 /// @param self KViewStateSerializer*
 /// @param signal QMetaMethod*
 ///
-void k_viewstateserializer_super_disconnect_notify(void* self, void* signal);
+void k_viewstateserializer_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -970,7 +938,7 @@ void k_viewstateserializer_super_disconnect_notify(void* self, void* signal);
 /// @param self KViewStateSerializer*
 /// @param callback void func(KViewStateSerializer* self, QMetaMethod* signal)
 ///
-void k_viewstateserializer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_viewstateserializer_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -978,9 +946,9 @@ void k_viewstateserializer_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-QObject* k_viewstateserializer_sender(void* self);
+QObject* k_viewstateserializer_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -988,9 +956,9 @@ QObject* k_viewstateserializer_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-QObject* k_viewstateserializer_super_sender(void* self);
+QObject* k_viewstateserializer_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -998,10 +966,10 @@ QObject* k_viewstateserializer_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KViewStateSerializer*
-/// @param callback QObject* func()
+/// @param self const KViewStateSerializer*
+/// @param callback QObject* func(KViewStateSerializer* self)
 ///
-void k_viewstateserializer_on_sender(void* self, QObject* (*callback)());
+void k_viewstateserializer_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1009,9 +977,9 @@ void k_viewstateserializer_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-int32_t k_viewstateserializer_sender_signal_index(void* self);
+int32_t k_viewstateserializer_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1019,9 +987,9 @@ int32_t k_viewstateserializer_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 ///
-int32_t k_viewstateserializer_super_sender_signal_index(void* self);
+int32_t k_viewstateserializer_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1029,10 +997,10 @@ int32_t k_viewstateserializer_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KViewStateSerializer*
-/// @param callback int32_t func()
+/// @param self const KViewStateSerializer*
+/// @param callback int32_t func(KViewStateSerializer* self)
 ///
-void k_viewstateserializer_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_viewstateserializer_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1040,10 +1008,10 @@ void k_viewstateserializer_on_sender_signal_index(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param signal const char*
 ///
-int32_t k_viewstateserializer_receivers(void* self, const char* signal);
+int32_t k_viewstateserializer_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1051,10 +1019,10 @@ int32_t k_viewstateserializer_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param signal const char*
 ///
-int32_t k_viewstateserializer_super_receivers(void* self, const char* signal);
+int32_t k_viewstateserializer_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1062,10 +1030,10 @@ int32_t k_viewstateserializer_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param callback int32_t func(KViewStateSerializer* self, const char* signal)
 ///
-void k_viewstateserializer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_viewstateserializer_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1073,10 +1041,10 @@ void k_viewstateserializer_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param signal QMetaMethod*
 ///
-bool k_viewstateserializer_is_signal_connected(void* self, void* signal);
+bool k_viewstateserializer_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1084,10 +1052,10 @@ bool k_viewstateserializer_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param signal QMetaMethod*
 ///
-bool k_viewstateserializer_super_is_signal_connected(void* self, void* signal);
+bool k_viewstateserializer_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1095,10 +1063,10 @@ bool k_viewstateserializer_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KViewStateSerializer*
+/// @param self const KViewStateSerializer*
 /// @param callback bool func(KViewStateSerializer* self, QMetaMethod* signal)
 ///
-void k_viewstateserializer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_viewstateserializer_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

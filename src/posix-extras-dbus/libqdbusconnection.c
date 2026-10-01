@@ -11,11 +11,11 @@ QDBusConnection* q_dbusconnection_new(const char* name) {
     return QDBusConnection_New(qstring(name));
 }
 
-QDBusConnection* q_dbusconnection_new2(void* other) {
+QDBusConnection* q_dbusconnection_new2(const void* other) {
     return QDBusConnection_New2((QDBusConnection*)other);
 }
 
-void q_dbusconnection_operator_assign(void* self, void* other) {
+void q_dbusconnection_operator_assign(void* self, const void* other) {
     QDBusConnection_OperatorAssign((QDBusConnection*)self, (QDBusConnection*)other);
 }
 
@@ -23,49 +23,49 @@ void q_dbusconnection_swap(void* self, void* other) {
     QDBusConnection_Swap((QDBusConnection*)self, (QDBusConnection*)other);
 }
 
-bool q_dbusconnection_is_connected(void* self) {
+bool q_dbusconnection_is_connected(const void* self) {
     return QDBusConnection_IsConnected((QDBusConnection*)self);
 }
 
-const char* q_dbusconnection_base_service(void* self) {
+const char* q_dbusconnection_base_service(const void* self) {
     libqt_string _str = QDBusConnection_BaseService((QDBusConnection*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QDBusError* q_dbusconnection_last_error(void* self) {
+QDBusError* q_dbusconnection_last_error(const void* self) {
     return QDBusConnection_LastError((QDBusConnection*)self);
 }
 
-const char* q_dbusconnection_name(void* self) {
+const char* q_dbusconnection_name(const void* self) {
     libqt_string _str = QDBusConnection_Name((QDBusConnection*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_dbusconnection_connection_capabilities(void* self) {
+int32_t q_dbusconnection_connection_capabilities(const void* self) {
     return QDBusConnection_ConnectionCapabilities((QDBusConnection*)self);
 }
 
-bool q_dbusconnection_send(void* self, void* message) {
+bool q_dbusconnection_send(const void* self, const void* message) {
     return QDBusConnection_Send((QDBusConnection*)self, (QDBusMessage*)message);
 }
 
-bool q_dbusconnection_call_with_callback(void* self, void* message, void* receiver, const char* returnMethod, const char* errorMethod) {
+bool q_dbusconnection_call_with_callback(const void* self, const void* message, void* receiver, const char* returnMethod, const char* errorMethod) {
     return QDBusConnection_CallWithCallback((QDBusConnection*)self, (QDBusMessage*)message, (QObject*)receiver, returnMethod, errorMethod);
 }
 
-bool q_dbusconnection_call_with_callback2(void* self, void* message, void* receiver, const char* slot) {
+bool q_dbusconnection_call_with_callback2(const void* self, const void* message, void* receiver, const char* slot) {
     return QDBusConnection_CallWithCallback2((QDBusConnection*)self, (QDBusMessage*)message, (QObject*)receiver, slot);
 }
 
-QDBusMessage* q_dbusconnection_call(void* self, void* message) {
+QDBusMessage* q_dbusconnection_call(const void* self, const void* message) {
     return QDBusConnection_Call((QDBusConnection*)self, (QDBusMessage*)message);
 }
 
-QDBusPendingCall* q_dbusconnection_async_call(void* self, void* message) {
+QDBusPendingCall* q_dbusconnection_async_call(const void* self, const void* message) {
     return QDBusConnection_AsyncCall((QDBusConnection*)self, (QDBusMessage*)message);
 }
 
@@ -127,7 +127,7 @@ void q_dbusconnection_unregister_object(void* self, const char* path) {
     QDBusConnection_UnregisterObject((QDBusConnection*)self, qstring(path));
 }
 
-QObject* q_dbusconnection_object_registered_at(void* self, const char* path) {
+QObject* q_dbusconnection_object_registered_at(const void* self, const char* path) {
     return QDBusConnection_ObjectRegisteredAt((QDBusConnection*)self, qstring(path));
 }
 
@@ -143,11 +143,11 @@ bool q_dbusconnection_unregister_service(void* self, const char* serviceName) {
     return QDBusConnection_UnregisterService((QDBusConnection*)self, qstring(serviceName));
 }
 
-QDBusConnectionInterface* q_dbusconnection_interface(void* self) {
+QDBusConnectionInterface* q_dbusconnection_interface(const void* self) {
     return QDBusConnection_Interface((QDBusConnection*)self);
 }
 
-void* q_dbusconnection_internal_pointer(void* self) {
+void* q_dbusconnection_internal_pointer(const void* self) {
     return QDBusConnection_InternalPointer((QDBusConnection*)self);
 }
 
@@ -186,23 +186,23 @@ QDBusConnection* q_dbusconnection_system_bus() {
     return QDBusConnection_SystemBus();
 }
 
-bool q_dbusconnection_call_with_callback5(void* self, void* message, void* receiver, const char* returnMethod, const char* errorMethod, int timeout) {
+bool q_dbusconnection_call_with_callback5(const void* self, const void* message, void* receiver, const char* returnMethod, const char* errorMethod, int timeout) {
     return QDBusConnection_CallWithCallback5((QDBusConnection*)self, (QDBusMessage*)message, (QObject*)receiver, returnMethod, errorMethod, timeout);
 }
 
-bool q_dbusconnection_call_with_callback4(void* self, void* message, void* receiver, const char* slot, int timeout) {
+bool q_dbusconnection_call_with_callback4(const void* self, const void* message, void* receiver, const char* slot, int timeout) {
     return QDBusConnection_CallWithCallback4((QDBusConnection*)self, (QDBusMessage*)message, (QObject*)receiver, slot, timeout);
 }
 
-QDBusMessage* q_dbusconnection_call2(void* self, void* message, int32_t mode) {
+QDBusMessage* q_dbusconnection_call2(const void* self, const void* message, int32_t mode) {
     return QDBusConnection_Call2((QDBusConnection*)self, (QDBusMessage*)message, mode);
 }
 
-QDBusMessage* q_dbusconnection_call3(void* self, void* message, int32_t mode, int timeout) {
+QDBusMessage* q_dbusconnection_call3(const void* self, const void* message, int32_t mode, int timeout) {
     return QDBusConnection_Call3((QDBusConnection*)self, (QDBusMessage*)message, mode, timeout);
 }
 
-QDBusPendingCall* q_dbusconnection_async_call2(void* self, void* message, int timeout) {
+QDBusPendingCall* q_dbusconnection_async_call2(const void* self, const void* message, int timeout) {
     return QDBusConnection_AsyncCall2((QDBusConnection*)self, (QDBusMessage*)message, timeout);
 }
 

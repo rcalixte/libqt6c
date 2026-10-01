@@ -5,11 +5,11 @@ TextEmoticonsCore__UnicodeEmoticon* k_textemoticonscore__unicodeemoticon_new() {
     return TextEmoticonsCore__UnicodeEmoticon_New();
 }
 
-TextEmoticonsCore__UnicodeEmoticon* k_textemoticonscore__unicodeemoticon_new2(void* param1) {
+TextEmoticonsCore__UnicodeEmoticon* k_textemoticonscore__unicodeemoticon_new2(const void* param1) {
     return TextEmoticonsCore__UnicodeEmoticon_New2((TextEmoticonsCore__UnicodeEmoticon*)param1);
 }
 
-const char* k_textemoticonscore__unicodeemoticon_identifier(void* self) {
+const char* k_textemoticonscore__unicodeemoticon_identifier(const void* self) {
     libqt_string _str = TextEmoticonsCore__UnicodeEmoticon_Identifier((TextEmoticonsCore__UnicodeEmoticon*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -20,14 +20,14 @@ void k_textemoticonscore__unicodeemoticon_set_identifier(void* self, const char*
     TextEmoticonsCore__UnicodeEmoticon_SetIdentifier((TextEmoticonsCore__UnicodeEmoticon*)self, qstring(identifier));
 }
 
-const char* k_textemoticonscore__unicodeemoticon_unicode(void* self) {
+const char* k_textemoticonscore__unicodeemoticon_unicode(const void* self) {
     libqt_string _str = TextEmoticonsCore__UnicodeEmoticon_Unicode((TextEmoticonsCore__UnicodeEmoticon*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_textemoticonscore__unicodeemoticon_unicode_display(void* self) {
+const char* k_textemoticonscore__unicodeemoticon_unicode_display(const void* self) {
     libqt_string _str = TextEmoticonsCore__UnicodeEmoticon_UnicodeDisplay((TextEmoticonsCore__UnicodeEmoticon*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -38,7 +38,7 @@ void k_textemoticonscore__unicodeemoticon_set_unicode(void* self, const char* un
     TextEmoticonsCore__UnicodeEmoticon_SetUnicode((TextEmoticonsCore__UnicodeEmoticon*)self, qstring(unicode));
 }
 
-const char* k_textemoticonscore__unicodeemoticon_category(void* self) {
+const char* k_textemoticonscore__unicodeemoticon_category(const void* self) {
     libqt_string _str = TextEmoticonsCore__UnicodeEmoticon_Category((TextEmoticonsCore__UnicodeEmoticon*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -49,7 +49,7 @@ void k_textemoticonscore__unicodeemoticon_set_category(void* self, const char* c
     TextEmoticonsCore__UnicodeEmoticon_SetCategory((TextEmoticonsCore__UnicodeEmoticon*)self, qstring(category));
 }
 
-const char** k_textemoticonscore__unicodeemoticon_aliases(void* self) {
+const char** k_textemoticonscore__unicodeemoticon_aliases(const void* self) {
     libqt_list _arr = TextEmoticonsCore__UnicodeEmoticon_Aliases((TextEmoticonsCore__UnicodeEmoticon*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -80,15 +80,15 @@ void k_textemoticonscore__unicodeemoticon_set_aliases(void* self, const char* al
     free(aliases_qstr);
 }
 
-bool k_textemoticonscore__unicodeemoticon_has_emoji(void* self, const char* identifier) {
+bool k_textemoticonscore__unicodeemoticon_has_emoji(const void* self, const char* identifier) {
     return TextEmoticonsCore__UnicodeEmoticon_HasEmoji((TextEmoticonsCore__UnicodeEmoticon*)self, qstring(identifier));
 }
 
-bool k_textemoticonscore__unicodeemoticon_is_valid(void* self) {
+bool k_textemoticonscore__unicodeemoticon_is_valid(const void* self) {
     return TextEmoticonsCore__UnicodeEmoticon_IsValid((TextEmoticonsCore__UnicodeEmoticon*)self);
 }
 
-int32_t k_textemoticonscore__unicodeemoticon_order(void* self) {
+int32_t k_textemoticonscore__unicodeemoticon_order(const void* self) {
     return TextEmoticonsCore__UnicodeEmoticon_Order((TextEmoticonsCore__UnicodeEmoticon*)self);
 }
 
@@ -96,7 +96,7 @@ void k_textemoticonscore__unicodeemoticon_set_order(void* self, int order) {
     TextEmoticonsCore__UnicodeEmoticon_SetOrder((TextEmoticonsCore__UnicodeEmoticon*)self, order);
 }
 
-const char* k_textemoticonscore__unicodeemoticon_key(void* self) {
+const char* k_textemoticonscore__unicodeemoticon_key(const void* self) {
     libqt_string _str = TextEmoticonsCore__UnicodeEmoticon_Key((TextEmoticonsCore__UnicodeEmoticon*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -107,11 +107,11 @@ void k_textemoticonscore__unicodeemoticon_set_key(void* self, const char* key) {
     TextEmoticonsCore__UnicodeEmoticon_SetKey((TextEmoticonsCore__UnicodeEmoticon*)self, qstring(key));
 }
 
-bool k_textemoticonscore__unicodeemoticon_operator_equal(void* self, void* other) {
+bool k_textemoticonscore__unicodeemoticon_operator_equal(const void* self, const void* other) {
     return TextEmoticonsCore__UnicodeEmoticon_OperatorEqual((TextEmoticonsCore__UnicodeEmoticon*)self, (TextEmoticonsCore__UnicodeEmoticon*)other);
 }
 
-void k_textemoticonscore__unicodeemoticon_operator_assign(void* self, void* param1) {
+void k_textemoticonscore__unicodeemoticon_operator_assign(void* self, const void* param1) {
     TextEmoticonsCore__UnicodeEmoticon_OperatorAssign((TextEmoticonsCore__UnicodeEmoticon*)self, (TextEmoticonsCore__UnicodeEmoticon*)param1);
 }
 

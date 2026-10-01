@@ -21,7 +21,7 @@ QSignalTransition* q_signaltransition_new();
 /// @param sender QObject*
 /// @param signal const char*
 ///
-QSignalTransition* q_signaltransition_new2(void* sender, const char* signal);
+QSignalTransition* q_signaltransition_new2(const void* sender, const char* signal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html)
 
@@ -39,30 +39,30 @@ QSignalTransition* q_signaltransition_new3(void* sourceState);
 /// @param signal const char*
 /// @param sourceState QState*
 ///
-QSignalTransition* q_signaltransition_new4(void* sender, const char* signal, void* sourceState);
+QSignalTransition* q_signaltransition_new4(const void* sender, const char* signal, void* sourceState);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-const QMetaObject* q_signaltransition_meta_object(void* self);
+const QMetaObject* q_signaltransition_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QSignalTransition*
-/// @param callback const QMetaObject* func()
+/// @param self const QSignalTransition*
+/// @param callback const QMetaObject* func(const QSignalTransition* self)
 ///
-void q_signaltransition_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_signaltransition_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-const QMetaObject* q_signaltransition_super_meta_object(void* self);
+const QMetaObject* q_signaltransition_super_meta_object(const void* self);
 
 /// @param self QSignalTransition*
 /// @param param1 const char*
@@ -116,24 +116,24 @@ const char* q_signaltransition_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html#senderObject)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-const QObject* q_signaltransition_sender_object(void* self);
+const QObject* q_signaltransition_sender_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html#setSenderObject)
 ///
 /// @param self QSignalTransition*
 /// @param sender QObject*
 ///
-void q_signaltransition_set_sender_object(void* self, void* sender);
+void q_signaltransition_set_sender_object(void* self, const void* sender);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html#signal)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-char* q_signaltransition_signal(void* self);
+char* q_signaltransition_signal(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html#setSignal)
 ///
@@ -240,17 +240,17 @@ const char* q_signaltransition_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttransition.html#sourceState)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-QState* q_signaltransition_source_state(void* self);
+QState* q_signaltransition_source_state(const void* self);
 
 /// Inherited from QAbstractTransition
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttransition.html#targetState)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-QAbstractState* q_signaltransition_target_state(void* self);
+QAbstractState* q_signaltransition_target_state(const void* self);
 
 /// Inherited from QAbstractTransition
 ///
@@ -265,11 +265,11 @@ void q_signaltransition_set_target_state(void* self, void* target);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttransition.html#targetStates)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
 /// @return libqt_list of QAbstractState*
 ///
-libqt_list q_signaltransition_target_states(void* self);
+libqt_list q_signaltransition_target_states(const void* self);
 
 /// Inherited from QAbstractTransition
 ///
@@ -284,11 +284,11 @@ void q_signaltransition_set_target_states(void* self, libqt_list targets);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttransition.html#transitionType)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
 /// @return enum QAbstractTransition__TransitionType
 ///
-int32_t q_signaltransition_transition_type(void* self);
+int32_t q_signaltransition_transition_type(const void* self);
 
 /// Inherited from QAbstractTransition
 ///
@@ -303,9 +303,9 @@ void q_signaltransition_set_transition_type(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttransition.html#machine)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-QStateMachine* q_signaltransition_machine(void* self);
+QStateMachine* q_signaltransition_machine(const void* self);
 
 /// Inherited from QAbstractTransition
 ///
@@ -329,11 +329,11 @@ void q_signaltransition_remove_animation(void* self, void* animation);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttransition.html#animations)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
 /// @return libqt_list of QAbstractAnimation*
 ///
-libqt_list q_signaltransition_animations(void* self);
+libqt_list q_signaltransition_animations(const void* self);
 
 /// Inherited from QObject
 ///
@@ -341,9 +341,9 @@ libqt_list q_signaltransition_animations(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-const char* q_signaltransition_object_name(void* self);
+const char* q_signaltransition_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -358,33 +358,33 @@ void q_signaltransition_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-bool q_signaltransition_is_widget_type(void* self);
+bool q_signaltransition_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-bool q_signaltransition_is_window_type(void* self);
+bool q_signaltransition_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-bool q_signaltransition_is_quick_item_type(void* self);
+bool q_signaltransition_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-bool q_signaltransition_signals_blocked(void* self);
+bool q_signaltransition_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -399,9 +399,9 @@ bool q_signaltransition_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-QThread* q_signaltransition_thread(void* self);
+QThread* q_signaltransition_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -452,11 +452,11 @@ void q_signaltransition_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_signaltransition_children(void* self);
+libqt_list q_signaltransition_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -494,7 +494,7 @@ void q_signaltransition_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_signaltransition_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_signaltransition_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -505,18 +505,18 @@ QMetaObject__Connection* q_signaltransition_connect(void* sender, const char* si
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_signaltransition_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_signaltransition_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_signaltransition_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_signaltransition_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -527,7 +527,7 @@ QMetaObject__Connection* q_signaltransition_connect3(void* self, void* sender, c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_signaltransition_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_signaltransition_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -538,24 +538,24 @@ bool q_signaltransition_disconnect(void* sender, const char* signal, void* recei
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_signaltransition_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_signaltransition_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-bool q_signaltransition_disconnect3(void* self);
+bool q_signaltransition_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param receiver QObject*
 ///
-bool q_signaltransition_disconnect4(void* self, void* receiver);
+bool q_signaltransition_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -563,23 +563,23 @@ bool q_signaltransition_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_signaltransition_disconnect5(void* param1);
+bool q_signaltransition_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-void q_signaltransition_dump_object_tree(void* self);
+void q_signaltransition_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-void q_signaltransition_dump_object_info(void* self);
+void q_signaltransition_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -589,16 +589,16 @@ void q_signaltransition_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_signaltransition_set_property(void* self, const char* name, void* value);
+bool q_signaltransition_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param name const char*
 ///
-QVariant* q_signaltransition_property(void* self, const char* name);
+QVariant* q_signaltransition_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -606,9 +606,9 @@ QVariant* q_signaltransition_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-const char** q_signaltransition_dynamic_property_names(void* self);
+const char** q_signaltransition_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -622,9 +622,9 @@ QBindingStorage* q_signaltransition_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-const QBindingStorage* q_signaltransition_binding_storage2(void* self);
+const QBindingStorage* q_signaltransition_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -647,18 +647,18 @@ void q_signaltransition_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-QObject* q_signaltransition_parent(void* self);
+QObject* q_signaltransition_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param classname const char*
 ///
-bool q_signaltransition_inherits(void* self, const char* classname);
+bool q_signaltransition_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -698,7 +698,7 @@ int32_t q_signaltransition_start_timer23(void* self, int64_t time, int32_t timer
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_signaltransition_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_signaltransition_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -710,59 +710,59 @@ QMetaObject__Connection* q_signaltransition_connect5(void* sender, const char* s
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_signaltransition_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_signaltransition_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_signaltransition_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_signaltransition_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param signal const char*
 ///
-bool q_signaltransition_disconnect1(void* self, const char* signal);
+bool q_signaltransition_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSignalTransition*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_signaltransition_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_signaltransition_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_signaltransition_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_signaltransition_disconnect23(void* self, void* receiver, const char* member);
+bool q_signaltransition_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QSignalTransition*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_signaltransition_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -925,7 +925,7 @@ void q_signaltransition_on_custom_event(void* self, void (*callback)(void*, void
 /// @param self QSignalTransition*
 /// @param signal QMetaMethod*
 ///
-void q_signaltransition_connect_notify(void* self, void* signal);
+void q_signaltransition_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -936,7 +936,7 @@ void q_signaltransition_connect_notify(void* self, void* signal);
 /// @param self QSignalTransition*
 /// @param signal QMetaMethod*
 ///
-void q_signaltransition_super_connect_notify(void* self, void* signal);
+void q_signaltransition_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -947,7 +947,7 @@ void q_signaltransition_super_connect_notify(void* self, void* signal);
 /// @param self QSignalTransition*
 /// @param callback void func(QSignalTransition* self, QMetaMethod* signal)
 ///
-void q_signaltransition_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_signaltransition_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -958,7 +958,7 @@ void q_signaltransition_on_connect_notify(void* self, void (*callback)(void*, vo
 /// @param self QSignalTransition*
 /// @param signal QMetaMethod*
 ///
-void q_signaltransition_disconnect_notify(void* self, void* signal);
+void q_signaltransition_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -969,7 +969,7 @@ void q_signaltransition_disconnect_notify(void* self, void* signal);
 /// @param self QSignalTransition*
 /// @param signal QMetaMethod*
 ///
-void q_signaltransition_super_disconnect_notify(void* self, void* signal);
+void q_signaltransition_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -980,7 +980,7 @@ void q_signaltransition_super_disconnect_notify(void* self, void* signal);
 /// @param self QSignalTransition*
 /// @param callback void func(QSignalTransition* self, QMetaMethod* signal)
 ///
-void q_signaltransition_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_signaltransition_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -988,9 +988,9 @@ void q_signaltransition_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-QObject* q_signaltransition_sender(void* self);
+QObject* q_signaltransition_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -998,9 +998,9 @@ QObject* q_signaltransition_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-QObject* q_signaltransition_super_sender(void* self);
+QObject* q_signaltransition_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1008,10 +1008,10 @@ QObject* q_signaltransition_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSignalTransition*
-/// @param callback QObject* func()
+/// @param self const QSignalTransition*
+/// @param callback QObject* func(QSignalTransition* self)
 ///
-void q_signaltransition_on_sender(void* self, QObject* (*callback)());
+void q_signaltransition_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1019,9 +1019,9 @@ void q_signaltransition_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-int32_t q_signaltransition_sender_signal_index(void* self);
+int32_t q_signaltransition_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1029,9 +1029,9 @@ int32_t q_signaltransition_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 ///
-int32_t q_signaltransition_super_sender_signal_index(void* self);
+int32_t q_signaltransition_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1039,10 +1039,10 @@ int32_t q_signaltransition_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSignalTransition*
-/// @param callback int32_t func()
+/// @param self const QSignalTransition*
+/// @param callback int32_t func(QSignalTransition* self)
 ///
-void q_signaltransition_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_signaltransition_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1050,10 +1050,10 @@ void q_signaltransition_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param signal const char*
 ///
-int32_t q_signaltransition_receivers(void* self, const char* signal);
+int32_t q_signaltransition_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1061,10 +1061,10 @@ int32_t q_signaltransition_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param signal const char*
 ///
-int32_t q_signaltransition_super_receivers(void* self, const char* signal);
+int32_t q_signaltransition_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1072,10 +1072,10 @@ int32_t q_signaltransition_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param callback int32_t func(QSignalTransition* self, const char* signal)
 ///
-void q_signaltransition_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_signaltransition_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1083,10 +1083,10 @@ void q_signaltransition_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param signal QMetaMethod*
 ///
-bool q_signaltransition_is_signal_connected(void* self, void* signal);
+bool q_signaltransition_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1094,10 +1094,10 @@ bool q_signaltransition_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param signal QMetaMethod*
 ///
-bool q_signaltransition_super_is_signal_connected(void* self, void* signal);
+bool q_signaltransition_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1105,10 +1105,10 @@ bool q_signaltransition_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QSignalTransition*
+/// @param self const QSignalTransition*
 /// @param callback bool func(QSignalTransition* self, QMetaMethod* signal)
 ///
-void q_signaltransition_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_signaltransition_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsignaltransition.html#senderObjectChanged)
 ///

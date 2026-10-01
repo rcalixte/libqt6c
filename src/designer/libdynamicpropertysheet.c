@@ -6,28 +6,20 @@ QDesignerDynamicPropertySheetExtension* q_designerdynamicpropertysheetextension_
     return QDesignerDynamicPropertySheetExtension_New();
 }
 
-bool q_designerdynamicpropertysheetextension_dynamic_properties_allowed(void* self) {
+bool q_designerdynamicpropertysheetextension_dynamic_properties_allowed(const void* self) {
     return QDesignerDynamicPropertySheetExtension_DynamicPropertiesAllowed((QDesignerDynamicPropertySheetExtension*)self);
 }
 
-void q_designerdynamicpropertysheetextension_on_dynamic_properties_allowed(void* self, bool (*callback)()) {
+void q_designerdynamicpropertysheetextension_on_dynamic_properties_allowed(const void* self, bool (*callback)(const void*)) {
     QDesignerDynamicPropertySheetExtension_OnDynamicPropertiesAllowed((QDesignerDynamicPropertySheetExtension*)self, (intptr_t)callback);
 }
 
-bool q_designerdynamicpropertysheetextension_super_dynamic_properties_allowed(void* self) {
-    return QDesignerDynamicPropertySheetExtension_SuperDynamicPropertiesAllowed((QDesignerDynamicPropertySheetExtension*)self);
-}
-
-int32_t q_designerdynamicpropertysheetextension_add_dynamic_property(void* self, const char* propertyName, void* value) {
+int32_t q_designerdynamicpropertysheetextension_add_dynamic_property(void* self, const char* propertyName, const void* value) {
     return QDesignerDynamicPropertySheetExtension_AddDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, qstring(propertyName), (QVariant*)value);
 }
 
-void q_designerdynamicpropertysheetextension_on_add_dynamic_property(void* self, int32_t (*callback)(void*, const char*, void*)) {
+void q_designerdynamicpropertysheetextension_on_add_dynamic_property(void* self, int32_t (*callback)(void*, const char*, const void*)) {
     QDesignerDynamicPropertySheetExtension_OnAddDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, (intptr_t)callback);
-}
-
-int32_t q_designerdynamicpropertysheetextension_super_add_dynamic_property(void* self, const char* propertyName, void* value) {
-    return QDesignerDynamicPropertySheetExtension_SuperAddDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, qstring(propertyName), (QVariant*)value);
 }
 
 bool q_designerdynamicpropertysheetextension_remove_dynamic_property(void* self, int index) {
@@ -38,32 +30,20 @@ void q_designerdynamicpropertysheetextension_on_remove_dynamic_property(void* se
     QDesignerDynamicPropertySheetExtension_OnRemoveDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, (intptr_t)callback);
 }
 
-bool q_designerdynamicpropertysheetextension_super_remove_dynamic_property(void* self, int index) {
-    return QDesignerDynamicPropertySheetExtension_SuperRemoveDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, index);
-}
-
-bool q_designerdynamicpropertysheetextension_is_dynamic_property(void* self, int index) {
+bool q_designerdynamicpropertysheetextension_is_dynamic_property(const void* self, int index) {
     return QDesignerDynamicPropertySheetExtension_IsDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, index);
 }
 
-void q_designerdynamicpropertysheetextension_on_is_dynamic_property(void* self, bool (*callback)(void*, int)) {
+void q_designerdynamicpropertysheetextension_on_is_dynamic_property(const void* self, bool (*callback)(const void*, int)) {
     QDesignerDynamicPropertySheetExtension_OnIsDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, (intptr_t)callback);
 }
 
-bool q_designerdynamicpropertysheetextension_super_is_dynamic_property(void* self, int index) {
-    return QDesignerDynamicPropertySheetExtension_SuperIsDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, index);
-}
-
-bool q_designerdynamicpropertysheetextension_can_add_dynamic_property(void* self, const char* propertyName) {
+bool q_designerdynamicpropertysheetextension_can_add_dynamic_property(const void* self, const char* propertyName) {
     return QDesignerDynamicPropertySheetExtension_CanAddDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, qstring(propertyName));
 }
 
-void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(void* self, bool (*callback)(void*, const char*)) {
+void q_designerdynamicpropertysheetextension_on_can_add_dynamic_property(const void* self, bool (*callback)(const void*, const char*)) {
     QDesignerDynamicPropertySheetExtension_OnCanAddDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, (intptr_t)callback);
-}
-
-bool q_designerdynamicpropertysheetextension_super_can_add_dynamic_property(void* self, const char* propertyName) {
-    return QDesignerDynamicPropertySheetExtension_SuperCanAddDynamicProperty((QDesignerDynamicPropertySheetExtension*)self, qstring(propertyName));
 }
 
 void q_designerdynamicpropertysheetextension_delete(void* self) {

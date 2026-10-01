@@ -15,7 +15,7 @@ QDataStream* q_datastream_new3(char* param1) {
     return QDataStream_New3(qstring(param1));
 }
 
-QIODevice* q_datastream_device(void* self) {
+QIODevice* q_datastream_device(const void* self) {
     return QDataStream_Device((QDataStream*)self);
 }
 
@@ -23,11 +23,11 @@ void q_datastream_set_device(void* self, void* device) {
     QDataStream_SetDevice((QDataStream*)self, (QIODevice*)device);
 }
 
-bool q_datastream_at_end(void* self) {
+bool q_datastream_at_end(const void* self) {
     return QDataStream_AtEnd((QDataStream*)self);
 }
 
-int32_t q_datastream_status(void* self) {
+int32_t q_datastream_status(const void* self) {
     return QDataStream_Status((QDataStream*)self);
 }
 
@@ -39,7 +39,7 @@ void q_datastream_reset_status(void* self) {
     QDataStream_ResetStatus((QDataStream*)self);
 }
 
-int32_t q_datastream_floating_point_precision(void* self) {
+int32_t q_datastream_floating_point_precision(const void* self) {
     return QDataStream_FloatingPointPrecision((QDataStream*)self);
 }
 
@@ -47,7 +47,7 @@ void q_datastream_set_floating_point_precision(void* self, int32_t precision) {
     QDataStream_SetFloatingPointPrecision((QDataStream*)self, precision);
 }
 
-int32_t q_datastream_byte_order(void* self) {
+int32_t q_datastream_byte_order(const void* self) {
     return QDataStream_ByteOrder((QDataStream*)self);
 }
 
@@ -55,7 +55,7 @@ void q_datastream_set_byte_order(void* self, int32_t byteOrder) {
     QDataStream_SetByteOrder((QDataStream*)self, byteOrder);
 }
 
-int32_t q_datastream_version(void* self) {
+int32_t q_datastream_version(const void* self) {
     return QDataStream_Version((QDataStream*)self);
 }
 
@@ -203,7 +203,7 @@ void q_datastream_abort_transaction(void* self) {
     QDataStream_AbortTransaction((QDataStream*)self);
 }
 
-bool q_datastream_is_device_transaction_started(void* self) {
+bool q_datastream_is_device_transaction_started(const void* self) {
     return QDataStream_IsDeviceTransactionStarted((QDataStream*)self);
 }
 

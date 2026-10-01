@@ -12,6 +12,8 @@
 
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#askDeleteConfirmation)
 ///
+/// @warning Use caution when calling this method as it might not be defined.
+///
 /// @param self KIO__JobUiDelegateExtension*
 /// @param urls libqt_list of QUrl*
 /// @param deletionType enum KIO__JobUiDelegateExtension__DeletionType
@@ -25,7 +27,7 @@ bool k_io__jobuidelegateextension_ask_delete_confirmation(void* self, libqt_list
 /// @param src QUrl*
 /// @param dest QUrl*
 ///
-void k_io__jobuidelegateextension_update_url_in_clipboard(void* self, void* src, void* dest);
+void k_io__jobuidelegateextension_update_url_in_clipboard(void* self, const void* src, const void* dest);
 
 /// [Upstream resources](https://api.kde.org/kio.html)
 

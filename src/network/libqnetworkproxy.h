@@ -20,7 +20,7 @@ QNetworkProxyQuery* q_networkproxyquery_new();
 ///
 /// @param requestUrl QUrl*
 ///
-QNetworkProxyQuery* q_networkproxyquery_new2(void* requestUrl);
+QNetworkProxyQuery* q_networkproxyquery_new2(const void* requestUrl);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html)
 
@@ -45,7 +45,7 @@ QNetworkProxyQuery* q_networkproxyquery_new4(uint16_t bindPort);
 ///
 /// @param other QNetworkProxyQuery*
 ///
-QNetworkProxyQuery* q_networkproxyquery_new5(void* other);
+QNetworkProxyQuery* q_networkproxyquery_new5(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html)
 
@@ -54,7 +54,7 @@ QNetworkProxyQuery* q_networkproxyquery_new5(void* other);
 /// @param requestUrl QUrl*
 /// @param queryType enum QNetworkProxyQuery__QueryType
 ///
-QNetworkProxyQuery* q_networkproxyquery_new6(void* requestUrl, int32_t queryType);
+QNetworkProxyQuery* q_networkproxyquery_new6(const void* requestUrl, int32_t queryType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html)
 
@@ -101,7 +101,7 @@ QNetworkProxyQuery* q_networkproxyquery_new10(uint16_t bindPort, const char* pro
 /// @param self QNetworkProxyQuery*
 /// @param other QNetworkProxyQuery*
 ///
-void q_networkproxyquery_operator_assign(void* self, void* other);
+void q_networkproxyquery_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#swap)
 ///
@@ -112,25 +112,25 @@ void q_networkproxyquery_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator-eq-eq)
 ///
-/// @param self QNetworkProxyQuery*
+/// @param self const QNetworkProxyQuery*
 /// @param other QNetworkProxyQuery*
 ///
-bool q_networkproxyquery_operator_equal(void* self, void* other);
+bool q_networkproxyquery_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator-not-eq)
 ///
-/// @param self QNetworkProxyQuery*
+/// @param self const QNetworkProxyQuery*
 /// @param other QNetworkProxyQuery*
 ///
-bool q_networkproxyquery_operator_not_equal(void* self, void* other);
+bool q_networkproxyquery_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#queryType)
 ///
-/// @param self QNetworkProxyQuery*
+/// @param self const QNetworkProxyQuery*
 ///
 /// @return enum QNetworkProxyQuery__QueryType
 ///
-int32_t q_networkproxyquery_query_type(void* self);
+int32_t q_networkproxyquery_query_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#setQueryType)
 ///
@@ -141,9 +141,9 @@ void q_networkproxyquery_set_query_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#peerPort)
 ///
-/// @param self QNetworkProxyQuery*
+/// @param self const QNetworkProxyQuery*
 ///
-int32_t q_networkproxyquery_peer_port(void* self);
+int32_t q_networkproxyquery_peer_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#setPeerPort)
 ///
@@ -156,9 +156,9 @@ void q_networkproxyquery_set_peer_port(void* self, int port);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkProxyQuery*
+/// @param self const QNetworkProxyQuery*
 ///
-const char* q_networkproxyquery_peer_host_name(void* self);
+const char* q_networkproxyquery_peer_host_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#setPeerHostName)
 ///
@@ -169,9 +169,9 @@ void q_networkproxyquery_set_peer_host_name(void* self, const char* hostname);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#localPort)
 ///
-/// @param self QNetworkProxyQuery*
+/// @param self const QNetworkProxyQuery*
 ///
-int32_t q_networkproxyquery_local_port(void* self);
+int32_t q_networkproxyquery_local_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#setLocalPort)
 ///
@@ -184,9 +184,9 @@ void q_networkproxyquery_set_local_port(void* self, int port);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkProxyQuery*
+/// @param self const QNetworkProxyQuery*
 ///
-const char* q_networkproxyquery_protocol_tag(void* self);
+const char* q_networkproxyquery_protocol_tag(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#setProtocolTag)
 ///
@@ -197,16 +197,16 @@ void q_networkproxyquery_set_protocol_tag(void* self, const char* protocolTag);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#url)
 ///
-/// @param self QNetworkProxyQuery*
+/// @param self const QNetworkProxyQuery*
 ///
-QUrl* q_networkproxyquery_url(void* self);
+QUrl* q_networkproxyquery_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#setUrl)
 ///
 /// @param self QNetworkProxyQuery*
 /// @param url QUrl*
 ///
-void q_networkproxyquery_set_url(void* self, void* url);
+void q_networkproxyquery_set_url(void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyquery.html#dtor.QNetworkProxyQuery)
 ///
@@ -236,7 +236,7 @@ QNetworkProxy* q_networkproxy_new2(int32_t type);
 ///
 /// @param other QNetworkProxy*
 ///
-QNetworkProxy* q_networkproxy_new3(void* other);
+QNetworkProxy* q_networkproxy_new3(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html)
 
@@ -285,7 +285,7 @@ QNetworkProxy* q_networkproxy_new7(int32_t type, const char* hostName, uint16_t 
 /// @param self QNetworkProxy*
 /// @param other QNetworkProxy*
 ///
-void q_networkproxy_operator_assign(void* self, void* other);
+void q_networkproxy_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#swap)
 ///
@@ -296,17 +296,17 @@ void q_networkproxy_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#operator-eq-eq)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 /// @param other QNetworkProxy*
 ///
-bool q_networkproxy_operator_equal(void* self, void* other);
+bool q_networkproxy_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#operator-not-eq)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 /// @param other QNetworkProxy*
 ///
-bool q_networkproxy_operator_not_equal(void* self, void* other);
+bool q_networkproxy_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setType)
 ///
@@ -317,11 +317,11 @@ void q_networkproxy_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#type)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
 /// @return enum QNetworkProxy__ProxyType
 ///
-int32_t q_networkproxy_type(void* self);
+int32_t q_networkproxy_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setCapabilities)
 ///
@@ -332,23 +332,23 @@ void q_networkproxy_set_capabilities(void* self, int32_t capab);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#capabilities)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
 /// @return flag of enum QNetworkProxy__Capability
 ///
-int32_t q_networkproxy_capabilities(void* self);
+int32_t q_networkproxy_capabilities(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#isCachingProxy)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
-bool q_networkproxy_is_caching_proxy(void* self);
+bool q_networkproxy_is_caching_proxy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#isTransparentProxy)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
-bool q_networkproxy_is_transparent_proxy(void* self);
+bool q_networkproxy_is_transparent_proxy(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setUser)
 ///
@@ -361,9 +361,9 @@ void q_networkproxy_set_user(void* self, const char* userName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
-const char* q_networkproxy_user(void* self);
+const char* q_networkproxy_user(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setPassword)
 ///
@@ -376,9 +376,9 @@ void q_networkproxy_set_password(void* self, const char* password);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
-const char* q_networkproxy_password(void* self);
+const char* q_networkproxy_password(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setHostName)
 ///
@@ -391,9 +391,9 @@ void q_networkproxy_set_host_name(void* self, const char* hostName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
-const char* q_networkproxy_host_name(void* self);
+const char* q_networkproxy_host_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setPort)
 ///
@@ -404,15 +404,15 @@ void q_networkproxy_set_port(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#port)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
-uint16_t q_networkproxy_port(void* self);
+uint16_t q_networkproxy_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setApplicationProxy)
 ///
 /// @param proxy QNetworkProxy*
 ///
-void q_networkproxy_set_application_proxy(void* proxy);
+void q_networkproxy_set_application_proxy(const void* proxy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#applicationProxy)
 ///
@@ -420,23 +420,23 @@ QNetworkProxy* q_networkproxy_application_proxy();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#headers)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
-QHttpHeaders* q_networkproxy_headers(void* self);
+QHttpHeaders* q_networkproxy_headers(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setHeaders)
 ///
 /// @param self QNetworkProxy*
 /// @param newHeaders QHttpHeaders*
 ///
-void q_networkproxy_set_headers(void* self, void* newHeaders);
+void q_networkproxy_set_headers(void* self, const void* newHeaders);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#header)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 /// @param header enum QNetworkRequest__KnownHeaders
 ///
-QVariant* q_networkproxy_header(void* self, int32_t header);
+QVariant* q_networkproxy_header(const void* self, int32_t header);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setHeader)
 ///
@@ -444,31 +444,31 @@ QVariant* q_networkproxy_header(void* self, int32_t header);
 /// @param header enum QNetworkRequest__KnownHeaders
 /// @param value QVariant*
 ///
-void q_networkproxy_set_header(void* self, int32_t header, void* value);
+void q_networkproxy_set_header(void* self, int32_t header, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#hasRawHeader)
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 /// @param headerName char*
 ///
-bool q_networkproxy_has_raw_header(void* self, char* headerName);
+bool q_networkproxy_has_raw_header(const void* self, char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#rawHeaderList)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 ///
-const char** q_networkproxy_raw_header_list(void* self);
+const char** q_networkproxy_raw_header_list(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#rawHeader)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QNetworkProxy*
+/// @param self const QNetworkProxy*
 /// @param headerName char*
 ///
-char* q_networkproxy_raw_header(void* self, char* headerName);
+char* q_networkproxy_raw_header(const void* self, char* headerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxy.html#setRawHeader)
 ///
@@ -494,12 +494,14 @@ QNetworkProxyFactory* q_networkproxyfactory_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#queryProxy)
 ///
+/// @warning This method must be implemented with `q_networkproxyfactory_on_query_proxy` before it can be called.
+///
 /// @param self QNetworkProxyFactory*
 /// @param query QNetworkProxyQuery*
 ///
 /// @return libqt_list of QNetworkProxy*
 ///
-libqt_list q_networkproxyfactory_query_proxy(void* self, void* query);
+libqt_list q_networkproxyfactory_query_proxy(void* self, const void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#queryProxy)
 ///
@@ -508,18 +510,7 @@ libqt_list q_networkproxyfactory_query_proxy(void* self, void* query);
 /// @param self QNetworkProxyFactory*
 /// @param callback libqt_list of QNetworkProxy* func(QNetworkProxyFactory* self, QNetworkProxyQuery* query)
 ///
-void q_networkproxyfactory_on_query_proxy(void* self, libqt_list (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#queryProxy)
-///
-/// Base class method implementation
-///
-/// @param self QNetworkProxyFactory*
-/// @param query QNetworkProxyQuery*
-///
-/// @return libqt_list of QNetworkProxy*
-///
-libqt_list q_networkproxyfactory_super_query_proxy(void* self, void* query);
+void q_networkproxyfactory_on_query_proxy(void* self, libqt_list (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#usesSystemConfiguration)
 ///
@@ -543,7 +534,7 @@ void q_networkproxyfactory_set_application_proxy_factory(void* factory);
 ///
 /// @return libqt_list of QNetworkProxy*
 ///
-libqt_list q_networkproxyfactory_proxy_for_query(void* query);
+libqt_list q_networkproxyfactory_proxy_for_query(const void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#systemProxyForQuery)
 ///
@@ -556,7 +547,7 @@ libqt_list q_networkproxyfactory_system_proxy_for_query();
 /// @param self QNetworkProxyFactory*
 /// @param param1 QNetworkProxyFactory*
 ///
-void q_networkproxyfactory_operator_assign(void* self, void* param1);
+void q_networkproxyfactory_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#systemProxyForQuery)
 ///
@@ -564,7 +555,7 @@ void q_networkproxyfactory_operator_assign(void* self, void* param1);
 ///
 /// @return libqt_list of QNetworkProxy*
 ///
-libqt_list q_networkproxyfactory_system_proxy_for_query1(void* query);
+libqt_list q_networkproxyfactory_system_proxy_for_query1(const void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#dtor.QNetworkProxyFactory)
 ///

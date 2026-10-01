@@ -100,7 +100,7 @@ const char* k_io_get_cache_control_string(int32_t cacheControl);
 ///
 /// @param url QUrl*
 ///
-const char* k_io_fav_icon_for_url(void* url);
+const char* k_io_fav_icon_for_url(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertPermissions)
 ///
@@ -116,13 +116,13 @@ int32_t k_io_convert_permissions(int permissions);
 ///
 /// @param url QUrl*
 ///
-const char* k_io_icon_name_for_url(void* url);
+const char* k_io_icon_name_for_url(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio.html#upUrl)
 ///
 /// @param url QUrl*
 ///
-QUrl* k_io_up_url(void* url);
+QUrl* k_io_up_url(const void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-global.html#public-types)
 

@@ -2,7 +2,7 @@
 #include "libstyleselector.hpp"
 #include "libstyleselector.h"
 
-Kirigami__Platform__StyleSelector* k_irigami__platform__styleselector_new(void* other) {
+Kirigami__Platform__StyleSelector* k_irigami__platform__styleselector_new(const void* other) {
     return Kirigami__Platform__StyleSelector_New((Kirigami__Platform__StyleSelector*)other);
 }
 
@@ -46,7 +46,7 @@ QUrl* k_irigami__platform__styleselector_component_url(const char* fileName) {
     return Kirigami__Platform__StyleSelector_ComponentUrl(qstring(fileName));
 }
 
-void k_irigami__platform__styleselector_set_base_url(void* baseUrl) {
+void k_irigami__platform__styleselector_set_base_url(const void* baseUrl) {
     Kirigami__Platform__StyleSelector_SetBaseUrl((QUrl*)baseUrl);
 }
 

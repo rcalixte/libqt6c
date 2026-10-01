@@ -50,10 +50,10 @@ QStringEncoder* q_stringencoder_new5(const char* name, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringencoder.html#requiredSpace)
 ///
-/// @param self QStringEncoder*
+/// @param self const QStringEncoder*
 /// @param inputLength intptr_t
 ///
-intptr_t q_stringencoder_required_space(void* self, intptr_t inputLength);
+intptr_t q_stringencoder_required_space(const void* self, intptr_t inputLength);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringencoder.html#appendToBuffer)
 ///
@@ -69,9 +69,9 @@ char* q_stringencoder_append_to_buffer(void* self, char* out, const char* in);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
 ///
-/// @param self QStringEncoder*
+/// @param self const QStringEncoder*
 ///
-bool q_stringencoder_is_valid(void* self);
+bool q_stringencoder_is_valid(const void* self);
 
 /// Inherited from QStringConverter
 ///
@@ -85,9 +85,9 @@ void q_stringencoder_reset_state(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
 ///
-/// @param self QStringEncoder*
+/// @param self const QStringEncoder*
 ///
-bool q_stringencoder_has_error(void* self);
+bool q_stringencoder_has_error(const void* self);
 
 /// Inherited from QStringConverter
 ///
@@ -95,9 +95,9 @@ bool q_stringencoder_has_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStringEncoder*
+/// @param self const QStringEncoder*
 ///
-const char* q_stringencoder_name(void* self);
+const char* q_stringencoder_name(const void* self);
 
 /// Inherited from QStringConverter
 ///
@@ -197,10 +197,10 @@ QStringDecoder* q_stringdecoder_new5(const char* name, int32_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#requiredSpace)
 ///
-/// @param self QStringDecoder*
+/// @param self const QStringDecoder*
 /// @param inputLength intptr_t
 ///
-intptr_t q_stringdecoder_required_space(void* self, intptr_t inputLength);
+intptr_t q_stringdecoder_required_space(const void* self, intptr_t inputLength);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#appendToBuffer)
 ///
@@ -220,9 +220,9 @@ QStringDecoder* q_stringdecoder_decoder_for_html(char* data);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
 ///
-/// @param self QStringDecoder*
+/// @param self const QStringDecoder*
 ///
-bool q_stringdecoder_is_valid(void* self);
+bool q_stringdecoder_is_valid(const void* self);
 
 /// Inherited from QStringConverter
 ///
@@ -236,9 +236,9 @@ void q_stringdecoder_reset_state(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
 ///
-/// @param self QStringDecoder*
+/// @param self const QStringDecoder*
 ///
-bool q_stringdecoder_has_error(void* self);
+bool q_stringdecoder_has_error(const void* self);
 
 /// Inherited from QStringConverter
 ///
@@ -246,9 +246,9 @@ bool q_stringdecoder_has_error(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QStringDecoder*
+/// @param self const QStringDecoder*
 ///
-const char* q_stringdecoder_name(void* self);
+const char* q_stringdecoder_name(const void* self);
 
 /// Inherited from QStringConverter
 ///

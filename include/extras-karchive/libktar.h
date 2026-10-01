@@ -30,7 +30,7 @@ KTar* k_tar_new2(void* dev);
 ///
 /// @param param1 KTar*
 ///
-KTar* k_tar_new3(void* param1);
+KTar* k_tar_new3(const void* param1);
 
 /// [Upstream resources](https://api.kde.org/ktar.html)
 
@@ -68,7 +68,7 @@ void k_tar_set_orig_file_name(void* self, char* fileName);
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doWriteSymLink)
 ///
@@ -77,7 +77,7 @@ bool k_tar_do_write_sym_link(void* self, const char* name, const char* target, c
 /// @param self KTar*
 /// @param callback bool func(KTar* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_tar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, void*, void*, void*));
+void k_tar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doWriteSymLink)
 ///
@@ -93,7 +93,7 @@ void k_tar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*,
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doWriteDir)
 ///
@@ -106,7 +106,7 @@ bool k_tar_super_do_write_sym_link(void* self, const char* name, const char* tar
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doWriteDir)
 ///
@@ -115,7 +115,7 @@ bool k_tar_do_write_dir(void* self, const char* name, const char* user, const ch
 /// @param self KTar*
 /// @param callback bool func(KTar* self, const char* name, const char* user, const char* group, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_tar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, void*, void*, void*));
+void k_tar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doWriteDir)
 ///
@@ -130,7 +130,7 @@ void k_tar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, cons
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doPrepareWriting)
 ///
@@ -144,7 +144,7 @@ bool k_tar_super_do_write_dir(void* self, const char* name, const char* user, co
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doPrepareWriting)
 ///
@@ -153,7 +153,7 @@ bool k_tar_do_prepare_writing(void* self, const char* name, const char* user, co
 /// @param self KTar*
 /// @param callback bool func(KTar* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_tar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, void*, void*, void*));
+void k_tar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, const void*, const void*, const void*));
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doPrepareWriting)
 ///
@@ -169,7 +169,7 @@ void k_tar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doFinishWriting)
 ///
@@ -232,9 +232,9 @@ bool k_tar_close_archive(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KTar*
-/// @param callback bool func()
+/// @param callback bool func(KTar* self)
 ///
-void k_tar_on_close_archive(void* self, bool (*callback)());
+void k_tar_on_close_archive(void* self, bool (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/ktar.html#closeArchive)
 ///
@@ -321,35 +321,35 @@ const char* k_tar_tr3(const char* sourceText, const char* disambiguation, int n)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTar*
+/// @param self const KTar*
 ///
-const char* k_tar_error_string(void* self);
+const char* k_tar_error_string(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#isOpen)
 ///
-/// @param self KTar*
+/// @param self const KTar*
 ///
-bool k_tar_is_open(void* self);
+bool k_tar_is_open(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#mode)
 ///
-/// @param self KTar*
+/// @param self const KTar*
 ///
 /// @return flag of enum QIODeviceBase__OpenModeFlag
 ///
-int32_t k_tar_mode(void* self);
+int32_t k_tar_mode(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#device)
 ///
-/// @param self KTar*
+/// @param self const KTar*
 ///
-QIODevice* k_tar_device(void* self);
+QIODevice* k_tar_device(const void* self);
 
 /// Inherited from KArchive
 ///
@@ -357,17 +357,17 @@ QIODevice* k_tar_device(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KTar*
+/// @param self const KTar*
 ///
-const char* k_tar_file_name(void* self);
+const char* k_tar_file_name(const void* self);
 
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#directory)
 ///
-/// @param self KTar*
+/// @param self const KTar*
 ///
-const KArchiveDirectory* k_tar_directory(void* self);
+const KArchiveDirectory* k_tar_directory(const void* self);
 
 /// Inherited from KArchive
 ///
@@ -502,7 +502,7 @@ bool k_tar_write_dir4(void* self, const char* name, const char* user, const char
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_tar_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime);
+bool k_tar_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -516,7 +516,7 @@ bool k_tar_write_dir5(void* self, const char* name, const char* user, const char
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_tar_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+bool k_tar_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -531,7 +531,7 @@ bool k_tar_write_dir6(void* self, const char* name, const char* user, const char
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -581,7 +581,7 @@ bool k_tar_write_sym_link5(void* self, const char* name, const char* target, con
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_tar_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime);
+bool k_tar_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -596,7 +596,7 @@ bool k_tar_write_sym_link6(void* self, const char* name, const char* target, con
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_tar_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime);
+bool k_tar_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -612,7 +612,7 @@ bool k_tar_write_sym_link7(void* self, const char* name, const char* target, con
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -662,7 +662,7 @@ bool k_tar_write_file5(void* self, const char* name, char* data, mode_t perm, co
 /// @param group const char*
 /// @param atime QDateTime*
 ///
-bool k_tar_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime);
+bool k_tar_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -677,7 +677,7 @@ bool k_tar_write_file6(void* self, const char* name, char* data, mode_t perm, co
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_tar_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime);
+bool k_tar_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -693,7 +693,7 @@ bool k_tar_write_file7(void* self, const char* name, char* data, mode_t perm, co
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime);
+bool k_tar_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -720,7 +720,7 @@ bool k_tar_prepare_writing5(void* self, const char* name, const char* user, cons
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_tar_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime);
+bool k_tar_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime);
 
 /// Inherited from KArchive
 ///
@@ -735,7 +735,7 @@ bool k_tar_prepare_writing6(void* self, const char* name, const char* user, cons
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_tar_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime);
+bool k_tar_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -751,7 +751,7 @@ bool k_tar_prepare_writing7(void* self, const char* name, const char* user, cons
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -813,9 +813,9 @@ bool k_tar_super_close(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTar*
-/// @param callback bool func()
+/// @param callback bool func(KTar* self)
 ///
-void k_tar_on_close(void* self, bool (*callback)());
+void k_tar_on_close(void* self, bool (*callback)(void*));
 
 /// Inherited from KArchive
 ///
@@ -844,9 +844,9 @@ KArchiveDirectory* k_tar_super_root_dir(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KTar*
-/// @param callback KArchiveDirectory* func()
+/// @param callback KArchiveDirectory* func(KTar* self)
 ///
-void k_tar_on_root_dir(void* self, KArchiveDirectory* (*callback)());
+void k_tar_on_root_dir(void* self, KArchiveDirectory* (*callback)(void*));
 
 /// Inherited from KArchive
 ///

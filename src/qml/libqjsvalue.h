@@ -20,7 +20,7 @@ QJSValue* q_jsvalue_new();
 ///
 /// @param other QJSValue*
 ///
-QJSValue* q_jsvalue_new2(void* other);
+QJSValue* q_jsvalue_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html)
 
@@ -91,194 +91,194 @@ QJSValue* q_jsvalue_new10(int32_t value);
 /// @param self QJSValue*
 /// @param other QJSValue*
 ///
-void q_jsvalue_operator_assign(void* self, void* other);
+void q_jsvalue_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isBool)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_bool(void* self);
+bool q_jsvalue_is_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isNumber)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_number(void* self);
+bool q_jsvalue_is_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isNull)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_null(void* self);
+bool q_jsvalue_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isString)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_string(void* self);
+bool q_jsvalue_is_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isUndefined)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_undefined(void* self);
+bool q_jsvalue_is_undefined(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isVariant)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_variant(void* self);
+bool q_jsvalue_is_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isQObject)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_q_object(void* self);
+bool q_jsvalue_is_q_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isQMetaObject)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_q_meta_object(void* self);
+bool q_jsvalue_is_q_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isObject)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_object(void* self);
+bool q_jsvalue_is_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isDate)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_date(void* self);
+bool q_jsvalue_is_date(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isRegExp)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_reg_exp(void* self);
+bool q_jsvalue_is_reg_exp(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isArray)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_array(void* self);
+bool q_jsvalue_is_array(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isError)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_error(void* self);
+bool q_jsvalue_is_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isUrl)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_url(void* self);
+bool q_jsvalue_is_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-const char* q_jsvalue_to_string(void* self);
+const char* q_jsvalue_to_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toNumber)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-double q_jsvalue_to_number(void* self);
+double q_jsvalue_to_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toInt)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-int32_t q_jsvalue_to_int(void* self);
+int32_t q_jsvalue_to_int(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toUInt)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-uint32_t q_jsvalue_to_u_int(void* self);
+uint32_t q_jsvalue_to_u_int(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toBool)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_to_bool(void* self);
+bool q_jsvalue_to_bool(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toVariant)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-QVariant* q_jsvalue_to_variant(void* self);
+QVariant* q_jsvalue_to_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toVariant)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param behavior enum QJSValue__ObjectConversionBehavior
 ///
-QVariant* q_jsvalue_to_variant2(void* self, int32_t behavior);
+QVariant* q_jsvalue_to_variant2(const void* self, int32_t behavior);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toPrimitive)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-QJSPrimitiveValue* q_jsvalue_to_primitive(void* self);
+QJSPrimitiveValue* q_jsvalue_to_primitive(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toQObject)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-QObject* q_jsvalue_to_q_object(void* self);
+QObject* q_jsvalue_to_q_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toQMetaObject)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-const QMetaObject* q_jsvalue_to_q_meta_object(void* self);
+const QMetaObject* q_jsvalue_to_q_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#toDateTime)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-QDateTime* q_jsvalue_to_date_time(void* self);
+QDateTime* q_jsvalue_to_date_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#equals)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param other QJSValue*
 ///
-bool q_jsvalue_equals(void* self, void* other);
+bool q_jsvalue_equals(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#strictlyEquals)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param other QJSValue*
 ///
-bool q_jsvalue_strictly_equals(void* self, void* other);
+bool q_jsvalue_strictly_equals(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#prototype)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-QJSValue* q_jsvalue_prototype(void* self);
+QJSValue* q_jsvalue_prototype(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#setPrototype)
 ///
 /// @param self QJSValue*
 /// @param prototype QJSValue*
 ///
-void q_jsvalue_set_prototype(void* self, void* prototype);
+void q_jsvalue_set_prototype(void* self, const void* prototype);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#property)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param name const char*
 ///
-QJSValue* q_jsvalue_property(void* self, const char* name);
+QJSValue* q_jsvalue_property(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#setProperty)
 ///
@@ -286,28 +286,28 @@ QJSValue* q_jsvalue_property(void* self, const char* name);
 /// @param name const char*
 /// @param value QJSValue*
 ///
-void q_jsvalue_set_property(void* self, const char* name, void* value);
+void q_jsvalue_set_property(void* self, const char* name, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#hasProperty)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param name const char*
 ///
-bool q_jsvalue_has_property(void* self, const char* name);
+bool q_jsvalue_has_property(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#hasOwnProperty)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param name const char*
 ///
-bool q_jsvalue_has_own_property(void* self, const char* name);
+bool q_jsvalue_has_own_property(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#property)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param arrayIndex uint32_t
 ///
-QJSValue* q_jsvalue_property2(void* self, uint32_t arrayIndex);
+QJSValue* q_jsvalue_property2(const void* self, uint32_t arrayIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#setProperty)
 ///
@@ -315,7 +315,7 @@ QJSValue* q_jsvalue_property2(void* self, uint32_t arrayIndex);
 /// @param arrayIndex uint32_t
 /// @param value QJSValue*
 ///
-void q_jsvalue_set_property2(void* self, uint32_t arrayIndex, void* value);
+void q_jsvalue_set_property2(void* self, uint32_t arrayIndex, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#deleteProperty)
 ///
@@ -326,58 +326,58 @@ bool q_jsvalue_delete_property(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#isCallable)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-bool q_jsvalue_is_callable(void* self);
+bool q_jsvalue_is_callable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#call)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-QJSValue* q_jsvalue_call(void* self);
+QJSValue* q_jsvalue_call(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#callWithInstance)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param instance QJSValue*
 ///
-QJSValue* q_jsvalue_call_with_instance(void* self, void* instance);
+QJSValue* q_jsvalue_call_with_instance(const void* self, const void* instance);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#callAsConstructor)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
-QJSValue* q_jsvalue_call_as_constructor(void* self);
+QJSValue* q_jsvalue_call_as_constructor(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#errorType)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 ///
 /// @return enum QJSValue__ErrorType
 ///
-int32_t q_jsvalue_error_type(void* self);
+int32_t q_jsvalue_error_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#call)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param args libqt_list of QJSValue*
 ///
-QJSValue* q_jsvalue_call1(void* self, libqt_list args);
+QJSValue* q_jsvalue_call1(const void* self, libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#callWithInstance)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param instance QJSValue*
 /// @param args libqt_list of QJSValue*
 ///
-QJSValue* q_jsvalue_call_with_instance2(void* self, void* instance, libqt_list args);
+QJSValue* q_jsvalue_call_with_instance2(const void* self, const void* instance, libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#callAsConstructor)
 ///
-/// @param self QJSValue*
+/// @param self const QJSValue*
 /// @param args libqt_list of QJSValue*
 ///
-QJSValue* q_jsvalue_call_as_constructor1(void* self, libqt_list args);
+QJSValue* q_jsvalue_call_as_constructor1(const void* self, libqt_list args);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsvalue.html#dtor.QJSValue)
 ///

@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-const QMetaObject* q_virtualkeyboarddictionarymanager_meta_object(void* self);
+const QMetaObject* q_virtualkeyboarddictionarymanager_meta_object(const void* self);
 
 /// @param self QVirtualKeyboardDictionaryManager*
 /// @param param1 const char*
@@ -44,17 +44,17 @@ QVirtualKeyboardDictionaryManager* q_virtualkeyboarddictionarymanager_instance()
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-const char** q_virtualkeyboarddictionarymanager_available_dictionaries(void* self);
+const char** q_virtualkeyboarddictionarymanager_available_dictionaries(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboarddictionarymanager.html#baseDictionaries)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-const char** q_virtualkeyboarddictionarymanager_base_dictionaries(void* self);
+const char** q_virtualkeyboarddictionarymanager_base_dictionaries(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboarddictionarymanager.html#setBaseDictionaries)
 ///
@@ -67,9 +67,9 @@ void q_virtualkeyboarddictionarymanager_set_base_dictionaries(void* self, const 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-const char** q_virtualkeyboarddictionarymanager_extra_dictionaries(void* self);
+const char** q_virtualkeyboarddictionarymanager_extra_dictionaries(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboarddictionarymanager.html#setExtraDictionaries)
 ///
@@ -82,9 +82,9 @@ void q_virtualkeyboarddictionarymanager_set_extra_dictionaries(void* self, const
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-const char** q_virtualkeyboarddictionarymanager_active_dictionaries(void* self);
+const char** q_virtualkeyboarddictionarymanager_active_dictionaries(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboarddictionarymanager.html#createDictionary)
 ///
@@ -95,10 +95,10 @@ QVirtualKeyboardDictionary* q_virtualkeyboarddictionarymanager_create_dictionary
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboarddictionarymanager.html#dictionary)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 /// @param name const char*
 ///
-QVirtualKeyboardDictionary* q_virtualkeyboarddictionarymanager_dictionary(void* self, const char* name);
+QVirtualKeyboardDictionary* q_virtualkeyboarddictionarymanager_dictionary(const void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvirtualkeyboarddictionarymanager.html#availableDictionariesChanged)
 ///
@@ -196,9 +196,9 @@ bool q_virtualkeyboarddictionarymanager_event_filter(void* self, void* watched, 
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-const char* q_virtualkeyboarddictionarymanager_object_name(void* self);
+const char* q_virtualkeyboarddictionarymanager_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -213,33 +213,33 @@ void q_virtualkeyboarddictionarymanager_set_object_name(void* self, const char* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-bool q_virtualkeyboarddictionarymanager_is_widget_type(void* self);
+bool q_virtualkeyboarddictionarymanager_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-bool q_virtualkeyboarddictionarymanager_is_window_type(void* self);
+bool q_virtualkeyboarddictionarymanager_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-bool q_virtualkeyboarddictionarymanager_is_quick_item_type(void* self);
+bool q_virtualkeyboarddictionarymanager_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-bool q_virtualkeyboarddictionarymanager_signals_blocked(void* self);
+bool q_virtualkeyboarddictionarymanager_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -254,9 +254,9 @@ bool q_virtualkeyboarddictionarymanager_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-QThread* q_virtualkeyboarddictionarymanager_thread(void* self);
+QThread* q_virtualkeyboarddictionarymanager_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -307,11 +307,11 @@ void q_virtualkeyboarddictionarymanager_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_virtualkeyboarddictionarymanager_children(void* self);
+libqt_list q_virtualkeyboarddictionarymanager_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -349,7 +349,7 @@ void q_virtualkeyboarddictionarymanager_remove_event_filter(void* self, void* ob
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -360,18 +360,18 @@ QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect(void* sender
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -382,7 +382,7 @@ QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect3(void* self,
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_virtualkeyboarddictionarymanager_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_virtualkeyboarddictionarymanager_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -393,24 +393,24 @@ bool q_virtualkeyboarddictionarymanager_disconnect(void* sender, const char* sig
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_virtualkeyboarddictionarymanager_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_virtualkeyboarddictionarymanager_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-bool q_virtualkeyboarddictionarymanager_disconnect3(void* self);
+bool q_virtualkeyboarddictionarymanager_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 /// @param receiver QObject*
 ///
-bool q_virtualkeyboarddictionarymanager_disconnect4(void* self, void* receiver);
+bool q_virtualkeyboarddictionarymanager_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -418,23 +418,23 @@ bool q_virtualkeyboarddictionarymanager_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_virtualkeyboarddictionarymanager_disconnect5(void* param1);
+bool q_virtualkeyboarddictionarymanager_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-void q_virtualkeyboarddictionarymanager_dump_object_tree(void* self);
+void q_virtualkeyboarddictionarymanager_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-void q_virtualkeyboarddictionarymanager_dump_object_info(void* self);
+void q_virtualkeyboarddictionarymanager_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -444,16 +444,16 @@ void q_virtualkeyboarddictionarymanager_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_virtualkeyboarddictionarymanager_set_property(void* self, const char* name, void* value);
+bool q_virtualkeyboarddictionarymanager_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 /// @param name const char*
 ///
-QVariant* q_virtualkeyboarddictionarymanager_property(void* self, const char* name);
+QVariant* q_virtualkeyboarddictionarymanager_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -461,9 +461,9 @@ QVariant* q_virtualkeyboarddictionarymanager_property(void* self, const char* na
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-const char** q_virtualkeyboarddictionarymanager_dynamic_property_names(void* self);
+const char** q_virtualkeyboarddictionarymanager_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -477,9 +477,9 @@ QBindingStorage* q_virtualkeyboarddictionarymanager_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-const QBindingStorage* q_virtualkeyboarddictionarymanager_binding_storage2(void* self);
+const QBindingStorage* q_virtualkeyboarddictionarymanager_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -502,18 +502,18 @@ void q_virtualkeyboarddictionarymanager_on_destroyed(void* self, void (*callback
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 ///
-QObject* q_virtualkeyboarddictionarymanager_parent(void* self);
+QObject* q_virtualkeyboarddictionarymanager_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 /// @param classname const char*
 ///
-bool q_virtualkeyboarddictionarymanager_inherits(void* self, const char* classname);
+bool q_virtualkeyboarddictionarymanager_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -553,7 +553,7 @@ int32_t q_virtualkeyboarddictionarymanager_start_timer23(void* self, int64_t tim
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -565,59 +565,59 @@ QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect5(void* sende
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_virtualkeyboarddictionarymanager_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 /// @param signal const char*
 ///
-bool q_virtualkeyboarddictionarymanager_disconnect1(void* self, const char* signal);
+bool q_virtualkeyboarddictionarymanager_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_virtualkeyboarddictionarymanager_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_virtualkeyboarddictionarymanager_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_virtualkeyboarddictionarymanager_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QVirtualKeyboardDictionaryManager*
+/// @param self const QVirtualKeyboardDictionaryManager*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_virtualkeyboarddictionarymanager_disconnect23(void* self, void* receiver, const char* member);
+bool q_virtualkeyboarddictionarymanager_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QVirtualKeyboardDictionaryManager*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_virtualkeyboarddictionarymanager_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

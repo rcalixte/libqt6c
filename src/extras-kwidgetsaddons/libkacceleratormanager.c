@@ -2,7 +2,7 @@
 #include "libkacceleratormanager.hpp"
 #include "libkacceleratormanager.h"
 
-KAcceleratorManager* k_acceleratormanager_new(void* other) {
+KAcceleratorManager* k_acceleratormanager_new(const void* other) {
     return KAcceleratorManager_New((KAcceleratorManager*)other);
 }
 

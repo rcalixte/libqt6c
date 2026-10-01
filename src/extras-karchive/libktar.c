@@ -14,7 +14,7 @@ KTar* k_tar_new2(void* dev) {
     return KTar_New2((QIODevice*)dev);
 }
 
-KTar* k_tar_new3(void* param1) {
+KTar* k_tar_new3(const void* param1) {
     return KTar_New3((KTar*)param1);
 }
 
@@ -33,39 +33,39 @@ void k_tar_set_orig_file_name(void* self, char* fileName) {
     KTar_SetOrigFileName((KTar*)self, qstring(fileName));
 }
 
-bool k_tar_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KTar_DoWriteSymLink((KTar*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-void k_tar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, void*, void*, void*)) {
+void k_tar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, const void*, const void*, const void*)) {
     KTar_OnDoWriteSymLink((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KTar_SuperDoWriteSymLink((KTar*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-bool k_tar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KTar_DoWriteDir((KTar*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-void k_tar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, void*, void*, void*)) {
+void k_tar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, const void*, const void*, const void*)) {
     KTar_OnDoWriteDir((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KTar_SuperDoWriteDir((KTar*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-bool k_tar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KTar_DoPrepareWriting((KTar*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-void k_tar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, void*, void*, void*)) {
+void k_tar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, const void*, const void*, const void*)) {
     KTar_OnDoPrepareWriting((KTar*)self, (intptr_t)callback);
 }
 
-bool k_tar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KTar_SuperDoPrepareWriting((KTar*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
@@ -97,7 +97,7 @@ bool k_tar_close_archive(void* self) {
     return KTar_CloseArchive((KTar*)self);
 }
 
-void k_tar_on_close_archive(void* self, bool (*callback)()) {
+void k_tar_on_close_archive(void* self, bool (*callback)(void*)) {
     KTar_OnCloseArchive((KTar*)self, (intptr_t)callback);
 }
 
@@ -143,33 +143,33 @@ const char* k_tar_tr3(const char* sourceText, const char* disambiguation, int n)
     return _ret;
 }
 
-const char* k_tar_error_string(void* self) {
+const char* k_tar_error_string(const void* self) {
     libqt_string _str = KArchive_ErrorString((KArchive*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_tar_is_open(void* self) {
+bool k_tar_is_open(const void* self) {
     return KArchive_IsOpen((KArchive*)self);
 }
 
-int32_t k_tar_mode(void* self) {
+int32_t k_tar_mode(const void* self) {
     return KArchive_Mode((KArchive*)self);
 }
 
-QIODevice* k_tar_device(void* self) {
+QIODevice* k_tar_device(const void* self) {
     return KArchive_Device((KArchive*)self);
 }
 
-const char* k_tar_file_name(void* self) {
+const char* k_tar_file_name(const void* self) {
     libqt_string _str = KArchive_FileName((KArchive*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const KArchiveDirectory* k_tar_directory(void* self) {
+const KArchiveDirectory* k_tar_directory(const void* self) {
     return KArchive_Directory((KArchive*)self);
 }
 
@@ -221,15 +221,15 @@ bool k_tar_write_dir4(void* self, const char* name, const char* user, const char
     return KArchive_WriteDir4((KArchive*)self, qstring(name), qstring(user), qstring(group), perm);
 }
 
-bool k_tar_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime) {
+bool k_tar_write_dir5(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime) {
     return KArchive_WriteDir5((KArchive*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime);
 }
 
-bool k_tar_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime) {
+bool k_tar_write_dir6(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime) {
     return KArchive_WriteDir6((KArchive*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_tar_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_write_dir7(void* self, const char* name, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KArchive_WriteDir7((KArchive*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
@@ -245,15 +245,15 @@ bool k_tar_write_sym_link5(void* self, const char* name, const char* target, con
     return KArchive_WriteSymLink5((KArchive*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm);
 }
 
-bool k_tar_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime) {
+bool k_tar_write_sym_link6(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime) {
     return KArchive_WriteSymLink6((KArchive*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime);
 }
 
-bool k_tar_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime) {
+bool k_tar_write_sym_link7(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime) {
     return KArchive_WriteSymLink7((KArchive*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_tar_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_write_sym_link8(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KArchive_WriteSymLink8((KArchive*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
@@ -269,15 +269,15 @@ bool k_tar_write_file5(void* self, const char* name, char* data, mode_t perm, co
     return KArchive_WriteFile5((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group));
 }
 
-bool k_tar_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime) {
+bool k_tar_write_file6(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime) {
     return KArchive_WriteFile6((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group), (QDateTime*)atime);
 }
 
-bool k_tar_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime) {
+bool k_tar_write_file7(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime) {
     return KArchive_WriteFile7((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group), (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_tar_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, void* atime, void* mtime, void* ctime) {
+bool k_tar_write_file8(void* self, const char* name, char* data, mode_t perm, const char* user, const char* group, const void* atime, const void* mtime, const void* ctime) {
     return KArchive_WriteFile8((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group), (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
@@ -285,15 +285,15 @@ bool k_tar_prepare_writing5(void* self, const char* name, const char* user, cons
     return KArchive_PrepareWriting5((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm);
 }
 
-bool k_tar_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime) {
+bool k_tar_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime) {
     return KArchive_PrepareWriting6((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime);
 }
 
-bool k_tar_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime) {
+bool k_tar_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime) {
     return KArchive_PrepareWriting7((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_tar_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_tar_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, const void* atime, const void* mtime, const void* ctime) {
     return KArchive_PrepareWriting8((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
@@ -317,7 +317,7 @@ bool k_tar_super_close(void* self) {
     return KTar_SuperClose((KTar*)self);
 }
 
-void k_tar_on_close(void* self, bool (*callback)()) {
+void k_tar_on_close(void* self, bool (*callback)(void*)) {
     KTar_OnClose((KTar*)self, (intptr_t)callback);
 }
 
@@ -329,7 +329,7 @@ KArchiveDirectory* k_tar_super_root_dir(void* self) {
     return KTar_SuperRootDir((KTar*)self);
 }
 
-void k_tar_on_root_dir(void* self, KArchiveDirectory* (*callback)()) {
+void k_tar_on_root_dir(void* self, KArchiveDirectory* (*callback)(void*)) {
     KTar_OnRootDir((KTar*)self, (intptr_t)callback);
 }
 
@@ -349,48 +349,16 @@ void k_tar_set_error_string(void* self, const char* errorStr) {
     KTar_SetErrorString((KTar*)self, qstring(errorStr));
 }
 
-void k_tar_super_set_error_string(void* self, const char* errorStr) {
-    KTar_SuperSetErrorString((KTar*)self, qstring(errorStr));
-}
-
-void k_tar_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
-    KTar_OnSetErrorString((KTar*)self, (intptr_t)callback);
-}
-
 KArchiveDirectory* k_tar_find_or_create(void* self, const char* path) {
     return KTar_FindOrCreate((KTar*)self, qstring(path));
-}
-
-KArchiveDirectory* k_tar_super_find_or_create(void* self, const char* path) {
-    return KTar_SuperFindOrCreate((KTar*)self, qstring(path));
-}
-
-void k_tar_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, const char*)) {
-    KTar_OnFindOrCreate((KTar*)self, (intptr_t)callback);
 }
 
 void k_tar_set_device(void* self, void* dev) {
     KTar_SetDevice((KTar*)self, (QIODevice*)dev);
 }
 
-void k_tar_super_set_device(void* self, void* dev) {
-    KTar_SuperSetDevice((KTar*)self, (QIODevice*)dev);
-}
-
-void k_tar_on_set_device(void* self, void (*callback)(void*, void*)) {
-    KTar_OnSetDevice((KTar*)self, (intptr_t)callback);
-}
-
 void k_tar_set_root_dir(void* self, void* rootDir) {
     KTar_SetRootDir((KTar*)self, (KArchiveDirectory*)rootDir);
-}
-
-void k_tar_super_set_root_dir(void* self, void* rootDir) {
-    KTar_SuperSetRootDir((KTar*)self, (KArchiveDirectory*)rootDir);
-}
-
-void k_tar_on_set_root_dir(void* self, void (*callback)(void*, void*)) {
-    KTar_OnSetRootDir((KTar*)self, (intptr_t)callback);
 }
 
 void k_tar_delete(void* self) {

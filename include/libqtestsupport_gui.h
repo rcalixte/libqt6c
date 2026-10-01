@@ -17,7 +17,7 @@
 /// @param points libqt_list of QEventPoint*
 /// @param mods flag of enum Qt__KeyboardModifier
 ///
-void q_qtestsupport_gui_h_handle_touch_event(void* w, void* device, libqt_list points, int32_t mods);
+void q_qtestsupport_gui_h_handle_touch_event(void* w, const void* device, libqt_list points, int32_t mods);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtestsupport-gui-h.html#qt_handleTouchEventv2)
 ///
@@ -26,7 +26,7 @@ void q_qtestsupport_gui_h_handle_touch_event(void* w, void* device, libqt_list p
 /// @param points libqt_list of QEventPoint*
 /// @param mods flag of enum Qt__KeyboardModifier
 ///
-bool q_qtestsupport_gui_h_handle_touch_eventv2(void* w, void* device, libqt_list points, int32_t mods);
+bool q_qtestsupport_gui_h_handle_touch_eventv2(void* w, const void* device, libqt_list points, int32_t mods);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html)
 
@@ -36,7 +36,7 @@ bool q_qtestsupport_gui_h_handle_touch_eventv2(void* w, void* device, libqt_list
 /// @param touchId int
 /// @param pt QPoint*
 ///
-QTest__QTouchEventSequence* q_test__qtoucheventsequence_press(void* self, int touchId, void* pt);
+QTest__QTouchEventSequence* q_test__qtoucheventsequence_press(void* self, int touchId, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#move)
 ///
@@ -44,7 +44,7 @@ QTest__QTouchEventSequence* q_test__qtoucheventsequence_press(void* self, int to
 /// @param touchId int
 /// @param pt QPoint*
 ///
-QTest__QTouchEventSequence* q_test__qtoucheventsequence_move(void* self, int touchId, void* pt);
+QTest__QTouchEventSequence* q_test__qtoucheventsequence_move(void* self, int touchId, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#release)
 ///
@@ -52,7 +52,7 @@ QTest__QTouchEventSequence* q_test__qtoucheventsequence_move(void* self, int tou
 /// @param touchId int
 /// @param pt QPoint*
 ///
-QTest__QTouchEventSequence* q_test__qtoucheventsequence_release(void* self, int touchId, void* pt);
+QTest__QTouchEventSequence* q_test__qtoucheventsequence_release(void* self, int touchId, const void* pt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#stationary)
 ///
@@ -73,7 +73,7 @@ bool q_test__qtoucheventsequence_commit(void* self, bool processEvents);
 /// @param self QTest__QTouchEventSequence*
 /// @param param1 QTest__QTouchEventSequence*
 ///
-void q_test__qtoucheventsequence_operator_assign(void* self, void* param1);
+void q_test__qtoucheventsequence_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)
 ///
@@ -82,7 +82,7 @@ void q_test__qtoucheventsequence_operator_assign(void* self, void* param1);
 /// @param pt QPoint*
 /// @param window QWindow*
 ///
-QTest__QTouchEventSequence* q_test__qtoucheventsequence_press3(void* self, int touchId, void* pt, void* window);
+QTest__QTouchEventSequence* q_test__qtoucheventsequence_press3(void* self, int touchId, const void* pt, void* window);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#move)
 ///
@@ -91,7 +91,7 @@ QTest__QTouchEventSequence* q_test__qtoucheventsequence_press3(void* self, int t
 /// @param pt QPoint*
 /// @param window QWindow*
 ///
-QTest__QTouchEventSequence* q_test__qtoucheventsequence_move3(void* self, int touchId, void* pt, void* window);
+QTest__QTouchEventSequence* q_test__qtoucheventsequence_move3(void* self, int touchId, const void* pt, void* window);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#release)
 ///
@@ -100,7 +100,7 @@ QTest__QTouchEventSequence* q_test__qtoucheventsequence_move3(void* self, int to
 /// @param pt QPoint*
 /// @param window QWindow*
 ///
-QTest__QTouchEventSequence* q_test__qtoucheventsequence_release3(void* self, int touchId, void* pt, void* window);
+QTest__QTouchEventSequence* q_test__qtoucheventsequence_release3(void* self, int touchId, const void* pt, void* window);
 
 /// Delete this object from C++ memory.
 ///

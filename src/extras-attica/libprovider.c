@@ -19,19 +19,19 @@ Attica__Provider* k_attica__provider_new() {
     return Attica__Provider_New();
 }
 
-Attica__Provider* k_attica__provider_new2(void* other) {
+Attica__Provider* k_attica__provider_new2(const void* other) {
     return Attica__Provider_New2((Attica__Provider*)other);
 }
 
-void k_attica__provider_operator_assign(void* self, void* other) {
+void k_attica__provider_operator_assign(void* self, const void* other) {
     Attica__Provider_OperatorAssign((Attica__Provider*)self, (Attica__Provider*)other);
 }
 
-bool k_attica__provider_is_valid(void* self) {
+bool k_attica__provider_is_valid(const void* self) {
     return Attica__Provider_IsValid((Attica__Provider*)self);
 }
 
-bool k_attica__provider_is_enabled(void* self) {
+bool k_attica__provider_is_enabled(const void* self) {
     return Attica__Provider_IsEnabled((Attica__Provider*)self);
 }
 
@@ -43,139 +43,139 @@ void k_attica__provider_set_additional_agent_information(void* self, const char*
     Attica__Provider_SetAdditionalAgentInformation((Attica__Provider*)self, qstring(additionalInformation));
 }
 
-const char* k_attica__provider_additional_agent_information(void* self) {
+const char* k_attica__provider_additional_agent_information(const void* self) {
     libqt_string _str = Attica__Provider_AdditionalAgentInformation((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* k_attica__provider_base_url(void* self) {
+QUrl* k_attica__provider_base_url(const void* self) {
     return Attica__Provider_BaseUrl((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_name(void* self) {
+const char* k_attica__provider_name(const void* self) {
     libqt_string _str = Attica__Provider_Name((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUrl* k_attica__provider_icon(void* self) {
+QUrl* k_attica__provider_icon(const void* self) {
     return Attica__Provider_Icon((Attica__Provider*)self);
 }
 
-bool k_attica__provider_has_person_service(void* self) {
+bool k_attica__provider_has_person_service(const void* self) {
     return Attica__Provider_HasPersonService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_person_service_version(void* self) {
+const char* k_attica__provider_person_service_version(const void* self) {
     libqt_string _str = Attica__Provider_PersonServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_friend_service(void* self) {
+bool k_attica__provider_has_friend_service(const void* self) {
     return Attica__Provider_HasFriendService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_friend_service_version(void* self) {
+const char* k_attica__provider_friend_service_version(const void* self) {
     libqt_string _str = Attica__Provider_FriendServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_message_service(void* self) {
+bool k_attica__provider_has_message_service(const void* self) {
     return Attica__Provider_HasMessageService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_message_service_version(void* self) {
+const char* k_attica__provider_message_service_version(const void* self) {
     libqt_string _str = Attica__Provider_MessageServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_achievement_service(void* self) {
+bool k_attica__provider_has_achievement_service(const void* self) {
     return Attica__Provider_HasAchievementService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_achievement_service_version(void* self) {
+const char* k_attica__provider_achievement_service_version(const void* self) {
     libqt_string _str = Attica__Provider_AchievementServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_activity_service(void* self) {
+bool k_attica__provider_has_activity_service(const void* self) {
     return Attica__Provider_HasActivityService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_activity_service_version(void* self) {
+const char* k_attica__provider_activity_service_version(const void* self) {
     libqt_string _str = Attica__Provider_ActivityServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_content_service(void* self) {
+bool k_attica__provider_has_content_service(const void* self) {
     return Attica__Provider_HasContentService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_content_service_version(void* self) {
+const char* k_attica__provider_content_service_version(const void* self) {
     libqt_string _str = Attica__Provider_ContentServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_fan_service(void* self) {
+bool k_attica__provider_has_fan_service(const void* self) {
     return Attica__Provider_HasFanService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_fan_service_version(void* self) {
+const char* k_attica__provider_fan_service_version(const void* self) {
     libqt_string _str = Attica__Provider_FanServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_forum_service(void* self) {
+bool k_attica__provider_has_forum_service(const void* self) {
     return Attica__Provider_HasForumService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_forum_service_version(void* self) {
+const char* k_attica__provider_forum_service_version(const void* self) {
     libqt_string _str = Attica__Provider_ForumServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_knowledgebase_service(void* self) {
+bool k_attica__provider_has_knowledgebase_service(const void* self) {
     return Attica__Provider_HasKnowledgebaseService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_knowledgebase_service_version(void* self) {
+const char* k_attica__provider_knowledgebase_service_version(const void* self) {
     libqt_string _str = Attica__Provider_KnowledgebaseServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_comment_service(void* self) {
+bool k_attica__provider_has_comment_service(const void* self) {
     return Attica__Provider_HasCommentService((Attica__Provider*)self);
 }
 
-const char* k_attica__provider_comment_service_version(void* self) {
+const char* k_attica__provider_comment_service_version(const void* self) {
     libqt_string _str = Attica__Provider_CommentServiceVersion((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_attica__provider_has_credentials(void* self) {
+bool k_attica__provider_has_credentials(const void* self) {
     return Attica__Provider_HasCredentials((Attica__Provider*)self);
 }
 
@@ -223,11 +223,11 @@ Attica__PostJob* k_attica__provider_cancel_friendship(void* self, const char* to
     return Attica__Provider_CancelFriendship((Attica__Provider*)self, qstring(to));
 }
 
-Attica__PostJob* k_attica__provider_post_message(void* self, void* message) {
+Attica__PostJob* k_attica__provider_post_message(void* self, const void* message) {
     return Attica__Provider_PostMessage((Attica__Provider*)self, (Attica__Message*)message);
 }
 
-Attica__PutJob* k_attica__provider_edit_achievement(void* self, const char* contentId, const char* achievementId, void* achievement) {
+Attica__PutJob* k_attica__provider_edit_achievement(void* self, const char* contentId, const char* achievementId, const void* achievement) {
     return Attica__Provider_EditAchievement((Attica__Provider*)self, qstring(contentId), qstring(achievementId), (Attica__Achievement*)achievement);
 }
 
@@ -235,7 +235,7 @@ Attica__DeleteJob* k_attica__provider_delete_achievement(void* self, const char*
     return Attica__Provider_DeleteAchievement((Attica__Provider*)self, qstring(contentId), qstring(achievementId));
 }
 
-Attica__PostJob* k_attica__provider_set_achievement_progress(void* self, const char* id, void* progress, void* timestamp) {
+Attica__PostJob* k_attica__provider_set_achievement_progress(void* self, const char* id, const void* progress, const void* timestamp) {
     return Attica__Provider_SetAchievementProgress((Attica__Provider*)self, qstring(id), (QVariant*)progress, (QDateTime*)timestamp);
 }
 
@@ -247,31 +247,31 @@ Attica__PostJob* k_attica__provider_post_activity(void* self, const char* messag
     return Attica__Provider_PostActivity((Attica__Provider*)self, qstring(message));
 }
 
-Attica__PostJob* k_attica__provider_create_project(void* self, void* project) {
+Attica__PostJob* k_attica__provider_create_project(void* self, const void* project) {
     return Attica__Provider_CreateProject((Attica__Provider*)self, (Attica__Project*)project);
 }
 
-Attica__PostJob* k_attica__provider_delete_project(void* self, void* project) {
+Attica__PostJob* k_attica__provider_delete_project(void* self, const void* project) {
     return Attica__Provider_DeleteProject((Attica__Provider*)self, (Attica__Project*)project);
 }
 
-Attica__PostJob* k_attica__provider_edit_project(void* self, void* project) {
+Attica__PostJob* k_attica__provider_edit_project(void* self, const void* project) {
     return Attica__Provider_EditProject((Attica__Provider*)self, (Attica__Project*)project);
 }
 
-Attica__PostJob* k_attica__provider_save_publisher_field(void* self, void* project, void* field) {
+Attica__PostJob* k_attica__provider_save_publisher_field(void* self, const void* project, const void* field) {
     return Attica__Provider_SavePublisherField((Attica__Provider*)self, (Attica__Project*)project, (Attica__PublisherField*)field);
 }
 
-Attica__PostJob* k_attica__provider_publish_build_job(void* self, void* buildjob, void* publisher) {
+Attica__PostJob* k_attica__provider_publish_build_job(void* self, const void* buildjob, const void* publisher) {
     return Attica__Provider_PublishBuildJob((Attica__Provider*)self, (Attica__BuildServiceJob*)buildjob, (Attica__Publisher*)publisher);
 }
 
-Attica__PostJob* k_attica__provider_create_build_service_job(void* self, void* job) {
+Attica__PostJob* k_attica__provider_create_build_service_job(void* self, const void* job) {
     return Attica__Provider_CreateBuildServiceJob((Attica__Provider*)self, (Attica__BuildServiceJob*)job);
 }
 
-Attica__PostJob* k_attica__provider_cancel_build_service_job(void* self, void* job) {
+Attica__PostJob* k_attica__provider_cancel_build_service_job(void* self, const void* job) {
     return Attica__Provider_CancelBuildServiceJob((Attica__Provider*)self, (Attica__BuildServiceJob*)job);
 }
 
@@ -279,11 +279,11 @@ Attica__PostJob* k_attica__provider_delete_remote_account(void* self, const char
     return Attica__Provider_DeleteRemoteAccount((Attica__Provider*)self, qstring(id));
 }
 
-Attica__PostJob* k_attica__provider_create_remote_account(void* self, void* account) {
+Attica__PostJob* k_attica__provider_create_remote_account(void* self, const void* account) {
     return Attica__Provider_CreateRemoteAccount((Attica__Provider*)self, (Attica__RemoteAccount*)account);
 }
 
-Attica__PostJob* k_attica__provider_edit_remote_account(void* self, void* account) {
+Attica__PostJob* k_attica__provider_edit_remote_account(void* self, const void* account) {
     return Attica__Provider_EditRemoteAccount((Attica__Provider*)self, (Attica__RemoteAccount*)account);
 }
 
@@ -331,7 +331,7 @@ Attica__PostJob* k_attica__provider_post_topic(void* self, const char* forumId, 
     return Attica__Provider_PostTopic((Attica__Provider*)self, qstring(forumId), qstring(subject), qstring(content));
 }
 
-const char* k_attica__provider_get_register_account_url(void* self) {
+const char* k_attica__provider_get_register_account_url(const void* self) {
     libqt_string _str = Attica__Provider_GetRegisterAccountUrl((Attica__Provider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

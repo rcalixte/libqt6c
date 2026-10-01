@@ -20,7 +20,7 @@ QSqlField* q_sqlfield_new();
 ///
 /// @param other QSqlField*
 ///
-QSqlField* q_sqlfield_new2(void* other);
+QSqlField* q_sqlfield_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html)
 
@@ -73,7 +73,7 @@ QSqlField* q_sqlfield_new7(const char* fieldName, int32_t type, const char* tabl
 /// @param self QSqlField*
 /// @param other QSqlField*
 ///
-void q_sqlfield_operator_assign(void* self, void* other);
+void q_sqlfield_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#swap)
 ///
@@ -84,30 +84,30 @@ void q_sqlfield_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#operator-eq-eq)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 /// @param other QSqlField*
 ///
-bool q_sqlfield_operator_equal(void* self, void* other);
+bool q_sqlfield_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#operator-not-eq)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 /// @param other QSqlField*
 ///
-bool q_sqlfield_operator_not_equal(void* self, void* other);
+bool q_sqlfield_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setValue)
 ///
 /// @param self QSqlField*
 /// @param value QVariant*
 ///
-void q_sqlfield_set_value(void* self, void* value);
+void q_sqlfield_set_value(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#value)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-QVariant* q_sqlfield_value(void* self);
+QVariant* q_sqlfield_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setName)
 ///
@@ -120,9 +120,9 @@ void q_sqlfield_set_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-const char* q_sqlfield_name(void* self);
+const char* q_sqlfield_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setTableName)
 ///
@@ -135,15 +135,15 @@ void q_sqlfield_set_table_name(void* self, const char* tableName);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-const char* q_sqlfield_table_name(void* self);
+const char* q_sqlfield_table_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#isNull)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-bool q_sqlfield_is_null(void* self);
+bool q_sqlfield_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setReadOnly)
 ///
@@ -154,9 +154,9 @@ void q_sqlfield_set_read_only(void* self, bool readOnly);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#isReadOnly)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-bool q_sqlfield_is_read_only(void* self);
+bool q_sqlfield_is_read_only(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#clear)
 ///
@@ -166,15 +166,15 @@ void q_sqlfield_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#isAutoValue)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-bool q_sqlfield_is_auto_value(void* self);
+bool q_sqlfield_is_auto_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#metaType)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-QMetaType* q_sqlfield_meta_type(void* self);
+QMetaType* q_sqlfield_meta_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setMetaType)
 ///
@@ -185,11 +185,11 @@ void q_sqlfield_set_meta_type(void* self, void* type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#type)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
 /// @return enum QVariant__Type
 ///
-int32_t q_sqlfield_type(void* self);
+int32_t q_sqlfield_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setType)
 ///
@@ -231,7 +231,7 @@ void q_sqlfield_set_precision(void* self, int precision);
 /// @param self QSqlField*
 /// @param value QVariant*
 ///
-void q_sqlfield_set_default_value(void* self, void* value);
+void q_sqlfield_set_default_value(void* self, const void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#setSqlType)
 ///
@@ -256,47 +256,47 @@ void q_sqlfield_set_auto_value(void* self, bool autoVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#requiredStatus)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
 /// @return enum QSqlField__RequiredStatus
 ///
-int32_t q_sqlfield_required_status(void* self);
+int32_t q_sqlfield_required_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#length)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-int32_t q_sqlfield_length(void* self);
+int32_t q_sqlfield_length(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#precision)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-int32_t q_sqlfield_precision(void* self);
+int32_t q_sqlfield_precision(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#defaultValue)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-QVariant* q_sqlfield_default_value(void* self);
+QVariant* q_sqlfield_default_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#typeID)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-int32_t q_sqlfield_type_i_d(void* self);
+int32_t q_sqlfield_type_i_d(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#isGenerated)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-bool q_sqlfield_is_generated(void* self);
+bool q_sqlfield_is_generated(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#isValid)
 ///
-/// @param self QSqlField*
+/// @param self const QSqlField*
 ///
-bool q_sqlfield_is_valid(void* self);
+bool q_sqlfield_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsqlfield.html#dtor.QSqlField)
 ///

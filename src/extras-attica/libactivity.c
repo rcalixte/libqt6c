@@ -8,11 +8,11 @@ Attica__Activity* k_attica__activity_new() {
     return Attica__Activity_New();
 }
 
-Attica__Activity* k_attica__activity_new2(void* other) {
+Attica__Activity* k_attica__activity_new2(const void* other) {
     return Attica__Activity_New2((Attica__Activity*)other);
 }
 
-void k_attica__activity_operator_assign(void* self, void* other) {
+void k_attica__activity_operator_assign(void* self, const void* other) {
     Attica__Activity_OperatorAssign((Attica__Activity*)self, (Attica__Activity*)other);
 }
 
@@ -20,26 +20,26 @@ void k_attica__activity_set_id(void* self, const char* id) {
     Attica__Activity_SetId((Attica__Activity*)self, qstring(id));
 }
 
-const char* k_attica__activity_id(void* self) {
+const char* k_attica__activity_id(const void* self) {
     libqt_string _str = Attica__Activity_Id((Attica__Activity*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_attica__activity_set_associated_person(void* self, void* associatedPerson) {
+void k_attica__activity_set_associated_person(void* self, const void* associatedPerson) {
     Attica__Activity_SetAssociatedPerson((Attica__Activity*)self, (Attica__Person*)associatedPerson);
 }
 
-Attica__Person* k_attica__activity_associated_person(void* self) {
+Attica__Person* k_attica__activity_associated_person(const void* self) {
     return Attica__Activity_AssociatedPerson((Attica__Activity*)self);
 }
 
-void k_attica__activity_set_timestamp(void* self, void* timestamp) {
+void k_attica__activity_set_timestamp(void* self, const void* timestamp) {
     Attica__Activity_SetTimestamp((Attica__Activity*)self, (QDateTime*)timestamp);
 }
 
-QDateTime* k_attica__activity_timestamp(void* self) {
+QDateTime* k_attica__activity_timestamp(const void* self) {
     return Attica__Activity_Timestamp((Attica__Activity*)self);
 }
 
@@ -47,22 +47,22 @@ void k_attica__activity_set_message(void* self, const char* message) {
     Attica__Activity_SetMessage((Attica__Activity*)self, qstring(message));
 }
 
-const char* k_attica__activity_message(void* self) {
+const char* k_attica__activity_message(const void* self) {
     libqt_string _str = Attica__Activity_Message((Attica__Activity*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_attica__activity_set_link(void* self, void* link) {
+void k_attica__activity_set_link(void* self, const void* link) {
     Attica__Activity_SetLink((Attica__Activity*)self, (QUrl*)link);
 }
 
-QUrl* k_attica__activity_link(void* self) {
+QUrl* k_attica__activity_link(const void* self) {
     return Attica__Activity_Link((Attica__Activity*)self);
 }
 
-bool k_attica__activity_is_valid(void* self) {
+bool k_attica__activity_is_valid(const void* self) {
     return Attica__Activity_IsValid((Attica__Activity*)self);
 }
 

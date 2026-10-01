@@ -16,7 +16,7 @@
 /// @param manager KBookmarkManager*
 /// @param owner KBookmarkOwner*
 ///
-KBookmarkContextMenu* k_bookmarkcontextmenu_new(void* bm, void* manager, void* owner);
+KBookmarkContextMenu* k_bookmarkcontextmenu_new(const void* bm, void* manager, void* owner);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html)
 
@@ -27,30 +27,30 @@ KBookmarkContextMenu* k_bookmarkcontextmenu_new(void* bm, void* manager, void* o
 /// @param owner KBookmarkOwner*
 /// @param parent QWidget*
 ///
-KBookmarkContextMenu* k_bookmarkcontextmenu_new2(void* bm, void* manager, void* owner, void* parent);
+KBookmarkContextMenu* k_bookmarkcontextmenu_new2(const void* bm, void* manager, void* owner, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const QMetaObject* k_bookmarkcontextmenu_meta_object(void* self);
+const QMetaObject* k_bookmarkcontextmenu_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback const QMetaObject* func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback const QMetaObject* func(const KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_bookmarkcontextmenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const QMetaObject* k_bookmarkcontextmenu_super_meta_object(void* self);
+const QMetaObject* k_bookmarkcontextmenu_super_meta_object(const void* self);
 
 /// @param self KBookmarkContextMenu*
 /// @param param1 const char*
@@ -113,9 +113,9 @@ void k_bookmarkcontextmenu_add_actions(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self KBookmarkContextMenu*
-/// @param callback void func()
+/// @param callback void func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_add_actions(void* self, void (*callback)());
+void k_bookmarkcontextmenu_on_add_actions(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addActions)
 ///
@@ -134,9 +134,9 @@ void k_bookmarkcontextmenu_set_browser_mode(void* self, bool browserMode);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#browserMode)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_browser_mode(void* self);
+bool k_bookmarkcontextmenu_browser_mode(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#slotEditAt)
 ///
@@ -180,45 +180,11 @@ void k_bookmarkcontextmenu_slot_open_folder_in_tabs(void* self);
 ///
 void k_bookmarkcontextmenu_add_bookmark(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addBookmark)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkContextMenu*
-/// @param callback void func()
-///
-void k_bookmarkcontextmenu_on_add_bookmark(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addBookmark)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkContextMenu*
-///
-void k_bookmarkcontextmenu_super_add_bookmark(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addFolderActions)
 ///
 /// @param self KBookmarkContextMenu*
 ///
 void k_bookmarkcontextmenu_add_folder_actions(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addFolderActions)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkContextMenu*
-/// @param callback void func()
-///
-void k_bookmarkcontextmenu_on_add_folder_actions(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addFolderActions)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkContextMenu*
-///
-void k_bookmarkcontextmenu_super_add_folder_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addProperties)
 ///
@@ -226,45 +192,11 @@ void k_bookmarkcontextmenu_super_add_folder_actions(void* self);
 ///
 void k_bookmarkcontextmenu_add_properties(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addProperties)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkContextMenu*
-/// @param callback void func()
-///
-void k_bookmarkcontextmenu_on_add_properties(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addProperties)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkContextMenu*
-///
-void k_bookmarkcontextmenu_super_add_properties(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addBookmarkActions)
 ///
 /// @param self KBookmarkContextMenu*
 ///
 void k_bookmarkcontextmenu_add_bookmark_actions(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addBookmarkActions)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkContextMenu*
-/// @param callback void func()
-///
-void k_bookmarkcontextmenu_on_add_bookmark_actions(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addBookmarkActions)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkContextMenu*
-///
-void k_bookmarkcontextmenu_super_add_bookmark_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addOpenFolderInTabs)
 ///
@@ -272,93 +204,23 @@ void k_bookmarkcontextmenu_super_add_bookmark_actions(void* self);
 ///
 void k_bookmarkcontextmenu_add_open_folder_in_tabs(void* self);
 
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addOpenFolderInTabs)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkContextMenu*
-/// @param callback void func()
-///
-void k_bookmarkcontextmenu_on_add_open_folder_in_tabs(void* self, void (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#addOpenFolderInTabs)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkContextMenu*
-///
-void k_bookmarkcontextmenu_super_add_open_folder_in_tabs(void* self);
-
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#manager)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-KBookmarkManager* k_bookmarkcontextmenu_manager(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#manager)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkContextMenu*
-/// @param callback KBookmarkManager* func()
-///
-void k_bookmarkcontextmenu_on_manager(void* self, KBookmarkManager* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#manager)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkContextMenu*
-///
-KBookmarkManager* k_bookmarkcontextmenu_super_manager(void* self);
+KBookmarkManager* k_bookmarkcontextmenu_manager(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#owner)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-KBookmarkOwner* k_bookmarkcontextmenu_owner(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#owner)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkContextMenu*
-/// @param callback KBookmarkOwner* func()
-///
-void k_bookmarkcontextmenu_on_owner(void* self, KBookmarkOwner* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#owner)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkContextMenu*
-///
-KBookmarkOwner* k_bookmarkcontextmenu_super_owner(void* self);
+KBookmarkOwner* k_bookmarkcontextmenu_owner(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#bookmark)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-KBookmark* k_bookmarkcontextmenu_bookmark(void* self);
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#bookmark)
-///
-/// Allows for overriding the related default method
-///
-/// @param self KBookmarkContextMenu*
-/// @param callback KBookmark* func()
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void k_bookmarkcontextmenu_on_bookmark(void* self, KBookmark* (*callback)());
-
-/// [Upstream resources](https://api.kde.org/kbookmarkcontextmenu.html#bookmark)
-///
-/// Base class method implementation
-///
-/// @param self KBookmarkContextMenu*
-///
-KBookmark* k_bookmarkcontextmenu_super_bookmark(void* self);
+KBookmark* k_bookmarkcontextmenu_bookmark(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -405,7 +267,7 @@ QMenu* k_bookmarkcontextmenu_add_menu2(void* self, const char* title);
 /// @param icon QIcon*
 /// @param title const char*
 ///
-QMenu* k_bookmarkcontextmenu_add_menu3(void* self, void* icon, const char* title);
+QMenu* k_bookmarkcontextmenu_add_menu3(void* self, const void* icon, const char* title);
 
 /// Inherited from QMenu
 ///
@@ -432,7 +294,7 @@ QAction* k_bookmarkcontextmenu_add_section(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_bookmarkcontextmenu_add_section2(void* self, void* icon, const char* text);
+QAction* k_bookmarkcontextmenu_add_section2(void* self, const void* icon, const char* text);
 
 /// Inherited from QMenu
 ///
@@ -472,15 +334,15 @@ QAction* k_bookmarkcontextmenu_insert_section(void* self, void* before, const ch
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_bookmarkcontextmenu_insert_section2(void* self, void* before, void* icon, const char* text);
+QAction* k_bookmarkcontextmenu_insert_section2(void* self, void* before, const void* icon, const char* text);
 
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#isEmpty)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_empty(void* self);
+bool k_bookmarkcontextmenu_is_empty(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -503,17 +365,17 @@ void k_bookmarkcontextmenu_set_tear_off_enabled(void* self, bool tearOffEnabled)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#isTearOffEnabled)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_tear_off_enabled(void* self);
+bool k_bookmarkcontextmenu_is_tear_off_enabled(const void* self);
 
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#isTearOffMenuVisible)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_tear_off_menu_visible(void* self);
+bool k_bookmarkcontextmenu_is_tear_off_menu_visible(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -530,7 +392,7 @@ void k_bookmarkcontextmenu_show_tear_off_menu(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param pos QPoint*
 ///
-void k_bookmarkcontextmenu_show_tear_off_menu2(void* self, void* pos);
+void k_bookmarkcontextmenu_show_tear_off_menu2(void* self, const void* pos);
 
 /// Inherited from QMenu
 ///
@@ -553,9 +415,9 @@ void k_bookmarkcontextmenu_set_default_action(void* self, void* defaultAction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#defaultAction)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QAction* k_bookmarkcontextmenu_default_action(void* self);
+QAction* k_bookmarkcontextmenu_default_action(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -570,9 +432,9 @@ void k_bookmarkcontextmenu_set_active_action(void* self, void* act);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#activeAction)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QAction* k_bookmarkcontextmenu_active_action(void* self);
+QAction* k_bookmarkcontextmenu_active_action(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -581,7 +443,7 @@ QAction* k_bookmarkcontextmenu_active_action(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param pos QPoint*
 ///
-void k_bookmarkcontextmenu_popup(void* self, void* pos);
+void k_bookmarkcontextmenu_popup(void* self, const void* pos);
 
 /// Inherited from QMenu
 ///
@@ -598,7 +460,7 @@ QAction* k_bookmarkcontextmenu_exec(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param pos QPoint*
 ///
-QAction* k_bookmarkcontextmenu_exec2(void* self, void* pos);
+QAction* k_bookmarkcontextmenu_exec2(void* self, const void* pos);
 
 /// Inherited from QMenu
 ///
@@ -607,33 +469,33 @@ QAction* k_bookmarkcontextmenu_exec2(void* self, void* pos);
 /// @param actions libqt_list of QAction*
 /// @param pos QPoint*
 ///
-QAction* k_bookmarkcontextmenu_exec3(libqt_list actions, void* pos);
+QAction* k_bookmarkcontextmenu_exec3(libqt_list actions, const void* pos);
 
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#actionGeometry)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QAction*
 ///
-QRect* k_bookmarkcontextmenu_action_geometry(void* self, void* param1);
+QRect* k_bookmarkcontextmenu_action_geometry(const void* self, void* param1);
 
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#actionAt)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPoint*
 ///
-QAction* k_bookmarkcontextmenu_action_at(void* self, void* param1);
+QAction* k_bookmarkcontextmenu_action_at(const void* self, const void* param1);
 
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#menuAction)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QAction* k_bookmarkcontextmenu_menu_action(void* self);
+QAction* k_bookmarkcontextmenu_menu_action(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -641,7 +503,7 @@ QAction* k_bookmarkcontextmenu_menu_action(void* self);
 ///
 /// @param action QAction*
 ///
-QMenu* k_bookmarkcontextmenu_menu_in_action(void* action);
+QMenu* k_bookmarkcontextmenu_menu_in_action(const void* action);
 
 /// Inherited from QMenu
 ///
@@ -649,9 +511,9 @@ QMenu* k_bookmarkcontextmenu_menu_in_action(void* action);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_title(void* self);
+const char* k_bookmarkcontextmenu_title(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -666,9 +528,9 @@ void k_bookmarkcontextmenu_set_title(void* self, const char* title);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#icon)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QIcon* k_bookmarkcontextmenu_icon(void* self);
+QIcon* k_bookmarkcontextmenu_icon(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -677,7 +539,7 @@ QIcon* k_bookmarkcontextmenu_icon(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param icon QIcon*
 ///
-void k_bookmarkcontextmenu_set_icon(void* self, void* icon);
+void k_bookmarkcontextmenu_set_icon(void* self, const void* icon);
 
 /// Inherited from QMenu
 ///
@@ -714,9 +576,9 @@ void k_bookmarkcontextmenu_set_as_dock_menu(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#separatorsCollapsible)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_separators_collapsible(void* self);
+bool k_bookmarkcontextmenu_separators_collapsible(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -731,9 +593,9 @@ void k_bookmarkcontextmenu_set_separators_collapsible(void* self, bool collapse)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#toolTipsVisible)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_tool_tips_visible(void* self);
+bool k_bookmarkcontextmenu_tool_tips_visible(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -822,7 +684,7 @@ void k_bookmarkcontextmenu_on_hovered(void* self, void (*callback)(void*, void*)
 /// @param pos QPoint*
 /// @param at QAction*
 ///
-void k_bookmarkcontextmenu_popup2(void* self, void* pos, void* at);
+void k_bookmarkcontextmenu_popup2(void* self, const void* pos, void* at);
 
 /// Inherited from QMenu
 ///
@@ -832,7 +694,7 @@ void k_bookmarkcontextmenu_popup2(void* self, void* pos, void* at);
 /// @param pos QPoint*
 /// @param at QAction*
 ///
-QAction* k_bookmarkcontextmenu_exec22(void* self, void* pos, void* at);
+QAction* k_bookmarkcontextmenu_exec22(void* self, const void* pos, void* at);
 
 /// Inherited from QMenu
 ///
@@ -842,7 +704,7 @@ QAction* k_bookmarkcontextmenu_exec22(void* self, void* pos, void* at);
 /// @param pos QPoint*
 /// @param at QAction*
 ///
-QAction* k_bookmarkcontextmenu_exec32(libqt_list actions, void* pos, void* at);
+QAction* k_bookmarkcontextmenu_exec32(libqt_list actions, const void* pos, void* at);
 
 /// Inherited from QMenu
 ///
@@ -853,7 +715,7 @@ QAction* k_bookmarkcontextmenu_exec32(libqt_list actions, void* pos, void* at);
 /// @param at QAction*
 /// @param parent QWidget*
 ///
-QAction* k_bookmarkcontextmenu_exec4(libqt_list actions, void* pos, void* at, void* parent);
+QAction* k_bookmarkcontextmenu_exec4(libqt_list actions, const void* pos, void* at, void* parent);
 
 /// Inherited from QWidget
 ///
@@ -875,9 +737,9 @@ KBookmarkContextMenu* k_bookmarkcontextmenu_from_q_paint_device(void* _qpaintdev
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-uintptr_t k_bookmarkcontextmenu_win_id(void* self);
+uintptr_t k_bookmarkcontextmenu_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -891,25 +753,25 @@ void k_bookmarkcontextmenu_create_win_id(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-uintptr_t k_bookmarkcontextmenu_internal_win_id(void* self);
+uintptr_t k_bookmarkcontextmenu_internal_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-uintptr_t k_bookmarkcontextmenu_effective_win_id(void* self);
+uintptr_t k_bookmarkcontextmenu_effective_win_id(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QStyle* k_bookmarkcontextmenu_style(void* self);
+QStyle* k_bookmarkcontextmenu_style(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -924,35 +786,35 @@ void k_bookmarkcontextmenu_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_top_level(void* self);
+bool k_bookmarkcontextmenu_is_top_level(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_window(void* self);
+bool k_bookmarkcontextmenu_is_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_modal(void* self);
+bool k_bookmarkcontextmenu_is_modal(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return enum Qt__WindowModality
 ///
-int32_t k_bookmarkcontextmenu_window_modality(void* self);
+int32_t k_bookmarkcontextmenu_window_modality(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -967,18 +829,18 @@ void k_bookmarkcontextmenu_set_window_modality(void* self, int32_t windowModalit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_enabled(void* self);
+bool k_bookmarkcontextmenu_is_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QWidget*
 ///
-bool k_bookmarkcontextmenu_is_enabled_to(void* self, void* param1);
+bool k_bookmarkcontextmenu_is_enabled_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1011,153 +873,153 @@ void k_bookmarkcontextmenu_set_window_modified(void* self, bool windowModified);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QRect* k_bookmarkcontextmenu_frame_geometry(void* self);
+QRect* k_bookmarkcontextmenu_frame_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const QRect* k_bookmarkcontextmenu_geometry(void* self);
+const QRect* k_bookmarkcontextmenu_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QRect* k_bookmarkcontextmenu_normal_geometry(void* self);
+QRect* k_bookmarkcontextmenu_normal_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_x(void* self);
+int32_t k_bookmarkcontextmenu_x(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_y(void* self);
+int32_t k_bookmarkcontextmenu_y(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QPoint* k_bookmarkcontextmenu_pos(void* self);
+QPoint* k_bookmarkcontextmenu_pos(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_frame_size(void* self);
+QSize* k_bookmarkcontextmenu_frame_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_size(void* self);
+QSize* k_bookmarkcontextmenu_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_width(void* self);
+int32_t k_bookmarkcontextmenu_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_height(void* self);
+int32_t k_bookmarkcontextmenu_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QRect* k_bookmarkcontextmenu_rect(void* self);
+QRect* k_bookmarkcontextmenu_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QRect* k_bookmarkcontextmenu_children_rect(void* self);
+QRect* k_bookmarkcontextmenu_children_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QRegion* k_bookmarkcontextmenu_children_region(void* self);
+QRegion* k_bookmarkcontextmenu_children_region(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_minimum_size(void* self);
+QSize* k_bookmarkcontextmenu_minimum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_maximum_size(void* self);
+QSize* k_bookmarkcontextmenu_maximum_size(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_minimum_width(void* self);
+int32_t k_bookmarkcontextmenu_minimum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_minimum_height(void* self);
+int32_t k_bookmarkcontextmenu_minimum_height(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_maximum_width(void* self);
+int32_t k_bookmarkcontextmenu_maximum_width(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_maximum_height(void* self);
+int32_t k_bookmarkcontextmenu_maximum_height(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1166,7 +1028,7 @@ int32_t k_bookmarkcontextmenu_maximum_height(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param minimumSize QSize*
 ///
-void k_bookmarkcontextmenu_set_minimum_size(void* self, void* minimumSize);
+void k_bookmarkcontextmenu_set_minimum_size(void* self, const void* minimumSize);
 
 /// Inherited from QWidget
 ///
@@ -1185,7 +1047,7 @@ void k_bookmarkcontextmenu_set_minimum_size2(void* self, int minw, int minh);
 /// @param self KBookmarkContextMenu*
 /// @param maximumSize QSize*
 ///
-void k_bookmarkcontextmenu_set_maximum_size(void* self, void* maximumSize);
+void k_bookmarkcontextmenu_set_maximum_size(void* self, const void* maximumSize);
 
 /// Inherited from QWidget
 ///
@@ -1237,9 +1099,9 @@ void k_bookmarkcontextmenu_set_maximum_height(void* self, int maxh);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_size_increment(void* self);
+QSize* k_bookmarkcontextmenu_size_increment(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1248,7 +1110,7 @@ QSize* k_bookmarkcontextmenu_size_increment(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param sizeIncrement QSize*
 ///
-void k_bookmarkcontextmenu_set_size_increment(void* self, void* sizeIncrement);
+void k_bookmarkcontextmenu_set_size_increment(void* self, const void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
@@ -1264,9 +1126,9 @@ void k_bookmarkcontextmenu_set_size_increment2(void* self, int w, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_base_size(void* self);
+QSize* k_bookmarkcontextmenu_base_size(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1275,7 +1137,7 @@ QSize* k_bookmarkcontextmenu_base_size(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param baseSize QSize*
 ///
-void k_bookmarkcontextmenu_set_base_size(void* self, void* baseSize);
+void k_bookmarkcontextmenu_set_base_size(void* self, const void* baseSize);
 
 /// Inherited from QWidget
 ///
@@ -1294,7 +1156,7 @@ void k_bookmarkcontextmenu_set_base_size2(void* self, int basew, int baseh);
 /// @param self KBookmarkContextMenu*
 /// @param fixedSize QSize*
 ///
-void k_bookmarkcontextmenu_set_fixed_size(void* self, void* fixedSize);
+void k_bookmarkcontextmenu_set_fixed_size(void* self, const void* fixedSize);
 
 /// Inherited from QWidget
 ///
@@ -1328,145 +1190,145 @@ void k_bookmarkcontextmenu_set_fixed_height(void* self, int h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPointF*
 ///
-QPointF* k_bookmarkcontextmenu_map_to_global(void* self, void* param1);
+QPointF* k_bookmarkcontextmenu_map_to_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPoint*
 ///
-QPoint* k_bookmarkcontextmenu_map_to_global2(void* self, void* param1);
+QPoint* k_bookmarkcontextmenu_map_to_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPointF*
 ///
-QPointF* k_bookmarkcontextmenu_map_from_global(void* self, void* param1);
+QPointF* k_bookmarkcontextmenu_map_from_global(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPoint*
 ///
-QPoint* k_bookmarkcontextmenu_map_from_global2(void* self, void* param1);
+QPoint* k_bookmarkcontextmenu_map_from_global2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPointF*
 ///
-QPointF* k_bookmarkcontextmenu_map_to_parent(void* self, void* param1);
+QPointF* k_bookmarkcontextmenu_map_to_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPoint*
 ///
-QPoint* k_bookmarkcontextmenu_map_to_parent2(void* self, void* param1);
+QPoint* k_bookmarkcontextmenu_map_to_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPointF*
 ///
-QPointF* k_bookmarkcontextmenu_map_from_parent(void* self, void* param1);
+QPointF* k_bookmarkcontextmenu_map_from_parent(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QPoint*
 ///
-QPoint* k_bookmarkcontextmenu_map_from_parent2(void* self, void* param1);
+QPoint* k_bookmarkcontextmenu_map_from_parent2(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_bookmarkcontextmenu_map_to(void* self, void* param1, void* param2);
+QPointF* k_bookmarkcontextmenu_map_to(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_bookmarkcontextmenu_map_to2(void* self, void* param1, void* param2);
+QPoint* k_bookmarkcontextmenu_map_to2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QWidget*
 /// @param param2 QPointF*
 ///
-QPointF* k_bookmarkcontextmenu_map_from(void* self, void* param1, void* param2);
+QPointF* k_bookmarkcontextmenu_map_from(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QWidget*
 /// @param param2 QPoint*
 ///
-QPoint* k_bookmarkcontextmenu_map_from2(void* self, void* param1, void* param2);
+QPoint* k_bookmarkcontextmenu_map_from2(const void* self, const void* param1, const void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWidget* k_bookmarkcontextmenu_window(void* self);
+QWidget* k_bookmarkcontextmenu_window(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWidget* k_bookmarkcontextmenu_native_parent_widget(void* self);
+QWidget* k_bookmarkcontextmenu_native_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWidget* k_bookmarkcontextmenu_top_level_widget(void* self);
+QWidget* k_bookmarkcontextmenu_top_level_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const QPalette* k_bookmarkcontextmenu_palette(void* self);
+const QPalette* k_bookmarkcontextmenu_palette(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1475,7 +1337,7 @@ const QPalette* k_bookmarkcontextmenu_palette(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param palette QPalette*
 ///
-void k_bookmarkcontextmenu_set_palette(void* self, void* palette);
+void k_bookmarkcontextmenu_set_palette(void* self, const void* palette);
 
 /// Inherited from QWidget
 ///
@@ -1490,11 +1352,11 @@ void k_bookmarkcontextmenu_set_background_role(void* self, int32_t backgroundRol
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_bookmarkcontextmenu_background_role(void* self);
+int32_t k_bookmarkcontextmenu_background_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1509,19 +1371,19 @@ void k_bookmarkcontextmenu_set_foreground_role(void* self, int32_t foregroundRol
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return enum QPalette__ColorRole
 ///
-int32_t k_bookmarkcontextmenu_foreground_role(void* self);
+int32_t k_bookmarkcontextmenu_foreground_role(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const QFont* k_bookmarkcontextmenu_font(void* self);
+const QFont* k_bookmarkcontextmenu_font(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1530,31 +1392,31 @@ const QFont* k_bookmarkcontextmenu_font(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param font QFont*
 ///
-void k_bookmarkcontextmenu_set_font(void* self, void* font);
+void k_bookmarkcontextmenu_set_font(void* self, const void* font);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QFontMetrics* k_bookmarkcontextmenu_font_metrics(void* self);
+QFontMetrics* k_bookmarkcontextmenu_font_metrics(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QFontInfo* k_bookmarkcontextmenu_font_info(void* self);
+QFontInfo* k_bookmarkcontextmenu_font_info(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QCursor* k_bookmarkcontextmenu_cursor(void* self);
+QCursor* k_bookmarkcontextmenu_cursor(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1563,7 +1425,7 @@ QCursor* k_bookmarkcontextmenu_cursor(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param cursor QCursor*
 ///
-void k_bookmarkcontextmenu_set_cursor(void* self, void* cursor);
+void k_bookmarkcontextmenu_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QWidget
 ///
@@ -1586,17 +1448,17 @@ void k_bookmarkcontextmenu_set_mouse_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_has_mouse_tracking(void* self);
+bool k_bookmarkcontextmenu_has_mouse_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_under_mouse(void* self);
+bool k_bookmarkcontextmenu_under_mouse(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1611,9 +1473,9 @@ void k_bookmarkcontextmenu_set_tablet_tracking(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_has_tablet_tracking(void* self);
+bool k_bookmarkcontextmenu_has_tablet_tracking(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1622,7 +1484,7 @@ bool k_bookmarkcontextmenu_has_tablet_tracking(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param mask QBitmap*
 ///
-void k_bookmarkcontextmenu_set_mask(void* self, void* mask);
+void k_bookmarkcontextmenu_set_mask(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1631,15 +1493,15 @@ void k_bookmarkcontextmenu_set_mask(void* self, void* mask);
 /// @param self KBookmarkContextMenu*
 /// @param mask QRegion*
 ///
-void k_bookmarkcontextmenu_set_mask2(void* self, void* mask);
+void k_bookmarkcontextmenu_set_mask2(void* self, const void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QRegion* k_bookmarkcontextmenu_mask(void* self);
+QRegion* k_bookmarkcontextmenu_mask(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1679,9 +1541,9 @@ QPixmap* k_bookmarkcontextmenu_grab(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QGraphicsEffect* k_bookmarkcontextmenu_graphics_effect(void* self);
+QGraphicsEffect* k_bookmarkcontextmenu_graphics_effect(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1734,9 +1596,9 @@ void k_bookmarkcontextmenu_set_style_sheet(void* self, const char* styleSheet);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_style_sheet(void* self);
+const char* k_bookmarkcontextmenu_style_sheet(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1744,9 +1606,9 @@ const char* k_bookmarkcontextmenu_style_sheet(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_window_title(void* self);
+const char* k_bookmarkcontextmenu_window_title(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1755,15 +1617,15 @@ const char* k_bookmarkcontextmenu_window_title(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param icon QIcon*
 ///
-void k_bookmarkcontextmenu_set_window_icon(void* self, void* icon);
+void k_bookmarkcontextmenu_set_window_icon(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QIcon* k_bookmarkcontextmenu_window_icon(void* self);
+QIcon* k_bookmarkcontextmenu_window_icon(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1780,9 +1642,9 @@ void k_bookmarkcontextmenu_set_window_icon_text(void* self, const char* windowIc
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_window_icon_text(void* self);
+const char* k_bookmarkcontextmenu_window_icon_text(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1799,9 +1661,9 @@ void k_bookmarkcontextmenu_set_window_role(void* self, const char* windowRole);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_window_role(void* self);
+const char* k_bookmarkcontextmenu_window_role(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1818,9 +1680,9 @@ void k_bookmarkcontextmenu_set_window_file_path(void* self, const char* filePath
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_window_file_path(void* self);
+const char* k_bookmarkcontextmenu_window_file_path(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1835,17 +1697,17 @@ void k_bookmarkcontextmenu_set_window_opacity(void* self, double level);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-double k_bookmarkcontextmenu_window_opacity(void* self);
+double k_bookmarkcontextmenu_window_opacity(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_window_modified(void* self);
+bool k_bookmarkcontextmenu_is_window_modified(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1862,9 +1724,9 @@ void k_bookmarkcontextmenu_set_tool_tip(void* self, const char* toolTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_tool_tip(void* self);
+const char* k_bookmarkcontextmenu_tool_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1879,9 +1741,9 @@ void k_bookmarkcontextmenu_set_tool_tip_duration(void* self, int msec);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_tool_tip_duration(void* self);
+int32_t k_bookmarkcontextmenu_tool_tip_duration(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1898,9 +1760,9 @@ void k_bookmarkcontextmenu_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_status_tip(void* self);
+const char* k_bookmarkcontextmenu_status_tip(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1917,9 +1779,9 @@ void k_bookmarkcontextmenu_set_whats_this(void* self, const char* whatsThis);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_whats_this(void* self);
+const char* k_bookmarkcontextmenu_whats_this(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1927,9 +1789,9 @@ const char* k_bookmarkcontextmenu_whats_this(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_accessible_name(void* self);
+const char* k_bookmarkcontextmenu_accessible_name(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1946,9 +1808,9 @@ void k_bookmarkcontextmenu_set_accessible_name(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_accessible_description(void* self);
+const char* k_bookmarkcontextmenu_accessible_description(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1972,11 +1834,11 @@ void k_bookmarkcontextmenu_set_layout_direction(void* self, int32_t direction);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t k_bookmarkcontextmenu_layout_direction(void* self);
+int32_t k_bookmarkcontextmenu_layout_direction(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -1993,15 +1855,15 @@ void k_bookmarkcontextmenu_unset_layout_direction(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param locale QLocale*
 ///
-void k_bookmarkcontextmenu_set_locale(void* self, void* locale);
+void k_bookmarkcontextmenu_set_locale(void* self, const void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QLocale* k_bookmarkcontextmenu_locale(void* self);
+QLocale* k_bookmarkcontextmenu_locale(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2015,17 +1877,17 @@ void k_bookmarkcontextmenu_unset_locale(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_right_to_left(void* self);
+bool k_bookmarkcontextmenu_is_right_to_left(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_left_to_right(void* self);
+bool k_bookmarkcontextmenu_is_left_to_right(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2039,9 +1901,9 @@ void k_bookmarkcontextmenu_set_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_active_window(void* self);
+bool k_bookmarkcontextmenu_is_active_window(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2072,11 +1934,11 @@ void k_bookmarkcontextmenu_set_focus2(void* self, int32_t reason);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t k_bookmarkcontextmenu_focus_policy(void* self);
+int32_t k_bookmarkcontextmenu_focus_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2091,9 +1953,9 @@ void k_bookmarkcontextmenu_set_focus_policy(void* self, int32_t policy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_has_focus(void* self);
+bool k_bookmarkcontextmenu_has_focus(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2117,19 +1979,19 @@ void k_bookmarkcontextmenu_set_focus_proxy(void* self, void* focusProxy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWidget* k_bookmarkcontextmenu_focus_proxy(void* self);
+QWidget* k_bookmarkcontextmenu_focus_proxy(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return enum Qt__ContextMenuPolicy
 ///
-int32_t k_bookmarkcontextmenu_context_menu_policy(void* self);
+int32_t k_bookmarkcontextmenu_context_menu_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2155,7 +2017,7 @@ void k_bookmarkcontextmenu_grab_mouse(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param param1 QCursor*
 ///
-void k_bookmarkcontextmenu_grab_mouse2(void* self, void* param1);
+void k_bookmarkcontextmenu_grab_mouse2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2188,7 +2050,7 @@ void k_bookmarkcontextmenu_release_keyboard(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param key QKeySequence*
 ///
-int32_t k_bookmarkcontextmenu_grab_shortcut(void* self, void* key);
+int32_t k_bookmarkcontextmenu_grab_shortcut(void* self, const void* key);
 
 /// Inherited from QWidget
 ///
@@ -2233,9 +2095,9 @@ QWidget* k_bookmarkcontextmenu_keyboard_grabber();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_updates_enabled(void* self);
+bool k_bookmarkcontextmenu_updates_enabled(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2250,9 +2112,9 @@ void k_bookmarkcontextmenu_set_updates_enabled(void* self, bool enable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QGraphicsProxyWidget* k_bookmarkcontextmenu_graphics_proxy_widget(void* self);
+QGraphicsProxyWidget* k_bookmarkcontextmenu_graphics_proxy_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2289,7 +2151,7 @@ void k_bookmarkcontextmenu_update2(void* self, int x, int y, int w, int h);
 /// @param self KBookmarkContextMenu*
 /// @param param1 QRect*
 ///
-void k_bookmarkcontextmenu_update3(void* self, void* param1);
+void k_bookmarkcontextmenu_update3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2298,7 +2160,7 @@ void k_bookmarkcontextmenu_update3(void* self, void* param1);
 /// @param self KBookmarkContextMenu*
 /// @param param1 QRegion*
 ///
-void k_bookmarkcontextmenu_update4(void* self, void* param1);
+void k_bookmarkcontextmenu_update4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2319,7 +2181,7 @@ void k_bookmarkcontextmenu_repaint2(void* self, int x, int y, int w, int h);
 /// @param self KBookmarkContextMenu*
 /// @param param1 QRect*
 ///
-void k_bookmarkcontextmenu_repaint3(void* self, void* param1);
+void k_bookmarkcontextmenu_repaint3(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2328,7 +2190,7 @@ void k_bookmarkcontextmenu_repaint3(void* self, void* param1);
 /// @param self KBookmarkContextMenu*
 /// @param param1 QRegion*
 ///
-void k_bookmarkcontextmenu_repaint4(void* self, void* param1);
+void k_bookmarkcontextmenu_repaint4(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2437,7 +2299,7 @@ void k_bookmarkcontextmenu_move(void* self, int x, int y);
 /// @param self KBookmarkContextMenu*
 /// @param param1 QPoint*
 ///
-void k_bookmarkcontextmenu_move2(void* self, void* param1);
+void k_bookmarkcontextmenu_move2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2456,7 +2318,7 @@ void k_bookmarkcontextmenu_resize(void* self, int w, int h);
 /// @param self KBookmarkContextMenu*
 /// @param param1 QSize*
 ///
-void k_bookmarkcontextmenu_resize2(void* self, void* param1);
+void k_bookmarkcontextmenu_resize2(void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2477,7 +2339,7 @@ void k_bookmarkcontextmenu_set_geometry(void* self, int x, int y, int w, int h);
 /// @param self KBookmarkContextMenu*
 /// @param geometry QRect*
 ///
-void k_bookmarkcontextmenu_set_geometry2(void* self, void* geometry);
+void k_bookmarkcontextmenu_set_geometry2(void* self, const void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2485,9 +2347,9 @@ void k_bookmarkcontextmenu_set_geometry2(void* self, void* geometry);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-char* k_bookmarkcontextmenu_save_geometry(void* self);
+char* k_bookmarkcontextmenu_save_geometry(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2510,60 +2372,60 @@ void k_bookmarkcontextmenu_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_visible(void* self);
+bool k_bookmarkcontextmenu_is_visible(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 QWidget*
 ///
-bool k_bookmarkcontextmenu_is_visible_to(void* self, void* param1);
+bool k_bookmarkcontextmenu_is_visible_to(const void* self, const void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_hidden(void* self);
+bool k_bookmarkcontextmenu_is_hidden(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_minimized(void* self);
+bool k_bookmarkcontextmenu_is_minimized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_maximized(void* self);
+bool k_bookmarkcontextmenu_is_maximized(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_full_screen(void* self);
+bool k_bookmarkcontextmenu_is_full_screen(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return flag of enum Qt__WindowState
 ///
-int32_t k_bookmarkcontextmenu_window_state(void* self);
+int32_t k_bookmarkcontextmenu_window_state(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2587,9 +2449,9 @@ void k_bookmarkcontextmenu_override_window_state(void* self, int32_t state);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSizePolicy* k_bookmarkcontextmenu_size_policy(void* self);
+QSizePolicy* k_bookmarkcontextmenu_size_policy(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2614,9 +2476,9 @@ void k_bookmarkcontextmenu_set_size_policy2(void* self, int32_t horizontal, int3
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QRegion* k_bookmarkcontextmenu_visible_region(void* self);
+QRegion* k_bookmarkcontextmenu_visible_region(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2637,31 +2499,31 @@ void k_bookmarkcontextmenu_set_contents_margins(void* self, int left, int top, i
 /// @param self KBookmarkContextMenu*
 /// @param margins QMargins*
 ///
-void k_bookmarkcontextmenu_set_contents_margins2(void* self, void* margins);
+void k_bookmarkcontextmenu_set_contents_margins2(void* self, const void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QMargins* k_bookmarkcontextmenu_contents_margins(void* self);
+QMargins* k_bookmarkcontextmenu_contents_margins(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QRect* k_bookmarkcontextmenu_contents_rect(void* self);
+QRect* k_bookmarkcontextmenu_contents_rect(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QLayout* k_bookmarkcontextmenu_layout(void* self);
+QLayout* k_bookmarkcontextmenu_layout(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2718,39 +2580,39 @@ void k_bookmarkcontextmenu_scroll(void* self, int dx, int dy);
 /// @param dy int
 /// @param param3 QRect*
 ///
-void k_bookmarkcontextmenu_scroll2(void* self, int dx, int dy, void* param3);
+void k_bookmarkcontextmenu_scroll2(void* self, int dx, int dy, const void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWidget* k_bookmarkcontextmenu_focus_widget(void* self);
+QWidget* k_bookmarkcontextmenu_focus_widget(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWidget* k_bookmarkcontextmenu_next_in_focus_chain(void* self);
+QWidget* k_bookmarkcontextmenu_next_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWidget* k_bookmarkcontextmenu_previous_in_focus_chain(void* self);
+QWidget* k_bookmarkcontextmenu_previous_in_focus_chain(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_accept_drops(void* self);
+bool k_bookmarkcontextmenu_accept_drops(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2803,11 +2665,11 @@ void k_bookmarkcontextmenu_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list k_bookmarkcontextmenu_actions(void* self);
+libqt_list k_bookmarkcontextmenu_actions(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2826,7 +2688,7 @@ QAction* k_bookmarkcontextmenu_add_action2(void* self, const char* text);
 /// @param icon QIcon*
 /// @param text const char*
 ///
-QAction* k_bookmarkcontextmenu_add_action3(void* self, void* icon, const char* text);
+QAction* k_bookmarkcontextmenu_add_action3(void* self, const void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
@@ -2836,7 +2698,7 @@ QAction* k_bookmarkcontextmenu_add_action3(void* self, void* icon, const char* t
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_bookmarkcontextmenu_add_action4(void* self, const char* text, void* shortcut);
+QAction* k_bookmarkcontextmenu_add_action4(void* self, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2847,15 +2709,15 @@ QAction* k_bookmarkcontextmenu_add_action4(void* self, const char* text, void* s
 /// @param text const char*
 /// @param shortcut QKeySequence*
 ///
-QAction* k_bookmarkcontextmenu_add_action5(void* self, void* icon, const char* text, void* shortcut);
+QAction* k_bookmarkcontextmenu_add_action5(void* self, const void* icon, const char* text, const void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWidget* k_bookmarkcontextmenu_parent_widget(void* self);
+QWidget* k_bookmarkcontextmenu_parent_widget(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2870,11 +2732,11 @@ void k_bookmarkcontextmenu_set_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t k_bookmarkcontextmenu_window_flags(void* self);
+int32_t k_bookmarkcontextmenu_window_flags(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2898,11 +2760,11 @@ void k_bookmarkcontextmenu_override_window_flags(void* self, int32_t type);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t k_bookmarkcontextmenu_window_type(void* self);
+int32_t k_bookmarkcontextmenu_window_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2916,29 +2778,29 @@ QWidget* k_bookmarkcontextmenu_find(uintptr_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param x int
 /// @param y int
 ///
-QWidget* k_bookmarkcontextmenu_child_at(void* self, int x, int y);
+QWidget* k_bookmarkcontextmenu_child_at(const void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param p QPoint*
 ///
-QWidget* k_bookmarkcontextmenu_child_at2(void* self, void* p);
+QWidget* k_bookmarkcontextmenu_child_at2(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param p QPointF*
 ///
-QWidget* k_bookmarkcontextmenu_child_at3(void* self, void* p);
+QWidget* k_bookmarkcontextmenu_child_at3(const void* self, const void* p);
 
 /// Inherited from QWidget
 ///
@@ -2953,35 +2815,35 @@ void k_bookmarkcontextmenu_set_attribute(void* self, int32_t param1);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 enum Qt__WidgetAttribute
 ///
-bool k_bookmarkcontextmenu_test_attribute(void* self, int32_t param1);
+bool k_bookmarkcontextmenu_test_attribute(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-void k_bookmarkcontextmenu_ensure_polished(void* self);
+void k_bookmarkcontextmenu_ensure_polished(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param child QWidget*
 ///
-bool k_bookmarkcontextmenu_is_ancestor_of(void* self, void* child);
+bool k_bookmarkcontextmenu_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_auto_fill_background(void* self);
+bool k_bookmarkcontextmenu_auto_fill_background(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -2996,25 +2858,25 @@ void k_bookmarkcontextmenu_set_auto_fill_background(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QBackingStore* k_bookmarkcontextmenu_backing_store(void* self);
+QBackingStore* k_bookmarkcontextmenu_backing_store(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QWindow* k_bookmarkcontextmenu_window_handle(void* self);
+QWindow* k_bookmarkcontextmenu_window_handle(const void* self);
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QScreen* k_bookmarkcontextmenu_screen(void* self);
+QScreen* k_bookmarkcontextmenu_screen(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3058,7 +2920,7 @@ void k_bookmarkcontextmenu_on_window_title_changed(void* self, void (*callback)(
 /// @param self KBookmarkContextMenu*
 /// @param icon QIcon*
 ///
-void k_bookmarkcontextmenu_window_icon_changed(void* self, void* icon);
+void k_bookmarkcontextmenu_window_icon_changed(void* self, const void* icon);
 
 /// Inherited from QWidget
 ///
@@ -3067,7 +2929,7 @@ void k_bookmarkcontextmenu_window_icon_changed(void* self, void* icon);
 /// @param self KBookmarkContextMenu*
 /// @param callback void func(KBookmarkContextMenu* self, QIcon* icon)
 ///
-void k_bookmarkcontextmenu_on_window_icon_changed(void* self, void (*callback)(void*, void*));
+void k_bookmarkcontextmenu_on_window_icon_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -3094,7 +2956,7 @@ void k_bookmarkcontextmenu_on_window_icon_text_changed(void* self, void (*callba
 /// @param self KBookmarkContextMenu*
 /// @param pos QPoint*
 ///
-void k_bookmarkcontextmenu_custom_context_menu_requested(void* self, void* pos);
+void k_bookmarkcontextmenu_custom_context_menu_requested(void* self, const void* pos);
 
 /// Inherited from QWidget
 ///
@@ -3103,17 +2965,17 @@ void k_bookmarkcontextmenu_custom_context_menu_requested(void* self, void* pos);
 /// @param self KBookmarkContextMenu*
 /// @param callback void func(KBookmarkContextMenu* self, QPoint* pos)
 ///
-void k_bookmarkcontextmenu_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
+void k_bookmarkcontextmenu_on_custom_context_menu_requested(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t k_bookmarkcontextmenu_input_method_hints(void* self);
+int32_t k_bookmarkcontextmenu_input_method_hints(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -3132,7 +2994,7 @@ void k_bookmarkcontextmenu_set_input_method_hints(void* self, int32_t hints);
 /// @param target QPaintDevice*
 /// @param targetOffset QPoint*
 ///
-void k_bookmarkcontextmenu_render22(void* self, void* target, void* targetOffset);
+void k_bookmarkcontextmenu_render22(void* self, void* target, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3143,7 +3005,7 @@ void k_bookmarkcontextmenu_render22(void* self, void* target, void* targetOffset
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_bookmarkcontextmenu_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
+void k_bookmarkcontextmenu_render3(void* self, void* target, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3155,7 +3017,7 @@ void k_bookmarkcontextmenu_render3(void* self, void* target, void* targetOffset,
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_bookmarkcontextmenu_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_bookmarkcontextmenu_render4(void* self, void* target, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3165,7 +3027,7 @@ void k_bookmarkcontextmenu_render4(void* self, void* target, void* targetOffset,
 /// @param painter QPainter*
 /// @param targetOffset QPoint*
 ///
-void k_bookmarkcontextmenu_render23(void* self, void* painter, void* targetOffset);
+void k_bookmarkcontextmenu_render23(void* self, void* painter, const void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3176,7 +3038,7 @@ void k_bookmarkcontextmenu_render23(void* self, void* painter, void* targetOffse
 /// @param targetOffset QPoint*
 /// @param sourceRegion QRegion*
 ///
-void k_bookmarkcontextmenu_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
+void k_bookmarkcontextmenu_render32(void* self, void* painter, const void* targetOffset, const void* sourceRegion);
 
 /// Inherited from QWidget
 ///
@@ -3188,7 +3050,7 @@ void k_bookmarkcontextmenu_render32(void* self, void* painter, void* targetOffse
 /// @param sourceRegion QRegion*
 /// @param renderFlags flag of enum QWidget__RenderFlag
 ///
-void k_bookmarkcontextmenu_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int32_t renderFlags);
+void k_bookmarkcontextmenu_render42(void* self, void* painter, const void* targetOffset, const void* sourceRegion, int32_t renderFlags);
 
 /// Inherited from QWidget
 ///
@@ -3197,7 +3059,7 @@ void k_bookmarkcontextmenu_render42(void* self, void* painter, void* targetOffse
 /// @param self KBookmarkContextMenu*
 /// @param rectangle QRect*
 ///
-QPixmap* k_bookmarkcontextmenu_grab1(void* self, void* rectangle);
+QPixmap* k_bookmarkcontextmenu_grab1(void* self, const void* rectangle);
 
 /// Inherited from QWidget
 ///
@@ -3217,7 +3079,7 @@ void k_bookmarkcontextmenu_grab_gesture2(void* self, int32_t type, int32_t flags
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t k_bookmarkcontextmenu_grab_shortcut2(void* self, void* key, int32_t context);
+int32_t k_bookmarkcontextmenu_grab_shortcut2(void* self, const void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3284,9 +3146,9 @@ QWidget* k_bookmarkcontextmenu_create_window_container3(void* window, void* pare
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char* k_bookmarkcontextmenu_object_name(void* self);
+const char* k_bookmarkcontextmenu_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3301,33 +3163,33 @@ void k_bookmarkcontextmenu_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_widget_type(void* self);
+bool k_bookmarkcontextmenu_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_window_type(void* self);
+bool k_bookmarkcontextmenu_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_is_quick_item_type(void* self);
+bool k_bookmarkcontextmenu_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_signals_blocked(void* self);
+bool k_bookmarkcontextmenu_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3342,9 +3204,9 @@ bool k_bookmarkcontextmenu_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QThread* k_bookmarkcontextmenu_thread(void* self);
+QThread* k_bookmarkcontextmenu_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3395,11 +3257,11 @@ void k_bookmarkcontextmenu_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_bookmarkcontextmenu_children(void* self);
+libqt_list k_bookmarkcontextmenu_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3428,7 +3290,7 @@ void k_bookmarkcontextmenu_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_bookmarkcontextmenu_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_bookmarkcontextmenu_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3439,18 +3301,18 @@ QMetaObject__Connection* k_bookmarkcontextmenu_connect(void* sender, const char*
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_bookmarkcontextmenu_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_bookmarkcontextmenu_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_bookmarkcontextmenu_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_bookmarkcontextmenu_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3461,7 +3323,7 @@ QMetaObject__Connection* k_bookmarkcontextmenu_connect3(void* self, void* sender
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_bookmarkcontextmenu_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_bookmarkcontextmenu_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3472,24 +3334,24 @@ bool k_bookmarkcontextmenu_disconnect(void* sender, const char* signal, void* re
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_bookmarkcontextmenu_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_bookmarkcontextmenu_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_disconnect3(void* self);
+bool k_bookmarkcontextmenu_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param receiver QObject*
 ///
-bool k_bookmarkcontextmenu_disconnect4(void* self, void* receiver);
+bool k_bookmarkcontextmenu_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -3497,23 +3359,23 @@ bool k_bookmarkcontextmenu_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_bookmarkcontextmenu_disconnect5(void* param1);
+bool k_bookmarkcontextmenu_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-void k_bookmarkcontextmenu_dump_object_tree(void* self);
+void k_bookmarkcontextmenu_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-void k_bookmarkcontextmenu_dump_object_info(void* self);
+void k_bookmarkcontextmenu_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3523,16 +3385,16 @@ void k_bookmarkcontextmenu_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_bookmarkcontextmenu_set_property(void* self, const char* name, void* value);
+bool k_bookmarkcontextmenu_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param name const char*
 ///
-QVariant* k_bookmarkcontextmenu_property(void* self, const char* name);
+QVariant* k_bookmarkcontextmenu_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -3540,9 +3402,9 @@ QVariant* k_bookmarkcontextmenu_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const char** k_bookmarkcontextmenu_dynamic_property_names(void* self);
+const char** k_bookmarkcontextmenu_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3556,9 +3418,9 @@ QBindingStorage* k_bookmarkcontextmenu_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-const QBindingStorage* k_bookmarkcontextmenu_binding_storage2(void* self);
+const QBindingStorage* k_bookmarkcontextmenu_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -3581,18 +3443,18 @@ void k_bookmarkcontextmenu_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QObject* k_bookmarkcontextmenu_parent(void* self);
+QObject* k_bookmarkcontextmenu_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param classname const char*
 ///
-bool k_bookmarkcontextmenu_inherits(void* self, const char* classname);
+bool k_bookmarkcontextmenu_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -3632,7 +3494,7 @@ int32_t k_bookmarkcontextmenu_start_timer23(void* self, int64_t time, int32_t ti
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkcontextmenu_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_bookmarkcontextmenu_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -3644,59 +3506,59 @@ QMetaObject__Connection* k_bookmarkcontextmenu_connect5(void* sender, const char
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkcontextmenu_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_bookmarkcontextmenu_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_bookmarkcontextmenu_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_bookmarkcontextmenu_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param signal const char*
 ///
-bool k_bookmarkcontextmenu_disconnect1(void* self, const char* signal);
+bool k_bookmarkcontextmenu_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkContextMenu*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_bookmarkcontextmenu_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_bookmarkcontextmenu_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_bookmarkcontextmenu_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_bookmarkcontextmenu_disconnect23(void* self, void* receiver, const char* member);
+bool k_bookmarkcontextmenu_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KBookmarkContextMenu*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_bookmarkcontextmenu_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -3720,89 +3582,89 @@ void k_bookmarkcontextmenu_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_painting_active(void* self);
+bool k_bookmarkcontextmenu_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_width_m_m(void* self);
+int32_t k_bookmarkcontextmenu_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_height_m_m(void* self);
+int32_t k_bookmarkcontextmenu_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_logical_dpi_x(void* self);
+int32_t k_bookmarkcontextmenu_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_logical_dpi_y(void* self);
+int32_t k_bookmarkcontextmenu_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_physical_dpi_x(void* self);
+int32_t k_bookmarkcontextmenu_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_physical_dpi_y(void* self);
+int32_t k_bookmarkcontextmenu_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-double k_bookmarkcontextmenu_device_pixel_ratio(void* self);
+double k_bookmarkcontextmenu_device_pixel_ratio(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-double k_bookmarkcontextmenu_device_pixel_ratio_f(void* self);
+double k_bookmarkcontextmenu_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_color_count(void* self);
+int32_t k_bookmarkcontextmenu_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_depth(void* self);
+int32_t k_bookmarkcontextmenu_depth(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -3825,9 +3687,9 @@ int32_t k_bookmarkcontextmenu_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_size_hint(void* self);
+QSize* k_bookmarkcontextmenu_size_hint(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -3835,9 +3697,9 @@ QSize* k_bookmarkcontextmenu_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_super_size_hint(void* self);
+QSize* k_bookmarkcontextmenu_super_size_hint(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -3845,12 +3707,12 @@ QSize* k_bookmarkcontextmenu_super_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback QSize* func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback QSize* func(KBookmarkContextMenu* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_bookmarkcontextmenu_on_size_hint(void* self, QSize* (*callback)());
+void k_bookmarkcontextmenu_on_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QMenu
 ///
@@ -4320,11 +4182,11 @@ void k_bookmarkcontextmenu_on_focus_next_prev_child(void* self, bool (*callback)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param option QStyleOptionMenuItem*
 /// @param action QAction*
 ///
-void k_bookmarkcontextmenu_init_style_option(void* self, void* option, void* action);
+void k_bookmarkcontextmenu_init_style_option(const void* self, void* option, const void* action);
 
 /// Inherited from QMenu
 ///
@@ -4332,11 +4194,11 @@ void k_bookmarkcontextmenu_init_style_option(void* self, void* option, void* act
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param option QStyleOptionMenuItem*
 /// @param action QAction*
 ///
-void k_bookmarkcontextmenu_super_init_style_option(void* self, void* option, void* action);
+void k_bookmarkcontextmenu_super_init_style_option(const void* self, void* option, const void* action);
 
 /// Inherited from QMenu
 ///
@@ -4344,10 +4206,10 @@ void k_bookmarkcontextmenu_super_init_style_option(void* self, void* option, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback void func(KBookmarkContextMenu* self, QStyleOptionMenuItem* option, QAction* action)
 ///
-void k_bookmarkcontextmenu_on_init_style_option(void* self, void (*callback)(void*, void*, void*));
+void k_bookmarkcontextmenu_on_init_style_option(const void* self, void (*callback)(const void*, void*, const void*));
 
 /// Inherited from QWidget
 ///
@@ -4355,9 +4217,9 @@ void k_bookmarkcontextmenu_on_init_style_option(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_dev_type(void* self);
+int32_t k_bookmarkcontextmenu_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4365,9 +4227,9 @@ int32_t k_bookmarkcontextmenu_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_super_dev_type(void* self);
+int32_t k_bookmarkcontextmenu_super_dev_type(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4375,10 +4237,10 @@ int32_t k_bookmarkcontextmenu_super_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback int32_t func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback int32_t func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_dev_type(void* self, int32_t (*callback)());
+void k_bookmarkcontextmenu_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4419,9 +4281,9 @@ void k_bookmarkcontextmenu_on_set_visible(void* self, void (*callback)(void*, bo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_minimum_size_hint(void* self);
+QSize* k_bookmarkcontextmenu_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4429,9 +4291,9 @@ QSize* k_bookmarkcontextmenu_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QSize* k_bookmarkcontextmenu_super_minimum_size_hint(void* self);
+QSize* k_bookmarkcontextmenu_super_minimum_size_hint(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4439,12 +4301,12 @@ QSize* k_bookmarkcontextmenu_super_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback QSize* func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback QSize* func(KBookmarkContextMenu* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_bookmarkcontextmenu_on_minimum_size_hint(void* self, QSize* (*callback)());
+void k_bookmarkcontextmenu_on_minimum_size_hint(const void* self, QSize* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4452,10 +4314,10 @@ void k_bookmarkcontextmenu_on_minimum_size_hint(void* self, QSize* (*callback)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 int
 ///
-int32_t k_bookmarkcontextmenu_height_for_width(void* self, int param1);
+int32_t k_bookmarkcontextmenu_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4463,10 +4325,10 @@ int32_t k_bookmarkcontextmenu_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 int
 ///
-int32_t k_bookmarkcontextmenu_super_height_for_width(void* self, int param1);
+int32_t k_bookmarkcontextmenu_super_height_for_width(const void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4474,10 +4336,10 @@ int32_t k_bookmarkcontextmenu_super_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback int32_t func(KBookmarkContextMenu* self, int param1)
 ///
-void k_bookmarkcontextmenu_on_height_for_width(void* self, int32_t (*callback)(void*, int));
+void k_bookmarkcontextmenu_on_height_for_width(const void* self, int32_t (*callback)(const void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4485,9 +4347,9 @@ void k_bookmarkcontextmenu_on_height_for_width(void* self, int32_t (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_has_height_for_width(void* self);
+bool k_bookmarkcontextmenu_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4495,9 +4357,9 @@ bool k_bookmarkcontextmenu_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-bool k_bookmarkcontextmenu_super_has_height_for_width(void* self);
+bool k_bookmarkcontextmenu_super_has_height_for_width(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4505,10 +4367,10 @@ bool k_bookmarkcontextmenu_super_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback bool func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback bool func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_has_height_for_width(void* self, bool (*callback)());
+void k_bookmarkcontextmenu_on_has_height_for_width(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -4516,9 +4378,9 @@ void k_bookmarkcontextmenu_on_has_height_for_width(void* self, bool (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QPaintEngine* k_bookmarkcontextmenu_paint_engine(void* self);
+QPaintEngine* k_bookmarkcontextmenu_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4526,9 +4388,9 @@ QPaintEngine* k_bookmarkcontextmenu_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QPaintEngine* k_bookmarkcontextmenu_super_paint_engine(void* self);
+QPaintEngine* k_bookmarkcontextmenu_super_paint_engine(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -4536,10 +4398,10 @@ QPaintEngine* k_bookmarkcontextmenu_super_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback QPaintEngine* func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback QPaintEngine* func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void k_bookmarkcontextmenu_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5046,10 +4908,10 @@ void k_bookmarkcontextmenu_on_native_event(void* self, bool (*callback)(void*, l
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_bookmarkcontextmenu_metric(void* self, int32_t param1);
+int32_t k_bookmarkcontextmenu_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5057,10 +4919,10 @@ int32_t k_bookmarkcontextmenu_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_bookmarkcontextmenu_super_metric(void* self, int32_t param1);
+int32_t k_bookmarkcontextmenu_super_metric(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5068,10 +4930,10 @@ int32_t k_bookmarkcontextmenu_super_metric(void* self, int32_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback int32_t func(KBookmarkContextMenu* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void k_bookmarkcontextmenu_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void k_bookmarkcontextmenu_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5079,10 +4941,10 @@ void k_bookmarkcontextmenu_on_metric(void* self, int32_t (*callback)(void*, int3
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param painter QPainter*
 ///
-void k_bookmarkcontextmenu_init_painter(void* self, void* painter);
+void k_bookmarkcontextmenu_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5090,10 +4952,10 @@ void k_bookmarkcontextmenu_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param painter QPainter*
 ///
-void k_bookmarkcontextmenu_super_init_painter(void* self, void* painter);
+void k_bookmarkcontextmenu_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5101,10 +4963,10 @@ void k_bookmarkcontextmenu_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback void func(KBookmarkContextMenu* self, QPainter* painter)
 ///
-void k_bookmarkcontextmenu_on_init_painter(void* self, void (*callback)(void*, void*));
+void k_bookmarkcontextmenu_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5112,10 +4974,10 @@ void k_bookmarkcontextmenu_on_init_painter(void* self, void (*callback)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_bookmarkcontextmenu_redirected(void* self, void* offset);
+QPaintDevice* k_bookmarkcontextmenu_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5123,10 +4985,10 @@ QPaintDevice* k_bookmarkcontextmenu_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_bookmarkcontextmenu_super_redirected(void* self, void* offset);
+QPaintDevice* k_bookmarkcontextmenu_super_redirected(const void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5134,10 +4996,10 @@ QPaintDevice* k_bookmarkcontextmenu_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback QPaintDevice* func(KBookmarkContextMenu* self, QPoint* offset)
 ///
-void k_bookmarkcontextmenu_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void k_bookmarkcontextmenu_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5145,9 +5007,9 @@ void k_bookmarkcontextmenu_on_redirected(void* self, QPaintDevice* (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QPainter* k_bookmarkcontextmenu_shared_painter(void* self);
+QPainter* k_bookmarkcontextmenu_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5155,9 +5017,9 @@ QPainter* k_bookmarkcontextmenu_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QPainter* k_bookmarkcontextmenu_super_shared_painter(void* self);
+QPainter* k_bookmarkcontextmenu_super_shared_painter(const void* self);
 
 /// Inherited from QWidget
 ///
@@ -5165,10 +5027,10 @@ QPainter* k_bookmarkcontextmenu_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback QPainter* func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback QPainter* func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_shared_painter(void* self, QPainter* (*callback)());
+void k_bookmarkcontextmenu_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5209,10 +5071,10 @@ void k_bookmarkcontextmenu_on_input_method_event(void* self, void (*callback)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_bookmarkcontextmenu_input_method_query(void* self, int32_t param1);
+QVariant* k_bookmarkcontextmenu_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5220,10 +5082,10 @@ QVariant* k_bookmarkcontextmenu_input_method_query(void* self, int32_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_bookmarkcontextmenu_super_input_method_query(void* self, int32_t param1);
+QVariant* k_bookmarkcontextmenu_super_input_method_query(const void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5231,12 +5093,12 @@ QVariant* k_bookmarkcontextmenu_super_input_method_query(void* self, int32_t par
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback QVariant* func(KBookmarkContextMenu* self, enum Qt__InputMethodQuery param1)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void k_bookmarkcontextmenu_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void k_bookmarkcontextmenu_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5348,7 +5210,7 @@ void k_bookmarkcontextmenu_on_custom_event(void* self, void (*callback)(void*, v
 /// @param self KBookmarkContextMenu*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkcontextmenu_connect_notify(void* self, void* signal);
+void k_bookmarkcontextmenu_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5359,7 +5221,7 @@ void k_bookmarkcontextmenu_connect_notify(void* self, void* signal);
 /// @param self KBookmarkContextMenu*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkcontextmenu_super_connect_notify(void* self, void* signal);
+void k_bookmarkcontextmenu_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5370,7 +5232,7 @@ void k_bookmarkcontextmenu_super_connect_notify(void* self, void* signal);
 /// @param self KBookmarkContextMenu*
 /// @param callback void func(KBookmarkContextMenu* self, QMetaMethod* signal)
 ///
-void k_bookmarkcontextmenu_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_bookmarkcontextmenu_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5381,7 +5243,7 @@ void k_bookmarkcontextmenu_on_connect_notify(void* self, void (*callback)(void*,
 /// @param self KBookmarkContextMenu*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkcontextmenu_disconnect_notify(void* self, void* signal);
+void k_bookmarkcontextmenu_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5392,7 +5254,7 @@ void k_bookmarkcontextmenu_disconnect_notify(void* self, void* signal);
 /// @param self KBookmarkContextMenu*
 /// @param signal QMetaMethod*
 ///
-void k_bookmarkcontextmenu_super_disconnect_notify(void* self, void* signal);
+void k_bookmarkcontextmenu_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5403,7 +5265,7 @@ void k_bookmarkcontextmenu_super_disconnect_notify(void* self, void* signal);
 /// @param self KBookmarkContextMenu*
 /// @param callback void func(KBookmarkContextMenu* self, QMetaMethod* signal)
 ///
-void k_bookmarkcontextmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_bookmarkcontextmenu_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QMenu
 ///
@@ -5411,9 +5273,9 @@ void k_bookmarkcontextmenu_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_column_count(void* self);
+int32_t k_bookmarkcontextmenu_column_count(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -5421,9 +5283,9 @@ int32_t k_bookmarkcontextmenu_column_count(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_super_column_count(void* self);
+int32_t k_bookmarkcontextmenu_super_column_count(const void* self);
 
 /// Inherited from QMenu
 ///
@@ -5431,10 +5293,10 @@ int32_t k_bookmarkcontextmenu_super_column_count(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback int32_t func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback int32_t func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_column_count(void* self, int32_t (*callback)());
+void k_bookmarkcontextmenu_on_column_count(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QWidget
 ///
@@ -5463,9 +5325,9 @@ void k_bookmarkcontextmenu_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBookmarkContextMenu*
-/// @param callback void func()
+/// @param callback void func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_update_micro_focus(void* self, void (*callback)());
+void k_bookmarkcontextmenu_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5494,9 +5356,9 @@ void k_bookmarkcontextmenu_super_create(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBookmarkContextMenu*
-/// @param callback void func()
+/// @param callback void func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_create(void* self, void (*callback)());
+void k_bookmarkcontextmenu_on_create(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5525,9 +5387,9 @@ void k_bookmarkcontextmenu_super_destroy(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBookmarkContextMenu*
-/// @param callback void func()
+/// @param callback void func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_destroy(void* self, void (*callback)());
+void k_bookmarkcontextmenu_on_destroy(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5556,9 +5418,9 @@ bool k_bookmarkcontextmenu_super_focus_next_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBookmarkContextMenu*
-/// @param callback bool func()
+/// @param callback bool func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_focus_next_child(void* self, bool (*callback)());
+void k_bookmarkcontextmenu_on_focus_next_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QWidget
 ///
@@ -5587,9 +5449,9 @@ bool k_bookmarkcontextmenu_super_focus_previous_child(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KBookmarkContextMenu*
-/// @param callback bool func()
+/// @param callback bool func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_focus_previous_child(void* self, bool (*callback)());
+void k_bookmarkcontextmenu_on_focus_previous_child(void* self, bool (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -5597,9 +5459,9 @@ void k_bookmarkcontextmenu_on_focus_previous_child(void* self, bool (*callback)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QObject* k_bookmarkcontextmenu_sender(void* self);
+QObject* k_bookmarkcontextmenu_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5607,9 +5469,9 @@ QObject* k_bookmarkcontextmenu_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-QObject* k_bookmarkcontextmenu_super_sender(void* self);
+QObject* k_bookmarkcontextmenu_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5617,10 +5479,10 @@ QObject* k_bookmarkcontextmenu_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback QObject* func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback QObject* func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_sender(void* self, QObject* (*callback)());
+void k_bookmarkcontextmenu_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5628,9 +5490,9 @@ void k_bookmarkcontextmenu_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_sender_signal_index(void* self);
+int32_t k_bookmarkcontextmenu_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5638,9 +5500,9 @@ int32_t k_bookmarkcontextmenu_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 ///
-int32_t k_bookmarkcontextmenu_super_sender_signal_index(void* self);
+int32_t k_bookmarkcontextmenu_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -5648,10 +5510,10 @@ int32_t k_bookmarkcontextmenu_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
-/// @param callback int32_t func()
+/// @param self const KBookmarkContextMenu*
+/// @param callback int32_t func(KBookmarkContextMenu* self)
 ///
-void k_bookmarkcontextmenu_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_bookmarkcontextmenu_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -5659,10 +5521,10 @@ void k_bookmarkcontextmenu_on_sender_signal_index(void* self, int32_t (*callback
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param signal const char*
 ///
-int32_t k_bookmarkcontextmenu_receivers(void* self, const char* signal);
+int32_t k_bookmarkcontextmenu_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5670,10 +5532,10 @@ int32_t k_bookmarkcontextmenu_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param signal const char*
 ///
-int32_t k_bookmarkcontextmenu_super_receivers(void* self, const char* signal);
+int32_t k_bookmarkcontextmenu_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5681,10 +5543,10 @@ int32_t k_bookmarkcontextmenu_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback int32_t func(KBookmarkContextMenu* self, const char* signal)
 ///
-void k_bookmarkcontextmenu_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_bookmarkcontextmenu_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5692,10 +5554,10 @@ void k_bookmarkcontextmenu_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param signal QMetaMethod*
 ///
-bool k_bookmarkcontextmenu_is_signal_connected(void* self, void* signal);
+bool k_bookmarkcontextmenu_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5703,10 +5565,10 @@ bool k_bookmarkcontextmenu_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param signal QMetaMethod*
 ///
-bool k_bookmarkcontextmenu_super_is_signal_connected(void* self, void* signal);
+bool k_bookmarkcontextmenu_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5714,10 +5576,10 @@ bool k_bookmarkcontextmenu_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback bool func(KBookmarkContextMenu* self, QMetaMethod* signal)
 ///
-void k_bookmarkcontextmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_bookmarkcontextmenu_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5725,11 +5587,11 @@ void k_bookmarkcontextmenu_on_is_signal_connected(void* self, bool (*callback)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_bookmarkcontextmenu_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_bookmarkcontextmenu_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5737,11 +5599,11 @@ double k_bookmarkcontextmenu_get_decoded_metric_f(void* self, int32_t metricA, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_bookmarkcontextmenu_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_bookmarkcontextmenu_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5749,10 +5611,10 @@ double k_bookmarkcontextmenu_super_get_decoded_metric_f(void* self, int32_t metr
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KBookmarkContextMenu*
+/// @param self const KBookmarkContextMenu*
 /// @param callback double func(KBookmarkContextMenu* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void k_bookmarkcontextmenu_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void k_bookmarkcontextmenu_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

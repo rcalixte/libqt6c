@@ -11,7 +11,7 @@
 #include "libqtextlayout.hpp"
 #include "libqtextlayout.h"
 
-QTextInlineObject* q_textinlineobject_new(void* other) {
+QTextInlineObject* q_textinlineobject_new(const void* other) {
     return QTextInlineObject_New((QTextInlineObject*)other);
 }
 
@@ -31,31 +31,31 @@ void q_textinlineobject_move_assign(void* self, void* other) {
     QTextInlineObject_MoveAssign((QTextInlineObject*)self, (QTextInlineObject*)other);
 }
 
-bool q_textinlineobject_is_valid(void* self) {
+bool q_textinlineobject_is_valid(const void* self) {
     return QTextInlineObject_IsValid((QTextInlineObject*)self);
 }
 
-QRectF* q_textinlineobject_rect(void* self) {
+QRectF* q_textinlineobject_rect(const void* self) {
     return QTextInlineObject_Rect((QTextInlineObject*)self);
 }
 
-double q_textinlineobject_width(void* self) {
+double q_textinlineobject_width(const void* self) {
     return QTextInlineObject_Width((QTextInlineObject*)self);
 }
 
-double q_textinlineobject_ascent(void* self) {
+double q_textinlineobject_ascent(const void* self) {
     return QTextInlineObject_Ascent((QTextInlineObject*)self);
 }
 
-double q_textinlineobject_descent(void* self) {
+double q_textinlineobject_descent(const void* self) {
     return QTextInlineObject_Descent((QTextInlineObject*)self);
 }
 
-double q_textinlineobject_height(void* self) {
+double q_textinlineobject_height(const void* self) {
     return QTextInlineObject_Height((QTextInlineObject*)self);
 }
 
-int32_t q_textinlineobject_text_direction(void* self) {
+int32_t q_textinlineobject_text_direction(const void* self) {
     return QTextInlineObject_TextDirection((QTextInlineObject*)self);
 }
 
@@ -71,15 +71,15 @@ void q_textinlineobject_set_descent(void* self, double d) {
     QTextInlineObject_SetDescent((QTextInlineObject*)self, d);
 }
 
-int32_t q_textinlineobject_text_position(void* self) {
+int32_t q_textinlineobject_text_position(const void* self) {
     return QTextInlineObject_TextPosition((QTextInlineObject*)self);
 }
 
-int32_t q_textinlineobject_format_index(void* self) {
+int32_t q_textinlineobject_format_index(const void* self) {
     return QTextInlineObject_FormatIndex((QTextInlineObject*)self);
 }
 
-QTextFormat* q_textinlineobject_format(void* self) {
+QTextFormat* q_textinlineobject_format(const void* self) {
     return QTextInlineObject_Format((QTextInlineObject*)self);
 }
 
@@ -95,27 +95,27 @@ QTextLayout* q_textlayout_new2(const char* text) {
     return QTextLayout_New2(qstring(text));
 }
 
-QTextLayout* q_textlayout_new3(const char* text, void* font) {
+QTextLayout* q_textlayout_new3(const char* text, const void* font) {
     return QTextLayout_New3(qstring(text), (QFont*)font);
 }
 
-QTextLayout* q_textlayout_new4(void* b) {
+QTextLayout* q_textlayout_new4(const void* b) {
     return QTextLayout_New4((QTextBlock*)b);
 }
 
-QTextLayout* q_textlayout_new5(const char* text, void* font, void* paintdevice) {
+QTextLayout* q_textlayout_new5(const char* text, const void* font, const void* paintdevice) {
     return QTextLayout_New5(qstring(text), (QFont*)font, (QPaintDevice*)paintdevice);
 }
 
-void q_textlayout_set_font(void* self, void* f) {
+void q_textlayout_set_font(void* self, const void* f) {
     QTextLayout_SetFont((QTextLayout*)self, (QFont*)f);
 }
 
-QFont* q_textlayout_font(void* self) {
+QFont* q_textlayout_font(const void* self) {
     return QTextLayout_Font((QTextLayout*)self);
 }
 
-void q_textlayout_set_raw_font(void* self, void* rawFont) {
+void q_textlayout_set_raw_font(void* self, const void* rawFont) {
     QTextLayout_SetRawFont((QTextLayout*)self, (QRawFont*)rawFont);
 }
 
@@ -123,18 +123,18 @@ void q_textlayout_set_text(void* self, const char* string) {
     QTextLayout_SetText((QTextLayout*)self, qstring(string));
 }
 
-const char* q_textlayout_text(void* self) {
+const char* q_textlayout_text(const void* self) {
     libqt_string _str = QTextLayout_Text((QTextLayout*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_textlayout_set_text_option(void* self, void* option) {
+void q_textlayout_set_text_option(void* self, const void* option) {
     QTextLayout_SetTextOption((QTextLayout*)self, (QTextOption*)option);
 }
 
-const QTextOption* q_textlayout_text_option(void* self) {
+const QTextOption* q_textlayout_text_option(const void* self) {
     return QTextLayout_TextOption((QTextLayout*)self);
 }
 
@@ -142,11 +142,11 @@ void q_textlayout_set_preedit_area(void* self, int position, const char* text) {
     QTextLayout_SetPreeditArea((QTextLayout*)self, position, qstring(text));
 }
 
-int32_t q_textlayout_preedit_area_position(void* self) {
+int32_t q_textlayout_preedit_area_position(const void* self) {
     return QTextLayout_PreeditAreaPosition((QTextLayout*)self);
 }
 
-const char* q_textlayout_preedit_area_text(void* self) {
+const char* q_textlayout_preedit_area_text(const void* self) {
     libqt_string _str = QTextLayout_PreeditAreaText((QTextLayout*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -157,7 +157,7 @@ void q_textlayout_set_formats(void* self, libqt_list /* of QTextLayout__FormatRa
     QTextLayout_SetFormats((QTextLayout*)self, overrides);
 }
 
-libqt_list /* of QTextLayout__FormatRange* */ q_textlayout_formats(void* self) {
+libqt_list /* of QTextLayout__FormatRange* */ q_textlayout_formats(const void* self) {
     libqt_list _arr = QTextLayout_Formats((QTextLayout*)self);
     return _arr;
 }
@@ -170,7 +170,7 @@ void q_textlayout_set_cache_enabled(void* self, bool enable) {
     QTextLayout_SetCacheEnabled((QTextLayout*)self, enable);
 }
 
-bool q_textlayout_cache_enabled(void* self) {
+bool q_textlayout_cache_enabled(const void* self) {
     return QTextLayout_CacheEnabled((QTextLayout*)self);
 }
 
@@ -178,7 +178,7 @@ void q_textlayout_set_cursor_move_style(void* self, int32_t style) {
     QTextLayout_SetCursorMoveStyle((QTextLayout*)self, style);
 }
 
-int32_t q_textlayout_cursor_move_style(void* self) {
+int32_t q_textlayout_cursor_move_style(const void* self) {
     return QTextLayout_CursorMoveStyle((QTextLayout*)self);
 }
 
@@ -198,76 +198,76 @@ QTextLine* q_textlayout_create_line(void* self) {
     return QTextLayout_CreateLine((QTextLayout*)self);
 }
 
-int32_t q_textlayout_line_count(void* self) {
+int32_t q_textlayout_line_count(const void* self) {
     return QTextLayout_LineCount((QTextLayout*)self);
 }
 
-QTextLine* q_textlayout_line_at(void* self, int i) {
+QTextLine* q_textlayout_line_at(const void* self, int i) {
     return QTextLayout_LineAt((QTextLayout*)self, i);
 }
 
-QTextLine* q_textlayout_line_for_text_position(void* self, int pos) {
+QTextLine* q_textlayout_line_for_text_position(const void* self, int pos) {
     return QTextLayout_LineForTextPosition((QTextLayout*)self, pos);
 }
 
-bool q_textlayout_is_valid_cursor_position(void* self, int pos) {
+bool q_textlayout_is_valid_cursor_position(const void* self, int pos) {
     return QTextLayout_IsValidCursorPosition((QTextLayout*)self, pos);
 }
 
-int32_t q_textlayout_next_cursor_position(void* self, int oldPos) {
+int32_t q_textlayout_next_cursor_position(const void* self, int oldPos) {
     return QTextLayout_NextCursorPosition((QTextLayout*)self, oldPos);
 }
 
-int32_t q_textlayout_previous_cursor_position(void* self, int oldPos) {
+int32_t q_textlayout_previous_cursor_position(const void* self, int oldPos) {
     return QTextLayout_PreviousCursorPosition((QTextLayout*)self, oldPos);
 }
 
-int32_t q_textlayout_left_cursor_position(void* self, int oldPos) {
+int32_t q_textlayout_left_cursor_position(const void* self, int oldPos) {
     return QTextLayout_LeftCursorPosition((QTextLayout*)self, oldPos);
 }
 
-int32_t q_textlayout_right_cursor_position(void* self, int oldPos) {
+int32_t q_textlayout_right_cursor_position(const void* self, int oldPos) {
     return QTextLayout_RightCursorPosition((QTextLayout*)self, oldPos);
 }
 
-void q_textlayout_draw(void* self, void* p, void* pos) {
+void q_textlayout_draw(const void* self, void* p, const void* pos) {
     QTextLayout_Draw((QTextLayout*)self, (QPainter*)p, (QPointF*)pos);
 }
 
-void q_textlayout_draw_cursor(void* self, void* p, void* pos, int cursorPosition) {
+void q_textlayout_draw_cursor(const void* self, void* p, const void* pos, int cursorPosition) {
     QTextLayout_DrawCursor((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, cursorPosition);
 }
 
-void q_textlayout_draw_cursor2(void* self, void* p, void* pos, int cursorPosition, int width) {
+void q_textlayout_draw_cursor2(const void* self, void* p, const void* pos, int cursorPosition, int width) {
     QTextLayout_DrawCursor2((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, cursorPosition, width);
 }
 
-QPointF* q_textlayout_position(void* self) {
+QPointF* q_textlayout_position(const void* self) {
     return QTextLayout_Position((QTextLayout*)self);
 }
 
-void q_textlayout_set_position(void* self, void* p) {
+void q_textlayout_set_position(void* self, const void* p) {
     QTextLayout_SetPosition((QTextLayout*)self, (QPointF*)p);
 }
 
-QRectF* q_textlayout_bounding_rect(void* self) {
+QRectF* q_textlayout_bounding_rect(const void* self) {
     return QTextLayout_BoundingRect((QTextLayout*)self);
 }
 
-double q_textlayout_minimum_width(void* self) {
+double q_textlayout_minimum_width(const void* self) {
     return QTextLayout_MinimumWidth((QTextLayout*)self);
 }
 
-double q_textlayout_maximum_width(void* self) {
+double q_textlayout_maximum_width(const void* self) {
     return QTextLayout_MaximumWidth((QTextLayout*)self);
 }
 
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self, int from, int length, uint16_t flags) {
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(const void* self, int from, int length, uint16_t flags) {
     libqt_list _arr = QTextLayout_GlyphRuns((QTextLayout*)self, from, length, flags);
     return _arr;
 }
 
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs2(void* self) {
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs2(const void* self) {
     libqt_list _arr = QTextLayout_GlyphRuns2((QTextLayout*)self);
     return _arr;
 }
@@ -276,28 +276,28 @@ void q_textlayout_set_flags(void* self, int flags) {
     QTextLayout_SetFlags((QTextLayout*)self, flags);
 }
 
-int32_t q_textlayout_next_cursor_position2(void* self, int oldPos, int32_t mode) {
+int32_t q_textlayout_next_cursor_position2(const void* self, int oldPos, int32_t mode) {
     return QTextLayout_NextCursorPosition2((QTextLayout*)self, oldPos, mode);
 }
 
-int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int32_t mode) {
+int32_t q_textlayout_previous_cursor_position2(const void* self, int oldPos, int32_t mode) {
     return QTextLayout_PreviousCursorPosition2((QTextLayout*)self, oldPos, mode);
 }
 
-void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections) {
+void q_textlayout_draw3(const void* self, void* p, const void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections) {
     QTextLayout_Draw3((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, selections);
 }
 
-void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections, void* clip) {
+void q_textlayout_draw4(const void* self, void* p, const void* pos, libqt_list /* of QTextLayout__FormatRange* */ selections, const void* clip) {
     QTextLayout_Draw4((QTextLayout*)self, (QPainter*)p, (QPointF*)pos, selections, (QRectF*)clip);
 }
 
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs1(void* self, int from) {
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs1(const void* self, int from) {
     libqt_list _arr = QTextLayout_GlyphRuns1((QTextLayout*)self, from);
     return _arr;
 }
 
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs22(void* self, int from, int length) {
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs22(const void* self, int from, int length) {
     libqt_list _arr = QTextLayout_GlyphRuns22((QTextLayout*)self, from, length);
     return _arr;
 }
@@ -306,7 +306,7 @@ void q_textlayout_delete(void* self) {
     QTextLayout_Delete((QTextLayout*)(self));
 }
 
-QTextLine* q_textline_new(void* other) {
+QTextLine* q_textline_new(const void* other) {
     return QTextLine_New((QTextLine*)other);
 }
 
@@ -326,39 +326,39 @@ void q_textline_move_assign(void* self, void* other) {
     QTextLine_MoveAssign((QTextLine*)self, (QTextLine*)other);
 }
 
-bool q_textline_is_valid(void* self) {
+bool q_textline_is_valid(const void* self) {
     return QTextLine_IsValid((QTextLine*)self);
 }
 
-QRectF* q_textline_rect(void* self) {
+QRectF* q_textline_rect(const void* self) {
     return QTextLine_Rect((QTextLine*)self);
 }
 
-double q_textline_x(void* self) {
+double q_textline_x(const void* self) {
     return QTextLine_X((QTextLine*)self);
 }
 
-double q_textline_y(void* self) {
+double q_textline_y(const void* self) {
     return QTextLine_Y((QTextLine*)self);
 }
 
-double q_textline_width(void* self) {
+double q_textline_width(const void* self) {
     return QTextLine_Width((QTextLine*)self);
 }
 
-double q_textline_ascent(void* self) {
+double q_textline_ascent(const void* self) {
     return QTextLine_Ascent((QTextLine*)self);
 }
 
-double q_textline_descent(void* self) {
+double q_textline_descent(const void* self) {
     return QTextLine_Descent((QTextLine*)self);
 }
 
-double q_textline_height(void* self) {
+double q_textline_height(const void* self) {
     return QTextLine_Height((QTextLine*)self);
 }
 
-double q_textline_leading(void* self) {
+double q_textline_leading(const void* self) {
     return QTextLine_Leading((QTextLine*)self);
 }
 
@@ -366,31 +366,31 @@ void q_textline_set_leading_included(void* self, bool included) {
     QTextLine_SetLeadingIncluded((QTextLine*)self, included);
 }
 
-bool q_textline_leading_included(void* self) {
+bool q_textline_leading_included(const void* self) {
     return QTextLine_LeadingIncluded((QTextLine*)self);
 }
 
-double q_textline_natural_text_width(void* self) {
+double q_textline_natural_text_width(const void* self) {
     return QTextLine_NaturalTextWidth((QTextLine*)self);
 }
 
-double q_textline_horizontal_advance(void* self) {
+double q_textline_horizontal_advance(const void* self) {
     return QTextLine_HorizontalAdvance((QTextLine*)self);
 }
 
-QRectF* q_textline_natural_text_rect(void* self) {
+QRectF* q_textline_natural_text_rect(const void* self) {
     return QTextLine_NaturalTextRect((QTextLine*)self);
 }
 
-double q_textline_cursor_to_x(void* self, int* cursorPos) {
+double q_textline_cursor_to_x(const void* self, int* cursorPos) {
     return QTextLine_CursorToX((QTextLine*)self, cursorPos);
 }
 
-double q_textline_cursor_to_x2(void* self, int cursorPos) {
+double q_textline_cursor_to_x2(const void* self, int cursorPos) {
     return QTextLine_CursorToX2((QTextLine*)self, cursorPos);
 }
 
-int32_t q_textline_x_to_cursor(void* self, double x) {
+int32_t q_textline_x_to_cursor(const void* self, double x) {
     return QTextLine_XToCursor((QTextLine*)self, x);
 }
 
@@ -406,58 +406,58 @@ void q_textline_set_num_columns2(void* self, int columns, double alignmentWidth)
     QTextLine_SetNumColumns2((QTextLine*)self, columns, alignmentWidth);
 }
 
-void q_textline_set_position(void* self, void* pos) {
+void q_textline_set_position(void* self, const void* pos) {
     QTextLine_SetPosition((QTextLine*)self, (QPointF*)pos);
 }
 
-QPointF* q_textline_position(void* self) {
+QPointF* q_textline_position(const void* self) {
     return QTextLine_Position((QTextLine*)self);
 }
 
-int32_t q_textline_text_start(void* self) {
+int32_t q_textline_text_start(const void* self) {
     return QTextLine_TextStart((QTextLine*)self);
 }
 
-int32_t q_textline_text_length(void* self) {
+int32_t q_textline_text_length(const void* self) {
     return QTextLine_TextLength((QTextLine*)self);
 }
 
-int32_t q_textline_line_number(void* self) {
+int32_t q_textline_line_number(const void* self) {
     return QTextLine_LineNumber((QTextLine*)self);
 }
 
-void q_textline_draw(void* self, void* painter, void* position) {
+void q_textline_draw(const void* self, void* painter, const void* position) {
     QTextLine_Draw((QTextLine*)self, (QPainter*)painter, (QPointF*)position);
 }
 
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self, int from, int length, uint16_t flags) {
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(const void* self, int from, int length, uint16_t flags) {
     libqt_list _arr = QTextLine_GlyphRuns((QTextLine*)self, from, length, flags);
     return _arr;
 }
 
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self) {
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(const void* self) {
     libqt_list _arr = QTextLine_GlyphRuns2((QTextLine*)self);
     return _arr;
 }
 
-double q_textline_cursor_to_x22(void* self, int* cursorPos, int32_t edge) {
+double q_textline_cursor_to_x22(const void* self, int* cursorPos, int32_t edge) {
     return QTextLine_CursorToX22((QTextLine*)self, cursorPos, edge);
 }
 
-double q_textline_cursor_to_x23(void* self, int cursorPos, int32_t edge) {
+double q_textline_cursor_to_x23(const void* self, int cursorPos, int32_t edge) {
     return QTextLine_CursorToX23((QTextLine*)self, cursorPos, edge);
 }
 
-int32_t q_textline_x_to_cursor2(void* self, double x, int32_t param2) {
+int32_t q_textline_x_to_cursor2(const void* self, double x, int32_t param2) {
     return QTextLine_XToCursor2((QTextLine*)self, x, param2);
 }
 
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs1(void* self, int from) {
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs1(const void* self, int from) {
     libqt_list _arr = QTextLine_GlyphRuns1((QTextLine*)self, from);
     return _arr;
 }
 
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs22(void* self, int from, int length) {
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs22(const void* self, int from, int length) {
     libqt_list _arr = QTextLine_GlyphRuns22((QTextLine*)self, from, length);
     return _arr;
 }
@@ -470,11 +470,11 @@ QTextLayout__FormatRange* q_textlayout__formatrange_new() {
     return QTextLayout__FormatRange_New();
 }
 
-QTextLayout__FormatRange* q_textlayout__formatrange_new2(void* param1) {
+QTextLayout__FormatRange* q_textlayout__formatrange_new2(const void* param1) {
     return QTextLayout__FormatRange_New2((QTextLayout__FormatRange*)param1);
 }
 
-int32_t q_textlayout__formatrange_start(void* self) {
+int32_t q_textlayout__formatrange_start(const void* self) {
     return QTextLayout__FormatRange_Start((QTextLayout__FormatRange*)self);
 }
 
@@ -482,7 +482,7 @@ void q_textlayout__formatrange_set_start(void* self, int start) {
     QTextLayout__FormatRange_SetStart((QTextLayout__FormatRange*)self, start);
 }
 
-int32_t q_textlayout__formatrange_length(void* self) {
+int32_t q_textlayout__formatrange_length(const void* self) {
     return QTextLayout__FormatRange_Length((QTextLayout__FormatRange*)self);
 }
 
@@ -490,7 +490,7 @@ void q_textlayout__formatrange_set_length(void* self, int length) {
     QTextLayout__FormatRange_SetLength((QTextLayout__FormatRange*)self, length);
 }
 
-QTextCharFormat* q_textlayout__formatrange_format(void* self) {
+QTextCharFormat* q_textlayout__formatrange_format(const void* self) {
     return QTextLayout__FormatRange_Format((QTextLayout__FormatRange*)self);
 }
 

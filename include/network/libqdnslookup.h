@@ -20,14 +20,14 @@ QDnsDomainNameRecord* q_dnsdomainnamerecord_new();
 ///
 /// @param other QDnsDomainNameRecord*
 ///
-QDnsDomainNameRecord* q_dnsdomainnamerecord_new2(void* other);
+QDnsDomainNameRecord* q_dnsdomainnamerecord_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#operator-eq)
 ///
 /// @param self QDnsDomainNameRecord*
 /// @param other QDnsDomainNameRecord*
 ///
-void q_dnsdomainnamerecord_operator_assign(void* self, void* other);
+void q_dnsdomainnamerecord_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#swap)
 ///
@@ -40,23 +40,23 @@ void q_dnsdomainnamerecord_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsDomainNameRecord*
+/// @param self const QDnsDomainNameRecord*
 ///
-const char* q_dnsdomainnamerecord_name(void* self);
+const char* q_dnsdomainnamerecord_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#timeToLive)
 ///
-/// @param self QDnsDomainNameRecord*
+/// @param self const QDnsDomainNameRecord*
 ///
-uint32_t q_dnsdomainnamerecord_time_to_live(void* self);
+uint32_t q_dnsdomainnamerecord_time_to_live(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#value)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsDomainNameRecord*
+/// @param self const QDnsDomainNameRecord*
 ///
-const char* q_dnsdomainnamerecord_value(void* self);
+const char* q_dnsdomainnamerecord_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#dtor.QDnsDomainNameRecord)
 ///
@@ -78,14 +78,14 @@ QDnsHostAddressRecord* q_dnshostaddressrecord_new();
 ///
 /// @param other QDnsHostAddressRecord*
 ///
-QDnsHostAddressRecord* q_dnshostaddressrecord_new2(void* other);
+QDnsHostAddressRecord* q_dnshostaddressrecord_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnshostaddressrecord.html#operator-eq)
 ///
 /// @param self QDnsHostAddressRecord*
 /// @param other QDnsHostAddressRecord*
 ///
-void q_dnshostaddressrecord_operator_assign(void* self, void* other);
+void q_dnshostaddressrecord_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnshostaddressrecord.html#swap)
 ///
@@ -98,21 +98,21 @@ void q_dnshostaddressrecord_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsHostAddressRecord*
+/// @param self const QDnsHostAddressRecord*
 ///
-const char* q_dnshostaddressrecord_name(void* self);
+const char* q_dnshostaddressrecord_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnshostaddressrecord.html#timeToLive)
 ///
-/// @param self QDnsHostAddressRecord*
+/// @param self const QDnsHostAddressRecord*
 ///
-uint32_t q_dnshostaddressrecord_time_to_live(void* self);
+uint32_t q_dnshostaddressrecord_time_to_live(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnshostaddressrecord.html#value)
 ///
-/// @param self QDnsHostAddressRecord*
+/// @param self const QDnsHostAddressRecord*
 ///
-QHostAddress* q_dnshostaddressrecord_value(void* self);
+QHostAddress* q_dnshostaddressrecord_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnshostaddressrecord.html#dtor.QDnsHostAddressRecord)
 ///
@@ -134,14 +134,14 @@ QDnsMailExchangeRecord* q_dnsmailexchangerecord_new();
 ///
 /// @param other QDnsMailExchangeRecord*
 ///
-QDnsMailExchangeRecord* q_dnsmailexchangerecord_new2(void* other);
+QDnsMailExchangeRecord* q_dnsmailexchangerecord_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#operator-eq)
 ///
 /// @param self QDnsMailExchangeRecord*
 /// @param other QDnsMailExchangeRecord*
 ///
-void q_dnsmailexchangerecord_operator_assign(void* self, void* other);
+void q_dnsmailexchangerecord_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#swap)
 ///
@@ -154,29 +154,29 @@ void q_dnsmailexchangerecord_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsMailExchangeRecord*
+/// @param self const QDnsMailExchangeRecord*
 ///
-const char* q_dnsmailexchangerecord_exchange(void* self);
+const char* q_dnsmailexchangerecord_exchange(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsMailExchangeRecord*
+/// @param self const QDnsMailExchangeRecord*
 ///
-const char* q_dnsmailexchangerecord_name(void* self);
+const char* q_dnsmailexchangerecord_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#preference)
 ///
-/// @param self QDnsMailExchangeRecord*
+/// @param self const QDnsMailExchangeRecord*
 ///
-uint16_t q_dnsmailexchangerecord_preference(void* self);
+uint16_t q_dnsmailexchangerecord_preference(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#timeToLive)
 ///
-/// @param self QDnsMailExchangeRecord*
+/// @param self const QDnsMailExchangeRecord*
 ///
-uint32_t q_dnsmailexchangerecord_time_to_live(void* self);
+uint32_t q_dnsmailexchangerecord_time_to_live(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#dtor.QDnsMailExchangeRecord)
 ///
@@ -198,14 +198,14 @@ QDnsServiceRecord* q_dnsservicerecord_new();
 ///
 /// @param other QDnsServiceRecord*
 ///
-QDnsServiceRecord* q_dnsservicerecord_new2(void* other);
+QDnsServiceRecord* q_dnsservicerecord_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#operator-eq)
 ///
 /// @param self QDnsServiceRecord*
 /// @param other QDnsServiceRecord*
 ///
-void q_dnsservicerecord_operator_assign(void* self, void* other);
+void q_dnsservicerecord_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#swap)
 ///
@@ -218,41 +218,41 @@ void q_dnsservicerecord_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsServiceRecord*
+/// @param self const QDnsServiceRecord*
 ///
-const char* q_dnsservicerecord_name(void* self);
+const char* q_dnsservicerecord_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#port)
 ///
-/// @param self QDnsServiceRecord*
+/// @param self const QDnsServiceRecord*
 ///
-uint16_t q_dnsservicerecord_port(void* self);
+uint16_t q_dnsservicerecord_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#priority)
 ///
-/// @param self QDnsServiceRecord*
+/// @param self const QDnsServiceRecord*
 ///
-uint16_t q_dnsservicerecord_priority(void* self);
+uint16_t q_dnsservicerecord_priority(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#target)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsServiceRecord*
+/// @param self const QDnsServiceRecord*
 ///
-const char* q_dnsservicerecord_target(void* self);
+const char* q_dnsservicerecord_target(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#timeToLive)
 ///
-/// @param self QDnsServiceRecord*
+/// @param self const QDnsServiceRecord*
 ///
-uint32_t q_dnsservicerecord_time_to_live(void* self);
+uint32_t q_dnsservicerecord_time_to_live(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#weight)
 ///
-/// @param self QDnsServiceRecord*
+/// @param self const QDnsServiceRecord*
 ///
-uint16_t q_dnsservicerecord_weight(void* self);
+uint16_t q_dnsservicerecord_weight(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#dtor.QDnsServiceRecord)
 ///
@@ -274,14 +274,14 @@ QDnsTextRecord* q_dnstextrecord_new();
 ///
 /// @param other QDnsTextRecord*
 ///
-QDnsTextRecord* q_dnstextrecord_new2(void* other);
+QDnsTextRecord* q_dnstextrecord_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstextrecord.html#operator-eq)
 ///
 /// @param self QDnsTextRecord*
 /// @param other QDnsTextRecord*
 ///
-void q_dnstextrecord_operator_assign(void* self, void* other);
+void q_dnstextrecord_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstextrecord.html#swap)
 ///
@@ -294,23 +294,23 @@ void q_dnstextrecord_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsTextRecord*
+/// @param self const QDnsTextRecord*
 ///
-const char* q_dnstextrecord_name(void* self);
+const char* q_dnstextrecord_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstextrecord.html#timeToLive)
 ///
-/// @param self QDnsTextRecord*
+/// @param self const QDnsTextRecord*
 ///
-uint32_t q_dnstextrecord_time_to_live(void* self);
+uint32_t q_dnstextrecord_time_to_live(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstextrecord.html#values)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDnsTextRecord*
+/// @param self const QDnsTextRecord*
 ///
-const char** q_dnstextrecord_values(void* self);
+const char** q_dnstextrecord_values(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstextrecord.html#dtor.QDnsTextRecord)
 ///
@@ -332,14 +332,14 @@ QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new();
 ///
 /// @param other QDnsTlsAssociationRecord*
 ///
-QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new2(void* other);
+QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#operator-eq)
 ///
 /// @param self QDnsTlsAssociationRecord*
 /// @param other QDnsTlsAssociationRecord*
 ///
-void q_dnstlsassociationrecord_operator_assign(void* self, void* other);
+void q_dnstlsassociationrecord_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#swap)
 ///
@@ -352,47 +352,47 @@ void q_dnstlsassociationrecord_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsTlsAssociationRecord*
+/// @param self const QDnsTlsAssociationRecord*
 ///
-const char* q_dnstlsassociationrecord_name(void* self);
+const char* q_dnstlsassociationrecord_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#timeToLive)
 ///
-/// @param self QDnsTlsAssociationRecord*
+/// @param self const QDnsTlsAssociationRecord*
 ///
-uint32_t q_dnstlsassociationrecord_time_to_live(void* self);
+uint32_t q_dnstlsassociationrecord_time_to_live(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#usage)
 ///
-/// @param self QDnsTlsAssociationRecord*
+/// @param self const QDnsTlsAssociationRecord*
 ///
 /// @return enum QDnsTlsAssociationRecord__CertificateUsage
 ///
-uint8_t q_dnstlsassociationrecord_usage(void* self);
+uint8_t q_dnstlsassociationrecord_usage(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#selector)
 ///
-/// @param self QDnsTlsAssociationRecord*
+/// @param self const QDnsTlsAssociationRecord*
 ///
 /// @return enum QDnsTlsAssociationRecord__Selector
 ///
-uint8_t q_dnstlsassociationrecord_selector(void* self);
+uint8_t q_dnstlsassociationrecord_selector(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#matchType)
 ///
-/// @param self QDnsTlsAssociationRecord*
+/// @param self const QDnsTlsAssociationRecord*
 ///
 /// @return enum QDnsTlsAssociationRecord__MatchingType
 ///
-uint8_t q_dnstlsassociationrecord_match_type(void* self);
+uint8_t q_dnstlsassociationrecord_match_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#value)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDnsTlsAssociationRecord*
+/// @param self const QDnsTlsAssociationRecord*
 ///
-char* q_dnstlsassociationrecord_value(void* self);
+char* q_dnstlsassociationrecord_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#dtor.QDnsTlsAssociationRecord)
 ///
@@ -425,7 +425,7 @@ QDnsLookup* q_dnslookup_new2(int32_t type, const char* name);
 /// @param name const char*
 /// @param nameserver QHostAddress*
 ///
-QDnsLookup* q_dnslookup_new3(int32_t type, const char* name, void* nameserver);
+QDnsLookup* q_dnslookup_new3(int32_t type, const char* name, const void* nameserver);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -436,7 +436,7 @@ QDnsLookup* q_dnslookup_new3(int32_t type, const char* name, void* nameserver);
 /// @param nameserver QHostAddress*
 /// @param port uint16_t
 ///
-QDnsLookup* q_dnslookup_new4(int32_t type, const char* name, void* nameserver, uint16_t port);
+QDnsLookup* q_dnslookup_new4(int32_t type, const char* name, const void* nameserver, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -447,7 +447,7 @@ QDnsLookup* q_dnslookup_new4(int32_t type, const char* name, void* nameserver, u
 /// @param protocol enum QDnsLookup__Protocol
 /// @param nameserver QHostAddress*
 ///
-QDnsLookup* q_dnslookup_new5(int32_t type, const char* name, uint8_t protocol, void* nameserver);
+QDnsLookup* q_dnslookup_new5(int32_t type, const char* name, uint8_t protocol, const void* nameserver);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -476,7 +476,7 @@ QDnsLookup* q_dnslookup_new7(int32_t type, const char* name, void* parent);
 /// @param nameserver QHostAddress*
 /// @param parent QObject*
 ///
-QDnsLookup* q_dnslookup_new8(int32_t type, const char* name, void* nameserver, void* parent);
+QDnsLookup* q_dnslookup_new8(int32_t type, const char* name, const void* nameserver, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -488,7 +488,7 @@ QDnsLookup* q_dnslookup_new8(int32_t type, const char* name, void* nameserver, v
 /// @param port uint16_t
 /// @param parent QObject*
 ///
-QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, void* nameserver, uint16_t port, void* parent);
+QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, const void* nameserver, uint16_t port, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -500,7 +500,7 @@ QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, void* nameserver, u
 /// @param nameserver QHostAddress*
 /// @param port uint16_t
 ///
-QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, void* nameserver, uint16_t port);
+QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, const void* nameserver, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -513,30 +513,30 @@ QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, 
 /// @param port uint16_t
 /// @param parent QObject*
 ///
-QDnsLookup* q_dnslookup_new11(int32_t type, const char* name, uint8_t protocol, void* nameserver, uint16_t port, void* parent);
+QDnsLookup* q_dnslookup_new11(int32_t type, const char* name, uint8_t protocol, const void* nameserver, uint16_t port, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-const QMetaObject* q_dnslookup_meta_object(void* self);
+const QMetaObject* q_dnslookup_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDnsLookup*
-/// @param callback const QMetaObject* func()
+/// @param self const QDnsLookup*
+/// @param callback const QMetaObject* func(const QDnsLookup* self)
 ///
-void q_dnslookup_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_dnslookup_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-const QMetaObject* q_dnslookup_super_meta_object(void* self);
+const QMetaObject* q_dnslookup_super_meta_object(const void* self);
 
 /// @param self QDnsLookup*
 /// @param param1 const char*
@@ -590,39 +590,39 @@ const char* q_dnslookup_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#isAuthenticData)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-bool q_dnslookup_is_authentic_data(void* self);
+bool q_dnslookup_is_authentic_data(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#error)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return enum QDnsLookup__Error
 ///
-int32_t q_dnslookup_error(void* self);
+int32_t q_dnslookup_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#errorString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-const char* q_dnslookup_error_string(void* self);
+const char* q_dnslookup_error_string(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#isFinished)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-bool q_dnslookup_is_finished(void* self);
+bool q_dnslookup_is_finished(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-const char* q_dnslookup_name(void* self);
+const char* q_dnslookup_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setName)
 ///
@@ -633,11 +633,11 @@ void q_dnslookup_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#type)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return enum QDnsLookup__Type
 ///
-int32_t q_dnslookup_type(void* self);
+int32_t q_dnslookup_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setType)
 ///
@@ -648,22 +648,22 @@ void q_dnslookup_set_type(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserver)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-QHostAddress* q_dnslookup_nameserver(void* self);
+QHostAddress* q_dnslookup_nameserver(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setNameserver)
 ///
 /// @param self QDnsLookup*
 /// @param nameserver QHostAddress*
 ///
-void q_dnslookup_set_nameserver(void* self, void* nameserver);
+void q_dnslookup_set_nameserver(void* self, const void* nameserver);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserverPort)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-uint16_t q_dnslookup_nameserver_port(void* self);
+uint16_t q_dnslookup_nameserver_port(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setNameserverPort)
 ///
@@ -674,11 +674,11 @@ void q_dnslookup_set_nameserver_port(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserverProtocol)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return enum QDnsLookup__Protocol
 ///
-uint8_t q_dnslookup_nameserver_protocol(void* self);
+uint8_t q_dnslookup_nameserver_protocol(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setNameserverProtocol)
 ///
@@ -693,7 +693,7 @@ void q_dnslookup_set_nameserver_protocol(void* self, uint8_t protocol);
 /// @param protocol enum QDnsLookup__Protocol
 /// @param nameserver QHostAddress*
 ///
-void q_dnslookup_set_nameserver2(void* self, uint8_t protocol, void* nameserver);
+void q_dnslookup_set_nameserver2(void* self, uint8_t protocol, const void* nameserver);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setNameserver)
 ///
@@ -701,84 +701,84 @@ void q_dnslookup_set_nameserver2(void* self, uint8_t protocol, void* nameserver)
 /// @param nameserver QHostAddress*
 /// @param port uint16_t
 ///
-void q_dnslookup_set_nameserver3(void* self, void* nameserver, uint16_t port);
+void q_dnslookup_set_nameserver3(void* self, const void* nameserver, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#canonicalNameRecords)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QDnsDomainNameRecord*
 ///
-libqt_list q_dnslookup_canonical_name_records(void* self);
+libqt_list q_dnslookup_canonical_name_records(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#hostAddressRecords)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QDnsHostAddressRecord*
 ///
-libqt_list q_dnslookup_host_address_records(void* self);
+libqt_list q_dnslookup_host_address_records(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#mailExchangeRecords)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QDnsMailExchangeRecord*
 ///
-libqt_list q_dnslookup_mail_exchange_records(void* self);
+libqt_list q_dnslookup_mail_exchange_records(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameServerRecords)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QDnsDomainNameRecord*
 ///
-libqt_list q_dnslookup_name_server_records(void* self);
+libqt_list q_dnslookup_name_server_records(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#pointerRecords)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QDnsDomainNameRecord*
 ///
-libqt_list q_dnslookup_pointer_records(void* self);
+libqt_list q_dnslookup_pointer_records(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#serviceRecords)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QDnsServiceRecord*
 ///
-libqt_list q_dnslookup_service_records(void* self);
+libqt_list q_dnslookup_service_records(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#textRecords)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QDnsTextRecord*
 ///
-libqt_list q_dnslookup_text_records(void* self);
+libqt_list q_dnslookup_text_records(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#tlsAssociationRecords)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QDnsTlsAssociationRecord*
 ///
-libqt_list q_dnslookup_tls_association_records(void* self);
+libqt_list q_dnslookup_tls_association_records(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setSslConfiguration)
 ///
 /// @param self QDnsLookup*
 /// @param sslConfiguration QSslConfiguration*
 ///
-void q_dnslookup_set_ssl_configuration(void* self, void* sslConfiguration);
+void q_dnslookup_set_ssl_configuration(void* self, const void* sslConfiguration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#sslConfiguration)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-QSslConfiguration* q_dnslookup_ssl_configuration(void* self);
+QSslConfiguration* q_dnslookup_ssl_configuration(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#isProtocolSupported)
 ///
@@ -850,14 +850,14 @@ void q_dnslookup_on_type_changed(void* self, void (*callback)(void*, int32_t));
 /// @param self QDnsLookup*
 /// @param nameserver QHostAddress*
 ///
-void q_dnslookup_nameserver_changed(void* self, void* nameserver);
+void q_dnslookup_nameserver_changed(void* self, const void* nameserver);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserverChanged)
 ///
 /// @param self QDnsLookup*
 /// @param callback void func(QDnsLookup* self, QHostAddress* nameserver)
 ///
-void q_dnslookup_on_nameserver_changed(void* self, void (*callback)(void*, void*));
+void q_dnslookup_on_nameserver_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserverPortChanged)
 ///
@@ -913,7 +913,7 @@ const char* q_dnslookup_tr3(const char* s, const char* c, int n);
 /// @param nameserver QHostAddress*
 /// @param port uint16_t
 ///
-void q_dnslookup_set_nameserver32(void* self, uint8_t protocol, void* nameserver, uint16_t port);
+void q_dnslookup_set_nameserver32(void* self, uint8_t protocol, const void* nameserver, uint16_t port);
 
 /// Inherited from QObject
 ///
@@ -921,9 +921,9 @@ void q_dnslookup_set_nameserver32(void* self, uint8_t protocol, void* nameserver
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-const char* q_dnslookup_object_name(void* self);
+const char* q_dnslookup_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -938,33 +938,33 @@ void q_dnslookup_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-bool q_dnslookup_is_widget_type(void* self);
+bool q_dnslookup_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-bool q_dnslookup_is_window_type(void* self);
+bool q_dnslookup_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-bool q_dnslookup_is_quick_item_type(void* self);
+bool q_dnslookup_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-bool q_dnslookup_signals_blocked(void* self);
+bool q_dnslookup_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -979,9 +979,9 @@ bool q_dnslookup_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-QThread* q_dnslookup_thread(void* self);
+QThread* q_dnslookup_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1032,11 +1032,11 @@ void q_dnslookup_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_dnslookup_children(void* self);
+libqt_list q_dnslookup_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1074,7 +1074,7 @@ void q_dnslookup_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_dnslookup_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_dnslookup_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1085,18 +1085,18 @@ QMetaObject__Connection* q_dnslookup_connect(void* sender, const char* signal, v
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_dnslookup_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_dnslookup_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_dnslookup_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_dnslookup_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1107,7 +1107,7 @@ QMetaObject__Connection* q_dnslookup_connect3(void* self, void* sender, const ch
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_dnslookup_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_dnslookup_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1118,24 +1118,24 @@ bool q_dnslookup_disconnect(void* sender, const char* signal, void* receiver, co
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_dnslookup_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_dnslookup_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-bool q_dnslookup_disconnect3(void* self);
+bool q_dnslookup_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param receiver QObject*
 ///
-bool q_dnslookup_disconnect4(void* self, void* receiver);
+bool q_dnslookup_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1143,23 +1143,23 @@ bool q_dnslookup_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_dnslookup_disconnect5(void* param1);
+bool q_dnslookup_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-void q_dnslookup_dump_object_tree(void* self);
+void q_dnslookup_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-void q_dnslookup_dump_object_info(void* self);
+void q_dnslookup_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1169,16 +1169,16 @@ void q_dnslookup_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_dnslookup_set_property(void* self, const char* name, void* value);
+bool q_dnslookup_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param name const char*
 ///
-QVariant* q_dnslookup_property(void* self, const char* name);
+QVariant* q_dnslookup_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1186,9 +1186,9 @@ QVariant* q_dnslookup_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-const char** q_dnslookup_dynamic_property_names(void* self);
+const char** q_dnslookup_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1202,9 +1202,9 @@ QBindingStorage* q_dnslookup_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-const QBindingStorage* q_dnslookup_binding_storage2(void* self);
+const QBindingStorage* q_dnslookup_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1227,18 +1227,18 @@ void q_dnslookup_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-QObject* q_dnslookup_parent(void* self);
+QObject* q_dnslookup_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param classname const char*
 ///
-bool q_dnslookup_inherits(void* self, const char* classname);
+bool q_dnslookup_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1278,7 +1278,7 @@ int32_t q_dnslookup_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dnslookup_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_dnslookup_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1290,59 +1290,59 @@ QMetaObject__Connection* q_dnslookup_connect5(void* sender, const char* signal, 
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dnslookup_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_dnslookup_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_dnslookup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_dnslookup_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param signal const char*
 ///
-bool q_dnslookup_disconnect1(void* self, const char* signal);
+bool q_dnslookup_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDnsLookup*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_dnslookup_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_dnslookup_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_dnslookup_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_dnslookup_disconnect23(void* self, void* receiver, const char* member);
+bool q_dnslookup_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QDnsLookup*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_dnslookup_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1538,7 +1538,7 @@ void q_dnslookup_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QDnsLookup*
 /// @param signal QMetaMethod*
 ///
-void q_dnslookup_connect_notify(void* self, void* signal);
+void q_dnslookup_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1549,7 +1549,7 @@ void q_dnslookup_connect_notify(void* self, void* signal);
 /// @param self QDnsLookup*
 /// @param signal QMetaMethod*
 ///
-void q_dnslookup_super_connect_notify(void* self, void* signal);
+void q_dnslookup_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1560,7 +1560,7 @@ void q_dnslookup_super_connect_notify(void* self, void* signal);
 /// @param self QDnsLookup*
 /// @param callback void func(QDnsLookup* self, QMetaMethod* signal)
 ///
-void q_dnslookup_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_dnslookup_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1571,7 +1571,7 @@ void q_dnslookup_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QDnsLookup*
 /// @param signal QMetaMethod*
 ///
-void q_dnslookup_disconnect_notify(void* self, void* signal);
+void q_dnslookup_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1582,7 +1582,7 @@ void q_dnslookup_disconnect_notify(void* self, void* signal);
 /// @param self QDnsLookup*
 /// @param signal QMetaMethod*
 ///
-void q_dnslookup_super_disconnect_notify(void* self, void* signal);
+void q_dnslookup_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1593,7 +1593,7 @@ void q_dnslookup_super_disconnect_notify(void* self, void* signal);
 /// @param self QDnsLookup*
 /// @param callback void func(QDnsLookup* self, QMetaMethod* signal)
 ///
-void q_dnslookup_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_dnslookup_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1601,9 +1601,9 @@ void q_dnslookup_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-QObject* q_dnslookup_sender(void* self);
+QObject* q_dnslookup_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1611,9 +1611,9 @@ QObject* q_dnslookup_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-QObject* q_dnslookup_super_sender(void* self);
+QObject* q_dnslookup_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1621,10 +1621,10 @@ QObject* q_dnslookup_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDnsLookup*
-/// @param callback QObject* func()
+/// @param self const QDnsLookup*
+/// @param callback QObject* func(QDnsLookup* self)
 ///
-void q_dnslookup_on_sender(void* self, QObject* (*callback)());
+void q_dnslookup_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1632,9 +1632,9 @@ void q_dnslookup_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-int32_t q_dnslookup_sender_signal_index(void* self);
+int32_t q_dnslookup_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1642,9 +1642,9 @@ int32_t q_dnslookup_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 ///
-int32_t q_dnslookup_super_sender_signal_index(void* self);
+int32_t q_dnslookup_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1652,10 +1652,10 @@ int32_t q_dnslookup_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDnsLookup*
-/// @param callback int32_t func()
+/// @param self const QDnsLookup*
+/// @param callback int32_t func(QDnsLookup* self)
 ///
-void q_dnslookup_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_dnslookup_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1663,10 +1663,10 @@ void q_dnslookup_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param signal const char*
 ///
-int32_t q_dnslookup_receivers(void* self, const char* signal);
+int32_t q_dnslookup_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1674,10 +1674,10 @@ int32_t q_dnslookup_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param signal const char*
 ///
-int32_t q_dnslookup_super_receivers(void* self, const char* signal);
+int32_t q_dnslookup_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1685,10 +1685,10 @@ int32_t q_dnslookup_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param callback int32_t func(QDnsLookup* self, const char* signal)
 ///
-void q_dnslookup_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_dnslookup_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1696,10 +1696,10 @@ void q_dnslookup_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param signal QMetaMethod*
 ///
-bool q_dnslookup_is_signal_connected(void* self, void* signal);
+bool q_dnslookup_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1707,10 +1707,10 @@ bool q_dnslookup_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param signal QMetaMethod*
 ///
-bool q_dnslookup_super_is_signal_connected(void* self, void* signal);
+bool q_dnslookup_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1718,10 +1718,10 @@ bool q_dnslookup_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QDnsLookup*
+/// @param self const QDnsLookup*
 /// @param callback bool func(QDnsLookup* self, QMetaMethod* signal)
 ///
-void q_dnslookup_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_dnslookup_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -386,9 +386,9 @@ KCoreConfigSkeleton__ItemString* k_textautocorrectioncore__textautocorrectionset
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-const QMetaObject* k_textautocorrectioncore__textautocorrectionsettingsbase_meta_object(void* self);
+const QMetaObject* k_textautocorrectioncore__textautocorrectionsettingsbase_meta_object(const void* self);
 
 /// Inherited from KConfigSkeleton
 ///
@@ -468,7 +468,7 @@ const char* k_textautocorrectioncore__textautocorrectionsettingsbase_tr3(const c
 /// @param reference QColor*
 /// @param defaultValue QColor*
 ///
-KConfigSkeleton__ItemColor* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_color3(void* self, const char* name, void* reference, void* defaultValue);
+KConfigSkeleton__ItemColor* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_color3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KConfigSkeleton
 ///
@@ -480,7 +480,7 @@ KConfigSkeleton__ItemColor* k_textautocorrectioncore__textautocorrectionsettings
 /// @param defaultValue QColor*
 /// @param key const char*
 ///
-KConfigSkeleton__ItemColor* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_color4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KConfigSkeleton__ItemColor* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_color4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KConfigSkeleton
 ///
@@ -491,7 +491,7 @@ KConfigSkeleton__ItemColor* k_textautocorrectioncore__textautocorrectionsettings
 /// @param reference QFont*
 /// @param defaultValue QFont*
 ///
-KConfigSkeleton__ItemFont* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_font3(void* self, const char* name, void* reference, void* defaultValue);
+KConfigSkeleton__ItemFont* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_font3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KConfigSkeleton
 ///
@@ -503,7 +503,7 @@ KConfigSkeleton__ItemFont* k_textautocorrectioncore__textautocorrectionsettingsb
 /// @param defaultValue QFont*
 /// @param key const char*
 ///
-KConfigSkeleton__ItemFont* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_font4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KConfigSkeleton__ItemFont* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_font4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -533,17 +533,17 @@ void k_textautocorrectioncore__textautocorrectionsettingsbase_read(void* self);
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isDefaults)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_defaults(void* self);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_defaults(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isSaveNeeded)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_save_needed(void* self);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_save_needed(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -560,9 +560,9 @@ void k_textautocorrectioncore__textautocorrectionsettingsbase_set_current_group(
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-const char* k_textautocorrectioncore__textautocorrectionsettingsbase_current_group(void* self);
+const char* k_textautocorrectioncore__textautocorrectionsettingsbase_current_group(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -775,19 +775,19 @@ KConfig* k_textautocorrectioncore__textautocorrectionsettingsbase_config(void* s
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#config)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-const KConfig* k_textautocorrectioncore__textautocorrectionsettingsbase_config2(void* self);
+const KConfig* k_textautocorrectioncore__textautocorrectionsettingsbase_config2(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#items)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
 /// @return libqt_list of KConfigSkeletonItem*
 ///
-libqt_list k_textautocorrectioncore__textautocorrectionsettingsbase_items(void* self);
+libqt_list k_textautocorrectioncore__textautocorrectionsettingsbase_items(const void* self);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -810,19 +810,19 @@ void k_textautocorrectioncore__textautocorrectionsettingsbase_clear_items(void* 
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#isImmutable)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param name const char*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_immutable(void* self, const char* name);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_immutable(const void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#findItem)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param name const char*
 ///
-KConfigSkeletonItem* k_textautocorrectioncore__textautocorrectionsettingsbase_find_item(void* self, const char* name);
+KConfigSkeletonItem* k_textautocorrectioncore__textautocorrectionsettingsbase_find_item(const void* self, const char* name);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -946,7 +946,7 @@ KCoreConfigSkeleton__ItemPath* k_textautocorrectioncore__textautocorrectionsetti
 /// @param reference QVariant*
 /// @param defaultValue QVariant*
 ///
-KCoreConfigSkeleton__ItemProperty* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_property3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemProperty* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_property3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -958,7 +958,7 @@ KCoreConfigSkeleton__ItemProperty* k_textautocorrectioncore__textautocorrections
 /// @param defaultValue QVariant*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemProperty* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_property4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemProperty* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_property4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1107,7 +1107,7 @@ KCoreConfigSkeleton__ItemDouble* k_textautocorrectioncore__textautocorrectionset
 /// @param reference QRect*
 /// @param defaultValue QRect*
 ///
-KCoreConfigSkeleton__ItemRect* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_rect3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemRect* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_rect3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1119,7 +1119,7 @@ KCoreConfigSkeleton__ItemRect* k_textautocorrectioncore__textautocorrectionsetti
 /// @param defaultValue QRect*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemRect* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_rect4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemRect* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_rect4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1130,7 +1130,7 @@ KCoreConfigSkeleton__ItemRect* k_textautocorrectioncore__textautocorrectionsetti
 /// @param reference QRectF*
 /// @param defaultValue QRectF*
 ///
-KCoreConfigSkeleton__ItemRectF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_rect_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemRectF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_rect_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1142,7 +1142,7 @@ KCoreConfigSkeleton__ItemRectF* k_textautocorrectioncore__textautocorrectionsett
 /// @param defaultValue QRectF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemRectF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_rect_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemRectF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_rect_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1153,7 +1153,7 @@ KCoreConfigSkeleton__ItemRectF* k_textautocorrectioncore__textautocorrectionsett
 /// @param reference QPoint*
 /// @param defaultValue QPoint*
 ///
-KCoreConfigSkeleton__ItemPoint* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_point3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemPoint* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_point3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1165,7 +1165,7 @@ KCoreConfigSkeleton__ItemPoint* k_textautocorrectioncore__textautocorrectionsett
 /// @param defaultValue QPoint*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemPoint* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_point4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemPoint* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_point4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1176,7 +1176,7 @@ KCoreConfigSkeleton__ItemPoint* k_textautocorrectioncore__textautocorrectionsett
 /// @param reference QPointF*
 /// @param defaultValue QPointF*
 ///
-KCoreConfigSkeleton__ItemPointF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_point_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemPointF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_point_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1188,7 +1188,7 @@ KCoreConfigSkeleton__ItemPointF* k_textautocorrectioncore__textautocorrectionset
 /// @param defaultValue QPointF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemPointF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_point_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemPointF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_point_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1199,7 +1199,7 @@ KCoreConfigSkeleton__ItemPointF* k_textautocorrectioncore__textautocorrectionset
 /// @param reference QSize*
 /// @param defaultValue QSize*
 ///
-KCoreConfigSkeleton__ItemSize* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_size3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemSize* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_size3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1211,7 +1211,7 @@ KCoreConfigSkeleton__ItemSize* k_textautocorrectioncore__textautocorrectionsetti
 /// @param defaultValue QSize*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemSize* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_size4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemSize* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_size4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1222,7 +1222,7 @@ KCoreConfigSkeleton__ItemSize* k_textautocorrectioncore__textautocorrectionsetti
 /// @param reference QSizeF*
 /// @param defaultValue QSizeF*
 ///
-KCoreConfigSkeleton__ItemSizeF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_size_f3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemSizeF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_size_f3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1234,7 +1234,7 @@ KCoreConfigSkeleton__ItemSizeF* k_textautocorrectioncore__textautocorrectionsett
 /// @param defaultValue QSizeF*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemSizeF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_size_f4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemSizeF* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_size_f4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1245,7 +1245,7 @@ KCoreConfigSkeleton__ItemSizeF* k_textautocorrectioncore__textautocorrectionsett
 /// @param reference QDateTime*
 /// @param defaultValue QDateTime*
 ///
-KCoreConfigSkeleton__ItemDateTime* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_date_time3(void* self, const char* name, void* reference, void* defaultValue);
+KCoreConfigSkeleton__ItemDateTime* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_date_time3(void* self, const char* name, void* reference, const void* defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1257,7 +1257,7 @@ KCoreConfigSkeleton__ItemDateTime* k_textautocorrectioncore__textautocorrections
 /// @param defaultValue QDateTime*
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemDateTime* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_date_time4(void* self, const char* name, void* reference, void* defaultValue, const char* key);
+KCoreConfigSkeleton__ItemDateTime* k_textautocorrectioncore__textautocorrectionsettingsbase_add_item_date_time4(void* self, const char* name, void* reference, const void* defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -1330,9 +1330,9 @@ bool k_textautocorrectioncore__textautocorrectionsettingsbase_event_filter(void*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-const char* k_textautocorrectioncore__textautocorrectionsettingsbase_object_name(void* self);
+const char* k_textautocorrectioncore__textautocorrectionsettingsbase_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1347,33 +1347,33 @@ void k_textautocorrectioncore__textautocorrectionsettingsbase_set_object_name(vo
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_widget_type(void* self);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_window_type(void* self);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_quick_item_type(void* self);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_signals_blocked(void* self);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1388,9 +1388,9 @@ bool k_textautocorrectioncore__textautocorrectionsettingsbase_block_signals(void
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-QThread* k_textautocorrectioncore__textautocorrectionsettingsbase_thread(void* self);
+QThread* k_textautocorrectioncore__textautocorrectionsettingsbase_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1441,11 +1441,11 @@ void k_textautocorrectioncore__textautocorrectionsettingsbase_kill_timer2(void* 
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_textautocorrectioncore__textautocorrectionsettingsbase_children(void* self);
+libqt_list k_textautocorrectioncore__textautocorrectionsettingsbase_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1483,7 +1483,7 @@ void k_textautocorrectioncore__textautocorrectionsettingsbase_remove_event_filte
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1494,18 +1494,18 @@ QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbas
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1516,7 +1516,7 @@ QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbas
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1527,24 +1527,24 @@ bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect(void* s
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect3(void* self);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param receiver QObject*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect4(void* self, void* receiver);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1552,23 +1552,23 @@ bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect4(void* 
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect5(void* param1);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-void k_textautocorrectioncore__textautocorrectionsettingsbase_dump_object_tree(void* self);
+void k_textautocorrectioncore__textautocorrectionsettingsbase_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-void k_textautocorrectioncore__textautocorrectionsettingsbase_dump_object_info(void* self);
+void k_textautocorrectioncore__textautocorrectionsettingsbase_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1578,16 +1578,16 @@ void k_textautocorrectioncore__textautocorrectionsettingsbase_dump_object_info(v
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_set_property(void* self, const char* name, void* value);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param name const char*
 ///
-QVariant* k_textautocorrectioncore__textautocorrectionsettingsbase_property(void* self, const char* name);
+QVariant* k_textautocorrectioncore__textautocorrectionsettingsbase_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1595,9 +1595,9 @@ QVariant* k_textautocorrectioncore__textautocorrectionsettingsbase_property(void
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-const char** k_textautocorrectioncore__textautocorrectionsettingsbase_dynamic_property_names(void* self);
+const char** k_textautocorrectioncore__textautocorrectionsettingsbase_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1611,9 +1611,9 @@ QBindingStorage* k_textautocorrectioncore__textautocorrectionsettingsbase_bindin
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-const QBindingStorage* k_textautocorrectioncore__textautocorrectionsettingsbase_binding_storage2(void* self);
+const QBindingStorage* k_textautocorrectioncore__textautocorrectionsettingsbase_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1636,18 +1636,18 @@ void k_textautocorrectioncore__textautocorrectionsettingsbase_on_destroyed(void*
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 ///
-QObject* k_textautocorrectioncore__textautocorrectionsettingsbase_parent(void* self);
+QObject* k_textautocorrectioncore__textautocorrectionsettingsbase_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param classname const char*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_inherits(void* self, const char* classname);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1687,7 +1687,7 @@ int32_t k_textautocorrectioncore__textautocorrectionsettingsbase_start_timer23(v
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1699,59 +1699,59 @@ QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbas
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_textautocorrectioncore__textautocorrectionsettingsbase_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param signal const char*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect1(void* self, const char* signal);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect23(void* self, void* receiver, const char* member);
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const TextAutoCorrectionCore__TextAutoCorrectionSettingsBase*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_textautocorrectioncore__textautocorrectionsettingsbase_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

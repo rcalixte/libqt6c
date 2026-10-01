@@ -5,11 +5,11 @@ QHttpHeaders* q_httpheaders_new() {
     return QHttpHeaders_New();
 }
 
-QHttpHeaders* q_httpheaders_new2(void* other) {
+QHttpHeaders* q_httpheaders_new2(const void* other) {
     return QHttpHeaders_New2((QHttpHeaders*)other);
 }
 
-void q_httpheaders_operator_assign(void* self, void* other) {
+void q_httpheaders_operator_assign(void* self, const void* other) {
     QHttpHeaders_OperatorAssign((QHttpHeaders*)self, (QHttpHeaders*)other);
 }
 
@@ -49,11 +49,11 @@ bool q_httpheaders_replace_or_append2(void* self, int32_t name, const char* newV
     return QHttpHeaders_ReplaceOrAppend2((QHttpHeaders*)self, name, newValue);
 }
 
-bool q_httpheaders_contains(void* self, const char* name) {
+bool q_httpheaders_contains(const void* self, const char* name) {
     return QHttpHeaders_Contains((QHttpHeaders*)self, name);
 }
 
-bool q_httpheaders_contains2(void* self, int32_t name) {
+bool q_httpheaders_contains2(const void* self, int32_t name) {
     return QHttpHeaders_Contains2((QHttpHeaders*)self, name);
 }
 
@@ -73,21 +73,21 @@ void q_httpheaders_remove_at(void* self, intptr_t i) {
     QHttpHeaders_RemoveAt((QHttpHeaders*)self, i);
 }
 
-char* q_httpheaders_value(void* self, const char* name) {
+char* q_httpheaders_value(const void* self, const char* name) {
     libqt_string _str = QHttpHeaders_Value((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_value2(void* self, int32_t name) {
+char* q_httpheaders_value2(const void* self, int32_t name) {
     libqt_string _str = QHttpHeaders_Value2((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_httpheaders_values(void* self, const char* name) {
+const char** q_httpheaders_values(const void* self, const char* name) {
     libqt_list _arr = QHttpHeaders_Values((QHttpHeaders*)self, name);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -104,7 +104,7 @@ const char** q_httpheaders_values(void* self, const char* name) {
     return _ret;
 }
 
-const char** q_httpheaders_values2(void* self, int32_t name) {
+const char** q_httpheaders_values2(const void* self, int32_t name) {
     libqt_list _arr = QHttpHeaders_Values2((QHttpHeaders*)self, name);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -121,35 +121,35 @@ const char** q_httpheaders_values2(void* self, int32_t name) {
     return _ret;
 }
 
-char* q_httpheaders_value_at(void* self, intptr_t i) {
+char* q_httpheaders_value_at(const void* self, intptr_t i) {
     libqt_string _str = QHttpHeaders_ValueAt((QHttpHeaders*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_name_at(void* self, intptr_t i) {
+char* q_httpheaders_name_at(const void* self, intptr_t i) {
     libqt_string _str = QHttpHeaders_NameAt((QHttpHeaders*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_combined_value(void* self, const char* name) {
+char* q_httpheaders_combined_value(const void* self, const char* name) {
     libqt_string _str = QHttpHeaders_CombinedValue((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_combined_value2(void* self, int32_t name) {
+char* q_httpheaders_combined_value2(const void* self, int32_t name) {
     libqt_string _str = QHttpHeaders_CombinedValue2((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-intptr_t q_httpheaders_size(void* self) {
+intptr_t q_httpheaders_size(const void* self) {
     return QHttpHeaders_Size((QHttpHeaders*)self);
 }
 
@@ -157,7 +157,7 @@ void q_httpheaders_reserve(void* self, intptr_t size) {
     QHttpHeaders_Reserve((QHttpHeaders*)self, size);
 }
 
-bool q_httpheaders_is_empty(void* self) {
+bool q_httpheaders_is_empty(const void* self) {
     return QHttpHeaders_IsEmpty((QHttpHeaders*)self);
 }
 
@@ -281,7 +281,7 @@ QHttpHeaders* q_httpheaders_from_multi_hash(libqt_map /* of char* to char** */ h
     return _out;
 }
 
-libqt_list /* of libqt_pair tuple of char* and char* */ q_httpheaders_to_list_of_pairs(void* self) {
+libqt_list /* of libqt_pair tuple of char* and char* */ q_httpheaders_to_list_of_pairs(const void* self) {
     libqt_list _arr = QHttpHeaders_ToListOfPairs((QHttpHeaders*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -297,7 +297,7 @@ libqt_list /* of libqt_pair tuple of char* and char* */ q_httpheaders_to_list_of
     return _arr;
 }
 
-libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
+libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(const void* self) {
     // Convert QMultiMap<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QHttpHeaders_ToMultiMap((QHttpHeaders*)self);
     libqt_map _ret;
@@ -386,7 +386,7 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_map(void* self) {
     return _ret;
 }
 
-libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
+libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(const void* self) {
     // Convert QMultiHash<QByteArray,QByteArray> to libqt_map
     libqt_map _out = QHttpHeaders_ToMultiHash((QHttpHeaders*)self);
     libqt_map _ret;
@@ -475,14 +475,14 @@ libqt_map /* of char* to char** */ q_httpheaders_to_multi_hash(void* self) {
     return _ret;
 }
 
-char* q_httpheaders_value22(void* self, const char* name, char* defaultValue) {
+char* q_httpheaders_value22(const void* self, const char* name, char* defaultValue) {
     libqt_string _str = QHttpHeaders_Value22((QHttpHeaders*)self, name, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_httpheaders_value23(void* self, int32_t name, char* defaultValue) {
+char* q_httpheaders_value23(const void* self, int32_t name, char* defaultValue) {
     libqt_string _str = QHttpHeaders_Value23((QHttpHeaders*)self, name, qstring(defaultValue));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

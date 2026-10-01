@@ -20,7 +20,7 @@ QAudioInput* q_audioinput_new();
 ///
 /// @param deviceInfo QAudioDevice*
 ///
-QAudioInput* q_audioinput_new2(void* deviceInfo);
+QAudioInput* q_audioinput_new2(const void* deviceInfo);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioinput.html)
 
@@ -37,30 +37,30 @@ QAudioInput* q_audioinput_new3(void* parent);
 /// @param deviceInfo QAudioDevice*
 /// @param parent QObject*
 ///
-QAudioInput* q_audioinput_new4(void* deviceInfo, void* parent);
+QAudioInput* q_audioinput_new4(const void* deviceInfo, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-const QMetaObject* q_audioinput_meta_object(void* self);
+const QMetaObject* q_audioinput_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAudioInput*
-/// @param callback const QMetaObject* func()
+/// @param self const QAudioInput*
+/// @param callback const QMetaObject* func(const QAudioInput* self)
 ///
-void q_audioinput_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_audioinput_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-const QMetaObject* q_audioinput_super_meta_object(void* self);
+const QMetaObject* q_audioinput_super_meta_object(const void* self);
 
 /// @param self QAudioInput*
 /// @param param1 const char*
@@ -114,28 +114,28 @@ const char* q_audioinput_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioinput.html#device)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-QAudioDevice* q_audioinput_device(void* self);
+QAudioDevice* q_audioinput_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioinput.html#volume)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-float q_audioinput_volume(void* self);
+float q_audioinput_volume(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioinput.html#isMuted)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-bool q_audioinput_is_muted(void* self);
+bool q_audioinput_is_muted(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioinput.html#setDevice)
 ///
 /// @param self QAudioInput*
 /// @param device QAudioDevice*
 ///
-void q_audioinput_set_device(void* self, void* device);
+void q_audioinput_set_device(void* self, const void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioinput.html#setVolume)
 ///
@@ -217,9 +217,9 @@ const char* q_audioinput_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-const char* q_audioinput_object_name(void* self);
+const char* q_audioinput_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -234,33 +234,33 @@ void q_audioinput_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-bool q_audioinput_is_widget_type(void* self);
+bool q_audioinput_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-bool q_audioinput_is_window_type(void* self);
+bool q_audioinput_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-bool q_audioinput_is_quick_item_type(void* self);
+bool q_audioinput_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-bool q_audioinput_signals_blocked(void* self);
+bool q_audioinput_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -275,9 +275,9 @@ bool q_audioinput_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-QThread* q_audioinput_thread(void* self);
+QThread* q_audioinput_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -328,11 +328,11 @@ void q_audioinput_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_audioinput_children(void* self);
+libqt_list q_audioinput_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -370,7 +370,7 @@ void q_audioinput_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_audioinput_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_audioinput_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -381,18 +381,18 @@ QMetaObject__Connection* q_audioinput_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_audioinput_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_audioinput_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_audioinput_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_audioinput_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -403,7 +403,7 @@ QMetaObject__Connection* q_audioinput_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_audioinput_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_audioinput_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -414,24 +414,24 @@ bool q_audioinput_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_audioinput_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_audioinput_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-bool q_audioinput_disconnect3(void* self);
+bool q_audioinput_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param receiver QObject*
 ///
-bool q_audioinput_disconnect4(void* self, void* receiver);
+bool q_audioinput_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -439,23 +439,23 @@ bool q_audioinput_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_audioinput_disconnect5(void* param1);
+bool q_audioinput_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-void q_audioinput_dump_object_tree(void* self);
+void q_audioinput_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-void q_audioinput_dump_object_info(void* self);
+void q_audioinput_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -465,16 +465,16 @@ void q_audioinput_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_audioinput_set_property(void* self, const char* name, void* value);
+bool q_audioinput_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param name const char*
 ///
-QVariant* q_audioinput_property(void* self, const char* name);
+QVariant* q_audioinput_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -482,9 +482,9 @@ QVariant* q_audioinput_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-const char** q_audioinput_dynamic_property_names(void* self);
+const char** q_audioinput_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -498,9 +498,9 @@ QBindingStorage* q_audioinput_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-const QBindingStorage* q_audioinput_binding_storage2(void* self);
+const QBindingStorage* q_audioinput_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -523,18 +523,18 @@ void q_audioinput_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-QObject* q_audioinput_parent(void* self);
+QObject* q_audioinput_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param classname const char*
 ///
-bool q_audioinput_inherits(void* self, const char* classname);
+bool q_audioinput_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -574,7 +574,7 @@ int32_t q_audioinput_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_audioinput_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_audioinput_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -586,59 +586,59 @@ QMetaObject__Connection* q_audioinput_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_audioinput_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_audioinput_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_audioinput_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_audioinput_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param signal const char*
 ///
-bool q_audioinput_disconnect1(void* self, const char* signal);
+bool q_audioinput_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAudioInput*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_audioinput_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_audioinput_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_audioinput_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_audioinput_disconnect23(void* self, void* receiver, const char* member);
+bool q_audioinput_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QAudioInput*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_audioinput_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -834,7 +834,7 @@ void q_audioinput_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QAudioInput*
 /// @param signal QMetaMethod*
 ///
-void q_audioinput_connect_notify(void* self, void* signal);
+void q_audioinput_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -845,7 +845,7 @@ void q_audioinput_connect_notify(void* self, void* signal);
 /// @param self QAudioInput*
 /// @param signal QMetaMethod*
 ///
-void q_audioinput_super_connect_notify(void* self, void* signal);
+void q_audioinput_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -856,7 +856,7 @@ void q_audioinput_super_connect_notify(void* self, void* signal);
 /// @param self QAudioInput*
 /// @param callback void func(QAudioInput* self, QMetaMethod* signal)
 ///
-void q_audioinput_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_audioinput_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -867,7 +867,7 @@ void q_audioinput_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QAudioInput*
 /// @param signal QMetaMethod*
 ///
-void q_audioinput_disconnect_notify(void* self, void* signal);
+void q_audioinput_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -878,7 +878,7 @@ void q_audioinput_disconnect_notify(void* self, void* signal);
 /// @param self QAudioInput*
 /// @param signal QMetaMethod*
 ///
-void q_audioinput_super_disconnect_notify(void* self, void* signal);
+void q_audioinput_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -889,7 +889,7 @@ void q_audioinput_super_disconnect_notify(void* self, void* signal);
 /// @param self QAudioInput*
 /// @param callback void func(QAudioInput* self, QMetaMethod* signal)
 ///
-void q_audioinput_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_audioinput_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -897,9 +897,9 @@ void q_audioinput_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-QObject* q_audioinput_sender(void* self);
+QObject* q_audioinput_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -907,9 +907,9 @@ QObject* q_audioinput_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-QObject* q_audioinput_super_sender(void* self);
+QObject* q_audioinput_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -917,10 +917,10 @@ QObject* q_audioinput_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAudioInput*
-/// @param callback QObject* func()
+/// @param self const QAudioInput*
+/// @param callback QObject* func(QAudioInput* self)
 ///
-void q_audioinput_on_sender(void* self, QObject* (*callback)());
+void q_audioinput_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -928,9 +928,9 @@ void q_audioinput_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-int32_t q_audioinput_sender_signal_index(void* self);
+int32_t q_audioinput_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -938,9 +938,9 @@ int32_t q_audioinput_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 ///
-int32_t q_audioinput_super_sender_signal_index(void* self);
+int32_t q_audioinput_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -948,10 +948,10 @@ int32_t q_audioinput_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAudioInput*
-/// @param callback int32_t func()
+/// @param self const QAudioInput*
+/// @param callback int32_t func(QAudioInput* self)
 ///
-void q_audioinput_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_audioinput_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -959,10 +959,10 @@ void q_audioinput_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param signal const char*
 ///
-int32_t q_audioinput_receivers(void* self, const char* signal);
+int32_t q_audioinput_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -970,10 +970,10 @@ int32_t q_audioinput_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param signal const char*
 ///
-int32_t q_audioinput_super_receivers(void* self, const char* signal);
+int32_t q_audioinput_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -981,10 +981,10 @@ int32_t q_audioinput_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param callback int32_t func(QAudioInput* self, const char* signal)
 ///
-void q_audioinput_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_audioinput_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -992,10 +992,10 @@ void q_audioinput_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param signal QMetaMethod*
 ///
-bool q_audioinput_is_signal_connected(void* self, void* signal);
+bool q_audioinput_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1003,10 +1003,10 @@ bool q_audioinput_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param signal QMetaMethod*
 ///
-bool q_audioinput_super_is_signal_connected(void* self, void* signal);
+bool q_audioinput_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1014,10 +1014,10 @@ bool q_audioinput_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAudioInput*
+/// @param self const QAudioInput*
 /// @param callback bool func(QAudioInput* self, QMetaMethod* signal)
 ///
-void q_audioinput_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_audioinput_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-const QMetaObject* q_screen_meta_object(void* self);
+const QMetaObject* q_screen_meta_object(const void* self);
 
 /// @param self QScreen*
 /// @param param1 const char*
@@ -40,119 +40,119 @@ const char* q_screen_tr(const char* s);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-const char* q_screen_name(void* self);
+const char* q_screen_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#manufacturer)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-const char* q_screen_manufacturer(void* self);
+const char* q_screen_manufacturer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#model)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-const char* q_screen_model(void* self);
+const char* q_screen_model(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#serialNumber)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-const char* q_screen_serial_number(void* self);
+const char* q_screen_serial_number(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#depth)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-int32_t q_screen_depth(void* self);
+int32_t q_screen_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#size)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QSize* q_screen_size(void* self);
+QSize* q_screen_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#geometry)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QRect* q_screen_geometry(void* self);
+QRect* q_screen_geometry(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#physicalSize)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QSizeF* q_screen_physical_size(void* self);
+QSizeF* q_screen_physical_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#physicalDotsPerInchX)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-double q_screen_physical_dots_per_inch_x(void* self);
+double q_screen_physical_dots_per_inch_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#physicalDotsPerInchY)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-double q_screen_physical_dots_per_inch_y(void* self);
+double q_screen_physical_dots_per_inch_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#physicalDotsPerInch)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-double q_screen_physical_dots_per_inch(void* self);
+double q_screen_physical_dots_per_inch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#logicalDotsPerInchX)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-double q_screen_logical_dots_per_inch_x(void* self);
+double q_screen_logical_dots_per_inch_x(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#logicalDotsPerInchY)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-double q_screen_logical_dots_per_inch_y(void* self);
+double q_screen_logical_dots_per_inch_y(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#logicalDotsPerInch)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-double q_screen_logical_dots_per_inch(void* self);
+double q_screen_logical_dots_per_inch(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#devicePixelRatio)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-double q_screen_device_pixel_ratio(void* self);
+double q_screen_device_pixel_ratio(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#availableSize)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QSize* q_screen_available_size(void* self);
+QSize* q_screen_available_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#availableGeometry)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QRect* q_screen_available_geometry(void* self);
+QRect* q_screen_available_geometry(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#virtualSiblings)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
 /// @return libqt_list of QScreen*
 ///
-libqt_list q_screen_virtual_siblings(void* self);
+libqt_list q_screen_virtual_siblings(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#virtualSiblingAt)
 ///
@@ -163,91 +163,91 @@ QScreen* q_screen_virtual_sibling_at(void* self, void* point);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#virtualSize)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QSize* q_screen_virtual_size(void* self);
+QSize* q_screen_virtual_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#virtualGeometry)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QRect* q_screen_virtual_geometry(void* self);
+QRect* q_screen_virtual_geometry(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#availableVirtualSize)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QSize* q_screen_available_virtual_size(void* self);
+QSize* q_screen_available_virtual_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#availableVirtualGeometry)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QRect* q_screen_available_virtual_geometry(void* self);
+QRect* q_screen_available_virtual_geometry(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#primaryOrientation)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
 /// @return enum Qt__ScreenOrientation
 ///
-int32_t q_screen_primary_orientation(void* self);
+int32_t q_screen_primary_orientation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#orientation)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
 /// @return enum Qt__ScreenOrientation
 ///
-int32_t q_screen_orientation(void* self);
+int32_t q_screen_orientation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#nativeOrientation)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
 /// @return enum Qt__ScreenOrientation
 ///
-int32_t q_screen_native_orientation(void* self);
+int32_t q_screen_native_orientation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#angleBetween)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param a enum Qt__ScreenOrientation
 /// @param b enum Qt__ScreenOrientation
 ///
-int32_t q_screen_angle_between(void* self, int32_t a, int32_t b);
+int32_t q_screen_angle_between(const void* self, int32_t a, int32_t b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#transformBetween)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param a enum Qt__ScreenOrientation
 /// @param b enum Qt__ScreenOrientation
 /// @param target QRect*
 ///
-QTransform* q_screen_transform_between(void* self, int32_t a, int32_t b, void* target);
+QTransform* q_screen_transform_between(const void* self, int32_t a, int32_t b, const void* target);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#mapBetween)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param a enum Qt__ScreenOrientation
 /// @param b enum Qt__ScreenOrientation
 /// @param rect QRect*
 ///
-QRect* q_screen_map_between(void* self, int32_t a, int32_t b, void* rect);
+QRect* q_screen_map_between(const void* self, int32_t a, int32_t b, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#isPortrait)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param orientation enum Qt__ScreenOrientation
 ///
-bool q_screen_is_portrait(void* self, int32_t orientation);
+bool q_screen_is_portrait(const void* self, int32_t orientation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#isLandscape)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param orientation enum Qt__ScreenOrientation
 ///
-bool q_screen_is_landscape(void* self, int32_t orientation);
+bool q_screen_is_landscape(const void* self, int32_t orientation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#grabWindow)
 ///
@@ -257,51 +257,51 @@ QPixmap* q_screen_grab_window(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#refreshRate)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-double q_screen_refresh_rate(void* self);
+double q_screen_refresh_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#geometryChanged)
 ///
 /// @param self QScreen*
 /// @param geometry QRect*
 ///
-void q_screen_geometry_changed(void* self, void* geometry);
+void q_screen_geometry_changed(void* self, const void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#geometryChanged)
 ///
 /// @param self QScreen*
 /// @param callback void func(QScreen* self, QRect* geometry)
 ///
-void q_screen_on_geometry_changed(void* self, void (*callback)(void*, void*));
+void q_screen_on_geometry_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#availableGeometryChanged)
 ///
 /// @param self QScreen*
 /// @param geometry QRect*
 ///
-void q_screen_available_geometry_changed(void* self, void* geometry);
+void q_screen_available_geometry_changed(void* self, const void* geometry);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#availableGeometryChanged)
 ///
 /// @param self QScreen*
 /// @param callback void func(QScreen* self, QRect* geometry)
 ///
-void q_screen_on_available_geometry_changed(void* self, void (*callback)(void*, void*));
+void q_screen_on_available_geometry_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#physicalSizeChanged)
 ///
 /// @param self QScreen*
 /// @param size QSizeF*
 ///
-void q_screen_physical_size_changed(void* self, void* size);
+void q_screen_physical_size_changed(void* self, const void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#physicalSizeChanged)
 ///
 /// @param self QScreen*
 /// @param callback void func(QScreen* self, QSizeF* size)
 ///
-void q_screen_on_physical_size_changed(void* self, void (*callback)(void*, void*));
+void q_screen_on_physical_size_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#physicalDotsPerInchChanged)
 ///
@@ -336,14 +336,14 @@ void q_screen_on_logical_dots_per_inch_changed(void* self, void (*callback)(void
 /// @param self QScreen*
 /// @param rect QRect*
 ///
-void q_screen_virtual_geometry_changed(void* self, void* rect);
+void q_screen_virtual_geometry_changed(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#virtualGeometryChanged)
 ///
 /// @param self QScreen*
 /// @param callback void func(QScreen* self, QRect* rect)
 ///
-void q_screen_on_virtual_geometry_changed(void* self, void (*callback)(void*, void*));
+void q_screen_on_virtual_geometry_changed(void* self, void (*callback)(void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qscreen.html#primaryOrientationChanged)
 ///
@@ -476,9 +476,9 @@ bool q_screen_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-const char* q_screen_object_name(void* self);
+const char* q_screen_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -493,33 +493,33 @@ void q_screen_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-bool q_screen_is_widget_type(void* self);
+bool q_screen_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-bool q_screen_is_window_type(void* self);
+bool q_screen_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-bool q_screen_is_quick_item_type(void* self);
+bool q_screen_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-bool q_screen_signals_blocked(void* self);
+bool q_screen_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -534,9 +534,9 @@ bool q_screen_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QThread* q_screen_thread(void* self);
+QThread* q_screen_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -587,11 +587,11 @@ void q_screen_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_screen_children(void* self);
+libqt_list q_screen_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -629,7 +629,7 @@ void q_screen_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_screen_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_screen_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -640,18 +640,18 @@ QMetaObject__Connection* q_screen_connect(void* sender, const char* signal, void
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_screen_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_screen_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_screen_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_screen_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -662,7 +662,7 @@ QMetaObject__Connection* q_screen_connect3(void* self, void* sender, const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_screen_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_screen_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -673,24 +673,24 @@ bool q_screen_disconnect(void* sender, const char* signal, void* receiver, const
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_screen_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_screen_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-bool q_screen_disconnect3(void* self);
+bool q_screen_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param receiver QObject*
 ///
-bool q_screen_disconnect4(void* self, void* receiver);
+bool q_screen_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -698,23 +698,23 @@ bool q_screen_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_screen_disconnect5(void* param1);
+bool q_screen_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-void q_screen_dump_object_tree(void* self);
+void q_screen_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-void q_screen_dump_object_info(void* self);
+void q_screen_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -724,16 +724,16 @@ void q_screen_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_screen_set_property(void* self, const char* name, void* value);
+bool q_screen_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param name const char*
 ///
-QVariant* q_screen_property(void* self, const char* name);
+QVariant* q_screen_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -741,9 +741,9 @@ QVariant* q_screen_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-const char** q_screen_dynamic_property_names(void* self);
+const char** q_screen_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -757,9 +757,9 @@ QBindingStorage* q_screen_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-const QBindingStorage* q_screen_binding_storage2(void* self);
+const QBindingStorage* q_screen_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -782,18 +782,18 @@ void q_screen_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 ///
-QObject* q_screen_parent(void* self);
+QObject* q_screen_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param classname const char*
 ///
-bool q_screen_inherits(void* self, const char* classname);
+bool q_screen_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -833,7 +833,7 @@ int32_t q_screen_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_screen_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_screen_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -845,59 +845,59 @@ QMetaObject__Connection* q_screen_connect5(void* sender, const char* signal, voi
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_screen_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_screen_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_screen_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_screen_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param signal const char*
 ///
-bool q_screen_disconnect1(void* self, const char* signal);
+bool q_screen_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScreen*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_screen_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QScreen*
+/// @param self const QScreen*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_screen_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_screen_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QScreen*
+/// @param self const QScreen*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_screen_disconnect23(void* self, void* receiver, const char* member);
+bool q_screen_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QScreen*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_screen_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

@@ -14,7 +14,7 @@
 ///
 /// @param other KFile*
 ///
-KFile* k_file_new(void* other);
+KFile* k_file_new(const void* other);
 
 /// [Upstream resources](https://api.kde.org/kfile.html)
 

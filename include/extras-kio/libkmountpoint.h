@@ -22,66 +22,66 @@ KMountPoint__List* k_mountpoint_current_mount_points();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 ///
-const char* k_mountpoint_mounted_from(void* self);
+const char* k_mountpoint_mounted_from(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#isOnNetwork)
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 ///
-bool k_mountpoint_is_on_network(void* self);
+bool k_mountpoint_is_on_network(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#deviceId)
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 ///
-dev_t k_mountpoint_device_id(void* self);
+dev_t k_mountpoint_device_id(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#realDeviceName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 ///
-const char* k_mountpoint_real_device_name(void* self);
+const char* k_mountpoint_real_device_name(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#mountPoint)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 ///
-const char* k_mountpoint_mount_point(void* self);
+const char* k_mountpoint_mount_point(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#mountType)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 ///
-const char* k_mountpoint_mount_type(void* self);
+const char* k_mountpoint_mount_type(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#mountOptions)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 ///
-const char** k_mountpoint_mount_options(void* self);
+const char** k_mountpoint_mount_options(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#probablySlow)
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 ///
-bool k_mountpoint_probably_slow(void* self);
+bool k_mountpoint_probably_slow(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#testFileSystemFlag)
 ///
-/// @param self KMountPoint*
+/// @param self const KMountPoint*
 /// @param flag enum KMountPoint__FileSystemFlag
 ///
-bool k_mountpoint_test_file_system_flag(void* self, int32_t flag);
+bool k_mountpoint_test_file_system_flag(const void* self, int32_t flag);
 
 /// [Upstream resources](https://api.kde.org/kmountpoint.html#possibleMountPoints)
 ///

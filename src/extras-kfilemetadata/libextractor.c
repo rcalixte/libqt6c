@@ -7,7 +7,7 @@ void k_filemetadata__extractor_extract(void* self, void* result) {
     KFileMetaData__Extractor_Extract((KFileMetaData__Extractor*)self, (KFileMetaData__ExtractionResult*)result);
 }
 
-const char** k_filemetadata__extractor_mimetypes(void* self) {
+const char** k_filemetadata__extractor_mimetypes(const void* self) {
     libqt_list _arr = KFileMetaData__Extractor_Mimetypes((KFileMetaData__Extractor*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -24,7 +24,7 @@ const char** k_filemetadata__extractor_mimetypes(void* self) {
     return _ret;
 }
 
-libqt_map /* of const char* to QVariant* */ k_filemetadata__extractor_extractor_properties(void* self) {
+libqt_map /* of const char* to QVariant* */ k_filemetadata__extractor_extractor_properties(const void* self) {
     // Convert QMap<QString,QVariant> to libqt_map
     libqt_map _out = KFileMetaData__Extractor_ExtractorProperties((KFileMetaData__Extractor*)self);
     libqt_map _ret;

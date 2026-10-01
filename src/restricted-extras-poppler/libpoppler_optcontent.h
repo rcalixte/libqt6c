@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-const QMetaObject* q_poppler__optcontentmodel_meta_object(void* self);
+const QMetaObject* q_poppler__optcontentmodel_meta_object(const void* self);
 
 /// @param self Poppler__OptContentModel*
 /// @param param1 const char*
@@ -38,41 +38,41 @@ const char* q_poppler__optcontentmodel_tr(const char* s);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* q_poppler__optcontentmodel_index(void* self, int row, int column, void* parent);
+QModelIndex* q_poppler__optcontentmodel_index(const void* self, int row, int column, const void* parent);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param child QModelIndex*
 ///
-QModelIndex* q_poppler__optcontentmodel_parent(void* self, void* child);
+QModelIndex* q_poppler__optcontentmodel_parent(const void* self, const void* child);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_poppler__optcontentmodel_row_count(void* self, void* parent);
+int32_t q_poppler__optcontentmodel_row_count(const void* self, const void* parent);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_poppler__optcontentmodel_column_count(void* self, void* parent);
+int32_t q_poppler__optcontentmodel_column_count(const void* self, const void* parent);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* q_poppler__optcontentmodel_data(void* self, void* index, int role);
+QVariant* q_poppler__optcontentmodel_data(const void* self, const void* index, int role);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
@@ -81,25 +81,25 @@ QVariant* q_poppler__optcontentmodel_data(void* self, void* index, int role);
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_poppler__optcontentmodel_set_data(void* self, void* index, void* value, int role);
+bool q_poppler__optcontentmodel_set_data(void* self, const void* index, const void* value, int role);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param index QModelIndex*
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t q_poppler__optcontentmodel_flags(void* self, void* index);
+int32_t q_poppler__optcontentmodel_flags(const void* self, const void* index);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* q_poppler__optcontentmodel_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* q_poppler__optcontentmodel_header_data(const void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1OptContentModel.html)
 ///
@@ -131,31 +131,31 @@ const char* q_poppler__optcontentmodel_tr3(const char* s, const char* c, int n);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param row int
 /// @param column int
 ///
-bool q_poppler__optcontentmodel_has_index(void* self, int row, int column);
+bool q_poppler__optcontentmodel_has_index(const void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param row int
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* q_poppler__optcontentmodel_sibling(void* self, int row, int column, void* idx);
+QModelIndex* q_poppler__optcontentmodel_sibling(const void* self, int row, int column, const void* idx);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_has_children(void* self, void* parent);
+bool q_poppler__optcontentmodel_has_children(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -167,7 +167,7 @@ bool q_poppler__optcontentmodel_has_children(void* self, void* parent);
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_poppler__optcontentmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool q_poppler__optcontentmodel_set_header_data(void* self, int section, int32_t orientation, const void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -184,12 +184,12 @@ bool q_poppler__optcontentmodel_set_header_data(void* self, int section, int32_t
 /// free(map.values);
 /// ```
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param index QModelIndex*
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_poppler__optcontentmodel_item_data(void* self, void* index);
+libqt_map q_poppler__optcontentmodel_item_data(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -199,7 +199,7 @@ libqt_map q_poppler__optcontentmodel_item_data(void* self, void* index);
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool q_poppler__optcontentmodel_set_item_data(void* self, void* index, libqt_map roles);
+bool q_poppler__optcontentmodel_set_item_data(void* self, const void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -208,7 +208,7 @@ bool q_poppler__optcontentmodel_set_item_data(void* self, void* index, libqt_map
 /// @param self Poppler__OptContentModel*
 /// @param index QModelIndex*
 ///
-bool q_poppler__optcontentmodel_clear_item_data(void* self, void* index);
+bool q_poppler__optcontentmodel_clear_item_data(void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -216,31 +216,31 @@ bool q_poppler__optcontentmodel_clear_item_data(void* self, void* index);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-const char** q_poppler__optcontentmodel_mime_types(void* self);
+const char** q_poppler__optcontentmodel_mime_types(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_poppler__optcontentmodel_mime_data(void* self, libqt_list indexes);
+QMimeData* q_poppler__optcontentmodel_mime_data(const void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_poppler__optcontentmodel_can_drop_mime_data(const void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -253,27 +253,27 @@ bool q_poppler__optcontentmodel_can_drop_mime_data(void* self, void* data, int32
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_poppler__optcontentmodel_drop_mime_data(void* self, const void* data, int32_t action, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_poppler__optcontentmodel_supported_drop_actions(void* self);
+int32_t q_poppler__optcontentmodel_supported_drop_actions(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_poppler__optcontentmodel_supported_drag_actions(void* self);
+int32_t q_poppler__optcontentmodel_supported_drag_actions(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -284,7 +284,7 @@ int32_t q_poppler__optcontentmodel_supported_drag_actions(void* self);
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_insert_rows(void* self, int row, int count, void* parent);
+bool q_poppler__optcontentmodel_insert_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -295,7 +295,7 @@ bool q_poppler__optcontentmodel_insert_rows(void* self, int row, int count, void
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_insert_columns(void* self, int column, int count, void* parent);
+bool q_poppler__optcontentmodel_insert_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -306,7 +306,7 @@ bool q_poppler__optcontentmodel_insert_columns(void* self, int column, int count
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_remove_rows(void* self, int row, int count, void* parent);
+bool q_poppler__optcontentmodel_remove_rows(void* self, int row, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -317,7 +317,7 @@ bool q_poppler__optcontentmodel_remove_rows(void* self, int row, int count, void
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_remove_columns(void* self, int column, int count, void* parent);
+bool q_poppler__optcontentmodel_remove_columns(void* self, int column, int count, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -330,7 +330,7 @@ bool q_poppler__optcontentmodel_remove_columns(void* self, int column, int count
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_poppler__optcontentmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool q_poppler__optcontentmodel_move_rows(void* self, const void* sourceParent, int sourceRow, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -343,7 +343,7 @@ bool q_poppler__optcontentmodel_move_rows(void* self, void* sourceParent, int so
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_poppler__optcontentmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool q_poppler__optcontentmodel_move_columns(void* self, const void* sourceParent, int sourceColumn, int count, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -391,7 +391,7 @@ bool q_poppler__optcontentmodel_remove_column(void* self, int column);
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_poppler__optcontentmodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
+bool q_poppler__optcontentmodel_move_row(void* self, const void* sourceParent, int sourceRow, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -403,7 +403,7 @@ bool q_poppler__optcontentmodel_move_row(void* self, void* sourceParent, int sou
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_poppler__optcontentmodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
+bool q_poppler__optcontentmodel_move_column(void* self, const void* sourceParent, int sourceColumn, const void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -412,16 +412,16 @@ bool q_poppler__optcontentmodel_move_column(void* self, void* sourceParent, int 
 /// @param self Poppler__OptContentModel*
 /// @param parent QModelIndex*
 ///
-void q_poppler__optcontentmodel_fetch_more(void* self, void* parent);
+void q_poppler__optcontentmodel_fetch_more(void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_can_fetch_more(void* self, void* parent);
+bool q_poppler__optcontentmodel_can_fetch_more(const void* self, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -437,16 +437,16 @@ void q_poppler__optcontentmodel_sort(void* self, int column, int32_t order);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* q_poppler__optcontentmodel_buddy(void* self, void* index);
+QModelIndex* q_poppler__optcontentmodel_buddy(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param start QModelIndex*
 /// @param role int
 /// @param value QVariant*
@@ -455,16 +455,16 @@ QModelIndex* q_poppler__optcontentmodel_buddy(void* self, void* index);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_poppler__optcontentmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list q_poppler__optcontentmodel_match(const void* self, const void* start, int role, const void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param index QModelIndex*
 ///
-QSize* q_poppler__optcontentmodel_span(void* self, void* index);
+QSize* q_poppler__optcontentmodel_span(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -481,30 +481,30 @@ QSize* q_poppler__optcontentmodel_span(void* self, void* index);
 /// free(map.values);
 /// ```
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map q_poppler__optcontentmodel_role_names(void* self);
+libqt_map q_poppler__optcontentmodel_role_names(const void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param index QModelIndex*
 ///
-bool q_poppler__optcontentmodel_check_index(void* self, void* index);
+bool q_poppler__optcontentmodel_check_index(const void* self, const void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void q_poppler__optcontentmodel_multi_data(void* self, void* index, void* roleDataSpan);
+void q_poppler__optcontentmodel_multi_data(const void* self, const void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -514,7 +514,7 @@ void q_poppler__optcontentmodel_multi_data(void* self, void* index, void* roleDa
 /// @param topLeft QModelIndex*
 /// @param bottomRight QModelIndex*
 ///
-void q_poppler__optcontentmodel_data_changed(void* self, void* topLeft, void* bottomRight);
+void q_poppler__optcontentmodel_data_changed(void* self, const void* topLeft, const void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -523,7 +523,7 @@ void q_poppler__optcontentmodel_data_changed(void* self, void* topLeft, void* bo
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* topLeft, QModelIndex* bottomRight)
 ///
-void q_poppler__optcontentmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
+void q_poppler__optcontentmodel_on_data_changed(void* self, void (*callback)(void*, const void*, const void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -599,12 +599,12 @@ void q_poppler__optcontentmodel_revert(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_has_index3(void* self, int row, int column, void* parent);
+bool q_poppler__optcontentmodel_has_index3(const void* self, int row, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -614,7 +614,7 @@ bool q_poppler__optcontentmodel_has_index3(void* self, int row, int column, void
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_insert_row2(void* self, int row, void* parent);
+bool q_poppler__optcontentmodel_insert_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -624,7 +624,7 @@ bool q_poppler__optcontentmodel_insert_row2(void* self, int row, void* parent);
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_insert_column2(void* self, int column, void* parent);
+bool q_poppler__optcontentmodel_insert_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -634,7 +634,7 @@ bool q_poppler__optcontentmodel_insert_column2(void* self, int column, void* par
 /// @param row int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_remove_row2(void* self, int row, void* parent);
+bool q_poppler__optcontentmodel_remove_row2(void* self, int row, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -644,17 +644,17 @@ bool q_poppler__optcontentmodel_remove_row2(void* self, int row, void* parent);
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_poppler__optcontentmodel_remove_column2(void* self, int column, void* parent);
+bool q_poppler__optcontentmodel_remove_column2(void* self, int column, const void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param index QModelIndex*
 /// @param options flag of enum QAbstractItemModel__CheckIndexOption
 ///
-bool q_poppler__optcontentmodel_check_index2(void* self, void* index, int32_t options);
+bool q_poppler__optcontentmodel_check_index2(const void* self, const void* index, int32_t options);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -665,7 +665,7 @@ bool q_poppler__optcontentmodel_check_index2(void* self, void* index, int32_t op
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void q_poppler__optcontentmodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void q_poppler__optcontentmodel_data_changed3(void* self, const void* topLeft, const void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -674,7 +674,7 @@ void q_poppler__optcontentmodel_data_changed3(void* self, void* topLeft, void* b
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list of int roles)
 ///
-void q_poppler__optcontentmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+void q_poppler__optcontentmodel_on_data_changed3(void* self, void (*callback)(void*, const void*, const void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -775,9 +775,9 @@ bool q_poppler__optcontentmodel_event_filter(void* self, void* watched, void* ev
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-const char* q_poppler__optcontentmodel_object_name(void* self);
+const char* q_poppler__optcontentmodel_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -792,33 +792,33 @@ void q_poppler__optcontentmodel_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-bool q_poppler__optcontentmodel_is_widget_type(void* self);
+bool q_poppler__optcontentmodel_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-bool q_poppler__optcontentmodel_is_window_type(void* self);
+bool q_poppler__optcontentmodel_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-bool q_poppler__optcontentmodel_is_quick_item_type(void* self);
+bool q_poppler__optcontentmodel_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-bool q_poppler__optcontentmodel_signals_blocked(void* self);
+bool q_poppler__optcontentmodel_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -833,9 +833,9 @@ bool q_poppler__optcontentmodel_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-QThread* q_poppler__optcontentmodel_thread(void* self);
+QThread* q_poppler__optcontentmodel_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -886,11 +886,11 @@ void q_poppler__optcontentmodel_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_poppler__optcontentmodel_children(void* self);
+libqt_list q_poppler__optcontentmodel_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -928,7 +928,7 @@ void q_poppler__optcontentmodel_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_poppler__optcontentmodel_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_poppler__optcontentmodel_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -939,18 +939,18 @@ QMetaObject__Connection* q_poppler__optcontentmodel_connect(void* sender, const 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_poppler__optcontentmodel_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_poppler__optcontentmodel_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_poppler__optcontentmodel_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_poppler__optcontentmodel_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -961,7 +961,7 @@ QMetaObject__Connection* q_poppler__optcontentmodel_connect3(void* self, void* s
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_poppler__optcontentmodel_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_poppler__optcontentmodel_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -972,24 +972,24 @@ bool q_poppler__optcontentmodel_disconnect(void* sender, const char* signal, voi
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_poppler__optcontentmodel_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_poppler__optcontentmodel_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-bool q_poppler__optcontentmodel_disconnect3(void* self);
+bool q_poppler__optcontentmodel_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param receiver QObject*
 ///
-bool q_poppler__optcontentmodel_disconnect4(void* self, void* receiver);
+bool q_poppler__optcontentmodel_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -997,23 +997,23 @@ bool q_poppler__optcontentmodel_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_poppler__optcontentmodel_disconnect5(void* param1);
+bool q_poppler__optcontentmodel_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-void q_poppler__optcontentmodel_dump_object_tree(void* self);
+void q_poppler__optcontentmodel_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-void q_poppler__optcontentmodel_dump_object_info(void* self);
+void q_poppler__optcontentmodel_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1023,16 +1023,16 @@ void q_poppler__optcontentmodel_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_poppler__optcontentmodel_set_property(void* self, const char* name, void* value);
+bool q_poppler__optcontentmodel_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param name const char*
 ///
-QVariant* q_poppler__optcontentmodel_property(void* self, const char* name);
+QVariant* q_poppler__optcontentmodel_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1040,9 +1040,9 @@ QVariant* q_poppler__optcontentmodel_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-const char** q_poppler__optcontentmodel_dynamic_property_names(void* self);
+const char** q_poppler__optcontentmodel_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1056,9 +1056,9 @@ QBindingStorage* q_poppler__optcontentmodel_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 ///
-const QBindingStorage* q_poppler__optcontentmodel_binding_storage2(void* self);
+const QBindingStorage* q_poppler__optcontentmodel_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1081,10 +1081,10 @@ void q_poppler__optcontentmodel_on_destroyed(void* self, void (*callback)(void*)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param classname const char*
 ///
-bool q_poppler__optcontentmodel_inherits(void* self, const char* classname);
+bool q_poppler__optcontentmodel_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1124,7 +1124,7 @@ int32_t q_poppler__optcontentmodel_start_timer23(void* self, int64_t time, int32
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_poppler__optcontentmodel_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_poppler__optcontentmodel_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1136,59 +1136,59 @@ QMetaObject__Connection* q_poppler__optcontentmodel_connect5(void* sender, const
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_poppler__optcontentmodel_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_poppler__optcontentmodel_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_poppler__optcontentmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_poppler__optcontentmodel_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param signal const char*
 ///
-bool q_poppler__optcontentmodel_disconnect1(void* self, const char* signal);
+bool q_poppler__optcontentmodel_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__OptContentModel*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_poppler__optcontentmodel_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_poppler__optcontentmodel_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_poppler__optcontentmodel_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self Poppler__OptContentModel*
+/// @param self const Poppler__OptContentModel*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_poppler__optcontentmodel_disconnect23(void* self, void* receiver, const char* member);
+bool q_poppler__optcontentmodel_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const Poppler__OptContentModel*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_poppler__optcontentmodel_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1217,7 +1217,7 @@ void q_poppler__optcontentmodel_on_destroyed1(void* self, void (*callback)(void*
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_poppler__optcontentmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_poppler__optcontentmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1228,7 +1228,7 @@ void q_poppler__optcontentmodel_on_rows_about_to_be_inserted(void* self, void (*
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_poppler__optcontentmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_poppler__optcontentmodel_on_rows_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1239,7 +1239,7 @@ void q_poppler__optcontentmodel_on_rows_inserted(void* self, void (*callback)(vo
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_poppler__optcontentmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_poppler__optcontentmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1250,7 +1250,7 @@ void q_poppler__optcontentmodel_on_rows_about_to_be_removed(void* self, void (*c
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_poppler__optcontentmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_poppler__optcontentmodel_on_rows_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1261,7 +1261,7 @@ void q_poppler__optcontentmodel_on_rows_removed(void* self, void (*callback)(voi
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_poppler__optcontentmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_poppler__optcontentmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1272,7 +1272,7 @@ void q_poppler__optcontentmodel_on_columns_about_to_be_inserted(void* self, void
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_poppler__optcontentmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
+void q_poppler__optcontentmodel_on_columns_inserted(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1283,7 +1283,7 @@ void q_poppler__optcontentmodel_on_columns_inserted(void* self, void (*callback)
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_poppler__optcontentmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_poppler__optcontentmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1294,7 +1294,7 @@ void q_poppler__optcontentmodel_on_columns_about_to_be_removed(void* self, void 
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* parent, int first, int last)
 ///
-void q_poppler__optcontentmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
+void q_poppler__optcontentmodel_on_columns_removed(void* self, void (*callback)(void*, const void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1327,7 +1327,7 @@ void q_poppler__optcontentmodel_on_model_reset(void* self, void (*callback)(void
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void q_poppler__optcontentmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_poppler__optcontentmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1338,7 +1338,7 @@ void q_poppler__optcontentmodel_on_rows_about_to_be_moved(void* self, void (*cal
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationRow)
 ///
-void q_poppler__optcontentmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_poppler__optcontentmodel_on_rows_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1349,7 +1349,7 @@ void q_poppler__optcontentmodel_on_rows_moved(void* self, void (*callback)(void*
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void q_poppler__optcontentmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_poppler__optcontentmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1360,7 +1360,7 @@ void q_poppler__optcontentmodel_on_columns_about_to_be_moved(void* self, void (*
 /// @param self Poppler__OptContentModel*
 /// @param callback void func(Poppler__OptContentModel* self, QModelIndex* sourceParent, int sourceStart, int sourceEnd, QModelIndex* destinationParent, int destinationColumn)
 ///
-void q_poppler__optcontentmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
+void q_poppler__optcontentmodel_on_columns_moved(void* self, void (*callback)(void*, const void*, int, int, const void*, int));
 
 /// Inherited from QObject
 ///

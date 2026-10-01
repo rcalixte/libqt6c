@@ -5,7 +5,7 @@ QDeadlineTimer* q_deadlinetimer_new() {
     return QDeadlineTimer_New();
 }
 
-QDeadlineTimer* q_deadlinetimer_new2(void* other) {
+QDeadlineTimer* q_deadlinetimer_new2(const void* other) {
     return QDeadlineTimer_New2((QDeadlineTimer*)other);
 }
 
@@ -25,7 +25,7 @@ QDeadlineTimer* q_deadlinetimer_new6(int64_t msecs) {
     return QDeadlineTimer_New6(msecs);
 }
 
-QDeadlineTimer* q_deadlinetimer_new7(void* param1) {
+QDeadlineTimer* q_deadlinetimer_new7(const void* param1) {
     return QDeadlineTimer_New7((QDeadlineTimer*)param1);
 }
 
@@ -49,15 +49,15 @@ void q_deadlinetimer_swap(void* self, void* other) {
     QDeadlineTimer_Swap((QDeadlineTimer*)self, (QDeadlineTimer*)other);
 }
 
-bool q_deadlinetimer_is_forever(void* self) {
+bool q_deadlinetimer_is_forever(const void* self) {
     return QDeadlineTimer_IsForever((QDeadlineTimer*)self);
 }
 
-bool q_deadlinetimer_has_expired(void* self) {
+bool q_deadlinetimer_has_expired(const void* self) {
     return QDeadlineTimer_HasExpired((QDeadlineTimer*)self);
 }
 
-int32_t q_deadlinetimer_timer_type(void* self) {
+int32_t q_deadlinetimer_timer_type(const void* self) {
     return QDeadlineTimer_TimerType((QDeadlineTimer*)self);
 }
 
@@ -65,11 +65,11 @@ void q_deadlinetimer_set_timer_type(void* self, int32_t type) {
     QDeadlineTimer_SetTimerType((QDeadlineTimer*)self, type);
 }
 
-int64_t q_deadlinetimer_remaining_time(void* self) {
+int64_t q_deadlinetimer_remaining_time(const void* self) {
     return QDeadlineTimer_RemainingTime((QDeadlineTimer*)self);
 }
 
-int64_t q_deadlinetimer_remaining_time_n_secs(void* self) {
+int64_t q_deadlinetimer_remaining_time_n_secs(const void* self) {
     return QDeadlineTimer_RemainingTimeNSecs((QDeadlineTimer*)self);
 }
 
@@ -81,11 +81,11 @@ void q_deadlinetimer_set_precise_remaining_time(void* self, int64_t secs) {
     QDeadlineTimer_SetPreciseRemainingTime((QDeadlineTimer*)self, secs);
 }
 
-int64_t q_deadlinetimer_deadline(void* self) {
+int64_t q_deadlinetimer_deadline(const void* self) {
     return QDeadlineTimer_Deadline((QDeadlineTimer*)self);
 }
 
-int64_t q_deadlinetimer_deadline_n_secs(void* self) {
+int64_t q_deadlinetimer_deadline_n_secs(const void* self) {
     return QDeadlineTimer_DeadlineNSecs((QDeadlineTimer*)self);
 }
 
@@ -113,11 +113,11 @@ QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, int64_t msecs)
     return QDeadlineTimer_OperatorMinusAssign((QDeadlineTimer*)self, msecs);
 }
 
-int64_t q_deadlinetimer_remaining_time_as_duration(void* self) {
+int64_t q_deadlinetimer_remaining_time_as_duration(const void* self) {
     return QDeadlineTimer_RemainingTimeAsDuration((QDeadlineTimer*)self);
 }
 
-void q_deadlinetimer_operator_assign(void* self, void* param1) {
+void q_deadlinetimer_operator_assign(void* self, const void* param1) {
     QDeadlineTimer_OperatorAssign((QDeadlineTimer*)self, (QDeadlineTimer*)param1);
 }
 

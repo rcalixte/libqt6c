@@ -46,17 +46,17 @@ void q_scicommandset_clear_alternate_keys(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommandSet.html)
 ///
-/// @param self QsciCommandSet*
+/// @param self const QsciCommandSet*
 /// @param key int
 ///
-QsciCommand* q_scicommandset_bound_to(void* self, int key);
+QsciCommand* q_scicommandset_bound_to(const void* self, int key);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommandSet.html)
 ///
-/// @param self QsciCommandSet*
+/// @param self const QsciCommandSet*
 /// @param command enum QsciCommand__Command
 ///
-QsciCommand* q_scicommandset_find(void* self, int32_t command);
+QsciCommand* q_scicommandset_find(const void* self, int32_t command);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommandSet.html)
 ///

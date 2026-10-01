@@ -27,11 +27,11 @@ QFont* q_font_new3(const char* families[static 1]) {
     return _out;
 }
 
-QFont* q_font_new4(void* font, void* pd) {
+QFont* q_font_new4(const void* font, const void* pd) {
     return QFont_New4((QFont*)font, (QPaintDevice*)pd);
 }
 
-QFont* q_font_new5(void* font) {
+QFont* q_font_new5(const void* font) {
     return QFont_New5((QFont*)font);
 }
 
@@ -99,7 +99,7 @@ void q_font_swap(void* self, void* other) {
     QFont_Swap((QFont*)self, (QFont*)other);
 }
 
-const char* q_font_family(void* self) {
+const char* q_font_family(const void* self) {
     libqt_string _str = QFont_Family((QFont*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -110,7 +110,7 @@ void q_font_set_family(void* self, const char* family) {
     QFont_SetFamily((QFont*)self, qstring(family));
 }
 
-const char** q_font_families(void* self) {
+const char** q_font_families(const void* self) {
     libqt_list _arr = QFont_Families((QFont*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -141,7 +141,7 @@ void q_font_set_families(void* self, const char* families[static 1]) {
     free(families_qstr);
 }
 
-const char* q_font_style_name(void* self) {
+const char* q_font_style_name(const void* self) {
     libqt_string _str = QFont_StyleName((QFont*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -152,7 +152,7 @@ void q_font_set_style_name(void* self, const char* styleName) {
     QFont_SetStyleName((QFont*)self, qstring(styleName));
 }
 
-int32_t q_font_point_size(void* self) {
+int32_t q_font_point_size(const void* self) {
     return QFont_PointSize((QFont*)self);
 }
 
@@ -160,7 +160,7 @@ void q_font_set_point_size(void* self, int pointSize) {
     QFont_SetPointSize((QFont*)self, pointSize);
 }
 
-double q_font_point_size_f(void* self) {
+double q_font_point_size_f(const void* self) {
     return QFont_PointSizeF((QFont*)self);
 }
 
@@ -168,7 +168,7 @@ void q_font_set_point_size_f(void* self, double pointSizeF) {
     QFont_SetPointSizeF((QFont*)self, pointSizeF);
 }
 
-int32_t q_font_pixel_size(void* self) {
+int32_t q_font_pixel_size(const void* self) {
     return QFont_PixelSize((QFont*)self);
 }
 
@@ -176,7 +176,7 @@ void q_font_set_pixel_size(void* self, int pixelSize) {
     QFont_SetPixelSize((QFont*)self, pixelSize);
 }
 
-int32_t q_font_weight(void* self) {
+int32_t q_font_weight(const void* self) {
     return QFont_Weight((QFont*)self);
 }
 
@@ -184,7 +184,7 @@ void q_font_set_weight(void* self, int32_t weight) {
     QFont_SetWeight((QFont*)self, weight);
 }
 
-bool q_font_bold(void* self) {
+bool q_font_bold(const void* self) {
     return QFont_Bold((QFont*)self);
 }
 
@@ -196,11 +196,11 @@ void q_font_set_style(void* self, int32_t style) {
     QFont_SetStyle((QFont*)self, style);
 }
 
-int32_t q_font_style(void* self) {
+int32_t q_font_style(const void* self) {
     return QFont_Style((QFont*)self);
 }
 
-bool q_font_italic(void* self) {
+bool q_font_italic(const void* self) {
     return QFont_Italic((QFont*)self);
 }
 
@@ -208,7 +208,7 @@ void q_font_set_italic(void* self, bool b) {
     QFont_SetItalic((QFont*)self, b);
 }
 
-bool q_font_underline(void* self) {
+bool q_font_underline(const void* self) {
     return QFont_Underline((QFont*)self);
 }
 
@@ -216,7 +216,7 @@ void q_font_set_underline(void* self, bool underline) {
     QFont_SetUnderline((QFont*)self, underline);
 }
 
-bool q_font_overline(void* self) {
+bool q_font_overline(const void* self) {
     return QFont_Overline((QFont*)self);
 }
 
@@ -224,7 +224,7 @@ void q_font_set_overline(void* self, bool overline) {
     QFont_SetOverline((QFont*)self, overline);
 }
 
-bool q_font_strike_out(void* self) {
+bool q_font_strike_out(const void* self) {
     return QFont_StrikeOut((QFont*)self);
 }
 
@@ -232,7 +232,7 @@ void q_font_set_strike_out(void* self, bool strikeOut) {
     QFont_SetStrikeOut((QFont*)self, strikeOut);
 }
 
-bool q_font_fixed_pitch(void* self) {
+bool q_font_fixed_pitch(const void* self) {
     return QFont_FixedPitch((QFont*)self);
 }
 
@@ -240,7 +240,7 @@ void q_font_set_fixed_pitch(void* self, bool fixedPitch) {
     QFont_SetFixedPitch((QFont*)self, fixedPitch);
 }
 
-bool q_font_kerning(void* self) {
+bool q_font_kerning(const void* self) {
     return QFont_Kerning((QFont*)self);
 }
 
@@ -248,11 +248,11 @@ void q_font_set_kerning(void* self, bool kerning) {
     QFont_SetKerning((QFont*)self, kerning);
 }
 
-int32_t q_font_style_hint(void* self) {
+int32_t q_font_style_hint(const void* self) {
     return QFont_StyleHint((QFont*)self);
 }
 
-int32_t q_font_style_strategy(void* self) {
+int32_t q_font_style_strategy(const void* self) {
     return QFont_StyleStrategy((QFont*)self);
 }
 
@@ -264,7 +264,7 @@ void q_font_set_style_strategy(void* self, int32_t s) {
     QFont_SetStyleStrategy((QFont*)self, s);
 }
 
-int32_t q_font_stretch(void* self) {
+int32_t q_font_stretch(const void* self) {
     return QFont_Stretch((QFont*)self);
 }
 
@@ -272,11 +272,11 @@ void q_font_set_stretch(void* self, int stretch) {
     QFont_SetStretch((QFont*)self, stretch);
 }
 
-double q_font_letter_spacing(void* self) {
+double q_font_letter_spacing(const void* self) {
     return QFont_LetterSpacing((QFont*)self);
 }
 
-int32_t q_font_letter_spacing_type(void* self) {
+int32_t q_font_letter_spacing_type(const void* self) {
     return QFont_LetterSpacingType((QFont*)self);
 }
 
@@ -284,7 +284,7 @@ void q_font_set_letter_spacing(void* self, int32_t type, double spacing) {
     QFont_SetLetterSpacing((QFont*)self, type, spacing);
 }
 
-double q_font_word_spacing(void* self) {
+double q_font_word_spacing(const void* self) {
     return QFont_WordSpacing((QFont*)self);
 }
 
@@ -296,7 +296,7 @@ void q_font_set_capitalization(void* self, int32_t capitalization) {
     QFont_SetCapitalization((QFont*)self, capitalization);
 }
 
-int32_t q_font_capitalization(void* self) {
+int32_t q_font_capitalization(const void* self) {
     return QFont_Capitalization((QFont*)self);
 }
 
@@ -304,7 +304,7 @@ void q_font_set_hinting_preference(void* self, int32_t hintingPreference) {
     QFont_SetHintingPreference((QFont*)self, hintingPreference);
 }
 
-int32_t q_font_hinting_preference(void* self) {
+int32_t q_font_hinting_preference(const void* self) {
     return QFont_HintingPreference((QFont*)self);
 }
 
@@ -316,15 +316,15 @@ void q_font_unset_feature(void* self, void* tag) {
     QFont_UnsetFeature((QFont*)self, (QFont__Tag*)tag);
 }
 
-uint32_t q_font_feature_value(void* self, void* tag) {
+uint32_t q_font_feature_value(const void* self, void* tag) {
     return QFont_FeatureValue((QFont*)self, (QFont__Tag*)tag);
 }
 
-bool q_font_is_feature_set(void* self, void* tag) {
+bool q_font_is_feature_set(const void* self, void* tag) {
     return QFont_IsFeatureSet((QFont*)self, (QFont__Tag*)tag);
 }
 
-libqt_list /* of QFont__Tag* */ q_font_feature_tags(void* self) {
+libqt_list /* of QFont__Tag* */ q_font_feature_tags(const void* self) {
     libqt_list _arr = QFont_FeatureTags((QFont*)self);
     return _arr;
 }
@@ -341,11 +341,11 @@ void q_font_unset_variable_axis(void* self, void* tag) {
     QFont_UnsetVariableAxis((QFont*)self, (QFont__Tag*)tag);
 }
 
-bool q_font_is_variable_axis_set(void* self, void* tag) {
+bool q_font_is_variable_axis_set(const void* self, void* tag) {
     return QFont_IsVariableAxisSet((QFont*)self, (QFont__Tag*)tag);
 }
 
-float q_font_variable_axis_value(void* self, void* tag) {
+float q_font_variable_axis_value(const void* self, void* tag) {
     return QFont_VariableAxisValue((QFont*)self, (QFont__Tag*)tag);
 }
 
@@ -353,47 +353,47 @@ void q_font_clear_variable_axes(void* self) {
     QFont_ClearVariableAxes((QFont*)self);
 }
 
-libqt_list /* of QFont__Tag* */ q_font_variable_axis_tags(void* self) {
+libqt_list /* of QFont__Tag* */ q_font_variable_axis_tags(const void* self) {
     libqt_list _arr = QFont_VariableAxisTags((QFont*)self);
     return _arr;
 }
 
-bool q_font_exact_match(void* self) {
+bool q_font_exact_match(const void* self) {
     return QFont_ExactMatch((QFont*)self);
 }
 
-void q_font_operator_assign(void* self, void* param1) {
+void q_font_operator_assign(void* self, const void* param1) {
     QFont_OperatorAssign((QFont*)self, (QFont*)param1);
 }
 
-bool q_font_operator_equal(void* self, void* param1) {
+bool q_font_operator_equal(const void* self, const void* param1) {
     return QFont_OperatorEqual((QFont*)self, (QFont*)param1);
 }
 
-bool q_font_operator_not_equal(void* self, void* param1) {
+bool q_font_operator_not_equal(const void* self, const void* param1) {
     return QFont_OperatorNotEqual((QFont*)self, (QFont*)param1);
 }
 
-bool q_font_operator_lesser(void* self, void* param1) {
+bool q_font_operator_lesser(const void* self, const void* param1) {
     return QFont_OperatorLesser((QFont*)self, (QFont*)param1);
 }
 
-QVariant* q_font_to_q_variant(void* self) {
+QVariant* q_font_to_q_variant(const void* self) {
     return QFont_ToQVariant((QFont*)self);
 }
 
-bool q_font_is_copy_of(void* self, void* param1) {
+bool q_font_is_copy_of(const void* self, const void* param1) {
     return QFont_IsCopyOf((QFont*)self, (QFont*)param1);
 }
 
-const char* q_font_key(void* self) {
+const char* q_font_key(const void* self) {
     libqt_string _str = QFont_Key((QFont*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_font_to_string(void* self) {
+const char* q_font_to_string(const void* self) {
     libqt_string _str = QFont_ToString((QFont*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -479,18 +479,18 @@ void q_font_cache_statistics() {
     QFont_CacheStatistics();
 }
 
-const char* q_font_default_family(void* self) {
+const char* q_font_default_family(const void* self) {
     libqt_string _str = QFont_DefaultFamily((QFont*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QFont* q_font_resolve(void* self, void* param1) {
+QFont* q_font_resolve(const void* self, const void* param1) {
     return QFont_Resolve((QFont*)self, (QFont*)param1);
 }
 
-uint32_t q_font_resolve_mask(void* self) {
+uint32_t q_font_resolve_mask(const void* self) {
     return QFont_ResolveMask((QFont*)self);
 }
 
@@ -502,7 +502,7 @@ void q_font_set_legacy_weight(void* self, int legacyWeight) {
     QFont_SetLegacyWeight((QFont*)self, legacyWeight);
 }
 
-int32_t q_font_legacy_weight(void* self) {
+int32_t q_font_legacy_weight(const void* self) {
     return QFont_LegacyWeight((QFont*)self);
 }
 
@@ -514,7 +514,7 @@ void q_font_delete(void* self) {
     QFont_Delete((QFont*)(self));
 }
 
-size_t q_qfont_h_q_hash(void* font, size_t seed) {
+size_t q_qfont_h_q_hash(const void* font, size_t seed) {
     return qfont_h_QHash((QFont*)font, seed);
 }
 
@@ -522,7 +522,7 @@ QFont__Tag* q_font__tag_new() {
     return QFont__Tag_New();
 }
 
-QFont__Tag* q_font__tag_new2(void* other) {
+QFont__Tag* q_font__tag_new2(const void* other) {
     return QFont__Tag_New2((QFont__Tag*)other);
 }
 
@@ -530,7 +530,7 @@ QFont__Tag* q_font__tag_new3(void* other) {
     return QFont__Tag_New3((QFont__Tag*)other);
 }
 
-QFont__Tag* q_font__tag_new4(void* param1) {
+QFont__Tag* q_font__tag_new4(const void* param1) {
     return QFont__Tag_New4((QFont__Tag*)param1);
 }
 
@@ -542,15 +542,15 @@ void q_font__tag_move_assign(void* self, void* other) {
     QFont__Tag_MoveAssign((QFont__Tag*)self, (QFont__Tag*)other);
 }
 
-bool q_font__tag_is_valid(void* self) {
+bool q_font__tag_is_valid(const void* self) {
     return QFont__Tag_IsValid((QFont__Tag*)self);
 }
 
-uint32_t q_font__tag_value(void* self) {
+uint32_t q_font__tag_value(const void* self) {
     return QFont__Tag_Value((QFont__Tag*)self);
 }
 
-char* q_font__tag_to_string(void* self) {
+char* q_font__tag_to_string(const void* self) {
     libqt_string _str = QFont__Tag_ToString((QFont__Tag*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -565,7 +565,7 @@ QFont__Tag* q_font__tag_from_string(const char* view) {
     return QFont__Tag_FromString(view);
 }
 
-void q_font__tag_operator_assign(void* self, void* param1) {
+void q_font__tag_operator_assign(void* self, const void* param1) {
     QFont__Tag_OperatorAssign((QFont__Tag*)self, (QFont__Tag*)param1);
 }
 

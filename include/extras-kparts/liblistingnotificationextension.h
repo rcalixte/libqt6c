@@ -18,26 +18,26 @@ KParts__ListingNotificationExtension* k_parts__listingnotificationextension_new(
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-const QMetaObject* k_parts__listingnotificationextension_meta_object(void* self);
+const QMetaObject* k_parts__listingnotificationextension_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KParts__ListingNotificationExtension*
-/// @param callback const QMetaObject* func()
+/// @param self const KParts__ListingNotificationExtension*
+/// @param callback const QMetaObject* func(const KParts__ListingNotificationExtension* self)
 ///
-void k_parts__listingnotificationextension_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_parts__listingnotificationextension_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-const QMetaObject* k_parts__listingnotificationextension_super_meta_object(void* self);
+const QMetaObject* k_parts__listingnotificationextension_super_meta_object(const void* self);
 
 /// @param self KParts__ListingNotificationExtension*
 /// @param param1 const char*
@@ -91,30 +91,30 @@ const char* k_parts__listingnotificationextension_tr(const char* s);
 
 /// [Upstream resources](https://api.kde.org/kparts-listingnotificationextension.html#supportedNotificationEventTypes)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
 /// @return flag of enum KParts__ListingNotificationExtension__NotificationEventType
 ///
-int32_t k_parts__listingnotificationextension_supported_notification_event_types(void* self);
+int32_t k_parts__listingnotificationextension_supported_notification_event_types(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-listingnotificationextension.html#supportedNotificationEventTypes)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KParts__ListingNotificationExtension*
-/// @param callback int32_t func()
+/// @param self const KParts__ListingNotificationExtension*
+/// @param callback int32_t func(const KParts__ListingNotificationExtension* self)
 ///
-void k_parts__listingnotificationextension_on_supported_notification_event_types(void* self, int32_t (*callback)());
+void k_parts__listingnotificationextension_on_supported_notification_event_types(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://api.kde.org/kparts-listingnotificationextension.html#supportedNotificationEventTypes)
 ///
 /// Base class method implementation
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
 /// @return flag of enum KParts__ListingNotificationExtension__NotificationEventType
 ///
-int32_t k_parts__listingnotificationextension_super_supported_notification_event_types(void* self);
+int32_t k_parts__listingnotificationextension_super_supported_notification_event_types(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-listingnotificationextension.html#childObject)
 ///
@@ -128,14 +128,14 @@ KParts__ListingNotificationExtension* k_parts__listingnotificationextension_chil
 /// @param param1 enum KParts__ListingNotificationExtension__NotificationEventType
 /// @param param2 KFileItemList*
 ///
-void k_parts__listingnotificationextension_listing_event(void* self, int32_t param1, void* param2);
+void k_parts__listingnotificationextension_listing_event(void* self, int32_t param1, const void* param2);
 
 /// [Upstream resources](https://api.kde.org/kparts-listingnotificationextension.html#listingEvent)
 ///
 /// @param self KParts__ListingNotificationExtension*
 /// @param callback void func(KParts__ListingNotificationExtension* self, enum KParts__ListingNotificationExtension__NotificationEventType param1, KFileItemList* param2)
 ///
-void k_parts__listingnotificationextension_on_listing_event(void* self, void (*callback)(void*, int32_t, void*));
+void k_parts__listingnotificationextension_on_listing_event(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -162,9 +162,9 @@ const char* k_parts__listingnotificationextension_tr3(const char* s, const char*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-const char* k_parts__listingnotificationextension_object_name(void* self);
+const char* k_parts__listingnotificationextension_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -179,33 +179,33 @@ void k_parts__listingnotificationextension_set_object_name(void* self, const cha
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-bool k_parts__listingnotificationextension_is_widget_type(void* self);
+bool k_parts__listingnotificationextension_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-bool k_parts__listingnotificationextension_is_window_type(void* self);
+bool k_parts__listingnotificationextension_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-bool k_parts__listingnotificationextension_is_quick_item_type(void* self);
+bool k_parts__listingnotificationextension_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-bool k_parts__listingnotificationextension_signals_blocked(void* self);
+bool k_parts__listingnotificationextension_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -220,9 +220,9 @@ bool k_parts__listingnotificationextension_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-QThread* k_parts__listingnotificationextension_thread(void* self);
+QThread* k_parts__listingnotificationextension_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -273,11 +273,11 @@ void k_parts__listingnotificationextension_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_parts__listingnotificationextension_children(void* self);
+libqt_list k_parts__listingnotificationextension_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -315,7 +315,7 @@ void k_parts__listingnotificationextension_remove_event_filter(void* self, void*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_parts__listingnotificationextension_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_parts__listingnotificationextension_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -326,18 +326,18 @@ QMetaObject__Connection* k_parts__listingnotificationextension_connect(void* sen
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_parts__listingnotificationextension_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_parts__listingnotificationextension_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_parts__listingnotificationextension_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_parts__listingnotificationextension_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -348,7 +348,7 @@ QMetaObject__Connection* k_parts__listingnotificationextension_connect3(void* se
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_parts__listingnotificationextension_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_parts__listingnotificationextension_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -359,24 +359,24 @@ bool k_parts__listingnotificationextension_disconnect(void* sender, const char* 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_parts__listingnotificationextension_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_parts__listingnotificationextension_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-bool k_parts__listingnotificationextension_disconnect3(void* self);
+bool k_parts__listingnotificationextension_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param receiver QObject*
 ///
-bool k_parts__listingnotificationextension_disconnect4(void* self, void* receiver);
+bool k_parts__listingnotificationextension_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -384,23 +384,23 @@ bool k_parts__listingnotificationextension_disconnect4(void* self, void* receive
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_parts__listingnotificationextension_disconnect5(void* param1);
+bool k_parts__listingnotificationextension_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-void k_parts__listingnotificationextension_dump_object_tree(void* self);
+void k_parts__listingnotificationextension_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-void k_parts__listingnotificationextension_dump_object_info(void* self);
+void k_parts__listingnotificationextension_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -410,16 +410,16 @@ void k_parts__listingnotificationextension_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_parts__listingnotificationextension_set_property(void* self, const char* name, void* value);
+bool k_parts__listingnotificationextension_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param name const char*
 ///
-QVariant* k_parts__listingnotificationextension_property(void* self, const char* name);
+QVariant* k_parts__listingnotificationextension_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -427,9 +427,9 @@ QVariant* k_parts__listingnotificationextension_property(void* self, const char*
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-const char** k_parts__listingnotificationextension_dynamic_property_names(void* self);
+const char** k_parts__listingnotificationextension_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -443,9 +443,9 @@ QBindingStorage* k_parts__listingnotificationextension_binding_storage(void* sel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-const QBindingStorage* k_parts__listingnotificationextension_binding_storage2(void* self);
+const QBindingStorage* k_parts__listingnotificationextension_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -468,18 +468,18 @@ void k_parts__listingnotificationextension_on_destroyed(void* self, void (*callb
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-QObject* k_parts__listingnotificationextension_parent(void* self);
+QObject* k_parts__listingnotificationextension_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param classname const char*
 ///
-bool k_parts__listingnotificationextension_inherits(void* self, const char* classname);
+bool k_parts__listingnotificationextension_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -519,7 +519,7 @@ int32_t k_parts__listingnotificationextension_start_timer23(void* self, int64_t 
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_parts__listingnotificationextension_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_parts__listingnotificationextension_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -531,59 +531,59 @@ QMetaObject__Connection* k_parts__listingnotificationextension_connect5(void* se
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_parts__listingnotificationextension_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_parts__listingnotificationextension_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_parts__listingnotificationextension_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_parts__listingnotificationextension_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param signal const char*
 ///
-bool k_parts__listingnotificationextension_disconnect1(void* self, const char* signal);
+bool k_parts__listingnotificationextension_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__ListingNotificationExtension*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_parts__listingnotificationextension_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_parts__listingnotificationextension_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_parts__listingnotificationextension_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_parts__listingnotificationextension_disconnect23(void* self, void* receiver, const char* member);
+bool k_parts__listingnotificationextension_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KParts__ListingNotificationExtension*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_parts__listingnotificationextension_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -779,7 +779,7 @@ void k_parts__listingnotificationextension_on_custom_event(void* self, void (*ca
 /// @param self KParts__ListingNotificationExtension*
 /// @param signal QMetaMethod*
 ///
-void k_parts__listingnotificationextension_connect_notify(void* self, void* signal);
+void k_parts__listingnotificationextension_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -790,7 +790,7 @@ void k_parts__listingnotificationextension_connect_notify(void* self, void* sign
 /// @param self KParts__ListingNotificationExtension*
 /// @param signal QMetaMethod*
 ///
-void k_parts__listingnotificationextension_super_connect_notify(void* self, void* signal);
+void k_parts__listingnotificationextension_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -801,7 +801,7 @@ void k_parts__listingnotificationextension_super_connect_notify(void* self, void
 /// @param self KParts__ListingNotificationExtension*
 /// @param callback void func(KParts__ListingNotificationExtension* self, QMetaMethod* signal)
 ///
-void k_parts__listingnotificationextension_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_parts__listingnotificationextension_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -812,7 +812,7 @@ void k_parts__listingnotificationextension_on_connect_notify(void* self, void (*
 /// @param self KParts__ListingNotificationExtension*
 /// @param signal QMetaMethod*
 ///
-void k_parts__listingnotificationextension_disconnect_notify(void* self, void* signal);
+void k_parts__listingnotificationextension_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -823,7 +823,7 @@ void k_parts__listingnotificationextension_disconnect_notify(void* self, void* s
 /// @param self KParts__ListingNotificationExtension*
 /// @param signal QMetaMethod*
 ///
-void k_parts__listingnotificationextension_super_disconnect_notify(void* self, void* signal);
+void k_parts__listingnotificationextension_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -834,7 +834,7 @@ void k_parts__listingnotificationextension_super_disconnect_notify(void* self, v
 /// @param self KParts__ListingNotificationExtension*
 /// @param callback void func(KParts__ListingNotificationExtension* self, QMetaMethod* signal)
 ///
-void k_parts__listingnotificationextension_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_parts__listingnotificationextension_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -842,9 +842,9 @@ void k_parts__listingnotificationextension_on_disconnect_notify(void* self, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-QObject* k_parts__listingnotificationextension_sender(void* self);
+QObject* k_parts__listingnotificationextension_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -852,9 +852,9 @@ QObject* k_parts__listingnotificationextension_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-QObject* k_parts__listingnotificationextension_super_sender(void* self);
+QObject* k_parts__listingnotificationextension_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -862,10 +862,10 @@ QObject* k_parts__listingnotificationextension_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
-/// @param callback QObject* func()
+/// @param self const KParts__ListingNotificationExtension*
+/// @param callback QObject* func(KParts__ListingNotificationExtension* self)
 ///
-void k_parts__listingnotificationextension_on_sender(void* self, QObject* (*callback)());
+void k_parts__listingnotificationextension_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -873,9 +873,9 @@ void k_parts__listingnotificationextension_on_sender(void* self, QObject* (*call
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-int32_t k_parts__listingnotificationextension_sender_signal_index(void* self);
+int32_t k_parts__listingnotificationextension_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -883,9 +883,9 @@ int32_t k_parts__listingnotificationextension_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 ///
-int32_t k_parts__listingnotificationextension_super_sender_signal_index(void* self);
+int32_t k_parts__listingnotificationextension_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -893,10 +893,10 @@ int32_t k_parts__listingnotificationextension_super_sender_signal_index(void* se
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
-/// @param callback int32_t func()
+/// @param self const KParts__ListingNotificationExtension*
+/// @param callback int32_t func(KParts__ListingNotificationExtension* self)
 ///
-void k_parts__listingnotificationextension_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_parts__listingnotificationextension_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -904,10 +904,10 @@ void k_parts__listingnotificationextension_on_sender_signal_index(void* self, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param signal const char*
 ///
-int32_t k_parts__listingnotificationextension_receivers(void* self, const char* signal);
+int32_t k_parts__listingnotificationextension_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -915,10 +915,10 @@ int32_t k_parts__listingnotificationextension_receivers(void* self, const char* 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param signal const char*
 ///
-int32_t k_parts__listingnotificationextension_super_receivers(void* self, const char* signal);
+int32_t k_parts__listingnotificationextension_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -926,10 +926,10 @@ int32_t k_parts__listingnotificationextension_super_receivers(void* self, const 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param callback int32_t func(KParts__ListingNotificationExtension* self, const char* signal)
 ///
-void k_parts__listingnotificationextension_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_parts__listingnotificationextension_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -937,10 +937,10 @@ void k_parts__listingnotificationextension_on_receivers(void* self, int32_t (*ca
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param signal QMetaMethod*
 ///
-bool k_parts__listingnotificationextension_is_signal_connected(void* self, void* signal);
+bool k_parts__listingnotificationextension_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -948,10 +948,10 @@ bool k_parts__listingnotificationextension_is_signal_connected(void* self, void*
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param signal QMetaMethod*
 ///
-bool k_parts__listingnotificationextension_super_is_signal_connected(void* self, void* signal);
+bool k_parts__listingnotificationextension_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -959,10 +959,10 @@ bool k_parts__listingnotificationextension_super_is_signal_connected(void* self,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__ListingNotificationExtension*
+/// @param self const KParts__ListingNotificationExtension*
 /// @param callback bool func(KParts__ListingNotificationExtension* self, QMetaMethod* signal)
 ///
-void k_parts__listingnotificationextension_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_parts__listingnotificationextension_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

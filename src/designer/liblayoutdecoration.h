@@ -28,188 +28,138 @@ QDesignerLayoutDecorationExtension* q_designerlayoutdecorationextension_new();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#widgets)
 ///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_widgets` before it can be called.
+///
+/// @param self const QDesignerLayoutDecorationExtension*
 /// @param layout QLayout*
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list q_designerlayoutdecorationextension_widgets(void* self, void* layout);
+libqt_list q_designerlayoutdecorationextension_widgets(const void* self, void* layout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#widgets)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback libqt_list of QWidget* func(QDesignerLayoutDecorationExtension* self, QLayout* layout)
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback libqt_list of QWidget* func(const QDesignerLayoutDecorationExtension* self, QLayout* layout)
 ///
-void q_designerlayoutdecorationextension_on_widgets(void* self, libqt_list (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#widgets)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param layout QLayout*
-///
-/// @return libqt_list of QWidget*
-///
-libqt_list q_designerlayoutdecorationextension_super_widgets(void* self, void* layout);
+void q_designerlayoutdecorationextension_on_widgets(const void* self, libqt_list (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#itemInfo)
 ///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_item_info` before it can be called.
+///
+/// @param self const QDesignerLayoutDecorationExtension*
 /// @param index int
 ///
-QRect* q_designerlayoutdecorationextension_item_info(void* self, int index);
+QRect* q_designerlayoutdecorationextension_item_info(const void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#itemInfo)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback QRect* func(QDesignerLayoutDecorationExtension* self, int index)
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback QRect* func(const QDesignerLayoutDecorationExtension* self, int index)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_designerlayoutdecorationextension_on_item_info(void* self, QRect* (*callback)(void*, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#itemInfo)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param index int
-///
-QRect* q_designerlayoutdecorationextension_super_item_info(void* self, int index);
+void q_designerlayoutdecorationextension_on_item_info(const void* self, QRect* (*callback)(const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_index_of` before it can be called.
+///
+/// @param self const QDesignerLayoutDecorationExtension*
 /// @param widget QWidget*
 ///
-int32_t q_designerlayoutdecorationextension_index_of(void* self, void* widget);
+int32_t q_designerlayoutdecorationextension_index_of(const void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback int32_t func(QDesignerLayoutDecorationExtension* self, QWidget* widget)
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self, QWidget* widget)
 ///
-void q_designerlayoutdecorationextension_on_index_of(void* self, int32_t (*callback)(void*, void*));
+void q_designerlayoutdecorationextension_on_index_of(const void* self, int32_t (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
-/// Base class method implementation
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_index_of2` before it can be called.
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param widget QWidget*
-///
-int32_t q_designerlayoutdecorationextension_super_index_of(void* self, void* widget);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
-///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @param self const QDesignerLayoutDecorationExtension*
 /// @param item QLayoutItem*
 ///
-int32_t q_designerlayoutdecorationextension_index_of2(void* self, void* item);
+int32_t q_designerlayoutdecorationextension_index_of2(const void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback int32_t func(QDesignerLayoutDecorationExtension* self, QLayoutItem* item)
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self, QLayoutItem* item)
 ///
-void q_designerlayoutdecorationextension_on_index_of2(void* self, int32_t (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#indexOf)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param item QLayoutItem*
-///
-int32_t q_designerlayoutdecorationextension_super_index_of2(void* self, void* item);
+void q_designerlayoutdecorationextension_on_index_of2(const void* self, int32_t (*callback)(const void*, void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentInsertMode)
 ///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_current_insert_mode` before it can be called.
+///
+/// @param self const QDesignerLayoutDecorationExtension*
 ///
 /// @return enum QDesignerLayoutDecorationExtension__InsertMode
 ///
-int32_t q_designerlayoutdecorationextension_current_insert_mode(void* self);
+int32_t q_designerlayoutdecorationextension_current_insert_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentInsertMode)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback int32_t func()
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self)
 ///
-void q_designerlayoutdecorationextension_on_current_insert_mode(void* self, int32_t (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentInsertMode)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-///
-/// @return enum QDesignerLayoutDecorationExtension__InsertMode
-///
-int32_t q_designerlayoutdecorationextension_super_current_insert_mode(void* self);
+void q_designerlayoutdecorationextension_on_current_insert_mode(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentIndex)
 ///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_current_index` before it can be called.
 ///
-int32_t q_designerlayoutdecorationextension_current_index(void* self);
+/// @param self const QDesignerLayoutDecorationExtension*
+///
+int32_t q_designerlayoutdecorationextension_current_index(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentIndex)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback int32_t func()
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self)
 ///
-void q_designerlayoutdecorationextension_on_current_index(void* self, int32_t (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentIndex)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-///
-int32_t q_designerlayoutdecorationextension_super_current_index(void* self);
+void q_designerlayoutdecorationextension_on_current_index(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentCell)
 ///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_current_cell` before it can be called.
+///
+/// @param self const QDesignerLayoutDecorationExtension*
 ///
 /// @return pair_int_int tuple of int and int
 ///
-pair_int_int q_designerlayoutdecorationextension_current_cell(void* self);
+pair_int_int q_designerlayoutdecorationextension_current_cell(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentCell)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback pair_int_int tuple of int and int func()
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback pair_int_int tuple of int and int func(const QDesignerLayoutDecorationExtension* self)
 ///
-void q_designerlayoutdecorationextension_on_current_cell(void* self, pair_int_int (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#currentCell)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-///
-/// @return pair_int_int tuple of int and int
-///
-pair_int_int q_designerlayoutdecorationextension_super_current_cell(void* self);
+void q_designerlayoutdecorationextension_on_current_cell(const void* self, pair_int_int (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertWidget)
+///
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_insert_widget` before it can be called.
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param widget QWidget*
@@ -226,17 +176,9 @@ void q_designerlayoutdecorationextension_insert_widget(void* self, void* widget,
 ///
 void q_designerlayoutdecorationextension_on_insert_widget(void* self, void (*callback)(void*, void*, pair_int_int));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertWidget)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param widget QWidget*
-/// @param cell pair_int_int tuple of int and int
-///
-void q_designerlayoutdecorationextension_super_insert_widget(void* self, void* widget, pair_int_int cell);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#removeWidget)
+///
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_remove_widget` before it can be called.
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param widget QWidget*
@@ -252,16 +194,9 @@ void q_designerlayoutdecorationextension_remove_widget(void* self, void* widget)
 ///
 void q_designerlayoutdecorationextension_on_remove_widget(void* self, void (*callback)(void*, void*));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#removeWidget)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param widget QWidget*
-///
-void q_designerlayoutdecorationextension_super_remove_widget(void* self, void* widget);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertRow)
+///
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_insert_row` before it can be called.
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param row int
@@ -277,16 +212,9 @@ void q_designerlayoutdecorationextension_insert_row(void* self, int row);
 ///
 void q_designerlayoutdecorationextension_on_insert_row(void* self, void (*callback)(void*, int));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertRow)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param row int
-///
-void q_designerlayoutdecorationextension_super_insert_row(void* self, int row);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertColumn)
+///
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_insert_column` before it can be called.
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param column int
@@ -302,16 +230,9 @@ void q_designerlayoutdecorationextension_insert_column(void* self, int column);
 ///
 void q_designerlayoutdecorationextension_on_insert_column(void* self, void (*callback)(void*, int));
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#insertColumn)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param column int
-///
-void q_designerlayoutdecorationextension_super_insert_column(void* self, int column);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#simplify)
+///
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_simplify` before it can be called.
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 ///
@@ -322,77 +243,56 @@ void q_designerlayoutdecorationextension_simplify(void* self);
 /// Allows for overriding the related default method
 ///
 /// @param self QDesignerLayoutDecorationExtension*
-/// @param callback void func()
+/// @param callback void func(QDesignerLayoutDecorationExtension* self)
 ///
-void q_designerlayoutdecorationextension_on_simplify(void* self, void (*callback)());
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#simplify)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-///
-void q_designerlayoutdecorationextension_super_simplify(void* self);
+void q_designerlayoutdecorationextension_on_simplify(void* self, void (*callback)(void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_find_item_at` before it can be called.
+///
+/// @param self const QDesignerLayoutDecorationExtension*
 /// @param pos QPoint*
 ///
-int32_t q_designerlayoutdecorationextension_find_item_at(void* self, void* pos);
+int32_t q_designerlayoutdecorationextension_find_item_at(const void* self, const void* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback int32_t func(QDesignerLayoutDecorationExtension* self, QPoint* pos)
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self, QPoint* pos)
 ///
-void q_designerlayoutdecorationextension_on_find_item_at(void* self, int32_t (*callback)(void*, void*));
+void q_designerlayoutdecorationextension_on_find_item_at(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
-/// Base class method implementation
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_find_item_at2` before it can be called.
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param pos QPoint*
-///
-int32_t q_designerlayoutdecorationextension_super_find_item_at(void* self, void* pos);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
-///
-/// @param self QDesignerLayoutDecorationExtension*
+/// @param self const QDesignerLayoutDecorationExtension*
 /// @param row int
 /// @param column int
 ///
-int32_t q_designerlayoutdecorationextension_find_item_at2(void* self, int row, int column);
+int32_t q_designerlayoutdecorationextension_find_item_at2(const void* self, int row, int column);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param callback int32_t func(QDesignerLayoutDecorationExtension* self, int row, int column)
+/// @param self const QDesignerLayoutDecorationExtension*
+/// @param callback int32_t func(const QDesignerLayoutDecorationExtension* self, int row, int column)
 ///
-void q_designerlayoutdecorationextension_on_find_item_at2(void* self, int32_t (*callback)(void*, int, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#findItemAt)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param row int
-/// @param column int
-///
-int32_t q_designerlayoutdecorationextension_super_find_item_at2(void* self, int row, int column);
+void q_designerlayoutdecorationextension_on_find_item_at2(const void* self, int32_t (*callback)(const void*, int, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#adjustIndicator)
+///
+/// @warning This method must be implemented with `q_designerlayoutdecorationextension_on_adjust_indicator` before it can be called.
 ///
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param pos QPoint*
 /// @param index int
 ///
-void q_designerlayoutdecorationextension_adjust_indicator(void* self, void* pos, int index);
+void q_designerlayoutdecorationextension_adjust_indicator(void* self, const void* pos, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#adjustIndicator)
 ///
@@ -401,17 +301,7 @@ void q_designerlayoutdecorationextension_adjust_indicator(void* self, void* pos,
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param callback void func(QDesignerLayoutDecorationExtension* self, QPoint* pos, int index)
 ///
-void q_designerlayoutdecorationextension_on_adjust_indicator(void* self, void (*callback)(void*, void*, int));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#adjustIndicator)
-///
-/// Base class method implementation
-///
-/// @param self QDesignerLayoutDecorationExtension*
-/// @param pos QPoint*
-/// @param index int
-///
-void q_designerlayoutdecorationextension_super_adjust_indicator(void* self, void* pos, int index);
+void q_designerlayoutdecorationextension_on_adjust_indicator(void* self, void (*callback)(void*, const void*, int));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerlayoutdecorationextension.html#dtor.QDesignerLayoutDecorationExtension)
 ///

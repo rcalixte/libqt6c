@@ -18,26 +18,26 @@ KHamburgerMenu* k_hamburgermenu_new(void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const QMetaObject* k_hamburgermenu_meta_object(void* self);
+const QMetaObject* k_hamburgermenu_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self KHamburgerMenu*
-/// @param callback const QMetaObject* func()
+/// @param self const KHamburgerMenu*
+/// @param callback const QMetaObject* func(const KHamburgerMenu* self)
 ///
-void k_hamburgermenu_on_meta_object(void* self, const QMetaObject* (*callback)());
+void k_hamburgermenu_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const QMetaObject* k_hamburgermenu_super_meta_object(void* self);
+const QMetaObject* k_hamburgermenu_super_meta_object(const void* self);
 
 /// @param self KHamburgerMenu*
 /// @param param1 const char*
@@ -98,9 +98,9 @@ void k_hamburgermenu_set_menu_bar(void* self, void* menuBar);
 
 /// [Upstream resources](https://api.kde.org/khamburgermenu.html#menuBar)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QMenuBar* k_hamburgermenu_menu_bar(void* self);
+QMenuBar* k_hamburgermenu_menu_bar(const void* self);
 
 /// [Upstream resources](https://api.kde.org/khamburgermenu.html#setMenuBarAdvertised)
 ///
@@ -111,9 +111,9 @@ void k_hamburgermenu_set_menu_bar_advertised(void* self, bool advertise);
 
 /// [Upstream resources](https://api.kde.org/khamburgermenu.html#menuBarAdvertised)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_menu_bar_advertised(void* self);
+bool k_hamburgermenu_menu_bar_advertised(const void* self);
 
 /// [Upstream resources](https://api.kde.org/khamburgermenu.html#setShowMenuBarAction)
 ///
@@ -221,9 +221,9 @@ void k_hamburgermenu_set_default_widget(void* self, void* w);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#defaultWidget)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QWidget* k_hamburgermenu_default_widget(void* self);
+QWidget* k_hamburgermenu_default_widget(const void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -247,11 +247,11 @@ void k_hamburgermenu_release_widget(void* self, void* widget);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#associatedObjects)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_hamburgermenu_associated_objects(void* self);
+libqt_list k_hamburgermenu_associated_objects(const void* self);
 
 /// Inherited from QAction
 ///
@@ -266,9 +266,9 @@ void k_hamburgermenu_set_action_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#actionGroup)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QActionGroup* k_hamburgermenu_action_group(void* self);
+QActionGroup* k_hamburgermenu_action_group(const void* self);
 
 /// Inherited from QAction
 ///
@@ -277,15 +277,15 @@ QActionGroup* k_hamburgermenu_action_group(void* self);
 /// @param self KHamburgerMenu*
 /// @param icon QIcon*
 ///
-void k_hamburgermenu_set_icon(void* self, void* icon);
+void k_hamburgermenu_set_icon(void* self, const void* icon);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#icon)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QIcon* k_hamburgermenu_icon(void* self);
+QIcon* k_hamburgermenu_icon(const void* self);
 
 /// Inherited from QAction
 ///
@@ -302,9 +302,9 @@ void k_hamburgermenu_set_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const char* k_hamburgermenu_text(void* self);
+const char* k_hamburgermenu_text(const void* self);
 
 /// Inherited from QAction
 ///
@@ -321,9 +321,9 @@ void k_hamburgermenu_set_icon_text(void* self, const char* text);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const char* k_hamburgermenu_icon_text(void* self);
+const char* k_hamburgermenu_icon_text(const void* self);
 
 /// Inherited from QAction
 ///
@@ -340,9 +340,9 @@ void k_hamburgermenu_set_tool_tip(void* self, const char* tip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const char* k_hamburgermenu_tool_tip(void* self);
+const char* k_hamburgermenu_tool_tip(const void* self);
 
 /// Inherited from QAction
 ///
@@ -359,9 +359,9 @@ void k_hamburgermenu_set_status_tip(void* self, const char* statusTip);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const char* k_hamburgermenu_status_tip(void* self);
+const char* k_hamburgermenu_status_tip(const void* self);
 
 /// Inherited from QAction
 ///
@@ -378,9 +378,9 @@ void k_hamburgermenu_set_whats_this(void* self, const char* what);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const char* k_hamburgermenu_whats_this(void* self);
+const char* k_hamburgermenu_whats_this(const void* self);
 
 /// Inherited from QAction
 ///
@@ -395,11 +395,11 @@ void k_hamburgermenu_set_priority(void* self, int32_t priority);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#priority)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
 /// @return enum QAction__Priority
 ///
-int32_t k_hamburgermenu_priority(void* self);
+int32_t k_hamburgermenu_priority(const void* self);
 
 /// Inherited from QAction
 ///
@@ -414,9 +414,9 @@ void k_hamburgermenu_set_separator(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isSeparator)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_separator(void* self);
+bool k_hamburgermenu_is_separator(const void* self);
 
 /// Inherited from QAction
 ///
@@ -425,15 +425,15 @@ bool k_hamburgermenu_is_separator(void* self);
 /// @param self KHamburgerMenu*
 /// @param shortcut QKeySequence*
 ///
-void k_hamburgermenu_set_shortcut(void* self, void* shortcut);
+void k_hamburgermenu_set_shortcut(void* self, const void* shortcut);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcut)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QKeySequence* k_hamburgermenu_shortcut(void* self);
+QKeySequence* k_hamburgermenu_shortcut(const void* self);
 
 /// Inherited from QAction
 ///
@@ -457,11 +457,11 @@ void k_hamburgermenu_set_shortcuts2(void* self, int32_t shortcuts);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcuts)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
 /// @return libqt_list of QKeySequence*
 ///
-libqt_list k_hamburgermenu_shortcuts(void* self);
+libqt_list k_hamburgermenu_shortcuts(const void* self);
 
 /// Inherited from QAction
 ///
@@ -476,11 +476,11 @@ void k_hamburgermenu_set_shortcut_context(void* self, int32_t context);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
 /// @return enum Qt__ShortcutContext
 ///
-int32_t k_hamburgermenu_shortcut_context(void* self);
+int32_t k_hamburgermenu_shortcut_context(const void* self);
 
 /// Inherited from QAction
 ///
@@ -495,9 +495,9 @@ void k_hamburgermenu_set_auto_repeat(void* self, bool autoRepeat);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#autoRepeat)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_auto_repeat(void* self);
+bool k_hamburgermenu_auto_repeat(const void* self);
 
 /// Inherited from QAction
 ///
@@ -506,15 +506,15 @@ bool k_hamburgermenu_auto_repeat(void* self);
 /// @param self KHamburgerMenu*
 /// @param font QFont*
 ///
-void k_hamburgermenu_set_font(void* self, void* font);
+void k_hamburgermenu_set_font(void* self, const void* font);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#font)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QFont* k_hamburgermenu_font(void* self);
+QFont* k_hamburgermenu_font(const void* self);
 
 /// Inherited from QAction
 ///
@@ -529,17 +529,17 @@ void k_hamburgermenu_set_checkable(void* self, bool checkable);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isCheckable)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_checkable(void* self);
+bool k_hamburgermenu_is_checkable(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#data)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QVariant* k_hamburgermenu_data(void* self);
+QVariant* k_hamburgermenu_data(const void* self);
 
 /// Inherited from QAction
 ///
@@ -548,31 +548,31 @@ QVariant* k_hamburgermenu_data(void* self);
 /// @param self KHamburgerMenu*
 /// @param var QVariant*
 ///
-void k_hamburgermenu_set_data(void* self, void* var);
+void k_hamburgermenu_set_data(void* self, const void* var);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isChecked)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_checked(void* self);
+bool k_hamburgermenu_is_checked(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isEnabled)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_enabled(void* self);
+bool k_hamburgermenu_is_enabled(const void* self);
 
 /// Inherited from QAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isVisible)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_visible(void* self);
+bool k_hamburgermenu_is_visible(const void* self);
 
 /// Inherited from QAction
 ///
@@ -596,11 +596,11 @@ void k_hamburgermenu_set_menu_role(void* self, int32_t menuRole);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#menuRole)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
 /// @return enum QAction__MenuRole
 ///
-int32_t k_hamburgermenu_menu_role(void* self);
+int32_t k_hamburgermenu_menu_role(const void* self);
 
 /// Inherited from QAction
 ///
@@ -615,9 +615,9 @@ void k_hamburgermenu_set_icon_visible_in_menu(void* self, bool visible);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isIconVisibleInMenu)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_icon_visible_in_menu(void* self);
+bool k_hamburgermenu_is_icon_visible_in_menu(const void* self);
 
 /// Inherited from QAction
 ///
@@ -632,9 +632,9 @@ void k_hamburgermenu_set_shortcut_visible_in_context_menu(void* self, bool show)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qaction.html#isShortcutVisibleInContextMenu)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_shortcut_visible_in_context_menu(void* self);
+bool k_hamburgermenu_is_shortcut_visible_in_context_menu(const void* self);
 
 /// Inherited from QAction
 ///
@@ -867,9 +867,9 @@ void k_hamburgermenu_on_triggered1(void* self, void (*callback)(void*, bool));
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const char* k_hamburgermenu_object_name(void* self);
+const char* k_hamburgermenu_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -884,33 +884,33 @@ void k_hamburgermenu_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_widget_type(void* self);
+bool k_hamburgermenu_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_window_type(void* self);
+bool k_hamburgermenu_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_is_quick_item_type(void* self);
+bool k_hamburgermenu_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_signals_blocked(void* self);
+bool k_hamburgermenu_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -925,9 +925,9 @@ bool k_hamburgermenu_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QThread* k_hamburgermenu_thread(void* self);
+QThread* k_hamburgermenu_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -978,11 +978,11 @@ void k_hamburgermenu_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list k_hamburgermenu_children(void* self);
+libqt_list k_hamburgermenu_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1020,7 +1020,7 @@ void k_hamburgermenu_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_hamburgermenu_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* k_hamburgermenu_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1031,18 +1031,18 @@ QMetaObject__Connection* k_hamburgermenu_connect(void* sender, const char* signa
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* k_hamburgermenu_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* k_hamburgermenu_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* k_hamburgermenu_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* k_hamburgermenu_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1053,7 +1053,7 @@ QMetaObject__Connection* k_hamburgermenu_connect3(void* self, void* sender, cons
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_hamburgermenu_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool k_hamburgermenu_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1064,24 +1064,24 @@ bool k_hamburgermenu_disconnect(void* sender, const char* signal, void* receiver
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool k_hamburgermenu_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool k_hamburgermenu_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-bool k_hamburgermenu_disconnect3(void* self);
+bool k_hamburgermenu_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param receiver QObject*
 ///
-bool k_hamburgermenu_disconnect4(void* self, void* receiver);
+bool k_hamburgermenu_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1089,23 +1089,23 @@ bool k_hamburgermenu_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool k_hamburgermenu_disconnect5(void* param1);
+bool k_hamburgermenu_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-void k_hamburgermenu_dump_object_tree(void* self);
+void k_hamburgermenu_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-void k_hamburgermenu_dump_object_info(void* self);
+void k_hamburgermenu_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1115,16 +1115,16 @@ void k_hamburgermenu_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool k_hamburgermenu_set_property(void* self, const char* name, void* value);
+bool k_hamburgermenu_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param name const char*
 ///
-QVariant* k_hamburgermenu_property(void* self, const char* name);
+QVariant* k_hamburgermenu_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1132,9 +1132,9 @@ QVariant* k_hamburgermenu_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const char** k_hamburgermenu_dynamic_property_names(void* self);
+const char** k_hamburgermenu_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1148,9 +1148,9 @@ QBindingStorage* k_hamburgermenu_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-const QBindingStorage* k_hamburgermenu_binding_storage2(void* self);
+const QBindingStorage* k_hamburgermenu_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1173,18 +1173,18 @@ void k_hamburgermenu_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QObject* k_hamburgermenu_parent(void* self);
+QObject* k_hamburgermenu_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param classname const char*
 ///
-bool k_hamburgermenu_inherits(void* self, const char* classname);
+bool k_hamburgermenu_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1224,7 +1224,7 @@ int32_t k_hamburgermenu_start_timer23(void* self, int64_t time, int32_t timerTyp
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_hamburgermenu_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* k_hamburgermenu_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1236,59 +1236,59 @@ QMetaObject__Connection* k_hamburgermenu_connect5(void* sender, const char* sign
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_hamburgermenu_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* k_hamburgermenu_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* k_hamburgermenu_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* k_hamburgermenu_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param signal const char*
 ///
-bool k_hamburgermenu_disconnect1(void* self, const char* signal);
+bool k_hamburgermenu_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KHamburgerMenu*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool k_hamburgermenu_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool k_hamburgermenu_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool k_hamburgermenu_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool k_hamburgermenu_disconnect23(void* self, void* receiver, const char* member);
+bool k_hamburgermenu_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const KHamburgerMenu*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool k_hamburgermenu_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1517,7 +1517,7 @@ void k_hamburgermenu_on_custom_event(void* self, void (*callback)(void*, void*))
 /// @param self KHamburgerMenu*
 /// @param signal QMetaMethod*
 ///
-void k_hamburgermenu_connect_notify(void* self, void* signal);
+void k_hamburgermenu_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1528,7 +1528,7 @@ void k_hamburgermenu_connect_notify(void* self, void* signal);
 /// @param self KHamburgerMenu*
 /// @param signal QMetaMethod*
 ///
-void k_hamburgermenu_super_connect_notify(void* self, void* signal);
+void k_hamburgermenu_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1539,7 +1539,7 @@ void k_hamburgermenu_super_connect_notify(void* self, void* signal);
 /// @param self KHamburgerMenu*
 /// @param callback void func(KHamburgerMenu* self, QMetaMethod* signal)
 ///
-void k_hamburgermenu_on_connect_notify(void* self, void (*callback)(void*, void*));
+void k_hamburgermenu_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -1550,7 +1550,7 @@ void k_hamburgermenu_on_connect_notify(void* self, void (*callback)(void*, void*
 /// @param self KHamburgerMenu*
 /// @param signal QMetaMethod*
 ///
-void k_hamburgermenu_disconnect_notify(void* self, void* signal);
+void k_hamburgermenu_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1561,7 +1561,7 @@ void k_hamburgermenu_disconnect_notify(void* self, void* signal);
 /// @param self KHamburgerMenu*
 /// @param signal QMetaMethod*
 ///
-void k_hamburgermenu_super_disconnect_notify(void* self, void* signal);
+void k_hamburgermenu_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1572,7 +1572,7 @@ void k_hamburgermenu_super_disconnect_notify(void* self, void* signal);
 /// @param self KHamburgerMenu*
 /// @param callback void func(KHamburgerMenu* self, QMetaMethod* signal)
 ///
-void k_hamburgermenu_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void k_hamburgermenu_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QWidgetAction
 ///
@@ -1580,11 +1580,11 @@ void k_hamburgermenu_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_hamburgermenu_created_widgets(void* self);
+libqt_list k_hamburgermenu_created_widgets(const void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1592,11 +1592,11 @@ libqt_list k_hamburgermenu_created_widgets(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_hamburgermenu_super_created_widgets(void* self);
+libqt_list k_hamburgermenu_super_created_widgets(const void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1604,10 +1604,10 @@ libqt_list k_hamburgermenu_super_created_widgets(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
-/// @param callback libqt_list of QWidget* func()
+/// @param self const KHamburgerMenu*
+/// @param callback libqt_list of QWidget* func(KHamburgerMenu* self)
 ///
-void k_hamburgermenu_on_created_widgets(void* self, libqt_list (*callback)());
+void k_hamburgermenu_on_created_widgets(const void* self, libqt_list (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1615,9 +1615,9 @@ void k_hamburgermenu_on_created_widgets(void* self, libqt_list (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QObject* k_hamburgermenu_sender(void* self);
+QObject* k_hamburgermenu_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1625,9 +1625,9 @@ QObject* k_hamburgermenu_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-QObject* k_hamburgermenu_super_sender(void* self);
+QObject* k_hamburgermenu_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1635,10 +1635,10 @@ QObject* k_hamburgermenu_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
-/// @param callback QObject* func()
+/// @param self const KHamburgerMenu*
+/// @param callback QObject* func(KHamburgerMenu* self)
 ///
-void k_hamburgermenu_on_sender(void* self, QObject* (*callback)());
+void k_hamburgermenu_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1646,9 +1646,9 @@ void k_hamburgermenu_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-int32_t k_hamburgermenu_sender_signal_index(void* self);
+int32_t k_hamburgermenu_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1656,9 +1656,9 @@ int32_t k_hamburgermenu_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 ///
-int32_t k_hamburgermenu_super_sender_signal_index(void* self);
+int32_t k_hamburgermenu_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1666,10 +1666,10 @@ int32_t k_hamburgermenu_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
-/// @param callback int32_t func()
+/// @param self const KHamburgerMenu*
+/// @param callback int32_t func(KHamburgerMenu* self)
 ///
-void k_hamburgermenu_on_sender_signal_index(void* self, int32_t (*callback)());
+void k_hamburgermenu_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -1677,10 +1677,10 @@ void k_hamburgermenu_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param signal const char*
 ///
-int32_t k_hamburgermenu_receivers(void* self, const char* signal);
+int32_t k_hamburgermenu_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1688,10 +1688,10 @@ int32_t k_hamburgermenu_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param signal const char*
 ///
-int32_t k_hamburgermenu_super_receivers(void* self, const char* signal);
+int32_t k_hamburgermenu_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1699,10 +1699,10 @@ int32_t k_hamburgermenu_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param callback int32_t func(KHamburgerMenu* self, const char* signal)
 ///
-void k_hamburgermenu_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void k_hamburgermenu_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1710,10 +1710,10 @@ void k_hamburgermenu_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param signal QMetaMethod*
 ///
-bool k_hamburgermenu_is_signal_connected(void* self, void* signal);
+bool k_hamburgermenu_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1721,10 +1721,10 @@ bool k_hamburgermenu_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param signal QMetaMethod*
 ///
-bool k_hamburgermenu_super_is_signal_connected(void* self, void* signal);
+bool k_hamburgermenu_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1732,10 +1732,10 @@ bool k_hamburgermenu_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KHamburgerMenu*
+/// @param self const KHamburgerMenu*
 /// @param callback bool func(KHamburgerMenu* self, QMetaMethod* signal)
 ///
-void k_hamburgermenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void k_hamburgermenu_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

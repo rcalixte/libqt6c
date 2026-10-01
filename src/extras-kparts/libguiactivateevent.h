@@ -18,41 +18,41 @@ KParts__GUIActivateEvent* k_parts__guiactivateevent_new(bool activated);
 
 /// [Upstream resources](https://api.kde.org/kparts-guiactivateevent.html#activated)
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
-bool k_parts__guiactivateevent_activated(void* self);
+bool k_parts__guiactivateevent_activated(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-guiactivateevent.html#test)
 ///
 /// @param event QEvent*
 ///
-bool k_parts__guiactivateevent_test(void* event);
+bool k_parts__guiactivateevent_test(const void* event);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
 /// @return enum QEvent__Type
 ///
-int32_t k_parts__guiactivateevent_type(void* self);
+int32_t k_parts__guiactivateevent_type(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
-bool k_parts__guiactivateevent_spontaneous(void* self);
+bool k_parts__guiactivateevent_spontaneous(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
-bool k_parts__guiactivateevent_is_accepted(void* self);
+bool k_parts__guiactivateevent_is_accepted(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -74,25 +74,25 @@ void k_parts__guiactivateevent_ignore(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
-bool k_parts__guiactivateevent_is_input_event(void* self);
+bool k_parts__guiactivateevent_is_input_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
-bool k_parts__guiactivateevent_is_pointer_event(void* self);
+bool k_parts__guiactivateevent_is_pointer_event(const void* self);
 
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
-bool k_parts__guiactivateevent_is_single_point_event(void* self);
+bool k_parts__guiactivateevent_is_single_point_event(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -147,9 +147,9 @@ void k_parts__guiactivateevent_on_set_accepted(void* self, void (*callback)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
-QEvent* k_parts__guiactivateevent_clone(void* self);
+QEvent* k_parts__guiactivateevent_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -157,9 +157,9 @@ QEvent* k_parts__guiactivateevent_clone(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self KParts__GUIActivateEvent*
+/// @param self const KParts__GUIActivateEvent*
 ///
-QEvent* k_parts__guiactivateevent_super_clone(void* self);
+QEvent* k_parts__guiactivateevent_super_clone(const void* self);
 
 /// Inherited from QEvent
 ///
@@ -167,10 +167,10 @@ QEvent* k_parts__guiactivateevent_super_clone(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self KParts__GUIActivateEvent*
-/// @param callback QEvent* func()
+/// @param self const KParts__GUIActivateEvent*
+/// @param callback QEvent* func(KParts__GUIActivateEvent* self)
 ///
-void k_parts__guiactivateevent_on_clone(void* self, QEvent* (*callback)());
+void k_parts__guiactivateevent_on_clone(const void* self, QEvent* (*callback)(const void*));
 
 /// Delete this object from C++ memory.
 ///

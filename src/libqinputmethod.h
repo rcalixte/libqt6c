@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-const QMetaObject* q_inputmethod_meta_object(void* self);
+const QMetaObject* q_inputmethod_meta_object(const void* self);
 
 /// @param self QInputMethod*
 /// @param param1 const char*
@@ -38,59 +38,59 @@ const char* q_inputmethod_tr(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#inputItemTransform)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QTransform* q_inputmethod_input_item_transform(void* self);
+QTransform* q_inputmethod_input_item_transform(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#setInputItemTransform)
 ///
 /// @param self QInputMethod*
 /// @param transform QTransform*
 ///
-void q_inputmethod_set_input_item_transform(void* self, void* transform);
+void q_inputmethod_set_input_item_transform(void* self, const void* transform);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#inputItemRectangle)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QRectF* q_inputmethod_input_item_rectangle(void* self);
+QRectF* q_inputmethod_input_item_rectangle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#setInputItemRectangle)
 ///
 /// @param self QInputMethod*
 /// @param rect QRectF*
 ///
-void q_inputmethod_set_input_item_rectangle(void* self, void* rect);
+void q_inputmethod_set_input_item_rectangle(void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#cursorRectangle)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QRectF* q_inputmethod_cursor_rectangle(void* self);
+QRectF* q_inputmethod_cursor_rectangle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#anchorRectangle)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QRectF* q_inputmethod_anchor_rectangle(void* self);
+QRectF* q_inputmethod_anchor_rectangle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#keyboardRectangle)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QRectF* q_inputmethod_keyboard_rectangle(void* self);
+QRectF* q_inputmethod_keyboard_rectangle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#inputItemClipRectangle)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QRectF* q_inputmethod_input_item_clip_rectangle(void* self);
+QRectF* q_inputmethod_input_item_clip_rectangle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#isVisible)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-bool q_inputmethod_is_visible(void* self);
+bool q_inputmethod_is_visible(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#setVisible)
 ///
@@ -101,30 +101,30 @@ void q_inputmethod_set_visible(void* self, bool visible);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#isAnimating)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-bool q_inputmethod_is_animating(void* self);
+bool q_inputmethod_is_animating(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#locale)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QLocale* q_inputmethod_locale(void* self);
+QLocale* q_inputmethod_locale(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#inputDirection)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_inputmethod_input_direction(void* self);
+int32_t q_inputmethod_input_direction(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#queryFocusObject)
 ///
 /// @param query enum Qt__InputMethodQuery
 /// @param argument QVariant*
 ///
-QVariant* q_inputmethod_query_focus_object(int32_t query, void* argument);
+QVariant* q_inputmethod_query_focus_object(int32_t query, const void* argument);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputmethod.html#show)
 ///
@@ -314,9 +314,9 @@ bool q_inputmethod_event_filter(void* self, void* watched, void* event);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-const char* q_inputmethod_object_name(void* self);
+const char* q_inputmethod_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -331,33 +331,33 @@ void q_inputmethod_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-bool q_inputmethod_is_widget_type(void* self);
+bool q_inputmethod_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-bool q_inputmethod_is_window_type(void* self);
+bool q_inputmethod_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-bool q_inputmethod_is_quick_item_type(void* self);
+bool q_inputmethod_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-bool q_inputmethod_signals_blocked(void* self);
+bool q_inputmethod_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -372,9 +372,9 @@ bool q_inputmethod_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QThread* q_inputmethod_thread(void* self);
+QThread* q_inputmethod_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -425,11 +425,11 @@ void q_inputmethod_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_inputmethod_children(void* self);
+libqt_list q_inputmethod_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -467,7 +467,7 @@ void q_inputmethod_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_inputmethod_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_inputmethod_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -478,18 +478,18 @@ QMetaObject__Connection* q_inputmethod_connect(void* sender, const char* signal,
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_inputmethod_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_inputmethod_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_inputmethod_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_inputmethod_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -500,7 +500,7 @@ QMetaObject__Connection* q_inputmethod_connect3(void* self, void* sender, const 
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_inputmethod_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_inputmethod_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -511,24 +511,24 @@ bool q_inputmethod_disconnect(void* sender, const char* signal, void* receiver, 
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_inputmethod_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_inputmethod_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-bool q_inputmethod_disconnect3(void* self);
+bool q_inputmethod_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 /// @param receiver QObject*
 ///
-bool q_inputmethod_disconnect4(void* self, void* receiver);
+bool q_inputmethod_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -536,23 +536,23 @@ bool q_inputmethod_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_inputmethod_disconnect5(void* param1);
+bool q_inputmethod_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-void q_inputmethod_dump_object_tree(void* self);
+void q_inputmethod_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-void q_inputmethod_dump_object_info(void* self);
+void q_inputmethod_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -562,16 +562,16 @@ void q_inputmethod_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_inputmethod_set_property(void* self, const char* name, void* value);
+bool q_inputmethod_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 /// @param name const char*
 ///
-QVariant* q_inputmethod_property(void* self, const char* name);
+QVariant* q_inputmethod_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -579,9 +579,9 @@ QVariant* q_inputmethod_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-const char** q_inputmethod_dynamic_property_names(void* self);
+const char** q_inputmethod_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -595,9 +595,9 @@ QBindingStorage* q_inputmethod_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-const QBindingStorage* q_inputmethod_binding_storage2(void* self);
+const QBindingStorage* q_inputmethod_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -620,18 +620,18 @@ void q_inputmethod_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 ///
-QObject* q_inputmethod_parent(void* self);
+QObject* q_inputmethod_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 /// @param classname const char*
 ///
-bool q_inputmethod_inherits(void* self, const char* classname);
+bool q_inputmethod_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -671,7 +671,7 @@ int32_t q_inputmethod_start_timer23(void* self, int64_t time, int32_t timerType)
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_inputmethod_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_inputmethod_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -683,59 +683,59 @@ QMetaObject__Connection* q_inputmethod_connect5(void* sender, const char* signal
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_inputmethod_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_inputmethod_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_inputmethod_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_inputmethod_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 /// @param signal const char*
 ///
-bool q_inputmethod_disconnect1(void* self, const char* signal);
+bool q_inputmethod_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QInputMethod*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_inputmethod_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_inputmethod_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_inputmethod_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QInputMethod*
+/// @param self const QInputMethod*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_inputmethod_disconnect23(void* self, void* receiver, const char* member);
+bool q_inputmethod_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QInputMethod*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_inputmethod_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///

@@ -22,14 +22,14 @@ QDBusConnection* q_dbusconnection_new(const char* name);
 ///
 /// @param other QDBusConnection*
 ///
-QDBusConnection* q_dbusconnection_new2(void* other);
+QDBusConnection* q_dbusconnection_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#operator-eq)
 ///
 /// @param self QDBusConnection*
 /// @param other QDBusConnection*
 ///
-void q_dbusconnection_operator_assign(void* self, void* other);
+void q_dbusconnection_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#swap)
 ///
@@ -40,79 +40,79 @@ void q_dbusconnection_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#isConnected)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 ///
-bool q_dbusconnection_is_connected(void* self);
+bool q_dbusconnection_is_connected(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#baseService)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 ///
-const char* q_dbusconnection_base_service(void* self);
+const char* q_dbusconnection_base_service(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#lastError)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 ///
-QDBusError* q_dbusconnection_last_error(void* self);
+QDBusError* q_dbusconnection_last_error(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 ///
-const char* q_dbusconnection_name(void* self);
+const char* q_dbusconnection_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#connectionCapabilities)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 ///
 /// @return flag of enum QDBusConnection__ConnectionCapability
 ///
-int32_t q_dbusconnection_connection_capabilities(void* self);
+int32_t q_dbusconnection_connection_capabilities(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#send)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 ///
-bool q_dbusconnection_send(void* self, void* message);
+bool q_dbusconnection_send(const void* self, const void* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#callWithCallback)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 /// @param receiver QObject*
 /// @param returnMethod const char*
 /// @param errorMethod const char*
 ///
-bool q_dbusconnection_call_with_callback(void* self, void* message, void* receiver, const char* returnMethod, const char* errorMethod);
+bool q_dbusconnection_call_with_callback(const void* self, const void* message, void* receiver, const char* returnMethod, const char* errorMethod);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#callWithCallback)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 /// @param receiver QObject*
 /// @param slot const char*
 ///
-bool q_dbusconnection_call_with_callback2(void* self, void* message, void* receiver, const char* slot);
+bool q_dbusconnection_call_with_callback2(const void* self, const void* message, void* receiver, const char* slot);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#call)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 ///
-QDBusMessage* q_dbusconnection_call(void* self, void* message);
+QDBusMessage* q_dbusconnection_call(const void* self, const void* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#asyncCall)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 ///
-QDBusPendingCall* q_dbusconnection_async_call(void* self, void* message);
+QDBusPendingCall* q_dbusconnection_async_call(const void* self, const void* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#connect)
 ///
@@ -218,10 +218,10 @@ void q_dbusconnection_unregister_object(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#objectRegisteredAt)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param path const char*
 ///
-QObject* q_dbusconnection_object_registered_at(void* self, const char* path);
+QObject* q_dbusconnection_object_registered_at(const void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#registerVirtualObject)
 ///
@@ -247,15 +247,15 @@ bool q_dbusconnection_unregister_service(void* self, const char* serviceName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#interface)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 ///
-QDBusConnectionInterface* q_dbusconnection_interface(void* self);
+QDBusConnectionInterface* q_dbusconnection_interface(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#internalPointer)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 ///
-void* q_dbusconnection_internal_pointer(void* self);
+void* q_dbusconnection_internal_pointer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#connectToBus)
 ///
@@ -306,49 +306,49 @@ QDBusConnection* q_dbusconnection_system_bus();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#callWithCallback)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 /// @param receiver QObject*
 /// @param returnMethod const char*
 /// @param errorMethod const char*
 /// @param timeout int
 ///
-bool q_dbusconnection_call_with_callback5(void* self, void* message, void* receiver, const char* returnMethod, const char* errorMethod, int timeout);
+bool q_dbusconnection_call_with_callback5(const void* self, const void* message, void* receiver, const char* returnMethod, const char* errorMethod, int timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#callWithCallback)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 /// @param receiver QObject*
 /// @param slot const char*
 /// @param timeout int
 ///
-bool q_dbusconnection_call_with_callback4(void* self, void* message, void* receiver, const char* slot, int timeout);
+bool q_dbusconnection_call_with_callback4(const void* self, const void* message, void* receiver, const char* slot, int timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#call)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 /// @param mode enum QDBus__CallMode
 ///
-QDBusMessage* q_dbusconnection_call2(void* self, void* message, int32_t mode);
+QDBusMessage* q_dbusconnection_call2(const void* self, const void* message, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#call)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 /// @param mode enum QDBus__CallMode
 /// @param timeout int
 ///
-QDBusMessage* q_dbusconnection_call3(void* self, void* message, int32_t mode, int timeout);
+QDBusMessage* q_dbusconnection_call3(const void* self, const void* message, int32_t mode, int timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#asyncCall)
 ///
-/// @param self QDBusConnection*
+/// @param self const QDBusConnection*
 /// @param message QDBusMessage*
 /// @param timeout int
 ///
-QDBusPendingCall* q_dbusconnection_async_call2(void* self, void* message, int timeout);
+QDBusPendingCall* q_dbusconnection_async_call2(const void* self, const void* message, int timeout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusconnection.html#registerObject)
 ///

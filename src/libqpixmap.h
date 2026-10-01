@@ -29,7 +29,7 @@ QPixmap* q_pixmap_new2(int w, int h);
 ///
 /// @param param1 QSize*
 ///
-QPixmap* q_pixmap_new3(void* param1);
+QPixmap* q_pixmap_new3(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html)
 
@@ -53,7 +53,7 @@ QPixmap* q_pixmap_new5(const char** xpm);
 ///
 /// @param param1 QPixmap*
 ///
-QPixmap* q_pixmap_new6(void* param1);
+QPixmap* q_pixmap_new6(const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html)
 
@@ -79,7 +79,7 @@ QPixmap* q_pixmap_new8(const char* fileName, const char* format, int32_t flags);
 /// @param self QPixmap*
 /// @param param1 QPixmap*
 ///
-void q_pixmap_operator_assign(void* self, void* param1);
+void q_pixmap_operator_assign(void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#swap)
 ///
@@ -90,68 +90,68 @@ void q_pixmap_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#operator-QVariant)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QVariant* q_pixmap_to_q_variant(void* self);
+QVariant* q_pixmap_to_q_variant(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#isNull)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-bool q_pixmap_is_null(void* self);
+bool q_pixmap_is_null(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#devType)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_dev_type(void* self);
+int32_t q_pixmap_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#devType)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPixmap*
-/// @param callback int32_t func()
+/// @param self const QPixmap*
+/// @param callback int32_t func(const QPixmap* self)
 ///
-void q_pixmap_on_dev_type(void* self, int32_t (*callback)());
+void q_pixmap_on_dev_type(const void* self, int32_t (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#devType)
 ///
 /// Base class method implementation
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_super_dev_type(void* self);
+int32_t q_pixmap_super_dev_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#width)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_width(void* self);
+int32_t q_pixmap_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#height)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_height(void* self);
+int32_t q_pixmap_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#size)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QSize* q_pixmap_size(void* self);
+QSize* q_pixmap_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#rect)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QRect* q_pixmap_rect(void* self);
+QRect* q_pixmap_rect(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#depth)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_depth(void* self);
+int32_t q_pixmap_depth(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#defaultDepth)
 ///
@@ -165,22 +165,22 @@ void q_pixmap_fill(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#mask)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QBitmap* q_pixmap_mask(void* self);
+QBitmap* q_pixmap_mask(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#setMask)
 ///
 /// @param self QPixmap*
 /// @param mask QBitmap*
 ///
-void q_pixmap_set_mask(void* self, void* mask);
+void q_pixmap_set_mask(void* self, const void* mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#devicePixelRatio)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-double q_pixmap_device_pixel_ratio(void* self);
+double q_pixmap_device_pixel_ratio(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#setDevicePixelRatio)
 ///
@@ -191,70 +191,70 @@ void q_pixmap_set_device_pixel_ratio(void* self, double scaleFactor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#deviceIndependentSize)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QSizeF* q_pixmap_device_independent_size(void* self);
+QSizeF* q_pixmap_device_independent_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#hasAlpha)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-bool q_pixmap_has_alpha(void* self);
+bool q_pixmap_has_alpha(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#hasAlphaChannel)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-bool q_pixmap_has_alpha_channel(void* self);
+bool q_pixmap_has_alpha_channel(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#createHeuristicMask)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QBitmap* q_pixmap_create_heuristic_mask(void* self);
+QBitmap* q_pixmap_create_heuristic_mask(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#createMaskFromColor)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param maskColor QColor*
 ///
-QBitmap* q_pixmap_create_mask_from_color(void* self, void* maskColor);
+QBitmap* q_pixmap_create_mask_from_color(const void* self, const void* maskColor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param w int
 /// @param h int
 ///
-QPixmap* q_pixmap_scaled(void* self, int w, int h);
+QPixmap* q_pixmap_scaled(const void* self, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param s QSize*
 ///
-QPixmap* q_pixmap_scaled2(void* self, void* s);
+QPixmap* q_pixmap_scaled2(const void* self, const void* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaledToWidth)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param w int
 ///
-QPixmap* q_pixmap_scaled_to_width(void* self, int w);
+QPixmap* q_pixmap_scaled_to_width(const void* self, int w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaledToHeight)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param h int
 ///
-QPixmap* q_pixmap_scaled_to_height(void* self, int h);
+QPixmap* q_pixmap_scaled_to_height(const void* self, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#transformed)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param param1 QTransform*
 ///
-QPixmap* q_pixmap_transformed(void* self, void* param1);
+QPixmap* q_pixmap_transformed(const void* self, const void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#trueMatrix)
 ///
@@ -262,19 +262,19 @@ QPixmap* q_pixmap_transformed(void* self, void* param1);
 /// @param w int
 /// @param h int
 ///
-QTransform* q_pixmap_true_matrix(void* m, int w, int h);
+QTransform* q_pixmap_true_matrix(const void* m, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#toImage)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QImage* q_pixmap_to_image(void* self);
+QImage* q_pixmap_to_image(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImage)
 ///
 /// @param image QImage*
 ///
-QPixmap* q_pixmap_from_image(void* image);
+QPixmap* q_pixmap_from_image(const void* image);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageReader)
 ///
@@ -306,40 +306,40 @@ bool q_pixmap_load_from_data2(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param fileName const char*
 ///
-bool q_pixmap_save(void* self, const char* fileName);
+bool q_pixmap_save(const void* self, const char* fileName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param device QIODevice*
 ///
-bool q_pixmap_save2(void* self, void* device);
+bool q_pixmap_save2(const void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#convertFromImage)
 ///
 /// @param self QPixmap*
 /// @param img QImage*
 ///
-bool q_pixmap_convert_from_image(void* self, void* img);
+bool q_pixmap_convert_from_image(void* self, const void* img);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#copy)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param x int
 /// @param y int
 /// @param width int
 /// @param height int
 ///
-QPixmap* q_pixmap_copy(void* self, int x, int y, int width, int height);
+QPixmap* q_pixmap_copy(const void* self, int x, int y, int width, int height);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#copy)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QPixmap* q_pixmap_copy2(void* self);
+QPixmap* q_pixmap_copy2(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scroll)
 ///
@@ -360,19 +360,19 @@ void q_pixmap_scroll(void* self, int dx, int dy, int x, int y, int width, int he
 /// @param dy int
 /// @param rect QRect*
 ///
-void q_pixmap_scroll2(void* self, int dx, int dy, void* rect);
+void q_pixmap_scroll2(void* self, int dx, int dy, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#cacheKey)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int64_t q_pixmap_cache_key(void* self);
+int64_t q_pixmap_cache_key(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#isDetached)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-bool q_pixmap_is_detached(void* self);
+bool q_pixmap_is_detached(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#detach)
 ///
@@ -382,63 +382,63 @@ void q_pixmap_detach(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#isQBitmap)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-bool q_pixmap_is_q_bitmap(void* self);
+bool q_pixmap_is_q_bitmap(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#paintEngine)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QPaintEngine* q_pixmap_paint_engine(void* self);
+QPaintEngine* q_pixmap_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#paintEngine)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPixmap*
-/// @param callback QPaintEngine* func()
+/// @param self const QPixmap*
+/// @param callback QPaintEngine* func(const QPixmap* self)
 ///
-void q_pixmap_on_paint_engine(void* self, QPaintEngine* (*callback)());
+void q_pixmap_on_paint_engine(const void* self, QPaintEngine* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#paintEngine)
 ///
 /// Base class method implementation
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QPaintEngine* q_pixmap_super_paint_engine(void* self);
+QPaintEngine* q_pixmap_super_paint_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#operator-not)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-bool q_pixmap_operator_not(void* self);
+bool q_pixmap_operator_not(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#metric)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_pixmap_metric(void* self, int32_t param1);
+int32_t q_pixmap_metric(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPixmap*
-/// @param callback int32_t func(QPixmap* self, enum QPaintDevice__PaintDeviceMetric param1)
+/// @param self const QPixmap*
+/// @param callback int32_t func(const QPixmap* self, enum QPaintDevice__PaintDeviceMetric param1)
 ///
-void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int32_t));
+void q_pixmap_on_metric(const void* self, int32_t (*callback)(const void*, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#metric)
 ///
 /// Base class method implementation
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_pixmap_super_metric(void* self, int32_t param1);
+int32_t q_pixmap_super_metric(const void* self, int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
 ///
@@ -447,114 +447,94 @@ int32_t q_pixmap_super_metric(void* self, int32_t param1);
 ///
 QPixmap* q_pixmap_from_image_in_place(void* self, void* image);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QPixmap*
-/// @param callback QPixmap* func(QPixmap* self, QImage* image)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_pixmap_on_from_image_in_place(void* self, QPixmap* (*callback)(void*, void*));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
-///
-/// Base class method implementation
-///
-/// @param self QPixmap*
-/// @param image QImage*
-///
-QPixmap* q_pixmap_super_from_image_in_place(void* self, void* image);
-
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fill)
 ///
 /// @param self QPixmap*
 /// @param fillColor QColor*
 ///
-void q_pixmap_fill1(void* self, void* fillColor);
+void q_pixmap_fill1(void* self, const void* fillColor);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#createHeuristicMask)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param clipTight bool
 ///
-QBitmap* q_pixmap_create_heuristic_mask1(void* self, bool clipTight);
+QBitmap* q_pixmap_create_heuristic_mask1(const void* self, bool clipTight);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#createMaskFromColor)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param maskColor QColor*
 /// @param mode enum Qt__MaskMode
 ///
-QBitmap* q_pixmap_create_mask_from_color2(void* self, void* maskColor, int32_t mode);
+QBitmap* q_pixmap_create_mask_from_color2(const void* self, const void* maskColor, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param w int
 /// @param h int
 /// @param aspectMode enum Qt__AspectRatioMode
 ///
-QPixmap* q_pixmap_scaled3(void* self, int w, int h, int32_t aspectMode);
+QPixmap* q_pixmap_scaled3(const void* self, int w, int h, int32_t aspectMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param w int
 /// @param h int
 /// @param aspectMode enum Qt__AspectRatioMode
 /// @param mode enum Qt__TransformationMode
 ///
-QPixmap* q_pixmap_scaled4(void* self, int w, int h, int32_t aspectMode, int32_t mode);
+QPixmap* q_pixmap_scaled4(const void* self, int w, int h, int32_t aspectMode, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param s QSize*
 /// @param aspectMode enum Qt__AspectRatioMode
 ///
-QPixmap* q_pixmap_scaled22(void* self, void* s, int32_t aspectMode);
+QPixmap* q_pixmap_scaled22(const void* self, const void* s, int32_t aspectMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param s QSize*
 /// @param aspectMode enum Qt__AspectRatioMode
 /// @param mode enum Qt__TransformationMode
 ///
-QPixmap* q_pixmap_scaled32(void* self, void* s, int32_t aspectMode, int32_t mode);
+QPixmap* q_pixmap_scaled32(const void* self, const void* s, int32_t aspectMode, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaledToWidth)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param w int
 /// @param mode enum Qt__TransformationMode
 ///
-QPixmap* q_pixmap_scaled_to_width2(void* self, int w, int32_t mode);
+QPixmap* q_pixmap_scaled_to_width2(const void* self, int w, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scaledToHeight)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param h int
 /// @param mode enum Qt__TransformationMode
 ///
-QPixmap* q_pixmap_scaled_to_height2(void* self, int h, int32_t mode);
+QPixmap* q_pixmap_scaled_to_height2(const void* self, int h, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#transformed)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param param1 QTransform*
 /// @param mode enum Qt__TransformationMode
 ///
-QPixmap* q_pixmap_transformed2(void* self, void* param1, int32_t mode);
+QPixmap* q_pixmap_transformed2(const void* self, const void* param1, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImage)
 ///
 /// @param image QImage*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QPixmap* q_pixmap_from_image2(void* image, int32_t flags);
+QPixmap* q_pixmap_from_image2(const void* image, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageReader)
 ///
@@ -618,37 +598,37 @@ bool q_pixmap_load_from_data32(void* self, char* data, const char* format, int32
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param fileName const char*
 /// @param format const char*
 ///
-bool q_pixmap_save22(void* self, const char* fileName, const char* format);
+bool q_pixmap_save22(const void* self, const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param fileName const char*
 /// @param format const char*
 /// @param quality int
 ///
-bool q_pixmap_save3(void* self, const char* fileName, const char* format, int quality);
+bool q_pixmap_save3(const void* self, const char* fileName, const char* format, int quality);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param device QIODevice*
 /// @param format const char*
 ///
-bool q_pixmap_save23(void* self, void* device, const char* format);
+bool q_pixmap_save23(const void* self, void* device, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param device QIODevice*
 /// @param format const char*
 /// @param quality int
 ///
-bool q_pixmap_save32(void* self, void* device, const char* format, int quality);
+bool q_pixmap_save32(const void* self, void* device, const char* format, int quality);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#convertFromImage)
 ///
@@ -656,14 +636,14 @@ bool q_pixmap_save32(void* self, void* device, const char* format, int quality);
 /// @param img QImage*
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-bool q_pixmap_convert_from_image2(void* self, void* img, int32_t flags);
+bool q_pixmap_convert_from_image2(void* self, const void* img, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#copy)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param rect QRect*
 ///
-QPixmap* q_pixmap_copy1(void* self, void* rect);
+QPixmap* q_pixmap_copy1(const void* self, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#scroll)
 ///
@@ -686,7 +666,7 @@ void q_pixmap_scroll7(void* self, int dx, int dy, int x, int y, int width, int h
 /// @param rect QRect*
 /// @param exposed QRegion*
 ///
-void q_pixmap_scroll4(void* self, int dx, int dy, void* rect, void* exposed);
+void q_pixmap_scroll4(void* self, int dx, int dy, const void* rect, void* exposed);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
 ///
@@ -696,98 +676,77 @@ void q_pixmap_scroll4(void* self, int dx, int dy, void* rect, void* exposed);
 ///
 QPixmap* q_pixmap_from_image_in_place2(void* self, void* image, int32_t flags);
 
-/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
-///
-/// Allows for overriding the related default method
-///
-/// @param self QPixmap*
-/// @param callback QPixmap* func(QPixmap* self, QImage* image, flag of enum Qt__ImageConversionFlag flags)
-///
-/// @warning Memory for the returned type of the callback is freed by the library.
-///
-void q_pixmap_on_from_image_in_place2(void* self, QPixmap* (*callback)(void*, void*, int32_t));
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
-///
-/// Base class method implementation
-///
-/// @param self QPixmap*
-/// @param image QImage*
-/// @param flags flag of enum Qt__ImageConversionFlag
-///
-QPixmap* q_pixmap_super_from_image_in_place2(void* self, void* image, int32_t flags);
-
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-bool q_pixmap_painting_active(void* self);
+bool q_pixmap_painting_active(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_width_m_m(void* self);
+int32_t q_pixmap_width_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_height_m_m(void* self);
+int32_t q_pixmap_height_m_m(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_logical_dpi_x(void* self);
+int32_t q_pixmap_logical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_logical_dpi_y(void* self);
+int32_t q_pixmap_logical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_physical_dpi_x(void* self);
+int32_t q_pixmap_physical_dpi_x(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_physical_dpi_y(void* self);
+int32_t q_pixmap_physical_dpi_y(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-double q_pixmap_device_pixel_ratio_f(void* self);
+double q_pixmap_device_pixel_ratio_f(const void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-int32_t q_pixmap_color_count(void* self);
+int32_t q_pixmap_color_count(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -810,10 +769,10 @@ int32_t q_pixmap_encode_metric_f(int32_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param painter QPainter*
 ///
-void q_pixmap_init_painter(void* self, void* painter);
+void q_pixmap_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -821,10 +780,10 @@ void q_pixmap_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param painter QPainter*
 ///
-void q_pixmap_super_init_painter(void* self, void* painter);
+void q_pixmap_super_init_painter(const void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -832,10 +791,10 @@ void q_pixmap_super_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param callback void func(QPixmap* self, QPainter* painter)
 ///
-void q_pixmap_on_init_painter(void* self, void (*callback)(void*, void*));
+void q_pixmap_on_init_painter(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -843,10 +802,10 @@ void q_pixmap_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_pixmap_redirected(void* self, void* offset);
+QPaintDevice* q_pixmap_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -854,10 +813,10 @@ QPaintDevice* q_pixmap_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_pixmap_super_redirected(void* self, void* offset);
+QPaintDevice* q_pixmap_super_redirected(const void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -865,10 +824,10 @@ QPaintDevice* q_pixmap_super_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param callback QPaintDevice* func(QPixmap* self, QPoint* offset)
 ///
-void q_pixmap_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
+void q_pixmap_on_redirected(const void* self, QPaintDevice* (*callback)(const void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -876,9 +835,9 @@ void q_pixmap_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QPainter* q_pixmap_shared_painter(void* self);
+QPainter* q_pixmap_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -886,9 +845,9 @@ QPainter* q_pixmap_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 ///
-QPainter* q_pixmap_super_shared_painter(void* self);
+QPainter* q_pixmap_super_shared_painter(const void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -896,10 +855,10 @@ QPainter* q_pixmap_super_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPixmap*
-/// @param callback QPainter* func()
+/// @param self const QPixmap*
+/// @param callback QPainter* func(QPixmap* self)
 ///
-void q_pixmap_on_shared_painter(void* self, QPainter* (*callback)());
+void q_pixmap_on_shared_painter(const void* self, QPainter* (*callback)(const void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -907,11 +866,11 @@ void q_pixmap_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_pixmap_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_pixmap_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -919,11 +878,11 @@ double q_pixmap_get_decoded_metric_f(void* self, int32_t metricA, int32_t metric
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_pixmap_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_pixmap_super_get_decoded_metric_f(const void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -931,10 +890,10 @@ double q_pixmap_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPixmap*
+/// @param self const QPixmap*
 /// @param callback double func(QPixmap* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB)
 ///
-void q_pixmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
+void q_pixmap_on_get_decoded_metric_f(const void* self, double (*callback)(const void*, int32_t, int32_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#dtor.QPixmap)
 ///

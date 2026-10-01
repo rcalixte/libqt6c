@@ -33,26 +33,26 @@ QPolarChart* q_polarchart_new3(void* parent, int32_t wFlags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const QMetaObject* q_polarchart_meta_object(void* self);
+const QMetaObject* q_polarchart_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QPolarChart*
-/// @param callback const QMetaObject* func()
+/// @param self const QPolarChart*
+/// @param callback const QMetaObject* func(const QPolarChart* self)
 ///
-void q_polarchart_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_polarchart_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const QMetaObject* q_polarchart_super_meta_object(void* self);
+const QMetaObject* q_polarchart_super_meta_object(const void* self);
 
 /// @param self QPolarChart*
 /// @param param1 const char*
@@ -114,11 +114,11 @@ void q_polarchart_add_axis(void* self, void* axis, int32_t polarOrientation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axes)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return libqt_list of QAbstractAxis*
 ///
-libqt_list q_polarchart_axes(void* self);
+libqt_list q_polarchart_axes(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axisPolarOrientation)
 ///
@@ -149,22 +149,22 @@ const char* q_polarchart_tr3(const char* s, const char* c, int n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axes)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param polarOrientation flag of enum QPolarChart__PolarOrientation
 ///
 /// @return libqt_list of QAbstractAxis*
 ///
-libqt_list q_polarchart_axes1(void* self, int32_t polarOrientation);
+libqt_list q_polarchart_axes1(const void* self, int32_t polarOrientation);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#axes)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param polarOrientation flag of enum QPolarChart__PolarOrientation
 /// @param series QAbstractSeries*
 ///
 /// @return libqt_list of QAbstractAxis*
 ///
-libqt_list q_polarchart_axes2(void* self, int32_t polarOrientation, void* series);
+libqt_list q_polarchart_axes2(const void* self, int32_t polarOrientation, void* series);
 
 /// Inherited from QChart
 ///
@@ -196,11 +196,11 @@ void q_polarchart_remove_all_series(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#series)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return libqt_list of QAbstractSeries*
 ///
-libqt_list q_polarchart_series(void* self);
+libqt_list q_polarchart_series(const void* self);
 
 /// Inherited from QChart
 ///
@@ -224,17 +224,17 @@ void q_polarchart_set_axis_y(void* self, void* axis);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#axisX)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QAbstractAxis* q_polarchart_axis_x(void* self);
+QAbstractAxis* q_polarchart_axis_x(const void* self);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#axisY)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QAbstractAxis* q_polarchart_axis_y(void* self);
+QAbstractAxis* q_polarchart_axis_y(const void* self);
 
 /// Inherited from QChart
 ///
@@ -266,11 +266,11 @@ void q_polarchart_set_theme(void* self, int32_t theme);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#theme)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return enum QChart__ChartTheme
 ///
-int32_t q_polarchart_theme(void* self);
+int32_t q_polarchart_theme(const void* self);
 
 /// Inherited from QChart
 ///
@@ -287,9 +287,9 @@ void q_polarchart_set_title(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const char* q_polarchart_title(void* self);
+const char* q_polarchart_title(const void* self);
 
 /// Inherited from QChart
 ///
@@ -298,15 +298,15 @@ const char* q_polarchart_title(void* self);
 /// @param self QPolarChart*
 /// @param font QFont*
 ///
-void q_polarchart_set_title_font(void* self, void* font);
+void q_polarchart_set_title_font(void* self, const void* font);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#titleFont)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QFont* q_polarchart_title_font(void* self);
+QFont* q_polarchart_title_font(const void* self);
 
 /// Inherited from QChart
 ///
@@ -315,15 +315,15 @@ QFont* q_polarchart_title_font(void* self);
 /// @param self QPolarChart*
 /// @param brush QBrush*
 ///
-void q_polarchart_set_title_brush(void* self, void* brush);
+void q_polarchart_set_title_brush(void* self, const void* brush);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#titleBrush)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QBrush* q_polarchart_title_brush(void* self);
+QBrush* q_polarchart_title_brush(const void* self);
 
 /// Inherited from QChart
 ///
@@ -332,15 +332,15 @@ QBrush* q_polarchart_title_brush(void* self);
 /// @param self QPolarChart*
 /// @param brush QBrush*
 ///
-void q_polarchart_set_background_brush(void* self, void* brush);
+void q_polarchart_set_background_brush(void* self, const void* brush);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#backgroundBrush)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QBrush* q_polarchart_background_brush(void* self);
+QBrush* q_polarchart_background_brush(const void* self);
 
 /// Inherited from QChart
 ///
@@ -349,15 +349,15 @@ QBrush* q_polarchart_background_brush(void* self);
 /// @param self QPolarChart*
 /// @param pen QPen*
 ///
-void q_polarchart_set_background_pen(void* self, void* pen);
+void q_polarchart_set_background_pen(void* self, const void* pen);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#backgroundPen)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPen* q_polarchart_background_pen(void* self);
+QPen* q_polarchart_background_pen(const void* self);
 
 /// Inherited from QChart
 ///
@@ -371,9 +371,9 @@ void q_polarchart_set_background_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#isBackgroundVisible)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_background_visible(void* self);
+bool q_polarchart_is_background_visible(const void* self);
 
 /// Inherited from QChart
 ///
@@ -387,9 +387,9 @@ void q_polarchart_set_drop_shadow_enabled(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#isDropShadowEnabled)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_drop_shadow_enabled(void* self);
+bool q_polarchart_is_drop_shadow_enabled(const void* self);
 
 /// Inherited from QChart
 ///
@@ -404,9 +404,9 @@ void q_polarchart_set_background_roundness(void* self, double diameter);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#backgroundRoundness)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_background_roundness(void* self);
+double q_polarchart_background_roundness(const void* self);
 
 /// Inherited from QChart
 ///
@@ -421,11 +421,11 @@ void q_polarchart_set_animation_options(void* self, int32_t options);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#animationOptions)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return flag of enum QChart__AnimationOption
 ///
-int32_t q_polarchart_animation_options(void* self);
+int32_t q_polarchart_animation_options(const void* self);
 
 /// Inherited from QChart
 ///
@@ -440,9 +440,9 @@ void q_polarchart_set_animation_duration(void* self, int msecs);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#animationDuration)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-int32_t q_polarchart_animation_duration(void* self);
+int32_t q_polarchart_animation_duration(const void* self);
 
 /// Inherited from QChart
 ///
@@ -451,15 +451,15 @@ int32_t q_polarchart_animation_duration(void* self);
 /// @param self QPolarChart*
 /// @param curve QEasingCurve*
 ///
-void q_polarchart_set_animation_easing_curve(void* self, void* curve);
+void q_polarchart_set_animation_easing_curve(void* self, const void* curve);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#animationEasingCurve)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QEasingCurve* q_polarchart_animation_easing_curve(void* self);
+QEasingCurve* q_polarchart_animation_easing_curve(const void* self);
 
 /// Inherited from QChart
 ///
@@ -484,7 +484,7 @@ void q_polarchart_zoom_out(void* self);
 /// @param self QPolarChart*
 /// @param rect QRectF*
 ///
-void q_polarchart_zoom_in2(void* self, void* rect);
+void q_polarchart_zoom_in2(void* self, const void* rect);
 
 /// Inherited from QChart
 ///
@@ -525,9 +525,9 @@ void q_polarchart_scroll(void* self, double dx, double dy);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#legend)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QLegend* q_polarchart_legend(void* self);
+QLegend* q_polarchart_legend(const void* self);
 
 /// Inherited from QChart
 ///
@@ -536,23 +536,23 @@ QLegend* q_polarchart_legend(void* self);
 /// @param self QPolarChart*
 /// @param margins QMargins*
 ///
-void q_polarchart_set_margins(void* self, void* margins);
+void q_polarchart_set_margins(void* self, const void* margins);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#margins)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QMargins* q_polarchart_margins(void* self);
+QMargins* q_polarchart_margins(const void* self);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#plotArea)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_plot_area(void* self);
+QRectF* q_polarchart_plot_area(const void* self);
 
 /// Inherited from QChart
 ///
@@ -561,7 +561,7 @@ QRectF* q_polarchart_plot_area(void* self);
 /// @param self QPolarChart*
 /// @param rect QRectF*
 ///
-void q_polarchart_set_plot_area(void* self, void* rect);
+void q_polarchart_set_plot_area(void* self, const void* rect);
 
 /// Inherited from QChart
 ///
@@ -570,15 +570,15 @@ void q_polarchart_set_plot_area(void* self, void* rect);
 /// @param self QPolarChart*
 /// @param brush QBrush*
 ///
-void q_polarchart_set_plot_area_background_brush(void* self, void* brush);
+void q_polarchart_set_plot_area_background_brush(void* self, const void* brush);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#plotAreaBackgroundBrush)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QBrush* q_polarchart_plot_area_background_brush(void* self);
+QBrush* q_polarchart_plot_area_background_brush(const void* self);
 
 /// Inherited from QChart
 ///
@@ -587,15 +587,15 @@ QBrush* q_polarchart_plot_area_background_brush(void* self);
 /// @param self QPolarChart*
 /// @param pen QPen*
 ///
-void q_polarchart_set_plot_area_background_pen(void* self, void* pen);
+void q_polarchart_set_plot_area_background_pen(void* self, const void* pen);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#plotAreaBackgroundPen)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPen* q_polarchart_plot_area_background_pen(void* self);
+QPen* q_polarchart_plot_area_background_pen(const void* self);
 
 /// Inherited from QChart
 ///
@@ -609,9 +609,9 @@ void q_polarchart_set_plot_area_background_visible(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#isPlotAreaBackgroundVisible)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_plot_area_background_visible(void* self);
+bool q_polarchart_is_plot_area_background_visible(const void* self);
 
 /// Inherited from QChart
 ///
@@ -626,9 +626,9 @@ void q_polarchart_set_localize_numbers(void* self, bool localize);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#localizeNumbers)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_localize_numbers(void* self);
+bool q_polarchart_localize_numbers(const void* self);
 
 /// Inherited from QChart
 ///
@@ -637,15 +637,15 @@ bool q_polarchart_localize_numbers(void* self);
 /// @param self QPolarChart*
 /// @param locale QLocale*
 ///
-void q_polarchart_set_locale(void* self, void* locale);
+void q_polarchart_set_locale(void* self, const void* locale);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#locale)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QLocale* q_polarchart_locale(void* self);
+QLocale* q_polarchart_locale(const void* self);
 
 /// Inherited from QChart
 ///
@@ -654,7 +654,7 @@ QLocale* q_polarchart_locale(void* self);
 /// @param self QPolarChart*
 /// @param position QPointF*
 ///
-QPointF* q_polarchart_map_to_value(void* self, void* position);
+QPointF* q_polarchart_map_to_value(void* self, const void* position);
 
 /// Inherited from QChart
 ///
@@ -663,17 +663,17 @@ QPointF* q_polarchart_map_to_value(void* self, void* position);
 /// @param self QPolarChart*
 /// @param value QPointF*
 ///
-QPointF* q_polarchart_map_to_position(void* self, void* value);
+QPointF* q_polarchart_map_to_position(void* self, const void* value);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#chartType)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return enum QChart__ChartType
 ///
-int32_t q_polarchart_chart_type(void* self);
+int32_t q_polarchart_chart_type(const void* self);
 
 /// Inherited from QChart
 ///
@@ -682,7 +682,7 @@ int32_t q_polarchart_chart_type(void* self);
 /// @param self QPolarChart*
 /// @param plotArea QRectF*
 ///
-void q_polarchart_plot_area_changed(void* self, void* plotArea);
+void q_polarchart_plot_area_changed(void* self, const void* plotArea);
 
 /// Inherited from QChart
 ///
@@ -691,7 +691,7 @@ void q_polarchart_plot_area_changed(void* self, void* plotArea);
 /// @param self QPolarChart*
 /// @param callback void func(QPolarChart* self, QRectF* plotArea)
 ///
-void q_polarchart_on_plot_area_changed(void* self, void (*callback)(void*, void*));
+void q_polarchart_on_plot_area_changed(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QChart
 ///
@@ -717,19 +717,19 @@ void q_polarchart_set_axis_y2(void* self, void* axis, void* series);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#axisX)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param series QAbstractSeries*
 ///
-QAbstractAxis* q_polarchart_axis_x1(void* self, void* series);
+QAbstractAxis* q_polarchart_axis_x1(const void* self, void* series);
 
 /// Inherited from QChart
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qchart.html#axisY)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param series QAbstractSeries*
 ///
-QAbstractAxis* q_polarchart_axis_y1(void* self, void* series);
+QAbstractAxis* q_polarchart_axis_y1(const void* self, void* series);
 
 /// Inherited from QChart
 ///
@@ -766,7 +766,7 @@ void q_polarchart_set_plot_area_background_visible1(void* self, bool visible);
 /// @param position QPointF*
 /// @param series QAbstractSeries*
 ///
-QPointF* q_polarchart_map_to_value2(void* self, void* position, void* series);
+QPointF* q_polarchart_map_to_value2(void* self, const void* position, void* series);
 
 /// Inherited from QChart
 ///
@@ -776,7 +776,7 @@ QPointF* q_polarchart_map_to_value2(void* self, void* position, void* series);
 /// @param value QPointF*
 /// @param series QAbstractSeries*
 ///
-QPointF* q_polarchart_map_to_position2(void* self, void* value, void* series);
+QPointF* q_polarchart_map_to_position2(void* self, const void* value, void* series);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -798,9 +798,9 @@ QPolarChart* q_polarchart_from_q_graphics_layout_item(void* _qgraphicslayoutitem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#layout)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsLayout* q_polarchart_layout(void* self);
+QGraphicsLayout* q_polarchart_layout(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -823,11 +823,11 @@ void q_polarchart_adjust_size(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutDirection)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return enum Qt__LayoutDirection
 ///
-int32_t q_polarchart_layout_direction(void* self);
+int32_t q_polarchart_layout_direction(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -850,9 +850,9 @@ void q_polarchart_unset_layout_direction(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#style)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QStyle* q_polarchart_style(void* self);
+QStyle* q_polarchart_style(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -867,9 +867,9 @@ void q_polarchart_set_style(void* self, void* style);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#font)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QFont* q_polarchart_font(void* self);
+QFont* q_polarchart_font(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -878,15 +878,15 @@ QFont* q_polarchart_font(void* self);
 /// @param self QPolarChart*
 /// @param font QFont*
 ///
-void q_polarchart_set_font(void* self, void* font);
+void q_polarchart_set_font(void* self, const void* font);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#palette)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPalette* q_polarchart_palette(void* self);
+QPalette* q_polarchart_palette(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -895,15 +895,15 @@ QPalette* q_polarchart_palette(void* self);
 /// @param self QPolarChart*
 /// @param palette QPalette*
 ///
-void q_polarchart_set_palette(void* self, void* palette);
+void q_polarchart_set_palette(void* self, const void* palette);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#autoFillBackground)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_auto_fill_background(void* self);
+bool q_polarchart_auto_fill_background(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -921,7 +921,7 @@ void q_polarchart_set_auto_fill_background(void* self, bool enabled);
 /// @param self QPolarChart*
 /// @param size QSizeF*
 ///
-void q_polarchart_resize(void* self, void* size);
+void q_polarchart_resize(void* self, const void* size);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -937,9 +937,9 @@ void q_polarchart_resize2(void* self, double w, double h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#size)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QSizeF* q_polarchart_size(void* self);
+QSizeF* q_polarchart_size(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -957,9 +957,9 @@ void q_polarchart_set_geometry2(void* self, double x, double y, double w, double
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#rect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_rect(void* self);
+QRectF* q_polarchart_rect(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1007,13 +1007,13 @@ void q_polarchart_set_window_frame_margins2(void* self, void* margins);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#getWindowFrameMargins)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param left double*
 /// @param top double*
 /// @param right double*
 /// @param bottom double*
 ///
-void q_polarchart_get_window_frame_margins(void* self, double* left, double* top, double* right, double* bottom);
+void q_polarchart_get_window_frame_margins(const void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1027,37 +1027,37 @@ void q_polarchart_unset_window_frame_margins(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameGeometry)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_window_frame_geometry(void* self);
+QRectF* q_polarchart_window_frame_geometry(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameRect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_window_frame_rect(void* self);
+QRectF* q_polarchart_window_frame_rect(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFlags)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return flag of enum Qt__WindowType
 ///
-int32_t q_polarchart_window_flags(void* self);
+int32_t q_polarchart_window_flags(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#windowType)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return enum Qt__WindowType
 ///
-int32_t q_polarchart_window_type(void* self);
+int32_t q_polarchart_window_type(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1072,9 +1072,9 @@ void q_polarchart_set_window_flags(void* self, int32_t wFlags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#isActiveWindow)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_active_window(void* self);
+bool q_polarchart_is_active_window(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1091,19 +1091,19 @@ void q_polarchart_set_window_title(void* self, const char* title);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const char* q_polarchart_window_title(void* self);
+const char* q_polarchart_window_title(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#focusPolicy)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return enum Qt__FocusPolicy
 ///
-int32_t q_polarchart_focus_policy(void* self);
+int32_t q_polarchart_focus_policy(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1127,9 +1127,9 @@ void q_polarchart_set_tab_order(void* first, void* second);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#focusWidget)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsWidget* q_polarchart_focus_widget(void* self);
+QGraphicsWidget* q_polarchart_focus_widget(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1138,7 +1138,7 @@ QGraphicsWidget* q_polarchart_focus_widget(void* self);
 /// @param self QPolarChart*
 /// @param sequence QKeySequence*
 ///
-int32_t q_polarchart_grab_shortcut(void* self, void* sequence);
+int32_t q_polarchart_grab_shortcut(void* self, const void* sequence);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1218,11 +1218,11 @@ void q_polarchart_remove_action(void* self, void* action);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#actions)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_polarchart_actions(void* self);
+libqt_list q_polarchart_actions(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1237,10 +1237,10 @@ void q_polarchart_set_attribute(void* self, int32_t attribute);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicswidget.html#testAttribute)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param attribute enum Qt__WidgetAttribute
 ///
-bool q_polarchart_test_attribute(void* self, int32_t attribute);
+bool q_polarchart_test_attribute(const void* self, int32_t attribute);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1292,7 +1292,7 @@ bool q_polarchart_close(void* self);
 /// @param sequence QKeySequence*
 /// @param context enum Qt__ShortcutContext
 ///
-int32_t q_polarchart_grab_shortcut2(void* self, void* sequence, int32_t context);
+int32_t q_polarchart_grab_shortcut2(void* self, const void* sequence, int32_t context);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1578,9 +1578,9 @@ void q_polarchart_grab_gesture2(void* self, int32_t type, int32_t flags);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const char* q_polarchart_object_name(void* self);
+const char* q_polarchart_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1595,33 +1595,33 @@ void q_polarchart_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_widget_type(void* self);
+bool q_polarchart_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_window_type(void* self);
+bool q_polarchart_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_quick_item_type(void* self);
+bool q_polarchart_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_signals_blocked(void* self);
+bool q_polarchart_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1636,9 +1636,9 @@ bool q_polarchart_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QThread* q_polarchart_thread(void* self);
+QThread* q_polarchart_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1689,11 +1689,11 @@ void q_polarchart_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_polarchart_children(void* self);
+libqt_list q_polarchart_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1731,7 +1731,7 @@ void q_polarchart_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_polarchart_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_polarchart_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1742,18 +1742,18 @@ QMetaObject__Connection* q_polarchart_connect(void* sender, const char* signal, 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_polarchart_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_polarchart_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_polarchart_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_polarchart_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1764,7 +1764,7 @@ QMetaObject__Connection* q_polarchart_connect3(void* self, void* sender, const c
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_polarchart_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_polarchart_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -1775,24 +1775,24 @@ bool q_polarchart_disconnect(void* sender, const char* signal, void* receiver, c
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_polarchart_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_polarchart_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_disconnect3(void* self);
+bool q_polarchart_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param receiver QObject*
 ///
-bool q_polarchart_disconnect4(void* self, void* receiver);
+bool q_polarchart_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -1800,23 +1800,23 @@ bool q_polarchart_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_polarchart_disconnect5(void* param1);
+bool q_polarchart_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-void q_polarchart_dump_object_tree(void* self);
+void q_polarchart_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-void q_polarchart_dump_object_info(void* self);
+void q_polarchart_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1826,16 +1826,16 @@ void q_polarchart_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_polarchart_set_property(void* self, const char* name, void* value);
+bool q_polarchart_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param name const char*
 ///
-QVariant* q_polarchart_property(void* self, const char* name);
+QVariant* q_polarchart_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -1843,9 +1843,9 @@ QVariant* q_polarchart_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const char** q_polarchart_dynamic_property_names(void* self);
+const char** q_polarchart_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1859,9 +1859,9 @@ QBindingStorage* q_polarchart_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const QBindingStorage* q_polarchart_binding_storage2(void* self);
+const QBindingStorage* q_polarchart_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -1884,18 +1884,18 @@ void q_polarchart_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QObject* q_polarchart_parent(void* self);
+QObject* q_polarchart_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param classname const char*
 ///
-bool q_polarchart_inherits(void* self, const char* classname);
+bool q_polarchart_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -1935,7 +1935,7 @@ int32_t q_polarchart_start_timer23(void* self, int64_t time, int32_t timerType);
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_polarchart_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_polarchart_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -1947,59 +1947,59 @@ QMetaObject__Connection* q_polarchart_connect5(void* sender, const char* signal,
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_polarchart_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_polarchart_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_polarchart_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_polarchart_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param signal const char*
 ///
-bool q_polarchart_disconnect1(void* self, const char* signal);
+bool q_polarchart_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPolarChart*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_polarchart_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_polarchart_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_polarchart_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_polarchart_disconnect23(void* self, void* receiver, const char* member);
+bool q_polarchart_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QPolarChart*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_polarchart_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -2023,65 +2023,65 @@ void q_polarchart_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsScene* q_polarchart_scene(void* self);
+QGraphicsScene* q_polarchart_scene(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsItem* q_polarchart_parent_item(void* self);
+QGraphicsItem* q_polarchart_parent_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsItem* q_polarchart_top_level_item(void* self);
+QGraphicsItem* q_polarchart_top_level_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsObject* q_polarchart_parent_object(void* self);
+QGraphicsObject* q_polarchart_parent_object(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsWidget* q_polarchart_parent_widget(void* self);
+QGraphicsWidget* q_polarchart_parent_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsWidget* q_polarchart_top_level_widget(void* self);
+QGraphicsWidget* q_polarchart_top_level_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsWidget* q_polarchart_window(void* self);
+QGraphicsWidget* q_polarchart_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsItem* q_polarchart_panel(void* self);
+QGraphicsItem* q_polarchart_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2096,35 +2096,35 @@ void q_polarchart_set_parent_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_polarchart_child_items(void* self);
+libqt_list q_polarchart_child_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_widget(void* self);
+bool q_polarchart_is_widget(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_window(void* self);
+bool q_polarchart_is_window(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_panel(void* self);
+bool q_polarchart_is_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2138,17 +2138,17 @@ QGraphicsObject* q_polarchart_to_graphics_object(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const QGraphicsObject* q_polarchart_to_graphics_object2(void* self);
+const QGraphicsObject* q_polarchart_to_graphics_object2(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsItemGroup* q_polarchart_group(void* self);
+QGraphicsItemGroup* q_polarchart_group(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2163,11 +2163,11 @@ void q_polarchart_set_group(void* self, void* group);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return flag of enum QGraphicsItem__GraphicsItemFlag
 ///
-int32_t q_polarchart_flags(void* self);
+int32_t q_polarchart_flags(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2191,11 +2191,11 @@ void q_polarchart_set_flags(void* self, int32_t flags);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return enum QGraphicsItem__CacheMode
 ///
-int32_t q_polarchart_cache_mode(void* self);
+int32_t q_polarchart_cache_mode(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2210,11 +2210,11 @@ void q_polarchart_set_cache_mode(void* self, int32_t mode);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return enum QGraphicsItem__PanelModality
 ///
-int32_t q_polarchart_panel_modality(void* self);
+int32_t q_polarchart_panel_modality(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2229,9 +2229,9 @@ void q_polarchart_set_panel_modality(void* self, int32_t panelModality);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_blocked_by_modal_panel(void* self);
+bool q_polarchart_is_blocked_by_modal_panel(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2239,9 +2239,9 @@ bool q_polarchart_is_blocked_by_modal_panel(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-const char* q_polarchart_tool_tip(void* self);
+const char* q_polarchart_tool_tip(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2256,9 +2256,9 @@ void q_polarchart_set_tool_tip(void* self, const char* toolTip);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QCursor* q_polarchart_cursor(void* self);
+QCursor* q_polarchart_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2267,15 +2267,15 @@ QCursor* q_polarchart_cursor(void* self);
 /// @param self QPolarChart*
 /// @param cursor QCursor*
 ///
-void q_polarchart_set_cursor(void* self, void* cursor);
+void q_polarchart_set_cursor(void* self, const void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_has_cursor(void* self);
+bool q_polarchart_has_cursor(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2289,18 +2289,18 @@ void q_polarchart_unset_cursor(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_visible(void* self);
+bool q_polarchart_is_visible(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param parent QGraphicsItem*
 ///
-bool q_polarchart_is_visible_to(void* self, void* parent);
+bool q_polarchart_is_visible_to(const void* self, const void* parent);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2331,9 +2331,9 @@ void q_polarchart_show(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_enabled(void* self);
+bool q_polarchart_is_enabled(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2348,9 +2348,9 @@ void q_polarchart_set_enabled(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_selected(void* self);
+bool q_polarchart_is_selected(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2365,9 +2365,9 @@ void q_polarchart_set_selected(void* self, bool selected);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_accept_drops(void* self);
+bool q_polarchart_accept_drops(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2382,17 +2382,17 @@ void q_polarchart_set_accept_drops(void* self, bool on);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_opacity(void* self);
+double q_polarchart_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_effective_opacity(void* self);
+double q_polarchart_effective_opacity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2407,9 +2407,9 @@ void q_polarchart_set_opacity(void* self, double opacity);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsEffect* q_polarchart_graphics_effect(void* self);
+QGraphicsEffect* q_polarchart_graphics_effect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2424,11 +2424,11 @@ void q_polarchart_set_graphics_effect(void* self, void* effect);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return flag of enum Qt__MouseButton
 ///
-int32_t q_polarchart_accepted_mouse_buttons(void* self);
+int32_t q_polarchart_accepted_mouse_buttons(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2443,9 +2443,9 @@ void q_polarchart_set_accepted_mouse_buttons(void* self, int32_t buttons);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_accept_hover_events(void* self);
+bool q_polarchart_accept_hover_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2460,9 +2460,9 @@ void q_polarchart_set_accept_hover_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_accept_touch_events(void* self);
+bool q_polarchart_accept_touch_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2477,9 +2477,9 @@ void q_polarchart_set_accept_touch_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_filters_child_events(void* self);
+bool q_polarchart_filters_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2494,9 +2494,9 @@ void q_polarchart_set_filters_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_handles_child_events(void* self);
+bool q_polarchart_handles_child_events(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2511,9 +2511,9 @@ void q_polarchart_set_handles_child_events(void* self, bool enabled);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_active(void* self);
+bool q_polarchart_is_active(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2528,9 +2528,9 @@ void q_polarchart_set_active(void* self, bool active);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_has_focus(void* self);
+bool q_polarchart_has_focus(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2552,9 +2552,9 @@ void q_polarchart_clear_focus(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsItem* q_polarchart_focus_proxy(void* self);
+QGraphicsItem* q_polarchart_focus_proxy(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2569,17 +2569,17 @@ void q_polarchart_set_focus_proxy(void* self, void* item);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsItem* q_polarchart_focus_item(void* self);
+QGraphicsItem* q_polarchart_focus_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsItem* q_polarchart_focus_scope_item(void* self);
+QGraphicsItem* q_polarchart_focus_scope_item(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2617,17 +2617,17 @@ void q_polarchart_ungrab_keyboard(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPointF* q_polarchart_pos(void* self);
+QPointF* q_polarchart_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_x(void* self);
+double q_polarchart_x(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2642,9 +2642,9 @@ void q_polarchart_set_x(void* self, double x);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_y(void* self);
+double q_polarchart_y(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2659,9 +2659,9 @@ void q_polarchart_set_y(void* self, double y);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPointF* q_polarchart_scene_pos(void* self);
+QPointF* q_polarchart_scene_pos(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2670,7 +2670,7 @@ QPointF* q_polarchart_scene_pos(void* self);
 /// @param self QPolarChart*
 /// @param pos QPointF*
 ///
-void q_polarchart_set_pos(void* self, void* pos);
+void q_polarchart_set_pos(void* self, const void* pos);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2716,35 +2716,35 @@ void q_polarchart_ensure_visible2(void* self, double x, double y, double w, doub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QTransform* q_polarchart_transform(void* self);
+QTransform* q_polarchart_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QTransform* q_polarchart_scene_transform(void* self);
+QTransform* q_polarchart_scene_transform(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param viewportTransform QTransform*
 ///
-QTransform* q_polarchart_device_transform(void* self, void* viewportTransform);
+QTransform* q_polarchart_device_transform(const void* self, const void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param other QGraphicsItem*
 ///
-QTransform* q_polarchart_item_transform(void* self, void* other);
+QTransform* q_polarchart_item_transform(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2753,7 +2753,7 @@ QTransform* q_polarchart_item_transform(void* self, void* other);
 /// @param self QPolarChart*
 /// @param matrix QTransform*
 ///
-void q_polarchart_set_transform(void* self, void* matrix);
+void q_polarchart_set_transform(void* self, const void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2776,9 +2776,9 @@ void q_polarchart_set_rotation(void* self, double angle);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_rotation(void* self);
+double q_polarchart_rotation(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2793,19 +2793,19 @@ void q_polarchart_set_scale(void* self, double scale);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_scale(void* self);
+double q_polarchart_scale(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return libqt_list of QGraphicsTransform*
 ///
-libqt_list q_polarchart_transformations(void* self);
+libqt_list q_polarchart_transformations(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2820,9 +2820,9 @@ void q_polarchart_set_transformations(void* self, libqt_list transformations);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPointF* q_polarchart_transform_origin_point(void* self);
+QPointF* q_polarchart_transform_origin_point(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2831,7 +2831,7 @@ QPointF* q_polarchart_transform_origin_point(void* self);
 /// @param self QPolarChart*
 /// @param origin QPointF*
 ///
-void q_polarchart_set_transform_origin_point(void* self, void* origin);
+void q_polarchart_set_transform_origin_point(void* self, const void* origin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2847,9 +2847,9 @@ void q_polarchart_set_transform_origin_point2(void* self, double ax, double ay);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_z_value(void* self);
+double q_polarchart_z_value(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2867,86 +2867,86 @@ void q_polarchart_set_z_value(void* self, double z);
 /// @param self QPolarChart*
 /// @param sibling QGraphicsItem*
 ///
-void q_polarchart_stack_before(void* self, void* sibling);
+void q_polarchart_stack_before(void* self, const void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_children_bounding_rect(void* self);
+QRectF* q_polarchart_children_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_scene_bounding_rect(void* self);
+QRectF* q_polarchart_scene_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_clipped(void* self);
+bool q_polarchart_is_clipped(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPainterPath* q_polarchart_clip_path(void* self);
+QPainterPath* q_polarchart_clip_path(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_polarchart_colliding_items(void* self);
+libqt_list q_polarchart_colliding_items(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_obscured(void* self);
+bool q_polarchart_is_obscured(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-bool q_polarchart_is_obscured2(void* self, double x, double y, double w, double h);
+bool q_polarchart_is_obscured2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param itemToDeviceTransform QTransform*
 ///
-QRegion* q_polarchart_bounding_region(void* self, void* itemToDeviceTransform);
+QRegion* q_polarchart_bounding_region(const void* self, const void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_bounding_region_granularity(void* self);
+double q_polarchart_bounding_region_granularity(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2981,526 +2981,526 @@ void q_polarchart_update2(void* self, double x, double y, double width, double h
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_polarchart_map_to_item(void* self, void* item, void* point);
+QPointF* q_polarchart_map_to_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param point QPointF*
 ///
-QPointF* q_polarchart_map_to_parent(void* self, void* point);
+QPointF* q_polarchart_map_to_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param point QPointF*
 ///
-QPointF* q_polarchart_map_to_scene(void* self, void* point);
+QPointF* q_polarchart_map_to_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_polarchart_map_to_item2(void* self, void* item, void* rect);
+QPolygonF* q_polarchart_map_to_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-QPolygonF* q_polarchart_map_to_parent2(void* self, void* rect);
+QPolygonF* q_polarchart_map_to_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-QPolygonF* q_polarchart_map_to_scene2(void* self, void* rect);
+QPolygonF* q_polarchart_map_to_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_polarchart_map_rect_to_item(void* self, void* item, void* rect);
+QRectF* q_polarchart_map_rect_to_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-QRectF* q_polarchart_map_rect_to_parent(void* self, void* rect);
+QRectF* q_polarchart_map_rect_to_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-QRectF* q_polarchart_map_rect_to_scene(void* self, void* rect);
+QRectF* q_polarchart_map_rect_to_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_polarchart_map_to_item3(void* self, void* item, void* polygon);
+QPolygonF* q_polarchart_map_to_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_polarchart_map_to_parent3(void* self, void* polygon);
+QPolygonF* q_polarchart_map_to_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_polarchart_map_to_scene3(void* self, void* polygon);
+QPolygonF* q_polarchart_map_to_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_polarchart_map_to_item4(void* self, void* item, void* path);
+QPainterPath* q_polarchart_map_to_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_polarchart_map_to_parent4(void* self, void* path);
+QPainterPath* q_polarchart_map_to_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_polarchart_map_to_scene4(void* self, void* path);
+QPainterPath* q_polarchart_map_to_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param point QPointF*
 ///
-QPointF* q_polarchart_map_from_item(void* self, void* item, void* point);
+QPointF* q_polarchart_map_from_item(const void* self, const void* item, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param point QPointF*
 ///
-QPointF* q_polarchart_map_from_parent(void* self, void* point);
+QPointF* q_polarchart_map_from_parent(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param point QPointF*
 ///
-QPointF* q_polarchart_map_from_scene(void* self, void* point);
+QPointF* q_polarchart_map_from_scene(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QPolygonF* q_polarchart_map_from_item2(void* self, void* item, void* rect);
+QPolygonF* q_polarchart_map_from_item2(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-QPolygonF* q_polarchart_map_from_parent2(void* self, void* rect);
+QPolygonF* q_polarchart_map_from_parent2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-QPolygonF* q_polarchart_map_from_scene2(void* self, void* rect);
+QPolygonF* q_polarchart_map_from_scene2(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param rect QRectF*
 ///
-QRectF* q_polarchart_map_rect_from_item(void* self, void* item, void* rect);
+QRectF* q_polarchart_map_rect_from_item(const void* self, const void* item, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-QRectF* q_polarchart_map_rect_from_parent(void* self, void* rect);
+QRectF* q_polarchart_map_rect_from_parent(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-QRectF* q_polarchart_map_rect_from_scene(void* self, void* rect);
+QRectF* q_polarchart_map_rect_from_scene(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_polarchart_map_from_item3(void* self, void* item, void* polygon);
+QPolygonF* q_polarchart_map_from_item3(const void* self, const void* item, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_polarchart_map_from_parent3(void* self, void* polygon);
+QPolygonF* q_polarchart_map_from_parent3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param polygon QPolygonF*
 ///
-QPolygonF* q_polarchart_map_from_scene3(void* self, void* polygon);
+QPolygonF* q_polarchart_map_from_scene3(const void* self, const void* polygon);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_polarchart_map_from_item4(void* self, void* item, void* path);
+QPainterPath* q_polarchart_map_from_item4(const void* self, const void* item, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_polarchart_map_from_parent4(void* self, void* path);
+QPainterPath* q_polarchart_map_from_parent4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param path QPainterPath*
 ///
-QPainterPath* q_polarchart_map_from_scene4(void* self, void* path);
+QPainterPath* q_polarchart_map_from_scene4(const void* self, const void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_polarchart_map_to_item5(void* self, void* item, double x, double y);
+QPointF* q_polarchart_map_to_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_polarchart_map_to_parent5(void* self, double x, double y);
+QPointF* q_polarchart_map_to_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_polarchart_map_to_scene5(void* self, double x, double y);
+QPointF* q_polarchart_map_to_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_polarchart_map_to_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_polarchart_map_to_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_polarchart_map_to_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_polarchart_map_to_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_polarchart_map_to_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_polarchart_map_to_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_polarchart_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_polarchart_map_rect_to_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_polarchart_map_rect_to_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_polarchart_map_rect_to_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_polarchart_map_rect_to_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_polarchart_map_rect_to_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_polarchart_map_from_item5(void* self, void* item, double x, double y);
+QPointF* q_polarchart_map_from_item5(const void* self, const void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_polarchart_map_from_parent5(void* self, double x, double y);
+QPointF* q_polarchart_map_from_parent5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 ///
-QPointF* q_polarchart_map_from_scene5(void* self, double x, double y);
+QPointF* q_polarchart_map_from_scene5(const void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_polarchart_map_from_item6(void* self, void* item, double x, double y, double w, double h);
+QPolygonF* q_polarchart_map_from_item6(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_polarchart_map_from_parent6(void* self, double x, double y, double w, double h);
+QPolygonF* q_polarchart_map_from_parent6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QPolygonF* q_polarchart_map_from_scene6(void* self, double x, double y, double w, double h);
+QPolygonF* q_polarchart_map_from_scene6(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_polarchart_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
+QRectF* q_polarchart_map_rect_from_item2(const void* self, const void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_polarchart_map_rect_from_parent2(void* self, double x, double y, double w, double h);
+QRectF* q_polarchart_map_rect_from_parent2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param x double
 /// @param y double
 /// @param w double
 /// @param h double
 ///
-QRectF* q_polarchart_map_rect_from_scene2(void* self, double x, double y, double w, double h);
+QRectF* q_polarchart_map_rect_from_scene2(const void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param child QGraphicsItem*
 ///
-bool q_polarchart_is_ancestor_of(void* self, void* child);
+bool q_polarchart_is_ancestor_of(const void* self, const void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param other QGraphicsItem*
 ///
-QGraphicsItem* q_polarchart_common_ancestor_item(void* self, void* other);
+QGraphicsItem* q_polarchart_common_ancestor_item(const void* self, const void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_under_mouse(void* self);
+bool q_polarchart_is_under_mouse(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param key int
 ///
-QVariant* q_polarchart_data(void* self, int key);
+QVariant* q_polarchart_data(const void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3510,17 +3510,17 @@ QVariant* q_polarchart_data(void* self, int key);
 /// @param key int
 /// @param value QVariant*
 ///
-void q_polarchart_set_data(void* self, int key, void* value);
+void q_polarchart_set_data(void* self, int key, const void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
 /// @return flag of enum Qt__InputMethodHint
 ///
-int32_t q_polarchart_input_method_hints(void* self);
+int32_t q_polarchart_input_method_hints(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3567,16 +3567,16 @@ void q_polarchart_set_flag2(void* self, int32_t flag, bool enabled);
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
 ///
-void q_polarchart_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
+void q_polarchart_set_cache_mode2(void* self, int32_t mode, const void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param blockingPanel QGraphicsItem**
 ///
-bool q_polarchart_is_blocked_by_modal_panel1(void* self, void** blockingPanel);
+bool q_polarchart_is_blocked_by_modal_panel1(const void* self, void** blockingPanel);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3594,7 +3594,7 @@ void q_polarchart_set_focus1(void* self, int32_t focusReason);
 /// @param self QPolarChart*
 /// @param rect QRectF*
 ///
-void q_polarchart_ensure_visible1(void* self, void* rect);
+void q_polarchart_ensure_visible1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3604,7 +3604,7 @@ void q_polarchart_ensure_visible1(void* self, void* rect);
 /// @param rect QRectF*
 /// @param xmargin int
 ///
-void q_polarchart_ensure_visible22(void* self, void* rect, int xmargin);
+void q_polarchart_ensure_visible22(void* self, const void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3615,7 +3615,7 @@ void q_polarchart_ensure_visible22(void* self, void* rect, int xmargin);
 /// @param xmargin int
 /// @param ymargin int
 ///
-void q_polarchart_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_polarchart_ensure_visible3(void* self, const void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3648,11 +3648,11 @@ void q_polarchart_ensure_visible6(void* self, double x, double y, double w, doub
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param other QGraphicsItem*
 /// @param ok bool*
 ///
-QTransform* q_polarchart_item_transform2(void* self, void* other, bool* ok);
+QTransform* q_polarchart_item_transform2(const void* self, const void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3662,27 +3662,27 @@ QTransform* q_polarchart_item_transform2(void* self, void* other, bool* ok);
 /// @param matrix QTransform*
 /// @param combine bool
 ///
-void q_polarchart_set_transform2(void* self, void* matrix, bool combine);
+void q_polarchart_set_transform2(void* self, const void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param mode enum Qt__ItemSelectionMode
 ///
 /// @return libqt_list of QGraphicsItem*
 ///
-libqt_list q_polarchart_colliding_items1(void* self, int32_t mode);
+libqt_list q_polarchart_colliding_items1(const void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param rect QRectF*
 ///
-bool q_polarchart_is_obscured1(void* self, void* rect);
+bool q_polarchart_is_obscured1(const void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3691,7 +3691,7 @@ bool q_polarchart_is_obscured1(void* self, void* rect);
 /// @param self QPolarChart*
 /// @param rect QRectF*
 ///
-void q_polarchart_update1(void* self, void* rect);
+void q_polarchart_update1(void* self, const void* rect);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3702,7 +3702,7 @@ void q_polarchart_update1(void* self, void* rect);
 /// @param dy double
 /// @param rect QRectF*
 ///
-void q_polarchart_scroll3(void* self, double dx, double dy, void* rect);
+void q_polarchart_scroll3(void* self, double dx, double dy, const void* rect);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3711,7 +3711,7 @@ void q_polarchart_scroll3(void* self, double dx, double dy, void* rect);
 /// @param self QPolarChart*
 /// @param policy QSizePolicy*
 ///
-void q_polarchart_set_size_policy(void* self, void* policy);
+void q_polarchart_set_size_policy(void* self, const void* policy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3727,9 +3727,9 @@ void q_polarchart_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy)
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizePolicy)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QSizePolicy* q_polarchart_size_policy(void* self);
+QSizePolicy* q_polarchart_size_policy(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3738,7 +3738,7 @@ QSizePolicy* q_polarchart_size_policy(void* self);
 /// @param self QPolarChart*
 /// @param size QSizeF*
 ///
-void q_polarchart_set_minimum_size(void* self, void* size);
+void q_polarchart_set_minimum_size(void* self, const void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3754,9 +3754,9 @@ void q_polarchart_set_minimum_size2(void* self, double w, double h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumSize)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QSizeF* q_polarchart_minimum_size(void* self);
+QSizeF* q_polarchart_minimum_size(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3771,9 +3771,9 @@ void q_polarchart_set_minimum_width(void* self, double width);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumWidth)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_minimum_width(void* self);
+double q_polarchart_minimum_width(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3788,9 +3788,9 @@ void q_polarchart_set_minimum_height(void* self, double height);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumHeight)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_minimum_height(void* self);
+double q_polarchart_minimum_height(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3799,7 +3799,7 @@ double q_polarchart_minimum_height(void* self);
 /// @param self QPolarChart*
 /// @param size QSizeF*
 ///
-void q_polarchart_set_preferred_size(void* self, void* size);
+void q_polarchart_set_preferred_size(void* self, const void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3815,9 +3815,9 @@ void q_polarchart_set_preferred_size2(void* self, double w, double h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredSize)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QSizeF* q_polarchart_preferred_size(void* self);
+QSizeF* q_polarchart_preferred_size(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3832,9 +3832,9 @@ void q_polarchart_set_preferred_width(void* self, double width);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredWidth)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_preferred_width(void* self);
+double q_polarchart_preferred_width(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3849,9 +3849,9 @@ void q_polarchart_set_preferred_height(void* self, double height);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredHeight)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_preferred_height(void* self);
+double q_polarchart_preferred_height(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3860,7 +3860,7 @@ double q_polarchart_preferred_height(void* self);
 /// @param self QPolarChart*
 /// @param size QSizeF*
 ///
-void q_polarchart_set_maximum_size(void* self, void* size);
+void q_polarchart_set_maximum_size(void* self, const void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3876,9 +3876,9 @@ void q_polarchart_set_maximum_size2(void* self, double w, double h);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumSize)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QSizeF* q_polarchart_maximum_size(void* self);
+QSizeF* q_polarchart_maximum_size(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3893,9 +3893,9 @@ void q_polarchart_set_maximum_width(void* self, double width);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumWidth)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_maximum_width(void* self);
+double q_polarchart_maximum_width(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3910,42 +3910,42 @@ void q_polarchart_set_maximum_height(void* self, double height);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumHeight)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-double q_polarchart_maximum_height(void* self);
+double q_polarchart_maximum_height(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#geometry)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_geometry(void* self);
+QRectF* q_polarchart_geometry(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#contentsRect)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_contents_rect(void* self);
+QRectF* q_polarchart_contents_rect(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param which enum Qt__SizeHint
 ///
-QSizeF* q_polarchart_effective_size_hint(void* self, int32_t which);
+QSizeF* q_polarchart_effective_size_hint(const void* self, int32_t which);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#parentLayoutItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsLayoutItem* q_polarchart_parent_layout_item(void* self);
+QGraphicsLayoutItem* q_polarchart_parent_layout_item(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3960,25 +3960,25 @@ void q_polarchart_set_parent_layout_item(void* self, void* parent);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isLayout)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_layout(void* self);
+bool q_polarchart_is_layout(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#graphicsItem)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QGraphicsItem* q_polarchart_graphics_item(void* self);
+QGraphicsItem* q_polarchart_graphics_item(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#ownedByLayout)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_owned_by_layout(void* self);
+bool q_polarchart_owned_by_layout(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3995,11 +3995,11 @@ void q_polarchart_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy,
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_polarchart_effective_size_hint2(void* self, int32_t which, void* constraint);
+QSizeF* q_polarchart_effective_size_hint2(const void* self, int32_t which, const void* constraint);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4010,7 +4010,7 @@ QSizeF* q_polarchart_effective_size_hint2(void* self, int32_t which, void* const
 /// @param self QPolarChart*
 /// @param rect QRectF*
 ///
-void q_polarchart_set_geometry(void* self, void* rect);
+void q_polarchart_set_geometry(void* self, const void* rect);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4021,7 +4021,7 @@ void q_polarchart_set_geometry(void* self, void* rect);
 /// @param self QPolarChart*
 /// @param rect QRectF*
 ///
-void q_polarchart_super_set_geometry(void* self, void* rect);
+void q_polarchart_super_set_geometry(void* self, const void* rect);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4032,7 +4032,7 @@ void q_polarchart_super_set_geometry(void* self, void* rect);
 /// @param self QPolarChart*
 /// @param callback void func(QPolarChart* self, QRectF* rect)
 ///
-void q_polarchart_on_set_geometry(void* self, void (*callback)(void*, void*));
+void q_polarchart_on_set_geometry(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4040,13 +4040,13 @@ void q_polarchart_on_set_geometry(void* self, void (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param left double*
 /// @param top double*
 /// @param right double*
 /// @param bottom double*
 ///
-void q_polarchart_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
+void q_polarchart_get_contents_margins(const void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4054,13 +4054,13 @@ void q_polarchart_get_contents_margins(void* self, double* left, double* top, do
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param left double*
 /// @param top double*
 /// @param right double*
 /// @param bottom double*
 ///
-void q_polarchart_super_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
+void q_polarchart_super_get_contents_margins(const void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4068,10 +4068,10 @@ void q_polarchart_super_get_contents_margins(void* self, double* left, double* t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback void func(QPolarChart* self, double* left, double* top, double* right, double* bottom)
 ///
-void q_polarchart_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
+void q_polarchart_on_get_contents_margins(const void* self, void (*callback)(const void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4079,9 +4079,9 @@ void q_polarchart_on_get_contents_margins(void* self, void (*callback)(void*, do
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-int32_t q_polarchart_type(void* self);
+int32_t q_polarchart_type(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4089,9 +4089,9 @@ int32_t q_polarchart_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-int32_t q_polarchart_super_type(void* self);
+int32_t q_polarchart_super_type(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4099,10 +4099,10 @@ int32_t q_polarchart_super_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
-/// @param callback int32_t func()
+/// @param self const QPolarChart*
+/// @param callback int32_t func(QPolarChart* self)
 ///
-void q_polarchart_on_type(void* self, int32_t (*callback)());
+void q_polarchart_on_type(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4115,7 +4115,7 @@ void q_polarchart_on_type(void* self, int32_t (*callback)());
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_polarchart_paint(void* self, void* painter, void* option, void* widget);
+void q_polarchart_paint(void* self, void* painter, const void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4128,7 +4128,7 @@ void q_polarchart_paint(void* self, void* painter, void* option, void* widget);
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_polarchart_super_paint(void* self, void* painter, void* option, void* widget);
+void q_polarchart_super_paint(void* self, void* painter, const void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4139,7 +4139,7 @@ void q_polarchart_super_paint(void* self, void* painter, void* option, void* wid
 /// @param self QPolarChart*
 /// @param callback void func(QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_polarchart_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
+void q_polarchart_on_paint(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4152,7 +4152,7 @@ void q_polarchart_on_paint(void* self, void (*callback)(void*, void*, void*, voi
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_polarchart_paint_window_frame(void* self, void* painter, void* option, void* widget);
+void q_polarchart_paint_window_frame(void* self, void* painter, const void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4165,7 +4165,7 @@ void q_polarchart_paint_window_frame(void* self, void* painter, void* option, vo
 /// @param option QStyleOptionGraphicsItem*
 /// @param widget QWidget*
 ///
-void q_polarchart_super_paint_window_frame(void* self, void* painter, void* option, void* widget);
+void q_polarchart_super_paint_window_frame(void* self, void* painter, const void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4176,7 +4176,7 @@ void q_polarchart_super_paint_window_frame(void* self, void* painter, void* opti
 /// @param self QPolarChart*
 /// @param callback void func(QPolarChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget)
 ///
-void q_polarchart_on_paint_window_frame(void* self, void (*callback)(void*, void*, void*, void*));
+void q_polarchart_on_paint_window_frame(void* self, void (*callback)(void*, void*, const void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4184,9 +4184,9 @@ void q_polarchart_on_paint_window_frame(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_bounding_rect(void* self);
+QRectF* q_polarchart_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4194,9 +4194,9 @@ QRectF* q_polarchart_bounding_rect(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QRectF* q_polarchart_super_bounding_rect(void* self);
+QRectF* q_polarchart_super_bounding_rect(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4204,12 +4204,12 @@ QRectF* q_polarchart_super_bounding_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
-/// @param callback QRectF* func()
+/// @param self const QPolarChart*
+/// @param callback QRectF* func(QPolarChart* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_polarchart_on_bounding_rect(void* self, QRectF* (*callback)());
+void q_polarchart_on_bounding_rect(const void* self, QRectF* (*callback)(const void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4217,9 +4217,9 @@ void q_polarchart_on_bounding_rect(void* self, QRectF* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPainterPath* q_polarchart_shape(void* self);
+QPainterPath* q_polarchart_shape(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4227,9 +4227,9 @@ QPainterPath* q_polarchart_shape(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPainterPath* q_polarchart_super_shape(void* self);
+QPainterPath* q_polarchart_super_shape(const void* self);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4237,12 +4237,12 @@ QPainterPath* q_polarchart_super_shape(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
-/// @param callback QPainterPath* func()
+/// @param self const QPolarChart*
+/// @param callback QPainterPath* func(QPolarChart* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_polarchart_on_shape(void* self, QPainterPath* (*callback)());
+void q_polarchart_on_shape(const void* self, QPainterPath* (*callback)(const void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4250,10 +4250,10 @@ void q_polarchart_on_shape(void* self, QPainterPath* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param option QStyleOption*
 ///
-void q_polarchart_init_style_option(void* self, void* option);
+void q_polarchart_init_style_option(const void* self, void* option);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4261,10 +4261,10 @@ void q_polarchart_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param option QStyleOption*
 ///
-void q_polarchart_super_init_style_option(void* self, void* option);
+void q_polarchart_super_init_style_option(const void* self, void* option);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4272,10 +4272,10 @@ void q_polarchart_super_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback void func(QPolarChart* self, QStyleOption* option)
 ///
-void q_polarchart_on_init_style_option(void* self, void (*callback)(void*, void*));
+void q_polarchart_on_init_style_option(const void* self, void (*callback)(const void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4283,11 +4283,11 @@ void q_polarchart_on_init_style_option(void* self, void (*callback)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_polarchart_size_hint(void* self, int32_t which, void* constraint);
+QSizeF* q_polarchart_size_hint(const void* self, int32_t which, const void* constraint);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4295,11 +4295,11 @@ QSizeF* q_polarchart_size_hint(void* self, int32_t which, void* constraint);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_polarchart_super_size_hint(void* self, int32_t which, void* constraint);
+QSizeF* q_polarchart_super_size_hint(const void* self, int32_t which, const void* constraint);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4307,12 +4307,12 @@ QSizeF* q_polarchart_super_size_hint(void* self, int32_t which, void* constraint
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback QSizeF* func(QPolarChart* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_polarchart_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
+void q_polarchart_on_size_hint(const void* self, QSizeF* (*callback)(const void*, int32_t, const void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4341,9 +4341,9 @@ void q_polarchart_super_update_geometry(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void func()
+/// @param callback void func(QPolarChart* self)
 ///
-void q_polarchart_on_update_geometry(void* self, void (*callback)());
+void q_polarchart_on_update_geometry(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4355,7 +4355,7 @@ void q_polarchart_on_update_geometry(void* self, void (*callback)());
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_polarchart_item_change(void* self, int32_t change, void* value);
+QVariant* q_polarchart_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4367,7 +4367,7 @@ QVariant* q_polarchart_item_change(void* self, int32_t change, void* value);
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
 ///
-QVariant* q_polarchart_super_item_change(void* self, int32_t change, void* value);
+QVariant* q_polarchart_super_item_change(void* self, int32_t change, const void* value);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4380,7 +4380,7 @@ QVariant* q_polarchart_super_item_change(void* self, int32_t change, void* value
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_polarchart_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
+void q_polarchart_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4392,7 +4392,7 @@ void q_polarchart_on_item_change(void* self, QVariant* (*callback)(void*, int32_
 /// @param propertyName const char*
 /// @param value QVariant*
 ///
-QVariant* q_polarchart_property_change(void* self, const char* propertyName, void* value);
+QVariant* q_polarchart_property_change(void* self, const char* propertyName, const void* value);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4404,7 +4404,7 @@ QVariant* q_polarchart_property_change(void* self, const char* propertyName, voi
 /// @param propertyName const char*
 /// @param value QVariant*
 ///
-QVariant* q_polarchart_super_property_change(void* self, const char* propertyName, void* value);
+QVariant* q_polarchart_super_property_change(void* self, const char* propertyName, const void* value);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4417,7 +4417,7 @@ QVariant* q_polarchart_super_property_change(void* self, const char* propertyNam
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_polarchart_on_property_change(void* self, QVariant* (*callback)(void*, const char*, void*));
+void q_polarchart_on_property_change(void* self, QVariant* (*callback)(void*, const char*, const void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4491,12 +4491,12 @@ void q_polarchart_on_window_frame_event(void* self, bool (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param pos QPointF*
 ///
 /// @return enum Qt__WindowFrameSection
 ///
-int32_t q_polarchart_window_frame_section_at(void* self, void* pos);
+int32_t q_polarchart_window_frame_section_at(const void* self, const void* pos);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4504,12 +4504,12 @@ int32_t q_polarchart_window_frame_section_at(void* self, void* pos);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param pos QPointF*
 ///
 /// @return enum Qt__WindowFrameSection
 ///
-int32_t q_polarchart_super_window_frame_section_at(void* self, void* pos);
+int32_t q_polarchart_super_window_frame_section_at(const void* self, const void* pos);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4517,10 +4517,10 @@ int32_t q_polarchart_super_window_frame_section_at(void* self, void* pos);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback int32_t func(QPolarChart* self, QPointF* pos)
 ///
-void q_polarchart_on_window_frame_section_at(void* self, int32_t (*callback)(void*, void*));
+void q_polarchart_on_window_frame_section_at(const void* self, int32_t (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -4813,9 +4813,9 @@ void q_polarchart_super_polish_event(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void func()
+/// @param callback void func(QPolarChart* self)
 ///
-void q_polarchart_on_polish_event(void* self, void (*callback)());
+void q_polarchart_on_polish_event(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -5224,7 +5224,7 @@ void q_polarchart_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QPolarChart*
 /// @param signal QMetaMethod*
 ///
-void q_polarchart_connect_notify(void* self, void* signal);
+void q_polarchart_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5235,7 +5235,7 @@ void q_polarchart_connect_notify(void* self, void* signal);
 /// @param self QPolarChart*
 /// @param signal QMetaMethod*
 ///
-void q_polarchart_super_connect_notify(void* self, void* signal);
+void q_polarchart_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5246,7 +5246,7 @@ void q_polarchart_super_connect_notify(void* self, void* signal);
 /// @param self QPolarChart*
 /// @param callback void func(QPolarChart* self, QMetaMethod* signal)
 ///
-void q_polarchart_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_polarchart_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -5257,7 +5257,7 @@ void q_polarchart_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QPolarChart*
 /// @param signal QMetaMethod*
 ///
-void q_polarchart_disconnect_notify(void* self, void* signal);
+void q_polarchart_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5268,7 +5268,7 @@ void q_polarchart_disconnect_notify(void* self, void* signal);
 /// @param self QPolarChart*
 /// @param signal QMetaMethod*
 ///
-void q_polarchart_super_disconnect_notify(void* self, void* signal);
+void q_polarchart_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -5279,7 +5279,7 @@ void q_polarchart_super_disconnect_notify(void* self, void* signal);
 /// @param self QPolarChart*
 /// @param callback void func(QPolarChart* self, QMetaMethod* signal)
 ///
-void q_polarchart_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_polarchart_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5320,10 +5320,10 @@ void q_polarchart_on_advance(void* self, void (*callback)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param point QPointF*
 ///
-bool q_polarchart_contains(void* self, void* point);
+bool q_polarchart_contains(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5331,10 +5331,10 @@ bool q_polarchart_contains(void* self, void* point);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param point QPointF*
 ///
-bool q_polarchart_super_contains(void* self, void* point);
+bool q_polarchart_super_contains(const void* self, const void* point);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5342,10 +5342,10 @@ bool q_polarchart_super_contains(void* self, void* point);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback bool func(QPolarChart* self, QPointF* point)
 ///
-void q_polarchart_on_contains(void* self, bool (*callback)(void*, void*));
+void q_polarchart_on_contains(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5353,11 +5353,11 @@ void q_polarchart_on_contains(void* self, bool (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_polarchart_collides_with_item(void* self, void* other, int32_t mode);
+bool q_polarchart_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5365,11 +5365,11 @@ bool q_polarchart_collides_with_item(void* self, void* other, int32_t mode);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_polarchart_super_collides_with_item(void* self, void* other, int32_t mode);
+bool q_polarchart_super_collides_with_item(const void* self, const void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5377,10 +5377,10 @@ bool q_polarchart_super_collides_with_item(void* self, void* other, int32_t mode
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback bool func(QPolarChart* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode)
 ///
-void q_polarchart_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
+void q_polarchart_on_collides_with_item(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5388,11 +5388,11 @@ void q_polarchart_on_collides_with_item(void* self, bool (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_polarchart_collides_with_path(void* self, void* path, int32_t mode);
+bool q_polarchart_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5400,11 +5400,11 @@ bool q_polarchart_collides_with_path(void* self, void* path, int32_t mode);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 ///
-bool q_polarchart_super_collides_with_path(void* self, void* path, int32_t mode);
+bool q_polarchart_super_collides_with_path(const void* self, const void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5412,10 +5412,10 @@ bool q_polarchart_super_collides_with_path(void* self, void* path, int32_t mode)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback bool func(QPolarChart* self, QPainterPath* path, enum Qt__ItemSelectionMode mode)
 ///
-void q_polarchart_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
+void q_polarchart_on_collides_with_path(const void* self, bool (*callback)(const void*, const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5423,10 +5423,10 @@ void q_polarchart_on_collides_with_path(void* self, bool (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 ///
-bool q_polarchart_is_obscured_by(void* self, void* item);
+bool q_polarchart_is_obscured_by(const void* self, const void* item);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5434,10 +5434,10 @@ bool q_polarchart_is_obscured_by(void* self, void* item);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param item QGraphicsItem*
 ///
-bool q_polarchart_super_is_obscured_by(void* self, void* item);
+bool q_polarchart_super_is_obscured_by(const void* self, const void* item);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5445,10 +5445,10 @@ bool q_polarchart_super_is_obscured_by(void* self, void* item);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback bool func(QPolarChart* self, QGraphicsItem* item)
 ///
-void q_polarchart_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
+void q_polarchart_on_is_obscured_by(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5456,9 +5456,9 @@ void q_polarchart_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPainterPath* q_polarchart_opaque_area(void* self);
+QPainterPath* q_polarchart_opaque_area(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5466,9 +5466,9 @@ QPainterPath* q_polarchart_opaque_area(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QPainterPath* q_polarchart_super_opaque_area(void* self);
+QPainterPath* q_polarchart_super_opaque_area(const void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5476,12 +5476,12 @@ QPainterPath* q_polarchart_super_opaque_area(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
-/// @param callback QPainterPath* func()
+/// @param self const QPolarChart*
+/// @param callback QPainterPath* func(QPolarChart* self)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_polarchart_on_opaque_area(void* self, QPainterPath* (*callback)());
+void q_polarchart_on_opaque_area(const void* self, QPainterPath* (*callback)(const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5986,10 +5986,10 @@ void q_polarchart_on_input_method_event(void* self, void (*callback)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_polarchart_input_method_query(void* self, int32_t query);
+QVariant* q_polarchart_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5997,10 +5997,10 @@ QVariant* q_polarchart_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* q_polarchart_super_input_method_query(void* self, int32_t query);
+QVariant* q_polarchart_super_input_method_query(const void* self, int32_t query);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6008,12 +6008,12 @@ QVariant* q_polarchart_super_input_method_query(void* self, int32_t query);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback QVariant* func(QPolarChart* self, enum Qt__InputMethodQuery query)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_polarchart_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
+void q_polarchart_on_input_method_query(const void* self, QVariant* (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6021,10 +6021,10 @@ void q_polarchart_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_polarchart_supports_extension(void* self, int32_t extension);
+bool q_polarchart_supports_extension(const void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6032,10 +6032,10 @@ bool q_polarchart_supports_extension(void* self, int32_t extension);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param extension enum QGraphicsItem__Extension
 ///
-bool q_polarchart_super_supports_extension(void* self, int32_t extension);
+bool q_polarchart_super_supports_extension(const void* self, int32_t extension);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6043,10 +6043,10 @@ bool q_polarchart_super_supports_extension(void* self, int32_t extension);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback bool func(QPolarChart* self, enum QGraphicsItem__Extension extension)
 ///
-void q_polarchart_on_supports_extension(void* self, bool (*callback)(void*, int32_t));
+void q_polarchart_on_supports_extension(const void* self, bool (*callback)(const void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6058,7 +6058,7 @@ void q_polarchart_on_supports_extension(void* self, bool (*callback)(void*, int3
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_polarchart_set_extension(void* self, int32_t extension, void* variant);
+void q_polarchart_set_extension(void* self, int32_t extension, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6070,7 +6070,7 @@ void q_polarchart_set_extension(void* self, int32_t extension, void* variant);
 /// @param extension enum QGraphicsItem__Extension
 /// @param variant QVariant*
 ///
-void q_polarchart_super_set_extension(void* self, int32_t extension, void* variant);
+void q_polarchart_super_set_extension(void* self, int32_t extension, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6081,7 +6081,7 @@ void q_polarchart_super_set_extension(void* self, int32_t extension, void* varia
 /// @param self QPolarChart*
 /// @param callback void func(QPolarChart* self, enum QGraphicsItem__Extension extension, QVariant* variant)
 ///
-void q_polarchart_on_set_extension(void* self, void (*callback)(void*, int32_t, void*));
+void q_polarchart_on_set_extension(void* self, void (*callback)(void*, int32_t, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6089,10 +6089,10 @@ void q_polarchart_on_set_extension(void* self, void (*callback)(void*, int32_t, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param variant QVariant*
 ///
-QVariant* q_polarchart_extension(void* self, void* variant);
+QVariant* q_polarchart_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6100,10 +6100,10 @@ QVariant* q_polarchart_extension(void* self, void* variant);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param variant QVariant*
 ///
-QVariant* q_polarchart_super_extension(void* self, void* variant);
+QVariant* q_polarchart_super_extension(const void* self, const void* variant);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6111,12 +6111,12 @@ QVariant* q_polarchart_super_extension(void* self, void* variant);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback QVariant* func(QPolarChart* self, QVariant* variant)
 ///
 /// @warning Memory for the returned type of the callback is freed by the library.
 ///
-void q_polarchart_on_extension(void* self, QVariant* (*callback)(void*, void*));
+void q_polarchart_on_extension(const void* self, QVariant* (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -6124,9 +6124,9 @@ void q_polarchart_on_extension(void* self, QVariant* (*callback)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_is_empty(void* self);
+bool q_polarchart_is_empty(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -6134,9 +6134,9 @@ bool q_polarchart_is_empty(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-bool q_polarchart_super_is_empty(void* self);
+bool q_polarchart_super_is_empty(const void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -6144,10 +6144,10 @@ bool q_polarchart_super_is_empty(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
-/// @param callback bool func()
+/// @param self const QPolarChart*
+/// @param callback bool func(QPolarChart* self)
 ///
-void q_polarchart_on_is_empty(void* self, bool (*callback)());
+void q_polarchart_on_is_empty(const void* self, bool (*callback)(const void*));
 
 /// Inherited from QGraphicsObject
 ///
@@ -6176,9 +6176,9 @@ void q_polarchart_super_update_micro_focus(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void func()
+/// @param callback void func(QPolarChart* self)
 ///
-void q_polarchart_on_update_micro_focus(void* self, void (*callback)());
+void q_polarchart_on_update_micro_focus(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -6186,9 +6186,9 @@ void q_polarchart_on_update_micro_focus(void* self, void (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QObject* q_polarchart_sender(void* self);
+QObject* q_polarchart_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6196,9 +6196,9 @@ QObject* q_polarchart_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-QObject* q_polarchart_super_sender(void* self);
+QObject* q_polarchart_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6206,10 +6206,10 @@ QObject* q_polarchart_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
-/// @param callback QObject* func()
+/// @param self const QPolarChart*
+/// @param callback QObject* func(QPolarChart* self)
 ///
-void q_polarchart_on_sender(void* self, QObject* (*callback)());
+void q_polarchart_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6217,9 +6217,9 @@ void q_polarchart_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-int32_t q_polarchart_sender_signal_index(void* self);
+int32_t q_polarchart_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6227,9 +6227,9 @@ int32_t q_polarchart_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 ///
-int32_t q_polarchart_super_sender_signal_index(void* self);
+int32_t q_polarchart_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -6237,10 +6237,10 @@ int32_t q_polarchart_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
-/// @param callback int32_t func()
+/// @param self const QPolarChart*
+/// @param callback int32_t func(QPolarChart* self)
 ///
-void q_polarchart_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_polarchart_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -6248,10 +6248,10 @@ void q_polarchart_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param signal const char*
 ///
-int32_t q_polarchart_receivers(void* self, const char* signal);
+int32_t q_polarchart_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6259,10 +6259,10 @@ int32_t q_polarchart_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param signal const char*
 ///
-int32_t q_polarchart_super_receivers(void* self, const char* signal);
+int32_t q_polarchart_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6270,10 +6270,10 @@ int32_t q_polarchart_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback int32_t func(QPolarChart* self, const char* signal)
 ///
-void q_polarchart_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_polarchart_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6281,10 +6281,10 @@ void q_polarchart_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param signal QMetaMethod*
 ///
-bool q_polarchart_is_signal_connected(void* self, void* signal);
+bool q_polarchart_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6292,10 +6292,10 @@ bool q_polarchart_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param signal QMetaMethod*
 ///
-bool q_polarchart_super_is_signal_connected(void* self, void* signal);
+bool q_polarchart_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -6303,10 +6303,10 @@ bool q_polarchart_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QPolarChart*
+/// @param self const QPolarChart*
 /// @param callback bool func(QPolarChart* self, QMetaMethod* signal)
 ///
-void q_polarchart_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_polarchart_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6335,9 +6335,9 @@ void q_polarchart_super_add_to_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void func()
+/// @param callback void func(QPolarChart* self)
 ///
-void q_polarchart_on_add_to_index(void* self, void (*callback)());
+void q_polarchart_on_add_to_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6366,9 +6366,9 @@ void q_polarchart_super_remove_from_index(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void func()
+/// @param callback void func(QPolarChart* self)
 ///
-void q_polarchart_on_remove_from_index(void* self, void (*callback)());
+void q_polarchart_on_remove_from_index(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6397,9 +6397,9 @@ void q_polarchart_super_prepare_geometry_change(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QPolarChart*
-/// @param callback void func()
+/// @param callback void func(QPolarChart* self)
 ///
-void q_polarchart_on_prepare_geometry_change(void* self, void (*callback)());
+void q_polarchart_on_prepare_geometry_change(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///

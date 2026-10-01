@@ -5,7 +5,7 @@ QElapsedTimer* q_elapsedtimer_new() {
     return QElapsedTimer_New();
 }
 
-QElapsedTimer* q_elapsedtimer_new2(void* other) {
+QElapsedTimer* q_elapsedtimer_new2(const void* other) {
     return QElapsedTimer_New2((QElapsedTimer*)other);
 }
 
@@ -41,31 +41,31 @@ void q_elapsedtimer_invalidate(void* self) {
     QElapsedTimer_Invalidate((QElapsedTimer*)self);
 }
 
-bool q_elapsedtimer_is_valid(void* self) {
+bool q_elapsedtimer_is_valid(const void* self) {
     return QElapsedTimer_IsValid((QElapsedTimer*)self);
 }
 
-int64_t q_elapsedtimer_nsecs_elapsed(void* self) {
+int64_t q_elapsedtimer_nsecs_elapsed(const void* self) {
     return QElapsedTimer_NsecsElapsed((QElapsedTimer*)self);
 }
 
-int64_t q_elapsedtimer_elapsed(void* self) {
+int64_t q_elapsedtimer_elapsed(const void* self) {
     return QElapsedTimer_Elapsed((QElapsedTimer*)self);
 }
 
-bool q_elapsedtimer_has_expired(void* self, int64_t timeout) {
+bool q_elapsedtimer_has_expired(const void* self, int64_t timeout) {
     return QElapsedTimer_HasExpired((QElapsedTimer*)self, timeout);
 }
 
-int64_t q_elapsedtimer_msecs_since_reference(void* self) {
+int64_t q_elapsedtimer_msecs_since_reference(const void* self) {
     return QElapsedTimer_MsecsSinceReference((QElapsedTimer*)self);
 }
 
-int64_t q_elapsedtimer_msecs_to(void* self, void* other) {
+int64_t q_elapsedtimer_msecs_to(const void* self, const void* other) {
     return QElapsedTimer_MsecsTo((QElapsedTimer*)self, (QElapsedTimer*)other);
 }
 
-int64_t q_elapsedtimer_secs_to(void* self, void* other) {
+int64_t q_elapsedtimer_secs_to(const void* self, const void* other) {
     return QElapsedTimer_SecsTo((QElapsedTimer*)self, (QElapsedTimer*)other);
 }
 

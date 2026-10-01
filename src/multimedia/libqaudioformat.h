@@ -20,7 +20,7 @@ QAudioFormat* q_audioformat_new();
 ///
 /// @param other QAudioFormat*
 ///
-QAudioFormat* q_audioformat_new2(void* other);
+QAudioFormat* q_audioformat_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html)
 
@@ -36,7 +36,7 @@ QAudioFormat* q_audioformat_new3(void* other);
 ///
 /// @param param1 QAudioFormat*
 ///
-QAudioFormat* q_audioformat_new4(void* param1);
+QAudioFormat* q_audioformat_new4(const void* param1);
 
 /// q_audioformat_copy_assign shallow copies `other` into `self`.
 ///
@@ -54,9 +54,9 @@ void q_audioformat_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#isValid)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 ///
-bool q_audioformat_is_valid(void* self);
+bool q_audioformat_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#setSampleRate)
 ///
@@ -67,9 +67,9 @@ void q_audioformat_set_sample_rate(void* self, int sampleRate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#sampleRate)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 ///
-int32_t q_audioformat_sample_rate(void* self);
+int32_t q_audioformat_sample_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#setChannelConfig)
 ///
@@ -80,11 +80,11 @@ void q_audioformat_set_channel_config(void* self, uint32_t config);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#channelConfig)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 ///
 /// @return enum QAudioFormat__ChannelConfig
 ///
-uint32_t q_audioformat_channel_config(void* self);
+uint32_t q_audioformat_channel_config(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#setChannelCount)
 ///
@@ -95,16 +95,16 @@ void q_audioformat_set_channel_count(void* self, int channelCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#channelCount)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 ///
-int32_t q_audioformat_channel_count(void* self);
+int32_t q_audioformat_channel_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#channelOffset)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 /// @param channel enum QAudioFormat__AudioChannelPosition
 ///
-int32_t q_audioformat_channel_offset(void* self, int32_t channel);
+int32_t q_audioformat_channel_offset(const void* self, int32_t channel);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#setSampleFormat)
 ///
@@ -115,72 +115,72 @@ void q_audioformat_set_sample_format(void* self, uint16_t f);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#sampleFormat)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 ///
 /// @return enum QAudioFormat__SampleFormat
 ///
-uint16_t q_audioformat_sample_format(void* self);
+uint16_t q_audioformat_sample_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#bytesForDuration)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 /// @param microseconds int64_t
 ///
-int32_t q_audioformat_bytes_for_duration(void* self, int64_t microseconds);
+int32_t q_audioformat_bytes_for_duration(const void* self, int64_t microseconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#durationForBytes)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 /// @param byteCount int32_t
 ///
-int64_t q_audioformat_duration_for_bytes(void* self, int32_t byteCount);
+int64_t q_audioformat_duration_for_bytes(const void* self, int32_t byteCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#bytesForFrames)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 /// @param frameCount int32_t
 ///
-int32_t q_audioformat_bytes_for_frames(void* self, int32_t frameCount);
+int32_t q_audioformat_bytes_for_frames(const void* self, int32_t frameCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#framesForBytes)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 /// @param byteCount int32_t
 ///
-int32_t q_audioformat_frames_for_bytes(void* self, int32_t byteCount);
+int32_t q_audioformat_frames_for_bytes(const void* self, int32_t byteCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#framesForDuration)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 /// @param microseconds int64_t
 ///
-int32_t q_audioformat_frames_for_duration(void* self, int64_t microseconds);
+int32_t q_audioformat_frames_for_duration(const void* self, int64_t microseconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#durationForFrames)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 /// @param frameCount int32_t
 ///
-int64_t q_audioformat_duration_for_frames(void* self, int32_t frameCount);
+int64_t q_audioformat_duration_for_frames(const void* self, int32_t frameCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#bytesPerFrame)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 ///
-int32_t q_audioformat_bytes_per_frame(void* self);
+int32_t q_audioformat_bytes_per_frame(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#bytesPerSample)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 ///
-int32_t q_audioformat_bytes_per_sample(void* self);
+int32_t q_audioformat_bytes_per_sample(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#normalizedSampleValue)
 ///
-/// @param self QAudioFormat*
+/// @param self const QAudioFormat*
 /// @param sample void*
 ///
-float q_audioformat_normalized_sample_value(void* self, void* sample);
+float q_audioformat_normalized_sample_value(const void* self, void* sample);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#defaultChannelConfigForChannelCount)
 ///

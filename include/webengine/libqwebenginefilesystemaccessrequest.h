@@ -14,14 +14,14 @@
 ///
 /// @param other QWebEngineFileSystemAccessRequest*
 ///
-QWebEngineFileSystemAccessRequest* q_webenginefilesystemaccessrequest_new(void* other);
+QWebEngineFileSystemAccessRequest* q_webenginefilesystemaccessrequest_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#operator-eq)
 ///
 /// @param self QWebEngineFileSystemAccessRequest*
 /// @param other QWebEngineFileSystemAccessRequest*
 ///
-void q_webenginefilesystemaccessrequest_operator_assign(void* self, void* other);
+void q_webenginefilesystemaccessrequest_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#swap)
 ///
@@ -44,31 +44,31 @@ void q_webenginefilesystemaccessrequest_reject(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#origin)
 ///
-/// @param self QWebEngineFileSystemAccessRequest*
+/// @param self const QWebEngineFileSystemAccessRequest*
 ///
-QUrl* q_webenginefilesystemaccessrequest_origin(void* self);
+QUrl* q_webenginefilesystemaccessrequest_origin(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#filePath)
 ///
-/// @param self QWebEngineFileSystemAccessRequest*
+/// @param self const QWebEngineFileSystemAccessRequest*
 ///
-QUrl* q_webenginefilesystemaccessrequest_file_path(void* self);
+QUrl* q_webenginefilesystemaccessrequest_file_path(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#handleType)
 ///
-/// @param self QWebEngineFileSystemAccessRequest*
+/// @param self const QWebEngineFileSystemAccessRequest*
 ///
 /// @return enum QWebEngineFileSystemAccessRequest__HandleType
 ///
-int32_t q_webenginefilesystemaccessrequest_handle_type(void* self);
+int32_t q_webenginefilesystemaccessrequest_handle_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#accessFlags)
 ///
-/// @param self QWebEngineFileSystemAccessRequest*
+/// @param self const QWebEngineFileSystemAccessRequest*
 ///
 /// @return flag of enum QWebEngineFileSystemAccessRequest__AccessFlag
 ///
-int32_t q_webenginefilesystemaccessrequest_access_flags(void* self);
+int32_t q_webenginefilesystemaccessrequest_access_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#dtor.QWebEngineFileSystemAccessRequest)
 ///

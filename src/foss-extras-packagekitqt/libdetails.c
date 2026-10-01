@@ -36,46 +36,46 @@ PackageKit__Details* q_packagekit__details_new2(libqt_map /* of const char* to Q
     return _out;
 }
 
-const char* q_packagekit__details_package_id(void* self) {
+const char* q_packagekit__details_package_id(const void* self) {
     libqt_string _str = PackageKit__Details_PackageId((PackageKit__Details*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_packagekit__details_description(void* self) {
+const char* q_packagekit__details_description(const void* self) {
     libqt_string _str = PackageKit__Details_Description((PackageKit__Details*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_packagekit__details_group(void* self) {
+int32_t q_packagekit__details_group(const void* self) {
     return PackageKit__Details_Group((PackageKit__Details*)self);
 }
 
-const char* q_packagekit__details_summary(void* self) {
+const char* q_packagekit__details_summary(const void* self) {
     libqt_string _str = PackageKit__Details_Summary((PackageKit__Details*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_packagekit__details_url(void* self) {
+const char* q_packagekit__details_url(const void* self) {
     libqt_string _str = PackageKit__Details_Url((PackageKit__Details*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_packagekit__details_license(void* self) {
+const char* q_packagekit__details_license(const void* self) {
     libqt_string _str = PackageKit__Details_License((PackageKit__Details*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uintptr_t q_packagekit__details_size(void* self) {
+uintptr_t q_packagekit__details_size(const void* self) {
     return PackageKit__Details_Size((PackageKit__Details*)self);
 }
 

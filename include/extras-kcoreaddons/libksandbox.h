@@ -26,7 +26,7 @@ bool k_sandbox_is_snap();
 ///
 /// @param process QProcess*
 ///
-KSandbox__ProcessContext* k_sandbox_make_host_context(void* process);
+KSandbox__ProcessContext* k_sandbox_make_host_context(const void* process);
 
 /// [Upstream resources](https://api.kde.org/ksandbox.html#startHostProcess)
 ///
@@ -47,7 +47,7 @@ KSandbox__ProcessContext* k_sandbox__processcontext_new();
 ///
 /// @param param1 KSandbox__ProcessContext*
 ///
-KSandbox__ProcessContext* k_sandbox__processcontext_new2(void* param1);
+KSandbox__ProcessContext* k_sandbox__processcontext_new2(const void* param1);
 
 /// Delete this object from C++ memory.
 ///

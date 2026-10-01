@@ -6,7 +6,7 @@
 #include "libkeychain.hpp"
 #include "libkeychain.h"
 
-const QMetaObject* q_keychain__job_meta_object(void* self) {
+const QMetaObject* q_keychain__job_meta_object(const void* self) {
     return QKeychain__Job_MetaObject((QKeychain__Job*)self);
 }
 
@@ -25,7 +25,7 @@ const char* q_keychain__job_tr(const char* s) {
     return _ret;
 }
 
-QSettings* q_keychain__job_settings(void* self) {
+QSettings* q_keychain__job_settings(const void* self) {
     return QKeychain__Job_Settings((QKeychain__Job*)self);
 }
 
@@ -37,25 +37,25 @@ void q_keychain__job_start(void* self) {
     QKeychain__Job_Start((QKeychain__Job*)self);
 }
 
-const char* q_keychain__job_service(void* self) {
+const char* q_keychain__job_service(const void* self) {
     libqt_string _str = QKeychain__Job_Service((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_keychain__job_error(void* self) {
+int32_t q_keychain__job_error(const void* self) {
     return QKeychain__Job_Error((QKeychain__Job*)self);
 }
 
-const char* q_keychain__job_error_string(void* self) {
+const char* q_keychain__job_error_string(const void* self) {
     libqt_string _str = QKeychain__Job_ErrorString((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_keychain__job_auto_delete(void* self) {
+bool q_keychain__job_auto_delete(const void* self) {
     return QKeychain__Job_AutoDelete((QKeychain__Job*)self);
 }
 
@@ -63,7 +63,7 @@ void q_keychain__job_set_auto_delete(void* self, bool autoDelete) {
     QKeychain__Job_SetAutoDelete((QKeychain__Job*)self, autoDelete);
 }
 
-bool q_keychain__job_insecure_fallback(void* self) {
+bool q_keychain__job_insecure_fallback(const void* self) {
     return QKeychain__Job_InsecureFallback((QKeychain__Job*)self);
 }
 
@@ -71,7 +71,7 @@ void q_keychain__job_set_insecure_fallback(void* self, bool insecureFallback) {
     QKeychain__Job_SetInsecureFallback((QKeychain__Job*)self, insecureFallback);
 }
 
-const char* q_keychain__job_key(void* self) {
+const char* q_keychain__job_key(const void* self) {
     libqt_string _str = QKeychain__Job_Key((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -120,7 +120,7 @@ bool q_keychain__job_event_filter(void* self, void* watched, void* event) {
     return QObject_EventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-const char* q_keychain__job_object_name(void* self) {
+const char* q_keychain__job_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -131,19 +131,19 @@ void q_keychain__job_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_keychain__job_is_widget_type(void* self) {
+bool q_keychain__job_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_keychain__job_is_window_type(void* self) {
+bool q_keychain__job_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_keychain__job_is_quick_item_type(void* self) {
+bool q_keychain__job_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_keychain__job_signals_blocked(void* self) {
+bool q_keychain__job_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -151,7 +151,7 @@ bool q_keychain__job_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_keychain__job_thread(void* self) {
+QThread* q_keychain__job_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -175,7 +175,7 @@ void q_keychain__job_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_keychain__job_children(void* self) {
+libqt_list /* of QObject* */ q_keychain__job_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -192,55 +192,55 @@ void q_keychain__job_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_keychain__job_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_keychain__job_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_keychain__job_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_keychain__job_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_keychain__job_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_keychain__job_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_keychain__job_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_keychain__job_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_keychain__job_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_keychain__job_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_keychain__job_disconnect3(void* self) {
+bool q_keychain__job_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_keychain__job_disconnect4(void* self, void* receiver) {
+bool q_keychain__job_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_keychain__job_disconnect5(void* param1) {
+bool q_keychain__job_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_keychain__job_dump_object_tree(void* self) {
+void q_keychain__job_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_keychain__job_dump_object_info(void* self) {
+void q_keychain__job_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_keychain__job_set_property(void* self, const char* name, void* value) {
+bool q_keychain__job_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_keychain__job_property(void* self, const char* name) {
+QVariant* q_keychain__job_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_keychain__job_dynamic_property_names(void* self) {
+const char** q_keychain__job_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -261,7 +261,7 @@ QBindingStorage* q_keychain__job_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_keychain__job_binding_storage2(void* self) {
+const QBindingStorage* q_keychain__job_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -273,11 +273,11 @@ void q_keychain__job_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_keychain__job_parent(void* self) {
+QObject* q_keychain__job_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_keychain__job_inherits(void* self, const char* classname) {
+bool q_keychain__job_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -293,31 +293,31 @@ int32_t q_keychain__job_start_timer23(void* self, int64_t time, int32_t timerTyp
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_keychain__job_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_keychain__job_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_keychain__job_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_keychain__job_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_keychain__job_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_keychain__job_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_keychain__job_disconnect1(void* self, const char* signal) {
+bool q_keychain__job_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_keychain__job_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_keychain__job_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_keychain__job_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_keychain__job_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_keychain__job_disconnect23(void* self, void* receiver, const char* member) {
+bool q_keychain__job_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -345,15 +345,15 @@ QKeychain__ReadPasswordJob* q_keychain__readpasswordjob_new2(const char* service
     return QKeychain__ReadPasswordJob_New2(qstring(service), (QObject*)parent);
 }
 
-const QMetaObject* q_keychain__readpasswordjob_meta_object(void* self) {
+const QMetaObject* q_keychain__readpasswordjob_meta_object(const void* self) {
     return QKeychain__ReadPasswordJob_MetaObject((QKeychain__ReadPasswordJob*)self);
 }
 
-void q_keychain__readpasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_keychain__readpasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QKeychain__ReadPasswordJob_OnMetaObject((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_keychain__readpasswordjob_super_meta_object(void* self) {
+const QMetaObject* q_keychain__readpasswordjob_super_meta_object(const void* self) {
     return QKeychain__ReadPasswordJob_SuperMetaObject((QKeychain__ReadPasswordJob*)self);
 }
 
@@ -388,14 +388,14 @@ const char* q_keychain__readpasswordjob_tr(const char* s) {
     return _ret;
 }
 
-char* q_keychain__readpasswordjob_binary_data(void* self) {
+char* q_keychain__readpasswordjob_binary_data(const void* self) {
     libqt_string _str = QKeychain__ReadPasswordJob_BinaryData((QKeychain__ReadPasswordJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_keychain__readpasswordjob_text_data(void* self) {
+const char* q_keychain__readpasswordjob_text_data(const void* self) {
     libqt_string _str = QKeychain__ReadPasswordJob_TextData((QKeychain__ReadPasswordJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -416,7 +416,7 @@ const char* q_keychain__readpasswordjob_tr3(const char* s, const char* c, int n)
     return _ret;
 }
 
-QSettings* q_keychain__readpasswordjob_settings(void* self) {
+QSettings* q_keychain__readpasswordjob_settings(const void* self) {
     return QKeychain__Job_Settings((QKeychain__Job*)self);
 }
 
@@ -428,25 +428,25 @@ void q_keychain__readpasswordjob_start(void* self) {
     QKeychain__Job_Start((QKeychain__Job*)self);
 }
 
-const char* q_keychain__readpasswordjob_service(void* self) {
+const char* q_keychain__readpasswordjob_service(const void* self) {
     libqt_string _str = QKeychain__Job_Service((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_keychain__readpasswordjob_error(void* self) {
+int32_t q_keychain__readpasswordjob_error(const void* self) {
     return QKeychain__Job_Error((QKeychain__Job*)self);
 }
 
-const char* q_keychain__readpasswordjob_error_string(void* self) {
+const char* q_keychain__readpasswordjob_error_string(const void* self) {
     libqt_string _str = QKeychain__Job_ErrorString((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_keychain__readpasswordjob_auto_delete(void* self) {
+bool q_keychain__readpasswordjob_auto_delete(const void* self) {
     return QKeychain__Job_AutoDelete((QKeychain__Job*)self);
 }
 
@@ -454,7 +454,7 @@ void q_keychain__readpasswordjob_set_auto_delete(void* self, bool autoDelete) {
     QKeychain__Job_SetAutoDelete((QKeychain__Job*)self, autoDelete);
 }
 
-bool q_keychain__readpasswordjob_insecure_fallback(void* self) {
+bool q_keychain__readpasswordjob_insecure_fallback(const void* self) {
     return QKeychain__Job_InsecureFallback((QKeychain__Job*)self);
 }
 
@@ -462,7 +462,7 @@ void q_keychain__readpasswordjob_set_insecure_fallback(void* self, bool insecure
     QKeychain__Job_SetInsecureFallback((QKeychain__Job*)self, insecureFallback);
 }
 
-const char* q_keychain__readpasswordjob_key(void* self) {
+const char* q_keychain__readpasswordjob_key(const void* self) {
     libqt_string _str = QKeychain__Job_Key((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -489,7 +489,7 @@ void q_keychain__readpasswordjob_on_finished(void* self, void (*callback)(void*,
     QKeychain__Job_Connect_Finished((QKeychain__Job*)self, (intptr_t)callback);
 }
 
-const char* q_keychain__readpasswordjob_object_name(void* self) {
+const char* q_keychain__readpasswordjob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -500,19 +500,19 @@ void q_keychain__readpasswordjob_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_keychain__readpasswordjob_is_widget_type(void* self) {
+bool q_keychain__readpasswordjob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_keychain__readpasswordjob_is_window_type(void* self) {
+bool q_keychain__readpasswordjob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_keychain__readpasswordjob_is_quick_item_type(void* self) {
+bool q_keychain__readpasswordjob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_keychain__readpasswordjob_signals_blocked(void* self) {
+bool q_keychain__readpasswordjob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -520,7 +520,7 @@ bool q_keychain__readpasswordjob_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_keychain__readpasswordjob_thread(void* self) {
+QThread* q_keychain__readpasswordjob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -544,7 +544,7 @@ void q_keychain__readpasswordjob_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_keychain__readpasswordjob_children(void* self) {
+libqt_list /* of QObject* */ q_keychain__readpasswordjob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -561,55 +561,55 @@ void q_keychain__readpasswordjob_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_keychain__readpasswordjob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_keychain__readpasswordjob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_keychain__readpasswordjob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_keychain__readpasswordjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_keychain__readpasswordjob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_keychain__readpasswordjob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_keychain__readpasswordjob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_keychain__readpasswordjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_keychain__readpasswordjob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_keychain__readpasswordjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_keychain__readpasswordjob_disconnect3(void* self) {
+bool q_keychain__readpasswordjob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_keychain__readpasswordjob_disconnect4(void* self, void* receiver) {
+bool q_keychain__readpasswordjob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_keychain__readpasswordjob_disconnect5(void* param1) {
+bool q_keychain__readpasswordjob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_keychain__readpasswordjob_dump_object_tree(void* self) {
+void q_keychain__readpasswordjob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_keychain__readpasswordjob_dump_object_info(void* self) {
+void q_keychain__readpasswordjob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_keychain__readpasswordjob_set_property(void* self, const char* name, void* value) {
+bool q_keychain__readpasswordjob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_keychain__readpasswordjob_property(void* self, const char* name) {
+QVariant* q_keychain__readpasswordjob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_keychain__readpasswordjob_dynamic_property_names(void* self) {
+const char** q_keychain__readpasswordjob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -630,7 +630,7 @@ QBindingStorage* q_keychain__readpasswordjob_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_keychain__readpasswordjob_binding_storage2(void* self) {
+const QBindingStorage* q_keychain__readpasswordjob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -642,11 +642,11 @@ void q_keychain__readpasswordjob_on_destroyed(void* self, void (*callback)(void*
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_keychain__readpasswordjob_parent(void* self) {
+QObject* q_keychain__readpasswordjob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_keychain__readpasswordjob_inherits(void* self, const char* classname) {
+bool q_keychain__readpasswordjob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -662,31 +662,31 @@ int32_t q_keychain__readpasswordjob_start_timer23(void* self, int64_t time, int3
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_keychain__readpasswordjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_keychain__readpasswordjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_keychain__readpasswordjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_keychain__readpasswordjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_keychain__readpasswordjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_keychain__readpasswordjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_keychain__readpasswordjob_disconnect1(void* self, const char* signal) {
+bool q_keychain__readpasswordjob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_keychain__readpasswordjob_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_keychain__readpasswordjob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_keychain__readpasswordjob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_keychain__readpasswordjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_keychain__readpasswordjob_disconnect23(void* self, void* receiver, const char* member) {
+bool q_keychain__readpasswordjob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -758,27 +758,27 @@ void q_keychain__readpasswordjob_on_custom_event(void* self, void (*callback)(vo
     QKeychain__ReadPasswordJob_OnCustomEvent((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
 }
 
-void q_keychain__readpasswordjob_connect_notify(void* self, void* signal) {
+void q_keychain__readpasswordjob_connect_notify(void* self, const void* signal) {
     QKeychain__ReadPasswordJob_ConnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__readpasswordjob_super_connect_notify(void* self, void* signal) {
+void q_keychain__readpasswordjob_super_connect_notify(void* self, const void* signal) {
     QKeychain__ReadPasswordJob_SuperConnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__readpasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_keychain__readpasswordjob_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QKeychain__ReadPasswordJob_OnConnectNotify((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
 }
 
-void q_keychain__readpasswordjob_disconnect_notify(void* self, void* signal) {
+void q_keychain__readpasswordjob_disconnect_notify(void* self, const void* signal) {
     QKeychain__ReadPasswordJob_DisconnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__readpasswordjob_super_disconnect_notify(void* self, void* signal) {
+void q_keychain__readpasswordjob_super_disconnect_notify(void* self, const void* signal) {
     QKeychain__ReadPasswordJob_SuperDisconnectNotify((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__readpasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_keychain__readpasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QKeychain__ReadPasswordJob_OnDisconnectNotify((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
 }
 
@@ -786,60 +786,20 @@ void q_keychain__readpasswordjob_do_start(void* self) {
     QKeychain__ReadPasswordJob_DoStart((QKeychain__ReadPasswordJob*)self);
 }
 
-void q_keychain__readpasswordjob_super_do_start(void* self) {
-    QKeychain__ReadPasswordJob_SuperDoStart((QKeychain__ReadPasswordJob*)self);
-}
-
-void q_keychain__readpasswordjob_on_do_start(void* self, void (*callback)()) {
-    QKeychain__ReadPasswordJob_OnDoStart((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
-}
-
-QObject* q_keychain__readpasswordjob_sender(void* self) {
+QObject* q_keychain__readpasswordjob_sender(const void* self) {
     return QKeychain__ReadPasswordJob_Sender((QKeychain__ReadPasswordJob*)self);
 }
 
-QObject* q_keychain__readpasswordjob_super_sender(void* self) {
-    return QKeychain__ReadPasswordJob_SuperSender((QKeychain__ReadPasswordJob*)self);
-}
-
-void q_keychain__readpasswordjob_on_sender(void* self, QObject* (*callback)()) {
-    QKeychain__ReadPasswordJob_OnSender((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
-}
-
-int32_t q_keychain__readpasswordjob_sender_signal_index(void* self) {
+int32_t q_keychain__readpasswordjob_sender_signal_index(const void* self) {
     return QKeychain__ReadPasswordJob_SenderSignalIndex((QKeychain__ReadPasswordJob*)self);
 }
 
-int32_t q_keychain__readpasswordjob_super_sender_signal_index(void* self) {
-    return QKeychain__ReadPasswordJob_SuperSenderSignalIndex((QKeychain__ReadPasswordJob*)self);
-}
-
-void q_keychain__readpasswordjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QKeychain__ReadPasswordJob_OnSenderSignalIndex((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
-}
-
-int32_t q_keychain__readpasswordjob_receivers(void* self, const char* signal) {
+int32_t q_keychain__readpasswordjob_receivers(const void* self, const char* signal) {
     return QKeychain__ReadPasswordJob_Receivers((QKeychain__ReadPasswordJob*)self, signal);
 }
 
-int32_t q_keychain__readpasswordjob_super_receivers(void* self, const char* signal) {
-    return QKeychain__ReadPasswordJob_SuperReceivers((QKeychain__ReadPasswordJob*)self, signal);
-}
-
-void q_keychain__readpasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QKeychain__ReadPasswordJob_OnReceivers((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
-}
-
-bool q_keychain__readpasswordjob_is_signal_connected(void* self, void* signal) {
+bool q_keychain__readpasswordjob_is_signal_connected(const void* self, const void* signal) {
     return QKeychain__ReadPasswordJob_IsSignalConnected((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
-}
-
-bool q_keychain__readpasswordjob_super_is_signal_connected(void* self, void* signal) {
-    return QKeychain__ReadPasswordJob_SuperIsSignalConnected((QKeychain__ReadPasswordJob*)self, (QMetaMethod*)signal);
-}
-
-void q_keychain__readpasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QKeychain__ReadPasswordJob_OnIsSignalConnected((QKeychain__ReadPasswordJob*)self, (intptr_t)callback);
 }
 
 void q_keychain__readpasswordjob_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -858,15 +818,15 @@ QKeychain__WritePasswordJob* q_keychain__writepasswordjob_new2(const char* servi
     return QKeychain__WritePasswordJob_New2(qstring(service), (QObject*)parent);
 }
 
-const QMetaObject* q_keychain__writepasswordjob_meta_object(void* self) {
+const QMetaObject* q_keychain__writepasswordjob_meta_object(const void* self) {
     return QKeychain__WritePasswordJob_MetaObject((QKeychain__WritePasswordJob*)self);
 }
 
-void q_keychain__writepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_keychain__writepasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QKeychain__WritePasswordJob_OnMetaObject((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_keychain__writepasswordjob_super_meta_object(void* self) {
+const QMetaObject* q_keychain__writepasswordjob_super_meta_object(const void* self) {
     return QKeychain__WritePasswordJob_SuperMetaObject((QKeychain__WritePasswordJob*)self);
 }
 
@@ -923,7 +883,7 @@ const char* q_keychain__writepasswordjob_tr3(const char* s, const char* c, int n
     return _ret;
 }
 
-QSettings* q_keychain__writepasswordjob_settings(void* self) {
+QSettings* q_keychain__writepasswordjob_settings(const void* self) {
     return QKeychain__Job_Settings((QKeychain__Job*)self);
 }
 
@@ -935,25 +895,25 @@ void q_keychain__writepasswordjob_start(void* self) {
     QKeychain__Job_Start((QKeychain__Job*)self);
 }
 
-const char* q_keychain__writepasswordjob_service(void* self) {
+const char* q_keychain__writepasswordjob_service(const void* self) {
     libqt_string _str = QKeychain__Job_Service((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_keychain__writepasswordjob_error(void* self) {
+int32_t q_keychain__writepasswordjob_error(const void* self) {
     return QKeychain__Job_Error((QKeychain__Job*)self);
 }
 
-const char* q_keychain__writepasswordjob_error_string(void* self) {
+const char* q_keychain__writepasswordjob_error_string(const void* self) {
     libqt_string _str = QKeychain__Job_ErrorString((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_keychain__writepasswordjob_auto_delete(void* self) {
+bool q_keychain__writepasswordjob_auto_delete(const void* self) {
     return QKeychain__Job_AutoDelete((QKeychain__Job*)self);
 }
 
@@ -961,7 +921,7 @@ void q_keychain__writepasswordjob_set_auto_delete(void* self, bool autoDelete) {
     QKeychain__Job_SetAutoDelete((QKeychain__Job*)self, autoDelete);
 }
 
-bool q_keychain__writepasswordjob_insecure_fallback(void* self) {
+bool q_keychain__writepasswordjob_insecure_fallback(const void* self) {
     return QKeychain__Job_InsecureFallback((QKeychain__Job*)self);
 }
 
@@ -969,7 +929,7 @@ void q_keychain__writepasswordjob_set_insecure_fallback(void* self, bool insecur
     QKeychain__Job_SetInsecureFallback((QKeychain__Job*)self, insecureFallback);
 }
 
-const char* q_keychain__writepasswordjob_key(void* self) {
+const char* q_keychain__writepasswordjob_key(const void* self) {
     libqt_string _str = QKeychain__Job_Key((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -996,7 +956,7 @@ void q_keychain__writepasswordjob_on_finished(void* self, void (*callback)(void*
     QKeychain__Job_Connect_Finished((QKeychain__Job*)self, (intptr_t)callback);
 }
 
-const char* q_keychain__writepasswordjob_object_name(void* self) {
+const char* q_keychain__writepasswordjob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1007,19 +967,19 @@ void q_keychain__writepasswordjob_set_object_name(void* self, const char* name) 
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_keychain__writepasswordjob_is_widget_type(void* self) {
+bool q_keychain__writepasswordjob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_keychain__writepasswordjob_is_window_type(void* self) {
+bool q_keychain__writepasswordjob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_keychain__writepasswordjob_is_quick_item_type(void* self) {
+bool q_keychain__writepasswordjob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_keychain__writepasswordjob_signals_blocked(void* self) {
+bool q_keychain__writepasswordjob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1027,7 +987,7 @@ bool q_keychain__writepasswordjob_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_keychain__writepasswordjob_thread(void* self) {
+QThread* q_keychain__writepasswordjob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1051,7 +1011,7 @@ void q_keychain__writepasswordjob_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_keychain__writepasswordjob_children(void* self) {
+libqt_list /* of QObject* */ q_keychain__writepasswordjob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1068,55 +1028,55 @@ void q_keychain__writepasswordjob_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_keychain__writepasswordjob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_keychain__writepasswordjob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_keychain__writepasswordjob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_keychain__writepasswordjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_keychain__writepasswordjob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_keychain__writepasswordjob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_keychain__writepasswordjob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_keychain__writepasswordjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_keychain__writepasswordjob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_keychain__writepasswordjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_keychain__writepasswordjob_disconnect3(void* self) {
+bool q_keychain__writepasswordjob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_keychain__writepasswordjob_disconnect4(void* self, void* receiver) {
+bool q_keychain__writepasswordjob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_keychain__writepasswordjob_disconnect5(void* param1) {
+bool q_keychain__writepasswordjob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_keychain__writepasswordjob_dump_object_tree(void* self) {
+void q_keychain__writepasswordjob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_keychain__writepasswordjob_dump_object_info(void* self) {
+void q_keychain__writepasswordjob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_keychain__writepasswordjob_set_property(void* self, const char* name, void* value) {
+bool q_keychain__writepasswordjob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_keychain__writepasswordjob_property(void* self, const char* name) {
+QVariant* q_keychain__writepasswordjob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_keychain__writepasswordjob_dynamic_property_names(void* self) {
+const char** q_keychain__writepasswordjob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1137,7 +1097,7 @@ QBindingStorage* q_keychain__writepasswordjob_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_keychain__writepasswordjob_binding_storage2(void* self) {
+const QBindingStorage* q_keychain__writepasswordjob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1149,11 +1109,11 @@ void q_keychain__writepasswordjob_on_destroyed(void* self, void (*callback)(void
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_keychain__writepasswordjob_parent(void* self) {
+QObject* q_keychain__writepasswordjob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_keychain__writepasswordjob_inherits(void* self, const char* classname) {
+bool q_keychain__writepasswordjob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1169,31 +1129,31 @@ int32_t q_keychain__writepasswordjob_start_timer23(void* self, int64_t time, int
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_keychain__writepasswordjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_keychain__writepasswordjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_keychain__writepasswordjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_keychain__writepasswordjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_keychain__writepasswordjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_keychain__writepasswordjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_keychain__writepasswordjob_disconnect1(void* self, const char* signal) {
+bool q_keychain__writepasswordjob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_keychain__writepasswordjob_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_keychain__writepasswordjob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_keychain__writepasswordjob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_keychain__writepasswordjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_keychain__writepasswordjob_disconnect23(void* self, void* receiver, const char* member) {
+bool q_keychain__writepasswordjob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1265,27 +1225,27 @@ void q_keychain__writepasswordjob_on_custom_event(void* self, void (*callback)(v
     QKeychain__WritePasswordJob_OnCustomEvent((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
 }
 
-void q_keychain__writepasswordjob_connect_notify(void* self, void* signal) {
+void q_keychain__writepasswordjob_connect_notify(void* self, const void* signal) {
     QKeychain__WritePasswordJob_ConnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__writepasswordjob_super_connect_notify(void* self, void* signal) {
+void q_keychain__writepasswordjob_super_connect_notify(void* self, const void* signal) {
     QKeychain__WritePasswordJob_SuperConnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__writepasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_keychain__writepasswordjob_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QKeychain__WritePasswordJob_OnConnectNotify((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
 }
 
-void q_keychain__writepasswordjob_disconnect_notify(void* self, void* signal) {
+void q_keychain__writepasswordjob_disconnect_notify(void* self, const void* signal) {
     QKeychain__WritePasswordJob_DisconnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__writepasswordjob_super_disconnect_notify(void* self, void* signal) {
+void q_keychain__writepasswordjob_super_disconnect_notify(void* self, const void* signal) {
     QKeychain__WritePasswordJob_SuperDisconnectNotify((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__writepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_keychain__writepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QKeychain__WritePasswordJob_OnDisconnectNotify((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
 }
 
@@ -1293,60 +1253,20 @@ void q_keychain__writepasswordjob_do_start(void* self) {
     QKeychain__WritePasswordJob_DoStart((QKeychain__WritePasswordJob*)self);
 }
 
-void q_keychain__writepasswordjob_super_do_start(void* self) {
-    QKeychain__WritePasswordJob_SuperDoStart((QKeychain__WritePasswordJob*)self);
-}
-
-void q_keychain__writepasswordjob_on_do_start(void* self, void (*callback)()) {
-    QKeychain__WritePasswordJob_OnDoStart((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
-}
-
-QObject* q_keychain__writepasswordjob_sender(void* self) {
+QObject* q_keychain__writepasswordjob_sender(const void* self) {
     return QKeychain__WritePasswordJob_Sender((QKeychain__WritePasswordJob*)self);
 }
 
-QObject* q_keychain__writepasswordjob_super_sender(void* self) {
-    return QKeychain__WritePasswordJob_SuperSender((QKeychain__WritePasswordJob*)self);
-}
-
-void q_keychain__writepasswordjob_on_sender(void* self, QObject* (*callback)()) {
-    QKeychain__WritePasswordJob_OnSender((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
-}
-
-int32_t q_keychain__writepasswordjob_sender_signal_index(void* self) {
+int32_t q_keychain__writepasswordjob_sender_signal_index(const void* self) {
     return QKeychain__WritePasswordJob_SenderSignalIndex((QKeychain__WritePasswordJob*)self);
 }
 
-int32_t q_keychain__writepasswordjob_super_sender_signal_index(void* self) {
-    return QKeychain__WritePasswordJob_SuperSenderSignalIndex((QKeychain__WritePasswordJob*)self);
-}
-
-void q_keychain__writepasswordjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QKeychain__WritePasswordJob_OnSenderSignalIndex((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
-}
-
-int32_t q_keychain__writepasswordjob_receivers(void* self, const char* signal) {
+int32_t q_keychain__writepasswordjob_receivers(const void* self, const char* signal) {
     return QKeychain__WritePasswordJob_Receivers((QKeychain__WritePasswordJob*)self, signal);
 }
 
-int32_t q_keychain__writepasswordjob_super_receivers(void* self, const char* signal) {
-    return QKeychain__WritePasswordJob_SuperReceivers((QKeychain__WritePasswordJob*)self, signal);
-}
-
-void q_keychain__writepasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QKeychain__WritePasswordJob_OnReceivers((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
-}
-
-bool q_keychain__writepasswordjob_is_signal_connected(void* self, void* signal) {
+bool q_keychain__writepasswordjob_is_signal_connected(const void* self, const void* signal) {
     return QKeychain__WritePasswordJob_IsSignalConnected((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
-}
-
-bool q_keychain__writepasswordjob_super_is_signal_connected(void* self, void* signal) {
-    return QKeychain__WritePasswordJob_SuperIsSignalConnected((QKeychain__WritePasswordJob*)self, (QMetaMethod*)signal);
-}
-
-void q_keychain__writepasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QKeychain__WritePasswordJob_OnIsSignalConnected((QKeychain__WritePasswordJob*)self, (intptr_t)callback);
 }
 
 void q_keychain__writepasswordjob_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
@@ -1365,15 +1285,15 @@ QKeychain__DeletePasswordJob* q_keychain__deletepasswordjob_new2(const char* ser
     return QKeychain__DeletePasswordJob_New2(qstring(service), (QObject*)parent);
 }
 
-const QMetaObject* q_keychain__deletepasswordjob_meta_object(void* self) {
+const QMetaObject* q_keychain__deletepasswordjob_meta_object(const void* self) {
     return QKeychain__DeletePasswordJob_MetaObject((QKeychain__DeletePasswordJob*)self);
 }
 
-void q_keychain__deletepasswordjob_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_keychain__deletepasswordjob_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QKeychain__DeletePasswordJob_OnMetaObject((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_keychain__deletepasswordjob_super_meta_object(void* self) {
+const QMetaObject* q_keychain__deletepasswordjob_super_meta_object(const void* self) {
     return QKeychain__DeletePasswordJob_SuperMetaObject((QKeychain__DeletePasswordJob*)self);
 }
 
@@ -1422,7 +1342,7 @@ const char* q_keychain__deletepasswordjob_tr3(const char* s, const char* c, int 
     return _ret;
 }
 
-QSettings* q_keychain__deletepasswordjob_settings(void* self) {
+QSettings* q_keychain__deletepasswordjob_settings(const void* self) {
     return QKeychain__Job_Settings((QKeychain__Job*)self);
 }
 
@@ -1434,25 +1354,25 @@ void q_keychain__deletepasswordjob_start(void* self) {
     QKeychain__Job_Start((QKeychain__Job*)self);
 }
 
-const char* q_keychain__deletepasswordjob_service(void* self) {
+const char* q_keychain__deletepasswordjob_service(const void* self) {
     libqt_string _str = QKeychain__Job_Service((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_keychain__deletepasswordjob_error(void* self) {
+int32_t q_keychain__deletepasswordjob_error(const void* self) {
     return QKeychain__Job_Error((QKeychain__Job*)self);
 }
 
-const char* q_keychain__deletepasswordjob_error_string(void* self) {
+const char* q_keychain__deletepasswordjob_error_string(const void* self) {
     libqt_string _str = QKeychain__Job_ErrorString((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_keychain__deletepasswordjob_auto_delete(void* self) {
+bool q_keychain__deletepasswordjob_auto_delete(const void* self) {
     return QKeychain__Job_AutoDelete((QKeychain__Job*)self);
 }
 
@@ -1460,7 +1380,7 @@ void q_keychain__deletepasswordjob_set_auto_delete(void* self, bool autoDelete) 
     QKeychain__Job_SetAutoDelete((QKeychain__Job*)self, autoDelete);
 }
 
-bool q_keychain__deletepasswordjob_insecure_fallback(void* self) {
+bool q_keychain__deletepasswordjob_insecure_fallback(const void* self) {
     return QKeychain__Job_InsecureFallback((QKeychain__Job*)self);
 }
 
@@ -1468,7 +1388,7 @@ void q_keychain__deletepasswordjob_set_insecure_fallback(void* self, bool insecu
     QKeychain__Job_SetInsecureFallback((QKeychain__Job*)self, insecureFallback);
 }
 
-const char* q_keychain__deletepasswordjob_key(void* self) {
+const char* q_keychain__deletepasswordjob_key(const void* self) {
     libqt_string _str = QKeychain__Job_Key((QKeychain__Job*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1495,7 +1415,7 @@ void q_keychain__deletepasswordjob_on_finished(void* self, void (*callback)(void
     QKeychain__Job_Connect_Finished((QKeychain__Job*)self, (intptr_t)callback);
 }
 
-const char* q_keychain__deletepasswordjob_object_name(void* self) {
+const char* q_keychain__deletepasswordjob_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -1506,19 +1426,19 @@ void q_keychain__deletepasswordjob_set_object_name(void* self, const char* name)
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_keychain__deletepasswordjob_is_widget_type(void* self) {
+bool q_keychain__deletepasswordjob_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_keychain__deletepasswordjob_is_window_type(void* self) {
+bool q_keychain__deletepasswordjob_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_keychain__deletepasswordjob_is_quick_item_type(void* self) {
+bool q_keychain__deletepasswordjob_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_keychain__deletepasswordjob_signals_blocked(void* self) {
+bool q_keychain__deletepasswordjob_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -1526,7 +1446,7 @@ bool q_keychain__deletepasswordjob_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_keychain__deletepasswordjob_thread(void* self) {
+QThread* q_keychain__deletepasswordjob_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -1550,7 +1470,7 @@ void q_keychain__deletepasswordjob_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_keychain__deletepasswordjob_children(void* self) {
+libqt_list /* of QObject* */ q_keychain__deletepasswordjob_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -1567,55 +1487,55 @@ void q_keychain__deletepasswordjob_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_keychain__deletepasswordjob_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_keychain__deletepasswordjob_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_keychain__deletepasswordjob_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_keychain__deletepasswordjob_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_keychain__deletepasswordjob_disconnect3(void* self) {
+bool q_keychain__deletepasswordjob_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_keychain__deletepasswordjob_disconnect4(void* self, void* receiver) {
+bool q_keychain__deletepasswordjob_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_keychain__deletepasswordjob_disconnect5(void* param1) {
+bool q_keychain__deletepasswordjob_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_keychain__deletepasswordjob_dump_object_tree(void* self) {
+void q_keychain__deletepasswordjob_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_keychain__deletepasswordjob_dump_object_info(void* self) {
+void q_keychain__deletepasswordjob_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_keychain__deletepasswordjob_set_property(void* self, const char* name, void* value) {
+bool q_keychain__deletepasswordjob_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_keychain__deletepasswordjob_property(void* self, const char* name) {
+QVariant* q_keychain__deletepasswordjob_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_keychain__deletepasswordjob_dynamic_property_names(void* self) {
+const char** q_keychain__deletepasswordjob_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -1636,7 +1556,7 @@ QBindingStorage* q_keychain__deletepasswordjob_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_keychain__deletepasswordjob_binding_storage2(void* self) {
+const QBindingStorage* q_keychain__deletepasswordjob_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -1648,11 +1568,11 @@ void q_keychain__deletepasswordjob_on_destroyed(void* self, void (*callback)(voi
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_keychain__deletepasswordjob_parent(void* self) {
+QObject* q_keychain__deletepasswordjob_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_keychain__deletepasswordjob_inherits(void* self, const char* classname) {
+bool q_keychain__deletepasswordjob_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -1668,31 +1588,31 @@ int32_t q_keychain__deletepasswordjob_start_timer23(void* self, int64_t time, in
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_keychain__deletepasswordjob_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_keychain__deletepasswordjob_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_keychain__deletepasswordjob_disconnect1(void* self, const char* signal) {
+bool q_keychain__deletepasswordjob_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_keychain__deletepasswordjob_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_keychain__deletepasswordjob_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_keychain__deletepasswordjob_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_keychain__deletepasswordjob_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_keychain__deletepasswordjob_disconnect23(void* self, void* receiver, const char* member) {
+bool q_keychain__deletepasswordjob_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -1764,27 +1684,27 @@ void q_keychain__deletepasswordjob_on_custom_event(void* self, void (*callback)(
     QKeychain__DeletePasswordJob_OnCustomEvent((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
 }
 
-void q_keychain__deletepasswordjob_connect_notify(void* self, void* signal) {
+void q_keychain__deletepasswordjob_connect_notify(void* self, const void* signal) {
     QKeychain__DeletePasswordJob_ConnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__deletepasswordjob_super_connect_notify(void* self, void* signal) {
+void q_keychain__deletepasswordjob_super_connect_notify(void* self, const void* signal) {
     QKeychain__DeletePasswordJob_SuperConnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__deletepasswordjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_keychain__deletepasswordjob_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QKeychain__DeletePasswordJob_OnConnectNotify((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
 }
 
-void q_keychain__deletepasswordjob_disconnect_notify(void* self, void* signal) {
+void q_keychain__deletepasswordjob_disconnect_notify(void* self, const void* signal) {
     QKeychain__DeletePasswordJob_DisconnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__deletepasswordjob_super_disconnect_notify(void* self, void* signal) {
+void q_keychain__deletepasswordjob_super_disconnect_notify(void* self, const void* signal) {
     QKeychain__DeletePasswordJob_SuperDisconnectNotify((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
 }
 
-void q_keychain__deletepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_keychain__deletepasswordjob_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QKeychain__DeletePasswordJob_OnDisconnectNotify((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
 }
 
@@ -1792,60 +1712,20 @@ void q_keychain__deletepasswordjob_do_start(void* self) {
     QKeychain__DeletePasswordJob_DoStart((QKeychain__DeletePasswordJob*)self);
 }
 
-void q_keychain__deletepasswordjob_super_do_start(void* self) {
-    QKeychain__DeletePasswordJob_SuperDoStart((QKeychain__DeletePasswordJob*)self);
-}
-
-void q_keychain__deletepasswordjob_on_do_start(void* self, void (*callback)()) {
-    QKeychain__DeletePasswordJob_OnDoStart((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
-}
-
-QObject* q_keychain__deletepasswordjob_sender(void* self) {
+QObject* q_keychain__deletepasswordjob_sender(const void* self) {
     return QKeychain__DeletePasswordJob_Sender((QKeychain__DeletePasswordJob*)self);
 }
 
-QObject* q_keychain__deletepasswordjob_super_sender(void* self) {
-    return QKeychain__DeletePasswordJob_SuperSender((QKeychain__DeletePasswordJob*)self);
-}
-
-void q_keychain__deletepasswordjob_on_sender(void* self, QObject* (*callback)()) {
-    QKeychain__DeletePasswordJob_OnSender((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
-}
-
-int32_t q_keychain__deletepasswordjob_sender_signal_index(void* self) {
+int32_t q_keychain__deletepasswordjob_sender_signal_index(const void* self) {
     return QKeychain__DeletePasswordJob_SenderSignalIndex((QKeychain__DeletePasswordJob*)self);
 }
 
-int32_t q_keychain__deletepasswordjob_super_sender_signal_index(void* self) {
-    return QKeychain__DeletePasswordJob_SuperSenderSignalIndex((QKeychain__DeletePasswordJob*)self);
-}
-
-void q_keychain__deletepasswordjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QKeychain__DeletePasswordJob_OnSenderSignalIndex((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
-}
-
-int32_t q_keychain__deletepasswordjob_receivers(void* self, const char* signal) {
+int32_t q_keychain__deletepasswordjob_receivers(const void* self, const char* signal) {
     return QKeychain__DeletePasswordJob_Receivers((QKeychain__DeletePasswordJob*)self, signal);
 }
 
-int32_t q_keychain__deletepasswordjob_super_receivers(void* self, const char* signal) {
-    return QKeychain__DeletePasswordJob_SuperReceivers((QKeychain__DeletePasswordJob*)self, signal);
-}
-
-void q_keychain__deletepasswordjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QKeychain__DeletePasswordJob_OnReceivers((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
-}
-
-bool q_keychain__deletepasswordjob_is_signal_connected(void* self, void* signal) {
+bool q_keychain__deletepasswordjob_is_signal_connected(const void* self, const void* signal) {
     return QKeychain__DeletePasswordJob_IsSignalConnected((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
-}
-
-bool q_keychain__deletepasswordjob_super_is_signal_connected(void* self, void* signal) {
-    return QKeychain__DeletePasswordJob_SuperIsSignalConnected((QKeychain__DeletePasswordJob*)self, (QMetaMethod*)signal);
-}
-
-void q_keychain__deletepasswordjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QKeychain__DeletePasswordJob_OnIsSignalConnected((QKeychain__DeletePasswordJob*)self, (intptr_t)callback);
 }
 
 void q_keychain__deletepasswordjob_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

@@ -32,9 +32,9 @@ QDataStream* q_datastream_new3(char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#device)
 ///
-/// @param self QDataStream*
+/// @param self const QDataStream*
 ///
-QIODevice* q_datastream_device(void* self);
+QIODevice* q_datastream_device(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setDevice)
 ///
@@ -45,17 +45,17 @@ void q_datastream_set_device(void* self, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#atEnd)
 ///
-/// @param self QDataStream*
+/// @param self const QDataStream*
 ///
-bool q_datastream_at_end(void* self);
+bool q_datastream_at_end(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#status)
 ///
-/// @param self QDataStream*
+/// @param self const QDataStream*
 ///
 /// @return enum QDataStream__Status
 ///
-int32_t q_datastream_status(void* self);
+int32_t q_datastream_status(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setStatus)
 ///
@@ -72,11 +72,11 @@ void q_datastream_reset_status(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#floatingPointPrecision)
 ///
-/// @param self QDataStream*
+/// @param self const QDataStream*
 ///
 /// @return enum QDataStream__FloatingPointPrecision
 ///
-int32_t q_datastream_floating_point_precision(void* self);
+int32_t q_datastream_floating_point_precision(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setFloatingPointPrecision)
 ///
@@ -87,11 +87,11 @@ void q_datastream_set_floating_point_precision(void* self, int32_t precision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#byteOrder)
 ///
-/// @param self QDataStream*
+/// @param self const QDataStream*
 ///
 /// @return enum QDataStream__ByteOrder
 ///
-int32_t q_datastream_byte_order(void* self);
+int32_t q_datastream_byte_order(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setByteOrder)
 ///
@@ -102,9 +102,9 @@ void q_datastream_set_byte_order(void* self, int32_t byteOrder);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#version)
 ///
-/// @param self QDataStream*
+/// @param self const QDataStream*
 ///
-int32_t q_datastream_version(void* self);
+int32_t q_datastream_version(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#setVersion)
 ///
@@ -361,9 +361,9 @@ void q_datastream_abort_transaction(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#isDeviceTransactionStarted)
 ///
-/// @param self QDataStream*
+/// @param self const QDataStream*
 ///
-bool q_datastream_is_device_transaction_started(void* self);
+bool q_datastream_is_device_transaction_started(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#dtor.QDataStream)
 ///

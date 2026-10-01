@@ -18,26 +18,26 @@ QAmbientSound* q_ambientsound_new(void* engine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-const QMetaObject* q_ambientsound_meta_object(void* self);
+const QMetaObject* q_ambientsound_meta_object(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// @param self QAmbientSound*
-/// @param callback const QMetaObject* func()
+/// @param self const QAmbientSound*
+/// @param callback const QMetaObject* func(const QAmbientSound* self)
 ///
-void q_ambientsound_on_meta_object(void* self, const QMetaObject* (*callback)());
+void q_ambientsound_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-const QMetaObject* q_ambientsound_super_meta_object(void* self);
+const QMetaObject* q_ambientsound_super_meta_object(const void* self);
 
 /// @param self QAmbientSound*
 /// @param param1 const char*
@@ -94,19 +94,19 @@ const char* q_ambientsound_tr(const char* s);
 /// @param self QAmbientSound*
 /// @param url QUrl*
 ///
-void q_ambientsound_set_source(void* self, void* url);
+void q_ambientsound_set_source(void* self, const void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qambientsound.html#source)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-QUrl* q_ambientsound_source(void* self);
+QUrl* q_ambientsound_source(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qambientsound.html#loops)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-int32_t q_ambientsound_loops(void* self);
+int32_t q_ambientsound_loops(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qambientsound.html#setLoops)
 ///
@@ -117,9 +117,9 @@ void q_ambientsound_set_loops(void* self, int loops);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qambientsound.html#autoPlay)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-bool q_ambientsound_auto_play(void* self);
+bool q_ambientsound_auto_play(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qambientsound.html#setAutoPlay)
 ///
@@ -137,15 +137,15 @@ void q_ambientsound_set_volume(void* self, float volume);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qambientsound.html#volume)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-float q_ambientsound_volume(void* self);
+float q_ambientsound_volume(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qambientsound.html#engine)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-QAudioEngine* q_ambientsound_engine(void* self);
+QAudioEngine* q_ambientsound_engine(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qambientsound.html#sourceChanged)
 ///
@@ -242,9 +242,9 @@ const char* q_ambientsound_tr3(const char* s, const char* c, int n);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-const char* q_ambientsound_object_name(void* self);
+const char* q_ambientsound_object_name(const void* self);
 
 /// Inherited from QObject
 ///
@@ -259,33 +259,33 @@ void q_ambientsound_set_object_name(void* self, const char* name);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-bool q_ambientsound_is_widget_type(void* self);
+bool q_ambientsound_is_widget_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-bool q_ambientsound_is_window_type(void* self);
+bool q_ambientsound_is_window_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-bool q_ambientsound_is_quick_item_type(void* self);
+bool q_ambientsound_is_quick_item_type(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-bool q_ambientsound_signals_blocked(void* self);
+bool q_ambientsound_signals_blocked(const void* self);
 
 /// Inherited from QObject
 ///
@@ -300,9 +300,9 @@ bool q_ambientsound_block_signals(void* self, bool b);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-QThread* q_ambientsound_thread(void* self);
+QThread* q_ambientsound_thread(const void* self);
 
 /// Inherited from QObject
 ///
@@ -353,11 +353,11 @@ void q_ambientsound_kill_timer2(void* self, int32_t id);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
 /// @return libqt_list of QObject*
 ///
-libqt_list q_ambientsound_children(void* self);
+libqt_list q_ambientsound_children(const void* self);
 
 /// Inherited from QObject
 ///
@@ -395,7 +395,7 @@ void q_ambientsound_remove_event_filter(void* self, void* obj);
 /// @param receiver QObject*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_ambientsound_connect(void* sender, const char* signal, void* receiver, const char* member);
+QMetaObject__Connection* q_ambientsound_connect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -406,18 +406,18 @@ QMetaObject__Connection* q_ambientsound_connect(void* sender, const char* signal
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 ///
-QMetaObject__Connection* q_ambientsound_connect2(void* sender, void* signal, void* receiver, void* method);
+QMetaObject__Connection* q_ambientsound_connect2(const void* sender, const void* signal, const void* receiver, const void* method);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 ///
-QMetaObject__Connection* q_ambientsound_connect3(void* self, void* sender, const char* signal, const char* member);
+QMetaObject__Connection* q_ambientsound_connect3(const void* self, const void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
@@ -428,7 +428,7 @@ QMetaObject__Connection* q_ambientsound_connect3(void* self, void* sender, const
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_ambientsound_disconnect(void* sender, const char* signal, void* receiver, const char* member);
+bool q_ambientsound_disconnect(const void* sender, const char* signal, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -439,24 +439,24 @@ bool q_ambientsound_disconnect(void* sender, const char* signal, void* receiver,
 /// @param receiver QObject*
 /// @param member QMetaMethod*
 ///
-bool q_ambientsound_disconnect2(void* sender, void* signal, void* receiver, void* member);
+bool q_ambientsound_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-bool q_ambientsound_disconnect3(void* self);
+bool q_ambientsound_disconnect3(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param receiver QObject*
 ///
-bool q_ambientsound_disconnect4(void* self, void* receiver);
+bool q_ambientsound_disconnect4(const void* self, const void* receiver);
 
 /// Inherited from QObject
 ///
@@ -464,23 +464,23 @@ bool q_ambientsound_disconnect4(void* self, void* receiver);
 ///
 /// @param param1 QMetaObject__Connection*
 ///
-bool q_ambientsound_disconnect5(void* param1);
+bool q_ambientsound_disconnect5(const void* param1);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-void q_ambientsound_dump_object_tree(void* self);
+void q_ambientsound_dump_object_tree(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-void q_ambientsound_dump_object_info(void* self);
+void q_ambientsound_dump_object_info(const void* self);
 
 /// Inherited from QObject
 ///
@@ -490,16 +490,16 @@ void q_ambientsound_dump_object_info(void* self);
 /// @param name const char*
 /// @param value QVariant*
 ///
-bool q_ambientsound_set_property(void* self, const char* name, void* value);
+bool q_ambientsound_set_property(void* self, const char* name, const void* value);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param name const char*
 ///
-QVariant* q_ambientsound_property(void* self, const char* name);
+QVariant* q_ambientsound_property(const void* self, const char* name);
 
 /// Inherited from QObject
 ///
@@ -507,9 +507,9 @@ QVariant* q_ambientsound_property(void* self, const char* name);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-const char** q_ambientsound_dynamic_property_names(void* self);
+const char** q_ambientsound_dynamic_property_names(const void* self);
 
 /// Inherited from QObject
 ///
@@ -523,9 +523,9 @@ QBindingStorage* q_ambientsound_binding_storage(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-const QBindingStorage* q_ambientsound_binding_storage2(void* self);
+const QBindingStorage* q_ambientsound_binding_storage2(const void* self);
 
 /// Inherited from QObject
 ///
@@ -548,18 +548,18 @@ void q_ambientsound_on_destroyed(void* self, void (*callback)(void*));
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-QObject* q_ambientsound_parent(void* self);
+QObject* q_ambientsound_parent(const void* self);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param classname const char*
 ///
-bool q_ambientsound_inherits(void* self, const char* classname);
+bool q_ambientsound_inherits(const void* self, const char* classname);
 
 /// Inherited from QObject
 ///
@@ -599,7 +599,7 @@ int32_t q_ambientsound_start_timer23(void* self, int64_t time, int32_t timerType
 /// @param member const char*
 /// @param param5 enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_ambientsound_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5);
+QMetaObject__Connection* q_ambientsound_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5);
 
 /// Inherited from QObject
 ///
@@ -611,59 +611,59 @@ QMetaObject__Connection* q_ambientsound_connect5(void* sender, const char* signa
 /// @param method QMetaMethod*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_ambientsound_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type);
+QMetaObject__Connection* q_ambientsound_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param sender QObject*
 /// @param signal const char*
 /// @param member const char*
 /// @param type enum Qt__ConnectionType
 ///
-QMetaObject__Connection* q_ambientsound_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type);
+QMetaObject__Connection* q_ambientsound_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param signal const char*
 ///
-bool q_ambientsound_disconnect1(void* self, const char* signal);
+bool q_ambientsound_disconnect1(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAmbientSound*
-/// @param signal const char*
-/// @param receiver QObject*
-///
-bool q_ambientsound_disconnect22(void* self, const char* signal, void* receiver);
-
-/// Inherited from QObject
-///
-/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
-///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param signal const char*
 /// @param receiver QObject*
-/// @param member const char*
 ///
-bool q_ambientsound_disconnect32(void* self, const char* signal, void* receiver, const char* member);
+bool q_ambientsound_disconnect22(const void* self, const char* signal, const void* receiver);
 
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
+/// @param signal const char*
 /// @param receiver QObject*
 /// @param member const char*
 ///
-bool q_ambientsound_disconnect23(void* self, void* receiver, const char* member);
+bool q_ambientsound_disconnect32(const void* self, const char* signal, const void* receiver, const char* member);
+
+/// Inherited from QObject
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnect)
+///
+/// @param self const QAmbientSound*
+/// @param receiver QObject*
+/// @param member const char*
+///
+bool q_ambientsound_disconnect23(const void* self, const void* receiver, const char* member);
 
 /// Inherited from QObject
 ///
@@ -859,7 +859,7 @@ void q_ambientsound_on_custom_event(void* self, void (*callback)(void*, void*));
 /// @param self QAmbientSound*
 /// @param signal QMetaMethod*
 ///
-void q_ambientsound_connect_notify(void* self, void* signal);
+void q_ambientsound_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -870,7 +870,7 @@ void q_ambientsound_connect_notify(void* self, void* signal);
 /// @param self QAmbientSound*
 /// @param signal QMetaMethod*
 ///
-void q_ambientsound_super_connect_notify(void* self, void* signal);
+void q_ambientsound_super_connect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -881,7 +881,7 @@ void q_ambientsound_super_connect_notify(void* self, void* signal);
 /// @param self QAmbientSound*
 /// @param callback void func(QAmbientSound* self, QMetaMethod* signal)
 ///
-void q_ambientsound_on_connect_notify(void* self, void (*callback)(void*, void*));
+void q_ambientsound_on_connect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -892,7 +892,7 @@ void q_ambientsound_on_connect_notify(void* self, void (*callback)(void*, void*)
 /// @param self QAmbientSound*
 /// @param signal QMetaMethod*
 ///
-void q_ambientsound_disconnect_notify(void* self, void* signal);
+void q_ambientsound_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -903,7 +903,7 @@ void q_ambientsound_disconnect_notify(void* self, void* signal);
 /// @param self QAmbientSound*
 /// @param signal QMetaMethod*
 ///
-void q_ambientsound_super_disconnect_notify(void* self, void* signal);
+void q_ambientsound_super_disconnect_notify(void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -914,7 +914,7 @@ void q_ambientsound_super_disconnect_notify(void* self, void* signal);
 /// @param self QAmbientSound*
 /// @param callback void func(QAmbientSound* self, QMetaMethod* signal)
 ///
-void q_ambientsound_on_disconnect_notify(void* self, void (*callback)(void*, void*));
+void q_ambientsound_on_disconnect_notify(void* self, void (*callback)(void*, const void*));
 
 /// Inherited from QObject
 ///
@@ -922,9 +922,9 @@ void q_ambientsound_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-QObject* q_ambientsound_sender(void* self);
+QObject* q_ambientsound_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -932,9 +932,9 @@ QObject* q_ambientsound_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-QObject* q_ambientsound_super_sender(void* self);
+QObject* q_ambientsound_super_sender(const void* self);
 
 /// Inherited from QObject
 ///
@@ -942,10 +942,10 @@ QObject* q_ambientsound_super_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAmbientSound*
-/// @param callback QObject* func()
+/// @param self const QAmbientSound*
+/// @param callback QObject* func(QAmbientSound* self)
 ///
-void q_ambientsound_on_sender(void* self, QObject* (*callback)());
+void q_ambientsound_on_sender(const void* self, QObject* (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -953,9 +953,9 @@ void q_ambientsound_on_sender(void* self, QObject* (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-int32_t q_ambientsound_sender_signal_index(void* self);
+int32_t q_ambientsound_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -963,9 +963,9 @@ int32_t q_ambientsound_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 ///
-int32_t q_ambientsound_super_sender_signal_index(void* self);
+int32_t q_ambientsound_super_sender_signal_index(const void* self);
 
 /// Inherited from QObject
 ///
@@ -973,10 +973,10 @@ int32_t q_ambientsound_super_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAmbientSound*
-/// @param callback int32_t func()
+/// @param self const QAmbientSound*
+/// @param callback int32_t func(QAmbientSound* self)
 ///
-void q_ambientsound_on_sender_signal_index(void* self, int32_t (*callback)());
+void q_ambientsound_on_sender_signal_index(const void* self, int32_t (*callback)(const void*));
 
 /// Inherited from QObject
 ///
@@ -984,10 +984,10 @@ void q_ambientsound_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param signal const char*
 ///
-int32_t q_ambientsound_receivers(void* self, const char* signal);
+int32_t q_ambientsound_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -995,10 +995,10 @@ int32_t q_ambientsound_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param signal const char*
 ///
-int32_t q_ambientsound_super_receivers(void* self, const char* signal);
+int32_t q_ambientsound_super_receivers(const void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1006,10 +1006,10 @@ int32_t q_ambientsound_super_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param callback int32_t func(QAmbientSound* self, const char* signal)
 ///
-void q_ambientsound_on_receivers(void* self, int32_t (*callback)(void*, const char*));
+void q_ambientsound_on_receivers(const void* self, int32_t (*callback)(const void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1017,10 +1017,10 @@ void q_ambientsound_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param signal QMetaMethod*
 ///
-bool q_ambientsound_is_signal_connected(void* self, void* signal);
+bool q_ambientsound_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1028,10 +1028,10 @@ bool q_ambientsound_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param signal QMetaMethod*
 ///
-bool q_ambientsound_super_is_signal_connected(void* self, void* signal);
+bool q_ambientsound_super_is_signal_connected(const void* self, const void* signal);
 
 /// Inherited from QObject
 ///
@@ -1039,10 +1039,10 @@ bool q_ambientsound_super_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// @param self QAmbientSound*
+/// @param self const QAmbientSound*
 /// @param callback bool func(QAmbientSound* self, QMetaMethod* signal)
 ///
-void q_ambientsound_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+void q_ambientsound_on_is_signal_connected(const void* self, bool (*callback)(const void*, const void*));
 
 /// Inherited from QObject
 ///

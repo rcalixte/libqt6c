@@ -14,7 +14,7 @@
 ///
 /// @param other QJSNumberCoercion*
 ///
-QJSNumberCoercion* q_jsnumbercoercion_new(void* other);
+QJSNumberCoercion* q_jsnumbercoercion_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsnumbercoercion.html)
 
@@ -30,7 +30,7 @@ QJSNumberCoercion* q_jsnumbercoercion_new2(void* other);
 ///
 /// @param param1 QJSNumberCoercion*
 ///
-QJSNumberCoercion* q_jsnumbercoercion_new3(void* param1);
+QJSNumberCoercion* q_jsnumbercoercion_new3(const void* param1);
 
 /// q_jsnumbercoercion_copy_assign shallow copies `other` into `self`.
 ///

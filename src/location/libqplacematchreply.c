@@ -16,15 +16,15 @@ QPlaceMatchReply* q_placematchreply_new2(void* parent) {
     return QPlaceMatchReply_New2((QObject*)parent);
 }
 
-const QMetaObject* q_placematchreply_meta_object(void* self) {
+const QMetaObject* q_placematchreply_meta_object(const void* self) {
     return QPlaceMatchReply_MetaObject((QPlaceMatchReply*)self);
 }
 
-void q_placematchreply_on_meta_object(void* self, const QMetaObject* (*callback)()) {
+void q_placematchreply_on_meta_object(const void* self, const QMetaObject* (*callback)(const void*)) {
     QPlaceMatchReply_OnMetaObject((QPlaceMatchReply*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_placematchreply_super_meta_object(void* self) {
+const QMetaObject* q_placematchreply_super_meta_object(const void* self) {
     return QPlaceMatchReply_SuperMetaObject((QPlaceMatchReply*)self);
 }
 
@@ -59,24 +59,24 @@ const char* q_placematchreply_tr(const char* s) {
     return _ret;
 }
 
-int32_t q_placematchreply_type(void* self) {
+int32_t q_placematchreply_type(const void* self) {
     return QPlaceMatchReply_Type((QPlaceMatchReply*)self);
 }
 
-void q_placematchreply_on_type(void* self, int32_t (*callback)()) {
+void q_placematchreply_on_type(const void* self, int32_t (*callback)(const void*)) {
     QPlaceMatchReply_OnType((QPlaceMatchReply*)self, (intptr_t)callback);
 }
 
-int32_t q_placematchreply_super_type(void* self) {
+int32_t q_placematchreply_super_type(const void* self) {
     return QPlaceMatchReply_SuperType((QPlaceMatchReply*)self);
 }
 
-libqt_list /* of QPlace* */ q_placematchreply_places(void* self) {
+libqt_list /* of QPlace* */ q_placematchreply_places(const void* self) {
     libqt_list _arr = QPlaceMatchReply_Places((QPlaceMatchReply*)self);
     return _arr;
 }
 
-QPlaceMatchRequest* q_placematchreply_request(void* self) {
+QPlaceMatchRequest* q_placematchreply_request(const void* self) {
     return QPlaceMatchReply_Request((QPlaceMatchReply*)self);
 }
 
@@ -84,24 +84,8 @@ void q_placematchreply_set_places(void* self, libqt_list /* of QPlace* */ result
     QPlaceMatchReply_SetPlaces((QPlaceMatchReply*)self, results);
 }
 
-void q_placematchreply_on_set_places(void* self, void (*callback)(void*, libqt_list /* of QPlace* */)) {
-    QPlaceMatchReply_OnSetPlaces((QPlaceMatchReply*)self, (intptr_t)callback);
-}
-
-void q_placematchreply_super_set_places(void* self, libqt_list /* of QPlace* */ results) {
-    QPlaceMatchReply_SuperSetPlaces((QPlaceMatchReply*)self, results);
-}
-
-void q_placematchreply_set_request(void* self, void* request) {
+void q_placematchreply_set_request(void* self, const void* request) {
     QPlaceMatchReply_SetRequest((QPlaceMatchReply*)self, (QPlaceMatchRequest*)request);
-}
-
-void q_placematchreply_on_set_request(void* self, void (*callback)(void*, void*)) {
-    QPlaceMatchReply_OnSetRequest((QPlaceMatchReply*)self, (intptr_t)callback);
-}
-
-void q_placematchreply_super_set_request(void* self, void* request) {
-    QPlaceMatchReply_SuperSetRequest((QPlaceMatchReply*)self, (QPlaceMatchRequest*)request);
 }
 
 const char* q_placematchreply_tr2(const char* s, const char* c) {
@@ -118,18 +102,18 @@ const char* q_placematchreply_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_placematchreply_is_finished(void* self) {
+bool q_placematchreply_is_finished(const void* self) {
     return QPlaceReply_IsFinished((QPlaceReply*)self);
 }
 
-const char* q_placematchreply_error_string(void* self) {
+const char* q_placematchreply_error_string(const void* self) {
     libqt_string _str = QPlaceReply_ErrorString((QPlaceReply*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t q_placematchreply_error(void* self) {
+int32_t q_placematchreply_error(const void* self) {
     return QPlaceReply_Error((QPlaceReply*)self);
 }
 
@@ -173,7 +157,7 @@ void q_placematchreply_on_error_occurred2(void* self, void (*callback)(void*, in
     QPlaceReply_Connect_ErrorOccurred2((QPlaceReply*)self, (intptr_t)callback);
 }
 
-const char* q_placematchreply_object_name(void* self) {
+const char* q_placematchreply_object_name(const void* self) {
     libqt_string _str = QObject_ObjectName((QObject*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -184,19 +168,19 @@ void q_placematchreply_set_object_name(void* self, const char* name) {
     QObject_SetObjectName((QObject*)self, name);
 }
 
-bool q_placematchreply_is_widget_type(void* self) {
+bool q_placematchreply_is_widget_type(const void* self) {
     return QObject_IsWidgetType((QObject*)self);
 }
 
-bool q_placematchreply_is_window_type(void* self) {
+bool q_placematchreply_is_window_type(const void* self) {
     return QObject_IsWindowType((QObject*)self);
 }
 
-bool q_placematchreply_is_quick_item_type(void* self) {
+bool q_placematchreply_is_quick_item_type(const void* self) {
     return QObject_IsQuickItemType((QObject*)self);
 }
 
-bool q_placematchreply_signals_blocked(void* self) {
+bool q_placematchreply_signals_blocked(const void* self) {
     return QObject_SignalsBlocked((QObject*)self);
 }
 
@@ -204,7 +188,7 @@ bool q_placematchreply_block_signals(void* self, bool b) {
     return QObject_BlockSignals((QObject*)self, b);
 }
 
-QThread* q_placematchreply_thread(void* self) {
+QThread* q_placematchreply_thread(const void* self) {
     return QObject_Thread((QObject*)self);
 }
 
@@ -228,7 +212,7 @@ void q_placematchreply_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
-libqt_list /* of QObject* */ q_placematchreply_children(void* self) {
+libqt_list /* of QObject* */ q_placematchreply_children(const void* self) {
     libqt_list _arr = QObject_Children((QObject*)self);
     return _arr;
 }
@@ -245,55 +229,55 @@ void q_placematchreply_remove_event_filter(void* self, void* obj) {
     QObject_RemoveEventFilter((QObject*)self, (QObject*)obj);
 }
 
-QMetaObject__Connection* q_placematchreply_connect(void* sender, const char* signal, void* receiver, const char* member) {
+QMetaObject__Connection* q_placematchreply_connect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Connect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-QMetaObject__Connection* q_placematchreply_connect2(void* sender, void* signal, void* receiver, void* method) {
+QMetaObject__Connection* q_placematchreply_connect2(const void* sender, const void* signal, const void* receiver, const void* method) {
     return QObject_Connect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method);
 }
 
-QMetaObject__Connection* q_placematchreply_connect3(void* self, void* sender, const char* signal, const char* member) {
+QMetaObject__Connection* q_placematchreply_connect3(const void* self, const void* sender, const char* signal, const char* member) {
     return QObject_Connect3((QObject*)self, (QObject*)sender, signal, member);
 }
 
-bool q_placematchreply_disconnect(void* sender, const char* signal, void* receiver, const char* member) {
+bool q_placematchreply_disconnect(const void* sender, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect((QObject*)sender, signal, (QObject*)receiver, member);
 }
 
-bool q_placematchreply_disconnect2(void* sender, void* signal, void* receiver, void* member) {
+bool q_placematchreply_disconnect2(const void* sender, const void* signal, const void* receiver, const void* member) {
     return QObject_Disconnect2((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_placematchreply_disconnect3(void* self) {
+bool q_placematchreply_disconnect3(const void* self) {
     return QObject_Disconnect3((QObject*)self);
 }
 
-bool q_placematchreply_disconnect4(void* self, void* receiver) {
+bool q_placematchreply_disconnect4(const void* self, const void* receiver) {
     return QObject_Disconnect4((QObject*)self, (QObject*)receiver);
 }
 
-bool q_placematchreply_disconnect5(void* param1) {
+bool q_placematchreply_disconnect5(const void* param1) {
     return QObject_Disconnect5((QMetaObject__Connection*)param1);
 }
 
-void q_placematchreply_dump_object_tree(void* self) {
+void q_placematchreply_dump_object_tree(const void* self) {
     QObject_DumpObjectTree((QObject*)self);
 }
 
-void q_placematchreply_dump_object_info(void* self) {
+void q_placematchreply_dump_object_info(const void* self) {
     QObject_DumpObjectInfo((QObject*)self);
 }
 
-bool q_placematchreply_set_property(void* self, const char* name, void* value) {
+bool q_placematchreply_set_property(void* self, const char* name, const void* value) {
     return QObject_SetProperty((QObject*)self, name, (QVariant*)value);
 }
 
-QVariant* q_placematchreply_property(void* self, const char* name) {
+QVariant* q_placematchreply_property(const void* self, const char* name) {
     return QObject_Property((QObject*)self, name);
 }
 
-const char** q_placematchreply_dynamic_property_names(void* self) {
+const char** q_placematchreply_dynamic_property_names(const void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -314,7 +298,7 @@ QBindingStorage* q_placematchreply_binding_storage(void* self) {
     return QObject_BindingStorage((QObject*)self);
 }
 
-const QBindingStorage* q_placematchreply_binding_storage2(void* self) {
+const QBindingStorage* q_placematchreply_binding_storage2(const void* self) {
     return QObject_BindingStorage2((QObject*)self);
 }
 
@@ -326,11 +310,11 @@ void q_placematchreply_on_destroyed(void* self, void (*callback)(void*)) {
     QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_placematchreply_parent(void* self) {
+QObject* q_placematchreply_parent(const void* self) {
     return QObject_Parent((QObject*)self);
 }
 
-bool q_placematchreply_inherits(void* self, const char* classname) {
+bool q_placematchreply_inherits(const void* self, const char* classname) {
     return QObject_Inherits((QObject*)self, classname);
 }
 
@@ -346,31 +330,31 @@ int32_t q_placematchreply_start_timer23(void* self, int64_t time, int32_t timerT
     return QObject_StartTimer23((QObject*)self, time, timerType);
 }
 
-QMetaObject__Connection* q_placematchreply_connect5(void* sender, const char* signal, void* receiver, const char* member, int32_t param5) {
+QMetaObject__Connection* q_placematchreply_connect5(const void* sender, const char* signal, const void* receiver, const char* member, int32_t param5) {
     return QObject_Connect5((QObject*)sender, signal, (QObject*)receiver, member, param5);
 }
 
-QMetaObject__Connection* q_placematchreply_connect52(void* sender, void* signal, void* receiver, void* method, int32_t type) {
+QMetaObject__Connection* q_placematchreply_connect52(const void* sender, const void* signal, const void* receiver, const void* method, int32_t type) {
     return QObject_Connect52((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, type);
 }
 
-QMetaObject__Connection* q_placematchreply_connect4(void* self, void* sender, const char* signal, const char* member, int32_t type) {
+QMetaObject__Connection* q_placematchreply_connect4(const void* self, const void* sender, const char* signal, const char* member, int32_t type) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, type);
 }
 
-bool q_placematchreply_disconnect1(void* self, const char* signal) {
+bool q_placematchreply_disconnect1(const void* self, const char* signal) {
     return QObject_Disconnect1((QObject*)self, signal);
 }
 
-bool q_placematchreply_disconnect22(void* self, const char* signal, void* receiver) {
+bool q_placematchreply_disconnect22(const void* self, const char* signal, const void* receiver) {
     return QObject_Disconnect22((QObject*)self, signal, (QObject*)receiver);
 }
 
-bool q_placematchreply_disconnect32(void* self, const char* signal, void* receiver, const char* member) {
+bool q_placematchreply_disconnect32(const void* self, const char* signal, const void* receiver, const char* member) {
     return QObject_Disconnect32((QObject*)self, signal, (QObject*)receiver, member);
 }
 
-bool q_placematchreply_disconnect23(void* self, void* receiver, const char* member) {
+bool q_placematchreply_disconnect23(const void* self, const void* receiver, const char* member) {
     return QObject_Disconnect23((QObject*)self, (QObject*)receiver, member);
 }
 
@@ -390,7 +374,7 @@ void q_placematchreply_super_abort(void* self) {
     QPlaceMatchReply_SuperAbort((QPlaceMatchReply*)self);
 }
 
-void q_placematchreply_on_abort(void* self, void (*callback)()) {
+void q_placematchreply_on_abort(void* self, void (*callback)(void*)) {
     QPlaceMatchReply_OnAbort((QPlaceMatchReply*)self, (intptr_t)callback);
 }
 
@@ -454,27 +438,27 @@ void q_placematchreply_on_custom_event(void* self, void (*callback)(void*, void*
     QPlaceMatchReply_OnCustomEvent((QPlaceMatchReply*)self, (intptr_t)callback);
 }
 
-void q_placematchreply_connect_notify(void* self, void* signal) {
+void q_placematchreply_connect_notify(void* self, const void* signal) {
     QPlaceMatchReply_ConnectNotify((QPlaceMatchReply*)self, (QMetaMethod*)signal);
 }
 
-void q_placematchreply_super_connect_notify(void* self, void* signal) {
+void q_placematchreply_super_connect_notify(void* self, const void* signal) {
     QPlaceMatchReply_SuperConnectNotify((QPlaceMatchReply*)self, (QMetaMethod*)signal);
 }
 
-void q_placematchreply_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+void q_placematchreply_on_connect_notify(void* self, void (*callback)(void*, const void*)) {
     QPlaceMatchReply_OnConnectNotify((QPlaceMatchReply*)self, (intptr_t)callback);
 }
 
-void q_placematchreply_disconnect_notify(void* self, void* signal) {
+void q_placematchreply_disconnect_notify(void* self, const void* signal) {
     QPlaceMatchReply_DisconnectNotify((QPlaceMatchReply*)self, (QMetaMethod*)signal);
 }
 
-void q_placematchreply_super_disconnect_notify(void* self, void* signal) {
+void q_placematchreply_super_disconnect_notify(void* self, const void* signal) {
     QPlaceMatchReply_SuperDisconnectNotify((QPlaceMatchReply*)self, (QMetaMethod*)signal);
 }
 
-void q_placematchreply_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+void q_placematchreply_on_disconnect_notify(void* self, void (*callback)(void*, const void*)) {
     QPlaceMatchReply_OnDisconnectNotify((QPlaceMatchReply*)self, (intptr_t)callback);
 }
 
@@ -482,72 +466,24 @@ void q_placematchreply_set_finished(void* self, bool finished) {
     QPlaceMatchReply_SetFinished((QPlaceMatchReply*)self, finished);
 }
 
-void q_placematchreply_super_set_finished(void* self, bool finished) {
-    QPlaceMatchReply_SuperSetFinished((QPlaceMatchReply*)self, finished);
-}
-
-void q_placematchreply_on_set_finished(void* self, void (*callback)(void*, bool)) {
-    QPlaceMatchReply_OnSetFinished((QPlaceMatchReply*)self, (intptr_t)callback);
-}
-
 void q_placematchreply_set_error(void* self, int32_t error, const char* errorString) {
     QPlaceMatchReply_SetError((QPlaceMatchReply*)self, error, qstring(errorString));
 }
 
-void q_placematchreply_super_set_error(void* self, int32_t error, const char* errorString) {
-    QPlaceMatchReply_SuperSetError((QPlaceMatchReply*)self, error, qstring(errorString));
-}
-
-void q_placematchreply_on_set_error(void* self, void (*callback)(void*, int32_t, const char*)) {
-    QPlaceMatchReply_OnSetError((QPlaceMatchReply*)self, (intptr_t)callback);
-}
-
-QObject* q_placematchreply_sender(void* self) {
+QObject* q_placematchreply_sender(const void* self) {
     return QPlaceMatchReply_Sender((QPlaceMatchReply*)self);
 }
 
-QObject* q_placematchreply_super_sender(void* self) {
-    return QPlaceMatchReply_SuperSender((QPlaceMatchReply*)self);
-}
-
-void q_placematchreply_on_sender(void* self, QObject* (*callback)()) {
-    QPlaceMatchReply_OnSender((QPlaceMatchReply*)self, (intptr_t)callback);
-}
-
-int32_t q_placematchreply_sender_signal_index(void* self) {
+int32_t q_placematchreply_sender_signal_index(const void* self) {
     return QPlaceMatchReply_SenderSignalIndex((QPlaceMatchReply*)self);
 }
 
-int32_t q_placematchreply_super_sender_signal_index(void* self) {
-    return QPlaceMatchReply_SuperSenderSignalIndex((QPlaceMatchReply*)self);
-}
-
-void q_placematchreply_on_sender_signal_index(void* self, int32_t (*callback)()) {
-    QPlaceMatchReply_OnSenderSignalIndex((QPlaceMatchReply*)self, (intptr_t)callback);
-}
-
-int32_t q_placematchreply_receivers(void* self, const char* signal) {
+int32_t q_placematchreply_receivers(const void* self, const char* signal) {
     return QPlaceMatchReply_Receivers((QPlaceMatchReply*)self, signal);
 }
 
-int32_t q_placematchreply_super_receivers(void* self, const char* signal) {
-    return QPlaceMatchReply_SuperReceivers((QPlaceMatchReply*)self, signal);
-}
-
-void q_placematchreply_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
-    QPlaceMatchReply_OnReceivers((QPlaceMatchReply*)self, (intptr_t)callback);
-}
-
-bool q_placematchreply_is_signal_connected(void* self, void* signal) {
+bool q_placematchreply_is_signal_connected(const void* self, const void* signal) {
     return QPlaceMatchReply_IsSignalConnected((QPlaceMatchReply*)self, (QMetaMethod*)signal);
-}
-
-bool q_placematchreply_super_is_signal_connected(void* self, void* signal) {
-    return QPlaceMatchReply_SuperIsSignalConnected((QPlaceMatchReply*)self, (QMetaMethod*)signal);
-}
-
-void q_placematchreply_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
-    QPlaceMatchReply_OnIsSignalConnected((QPlaceMatchReply*)self, (intptr_t)callback);
 }
 
 void q_placematchreply_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

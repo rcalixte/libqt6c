@@ -14,7 +14,7 @@
 ///
 /// @param other QToolTip*
 ///
-QToolTip* q_tooltip_new(void* other);
+QToolTip* q_tooltip_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html)
 
@@ -43,7 +43,7 @@ void q_tooltip_move_assign(void* self, void* other);
 /// @param pos QPoint*
 /// @param text const char*
 ///
-void q_tooltip_show_text(void* pos, const char* text);
+void q_tooltip_show_text(const void* pos, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#hideText)
 ///
@@ -67,7 +67,7 @@ QPalette* q_tooltip_palette();
 ///
 /// @param palette QPalette*
 ///
-void q_tooltip_set_palette(void* palette);
+void q_tooltip_set_palette(const void* palette);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#font)
 ///
@@ -77,7 +77,7 @@ QFont* q_tooltip_font();
 ///
 /// @param font QFont*
 ///
-void q_tooltip_set_font(void* font);
+void q_tooltip_set_font(const void* font);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
 ///
@@ -85,7 +85,7 @@ void q_tooltip_set_font(void* font);
 /// @param text const char*
 /// @param w QWidget*
 ///
-void q_tooltip_show_text3(void* pos, const char* text, void* w);
+void q_tooltip_show_text3(const void* pos, const char* text, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
 ///
@@ -94,7 +94,7 @@ void q_tooltip_show_text3(void* pos, const char* text, void* w);
 /// @param w QWidget*
 /// @param rect QRect*
 ///
-void q_tooltip_show_text4(void* pos, const char* text, void* w, void* rect);
+void q_tooltip_show_text4(const void* pos, const char* text, void* w, const void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#showText)
 ///
@@ -104,7 +104,7 @@ void q_tooltip_show_text4(void* pos, const char* text, void* w, void* rect);
 /// @param rect QRect*
 /// @param msecShowTime int
 ///
-void q_tooltip_show_text5(void* pos, const char* text, void* w, void* rect, int msecShowTime);
+void q_tooltip_show_text5(const void* pos, const char* text, void* w, const void* rect, int msecShowTime);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtooltip.html#dtor.QToolTip)
 ///

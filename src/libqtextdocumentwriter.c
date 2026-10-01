@@ -24,7 +24,7 @@ void q_textdocumentwriter_set_format(void* self, char* format) {
     QTextDocumentWriter_SetFormat((QTextDocumentWriter*)self, qstring(format));
 }
 
-char* q_textdocumentwriter_format(void* self) {
+char* q_textdocumentwriter_format(const void* self) {
     libqt_string _str = QTextDocumentWriter_Format((QTextDocumentWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -35,7 +35,7 @@ void q_textdocumentwriter_set_device(void* self, void* device) {
     QTextDocumentWriter_SetDevice((QTextDocumentWriter*)self, (QIODevice*)device);
 }
 
-QIODevice* q_textdocumentwriter_device(void* self) {
+QIODevice* q_textdocumentwriter_device(const void* self) {
     return QTextDocumentWriter_Device((QTextDocumentWriter*)self);
 }
 
@@ -43,18 +43,18 @@ void q_textdocumentwriter_set_file_name(void* self, const char* fileName) {
     QTextDocumentWriter_SetFileName((QTextDocumentWriter*)self, qstring(fileName));
 }
 
-const char* q_textdocumentwriter_file_name(void* self) {
+const char* q_textdocumentwriter_file_name(const void* self) {
     libqt_string _str = QTextDocumentWriter_FileName((QTextDocumentWriter*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool q_textdocumentwriter_write(void* self, void* document) {
+bool q_textdocumentwriter_write(void* self, const void* document) {
     return QTextDocumentWriter_Write((QTextDocumentWriter*)self, (QTextDocument*)document);
 }
 
-bool q_textdocumentwriter_write2(void* self, void* fragment) {
+bool q_textdocumentwriter_write2(void* self, const void* fragment) {
     return QTextDocumentWriter_Write2((QTextDocumentWriter*)self, (QTextDocumentFragment*)fragment);
 }
 

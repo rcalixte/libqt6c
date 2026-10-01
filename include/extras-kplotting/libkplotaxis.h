@@ -24,9 +24,9 @@ KPlotAxis* k_plotaxis_new2(const char* label);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#isVisible)
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 ///
-bool k_plotaxis_is_visible(void* self);
+bool k_plotaxis_is_visible(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#setVisible)
 ///
@@ -37,9 +37,9 @@ void k_plotaxis_set_visible(void* self, bool visible);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#areTickLabelsShown)
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 ///
-bool k_plotaxis_are_tick_labels_shown(void* self);
+bool k_plotaxis_are_tick_labels_shown(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#setTickLabelsShown)
 ///
@@ -59,18 +59,18 @@ void k_plotaxis_set_label(void* self, const char* label);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 ///
-const char* k_plotaxis_label(void* self);
+const char* k_plotaxis_label(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#tickLabel)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 /// @param value double
 ///
-const char* k_plotaxis_tick_label(void* self, double value);
+const char* k_plotaxis_tick_label(const void* self, double value);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#setTickLabelFormat)
 ///
@@ -80,21 +80,21 @@ void k_plotaxis_set_tick_label_format(void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#tickLabelWidth)
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 ///
-int32_t k_plotaxis_tick_label_width(void* self);
+int32_t k_plotaxis_tick_label_width(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#tickLabelFormat)
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 ///
-char k_plotaxis_tick_label_format(void* self);
+char k_plotaxis_tick_label_format(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#tickLabelPrecision)
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 ///
-int32_t k_plotaxis_tick_label_precision(void* self);
+int32_t k_plotaxis_tick_label_precision(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#setTickMarks)
 ///
@@ -106,19 +106,19 @@ void k_plotaxis_set_tick_marks(void* self, double x0, double length);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#majorTickMarks)
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 ///
 /// @return libqt_list of double
 ///
-libqt_list k_plotaxis_major_tick_marks(void* self);
+libqt_list k_plotaxis_major_tick_marks(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#minorTickMarks)
 ///
-/// @param self KPlotAxis*
+/// @param self const KPlotAxis*
 ///
 /// @return libqt_list of double
 ///
-libqt_list k_plotaxis_minor_tick_marks(void* self);
+libqt_list k_plotaxis_minor_tick_marks(const void* self);
 
 /// [Upstream resources](https://api.kde.org/kplotaxis.html#setTickLabelFormat)
 ///

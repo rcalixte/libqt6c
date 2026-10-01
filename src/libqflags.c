@@ -1,7 +1,7 @@
 #include "libqflags.hpp"
 #include "libqflags.h"
 
-QFlag* q_flag_new(void* other) {
+QFlag* q_flag_new(const void* other) {
     return QFlag_New((QFlag*)other);
 }
 
@@ -25,7 +25,7 @@ QFlag* q_flag_new6(uint16_t value) {
     return QFlag_New6(value);
 }
 
-QFlag* q_flag_new7(void* param1) {
+QFlag* q_flag_new7(const void* param1) {
     return QFlag_New7((QFlag*)param1);
 }
 
@@ -37,11 +37,11 @@ void q_flag_move_assign(void* self, void* other) {
     QFlag_MoveAssign((QFlag*)self, (QFlag*)other);
 }
 
-int32_t q_flag_to_int(void* self) {
+int32_t q_flag_to_int(const void* self) {
     return QFlag_ToInt((QFlag*)self);
 }
 
-uint32_t q_flag_to_unsigned_int(void* self) {
+uint32_t q_flag_to_unsigned_int(const void* self) {
     return QFlag_ToUnsignedInt((QFlag*)self);
 }
 
@@ -49,7 +49,7 @@ void q_flag_delete(void* self) {
     QFlag_Delete((QFlag*)(self));
 }
 
-QIncompatibleFlag* q_incompatibleflag_new(void* other) {
+QIncompatibleFlag* q_incompatibleflag_new(const void* other) {
     return QIncompatibleFlag_New((QIncompatibleFlag*)other);
 }
 
@@ -61,7 +61,7 @@ QIncompatibleFlag* q_incompatibleflag_new3(int i) {
     return QIncompatibleFlag_New3(i);
 }
 
-QIncompatibleFlag* q_incompatibleflag_new4(void* param1) {
+QIncompatibleFlag* q_incompatibleflag_new4(const void* param1) {
     return QIncompatibleFlag_New4((QIncompatibleFlag*)param1);
 }
 
@@ -73,7 +73,7 @@ void q_incompatibleflag_move_assign(void* self, void* other) {
     QIncompatibleFlag_MoveAssign((QIncompatibleFlag*)self, (QIncompatibleFlag*)other);
 }
 
-int32_t q_incompatibleflag_to_int(void* self) {
+int32_t q_incompatibleflag_to_int(const void* self) {
     return QIncompatibleFlag_ToInt((QIncompatibleFlag*)self);
 }
 

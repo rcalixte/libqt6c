@@ -1,7 +1,7 @@
 #include "libqjsnumbercoercion.hpp"
 #include "libqjsnumbercoercion.h"
 
-QJSNumberCoercion* q_jsnumbercoercion_new(void* other) {
+QJSNumberCoercion* q_jsnumbercoercion_new(const void* other) {
     return QJSNumberCoercion_New((QJSNumberCoercion*)other);
 }
 
@@ -9,7 +9,7 @@ QJSNumberCoercion* q_jsnumbercoercion_new2(void* other) {
     return QJSNumberCoercion_New2((QJSNumberCoercion*)other);
 }
 
-QJSNumberCoercion* q_jsnumbercoercion_new3(void* param1) {
+QJSNumberCoercion* q_jsnumbercoercion_new3(const void* param1) {
     return QJSNumberCoercion_New3((QJSNumberCoercion*)param1);
 }
 

@@ -20,14 +20,14 @@ QSslCertificateExtension* q_sslcertificateextension_new();
 ///
 /// @param other QSslCertificateExtension*
 ///
-QSslCertificateExtension* q_sslcertificateextension_new2(void* other);
+QSslCertificateExtension* q_sslcertificateextension_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#operator-eq)
 ///
 /// @param self QSslCertificateExtension*
 /// @param other QSslCertificateExtension*
 ///
-void q_sslcertificateextension_operator_assign(void* self, void* other);
+void q_sslcertificateextension_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#swap)
 ///
@@ -40,35 +40,35 @@ void q_sslcertificateextension_swap(void* self, void* other);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSslCertificateExtension*
+/// @param self const QSslCertificateExtension*
 ///
-const char* q_sslcertificateextension_oid(void* self);
+const char* q_sslcertificateextension_oid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#name)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QSslCertificateExtension*
+/// @param self const QSslCertificateExtension*
 ///
-const char* q_sslcertificateextension_name(void* self);
+const char* q_sslcertificateextension_name(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#value)
 ///
-/// @param self QSslCertificateExtension*
+/// @param self const QSslCertificateExtension*
 ///
-QVariant* q_sslcertificateextension_value(void* self);
+QVariant* q_sslcertificateextension_value(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#isCritical)
 ///
-/// @param self QSslCertificateExtension*
+/// @param self const QSslCertificateExtension*
 ///
-bool q_sslcertificateextension_is_critical(void* self);
+bool q_sslcertificateextension_is_critical(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#isSupported)
 ///
-/// @param self QSslCertificateExtension*
+/// @param self const QSslCertificateExtension*
 ///
-bool q_sslcertificateextension_is_supported(void* self);
+bool q_sslcertificateextension_is_supported(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsslcertificateextension.html#dtor.QSslCertificateExtension)
 ///

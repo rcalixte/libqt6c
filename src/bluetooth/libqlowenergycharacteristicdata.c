@@ -7,23 +7,23 @@ QLowEnergyCharacteristicData* q_lowenergycharacteristicdata_new() {
     return QLowEnergyCharacteristicData_New();
 }
 
-QLowEnergyCharacteristicData* q_lowenergycharacteristicdata_new2(void* other) {
+QLowEnergyCharacteristicData* q_lowenergycharacteristicdata_new2(const void* other) {
     return QLowEnergyCharacteristicData_New2((QLowEnergyCharacteristicData*)other);
 }
 
-void q_lowenergycharacteristicdata_operator_assign(void* self, void* other) {
+void q_lowenergycharacteristicdata_operator_assign(void* self, const void* other) {
     QLowEnergyCharacteristicData_OperatorAssign((QLowEnergyCharacteristicData*)self, (QLowEnergyCharacteristicData*)other);
 }
 
-QBluetoothUuid* q_lowenergycharacteristicdata_uuid(void* self) {
+QBluetoothUuid* q_lowenergycharacteristicdata_uuid(const void* self) {
     return QLowEnergyCharacteristicData_Uuid((QLowEnergyCharacteristicData*)self);
 }
 
-void q_lowenergycharacteristicdata_set_uuid(void* self, void* uuid) {
+void q_lowenergycharacteristicdata_set_uuid(void* self, const void* uuid) {
     QLowEnergyCharacteristicData_SetUuid((QLowEnergyCharacteristicData*)self, (QBluetoothUuid*)uuid);
 }
 
-char* q_lowenergycharacteristicdata_value(void* self) {
+char* q_lowenergycharacteristicdata_value(const void* self) {
     libqt_string _str = QLowEnergyCharacteristicData_Value((QLowEnergyCharacteristicData*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -34,7 +34,7 @@ void q_lowenergycharacteristicdata_set_value(void* self, char* value) {
     QLowEnergyCharacteristicData_SetValue((QLowEnergyCharacteristicData*)self, qstring(value));
 }
 
-int32_t q_lowenergycharacteristicdata_properties(void* self) {
+int32_t q_lowenergycharacteristicdata_properties(const void* self) {
     return QLowEnergyCharacteristicData_Properties((QLowEnergyCharacteristicData*)self);
 }
 
@@ -42,7 +42,7 @@ void q_lowenergycharacteristicdata_set_properties(void* self, int32_t properties
     QLowEnergyCharacteristicData_SetProperties((QLowEnergyCharacteristicData*)self, properties);
 }
 
-libqt_list /* of QLowEnergyDescriptorData* */ q_lowenergycharacteristicdata_descriptors(void* self) {
+libqt_list /* of QLowEnergyDescriptorData* */ q_lowenergycharacteristicdata_descriptors(const void* self) {
     libqt_list _arr = QLowEnergyCharacteristicData_Descriptors((QLowEnergyCharacteristicData*)self);
     return _arr;
 }
@@ -51,7 +51,7 @@ void q_lowenergycharacteristicdata_set_descriptors(void* self, libqt_list /* of 
     QLowEnergyCharacteristicData_SetDescriptors((QLowEnergyCharacteristicData*)self, descriptors);
 }
 
-void q_lowenergycharacteristicdata_add_descriptor(void* self, void* descriptor) {
+void q_lowenergycharacteristicdata_add_descriptor(void* self, const void* descriptor) {
     QLowEnergyCharacteristicData_AddDescriptor((QLowEnergyCharacteristicData*)self, (QLowEnergyDescriptorData*)descriptor);
 }
 
@@ -59,7 +59,7 @@ void q_lowenergycharacteristicdata_set_read_constraints(void* self, int32_t cons
     QLowEnergyCharacteristicData_SetReadConstraints((QLowEnergyCharacteristicData*)self, constraints);
 }
 
-int32_t q_lowenergycharacteristicdata_read_constraints(void* self) {
+int32_t q_lowenergycharacteristicdata_read_constraints(const void* self) {
     return QLowEnergyCharacteristicData_ReadConstraints((QLowEnergyCharacteristicData*)self);
 }
 
@@ -67,7 +67,7 @@ void q_lowenergycharacteristicdata_set_write_constraints(void* self, int32_t con
     QLowEnergyCharacteristicData_SetWriteConstraints((QLowEnergyCharacteristicData*)self, constraints);
 }
 
-int32_t q_lowenergycharacteristicdata_write_constraints(void* self) {
+int32_t q_lowenergycharacteristicdata_write_constraints(const void* self) {
     return QLowEnergyCharacteristicData_WriteConstraints((QLowEnergyCharacteristicData*)self);
 }
 
@@ -75,15 +75,15 @@ void q_lowenergycharacteristicdata_set_value_length(void* self, int minimum, int
     QLowEnergyCharacteristicData_SetValueLength((QLowEnergyCharacteristicData*)self, minimum, maximum);
 }
 
-int32_t q_lowenergycharacteristicdata_minimum_value_length(void* self) {
+int32_t q_lowenergycharacteristicdata_minimum_value_length(const void* self) {
     return QLowEnergyCharacteristicData_MinimumValueLength((QLowEnergyCharacteristicData*)self);
 }
 
-int32_t q_lowenergycharacteristicdata_maximum_value_length(void* self) {
+int32_t q_lowenergycharacteristicdata_maximum_value_length(const void* self) {
     return QLowEnergyCharacteristicData_MaximumValueLength((QLowEnergyCharacteristicData*)self);
 }
 
-bool q_lowenergycharacteristicdata_is_valid(void* self) {
+bool q_lowenergycharacteristicdata_is_valid(const void* self) {
     return QLowEnergyCharacteristicData_IsValid((QLowEnergyCharacteristicData*)self);
 }
 

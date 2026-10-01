@@ -14,48 +14,48 @@
 ///
 /// @param other QWebEngineCertificateError*
 ///
-QWebEngineCertificateError* q_webenginecertificateerror_new(void* other);
+QWebEngineCertificateError* q_webenginecertificateerror_new(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#operator-eq)
 ///
 /// @param self QWebEngineCertificateError*
 /// @param other QWebEngineCertificateError*
 ///
-void q_webenginecertificateerror_operator_assign(void* self, void* other);
+void q_webenginecertificateerror_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#type)
 ///
-/// @param self QWebEngineCertificateError*
+/// @param self const QWebEngineCertificateError*
 ///
 /// @return enum QWebEngineCertificateError__Type
 ///
-int32_t q_webenginecertificateerror_type(void* self);
+int32_t q_webenginecertificateerror_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#url)
 ///
-/// @param self QWebEngineCertificateError*
+/// @param self const QWebEngineCertificateError*
 ///
-QUrl* q_webenginecertificateerror_url(void* self);
+QUrl* q_webenginecertificateerror_url(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#isOverridable)
 ///
-/// @param self QWebEngineCertificateError*
+/// @param self const QWebEngineCertificateError*
 ///
-bool q_webenginecertificateerror_is_overridable(void* self);
+bool q_webenginecertificateerror_is_overridable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#description)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QWebEngineCertificateError*
+/// @param self const QWebEngineCertificateError*
 ///
-const char* q_webenginecertificateerror_description(void* self);
+const char* q_webenginecertificateerror_description(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#isMainFrame)
 ///
-/// @param self QWebEngineCertificateError*
+/// @param self const QWebEngineCertificateError*
 ///
-bool q_webenginecertificateerror_is_main_frame(void* self);
+bool q_webenginecertificateerror_is_main_frame(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#defer)
 ///
@@ -77,11 +77,11 @@ void q_webenginecertificateerror_accept_certificate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#certificateChain)
 ///
-/// @param self QWebEngineCertificateError*
+/// @param self const QWebEngineCertificateError*
 ///
 /// @return libqt_list of QSslCertificate*
 ///
-libqt_list q_webenginecertificateerror_certificate_chain(void* self);
+libqt_list q_webenginecertificateerror_certificate_chain(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#dtor.QWebEngineCertificateError)
 ///

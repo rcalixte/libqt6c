@@ -28,60 +28,60 @@ const char* k_desktopfile_locate_local(const char* path) {
     return _ret;
 }
 
-KConfigGroup* k_desktopfile_desktop_group(void* self) {
+KConfigGroup* k_desktopfile_desktop_group(const void* self) {
     return KDesktopFile_DesktopGroup((KDesktopFile*)self);
 }
 
-const char* k_desktopfile_read_type(void* self) {
+const char* k_desktopfile_read_type(const void* self) {
     libqt_string _str = KDesktopFile_ReadType((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_desktopfile_read_icon(void* self) {
+const char* k_desktopfile_read_icon(const void* self) {
     libqt_string _str = KDesktopFile_ReadIcon((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_desktopfile_read_name(void* self) {
+const char* k_desktopfile_read_name(const void* self) {
     libqt_string _str = KDesktopFile_ReadName((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_desktopfile_read_comment(void* self) {
+const char* k_desktopfile_read_comment(const void* self) {
     libqt_string _str = KDesktopFile_ReadComment((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_desktopfile_read_generic_name(void* self) {
+const char* k_desktopfile_read_generic_name(const void* self) {
     libqt_string _str = KDesktopFile_ReadGenericName((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_desktopfile_read_path(void* self) {
+const char* k_desktopfile_read_path(const void* self) {
     libqt_string _str = KDesktopFile_ReadPath((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_desktopfile_read_url(void* self) {
+const char* k_desktopfile_read_url(const void* self) {
     libqt_string _str = KDesktopFile_ReadUrl((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_desktopfile_read_actions(void* self) {
+const char** k_desktopfile_read_actions(const void* self) {
     libqt_list _arr = KDesktopFile_ReadActions((KDesktopFile*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -98,7 +98,7 @@ const char** k_desktopfile_read_actions(void* self) {
     return _ret;
 }
 
-const char** k_desktopfile_read_mime_types(void* self) {
+const char** k_desktopfile_read_mime_types(const void* self) {
     libqt_list _arr = KDesktopFile_ReadMimeTypes((KDesktopFile*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -119,73 +119,73 @@ KConfigGroup* k_desktopfile_action_group(void* self, const char* group) {
     return KDesktopFile_ActionGroup((KDesktopFile*)self, qstring(group));
 }
 
-KConfigGroup* k_desktopfile_action_group2(void* self, const char* group) {
+KConfigGroup* k_desktopfile_action_group2(const void* self, const char* group) {
     return KDesktopFile_ActionGroup2((KDesktopFile*)self, qstring(group));
 }
 
-bool k_desktopfile_has_action_group(void* self, const char* group) {
+bool k_desktopfile_has_action_group(const void* self, const char* group) {
     return KDesktopFile_HasActionGroup((KDesktopFile*)self, qstring(group));
 }
 
-bool k_desktopfile_has_link_type(void* self) {
+bool k_desktopfile_has_link_type(const void* self) {
     return KDesktopFile_HasLinkType((KDesktopFile*)self);
 }
 
-bool k_desktopfile_has_application_type(void* self) {
+bool k_desktopfile_has_application_type(const void* self) {
     return KDesktopFile_HasApplicationType((KDesktopFile*)self);
 }
 
-bool k_desktopfile_has_device_type(void* self) {
+bool k_desktopfile_has_device_type(const void* self) {
     return KDesktopFile_HasDeviceType((KDesktopFile*)self);
 }
 
-bool k_desktopfile_try_exec(void* self) {
+bool k_desktopfile_try_exec(const void* self) {
     return KDesktopFile_TryExec((KDesktopFile*)self);
 }
 
-const char* k_desktopfile_read_doc_path(void* self) {
+const char* k_desktopfile_read_doc_path(const void* self) {
     libqt_string _str = KDesktopFile_ReadDocPath((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-bool k_desktopfile_no_display(void* self) {
+bool k_desktopfile_no_display(const void* self) {
     return KDesktopFile_NoDisplay((KDesktopFile*)self);
 }
 
-KDesktopFile* k_desktopfile_copy_to(void* self, const char* file) {
+KDesktopFile* k_desktopfile_copy_to(const void* self, const char* file) {
     return KDesktopFile_CopyTo((KDesktopFile*)self, qstring(file));
 }
 
-const char* k_desktopfile_file_name(void* self) {
+const char* k_desktopfile_file_name(const void* self) {
     libqt_string _str = KDesktopFile_FileName((KDesktopFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-libqt_list /* of KDesktopFileAction* */ k_desktopfile_actions(void* self) {
+libqt_list /* of KDesktopFileAction* */ k_desktopfile_actions(const void* self) {
     libqt_list _arr = KDesktopFile_Actions((KDesktopFile*)self);
     return _arr;
 }
 
-int32_t k_desktopfile_location_type(void* self) {
+int32_t k_desktopfile_location_type(const void* self) {
     return KConfig_LocationType((KConfig*)self);
 }
 
-const char* k_desktopfile_name(void* self) {
+const char* k_desktopfile_name(const void* self) {
     libqt_string _str = KConfig_Name((KConfig*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_desktopfile_open_flags(void* self) {
+int32_t k_desktopfile_open_flags(const void* self) {
     return KConfig_OpenFlags((KConfig*)self);
 }
 
-bool k_desktopfile_is_dirty(void* self) {
+bool k_desktopfile_is_dirty(const void* self) {
     return KConfig_IsDirty((KConfig*)self);
 }
 
@@ -215,7 +215,7 @@ void k_desktopfile_add_config_sources(void* self, const char* sources[static 1])
     free(sources_qstr);
 }
 
-const char** k_desktopfile_additional_config_sources(void* self) {
+const char** k_desktopfile_additional_config_sources(const void* self) {
     libqt_list _arr = KConfig_AdditionalConfigSources((KConfig*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -232,7 +232,7 @@ const char** k_desktopfile_additional_config_sources(void* self) {
     return _ret;
 }
 
-const char* k_desktopfile_locale(void* self) {
+const char* k_desktopfile_locale(const void* self) {
     libqt_string _str = KConfig_Locale((KConfig*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -247,11 +247,11 @@ void k_desktopfile_set_read_defaults(void* self, bool b) {
     KConfig_SetReadDefaults((KConfig*)self, b);
 }
 
-bool k_desktopfile_read_defaults(void* self) {
+bool k_desktopfile_read_defaults(const void* self) {
     return KConfig_ReadDefaults((KConfig*)self);
 }
 
-libqt_map /* of const char* to const char* */ k_desktopfile_entry_map(void* self) {
+libqt_map /* of const char* to const char* */ k_desktopfile_entry_map(const void* self) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = KConfig_EntryMap((KConfig*)self);
     libqt_map _ret;
@@ -317,11 +317,11 @@ const char* k_desktopfile_main_config_name() {
     return _ret;
 }
 
-KConfig* k_desktopfile_copy_to2(void* self, const char* file, void* config) {
+KConfig* k_desktopfile_copy_to2(const void* self, const char* file, void* config) {
     return KConfig_CopyTo2((KConfig*)self, qstring(file), (KConfig*)config);
 }
 
-libqt_map /* of const char* to const char* */ k_desktopfile_entry_map1(void* self, const char* aGroup) {
+libqt_map /* of const char* to const char* */ k_desktopfile_entry_map1(const void* self, const char* aGroup) {
     // Convert QMap<QString,QString> to libqt_map
     libqt_map _out = KConfig_EntryMap1((KConfig*)self, qstring(aGroup));
     libqt_map _ret;
@@ -376,7 +376,7 @@ libqt_map /* of const char* to const char* */ k_desktopfile_entry_map1(void* sel
     return _ret;
 }
 
-bool k_desktopfile_has_group(void* self, const char* group) {
+bool k_desktopfile_has_group(const void* self, const char* group) {
     return KConfigBase_HasGroup((KConfigBase*)self, qstring(group));
 }
 
@@ -384,7 +384,7 @@ KConfigGroup* k_desktopfile_group(void* self, const char* group) {
     return KConfigBase_Group((KConfigBase*)self, qstring(group));
 }
 
-const KConfigGroup* k_desktopfile_group2(void* self, const char* group) {
+const KConfigGroup* k_desktopfile_group2(const void* self, const char* group) {
     return KConfigBase_Group2((KConfigBase*)self, qstring(group));
 }
 
@@ -392,11 +392,11 @@ void k_desktopfile_delete_group(void* self, const char* group) {
     KConfigBase_DeleteGroup((KConfigBase*)self, qstring(group));
 }
 
-bool k_desktopfile_is_group_immutable(void* self, const char* group) {
+bool k_desktopfile_is_group_immutable(const void* self, const char* group) {
     return KConfigBase_IsGroupImmutable((KConfigBase*)self, qstring(group));
 }
 
-void k_desktopfile_operator_assign(void* self, void* param1) {
+void k_desktopfile_operator_assign(void* self, const void* param1) {
     KConfigBase_OperatorAssign((KConfigBase*)self, (KConfigBase*)param1);
 }
 
@@ -412,7 +412,7 @@ bool k_desktopfile_super_sync(void* self) {
     return KDesktopFile_SuperSync((KDesktopFile*)self);
 }
 
-void k_desktopfile_on_sync(void* self, bool (*callback)()) {
+void k_desktopfile_on_sync(void* self, bool (*callback)(void*)) {
     KDesktopFile_OnSync((KDesktopFile*)self, (intptr_t)callback);
 }
 
@@ -424,35 +424,35 @@ void k_desktopfile_super_mark_as_clean(void* self) {
     KDesktopFile_SuperMarkAsClean((KDesktopFile*)self);
 }
 
-void k_desktopfile_on_mark_as_clean(void* self, void (*callback)()) {
+void k_desktopfile_on_mark_as_clean(void* self, void (*callback)(void*)) {
     KDesktopFile_OnMarkAsClean((KDesktopFile*)self, (intptr_t)callback);
 }
 
-int32_t k_desktopfile_access_mode(void* self) {
+int32_t k_desktopfile_access_mode(const void* self) {
     return KDesktopFile_AccessMode((KDesktopFile*)self);
 }
 
-int32_t k_desktopfile_super_access_mode(void* self) {
+int32_t k_desktopfile_super_access_mode(const void* self) {
     return KDesktopFile_SuperAccessMode((KDesktopFile*)self);
 }
 
-void k_desktopfile_on_access_mode(void* self, int32_t (*callback)()) {
-    KDesktopFile_OnAccessMode((KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_access_mode(const void* self, int32_t (*callback)(const void*)) {
+    KDesktopFile_OnAccessMode((const KDesktopFile*)self, (intptr_t)callback);
 }
 
-bool k_desktopfile_is_immutable(void* self) {
+bool k_desktopfile_is_immutable(const void* self) {
     return KDesktopFile_IsImmutable((KDesktopFile*)self);
 }
 
-bool k_desktopfile_super_is_immutable(void* self) {
+bool k_desktopfile_super_is_immutable(const void* self) {
     return KDesktopFile_SuperIsImmutable((KDesktopFile*)self);
 }
 
-void k_desktopfile_on_is_immutable(void* self, bool (*callback)()) {
-    KDesktopFile_OnIsImmutable((KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_is_immutable(const void* self, bool (*callback)(const void*)) {
+    KDesktopFile_OnIsImmutable((const KDesktopFile*)self, (intptr_t)callback);
 }
 
-const char** k_desktopfile_group_list(void* self) {
+const char** k_desktopfile_group_list(const void* self) {
     libqt_list _arr = KDesktopFile_GroupList((KDesktopFile*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -469,7 +469,7 @@ const char** k_desktopfile_group_list(void* self) {
     return _ret;
 }
 
-const char** k_desktopfile_super_group_list(void* self) {
+const char** k_desktopfile_super_group_list(const void* self) {
     libqt_list _arr = KDesktopFile_SuperGroupList((KDesktopFile*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -486,32 +486,20 @@ const char** k_desktopfile_super_group_list(void* self) {
     return _ret;
 }
 
-void k_desktopfile_on_group_list(void* self, const char** (*callback)()) {
-    KDesktopFile_OnGroupList((KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_group_list(const void* self, const char** (*callback)(const void*)) {
+    KDesktopFile_OnGroupList((const KDesktopFile*)self, (intptr_t)callback);
 }
 
-bool k_desktopfile_has_group_impl(void* self, const char* groupName) {
+bool k_desktopfile_has_group_impl(const void* self, const char* groupName) {
     return KDesktopFile_HasGroupImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-bool k_desktopfile_super_has_group_impl(void* self, const char* groupName) {
+bool k_desktopfile_super_has_group_impl(const void* self, const char* groupName) {
     return KDesktopFile_SuperHasGroupImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(void*, const char*)) {
-    KDesktopFile_OnHasGroupImpl((KDesktopFile*)self, (intptr_t)callback);
-}
-
-KConfigGroup* k_desktopfile_group_impl(void* self, const char* groupName) {
-    return KDesktopFile_GroupImpl((KDesktopFile*)self, qstring(groupName));
-}
-
-KConfigGroup* k_desktopfile_super_group_impl(void* self, const char* groupName) {
-    return KDesktopFile_SuperGroupImpl((KDesktopFile*)self, qstring(groupName));
-}
-
-void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*)) {
-    KDesktopFile_OnGroupImpl((KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_has_group_impl(const void* self, bool (*callback)(const void*, const char*)) {
+    KDesktopFile_OnHasGroupImpl((const KDesktopFile*)self, (intptr_t)callback);
 }
 
 void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t flags) {
@@ -526,16 +514,16 @@ void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, cons
     KDesktopFile_OnDeleteGroupImpl((KDesktopFile*)self, (intptr_t)callback);
 }
 
-bool k_desktopfile_is_group_immutable_impl(void* self, const char* groupName) {
+bool k_desktopfile_is_group_immutable_impl(const void* self, const char* groupName) {
     return KDesktopFile_IsGroupImmutableImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-bool k_desktopfile_super_is_group_immutable_impl(void* self, const char* groupName) {
+bool k_desktopfile_super_is_group_immutable_impl(const void* self, const char* groupName) {
     return KDesktopFile_SuperIsGroupImmutableImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*)) {
-    KDesktopFile_OnIsGroupImmutableImpl((KDesktopFile*)self, (intptr_t)callback);
+void k_desktopfile_on_is_group_immutable_impl(const void* self, bool (*callback)(const void*, const char*)) {
+    KDesktopFile_OnIsGroupImmutableImpl((const KDesktopFile*)self, (intptr_t)callback);
 }
 
 void k_desktopfile_virtual_hook(void* self, int id, void* data) {

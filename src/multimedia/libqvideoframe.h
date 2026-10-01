@@ -20,7 +20,7 @@ QVideoFrame* q_videoframe_new();
 ///
 /// @param format QVideoFrameFormat*
 ///
-QVideoFrame* q_videoframe_new2(void* format);
+QVideoFrame* q_videoframe_new2(const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html)
 
@@ -28,7 +28,7 @@ QVideoFrame* q_videoframe_new2(void* format);
 ///
 /// @param image QImage*
 ///
-QVideoFrame* q_videoframe_new3(void* image);
+QVideoFrame* q_videoframe_new3(const void* image);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html)
 
@@ -44,7 +44,7 @@ QVideoFrame* q_videoframe_new4(void* videoBuffer);
 ///
 /// @param other QVideoFrame*
 ///
-QVideoFrame* q_videoframe_new5(void* other);
+QVideoFrame* q_videoframe_new5(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html)
 
@@ -53,7 +53,7 @@ QVideoFrame* q_videoframe_new5(void* other);
 /// @param buffer QAbstractVideoBuffer*
 /// @param format QVideoFrameFormat*
 ///
-QVideoFrame* q_videoframe_new6(void* buffer, void* format);
+QVideoFrame* q_videoframe_new6(void* buffer, const void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#swap)
 ///
@@ -67,93 +67,93 @@ void q_videoframe_swap(void* self, void* other);
 /// @param self QVideoFrame*
 /// @param other QVideoFrame*
 ///
-void q_videoframe_operator_assign(void* self, void* other);
+void q_videoframe_operator_assign(void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#operator-eq-eq)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 /// @param other QVideoFrame*
 ///
-bool q_videoframe_operator_equal(void* self, void* other);
+bool q_videoframe_operator_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#operator-not-eq)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 /// @param other QVideoFrame*
 ///
-bool q_videoframe_operator_not_equal(void* self, void* other);
+bool q_videoframe_operator_not_equal(const void* self, const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#isValid)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-bool q_videoframe_is_valid(void* self);
+bool q_videoframe_is_valid(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#pixelFormat)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
 /// @return enum QVideoFrameFormat__PixelFormat
 ///
-int32_t q_videoframe_pixel_format(void* self);
+int32_t q_videoframe_pixel_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#surfaceFormat)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-QVideoFrameFormat* q_videoframe_surface_format(void* self);
+QVideoFrameFormat* q_videoframe_surface_format(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#handleType)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
 /// @return enum QVideoFrame__HandleType
 ///
-int32_t q_videoframe_handle_type(void* self);
+int32_t q_videoframe_handle_type(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#size)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-QSize* q_videoframe_size(void* self);
+QSize* q_videoframe_size(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#width)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-int32_t q_videoframe_width(void* self);
+int32_t q_videoframe_width(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#height)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-int32_t q_videoframe_height(void* self);
+int32_t q_videoframe_height(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#isMapped)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-bool q_videoframe_is_mapped(void* self);
+bool q_videoframe_is_mapped(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#isReadable)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-bool q_videoframe_is_readable(void* self);
+bool q_videoframe_is_readable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#isWritable)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-bool q_videoframe_is_writable(void* self);
+bool q_videoframe_is_writable(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#mapMode)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
 /// @return enum QVideoFrame__MapMode
 ///
-int32_t q_videoframe_map_mode(void* self);
+int32_t q_videoframe_map_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#map)
 ///
@@ -170,10 +170,10 @@ void q_videoframe_unmap(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#bytesPerLine)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 /// @param plane int
 ///
-int32_t q_videoframe_bytes_per_line(void* self, int plane);
+int32_t q_videoframe_bytes_per_line(const void* self, int plane);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#bits)
 ///
@@ -184,29 +184,29 @@ unsigned char* q_videoframe_bits(void* self, int plane);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#bits)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 /// @param plane int
 ///
-const unsigned char* q_videoframe_bits2(void* self, int plane);
+const unsigned char* q_videoframe_bits2(const void* self, int plane);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#mappedBytes)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 /// @param plane int
 ///
-int32_t q_videoframe_mapped_bytes(void* self, int plane);
+int32_t q_videoframe_mapped_bytes(const void* self, int plane);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#planeCount)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-int32_t q_videoframe_plane_count(void* self);
+int32_t q_videoframe_plane_count(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#startTime)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-int64_t q_videoframe_start_time(void* self);
+int64_t q_videoframe_start_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setStartTime)
 ///
@@ -217,9 +217,9 @@ void q_videoframe_set_start_time(void* self, int64_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#endTime)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-int64_t q_videoframe_end_time(void* self);
+int64_t q_videoframe_end_time(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setEndTime)
 ///
@@ -237,11 +237,11 @@ void q_videoframe_set_rotation_angle(void* self, int32_t angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#rotationAngle)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
 /// @return enum QVideoFrame__RotationAngle
 ///
-int32_t q_videoframe_rotation_angle(void* self);
+int32_t q_videoframe_rotation_angle(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setRotation)
 ///
@@ -252,11 +252,11 @@ void q_videoframe_set_rotation(void* self, int32_t angle);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#rotation)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
 /// @return enum QtVideo__Rotation
 ///
-int32_t q_videoframe_rotation(void* self);
+int32_t q_videoframe_rotation(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setMirrored)
 ///
@@ -267,9 +267,9 @@ void q_videoframe_set_mirrored(void* self, bool mirrored);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#mirrored)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-bool q_videoframe_mirrored(void* self);
+bool q_videoframe_mirrored(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setStreamFrameRate)
 ///
@@ -280,23 +280,23 @@ void q_videoframe_set_stream_frame_rate(void* self, double rate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#streamFrameRate)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-double q_videoframe_stream_frame_rate(void* self);
+double q_videoframe_stream_frame_rate(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#toImage)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-QImage* q_videoframe_to_image(void* self);
+QImage* q_videoframe_to_image(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#subtitleText)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-const char* q_videoframe_subtitle_text(void* self);
+const char* q_videoframe_subtitle_text(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setSubtitleText)
 ///
@@ -312,13 +312,13 @@ void q_videoframe_set_subtitle_text(void* self, const char* text);
 /// @param rect QRectF*
 /// @param options QVideoFrame__PaintOptions*
 ///
-void q_videoframe_paint(void* self, void* painter, void* rect, void* options);
+void q_videoframe_paint(void* self, void* painter, const void* rect, const void* options);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#videoBuffer)
 ///
-/// @param self QVideoFrame*
+/// @param self const QVideoFrame*
 ///
-QAbstractVideoBuffer* q_videoframe_video_buffer(void* self);
+QAbstractVideoBuffer* q_videoframe_video_buffer(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#dtor.QVideoFrame)
 ///
@@ -340,7 +340,7 @@ QVideoFrame__PaintOptions* q_videoframe__paintoptions_new();
 ///
 /// @param other QVideoFrame__PaintOptions*
 ///
-QVideoFrame__PaintOptions* q_videoframe__paintoptions_new2(void* other);
+QVideoFrame__PaintOptions* q_videoframe__paintoptions_new2(const void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html)
 
@@ -366,9 +366,9 @@ void q_videoframe__paintoptions_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#backgroundColor-var)
 ///
-/// @param self QVideoFrame__PaintOptions*
+/// @param self const QVideoFrame__PaintOptions*
 ///
-QColor* q_videoframe__paintoptions_background_color(void* self);
+QColor* q_videoframe__paintoptions_background_color(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#backgroundColor-var)
 ///
@@ -379,11 +379,11 @@ void q_videoframe__paintoptions_set_background_color(void* self, void* backgroun
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#aspectRatioMode-var)
 ///
-/// @param self QVideoFrame__PaintOptions*
+/// @param self const QVideoFrame__PaintOptions*
 ///
 /// @return enum Qt__AspectRatioMode
 ///
-int32_t q_videoframe__paintoptions_aspect_ratio_mode(void* self);
+int32_t q_videoframe__paintoptions_aspect_ratio_mode(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#aspectRatioMode-var)
 ///
@@ -394,11 +394,11 @@ void q_videoframe__paintoptions_set_aspect_ratio_mode(void* self, int32_t aspect
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#paintFlags-var)
 ///
-/// @param self QVideoFrame__PaintOptions*
+/// @param self const QVideoFrame__PaintOptions*
 ///
 /// @return flag of enum QVideoFrame__PaintOptions__PaintFlag
 ///
-int32_t q_videoframe__paintoptions_paint_flags(void* self);
+int32_t q_videoframe__paintoptions_paint_flags(const void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#paintFlags-var)
 ///
